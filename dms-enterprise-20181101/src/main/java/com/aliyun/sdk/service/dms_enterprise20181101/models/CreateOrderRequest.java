@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class CreateOrderRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PluginParam")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > pluginParam;
+    private java.util.Map<String, ?> pluginParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PluginType")
@@ -91,7 +96,7 @@ public class CreateOrderRequest extends Request {
     /**
      * @return pluginParam
      */
-    public java.util.Map < String, ? > getPluginParam() {
+    public java.util.Map<String, ?> getPluginParam() {
         return this.pluginParam;
     }
 
@@ -120,7 +125,7 @@ public class CreateOrderRequest extends Request {
         private String regionId; 
         private String attachmentKey; 
         private String comment; 
-        private java.util.Map < String, ? > pluginParam; 
+        private java.util.Map<String, ?> pluginParam; 
         private String pluginType; 
         private String relatedUserList; 
         private Long tid; 
@@ -181,7 +186,7 @@ public class CreateOrderRequest extends Request {
          * <strong>example:</strong>
          * <p>{PluginParam_test}</p>
          */
-        public Builder pluginParam(java.util.Map < String, ? > pluginParam) {
+        public Builder pluginParam(java.util.Map<String, ?> pluginParam) {
             String pluginParamShrink = shrink(pluginParam, "PluginParam", "json");
             this.putBodyParameter("PluginParam", pluginParamShrink);
             this.pluginParam = pluginParam;

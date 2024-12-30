@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSQLReviewOrderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
-    private java.util.List < Long > createOrderResult;
+    private java.util.List<Long> createOrderResult;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class CreateSQLReviewOrderResponseBody extends TeaModel {
     /**
      * @return createOrderResult
      */
-    public java.util.List < Long > getCreateOrderResult() {
+    public java.util.List<Long> getCreateOrderResult() {
         return this.createOrderResult;
     }
 
@@ -79,7 +84,7 @@ public class CreateSQLReviewOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > createOrderResult; 
+        private java.util.List<Long> createOrderResult; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class CreateSQLReviewOrderResponseBody extends TeaModel {
         /**
          * <p>The result of the ticket creation task.</p>
          */
-        public Builder createOrderResult(java.util.List < Long > createOrderResult) {
+        public Builder createOrderResult(java.util.List<Long> createOrderResult) {
             this.createOrderResult = createOrderResult;
             return this;
         }

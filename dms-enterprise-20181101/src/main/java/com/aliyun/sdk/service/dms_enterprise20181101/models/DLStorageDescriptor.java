@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DLStorageDescriptor extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BucketCols")
-    private java.util.List < String > bucketCols;
+    private java.util.List<String> bucketCols;
 
     @com.aliyun.core.annotation.NameInMap("Columns")
-    private java.util.List < DLColumn > columns;
+    private java.util.List<DLColumn> columns;
 
     @com.aliyun.core.annotation.NameInMap("InputFormat")
     private String inputFormat;
@@ -31,13 +36,13 @@ public class DLStorageDescriptor extends TeaModel {
     private Integer numBuckets;
 
     @com.aliyun.core.annotation.NameInMap("OriginalColumns")
-    private java.util.List < DLColumn > originalColumns;
+    private java.util.List<DLColumn> originalColumns;
 
     @com.aliyun.core.annotation.NameInMap("OutputFormat")
     private String outputFormat;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.NameInMap("SerdeInfo")
     private DLSerdeInfo serdeInfo;
@@ -46,7 +51,7 @@ public class DLStorageDescriptor extends TeaModel {
     private DLSkewedInfo skewedInfo;
 
     @com.aliyun.core.annotation.NameInMap("SortCols")
-    private java.util.List < DLOrder > sortCols;
+    private java.util.List<DLOrder> sortCols;
 
     private DLStorageDescriptor(Builder builder) {
         this.bucketCols = builder.bucketCols;
@@ -74,14 +79,14 @@ public class DLStorageDescriptor extends TeaModel {
     /**
      * @return bucketCols
      */
-    public java.util.List < String > getBucketCols() {
+    public java.util.List<String> getBucketCols() {
         return this.bucketCols;
     }
 
     /**
      * @return columns
      */
-    public java.util.List < DLColumn > getColumns() {
+    public java.util.List<DLColumn> getColumns() {
         return this.columns;
     }
 
@@ -116,7 +121,7 @@ public class DLStorageDescriptor extends TeaModel {
     /**
      * @return originalColumns
      */
-    public java.util.List < DLColumn > getOriginalColumns() {
+    public java.util.List<DLColumn> getOriginalColumns() {
         return this.originalColumns;
     }
 
@@ -130,7 +135,7 @@ public class DLStorageDescriptor extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -151,28 +156,28 @@ public class DLStorageDescriptor extends TeaModel {
     /**
      * @return sortCols
      */
-    public java.util.List < DLOrder > getSortCols() {
+    public java.util.List<DLOrder> getSortCols() {
         return this.sortCols;
     }
 
     public static final class Builder {
-        private java.util.List < String > bucketCols; 
-        private java.util.List < DLColumn > columns; 
+        private java.util.List<String> bucketCols; 
+        private java.util.List<DLColumn> columns; 
         private String inputFormat; 
         private Boolean isCompressed; 
         private String location; 
         private Integer numBuckets; 
-        private java.util.List < DLColumn > originalColumns; 
+        private java.util.List<DLColumn> originalColumns; 
         private String outputFormat; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private DLSerdeInfo serdeInfo; 
         private DLSkewedInfo skewedInfo; 
-        private java.util.List < DLOrder > sortCols; 
+        private java.util.List<DLOrder> sortCols; 
 
         /**
          * BucketCols.
          */
-        public Builder bucketCols(java.util.List < String > bucketCols) {
+        public Builder bucketCols(java.util.List<String> bucketCols) {
             this.bucketCols = bucketCols;
             return this;
         }
@@ -180,7 +185,7 @@ public class DLStorageDescriptor extends TeaModel {
         /**
          * Columns.
          */
-        public Builder columns(java.util.List < DLColumn > columns) {
+        public Builder columns(java.util.List<DLColumn> columns) {
             this.columns = columns;
             return this;
         }
@@ -220,7 +225,7 @@ public class DLStorageDescriptor extends TeaModel {
         /**
          * OriginalColumns.
          */
-        public Builder originalColumns(java.util.List < DLColumn > originalColumns) {
+        public Builder originalColumns(java.util.List<DLColumn> originalColumns) {
             this.originalColumns = originalColumns;
             return this;
         }
@@ -236,7 +241,7 @@ public class DLStorageDescriptor extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -260,7 +265,7 @@ public class DLStorageDescriptor extends TeaModel {
         /**
          * SortCols.
          */
-        public Builder sortCols(java.util.List < DLOrder > sortCols) {
+        public Builder sortCols(java.util.List<DLOrder> sortCols) {
             this.sortCols = sortCols;
             return this;
         }

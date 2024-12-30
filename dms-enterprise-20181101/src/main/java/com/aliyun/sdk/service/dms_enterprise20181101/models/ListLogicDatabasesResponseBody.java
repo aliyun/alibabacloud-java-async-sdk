@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
      */
     public static class DatabaseIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseIds")
-        private java.util.List < Long > databaseIds;
+        private java.util.List<Long> databaseIds;
 
         private DatabaseIds(Builder builder) {
             this.databaseIds = builder.databaseIds;
@@ -195,17 +200,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return databaseIds
          */
-        public java.util.List < Long > getDatabaseIds() {
+        public java.util.List<Long> getDatabaseIds() {
             return this.databaseIds;
         }
 
         public static final class Builder {
-            private java.util.List < Long > databaseIds; 
+            private java.util.List<Long> databaseIds; 
 
             /**
              * DatabaseIds.
              */
-            public Builder databaseIds(java.util.List < Long > databaseIds) {
+            public Builder databaseIds(java.util.List<Long> databaseIds) {
                 this.databaseIds = databaseIds;
                 return this;
             }
@@ -225,7 +230,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
      */
     public static class OwnerIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
-        private java.util.List < String > ownerIds;
+        private java.util.List<String> ownerIds;
 
         private OwnerIdList(Builder builder) {
             this.ownerIds = builder.ownerIds;
@@ -242,17 +247,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < String > getOwnerIds() {
+        public java.util.List<String> getOwnerIds() {
             return this.ownerIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerIds; 
+            private java.util.List<String> ownerIds; 
 
             /**
              * OwnerIds.
              */
-            public Builder ownerIds(java.util.List < String > ownerIds) {
+            public Builder ownerIds(java.util.List<String> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -272,7 +277,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
      */
     public static class OwnerNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
-        private java.util.List < String > ownerNames;
+        private java.util.List<String> ownerNames;
 
         private OwnerNameList(Builder builder) {
             this.ownerNames = builder.ownerNames;
@@ -289,17 +294,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return ownerNames
          */
-        public java.util.List < String > getOwnerNames() {
+        public java.util.List<String> getOwnerNames() {
             return this.ownerNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > ownerNames; 
+            private java.util.List<String> ownerNames; 
 
             /**
              * OwnerNames.
              */
-            public Builder ownerNames(java.util.List < String > ownerNames) {
+            public Builder ownerNames(java.util.List<String> ownerNames) {
                 this.ownerNames = ownerNames;
                 return this;
             }
@@ -580,7 +585,7 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
      */
     public static class LogicDatabaseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicDatabase")
-        private java.util.List < LogicDatabase> logicDatabase;
+        private java.util.List<LogicDatabase> logicDatabase;
 
         private LogicDatabaseList(Builder builder) {
             this.logicDatabase = builder.logicDatabase;
@@ -597,17 +602,17 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         /**
          * @return logicDatabase
          */
-        public java.util.List < LogicDatabase> getLogicDatabase() {
+        public java.util.List<LogicDatabase> getLogicDatabase() {
             return this.logicDatabase;
         }
 
         public static final class Builder {
-            private java.util.List < LogicDatabase> logicDatabase; 
+            private java.util.List<LogicDatabase> logicDatabase; 
 
             /**
              * LogicDatabase.
              */
-            public Builder logicDatabase(java.util.List < LogicDatabase> logicDatabase) {
+            public Builder logicDatabase(java.util.List<LogicDatabase> logicDatabase) {
                 this.logicDatabase = logicDatabase;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -397,7 +402,7 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
      */
     public static class NodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Node")
-        private java.util.List < Node> node;
+        private java.util.List<Node> node;
 
         private NodeList(Builder builder) {
             this.node = builder.node;
@@ -414,17 +419,17 @@ public class GetTaskInstanceRelationResponseBody extends TeaModel {
         /**
          * @return node
          */
-        public java.util.List < Node> getNode() {
+        public java.util.List<Node> getNode() {
             return this.node;
         }
 
         public static final class Builder {
-            private java.util.List < Node> node; 
+            private java.util.List<Node> node; 
 
             /**
              * Node.
              */
-            public Builder node(java.util.List < Node> node) {
+            public Builder node(java.util.List<Node> node) {
                 this.node = node;
                 return this;
             }

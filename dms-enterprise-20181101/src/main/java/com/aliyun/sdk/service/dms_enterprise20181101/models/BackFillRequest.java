@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class BackFillRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterNodeIds")
-    private java.util.List < Long > filterNodeIds;
+    private java.util.List<Long> filterNodeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HistoryDagId")
@@ -55,7 +60,7 @@ public class BackFillRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartNodeIds")
-    private java.util.List < Long > startNodeIds;
+    private java.util.List<Long> startNodeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -136,7 +141,7 @@ public class BackFillRequest extends Request {
     /**
      * @return filterNodeIds
      */
-    public java.util.List < Long > getFilterNodeIds() {
+    public java.util.List<Long> getFilterNodeIds() {
         return this.filterNodeIds;
     }
 
@@ -164,7 +169,7 @@ public class BackFillRequest extends Request {
     /**
      * @return startNodeIds
      */
-    public java.util.List < Long > getStartNodeIds() {
+    public java.util.List<Long> getStartNodeIds() {
         return this.startNodeIds;
     }
 
@@ -182,11 +187,11 @@ public class BackFillRequest extends Request {
         private String backFillDateBegin; 
         private String backFillDateEnd; 
         private Long dagId; 
-        private java.util.List < Long > filterNodeIds; 
+        private java.util.List<Long> filterNodeIds; 
         private Long historyDagId; 
         private Integer interval; 
         private Boolean isTriggerSubTree; 
-        private java.util.List < Long > startNodeIds; 
+        private java.util.List<Long> startNodeIds; 
         private Long tid; 
 
         private Builder() {
@@ -286,7 +291,7 @@ public class BackFillRequest extends Request {
         /**
          * <p>Filter condition, which specifies the list of node IDs in the task flow that do not need to supplement data.</p>
          */
-        public Builder filterNodeIds(java.util.List < Long > filterNodeIds) {
+        public Builder filterNodeIds(java.util.List<Long> filterNodeIds) {
             String filterNodeIdsShrink = shrink(filterNodeIds, "FilterNodeIds", "json");
             this.putQueryParameter("FilterNodeIds", filterNodeIdsShrink);
             this.filterNodeIds = filterNodeIds;
@@ -332,7 +337,7 @@ public class BackFillRequest extends Request {
         /**
          * <p>The number of nodes for which you want to backfill data.</p>
          */
-        public Builder startNodeIds(java.util.List < Long > startNodeIds) {
+        public Builder startNodeIds(java.util.List<Long> startNodeIds) {
             String startNodeIdsShrink = shrink(startNodeIds, "StartNodeIds", "json");
             this.putQueryParameter("StartNodeIds", startNodeIdsShrink);
             this.startNodeIds = startNodeIds;

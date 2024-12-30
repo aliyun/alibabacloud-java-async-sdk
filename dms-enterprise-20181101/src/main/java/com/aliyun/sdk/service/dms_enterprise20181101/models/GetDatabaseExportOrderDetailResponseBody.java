@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
      */
     public static class ExportTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExportTypes")
-        private java.util.List < String > exportTypes;
+        private java.util.List<String> exportTypes;
 
         private ExportTypes(Builder builder) {
             this.exportTypes = builder.exportTypes;
@@ -172,17 +177,17 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         /**
          * @return exportTypes
          */
-        public java.util.List < String > getExportTypes() {
+        public java.util.List<String> getExportTypes() {
             return this.exportTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > exportTypes; 
+            private java.util.List<String> exportTypes; 
 
             /**
              * ExportTypes.
              */
-            public Builder exportTypes(java.util.List < String > exportTypes) {
+            public Builder exportTypes(java.util.List<String> exportTypes) {
                 this.exportTypes = exportTypes;
                 return this;
             }
@@ -202,7 +207,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
      */
     public static class SQLExtOption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLExtOption")
-        private java.util.List < String > SQLExtOption;
+        private java.util.List<String> SQLExtOption;
 
         private SQLExtOption(Builder builder) {
             this.SQLExtOption = builder.SQLExtOption;
@@ -219,17 +224,17 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         /**
          * @return SQLExtOption
          */
-        public java.util.List < String > getSQLExtOption() {
+        public java.util.List<String> getSQLExtOption() {
             return this.SQLExtOption;
         }
 
         public static final class Builder {
-            private java.util.List < String > SQLExtOption; 
+            private java.util.List<String> SQLExtOption; 
 
             /**
              * SQLExtOption.
              */
-            public Builder SQLExtOption(java.util.List < String > SQLExtOption) {
+            public Builder SQLExtOption(java.util.List<String> SQLExtOption) {
                 this.SQLExtOption = SQLExtOption;
                 return this;
             }
@@ -249,7 +254,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
      */
     public static class SelectedTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SelectedTables")
-        private java.util.List < String > selectedTables;
+        private java.util.List<String> selectedTables;
 
         private SelectedTables(Builder builder) {
             this.selectedTables = builder.selectedTables;
@@ -266,17 +271,17 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
         /**
          * @return selectedTables
          */
-        public java.util.List < String > getSelectedTables() {
+        public java.util.List<String> getSelectedTables() {
             return this.selectedTables;
         }
 
         public static final class Builder {
-            private java.util.List < String > selectedTables; 
+            private java.util.List<String> selectedTables; 
 
             /**
              * SelectedTables.
              */
-            public Builder selectedTables(java.util.List < String > selectedTables) {
+            public Builder selectedTables(java.util.List<String> selectedTables) {
                 this.selectedTables = selectedTables;
                 return this;
             }

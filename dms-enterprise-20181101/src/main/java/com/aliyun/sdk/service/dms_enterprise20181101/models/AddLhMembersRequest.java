@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AddLhMembersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Members")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Members> members;
+    private java.util.List<Members> members;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectId")
@@ -68,7 +73,7 @@ public class AddLhMembersRequest extends Request {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
@@ -95,7 +100,7 @@ public class AddLhMembersRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddLhMembersRequest, Builder> {
         private String regionId; 
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
         private Long objectId; 
         private Integer objectType; 
         private Long tid; 
@@ -126,7 +131,7 @@ public class AddLhMembersRequest extends Request {
          * <p>The information about the users to be added.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             String membersShrink = shrink(members, "Members", "json");
             this.putQueryParameter("Members", membersShrink);
             this.members = members;
@@ -195,7 +200,7 @@ public class AddLhMembersRequest extends Request {
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Roles")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > roles;
+        private java.util.List<String> roles;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -217,7 +222,7 @@ public class AddLhMembersRequest extends Request {
         /**
          * @return roles
          */
-        public java.util.List < String > getRoles() {
+        public java.util.List<String> getRoles() {
             return this.roles;
         }
 
@@ -229,7 +234,7 @@ public class AddLhMembersRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > roles; 
+            private java.util.List<String> roles; 
             private Long userId; 
 
             /**
@@ -241,7 +246,7 @@ public class AddLhMembersRequest extends Request {
              * </ul>
              * <p>This parameter is required.</p>
              */
-            public Builder roles(java.util.List < String > roles) {
+            public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
                 return this;
             }

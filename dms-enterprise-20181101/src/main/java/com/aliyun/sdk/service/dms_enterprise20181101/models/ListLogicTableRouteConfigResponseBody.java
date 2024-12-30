@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
      */
     public static class LogicTableRouteConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicTableRouteConfig")
-        private java.util.List < LogicTableRouteConfig> logicTableRouteConfig;
+        private java.util.List<LogicTableRouteConfig> logicTableRouteConfig;
 
         private LogicTableRouteConfigList(Builder builder) {
             this.logicTableRouteConfig = builder.logicTableRouteConfig;
@@ -268,17 +273,17 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
         /**
          * @return logicTableRouteConfig
          */
-        public java.util.List < LogicTableRouteConfig> getLogicTableRouteConfig() {
+        public java.util.List<LogicTableRouteConfig> getLogicTableRouteConfig() {
             return this.logicTableRouteConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LogicTableRouteConfig> logicTableRouteConfig; 
+            private java.util.List<LogicTableRouteConfig> logicTableRouteConfig; 
 
             /**
              * LogicTableRouteConfig.
              */
-            public Builder logicTableRouteConfig(java.util.List < LogicTableRouteConfig> logicTableRouteConfig) {
+            public Builder logicTableRouteConfig(java.util.List<LogicTableRouteConfig> logicTableRouteConfig) {
                 this.logicTableRouteConfig = logicTableRouteConfig;
                 return this;
             }

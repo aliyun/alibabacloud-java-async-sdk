@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -416,7 +421,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
      */
     public static class SensitiveColumnsDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveColumnsDetail")
-        private java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail;
+        private java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail;
 
         private SensitiveColumnsDetailList(Builder builder) {
             this.sensitiveColumnsDetail = builder.sensitiveColumnsDetail;
@@ -433,17 +438,17 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
         /**
          * @return sensitiveColumnsDetail
          */
-        public java.util.List < SensitiveColumnsDetail> getSensitiveColumnsDetail() {
+        public java.util.List<SensitiveColumnsDetail> getSensitiveColumnsDetail() {
             return this.sensitiveColumnsDetail;
         }
 
         public static final class Builder {
-            private java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail; 
+            private java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail; 
 
             /**
              * SensitiveColumnsDetail.
              */
-            public Builder sensitiveColumnsDetail(java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail) {
+            public Builder sensitiveColumnsDetail(java.util.List<SensitiveColumnsDetail> sensitiveColumnsDetail) {
                 this.sensitiveColumnsDetail = sensitiveColumnsDetail;
                 return this;
             }

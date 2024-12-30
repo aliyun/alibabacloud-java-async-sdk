@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    private java.util.List<Long> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -104,7 +109,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -121,7 +126,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         private String comment; 
         private Long parentId; 
         private PluginParam pluginParam; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -199,7 +204,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         /**
          * <p>The stakeholders involved in this operation.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -237,24 +242,24 @@ public class CreateDatabaseExportOrderRequest extends Request {
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataOption")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > dataOption;
+        private java.util.List<String> dataOption;
 
         @com.aliyun.core.annotation.NameInMap("ExportContent")
         @com.aliyun.core.annotation.Validation(required = true)
         private String exportContent;
 
         @com.aliyun.core.annotation.NameInMap("ExportTypes")
-        private java.util.List < String > exportTypes;
+        private java.util.List<String> exportTypes;
 
         @com.aliyun.core.annotation.NameInMap("SQLExtOption")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > SQLExtOption;
+        private java.util.List<String> SQLExtOption;
 
         @com.aliyun.core.annotation.NameInMap("SelectedTables")
-        private java.util.List < String > selectedTables;
+        private java.util.List<String> selectedTables;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.Map < String, String > tables;
+        private java.util.Map<String, String> tables;
 
         @com.aliyun.core.annotation.NameInMap("TargetOption")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -281,7 +286,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
         /**
          * @return dataOption
          */
-        public java.util.List < String > getDataOption() {
+        public java.util.List<String> getDataOption() {
             return this.dataOption;
         }
 
@@ -295,28 +300,28 @@ public class CreateDatabaseExportOrderRequest extends Request {
         /**
          * @return exportTypes
          */
-        public java.util.List < String > getExportTypes() {
+        public java.util.List<String> getExportTypes() {
             return this.exportTypes;
         }
 
         /**
          * @return SQLExtOption
          */
-        public java.util.List < String > getSQLExtOption() {
+        public java.util.List<String> getSQLExtOption() {
             return this.SQLExtOption;
         }
 
         /**
          * @return selectedTables
          */
-        public java.util.List < String > getSelectedTables() {
+        public java.util.List<String> getSelectedTables() {
             return this.selectedTables;
         }
 
         /**
          * @return tables
          */
-        public java.util.Map < String, String > getTables() {
+        public java.util.Map<String, String> getTables() {
             return this.tables;
         }
 
@@ -328,19 +333,19 @@ public class CreateDatabaseExportOrderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > dataOption; 
+            private java.util.List<String> dataOption; 
             private String exportContent; 
-            private java.util.List < String > exportTypes; 
-            private java.util.List < String > SQLExtOption; 
-            private java.util.List < String > selectedTables; 
-            private java.util.Map < String, String > tables; 
+            private java.util.List<String> exportTypes; 
+            private java.util.List<String> SQLExtOption; 
+            private java.util.List<String> selectedTables; 
+            private java.util.Map<String, String> tables; 
             private String targetOption; 
 
             /**
              * <p>The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder dataOption(java.util.List < String > dataOption) {
+            public Builder dataOption(java.util.List<String> dataOption) {
                 this.dataOption = dataOption;
                 return this;
             }
@@ -365,7 +370,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             /**
              * <p>The types of schemas that you want to export.</p>
              */
-            public Builder exportTypes(java.util.List < String > exportTypes) {
+            public Builder exportTypes(java.util.List<String> exportTypes) {
                 this.exportTypes = exportTypes;
                 return this;
             }
@@ -374,7 +379,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
              * <p>The extension options of the SQL script. You can leave this parameter empty.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder SQLExtOption(java.util.List < String > SQLExtOption) {
+            public Builder SQLExtOption(java.util.List<String> SQLExtOption) {
                 this.SQLExtOption = SQLExtOption;
                 return this;
             }
@@ -382,7 +387,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             /**
              * <p>The tables that you want to export.</p>
              */
-            public Builder selectedTables(java.util.List < String > selectedTables) {
+            public Builder selectedTables(java.util.List<String> selectedTables) {
                 this.selectedTables = selectedTables;
                 return this;
             }
@@ -390,7 +395,7 @@ public class CreateDatabaseExportOrderRequest extends Request {
             /**
              * <p>The conditions used to filter the tables to be exported.</p>
              */
-            public Builder tables(java.util.Map < String, String > tables) {
+            public Builder tables(java.util.Map<String, String> tables) {
                 this.tables = tables;
                 return this;
             }

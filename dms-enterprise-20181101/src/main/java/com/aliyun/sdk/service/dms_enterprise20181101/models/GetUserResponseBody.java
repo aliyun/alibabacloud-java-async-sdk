@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class GetUserResponseBody extends TeaModel {
      */
     public static class RoleIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleIds")
-        private java.util.List < Integer > roleIds;
+        private java.util.List<Integer> roleIds;
 
         private RoleIdList(Builder builder) {
             this.roleIds = builder.roleIds;
@@ -172,17 +177,17 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return roleIds
          */
-        public java.util.List < Integer > getRoleIds() {
+        public java.util.List<Integer> getRoleIds() {
             return this.roleIds;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > roleIds; 
+            private java.util.List<Integer> roleIds; 
 
             /**
              * RoleIds.
              */
-            public Builder roleIds(java.util.List < Integer > roleIds) {
+            public Builder roleIds(java.util.List<Integer> roleIds) {
                 this.roleIds = roleIds;
                 return this;
             }
@@ -202,7 +207,7 @@ public class GetUserResponseBody extends TeaModel {
      */
     public static class RoleNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleNames")
-        private java.util.List < String > roleNames;
+        private java.util.List<String> roleNames;
 
         private RoleNameList(Builder builder) {
             this.roleNames = builder.roleNames;
@@ -219,17 +224,17 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return roleNames
          */
-        public java.util.List < String > getRoleNames() {
+        public java.util.List<String> getRoleNames() {
             return this.roleNames;
         }
 
         public static final class Builder {
-            private java.util.List < String > roleNames; 
+            private java.util.List<String> roleNames; 
 
             /**
              * RoleNames.
              */
-            public Builder roleNames(java.util.List < String > roleNames) {
+            public Builder roleNames(java.util.List<String> roleNames) {
                 this.roleNames = roleNames;
                 return this;
             }

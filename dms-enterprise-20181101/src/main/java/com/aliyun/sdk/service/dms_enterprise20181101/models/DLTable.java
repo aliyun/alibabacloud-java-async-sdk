@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,10 +54,10 @@ public class DLTable extends TeaModel {
     private String ownerType;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.NameInMap("PartitionKeys")
-    private java.util.List < DLColumn > partitionKeys;
+    private java.util.List<DLColumn> partitionKeys;
 
     @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
@@ -186,14 +191,14 @@ public class DLTable extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
     /**
      * @return partitionKeys
      */
-    public java.util.List < DLColumn > getPartitionKeys() {
+    public java.util.List<DLColumn> getPartitionKeys() {
         return this.partitionKeys;
     }
 
@@ -245,8 +250,8 @@ public class DLTable extends TeaModel {
         private String name; 
         private String owner; 
         private String ownerType; 
-        private java.util.Map < String, ? > parameters; 
-        private java.util.List < DLColumn > partitionKeys; 
+        private java.util.Map<String, ?> parameters; 
+        private java.util.List<DLColumn> partitionKeys; 
         private Integer retention; 
         private DLStorageDescriptor storageDescriptor; 
         private String tableType; 
@@ -352,7 +357,7 @@ public class DLTable extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -360,7 +365,7 @@ public class DLTable extends TeaModel {
         /**
          * PartitionKeys.
          */
-        public Builder partitionKeys(java.util.List < DLColumn > partitionKeys) {
+        public Builder partitionKeys(java.util.List<DLColumn> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         private String feedback;
 
         @com.aliyun.core.annotation.NameInMap("Messages")
-        private java.util.List < String > messages;
+        private java.util.List<String> messages;
 
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
@@ -262,7 +267,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         private String ruleType;
 
         @com.aliyun.core.annotation.NameInMap("Scripts")
-        private java.util.List < Scripts> scripts;
+        private java.util.List<Scripts> scripts;
 
         private Results(Builder builder) {
             this.comments = builder.comments;
@@ -298,7 +303,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         /**
          * @return messages
          */
-        public java.util.List < String > getMessages() {
+        public java.util.List<String> getMessages() {
             return this.messages;
         }
 
@@ -319,17 +324,17 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         /**
          * @return scripts
          */
-        public java.util.List < Scripts> getScripts() {
+        public java.util.List<Scripts> getScripts() {
             return this.scripts;
         }
 
         public static final class Builder {
             private String comments; 
             private String feedback; 
-            private java.util.List < String > messages; 
+            private java.util.List<String> messages; 
             private String ruleName; 
             private String ruleType; 
-            private java.util.List < Scripts> scripts; 
+            private java.util.List<Scripts> scripts; 
 
             /**
              * <p>The comment that is specified when you create the SQL review rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</p>
@@ -364,7 +369,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             /**
              * <p>The review results.</p>
              */
-            public Builder messages(java.util.List < String > messages) {
+            public Builder messages(java.util.List<String> messages) {
                 this.messages = messages;
                 return this;
             }
@@ -398,7 +403,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             /**
              * <p>The SQL script for data changes.</p>
              */
-            public Builder scripts(java.util.List < Scripts> scripts) {
+            public Builder scripts(java.util.List<Scripts> scripts) {
                 this.scripts = scripts;
                 return this;
             }
@@ -424,7 +429,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         private Boolean occurError;
 
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         private QualityResult(Builder builder) {
             this.errorMessage = builder.errorMessage;
@@ -457,14 +462,14 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
         public static final class Builder {
             private String errorMessage; 
             private Boolean occurError; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
 
             /**
              * <p>The error message returned.</p>
@@ -495,7 +500,7 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
             /**
              * <p>The review results based on rules.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }

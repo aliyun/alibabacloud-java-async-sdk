@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -228,7 +233,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
      */
     public static class TimeVariables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeVariable")
-        private java.util.List < TimeVariable> timeVariable;
+        private java.util.List<TimeVariable> timeVariable;
 
         private TimeVariables(Builder builder) {
             this.timeVariable = builder.timeVariable;
@@ -245,17 +250,17 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
         /**
          * @return timeVariable
          */
-        public java.util.List < TimeVariable> getTimeVariable() {
+        public java.util.List<TimeVariable> getTimeVariable() {
             return this.timeVariable;
         }
 
         public static final class Builder {
-            private java.util.List < TimeVariable> timeVariable; 
+            private java.util.List<TimeVariable> timeVariable; 
 
             /**
              * TimeVariable.
              */
-            public Builder timeVariable(java.util.List < TimeVariable> timeVariable) {
+            public Builder timeVariable(java.util.List<TimeVariable> timeVariable) {
                 this.timeVariable = timeVariable;
                 return this;
             }

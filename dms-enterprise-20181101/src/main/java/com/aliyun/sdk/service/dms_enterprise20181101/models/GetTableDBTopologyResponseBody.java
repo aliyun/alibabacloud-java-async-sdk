@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -259,7 +264,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         private String envType;
 
         @com.aliyun.core.annotation.NameInMap("TableList")
-        private java.util.List < TableList> tableList;
+        private java.util.List<TableList> tableList;
 
         private DatabaseList(Builder builder) {
             this.dbId = builder.dbId;
@@ -308,7 +313,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         /**
          * @return tableList
          */
-        public java.util.List < TableList> getTableList() {
+        public java.util.List<TableList> getTableList() {
             return this.tableList;
         }
 
@@ -317,7 +322,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             private String dbName; 
             private String dbType; 
             private String envType; 
-            private java.util.List < TableList> tableList; 
+            private java.util.List<TableList> tableList; 
 
             /**
              * <p>The ID of the database.</p>
@@ -379,7 +384,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             /**
              * <p>The physical tables.</p>
              */
-            public Builder tableList(java.util.List < TableList> tableList) {
+            public Builder tableList(java.util.List<TableList> tableList) {
                 this.tableList = tableList;
                 return this;
             }
@@ -399,7 +404,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
      */
     public static class DataSourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseList")
-        private java.util.List < DatabaseList> databaseList;
+        private java.util.List<DatabaseList> databaseList;
 
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
@@ -432,7 +437,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         /**
          * @return databaseList
          */
-        public java.util.List < DatabaseList> getDatabaseList() {
+        public java.util.List<DatabaseList> getDatabaseList() {
             return this.databaseList;
         }
 
@@ -465,7 +470,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DatabaseList> databaseList; 
+            private java.util.List<DatabaseList> databaseList; 
             private String dbType; 
             private String host; 
             private Integer port; 
@@ -474,7 +479,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             /**
              * <p>The physical databases.</p>
              */
-            public Builder databaseList(java.util.List < DatabaseList> databaseList) {
+            public Builder databaseList(java.util.List<DatabaseList> databaseList) {
                 this.databaseList = databaseList;
                 return this;
             }
@@ -538,7 +543,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
      */
     public static class DBTopology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceList")
-        private java.util.List < DataSourceList> dataSourceList;
+        private java.util.List<DataSourceList> dataSourceList;
 
         @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
@@ -563,7 +568,7 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         /**
          * @return dataSourceList
          */
-        public java.util.List < DataSourceList> getDataSourceList() {
+        public java.util.List<DataSourceList> getDataSourceList() {
             return this.dataSourceList;
         }
 
@@ -582,14 +587,14 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataSourceList> dataSourceList; 
+            private java.util.List<DataSourceList> dataSourceList; 
             private String tableGuid; 
             private String tableName; 
 
             /**
              * <p>The data sources.</p>
              */
-            public Builder dataSourceList(java.util.List < DataSourceList> dataSourceList) {
+            public Builder dataSourceList(java.util.List<DataSourceList> dataSourceList) {
                 this.dataSourceList = dataSourceList;
                 return this;
             }

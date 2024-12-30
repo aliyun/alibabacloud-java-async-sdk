@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAbacAuthorizationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AuthorizationList")
-    private java.util.List < AuthorizationList> authorizationList;
+    private java.util.List<AuthorizationList> authorizationList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
     /**
      * @return authorizationList
      */
-    public java.util.List < AuthorizationList> getAuthorizationList() {
+    public java.util.List<AuthorizationList> getAuthorizationList() {
         return this.authorizationList;
     }
 
@@ -90,7 +95,7 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AuthorizationList> authorizationList; 
+        private java.util.List<AuthorizationList> authorizationList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListAbacAuthorizationsResponseBody extends TeaModel {
         /**
          * AuthorizationList.
          */
-        public Builder authorizationList(java.util.List < AuthorizationList> authorizationList) {
+        public Builder authorizationList(java.util.List<AuthorizationList> authorizationList) {
             this.authorizationList = authorizationList;
             return this;
         }

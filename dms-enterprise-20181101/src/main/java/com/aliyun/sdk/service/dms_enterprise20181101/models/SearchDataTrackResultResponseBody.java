@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,10 +160,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
      */
     public static class EventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataAfter")
-        private java.util.List < String > dataAfter;
+        private java.util.List<String> dataAfter;
 
         @com.aliyun.core.annotation.NameInMap("DataBefore")
-        private java.util.List < String > dataBefore;
+        private java.util.List<String> dataBefore;
 
         @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
@@ -196,14 +201,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         /**
          * @return dataAfter
          */
-        public java.util.List < String > getDataAfter() {
+        public java.util.List<String> getDataAfter() {
             return this.dataAfter;
         }
 
         /**
          * @return dataBefore
          */
-        public java.util.List < String > getDataBefore() {
+        public java.util.List<String> getDataBefore() {
             return this.dataBefore;
         }
 
@@ -243,8 +248,8 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > dataAfter; 
-            private java.util.List < String > dataBefore; 
+            private java.util.List<String> dataAfter; 
+            private java.util.List<String> dataBefore; 
             private Long eventId; 
             private Long eventLength; 
             private String eventTimestamp; 
@@ -254,7 +259,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             /**
              * <p>The data records after you perform data operations in the database.</p>
              */
-            public Builder dataAfter(java.util.List < String > dataAfter) {
+            public Builder dataAfter(java.util.List<String> dataAfter) {
                 this.dataAfter = dataAfter;
                 return this;
             }
@@ -262,7 +267,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             /**
              * <p>The data records before you perform data operations in the database.</p>
              */
-            public Builder dataBefore(java.util.List < String > dataBefore) {
+            public Builder dataBefore(java.util.List<String> dataBefore) {
                 this.dataBefore = dataBefore;
                 return this;
             }
@@ -468,7 +473,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
      */
     public static class TableInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -497,7 +502,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -523,7 +528,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String description; 
             private String schemaName; 
             private String tableName; 
@@ -531,7 +536,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             /**
              * <p>The information about columns.</p>
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -584,10 +589,10 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
      */
     public static class TrackResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventList")
-        private java.util.List < EventList> eventList;
+        private java.util.List<EventList> eventList;
 
         @com.aliyun.core.annotation.NameInMap("TableInfoList")
-        private java.util.List < TableInfoList> tableInfoList;
+        private java.util.List<TableInfoList> tableInfoList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -609,14 +614,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         /**
          * @return eventList
          */
-        public java.util.List < EventList> getEventList() {
+        public java.util.List<EventList> getEventList() {
             return this.eventList;
         }
 
         /**
          * @return tableInfoList
          */
-        public java.util.List < TableInfoList> getTableInfoList() {
+        public java.util.List<TableInfoList> getTableInfoList() {
             return this.tableInfoList;
         }
 
@@ -628,14 +633,14 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventList> eventList; 
-            private java.util.List < TableInfoList> tableInfoList; 
+            private java.util.List<EventList> eventList; 
+            private java.util.List<TableInfoList> tableInfoList; 
             private Long totalCount; 
 
             /**
              * <p>The details of the event logs.</p>
              */
-            public Builder eventList(java.util.List < EventList> eventList) {
+            public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
                 return this;
             }
@@ -643,7 +648,7 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
             /**
              * <p>The metadata of tables for which you track data operations.</p>
              */
-            public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
+            public Builder tableInfoList(java.util.List<TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
                 return this;
             }

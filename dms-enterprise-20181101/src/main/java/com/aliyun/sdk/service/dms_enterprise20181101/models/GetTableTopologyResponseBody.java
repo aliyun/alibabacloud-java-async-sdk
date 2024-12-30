@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -463,7 +468,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         private String tableName;
 
         @com.aliyun.core.annotation.NameInMap("TableTopologyInfoList")
-        private java.util.List < TableTopologyInfoList> tableTopologyInfoList;
+        private java.util.List<TableTopologyInfoList> tableTopologyInfoList;
 
         private TableTopology(Builder builder) {
             this.logic = builder.logic;
@@ -504,7 +509,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
         /**
          * @return tableTopologyInfoList
          */
-        public java.util.List < TableTopologyInfoList> getTableTopologyInfoList() {
+        public java.util.List<TableTopologyInfoList> getTableTopologyInfoList() {
             return this.tableTopologyInfoList;
         }
 
@@ -512,7 +517,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             private Boolean logic; 
             private String tableGuid; 
             private String tableName; 
-            private java.util.List < TableTopologyInfoList> tableTopologyInfoList; 
+            private java.util.List<TableTopologyInfoList> tableTopologyInfoList; 
 
             /**
              * <p>Indicates whether the table is a logical table. Valid values:</p>
@@ -554,7 +559,7 @@ public class GetTableTopologyResponseBody extends TeaModel {
             /**
              * <p>Information of the topology of the table.</p>
              */
-            public Builder tableTopologyInfoList(java.util.List < TableTopologyInfoList> tableTopologyInfoList) {
+            public Builder tableTopologyInfoList(java.util.List<TableTopologyInfoList> tableTopologyInfoList) {
                 this.tableTopologyInfoList = tableTopologyInfoList;
                 return this;
             }

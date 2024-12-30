@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -240,10 +245,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         private Boolean logic;
 
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
-        private java.util.List < Long > ownerIds;
+        private java.util.List<Long> ownerIds;
 
         @com.aliyun.core.annotation.NameInMap("OwnerNickNames")
-        private java.util.List < String > ownerNickNames;
+        private java.util.List<String> ownerNickNames;
 
         @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
@@ -297,14 +302,14 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < Long > getOwnerIds() {
+        public java.util.List<Long> getOwnerIds() {
             return this.ownerIds;
         }
 
         /**
          * @return ownerNickNames
          */
-        public java.util.List < String > getOwnerNickNames() {
+        public java.util.List<String> getOwnerNickNames() {
             return this.ownerNickNames;
         }
 
@@ -320,8 +325,8 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String dbType; 
             private String envType; 
             private Boolean logic; 
-            private java.util.List < Long > ownerIds; 
-            private java.util.List < String > ownerNickNames; 
+            private java.util.List<Long> ownerIds; 
+            private java.util.List<String> ownerNickNames; 
             private String searchName; 
 
             /**
@@ -375,7 +380,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of the owners of the database.</p>
              */
-            public Builder ownerIds(java.util.List < Long > ownerIds) {
+            public Builder ownerIds(java.util.List<Long> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -383,7 +388,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The nicknames of the owners of the database.</p>
              */
-            public Builder ownerNickNames(java.util.List < String > ownerNickNames) {
+            public Builder ownerNickNames(java.util.List<String> ownerNickNames) {
                 this.ownerNickNames = ownerNickNames;
                 return this;
             }
@@ -432,10 +437,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
-        private java.util.List < Long > ownerIds;
+        private java.util.List<Long> ownerIds;
 
         @com.aliyun.core.annotation.NameInMap("OwnerNickName")
-        private java.util.List < String > ownerNickName;
+        private java.util.List<String> ownerNickName;
 
         @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
@@ -509,14 +514,14 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < Long > getOwnerIds() {
+        public java.util.List<Long> getOwnerIds() {
             return this.ownerIds;
         }
 
         /**
          * @return ownerNickName
          */
-        public java.util.List < String > getOwnerNickName() {
+        public java.util.List<String> getOwnerNickName() {
             return this.ownerNickName;
         }
 
@@ -541,8 +546,8 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             private String envType; 
             private String host; 
             private String instanceId; 
-            private java.util.List < Long > ownerIds; 
-            private java.util.List < String > ownerNickName; 
+            private java.util.List<Long> ownerIds; 
+            private java.util.List<String> ownerNickName; 
             private Long port; 
             private String searchName; 
 
@@ -615,7 +620,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of the owners of the instance.</p>
              */
-            public Builder ownerIds(java.util.List < Long > ownerIds) {
+            public Builder ownerIds(java.util.List<Long> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -623,7 +628,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The nicknames of the owners of the instance.</p>
              */
-            public Builder ownerNickName(java.util.List < String > ownerNickName) {
+            public Builder ownerNickName(java.util.List<String> ownerNickName) {
                 this.ownerNickName = ownerNickName;
                 return this;
             }
@@ -828,7 +833,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         private Long permType;
 
         @com.aliyun.core.annotation.NameInMap("Resources")
-        private java.util.List < Resources> resources;
+        private java.util.List<Resources> resources;
 
         @com.aliyun.core.annotation.NameInMap("Seconds")
         private Long seconds;
@@ -865,7 +870,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < Resources> getResources() {
+        public java.util.List<Resources> getResources() {
             return this.resources;
         }
 
@@ -879,7 +884,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String applyType; 
             private Long permType; 
-            private java.util.List < Resources> resources; 
+            private java.util.List<Resources> resources; 
             private Long seconds; 
 
             /**
@@ -923,7 +928,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The list of resources.</p>
              */
-            public Builder resources(java.util.List < Resources> resources) {
+            public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;
                 return this;
             }

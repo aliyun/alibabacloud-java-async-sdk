@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMetaTableColumnResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ColumnList")
-    private java.util.List < ColumnList> columnList;
+    private java.util.List<ColumnList> columnList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     /**
      * @return columnList
      */
-    public java.util.List < ColumnList> getColumnList() {
+    public java.util.List<ColumnList> getColumnList() {
         return this.columnList;
     }
 
@@ -79,7 +84,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ColumnList> columnList; 
+        private java.util.List<ColumnList> columnList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         /**
          * <p>The details about fields in the table.</p>
          */
-        public Builder columnList(java.util.List < ColumnList> columnList) {
+        public Builder columnList(java.util.List<ColumnList> columnList) {
             this.columnList = columnList;
             return this;
         }

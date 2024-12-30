@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteLhMembersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Integer > memberIds;
+    private java.util.List<Integer> memberIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectId")
@@ -68,7 +73,7 @@ public class DeleteLhMembersRequest extends Request {
     /**
      * @return memberIds
      */
-    public java.util.List < Integer > getMemberIds() {
+    public java.util.List<Integer> getMemberIds() {
         return this.memberIds;
     }
 
@@ -95,7 +100,7 @@ public class DeleteLhMembersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteLhMembersRequest, Builder> {
         private String regionId; 
-        private java.util.List < Integer > memberIds; 
+        private java.util.List<Integer> memberIds; 
         private Long objectId; 
         private Integer objectType; 
         private Long tid; 
@@ -126,7 +131,7 @@ public class DeleteLhMembersRequest extends Request {
          * <p>The ID of the user to be removed. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain the user ID.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder memberIds(java.util.List < Integer > memberIds) {
+        public Builder memberIds(java.util.List<Integer> memberIds) {
             String memberIdsShrink = shrink(memberIds, "MemberIds", "json");
             this.putQueryParameter("MemberIds", memberIdsShrink);
             this.memberIds = memberIds;

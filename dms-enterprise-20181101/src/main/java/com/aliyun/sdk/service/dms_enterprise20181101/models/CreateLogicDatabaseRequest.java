@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateLogicDatabaseRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabaseIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > databaseIds;
+    private java.util.List<Long> databaseIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -69,7 +74,7 @@ public class CreateLogicDatabaseRequest extends Request {
     /**
      * @return databaseIds
      */
-    public java.util.List < Long > getDatabaseIds() {
+    public java.util.List<Long> getDatabaseIds() {
         return this.databaseIds;
     }
 
@@ -83,7 +88,7 @@ public class CreateLogicDatabaseRequest extends Request {
     public static final class Builder extends Request.Builder<CreateLogicDatabaseRequest, Builder> {
         private String regionId; 
         private String alias; 
-        private java.util.List < Long > databaseIds; 
+        private java.util.List<Long> databaseIds; 
         private Long tid; 
 
         private Builder() {
@@ -124,7 +129,7 @@ public class CreateLogicDatabaseRequest extends Request {
          * <p>The IDs of the physical databases that compose the logical database. You can specify one or more database IDs. You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listdatabases">ListDatabases</a> or <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/searchdatabase">SearchDatabase</a> operation to query the IDs of the physical databases.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder databaseIds(java.util.List < Long > databaseIds) {
+        public Builder databaseIds(java.util.List<Long> databaseIds) {
             String databaseIdsShrink = shrink(databaseIds, "DatabaseIds", "json");
             this.putQueryParameter("DatabaseIds", databaseIdsShrink);
             this.databaseIds = databaseIds;

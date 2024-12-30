@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDataLakeCatalogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CataLogList")
-    private CataLogList cataLogList;
+    private java.util.List<DLCatalog> cataLogList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     /**
      * @return cataLogList
      */
-    public CataLogList getCataLogList() {
+    public java.util.List<DLCatalog> getCataLogList() {
         return this.cataLogList;
     }
 
@@ -79,7 +84,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private CataLogList cataLogList; 
+        private java.util.List<DLCatalog> cataLogList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
         /**
          * CataLogList.
          */
-        public Builder cataLogList(CataLogList cataLogList) {
+        public Builder cataLogList(java.util.List<DLCatalog> cataLogList) {
             this.cataLogList = cataLogList;
             return this;
         }
@@ -131,51 +136,4 @@ public class ListDataLakeCatalogResponseBody extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link ListDataLakeCatalogResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListDataLakeCatalogResponseBody</p>
-     */
-    public static class CataLogList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Catalog")
-        private java.util.List < DLCatalog > catalog;
-
-        private CataLogList(Builder builder) {
-            this.catalog = builder.catalog;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CataLogList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return catalog
-         */
-        public java.util.List < DLCatalog > getCatalog() {
-            return this.catalog;
-        }
-
-        public static final class Builder {
-            private java.util.List < DLCatalog > catalog; 
-
-            /**
-             * Catalog.
-             */
-            public Builder catalog(java.util.List < DLCatalog > catalog) {
-                this.catalog = catalog;
-                return this;
-            }
-
-            public CataLogList build() {
-                return new CataLogList(this);
-            } 
-
-        } 
-
-    }
 }

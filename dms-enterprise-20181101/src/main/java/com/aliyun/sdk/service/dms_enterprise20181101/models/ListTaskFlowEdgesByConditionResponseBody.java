@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
      */
     public static class Edges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edge")
-        private java.util.List < Edge> edge;
+        private java.util.List<Edge> edge;
 
         private Edges(Builder builder) {
             this.edge = builder.edge;
@@ -268,17 +273,17 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
         /**
          * @return edge
          */
-        public java.util.List < Edge> getEdge() {
+        public java.util.List<Edge> getEdge() {
             return this.edge;
         }
 
         public static final class Builder {
-            private java.util.List < Edge> edge; 
+            private java.util.List<Edge> edge; 
 
             /**
              * Edge.
              */
-            public Builder edge(java.util.List < Edge> edge) {
+            public Builder edge(java.util.List<Edge> edge) {
                 this.edge = edge;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateSLARulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlaRuleList")
-    private java.util.List < SlaRuleList> slaRuleList;
+    private java.util.List<SlaRuleList> slaRuleList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -68,7 +73,7 @@ public class UpdateSLARulesRequest extends Request {
     /**
      * @return slaRuleList
      */
-    public java.util.List < SlaRuleList> getSlaRuleList() {
+    public java.util.List<SlaRuleList> getSlaRuleList() {
         return this.slaRuleList;
     }
 
@@ -82,7 +87,7 @@ public class UpdateSLARulesRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateSLARulesRequest, Builder> {
         private String regionId; 
         private Long dagId; 
-        private java.util.List < SlaRuleList> slaRuleList; 
+        private java.util.List<SlaRuleList> slaRuleList; 
         private Long tid; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class UpdateSLARulesRequest extends Request {
         /**
          * <p>The list of SLA rules.</p>
          */
-        public Builder slaRuleList(java.util.List < SlaRuleList> slaRuleList) {
+        public Builder slaRuleList(java.util.List<SlaRuleList> slaRuleList) {
             String slaRuleListShrink = shrink(slaRuleList, "SlaRuleList", "json");
             this.putQueryParameter("SlaRuleList", slaRuleListShrink);
             this.slaRuleList = slaRuleList;

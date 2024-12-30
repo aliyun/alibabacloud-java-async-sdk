@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("PreCheckSQLDetailList")
-    private java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList;
+    private java.util.List<PreCheckSQLDetailList> preCheckSQLDetailList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     /**
      * @return preCheckSQLDetailList
      */
-    public java.util.List < PreCheckSQLDetailList> getPreCheckSQLDetailList() {
+    public java.util.List<PreCheckSQLDetailList> getPreCheckSQLDetailList() {
         return this.preCheckSQLDetailList;
     }
 
@@ -92,7 +97,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList; 
+        private java.util.List<PreCheckSQLDetailList> preCheckSQLDetailList; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -122,7 +127,7 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
         /**
          * <p>The precheck information of SQL statements.</p>
          */
-        public Builder preCheckSQLDetailList(java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList) {
+        public Builder preCheckSQLDetailList(java.util.List<PreCheckSQLDetailList> preCheckSQLDetailList) {
             this.preCheckSQLDetailList = preCheckSQLDetailList;
             return this;
         }

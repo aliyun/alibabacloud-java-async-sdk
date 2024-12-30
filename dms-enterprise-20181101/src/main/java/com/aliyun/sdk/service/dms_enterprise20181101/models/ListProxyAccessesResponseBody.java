@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("ProxyAccessList")
-    private java.util.List < ProxyAccessList> proxyAccessList;
+    private java.util.List<ProxyAccessList> proxyAccessList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     /**
      * @return proxyAccessList
      */
-    public java.util.List < ProxyAccessList> getProxyAccessList() {
+    public java.util.List<ProxyAccessList> getProxyAccessList() {
         return this.proxyAccessList;
     }
 
@@ -81,7 +86,7 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < ProxyAccessList> proxyAccessList; 
+        private java.util.List<ProxyAccessList> proxyAccessList; 
         private String requestId; 
         private Boolean success; 
 
@@ -110,7 +115,7 @@ public class ListProxyAccessesResponseBody extends TeaModel {
         /**
          * <p>The information about the users that are authorized to access the database instance by using the secure access proxy feature.</p>
          */
-        public Builder proxyAccessList(java.util.List < ProxyAccessList> proxyAccessList) {
+        public Builder proxyAccessList(java.util.List<ProxyAccessList> proxyAccessList) {
             this.proxyAccessList = proxyAccessList;
             return this;
         }

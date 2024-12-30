@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SensitivityLevelList")
-    private java.util.List < SensitivityLevelList> sensitivityLevelList;
+    private java.util.List<SensitivityLevelList> sensitivityLevelList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -67,7 +72,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
     /**
      * @return sensitivityLevelList
      */
-    public java.util.List < SensitivityLevelList> getSensitivityLevelList() {
+    public java.util.List<SensitivityLevelList> getSensitivityLevelList() {
         return this.sensitivityLevelList;
     }
 
@@ -82,7 +87,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < SensitivityLevelList> sensitivityLevelList; 
+        private java.util.List<SensitivityLevelList> sensitivityLevelList; 
         private Boolean success; 
 
         /**
@@ -121,7 +126,7 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
         /**
          * <p>The sensitivity levels.</p>
          */
-        public Builder sensitivityLevelList(java.util.List < SensitivityLevelList> sensitivityLevelList) {
+        public Builder sensitivityLevelList(java.util.List<SensitivityLevelList> sensitivityLevelList) {
             this.sensitivityLevelList = sensitivityLevelList;
             return this;
         }

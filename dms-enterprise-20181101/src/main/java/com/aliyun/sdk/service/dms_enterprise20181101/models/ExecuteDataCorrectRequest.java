@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ExecuteDataCorrectRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ActionDetail")
-    private java.util.Map < String, ? > actionDetail;
+    private java.util.Map<String, ?> actionDetail;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderId")
@@ -65,7 +70,7 @@ public class ExecuteDataCorrectRequest extends Request {
     /**
      * @return actionDetail
      */
-    public java.util.Map < String, ? > getActionDetail() {
+    public java.util.Map<String, ?> getActionDetail() {
         return this.actionDetail;
     }
 
@@ -92,7 +97,7 @@ public class ExecuteDataCorrectRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExecuteDataCorrectRequest, Builder> {
         private String regionId; 
-        private java.util.Map < String, ? > actionDetail; 
+        private java.util.Map<String, ?> actionDetail; 
         private Long orderId; 
         private String realLoginUserUid; 
         private String tid; 
@@ -134,7 +139,7 @@ public class ExecuteDataCorrectRequest extends Request {
          * <strong>example:</strong>
          * <p>{ &quot;startTime&quot; : &quot;2021-07-01 00:00:00&quot;, &quot;endTime&quot; : &quot;2021-07-01 01:00:00&quot;, &quot;transaction&quot; : false, &quot;backupData&quot; : true }</p>
          */
-        public Builder actionDetail(java.util.Map < String, ? > actionDetail) {
+        public Builder actionDetail(java.util.Map<String, ?> actionDetail) {
             String actionDetailShrink = shrink(actionDetail, "ActionDetail", "json");
             this.putQueryParameter("ActionDetail", actionDetailShrink);
             this.actionDetail = actionDetail;

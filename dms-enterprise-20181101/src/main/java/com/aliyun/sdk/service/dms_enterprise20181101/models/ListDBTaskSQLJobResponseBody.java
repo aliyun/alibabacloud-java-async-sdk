@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDBTaskSQLJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBTaskSQLJobList")
-    private java.util.List < DBTaskSQLJobList> DBTaskSQLJobList;
+    private java.util.List<DBTaskSQLJobList> DBTaskSQLJobList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
     /**
      * @return DBTaskSQLJobList
      */
-    public java.util.List < DBTaskSQLJobList> getDBTaskSQLJobList() {
+    public java.util.List<DBTaskSQLJobList> getDBTaskSQLJobList() {
         return this.DBTaskSQLJobList;
     }
 
@@ -90,7 +95,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBTaskSQLJobList> DBTaskSQLJobList; 
+        private java.util.List<DBTaskSQLJobList> DBTaskSQLJobList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
         /**
          * <p>The list of the SQL tasks.</p>
          */
-        public Builder DBTaskSQLJobList(java.util.List < DBTaskSQLJobList> DBTaskSQLJobList) {
+        public Builder DBTaskSQLJobList(java.util.List<DBTaskSQLJobList> DBTaskSQLJobList) {
             this.DBTaskSQLJobList = DBTaskSQLJobList;
             return this;
         }

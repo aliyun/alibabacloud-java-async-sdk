@@ -100,6 +100,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BackFillResponse> backFill(BackFillRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateDataLakePartitions  BatchCreateDataLakePartitionsRequest
+     * @return BatchCreateDataLakePartitionsResponse
+     */
+    CompletableFuture<BatchCreateDataLakePartitionsResponse> batchCreateDataLakePartitions(BatchCreateDataLakePartitionsRequest request);
+
+    /**
+     * @param request the request parameters of BatchDeleteDataLakePartitions  BatchDeleteDataLakePartitionsRequest
+     * @return BatchDeleteDataLakePartitionsResponse
+     */
+    CompletableFuture<BatchDeleteDataLakePartitionsResponse> batchDeleteDataLakePartitions(BatchDeleteDataLakePartitionsRequest request);
+
+    /**
+     * @param request the request parameters of BatchUpdateDataLakePartitions  BatchUpdateDataLakePartitionsRequest
+     * @return BatchUpdateDataLakePartitionsResponse
+     */
+    CompletableFuture<BatchUpdateDataLakePartitionsResponse> batchUpdateDataLakePartitions(BatchUpdateDataLakePartitionsRequest request);
+
+    /**
      * @param request the request parameters of BuyPayAsYouGoOrder  BuyPayAsYouGoOrderRequest
      * @return BuyPayAsYouGoOrderResponse
      */
@@ -199,6 +217,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDataImportOrderResponse
      */
     CompletableFuture<CreateDataImportOrderResponse> createDataImportOrder(CreateDataImportOrderRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataLakeDatabase  CreateDataLakeDatabaseRequest
+     * @return CreateDataLakeDatabaseResponse
+     */
+    CompletableFuture<CreateDataLakeDatabaseResponse> createDataLakeDatabase(CreateDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataLakePartition  CreateDataLakePartitionRequest
+     * @return CreateDataLakePartitionResponse
+     */
+    CompletableFuture<CreateDataLakePartitionResponse> createDataLakePartition(CreateDataLakePartitionRequest request);
+
+    /**
+     * @param request the request parameters of CreateDataLakeTable  CreateDataLakeTableRequest
+     * @return CreateDataLakeTableResponse
+     */
+    CompletableFuture<CreateDataLakeTableResponse> createDataLakeTable(CreateDataLakeTableRequest request);
 
     /**
      * <b>description</b> :
@@ -364,6 +400,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAuthorityTemplateResponse
      */
     CompletableFuture<DeleteAuthorityTemplateResponse> deleteAuthorityTemplate(DeleteAuthorityTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataLakeDatabase  DeleteDataLakeDatabaseRequest
+     * @return DeleteDataLakeDatabaseResponse
+     */
+    CompletableFuture<DeleteDataLakeDatabaseResponse> deleteDataLakeDatabase(DeleteDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataLakePartition  DeleteDataLakePartitionRequest
+     * @return DeleteDataLakePartitionResponse
+     */
+    CompletableFuture<DeleteDataLakePartitionResponse> deleteDataLakePartition(DeleteDataLakePartitionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataLakeTable  DeleteDataLakeTableRequest
+     * @return DeleteDataLakeTableResponse
+     */
+    CompletableFuture<DeleteDataLakeTableResponse> deleteDataLakeTable(DeleteDataLakeTableRequest request);
 
     /**
      * <b>description</b> :
@@ -677,6 +731,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDataLakeDatabaseResponse
      */
     CompletableFuture<GetDataLakeDatabaseResponse> getDataLakeDatabase(GetDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of GetDataLakePartition  GetDataLakePartitionRequest
+     * @return GetDataLakePartitionResponse
+     */
+    CompletableFuture<GetDataLakePartitionResponse> getDataLakePartition(GetDataLakePartitionRequest request);
 
     /**
      * @param request the request parameters of GetDataLakeTable  GetDataLakeTableRequest
@@ -1103,6 +1163,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataLakeDatabaseResponse
      */
     CompletableFuture<ListDataLakeDatabaseResponse> listDataLakeDatabase(ListDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakePartition  ListDataLakePartitionRequest
+     * @return ListDataLakePartitionResponse
+     */
+    CompletableFuture<ListDataLakePartitionResponse> listDataLakePartition(ListDataLakePartitionRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakePartitionByFilter  ListDataLakePartitionByFilterRequest
+     * @return ListDataLakePartitionByFilterResponse
+     */
+    CompletableFuture<ListDataLakePartitionByFilterResponse> listDataLakePartitionByFilter(ListDataLakePartitionByFilterRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakePartitionName  ListDataLakePartitionNameRequest
+     * @return ListDataLakePartitionNameResponse
+     */
+    CompletableFuture<ListDataLakePartitionNameResponse> listDataLakePartitionName(ListDataLakePartitionNameRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeTable  ListDataLakeTableRequest
+     * @return ListDataLakeTableResponse
+     */
+    CompletableFuture<ListDataLakeTableResponse> listDataLakeTable(ListDataLakeTableRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeTableName  ListDataLakeTableNameRequest
+     * @return ListDataLakeTableNameResponse
+     */
+    CompletableFuture<ListDataLakeTableNameResponse> listDataLakeTableName(ListDataLakeTableNameRequest request);
 
     /**
      * @param request the request parameters of ListDataLakeTablebaseInfo  ListDataLakeTablebaseInfoRequest
@@ -1622,6 +1712,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAuthorityTemplateResponse
      */
     CompletableFuture<UpdateAuthorityTemplateResponse> updateAuthorityTemplate(UpdateAuthorityTemplateRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataLakeDatabase  UpdateDataLakeDatabaseRequest
+     * @return UpdateDataLakeDatabaseResponse
+     */
+    CompletableFuture<UpdateDataLakeDatabaseResponse> updateDataLakeDatabase(UpdateDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataLakePartition  UpdateDataLakePartitionRequest
+     * @return UpdateDataLakePartitionResponse
+     */
+    CompletableFuture<UpdateDataLakePartitionResponse> updateDataLakePartition(UpdateDataLakePartitionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataLakeTable  UpdateDataLakeTableRequest
+     * @return UpdateDataLakeTableResponse
+     */
+    CompletableFuture<UpdateDataLakeTableResponse> updateDataLakeTable(UpdateDataLakeTableRequest request);
 
     /**
      * <b>description</b> :

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateDataCronClearOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    private java.util.List<Long> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -93,7 +98,7 @@ public class CreateDataCronClearOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -109,7 +114,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         private String attachmentKey; 
         private String comment; 
         private Param param; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -175,7 +180,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         /**
          * <p>The stakeholders of this operation. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than Data Management (DMS) administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -449,7 +454,7 @@ public class CreateDataCronClearOrderRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("CronClearItemList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < CronClearItemList> cronClearItemList;
+        private java.util.List<CronClearItemList> cronClearItemList;
 
         @com.aliyun.core.annotation.NameInMap("CronFormat")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -457,7 +462,7 @@ public class CreateDataCronClearOrderRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("DbItemList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < DbItemList> dbItemList;
+        private java.util.List<DbItemList> dbItemList;
 
         @com.aliyun.core.annotation.NameInMap("DurationHour")
         private Long durationHour;
@@ -493,7 +498,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         /**
          * @return cronClearItemList
          */
-        public java.util.List < CronClearItemList> getCronClearItemList() {
+        public java.util.List<CronClearItemList> getCronClearItemList() {
             return this.cronClearItemList;
         }
 
@@ -507,7 +512,7 @@ public class CreateDataCronClearOrderRequest extends Request {
         /**
          * @return dbItemList
          */
-        public java.util.List < DbItemList> getDbItemList() {
+        public java.util.List<DbItemList> getDbItemList() {
             return this.dbItemList;
         }
 
@@ -527,9 +532,9 @@ public class CreateDataCronClearOrderRequest extends Request {
 
         public static final class Builder {
             private String classify; 
-            private java.util.List < CronClearItemList> cronClearItemList; 
+            private java.util.List<CronClearItemList> cronClearItemList; 
             private String cronFormat; 
-            private java.util.List < DbItemList> dbItemList; 
+            private java.util.List<DbItemList> dbItemList; 
             private Long durationHour; 
             private Boolean specifyDuration; 
 
@@ -548,7 +553,7 @@ public class CreateDataCronClearOrderRequest extends Request {
              * <p>The tables for which you want to clear historical data.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder cronClearItemList(java.util.List < CronClearItemList> cronClearItemList) {
+            public Builder cronClearItemList(java.util.List<CronClearItemList> cronClearItemList) {
                 this.cronClearItemList = cronClearItemList;
                 return this;
             }
@@ -569,7 +574,7 @@ public class CreateDataCronClearOrderRequest extends Request {
              * <p>The databases for which you want to clear historical data.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder dbItemList(java.util.List < DbItemList> dbItemList) {
+            public Builder dbItemList(java.util.List<DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
                 return this;
             }

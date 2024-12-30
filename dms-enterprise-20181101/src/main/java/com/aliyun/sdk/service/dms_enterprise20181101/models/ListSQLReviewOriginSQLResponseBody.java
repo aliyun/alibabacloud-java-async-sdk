@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("OriginSQLList")
-    private java.util.List < OriginSQLList> originSQLList;
+    private java.util.List<OriginSQLList> originSQLList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     /**
      * @return originSQLList
      */
-    public java.util.List < OriginSQLList> getOriginSQLList() {
+    public java.util.List<OriginSQLList> getOriginSQLList() {
         return this.originSQLList;
     }
 
@@ -92,7 +97,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < OriginSQLList> originSQLList; 
+        private java.util.List<OriginSQLList> originSQLList; 
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
@@ -122,7 +127,7 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         /**
          * <p>The information about the parsed SQL statements.</p>
          */
-        public Builder originSQLList(java.util.List < OriginSQLList> originSQLList) {
+        public Builder originSQLList(java.util.List<OriginSQLList> originSQLList) {
             this.originSQLList = originSQLList;
             return this;
         }

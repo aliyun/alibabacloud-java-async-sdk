@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -324,10 +329,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
      */
     public static class StructSyncJobAnalyzeResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultList")
-        private java.util.List < ResultList> resultList;
+        private java.util.List<ResultList> resultList;
 
         @com.aliyun.core.annotation.NameInMap("SummaryList")
-        private java.util.List < SummaryList> summaryList;
+        private java.util.List<SummaryList> summaryList;
 
         private StructSyncJobAnalyzeResult(Builder builder) {
             this.resultList = builder.resultList;
@@ -345,25 +350,25 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
         /**
          * @return resultList
          */
-        public java.util.List < ResultList> getResultList() {
+        public java.util.List<ResultList> getResultList() {
             return this.resultList;
         }
 
         /**
          * @return summaryList
          */
-        public java.util.List < SummaryList> getSummaryList() {
+        public java.util.List<SummaryList> getSummaryList() {
             return this.summaryList;
         }
 
         public static final class Builder {
-            private java.util.List < ResultList> resultList; 
-            private java.util.List < SummaryList> summaryList; 
+            private java.util.List<ResultList> resultList; 
+            private java.util.List<SummaryList> summaryList; 
 
             /**
              * <p>The details of the analysis results.</p>
              */
-            public Builder resultList(java.util.List < ResultList> resultList) {
+            public Builder resultList(java.util.List<ResultList> resultList) {
                 this.resultList = resultList;
                 return this;
             }
@@ -371,7 +376,7 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
             /**
              * <p>The statistics on the analysis results.</p>
              */
-            public Builder summaryList(java.util.List < SummaryList> summaryList) {
+            public Builder summaryList(java.util.List<SummaryList> summaryList) {
                 this.summaryList = summaryList;
                 return this;
             }

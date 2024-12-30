@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBTaskSQLJobDetailList")
-    private java.util.List < DBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
+    private java.util.List<DBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     /**
      * @return DBTaskSQLJobDetailList
      */
-    public java.util.List < DBTaskSQLJobDetailList> getDBTaskSQLJobDetailList() {
+    public java.util.List<DBTaskSQLJobDetailList> getDBTaskSQLJobDetailList() {
         return this.DBTaskSQLJobDetailList;
     }
 
@@ -90,7 +95,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBTaskSQLJobDetailList> DBTaskSQLJobDetailList; 
+        private java.util.List<DBTaskSQLJobDetailList> DBTaskSQLJobDetailList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
         /**
          * <p>The details of SQL tasks.</p>
          */
-        public Builder DBTaskSQLJobDetailList(java.util.List < DBTaskSQLJobDetailList> DBTaskSQLJobDetailList) {
+        public Builder DBTaskSQLJobDetailList(java.util.List<DBTaskSQLJobDetailList> DBTaskSQLJobDetailList) {
             this.DBTaskSQLJobDetailList = DBTaskSQLJobDetailList;
             return this;
         }

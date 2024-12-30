@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class CreateDataArchiveOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < String > relatedUserList;
+    private java.util.List<String> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -105,7 +110,7 @@ public class CreateDataArchiveOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < String > getRelatedUserList() {
+    public java.util.List<String> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -122,7 +127,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         private Param param; 
         private Long parentId; 
         private String pluginType; 
-        private java.util.List < String > relatedUserList; 
+        private java.util.List<String> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -200,7 +205,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         /**
          * <p>The list of the related users.</p>
          */
-        public Builder relatedUserList(java.util.List < String > relatedUserList) {
+        public Builder relatedUserList(java.util.List<String> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -389,7 +394,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         private Boolean logic;
 
         @com.aliyun.core.annotation.NameInMap("OrderAfter")
-        private java.util.List < String > orderAfter;
+        private java.util.List<String> orderAfter;
 
         @com.aliyun.core.annotation.NameInMap("RunMethod")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -409,17 +414,17 @@ public class CreateDataArchiveOrderRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("TableIncludes")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < TableIncludes> tableIncludes;
+        private java.util.List<TableIncludes> tableIncludes;
 
         @com.aliyun.core.annotation.NameInMap("TableMapping")
-        private java.util.List < String > tableMapping;
+        private java.util.List<String> tableMapping;
 
         @com.aliyun.core.annotation.NameInMap("TargetInstanceHost")
         @com.aliyun.core.annotation.Validation(required = true)
         private String targetInstanceHost;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private Param(Builder builder) {
             this.archiveMethod = builder.archiveMethod;
@@ -476,7 +481,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         /**
          * @return orderAfter
          */
-        public java.util.List < String > getOrderAfter() {
+        public java.util.List<String> getOrderAfter() {
             return this.orderAfter;
         }
 
@@ -511,14 +516,14 @@ public class CreateDataArchiveOrderRequest extends Request {
         /**
          * @return tableIncludes
          */
-        public java.util.List < TableIncludes> getTableIncludes() {
+        public java.util.List<TableIncludes> getTableIncludes() {
             return this.tableIncludes;
         }
 
         /**
          * @return tableMapping
          */
-        public java.util.List < String > getTableMapping() {
+        public java.util.List<String> getTableMapping() {
             return this.tableMapping;
         }
 
@@ -532,7 +537,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
@@ -541,15 +546,15 @@ public class CreateDataArchiveOrderRequest extends Request {
             private String cronStr; 
             private String databaseId; 
             private Boolean logic; 
-            private java.util.List < String > orderAfter; 
+            private java.util.List<String> orderAfter; 
             private String runMethod; 
             private String sourceCatalogName; 
             private String sourceInstanceName; 
             private String sourceSchemaName; 
-            private java.util.List < TableIncludes> tableIncludes; 
-            private java.util.List < String > tableMapping; 
+            private java.util.List<TableIncludes> tableIncludes; 
+            private java.util.List<String> tableMapping; 
             private String targetInstanceHost; 
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
 
             /**
              * <p>The archiving destination to which you want to archive data. Valid values:</p>
@@ -610,7 +615,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             /**
              * <p>The post behaviors.</p>
              */
-            public Builder orderAfter(java.util.List < String > orderAfter) {
+            public Builder orderAfter(java.util.List<String> orderAfter) {
                 this.orderAfter = orderAfter;
                 return this;
             }
@@ -676,7 +681,7 @@ public class CreateDataArchiveOrderRequest extends Request {
              * <p>The collection of tables to be archived.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
+            public Builder tableIncludes(java.util.List<TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
                 return this;
             }
@@ -684,7 +689,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             /**
              * <p>The table names mapped to the destination database. This parameter is not required and the default value is used.</p>
              */
-            public Builder tableMapping(java.util.List < String > tableMapping) {
+            public Builder tableMapping(java.util.List<String> tableMapping) {
                 this.tableMapping = tableMapping;
                 return this;
             }
@@ -708,7 +713,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             /**
              * <p>The configuration of archiving variables. You can use a time variable as a filter condition for archiving data. Each variable has two attributes: name and pattern.</p>
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }

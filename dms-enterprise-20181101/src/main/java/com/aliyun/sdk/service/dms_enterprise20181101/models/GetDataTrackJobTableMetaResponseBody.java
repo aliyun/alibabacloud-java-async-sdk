@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TableMetaList")
-    private java.util.List < TableMetaList> tableMetaList;
+    private java.util.List<TableMetaList> tableMetaList;
 
     private GetDataTrackJobTableMetaResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -74,7 +79,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
     /**
      * @return tableMetaList
      */
-    public java.util.List < TableMetaList> getTableMetaList() {
+    public java.util.List<TableMetaList> getTableMetaList() {
         return this.tableMetaList;
     }
 
@@ -83,7 +88,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TableMetaList> tableMetaList; 
+        private java.util.List<TableMetaList> tableMetaList; 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -136,7 +141,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         /**
          * <p>The metadata of tables.</p>
          */
-        public Builder tableMetaList(java.util.List < TableMetaList> tableMetaList) {
+        public Builder tableMetaList(java.util.List<TableMetaList> tableMetaList) {
             this.tableMetaList = tableMetaList;
             return this;
         }
@@ -301,7 +306,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
      */
     public static class TableMetaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
@@ -326,7 +331,7 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -345,14 +350,14 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String schemaName; 
             private String tableName; 
 
             /**
              * <p>The information about columns.</p>
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }

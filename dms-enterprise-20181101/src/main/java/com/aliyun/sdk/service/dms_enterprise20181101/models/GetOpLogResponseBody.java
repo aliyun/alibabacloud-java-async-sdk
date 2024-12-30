@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -400,7 +405,7 @@ public class GetOpLogResponseBody extends TeaModel {
      */
     public static class OpLogDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OpLogDetail")
-        private java.util.List < OpLogDetail> opLogDetail;
+        private java.util.List<OpLogDetail> opLogDetail;
 
         private OpLogDetails(Builder builder) {
             this.opLogDetail = builder.opLogDetail;
@@ -417,17 +422,17 @@ public class GetOpLogResponseBody extends TeaModel {
         /**
          * @return opLogDetail
          */
-        public java.util.List < OpLogDetail> getOpLogDetail() {
+        public java.util.List<OpLogDetail> getOpLogDetail() {
             return this.opLogDetail;
         }
 
         public static final class Builder {
-            private java.util.List < OpLogDetail> opLogDetail; 
+            private java.util.List<OpLogDetail> opLogDetail; 
 
             /**
              * OpLogDetail.
              */
-            public Builder opLogDetail(java.util.List < OpLogDetail> opLogDetail) {
+            public Builder opLogDetail(java.util.List<OpLogDetail> opLogDetail) {
                 this.opLogDetail = opLogDetail;
                 return this;
             }

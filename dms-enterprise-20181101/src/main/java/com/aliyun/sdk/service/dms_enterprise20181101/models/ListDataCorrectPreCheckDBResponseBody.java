@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("PreCheckDBList")
-    private java.util.List < PreCheckDBList> preCheckDBList;
+    private java.util.List<PreCheckDBList> preCheckDBList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     /**
      * @return preCheckDBList
      */
-    public java.util.List < PreCheckDBList> getPreCheckDBList() {
+    public java.util.List<PreCheckDBList> getPreCheckDBList() {
         return this.preCheckDBList;
     }
 
@@ -81,7 +86,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < PreCheckDBList> preCheckDBList; 
+        private java.util.List<PreCheckDBList> preCheckDBList; 
         private String requestId; 
         private Boolean success; 
 
@@ -110,7 +115,7 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
         /**
          * <p>The information about the databases that are involved in the precheck.</p>
          */
-        public Builder preCheckDBList(java.util.List < PreCheckDBList> preCheckDBList) {
+        public Builder preCheckDBList(java.util.List<PreCheckDBList> preCheckDBList) {
             this.preCheckDBList = preCheckDBList;
             return this;
         }

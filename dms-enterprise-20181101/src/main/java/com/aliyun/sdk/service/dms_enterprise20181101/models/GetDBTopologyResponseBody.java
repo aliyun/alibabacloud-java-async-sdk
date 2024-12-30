@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -437,7 +442,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("DBTopologyInfoList")
-        private java.util.List < DBTopologyInfoList> DBTopologyInfoList;
+        private java.util.List<DBTopologyInfoList> DBTopologyInfoList;
 
         @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
@@ -482,7 +487,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
         /**
          * @return DBTopologyInfoList
          */
-        public java.util.List < DBTopologyInfoList> getDBTopologyInfoList() {
+        public java.util.List<DBTopologyInfoList> getDBTopologyInfoList() {
             return this.DBTopologyInfoList;
         }
 
@@ -523,7 +528,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.List < DBTopologyInfoList> DBTopologyInfoList; 
+            private java.util.List<DBTopologyInfoList> DBTopologyInfoList; 
             private String dbType; 
             private String envType; 
             private Long logicDbId; 
@@ -544,7 +549,7 @@ public class GetDBTopologyResponseBody extends TeaModel {
             /**
              * <p>The list of database splitting topology information.</p>
              */
-            public Builder DBTopologyInfoList(java.util.List < DBTopologyInfoList> DBTopologyInfoList) {
+            public Builder DBTopologyInfoList(java.util.List<DBTopologyInfoList> DBTopologyInfoList) {
                 this.DBTopologyInfoList = DBTopologyInfoList;
                 return this;
             }

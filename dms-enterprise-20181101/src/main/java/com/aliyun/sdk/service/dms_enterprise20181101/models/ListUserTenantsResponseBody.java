@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TenantList")
-    private java.util.List < TenantList> tenantList;
+    private java.util.List<TenantList> tenantList;
 
     private ListUserTenantsResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -74,7 +79,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
     /**
      * @return tenantList
      */
-    public java.util.List < TenantList> getTenantList() {
+    public java.util.List<TenantList> getTenantList() {
         return this.tenantList;
     }
 
@@ -83,7 +88,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TenantList> tenantList; 
+        private java.util.List<TenantList> tenantList; 
 
         /**
          * <p>The error code.</p>
@@ -136,7 +141,7 @@ public class ListUserTenantsResponseBody extends TeaModel {
         /**
          * <p>The details of the tenants that were returned.</p>
          */
-        public Builder tenantList(java.util.List < TenantList> tenantList) {
+        public Builder tenantList(java.util.List<TenantList> tenantList) {
             this.tenantList = tenantList;
             return this;
         }

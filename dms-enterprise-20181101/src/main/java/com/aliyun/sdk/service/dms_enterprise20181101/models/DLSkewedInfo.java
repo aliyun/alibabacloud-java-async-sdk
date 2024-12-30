@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DLSkewedInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SkewedColNames")
-    private java.util.List < String > skewedColNames;
+    private java.util.List<String> skewedColNames;
 
     @com.aliyun.core.annotation.NameInMap("SkewedColValueLocationMaps")
-    private java.util.Map < String, ? > skewedColValueLocationMaps;
+    private java.util.Map<String, ?> skewedColValueLocationMaps;
 
     @com.aliyun.core.annotation.NameInMap("SkewedColValues")
-    private java.util.List < java.util.List < String > > skewedColValues;
+    private java.util.List<java.util.List<String>> skewedColValues;
 
     private DLSkewedInfo(Builder builder) {
         this.skewedColNames = builder.skewedColNames;
@@ -38,33 +43,33 @@ public class DLSkewedInfo extends TeaModel {
     /**
      * @return skewedColNames
      */
-    public java.util.List < String > getSkewedColNames() {
+    public java.util.List<String> getSkewedColNames() {
         return this.skewedColNames;
     }
 
     /**
      * @return skewedColValueLocationMaps
      */
-    public java.util.Map < String, ? > getSkewedColValueLocationMaps() {
+    public java.util.Map<String, ?> getSkewedColValueLocationMaps() {
         return this.skewedColValueLocationMaps;
     }
 
     /**
      * @return skewedColValues
      */
-    public java.util.List < java.util.List < String > > getSkewedColValues() {
+    public java.util.List<java.util.List<String>> getSkewedColValues() {
         return this.skewedColValues;
     }
 
     public static final class Builder {
-        private java.util.List < String > skewedColNames; 
-        private java.util.Map < String, ? > skewedColValueLocationMaps; 
-        private java.util.List < java.util.List < String > > skewedColValues; 
+        private java.util.List<String> skewedColNames; 
+        private java.util.Map<String, ?> skewedColValueLocationMaps; 
+        private java.util.List<java.util.List<String>> skewedColValues; 
 
         /**
          * SkewedColNames.
          */
-        public Builder skewedColNames(java.util.List < String > skewedColNames) {
+        public Builder skewedColNames(java.util.List<String> skewedColNames) {
             this.skewedColNames = skewedColNames;
             return this;
         }
@@ -72,7 +77,7 @@ public class DLSkewedInfo extends TeaModel {
         /**
          * SkewedColValueLocationMaps.
          */
-        public Builder skewedColValueLocationMaps(java.util.Map < String, ? > skewedColValueLocationMaps) {
+        public Builder skewedColValueLocationMaps(java.util.Map<String, ?> skewedColValueLocationMaps) {
             this.skewedColValueLocationMaps = skewedColValueLocationMaps;
             return this;
         }
@@ -80,7 +85,7 @@ public class DLSkewedInfo extends TeaModel {
         /**
          * SkewedColValues.
          */
-        public Builder skewedColValues(java.util.List < java.util.List < String > > skewedColValues) {
+        public Builder skewedColValues(java.util.List<java.util.List<String>> skewedColValues) {
             this.skewedColValues = skewedColValues;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -306,7 +311,7 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
      */
     public static class AuthorityTemplateViewList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorityTemplateView")
-        private java.util.List < AuthorityTemplateView> authorityTemplateView;
+        private java.util.List<AuthorityTemplateView> authorityTemplateView;
 
         private AuthorityTemplateViewList(Builder builder) {
             this.authorityTemplateView = builder.authorityTemplateView;
@@ -323,17 +328,17 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         /**
          * @return authorityTemplateView
          */
-        public java.util.List < AuthorityTemplateView> getAuthorityTemplateView() {
+        public java.util.List<AuthorityTemplateView> getAuthorityTemplateView() {
             return this.authorityTemplateView;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorityTemplateView> authorityTemplateView; 
+            private java.util.List<AuthorityTemplateView> authorityTemplateView; 
 
             /**
              * AuthorityTemplateView.
              */
-            public Builder authorityTemplateView(java.util.List < AuthorityTemplateView> authorityTemplateView) {
+            public Builder authorityTemplateView(java.util.List<AuthorityTemplateView> authorityTemplateView) {
                 this.authorityTemplateView = authorityTemplateView;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Items")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
@@ -61,7 +66,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -81,7 +86,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddAuthorityTemplateItemsRequest, Builder> {
         private String regionId; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Long templateId; 
         private Long tid; 
 
@@ -109,7 +114,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             String itemsShrink = shrink(items, "Items", "json");
             this.putQueryParameter("Items", itemsShrink);
             this.items = items;
@@ -158,7 +163,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         private Integer instanceId;
 
         @com.aliyun.core.annotation.NameInMap("PermissionTypes")
-        private java.util.List < String > permissionTypes;
+        private java.util.List<String> permissionTypes;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -200,7 +205,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         /**
          * @return permissionTypes
          */
-        public java.util.List < String > getPermissionTypes() {
+        public java.util.List<String> getPermissionTypes() {
             return this.permissionTypes;
         }
 
@@ -221,7 +226,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
         public static final class Builder {
             private Integer dbId; 
             private Integer instanceId; 
-            private java.util.List < String > permissionTypes; 
+            private java.util.List<String> permissionTypes; 
             private String resourceType; 
             private String tableName; 
 
@@ -244,7 +249,7 @@ public class AddAuthorityTemplateItemsRequest extends Request {
             /**
              * PermissionTypes.
              */
-            public Builder permissionTypes(java.util.List < String > permissionTypes) {
+            public Builder permissionTypes(java.util.List<String> permissionTypes) {
                 this.permissionTypes = permissionTypes;
                 return this;
             }

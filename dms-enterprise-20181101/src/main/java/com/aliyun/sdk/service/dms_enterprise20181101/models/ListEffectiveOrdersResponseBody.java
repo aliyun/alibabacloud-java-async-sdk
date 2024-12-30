@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("OrderSummary")
-    private java.util.List < OrderSummary> orderSummary;
+    private java.util.List<OrderSummary> orderSummary;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
     /**
      * @return orderSummary
      */
-    public java.util.List < OrderSummary> getOrderSummary() {
+    public java.util.List<OrderSummary> getOrderSummary() {
         return this.orderSummary;
     }
 
@@ -81,7 +86,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < OrderSummary> orderSummary; 
+        private java.util.List<OrderSummary> orderSummary; 
         private String requestId; 
         private Boolean success; 
 
@@ -110,7 +115,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         /**
          * <p>The information about orders.</p>
          */
-        public Builder orderSummary(java.util.List < OrderSummary> orderSummary) {
+        public Builder orderSummary(java.util.List<OrderSummary> orderSummary) {
             this.orderSummary = orderSummary;
             return this;
         }
@@ -326,7 +331,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         private String commodityType;
 
         @com.aliyun.core.annotation.NameInMap("OrderList")
-        private java.util.List < OrderList> orderList;
+        private java.util.List<OrderList> orderList;
 
         @com.aliyun.core.annotation.NameInMap("TotalQuota")
         private Integer totalQuota;
@@ -367,7 +372,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         /**
          * @return orderList
          */
-        public java.util.List < OrderList> getOrderList() {
+        public java.util.List<OrderList> getOrderList() {
             return this.orderList;
         }
 
@@ -388,7 +393,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
         public static final class Builder {
             private String commodityCode; 
             private String commodityType; 
-            private java.util.List < OrderList> orderList; 
+            private java.util.List<OrderList> orderList; 
             private Integer totalQuota; 
             private String versionType; 
 
@@ -425,7 +430,7 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
             /**
              * <p>Details about the orders.</p>
              */
-            public Builder orderList(java.util.List < OrderList> orderList) {
+            public Builder orderList(java.util.List<OrderList> orderList) {
                 this.orderList = orderList;
                 return this;
             }

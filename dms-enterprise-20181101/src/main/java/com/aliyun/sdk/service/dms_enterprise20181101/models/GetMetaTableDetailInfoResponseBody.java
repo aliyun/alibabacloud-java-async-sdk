@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -416,7 +421,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
      */
     public static class IndexList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndexColumns")
-        private java.util.List < String > indexColumns;
+        private java.util.List<String> indexColumns;
 
         @com.aliyun.core.annotation.NameInMap("IndexId")
         private String indexId;
@@ -449,7 +454,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         /**
          * @return indexColumns
          */
-        public java.util.List < String > getIndexColumns() {
+        public java.util.List<String> getIndexColumns() {
             return this.indexColumns;
         }
 
@@ -482,7 +487,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > indexColumns; 
+            private java.util.List<String> indexColumns; 
             private String indexId; 
             private String indexName; 
             private String indexType; 
@@ -491,7 +496,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             /**
              * <p>The index column.</p>
              */
-            public Builder indexColumns(java.util.List < String > indexColumns) {
+            public Builder indexColumns(java.util.List<String> indexColumns) {
                 this.indexColumns = indexColumns;
                 return this;
             }
@@ -559,10 +564,10 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
      */
     public static class DetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnList")
-        private java.util.List < ColumnList> columnList;
+        private java.util.List<ColumnList> columnList;
 
         @com.aliyun.core.annotation.NameInMap("IndexList")
-        private java.util.List < IndexList> indexList;
+        private java.util.List<IndexList> indexList;
 
         private DetailInfo(Builder builder) {
             this.columnList = builder.columnList;
@@ -580,25 +585,25 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         /**
          * @return columnList
          */
-        public java.util.List < ColumnList> getColumnList() {
+        public java.util.List<ColumnList> getColumnList() {
             return this.columnList;
         }
 
         /**
          * @return indexList
          */
-        public java.util.List < IndexList> getIndexList() {
+        public java.util.List<IndexList> getIndexList() {
             return this.indexList;
         }
 
         public static final class Builder {
-            private java.util.List < ColumnList> columnList; 
-            private java.util.List < IndexList> indexList; 
+            private java.util.List<ColumnList> columnList; 
+            private java.util.List<IndexList> indexList; 
 
             /**
              * <p>The columns in the table.</p>
              */
-            public Builder columnList(java.util.List < ColumnList> columnList) {
+            public Builder columnList(java.util.List<ColumnList> columnList) {
                 this.columnList = columnList;
                 return this;
             }
@@ -606,7 +611,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             /**
              * <p>The list of indexes.</p>
              */
-            public Builder indexList(java.util.List < IndexList> indexList) {
+            public Builder indexList(java.util.List<IndexList> indexList) {
                 this.indexList = indexList;
                 return this;
             }

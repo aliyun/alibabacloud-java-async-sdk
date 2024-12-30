@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class CreateDataTrackOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < String > relatedUserList;
+    private java.util.List<String> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -81,7 +86,7 @@ public class CreateDataTrackOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < String > getRelatedUserList() {
+    public java.util.List<String> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -96,7 +101,7 @@ public class CreateDataTrackOrderRequest extends Request {
         private String regionId; 
         private String comment; 
         private Param param; 
-        private java.util.List < String > relatedUserList; 
+        private java.util.List<String> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -148,7 +153,7 @@ public class CreateDataTrackOrderRequest extends Request {
         /**
          * <p>The IDs of the operators that are related to the ticket.</p>
          */
-        public Builder relatedUserList(java.util.List < String > relatedUserList) {
+        public Builder relatedUserList(java.util.List<String> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -195,11 +200,11 @@ public class CreateDataTrackOrderRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("TableNames")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > tableNames;
+        private java.util.List<String> tableNames;
 
         @com.aliyun.core.annotation.NameInMap("TrackTypes")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > trackTypes;
+        private java.util.List<String> trackTypes;
 
         private Param(Builder builder) {
             this.dbId = builder.dbId;
@@ -241,14 +246,14 @@ public class CreateDataTrackOrderRequest extends Request {
         /**
          * @return tableNames
          */
-        public java.util.List < String > getTableNames() {
+        public java.util.List<String> getTableNames() {
             return this.tableNames;
         }
 
         /**
          * @return trackTypes
          */
-        public java.util.List < String > getTrackTypes() {
+        public java.util.List<String> getTrackTypes() {
             return this.trackTypes;
         }
 
@@ -256,8 +261,8 @@ public class CreateDataTrackOrderRequest extends Request {
             private String dbId; 
             private String jobEndTime; 
             private String jobStartTime; 
-            private java.util.List < String > tableNames; 
-            private java.util.List < String > trackTypes; 
+            private java.util.List<String> tableNames; 
+            private java.util.List<String> trackTypes; 
 
             /**
              * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
@@ -302,7 +307,7 @@ public class CreateDataTrackOrderRequest extends Request {
              * <p>The names of the tables for which you want to track data operations.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder tableNames(java.util.List < String > tableNames) {
+            public Builder tableNames(java.util.List<String> tableNames) {
                 this.tableNames = tableNames;
                 return this;
             }
@@ -311,7 +316,7 @@ public class CreateDataTrackOrderRequest extends Request {
              * <p>The types of data operations that you want to track.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder trackTypes(java.util.List < String > trackTypes) {
+            public Builder trackTypes(java.util.List<String> trackTypes) {
                 this.trackTypes = trackTypes;
                 return this;
             }

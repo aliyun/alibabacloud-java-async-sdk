@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("PreCheckSQLList")
-    private java.util.List < PreCheckSQLList> preCheckSQLList;
+    private java.util.List<PreCheckSQLList> preCheckSQLList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     /**
      * @return preCheckSQLList
      */
-    public java.util.List < PreCheckSQLList> getPreCheckSQLList() {
+    public java.util.List<PreCheckSQLList> getPreCheckSQLList() {
         return this.preCheckSQLList;
     }
 
@@ -81,7 +86,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < PreCheckSQLList> preCheckSQLList; 
+        private java.util.List<PreCheckSQLList> preCheckSQLList; 
         private String requestId; 
         private Boolean success; 
 
@@ -110,7 +115,7 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
         /**
          * <p>The precheck information about SQL statements.</p>
          */
-        public Builder preCheckSQLList(java.util.List < PreCheckSQLList> preCheckSQLList) {
+        public Builder preCheckSQLList(java.util.List<PreCheckSQLList> preCheckSQLList) {
             this.preCheckSQLList = preCheckSQLList;
             return this;
         }

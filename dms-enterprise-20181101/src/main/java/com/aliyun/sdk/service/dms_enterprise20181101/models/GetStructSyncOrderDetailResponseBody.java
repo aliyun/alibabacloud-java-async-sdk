@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -628,7 +633,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         private SourceVersionInfo sourceVersionInfo;
 
         @com.aliyun.core.annotation.NameInMap("TableInfoList")
-        private java.util.List < TableInfoList> tableInfoList;
+        private java.util.List<TableInfoList> tableInfoList;
 
         @com.aliyun.core.annotation.NameInMap("TargetDatabaseInfo")
         private TargetDatabaseInfo targetDatabaseInfo;
@@ -689,7 +694,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         /**
          * @return tableInfoList
          */
-        public java.util.List < TableInfoList> getTableInfoList() {
+        public java.util.List<TableInfoList> getTableInfoList() {
             return this.tableInfoList;
         }
 
@@ -719,7 +724,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             private SourceDatabaseInfo sourceDatabaseInfo; 
             private String sourceType; 
             private SourceVersionInfo sourceVersionInfo; 
-            private java.util.List < TableInfoList> tableInfoList; 
+            private java.util.List<TableInfoList> tableInfoList; 
             private TargetDatabaseInfo targetDatabaseInfo; 
             private String targetType; 
             private TargetVersionInfo targetVersionInfo; 
@@ -776,7 +781,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the table whose schema you want to synchronize.</p>
              */
-            public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
+            public Builder tableInfoList(java.util.List<TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
                 return this;
             }

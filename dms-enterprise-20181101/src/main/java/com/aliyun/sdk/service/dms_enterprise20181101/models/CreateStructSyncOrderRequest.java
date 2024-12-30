@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateStructSyncOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    private java.util.List<Long> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -93,7 +98,7 @@ public class CreateStructSyncOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -109,7 +114,7 @@ public class CreateStructSyncOrderRequest extends Request {
         private String attachmentKey; 
         private String comment; 
         private Param param; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -174,7 +179,7 @@ public class CreateStructSyncOrderRequest extends Request {
         /**
          * <p>The IDs of the stakeholders.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -548,7 +553,7 @@ public class CreateStructSyncOrderRequest extends Request {
         private Source source;
 
         @com.aliyun.core.annotation.NameInMap("TableInfoList")
-        private java.util.List < TableInfoList> tableInfoList;
+        private java.util.List<TableInfoList> tableInfoList;
 
         @com.aliyun.core.annotation.NameInMap("Target")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -586,7 +591,7 @@ public class CreateStructSyncOrderRequest extends Request {
         /**
          * @return tableInfoList
          */
-        public java.util.List < TableInfoList> getTableInfoList() {
+        public java.util.List<TableInfoList> getTableInfoList() {
             return this.tableInfoList;
         }
 
@@ -600,7 +605,7 @@ public class CreateStructSyncOrderRequest extends Request {
         public static final class Builder {
             private Boolean ignoreError; 
             private Source source; 
-            private java.util.List < TableInfoList> tableInfoList; 
+            private java.util.List<TableInfoList> tableInfoList; 
             private Target target; 
 
             /**
@@ -630,7 +635,7 @@ public class CreateStructSyncOrderRequest extends Request {
             /**
              * <p>The information about the table of which you want to synchronize the schema.</p>
              */
-            public Builder tableInfoList(java.util.List < TableInfoList> tableInfoList) {
+            public Builder tableInfoList(java.util.List<TableInfoList> tableInfoList) {
                 this.tableInfoList = tableInfoList;
                 return this;
             }

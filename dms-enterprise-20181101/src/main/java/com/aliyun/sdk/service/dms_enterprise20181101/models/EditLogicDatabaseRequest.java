@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class EditLogicDatabaseRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabaseIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > databaseIds;
+    private java.util.List<Long> databaseIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogicDbId")
@@ -75,7 +80,7 @@ public class EditLogicDatabaseRequest extends Request {
     /**
      * @return databaseIds
      */
-    public java.util.List < Long > getDatabaseIds() {
+    public java.util.List<Long> getDatabaseIds() {
         return this.databaseIds;
     }
 
@@ -96,7 +101,7 @@ public class EditLogicDatabaseRequest extends Request {
     public static final class Builder extends Request.Builder<EditLogicDatabaseRequest, Builder> {
         private String regionId; 
         private String alias; 
-        private java.util.List < Long > databaseIds; 
+        private java.util.List<Long> databaseIds; 
         private Long logicDbId; 
         private Long tid; 
 
@@ -145,7 +150,7 @@ public class EditLogicDatabaseRequest extends Request {
          * </ul>
          * <p>This parameter is required.</p>
          */
-        public Builder databaseIds(java.util.List < Long > databaseIds) {
+        public Builder databaseIds(java.util.List<Long> databaseIds) {
             String databaseIdsShrink = shrink(databaseIds, "DatabaseIds", "json");
             this.putQueryParameter("DatabaseIds", databaseIdsShrink);
             this.databaseIds = databaseIds;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -67,7 +72,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
@@ -82,7 +87,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
         private Boolean success; 
 
         /**
@@ -121,7 +126,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         /**
          * <p>The results of the SQL statements that are executed, in the format of an array. Each entry in the array indicates the result of an SQL statement.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }
@@ -151,7 +156,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnNames")
-        private java.util.List < String > columnNames;
+        private java.util.List<String> columnNames;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -160,7 +165,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         private Long rowCount;
 
         @com.aliyun.core.annotation.NameInMap("Rows")
-        private java.util.List < java.util.Map<String, ?>> rows;
+        private java.util.List<java.util.Map<String, ?>> rows;
 
         @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
@@ -184,7 +189,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         /**
          * @return columnNames
          */
-        public java.util.List < String > getColumnNames() {
+        public java.util.List<String> getColumnNames() {
             return this.columnNames;
         }
 
@@ -205,7 +210,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
         /**
          * @return rows
          */
-        public java.util.List < java.util.Map<String, ?>> getRows() {
+        public java.util.List<java.util.Map<String, ?>> getRows() {
             return this.rows;
         }
 
@@ -217,16 +222,16 @@ public class ExecuteScriptResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > columnNames; 
+            private java.util.List<String> columnNames; 
             private String message; 
             private Long rowCount; 
-            private java.util.List < java.util.Map<String, ?>> rows; 
+            private java.util.List<java.util.Map<String, ?>> rows; 
             private Boolean success; 
 
             /**
              * <p>The fields that are queried after the SQL statement is executed.</p>
              */
-            public Builder columnNames(java.util.List < String > columnNames) {
+            public Builder columnNames(java.util.List<String> columnNames) {
                 this.columnNames = columnNames;
                 return this;
             }
@@ -256,7 +261,7 @@ public class ExecuteScriptResponseBody extends TeaModel {
             /**
              * <p>The rows that are queried after the SQL statement is executed.</p>
              */
-            public Builder rows(java.util.List < java.util.Map<String, ?>> rows) {
+            public Builder rows(java.util.List<java.util.Map<String, ?>> rows) {
                 this.rows = rows;
                 return this;
             }

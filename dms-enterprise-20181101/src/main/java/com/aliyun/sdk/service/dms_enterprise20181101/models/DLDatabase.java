@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DLDatabase extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     private DLDatabase(Builder builder) {
         this.catalogName = builder.catalogName;
@@ -85,7 +90,7 @@ public class DLDatabase extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -95,7 +100,7 @@ public class DLDatabase extends TeaModel {
         private String description; 
         private String location; 
         private String name; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
 
         /**
          * CatalogName.
@@ -140,7 +145,7 @@ public class DLDatabase extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
             return this;
         }

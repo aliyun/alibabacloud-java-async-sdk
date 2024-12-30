@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -348,7 +353,7 @@ public class ListUserPermissionsResponseBody extends TeaModel {
      */
     public static class PermDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PermDetail")
-        private java.util.List < PermDetail> permDetail;
+        private java.util.List<PermDetail> permDetail;
 
         private PermDetails(Builder builder) {
             this.permDetail = builder.permDetail;
@@ -365,17 +370,17 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         /**
          * @return permDetail
          */
-        public java.util.List < PermDetail> getPermDetail() {
+        public java.util.List<PermDetail> getPermDetail() {
             return this.permDetail;
         }
 
         public static final class Builder {
-            private java.util.List < PermDetail> permDetail; 
+            private java.util.List<PermDetail> permDetail; 
 
             /**
              * PermDetail.
              */
-            public Builder permDetail(java.util.List < PermDetail> permDetail) {
+            public Builder permDetail(java.util.List<PermDetail> permDetail) {
                 this.permDetail = permDetail;
                 return this;
             }
@@ -830,7 +835,7 @@ public class ListUserPermissionsResponseBody extends TeaModel {
      */
     public static class UserPermissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserPermission")
-        private java.util.List < UserPermission> userPermission;
+        private java.util.List<UserPermission> userPermission;
 
         private UserPermissions(Builder builder) {
             this.userPermission = builder.userPermission;
@@ -847,17 +852,17 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         /**
          * @return userPermission
          */
-        public java.util.List < UserPermission> getUserPermission() {
+        public java.util.List<UserPermission> getUserPermission() {
             return this.userPermission;
         }
 
         public static final class Builder {
-            private java.util.List < UserPermission> userPermission; 
+            private java.util.List<UserPermission> userPermission; 
 
             /**
              * UserPermission.
              */
-            public Builder userPermission(java.util.List < UserPermission> userPermission) {
+            public Builder userPermission(java.util.List<UserPermission> userPermission) {
                 this.userPermission = userPermission;
                 return this;
             }

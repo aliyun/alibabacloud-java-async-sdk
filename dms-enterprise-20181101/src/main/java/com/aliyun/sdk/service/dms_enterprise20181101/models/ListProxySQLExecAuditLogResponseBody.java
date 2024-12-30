@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -495,7 +500,7 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
      */
     public static class ProxySQLExecAuditLogList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxySQLExecAuditLog")
-        private java.util.List < ProxySQLExecAuditLog> proxySQLExecAuditLog;
+        private java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog;
 
         private ProxySQLExecAuditLogList(Builder builder) {
             this.proxySQLExecAuditLog = builder.proxySQLExecAuditLog;
@@ -512,17 +517,17 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
         /**
          * @return proxySQLExecAuditLog
          */
-        public java.util.List < ProxySQLExecAuditLog> getProxySQLExecAuditLog() {
+        public java.util.List<ProxySQLExecAuditLog> getProxySQLExecAuditLog() {
             return this.proxySQLExecAuditLog;
         }
 
         public static final class Builder {
-            private java.util.List < ProxySQLExecAuditLog> proxySQLExecAuditLog; 
+            private java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog; 
 
             /**
              * ProxySQLExecAuditLog.
              */
-            public Builder proxySQLExecAuditLog(java.util.List < ProxySQLExecAuditLog> proxySQLExecAuditLog) {
+            public Builder proxySQLExecAuditLog(java.util.List<ProxySQLExecAuditLog> proxySQLExecAuditLog) {
                 this.proxySQLExecAuditLog = proxySQLExecAuditLog;
                 return this;
             }

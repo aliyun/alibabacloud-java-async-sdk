@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListTaskFlowsByPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DagIdList")
-    private java.util.List < Long > dagIdList;
+    private java.util.List<Long> dagIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageIndex")
@@ -75,7 +80,7 @@ public class ListTaskFlowsByPageRequest extends Request {
     /**
      * @return dagIdList
      */
-    public java.util.List < Long > getDagIdList() {
+    public java.util.List<Long> getDagIdList() {
         return this.dagIdList;
     }
 
@@ -116,7 +121,7 @@ public class ListTaskFlowsByPageRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListTaskFlowsByPageRequest, Builder> {
         private String regionId; 
-        private java.util.List < Long > dagIdList; 
+        private java.util.List<Long> dagIdList; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private Long scenarioId; 
@@ -150,7 +155,7 @@ public class ListTaskFlowsByPageRequest extends Request {
         /**
          * <p>Filter condition, task flow ID list.</p>
          */
-        public Builder dagIdList(java.util.List < Long > dagIdList) {
+        public Builder dagIdList(java.util.List<Long> dagIdList) {
             String dagIdListShrink = shrink(dagIdList, "DagIdList", "json");
             this.putQueryParameter("DagIdList", dagIdListShrink);
             this.dagIdList = dagIdList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -376,7 +381,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
      */
     public static class TaskFlowList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskFlow")
-        private java.util.List < TaskFlow> taskFlow;
+        private java.util.List<TaskFlow> taskFlow;
 
         private TaskFlowList(Builder builder) {
             this.taskFlow = builder.taskFlow;
@@ -393,17 +398,17 @@ public class ListTaskFlowResponseBody extends TeaModel {
         /**
          * @return taskFlow
          */
-        public java.util.List < TaskFlow> getTaskFlow() {
+        public java.util.List<TaskFlow> getTaskFlow() {
             return this.taskFlow;
         }
 
         public static final class Builder {
-            private java.util.List < TaskFlow> taskFlow; 
+            private java.util.List<TaskFlow> taskFlow; 
 
             /**
              * TaskFlow.
              */
-            public Builder taskFlow(java.util.List < TaskFlow> taskFlow) {
+            public Builder taskFlow(java.util.List<TaskFlow> taskFlow) {
                 this.taskFlow = taskFlow;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Edges")
-    private java.util.List < Edges> edges;
+    private java.util.List<Edges> edges;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -68,7 +73,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
     /**
      * @return edges
      */
-    public java.util.List < Edges> getEdges() {
+    public java.util.List<Edges> getEdges() {
         return this.edges;
     }
 
@@ -82,7 +87,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateTaskFlowRelationsRequest, Builder> {
         private String regionId; 
         private Long dagId; 
-        private java.util.List < Edges> edges; 
+        private java.util.List<Edges> edges; 
         private Long tid; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class UpdateTaskFlowRelationsRequest extends Request {
         /**
          * <p>The list of task flow edges to be updated.</p>
          */
-        public Builder edges(java.util.List < Edges> edges) {
+        public Builder edges(java.util.List<Edges> edges) {
             String edgesShrink = shrink(edges, "Edges", "json");
             this.putQueryParameter("Edges", edgesShrink);
             this.edges = edges;

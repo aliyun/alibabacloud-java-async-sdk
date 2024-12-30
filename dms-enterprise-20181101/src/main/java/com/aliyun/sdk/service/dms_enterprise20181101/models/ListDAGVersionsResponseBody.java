@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -343,7 +348,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
      */
     public static class DagVersionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagVersion")
-        private java.util.List < DagVersion> dagVersion;
+        private java.util.List<DagVersion> dagVersion;
 
         private DagVersionList(Builder builder) {
             this.dagVersion = builder.dagVersion;
@@ -360,17 +365,17 @@ public class ListDAGVersionsResponseBody extends TeaModel {
         /**
          * @return dagVersion
          */
-        public java.util.List < DagVersion> getDagVersion() {
+        public java.util.List<DagVersion> getDagVersion() {
             return this.dagVersion;
         }
 
         public static final class Builder {
-            private java.util.List < DagVersion> dagVersion; 
+            private java.util.List<DagVersion> dagVersion; 
 
             /**
              * DagVersion.
              */
-            public Builder dagVersion(java.util.List < DagVersion> dagVersion) {
+            public Builder dagVersion(java.util.List<DagVersion> dagVersion) {
                 this.dagVersion = dagVersion;
                 return this;
             }

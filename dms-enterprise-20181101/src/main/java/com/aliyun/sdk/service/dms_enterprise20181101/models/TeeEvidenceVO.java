@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class TeeEvidenceVO extends TeaModel {
     private String signPublicKeyType;
 
     @com.aliyun.core.annotation.NameInMap("TrustedMrEnclave")
-    private java.util.List < String > trustedMrEnclave;
+    private java.util.List<String> trustedMrEnclave;
 
     private TeeEvidenceVO(Builder builder) {
         this.cipherSuite = builder.cipherSuite;
@@ -151,7 +156,7 @@ public class TeeEvidenceVO extends TeaModel {
     /**
      * @return trustedMrEnclave
      */
-    public java.util.List < String > getTrustedMrEnclave() {
+    public java.util.List<String> getTrustedMrEnclave() {
         return this.trustedMrEnclave;
     }
 
@@ -167,7 +172,7 @@ public class TeeEvidenceVO extends TeaModel {
         private String quoteReport; 
         private String signPublicKeyPem; 
         private String signPublicKeyType; 
-        private java.util.List < String > trustedMrEnclave; 
+        private java.util.List<String> trustedMrEnclave; 
 
         /**
          * CipherSuite.
@@ -260,7 +265,7 @@ public class TeeEvidenceVO extends TeaModel {
         /**
          * TrustedMrEnclave.
          */
-        public Builder trustedMrEnclave(java.util.List < String > trustedMrEnclave) {
+        public Builder trustedMrEnclave(java.util.List<String> trustedMrEnclave) {
             this.trustedMrEnclave = trustedMrEnclave;
             return this;
         }

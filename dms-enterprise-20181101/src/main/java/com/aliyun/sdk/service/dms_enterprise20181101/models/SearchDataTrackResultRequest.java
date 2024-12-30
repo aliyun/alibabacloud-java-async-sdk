@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,11 +35,11 @@ public class SearchDataTrackResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterTableList")
-    private java.util.List < String > filterTableList;
+    private java.util.List<String> filterTableList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterTypeList")
-    private java.util.List < String > filterTypeList;
+    private java.util.List<String> filterTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderId")
@@ -102,14 +107,14 @@ public class SearchDataTrackResultRequest extends Request {
     /**
      * @return filterTableList
      */
-    public java.util.List < String > getFilterTableList() {
+    public java.util.List<String> getFilterTableList() {
         return this.filterTableList;
     }
 
     /**
      * @return filterTypeList
      */
-    public java.util.List < String > getFilterTypeList() {
+    public java.util.List<String> getFilterTypeList() {
         return this.filterTypeList;
     }
 
@@ -132,8 +137,8 @@ public class SearchDataTrackResultRequest extends Request {
         private ColumnFilter columnFilter; 
         private String filterEndTime; 
         private String filterStartTime; 
-        private java.util.List < String > filterTableList; 
-        private java.util.List < String > filterTypeList; 
+        private java.util.List<String> filterTableList; 
+        private java.util.List<String> filterTypeList; 
         private Long orderId; 
         private Long tid; 
 
@@ -199,7 +204,7 @@ public class SearchDataTrackResultRequest extends Request {
         /**
          * <p>The names of the tables for which you want to track data operations.</p>
          */
-        public Builder filterTableList(java.util.List < String > filterTableList) {
+        public Builder filterTableList(java.util.List<String> filterTableList) {
             String filterTableListShrink = shrink(filterTableList, "FilterTableList", "json");
             this.putQueryParameter("FilterTableList", filterTableListShrink);
             this.filterTableList = filterTableList;
@@ -209,7 +214,7 @@ public class SearchDataTrackResultRequest extends Request {
         /**
          * <p>The types of data operations that you want to track.</p>
          */
-        public Builder filterTypeList(java.util.List < String > filterTypeList) {
+        public Builder filterTypeList(java.util.List<String> filterTypeList) {
             String filterTypeListShrink = shrink(filterTypeList, "FilterTypeList", "json");
             this.putQueryParameter("FilterTypeList", filterTypeListShrink);
             this.filterTypeList = filterTypeList;
@@ -265,7 +270,7 @@ public class SearchDataTrackResultRequest extends Request {
         private String columnName;
 
         @com.aliyun.core.annotation.NameInMap("InList")
-        private java.util.List < String > inList;
+        private java.util.List<String> inList;
 
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
@@ -314,7 +319,7 @@ public class SearchDataTrackResultRequest extends Request {
         /**
          * @return inList
          */
-        public java.util.List < String > getInList() {
+        public java.util.List<String> getInList() {
             return this.inList;
         }
 
@@ -336,7 +341,7 @@ public class SearchDataTrackResultRequest extends Request {
             private String betweenEnd; 
             private String betweenStart; 
             private String columnName; 
-            private java.util.List < String > inList; 
+            private java.util.List<String> inList; 
             private String operator; 
             private String value; 
 
@@ -376,7 +381,7 @@ public class SearchDataTrackResultRequest extends Request {
             /**
              * <p>The IN list used in the filter condition. This parameter takes effect only when Operator is set to IN or NOT_IN.</p>
              */
-            public Builder inList(java.util.List < String > inList) {
+            public Builder inList(java.util.List<String> inList) {
                 this.inList = inList;
                 return this;
             }

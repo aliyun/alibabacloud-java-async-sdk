@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class AddDesensitizationRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FunctionParams")
-    private java.util.List < java.util.Map<String, String>> functionParams;
+    private java.util.List<java.util.Map<String, String>> functionParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FunctionType")
@@ -78,7 +83,7 @@ public class AddDesensitizationRuleRequest extends Request {
     /**
      * @return functionParams
      */
-    public java.util.List < java.util.Map<String, String>> getFunctionParams() {
+    public java.util.List<java.util.Map<String, String>> getFunctionParams() {
         return this.functionParams;
     }
 
@@ -119,7 +124,7 @@ public class AddDesensitizationRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddDesensitizationRuleRequest, Builder> {
         private String regionId; 
-        private java.util.List < java.util.Map<String, String>> functionParams; 
+        private java.util.List<java.util.Map<String, String>> functionParams; 
         private String functionType; 
         private String ruleDescription; 
         private String ruleName; 
@@ -153,7 +158,7 @@ public class AddDesensitizationRuleRequest extends Request {
         /**
          * <p>The parameters of the algorithm.</p>
          */
-        public Builder functionParams(java.util.List < java.util.Map<String, String>> functionParams) {
+        public Builder functionParams(java.util.List<java.util.Map<String, String>> functionParams) {
             this.putBodyParameter("FunctionParams", functionParams);
             this.functionParams = functionParams;
             return this;

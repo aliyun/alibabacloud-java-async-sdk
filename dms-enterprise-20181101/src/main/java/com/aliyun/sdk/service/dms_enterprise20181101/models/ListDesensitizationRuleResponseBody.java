@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDesensitizationRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesensitizationRuleList")
-    private java.util.List < DesensitizationRuleList> desensitizationRuleList;
+    private java.util.List<DesensitizationRuleList> desensitizationRuleList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -51,7 +56,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     /**
      * @return desensitizationRuleList
      */
-    public java.util.List < DesensitizationRuleList> getDesensitizationRuleList() {
+    public java.util.List<DesensitizationRuleList> getDesensitizationRuleList() {
         return this.desensitizationRuleList;
     }
 
@@ -91,7 +96,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DesensitizationRuleList> desensitizationRuleList; 
+        private java.util.List<DesensitizationRuleList> desensitizationRuleList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -101,7 +106,7 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
         /**
          * <p>The list of masking rules.</p>
          */
-        public Builder desensitizationRuleList(java.util.List < DesensitizationRuleList> desensitizationRuleList) {
+        public Builder desensitizationRuleList(java.util.List<DesensitizationRuleList> desensitizationRuleList) {
             this.desensitizationRuleList = desensitizationRuleList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("PolicyList")
-    private java.util.List < PolicyList> policyList;
+    private java.util.List<PolicyList> policyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -68,7 +73,7 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     /**
      * @return policyList
      */
-    public java.util.List < PolicyList> getPolicyList() {
+    public java.util.List<PolicyList> getPolicyList() {
         return this.policyList;
     }
 
@@ -103,7 +108,7 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < PolicyList> policyList; 
+        private java.util.List<PolicyList> policyList; 
         private String requestId; 
         private Boolean success; 
         private Long tid; 
@@ -128,7 +133,7 @@ public class ListAbacPoliciesResponseBody extends TeaModel {
         /**
          * PolicyList.
          */
-        public Builder policyList(java.util.List < PolicyList> policyList) {
+        public Builder policyList(java.util.List<PolicyList> policyList) {
             this.policyList = policyList;
             return this;
         }

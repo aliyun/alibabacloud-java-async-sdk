@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -228,7 +233,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
      */
     public static class DagConstants extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DagConstant")
-        private java.util.List < DagConstant> dagConstant;
+        private java.util.List<DagConstant> dagConstant;
 
         private DagConstants(Builder builder) {
             this.dagConstant = builder.dagConstant;
@@ -245,17 +250,17 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
         /**
          * @return dagConstant
          */
-        public java.util.List < DagConstant> getDagConstant() {
+        public java.util.List<DagConstant> getDagConstant() {
             return this.dagConstant;
         }
 
         public static final class Builder {
-            private java.util.List < DagConstant> dagConstant; 
+            private java.util.List<DagConstant> dagConstant; 
 
             /**
              * DagConstant.
              */
-            public Builder dagConstant(java.util.List < DagConstant> dagConstant) {
+            public Builder dagConstant(java.util.List<DagConstant> dagConstant) {
                 this.dagConstant = dagConstant;
                 return this;
             }

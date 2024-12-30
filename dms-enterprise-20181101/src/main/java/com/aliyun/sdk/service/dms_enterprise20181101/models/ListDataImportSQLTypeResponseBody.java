@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListDataImportSQLTypeResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SqlTypeResult")
-    private java.util.List < String > sqlTypeResult;
+    private java.util.List<String> sqlTypeResult;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -67,7 +72,7 @@ public class ListDataImportSQLTypeResponseBody extends TeaModel {
     /**
      * @return sqlTypeResult
      */
-    public java.util.List < String > getSqlTypeResult() {
+    public java.util.List<String> getSqlTypeResult() {
         return this.sqlTypeResult;
     }
 
@@ -82,7 +87,7 @@ public class ListDataImportSQLTypeResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < String > sqlTypeResult; 
+        private java.util.List<String> sqlTypeResult; 
         private Boolean success; 
 
         /**
@@ -121,7 +126,7 @@ public class ListDataImportSQLTypeResponseBody extends TeaModel {
         /**
          * <p>The types of SQL statements.</p>
          */
-        public Builder sqlTypeResult(java.util.List < String > sqlTypeResult) {
+        public Builder sqlTypeResult(java.util.List<String> sqlTypeResult) {
             this.sqlTypeResult = sqlTypeResult;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Databases")
-    private java.util.List < Databases> databases;
+    private java.util.List<Databases> databases;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
     /**
      * @return databases
      */
-    public java.util.List < Databases> getDatabases() {
+    public java.util.List<Databases> getDatabases() {
         return this.databases;
     }
 
@@ -46,13 +51,13 @@ public class ListAuthorizedDatabasesForUserResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Databases> databases; 
+        private java.util.List<Databases> databases; 
         private String requestId; 
 
         /**
          * Databases.
          */
-        public Builder databases(java.util.List < Databases> databases) {
+        public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
             return this;
         }

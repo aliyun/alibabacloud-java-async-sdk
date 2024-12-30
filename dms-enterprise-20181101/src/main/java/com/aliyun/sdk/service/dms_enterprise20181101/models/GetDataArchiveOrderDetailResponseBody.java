@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -948,10 +953,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private Boolean logic;
 
         @com.aliyun.core.annotation.NameInMap("OwnerIds")
-        private java.util.List < Long > ownerIds;
+        private java.util.List<Long> ownerIds;
 
         @com.aliyun.core.annotation.NameInMap("OwnerNames")
-        private java.util.List < String > ownerNames;
+        private java.util.List<String> ownerNames;
 
         @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
@@ -1169,14 +1174,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return ownerIds
          */
-        public java.util.List < Long > getOwnerIds() {
+        public java.util.List<Long> getOwnerIds() {
             return this.ownerIds;
         }
 
         /**
          * @return ownerNames
          */
-        public java.util.List < String > getOwnerNames() {
+        public java.util.List<String> getOwnerNames() {
             return this.ownerNames;
         }
 
@@ -1258,8 +1263,8 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String lastSyncTime; 
             private String level; 
             private Boolean logic; 
-            private java.util.List < Long > ownerIds; 
-            private java.util.List < String > ownerNames; 
+            private java.util.List<Long> ownerIds; 
+            private java.util.List<String> ownerNames; 
             private Long port; 
             private String schemaName; 
             private String searchName; 
@@ -1538,7 +1543,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
              * <p> The value of OwnerIds is the same as the value of UserId</p>
              * </blockquote>
              */
-            public Builder ownerIds(java.util.List < Long > ownerIds) {
+            public Builder ownerIds(java.util.List<Long> ownerIds) {
                 this.ownerIds = ownerIds;
                 return this;
             }
@@ -1546,7 +1551,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The usernames of the database owners.</p>
              */
-            public Builder ownerNames(java.util.List < String > ownerNames) {
+            public Builder ownerNames(java.util.List<String> ownerNames) {
                 this.ownerNames = ownerNames;
                 return this;
             }
@@ -2059,7 +2064,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private Long instanceTotal;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        private java.util.List<Instances> instances;
 
         @com.aliyun.core.annotation.NameInMap("NextFireTimeResult")
         private NextFireTimeResult nextFireTimeResult;
@@ -2071,7 +2076,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("TempTableNameMap")
-        private java.util.Map < String, ? > tempTableNameMap;
+        private java.util.Map<String, ?> tempTableNameMap;
 
         private PluginExtraData(Builder builder) {
             this.dagInfo = builder.dagInfo;
@@ -2116,7 +2121,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
@@ -2144,7 +2149,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return tempTableNameMap
          */
-        public java.util.Map < String, ? > getTempTableNameMap() {
+        public java.util.Map<String, ?> getTempTableNameMap() {
             return this.tempTableNameMap;
         }
 
@@ -2152,11 +2157,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private DagInfo dagInfo; 
             private DbBaseInfo dbBaseInfo; 
             private Long instanceTotal; 
-            private java.util.List < Instances> instances; 
+            private java.util.List<Instances> instances; 
             private NextFireTimeResult nextFireTimeResult; 
             private Long pageIndex; 
             private Long pageSize; 
-            private java.util.Map < String, ? > tempTableNameMap; 
+            private java.util.Map<String, ?> tempTableNameMap; 
 
             /**
              * <p>The information about the workflow.</p>
@@ -2188,7 +2193,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The list of archiving tasks.</p>
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }
@@ -2233,7 +2238,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
              *       ]
              * }</p>
              */
-            public Builder tempTableNameMap(java.util.Map < String, ? > tempTableNameMap) {
+            public Builder tempTableNameMap(java.util.Map<String, ?> tempTableNameMap) {
                 this.tempTableNameMap = tempTableNameMap;
                 return this;
             }
@@ -2335,7 +2340,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private Boolean logic;
 
         @com.aliyun.core.annotation.NameInMap("OrderAfter")
-        private java.util.List < String > orderAfter;
+        private java.util.List<String> orderAfter;
 
         @com.aliyun.core.annotation.NameInMap("RunMethod")
         private String runMethod;
@@ -2344,16 +2349,16 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private Long sourceDatabaseId;
 
         @com.aliyun.core.annotation.NameInMap("TableIncludes")
-        private java.util.List < TableIncludes> tableIncludes;
+        private java.util.List<TableIncludes> tableIncludes;
 
         @com.aliyun.core.annotation.NameInMap("TableMapping")
-        private java.util.List < String > tableMapping;
+        private java.util.List<String> tableMapping;
 
         @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
         private String targetInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < String > variables;
+        private java.util.List<String> variables;
 
         private PluginParam(Builder builder) {
             this.archiveMethod = builder.archiveMethod;
@@ -2400,7 +2405,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return orderAfter
          */
-        public java.util.List < String > getOrderAfter() {
+        public java.util.List<String> getOrderAfter() {
             return this.orderAfter;
         }
 
@@ -2421,14 +2426,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return tableIncludes
          */
-        public java.util.List < TableIncludes> getTableIncludes() {
+        public java.util.List<TableIncludes> getTableIncludes() {
             return this.tableIncludes;
         }
 
         /**
          * @return tableMapping
          */
-        public java.util.List < String > getTableMapping() {
+        public java.util.List<String> getTableMapping() {
             return this.tableMapping;
         }
 
@@ -2442,7 +2447,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < String > getVariables() {
+        public java.util.List<String> getVariables() {
             return this.variables;
         }
 
@@ -2450,13 +2455,13 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String archiveMethod; 
             private String dbSchema; 
             private Boolean logic; 
-            private java.util.List < String > orderAfter; 
+            private java.util.List<String> orderAfter; 
             private String runMethod; 
             private Long sourceDatabaseId; 
-            private java.util.List < TableIncludes> tableIncludes; 
-            private java.util.List < String > tableMapping; 
+            private java.util.List<TableIncludes> tableIncludes; 
+            private java.util.List<String> tableMapping; 
             private String targetInstanceId; 
-            private java.util.List < String > variables; 
+            private java.util.List<String> variables; 
 
             /**
              * <p>The type of the archiving destination.</p>
@@ -2498,7 +2503,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The post behavior of archiving.</p>
              */
-            public Builder orderAfter(java.util.List < String > orderAfter) {
+            public Builder orderAfter(java.util.List<String> orderAfter) {
                 this.orderAfter = orderAfter;
                 return this;
             }
@@ -2528,7 +2533,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The list of the archived tables and the filter conditions.</p>
              */
-            public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
+            public Builder tableIncludes(java.util.List<TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;
                 return this;
             }
@@ -2536,7 +2541,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The mapping of schemas.</p>
              */
-            public Builder tableMapping(java.util.List < String > tableMapping) {
+            public Builder tableMapping(java.util.List<String> tableMapping) {
                 this.tableMapping = tableMapping;
                 return this;
             }
@@ -2555,7 +2560,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The time variable defined for scheduled archiving.</p>
              */
-            public Builder variables(java.util.List < String > variables) {
+            public Builder variables(java.util.List<String> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -2602,10 +2607,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         private String pluginType;
 
         @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-        private java.util.List < Long > relatedUserList;
+        private java.util.List<Long> relatedUserList;
 
         @com.aliyun.core.annotation.NameInMap("RelatedUserNickList")
-        private java.util.List < String > relatedUserNickList;
+        private java.util.List<String> relatedUserNickList;
 
         @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
@@ -2711,14 +2716,14 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * @return relatedUserList
          */
-        public java.util.List < Long > getRelatedUserList() {
+        public java.util.List<Long> getRelatedUserList() {
             return this.relatedUserList;
         }
 
         /**
          * @return relatedUserNickList
          */
-        public java.util.List < String > getRelatedUserNickList() {
+        public java.util.List<String> getRelatedUserNickList() {
             return this.relatedUserNickList;
         }
 
@@ -2760,8 +2765,8 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private PluginExtraData pluginExtraData; 
             private PluginParam pluginParam; 
             private String pluginType; 
-            private java.util.List < Long > relatedUserList; 
-            private java.util.List < String > relatedUserNickList; 
+            private java.util.List<Long> relatedUserList; 
+            private java.util.List<String> relatedUserNickList; 
             private String statusCode; 
             private String statusDesc; 
             private Long workflowInstanceId; 
@@ -2863,7 +2868,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The user IDs related to the ticket.</p>
              */
-            public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+            public Builder relatedUserList(java.util.List<Long> relatedUserList) {
                 this.relatedUserList = relatedUserList;
                 return this;
             }
@@ -2871,7 +2876,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The nicknames of the users that are related to the ticket.</p>
              */
-            public Builder relatedUserNickList(java.util.List < String > relatedUserNickList) {
+            public Builder relatedUserNickList(java.util.List<String> relatedUserNickList) {
                 this.relatedUserNickList = relatedUserNickList;
                 return this;
             }

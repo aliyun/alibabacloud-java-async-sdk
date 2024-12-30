@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListScenariosResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScenarioList")
-    private java.util.List < ScenarioList> scenarioList;
+    private java.util.List<ScenarioList> scenarioList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -67,7 +72,7 @@ public class ListScenariosResponseBody extends TeaModel {
     /**
      * @return scenarioList
      */
-    public java.util.List < ScenarioList> getScenarioList() {
+    public java.util.List<ScenarioList> getScenarioList() {
         return this.scenarioList;
     }
 
@@ -82,7 +87,7 @@ public class ListScenariosResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < ScenarioList> scenarioList; 
+        private java.util.List<ScenarioList> scenarioList; 
         private Boolean success; 
 
         /**
@@ -121,7 +126,7 @@ public class ListScenariosResponseBody extends TeaModel {
         /**
          * <p>The details of the returned business scenarios.</p>
          */
-        public Builder scenarioList(java.util.List < ScenarioList> scenarioList) {
+        public Builder scenarioList(java.util.List<ScenarioList> scenarioList) {
             this.scenarioList = scenarioList;
             return this;
         }

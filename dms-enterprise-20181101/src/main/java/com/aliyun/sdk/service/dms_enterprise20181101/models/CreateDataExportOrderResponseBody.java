@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
      */
     public static class CreateOrderResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateOrderResult")
-        private java.util.List < Long > createOrderResult;
+        private java.util.List<Long> createOrderResult;
 
         private CreateOrderResult(Builder builder) {
             this.createOrderResult = builder.createOrderResult;
@@ -172,17 +177,17 @@ public class CreateDataExportOrderResponseBody extends TeaModel {
         /**
          * @return createOrderResult
          */
-        public java.util.List < Long > getCreateOrderResult() {
+        public java.util.List<Long> getCreateOrderResult() {
             return this.createOrderResult;
         }
 
         public static final class Builder {
-            private java.util.List < Long > createOrderResult; 
+            private java.util.List<Long> createOrderResult; 
 
             /**
              * <p>The content of the ticket.</p>
              */
-            public Builder createOrderResult(java.util.List < Long > createOrderResult) {
+            public Builder createOrderResult(java.util.List<Long> createOrderResult) {
                 this.createOrderResult = createOrderResult;
                 return this;
             }

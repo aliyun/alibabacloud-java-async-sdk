@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDDLPublishRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DDLPublishRecordList")
-    private java.util.List < DDLPublishRecordList> DDLPublishRecordList;
+    private java.util.List<DDLPublishRecordList> DDLPublishRecordList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     /**
      * @return DDLPublishRecordList
      */
-    public java.util.List < DDLPublishRecordList> getDDLPublishRecordList() {
+    public java.util.List<DDLPublishRecordList> getDDLPublishRecordList() {
         return this.DDLPublishRecordList;
     }
 
@@ -79,7 +84,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DDLPublishRecordList> DDLPublishRecordList; 
+        private java.util.List<DDLPublishRecordList> DDLPublishRecordList; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         /**
          * <p>The details of the publishing records.</p>
          */
-        public Builder DDLPublishRecordList(java.util.List < DDLPublishRecordList> DDLPublishRecordList) {
+        public Builder DDLPublishRecordList(java.util.List<DDLPublishRecordList> DDLPublishRecordList) {
             this.DDLPublishRecordList = DDLPublishRecordList;
             return this;
         }
@@ -330,7 +335,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         private String planTime;
 
         @com.aliyun.core.annotation.NameInMap("PublishJobList")
-        private java.util.List < PublishJobList> publishJobList;
+        private java.util.List<PublishJobList> publishJobList;
 
         @com.aliyun.core.annotation.NameInMap("PublishStrategy")
         private String publishStrategy;
@@ -383,7 +388,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         /**
          * @return publishJobList
          */
-        public java.util.List < PublishJobList> getPublishJobList() {
+        public java.util.List<PublishJobList> getPublishJobList() {
             return this.publishJobList;
         }
 
@@ -412,7 +417,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private Long dbId; 
             private Boolean logic; 
             private String planTime; 
-            private java.util.List < PublishJobList> publishJobList; 
+            private java.util.List<PublishJobList> publishJobList; 
             private String publishStrategy; 
             private String statusDesc; 
             private String taskJobStatus; 
@@ -457,7 +462,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             /**
              * <p>The list of the publishing tasks.</p>
              */
-            public Builder publishJobList(java.util.List < PublishJobList> publishJobList) {
+            public Builder publishJobList(java.util.List<PublishJobList> publishJobList) {
                 this.publishJobList = publishJobList;
                 return this;
             }
@@ -535,7 +540,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         private String publishStatus;
 
         @com.aliyun.core.annotation.NameInMap("PublishTaskInfoList")
-        private java.util.List < PublishTaskInfoList> publishTaskInfoList;
+        private java.util.List<PublishTaskInfoList> publishTaskInfoList;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -620,7 +625,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         /**
          * @return publishTaskInfoList
          */
-        public java.util.List < PublishTaskInfoList> getPublishTaskInfoList() {
+        public java.util.List<PublishTaskInfoList> getPublishTaskInfoList() {
             return this.publishTaskInfoList;
         }
 
@@ -653,7 +658,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             private Boolean finality; 
             private String finalityReason; 
             private String publishStatus; 
-            private java.util.List < PublishTaskInfoList> publishTaskInfoList; 
+            private java.util.List<PublishTaskInfoList> publishTaskInfoList; 
             private String riskLevel; 
             private String statusDesc; 
             private Long workflowInstanceId; 
@@ -759,7 +764,7 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             /**
              * <p>The list of publishing tasks.</p>
              */
-            public Builder publishTaskInfoList(java.util.List < PublishTaskInfoList> publishTaskInfoList) {
+            public Builder publishTaskInfoList(java.util.List<PublishTaskInfoList> publishTaskInfoList) {
                 this.publishTaskInfoList = publishTaskInfoList;
                 return this;
             }

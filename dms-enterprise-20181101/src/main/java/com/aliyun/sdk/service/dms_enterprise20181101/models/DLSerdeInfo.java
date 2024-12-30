@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,10 +27,10 @@ public class DLSerdeInfo extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.NameInMap("SerdeType")
-    private String serdeType;
+    private Integer serdeType;
 
     @com.aliyun.core.annotation.NameInMap("SerializationLib")
     private String serializationLib;
@@ -75,14 +80,14 @@ public class DLSerdeInfo extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
     /**
      * @return serdeType
      */
-    public String getSerdeType() {
+    public Integer getSerdeType() {
         return this.serdeType;
     }
 
@@ -104,8 +109,8 @@ public class DLSerdeInfo extends TeaModel {
         private String description; 
         private String deserializerClass; 
         private String name; 
-        private java.util.Map < String, ? > parameters; 
-        private String serdeType; 
+        private java.util.Map<String, ?> parameters; 
+        private Integer serdeType; 
         private String serializationLib; 
         private String serializerClass; 
 
@@ -136,7 +141,7 @@ public class DLSerdeInfo extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -144,7 +149,7 @@ public class DLSerdeInfo extends TeaModel {
         /**
          * SerdeType.
          */
-        public Builder serdeType(String serdeType) {
+        public Builder serdeType(Integer serdeType) {
             this.serdeType = serdeType;
             return this;
         }

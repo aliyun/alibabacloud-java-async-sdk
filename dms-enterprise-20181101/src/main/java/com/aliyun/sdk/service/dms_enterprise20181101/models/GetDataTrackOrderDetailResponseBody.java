@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -179,10 +184,10 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         private String statusDesc;
 
         @com.aliyun.core.annotation.NameInMap("TableNames")
-        private java.util.List < String > tableNames;
+        private java.util.List<String> tableNames;
 
         @com.aliyun.core.annotation.NameInMap("TrackTypes")
-        private java.util.List < String > trackTypes;
+        private java.util.List<String> trackTypes;
 
         private DataTrackOrderDetail(Builder builder) {
             this.databaseSearchName = builder.databaseSearchName;
@@ -264,14 +269,14 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
         /**
          * @return tableNames
          */
-        public java.util.List < String > getTableNames() {
+        public java.util.List<String> getTableNames() {
             return this.tableNames;
         }
 
         /**
          * @return trackTypes
          */
-        public java.util.List < String > getTrackTypes() {
+        public java.util.List<String> getTrackTypes() {
             return this.trackTypes;
         }
 
@@ -284,8 +289,8 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             private Boolean logic; 
             private String schemaName; 
             private String statusDesc; 
-            private java.util.List < String > tableNames; 
-            private java.util.List < String > trackTypes; 
+            private java.util.List<String> tableNames; 
+            private java.util.List<String> trackTypes; 
 
             /**
              * <p>The name that is used to search for the database.</p>
@@ -393,7 +398,7 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The names of the tables for which data operations are tracked.</p>
              */
-            public Builder tableNames(java.util.List < String > tableNames) {
+            public Builder tableNames(java.util.List<String> tableNames) {
                 this.tableNames = tableNames;
                 return this;
             }
@@ -401,7 +406,7 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The types of data operations that are tracked.</p>
              */
-            public Builder trackTypes(java.util.List < String > trackTypes) {
+            public Builder trackTypes(java.util.List<String> trackTypes) {
                 this.trackTypes = trackTypes;
                 return this;
             }

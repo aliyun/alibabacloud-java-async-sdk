@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TemplateList")
-    private java.util.List < TemplateList> templateList;
+    private java.util.List<TemplateList> templateList;
 
     private ListClassificationTemplatesResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -74,7 +79,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
     /**
      * @return templateList
      */
-    public java.util.List < TemplateList> getTemplateList() {
+    public java.util.List<TemplateList> getTemplateList() {
         return this.templateList;
     }
 
@@ -83,7 +88,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TemplateList> templateList; 
+        private java.util.List<TemplateList> templateList; 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -136,7 +141,7 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
         /**
          * <p>The list of templates.</p>
          */
-        public Builder templateList(java.util.List < TemplateList> templateList) {
+        public Builder templateList(java.util.List<TemplateList> templateList) {
             this.templateList = templateList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class CreateSQLReviewOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    private java.util.List<Long> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -81,7 +86,7 @@ public class CreateSQLReviewOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -96,7 +101,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         private String regionId; 
         private String comment; 
         private Param param; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -148,7 +153,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         /**
          * <p>The stakeholders involved in this operation. All the specified stakeholders can view the ticket details and take part in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -183,7 +188,7 @@ public class CreateSQLReviewOrderRequest extends Request {
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentKeyList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > attachmentKeyList;
+        private java.util.List<String> attachmentKeyList;
 
         @com.aliyun.core.annotation.NameInMap("DbId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -210,7 +215,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         /**
          * @return attachmentKeyList
          */
-        public java.util.List < String > getAttachmentKeyList() {
+        public java.util.List<String> getAttachmentKeyList() {
             return this.attachmentKeyList;
         }
 
@@ -229,7 +234,7 @@ public class CreateSQLReviewOrderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > attachmentKeyList; 
+            private java.util.List<String> attachmentKeyList; 
             private Long dbId; 
             private String projectName; 
 
@@ -237,7 +242,7 @@ public class CreateSQLReviewOrderRequest extends Request {
              * <p>The files to be reviewed. Multiple files can be reviewed at a time.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder attachmentKeyList(java.util.List < String > attachmentKeyList) {
+            public Builder attachmentKeyList(java.util.List<String> attachmentKeyList) {
                 this.attachmentKeyList = attachmentKeyList;
                 return this;
             }

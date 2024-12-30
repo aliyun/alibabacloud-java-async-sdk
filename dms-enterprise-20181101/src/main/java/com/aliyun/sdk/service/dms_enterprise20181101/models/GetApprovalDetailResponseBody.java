@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -228,7 +233,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
      */
     public static class CurrentHandlers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentHandler")
-        private java.util.List < CurrentHandler> currentHandler;
+        private java.util.List<CurrentHandler> currentHandler;
 
         private CurrentHandlers(Builder builder) {
             this.currentHandler = builder.currentHandler;
@@ -245,17 +250,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return currentHandler
          */
-        public java.util.List < CurrentHandler> getCurrentHandler() {
+        public java.util.List<CurrentHandler> getCurrentHandler() {
             return this.currentHandler;
         }
 
         public static final class Builder {
-            private java.util.List < CurrentHandler> currentHandler; 
+            private java.util.List<CurrentHandler> currentHandler; 
 
             /**
              * CurrentHandler.
              */
-            public Builder currentHandler(java.util.List < CurrentHandler> currentHandler) {
+            public Builder currentHandler(java.util.List<CurrentHandler> currentHandler) {
                 this.currentHandler = currentHandler;
                 return this;
             }
@@ -275,7 +280,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
      */
     public static class ReasonList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reasons")
-        private java.util.List < String > reasons;
+        private java.util.List<String> reasons;
 
         private ReasonList(Builder builder) {
             this.reasons = builder.reasons;
@@ -292,17 +297,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return reasons
          */
-        public java.util.List < String > getReasons() {
+        public java.util.List<String> getReasons() {
             return this.reasons;
         }
 
         public static final class Builder {
-            private java.util.List < String > reasons; 
+            private java.util.List<String> reasons; 
 
             /**
              * Reasons.
              */
-            public Builder reasons(java.util.List < String > reasons) {
+            public Builder reasons(java.util.List<String> reasons) {
                 this.reasons = reasons;
                 return this;
             }
@@ -322,7 +327,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
      */
     public static class AuditUserIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditUserIds")
-        private java.util.List < String > auditUserIds;
+        private java.util.List<String> auditUserIds;
 
         private AuditUserIdList(Builder builder) {
             this.auditUserIds = builder.auditUserIds;
@@ -339,17 +344,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return auditUserIds
          */
-        public java.util.List < String > getAuditUserIds() {
+        public java.util.List<String> getAuditUserIds() {
             return this.auditUserIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > auditUserIds; 
+            private java.util.List<String> auditUserIds; 
 
             /**
              * AuditUserIds.
              */
-            public Builder auditUserIds(java.util.List < String > auditUserIds) {
+            public Builder auditUserIds(java.util.List<String> auditUserIds) {
                 this.auditUserIds = auditUserIds;
                 return this;
             }
@@ -539,7 +544,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
      */
     public static class WorkflowNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowNode")
-        private java.util.List < WorkflowNode> workflowNode;
+        private java.util.List<WorkflowNode> workflowNode;
 
         private WorkflowNodes(Builder builder) {
             this.workflowNode = builder.workflowNode;
@@ -556,17 +561,17 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         /**
          * @return workflowNode
          */
-        public java.util.List < WorkflowNode> getWorkflowNode() {
+        public java.util.List<WorkflowNode> getWorkflowNode() {
             return this.workflowNode;
         }
 
         public static final class Builder {
-            private java.util.List < WorkflowNode> workflowNode; 
+            private java.util.List<WorkflowNode> workflowNode; 
 
             /**
              * WorkflowNode.
              */
-            public Builder workflowNode(java.util.List < WorkflowNode> workflowNode) {
+            public Builder workflowNode(java.util.List<WorkflowNode> workflowNode) {
                 this.workflowNode = workflowNode;
                 return this;
             }

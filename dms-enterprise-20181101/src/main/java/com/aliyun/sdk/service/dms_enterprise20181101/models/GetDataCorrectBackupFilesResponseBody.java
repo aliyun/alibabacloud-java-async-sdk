@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
      */
     public static class DataCorrectBackupFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
-        private java.util.List < String > fileUrl;
+        private java.util.List<String> fileUrl;
 
         private DataCorrectBackupFiles(Builder builder) {
             this.fileUrl = builder.fileUrl;
@@ -168,17 +173,17 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
         /**
          * @return fileUrl
          */
-        public java.util.List < String > getFileUrl() {
+        public java.util.List<String> getFileUrl() {
             return this.fileUrl;
         }
 
         public static final class Builder {
-            private java.util.List < String > fileUrl; 
+            private java.util.List<String> fileUrl; 
 
             /**
              * FileUrl.
              */
-            public Builder fileUrl(java.util.List < String > fileUrl) {
+            public Builder fileUrl(java.util.List<String> fileUrl) {
                 this.fileUrl = fileUrl;
                 return this;
             }

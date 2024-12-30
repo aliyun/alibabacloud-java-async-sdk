@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -569,7 +574,7 @@ public class GetPagedInstanceResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        private java.util.List<Instance> instance;
 
         private Data(Builder builder) {
             this.instance = builder.instance;
@@ -586,17 +591,17 @@ public class GetPagedInstanceResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

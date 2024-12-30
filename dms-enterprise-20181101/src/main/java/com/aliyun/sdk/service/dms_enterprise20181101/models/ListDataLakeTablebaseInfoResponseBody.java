@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TablebaseInfoList")
-    private TablebaseInfoList tablebaseInfoList;
+    private java.util.List<DLTablebaseInfo> tablebaseInfoList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -78,7 +83,7 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
     /**
      * @return tablebaseInfoList
      */
-    public TablebaseInfoList getTablebaseInfoList() {
+    public java.util.List<DLTablebaseInfo> getTablebaseInfoList() {
         return this.tablebaseInfoList;
     }
 
@@ -94,7 +99,7 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         private String errorMessage; 
         private String requestId; 
         private Boolean success; 
-        private TablebaseInfoList tablebaseInfoList; 
+        private java.util.List<DLTablebaseInfo> tablebaseInfoList; 
         private String totalCount; 
 
         /**
@@ -132,7 +137,7 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
         /**
          * TablebaseInfoList.
          */
-        public Builder tablebaseInfoList(TablebaseInfoList tablebaseInfoList) {
+        public Builder tablebaseInfoList(java.util.List<DLTablebaseInfo> tablebaseInfoList) {
             this.tablebaseInfoList = tablebaseInfoList;
             return this;
         }
@@ -151,51 +156,4 @@ public class ListDataLakeTablebaseInfoResponseBody extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link ListDataLakeTablebaseInfoResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListDataLakeTablebaseInfoResponseBody</p>
-     */
-    public static class TablebaseInfoList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("TablebaseInfo")
-        private java.util.List < DLTablebaseInfo > tablebaseInfo;
-
-        private TablebaseInfoList(Builder builder) {
-            this.tablebaseInfo = builder.tablebaseInfo;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TablebaseInfoList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return tablebaseInfo
-         */
-        public java.util.List < DLTablebaseInfo > getTablebaseInfo() {
-            return this.tablebaseInfo;
-        }
-
-        public static final class Builder {
-            private java.util.List < DLTablebaseInfo > tablebaseInfo; 
-
-            /**
-             * TablebaseInfo.
-             */
-            public Builder tablebaseInfo(java.util.List < DLTablebaseInfo > tablebaseInfo) {
-                this.tablebaseInfo = tablebaseInfo;
-                return this;
-            }
-
-            public TablebaseInfoList build() {
-                return new TablebaseInfoList(this);
-            } 
-
-        } 
-
-    }
 }

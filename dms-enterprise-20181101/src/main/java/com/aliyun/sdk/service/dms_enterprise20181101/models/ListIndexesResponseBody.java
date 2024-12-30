@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -300,7 +305,7 @@ public class ListIndexesResponseBody extends TeaModel {
      */
     public static class IndexList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
-        private java.util.List < Index> index;
+        private java.util.List<Index> index;
 
         private IndexList(Builder builder) {
             this.index = builder.index;
@@ -317,17 +322,17 @@ public class ListIndexesResponseBody extends TeaModel {
         /**
          * @return index
          */
-        public java.util.List < Index> getIndex() {
+        public java.util.List<Index> getIndex() {
             return this.index;
         }
 
         public static final class Builder {
-            private java.util.List < Index> index; 
+            private java.util.List<Index> index; 
 
             /**
              * Index.
              */
-            public Builder index(java.util.List < Index> index) {
+            public Builder index(java.util.List<Index> index) {
                 this.index = index;
                 return this;
             }

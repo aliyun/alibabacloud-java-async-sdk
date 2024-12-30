@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DagConstants")
-    private java.util.List < DagConstants> dagConstants;
+    private java.util.List<DagConstants> dagConstants;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DagId")
@@ -61,7 +66,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
     /**
      * @return dagConstants
      */
-    public java.util.List < DagConstants> getDagConstants() {
+    public java.util.List<DagConstants> getDagConstants() {
         return this.dagConstants;
     }
 
@@ -81,7 +86,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTaskFlowConstantsRequest, Builder> {
         private String regionId; 
-        private java.util.List < DagConstants> dagConstants; 
+        private java.util.List<DagConstants> dagConstants; 
         private Long dagId; 
         private Long tid; 
 
@@ -109,7 +114,7 @@ public class UpdateTaskFlowConstantsRequest extends Request {
         /**
          * <p>The constants for the task flow.</p>
          */
-        public Builder dagConstants(java.util.List < DagConstants> dagConstants) {
+        public Builder dagConstants(java.util.List<DagConstants> dagConstants) {
             String dagConstantsShrink = shrink(dagConstants, "DagConstants", "json");
             this.putQueryParameter("DagConstants", dagConstantsShrink);
             this.dagConstants = dagConstants;

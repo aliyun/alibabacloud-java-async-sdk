@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DownloadDataTrackResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventIdList")
-    private java.util.List < Long > eventIdList;
+    private java.util.List<Long> eventIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterEndTime")
@@ -34,11 +39,11 @@ public class DownloadDataTrackResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterTableList")
-    private java.util.List < String > filterTableList;
+    private java.util.List<String> filterTableList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterTypeList")
-    private java.util.List < String > filterTypeList;
+    private java.util.List<String> filterTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderId")
@@ -99,7 +104,7 @@ public class DownloadDataTrackResultRequest extends Request {
     /**
      * @return eventIdList
      */
-    public java.util.List < Long > getEventIdList() {
+    public java.util.List<Long> getEventIdList() {
         return this.eventIdList;
     }
 
@@ -120,14 +125,14 @@ public class DownloadDataTrackResultRequest extends Request {
     /**
      * @return filterTableList
      */
-    public java.util.List < String > getFilterTableList() {
+    public java.util.List<String> getFilterTableList() {
         return this.filterTableList;
     }
 
     /**
      * @return filterTypeList
      */
-    public java.util.List < String > getFilterTypeList() {
+    public java.util.List<String> getFilterTypeList() {
         return this.filterTypeList;
     }
 
@@ -155,11 +160,11 @@ public class DownloadDataTrackResultRequest extends Request {
     public static final class Builder extends Request.Builder<DownloadDataTrackResultRequest, Builder> {
         private String regionId; 
         private ColumnFilter columnFilter; 
-        private java.util.List < Long > eventIdList; 
+        private java.util.List<Long> eventIdList; 
         private String filterEndTime; 
         private String filterStartTime; 
-        private java.util.List < String > filterTableList; 
-        private java.util.List < String > filterTypeList; 
+        private java.util.List<String> filterTableList; 
+        private java.util.List<String> filterTypeList; 
         private Long orderId; 
         private String rollbackSQLType; 
         private Long tid; 
@@ -204,7 +209,7 @@ public class DownloadDataTrackResultRequest extends Request {
         /**
          * <p>The IDs of the events.</p>
          */
-        public Builder eventIdList(java.util.List < Long > eventIdList) {
+        public Builder eventIdList(java.util.List<Long> eventIdList) {
             String eventIdListShrink = shrink(eventIdList, "EventIdList", "json");
             this.putQueryParameter("EventIdList", eventIdListShrink);
             this.eventIdList = eventIdList;
@@ -238,7 +243,7 @@ public class DownloadDataTrackResultRequest extends Request {
         /**
          * <p>The names of the tables for which you want to track data operations.</p>
          */
-        public Builder filterTableList(java.util.List < String > filterTableList) {
+        public Builder filterTableList(java.util.List<String> filterTableList) {
             String filterTableListShrink = shrink(filterTableList, "FilterTableList", "json");
             this.putQueryParameter("FilterTableList", filterTableListShrink);
             this.filterTableList = filterTableList;
@@ -248,7 +253,7 @@ public class DownloadDataTrackResultRequest extends Request {
         /**
          * <p>The types of data operations that you want to track.</p>
          */
-        public Builder filterTypeList(java.util.List < String > filterTypeList) {
+        public Builder filterTypeList(java.util.List<String> filterTypeList) {
             String filterTypeListShrink = shrink(filterTypeList, "FilterTypeList", "json");
             this.putQueryParameter("FilterTypeList", filterTypeListShrink);
             this.filterTypeList = filterTypeList;
@@ -321,7 +326,7 @@ public class DownloadDataTrackResultRequest extends Request {
         private String columnName;
 
         @com.aliyun.core.annotation.NameInMap("InList")
-        private java.util.List < String > inList;
+        private java.util.List<String> inList;
 
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
@@ -370,7 +375,7 @@ public class DownloadDataTrackResultRequest extends Request {
         /**
          * @return inList
          */
-        public java.util.List < String > getInList() {
+        public java.util.List<String> getInList() {
             return this.inList;
         }
 
@@ -392,7 +397,7 @@ public class DownloadDataTrackResultRequest extends Request {
             private String betweenEnd; 
             private String betweenStart; 
             private String columnName; 
-            private java.util.List < String > inList; 
+            private java.util.List<String> inList; 
             private String operator; 
             private String value; 
 
@@ -432,7 +437,7 @@ public class DownloadDataTrackResultRequest extends Request {
             /**
              * <p>The IN list used in the filter condition.</p>
              */
-            public Builder inList(java.util.List < String > inList) {
+            public Builder inList(java.util.List<String> inList) {
                 this.inList = inList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDataLakeDatabaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatabaseList")
-    private DatabaseList databaseList;
+    private java.util.List<DLDatabase> databaseList;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -54,7 +59,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     /**
      * @return databaseList
      */
-    public DatabaseList getDatabaseList() {
+    public java.util.List<DLDatabase> getDatabaseList() {
         return this.databaseList;
     }
 
@@ -101,7 +106,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private DatabaseList databaseList; 
+        private java.util.List<DLDatabase> databaseList; 
         private String errorCode; 
         private String errorMessage; 
         private Integer maxResults; 
@@ -112,7 +117,7 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
         /**
          * DatabaseList.
          */
-        public Builder databaseList(DatabaseList databaseList) {
+        public Builder databaseList(java.util.List<DLDatabase> databaseList) {
             this.databaseList = databaseList;
             return this;
         }
@@ -171,51 +176,4 @@ public class ListDataLakeDatabaseResponseBody extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link ListDataLakeDatabaseResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListDataLakeDatabaseResponseBody</p>
-     */
-    public static class DatabaseList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Database")
-        private java.util.List < DLDatabase > database;
-
-        private DatabaseList(Builder builder) {
-            this.database = builder.database;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DatabaseList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return database
-         */
-        public java.util.List < DLDatabase > getDatabase() {
-            return this.database;
-        }
-
-        public static final class Builder {
-            private java.util.List < DLDatabase > database; 
-
-            /**
-             * Database.
-             */
-            public Builder database(java.util.List < DLDatabase > database) {
-                this.database = database;
-                return this;
-            }
-
-            public DatabaseList build() {
-                return new DatabaseList(this);
-            } 
-
-        } 
-
-    }
 }

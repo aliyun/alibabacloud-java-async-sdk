@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SensitiveDataAuditLogList")
-    private java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList;
+    private java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -71,7 +76,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     /**
      * @return sensitiveDataAuditLogList
      */
-    public java.util.List < SensitiveDataAuditLogList> getSensitiveDataAuditLogList() {
+    public java.util.List<SensitiveDataAuditLogList> getSensitiveDataAuditLogList() {
         return this.sensitiveDataAuditLogList;
     }
 
@@ -93,7 +98,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList; 
+        private java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList; 
         private Boolean success; 
         private Long totalCount; 
 
@@ -133,7 +138,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         /**
          * <p>The audit logs for sensitive data.</p>
          */
-        public Builder sensitiveDataAuditLogList(java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList) {
+        public Builder sensitiveDataAuditLogList(java.util.List<SensitiveDataAuditLogList> sensitiveDataAuditLogList) {
             this.sensitiveDataAuditLogList = sensitiveDataAuditLogList;
             return this;
         }
@@ -345,7 +350,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         private String opTime;
 
         @com.aliyun.core.annotation.NameInMap("SensitiveDataLog")
-        private java.util.List < SensitiveDataLog> sensitiveDataLog;
+        private java.util.List<SensitiveDataLog> sensitiveDataLog;
 
         @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
@@ -406,7 +411,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
         /**
          * @return sensitiveDataLog
          */
-        public java.util.List < SensitiveDataLog> getSensitiveDataLog() {
+        public java.util.List<SensitiveDataLog> getSensitiveDataLog() {
             return this.sensitiveDataLog;
         }
 
@@ -436,7 +441,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             private Long instanceId; 
             private String moduleName; 
             private String opTime; 
-            private java.util.List < SensitiveDataLog> sensitiveDataLog; 
+            private java.util.List<SensitiveDataLog> sensitiveDataLog; 
             private String targetName; 
             private Long userId; 
             private String userName; 
@@ -488,7 +493,7 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
             /**
              * <p>The logs for sensitive data.</p>
              */
-            public Builder sensitiveDataLog(java.util.List < SensitiveDataLog> sensitiveDataLog) {
+            public Builder sensitiveDataLog(java.util.List<SensitiveDataLog> sensitiveDataLog) {
                 this.sensitiveDataLog = sensitiveDataLog;
                 return this;
             }

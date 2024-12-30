@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
      */
     public static class RelatedUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserIds")
-        private java.util.List < String > userIds;
+        private java.util.List<String> userIds;
 
         private RelatedUserList(Builder builder) {
             this.userIds = builder.userIds;
@@ -168,17 +173,17 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         /**
          * @return userIds
          */
-        public java.util.List < String > getUserIds() {
+        public java.util.List<String> getUserIds() {
             return this.userIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > userIds; 
+            private java.util.List<String> userIds; 
 
             /**
              * UserIds.
              */
-            public Builder userIds(java.util.List < String > userIds) {
+            public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
                 return this;
             }
@@ -198,7 +203,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
      */
     public static class RelatedUserNickList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserNicks")
-        private java.util.List < String > userNicks;
+        private java.util.List<String> userNicks;
 
         private RelatedUserNickList(Builder builder) {
             this.userNicks = builder.userNicks;
@@ -215,17 +220,17 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         /**
          * @return userNicks
          */
-        public java.util.List < String > getUserNicks() {
+        public java.util.List<String> getUserNicks() {
             return this.userNicks;
         }
 
         public static final class Builder {
-            private java.util.List < String > userNicks; 
+            private java.util.List<String> userNicks; 
 
             /**
              * UserNicks.
              */
-            public Builder userNicks(java.util.List < String > userNicks) {
+            public Builder userNicks(java.util.List<String> userNicks) {
                 this.userNicks = userNicks;
                 return this;
             }

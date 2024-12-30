@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -432,7 +437,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
      */
     public static class ObjectMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.List < Fields> fields;
+        private java.util.List<Fields> fields;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -461,7 +466,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < Fields> getFields() {
+        public java.util.List<Fields> getFields() {
             return this.fields;
         }
 
@@ -487,7 +492,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Fields> fields; 
+            private java.util.List<Fields> fields; 
             private String name; 
             private String source; 
             private String type; 
@@ -495,7 +500,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             /**
              * <p>The fields in the metatable.</p>
              */
-            public Builder fields(java.util.List < Fields> fields) {
+            public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
                 return this;
             }
@@ -557,10 +562,10 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
      */
     public static class LineageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Lineages")
-        private java.util.List < Lineages> lineages;
+        private java.util.List<Lineages> lineages;
 
         @com.aliyun.core.annotation.NameInMap("ObjectMetadata")
-        private java.util.List < ObjectMetadata> objectMetadata;
+        private java.util.List<ObjectMetadata> objectMetadata;
 
         private LineageResult(Builder builder) {
             this.lineages = builder.lineages;
@@ -578,25 +583,25 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
         /**
          * @return lineages
          */
-        public java.util.List < Lineages> getLineages() {
+        public java.util.List<Lineages> getLineages() {
             return this.lineages;
         }
 
         /**
          * @return objectMetadata
          */
-        public java.util.List < ObjectMetadata> getObjectMetadata() {
+        public java.util.List<ObjectMetadata> getObjectMetadata() {
             return this.objectMetadata;
         }
 
         public static final class Builder {
-            private java.util.List < Lineages> lineages; 
-            private java.util.List < ObjectMetadata> objectMetadata; 
+            private java.util.List<Lineages> lineages; 
+            private java.util.List<ObjectMetadata> objectMetadata; 
 
             /**
              * <p>The details about the lineage.</p>
              */
-            public Builder lineages(java.util.List < Lineages> lineages) {
+            public Builder lineages(java.util.List<Lineages> lineages) {
                 this.lineages = lineages;
                 return this;
             }
@@ -604,7 +609,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
             /**
              * <p>The table and field metadata information.</p>
              */
-            public Builder objectMetadata(java.util.List < ObjectMetadata> objectMetadata) {
+            public Builder objectMetadata(java.util.List<ObjectMetadata> objectMetadata) {
                 this.objectMetadata = objectMetadata;
                 return this;
             }

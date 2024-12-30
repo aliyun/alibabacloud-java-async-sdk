@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -366,7 +371,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
      */
     public static class InstanceLoginAuditLogList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceLoginAuditLog")
-        private java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog;
+        private java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog;
 
         private InstanceLoginAuditLogList(Builder builder) {
             this.instanceLoginAuditLog = builder.instanceLoginAuditLog;
@@ -383,17 +388,17 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
         /**
          * @return instanceLoginAuditLog
          */
-        public java.util.List < InstanceLoginAuditLog> getInstanceLoginAuditLog() {
+        public java.util.List<InstanceLoginAuditLog> getInstanceLoginAuditLog() {
             return this.instanceLoginAuditLog;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog; 
+            private java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog; 
 
             /**
              * InstanceLoginAuditLog.
              */
-            public Builder instanceLoginAuditLog(java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog) {
+            public Builder instanceLoginAuditLog(java.util.List<InstanceLoginAuditLog> instanceLoginAuditLog) {
                 this.instanceLoginAuditLog = instanceLoginAuditLog;
                 return this;
             }

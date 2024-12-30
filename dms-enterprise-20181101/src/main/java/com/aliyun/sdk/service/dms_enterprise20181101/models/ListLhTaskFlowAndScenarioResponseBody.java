@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -592,7 +597,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
      */
     public static class RawDAGList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dag")
-        private java.util.List < Dag> dag;
+        private java.util.List<Dag> dag;
 
         private RawDAGList(Builder builder) {
             this.dag = builder.dag;
@@ -609,17 +614,17 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         /**
          * @return dag
          */
-        public java.util.List < Dag> getDag() {
+        public java.util.List<Dag> getDag() {
             return this.dag;
         }
 
         public static final class Builder {
-            private java.util.List < Dag> dag; 
+            private java.util.List<Dag> dag; 
 
             /**
              * Dag.
              */
-            public Builder dag(java.util.List < Dag> dag) {
+            public Builder dag(java.util.List<Dag> dag) {
                 this.dag = dag;
                 return this;
             }
@@ -1056,7 +1061,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
      */
     public static class DagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dag")
-        private java.util.List < DagListDag> dag;
+        private java.util.List<DagListDag> dag;
 
         private DagList(Builder builder) {
             this.dag = builder.dag;
@@ -1073,17 +1078,17 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         /**
          * @return dag
          */
-        public java.util.List < DagListDag> getDag() {
+        public java.util.List<DagListDag> getDag() {
             return this.dag;
         }
 
         public static final class Builder {
-            private java.util.List < DagListDag> dag; 
+            private java.util.List<DagListDag> dag; 
 
             /**
              * Dag.
              */
-            public Builder dag(java.util.List < DagListDag> dag) {
+            public Builder dag(java.util.List<DagListDag> dag) {
                 this.dag = dag;
                 return this;
             }
@@ -1266,7 +1271,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
      */
     public static class ScenarioDAGList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScenarioDAG")
-        private java.util.List < ScenarioDAG> scenarioDAG;
+        private java.util.List<ScenarioDAG> scenarioDAG;
 
         private ScenarioDAGList(Builder builder) {
             this.scenarioDAG = builder.scenarioDAG;
@@ -1283,17 +1288,17 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
         /**
          * @return scenarioDAG
          */
-        public java.util.List < ScenarioDAG> getScenarioDAG() {
+        public java.util.List<ScenarioDAG> getScenarioDAG() {
             return this.scenarioDAG;
         }
 
         public static final class Builder {
-            private java.util.List < ScenarioDAG> scenarioDAG; 
+            private java.util.List<ScenarioDAG> scenarioDAG; 
 
             /**
              * ScenarioDAG.
              */
-            public Builder scenarioDAG(java.util.List < ScenarioDAG> scenarioDAG) {
+            public Builder scenarioDAG(java.util.List<ScenarioDAG> scenarioDAG) {
                 this.scenarioDAG = scenarioDAG;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -507,7 +512,7 @@ public class ListColumnsResponseBody extends TeaModel {
      */
     public static class ColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
-        private java.util.List < Column> column;
+        private java.util.List<Column> column;
 
         private ColumnList(Builder builder) {
             this.column = builder.column;
@@ -524,17 +529,17 @@ public class ListColumnsResponseBody extends TeaModel {
         /**
          * @return column
          */
-        public java.util.List < Column> getColumn() {
+        public java.util.List<Column> getColumn() {
             return this.column;
         }
 
         public static final class Builder {
-            private java.util.List < Column> column; 
+            private java.util.List<Column> column; 
 
             /**
              * Column.
              */
-            public Builder column(java.util.List < Column> column) {
+            public Builder column(java.util.List<Column> column) {
                 this.column = column;
                 return this;
             }

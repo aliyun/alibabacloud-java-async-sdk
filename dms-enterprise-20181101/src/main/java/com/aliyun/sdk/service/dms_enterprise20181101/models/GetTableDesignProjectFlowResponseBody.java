@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -173,7 +178,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         private Boolean publishAnchor;
 
         @com.aliyun.core.annotation.NameInMap("PublishStrategies")
-        private java.util.List < String > publishStrategies;
+        private java.util.List<String> publishStrategies;
 
         private FlowNodeArray(Builder builder) {
             this.backToDesign = builder.backToDesign;
@@ -238,7 +243,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         /**
          * @return publishStrategies
          */
-        public java.util.List < String > getPublishStrategies() {
+        public java.util.List<String> getPublishStrategies() {
             return this.publishStrategies;
         }
 
@@ -249,7 +254,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             private String nodeTitle; 
             private Integer position; 
             private Boolean publishAnchor; 
-            private java.util.List < String > publishStrategies; 
+            private java.util.List<String> publishStrategies; 
 
             /**
              * <p>Indicates whether the ticket can be returned to the schema design node. Valid values:</p>
@@ -331,7 +336,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             /**
              * <p>The available publishing strategies.</p>
              */
-            public Builder publishStrategies(java.util.List < String > publishStrategies) {
+            public Builder publishStrategies(java.util.List<String> publishStrategies) {
                 this.publishStrategies = publishStrategies;
                 return this;
             }
@@ -354,7 +359,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         private Integer currentPosition;
 
         @com.aliyun.core.annotation.NameInMap("FlowNodeArray")
-        private java.util.List < FlowNodeArray> flowNodeArray;
+        private java.util.List<FlowNodeArray> flowNodeArray;
 
         @com.aliyun.core.annotation.NameInMap("RuleComment")
         private String ruleComment;
@@ -387,7 +392,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         /**
          * @return flowNodeArray
          */
-        public java.util.List < FlowNodeArray> getFlowNodeArray() {
+        public java.util.List<FlowNodeArray> getFlowNodeArray() {
             return this.flowNodeArray;
         }
 
@@ -407,7 +412,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPosition; 
-            private java.util.List < FlowNodeArray> flowNodeArray; 
+            private java.util.List<FlowNodeArray> flowNodeArray; 
             private String ruleComment; 
             private String ruleName; 
 
@@ -425,7 +430,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             /**
              * <p>The nodes in the process.</p>
              */
-            public Builder flowNodeArray(java.util.List < FlowNodeArray> flowNodeArray) {
+            public Builder flowNodeArray(java.util.List<FlowNodeArray> flowNodeArray) {
                 this.flowNodeArray = flowNodeArray;
                 return this;
             }

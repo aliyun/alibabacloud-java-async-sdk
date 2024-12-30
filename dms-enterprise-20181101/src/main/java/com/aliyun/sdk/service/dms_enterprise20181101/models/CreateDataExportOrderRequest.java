@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class CreateDataExportOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
-    private java.util.List < Long > relatedUserList;
+    private java.util.List<Long> relatedUserList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
@@ -116,7 +121,7 @@ public class CreateDataExportOrderRequest extends Request {
     /**
      * @return relatedUserList
      */
-    public java.util.List < Long > getRelatedUserList() {
+    public java.util.List<Long> getRelatedUserList() {
         return this.relatedUserList;
     }
 
@@ -134,7 +139,7 @@ public class CreateDataExportOrderRequest extends Request {
         private Long parentId; 
         private PluginParam pluginParam; 
         private String realLoginUserUid; 
-        private java.util.List < Long > relatedUserList; 
+        private java.util.List<Long> relatedUserList; 
         private Long tid; 
 
         private Builder() {
@@ -225,7 +230,7 @@ public class CreateDataExportOrderRequest extends Request {
         /**
          * <p>The stakeholders involved in this operation.</p>
          */
-        public Builder relatedUserList(java.util.List < Long > relatedUserList) {
+        public Builder relatedUserList(java.util.List<Long> relatedUserList) {
             String relatedUserListShrink = shrink(relatedUserList, "RelatedUserList", "json");
             this.putQueryParameter("RelatedUserList", relatedUserListShrink);
             this.relatedUserList = relatedUserList;
@@ -271,10 +276,10 @@ public class CreateDataExportOrderRequest extends Request {
         private String fileWatermark;
 
         @com.aliyun.core.annotation.NameInMap("Keys")
-        private java.util.List < String > keys;
+        private java.util.List<String> keys;
 
         @com.aliyun.core.annotation.NameInMap("WatermarkTypes")
-        private java.util.List < String > watermarkTypes;
+        private java.util.List<String> watermarkTypes;
 
         private Watermark(Builder builder) {
             this.columnName = builder.columnName;
@@ -316,14 +321,14 @@ public class CreateDataExportOrderRequest extends Request {
         /**
          * @return keys
          */
-        public java.util.List < String > getKeys() {
+        public java.util.List<String> getKeys() {
             return this.keys;
         }
 
         /**
          * @return watermarkTypes
          */
-        public java.util.List < String > getWatermarkTypes() {
+        public java.util.List<String> getWatermarkTypes() {
             return this.watermarkTypes;
         }
 
@@ -331,8 +336,8 @@ public class CreateDataExportOrderRequest extends Request {
             private String columnName; 
             private String dataWatermark; 
             private String fileWatermark; 
-            private java.util.List < String > keys; 
-            private java.util.List < String > watermarkTypes; 
+            private java.util.List<String> keys; 
+            private java.util.List<String> watermarkTypes; 
 
             /**
              * <p>The field into which the watermark is to be embedded.</p>
@@ -370,7 +375,7 @@ public class CreateDataExportOrderRequest extends Request {
             /**
              * <p>One or more primary keys or unique keys.</p>
              */
-            public Builder keys(java.util.List < String > keys) {
+            public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
                 return this;
             }
@@ -378,7 +383,7 @@ public class CreateDataExportOrderRequest extends Request {
             /**
              * <p>The methods in which the watermark is embedded.</p>
              */
-            public Builder watermarkTypes(java.util.List < String > watermarkTypes) {
+            public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;
                 return this;
             }

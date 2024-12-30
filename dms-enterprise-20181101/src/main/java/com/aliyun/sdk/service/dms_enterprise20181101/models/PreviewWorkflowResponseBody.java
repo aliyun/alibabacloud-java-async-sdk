@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
      */
     public static class AuditUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuditUser")
-        private java.util.List < AuditUser> auditUser;
+        private java.util.List<AuditUser> auditUser;
 
         private AuditUserList(Builder builder) {
             this.auditUser = builder.auditUser;
@@ -243,17 +248,17 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         /**
          * @return auditUser
          */
-        public java.util.List < AuditUser> getAuditUser() {
+        public java.util.List<AuditUser> getAuditUser() {
             return this.auditUser;
         }
 
         public static final class Builder {
-            private java.util.List < AuditUser> auditUser; 
+            private java.util.List<AuditUser> auditUser; 
 
             /**
              * AuditUser.
              */
-            public Builder auditUser(java.util.List < AuditUser> auditUser) {
+            public Builder auditUser(java.util.List<AuditUser> auditUser) {
                 this.auditUser = auditUser;
                 return this;
             }
@@ -380,7 +385,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
      */
     public static class WorkflowNodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowNode")
-        private java.util.List < WorkflowNode> workflowNode;
+        private java.util.List<WorkflowNode> workflowNode;
 
         private WorkflowNodeList(Builder builder) {
             this.workflowNode = builder.workflowNode;
@@ -397,17 +402,17 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         /**
          * @return workflowNode
          */
-        public java.util.List < WorkflowNode> getWorkflowNode() {
+        public java.util.List<WorkflowNode> getWorkflowNode() {
             return this.workflowNode;
         }
 
         public static final class Builder {
-            private java.util.List < WorkflowNode> workflowNode; 
+            private java.util.List<WorkflowNode> workflowNode; 
 
             /**
              * WorkflowNode.
              */
-            public Builder workflowNode(java.util.List < WorkflowNode> workflowNode) {
+            public Builder workflowNode(java.util.List<WorkflowNode> workflowNode) {
                 this.workflowNode = workflowNode;
                 return this;
             }
