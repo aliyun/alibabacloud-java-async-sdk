@@ -25,10 +25,15 @@ public class SubmitMediaAiAnalysisJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
     private SubmitMediaAiAnalysisJobRequest(Builder builder) {
         super(builder);
         this.analysisParams = builder.analysisParams;
         this.input = builder.input;
+        this.userData = builder.userData;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class SubmitMediaAiAnalysisJobRequest extends Request {
         return this.input;
     }
 
+    /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
     public static final class Builder extends Request.Builder<SubmitMediaAiAnalysisJobRequest, Builder> {
         private String analysisParams; 
         private String input; 
+        private String userData; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class SubmitMediaAiAnalysisJobRequest extends Request {
             super(request);
             this.analysisParams = request.analysisParams;
             this.input = request.input;
+            this.userData = request.userData;
         } 
 
         /**
@@ -93,6 +107,15 @@ public class SubmitMediaAiAnalysisJobRequest extends Request {
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
             this.input = input;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.putQueryParameter("UserData", userData);
+            this.userData = userData;
             return this;
         }
 
