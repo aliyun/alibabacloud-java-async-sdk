@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     private Long duration;
 
     @com.aliyun.core.annotation.NameInMap("Environments")
-    private java.util.Map < String, String > environments;
+    private java.util.Map<String, String> environments;
 
     @com.aliyun.core.annotation.NameInMap("ExperimentConfig")
     private ExperimentConfig experimentConfig;
@@ -46,28 +51,28 @@ public class GetTrainingJobResponseBody extends TeaModel {
     private String gmtModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("HyperParameters")
-    private java.util.List < HyperParameters> hyperParameters;
+    private java.util.List<HyperParameters> hyperParameters;
 
     @com.aliyun.core.annotation.NameInMap("InputChannels")
-    private java.util.List < InputChannels> inputChannels;
+    private java.util.List<InputChannels> inputChannels;
 
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("IsTempAlgo")
     private Boolean isTempAlgo;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestMetrics")
-    private java.util.List < LatestMetrics> latestMetrics;
+    private java.util.List<LatestMetrics> latestMetrics;
 
     @com.aliyun.core.annotation.NameInMap("LatestProgress")
     private LatestProgress latestProgress;
 
     @com.aliyun.core.annotation.NameInMap("OutputChannels")
-    private java.util.List < OutputChannels> outputChannels;
+    private java.util.List<OutputChannels> outputChannels;
 
     @com.aliyun.core.annotation.NameInMap("OutputModel")
     private OutputModel outputModel;
@@ -76,7 +81,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     private Integer priority;
 
     @com.aliyun.core.annotation.NameInMap("PythonRequirements")
-    private java.util.List < String > pythonRequirements;
+    private java.util.List<String> pythonRequirements;
 
     @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
@@ -100,7 +105,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("StatusTransitions")
-    private java.util.List < StatusTransitions> statusTransitions;
+    private java.util.List<StatusTransitions> statusTransitions;
 
     @com.aliyun.core.annotation.NameInMap("TrainingJobDescription")
     private String trainingJobDescription;
@@ -223,7 +228,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return environments
      */
-    public java.util.Map < String, String > getEnvironments() {
+    public java.util.Map<String, String> getEnvironments() {
         return this.environments;
     }
 
@@ -251,21 +256,21 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return hyperParameters
      */
-    public java.util.List < HyperParameters> getHyperParameters() {
+    public java.util.List<HyperParameters> getHyperParameters() {
         return this.hyperParameters;
     }
 
     /**
      * @return inputChannels
      */
-    public java.util.List < InputChannels> getInputChannels() {
+    public java.util.List<InputChannels> getInputChannels() {
         return this.inputChannels;
     }
 
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -279,14 +284,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
     /**
      * @return latestMetrics
      */
-    public java.util.List < LatestMetrics> getLatestMetrics() {
+    public java.util.List<LatestMetrics> getLatestMetrics() {
         return this.latestMetrics;
     }
 
@@ -300,7 +305,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return outputChannels
      */
-    public java.util.List < OutputChannels> getOutputChannels() {
+    public java.util.List<OutputChannels> getOutputChannels() {
         return this.outputChannels;
     }
 
@@ -321,7 +326,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return pythonRequirements
      */
-    public java.util.List < String > getPythonRequirements() {
+    public java.util.List<String> getPythonRequirements() {
         return this.pythonRequirements;
     }
 
@@ -377,7 +382,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
     /**
      * @return statusTransitions
      */
-    public java.util.List < StatusTransitions> getStatusTransitions() {
+    public java.util.List<StatusTransitions> getStatusTransitions() {
         return this.statusTransitions;
     }
 
@@ -438,21 +443,21 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private String algorithmVersion; 
         private ComputeResource computeResource; 
         private Long duration; 
-        private java.util.Map < String, String > environments; 
+        private java.util.Map<String, String> environments; 
         private ExperimentConfig experimentConfig; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
-        private java.util.List < HyperParameters> hyperParameters; 
-        private java.util.List < InputChannels> inputChannels; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<HyperParameters> hyperParameters; 
+        private java.util.List<InputChannels> inputChannels; 
+        private java.util.List<Instances> instances; 
         private Boolean isTempAlgo; 
-        private java.util.List < Labels> labels; 
-        private java.util.List < LatestMetrics> latestMetrics; 
+        private java.util.List<Labels> labels; 
+        private java.util.List<LatestMetrics> latestMetrics; 
         private LatestProgress latestProgress; 
-        private java.util.List < OutputChannels> outputChannels; 
+        private java.util.List<OutputChannels> outputChannels; 
         private OutputModel outputModel; 
         private Integer priority; 
-        private java.util.List < String > pythonRequirements; 
+        private java.util.List<String> pythonRequirements; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
@@ -460,7 +465,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private Scheduler scheduler; 
         private JobSettings settings; 
         private String status; 
-        private java.util.List < StatusTransitions> statusTransitions; 
+        private java.util.List<StatusTransitions> statusTransitions; 
         private String trainingJobDescription; 
         private String trainingJobId; 
         private String trainingJobName; 
@@ -528,7 +533,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * Environments.
          */
-        public Builder environments(java.util.Map < String, String > environments) {
+        public Builder environments(java.util.Map<String, String> environments) {
             this.environments = environments;
             return this;
         }
@@ -560,7 +565,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * HyperParameters.
          */
-        public Builder hyperParameters(java.util.List < HyperParameters> hyperParameters) {
+        public Builder hyperParameters(java.util.List<HyperParameters> hyperParameters) {
             this.hyperParameters = hyperParameters;
             return this;
         }
@@ -568,7 +573,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * InputChannels.
          */
-        public Builder inputChannels(java.util.List < InputChannels> inputChannels) {
+        public Builder inputChannels(java.util.List<InputChannels> inputChannels) {
             this.inputChannels = inputChannels;
             return this;
         }
@@ -576,7 +581,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * Instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -592,7 +597,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
@@ -600,7 +605,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * LatestMetrics.
          */
-        public Builder latestMetrics(java.util.List < LatestMetrics> latestMetrics) {
+        public Builder latestMetrics(java.util.List<LatestMetrics> latestMetrics) {
             this.latestMetrics = latestMetrics;
             return this;
         }
@@ -616,7 +621,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * OutputChannels.
          */
-        public Builder outputChannels(java.util.List < OutputChannels> outputChannels) {
+        public Builder outputChannels(java.util.List<OutputChannels> outputChannels) {
             this.outputChannels = outputChannels;
             return this;
         }
@@ -640,7 +645,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * PythonRequirements.
          */
-        public Builder pythonRequirements(java.util.List < String > pythonRequirements) {
+        public Builder pythonRequirements(java.util.List<String> pythonRequirements) {
             this.pythonRequirements = pythonRequirements;
             return this;
         }
@@ -704,7 +709,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * StatusTransitions.
          */
-        public Builder statusTransitions(java.util.List < StatusTransitions> statusTransitions) {
+        public Builder statusTransitions(java.util.List<StatusTransitions> statusTransitions) {
             this.statusTransitions = statusTransitions;
             return this;
         }
@@ -2231,7 +2236,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
      */
     public static class UserVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        private java.util.List<String> extendedCIDRs;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -2260,7 +2265,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
         }
 
@@ -2286,7 +2291,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > extendedCIDRs; 
+            private java.util.List<String> extendedCIDRs; 
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
@@ -2294,7 +2299,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserVpc</p>
  */
 public class UserVpc extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DefaultForwardInfo")
+    private ForwardInfo defaultForwardInfo;
+
     @com.aliyun.core.annotation.NameInMap("DefaultRoute")
     private String defaultRoute;
 
     @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
-    private java.util.List < String > extendedCIDRs;
+    private java.util.List<String> extendedCIDRs;
 
     @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
@@ -31,6 +39,7 @@ public class UserVpc extends TeaModel {
     private String vpcId;
 
     private UserVpc(Builder builder) {
+        this.defaultForwardInfo = builder.defaultForwardInfo;
         this.defaultRoute = builder.defaultRoute;
         this.extendedCIDRs = builder.extendedCIDRs;
         this.roleArn = builder.roleArn;
@@ -48,6 +57,13 @@ public class UserVpc extends TeaModel {
     }
 
     /**
+     * @return defaultForwardInfo
+     */
+    public ForwardInfo getDefaultForwardInfo() {
+        return this.defaultForwardInfo;
+    }
+
+    /**
      * @return defaultRoute
      */
     public String getDefaultRoute() {
@@ -57,7 +73,7 @@ public class UserVpc extends TeaModel {
     /**
      * @return extendedCIDRs
      */
-    public java.util.List < String > getExtendedCIDRs() {
+    public java.util.List<String> getExtendedCIDRs() {
         return this.extendedCIDRs;
     }
 
@@ -90,12 +106,21 @@ public class UserVpc extends TeaModel {
     }
 
     public static final class Builder {
+        private ForwardInfo defaultForwardInfo; 
         private String defaultRoute; 
-        private java.util.List < String > extendedCIDRs; 
+        private java.util.List<String> extendedCIDRs; 
         private String roleArn; 
         private String securityGroupId; 
         private String switchId; 
         private String vpcId; 
+
+        /**
+         * DefaultForwardInfo.
+         */
+        public Builder defaultForwardInfo(ForwardInfo defaultForwardInfo) {
+            this.defaultForwardInfo = defaultForwardInfo;
+            return this;
+        }
 
         /**
          * DefaultRoute.
@@ -108,7 +133,7 @@ public class UserVpc extends TeaModel {
         /**
          * ExtendedCIDRs.
          */
-        public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+        public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
             this.extendedCIDRs = extendedCIDRs;
             return this;
         }

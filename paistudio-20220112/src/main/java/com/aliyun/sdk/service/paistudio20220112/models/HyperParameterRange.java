@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HyperParameterRange extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Enum")
-    private java.util.List < String > _enum;
+    private java.util.List<String> _enum;
 
     @com.aliyun.core.annotation.NameInMap("ExclusiveMaximum")
     private Boolean exclusiveMaximum;
@@ -58,7 +63,7 @@ public class HyperParameterRange extends TeaModel {
     /**
      * @return _enum
      */
-    public java.util.List < String > get_enum() {
+    public java.util.List<String> get_enum() {
         return this._enum;
     }
 
@@ -112,7 +117,7 @@ public class HyperParameterRange extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > _enum; 
+        private java.util.List<String> _enum; 
         private Boolean exclusiveMaximum; 
         private Boolean exclusiveMinimum; 
         private Long maxLength; 
@@ -124,7 +129,7 @@ public class HyperParameterRange extends TeaModel {
         /**
          * Enum.
          */
-        public Builder _enum(java.util.List < String > _enum) {
+        public Builder _enum(java.util.List<String> _enum) {
             this._enum = _enum;
             return this;
         }

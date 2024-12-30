@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class JobViewMetric extends TeaModel {
     private String networkOutputRate;
 
     @com.aliyun.core.annotation.NameInMap("NodeNames")
-    private java.util.List < String > nodeNames;
+    private java.util.List<String> nodeNames;
 
     @com.aliyun.core.annotation.NameInMap("RequestCPU")
     private Integer requestCPU;
@@ -161,7 +166,7 @@ public class JobViewMetric extends TeaModel {
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
@@ -231,7 +236,7 @@ public class JobViewMetric extends TeaModel {
         private String memoryUsageRate; 
         private String networkInputRate; 
         private String networkOutputRate; 
-        private java.util.List < String > nodeNames; 
+        private java.util.List<String> nodeNames; 
         private Integer requestCPU; 
         private Integer requestGPU; 
         private Long requestMemory; 
@@ -316,7 +321,7 @@ public class JobViewMetric extends TeaModel {
         /**
          * NodeNames.
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
             return this;
         }

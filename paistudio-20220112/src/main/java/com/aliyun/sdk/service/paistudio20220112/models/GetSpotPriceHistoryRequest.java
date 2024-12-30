@@ -12,23 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListTrainingJobMetricsRequest} extends {@link RequestModel}
+ * {@link GetSpotPriceHistoryRequest} extends {@link RequestModel}
  *
- * <p>ListTrainingJobMetricsRequest</p>
+ * <p>GetSpotPriceHistoryRequest</p>
  */
-public class ListTrainingJobMetricsRequest extends Request {
+public class GetSpotPriceHistoryRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("TrainingJobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String trainingJobId;
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Name")
-    private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -36,25 +31,33 @@ public class ListTrainingJobMetricsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private Long pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
-    private Long pageSize;
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotDuration")
+    private Integer spotDuration;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    private ListTrainingJobMetricsRequest(Builder builder) {
+    private GetSpotPriceHistoryRequest(Builder builder) {
         super(builder);
-        this.trainingJobId = builder.trainingJobId;
+        this.instanceType = builder.instanceType;
         this.endTime = builder.endTime;
-        this.name = builder.name;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sortBy = builder.sortBy;
+        this.spotDuration = builder.spotDuration;
         this.startTime = builder.startTime;
     }
 
@@ -62,7 +65,7 @@ public class ListTrainingJobMetricsRequest extends Request {
         return new Builder();
     }
 
-    public static ListTrainingJobMetricsRequest create() {
+    public static GetSpotPriceHistoryRequest create() {
         return builder().build();
     }
 
@@ -72,10 +75,10 @@ public class ListTrainingJobMetricsRequest extends Request {
     }
 
     /**
-     * @return trainingJobId
+     * @return instanceType
      */
-    public String getTrainingJobId() {
-        return this.trainingJobId;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -83,13 +86,6 @@ public class ListTrainingJobMetricsRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
     }
 
     /**
@@ -102,15 +98,29 @@ public class ListTrainingJobMetricsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public Long getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    /**
+     * @return spotDuration
+     */
+    public Integer getSpotDuration() {
+        return this.spotDuration;
     }
 
     /**
@@ -120,60 +130,47 @@ public class ListTrainingJobMetricsRequest extends Request {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<ListTrainingJobMetricsRequest, Builder> {
-        private String trainingJobId; 
+    public static final class Builder extends Request.Builder<GetSpotPriceHistoryRequest, Builder> {
+        private String instanceType; 
         private String endTime; 
-        private String name; 
         private String order; 
-        private Long pageNumber; 
-        private Long pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String sortBy; 
+        private Integer spotDuration; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListTrainingJobMetricsRequest request) {
+        private Builder(GetSpotPriceHistoryRequest request) {
             super(request);
-            this.trainingJobId = request.trainingJobId;
+            this.instanceType = request.instanceType;
             this.endTime = request.endTime;
-            this.name = request.name;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.spotDuration = request.spotDuration;
             this.startTime = request.startTime;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>train76rcaupa2cz</p>
+         * InstanceType.
          */
-        public Builder trainingJobId(String trainingJobId) {
-            this.putPathParameter("TrainingJobId", trainingJobId);
-            this.trainingJobId = trainingJobId;
+        public Builder instanceType(String instanceType) {
+            this.putPathParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
         /**
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-08T16:00:00Z</p>
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
             return this;
         }
 
@@ -189,7 +186,7 @@ public class ListTrainingJobMetricsRequest extends Request {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(Long pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -198,17 +195,32 @@ public class ListTrainingJobMetricsRequest extends Request {
         /**
          * PageSize.
          */
-        public Builder pageSize(Long pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2020-11-08T16:00:00Z</p>
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
+            return this;
+        }
+
+        /**
+         * SpotDuration.
+         */
+        public Builder spotDuration(Integer spotDuration) {
+            this.putQueryParameter("SpotDuration", spotDuration);
+            this.spotDuration = spotDuration;
+            return this;
+        }
+
+        /**
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -217,8 +229,8 @@ public class ListTrainingJobMetricsRequest extends Request {
         }
 
         @Override
-        public ListTrainingJobMetricsRequest build() {
-            return new ListTrainingJobMetricsRequest(this);
+        public GetSpotPriceHistoryRequest build() {
+            return new GetSpotPriceHistoryRequest(this);
         } 
 
     } 

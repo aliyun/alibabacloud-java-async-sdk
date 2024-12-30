@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class NodeMetric extends TeaModel {
     private String GPUType;
 
     @com.aliyun.core.annotation.NameInMap("Metrics")
-    private java.util.List < Metric > metrics;
+    private java.util.List<Metric> metrics;
 
     @com.aliyun.core.annotation.NameInMap("NodeID")
     private String nodeID;
@@ -45,7 +50,7 @@ public class NodeMetric extends TeaModel {
     /**
      * @return metrics
      */
-    public java.util.List < Metric > getMetrics() {
+    public java.util.List<Metric> getMetrics() {
         return this.metrics;
     }
 
@@ -58,7 +63,7 @@ public class NodeMetric extends TeaModel {
 
     public static final class Builder {
         private String GPUType; 
-        private java.util.List < Metric > metrics; 
+        private java.util.List<Metric> metrics; 
         private String nodeID; 
 
         /**
@@ -72,7 +77,7 @@ public class NodeMetric extends TeaModel {
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < Metric > metrics) {
+        public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;
             return this;
         }

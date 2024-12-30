@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CreateTrainingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Environments")
-    private java.util.Map < String, String > environments;
+    private java.util.Map<String, String> environments;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExperimentConfig")
@@ -46,19 +51,19 @@ public class CreateTrainingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HyperParameters")
-    private java.util.List < HyperParameters> hyperParameters;
+    private java.util.List<HyperParameters> hyperParameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InputChannels")
-    private java.util.List < InputChannels> inputChannels;
+    private java.util.List<InputChannels> inputChannels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OutputChannels")
-    private java.util.List < OutputChannels> outputChannels;
+    private java.util.List<OutputChannels> outputChannels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Priority")
@@ -66,7 +71,7 @@ public class CreateTrainingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PythonRequirements")
-    private java.util.List < String > pythonRequirements;
+    private java.util.List<String> pythonRequirements;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleArn")
@@ -181,7 +186,7 @@ public class CreateTrainingJobRequest extends Request {
     /**
      * @return environments
      */
-    public java.util.Map < String, String > getEnvironments() {
+    public java.util.Map<String, String> getEnvironments() {
         return this.environments;
     }
 
@@ -195,28 +200,28 @@ public class CreateTrainingJobRequest extends Request {
     /**
      * @return hyperParameters
      */
-    public java.util.List < HyperParameters> getHyperParameters() {
+    public java.util.List<HyperParameters> getHyperParameters() {
         return this.hyperParameters;
     }
 
     /**
      * @return inputChannels
      */
-    public java.util.List < InputChannels> getInputChannels() {
+    public java.util.List<InputChannels> getInputChannels() {
         return this.inputChannels;
     }
 
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
     /**
      * @return outputChannels
      */
-    public java.util.List < OutputChannels> getOutputChannels() {
+    public java.util.List<OutputChannels> getOutputChannels() {
         return this.outputChannels;
     }
 
@@ -230,7 +235,7 @@ public class CreateTrainingJobRequest extends Request {
     /**
      * @return pythonRequirements
      */
-    public java.util.List < String > getPythonRequirements() {
+    public java.util.List<String> getPythonRequirements() {
         return this.pythonRequirements;
     }
 
@@ -290,14 +295,14 @@ public class CreateTrainingJobRequest extends Request {
         private String algorithmVersion; 
         private Location codeDir; 
         private ComputeResource computeResource; 
-        private java.util.Map < String, String > environments; 
+        private java.util.Map<String, String> environments; 
         private ExperimentConfig experimentConfig; 
-        private java.util.List < HyperParameters> hyperParameters; 
-        private java.util.List < InputChannels> inputChannels; 
-        private java.util.List < Labels> labels; 
-        private java.util.List < OutputChannels> outputChannels; 
+        private java.util.List<HyperParameters> hyperParameters; 
+        private java.util.List<InputChannels> inputChannels; 
+        private java.util.List<Labels> labels; 
+        private java.util.List<OutputChannels> outputChannels; 
         private Integer priority; 
-        private java.util.List < String > pythonRequirements; 
+        private java.util.List<String> pythonRequirements; 
         private String roleArn; 
         private Scheduler scheduler; 
         private JobSettings settings; 
@@ -392,7 +397,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * Environments.
          */
-        public Builder environments(java.util.Map < String, String > environments) {
+        public Builder environments(java.util.Map<String, String> environments) {
             this.putBodyParameter("Environments", environments);
             this.environments = environments;
             return this;
@@ -410,7 +415,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * HyperParameters.
          */
-        public Builder hyperParameters(java.util.List < HyperParameters> hyperParameters) {
+        public Builder hyperParameters(java.util.List<HyperParameters> hyperParameters) {
             this.putBodyParameter("HyperParameters", hyperParameters);
             this.hyperParameters = hyperParameters;
             return this;
@@ -419,7 +424,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * InputChannels.
          */
-        public Builder inputChannels(java.util.List < InputChannels> inputChannels) {
+        public Builder inputChannels(java.util.List<InputChannels> inputChannels) {
             this.putBodyParameter("InputChannels", inputChannels);
             this.inputChannels = inputChannels;
             return this;
@@ -428,7 +433,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;
@@ -437,7 +442,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * OutputChannels.
          */
-        public Builder outputChannels(java.util.List < OutputChannels> outputChannels) {
+        public Builder outputChannels(java.util.List<OutputChannels> outputChannels) {
             this.putBodyParameter("OutputChannels", outputChannels);
             this.outputChannels = outputChannels;
             return this;
@@ -455,7 +460,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * PythonRequirements.
          */
-        public Builder pythonRequirements(java.util.List < String > pythonRequirements) {
+        public Builder pythonRequirements(java.util.List<String> pythonRequirements) {
             this.putBodyParameter("PythonRequirements", pythonRequirements);
             this.pythonRequirements = pythonRequirements;
             return this;
@@ -1391,7 +1396,7 @@ public class CreateTrainingJobRequest extends Request {
         private String defaultRoute;
 
         @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        private java.util.List<String> extendedCIDRs;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -1428,7 +1433,7 @@ public class CreateTrainingJobRequest extends Request {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
         }
 
@@ -1455,7 +1460,7 @@ public class CreateTrainingJobRequest extends Request {
 
         public static final class Builder {
             private String defaultRoute; 
-            private java.util.List < String > extendedCIDRs; 
+            private java.util.List<String> extendedCIDRs; 
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
@@ -1471,7 +1476,7 @@ public class CreateTrainingJobRequest extends Request {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
                 return this;
             }

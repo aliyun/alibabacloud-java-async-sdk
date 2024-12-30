@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     private Boolean supportRDMA;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
@@ -159,7 +164,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -189,7 +194,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String resourceType; 
         private String status; 
         private Boolean supportRDMA; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private UserVpc userVpc; 
         private String workspaceID; 
 
@@ -284,7 +289,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

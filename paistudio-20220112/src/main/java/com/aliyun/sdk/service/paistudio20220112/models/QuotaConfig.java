@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,10 +30,10 @@ public class QuotaConfig extends TeaModel {
     private Boolean enablePreemptSubquotaWorkloads;
 
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
-    private java.util.List < WorkspaceSpecs > resourceSpecs;
+    private java.util.List<WorkspaceSpecs> resourceSpecs;
 
     @com.aliyun.core.annotation.NameInMap("SupportGPUDrivers")
-    private java.util.List < String > supportGPUDrivers;
+    private java.util.List<String> supportGPUDrivers;
 
     @com.aliyun.core.annotation.NameInMap("SupportRDMA")
     private Boolean supportRDMA;
@@ -86,14 +91,14 @@ public class QuotaConfig extends TeaModel {
     /**
      * @return resourceSpecs
      */
-    public java.util.List < WorkspaceSpecs > getResourceSpecs() {
+    public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
     }
 
     /**
      * @return supportGPUDrivers
      */
-    public java.util.List < String > getSupportGPUDrivers() {
+    public java.util.List<String> getSupportGPUDrivers() {
         return this.supportGPUDrivers;
     }
 
@@ -116,8 +121,8 @@ public class QuotaConfig extends TeaModel {
         private String clusterId; 
         private String defaultGPUDriver; 
         private Boolean enablePreemptSubquotaWorkloads; 
-        private java.util.List < WorkspaceSpecs > resourceSpecs; 
-        private java.util.List < String > supportGPUDrivers; 
+        private java.util.List<WorkspaceSpecs> resourceSpecs; 
+        private java.util.List<String> supportGPUDrivers; 
         private Boolean supportRDMA; 
         private UserVpc userVpc; 
 
@@ -156,7 +161,7 @@ public class QuotaConfig extends TeaModel {
         /**
          * ResourceSpecs.
          */
-        public Builder resourceSpecs(java.util.List < WorkspaceSpecs > resourceSpecs) {
+        public Builder resourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
             this.resourceSpecs = resourceSpecs;
             return this;
         }
@@ -164,7 +169,7 @@ public class QuotaConfig extends TeaModel {
         /**
          * SupportGPUDrivers.
          */
-        public Builder supportGPUDrivers(java.util.List < String > supportGPUDrivers) {
+        public Builder supportGPUDrivers(java.util.List<String> supportGPUDrivers) {
             this.supportGPUDrivers = supportGPUDrivers;
             return this;
         }

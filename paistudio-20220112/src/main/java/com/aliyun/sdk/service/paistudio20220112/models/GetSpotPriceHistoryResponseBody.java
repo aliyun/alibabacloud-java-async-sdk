@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListNodesResponseBody} extends {@link TeaModel}
+ * {@link GetSpotPriceHistoryResponseBody} extends {@link TeaModel}
  *
- * <p>ListNodesResponseBody</p>
+ * <p>GetSpotPriceHistoryResponseBody</p>
  */
-public class ListNodesResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List<Node> nodes;
-
+public class GetSpotPriceHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SpotPriceHistory")
+    private java.util.List<SpotPriceItem> spotPriceHistory;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    private ListNodesResponseBody(Builder builder) {
-        this.nodes = builder.nodes;
+    private GetSpotPriceHistoryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.spotPriceHistory = builder.spotPriceHistory;
         this.totalCount = builder.totalCount;
     }
 
@@ -36,15 +36,8 @@ public class ListNodesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListNodesResponseBody create() {
+    public static GetSpotPriceHistoryResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return nodes
-     */
-    public java.util.List<Node> getNodes() {
-        return this.nodes;
     }
 
     /**
@@ -55,6 +48,13 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     /**
+     * @return spotPriceHistory
+     */
+    public java.util.List<SpotPriceItem> getSpotPriceHistory() {
+        return this.spotPriceHistory;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -62,23 +62,23 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List<Node> nodes; 
         private String requestId; 
+        private java.util.List<SpotPriceItem> spotPriceHistory; 
         private Integer totalCount; 
-
-        /**
-         * Nodes.
-         */
-        public Builder nodes(java.util.List<Node> nodes) {
-            this.nodes = nodes;
-            return this;
-        }
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SpotPriceHistory.
+         */
+        public Builder spotPriceHistory(java.util.List<SpotPriceItem> spotPriceHistory) {
+            this.spotPriceHistory = spotPriceHistory;
             return this;
         }
 
@@ -90,8 +90,8 @@ public class ListNodesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListNodesResponseBody build() {
-            return new ListNodesResponseBody(this);
+        public GetSpotPriceHistoryResponseBody build() {
+            return new GetSpotPriceHistoryResponseBody(this);
         } 
 
     } 

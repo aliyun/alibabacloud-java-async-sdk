@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAlgorithmsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Algorithms")
-    private java.util.List < Algorithms> algorithms;
+    private java.util.List<Algorithms> algorithms;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     /**
      * @return algorithms
      */
-    public java.util.List < Algorithms> getAlgorithms() {
+    public java.util.List<Algorithms> getAlgorithms() {
         return this.algorithms;
     }
 
@@ -57,14 +62,14 @@ public class ListAlgorithmsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Algorithms> algorithms; 
+        private java.util.List<Algorithms> algorithms; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Algorithms.
          */
-        public Builder algorithms(java.util.List < Algorithms> algorithms) {
+        public Builder algorithms(java.util.List<Algorithms> algorithms) {
             this.algorithms = algorithms;
             return this;
         }

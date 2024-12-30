@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetAlgorithmResponse} extends {@link TeaModel}
+ * {@link GetSpotPriceHistoryResponse} extends {@link TeaModel}
  *
- * <p>GetAlgorithmResponse</p>
+ * <p>GetSpotPriceHistoryResponse</p>
  */
-public class GetAlgorithmResponse extends Response {
+public class GetSpotPriceHistoryResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetAlgorithmResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetAlgorithmResponseBody body;
+    private GetSpotPriceHistoryResponseBody body;
 
-    private GetAlgorithmResponse(BuilderImpl builder) {
+    private GetSpotPriceHistoryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetAlgorithmResponse create() {
+    public static GetSpotPriceHistoryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetAlgorithmResponse extends Response {
     /**
      * @return body
      */
-    public GetAlgorithmResponseBody getBody() {
+    public GetSpotPriceHistoryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetAlgorithmResponse, Builder> {
+    public interface Builder extends Response.Builder<GetSpotPriceHistoryResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetAlgorithmResponseBody body);
+        Builder body(GetSpotPriceHistoryResponseBody body);
 
         @Override
-        GetAlgorithmResponse build();
+        GetSpotPriceHistoryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetAlgorithmResponse, Builder>
+            extends Response.BuilderImpl<GetSpotPriceHistoryResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetAlgorithmResponseBody body; 
+        private GetSpotPriceHistoryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetAlgorithmResponse response) {
+        private BuilderImpl(GetSpotPriceHistoryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetAlgorithmResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetAlgorithmResponseBody body) {
+        public Builder body(GetSpotPriceHistoryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetAlgorithmResponse build() {
-            return new GetAlgorithmResponse(this);
+        public GetSpotPriceHistoryResponse build() {
+            return new GetSpotPriceHistoryResponse(this);
         } 
 
     } 

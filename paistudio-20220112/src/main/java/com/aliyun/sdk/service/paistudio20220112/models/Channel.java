@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,13 +25,13 @@ public class Channel extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Properties")
-    private java.util.Map < String, ? > properties;
+    private java.util.Map<String, ?> properties;
 
     @com.aliyun.core.annotation.NameInMap("Required")
     private Boolean required;
 
     @com.aliyun.core.annotation.NameInMap("SupportedChannelTypes")
-    private java.util.List < String > supportedChannelTypes;
+    private java.util.List<String> supportedChannelTypes;
 
     private Channel(Builder builder) {
         this.description = builder.description;
@@ -61,7 +66,7 @@ public class Channel extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.Map < String, ? > getProperties() {
+    public java.util.Map<String, ?> getProperties() {
         return this.properties;
     }
 
@@ -75,16 +80,16 @@ public class Channel extends TeaModel {
     /**
      * @return supportedChannelTypes
      */
-    public java.util.List < String > getSupportedChannelTypes() {
+    public java.util.List<String> getSupportedChannelTypes() {
         return this.supportedChannelTypes;
     }
 
     public static final class Builder {
         private String description; 
         private String name; 
-        private java.util.Map < String, ? > properties; 
+        private java.util.Map<String, ?> properties; 
         private Boolean required; 
-        private java.util.List < String > supportedChannelTypes; 
+        private java.util.List<String> supportedChannelTypes; 
 
         /**
          * Description.
@@ -105,7 +110,7 @@ public class Channel extends TeaModel {
         /**
          * Properties.
          */
-        public Builder properties(java.util.Map < String, ? > properties) {
+        public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
             return this;
         }
@@ -121,7 +126,7 @@ public class Channel extends TeaModel {
         /**
          * SupportedChannelTypes.
          */
-        public Builder supportedChannelTypes(java.util.List < String > supportedChannelTypes) {
+        public Builder supportedChannelTypes(java.util.List<String> supportedChannelTypes) {
             this.supportedChannelTypes = supportedChannelTypes;
             return this;
         }

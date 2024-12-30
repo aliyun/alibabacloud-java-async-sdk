@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -58,7 +63,7 @@ public class QuotaNodeViewMetric extends TeaModel {
     private Long requestMemory;
 
     @com.aliyun.core.annotation.NameInMap("TaskIdMap")
-    private java.util.Map < String, ? > taskIdMap;
+    private java.util.Map<String, ?> taskIdMap;
 
     @com.aliyun.core.annotation.NameInMap("TotalCPU")
     private Long totalCPU;
@@ -73,7 +78,7 @@ public class QuotaNodeViewMetric extends TeaModel {
     private Long totalTasks;
 
     @com.aliyun.core.annotation.NameInMap("UserIDs")
-    private java.util.List < String > userIDs;
+    private java.util.List<String> userIDs;
 
     @com.aliyun.core.annotation.NameInMap("UserNumber")
     private String userNumber;
@@ -219,7 +224,7 @@ public class QuotaNodeViewMetric extends TeaModel {
     /**
      * @return taskIdMap
      */
-    public java.util.Map < String, ? > getTaskIdMap() {
+    public java.util.Map<String, ?> getTaskIdMap() {
         return this.taskIdMap;
     }
 
@@ -254,7 +259,7 @@ public class QuotaNodeViewMetric extends TeaModel {
     /**
      * @return userIDs
      */
-    public java.util.List < String > getUserIDs() {
+    public java.util.List<String> getUserIDs() {
         return this.userIDs;
     }
 
@@ -281,12 +286,12 @@ public class QuotaNodeViewMetric extends TeaModel {
         private Long requestCPU; 
         private Long requestGPU; 
         private Long requestMemory; 
-        private java.util.Map < String, ? > taskIdMap; 
+        private java.util.Map<String, ?> taskIdMap; 
         private Long totalCPU; 
         private Long totalGPU; 
         private Long totalMemory; 
         private Long totalTasks; 
-        private java.util.List < String > userIDs; 
+        private java.util.List<String> userIDs; 
         private String userNumber; 
 
         /**
@@ -412,7 +417,7 @@ public class QuotaNodeViewMetric extends TeaModel {
         /**
          * TaskIdMap.
          */
-        public Builder taskIdMap(java.util.Map < String, ? > taskIdMap) {
+        public Builder taskIdMap(java.util.Map<String, ?> taskIdMap) {
             this.taskIdMap = taskIdMap;
             return this;
         }
@@ -452,7 +457,7 @@ public class QuotaNodeViewMetric extends TeaModel {
         /**
          * UserIDs.
          */
-        public Builder userIDs(java.util.List < String > userIDs) {
+        public Builder userIDs(java.util.List<String> userIDs) {
             this.userIDs = userIDs;
             return this;
         }

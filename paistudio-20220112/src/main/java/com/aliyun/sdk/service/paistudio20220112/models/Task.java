@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Actions")
-    private java.util.List < Action > actions;
+    private java.util.List<Action> actions;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -78,7 +83,7 @@ public class Task extends TeaModel {
     /**
      * @return actions
      */
-    public java.util.List < Action > getActions() {
+    public java.util.List<Action> getActions() {
         return this.actions;
     }
 
@@ -167,7 +172,7 @@ public class Task extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Action > actions; 
+        private java.util.List<Action> actions; 
         private String description; 
         private String gmtActivatedTime; 
         private String gmtCreatedTime; 
@@ -184,7 +189,7 @@ public class Task extends TeaModel {
         /**
          * Actions.
          */
-        public Builder actions(java.util.List < Action > actions) {
+        public Builder actions(java.util.List<Action> actions) {
             this.actions = actions;
             return this;
         }

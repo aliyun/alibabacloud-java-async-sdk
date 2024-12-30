@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
     private Integer total;
 
     @com.aliyun.core.annotation.NameInMap("UserMetrics")
-    private java.util.List < UserViewMetric > userMetrics;
+    private java.util.List<UserViewMetric> userMetrics;
 
     private GetUserViewMetricsResponseBody(Builder builder) {
         this.resourceGroupId = builder.resourceGroupId;
@@ -63,7 +68,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
     /**
      * @return userMetrics
      */
-    public java.util.List < UserViewMetric > getUserMetrics() {
+    public java.util.List<UserViewMetric> getUserMetrics() {
         return this.userMetrics;
     }
 
@@ -71,7 +76,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         private String resourceGroupId; 
         private UserViewMetric summary; 
         private Integer total; 
-        private java.util.List < UserViewMetric > userMetrics; 
+        private java.util.List<UserViewMetric> userMetrics; 
 
         /**
          * ResourceGroupId.
@@ -100,7 +105,7 @@ public class GetUserViewMetricsResponseBody extends TeaModel {
         /**
          * UserMetrics.
          */
-        public Builder userMetrics(java.util.List < UserViewMetric > userMetrics) {
+        public Builder userMetrics(java.util.List<UserViewMetric> userMetrics) {
             this.userMetrics = userMetrics;
             return this;
         }

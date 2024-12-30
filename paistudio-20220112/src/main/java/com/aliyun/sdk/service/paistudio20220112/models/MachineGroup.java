@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class MachineGroup extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
-    private java.util.List < String > supportedDrivers;
+    private java.util.List<String> supportedDrivers;
 
     private MachineGroup(Builder builder) {
         this.creatorID = builder.creatorID;
@@ -217,7 +222,7 @@ public class MachineGroup extends TeaModel {
     /**
      * @return supportedDrivers
      */
-    public java.util.List < String > getSupportedDrivers() {
+    public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
     }
 
@@ -239,7 +244,7 @@ public class MachineGroup extends TeaModel {
         private String reasonMessage; 
         private String resourceGroupID; 
         private String status; 
-        private java.util.List < String > supportedDrivers; 
+        private java.util.List<String> supportedDrivers; 
 
         /**
          * CreatorID.
@@ -380,7 +385,7 @@ public class MachineGroup extends TeaModel {
         /**
          * SupportedDrivers.
          */
-        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+        public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
             return this;
         }

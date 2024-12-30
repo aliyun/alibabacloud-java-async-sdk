@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ScaleQuotaRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
-    private java.util.List < String > resourceGroupIds;
+    private java.util.List<String> resourceGroupIds;
 
     private ScaleQuotaRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class ScaleQuotaRequest extends Request {
     /**
      * @return resourceGroupIds
      */
-    public java.util.List < String > getResourceGroupIds() {
+    public java.util.List<String> getResourceGroupIds() {
         return this.resourceGroupIds;
     }
 
     public static final class Builder extends Request.Builder<ScaleQuotaRequest, Builder> {
         private String quotaId; 
         private ResourceSpec min; 
-        private java.util.List < String > resourceGroupIds; 
+        private java.util.List<String> resourceGroupIds; 
 
         private Builder() {
             super();
@@ -105,7 +110,7 @@ public class ScaleQuotaRequest extends Request {
         /**
          * ResourceGroupIds.
          */
-        public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
+        public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putBodyParameter("ResourceGroupIds", resourceGroupIds);
             this.resourceGroupIds = resourceGroupIds;
             return this;

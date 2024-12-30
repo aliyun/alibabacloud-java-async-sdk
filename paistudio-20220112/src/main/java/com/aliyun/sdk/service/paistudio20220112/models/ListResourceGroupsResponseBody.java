@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroups")
-    private java.util.List < ResourceGroup > resourceGroups;
+    private java.util.List<ResourceGroup> resourceGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -46,7 +51,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     /**
      * @return resourceGroups
      */
-    public java.util.List < ResourceGroup > getResourceGroups() {
+    public java.util.List<ResourceGroup> getResourceGroups() {
         return this.resourceGroups;
     }
 
@@ -59,7 +64,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceGroup > resourceGroups; 
+        private java.util.List<ResourceGroup> resourceGroups; 
         private Long totalCount; 
 
         /**
@@ -73,7 +78,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * ResourceGroups.
          */
-        public Builder resourceGroups(java.util.List < ResourceGroup > resourceGroups) {
+        public Builder resourceGroups(java.util.List<ResourceGroup> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }

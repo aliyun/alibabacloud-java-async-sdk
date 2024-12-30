@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class Node extends TeaModel {
     private String acceleratorType;
 
     @com.aliyun.core.annotation.NameInMap("BoundQuotas")
-    private java.util.List < QuotaIdName > boundQuotas;
+    private java.util.List<QuotaIdName> boundQuotas;
 
     @com.aliyun.core.annotation.NameInMap("CPU")
     private String CPU;
@@ -97,7 +102,7 @@ public class Node extends TeaModel {
     private String resourceGroupName;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < UserInfo > users;
+    private java.util.List<UserInfo> users;
 
     @com.aliyun.core.annotation.NameInMap("WorkloadNum")
     private Long workloadNum;
@@ -153,7 +158,7 @@ public class Node extends TeaModel {
     /**
      * @return boundQuotas
      */
-    public java.util.List < QuotaIdName > getBoundQuotas() {
+    public java.util.List<QuotaIdName> getBoundQuotas() {
         return this.boundQuotas;
     }
 
@@ -342,7 +347,7 @@ public class Node extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < UserInfo > getUsers() {
+    public java.util.List<UserInfo> getUsers() {
         return this.users;
     }
 
@@ -355,7 +360,7 @@ public class Node extends TeaModel {
 
     public static final class Builder {
         private String acceleratorType; 
-        private java.util.List < QuotaIdName > boundQuotas; 
+        private java.util.List<QuotaIdName> boundQuotas; 
         private String CPU; 
         private String creatorId; 
         private String GPU; 
@@ -382,7 +387,7 @@ public class Node extends TeaModel {
         private String requestMemory; 
         private String resourceGroupId; 
         private String resourceGroupName; 
-        private java.util.List < UserInfo > users; 
+        private java.util.List<UserInfo> users; 
         private Long workloadNum; 
 
         /**
@@ -396,7 +401,7 @@ public class Node extends TeaModel {
         /**
          * BoundQuotas.
          */
-        public Builder boundQuotas(java.util.List < QuotaIdName > boundQuotas) {
+        public Builder boundQuotas(java.util.List<QuotaIdName> boundQuotas) {
             this.boundQuotas = boundQuotas;
             return this;
         }
@@ -612,7 +617,7 @@ public class Node extends TeaModel {
         /**
          * Users.
          */
-        public Builder users(java.util.List < UserInfo > users) {
+        public Builder users(java.util.List<UserInfo> users) {
             this.users = users;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
     private Integer requestGPU;
 
     @com.aliyun.core.annotation.NameInMap("requestGPUInfos")
-    private java.util.List < GPUInfo > requestGPUInfos;
+    private java.util.List<GPUInfo> requestGPUInfos;
 
     @com.aliyun.core.annotation.NameInMap("requestMemory")
     private Integer requestMemory;
@@ -56,7 +61,7 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
     /**
      * @return requestGPUInfos
      */
-    public java.util.List < GPUInfo > getRequestGPUInfos() {
+    public java.util.List<GPUInfo> getRequestGPUInfos() {
         return this.requestGPUInfos;
     }
 
@@ -70,7 +75,7 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
     public static final class Builder {
         private Integer requestCPU; 
         private Integer requestGPU; 
-        private java.util.List < GPUInfo > requestGPUInfos; 
+        private java.util.List<GPUInfo> requestGPUInfos; 
         private Integer requestMemory; 
 
         /**
@@ -92,7 +97,7 @@ public class GetResourceGroupRequestResponseBody extends TeaModel {
         /**
          * requestGPUInfos.
          */
-        public Builder requestGPUInfos(java.util.List < GPUInfo > requestGPUInfos) {
+        public Builder requestGPUInfos(java.util.List<GPUInfo> requestGPUInfos) {
             this.requestGPUInfos = requestGPUInfos;
             return this;
         }

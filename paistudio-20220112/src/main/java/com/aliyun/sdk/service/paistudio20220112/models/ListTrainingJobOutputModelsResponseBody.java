@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OutputModels")
-    private java.util.List < OutputModels> outputModels;
+    private java.util.List<OutputModels> outputModels;
 
     private ListTrainingJobOutputModelsResponseBody(Builder builder) {
         this.outputModels = builder.outputModels;
@@ -30,17 +35,17 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
     /**
      * @return outputModels
      */
-    public java.util.List < OutputModels> getOutputModels() {
+    public java.util.List<OutputModels> getOutputModels() {
         return this.outputModels;
     }
 
     public static final class Builder {
-        private java.util.List < OutputModels> outputModels; 
+        private java.util.List<OutputModels> outputModels; 
 
         /**
          * OutputModels.
          */
-        public Builder outputModels(java.util.List < OutputModels> outputModels) {
+        public Builder outputModels(java.util.List<OutputModels> outputModels) {
             this.outputModels = outputModels;
             return this;
         }
@@ -126,19 +131,19 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
      */
     public static class OutputModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompressionSpec")
-        private java.util.Map < String, ? > compressionSpec;
+        private java.util.Map<String, ?> compressionSpec;
 
         @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
-        private java.util.Map < String, ? > evaluationSpec;
+        private java.util.Map<String, ?> evaluationSpec;
 
         @com.aliyun.core.annotation.NameInMap("InferenceSpec")
-        private java.util.Map < String, ? > inferenceSpec;
+        private java.util.Map<String, ?> inferenceSpec;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.Map < String, ? > metrics;
+        private java.util.Map<String, ?> metrics;
 
         @com.aliyun.core.annotation.NameInMap("OutputChannelName")
         private String outputChannelName;
@@ -150,7 +155,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("TrainingSpec")
-        private java.util.Map < String, ? > trainingSpec;
+        private java.util.Map<String, ?> trainingSpec;
 
         @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
@@ -179,35 +184,35 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         /**
          * @return compressionSpec
          */
-        public java.util.Map < String, ? > getCompressionSpec() {
+        public java.util.Map<String, ?> getCompressionSpec() {
             return this.compressionSpec;
         }
 
         /**
          * @return evaluationSpec
          */
-        public java.util.Map < String, ? > getEvaluationSpec() {
+        public java.util.Map<String, ?> getEvaluationSpec() {
             return this.evaluationSpec;
         }
 
         /**
          * @return inferenceSpec
          */
-        public java.util.Map < String, ? > getInferenceSpec() {
+        public java.util.Map<String, ?> getInferenceSpec() {
             return this.inferenceSpec;
         }
 
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
         /**
          * @return metrics
          */
-        public java.util.Map < String, ? > getMetrics() {
+        public java.util.Map<String, ?> getMetrics() {
             return this.metrics;
         }
 
@@ -235,7 +240,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         /**
          * @return trainingSpec
          */
-        public java.util.Map < String, ? > getTrainingSpec() {
+        public java.util.Map<String, ?> getTrainingSpec() {
             return this.trainingSpec;
         }
 
@@ -247,21 +252,21 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > compressionSpec; 
-            private java.util.Map < String, ? > evaluationSpec; 
-            private java.util.Map < String, ? > inferenceSpec; 
-            private java.util.List < Labels> labels; 
-            private java.util.Map < String, ? > metrics; 
+            private java.util.Map<String, ?> compressionSpec; 
+            private java.util.Map<String, ?> evaluationSpec; 
+            private java.util.Map<String, ?> inferenceSpec; 
+            private java.util.List<Labels> labels; 
+            private java.util.Map<String, ?> metrics; 
             private String outputChannelName; 
             private String sourceId; 
             private String sourceType; 
-            private java.util.Map < String, ? > trainingSpec; 
+            private java.util.Map<String, ?> trainingSpec; 
             private String uri; 
 
             /**
              * CompressionSpec.
              */
-            public Builder compressionSpec(java.util.Map < String, ? > compressionSpec) {
+            public Builder compressionSpec(java.util.Map<String, ?> compressionSpec) {
                 this.compressionSpec = compressionSpec;
                 return this;
             }
@@ -269,7 +274,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             /**
              * EvaluationSpec.
              */
-            public Builder evaluationSpec(java.util.Map < String, ? > evaluationSpec) {
+            public Builder evaluationSpec(java.util.Map<String, ?> evaluationSpec) {
                 this.evaluationSpec = evaluationSpec;
                 return this;
             }
@@ -277,7 +282,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             /**
              * InferenceSpec.
              */
-            public Builder inferenceSpec(java.util.Map < String, ? > inferenceSpec) {
+            public Builder inferenceSpec(java.util.Map<String, ?> inferenceSpec) {
                 this.inferenceSpec = inferenceSpec;
                 return this;
             }
@@ -285,7 +290,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -293,7 +298,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.Map < String, ? > metrics) {
+            public Builder metrics(java.util.Map<String, ?> metrics) {
                 this.metrics = metrics;
                 return this;
             }
@@ -325,7 +330,7 @@ public class ListTrainingJobOutputModelsResponseBody extends TeaModel {
             /**
              * TrainingSpec.
              */
-            public Builder trainingSpec(java.util.Map < String, ? > trainingSpec) {
+            public Builder trainingSpec(java.util.Map<String, ?> trainingSpec) {
                 this.trainingSpec = trainingSpec;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,7 +22,7 @@ public class AlgorithmSpec extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Command")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > command;
+    private java.util.List<String> command;
 
     @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private ComputeResource computeResource;
@@ -26,33 +31,33 @@ public class AlgorithmSpec extends TeaModel {
     private Customization customization;
 
     @com.aliyun.core.annotation.NameInMap("HyperParameters")
-    private java.util.List < HyperParameterDefinition > hyperParameters;
+    private java.util.List<HyperParameterDefinition> hyperParameters;
 
     @com.aliyun.core.annotation.NameInMap("Image")
     @com.aliyun.core.annotation.Validation(required = true)
     private String image;
 
     @com.aliyun.core.annotation.NameInMap("InputChannels")
-    private java.util.List < Channel > inputChannels;
+    private java.util.List<Channel> inputChannels;
 
     @com.aliyun.core.annotation.NameInMap("JobType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobType;
 
     @com.aliyun.core.annotation.NameInMap("MetricDefinitions")
-    private java.util.List < MetricDefinition > metricDefinitions;
+    private java.util.List<MetricDefinition> metricDefinitions;
 
     @com.aliyun.core.annotation.NameInMap("OutputChannels")
-    private java.util.List < Channel > outputChannels;
+    private java.util.List<Channel> outputChannels;
 
     @com.aliyun.core.annotation.NameInMap("ProgressDefinitions")
     private ProgressDefinitions progressDefinitions;
 
     @com.aliyun.core.annotation.NameInMap("ResourceRequirements")
-    private java.util.List < ConditionExpression > resourceRequirements;
+    private java.util.List<ConditionExpression> resourceRequirements;
 
     @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypes")
-    private java.util.List < String > supportedInstanceTypes;
+    private java.util.List<String> supportedInstanceTypes;
 
     @com.aliyun.core.annotation.NameInMap("SupportsDistributedTraining")
     private Boolean supportsDistributedTraining;
@@ -92,7 +97,7 @@ public class AlgorithmSpec extends TeaModel {
     /**
      * @return command
      */
-    public java.util.List < String > getCommand() {
+    public java.util.List<String> getCommand() {
         return this.command;
     }
 
@@ -113,7 +118,7 @@ public class AlgorithmSpec extends TeaModel {
     /**
      * @return hyperParameters
      */
-    public java.util.List < HyperParameterDefinition > getHyperParameters() {
+    public java.util.List<HyperParameterDefinition> getHyperParameters() {
         return this.hyperParameters;
     }
 
@@ -127,7 +132,7 @@ public class AlgorithmSpec extends TeaModel {
     /**
      * @return inputChannels
      */
-    public java.util.List < Channel > getInputChannels() {
+    public java.util.List<Channel> getInputChannels() {
         return this.inputChannels;
     }
 
@@ -141,14 +146,14 @@ public class AlgorithmSpec extends TeaModel {
     /**
      * @return metricDefinitions
      */
-    public java.util.List < MetricDefinition > getMetricDefinitions() {
+    public java.util.List<MetricDefinition> getMetricDefinitions() {
         return this.metricDefinitions;
     }
 
     /**
      * @return outputChannels
      */
-    public java.util.List < Channel > getOutputChannels() {
+    public java.util.List<Channel> getOutputChannels() {
         return this.outputChannels;
     }
 
@@ -162,14 +167,14 @@ public class AlgorithmSpec extends TeaModel {
     /**
      * @return resourceRequirements
      */
-    public java.util.List < ConditionExpression > getResourceRequirements() {
+    public java.util.List<ConditionExpression> getResourceRequirements() {
         return this.resourceRequirements;
     }
 
     /**
      * @return supportedInstanceTypes
      */
-    public java.util.List < String > getSupportedInstanceTypes() {
+    public java.util.List<String> getSupportedInstanceTypes() {
         return this.supportedInstanceTypes;
     }
 
@@ -182,18 +187,18 @@ public class AlgorithmSpec extends TeaModel {
 
     public static final class Builder {
         private Location codeDir; 
-        private java.util.List < String > command; 
+        private java.util.List<String> command; 
         private ComputeResource computeResource; 
         private Customization customization; 
-        private java.util.List < HyperParameterDefinition > hyperParameters; 
+        private java.util.List<HyperParameterDefinition> hyperParameters; 
         private String image; 
-        private java.util.List < Channel > inputChannels; 
+        private java.util.List<Channel> inputChannels; 
         private String jobType; 
-        private java.util.List < MetricDefinition > metricDefinitions; 
-        private java.util.List < Channel > outputChannels; 
+        private java.util.List<MetricDefinition> metricDefinitions; 
+        private java.util.List<Channel> outputChannels; 
         private ProgressDefinitions progressDefinitions; 
-        private java.util.List < ConditionExpression > resourceRequirements; 
-        private java.util.List < String > supportedInstanceTypes; 
+        private java.util.List<ConditionExpression> resourceRequirements; 
+        private java.util.List<String> supportedInstanceTypes; 
         private Boolean supportsDistributedTraining; 
 
         /**
@@ -207,7 +212,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder command(java.util.List < String > command) {
+        public Builder command(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -231,7 +236,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * HyperParameters.
          */
-        public Builder hyperParameters(java.util.List < HyperParameterDefinition > hyperParameters) {
+        public Builder hyperParameters(java.util.List<HyperParameterDefinition> hyperParameters) {
             this.hyperParameters = hyperParameters;
             return this;
         }
@@ -247,7 +252,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * InputChannels.
          */
-        public Builder inputChannels(java.util.List < Channel > inputChannels) {
+        public Builder inputChannels(java.util.List<Channel> inputChannels) {
             this.inputChannels = inputChannels;
             return this;
         }
@@ -263,7 +268,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * MetricDefinitions.
          */
-        public Builder metricDefinitions(java.util.List < MetricDefinition > metricDefinitions) {
+        public Builder metricDefinitions(java.util.List<MetricDefinition> metricDefinitions) {
             this.metricDefinitions = metricDefinitions;
             return this;
         }
@@ -271,7 +276,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * OutputChannels.
          */
-        public Builder outputChannels(java.util.List < Channel > outputChannels) {
+        public Builder outputChannels(java.util.List<Channel> outputChannels) {
             this.outputChannels = outputChannels;
             return this;
         }
@@ -287,7 +292,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * ResourceRequirements.
          */
-        public Builder resourceRequirements(java.util.List < ConditionExpression > resourceRequirements) {
+        public Builder resourceRequirements(java.util.List<ConditionExpression> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
@@ -295,7 +300,7 @@ public class AlgorithmSpec extends TeaModel {
         /**
          * SupportedInstanceTypes.
          */
-        public Builder supportedInstanceTypes(java.util.List < String > supportedInstanceTypes) {
+        public Builder supportedInstanceTypes(java.util.List<String> supportedInstanceTypes) {
             this.supportedInstanceTypes = supportedInstanceTypes;
             return this;
         }

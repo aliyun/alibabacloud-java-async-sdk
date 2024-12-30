@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Workloads")
-    private java.util.List < QueueInfo > workloads;
+    private java.util.List<QueueInfo> workloads;
 
     private ListQuotaWorkloadsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
     /**
      * @return workloads
      */
-    public java.util.List < QueueInfo > getWorkloads() {
+    public java.util.List<QueueInfo> getWorkloads() {
         return this.workloads;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < QueueInfo > workloads; 
+        private java.util.List<QueueInfo> workloads; 
 
         /**
          * <p>Id of the request</p>
@@ -83,7 +88,7 @@ public class ListQuotaWorkloadsResponseBody extends TeaModel {
         /**
          * Workloads.
          */
-        public Builder workloads(java.util.List < QueueInfo > workloads) {
+        public Builder workloads(java.util.List<QueueInfo> workloads) {
             this.workloads = workloads;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
     private String metricType;
 
     @com.aliyun.core.annotation.NameInMap("NodesMetrics")
-    private java.util.List < NodeMetric > nodesMetrics;
+    private java.util.List<NodeMetric> nodesMetrics;
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
@@ -45,7 +50,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
     /**
      * @return nodesMetrics
      */
-    public java.util.List < NodeMetric > getNodesMetrics() {
+    public java.util.List<NodeMetric> getNodesMetrics() {
         return this.nodesMetrics;
     }
 
@@ -58,7 +63,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String metricType; 
-        private java.util.List < NodeMetric > nodesMetrics; 
+        private java.util.List<NodeMetric> nodesMetrics; 
         private String resourceGroupID; 
 
         /**
@@ -72,7 +77,7 @@ public class GetNodeMetricsResponseBody extends TeaModel {
         /**
          * NodesMetrics.
          */
-        public Builder nodesMetrics(java.util.List < NodeMetric > nodesMetrics) {
+        public Builder nodesMetrics(java.util.List<NodeMetric> nodesMetrics) {
             this.nodesMetrics = nodesMetrics;
             return this;
         }

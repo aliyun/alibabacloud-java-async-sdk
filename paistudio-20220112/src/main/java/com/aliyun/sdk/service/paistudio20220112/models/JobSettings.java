@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AdvancedSettings")
-    private java.util.Map < String, ? > advancedSettings;
+    private java.util.Map<String, ?> advancedSettings;
 
     @com.aliyun.core.annotation.NameInMap("BusinessUserId")
     private String businessUserId;
@@ -58,7 +63,7 @@ public class JobSettings extends TeaModel {
     private String sanityCheckArgs;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, String > tags;
+    private java.util.Map<String, String> tags;
 
     private JobSettings(Builder builder) {
         this.advancedSettings = builder.advancedSettings;
@@ -90,7 +95,7 @@ public class JobSettings extends TeaModel {
     /**
      * @return advancedSettings
      */
-    public java.util.Map < String, ? > getAdvancedSettings() {
+    public java.util.Map<String, ?> getAdvancedSettings() {
         return this.advancedSettings;
     }
 
@@ -195,12 +200,12 @@ public class JobSettings extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > advancedSettings; 
+        private java.util.Map<String, ?> advancedSettings; 
         private String businessUserId; 
         private String caller; 
         private String driver; 
@@ -215,12 +220,12 @@ public class JobSettings extends TeaModel {
         private String oversoldType; 
         private String pipelineId; 
         private String sanityCheckArgs; 
-        private java.util.Map < String, String > tags; 
+        private java.util.Map<String, String> tags; 
 
         /**
          * AdvancedSettings.
          */
-        public Builder advancedSettings(java.util.Map < String, ? > advancedSettings) {
+        public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
             return this;
         }
@@ -340,7 +345,7 @@ public class JobSettings extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
             return this;
         }

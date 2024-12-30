@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class WorkspaceSpecs extends TeaModel {
     private String product;
 
     @com.aliyun.core.annotation.NameInMap("Specs")
-    private java.util.List < WorkspaceSpec > specs;
+    private java.util.List<WorkspaceSpec> specs;
 
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
@@ -45,7 +50,7 @@ public class WorkspaceSpecs extends TeaModel {
     /**
      * @return specs
      */
-    public java.util.List < WorkspaceSpec > getSpecs() {
+    public java.util.List<WorkspaceSpec> getSpecs() {
         return this.specs;
     }
 
@@ -58,7 +63,7 @@ public class WorkspaceSpecs extends TeaModel {
 
     public static final class Builder {
         private String product; 
-        private java.util.List < WorkspaceSpec > specs; 
+        private java.util.List<WorkspaceSpec> specs; 
         private String workspaceId; 
 
         /**
@@ -72,7 +77,7 @@ public class WorkspaceSpecs extends TeaModel {
         /**
          * Specs.
          */
-        public Builder specs(java.util.List < WorkspaceSpec > specs) {
+        public Builder specs(java.util.List<WorkspaceSpec> specs) {
             this.specs = specs;
             return this;
         }

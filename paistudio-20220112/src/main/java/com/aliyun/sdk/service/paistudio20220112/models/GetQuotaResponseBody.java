@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class GetQuotaResponseBody extends TeaModel {
     private String gmtModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestOperationId")
     private String latestOperationId;
@@ -64,7 +69,7 @@ public class GetQuotaResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
-    private java.util.List < String > resourceGroupIds;
+    private java.util.List<String> resourceGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
@@ -73,10 +78,10 @@ public class GetQuotaResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("SubQuotas")
-    private java.util.List < QuotaIdName > subQuotas;
+    private java.util.List<QuotaIdName> subQuotas;
 
     @com.aliyun.core.annotation.NameInMap("Workspaces")
-    private java.util.List < WorkspaceIdName > workspaces;
+    private java.util.List<WorkspaceIdName> workspaces;
 
     private GetQuotaResponseBody(Builder builder) {
         this.allocateStrategy = builder.allocateStrategy;
@@ -149,7 +154,7 @@ public class GetQuotaResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -233,7 +238,7 @@ public class GetQuotaResponseBody extends TeaModel {
     /**
      * @return resourceGroupIds
      */
-    public java.util.List < String > getResourceGroupIds() {
+    public java.util.List<String> getResourceGroupIds() {
         return this.resourceGroupIds;
     }
 
@@ -254,14 +259,14 @@ public class GetQuotaResponseBody extends TeaModel {
     /**
      * @return subQuotas
      */
-    public java.util.List < QuotaIdName > getSubQuotas() {
+    public java.util.List<QuotaIdName> getSubQuotas() {
         return this.subQuotas;
     }
 
     /**
      * @return workspaces
      */
-    public java.util.List < WorkspaceIdName > getWorkspaces() {
+    public java.util.List<WorkspaceIdName> getWorkspaces() {
         return this.workspaces;
     }
 
@@ -271,7 +276,7 @@ public class GetQuotaResponseBody extends TeaModel {
         private String description; 
         private String gmtCreatedTime; 
         private String gmtModifiedTime; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private String latestOperationId; 
         private ResourceSpec min; 
         private String parentQuotaId; 
@@ -283,11 +288,11 @@ public class GetQuotaResponseBody extends TeaModel {
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
-        private java.util.List < String > resourceGroupIds; 
+        private java.util.List<String> resourceGroupIds; 
         private String resourceType; 
         private String status; 
-        private java.util.List < QuotaIdName > subQuotas; 
-        private java.util.List < WorkspaceIdName > workspaces; 
+        private java.util.List<QuotaIdName> subQuotas; 
+        private java.util.List<WorkspaceIdName> workspaces; 
 
         /**
          * AllocateStrategy.
@@ -332,7 +337,7 @@ public class GetQuotaResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }
@@ -431,7 +436,7 @@ public class GetQuotaResponseBody extends TeaModel {
         /**
          * ResourceGroupIds.
          */
-        public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
+        public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.resourceGroupIds = resourceGroupIds;
             return this;
         }
@@ -455,7 +460,7 @@ public class GetQuotaResponseBody extends TeaModel {
         /**
          * SubQuotas.
          */
-        public Builder subQuotas(java.util.List < QuotaIdName > subQuotas) {
+        public Builder subQuotas(java.util.List<QuotaIdName> subQuotas) {
             this.subQuotas = subQuotas;
             return this;
         }
@@ -463,7 +468,7 @@ public class GetQuotaResponseBody extends TeaModel {
         /**
          * Workspaces.
          */
-        public Builder workspaces(java.util.List < WorkspaceIdName > workspaces) {
+        public Builder workspaces(java.util.List<WorkspaceIdName> workspaces) {
             this.workspaces = workspaces;
             return this;
         }

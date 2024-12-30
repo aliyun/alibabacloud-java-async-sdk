@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,27 +25,27 @@ public class ComponentSpec extends TeaModel {
     private String command;
 
     @com.aliyun.core.annotation.NameInMap("HyperParameters")
-    private java.util.List < HyperParameterDefinition > hyperParameters;
+    private java.util.List<HyperParameterDefinition> hyperParameters;
 
     @com.aliyun.core.annotation.NameInMap("Image")
     @com.aliyun.core.annotation.Validation(required = true)
     private String image;
 
     @com.aliyun.core.annotation.NameInMap("InputChannels")
-    private java.util.List < Channel > inputChannels;
+    private java.util.List<Channel> inputChannels;
 
     @com.aliyun.core.annotation.NameInMap("JobType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobType;
 
     @com.aliyun.core.annotation.NameInMap("MetricDefinitions")
-    private java.util.List < MetricDefinition > metricDefinitions;
+    private java.util.List<MetricDefinition> metricDefinitions;
 
     @com.aliyun.core.annotation.NameInMap("OutputChannels")
-    private java.util.List < Channel > outputChannels;
+    private java.util.List<Channel> outputChannels;
 
     @com.aliyun.core.annotation.NameInMap("ResourceRequirements")
-    private java.util.List < ConditionExpression > resourceRequirements;
+    private java.util.List<ConditionExpression> resourceRequirements;
 
     private ComponentSpec(Builder builder) {
         this.codeDir = builder.codeDir;
@@ -79,7 +84,7 @@ public class ComponentSpec extends TeaModel {
     /**
      * @return hyperParameters
      */
-    public java.util.List < HyperParameterDefinition > getHyperParameters() {
+    public java.util.List<HyperParameterDefinition> getHyperParameters() {
         return this.hyperParameters;
     }
 
@@ -93,7 +98,7 @@ public class ComponentSpec extends TeaModel {
     /**
      * @return inputChannels
      */
-    public java.util.List < Channel > getInputChannels() {
+    public java.util.List<Channel> getInputChannels() {
         return this.inputChannels;
     }
 
@@ -107,34 +112,34 @@ public class ComponentSpec extends TeaModel {
     /**
      * @return metricDefinitions
      */
-    public java.util.List < MetricDefinition > getMetricDefinitions() {
+    public java.util.List<MetricDefinition> getMetricDefinitions() {
         return this.metricDefinitions;
     }
 
     /**
      * @return outputChannels
      */
-    public java.util.List < Channel > getOutputChannels() {
+    public java.util.List<Channel> getOutputChannels() {
         return this.outputChannels;
     }
 
     /**
      * @return resourceRequirements
      */
-    public java.util.List < ConditionExpression > getResourceRequirements() {
+    public java.util.List<ConditionExpression> getResourceRequirements() {
         return this.resourceRequirements;
     }
 
     public static final class Builder {
         private Location codeDir; 
         private String command; 
-        private java.util.List < HyperParameterDefinition > hyperParameters; 
+        private java.util.List<HyperParameterDefinition> hyperParameters; 
         private String image; 
-        private java.util.List < Channel > inputChannels; 
+        private java.util.List<Channel> inputChannels; 
         private String jobType; 
-        private java.util.List < MetricDefinition > metricDefinitions; 
-        private java.util.List < Channel > outputChannels; 
-        private java.util.List < ConditionExpression > resourceRequirements; 
+        private java.util.List<MetricDefinition> metricDefinitions; 
+        private java.util.List<Channel> outputChannels; 
+        private java.util.List<ConditionExpression> resourceRequirements; 
 
         /**
          * CodeDir.
@@ -155,7 +160,7 @@ public class ComponentSpec extends TeaModel {
         /**
          * HyperParameters.
          */
-        public Builder hyperParameters(java.util.List < HyperParameterDefinition > hyperParameters) {
+        public Builder hyperParameters(java.util.List<HyperParameterDefinition> hyperParameters) {
             this.hyperParameters = hyperParameters;
             return this;
         }
@@ -171,7 +176,7 @@ public class ComponentSpec extends TeaModel {
         /**
          * InputChannels.
          */
-        public Builder inputChannels(java.util.List < Channel > inputChannels) {
+        public Builder inputChannels(java.util.List<Channel> inputChannels) {
             this.inputChannels = inputChannels;
             return this;
         }
@@ -187,7 +192,7 @@ public class ComponentSpec extends TeaModel {
         /**
          * MetricDefinitions.
          */
-        public Builder metricDefinitions(java.util.List < MetricDefinition > metricDefinitions) {
+        public Builder metricDefinitions(java.util.List<MetricDefinition> metricDefinitions) {
             this.metricDefinitions = metricDefinitions;
             return this;
         }
@@ -195,7 +200,7 @@ public class ComponentSpec extends TeaModel {
         /**
          * OutputChannels.
          */
-        public Builder outputChannels(java.util.List < Channel > outputChannels) {
+        public Builder outputChannels(java.util.List<Channel> outputChannels) {
             this.outputChannels = outputChannels;
             return this;
         }
@@ -203,7 +208,7 @@ public class ComponentSpec extends TeaModel {
         /**
          * ResourceRequirements.
          */
-        public Builder resourceRequirements(java.util.List < ConditionExpression > resourceRequirements) {
+        public Builder resourceRequirements(java.util.List<ConditionExpression> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }

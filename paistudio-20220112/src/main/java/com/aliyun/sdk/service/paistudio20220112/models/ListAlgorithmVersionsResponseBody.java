@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAlgorithmVersionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlgorithmVersions")
-    private java.util.List < AlgorithmVersions> algorithmVersions;
+    private java.util.List<AlgorithmVersions> algorithmVersions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     /**
      * @return algorithmVersions
      */
-    public java.util.List < AlgorithmVersions> getAlgorithmVersions() {
+    public java.util.List<AlgorithmVersions> getAlgorithmVersions() {
         return this.algorithmVersions;
     }
 
@@ -57,14 +62,14 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlgorithmVersions> algorithmVersions; 
+        private java.util.List<AlgorithmVersions> algorithmVersions; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * AlgorithmVersions.
          */
-        public Builder algorithmVersions(java.util.List < AlgorithmVersions> algorithmVersions) {
+        public Builder algorithmVersions(java.util.List<AlgorithmVersions> algorithmVersions) {
             this.algorithmVersions = algorithmVersions;
             return this;
         }

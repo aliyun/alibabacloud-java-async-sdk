@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ResourceDiagnosisDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExceedResources")
-    private java.util.List < String > exceedResources;
+    private java.util.List<String> exceedResources;
 
     @com.aliyun.core.annotation.NameInMap("Limit")
     private ResourceAmount limit;
@@ -25,7 +30,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
     private ResourceAmount used;
 
     @com.aliyun.core.annotation.NameInMap("WorkloadIds")
-    private java.util.List < String > workloadIds;
+    private java.util.List<String> workloadIds;
 
     private ResourceDiagnosisDetail(Builder builder) {
         this.exceedResources = builder.exceedResources;
@@ -46,7 +51,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
     /**
      * @return exceedResources
      */
-    public java.util.List < String > getExceedResources() {
+    public java.util.List<String> getExceedResources() {
         return this.exceedResources;
     }
 
@@ -74,21 +79,21 @@ public class ResourceDiagnosisDetail extends TeaModel {
     /**
      * @return workloadIds
      */
-    public java.util.List < String > getWorkloadIds() {
+    public java.util.List<String> getWorkloadIds() {
         return this.workloadIds;
     }
 
     public static final class Builder {
-        private java.util.List < String > exceedResources; 
+        private java.util.List<String> exceedResources; 
         private ResourceAmount limit; 
         private String status; 
         private ResourceAmount used; 
-        private java.util.List < String > workloadIds; 
+        private java.util.List<String> workloadIds; 
 
         /**
          * ExceedResources.
          */
-        public Builder exceedResources(java.util.List < String > exceedResources) {
+        public Builder exceedResources(java.util.List<String> exceedResources) {
             this.exceedResources = exceedResources;
             return this;
         }
@@ -120,7 +125,7 @@ public class ResourceDiagnosisDetail extends TeaModel {
         /**
          * WorkloadIds.
          */
-        public Builder workloadIds(java.util.List < String > workloadIds) {
+        public Builder workloadIds(java.util.List<String> workloadIds) {
             this.workloadIds = workloadIds;
             return this;
         }

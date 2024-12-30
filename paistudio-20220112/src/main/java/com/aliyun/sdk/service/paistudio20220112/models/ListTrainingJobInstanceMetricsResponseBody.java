@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceMetrics")
-    private java.util.List < InstanceMetrics> instanceMetrics;
+    private java.util.List<InstanceMetrics> instanceMetrics;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
     /**
      * @return instanceMetrics
      */
-    public java.util.List < InstanceMetrics> getInstanceMetrics() {
+    public java.util.List<InstanceMetrics> getInstanceMetrics() {
         return this.instanceMetrics;
     }
 
@@ -46,13 +51,13 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceMetrics> instanceMetrics; 
+        private java.util.List<InstanceMetrics> instanceMetrics; 
         private String requestId; 
 
         /**
          * InstanceMetrics.
          */
-        public Builder instanceMetrics(java.util.List < InstanceMetrics> instanceMetrics) {
+        public Builder instanceMetrics(java.util.List<InstanceMetrics> instanceMetrics) {
             this.instanceMetrics = instanceMetrics;
             return this;
         }
@@ -149,7 +154,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
@@ -178,7 +183,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -191,7 +196,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private String nodeName; 
 
             /**
@@ -205,7 +210,7 @@ public class ListTrainingJobInstanceMetricsResponseBody extends TeaModel {
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }

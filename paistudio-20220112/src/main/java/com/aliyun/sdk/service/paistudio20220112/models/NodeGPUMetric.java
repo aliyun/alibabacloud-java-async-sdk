@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class NodeGPUMetric extends TeaModel {
     private Integer GPUCount;
 
     @com.aliyun.core.annotation.NameInMap("GPUMetrics")
-    private java.util.List < GPUMetric > GPUMetrics;
+    private java.util.List<GPUMetric> GPUMetrics;
 
     @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
@@ -76,7 +81,7 @@ public class NodeGPUMetric extends TeaModel {
     /**
      * @return GPUMetrics
      */
-    public java.util.List < GPUMetric > getGPUMetrics() {
+    public java.util.List<GPUMetric> getGPUMetrics() {
         return this.GPUMetrics;
     }
 
@@ -125,7 +130,7 @@ public class NodeGPUMetric extends TeaModel {
     public static final class Builder {
         private String acceleratorType; 
         private Integer GPUCount; 
-        private java.util.List < GPUMetric > GPUMetrics; 
+        private java.util.List<GPUMetric> GPUMetrics; 
         private String GPUType; 
         private Float memoryUtil; 
         private String nodeId; 
@@ -152,7 +157,7 @@ public class NodeGPUMetric extends TeaModel {
         /**
          * GPUMetrics.
          */
-        public Builder GPUMetrics(java.util.List < GPUMetric > GPUMetrics) {
+        public Builder GPUMetrics(java.util.List<GPUMetric> GPUMetrics) {
             this.GPUMetrics = GPUMetrics;
             return this;
         }

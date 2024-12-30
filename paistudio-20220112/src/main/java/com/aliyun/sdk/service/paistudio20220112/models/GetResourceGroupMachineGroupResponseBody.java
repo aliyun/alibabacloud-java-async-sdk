@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,10 +75,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
-    private java.util.List < String > supportedDrivers;
+    private java.util.List<String> supportedDrivers;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private GetResourceGroupMachineGroupResponseBody(Builder builder) {
         this.cpu = builder.cpu;
@@ -243,14 +248,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     /**
      * @return supportedDrivers
      */
-    public java.util.List < String > getSupportedDrivers() {
+    public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -274,8 +279,8 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupID; 
         private String status; 
-        private java.util.List < String > supportedDrivers; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> supportedDrivers; 
+        private java.util.List<Tags> tags; 
 
         /**
          * Cpu.
@@ -432,7 +437,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         /**
          * SupportedDrivers.
          */
-        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+        public Builder supportedDrivers(java.util.List<String> supportedDrivers) {
             this.supportedDrivers = supportedDrivers;
             return this;
         }
@@ -440,7 +445,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
