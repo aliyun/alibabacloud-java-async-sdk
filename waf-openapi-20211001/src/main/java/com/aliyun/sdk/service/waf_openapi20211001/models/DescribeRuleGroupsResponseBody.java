@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleGroups")
-    private java.util.List < RuleGroups> ruleGroups;
+    private java.util.List<RuleGroups> ruleGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -45,7 +50,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
     /**
      * @return ruleGroups
      */
-    public java.util.List < RuleGroups> getRuleGroups() {
+    public java.util.List<RuleGroups> getRuleGroups() {
         return this.ruleGroups;
     }
 
@@ -58,7 +63,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleGroups> ruleGroups; 
+        private java.util.List<RuleGroups> ruleGroups; 
         private Long totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         /**
          * <p>An array of regular expression rule groups.</p>
          */
-        public Builder ruleGroups(java.util.List < RuleGroups> ruleGroups) {
+        public Builder ruleGroups(java.util.List<RuleGroups> ruleGroups) {
             this.ruleGroups = ruleGroups;
             return this;
         }

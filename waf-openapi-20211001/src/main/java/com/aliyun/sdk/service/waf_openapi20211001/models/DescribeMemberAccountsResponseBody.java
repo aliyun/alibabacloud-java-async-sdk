@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMemberAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccountInfos")
-    private java.util.List < AccountInfos> accountInfos;
+    private java.util.List<AccountInfos> accountInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
     /**
      * @return accountInfos
      */
-    public java.util.List < AccountInfos> getAccountInfos() {
+    public java.util.List<AccountInfos> getAccountInfos() {
         return this.accountInfos;
     }
 
@@ -46,13 +51,13 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccountInfos> accountInfos; 
+        private java.util.List<AccountInfos> accountInfos; 
         private String requestId; 
 
         /**
          * <p>The information about the member.</p>
          */
-        public Builder accountInfos(java.util.List < AccountInfos> accountInfos) {
+        public Builder accountInfos(java.util.List<AccountInfos> accountInfos) {
             this.accountInfos = accountInfos;
             return this;
         }

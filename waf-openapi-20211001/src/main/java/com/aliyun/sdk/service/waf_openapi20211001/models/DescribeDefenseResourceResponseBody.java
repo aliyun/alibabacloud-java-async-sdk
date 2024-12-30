@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,13 +96,13 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         private Integer acwV3SecureStatus;
 
         @com.aliyun.core.annotation.NameInMap("CustomHeaders")
-        private java.util.List < String > customHeaders;
+        private java.util.List<String> customHeaders;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.Map < String, ? > detail;
+        private java.util.Map<String, ?> detail;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -180,7 +185,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         /**
          * @return customHeaders
          */
-        public java.util.List < String > getCustomHeaders() {
+        public java.util.List<String> getCustomHeaders() {
             return this.customHeaders;
         }
 
@@ -194,7 +199,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.Map < String, ? > getDetail() {
+        public java.util.Map<String, ?> getDetail() {
             return this.detail;
         }
 
@@ -272,9 +277,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private Integer acwCookieStatus; 
             private Integer acwSecureStatus; 
             private Integer acwV3SecureStatus; 
-            private java.util.List < String > customHeaders; 
+            private java.util.List<String> customHeaders; 
             private String description; 
-            private java.util.Map < String, ? > detail; 
+            private java.util.Map<String, ?> detail; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private String ownerUserId; 
@@ -337,7 +342,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
              * <p> If the value of XffStatus is 1, the first IP address in the specified header field is used as the originating IP address of the client to prevent X-Forwarded-For (XFF) forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the XFF header field is used as the originating IP address of the client.</p>
              * </blockquote>
              */
-            public Builder customHeaders(java.util.List < String > customHeaders) {
+            public Builder customHeaders(java.util.List<String> customHeaders) {
                 this.customHeaders = customHeaders;
                 return this;
             }
@@ -362,7 +367,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
              *  &quot;domain&quot;: &quot;demo.aliyundoc****.com&quot;
              * }</p>
              */
-            public Builder detail(java.util.Map < String, ? > detail) {
+            public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
                 return this;
             }

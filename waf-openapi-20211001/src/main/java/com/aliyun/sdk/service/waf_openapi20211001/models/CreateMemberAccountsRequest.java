@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateMemberAccountsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberAccountIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > memberAccountIds;
+    private java.util.List<String> memberAccountIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -66,7 +71,7 @@ public class CreateMemberAccountsRequest extends Request {
     /**
      * @return memberAccountIds
      */
-    public java.util.List < String > getMemberAccountIds() {
+    public java.util.List<String> getMemberAccountIds() {
         return this.memberAccountIds;
     }
 
@@ -93,7 +98,7 @@ public class CreateMemberAccountsRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateMemberAccountsRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > memberAccountIds; 
+        private java.util.List<String> memberAccountIds; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private String sourceIp; 
@@ -131,7 +136,7 @@ public class CreateMemberAccountsRequest extends Request {
          * <p>The Alibaba Cloud account IDs of the members that you want to add. You can add up to 10 members at the same time.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder memberAccountIds(java.util.List < String > memberAccountIds) {
+        public Builder memberAccountIds(java.util.List<String> memberAccountIds) {
             this.putQueryParameter("MemberAccountIds", memberAccountIds);
             this.memberAccountIds = memberAccountIds;
             return this;

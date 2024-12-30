@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -277,7 +282,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         private String detectionResult;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("Max")
         private Max max;
@@ -306,7 +311,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -319,7 +324,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String detectionResult; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Max max; 
 
             /**
@@ -340,7 +345,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             /**
              * <p>The sensitive information check results by sensitive data type.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
@@ -368,7 +373,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private Data(Builder builder) {
             this.result = builder.result;
@@ -385,17 +390,17 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
 
             /**
              * <p>The compliance checks.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

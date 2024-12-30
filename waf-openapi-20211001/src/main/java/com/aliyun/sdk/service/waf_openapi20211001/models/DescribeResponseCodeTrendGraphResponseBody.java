@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResponseCodes")
-    private java.util.List < ResponseCodes> responseCodes;
+    private java.util.List<ResponseCodes> responseCodes;
 
     private DescribeResponseCodeTrendGraphResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     /**
      * @return responseCodes
      */
-    public java.util.List < ResponseCodes> getResponseCodes() {
+    public java.util.List<ResponseCodes> getResponseCodes() {
         return this.responseCodes;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResponseCodes> responseCodes; 
+        private java.util.List<ResponseCodes> responseCodes; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
         /**
          * <p>The array of the statistics of the error codes.</p>
          */
-        public Builder responseCodes(java.util.List < ResponseCodes> responseCodes) {
+        public Builder responseCodes(java.util.List<ResponseCodes> responseCodes) {
             this.responseCodes = responseCodes;
             return this;
         }

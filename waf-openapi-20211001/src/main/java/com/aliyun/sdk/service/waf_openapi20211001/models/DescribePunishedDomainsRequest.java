@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribePunishedDomainsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < String > domains;
+    private java.util.List<String> domains;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -53,7 +58,7 @@ public class DescribePunishedDomainsRequest extends Request {
     /**
      * @return domains
      */
-    public java.util.List < String > getDomains() {
+    public java.util.List<String> getDomains() {
         return this.domains;
     }
 
@@ -79,7 +84,7 @@ public class DescribePunishedDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePunishedDomainsRequest, Builder> {
-        private java.util.List < String > domains; 
+        private java.util.List<String> domains; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -99,7 +104,7 @@ public class DescribePunishedDomainsRequest extends Request {
         /**
          * <p>The domain names.</p>
          */
-        public Builder domains(java.util.List < String > domains) {
+        public Builder domains(java.util.List<String> domains) {
             this.putQueryParameter("Domains", domains);
             this.domains = domains;
             return this;

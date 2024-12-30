@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePeakTrendResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FlowChart")
-    private java.util.List < FlowChart> flowChart;
+    private java.util.List<FlowChart> flowChart;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePeakTrendResponseBody extends TeaModel {
     /**
      * @return flowChart
      */
-    public java.util.List < FlowChart> getFlowChart() {
+    public java.util.List<FlowChart> getFlowChart() {
         return this.flowChart;
     }
 
@@ -46,13 +51,13 @@ public class DescribePeakTrendResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FlowChart> flowChart; 
+        private java.util.List<FlowChart> flowChart; 
         private String requestId; 
 
         /**
          * <p>An array of the QPS statistics of the WAF instance.</p>
          */
-        public Builder flowChart(java.util.List < FlowChart> flowChart) {
+        public Builder flowChart(java.util.List<FlowChart> flowChart) {
             this.flowChart = flowChart;
             return this;
         }

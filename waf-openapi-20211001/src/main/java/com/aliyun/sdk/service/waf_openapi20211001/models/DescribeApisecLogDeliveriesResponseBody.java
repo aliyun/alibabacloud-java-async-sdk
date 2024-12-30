@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeliveryConfigs")
-    private java.util.List < DeliveryConfigs> deliveryConfigs;
+    private java.util.List<DeliveryConfigs> deliveryConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
     /**
      * @return deliveryConfigs
      */
-    public java.util.List < DeliveryConfigs> getDeliveryConfigs() {
+    public java.util.List<DeliveryConfigs> getDeliveryConfigs() {
         return this.deliveryConfigs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeliveryConfigs> deliveryConfigs; 
+        private java.util.List<DeliveryConfigs> deliveryConfigs; 
         private String requestId; 
 
         /**
          * <p>The configurations of API security log subscription.</p>
          */
-        public Builder deliveryConfigs(java.util.List < DeliveryConfigs> deliveryConfigs) {
+        public Builder deliveryConfigs(java.util.List<DeliveryConfigs> deliveryConfigs) {
             this.deliveryConfigs = deliveryConfigs;
             return this;
         }

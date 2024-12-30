@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,8 +44,16 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
     private Long ruleId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    private String ruleName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
 
     private DescribeDefenseResourceTemplatesRequest(Builder builder) {
         super(builder);
@@ -50,7 +63,9 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceType = builder.resourceType;
         this.ruleId = builder.ruleId;
+        this.ruleName = builder.ruleName;
         this.ruleType = builder.ruleType;
+        this.templateName = builder.templateName;
     }
 
     public static Builder builder() {
@@ -109,10 +124,24 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
     }
 
     /**
+     * @return ruleName
+     */
+    public String getRuleName() {
+        return this.ruleName;
+    }
+
+    /**
      * @return ruleType
      */
     public String getRuleType() {
         return this.ruleType;
+    }
+
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public static final class Builder extends Request.Builder<DescribeDefenseResourceTemplatesRequest, Builder> {
@@ -122,7 +151,9 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         private String resourceManagerResourceGroupId; 
         private String resourceType; 
         private Long ruleId; 
+        private String ruleName; 
         private String ruleType; 
+        private String templateName; 
 
         private Builder() {
             super();
@@ -136,7 +167,9 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceType = request.resourceType;
             this.ruleId = request.ruleId;
+            this.ruleName = request.ruleName;
             this.ruleType = request.ruleType;
+            this.templateName = request.templateName;
         } 
 
         /**
@@ -225,6 +258,15 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
+         * RuleName.
+         */
+        public Builder ruleName(String ruleName) {
+            this.putQueryParameter("RuleName", ruleName);
+            this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
          * <p>The type of the protection rule. Valid values:</p>
          * <ul>
          * <li><strong>defense</strong>: defense rule. This is the default value.</li>
@@ -237,6 +279,15 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
             this.ruleType = ruleType;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("TemplateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 

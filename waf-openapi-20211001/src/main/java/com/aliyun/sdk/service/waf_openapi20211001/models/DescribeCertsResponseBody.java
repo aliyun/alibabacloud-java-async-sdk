@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCertsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Certs")
-    private java.util.List < Certs> certs;
+    private java.util.List<Certs> certs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeCertsResponseBody extends TeaModel {
     /**
      * @return certs
      */
-    public java.util.List < Certs> getCerts() {
+    public java.util.List<Certs> getCerts() {
         return this.certs;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCertsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Certs> certs; 
+        private java.util.List<Certs> certs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The certificates.</p>
          */
-        public Builder certs(java.util.List < Certs> certs) {
+        public Builder certs(java.util.List<Certs> certs) {
             this.certs = certs;
             return this;
         }
@@ -202,7 +207,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             private Boolean isChainCompleted; 
 
             /**
-             * <p>The time when the certificate becomes valid.</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>1976256736582</p>
@@ -213,7 +218,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires.</p>
+             * <p>The effective time.</p>
              * 
              * <strong>example:</strong>
              * <p>1976256836582</p>
@@ -224,10 +229,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+             * <p>The globally unique ID of the certificate. The value follows a &quot;&lt;Certificate ID&gt;-ap-southeast-1&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-ap-southeast-1.</p>
              * 
              * <strong>example:</strong>
-             * <p>1234567-cn-hangzhou</p>
+             * <p>123-ap-southeast-1</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -257,7 +262,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name that is added to WAF.</p>
+             * <p>The domain that is supported by the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>

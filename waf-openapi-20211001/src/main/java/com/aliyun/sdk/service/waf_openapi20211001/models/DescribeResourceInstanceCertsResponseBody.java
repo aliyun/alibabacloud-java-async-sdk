@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Certs")
-    private java.util.List < Certs> certs;
+    private java.util.List<Certs> certs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
     /**
      * @return certs
      */
-    public java.util.List < Certs> getCerts() {
+    public java.util.List<Certs> getCerts() {
         return this.certs;
     }
 
@@ -57,14 +62,14 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Certs> certs; 
+        private java.util.List<Certs> certs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The certificates.</p>
          */
-        public Builder certs(java.util.List < Certs> certs) {
+        public Builder certs(java.util.List<Certs> certs) {
             this.certs = certs;
             return this;
         }

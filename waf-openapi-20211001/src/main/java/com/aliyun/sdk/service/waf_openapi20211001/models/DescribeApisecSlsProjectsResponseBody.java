@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Projects")
-    private java.util.List < String > projects;
+    private java.util.List<String> projects;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
     /**
      * @return projects
      */
-    public java.util.List < String > getProjects() {
+    public java.util.List<String> getProjects() {
         return this.projects;
     }
 
@@ -46,13 +51,13 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > projects; 
+        private java.util.List<String> projects; 
         private String requestId; 
 
         /**
          * <p>The names of the projects in Simple Log Service.</p>
          */
-        public Builder projects(java.util.List < String > projects) {
+        public Builder projects(java.util.List<String> projects) {
             this.projects = projects;
             return this;
         }

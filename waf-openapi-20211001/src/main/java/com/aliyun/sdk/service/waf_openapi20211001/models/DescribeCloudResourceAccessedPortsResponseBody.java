@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Http")
-    private java.util.List < Integer > http;
+    private java.util.List<Integer> http;
 
     @com.aliyun.core.annotation.NameInMap("Https")
-    private java.util.List < Integer > https;
+    private java.util.List<Integer> https;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
     /**
      * @return http
      */
-    public java.util.List < Integer > getHttp() {
+    public java.util.List<Integer> getHttp() {
         return this.http;
     }
 
     /**
      * @return https
      */
-    public java.util.List < Integer > getHttps() {
+    public java.util.List<Integer> getHttps() {
         return this.https;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Integer > http; 
-        private java.util.List < Integer > https; 
+        private java.util.List<Integer> http; 
+        private java.util.List<Integer> https; 
         private String requestId; 
 
         /**
          * <p>The HTTP ports.</p>
          */
-        public Builder http(java.util.List < Integer > http) {
+        public Builder http(java.util.List<Integer> http) {
             this.http = http;
             return this;
         }
@@ -72,7 +77,7 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         /**
          * <p>The HTTPS ports.</p>
          */
-        public Builder https(java.util.List < Integer > https) {
+        public Builder https(java.util.List<Integer> https) {
             this.https = https;
             return this;
         }

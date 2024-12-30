@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteApisecEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > eventIds;
+    private java.util.List<String> eventIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -66,7 +71,7 @@ public class DeleteApisecEventsRequest extends Request {
     /**
      * @return eventIds
      */
-    public java.util.List < String > getEventIds() {
+    public java.util.List<String> getEventIds() {
         return this.eventIds;
     }
 
@@ -93,7 +98,7 @@ public class DeleteApisecEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteApisecEventsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > eventIds; 
+        private java.util.List<String> eventIds; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -130,7 +135,7 @@ public class DeleteApisecEventsRequest extends Request {
          * <p>The IDs of the security events.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder eventIds(java.util.List < String > eventIds) {
+        public Builder eventIds(java.util.List<String> eventIds) {
             this.putQueryParameter("EventIds", eventIds);
             this.eventIds = eventIds;
             return this;

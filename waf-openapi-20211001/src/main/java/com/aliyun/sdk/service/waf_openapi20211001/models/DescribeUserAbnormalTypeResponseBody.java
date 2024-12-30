@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Abnormal")
-    private java.util.List < Abnormal> abnormal;
+    private java.util.List<Abnormal> abnormal;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
     /**
      * @return abnormal
      */
-    public java.util.List < Abnormal> getAbnormal() {
+    public java.util.List<Abnormal> getAbnormal() {
         return this.abnormal;
     }
 
@@ -46,13 +51,13 @@ public class DescribeUserAbnormalTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Abnormal> abnormal; 
+        private java.util.List<Abnormal> abnormal; 
         private String requestId; 
 
         /**
          * <p>The types and statistics of risks.</p>
          */
-        public Builder abnormal(java.util.List < Abnormal> abnormal) {
+        public Builder abnormal(java.util.List<Abnormal> abnormal) {
             this.abnormal = abnormal;
             return this;
         }

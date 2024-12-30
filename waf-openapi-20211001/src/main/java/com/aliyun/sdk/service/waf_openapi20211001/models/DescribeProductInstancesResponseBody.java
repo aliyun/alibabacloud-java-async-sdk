@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeProductInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProductInstances")
-    private java.util.List < ProductInstances> productInstances;
+    private java.util.List<ProductInstances> productInstances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
     /**
      * @return productInstances
      */
-    public java.util.List < ProductInstances> getProductInstances() {
+    public java.util.List<ProductInstances> getProductInstances() {
         return this.productInstances;
     }
 
@@ -57,14 +62,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProductInstances> productInstances; 
+        private java.util.List<ProductInstances> productInstances; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The information about the instances.</p>
          */
-        public Builder productInstances(java.util.List < ProductInstances> productInstances) {
+        public Builder productInstances(java.util.List<ProductInstances> productInstances) {
             this.productInstances = productInstances;
             return this;
         }
@@ -178,7 +183,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
      */
     public static class ResourcePorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Certificates")
-        private java.util.List < Certificates> certificates;
+        private java.util.List<Certificates> certificates;
 
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -203,7 +208,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         /**
          * @return certificates
          */
-        public java.util.List < Certificates> getCertificates() {
+        public java.util.List<Certificates> getCertificates() {
             return this.certificates;
         }
 
@@ -222,14 +227,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Certificates> certificates; 
+            private java.util.List<Certificates> certificates; 
             private Integer port; 
             private String protocol; 
 
             /**
              * <p>The information about the certificates.</p>
              */
-            public Builder certificates(java.util.List < Certificates> certificates) {
+            public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
                 return this;
             }
@@ -295,7 +300,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         private String resourceName;
 
         @com.aliyun.core.annotation.NameInMap("ResourcePorts")
-        private java.util.List < ResourcePorts> resourcePorts;
+        private java.util.List<ResourcePorts> resourcePorts;
 
         @com.aliyun.core.annotation.NameInMap("ResourceProduct")
         private String resourceProduct;
@@ -368,7 +373,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         /**
          * @return resourcePorts
          */
-        public java.util.List < ResourcePorts> getResourcePorts() {
+        public java.util.List<ResourcePorts> getResourcePorts() {
             return this.resourcePorts;
         }
 
@@ -393,7 +398,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             private String resourceInstanceName; 
             private String resourceIp; 
             private String resourceName; 
-            private java.util.List < ResourcePorts> resourcePorts; 
+            private java.util.List<ResourcePorts> resourcePorts; 
             private String resourceProduct; 
             private String resourceRegionId; 
 
@@ -466,7 +471,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             /**
              * <p>The information about the ports.</p>
              */
-            public Builder resourcePorts(java.util.List < ResourcePorts> resourcePorts) {
+            public Builder resourcePorts(java.util.List<ResourcePorts> resourcePorts) {
                 this.resourcePorts = resourcePorts;
                 return this;
             }

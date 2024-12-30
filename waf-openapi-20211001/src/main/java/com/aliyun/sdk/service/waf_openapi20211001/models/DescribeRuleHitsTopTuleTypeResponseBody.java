@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleHitsTopTuleType")
-    private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType;
+    private java.util.List<RuleHitsTopTuleType> ruleHitsTopTuleType;
 
     private DescribeRuleHitsTopTuleTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopTuleType
      */
-    public java.util.List < RuleHitsTopTuleType> getRuleHitsTopTuleType() {
+    public java.util.List<RuleHitsTopTuleType> getRuleHitsTopTuleType() {
         return this.ruleHitsTopTuleType;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType; 
+        private java.util.List<RuleHitsTopTuleType> ruleHitsTopTuleType; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         /**
          * <p>The top 10 protection modules that are matched.</p>
          */
-        public Builder ruleHitsTopTuleType(java.util.List < RuleHitsTopTuleType> ruleHitsTopTuleType) {
+        public Builder ruleHitsTopTuleType(java.util.List<RuleHitsTopTuleType> ruleHitsTopTuleType) {
             this.ruleHitsTopTuleType = ruleHitsTopTuleType;
             return this;
         }

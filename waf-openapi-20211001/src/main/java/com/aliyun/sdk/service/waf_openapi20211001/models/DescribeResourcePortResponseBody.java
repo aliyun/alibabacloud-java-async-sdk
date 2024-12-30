@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeResourcePortResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourcePorts")
-    private java.util.List < String > resourcePorts;
+    private java.util.List<String> resourcePorts;
 
     private DescribeResourcePortResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeResourcePortResponseBody extends TeaModel {
     /**
      * @return resourcePorts
      */
-    public java.util.List < String > getResourcePorts() {
+    public java.util.List<String> getResourcePorts() {
         return this.resourcePorts;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > resourcePorts; 
+        private java.util.List<String> resourcePorts; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeResourcePortResponseBody extends TeaModel {
         /**
          * <p>An array of HTTP and HTTPS listener ports that are added to the WAF instance.</p>
          */
-        public Builder resourcePorts(java.util.List < String > resourcePorts) {
+        public Builder resourcePorts(java.util.List<String> resourcePorts) {
             this.resourcePorts = resourcePorts;
             return this;
         }

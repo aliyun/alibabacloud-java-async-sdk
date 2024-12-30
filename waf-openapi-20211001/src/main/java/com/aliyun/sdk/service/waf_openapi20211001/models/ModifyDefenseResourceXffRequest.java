@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomHeaders")
-    private java.util.List < String > customHeaders;
+    private java.util.List<String> customHeaders;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -101,7 +106,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
     /**
      * @return customHeaders
      */
-    public java.util.List < String > getCustomHeaders() {
+    public java.util.List<String> getCustomHeaders() {
         return this.customHeaders;
     }
 
@@ -144,7 +149,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
         private Integer acwCookieStatus; 
         private Integer acwSecureStatus; 
         private Integer acwV3SecureStatus; 
-        private java.util.List < String > customHeaders; 
+        private java.util.List<String> customHeaders; 
         private String instanceId; 
         private String regionId; 
         private String resource; 
@@ -222,7 +227,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
          * <p> The first IP address in the specified custom header field is used as the originating IP address of the client to prevent X-Forwarded-For forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the X-Forwarded-For header is used as the originating IP address of the client.</p>
          * </blockquote>
          */
-        public Builder customHeaders(java.util.List < String > customHeaders) {
+        public Builder customHeaders(java.util.List<String> customHeaders) {
             this.putQueryParameter("CustomHeaders", customHeaders);
             this.customHeaders = customHeaders;
             return this;

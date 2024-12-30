@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApisecApiResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,14 +62,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The API assets.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -153,7 +158,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         private Long eventNum;
 
         @com.aliyun.core.annotation.NameInMap("Examples")
-        private java.util.List < String > examples;
+        private java.util.List<String> examples;
 
         @com.aliyun.core.annotation.NameInMap("FarthestTs")
         private Long farthestTs;
@@ -318,7 +323,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * @return examples
          */
-        public java.util.List < String > getExamples() {
+        public java.util.List<String> getExamples() {
             return this.examples;
         }
 
@@ -374,7 +379,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             private Long botCnt; 
             private Long crossBorderCnt; 
             private Long eventNum; 
-            private java.util.List < String > examples; 
+            private java.util.List<String> examples; 
             private Long farthestTs; 
             private Integer follow; 
             private Long lastestTs; 
@@ -605,7 +610,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             /**
              * <p>The sample APIs.</p>
              */
-            public Builder examples(java.util.List < String > examples) {
+            public Builder examples(java.util.List<String> examples) {
                 this.examples = examples;
                 return this;
             }

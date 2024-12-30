@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleHitsTopClientIp")
-    private java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp;
+    private java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp;
 
     private DescribeRuleHitsTopClientIpResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopClientIp
      */
-    public java.util.List < RuleHitsTopClientIp> getRuleHitsTopClientIp() {
+    public java.util.List<RuleHitsTopClientIp> getRuleHitsTopClientIp() {
         return this.ruleHitsTopClientIp;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp; 
+        private java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         /**
          * <p>The array of the top 10 IP addresses from which attacks are initiated.</p>
          */
-        public Builder ruleHitsTopClientIp(java.util.List < RuleHitsTopClientIp> ruleHitsTopClientIp) {
+        public Builder ruleHitsTopClientIp(java.util.List<RuleHitsTopClientIp> ruleHitsTopClientIp) {
             this.ruleHitsTopClientIp = ruleHitsTopClientIp;
             return this;
         }

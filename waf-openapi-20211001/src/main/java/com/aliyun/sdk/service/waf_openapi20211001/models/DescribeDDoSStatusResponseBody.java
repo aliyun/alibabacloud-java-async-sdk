@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDDoSStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DDoSStatus")
-    private java.util.List < DDoSStatus> dDoSStatus;
+    private java.util.List<DDoSStatus> dDoSStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
     /**
      * @return dDoSStatus
      */
-    public java.util.List < DDoSStatus> getDDoSStatus() {
+    public java.util.List<DDoSStatus> getDDoSStatus() {
         return this.dDoSStatus;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DDoSStatus> dDoSStatus; 
+        private java.util.List<DDoSStatus> dDoSStatus; 
         private String requestId; 
 
         /**
          * <p>Indicates whether DDoS attacks occur on specific domain names.</p>
          */
-        public Builder dDoSStatus(java.util.List < DDoSStatus> dDoSStatus) {
+        public Builder dDoSStatus(java.util.List<DDoSStatus> dDoSStatus) {
             this.dDoSStatus = dDoSStatus;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Groups")
-    private java.util.List < String > groups;
+    private java.util.List<String> groups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < String > getGroups() {
+    public java.util.List<String> getGroups() {
         return this.groups;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDefenseTemplateValidGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > groups; 
+        private java.util.List<String> groups; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The names of the protected object groups.</p>
          */
-        public Builder groups(java.util.List < String > groups) {
+        public Builder groups(java.util.List<String> groups) {
             this.groups = groups;
             return this;
         }

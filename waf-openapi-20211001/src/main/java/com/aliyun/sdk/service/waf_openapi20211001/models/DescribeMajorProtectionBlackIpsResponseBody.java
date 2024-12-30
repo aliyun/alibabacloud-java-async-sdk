@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IpList")
-    private java.util.List < IpList> ipList;
+    private java.util.List<IpList> ipList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     /**
      * @return ipList
      */
-    public java.util.List < IpList> getIpList() {
+    public java.util.List<IpList> getIpList() {
         return this.ipList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeMajorProtectionBlackIpsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpList> ipList; 
+        private java.util.List<IpList> ipList; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>An array of IP addresses in the IP address blacklist.</p>
          */
-        public Builder ipList(java.util.List < IpList> ipList) {
+        public Builder ipList(java.util.List<IpList> ipList) {
             this.ipList = ipList;
             return this;
         }

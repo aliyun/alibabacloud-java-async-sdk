@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,13 +275,13 @@ public class ModifyCloudResourceRequest extends Request {
      */
     public static class Listen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Certificates")
-        private java.util.List < Certificates> certificates;
+        private java.util.List<Certificates> certificates;
 
         @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Integer cipherSuite;
 
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        private java.util.List<String> customCiphers;
 
         @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
@@ -327,7 +332,7 @@ public class ModifyCloudResourceRequest extends Request {
         /**
          * @return certificates
          */
-        public java.util.List < Certificates> getCertificates() {
+        public java.util.List<Certificates> getCertificates() {
             return this.certificates;
         }
 
@@ -341,7 +346,7 @@ public class ModifyCloudResourceRequest extends Request {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -395,9 +400,9 @@ public class ModifyCloudResourceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Certificates> certificates; 
+            private java.util.List<Certificates> certificates; 
             private Integer cipherSuite; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean http2Enabled; 
             private Integer port; 
@@ -409,7 +414,7 @@ public class ModifyCloudResourceRequest extends Request {
             /**
              * <p>An array of certificates.</p>
              */
-            public Builder certificates(java.util.List < Certificates> certificates) {
+            public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
                 return this;
             }
@@ -433,7 +438,7 @@ public class ModifyCloudResourceRequest extends Request {
             /**
              * <p>An array of custom cipher suites.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
@@ -644,7 +649,7 @@ public class ModifyCloudResourceRequest extends Request {
         private Integer readTimeout;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-        private java.util.List < RequestHeaders> requestHeaders;
+        private java.util.List<RequestHeaders> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("WriteTimeout")
         @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
@@ -654,7 +659,7 @@ public class ModifyCloudResourceRequest extends Request {
         private Integer xffHeaderMode;
 
         @com.aliyun.core.annotation.NameInMap("XffHeaders")
-        private java.util.List < String > xffHeaders;
+        private java.util.List<String> xffHeaders;
 
         @com.aliyun.core.annotation.NameInMap("XffProto")
         private Boolean xffProto;
@@ -710,7 +715,7 @@ public class ModifyCloudResourceRequest extends Request {
         /**
          * @return requestHeaders
          */
-        public java.util.List < RequestHeaders> getRequestHeaders() {
+        public java.util.List<RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
         }
 
@@ -731,7 +736,7 @@ public class ModifyCloudResourceRequest extends Request {
         /**
          * @return xffHeaders
          */
-        public java.util.List < String > getXffHeaders() {
+        public java.util.List<String> getXffHeaders() {
             return this.xffHeaders;
         }
 
@@ -747,10 +752,10 @@ public class ModifyCloudResourceRequest extends Request {
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
             private Integer readTimeout; 
-            private java.util.List < RequestHeaders> requestHeaders; 
+            private java.util.List<RequestHeaders> requestHeaders; 
             private Integer writeTimeout; 
             private Integer xffHeaderMode; 
-            private java.util.List < String > xffHeaders; 
+            private java.util.List<String> xffHeaders; 
             private Boolean xffProto; 
 
             /**
@@ -810,7 +815,7 @@ public class ModifyCloudResourceRequest extends Request {
             /**
              * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
              */
-            public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
+            public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }
@@ -848,7 +853,7 @@ public class ModifyCloudResourceRequest extends Request {
              * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
              * </blockquote>
              */
-            public Builder xffHeaders(java.util.List < String > xffHeaders) {
+            public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
                 return this;
             }

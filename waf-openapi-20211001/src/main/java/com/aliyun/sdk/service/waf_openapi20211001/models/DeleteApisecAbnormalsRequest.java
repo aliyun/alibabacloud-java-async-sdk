@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteApisecAbnormalsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AbnormalIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > abnormalIds;
+    private java.util.List<String> abnormalIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -59,7 +64,7 @@ public class DeleteApisecAbnormalsRequest extends Request {
     /**
      * @return abnormalIds
      */
-    public java.util.List < String > getAbnormalIds() {
+    public java.util.List<String> getAbnormalIds() {
         return this.abnormalIds;
     }
 
@@ -92,7 +97,7 @@ public class DeleteApisecAbnormalsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteApisecAbnormalsRequest, Builder> {
-        private java.util.List < String > abnormalIds; 
+        private java.util.List<String> abnormalIds; 
         private String clusterId; 
         private String instanceId; 
         private String regionId; 
@@ -115,7 +120,7 @@ public class DeleteApisecAbnormalsRequest extends Request {
          * <p>The risk IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder abnormalIds(java.util.List < String > abnormalIds) {
+        public Builder abnormalIds(java.util.List<String> abnormalIds) {
             this.putQueryParameter("AbnormalIds", abnormalIds);
             this.abnormalIds = abnormalIds;
             return this;

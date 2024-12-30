@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("UnassignedMachines")
-    private java.util.List < UnassignedMachines> unassignedMachines;
+    private java.util.List<UnassignedMachines> unassignedMachines;
 
     private DescribeHybridCloudUnassignedMachinesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
     /**
      * @return unassignedMachines
      */
-    public java.util.List < UnassignedMachines> getUnassignedMachines() {
+    public java.util.List<UnassignedMachines> getUnassignedMachines() {
         return this.unassignedMachines;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < UnassignedMachines> unassignedMachines; 
+        private java.util.List<UnassignedMachines> unassignedMachines; 
 
         /**
          * <p>The ID of the request.</p>
@@ -86,7 +91,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
         /**
          * <p>The servers that are not assigned to the hybrid cloud cluster.</p>
          */
-        public Builder unassignedMachines(java.util.List < UnassignedMachines> unassignedMachines) {
+        public Builder unassignedMachines(java.util.List<UnassignedMachines> unassignedMachines) {
             this.unassignedMachines = unassignedMachines;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyTemplateResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BindResourceGroups")
-    private java.util.List < String > bindResourceGroups;
+    private java.util.List<String> bindResourceGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BindResources")
-    private java.util.List < String > bindResources;
+    private java.util.List<String> bindResources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -40,11 +45,11 @@ public class ModifyTemplateResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnbindResourceGroups")
-    private java.util.List < String > unbindResourceGroups;
+    private java.util.List<String> unbindResourceGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnbindResources")
-    private java.util.List < String > unbindResources;
+    private java.util.List<String> unbindResources;
 
     private ModifyTemplateResourcesRequest(Builder builder) {
         super(builder);
@@ -74,14 +79,14 @@ public class ModifyTemplateResourcesRequest extends Request {
     /**
      * @return bindResourceGroups
      */
-    public java.util.List < String > getBindResourceGroups() {
+    public java.util.List<String> getBindResourceGroups() {
         return this.bindResourceGroups;
     }
 
     /**
      * @return bindResources
      */
-    public java.util.List < String > getBindResources() {
+    public java.util.List<String> getBindResources() {
         return this.bindResources;
     }
 
@@ -116,26 +121,26 @@ public class ModifyTemplateResourcesRequest extends Request {
     /**
      * @return unbindResourceGroups
      */
-    public java.util.List < String > getUnbindResourceGroups() {
+    public java.util.List<String> getUnbindResourceGroups() {
         return this.unbindResourceGroups;
     }
 
     /**
      * @return unbindResources
      */
-    public java.util.List < String > getUnbindResources() {
+    public java.util.List<String> getUnbindResources() {
         return this.unbindResources;
     }
 
     public static final class Builder extends Request.Builder<ModifyTemplateResourcesRequest, Builder> {
-        private java.util.List < String > bindResourceGroups; 
-        private java.util.List < String > bindResources; 
+        private java.util.List<String> bindResourceGroups; 
+        private java.util.List<String> bindResources; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private Long templateId; 
-        private java.util.List < String > unbindResourceGroups; 
-        private java.util.List < String > unbindResources; 
+        private java.util.List<String> unbindResourceGroups; 
+        private java.util.List<String> unbindResources; 
 
         private Builder() {
             super();
@@ -156,7 +161,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         /**
          * <p>The protected object groups that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
          */
-        public Builder bindResourceGroups(java.util.List < String > bindResourceGroups) {
+        public Builder bindResourceGroups(java.util.List<String> bindResourceGroups) {
             this.putQueryParameter("BindResourceGroups", bindResourceGroups);
             this.bindResourceGroups = bindResourceGroups;
             return this;
@@ -165,7 +170,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         /**
          * <p>The protected objects that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
          */
-        public Builder bindResources(java.util.List < String > bindResources) {
+        public Builder bindResources(java.util.List<String> bindResources) {
             this.putQueryParameter("BindResources", bindResources);
             this.bindResources = bindResources;
             return this;
@@ -231,7 +236,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         /**
          * <p>The protected object groups that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
          */
-        public Builder unbindResourceGroups(java.util.List < String > unbindResourceGroups) {
+        public Builder unbindResourceGroups(java.util.List<String> unbindResourceGroups) {
             this.putQueryParameter("UnbindResourceGroups", unbindResourceGroups);
             this.unbindResourceGroups = unbindResourceGroups;
             return this;
@@ -240,7 +245,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         /**
          * <p>The protected objects that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
          */
-        public Builder unbindResources(java.util.List < String > unbindResources) {
+        public Builder unbindResources(java.util.List<String> unbindResources) {
             this.putQueryParameter("UnbindResources", unbindResources);
             this.unbindResources = unbindResources;
             return this;

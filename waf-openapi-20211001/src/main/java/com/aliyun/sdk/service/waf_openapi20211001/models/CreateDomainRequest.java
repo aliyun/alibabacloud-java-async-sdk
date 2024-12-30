@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class CreateDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateDomainRequest(Builder builder) {
         super(builder);
@@ -126,7 +131,7 @@ public class CreateDomainRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -138,7 +143,7 @@ public class CreateDomainRequest extends Request {
         private Redirect redirect; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -255,7 +260,7 @@ public class CreateDomainRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -282,7 +287,7 @@ public class CreateDomainRequest extends Request {
         private Integer cipherSuite;
 
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        private java.util.List<String> customCiphers;
 
         @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
@@ -297,10 +302,10 @@ public class CreateDomainRequest extends Request {
         private Boolean http2Enabled;
 
         @com.aliyun.core.annotation.NameInMap("HttpPorts")
-        private java.util.List < Integer > httpPorts;
+        private java.util.List<Integer> httpPorts;
 
         @com.aliyun.core.annotation.NameInMap("HttpsPorts")
-        private java.util.List < Integer > httpsPorts;
+        private java.util.List<Integer> httpsPorts;
 
         @com.aliyun.core.annotation.NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
@@ -324,7 +329,7 @@ public class CreateDomainRequest extends Request {
         private Integer xffHeaderMode;
 
         @com.aliyun.core.annotation.NameInMap("XffHeaders")
-        private java.util.List < String > xffHeaders;
+        private java.util.List<String> xffHeaders;
 
         private Listen(Builder builder) {
             this.certId = builder.certId;
@@ -371,7 +376,7 @@ public class CreateDomainRequest extends Request {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -406,14 +411,14 @@ public class CreateDomainRequest extends Request {
         /**
          * @return httpPorts
          */
-        public java.util.List < Integer > getHttpPorts() {
+        public java.util.List<Integer> getHttpPorts() {
             return this.httpPorts;
         }
 
         /**
          * @return httpsPorts
          */
-        public java.util.List < Integer > getHttpsPorts() {
+        public java.util.List<Integer> getHttpsPorts() {
             return this.httpsPorts;
         }
 
@@ -469,20 +474,20 @@ public class CreateDomainRequest extends Request {
         /**
          * @return xffHeaders
          */
-        public java.util.List < String > getXffHeaders() {
+        public java.util.List<String> getXffHeaders() {
             return this.xffHeaders;
         }
 
         public static final class Builder {
             private String certId; 
             private Integer cipherSuite; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean exclusiveIp; 
             private Boolean focusHttps; 
             private Boolean http2Enabled; 
-            private java.util.List < Integer > httpPorts; 
-            private java.util.List < Integer > httpsPorts; 
+            private java.util.List<Integer> httpPorts; 
+            private java.util.List<Integer> httpsPorts; 
             private Boolean iPv6Enabled; 
             private String protectionResource; 
             private Boolean sM2AccessOnly; 
@@ -490,7 +495,7 @@ public class CreateDomainRequest extends Request {
             private Boolean sM2Enabled; 
             private String TLSVersion; 
             private Integer xffHeaderMode; 
-            private java.util.List < String > xffHeaders; 
+            private java.util.List<String> xffHeaders; 
 
             /**
              * <p>The ID of the certificate that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>.</p>
@@ -522,7 +527,7 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The custom cipher suite that you want to add.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
@@ -590,7 +595,7 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The HTTP listener port.</p>
              */
-            public Builder httpPorts(java.util.List < Integer > httpPorts) {
+            public Builder httpPorts(java.util.List<Integer> httpPorts) {
                 this.httpPorts = httpPorts;
                 return this;
             }
@@ -598,7 +603,7 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The HTTPS listener port.</p>
              */
-            public Builder httpsPorts(java.util.List < Integer > httpsPorts) {
+            public Builder httpsPorts(java.util.List<Integer> httpsPorts) {
                 this.httpsPorts = httpsPorts;
                 return this;
             }
@@ -705,7 +710,7 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The custom header field that you want WAF to use to obtain the actual IP address of a client.</p>
              */
-            public Builder xffHeaders(java.util.List < String > xffHeaders) {
+            public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
                 return this;
             }
@@ -798,10 +803,10 @@ public class CreateDomainRequest extends Request {
      */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backends")
-        private java.util.List < String > backends;
+        private java.util.List<String> backends;
 
         @com.aliyun.core.annotation.NameInMap("BackupBackends")
-        private java.util.List < String > backupBackends;
+        private java.util.List<String> backupBackends;
 
         @com.aliyun.core.annotation.NameInMap("CnameEnabled")
         private Boolean cnameEnabled;
@@ -833,7 +838,7 @@ public class CreateDomainRequest extends Request {
         private Integer readTimeout;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-        private java.util.List < RequestHeaders> requestHeaders;
+        private java.util.List<RequestHeaders> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("Retry")
         private Boolean retry;
@@ -885,14 +890,14 @@ public class CreateDomainRequest extends Request {
         /**
          * @return backends
          */
-        public java.util.List < String > getBackends() {
+        public java.util.List<String> getBackends() {
             return this.backends;
         }
 
         /**
          * @return backupBackends
          */
-        public java.util.List < String > getBackupBackends() {
+        public java.util.List<String> getBackupBackends() {
             return this.backupBackends;
         }
 
@@ -955,7 +960,7 @@ public class CreateDomainRequest extends Request {
         /**
          * @return requestHeaders
          */
-        public java.util.List < RequestHeaders> getRequestHeaders() {
+        public java.util.List<RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
         }
 
@@ -1002,8 +1007,8 @@ public class CreateDomainRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > backends; 
-            private java.util.List < String > backupBackends; 
+            private java.util.List<String> backends; 
+            private java.util.List<String> backupBackends; 
             private Boolean cnameEnabled; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
@@ -1012,7 +1017,7 @@ public class CreateDomainRequest extends Request {
             private Integer keepaliveTimeout; 
             private String loadbalance; 
             private Integer readTimeout; 
-            private java.util.List < RequestHeaders> requestHeaders; 
+            private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
             private String routingRules; 
             private Boolean sniEnabled; 
@@ -1023,7 +1028,7 @@ public class CreateDomainRequest extends Request {
             /**
              * <p>The IP addresses or domain names of the origin server.</p>
              */
-            public Builder backends(java.util.List < String > backends) {
+            public Builder backends(java.util.List<String> backends) {
                 this.backends = backends;
                 return this;
             }
@@ -1031,7 +1036,7 @@ public class CreateDomainRequest extends Request {
             /**
              * BackupBackends.
              */
-            public Builder backupBackends(java.util.List < String > backupBackends) {
+            public Builder backupBackends(java.util.List<String> backupBackends) {
                 this.backupBackends = backupBackends;
                 return this;
             }
@@ -1152,7 +1157,7 @@ public class CreateDomainRequest extends Request {
              * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
              * <p>When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.</p>
              */
-            public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
+            public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }

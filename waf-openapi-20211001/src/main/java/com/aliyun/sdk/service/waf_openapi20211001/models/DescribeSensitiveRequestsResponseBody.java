@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSensitiveRequestsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,14 +62,14 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The tracing results of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -196,13 +201,13 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         private Long eventCount;
 
         @com.aliyun.core.annotation.NameInMap("InfoCount")
-        private java.util.List < InfoCount> infoCount;
+        private java.util.List<InfoCount> infoCount;
 
         @com.aliyun.core.annotation.NameInMap("MatchedHost")
         private String matchedHost;
 
         @com.aliyun.core.annotation.NameInMap("SensitiveList")
-        private java.util.List < String > sensitiveList;
+        private java.util.List<String> sensitiveList;
 
         private Data(Builder builder) {
             this.abnormalCount = builder.abnormalCount;
@@ -269,7 +274,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         /**
          * @return infoCount
          */
-        public java.util.List < InfoCount> getInfoCount() {
+        public java.util.List<InfoCount> getInfoCount() {
             return this.infoCount;
         }
 
@@ -283,7 +288,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         /**
          * @return sensitiveList
          */
-        public java.util.List < String > getSensitiveList() {
+        public java.util.List<String> getSensitiveList() {
             return this.sensitiveList;
         }
 
@@ -294,9 +299,9 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
             private String clientIP; 
             private String detectionResult; 
             private Long eventCount; 
-            private java.util.List < InfoCount> infoCount; 
+            private java.util.List<InfoCount> infoCount; 
             private String matchedHost; 
-            private java.util.List < String > sensitiveList; 
+            private java.util.List<String> sensitiveList; 
 
             /**
              * <p>The number of risks in the previous 30 days.</p>
@@ -371,7 +376,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
             /**
              * <p>The statistics of the sensitive data.</p>
              */
-            public Builder infoCount(java.util.List < InfoCount> infoCount) {
+            public Builder infoCount(java.util.List<InfoCount> infoCount) {
                 this.infoCount = infoCount;
                 return this;
             }
@@ -390,7 +395,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
             /**
              * <p>The sensitive data.</p>
              */
-            public Builder sensitiveList(java.util.List < String > sensitiveList) {
+            public Builder sensitiveList(java.util.List<String> sensitiveList) {
                 this.sensitiveList = sensitiveList;
                 return this;
             }

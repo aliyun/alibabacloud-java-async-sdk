@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHybridCloudClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterInfos")
-    private java.util.List < ClusterInfos> clusterInfos;
+    private java.util.List<ClusterInfos> clusterInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
     /**
      * @return clusterInfos
      */
-    public java.util.List < ClusterInfos> getClusterInfos() {
+    public java.util.List<ClusterInfos> getClusterInfos() {
         return this.clusterInfos;
     }
 
@@ -46,13 +51,13 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterInfos> clusterInfos; 
+        private java.util.List<ClusterInfos> clusterInfos; 
         private String requestId; 
 
         /**
          * <p>The information about the clusters.</p>
          */
-        public Builder clusterInfos(java.util.List < ClusterInfos> clusterInfos) {
+        public Builder clusterInfos(java.util.List<ClusterInfos> clusterInfos) {
             this.clusterInfos = clusterInfos;
             return this;
         }

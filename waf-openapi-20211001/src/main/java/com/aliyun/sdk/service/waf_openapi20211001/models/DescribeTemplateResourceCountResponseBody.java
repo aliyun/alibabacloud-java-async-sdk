@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceCount")
-    private java.util.List < ResourceCount> resourceCount;
+    private java.util.List<ResourceCount> resourceCount;
 
     private DescribeTemplateResourceCountResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     /**
      * @return resourceCount
      */
-    public java.util.List < ResourceCount> getResourceCount() {
+    public java.util.List<ResourceCount> getResourceCount() {
         return this.resourceCount;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ResourceCount> resourceCount; 
+        private java.util.List<ResourceCount> resourceCount; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
         /**
          * <p>The number of protected objects or protected object groups for which the protection template takes effect.</p>
          */
-        public Builder resourceCount(java.util.List < ResourceCount> resourceCount) {
+        public Builder resourceCount(java.util.List<ResourceCount> resourceCount) {
             this.resourceCount = resourceCount;
             return this;
         }

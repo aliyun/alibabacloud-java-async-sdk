@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ModifyDefaultHttpsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-    private java.util.List < String > customCiphers;
+    private java.util.List<String> customCiphers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
@@ -89,7 +94,7 @@ public class ModifyDefaultHttpsRequest extends Request {
     /**
      * @return customCiphers
      */
-    public java.util.List < String > getCustomCiphers() {
+    public java.util.List<String> getCustomCiphers() {
         return this.customCiphers;
     }
 
@@ -131,7 +136,7 @@ public class ModifyDefaultHttpsRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDefaultHttpsRequest, Builder> {
         private String certId; 
         private Integer cipherSuite; 
-        private java.util.List < String > customCiphers; 
+        private java.util.List<String> customCiphers; 
         private Boolean enableTLSv3; 
         private String instanceId; 
         private String regionId; 
@@ -187,7 +192,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         /**
          * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
          */
-        public Builder customCiphers(java.util.List < String > customCiphers) {
+        public Builder customCiphers(java.util.List<String> customCiphers) {
             this.putQueryParameter("CustomCiphers", customCiphers);
             this.customCiphers = customCiphers;
             return this;
@@ -242,7 +247,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>阿里云资源组ID。</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

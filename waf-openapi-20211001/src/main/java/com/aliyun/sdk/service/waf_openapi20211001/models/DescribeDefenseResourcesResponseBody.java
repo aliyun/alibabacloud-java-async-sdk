@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -45,7 +50,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -58,7 +63,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private Long totalCount; 
 
         /**
@@ -73,9 +78,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The protected objects.</p>
+         * <p>An array of protected objects.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -114,13 +119,13 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         private Integer acwV3SecureStatus;
 
         @com.aliyun.core.annotation.NameInMap("CustomHeaders")
-        private java.util.List < String > customHeaders;
+        private java.util.List<String> customHeaders;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.Map < String, ? > detail;
+        private java.util.Map<String, ?> detail;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -203,7 +208,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         /**
          * @return customHeaders
          */
-        public java.util.List < String > getCustomHeaders() {
+        public java.util.List<String> getCustomHeaders() {
             return this.customHeaders;
         }
 
@@ -217,7 +222,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.Map < String, ? > getDetail() {
+        public java.util.Map<String, ?> getDetail() {
             return this.detail;
         }
 
@@ -295,9 +300,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private Integer acwCookieStatus; 
             private Integer acwSecureStatus; 
             private Integer acwV3SecureStatus; 
-            private java.util.List < String > customHeaders; 
+            private java.util.List<String> customHeaders; 
             private String description; 
-            private java.util.Map < String, ? > detail; 
+            private java.util.Map<String, ?> detail; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private String ownerUserId; 
@@ -310,10 +315,12 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             private Integer xffStatus; 
 
             /**
-             * <p>The status of the tracking cookie.</p>
+             * <p>跟踪cookie开关状态。</p>
              * <ul>
-             * <li><strong>0:</strong> disabled.</li>
-             * <li><strong>1:</strong> enabled.</li>
+             * <li><p><strong>0</strong>：表示关闭。</p>
+             * </li>
+             * <li><p><strong>1</strong>：表示开启。</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -325,10 +332,12 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the secure attribute in the tracking cookie.</p>
+             * <p>跟踪cookie的secure属性状态。</p>
              * <ul>
-             * <li><strong>0:</strong> disabled.</li>
-             * <li><strong>1:</strong> enabled.</li>
+             * <li><p><strong>0</strong>：表示关闭。</p>
+             * </li>
+             * <li><p><strong>1</strong>：表示开启。</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -340,10 +349,12 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the secure attribute in the slider CAPTCHA cookie.</p>
+             * <p>滑块cookie的secure属性状态。</p>
              * <ul>
-             * <li><strong>0:</strong> disabled.</li>
-             * <li><strong>1:</strong> enabled.</li>
+             * <li><p><strong>0</strong>：表示关闭。</p>
+             * </li>
+             * <li><p><strong>1</strong>：表示开启。</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -355,9 +366,9 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP addresses in the XFF headers are used as the originating IP addresses of clients.</p>
+             * <p>An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.</p>
              */
-            public Builder customHeaders(java.util.List < String > customHeaders) {
+            public Builder customHeaders(java.util.List<String> customHeaders) {
                 this.customHeaders = customHeaders;
                 return this;
             }
@@ -374,15 +385,15 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the protected object. Different key-value pairs indicate different attributes of the protected object.</p>
+             * <p>The description of the protected object. Different key-value pairs in a map indicate different properties of the protected object.</p>
              */
-            public Builder detail(java.util.Map < String, ? > detail) {
+            public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * <p>The time when the protected object was created. Unit: milliseconds.</p>
+             * <p>The creation time of the protected object. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652149203187</p>
@@ -393,7 +404,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the protected object was modified. Unit: milliseconds.</p>
+             * <p>The most recent modification time of the protected object. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1665633032000</p>
@@ -404,7 +415,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * <p>多账号统一管理场景中防护对象资产归属账号。</p>
              * 
              * <strong>example:</strong>
              * <p>135*********46</p>
@@ -415,7 +426,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pattern in which the protected object is protected.</p>
+             * <p>The protection pattern.</p>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -459,7 +470,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud resource group.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm***q</p>
@@ -481,7 +492,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the X-Forwarded-For (XFF) proxy is enabled.</p>
+             * <p>Indicates whether the X-Forwarded-For (XFF) header is used.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

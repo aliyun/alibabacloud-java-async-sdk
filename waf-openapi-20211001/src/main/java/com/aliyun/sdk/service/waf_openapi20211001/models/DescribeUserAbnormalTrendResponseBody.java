@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Trend")
-    private java.util.List < Trend> trend;
+    private java.util.List<Trend> trend;
 
     private DescribeUserAbnormalTrendResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
     /**
      * @return trend
      */
-    public java.util.List < Trend> getTrend() {
+    public java.util.List<Trend> getTrend() {
         return this.trend;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Trend> trend; 
+        private java.util.List<Trend> trend; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
         /**
          * <p>The trends of risks.</p>
          */
-        public Builder trend(java.util.List < Trend> trend) {
+        public Builder trend(java.util.List<Trend> trend) {
             this.trend = trend;
             return this;
         }

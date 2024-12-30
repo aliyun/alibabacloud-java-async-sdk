@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceRegionIds")
-    private java.util.List < String > resourceRegionIds;
+    private java.util.List<String> resourceRegionIds;
 
     private DescribeResourceRegionIdResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
     /**
      * @return resourceRegionIds
      */
-    public java.util.List < String > getResourceRegionIds() {
+    public java.util.List<String> getResourceRegionIds() {
         return this.resourceRegionIds;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > resourceRegionIds; 
+        private java.util.List<String> resourceRegionIds; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
         /**
          * <p>The region IDs.</p>
          */
-        public Builder resourceRegionIds(java.util.List < String > resourceRegionIds) {
+        public Builder resourceRegionIds(java.util.List<String> resourceRegionIds) {
             this.resourceRegionIds = resourceRegionIds;
             return this;
         }

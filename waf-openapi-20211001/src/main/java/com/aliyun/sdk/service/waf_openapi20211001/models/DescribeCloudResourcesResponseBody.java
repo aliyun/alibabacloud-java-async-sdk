@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudResources")
-    private java.util.List < CloudResources> cloudResources;
+    private java.util.List<CloudResources> cloudResources;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     /**
      * @return cloudResources
      */
-    public java.util.List < CloudResources> getCloudResources() {
+    public java.util.List<CloudResources> getCloudResources() {
         return this.cloudResources;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudResources> cloudResources; 
+        private java.util.List<CloudResources> cloudResources; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The cloud service resources that are added to WAF.</p>
          */
-        public Builder cloudResources(java.util.List < CloudResources> cloudResources) {
+        public Builder cloudResources(java.util.List<CloudResources> cloudResources) {
             this.cloudResources = cloudResources;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,10 +87,10 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
      */
     public static class WafSourceIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        private java.util.List<String> iPv4;
 
         @com.aliyun.core.annotation.NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        private java.util.List<String> iPv6;
 
         private WafSourceIp(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -103,25 +108,25 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
              * <p>An array of back-to-origin IPv4 CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
@@ -129,7 +134,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
             /**
              * <p>An array of back-to-origin IPv6 CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }

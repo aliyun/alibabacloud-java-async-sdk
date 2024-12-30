@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Sans")
-        private java.util.List < String > sans;
+        private java.util.List<String> sans;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -306,7 +311,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return sans
          */
-        public java.util.List < String > getSans() {
+        public java.util.List<String> getSans() {
             return this.sans;
         }
 
@@ -322,7 +327,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long endTime; 
             private String id; 
             private String name; 
-            private java.util.List < String > sans; 
+            private java.util.List<String> sans; 
             private Long startTime; 
 
             /**
@@ -372,7 +377,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>All domain names that are bound to the certificate.</p>
              */
-            public Builder sans(java.util.List < String > sans) {
+            public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
                 return this;
             }
@@ -409,7 +414,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Long cipherSuite;
 
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        private java.util.List<String> customCiphers;
 
         @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
@@ -424,10 +429,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Boolean http2Enabled;
 
         @com.aliyun.core.annotation.NameInMap("HttpPorts")
-        private java.util.List < Long > httpPorts;
+        private java.util.List<Long> httpPorts;
 
         @com.aliyun.core.annotation.NameInMap("HttpsPorts")
-        private java.util.List < Long > httpsPorts;
+        private java.util.List<Long> httpsPorts;
 
         @com.aliyun.core.annotation.NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
@@ -451,7 +456,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Long xffHeaderMode;
 
         @com.aliyun.core.annotation.NameInMap("XffHeaders")
-        private java.util.List < String > xffHeaders;
+        private java.util.List<String> xffHeaders;
 
         private Listen(Builder builder) {
             this.certId = builder.certId;
@@ -498,7 +503,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -533,14 +538,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return httpPorts
          */
-        public java.util.List < Long > getHttpPorts() {
+        public java.util.List<Long> getHttpPorts() {
             return this.httpPorts;
         }
 
         /**
          * @return httpsPorts
          */
-        public java.util.List < Long > getHttpsPorts() {
+        public java.util.List<Long> getHttpsPorts() {
             return this.httpsPorts;
         }
 
@@ -596,20 +601,20 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return xffHeaders
          */
-        public java.util.List < String > getXffHeaders() {
+        public java.util.List<String> getXffHeaders() {
             return this.xffHeaders;
         }
 
         public static final class Builder {
             private Long certId; 
             private Long cipherSuite; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean exclusiveIp; 
             private Boolean focusHttps; 
             private Boolean http2Enabled; 
-            private java.util.List < Long > httpPorts; 
-            private java.util.List < Long > httpsPorts; 
+            private java.util.List<Long> httpPorts; 
+            private java.util.List<Long> httpsPorts; 
             private Boolean iPv6Enabled; 
             private String protectionResource; 
             private Boolean sM2AccessOnly; 
@@ -617,7 +622,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Boolean sM2Enabled; 
             private String TLSVersion; 
             private Long xffHeaderMode; 
-            private java.util.List < String > xffHeaders; 
+            private java.util.List<String> xffHeaders; 
 
             /**
              * <p>The ID of the certificate.</p>
@@ -649,7 +654,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>An array of custom cipher suites.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
@@ -717,7 +722,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>An array of HTTP listener ports.</p>
              */
-            public Builder httpPorts(java.util.List < Long > httpPorts) {
+            public Builder httpPorts(java.util.List<Long> httpPorts) {
                 this.httpPorts = httpPorts;
                 return this;
             }
@@ -725,7 +730,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>An array of HTTPS listener ports.</p>
              */
-            public Builder httpsPorts(java.util.List < Long > httpsPorts) {
+            public Builder httpsPorts(java.util.List<Long> httpsPorts) {
                 this.httpsPorts = httpsPorts;
                 return this;
             }
@@ -836,7 +841,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>An array of custom header fields that are used to obtain the actual IP address of a client.</p>
              */
-            public Builder xffHeaders(java.util.List < String > xffHeaders) {
+            public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
                 return this;
             }
@@ -1029,10 +1034,10 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
      */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backends")
-        private java.util.List < Backends> backends;
+        private java.util.List<Backends> backends;
 
         @com.aliyun.core.annotation.NameInMap("BackupBackends")
-        private java.util.List < BackupBackends> backupBackends;
+        private java.util.List<BackupBackends> backupBackends;
 
         @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
         private Integer connectTimeout;
@@ -1056,7 +1061,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Integer readTimeout;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-        private java.util.List < RequestHeaders> requestHeaders;
+        private java.util.List<RequestHeaders> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("Retry")
         private Boolean retry;
@@ -1102,14 +1107,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return backends
          */
-        public java.util.List < Backends> getBackends() {
+        public java.util.List<Backends> getBackends() {
             return this.backends;
         }
 
         /**
          * @return backupBackends
          */
-        public java.util.List < BackupBackends> getBackupBackends() {
+        public java.util.List<BackupBackends> getBackupBackends() {
             return this.backupBackends;
         }
 
@@ -1165,7 +1170,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return requestHeaders
          */
-        public java.util.List < RequestHeaders> getRequestHeaders() {
+        public java.util.List<RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
         }
 
@@ -1205,8 +1210,8 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Backends> backends; 
-            private java.util.List < BackupBackends> backupBackends; 
+            private java.util.List<Backends> backends; 
+            private java.util.List<BackupBackends> backupBackends; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
             private Boolean keepalive; 
@@ -1214,7 +1219,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Integer keepaliveTimeout; 
             private String loadbalance; 
             private Integer readTimeout; 
-            private java.util.List < RequestHeaders> requestHeaders; 
+            private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
             private Boolean sniEnabled; 
             private String sniHost; 
@@ -1224,7 +1229,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>An array of addresses of origin servers.</p>
              */
-            public Builder backends(java.util.List < Backends> backends) {
+            public Builder backends(java.util.List<Backends> backends) {
                 this.backends = backends;
                 return this;
             }
@@ -1232,7 +1237,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * BackupBackends.
              */
-            public Builder backupBackends(java.util.List < BackupBackends> backupBackends) {
+            public Builder backupBackends(java.util.List<BackupBackends> backupBackends) {
                 this.backupBackends = backupBackends;
                 return this;
             }
@@ -1336,7 +1341,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>An array of key-value pairs that are used to mark the requests that pass through the WAF instance.</p>
              */
-            public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
+            public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }
@@ -1435,7 +1440,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Sans")
-        private java.util.List < String > sans;
+        private java.util.List<String> sans;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -1488,7 +1493,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return sans
          */
-        public java.util.List < String > getSans() {
+        public java.util.List<String> getSans() {
             return this.sans;
         }
 
@@ -1504,7 +1509,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Long endTime; 
             private String id; 
             private String name; 
-            private java.util.List < String > sans; 
+            private java.util.List<String> sans; 
             private Long startTime; 
 
             /**
@@ -1554,7 +1559,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * <p>All domain names that are bound to the certificate.</p>
              */
-            public Builder sans(java.util.List < String > sans) {
+            public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
                 return this;
             }

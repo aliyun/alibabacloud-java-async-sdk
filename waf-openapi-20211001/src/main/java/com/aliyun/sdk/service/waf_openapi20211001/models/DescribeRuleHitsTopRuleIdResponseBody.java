@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleHitsTopRuleId")
-    private java.util.List < RuleHitsTopRuleId> ruleHitsTopRuleId;
+    private java.util.List<RuleHitsTopRuleId> ruleHitsTopRuleId;
 
     private DescribeRuleHitsTopRuleIdResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopRuleId
      */
-    public java.util.List < RuleHitsTopRuleId> getRuleHitsTopRuleId() {
+    public java.util.List<RuleHitsTopRuleId> getRuleHitsTopRuleId() {
         return this.ruleHitsTopRuleId;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopRuleId> ruleHitsTopRuleId; 
+        private java.util.List<RuleHitsTopRuleId> ruleHitsTopRuleId; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
         /**
          * <p>The array of the IDs of the top 10 rules that are matched by requests.</p>
          */
-        public Builder ruleHitsTopRuleId(java.util.List < RuleHitsTopRuleId> ruleHitsTopRuleId) {
+        public Builder ruleHitsTopRuleId(java.util.List<RuleHitsTopRuleId> ruleHitsTopRuleId) {
             this.ruleHitsTopRuleId = ruleHitsTopRuleId;
             return this;
         }

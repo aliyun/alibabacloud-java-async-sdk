@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,14 +62,14 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The statistics.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -114,7 +119,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         private Long infoCount;
 
         @com.aliyun.core.annotation.NameInMap("SensitiveCode")
-        private java.util.List < String > sensitiveCode;
+        private java.util.List<String> sensitiveCode;
 
         @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Long sensitiveCount;
@@ -159,7 +164,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         /**
          * @return sensitiveCode
          */
-        public java.util.List < String > getSensitiveCode() {
+        public java.util.List<String> getSensitiveCode() {
             return this.sensitiveCode;
         }
 
@@ -174,7 +179,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             private String apiFormat; 
             private String apiId; 
             private Long infoCount; 
-            private java.util.List < String > sensitiveCode; 
+            private java.util.List<String> sensitiveCode; 
             private Long sensitiveCount; 
 
             /**
@@ -213,7 +218,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             /**
              * <p>The types of sensitive data.</p>
              */
-            public Builder sensitiveCode(java.util.List < String > sensitiveCode) {
+            public Builder sensitiveCode(java.util.List<String> sensitiveCode) {
                 this.sensitiveCode = sensitiveCode;
                 return this;
             }
@@ -247,7 +252,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         private Long infoOutboundCount;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("MatchedHost")
         private String matchedHost;
@@ -280,7 +285,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -300,7 +305,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long infoOutboundCount; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private String matchedHost; 
             private Long sensitiveOutboundCount; 
 
@@ -318,7 +323,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             /**
              * <p>The domain name-related APIs.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

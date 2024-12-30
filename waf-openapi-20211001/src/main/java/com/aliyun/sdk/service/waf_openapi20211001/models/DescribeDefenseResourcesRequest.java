@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class DescribeDefenseResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeDefenseResourcesRequest(Builder builder) {
         super(builder);
@@ -110,7 +115,7 @@ public class DescribeDefenseResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -121,7 +126,7 @@ public class DescribeDefenseResourcesRequest extends Request {
         private String query; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -222,9 +227,9 @@ public class DescribeDefenseResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the resources that you want to query. You can specify up to 20 tags.</p>
+         * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -282,10 +287,7 @@ public class DescribeDefenseResourcesRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Tagkey1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -293,10 +295,7 @@ public class DescribeDefenseResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TagValue1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

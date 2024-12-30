@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -57,14 +62,14 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The domain names.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -111,7 +116,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         private Integer cipherSuite;
 
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        private java.util.List<String> customCiphers;
 
         @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
@@ -126,10 +131,10 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         private Boolean http2Enabled;
 
         @com.aliyun.core.annotation.NameInMap("HttpPorts")
-        private java.util.List < Long > httpPorts;
+        private java.util.List<Long> httpPorts;
 
         @com.aliyun.core.annotation.NameInMap("HttpsPorts")
-        private java.util.List < Long > httpsPorts;
+        private java.util.List<Long> httpsPorts;
 
         @com.aliyun.core.annotation.NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
@@ -144,7 +149,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         private Integer xffHeaderMode;
 
         @com.aliyun.core.annotation.NameInMap("XffHeaders")
-        private java.util.List < String > xffHeaders;
+        private java.util.List<String> xffHeaders;
 
         private Listen(Builder builder) {
             this.certId = builder.certId;
@@ -188,7 +193,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -223,14 +228,14 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * @return httpPorts
          */
-        public java.util.List < Long > getHttpPorts() {
+        public java.util.List<Long> getHttpPorts() {
             return this.httpPorts;
         }
 
         /**
          * @return httpsPorts
          */
-        public java.util.List < Long > getHttpsPorts() {
+        public java.util.List<Long> getHttpsPorts() {
             return this.httpsPorts;
         }
 
@@ -265,25 +270,25 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * @return xffHeaders
          */
-        public java.util.List < String > getXffHeaders() {
+        public java.util.List<String> getXffHeaders() {
             return this.xffHeaders;
         }
 
         public static final class Builder {
             private String certId; 
             private Integer cipherSuite; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean exclusiveIp; 
             private Boolean focusHttps; 
             private Boolean http2Enabled; 
-            private java.util.List < Long > httpPorts; 
-            private java.util.List < Long > httpsPorts; 
+            private java.util.List<Long> httpPorts; 
+            private java.util.List<Long> httpsPorts; 
             private Boolean iPv6Enabled; 
             private String protectionResource; 
             private String TLSVersion; 
             private Integer xffHeaderMode; 
-            private java.util.List < String > xffHeaders; 
+            private java.util.List<String> xffHeaders; 
 
             /**
              * <p>The ID of the certificate.</p>
@@ -318,7 +323,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
              * <p> This parameter is returned only if the value of <strong>CipherSuite</strong> is <strong>99</strong>.</p>
              * </blockquote>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
@@ -386,7 +391,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             /**
              * <p>The HTTP listener ports.</p>
              */
-            public Builder httpPorts(java.util.List < Long > httpPorts) {
+            public Builder httpPorts(java.util.List<Long> httpPorts) {
                 this.httpPorts = httpPorts;
                 return this;
             }
@@ -394,7 +399,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             /**
              * <p>The HTTPS listener ports.</p>
              */
-            public Builder httpsPorts(java.util.List < Long > httpsPorts) {
+            public Builder httpsPorts(java.util.List<Long> httpsPorts) {
                 this.httpsPorts = httpsPorts;
                 return this;
             }
@@ -467,7 +472,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
              * <p> This parameter is returned only if the value of <strong>XffHeaderMode</strong> is 2.</p>
              * </blockquote>
              */
-            public Builder xffHeaders(java.util.List < String > xffHeaders) {
+            public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
                 return this;
             }
@@ -560,7 +565,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
      */
     public static class Redirect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backends")
-        private java.util.List < String > backends;
+        private java.util.List<String> backends;
 
         @com.aliyun.core.annotation.NameInMap("CnameEnabled")
         private Boolean cnameEnabled;
@@ -587,7 +592,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         private Long readTimeout;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-        private java.util.List < RequestHeaders> requestHeaders;
+        private java.util.List<RequestHeaders> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("Retry")
         private Boolean retry;
@@ -633,7 +638,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * @return backends
          */
-        public java.util.List < String > getBackends() {
+        public java.util.List<String> getBackends() {
             return this.backends;
         }
 
@@ -696,7 +701,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         /**
          * @return requestHeaders
          */
-        public java.util.List < RequestHeaders> getRequestHeaders() {
+        public java.util.List<RequestHeaders> getRequestHeaders() {
             return this.requestHeaders;
         }
 
@@ -736,7 +741,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > backends; 
+            private java.util.List<String> backends; 
             private Boolean cnameEnabled; 
             private Long connectTimeout; 
             private Boolean focusHttpBackend; 
@@ -745,7 +750,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             private Long keepaliveTimeout; 
             private String loadbalance; 
             private Long readTimeout; 
-            private java.util.List < RequestHeaders> requestHeaders; 
+            private java.util.List<RequestHeaders> requestHeaders; 
             private Boolean retry; 
             private String routingRules; 
             private Boolean sniEnabled; 
@@ -755,7 +760,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             /**
              * <p>The IP addresses or domain names of the origin server.</p>
              */
-            public Builder backends(java.util.List < String > backends) {
+            public Builder backends(java.util.List<String> backends) {
                 this.backends = backends;
                 return this;
             }
@@ -874,7 +879,7 @@ public class DescribeHybridCloudResourcesResponseBody extends TeaModel {
             /**
              * <p>The key-value pair that is used to label requests that pass through WAF.</p>
              */
-            public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
+            public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }

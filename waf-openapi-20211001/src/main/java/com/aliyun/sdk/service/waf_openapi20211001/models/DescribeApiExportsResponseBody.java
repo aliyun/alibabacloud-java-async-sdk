@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApiExportsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApiExports")
-    private java.util.List < ApiExports> apiExports;
+    private java.util.List<ApiExports> apiExports;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeApiExportsResponseBody extends TeaModel {
     /**
      * @return apiExports
      */
-    public java.util.List < ApiExports> getApiExports() {
+    public java.util.List<ApiExports> getApiExports() {
         return this.apiExports;
     }
 
@@ -57,14 +62,14 @@ public class DescribeApiExportsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApiExports> apiExports; 
+        private java.util.List<ApiExports> apiExports; 
         private String requestId; 
         private Long total; 
 
         /**
          * <p>The returned data export tasks.</p>
          */
-        public Builder apiExports(java.util.List < ApiExports> apiExports) {
+        public Builder apiExports(java.util.List<ApiExports> apiExports) {
             this.apiExports = apiExports;
             return this;
         }

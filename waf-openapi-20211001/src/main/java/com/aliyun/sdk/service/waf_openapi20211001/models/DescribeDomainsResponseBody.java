@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The domain names that are added to WAF in CNAME record mode.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -205,10 +210,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
      */
     public static class Backeds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Http")
-        private java.util.List < Http> http;
+        private java.util.List<Http> http;
 
         @com.aliyun.core.annotation.NameInMap("Https")
-        private java.util.List < Https> https;
+        private java.util.List<Https> https;
 
         private Backeds(Builder builder) {
             this.http = builder.http;
@@ -226,25 +231,25 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return http
          */
-        public java.util.List < Http> getHttp() {
+        public java.util.List<Http> getHttp() {
             return this.http;
         }
 
         /**
          * @return https
          */
-        public java.util.List < Https> getHttps() {
+        public java.util.List<Https> getHttps() {
             return this.https;
         }
 
         public static final class Builder {
-            private java.util.List < Http> http; 
-            private java.util.List < Https> https; 
+            private java.util.List<Http> http; 
+            private java.util.List<Https> https; 
 
             /**
              * <p>The HTTP addresses of the origin server.</p>
              */
-            public Builder http(java.util.List < Http> http) {
+            public Builder http(java.util.List<Http> http) {
                 this.http = http;
                 return this;
             }
@@ -252,7 +257,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             /**
              * <p>The HTTPS addresses of the origin server.</p>
              */
-            public Builder https(java.util.List < Https> https) {
+            public Builder https(java.util.List<Https> https) {
                 this.https = https;
                 return this;
             }
@@ -272,10 +277,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
      */
     public static class ListenPorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Http")
-        private java.util.List < Long > http;
+        private java.util.List<Long> http;
 
         @com.aliyun.core.annotation.NameInMap("Https")
-        private java.util.List < Long > https;
+        private java.util.List<Long> https;
 
         private ListenPorts(Builder builder) {
             this.http = builder.http;
@@ -293,25 +298,25 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return http
          */
-        public java.util.List < Long > getHttp() {
+        public java.util.List<Long> getHttp() {
             return this.http;
         }
 
         /**
          * @return https
          */
-        public java.util.List < Long > getHttps() {
+        public java.util.List<Long> getHttps() {
             return this.https;
         }
 
         public static final class Builder {
-            private java.util.List < Long > http; 
-            private java.util.List < Long > https; 
+            private java.util.List<Long> http; 
+            private java.util.List<Long> https; 
 
             /**
              * <p>The HTTP listener ports.</p>
              */
-            public Builder http(java.util.List < Long > http) {
+            public Builder http(java.util.List<Long> http) {
                 this.http = http;
                 return this;
             }
@@ -319,7 +324,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             /**
              * <p>The HTTPS listener ports.</p>
              */
-            public Builder https(java.util.List < Long > https) {
+            public Builder https(java.util.List<Long> https) {
                 this.https = https;
                 return this;
             }

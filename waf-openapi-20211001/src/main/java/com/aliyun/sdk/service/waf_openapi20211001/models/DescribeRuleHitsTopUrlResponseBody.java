@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleHitsTopUrl")
-    private java.util.List < RuleHitsTopUrl> ruleHitsTopUrl;
+    private java.util.List<RuleHitsTopUrl> ruleHitsTopUrl;
 
     private DescribeRuleHitsTopUrlResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
     /**
      * @return ruleHitsTopUrl
      */
-    public java.util.List < RuleHitsTopUrl> getRuleHitsTopUrl() {
+    public java.util.List<RuleHitsTopUrl> getRuleHitsTopUrl() {
         return this.ruleHitsTopUrl;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleHitsTopUrl> ruleHitsTopUrl; 
+        private java.util.List<RuleHitsTopUrl> ruleHitsTopUrl; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         /**
          * <p>The top 10 URLs that match protection rules.</p>
          */
-        public Builder ruleHitsTopUrl(java.util.List < RuleHitsTopUrl> ruleHitsTopUrl) {
+        public Builder ruleHitsTopUrl(java.util.List<RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
             return this;
         }

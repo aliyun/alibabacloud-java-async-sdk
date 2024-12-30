@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Requests")
-    private java.util.List < Requests> requests;
+    private java.util.List<Requests> requests;
 
     private DescribeUserApiRequestResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
     /**
      * @return requests
      */
-    public java.util.List < Requests> getRequests() {
+    public java.util.List<Requests> getRequests() {
         return this.requests;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Requests> requests; 
+        private java.util.List<Requests> requests; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
         /**
          * <p>The statistics.</p>
          */
-        public Builder requests(java.util.List < Requests> requests) {
+        public Builder requests(java.util.List<Requests> requests) {
             this.requests = requests;
             return this;
         }

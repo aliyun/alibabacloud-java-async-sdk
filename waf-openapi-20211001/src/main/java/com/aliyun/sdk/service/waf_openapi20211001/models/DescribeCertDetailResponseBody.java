@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -100,7 +105,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("Sans")
-        private java.util.List < String > sans;
+        private java.util.List<String> sans;
 
         private CertDetail(Builder builder) {
             this.afterDate = builder.afterDate;
@@ -165,7 +170,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         /**
          * @return sans
          */
-        public java.util.List < String > getSans() {
+        public java.util.List<String> getSans() {
             return this.sans;
         }
 
@@ -176,7 +181,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             private String certName; 
             private String commonName; 
             private String domain; 
-            private java.util.List < String > sans; 
+            private java.util.List<String> sans; 
 
             /**
              * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -247,7 +252,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
             /**
              * <p>The other domain names that are associated with the certificate.</p>
              */
-            public Builder sans(java.util.List < String > sans) {
+            public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
                 return this;
             }

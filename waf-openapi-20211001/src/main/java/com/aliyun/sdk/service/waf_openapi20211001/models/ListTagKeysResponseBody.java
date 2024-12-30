@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTagKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Keys")
-    private java.util.List < Keys> keys;
+    private java.util.List<Keys> keys;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     /**
      * @return keys
      */
-    public java.util.List < Keys> getKeys() {
+    public java.util.List<Keys> getKeys() {
         return this.keys;
     }
 
@@ -57,14 +62,14 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Keys> keys; 
+        private java.util.List<Keys> keys; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The keys and types of the tags.</p>
          */
-        public Builder keys(java.util.List < Keys> keys) {
+        public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
             return this;
         }

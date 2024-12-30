@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessPortDetails")
-    private java.util.List < AccessPortDetails> accessPortDetails;
+    private java.util.List<AccessPortDetails> accessPortDetails;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
     /**
      * @return accessPortDetails
      */
-    public java.util.List < AccessPortDetails> getAccessPortDetails() {
+    public java.util.List<AccessPortDetails> getAccessPortDetails() {
         return this.accessPortDetails;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
     }
 
     public static final class Builder {
-        private java.util.List < AccessPortDetails> accessPortDetails; 
+        private java.util.List<AccessPortDetails> accessPortDetails; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The details of the ports of cloud services that are added to WAF.</p>
          */
-        public Builder accessPortDetails(java.util.List < AccessPortDetails> accessPortDetails) {
+        public Builder accessPortDetails(java.util.List<AccessPortDetails> accessPortDetails) {
             this.accessPortDetails = accessPortDetails;
             return this;
         }
@@ -278,13 +283,13 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
      */
     public static class AccessPortDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Certificates")
-        private java.util.List < Certificates> certificates;
+        private java.util.List<Certificates> certificates;
 
         @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Integer cipherSuite;
 
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        private java.util.List<String> customCiphers;
 
         @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
@@ -302,7 +307,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         private Integer keepaliveTimeout;
 
         @com.aliyun.core.annotation.NameInMap("LogHeaders")
-        private java.util.List < LogHeaders> logHeaders;
+        private java.util.List<LogHeaders> logHeaders;
 
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
@@ -329,7 +334,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         private Integer xffHeaderMode;
 
         @com.aliyun.core.annotation.NameInMap("XffHeaders")
-        private java.util.List < String > xffHeaders;
+        private java.util.List<String> xffHeaders;
 
         @com.aliyun.core.annotation.NameInMap("XffProto")
         private Boolean xffProto;
@@ -367,7 +372,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * @return certificates
          */
-        public java.util.List < Certificates> getCertificates() {
+        public java.util.List<Certificates> getCertificates() {
             return this.certificates;
         }
 
@@ -381,7 +386,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -423,7 +428,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * @return logHeaders
          */
-        public java.util.List < LogHeaders> getLogHeaders() {
+        public java.util.List<LogHeaders> getLogHeaders() {
             return this.logHeaders;
         }
 
@@ -486,7 +491,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * @return xffHeaders
          */
-        public java.util.List < String > getXffHeaders() {
+        public java.util.List<String> getXffHeaders() {
             return this.xffHeaders;
         }
 
@@ -498,15 +503,15 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < Certificates> certificates; 
+            private java.util.List<Certificates> certificates; 
             private Integer cipherSuite; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
             private Boolean http2Enabled; 
             private Boolean keepalive; 
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
-            private java.util.List < LogHeaders> logHeaders; 
+            private java.util.List<LogHeaders> logHeaders; 
             private String ownerUserId; 
             private Integer port; 
             private String protocol; 
@@ -515,13 +520,13 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             private String TLSVersion; 
             private Integer writeTimeout; 
             private Integer xffHeaderMode; 
-            private java.util.List < String > xffHeaders; 
+            private java.util.List<String> xffHeaders; 
             private Boolean xffProto; 
 
             /**
              * <p>The certificates that are associated with the ports of cloud services.</p>
              */
-            public Builder certificates(java.util.List < Certificates> certificates) {
+            public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
                 return this;
             }
@@ -545,7 +550,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
             /**
              * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
@@ -629,7 +634,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
              * <p> This parameter is returned only when the traffic marking feature is enabled for the domain name.</p>
              * </blockquote>
              */
-            public Builder logHeaders(java.util.List < LogHeaders> logHeaders) {
+            public Builder logHeaders(java.util.List<LogHeaders> logHeaders) {
                 this.logHeaders = logHeaders;
                 return this;
             }
@@ -748,7 +753,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
              * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
              * </blockquote>
              */
-            public Builder xffHeaders(java.util.List < String > xffHeaders) {
+            public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
                 return this;
             }

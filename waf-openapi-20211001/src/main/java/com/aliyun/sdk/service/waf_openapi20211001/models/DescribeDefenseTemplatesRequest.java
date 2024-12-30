@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -54,6 +59,14 @@ public class DescribeDefenseTemplatesRequest extends Request {
     private Long templateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIds")
+    private String templateIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
@@ -69,6 +82,8 @@ public class DescribeDefenseTemplatesRequest extends Request {
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceType = builder.resourceType;
         this.templateId = builder.templateId;
+        this.templateIds = builder.templateIds;
+        this.templateName = builder.templateName;
         this.templateType = builder.templateType;
     }
 
@@ -156,6 +171,20 @@ public class DescribeDefenseTemplatesRequest extends Request {
     }
 
     /**
+     * @return templateIds
+     */
+    public String getTemplateIds() {
+        return this.templateIds;
+    }
+
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    /**
      * @return templateType
      */
     public String getTemplateType() {
@@ -173,6 +202,8 @@ public class DescribeDefenseTemplatesRequest extends Request {
         private String resourceManagerResourceGroupId; 
         private String resourceType; 
         private Long templateId; 
+        private String templateIds; 
+        private String templateName; 
         private String templateType; 
 
         private Builder() {
@@ -191,6 +222,8 @@ public class DescribeDefenseTemplatesRequest extends Request {
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceType = request.resourceType;
             this.templateId = request.templateId;
+            this.templateIds = request.templateIds;
+            this.templateName = request.templateName;
             this.templateType = request.templateType;
         } 
 
@@ -346,6 +379,24 @@ public class DescribeDefenseTemplatesRequest extends Request {
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateIds.
+         */
+        public Builder templateIds(String templateIds) {
+            this.putQueryParameter("TemplateIds", templateIds);
+            this.templateIds = templateIds;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("TemplateName", templateName);
+            this.templateName = templateName;
             return this;
         }
 

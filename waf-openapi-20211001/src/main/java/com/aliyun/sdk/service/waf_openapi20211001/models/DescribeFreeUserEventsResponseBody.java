@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFreeUserEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Event")
-    private java.util.List < Event> event;
+    private java.util.List<Event> event;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
     /**
      * @return event
      */
-    public java.util.List < Event> getEvent() {
+    public java.util.List<Event> getEvent() {
         return this.event;
     }
 
@@ -46,13 +51,13 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Event> event; 
+        private java.util.List<Event> event; 
         private String requestId; 
 
         /**
          * <p>The security events on which basic detection is performed.</p>
          */
-        public Builder event(java.util.List < Event> event) {
+        public Builder event(java.util.List<Event> event) {
             this.event = event;
             return this;
         }
