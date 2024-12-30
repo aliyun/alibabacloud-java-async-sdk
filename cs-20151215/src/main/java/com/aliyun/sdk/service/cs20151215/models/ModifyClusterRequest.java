@@ -297,7 +297,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * <p>The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
+         * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
          */
         public Builder accessControlList(java.util.List<String> accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -356,7 +356,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * control_plane_config.
+         * <p>The control plane configurations of an ACK dedicated cluster.</p>
          */
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             this.putBodyParameter("control_plane_config", controlPlaneConfig);
@@ -365,12 +365,12 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+         * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables cluster deletion protection.</li>
          * <li><code>false</code>: disables cluster deletion protection.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -403,7 +403,7 @@ public class ModifyClusterRequest extends Request {
          * <li><code>true</code>: remaps the test domain name of the cluster.</li>
          * <li><code>false</code>: does not remap the test domain name of the cluster.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -432,7 +432,7 @@ public class ModifyClusterRequest extends Request {
          * <li><code>true</code>: enables instance deletion protection.</li>
          * <li><code>false</code>: disables instance deletion protection.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -462,7 +462,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster resource group ID.</p>
+         * <p>The resource group ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmyvw3wjm****</p>
@@ -483,12 +483,12 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * <p>The vSwitches of the control planes. This parameter can be used to change the vSwitches of the control planes in an ACK managed cluster. Take note of the following items:</p>
+         * <p>The vSwitches of the control plane. This parameter can be used to change the vSwitches of the control plane in an ACK managed cluster. Take note of the following items:</p>
          * <ul>
-         * <li>This parameter overwrites the existing configuration. You must specify all vSwitches of the control planes.</li>
-         * <li>The control planes restart during the update process. Exercise caution when you perform this operation.</li>
-         * <li>Make sure that all security groups of the cluster, including the security groups of the control planes, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</li>
-         * <li>If the new vSwitches of the control planes are configured with an access control list (ACL), ensure that the ACL allows communication between the new vSwitches and the CIDR blocks of cluster nodes and container networks.</li>
+         * <li>This parameter overwrites the existing configuration. You must specify all vSwitches of the control plane.</li>
+         * <li>The control plane restarts during the change process. Exercise caution when you perform this operation.</li>
+         * <li>Ensure that all security groups of the cluster, including the security groups of the control plane, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</li>
+         * <li>If the new vSwitches of the control plane are configured with an ACL, ensure that the ACL allows communication between the new vSwitches and CIDR blocks such as those of the cluster nodes and the container network.</li>
          * </ul>
          */
         public Builder vswitchIds(java.util.List<String> vswitchIds) {
@@ -564,7 +564,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * <p>The SANs.</p>
+             * <p>The list of SANs.</p>
              */
             public Builder subjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
@@ -887,7 +887,15 @@ public class ModifyClusterRequest extends Request {
             private String systemDiskSnapshotPolicyId; 
 
             /**
-             * auto_renew.
+             * <p>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enables auto-renewal.</li>
+             * <li><code>false</code>: disables auto-renewal.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -895,7 +903,11 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * auto_renew_period.
+             * <p>The auto-renewal period of the instance. Valid values: 1, 2, 3, 6, and 12.</p>
+             * <p>Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -903,7 +915,15 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * charge_type.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><code>PrePaid</code>: subscription.</li>
+             * <li><code>PostPaid</code>: pay-as-you-go.</li>
+             * </ul>
+             * <p>Default value: <code>PostPaid</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -911,7 +931,14 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * cloud_monitor_flags.
+             * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: installs the CloudMonitor agent.</li>
+             * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
                 this.cloudMonitorFlags = cloudMonitorFlags;
@@ -919,7 +946,15 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * cpu_policy.
+             * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+             * <ul>
+             * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
+             * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+             * </ul>
+             * <p>Default value: <code>none</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder cpuPolicy(String cpuPolicy) {
                 this.cpuPolicy = cpuPolicy;
@@ -927,7 +962,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * deploymentset_id.
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp10b35imuam5amw****</p>
              */
             public Builder deploymentsetId(String deploymentsetId) {
                 this.deploymentsetId = deploymentsetId;
@@ -935,7 +973,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * image_id.
+             * <p>The custom image ID. You must configure this parameter if you use a custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -943,7 +984,14 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * image_type.
+             * <p>The type of the OS image. Valid values:</p>
+             * <ul>
+             * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3.</li>
+             * <li><code>Custom</code>: the custom image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunLinux3</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -951,7 +999,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * instance_types.
+             * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -959,7 +1007,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * key_pair.
+             * <p>The name of the key pair. You must configure either this parameter or the <code>login_password</code> parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack</p>
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
@@ -967,7 +1018,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * login_password.
+             * <p>The password for SSH logon. You must configure either this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. To log on with a password, you must specify this parameter during the scale-out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ack@2000.</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -975,7 +1029,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * node_port_range.
+             * <p>The node port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000-32767</p>
              */
             public Builder nodePortRange(String nodePortRange) {
                 this.nodePortRange = nodePortRange;
@@ -983,7 +1040,11 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * period.
+             * <p>The subscription duration of the instance. This parameter takes effect and is required only when <code>charge_type</code> is set to <code>PrePaid</code>.</p>
+             * <p>If <code>PeriodUnit=Month</code> is specified, the valid values are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -991,7 +1052,11 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * period_unit.
+             * <p>The billing cycle of the instance. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+             * <p>Valid value: <code>Month</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -999,7 +1064,14 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * runtime.
+             * <p>The type of the container runtime. Valid values:</p>
+             * <ul>
+             * <li><code>containerd</code>: supports all Kubernetes versions. We recommend that you set the parameter to this value.</li>
+             * </ul>
+             * <p>Default value: containerd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -1007,7 +1079,15 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * security_hardening_os.
+             * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
+             * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -1015,7 +1095,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>The number of control plane nodes. If you want to scale out the control plane in an ACK dedicated cluster, set this parameter to the desired number of nodes. This parameter must be greater than the current number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1023,7 +1106,16 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * soc_enabled.
+             * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enables MLPS security hardening.</li>
+             * <li><code>false</code>: disables MLPS security hardening.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder socEnabled(Boolean socEnabled) {
                 this.socEnabled = socEnabled;
@@ -1031,7 +1123,15 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * system_disk_bursting_enabled.
+             * <p>Specifies whether to enable the burst feature for the system disk. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: enables the burst feature.</li>
+             * <li><code>false</code>: disables the burst feature.</li>
+             * </ul>
+             * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -1039,7 +1139,18 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * system_disk_category.
+             * <p>The type of the node system disk. Valid values:</p>
+             * <ul>
+             * <li><code>cloud</code>: basic disk.</li>
+             * <li><code>cloud_efficiency</code>: ultra disk.</li>
+             * <li><code>cloud_ssd</code>: standard SSD.</li>
+             * <li><code>cloud_essd</code>: enhanced SSD (ESSD).</li>
+             * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
+             * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1047,7 +1158,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * system_disk_performance_level.
+             * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter is effective only for ESSDs. This parameter is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -1055,7 +1169,11 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * system_disk_provisioned_iops.
+             * <p>The preset read/write input/output operations per second (IOPS) of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
@@ -1063,7 +1181,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * system_disk_size.
+             * <p>The type of the system disk. Valid values: [40,500]. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1071,7 +1192,10 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * system_disk_snapshot_policy_id.
+             * <p>The ID of the automatic snapshot policy applied to the node system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-2zej1nogjvovnz4z****</p>
              */
             public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
                 this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;
@@ -1130,10 +1254,10 @@ public class ModifyClusterRequest extends Request {
             private Boolean enabled; 
 
             /**
-             * <p>The automatic update frequency. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+             * <p>The frequency of automatic cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>patch: specifies the latest patch version.</li>
+             * <li>patch: the latest patch version.</li>
              * <li>stables: the second-latest minor version.</li>
              * <li>rapid: the latest minor version.</li>
              * </ul>

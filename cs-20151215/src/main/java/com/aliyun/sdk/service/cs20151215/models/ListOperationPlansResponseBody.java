@@ -87,6 +87,9 @@ public class ListOperationPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("target_type")
         private String targetType;
 
+        @com.aliyun.core.annotation.NameInMap("task_id")
+        private String taskId;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -99,6 +102,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             this.state = builder.state;
             this.targetId = builder.targetId;
             this.targetType = builder.targetType;
+            this.taskId = builder.taskId;
             this.type = builder.type;
         }
 
@@ -167,6 +171,13 @@ public class ListOperationPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -182,6 +193,7 @@ public class ListOperationPlansResponseBody extends TeaModel {
             private String state; 
             private String targetId; 
             private String targetType; 
+            private String taskId; 
             private String type; 
 
             /**
@@ -273,6 +285,14 @@ public class ListOperationPlansResponseBody extends TeaModel {
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
+                return this;
+            }
+
+            /**
+             * task_id.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 
