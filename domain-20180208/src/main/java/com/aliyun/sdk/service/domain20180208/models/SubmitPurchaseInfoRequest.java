@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class SubmitPurchaseInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PurchaseProofs")
-    private java.util.List < String > purchaseProofs;
+    private java.util.List<String> purchaseProofs;
 
     private SubmitPurchaseInfoRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class SubmitPurchaseInfoRequest extends Request {
     /**
      * @return purchaseProofs
      */
-    public java.util.List < String > getPurchaseProofs() {
+    public java.util.List<String> getPurchaseProofs() {
         return this.purchaseProofs;
     }
 
@@ -81,7 +86,7 @@ public class SubmitPurchaseInfoRequest extends Request {
         private String bizId; 
         private String purchaseCurrency; 
         private Double purchasePrice; 
-        private java.util.List < String > purchaseProofs; 
+        private java.util.List<String> purchaseProofs; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class SubmitPurchaseInfoRequest extends Request {
         /**
          * PurchaseProofs.
          */
-        public Builder purchaseProofs(java.util.List < String > purchaseProofs) {
+        public Builder purchaseProofs(java.util.List<String> purchaseProofs) {
             this.putBodyParameter("PurchaseProofs", purchaseProofs);
             this.purchaseProofs = purchaseProofs;
             return this;

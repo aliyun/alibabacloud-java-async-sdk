@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ChangeAuctionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AuctionList")
-    private java.util.List < AuctionList> auctionList;
+    private java.util.List<AuctionList> auctionList;
 
     private ChangeAuctionRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ChangeAuctionRequest extends Request {
     /**
      * @return auctionList
      */
-    public java.util.List < AuctionList> getAuctionList() {
+    public java.util.List<AuctionList> getAuctionList() {
         return this.auctionList;
     }
 
     public static final class Builder extends Request.Builder<ChangeAuctionRequest, Builder> {
-        private java.util.List < AuctionList> auctionList; 
+        private java.util.List<AuctionList> auctionList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class ChangeAuctionRequest extends Request {
         /**
          * AuctionList.
          */
-        public Builder auctionList(java.util.List < AuctionList> auctionList) {
+        public Builder auctionList(java.util.List<AuctionList> auctionList) {
             this.putBodyParameter("AuctionList", auctionList);
             this.auctionList = auctionList;
             return this;
@@ -167,7 +172,7 @@ public class ChangeAuctionRequest extends Request {
      */
     public static class AuctionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BidRecords")
-        private java.util.List < BidRecords> bidRecords;
+        private java.util.List<BidRecords> bidRecords;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -224,7 +229,7 @@ public class ChangeAuctionRequest extends Request {
         /**
          * @return bidRecords
          */
-        public java.util.List < BidRecords> getBidRecords() {
+        public java.util.List<BidRecords> getBidRecords() {
             return this.bidRecords;
         }
 
@@ -292,7 +297,7 @@ public class ChangeAuctionRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < BidRecords> bidRecords; 
+            private java.util.List<BidRecords> bidRecords; 
             private String domainName; 
             private String endTime; 
             private Integer isReserve; 
@@ -306,7 +311,7 @@ public class ChangeAuctionRequest extends Request {
             /**
              * BidRecords.
              */
-            public Builder bidRecords(java.util.List < BidRecords> bidRecords) {
+            public Builder bidRecords(java.util.List<BidRecords> bidRecords) {
                 this.bidRecords = bidRecords;
                 return this;
             }

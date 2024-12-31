@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BrokerDemandRecord")
-        private java.util.List < BrokerDemandRecord> brokerDemandRecord;
+        private java.util.List<BrokerDemandRecord> brokerDemandRecord;
 
         private Data(Builder builder) {
             this.brokerDemandRecord = builder.brokerDemandRecord;
@@ -263,17 +268,17 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
         /**
          * @return brokerDemandRecord
          */
-        public java.util.List < BrokerDemandRecord> getBrokerDemandRecord() {
+        public java.util.List<BrokerDemandRecord> getBrokerDemandRecord() {
             return this.brokerDemandRecord;
         }
 
         public static final class Builder {
-            private java.util.List < BrokerDemandRecord> brokerDemandRecord; 
+            private java.util.List<BrokerDemandRecord> brokerDemandRecord; 
 
             /**
              * BrokerDemandRecord.
              */
-            public Builder brokerDemandRecord(java.util.List < BrokerDemandRecord> brokerDemandRecord) {
+            public Builder brokerDemandRecord(java.util.List<BrokerDemandRecord> brokerDemandRecord) {
                 this.brokerDemandRecord = brokerDemandRecord;
                 return this;
             }

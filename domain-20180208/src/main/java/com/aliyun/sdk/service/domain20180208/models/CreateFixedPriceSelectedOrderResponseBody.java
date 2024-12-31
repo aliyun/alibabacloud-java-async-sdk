@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -141,6 +146,9 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("DomainBlockTrade")
+        private java.util.List<String> domainBlockTrade;
+
         @com.aliyun.core.annotation.NameInMap("OrderNo")
         private String orderNo;
 
@@ -149,6 +157,7 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
 
         private Module(Builder builder) {
             this.domain = builder.domain;
+            this.domainBlockTrade = builder.domainBlockTrade;
             this.orderNo = builder.orderNo;
             this.price = builder.price;
         }
@@ -169,6 +178,13 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainBlockTrade
+         */
+        public java.util.List<String> getDomainBlockTrade() {
+            return this.domainBlockTrade;
+        }
+
+        /**
          * @return orderNo
          */
         public String getOrderNo() {
@@ -184,6 +200,7 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domain; 
+            private java.util.List<String> domainBlockTrade; 
             private String orderNo; 
             private Long price; 
 
@@ -192,6 +209,14 @@ public class CreateFixedPriceSelectedOrderResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * DomainBlockTrade.
+             */
+            public Builder domainBlockTrade(java.util.List<String> domainBlockTrade) {
+                this.domainBlockTrade = domainBlockTrade;
                 return this;
             }
 

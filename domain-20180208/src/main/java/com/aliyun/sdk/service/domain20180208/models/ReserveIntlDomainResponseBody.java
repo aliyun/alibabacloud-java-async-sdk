@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ReserveIntlDomainResponseBody extends TeaModel {
     private String dynamicMessage;
 
     @com.aliyun.core.annotation.NameInMap("ErrorArgs")
-    private java.util.List < ? > errorArgs;
+    private java.util.List<?> errorArgs;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -105,7 +110,7 @@ public class ReserveIntlDomainResponseBody extends TeaModel {
     /**
      * @return errorArgs
      */
-    public java.util.List < ? > getErrorArgs() {
+    public java.util.List<?> getErrorArgs() {
         return this.errorArgs;
     }
 
@@ -150,7 +155,7 @@ public class ReserveIntlDomainResponseBody extends TeaModel {
         private String auctionId; 
         private String dynamicCode; 
         private String dynamicMessage; 
-        private java.util.List < ? > errorArgs; 
+        private java.util.List<?> errorArgs; 
         private String errorCode; 
         private String errorMsg; 
         private Integer httpStatusCode; 
@@ -200,7 +205,7 @@ public class ReserveIntlDomainResponseBody extends TeaModel {
         /**
          * ErrorArgs.
          */
-        public Builder errorArgs(java.util.List < ? > errorArgs) {
+        public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
             return this;
         }
