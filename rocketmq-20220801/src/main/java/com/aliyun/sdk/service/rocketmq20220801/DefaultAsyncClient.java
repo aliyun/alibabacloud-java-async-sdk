@@ -236,6 +236,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDisasterRecoveryPlan  DeleteDisasterRecoveryPlanRequest
+     * @return DeleteDisasterRecoveryPlanResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDisasterRecoveryPlanResponse> deleteDisasterRecoveryPlan(DeleteDisasterRecoveryPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDisasterRecoveryPlan").setMethod(HttpMethod.DELETE).setPathRegex("/disaster_recovery/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDisasterRecoveryPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDisasterRecoveryPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -682,6 +700,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMetricMeta  ListMetricMetaRequest
+     * @return ListMetricMetaResponse
+     */
+    @Override
+    public CompletableFuture<ListMetricMetaResponse> listMetricMeta(ListMetricMetaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMetricMeta").setMethod(HttpMethod.GET).setPathRegex("/monitor/metrics/meta").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMetricMetaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMetricMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
      */
@@ -784,6 +820,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetConsumeOffsetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartDisasterRecoveryItem  StartDisasterRecoveryItemRequest
+     * @return StartDisasterRecoveryItemResponse
+     */
+    @Override
+    public CompletableFuture<StartDisasterRecoveryItemResponse> startDisasterRecoveryItem(StartDisasterRecoveryItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartDisasterRecoveryItem").setMethod(HttpMethod.POST).setPathRegex("/disaster_recovery/{planId}/items/{itemId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartDisasterRecoveryItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartDisasterRecoveryItemResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopDisasterRecoveryItem  StopDisasterRecoveryItemRequest
+     * @return StopDisasterRecoveryItemResponse
+     */
+    @Override
+    public CompletableFuture<StopDisasterRecoveryItemResponse> stopDisasterRecoveryItem(StopDisasterRecoveryItemRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopDisasterRecoveryItem").setMethod(HttpMethod.POST).setPathRegex("/disaster_recovery/{planId}/items/{itemId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopDisasterRecoveryItemResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopDisasterRecoveryItemResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

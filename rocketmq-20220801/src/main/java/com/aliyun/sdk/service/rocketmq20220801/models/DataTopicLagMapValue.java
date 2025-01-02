@@ -26,10 +26,14 @@ public class DataTopicLagMapValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deliveryDuration")
     private Long deliveryDuration;
 
+    @com.aliyun.core.annotation.NameInMap("lastConsumeTimestamp")
+    private Long lastConsumeTimestamp;
+
     private DataTopicLagMapValue(Builder builder) {
         this.readyCount = builder.readyCount;
         this.inflightCount = builder.inflightCount;
         this.deliveryDuration = builder.deliveryDuration;
+        this.lastConsumeTimestamp = builder.lastConsumeTimestamp;
     }
 
     public static Builder builder() {
@@ -61,10 +65,18 @@ public class DataTopicLagMapValue extends TeaModel {
         return this.deliveryDuration;
     }
 
+    /**
+     * @return lastConsumeTimestamp
+     */
+    public Long getLastConsumeTimestamp() {
+        return this.lastConsumeTimestamp;
+    }
+
     public static final class Builder {
         private Long readyCount; 
         private Long inflightCount; 
         private Long deliveryDuration; 
+        private Long lastConsumeTimestamp; 
 
         /**
          * <p>Ready message count</p>
@@ -96,6 +108,14 @@ public class DataTopicLagMapValue extends TeaModel {
          */
         public Builder deliveryDuration(Long deliveryDuration) {
             this.deliveryDuration = deliveryDuration;
+            return this;
+        }
+
+        /**
+         * lastConsumeTimestamp.
+         */
+        public Builder lastConsumeTimestamp(Long lastConsumeTimestamp) {
+            this.lastConsumeTimestamp = lastConsumeTimestamp;
             return this;
         }
 

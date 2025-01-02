@@ -78,6 +78,10 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String subSeriesCode;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
@@ -98,6 +102,7 @@ public class CreateInstanceRequest extends Request {
         this.seriesCode = builder.seriesCode;
         this.serviceCode = builder.serviceCode;
         this.subSeriesCode = builder.subSeriesCode;
+        this.tags = builder.tags;
         this.clientToken = builder.clientToken;
     }
 
@@ -213,6 +218,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -234,6 +246,7 @@ public class CreateInstanceRequest extends Request {
         private String seriesCode; 
         private String serviceCode; 
         private String subSeriesCode; 
+        private java.util.List<Tags> tags; 
         private String clientToken; 
 
         private Builder() {
@@ -256,6 +269,7 @@ public class CreateInstanceRequest extends Request {
             this.seriesCode = request.seriesCode;
             this.serviceCode = request.serviceCode;
             this.subSeriesCode = request.subSeriesCode;
+            this.tags = request.tags;
             this.clientToken = request.clientToken;
         } 
 
@@ -477,6 +491,15 @@ public class CreateInstanceRequest extends Request {
         public Builder subSeriesCode(String subSeriesCode) {
             this.putBodyParameter("subSeriesCode", subSeriesCode);
             this.subSeriesCode = subSeriesCode;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -1119,6 +1142,73 @@ public class CreateInstanceRequest extends Request {
 
             public ProductInfo build() {
                 return new ProductInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

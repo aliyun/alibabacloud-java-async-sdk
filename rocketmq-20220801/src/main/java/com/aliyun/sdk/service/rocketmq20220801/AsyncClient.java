@@ -96,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteConsumerGroupSubscriptionResponse> deleteConsumerGroupSubscription(DeleteConsumerGroupSubscriptionRequest request);
 
     /**
+     * @param request the request parameters of DeleteDisasterRecoveryPlan  DeleteDisasterRecoveryPlanRequest
+     * @return DeleteDisasterRecoveryPlanResponse
+     */
+    CompletableFuture<DeleteDisasterRecoveryPlanResponse> deleteDisasterRecoveryPlan(DeleteDisasterRecoveryPlanRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -266,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMessagesResponse> listMessages(ListMessagesRequest request);
 
     /**
+     * @param request the request parameters of ListMetricMeta  ListMetricMetaRequest
+     * @return ListMetricMetaResponse
+     */
+    CompletableFuture<ListMetricMetaResponse> listMetricMeta(ListMetricMetaRequest request);
+
+    /**
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
      */
@@ -300,6 +312,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetConsumeOffsetResponse
      */
     CompletableFuture<ResetConsumeOffsetResponse> resetConsumeOffset(ResetConsumeOffsetRequest request);
+
+    /**
+     * @param request the request parameters of StartDisasterRecoveryItem  StartDisasterRecoveryItemRequest
+     * @return StartDisasterRecoveryItemResponse
+     */
+    CompletableFuture<StartDisasterRecoveryItemResponse> startDisasterRecoveryItem(StartDisasterRecoveryItemRequest request);
+
+    /**
+     * @param request the request parameters of StopDisasterRecoveryItem  StopDisasterRecoveryItemRequest
+     * @return StopDisasterRecoveryItemResponse
+     */
+    CompletableFuture<StopDisasterRecoveryItemResponse> stopDisasterRecoveryItem(StopDisasterRecoveryItemRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest
