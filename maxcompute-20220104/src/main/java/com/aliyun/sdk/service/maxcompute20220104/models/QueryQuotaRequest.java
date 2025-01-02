@@ -1,28 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateQuotaRequest} extends {@link RequestModel}
+ * 
+ * {@link QueryQuotaRequest} extends {@link RequestModel}
  *
- * <p>UpdateQuotaRequest</p>
+ * <p>QueryQuotaRequest</p>
  */
-public class UpdateQuotaRequest extends Request {
+public class QueryQuotaRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("nickname")
     @com.aliyun.core.annotation.Validation(required = true)
     private String nickname;
 
-    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AkProven")
     private String akProven;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("body")
-    private String body;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("mock")
+    private Boolean mock;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("region")
@@ -32,11 +38,11 @@ public class UpdateQuotaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
-    private UpdateQuotaRequest(Builder builder) {
+    private QueryQuotaRequest(Builder builder) {
         super(builder);
         this.nickname = builder.nickname;
         this.akProven = builder.akProven;
-        this.body = builder.body;
+        this.mock = builder.mock;
         this.region = builder.region;
         this.tenantId = builder.tenantId;
     }
@@ -45,7 +51,7 @@ public class UpdateQuotaRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateQuotaRequest create() {
+    public static QueryQuotaRequest create() {
         return builder().build();
     }
 
@@ -69,10 +75,10 @@ public class UpdateQuotaRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return mock
      */
-    public String getBody() {
-        return this.body;
+    public Boolean getMock() {
+        return this.mock;
     }
 
     /**
@@ -89,10 +95,10 @@ public class UpdateQuotaRequest extends Request {
         return this.tenantId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateQuotaRequest, Builder> {
+    public static final class Builder extends Request.Builder<QueryQuotaRequest, Builder> {
         private String nickname; 
         private String akProven; 
-        private String body; 
+        private Boolean mock; 
         private String region; 
         private String tenantId; 
 
@@ -100,17 +106,17 @@ public class UpdateQuotaRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateQuotaRequest request) {
+        private Builder(QueryQuotaRequest request) {
             super(request);
             this.nickname = request.nickname;
             this.akProven = request.akProven;
-            this.body = request.body;
+            this.mock = request.mock;
             this.region = request.region;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * The name of the quota.
+         * <p>This parameter is required.</p>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -119,25 +125,25 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * The trusted AccessKey pairs.
+         * AkProven.
          */
         public Builder akProven(String akProven) {
-            this.putHeaderParameter("AkProven", akProven);
+            this.putQueryParameter("AkProven", akProven);
             this.akProven = akProven;
             return this;
         }
 
         /**
-         * The request body parameter.
+         * mock.
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder mock(Boolean mock) {
+            this.putQueryParameter("mock", mock);
+            this.mock = mock;
             return this;
         }
 
         /**
-         * The region ID.
+         * region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -146,7 +152,7 @@ public class UpdateQuotaRequest extends Request {
         }
 
         /**
-         * The tenant ID.
+         * tenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
@@ -155,8 +161,8 @@ public class UpdateQuotaRequest extends Request {
         }
 
         @Override
-        public UpdateQuotaRequest build() {
-            return new UpdateQuotaRequest(this);
+        public QueryQuotaRequest build() {
+            return new QueryQuotaRequest(this);
         } 
 
     } 

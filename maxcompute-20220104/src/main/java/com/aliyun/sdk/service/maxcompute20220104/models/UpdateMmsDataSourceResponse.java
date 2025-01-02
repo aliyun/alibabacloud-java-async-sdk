@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateQuotaResponse} extends {@link TeaModel}
+ * 
+ * {@link UpdateMmsDataSourceResponse} extends {@link TeaModel}
  *
- * <p>UpdateQuotaResponse</p>
+ * <p>UpdateMmsDataSourceResponse</p>
  */
-public class UpdateQuotaResponse extends Response {
+public class UpdateMmsDataSourceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateQuotaResponseBody body;
+    private UpdateMmsDataSourceResponseBody body;
 
-    private UpdateQuotaResponse(BuilderImpl builder) {
+    private UpdateMmsDataSourceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateQuotaResponse create() {
+    public static UpdateMmsDataSourceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class UpdateQuotaResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class UpdateQuotaResponse extends Response {
     /**
      * @return body
      */
-    public UpdateQuotaResponseBody getBody() {
+    public UpdateMmsDataSourceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateQuotaResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateMmsDataSourceResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateQuotaResponseBody body);
+        Builder body(UpdateMmsDataSourceResponseBody body);
 
         @Override
-        UpdateQuotaResponse build();
+        UpdateMmsDataSourceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateQuotaResponse, Builder>
+            extends Response.BuilderImpl<UpdateMmsDataSourceResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateQuotaResponseBody body; 
+        private UpdateMmsDataSourceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateQuotaResponse response) {
+        private BuilderImpl(UpdateMmsDataSourceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class UpdateQuotaResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class UpdateQuotaResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateQuotaResponseBody body) {
+        public Builder body(UpdateMmsDataSourceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateQuotaResponse build() {
-            return new UpdateQuotaResponse(this);
+        public UpdateMmsDataSourceResponse build() {
+            return new UpdateMmsDataSourceResponse(this);
         } 
 
     } 

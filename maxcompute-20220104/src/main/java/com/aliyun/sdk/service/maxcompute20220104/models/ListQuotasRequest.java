@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotasRequest} extends {@link RequestModel}
  *
  * <p>ListQuotasRequest</p>
@@ -137,7 +143,10 @@ public class ListQuotasRequest extends Request {
         } 
 
         /**
-         * The billing method of the quota.
+         * <p>The billing method of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subscription</p>
          */
         public Builder billingType(String billingType) {
             this.putQueryParameter("billingType", billingType);
@@ -146,7 +155,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * Specifies the marker after which the returned list begins.
+         * <p>Specifies the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -155,7 +167,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxItem(Long maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -164,7 +179,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("productId", productId);
@@ -173,7 +191,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -182,7 +203,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.
+         * <p>The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tag&quot;:&quot;this_is_tag_demo&quot;}</p>
          */
         public Builder saleTags(String saleTags) {
             this.putQueryParameter("saleTags", saleTags);
@@ -191,7 +215,10 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280747109771520</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQuotaScheduleRequest} extends {@link RequestModel}
  *
  * <p>UpdateQuotaScheduleRequest</p>
@@ -96,7 +102,11 @@ public class UpdateQuotaScheduleRequest extends Request {
         } 
 
         /**
-         * The name of the quota.
+         * <p>The name of the quota.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaA</p>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -105,7 +115,10 @@ public class UpdateQuotaScheduleRequest extends Request {
         }
 
         /**
-         * The request body parameters.
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p># The quota plan immediately takes effect. [ { &quot;type&quot;: &quot;once&quot;, &quot;plan&quot;: &quot;planA&quot;, &quot;operator&quot;:&quot;userA&quot; } ] # The quota plan is scheduled on a regular basis. [ { &quot;id&quot;: &quot;etl_time&quot;, &quot;type&quot;: &quot;daily&quot;, &quot;condition&quot;: { &quot;at&quot;: &quot;0800&quot;, &quot;after&quot;: &quot;2022-04-25T04:23:04Z&quot; // optional }, &quot;plan&quot;: &quot;planA&quot; }, { &quot;id&quot;: &quot;bi&quot;, &quot;type&quot;: &quot;daily&quot;, &quot;condition&quot;: { &quot;at&quot;: &quot;0900&quot;, &quot;after&quot;: &quot;2022-04-25T04:23:04Z&quot; // optional }, &quot;plan&quot;: &quot;planB&quot; }, ]</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
@@ -114,7 +127,10 @@ public class UpdateQuotaScheduleRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -123,7 +139,10 @@ public class UpdateQuotaScheduleRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478403690625249</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

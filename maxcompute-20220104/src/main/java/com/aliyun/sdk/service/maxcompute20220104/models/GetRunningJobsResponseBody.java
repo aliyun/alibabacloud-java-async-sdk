@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRunningJobsResponseBody} extends {@link TeaModel}
  *
  * <p>GetRunningJobsResponseBody</p>
@@ -85,7 +91,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,9 +99,13 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * *   If the value of success was false, an error code was returned.
-         * <p>
-         * *   If the value of success was true, a null value was returned.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -103,7 +113,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A3B1FD2006A24C8D8BE65CDAC028298</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -111,7 +124,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+         * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -119,7 +135,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b4ab16684833172127321e2c25</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,6 +151,12 @@ public class GetRunningJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRunningJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRunningJobsResponseBody</p>
+     */
     public static class RunningJobInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cuSnapshot")
         private Double cuSnapshot;
@@ -255,7 +280,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             private Long submittedAtTime; 
 
             /**
-             * The compute unit (CU) snapshot proportion of the job.
+             * <p>The compute unit (CU) snapshot proportion of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.45</p>
              */
             public Builder cuSnapshot(Double cuSnapshot) {
                 this.cuSnapshot = cuSnapshot;
@@ -263,7 +291,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023050206371544gomgtp3ljcr4</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -271,7 +302,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The account that submits the job.
+             * <p>The account that submits the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
              */
             public Builder jobOwner(String jobOwner) {
                 this.jobOwner = jobOwner;
@@ -279,7 +313,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory snapshot proportion of the job.
+             * <p>The memory snapshot proportion of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.45</p>
              */
             public Builder memorySnapshot(Double memorySnapshot) {
                 this.memorySnapshot = memorySnapshot;
@@ -287,7 +324,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the job.
+             * <p>The progress of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Double progress) {
                 this.progress = progress;
@@ -295,7 +335,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MaxCompute project.
+             * <p>The name of the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_20221021123044_981b</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -303,7 +346,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the quota that is used by the job.
+             * <p>The nickname of the quota that is used by the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_quota</p>
              */
             public Builder quotaNickname(String quotaNickname) {
                 this.quotaNickname = quotaNickname;
@@ -311,7 +357,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job starts to run.
+             * <p>The time when the job starts to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1689746864</p>
              */
             public Builder runningAtTime(Long runningAtTime) {
                 this.runningAtTime = runningAtTime;
@@ -319,7 +368,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job is submitted.
+             * <p>The time when the job is submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1689746864</p>
              */
             public Builder submittedAtTime(Long submittedAtTime) {
                 this.submittedAtTime = submittedAtTime;
@@ -333,6 +385,12 @@ public class GetRunningJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRunningJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRunningJobsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -341,7 +399,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("runningJobInfoList")
-        private java.util.List < RunningJobInfoList> runningJobInfoList;
+        private java.util.List<RunningJobInfoList> runningJobInfoList;
 
         @com.aliyun.core.annotation.NameInMap("totalCount")
         private Long totalCount;
@@ -378,7 +436,7 @@ public class GetRunningJobsResponseBody extends TeaModel {
         /**
          * @return runningJobInfoList
          */
-        public java.util.List < RunningJobInfoList> getRunningJobInfoList() {
+        public java.util.List<RunningJobInfoList> getRunningJobInfoList() {
             return this.runningJobInfoList;
         }
 
@@ -392,11 +450,14 @@ public class GetRunningJobsResponseBody extends TeaModel {
         public static final class Builder {
             private Long pageNumber; 
             private Long pageSize; 
-            private java.util.List < RunningJobInfoList> runningJobInfoList; 
+            private java.util.List<RunningJobInfoList> runningJobInfoList; 
             private Long totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -404,7 +465,10 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -412,15 +476,18 @@ public class GetRunningJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of jobs in the running state.
+             * <p>The list of jobs in the running state.</p>
              */
-            public Builder runningJobInfoList(java.util.List < RunningJobInfoList> runningJobInfoList) {
+            public Builder runningJobInfoList(java.util.List<RunningJobInfoList> runningJobInfoList) {
                 this.runningJobInfoList = runningJobInfoList;
                 return this;
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

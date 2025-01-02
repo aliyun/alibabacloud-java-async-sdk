@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobResourceUsageRequest} extends {@link RequestModel}
  *
  * <p>GetJobResourceUsageRequest</p>
@@ -18,7 +24,7 @@ public class GetJobResourceUsageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("jobOwnerList")
-    private java.util.List < String > jobOwnerList;
+    private java.util.List<String> jobOwnerList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
@@ -30,7 +36,7 @@ public class GetJobResourceUsageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("quotaNicknameList")
-    private java.util.List < String > quotaNicknameList;
+    private java.util.List<String> quotaNicknameList;
 
     private GetJobResourceUsageRequest(Builder builder) {
         super(builder);
@@ -64,7 +70,7 @@ public class GetJobResourceUsageRequest extends Request {
     /**
      * @return jobOwnerList
      */
-    public java.util.List < String > getJobOwnerList() {
+    public java.util.List<String> getJobOwnerList() {
         return this.jobOwnerList;
     }
 
@@ -85,16 +91,16 @@ public class GetJobResourceUsageRequest extends Request {
     /**
      * @return quotaNicknameList
      */
-    public java.util.List < String > getQuotaNicknameList() {
+    public java.util.List<String> getQuotaNicknameList() {
         return this.quotaNicknameList;
     }
 
     public static final class Builder extends Request.Builder<GetJobResourceUsageRequest, Builder> {
         private String date; 
-        private java.util.List < String > jobOwnerList; 
+        private java.util.List<String> jobOwnerList; 
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < String > quotaNicknameList; 
+        private java.util.List<String> quotaNicknameList; 
 
         private Builder() {
             super();
@@ -110,7 +116,11 @@ public class GetJobResourceUsageRequest extends Request {
         } 
 
         /**
-         * The date that is accurate to the day part for the query. The date must be in the yyyy-MM-dd format.
+         * <p>The date that is accurate to the day part for the query. The date must be in the yyyy-MM-dd format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-15</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);
@@ -119,9 +129,9 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * The list of job executors.
+         * <p>The list of job executors.</p>
          */
-        public Builder jobOwnerList(java.util.List < String > jobOwnerList) {
+        public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             String jobOwnerListShrink = shrink(jobOwnerList, "jobOwnerList", "simple");
             this.putQueryParameter("jobOwnerList", jobOwnerListShrink);
             this.jobOwnerList = jobOwnerList;
@@ -129,7 +139,10 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -138,7 +151,10 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. Maximum value: 100.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -147,9 +163,9 @@ public class GetJobResourceUsageRequest extends Request {
         }
 
         /**
-         * The list of nicknames of quotas that are used by jobs.
+         * <p>The list of nicknames of quotas that are used by jobs.</p>
          */
-        public Builder quotaNicknameList(java.util.List < String > quotaNicknameList) {
+        public Builder quotaNicknameList(java.util.List<String> quotaNicknameList) {
             String quotaNicknameListShrink = shrink(quotaNicknameList, "quotaNicknameList", "simple");
             this.putQueryParameter("quotaNicknameList", quotaNicknameListShrink);
             this.quotaNicknameList = quotaNicknameList;

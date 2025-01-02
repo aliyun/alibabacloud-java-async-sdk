@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobResourceUsageResponseBody</p>
@@ -85,7 +91,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +99,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +110,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A3B1E82006A23A918C70905BF08AEC7</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -109,7 +121,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+         * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -117,7 +132,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b57ff7616612271051086500ea3ce</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +148,12 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJobResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResourceUsageResponseBody</p>
+     */
     public static class JobResourceUsageList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cuUsage")
         private Long cuUsage;
@@ -205,7 +229,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             private String quotaNickname; 
 
             /**
-             * The total number of used compute units (CUs).
+             * <p>The total number of used compute units (CUs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1185100</p>
              */
             public Builder cuUsage(Long cuUsage) {
                 this.cuUsage = cuUsage;
@@ -213,7 +240,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The start date of the query in the format of yyyy-MM-dd.
+             * <p>The start date of the query in the format of yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-09</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -221,7 +251,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The job executor.
+             * <p>The job executor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
              */
             public Builder jobOwner(String jobOwner) {
                 this.jobOwner = jobOwner;
@@ -229,7 +262,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory usage.
+             * <p>The total memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15169536</p>
              */
             public Builder memoryUsage(Long memoryUsage) {
                 this.memoryUsage = memoryUsage;
@@ -237,7 +273,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The quota nickname.
+             * <p>The quota nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_quota</p>
              */
             public Builder quotaNickname(String quotaNickname) {
                 this.quotaNickname = quotaNickname;
@@ -251,9 +290,15 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetJobResourceUsageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResourceUsageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("jobResourceUsageList")
-        private java.util.List < JobResourceUsageList> jobResourceUsageList;
+        private java.util.List<JobResourceUsageList> jobResourceUsageList;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -282,7 +327,7 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         /**
          * @return jobResourceUsageList
          */
-        public java.util.List < JobResourceUsageList> getJobResourceUsageList() {
+        public java.util.List<JobResourceUsageList> getJobResourceUsageList() {
             return this.jobResourceUsageList;
         }
 
@@ -308,21 +353,24 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < JobResourceUsageList> jobResourceUsageList; 
+            private java.util.List<JobResourceUsageList> jobResourceUsageList; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * The data list returned.
+             * <p>The data list returned.</p>
              */
-            public Builder jobResourceUsageList(java.util.List < JobResourceUsageList> jobResourceUsageList) {
+            public Builder jobResourceUsageList(java.util.List<JobResourceUsageList> jobResourceUsageList) {
                 this.jobResourceUsageList = jobResourceUsageList;
                 return this;
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -330,7 +378,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -338,7 +389,10 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

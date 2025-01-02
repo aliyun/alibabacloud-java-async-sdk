@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateQuotaPlanResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateQuotaPlanResponseBody</p>
@@ -49,7 +55,10 @@ public class UpdateQuotaPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +66,10 @@ public class UpdateQuotaPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dfe516688379832875789e2c65</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

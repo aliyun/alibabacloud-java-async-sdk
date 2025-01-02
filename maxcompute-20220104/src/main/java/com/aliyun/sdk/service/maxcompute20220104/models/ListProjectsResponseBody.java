@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectsResponseBody</p>
@@ -49,7 +55,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b16399216671970335563173e2340</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,67 +79,12 @@ public class ListProjectsResponseBody extends TeaModel {
 
     } 
 
-    public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("TagKey")
-        private String tagKey;
-
-        @com.aliyun.core.annotation.NameInMap("TagValue")
-        private String tagValue;
-
-        private Tags(Builder builder) {
-            this.tagKey = builder.tagKey;
-            this.tagValue = builder.tagValue;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tags create() {
-            return builder().build();
-        }
-
-        /**
-         * @return tagKey
-         */
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        /**
-         * @return tagValue
-         */
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public static final class Builder {
-            private String tagKey; 
-            private String tagValue; 
-
-            /**
-             * The tag key.
-             */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
-                return this;
-            }
-
-            /**
-             * The tag value.
-             */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
-                return this;
-            }
-
-            public Tags build() {
-                return new Tags(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class IpWhiteList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ipList")
         private String ipList;
@@ -170,7 +124,13 @@ public class ListProjectsResponseBody extends TeaModel {
             private String vpcIpList; 
 
             /**
-             * The list of IP addresses.
+             * <p>The IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services.</p>
+             * <blockquote>
+             * <p> If you configure only the IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services, the access over the Internet or the network for interconnecting with other Alibaba Cloud services is subject to configurations, and access over a virtual private cloud (VPC) is not allowed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10.88.111.3</p>
              */
             public Builder ipList(String ipList) {
                 this.ipList = ipList;
@@ -178,7 +138,13 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of virtual private cloud (VPC) IP addresses.
+             * <p>The IP address whitelist for access over a VPC.</p>
+             * <blockquote>
+             * <p> If you configure only the IP address whitelist for access over a VPC, the access over a VPC is subject to configurations, and the access over the Internet or the network for interconnecting with other Alibaba Cloud services is not allowed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10.88.111.3</p>
              */
             public Builder vpcIpList(String vpcIpList) {
                 this.vpcIpList = vpcIpList;
@@ -192,6 +158,12 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class Encryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("algorithm")
         private String algorithm;
@@ -243,7 +215,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The name of the encryption algorithm.
+             * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA1</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -251,7 +226,11 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data encryption is enabled. Valid values: true and false.
+             * <p>Indicates whether the data encryption feature needs to be enabled for the project. For more information about data encryption, see</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -259,7 +238,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the encryption algorithm.
+             * <p>The type of key that is used for data encryption. You can select MaxCompute Default Key or Bring Your Own Key (BYOK) as the key type. If you select MaxCompute Default Key, the default key that is created by MaxCompute is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dafault</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -273,6 +255,62 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
+    public static class ExternalProjectProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("isExternalCatalogBound")
+        private String isExternalCatalogBound;
+
+        private ExternalProjectProperties(Builder builder) {
+            this.isExternalCatalogBound = builder.isExternalCatalogBound;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalProjectProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isExternalCatalogBound
+         */
+        public String getIsExternalCatalogBound() {
+            return this.isExternalCatalogBound;
+        }
+
+        public static final class Builder {
+            private String isExternalCatalogBound; 
+
+            /**
+             * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder isExternalCatalogBound(String isExternalCatalogBound) {
+                this.isExternalCatalogBound = isExternalCatalogBound;
+                return this;
+            }
+
+            public ExternalProjectProperties build() {
+                return new ExternalProjectProperties(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class TableLifecycle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -312,7 +350,15 @@ public class ListProjectsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The type of the lifecycle. Valid values: -mandatory: The lifecycle clause is required. You must configure a lifecycle for a table. -optional: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire. -inherit: If you do not configure a lifecycle for a table when you create the table, the value of odps.table.lifecycle.value is used by default.
+             * <p>The lifecycle type. Valid values:</p>
+             * <ul>
+             * <li><strong>mandatory</strong>: The lifecycle clause is required in a table creation statement.</li>
+             * <li><strong>optional</strong>: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire.</li>
+             * <li><strong>inherit</strong>: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used as the table lifecycle by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>optional</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -320,7 +366,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of a table. Unit: days.
+             * <p>The table lifecycle. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37231</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,6 +383,12 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowFullScan")
         private Boolean allowFullScan;
@@ -346,6 +401,9 @@ public class ListProjectsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("encryption")
         private Encryption encryption;
+
+        @com.aliyun.core.annotation.NameInMap("externalProjectProperties")
+        private ExternalProjectProperties externalProjectProperties;
 
         @com.aliyun.core.annotation.NameInMap("retentionDays")
         private Long retentionDays;
@@ -370,6 +428,7 @@ public class ListProjectsResponseBody extends TeaModel {
             this.enableDecimal2 = builder.enableDecimal2;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
+            this.externalProjectProperties = builder.externalProjectProperties;
             this.retentionDays = builder.retentionDays;
             this.sqlMeteringMax = builder.sqlMeteringMax;
             this.tableLifecycle = builder.tableLifecycle;
@@ -412,6 +471,13 @@ public class ListProjectsResponseBody extends TeaModel {
          */
         public Encryption getEncryption() {
             return this.encryption;
+        }
+
+        /**
+         * @return externalProjectProperties
+         */
+        public ExternalProjectProperties getExternalProjectProperties() {
+            return this.externalProjectProperties;
         }
 
         /**
@@ -461,6 +527,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean enableDecimal2; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
+            private ExternalProjectProperties externalProjectProperties; 
             private Long retentionDays; 
             private String sqlMeteringMax; 
             private TableLifecycle tableLifecycle; 
@@ -469,7 +536,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private String typeSystem; 
 
             /**
-             * Indicates whether a full table scan on the project is enabled.
+             * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowFullScan(Boolean allowFullScan) {
                 this.allowFullScan = allowFullScan;
@@ -477,7 +547,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the DECIMAL data type in the MaxCompute V2.0 data type edition is enabled.
+             * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableDecimal2(Boolean enableDecimal2) {
                 this.enableDecimal2 = enableDecimal2;
@@ -485,7 +558,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether tunnel quota routing is enabled.
+             * <p>Indicates whether the routing of the Tunnel resource group is enabled.</p>
+             * <ul>
+             * <li>true: The data transfer tasks that are submitted by the project by default use the Tunnel resource group that is bound to the project.</li>
+             * <li>false: The data transfer tasks that are submitted by the project by default use the Tunnel shared resource group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTunnelQuotaRoute(Boolean enableTunnelQuotaRoute) {
                 this.enableTunnelQuotaRoute = enableTunnelQuotaRoute;
@@ -493,7 +573,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption information.
+             * <p>The storage encryption properties.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -501,7 +581,18 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of days for which backup data can be retained.
+             * <p>The properties of the external project.</p>
+             */
+            public Builder externalProjectProperties(ExternalProjectProperties externalProjectProperties) {
+                this.externalProjectProperties = externalProjectProperties;
+                return this;
+            }
+
+            /**
+             * <p>The retention period for backup data. Unit: days. During the retention period, you can restore data of the version in use to the backup data of any version. Valid values: [0,30]. Default value: 1. The value 0 indicates that the backup feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder retentionDays(Long retentionDays) {
                 this.retentionDays = retentionDays;
@@ -509,7 +600,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The upper limit for the resources that are consumed by an SQL statement.
+             * <p>The maximum consumption threshold of a single SQL statement. Formula: Amount of scanned data (GB) × Complexity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder sqlMeteringMax(String sqlMeteringMax) {
                 this.sqlMeteringMax = sqlMeteringMax;
@@ -517,7 +611,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of a table in the project.
+             * <p>The table lifecycle properties.</p>
              */
             public Builder tableLifecycle(TableLifecycle tableLifecycle) {
                 this.tableLifecycle = tableLifecycle;
@@ -525,7 +619,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the instance.
+             * <p>The time zone that is used by your project. The time zone is the same as the time zone specified by <code>odps.sql.timezone</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -533,7 +630,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tunnel quota.
+             * <p>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Tunnel</a> resource group that is bound to the project.</p>
+             * <ul>
+             * <li>Default resource group: The Tunnel shared resource group is used. You cannot use the subscription-based Tunnel resource group for the project. The default resource group is automatically used by the Tunnel service of your project, regardless of the parameter setting.</li>
+             * <li>Subscription-based Tunnel resource group: You can use the subscription-based Tunnel resource group for the project.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_tunnel</p>
              */
             public Builder tunnelQuota(String tunnelQuota) {
                 this.tunnelQuota = tunnelQuota;
@@ -541,7 +645,16 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The data type edition. Valid values: -1: MaxCompute V1.0 data type edition. -2: MaxCompute V2.0 data type edition. -hive: Hive-compatible data type edition.
+             * <p>The data type edition. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute V1.0 data type edition</li>
+             * <li><strong>2</strong>: MaxCompute V2.0 data type edition</li>
+             * <li><strong>hive</strong>: Hive-compatible data type edition</li>
+             * </ul>
+             * <p>For more information about the differences among the three data type editions, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder typeSystem(String typeSystem) {
                 this.typeSystem = typeSystem;
@@ -555,6 +668,12 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class SaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
@@ -594,7 +713,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+             * <p>The instance ID of the default computing quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;aaaa-bbbb&quot;</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -602,7 +724,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values: quota and project.
+             * <p>The billing method of the default computing quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;project&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -616,6 +741,12 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class ProjectProtection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("exceptionPolicy")
         private String exceptionPolicy;
@@ -655,7 +786,29 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean _protected; 
 
             /**
-             * The exception policy. If cross-project data access operations are required, the project owner must configure an exception policy in advance to allow the specified user to transfer data of a specified object from the current project to a specified project. After the exception policy is configured, data of the object can be transferred to the specified project even if the project data protection feature is enabled.
+             * <p>If you enable the project data protection mechanism, you can configure exception or trusted projects. This allows specified users to transfer data of a specified object to a specified project. The project data protection mechanism does not take effect in all the situations that are specified in the exception policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;Version&quot;: &quot;1&quot;,
+             *       &quot;Statement&quot;: [
+             *             {
+             *                   &quot;Effect&quot;: &quot;Allow&quot;,
+             *                   &quot;Principal&quot;: &quot;&quot;,
+             *                   &quot;Action&quot;: [
+             *                         &quot;odps:[, , ...]&quot;
+             *                   ],
+             *                   &quot;Resource&quot;: &quot;acs:odps:*:&quot;,
+             *                   &quot;Condition&quot;: {
+             *                         &quot;StringEquals&quot;: {
+             *                               &quot;odps:TaskType&quot;: [
+             *                                     &quot;&quot;
+             *                               ]
+             *                         }
+             *                   }
+             *             }
+             *       ]
+             * }</p>
              */
             public Builder exceptionPolicy(String exceptionPolicy) {
                 this.exceptionPolicy = exceptionPolicy;
@@ -663,7 +816,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether project data protection is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> is enabled for the project. This allows or denies data transfer across projects. By default, the data protection mechanism is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _protected(Boolean _protected) {
                 this._protected = _protected;
@@ -677,6 +833,12 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class SecurityProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableDownloadPrivilege")
         private Boolean enableDownloadPrivilege;
@@ -776,7 +938,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private Boolean usingPolicy; 
 
             /**
-             * Indicates whether Download control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. By default, this feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableDownloadPrivilege(Boolean enableDownloadPrivilege) {
                 this.enableDownloadPrivilege = enableDownloadPrivilege;
@@ -784,7 +949,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether label-based access control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature is enabled. By default, this feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder labelSecurity(Boolean labelSecurity) {
                 this.labelSecurity = labelSecurity;
@@ -792,7 +960,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the object creator is allowed to perform operations on objects.
+             * <p>Indicates whether to allow the object creator to have the access permissions on the object. The default value is true, which indicates that the object creator has the access permissions on the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder objectCreatorHasAccessPermission(Boolean objectCreatorHasAccessPermission) {
                 this.objectCreatorHasAccessPermission = objectCreatorHasAccessPermission;
@@ -800,7 +971,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the object creator is allowed to authorize other users to perform operations on objects.
+             * <p>Indicates whether the object creator has the authorization permissions on the object. The default value is true, which indicates that the object creator has the authorization permissions on the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder objectCreatorHasGrantPermission(Boolean objectCreatorHasGrantPermission) {
                 this.objectCreatorHasGrantPermission = objectCreatorHasGrantPermission;
@@ -808,7 +982,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether project data protection is enabled.
+             * <p>The properties of the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>.</p>
              */
             public Builder projectProtection(ProjectProtection projectProtection) {
                 this.projectProtection = projectProtection;
@@ -816,7 +990,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether ACL-based access control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. By default, this feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder usingAcl(Boolean usingAcl) {
                 this.usingAcl = usingAcl;
@@ -824,7 +1001,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether policy-based access control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature is enabled. By default, this feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder usingPolicy(Boolean usingPolicy) {
                 this.usingPolicy = usingPolicy;
@@ -838,10 +1018,13 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class Projects extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
-
         @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
@@ -885,7 +1068,6 @@ public class ListProjectsResponseBody extends TeaModel {
         private String type;
 
         private Projects(Builder builder) {
-            this.tags = builder.tags;
             this.comment = builder.comment;
             this.costStorage = builder.costStorage;
             this.createdTime = builder.createdTime;
@@ -908,13 +1090,6 @@ public class ListProjectsResponseBody extends TeaModel {
 
         public static Projects create() {
             return builder().build();
-        }
-
-        /**
-         * @return tags
-         */
-        public java.util.List < Tags> getTags() {
-            return this.tags;
         }
 
         /**
@@ -1016,7 +1191,6 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
             private String comment; 
             private String costStorage; 
             private Long createdTime; 
@@ -1033,15 +1207,10 @@ public class ListProjectsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The tags.
-             */
-            public Builder tags(java.util.List < Tags> tags) {
-                this.tags = tags;
-                return this;
-            }
-
-            /**
-             * The remarks.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute projects</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1049,7 +1218,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage.
+             * <p>The total storage usage. The storage space that is occupied by your project, which is the logical storage space after your project data is collected and compressed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16489027</p>
              */
             public Builder costStorage(String costStorage) {
                 this.costStorage = costStorage;
@@ -1057,7 +1229,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Create time
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1704380838000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1065,7 +1240,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The default computing quota.
+             * <p>The default computing quota that is used to allocate computing resources. If you do not specify a computing quota for your project, the jobs that are initiated by your project consume the computing resources in the default quota. For more information about how to use computing resources, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use quota groups for computing resources</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>quotaA</p>
              */
             public Builder defaultQuota(String defaultQuota) {
                 this.defaultQuota = defaultQuota;
@@ -1073,7 +1251,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist.
+             * <p>The information about the IP address whitelist.</p>
              */
             public Builder ipWhiteList(IpWhiteList ipWhiteList) {
                 this.ipWhiteList = ipWhiteList;
@@ -1081,7 +1259,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1089,7 +1270,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the project.
+             * <p>The account information of the project owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1139815775606813</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1097,7 +1281,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The properties of the project.
+             * <p>The basic properties of the project.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -1105,7 +1289,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Region Id
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1113,7 +1300,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+             * <p>The instance ID and billing method of the default computing quota.</p>
              */
             public Builder saleTag(SaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1121,7 +1308,7 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The permission properties.
+             * <p>The permission properties.</p>
              */
             public Builder securityProperties(SecurityProperties securityProperties) {
                 this.securityProperties = securityProperties;
@@ -1129,7 +1316,16 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the project. Valid values: -AVAILABLE: The project is available. -READONLY: The project is read-only. -FROZEN: The project is frozen. -DELETING: The project is being deleted.
+             * <p>The project status. Valid values:</p>
+             * <ul>
+             * <li><strong>AVAILABLE</strong></li>
+             * <li><strong>READONLY</strong></li>
+             * <li><strong>FROZEN</strong></li>
+             * <li><strong>DELETING</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1137,26 +1333,15 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the current project supports the MaxCompute three-layer model.
-             * <p>
+             * <p>Indicates whether data storage by schema is supported. MaxCompute supports the schema feature. This feature allows you to classify objects such as tables, resources, and user-defined functions (UDFs) in a project by schema. You can create multiple schemas in a project. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: supported</li>
+             * <li>false: not supported</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   true
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder threeTierModel(Boolean threeTierModel) {
                 this.threeTierModel = threeTierModel;
@@ -1164,7 +1349,14 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The project type. Valid values: -managed: The project is an internal project. -external: The project is an external project.
+             * <p>The project type. Valid values:</p>
+             * <ul>
+             * <li><strong>managed</strong>: internal project</li>
+             * <li><strong>external</strong>: external project</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>managed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1178,6 +1370,12 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -1189,7 +1387,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private Integer maxItem;
 
         @com.aliyun.core.annotation.NameInMap("projects")
-        private java.util.List < Projects> projects;
+        private java.util.List<Projects> projects;
 
         private Data(Builder builder) {
             this.nextToken = builder.nextToken;
@@ -1230,7 +1428,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * @return projects
          */
-        public java.util.List < Projects> getProjects() {
+        public java.util.List<Projects> getProjects() {
             return this.projects;
         }
 
@@ -1238,10 +1436,13 @@ public class ListProjectsResponseBody extends TeaModel {
             private String nextToken; 
             private String marker; 
             private Integer maxItem; 
-            private java.util.List < Projects> projects; 
+            private java.util.List<Projects> projects; 
 
             /**
-             * A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kvikyUl3ChyRxN+qLPvtOb</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1249,7 +1450,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the marker after which the returned list begins.
+             * <p>Indicates the marker after which the returned list begins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -1257,7 +1461,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned per page.
+             * <p>The maximum number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxItem(Integer maxItem) {
                 this.maxItem = maxItem;
@@ -1265,9 +1472,9 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the project.
+             * <p>The list of projects.</p>
              */
-            public Builder projects(java.util.List < Projects> projects) {
+            public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
                 return this;
             }

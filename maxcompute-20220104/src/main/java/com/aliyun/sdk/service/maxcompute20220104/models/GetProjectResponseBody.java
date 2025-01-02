@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectResponseBody} extends {@link TeaModel}
  *
  * <p>GetProjectResponseBody</p>
@@ -85,7 +91,7 @@ public class GetProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +99,10 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040002</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +110,10 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -109,7 +121,17 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>1xx: informational response. The request is received and is being processed.</li>
+         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+         * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -117,7 +139,10 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7b316643495896551555e855b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +155,12 @@ public class GetProjectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class IpWhiteList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ipList")
         private String ipList;
@@ -169,7 +200,13 @@ public class GetProjectResponseBody extends TeaModel {
             private String vpcIpList; 
 
             /**
-             * The list of IP addresses.
+             * <p>The IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services.</p>
+             * <blockquote>
+             * <p> If you configure only the IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services, the access over the Internet or the network for interconnecting with other Alibaba Cloud services is subject to configurations, and access over a virtual private cloud (VPC) is not allowed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10.88.111.3</p>
              */
             public Builder ipList(String ipList) {
                 this.ipList = ipList;
@@ -177,7 +214,13 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The list of virtual private cloud (VPC) IP addresses.
+             * <p>The IP address whitelist for access over a VPC.</p>
+             * <blockquote>
+             * <p> If you configure only the IP address whitelist for access over a VPC, the access over a VPC is subject to configurations, and the access over the Internet or the network for interconnecting with other Alibaba Cloud services is not allowed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10.88.111.3</p>
              */
             public Builder vpcIpList(String vpcIpList) {
                 this.vpcIpList = vpcIpList;
@@ -191,6 +234,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class Encryption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("algorithm")
         private String algorithm;
@@ -242,7 +291,10 @@ public class GetProjectResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The name of the encryption algorithm.
+             * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA1</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -250,7 +302,11 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data encryption is enabled. Valid values: true and false.
+             * <p>Indicates whether the data encryption feature needs to be enabled for the project. For more information about data encryption, see</p>
+             * <p><a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -258,7 +314,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the encryption algorithm.
+             * <p>The type of key that is used for data encryption. You can select MaxCompute Default Key or Bring Your Own Key (BYOK) as the key type. If you select MaxCompute Default Key, the default key that is created by MaxCompute is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dafault</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -272,6 +331,62 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
+    public static class ExternalProjectProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("isExternalCatalogBound")
+        private String isExternalCatalogBound;
+
+        private ExternalProjectProperties(Builder builder) {
+            this.isExternalCatalogBound = builder.isExternalCatalogBound;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExternalProjectProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isExternalCatalogBound
+         */
+        public String getIsExternalCatalogBound() {
+            return this.isExternalCatalogBound;
+        }
+
+        public static final class Builder {
+            private String isExternalCatalogBound; 
+
+            /**
+             * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder isExternalCatalogBound(String isExternalCatalogBound) {
+                this.isExternalCatalogBound = isExternalCatalogBound;
+                return this;
+            }
+
+            public ExternalProjectProperties build() {
+                return new ExternalProjectProperties(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class StorageTierSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("longTermSize")
         private Long longTermSize;
@@ -323,7 +438,10 @@ public class GetProjectResponseBody extends TeaModel {
             private Long standardSize; 
 
             /**
-             * The long-term storage.
+             * <p>The storage usage at the long-term storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21764917</p>
              */
             public Builder longTermSize(Long longTermSize) {
                 this.longTermSize = longTermSize;
@@ -331,7 +449,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The IA storage.
+             * <p>The storage usage at the Infrequent Access (IA) layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>767693</p>
              */
             public Builder lowFrequencySize(Long lowFrequencySize) {
                 this.lowFrequencySize = lowFrequencySize;
@@ -339,7 +460,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The standard storage.
+             * <p>The storage usage at the standard storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27649172</p>
              */
             public Builder standardSize(Long standardSize) {
                 this.standardSize = standardSize;
@@ -353,6 +477,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class StorageTierInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("projectBackupSize")
         private Long projectBackupSize;
@@ -404,7 +534,10 @@ public class GetProjectResponseBody extends TeaModel {
             private StorageTierSize storageTierSize; 
 
             /**
-             * The backup storage.
+             * <p>The backup storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86672917</p>
              */
             public Builder projectBackupSize(Long projectBackupSize) {
                 this.projectBackupSize = projectBackupSize;
@@ -412,7 +545,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The total storage.
+             * <p>The total storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56066037</p>
              */
             public Builder projectTotalSize(Long projectTotalSize) {
                 this.projectTotalSize = projectTotalSize;
@@ -420,7 +556,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The tiered storage.
+             * <p>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">storage tier</a> information.</p>
              */
             public Builder storageTierSize(StorageTierSize storageTierSize) {
                 this.storageTierSize = storageTierSize;
@@ -434,6 +570,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class TableLifecycle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -473,7 +615,15 @@ public class GetProjectResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The type of the lifecycle. Valid values: -**mandatory**: The lifecycle clause is required. You must configure a lifecycle for a table. -**optional**: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire. -**inherit**: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used by default.
+             * <p>The lifecycle type. Valid values:</p>
+             * <ul>
+             * <li><strong>mandatory</strong>: The lifecycle clause is required in a table creation statement.</li>
+             * <li><strong>optional</strong>: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire.</li>
+             * <li><strong>inherit</strong>: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used as the table lifecycle by default.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>optional</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -481,7 +631,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of a table. Unit: days.
+             * <p>The table lifecycle. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37231</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -495,198 +648,21 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
-    public static class DaysAfterLastAccessGreaterThan extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditionCode")
-        private String conditionCode;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private Long value;
-
-        private DaysAfterLastAccessGreaterThan(Builder builder) {
-            this.conditionCode = builder.conditionCode;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DaysAfterLastAccessGreaterThan create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditionCode
-         */
-        public String getConditionCode() {
-            return this.conditionCode;
-        }
-
-        /**
-         * @return value
-         */
-        public Long getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String conditionCode; 
-            private Long value; 
-
-            /**
-             * conditionCode.
-             */
-            public Builder conditionCode(String conditionCode) {
-                this.conditionCode = conditionCode;
-                return this;
-            }
-
-            /**
-             * The retention period of a table. Unit: days.
-             */
-            public Builder value(Long value) {
-                this.value = value;
-                return this;
-            }
-
-            public DaysAfterLastAccessGreaterThan build() {
-                return new DaysAfterLastAccessGreaterThan(this);
-            } 
-
-        } 
-
-    }
-    public static class DaysAfterLastModificationGreaterThan extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditionCode")
-        private String conditionCode;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private Long value;
-
-        private DaysAfterLastModificationGreaterThan(Builder builder) {
-            this.conditionCode = builder.conditionCode;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DaysAfterLastModificationGreaterThan create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditionCode
-         */
-        public String getConditionCode() {
-            return this.conditionCode;
-        }
-
-        /**
-         * @return value
-         */
-        public Long getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String conditionCode; 
-            private Long value; 
-
-            /**
-             * conditionCode.
-             */
-            public Builder conditionCode(String conditionCode) {
-                this.conditionCode = conditionCode;
-                return this;
-            }
-
-            /**
-             * The retention period of a table. Unit: days.
-             */
-            public Builder value(Long value) {
-                this.value = value;
-                return this;
-            }
-
-            public DaysAfterLastModificationGreaterThan build() {
-                return new DaysAfterLastModificationGreaterThan(this);
-            } 
-
-        } 
-
-    }
-    public static class DaysAfterLastTierModificationGreaterThan extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditionCode")
-        private String conditionCode;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private Long value;
-
-        private DaysAfterLastTierModificationGreaterThan(Builder builder) {
-            this.conditionCode = builder.conditionCode;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DaysAfterLastTierModificationGreaterThan create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditionCode
-         */
-        public String getConditionCode() {
-            return this.conditionCode;
-        }
-
-        /**
-         * @return value
-         */
-        public Long getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String conditionCode; 
-            private Long value; 
-
-            /**
-             * conditionCode.
-             */
-            public Builder conditionCode(String conditionCode) {
-                this.conditionCode = conditionCode;
-                return this;
-            }
-
-            /**
-             * The retention period of a table. Unit: days.
-             */
-            public Builder value(Long value) {
-                this.value = value;
-                return this;
-            }
-
-            public DaysAfterLastTierModificationGreaterThan build() {
-                return new DaysAfterLastTierModificationGreaterThan(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class TierToLongterm extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("daysAfterLastAccessGreaterThan")
-        private DaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan;
+        @com.aliyun.core.annotation.NameInMap("DaysAfterLastAccessGreaterThan")
+        private Long daysAfterLastAccessGreaterThan;
 
-        @com.aliyun.core.annotation.NameInMap("daysAfterLastModificationGreaterThan")
-        private DaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan;
+        @com.aliyun.core.annotation.NameInMap("DaysAfterLastModificationGreaterThan")
+        private Long daysAfterLastModificationGreaterThan;
 
-        @com.aliyun.core.annotation.NameInMap("daysAfterLastTierModificationGreaterThan")
-        private DaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan;
+        @com.aliyun.core.annotation.NameInMap("DaysAfterLastTierModificationGreaterThan")
+        private Long daysAfterLastTierModificationGreaterThan;
 
         private TierToLongterm(Builder builder) {
             this.daysAfterLastAccessGreaterThan = builder.daysAfterLastAccessGreaterThan;
@@ -705,49 +681,67 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * @return daysAfterLastAccessGreaterThan
          */
-        public DaysAfterLastAccessGreaterThan getDaysAfterLastAccessGreaterThan() {
+        public Long getDaysAfterLastAccessGreaterThan() {
             return this.daysAfterLastAccessGreaterThan;
         }
 
         /**
          * @return daysAfterLastModificationGreaterThan
          */
-        public DaysAfterLastModificationGreaterThan getDaysAfterLastModificationGreaterThan() {
+        public Long getDaysAfterLastModificationGreaterThan() {
             return this.daysAfterLastModificationGreaterThan;
         }
 
         /**
          * @return daysAfterLastTierModificationGreaterThan
          */
-        public DaysAfterLastTierModificationGreaterThan getDaysAfterLastTierModificationGreaterThan() {
+        public Long getDaysAfterLastTierModificationGreaterThan() {
             return this.daysAfterLastTierModificationGreaterThan;
         }
 
         public static final class Builder {
-            private DaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan; 
-            private DaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan; 
-            private DaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan; 
+            private Long daysAfterLastAccessGreaterThan; 
+            private Long daysAfterLastModificationGreaterThan; 
+            private Long daysAfterLastTierModificationGreaterThan; 
 
             /**
-             * daysAfterLastAccessGreaterThan.
+             * <p>The system triggers an automatic storage tier change N days after the last access time of data. N is specified by this parameter and corresponds to <code>LastAccessTime</code> that is configured for the table or partition.</p>
+             * <blockquote>
+             * <p> If LastAccessTime of a table or partition is left empty, the following rules are applied:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>For tables or partitions that you created before October 1, 2023, 2023.10.01 00:00:00 in UTC+0 is considered as the last access time.</p>
+             * </li>
+             * <li><p>For tables or partitions that you created on or after October 1, 2023, if no data is accessed, the table or partition creation time is considered as the last access time.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
-            public Builder daysAfterLastAccessGreaterThan(DaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan) {
+            public Builder daysAfterLastAccessGreaterThan(Long daysAfterLastAccessGreaterThan) {
                 this.daysAfterLastAccessGreaterThan = daysAfterLastAccessGreaterThan;
                 return this;
             }
 
             /**
-             * daysAfterLastModificationGreaterThan.
+             * <p>The system triggers an automatic storage tier change N days after the last modification time of data. N is specified by this parameter and corresponds to <code>LastModifiedTime</code> that is configured for the table or partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
-            public Builder daysAfterLastModificationGreaterThan(DaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan) {
+            public Builder daysAfterLastModificationGreaterThan(Long daysAfterLastModificationGreaterThan) {
                 this.daysAfterLastModificationGreaterThan = daysAfterLastModificationGreaterThan;
                 return this;
             }
 
             /**
-             * daysAfterLastTierModificationGreaterThan.
+             * <p>The period after the previous storage tier change time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder daysAfterLastTierModificationGreaterThan(DaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan) {
+            public Builder daysAfterLastTierModificationGreaterThan(Long daysAfterLastTierModificationGreaterThan) {
                 this.daysAfterLastTierModificationGreaterThan = daysAfterLastTierModificationGreaterThan;
                 return this;
             }
@@ -759,198 +753,21 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
-    public static class TierToLowFrequencyDaysAfterLastAccessGreaterThan extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditionCode")
-        private String conditionCode;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private Long value;
-
-        private TierToLowFrequencyDaysAfterLastAccessGreaterThan(Builder builder) {
-            this.conditionCode = builder.conditionCode;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TierToLowFrequencyDaysAfterLastAccessGreaterThan create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditionCode
-         */
-        public String getConditionCode() {
-            return this.conditionCode;
-        }
-
-        /**
-         * @return value
-         */
-        public Long getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String conditionCode; 
-            private Long value; 
-
-            /**
-             * conditionCode.
-             */
-            public Builder conditionCode(String conditionCode) {
-                this.conditionCode = conditionCode;
-                return this;
-            }
-
-            /**
-             * The retention period of a table. Unit: days.
-             */
-            public Builder value(Long value) {
-                this.value = value;
-                return this;
-            }
-
-            public TierToLowFrequencyDaysAfterLastAccessGreaterThan build() {
-                return new TierToLowFrequencyDaysAfterLastAccessGreaterThan(this);
-            } 
-
-        } 
-
-    }
-    public static class TierToLowFrequencyDaysAfterLastModificationGreaterThan extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditionCode")
-        private String conditionCode;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private Long value;
-
-        private TierToLowFrequencyDaysAfterLastModificationGreaterThan(Builder builder) {
-            this.conditionCode = builder.conditionCode;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TierToLowFrequencyDaysAfterLastModificationGreaterThan create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditionCode
-         */
-        public String getConditionCode() {
-            return this.conditionCode;
-        }
-
-        /**
-         * @return value
-         */
-        public Long getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String conditionCode; 
-            private Long value; 
-
-            /**
-             * conditionCode.
-             */
-            public Builder conditionCode(String conditionCode) {
-                this.conditionCode = conditionCode;
-                return this;
-            }
-
-            /**
-             * The retention period of a table. Unit: days.
-             */
-            public Builder value(Long value) {
-                this.value = value;
-                return this;
-            }
-
-            public TierToLowFrequencyDaysAfterLastModificationGreaterThan build() {
-                return new TierToLowFrequencyDaysAfterLastModificationGreaterThan(this);
-            } 
-
-        } 
-
-    }
-    public static class TierToLowFrequencyDaysAfterLastTierModificationGreaterThan extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditionCode")
-        private String conditionCode;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private Long value;
-
-        private TierToLowFrequencyDaysAfterLastTierModificationGreaterThan(Builder builder) {
-            this.conditionCode = builder.conditionCode;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static TierToLowFrequencyDaysAfterLastTierModificationGreaterThan create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditionCode
-         */
-        public String getConditionCode() {
-            return this.conditionCode;
-        }
-
-        /**
-         * @return value
-         */
-        public Long getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String conditionCode; 
-            private Long value; 
-
-            /**
-             * conditionCode.
-             */
-            public Builder conditionCode(String conditionCode) {
-                this.conditionCode = conditionCode;
-                return this;
-            }
-
-            /**
-             * The retention period of a table. Unit: days.
-             */
-            public Builder value(Long value) {
-                this.value = value;
-                return this;
-            }
-
-            public TierToLowFrequencyDaysAfterLastTierModificationGreaterThan build() {
-                return new TierToLowFrequencyDaysAfterLastTierModificationGreaterThan(this);
-            } 
-
-        } 
-
-    }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class TierToLowFrequency extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("daysAfterLastAccessGreaterThan")
-        private TierToLowFrequencyDaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan;
+        @com.aliyun.core.annotation.NameInMap("DaysAfterLastAccessGreaterThan")
+        private Long daysAfterLastAccessGreaterThan;
 
-        @com.aliyun.core.annotation.NameInMap("daysAfterLastModificationGreaterThan")
-        private TierToLowFrequencyDaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan;
+        @com.aliyun.core.annotation.NameInMap("DaysAfterLastModificationGreaterThan")
+        private Long daysAfterLastModificationGreaterThan;
 
-        @com.aliyun.core.annotation.NameInMap("daysAfterLastTierModificationGreaterThan")
-        private TierToLowFrequencyDaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan;
+        @com.aliyun.core.annotation.NameInMap("DaysAfterLastTierModificationGreaterThan")
+        private Long daysAfterLastTierModificationGreaterThan;
 
         private TierToLowFrequency(Builder builder) {
             this.daysAfterLastAccessGreaterThan = builder.daysAfterLastAccessGreaterThan;
@@ -969,49 +786,67 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * @return daysAfterLastAccessGreaterThan
          */
-        public TierToLowFrequencyDaysAfterLastAccessGreaterThan getDaysAfterLastAccessGreaterThan() {
+        public Long getDaysAfterLastAccessGreaterThan() {
             return this.daysAfterLastAccessGreaterThan;
         }
 
         /**
          * @return daysAfterLastModificationGreaterThan
          */
-        public TierToLowFrequencyDaysAfterLastModificationGreaterThan getDaysAfterLastModificationGreaterThan() {
+        public Long getDaysAfterLastModificationGreaterThan() {
             return this.daysAfterLastModificationGreaterThan;
         }
 
         /**
          * @return daysAfterLastTierModificationGreaterThan
          */
-        public TierToLowFrequencyDaysAfterLastTierModificationGreaterThan getDaysAfterLastTierModificationGreaterThan() {
+        public Long getDaysAfterLastTierModificationGreaterThan() {
             return this.daysAfterLastTierModificationGreaterThan;
         }
 
         public static final class Builder {
-            private TierToLowFrequencyDaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan; 
-            private TierToLowFrequencyDaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan; 
-            private TierToLowFrequencyDaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan; 
+            private Long daysAfterLastAccessGreaterThan; 
+            private Long daysAfterLastModificationGreaterThan; 
+            private Long daysAfterLastTierModificationGreaterThan; 
 
             /**
-             * daysAfterLastAccessGreaterThan.
+             * <p>The system triggers an automatic storage tier change N days after the last access time of data. N is specified by this parameter and corresponds to <code>LastAccessTime</code> that is configured for the table or partition.</p>
+             * <blockquote>
+             * <p> If LastAccessTime of a table or partition is left empty, the following rules are applied:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>For tables or partitions that you created before October 1, 2023, 2023.10.01 00:00:00 in UTC+0 is considered as the last access time.</p>
+             * </li>
+             * <li><p>For tables or partitions that you created on or after October 1, 2023, if no data is accessed, the table or partition creation time is considered as the last access time.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
-            public Builder daysAfterLastAccessGreaterThan(TierToLowFrequencyDaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan) {
+            public Builder daysAfterLastAccessGreaterThan(Long daysAfterLastAccessGreaterThan) {
                 this.daysAfterLastAccessGreaterThan = daysAfterLastAccessGreaterThan;
                 return this;
             }
 
             /**
-             * daysAfterLastModificationGreaterThan.
+             * <p>The system triggers an automatic storage tier change N days after the last modification time of data. N is specified by this parameter and corresponds to <code>LastModifiedTime</code> that is configured for the table or partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
-            public Builder daysAfterLastModificationGreaterThan(TierToLowFrequencyDaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan) {
+            public Builder daysAfterLastModificationGreaterThan(Long daysAfterLastModificationGreaterThan) {
                 this.daysAfterLastModificationGreaterThan = daysAfterLastModificationGreaterThan;
                 return this;
             }
 
             /**
-             * daysAfterLastTierModificationGreaterThan.
+             * <p>The period after the previous storage tier change time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder daysAfterLastTierModificationGreaterThan(TierToLowFrequencyDaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan) {
+            public Builder daysAfterLastTierModificationGreaterThan(Long daysAfterLastTierModificationGreaterThan) {
                 this.daysAfterLastTierModificationGreaterThan = daysAfterLastTierModificationGreaterThan;
                 return this;
             }
@@ -1023,6 +858,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class TableLifecycleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TierToLongterm")
         private TierToLongterm tierToLongterm;
@@ -1062,7 +903,7 @@ public class GetProjectResponseBody extends TeaModel {
             private TierToLowFrequency tierToLowFrequency; 
 
             /**
-             * TierToLongterm.
+             * <p>The information about the long-term storage tier.</p>
              */
             public Builder tierToLongterm(TierToLongterm tierToLongterm) {
                 this.tierToLongterm = tierToLongterm;
@@ -1070,7 +911,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * TierToLowFrequency.
+             * <p>The information about the IA storage tier.</p>
              */
             public Builder tierToLowFrequency(TierToLowFrequency tierToLowFrequency) {
                 this.tierToLowFrequency = tierToLowFrequency;
@@ -1084,6 +925,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowFullScan")
         private Boolean allowFullScan;
@@ -1105,6 +952,9 @@ public class GetProjectResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("encryption")
         private Encryption encryption;
+
+        @com.aliyun.core.annotation.NameInMap("externalProjectProperties")
+        private ExternalProjectProperties externalProjectProperties;
 
         @com.aliyun.core.annotation.NameInMap("fdcQuota")
         private String fdcQuota;
@@ -1141,6 +991,7 @@ public class GetProjectResponseBody extends TeaModel {
             this.enableTieredStorage = builder.enableTieredStorage;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
+            this.externalProjectProperties = builder.externalProjectProperties;
             this.fdcQuota = builder.fdcQuota;
             this.retentionDays = builder.retentionDays;
             this.sqlMeteringMax = builder.sqlMeteringMax;
@@ -1207,6 +1058,13 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Encryption getEncryption() {
             return this.encryption;
+        }
+
+        /**
+         * @return externalProjectProperties
+         */
+        public ExternalProjectProperties getExternalProjectProperties() {
+            return this.externalProjectProperties;
         }
 
         /**
@@ -1280,6 +1138,7 @@ public class GetProjectResponseBody extends TeaModel {
             private Boolean enableTieredStorage; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
+            private ExternalProjectProperties externalProjectProperties; 
             private String fdcQuota; 
             private Long retentionDays; 
             private String sqlMeteringMax; 
@@ -1291,7 +1150,10 @@ public class GetProjectResponseBody extends TeaModel {
             private String typeSystem; 
 
             /**
-             * Indicates whether a full table scan on the project is enabled.
+             * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowFullScan(Boolean allowFullScan) {
                 this.allowFullScan = allowFullScan;
@@ -1299,7 +1161,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * This operation does not return a value for this parameter.
+             * <p>The Tunnel parent resource group that is bound to the project. You do not need to pay attention to this group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No value</p>
              */
             public Builder elderTunnelQuota(String elderTunnelQuota) {
                 this.elderTunnelQuota = elderTunnelQuota;
@@ -1307,7 +1172,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.
+             * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableDecimal2(Boolean enableDecimal2) {
                 this.enableDecimal2 = enableDecimal2;
@@ -1315,7 +1183,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * enableFdcCacheForce.
+             * <p>Indicates whether external table caching is forcefully enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFdcCacheForce(Boolean enableFdcCacheForce) {
                 this.enableFdcCacheForce = enableFdcCacheForce;
@@ -1323,7 +1194,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * enableTieredStorage.
+             * <p>Indicates whether <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTieredStorage(Boolean enableTieredStorage) {
                 this.enableTieredStorage = enableTieredStorage;
@@ -1331,7 +1205,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether tunnel quota routing is enabled.
+             * <p>Indicates whether the routing of the Tunnel resource group is enabled.</p>
+             * <ul>
+             * <li>true: The data transfer tasks that are submitted by the project by default use the Tunnel resource group that is bound to the project.</li>
+             * <li>false: The data transfer tasks that are submitted by the project by default use the Tunnel shared resource group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTunnelQuotaRoute(Boolean enableTunnelQuotaRoute) {
                 this.enableTunnelQuotaRoute = enableTunnelQuotaRoute;
@@ -1339,7 +1220,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The encryption information.
+             * <p>The storage encryption properties.</p>
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -1347,7 +1228,18 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * fdcQuota.
+             * <p>The properties of the external project.</p>
+             */
+            public Builder externalProjectProperties(ExternalProjectProperties externalProjectProperties) {
+                this.externalProjectProperties = externalProjectProperties;
+                return this;
+            }
+
+            /**
+             * <p>The quota for external table caching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fdc_quota</p>
              */
             public Builder fdcQuota(String fdcQuota) {
                 this.fdcQuota = fdcQuota;
@@ -1355,7 +1247,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which backup data can be retained.
+             * <p>The retention period for backup data. Unit: days. During the retention period, you can restore data of the version in use to the backup data of any version. Valid values: [0,30]. Default value: 1. The value 0 indicates that the backup feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder retentionDays(Long retentionDays) {
                 this.retentionDays = retentionDays;
@@ -1363,7 +1258,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The upper limit for the resources that are consumed by an SQL statement.
+             * <p>The maximum consumption threshold of a single SQL statement. Formula: Amount of scanned data (GB) × Complexity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder sqlMeteringMax(String sqlMeteringMax) {
                 this.sqlMeteringMax = sqlMeteringMax;
@@ -1371,7 +1269,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the tiered storage.
+             * <p>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">storage tier</a> information.</p>
              */
             public Builder storageTierInfo(StorageTierInfo storageTierInfo) {
                 this.storageTierInfo = storageTierInfo;
@@ -1379,7 +1277,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle of the table in the project.
+             * <p>The table lifecycle properties.</p>
              */
             public Builder tableLifecycle(TableLifecycle tableLifecycle) {
                 this.tableLifecycle = tableLifecycle;
@@ -1387,7 +1285,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * tableLifecycleConfig.
+             * <p>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">properties of tiered storage lifecycle rules</a>. After you configure the properties, the system triggers automatic switching of storage tiers based on the rules.</p>
              */
             public Builder tableLifecycleConfig(TableLifecycleConfig tableLifecycleConfig) {
                 this.tableLifecycleConfig = tableLifecycleConfig;
@@ -1395,7 +1293,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the project.
+             * <p>The time zone that is used by your project. The time zone is the same as the time zone specified by <code>odps.sql.timezone</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -1403,7 +1304,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tunnel quota.
+             * <p>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Tunnel</a> resource group that is bound to the project.</p>
+             * <ul>
+             * <li>Default resource group: The Tunnel shared resource group is used. You cannot use the subscription-based Tunnel resource group for the project. The default resource group is automatically used by the Tunnel service of your project, regardless of the parameter setting.</li>
+             * <li>Subscription-based Tunnel resource group: You can use the subscription-based Tunnel resource group for the project.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Quota</p>
              */
             public Builder tunnelQuota(String tunnelQuota) {
                 this.tunnelQuota = tunnelQuota;
@@ -1411,7 +1319,16 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The data type edition. Valid values: -**1**: MaxCompute V1.0 data type edition. -**2**: MaxCompute V2.0 data type edition. -**hive**: Hive-compatible data type edition.
+             * <p>The data type edition. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: MaxCompute V1.0 data type edition</li>
+             * <li><strong>2</strong>: MaxCompute V2.0 data type edition</li>
+             * <li><strong>hive</strong>: Hive-compatible data type edition</li>
+             * </ul>
+             * <p>For more information about the differences among the three data type editions, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder typeSystem(String typeSystem) {
                 this.typeSystem = typeSystem;
@@ -1425,6 +1342,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class SaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
@@ -1464,7 +1387,10 @@ public class GetProjectResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The ID of the resource.
+             * <p>The instance ID of the default computing quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_name</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -1472,7 +1398,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The billing method of the default computing quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1486,6 +1415,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class ProjectProtection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("exceptionPolicy")
         private String exceptionPolicy;
@@ -1525,7 +1460,24 @@ public class GetProjectResponseBody extends TeaModel {
             private Boolean _protected; 
 
             /**
-             * The exception policy. If cross-project data access operations are required, the project owner must configure an exception policy in advance to allow the specified user to transfer data of a specified object from the current project to a specified project. After the exception policy is configured, data of the object can be transferred to the specified project even if the project data protection feature is enabled.
+             * <p>If you enable the project data protection mechanism, you can configure exception or trusted projects. This allows specified users to transfer data of a specified object to a specified project. The project data protection mechanism does not take effect in all the situations that are specified in the exception policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;Version&quot;: &quot;1&quot;,
+             *     &quot;Statement&quot;:
+             *     [{
+             *         &quot;Effect&quot;:&quot;Allow&quot;,
+             *         &quot;Principal&quot;:&quot;<Principal>&quot;,
+             *         &quot;Action&quot;:[&quot;odps:<Action1>[, <Action2>, ...]&quot;],
+             *         &quot;Resource&quot;:&quot;acs:odps:*:<Resource>&quot;,
+             *         &quot;Condition&quot;:{
+             *             &quot;StringEquals&quot;: {
+             *                 &quot;odps:TaskType&quot;:[&quot;<Tasktype>&quot;]
+             *             }
+             *         }
+             *     }]
+             *     }</p>
              */
             public Builder exceptionPolicy(String exceptionPolicy) {
                 this.exceptionPolicy = exceptionPolicy;
@@ -1533,7 +1485,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether project data protection is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> is enabled for the project. This allows or denies data transfer across projects. By default, the data protection mechanism is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _protected(Boolean _protected) {
                 this._protected = _protected;
@@ -1547,6 +1502,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class SecurityProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableDownloadPrivilege")
         private Boolean enableDownloadPrivilege;
@@ -1646,7 +1607,10 @@ public class GetProjectResponseBody extends TeaModel {
             private Boolean usingPolicy; 
 
             /**
-             * Indicates whether Download control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. By default, this feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableDownloadPrivilege(Boolean enableDownloadPrivilege) {
                 this.enableDownloadPrivilege = enableDownloadPrivilege;
@@ -1654,7 +1618,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether label-based access control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature is enabled. By default, this feature is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder labelSecurity(Boolean labelSecurity) {
                 this.labelSecurity = labelSecurity;
@@ -1662,7 +1629,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the object creator is allowed to perform operations on objects.
+             * <p>Indicates whether to allow the object creator to have the access permissions on the object. The default value is true, which indicates that the object creator has the access permissions on the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder objectCreatorHasAccessPermission(Boolean objectCreatorHasAccessPermission) {
                 this.objectCreatorHasAccessPermission = objectCreatorHasAccessPermission;
@@ -1670,7 +1640,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the object creator is allowed to authorize other users to perform operations on objects.
+             * <p>Indicates whether the object creator has the authorization permissions on the object. The default value is true, which indicates that the object creator has the authorization permissions on the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder objectCreatorHasGrantPermission(Boolean objectCreatorHasGrantPermission) {
                 this.objectCreatorHasGrantPermission = objectCreatorHasGrantPermission;
@@ -1678,7 +1651,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether project data protection is enabled.
+             * <p>The properties of the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>.</p>
              */
             public Builder projectProtection(ProjectProtection projectProtection) {
                 this.projectProtection = projectProtection;
@@ -1686,7 +1659,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether ACL-based access control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. By default, this feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder usingAcl(Boolean usingAcl) {
                 this.usingAcl = usingAcl;
@@ -1694,7 +1670,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether policy-based access control is enabled.
+             * <p>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature is enabled. By default, this feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder usingPolicy(Boolean usingPolicy) {
                 this.usingPolicy = usingPolicy;
@@ -1708,6 +1687,12 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProjectResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
@@ -1749,7 +1734,7 @@ public class GetProjectResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("superAdmins")
-        private java.util.List < String > superAdmins;
+        private java.util.List<String> superAdmins;
 
         @com.aliyun.core.annotation.NameInMap("threeTierModel")
         private Boolean threeTierModel;
@@ -1878,7 +1863,7 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * @return superAdmins
          */
-        public java.util.List < String > getSuperAdmins() {
+        public java.util.List<String> getSuperAdmins() {
             return this.superAdmins;
         }
 
@@ -1910,12 +1895,15 @@ public class GetProjectResponseBody extends TeaModel {
             private SaleTag saleTag; 
             private SecurityProperties securityProperties; 
             private String status; 
-            private java.util.List < String > superAdmins; 
+            private java.util.List<String> superAdmins; 
             private Boolean threeTierModel; 
             private String type; 
 
             /**
-             * The comment of the project.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute project</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1923,7 +1911,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage.
+             * <p>The total storage usage. The storage space that is occupied by your project, which is the logical storage space after your project data is collected and compressed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16489027</p>
              */
             public Builder costStorage(String costStorage) {
                 this.costStorage = costStorage;
@@ -1931,7 +1922,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Create time
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1704380838000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1939,7 +1933,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The default computing quota.
+             * <p>The default computing quota that is used to allocate computing resources. If you do not specify a computing quota for your project, the jobs that are initiated by your project consume the computing resources in the default quota. For more information about how to use computing resources, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use quota groups for computing resources</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_a</p>
              */
             public Builder defaultQuota(String defaultQuota) {
                 this.defaultQuota = defaultQuota;
@@ -1947,7 +1944,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist.
+             * <p>The information about the IP address whitelist.</p>
              */
             public Builder ipWhiteList(IpWhiteList ipWhiteList) {
                 this.ipWhiteList = ipWhiteList;
@@ -1955,7 +1952,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MaxCompute project.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1963,7 +1963,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The owner of the project.
+             * <p>The account information of the project owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565950907343451</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1971,7 +1974,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the project.
+             * <p>The billing method of the default computing quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PayAsYouGo</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -1979,7 +1985,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The properties of the project.
+             * <p>The basic properties of the project.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -1987,7 +1993,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * RegionID
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1995,7 +2004,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The instance ID and billing method of the default computing quota.</p>
              */
             public Builder saleTag(SaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -2003,7 +2012,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The permission properties.
+             * <p>The permission properties.</p>
              */
             public Builder securityProperties(SecurityProperties securityProperties) {
                 this.securityProperties = securityProperties;
@@ -2011,7 +2020,16 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the project. Valid values: -**AVAILABLE**: The project was available. -**READONLY**: The project was read only. -**FROZEN**: The project was frozen. -**DELETING**: The project was being deleted.
+             * <p>The project status. Valid values:</p>
+             * <ul>
+             * <li><strong>AVAILABLE</strong></li>
+             * <li><strong>READONLY</strong></li>
+             * <li><strong>FROZEN</strong></li>
+             * <li><strong>DELETING</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2019,15 +2037,18 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The Super_Administrator role.
+             * <p>The list of <code>Super_Administrator</code> role members of the project.</p>
              */
-            public Builder superAdmins(java.util.List < String > superAdmins) {
+            public Builder superAdmins(java.util.List<String> superAdmins) {
                 this.superAdmins = superAdmins;
                 return this;
             }
 
             /**
-             * Indicates whether the current project supports the three-layer model of MaxCompute.
+             * <p>Indicates whether data storage by schema is supported. MaxCompute supports the schema feature. This feature allows you to classify objects such as tables, resources, and user-defined functions (UDFs) in a project by schema. You can create multiple schemas in a project. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder threeTierModel(Boolean threeTierModel) {
                 this.threeTierModel = threeTierModel;
@@ -2035,7 +2056,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the project. Valid values: -**managed**: The project is an internal project. -**external**: The project is an external project.
+             * <p>The project type. Valid values:</p>
+             * <ul>
+             * <li><strong>managed</strong>: internal project</li>
+             * <li><strong>external</strong>: external project</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>managed</p>
              */
             public Builder type(String type) {
                 this.type = type;

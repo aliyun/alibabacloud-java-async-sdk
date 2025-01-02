@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListResourcesRequest</p>
@@ -110,7 +116,11 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -119,7 +129,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * Specifies the marker after which the returned list begins.
+         * <p>Specifies the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -128,7 +141,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxItem(Integer maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -137,7 +153,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The name of the resource.
+         * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -146,7 +165,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The name of the schema.
+         * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("schemaName", schemaName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionsRequest} extends {@link RequestModel}
  *
  * <p>ListFunctionsRequest</p>
@@ -110,7 +116,11 @@ public class ListFunctionsRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_project</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -119,7 +129,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * Specifies the marker after which the returned list begins.
+         * <p>Specifies the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("marker", marker);
@@ -128,7 +141,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxItem(Integer maxItem) {
             this.putQueryParameter("maxItem", maxItem);
@@ -137,7 +153,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.
+         * <p>The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -146,7 +165,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * the name of schema.
+         * <p>the name of schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("schemaName", schemaName);

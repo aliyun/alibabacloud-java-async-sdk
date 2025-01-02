@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPackageRequest} extends {@link RequestModel}
  *
  * <p>GetPackageRequest</p>
@@ -83,7 +89,11 @@ public class GetPackageRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -92,7 +102,11 @@ public class GetPackageRequest extends Request {
         }
 
         /**
-         * The name of the package.
+         * <p>The name of the package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_package</p>
          */
         public Builder packageName(String packageName) {
             this.putPathParameter("packageName", packageName);
@@ -101,7 +115,10 @@ public class GetPackageRequest extends Request {
         }
 
         /**
-         * The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.
+         * <p>The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectB</p>
          */
         public Builder sourceProject(String sourceProject) {
             this.putQueryParameter("sourceProject", sourceProject);

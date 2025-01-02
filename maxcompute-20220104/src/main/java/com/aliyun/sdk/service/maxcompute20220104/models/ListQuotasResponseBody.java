@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotasResponseBody} extends {@link TeaModel}
  *
  * <p>ListQuotasResponseBody</p>
@@ -24,7 +30,7 @@ public class ListQuotasResponseBody extends TeaModel {
     private Long maxItem;
 
     @com.aliyun.core.annotation.NameInMap("quotaInfoList")
-    private java.util.List < QuotaInfoList> quotaInfoList;
+    private java.util.List<QuotaInfoList> quotaInfoList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -77,7 +83,7 @@ public class ListQuotasResponseBody extends TeaModel {
     /**
      * @return quotaInfoList
      */
-    public java.util.List < QuotaInfoList> getQuotaInfoList() {
+    public java.util.List<QuotaInfoList> getQuotaInfoList() {
         return this.quotaInfoList;
     }
 
@@ -93,11 +99,14 @@ public class ListQuotasResponseBody extends TeaModel {
         private Data data; 
         private String marker; 
         private Long maxItem; 
-        private java.util.List < QuotaInfoList> quotaInfoList; 
+        private java.util.List<QuotaInfoList> quotaInfoList; 
         private String requestId; 
 
         /**
-         * A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2w6Olxc+cMPjUtUMo/CvPe4IK7f7kIQFrIZjyc</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +114,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +122,10 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates the marker after which the returned list begins.
+         * <p>Indicates the marker after which the returned list begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -121,7 +133,10 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxItem(Long maxItem) {
             this.maxItem = maxItem;
@@ -129,15 +144,18 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         /**
-         * The list of quotas.
+         * <p>The list of quotas.</p>
          */
-        public Builder quotaInfoList(java.util.List < QuotaInfoList> quotaInfoList) {
+        public Builder quotaInfoList(java.util.List<QuotaInfoList> quotaInfoList) {
             this.quotaInfoList = quotaInfoList;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc12e6f16677875480593081d2956</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +168,12 @@ public class ListQuotasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -189,7 +213,10 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Department</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -197,7 +224,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a12351qHDP6YEQMt</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -211,6 +241,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class BillingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
@@ -262,11 +298,14 @@ public class ListQuotasResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The billing method of the quota. Valid values:
-             * <p>
+             * <p>The billing method of the quota. Valid values:</p>
+             * <ul>
+             * <li>subscription: a subscription quota.</li>
+             * <li>payasyougo: a pay-as-you-go quota.</li>
+             * </ul>
              * 
-             * *   subscription: a subscription quota.
-             * *   payasyougo: a pay-as-you-go quota.
+             * <strong>example:</strong>
+             * <p>subscription</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -274,7 +313,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the order.
+             * <p>The specifications of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OdpsStandard</p>
              */
             public Builder odpsSpecCode(String odpsSpecCode) {
                 this.odpsSpecCode = odpsSpecCode;
@@ -282,7 +324,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45245678</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -296,9 +341,15 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class SaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceIds")
-        private java.util.List < String > resourceIds;
+        private java.util.List<String> resourceIds;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
@@ -319,7 +370,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return resourceIds
          */
-        public java.util.List < String > getResourceIds() {
+        public java.util.List<String> getResourceIds() {
             return this.resourceIds;
         }
 
@@ -331,19 +382,22 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > resourceIds; 
+            private java.util.List<String> resourceIds; 
             private String resourceType; 
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
              */
-            public Builder resourceIds(java.util.List < String > resourceIds) {
+            public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
                 return this;
             }
 
             /**
-             * The type of the object. Valid values: quota and project.
+             * <p>The type of the object. Valid values: quota and project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;quota&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -357,6 +411,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class ScheduleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
@@ -468,7 +528,10 @@ public class ListQuotasResponseBody extends TeaModel {
             private String timezone; 
 
             /**
-             * The quota plan that takes effect based on the scheduling plan.
+             * <p>The quota plan that takes effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder currPlan(String currPlan) {
                 this.currPlan = currPlan;
@@ -476,7 +539,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the current quota plan is scheduled.
+             * <p>The time when the current quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0800</p>
              */
             public Builder currTime(String currTime) {
                 this.currTime = currTime;
@@ -484,7 +550,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The next quota plan that will take effect based on the scheduling plan.
+             * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planB</p>
              */
             public Builder nextPlan(String nextPlan) {
                 this.nextPlan = nextPlan;
@@ -492,7 +561,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next quota plan is scheduled.
+             * <p>The time when the next quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700</p>
              */
             public Builder nextTime(String nextTime) {
                 this.nextTime = nextTime;
@@ -500,7 +572,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.
+             * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planC</p>
              */
             public Builder oncePlan(String oncePlan) {
                 this.oncePlan = oncePlan;
@@ -508,7 +583,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota plan immediately takes effect.
+             * <p>The time when the quota plan immediately takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder onceTime(String onceTime) {
                 this.onceTime = onceTime;
@@ -516,7 +594,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -524,7 +605,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the project.
+             * <p>The time zone of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -538,6 +622,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class SubQuotaInfoListBillingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
@@ -589,11 +679,14 @@ public class ListQuotasResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The billing method of the quota. Valid values:
-             * <p>
+             * <p>The billing method of the quota. Valid values:</p>
+             * <ul>
+             * <li>subscription: a subscription quota.</li>
+             * <li>payasyougo: a pay-as-you-go quota.</li>
+             * </ul>
              * 
-             * *   subscription: a subscription quota.
-             * *   payasyougo: a pay-as-you-go quota.
+             * <strong>example:</strong>
+             * <p>subscription</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -601,7 +694,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the order.
+             * <p>The specifications of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OdpsStandard</p>
              */
             public Builder odpsSpecCode(String odpsSpecCode) {
                 this.odpsSpecCode = odpsSpecCode;
@@ -609,7 +705,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45245678</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -623,9 +722,15 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class SubQuotaInfoListSaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceIds")
-        private java.util.List < String > resourceIds;
+        private java.util.List<String> resourceIds;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
@@ -646,7 +751,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return resourceIds
          */
-        public java.util.List < String > getResourceIds() {
+        public java.util.List<String> getResourceIds() {
             return this.resourceIds;
         }
 
@@ -658,19 +763,22 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > resourceIds; 
+            private java.util.List<String> resourceIds; 
             private String resourceType; 
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
              */
-            public Builder resourceIds(java.util.List < String > resourceIds) {
+            public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
                 return this;
             }
 
             /**
-             * The type of the object. Valid values: quota and project.
+             * <p>The type of the object. Valid values: quota and project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;quota&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -684,6 +792,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class SubQuotaInfoListScheduleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
@@ -795,7 +909,10 @@ public class ListQuotasResponseBody extends TeaModel {
             private String timezone; 
 
             /**
-             * The quota plan that takes effect based on the scheduling plan.
+             * <p>The quota plan that takes effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder currPlan(String currPlan) {
                 this.currPlan = currPlan;
@@ -803,7 +920,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the current quota plan is scheduled.
+             * <p>The time when the current quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0800</p>
              */
             public Builder currTime(String currTime) {
                 this.currTime = currTime;
@@ -811,7 +931,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The next quota plan that will take effect based on the scheduling plan.
+             * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planB</p>
              */
             public Builder nextPlan(String nextPlan) {
                 this.nextPlan = nextPlan;
@@ -819,7 +942,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next quota plan is scheduled.
+             * <p>The time when the next quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700</p>
              */
             public Builder nextTime(String nextTime) {
                 this.nextTime = nextTime;
@@ -827,7 +953,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.
+             * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planC</p>
              */
             public Builder oncePlan(String oncePlan) {
                 this.oncePlan = oncePlan;
@@ -835,7 +964,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota plan immediately takes effect.
+             * <p>The time when the quota plan immediately takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder onceTime(String onceTime) {
                 this.onceTime = onceTime;
@@ -843,7 +975,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -851,7 +986,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the project.
+             * <p>The time zone of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -865,6 +1003,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class SubQuotaInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private SubQuotaInfoListBillingPolicy billingPolicy;
@@ -888,7 +1032,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map < String, ? > parameter;
+        private java.util.Map<String, ?> parameter;
 
         @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
@@ -997,7 +1141,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map < String, ? > getParameter() {
+        public java.util.Map<String, ?> getParameter() {
             return this.parameter;
         }
 
@@ -1072,7 +1216,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map < String, ? > parameter; 
+            private java.util.Map<String, ?> parameter; 
             private String parentId; 
             private String regionId; 
             private SubQuotaInfoListSaleTag saleTag; 
@@ -1084,7 +1228,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The information of the order.
+             * <p>The information of the order.</p>
              */
             public Builder billingPolicy(SubQuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -1092,7 +1236,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AT-120N</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -1100,7 +1247,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T02:14:44Z</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1108,7 +1258,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the resource.
+             * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>672863518</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -1116,7 +1269,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the level-2 quota.
+             * <p>The ID of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000048</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1124,7 +1280,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the level-2 quota.
+             * <p>The name of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subquotaA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1132,7 +1291,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the level-2 quota.
+             * <p>The nickname of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subquotaA</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -1140,15 +1302,25 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the quota.
+             * <p>The description of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minCU&quot;:10,	
+             * &quot;adhocCU&quot;:0,
+             * &quot;maxCU&quot;:10,
+             * &quot;schedulerType&quot;:&quot;Fair&quot;,
+             * }</p>
              */
-            public Builder parameter(java.util.Map < String, ? > parameter) {
+            public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;
                 return this;
             }
 
             /**
-             * The ID of the parent resource.
+             * <p>The ID of the parent resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -1156,7 +1328,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1164,7 +1339,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</p>
              */
             public Builder saleTag(SubQuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1172,7 +1347,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the scheduling plan.
+             * <p>The information of the scheduling plan.</p>
              */
             public Builder scheduleInfo(SubQuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -1180,7 +1355,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint group.
+             * <p>The status of the endpoint group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1188,7 +1366,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource for the quota.
+             * <p>The tag of the resource for the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1196,7 +1377,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>280747109771520</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1204,7 +1388,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.
+             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FUXI_ONLINE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1212,7 +1399,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the algorithm image.
+             * <p>The version of the algorithm image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1226,9 +1416,15 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class DataQuotaInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private BillingPolicy billingPolicy;
@@ -1252,7 +1448,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map < String, ? > parameter;
+        private java.util.Map<String, ?> parameter;
 
         @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
@@ -1270,7 +1466,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("subQuotaInfoList")
-        private java.util.List < SubQuotaInfoList> subQuotaInfoList;
+        private java.util.List<SubQuotaInfoList> subQuotaInfoList;
 
         @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
@@ -1317,7 +1513,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1373,7 +1569,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map < String, ? > getParameter() {
+        public java.util.Map<String, ?> getParameter() {
             return this.parameter;
         }
 
@@ -1415,7 +1611,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return subQuotaInfoList
          */
-        public java.util.List < SubQuotaInfoList> getSubQuotaInfoList() {
+        public java.util.List<SubQuotaInfoList> getSubQuotaInfoList() {
             return this.subQuotaInfoList;
         }
 
@@ -1448,7 +1644,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private BillingPolicy billingPolicy; 
             private String cluster; 
             private Long createTime; 
@@ -1456,28 +1652,28 @@ public class ListQuotasResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map < String, ? > parameter; 
+            private java.util.Map<String, ?> parameter; 
             private String parentId; 
             private String regionId; 
             private SaleTag saleTag; 
             private ScheduleInfo scheduleInfo; 
             private String status; 
-            private java.util.List < SubQuotaInfoList> subQuotaInfoList; 
+            private java.util.List<SubQuotaInfoList> subQuotaInfoList; 
             private String tag; 
             private String tenantId; 
             private String type; 
             private String version; 
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The information of the order.
+             * <p>The information of the order.</p>
              */
             public Builder billingPolicy(BillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -1485,7 +1681,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AT-120N</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -1493,7 +1692,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T02:14:44Z</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1501,7 +1703,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the resource.
+             * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>672863518</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -1509,7 +1714,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota ID.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1517,7 +1725,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the quota.
+             * <p>The name of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1525,7 +1736,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the quota.
+             * <p>The alias of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_nickname</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -1533,15 +1747,25 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the quota.
+             * <p>The description of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minCU&quot;:10,	
+             * &quot;adhocCU&quot;:0,
+             * &quot;maxCU&quot;:10,
+             * &quot;schedulerType&quot;:&quot;Fair&quot;,
+             * }</p>
              */
-            public Builder parameter(java.util.Map < String, ? > parameter) {
+            public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;
                 return this;
             }
 
             /**
-             * The ID of the parent resource.
+             * <p>The ID of the parent resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -1549,7 +1773,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1557,7 +1784,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</p>
              */
             public Builder saleTag(SaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -1565,7 +1792,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the scheduling plan.
+             * <p>The information of the scheduling plan.</p>
              */
             public Builder scheduleInfo(ScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -1573,7 +1800,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint group.
+             * <p>The status of the endpoint group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1581,15 +1811,18 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the level-2 quota.
+             * <p>The information of the level-2 quota.</p>
              */
-            public Builder subQuotaInfoList(java.util.List < SubQuotaInfoList> subQuotaInfoList) {
+            public Builder subQuotaInfoList(java.util.List<SubQuotaInfoList> subQuotaInfoList) {
                 this.subQuotaInfoList = subQuotaInfoList;
                 return this;
             }
 
             /**
-             * The tag of the resource for the quota.
+             * <p>The tag of the resource for the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1597,7 +1830,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>280747109771520</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1605,7 +1841,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.
+             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FUXI_ONLINE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1613,7 +1852,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1627,6 +1869,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -1638,7 +1886,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private Long maxItem;
 
         @com.aliyun.core.annotation.NameInMap("quotaInfoList")
-        private java.util.List < DataQuotaInfoList> quotaInfoList;
+        private java.util.List<DataQuotaInfoList> quotaInfoList;
 
         private Data(Builder builder) {
             this.nextToken = builder.nextToken;
@@ -1679,7 +1927,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return quotaInfoList
          */
-        public java.util.List < DataQuotaInfoList> getQuotaInfoList() {
+        public java.util.List<DataQuotaInfoList> getQuotaInfoList() {
             return this.quotaInfoList;
         }
 
@@ -1687,10 +1935,13 @@ public class ListQuotasResponseBody extends TeaModel {
             private String nextToken; 
             private String marker; 
             private Long maxItem; 
-            private java.util.List < DataQuotaInfoList> quotaInfoList; 
+            private java.util.List<DataQuotaInfoList> quotaInfoList; 
 
             /**
-             * A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;abcde&quot;</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1698,7 +1949,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the marker after which the returned list begins.
+             * <p>Indicates the marker after which the returned list begins.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
              */
             public Builder marker(String marker) {
                 this.marker = marker;
@@ -1706,7 +1960,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries returned per page.
+             * <p>The maximum number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxItem(Long maxItem) {
                 this.maxItem = maxItem;
@@ -1714,9 +1971,9 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The list of quotas.
+             * <p>The list of quotas.</p>
              */
-            public Builder quotaInfoList(java.util.List < DataQuotaInfoList> quotaInfoList) {
+            public Builder quotaInfoList(java.util.List<DataQuotaInfoList> quotaInfoList) {
                 this.quotaInfoList = quotaInfoList;
                 return this;
             }
@@ -1728,6 +1985,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1767,7 +2030,10 @@ public class ListQuotasResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Department</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1775,7 +2041,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1789,6 +2058,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListBillingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
@@ -1840,11 +2115,14 @@ public class ListQuotasResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The billing method of the quota. Valid values:
-             * <p>
+             * <p>The billing method of the quota. Valid values:</p>
+             * <ul>
+             * <li>subscription: a subscription quota.</li>
+             * <li>payasyougo: a pay-as-you-go quota.</li>
+             * </ul>
              * 
-             * *   subscription: a subscription quota.
-             * *   payasyougo: a pay-as-you-go quota.
+             * <strong>example:</strong>
+             * <p>subscription</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -1852,7 +2130,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the order.
+             * <p>The specifications of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OdpsStandard</p>
              */
             public Builder odpsSpecCode(String odpsSpecCode) {
                 this.odpsSpecCode = odpsSpecCode;
@@ -1860,7 +2141,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45245678</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -1874,9 +2158,15 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListSaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceIds")
-        private java.util.List < String > resourceIds;
+        private java.util.List<String> resourceIds;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
@@ -1897,7 +2187,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return resourceIds
          */
-        public java.util.List < String > getResourceIds() {
+        public java.util.List<String> getResourceIds() {
             return this.resourceIds;
         }
 
@@ -1909,19 +2199,22 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > resourceIds; 
+            private java.util.List<String> resourceIds; 
             private String resourceType; 
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
              */
-            public Builder resourceIds(java.util.List < String > resourceIds) {
+            public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
                 return this;
             }
 
             /**
-             * The type of the object. Valid values: quota and project.
+             * <p>The type of the object. Valid values: quota and project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;project&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1935,6 +2228,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListScheduleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
@@ -2046,7 +2345,10 @@ public class ListQuotasResponseBody extends TeaModel {
             private String timezone; 
 
             /**
-             * The quota plan that takes effect based on the scheduling plan.
+             * <p>The quota plan that takes effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder currPlan(String currPlan) {
                 this.currPlan = currPlan;
@@ -2054,7 +2356,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the current quota plan is scheduled.
+             * <p>The time when the current quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0800</p>
              */
             public Builder currTime(String currTime) {
                 this.currTime = currTime;
@@ -2062,7 +2367,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The next quota plan that will take effect based on the scheduling plan.
+             * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planB</p>
              */
             public Builder nextPlan(String nextPlan) {
                 this.nextPlan = nextPlan;
@@ -2070,7 +2378,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next quota plan is scheduled.
+             * <p>The time when the next quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700</p>
              */
             public Builder nextTime(String nextTime) {
                 this.nextTime = nextTime;
@@ -2078,7 +2389,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.
+             * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planC</p>
              */
             public Builder oncePlan(String oncePlan) {
                 this.oncePlan = oncePlan;
@@ -2086,7 +2400,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota plan immediately takes effect.
+             * <p>The time when the quota plan immediately takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder onceTime(String onceTime) {
                 this.onceTime = onceTime;
@@ -2094,7 +2411,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -2102,7 +2422,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the project.
+             * <p>The time zone of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -2116,6 +2439,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListSubQuotaInfoListBillingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
@@ -2167,11 +2496,14 @@ public class ListQuotasResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * The billing method of the quota. Valid values:
-             * <p>
+             * <p>The billing method of the quota. Valid values:</p>
+             * <ul>
+             * <li>subscription: a subscription quota.</li>
+             * <li>payasyougo: a pay-as-you-go quota.</li>
+             * </ul>
              * 
-             * *   subscription: a subscription quota.
-             * *   payasyougo: a pay-as-you-go quota.
+             * <strong>example:</strong>
+             * <p>subscription</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -2179,7 +2511,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the order.
+             * <p>The specifications of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OdpsStandard</p>
              */
             public Builder odpsSpecCode(String odpsSpecCode) {
                 this.odpsSpecCode = odpsSpecCode;
@@ -2187,7 +2522,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45245678</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -2201,9 +2539,15 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListSubQuotaInfoListSaleTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceIds")
-        private java.util.List < String > resourceIds;
+        private java.util.List<String> resourceIds;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
@@ -2224,7 +2568,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return resourceIds
          */
-        public java.util.List < String > getResourceIds() {
+        public java.util.List<String> getResourceIds() {
             return this.resourceIds;
         }
 
@@ -2236,19 +2580,22 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > resourceIds; 
+            private java.util.List<String> resourceIds; 
             private String resourceType; 
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
              */
-            public Builder resourceIds(java.util.List < String > resourceIds) {
+            public Builder resourceIds(java.util.List<String> resourceIds) {
                 this.resourceIds = resourceIds;
                 return this;
             }
 
             /**
-             * The type of the object. Valid values: quota and project.
+             * <p>The type of the object. Valid values: quota and project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;quota&quot;</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -2262,6 +2609,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListSubQuotaInfoListScheduleInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
@@ -2373,7 +2726,10 @@ public class ListQuotasResponseBody extends TeaModel {
             private String timezone; 
 
             /**
-             * The quota plan that takes effect based on the scheduling plan.
+             * <p>The quota plan that takes effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planA</p>
              */
             public Builder currPlan(String currPlan) {
                 this.currPlan = currPlan;
@@ -2381,7 +2737,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the current quota plan is scheduled.
+             * <p>The time when the current quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0800</p>
              */
             public Builder currTime(String currTime) {
                 this.currTime = currTime;
@@ -2389,7 +2748,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The next quota plan that will take effect based on the scheduling plan.
+             * <p>The next quota plan that will take effect based on the scheduling plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planB</p>
              */
             public Builder nextPlan(String nextPlan) {
                 this.nextPlan = nextPlan;
@@ -2397,7 +2759,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next quota plan is scheduled.
+             * <p>The time when the next quota plan is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700</p>
              */
             public Builder nextTime(String nextTime) {
                 this.nextTime = nextTime;
@@ -2405,7 +2770,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.
+             * <p>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planC</p>
              */
             public Builder oncePlan(String oncePlan) {
                 this.oncePlan = oncePlan;
@@ -2413,7 +2781,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the quota plan immediately takes effect.
+             * <p>The time when the quota plan immediately takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1500</p>
              */
             public Builder onceTime(String onceTime) {
                 this.onceTime = onceTime;
@@ -2421,7 +2792,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userA</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -2429,7 +2803,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the project.
+             * <p>The time zone of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -2443,6 +2820,12 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoListSubQuotaInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private QuotaInfoListSubQuotaInfoListBillingPolicy billingPolicy;
@@ -2466,7 +2849,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map < String, ? > parameter;
+        private java.util.Map<String, ?> parameter;
 
         @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
@@ -2575,7 +2958,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map < String, ? > getParameter() {
+        public java.util.Map<String, ?> getParameter() {
             return this.parameter;
         }
 
@@ -2650,7 +3033,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map < String, ? > parameter; 
+            private java.util.Map<String, ?> parameter; 
             private String parentId; 
             private String regionId; 
             private QuotaInfoListSubQuotaInfoListSaleTag saleTag; 
@@ -2662,7 +3045,7 @@ public class ListQuotasResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The information of the order.
+             * <p>The information of the order.</p>
              */
             public Builder billingPolicy(QuotaInfoListSubQuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -2670,7 +3053,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AT-120N</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -2678,7 +3064,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T02:14:44Z</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -2686,7 +3075,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the resource.
+             * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>672863518</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -2694,7 +3086,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the level-2 quota.
+             * <p>The ID of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000048</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2702,7 +3097,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the level-2 quota.
+             * <p>The name of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subquotaA</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2710,7 +3108,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the level-2 quota.
+             * <p>The alias of the level-2 quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subquotaA</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -2718,15 +3119,25 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the quota.
+             * <p>The description of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minCU&quot;:10,	
+             * &quot;adhocCU&quot;:0,
+             * &quot;maxCU&quot;:10,
+             * &quot;schedulerType&quot;:&quot;Fair&quot;,
+             * }</p>
              */
-            public Builder parameter(java.util.Map < String, ? > parameter) {
+            public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;
                 return this;
             }
 
             /**
-             * The ID of the parent resource.
+             * <p>The ID of the parent resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -2734,7 +3145,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2742,7 +3156,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</p>
              */
             public Builder saleTag(QuotaInfoListSubQuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -2750,7 +3164,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the scheduling plan.
+             * <p>The information of the scheduling plan.</p>
              */
             public Builder scheduleInfo(QuotaInfoListSubQuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -2758,7 +3172,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint group.
+             * <p>The status of the endpoint group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2766,7 +3183,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the resource for the quota.
+             * <p>The tag of the resource for the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -2774,7 +3194,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>280747109771520</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -2782,7 +3205,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.
+             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FUXI_ONLINE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2790,7 +3216,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2804,9 +3233,15 @@ public class ListQuotasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQuotasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotasResponseBody</p>
+     */
     public static class QuotaInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < QuotaInfoListTags> tags;
+        private java.util.List<QuotaInfoListTags> tags;
 
         @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private QuotaInfoListBillingPolicy billingPolicy;
@@ -2830,7 +3265,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map < String, ? > parameter;
+        private java.util.Map<String, ?> parameter;
 
         @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
@@ -2848,7 +3283,7 @@ public class ListQuotasResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("subQuotaInfoList")
-        private java.util.List < QuotaInfoListSubQuotaInfoList> subQuotaInfoList;
+        private java.util.List<QuotaInfoListSubQuotaInfoList> subQuotaInfoList;
 
         @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
@@ -2895,7 +3330,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < QuotaInfoListTags> getTags() {
+        public java.util.List<QuotaInfoListTags> getTags() {
             return this.tags;
         }
 
@@ -2951,7 +3386,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map < String, ? > getParameter() {
+        public java.util.Map<String, ?> getParameter() {
             return this.parameter;
         }
 
@@ -2993,7 +3428,7 @@ public class ListQuotasResponseBody extends TeaModel {
         /**
          * @return subQuotaInfoList
          */
-        public java.util.List < QuotaInfoListSubQuotaInfoList> getSubQuotaInfoList() {
+        public java.util.List<QuotaInfoListSubQuotaInfoList> getSubQuotaInfoList() {
             return this.subQuotaInfoList;
         }
 
@@ -3026,7 +3461,7 @@ public class ListQuotasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < QuotaInfoListTags> tags; 
+            private java.util.List<QuotaInfoListTags> tags; 
             private QuotaInfoListBillingPolicy billingPolicy; 
             private String cluster; 
             private Long createTime; 
@@ -3034,28 +3469,28 @@ public class ListQuotasResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map < String, ? > parameter; 
+            private java.util.Map<String, ?> parameter; 
             private String parentId; 
             private String regionId; 
             private QuotaInfoListSaleTag saleTag; 
             private QuotaInfoListScheduleInfo scheduleInfo; 
             private String status; 
-            private java.util.List < QuotaInfoListSubQuotaInfoList> subQuotaInfoList; 
+            private java.util.List<QuotaInfoListSubQuotaInfoList> subQuotaInfoList; 
             private String tag; 
             private String tenantId; 
             private String type; 
             private String version; 
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < QuotaInfoListTags> tags) {
+            public Builder tags(java.util.List<QuotaInfoListTags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The information of the order.
+             * <p>The information of the order.</p>
              */
             public Builder billingPolicy(QuotaInfoListBillingPolicy billingPolicy) {
                 this.billingPolicy = billingPolicy;
@@ -3063,7 +3498,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AT-120N</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -3071,7 +3509,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * <p>The time when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T02:14:44Z</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -3079,7 +3520,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to create the resource.
+             * <p>The ID of the Alibaba Cloud account that is used to create the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>672863518</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -3087,7 +3531,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The quota ID.
+             * <p>The quota ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -3095,7 +3542,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the quota.
+             * <p>The name of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_a</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3103,7 +3553,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the quota.
+             * <p>The alias of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_nickname</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -3111,15 +3564,25 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the quota.
+             * <p>The description of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;minCU&quot;:10,	
+             * &quot;adhocCU&quot;:0,
+             * &quot;maxCU&quot;:10,
+             * &quot;schedulerType&quot;:&quot;Fair&quot;,
+             * }</p>
              */
-            public Builder parameter(java.util.Map < String, ? > parameter) {
+            public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;
                 return this;
             }
 
             /**
-             * The ID of the parent resource.
+             * <p>The ID of the parent resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -3127,7 +3590,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -3135,7 +3601,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.
+             * <p>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</p>
              */
             public Builder saleTag(QuotaInfoListSaleTag saleTag) {
                 this.saleTag = saleTag;
@@ -3143,7 +3609,7 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the scheduling plan.
+             * <p>The information of the scheduling plan.</p>
              */
             public Builder scheduleInfo(QuotaInfoListScheduleInfo scheduleInfo) {
                 this.scheduleInfo = scheduleInfo;
@@ -3151,7 +3617,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the endpoint group.
+             * <p>The status of the endpoint group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3159,15 +3628,18 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the level-2 quota.
+             * <p>The information of the level-2 quota.</p>
              */
-            public Builder subQuotaInfoList(java.util.List < QuotaInfoListSubQuotaInfoList> subQuotaInfoList) {
+            public Builder subQuotaInfoList(java.util.List<QuotaInfoListSubQuotaInfoList> subQuotaInfoList) {
                 this.subQuotaInfoList = subQuotaInfoList;
                 return this;
             }
 
             /**
-             * The tag of the resource for the quota.
+             * <p>The tag of the resource for the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -3175,7 +3647,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant ID.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>280747109771520</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -3183,7 +3658,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.
+             * <p>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FUXI_ONLINE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -3191,7 +3669,10 @@ public class ListQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

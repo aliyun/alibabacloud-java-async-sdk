@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateQuotaScheduleResponse} extends {@link TeaModel}
+ * 
+ * {@link CreateMmsFetchMetadataJobResponse} extends {@link TeaModel}
  *
- * <p>CreateQuotaScheduleResponse</p>
+ * <p>CreateMmsFetchMetadataJobResponse</p>
  */
-public class CreateQuotaScheduleResponse extends Response {
+public class CreateMmsFetchMetadataJobResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateQuotaScheduleResponseBody body;
+    private CreateMmsFetchMetadataJobResponseBody body;
 
-    private CreateQuotaScheduleResponse(BuilderImpl builder) {
+    private CreateMmsFetchMetadataJobResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateQuotaScheduleResponse create() {
+    public static CreateMmsFetchMetadataJobResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class CreateQuotaScheduleResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class CreateQuotaScheduleResponse extends Response {
     /**
      * @return body
      */
-    public CreateQuotaScheduleResponseBody getBody() {
+    public CreateMmsFetchMetadataJobResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateQuotaScheduleResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateMmsFetchMetadataJobResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateQuotaScheduleResponseBody body);
+        Builder body(CreateMmsFetchMetadataJobResponseBody body);
 
         @Override
-        CreateQuotaScheduleResponse build();
+        CreateMmsFetchMetadataJobResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateQuotaScheduleResponse, Builder>
+            extends Response.BuilderImpl<CreateMmsFetchMetadataJobResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateQuotaScheduleResponseBody body; 
+        private CreateMmsFetchMetadataJobResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateQuotaScheduleResponse response) {
+        private BuilderImpl(CreateMmsFetchMetadataJobResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class CreateQuotaScheduleResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class CreateQuotaScheduleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateQuotaScheduleResponseBody body) {
+        public Builder body(CreateMmsFetchMetadataJobResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateQuotaScheduleResponse build() {
-            return new CreateQuotaScheduleResponse(this);
+        public CreateMmsFetchMetadataJobResponse build() {
+            return new CreateMmsFetchMetadataJobResponse(this);
         } 
 
     } 

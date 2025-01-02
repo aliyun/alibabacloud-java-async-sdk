@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQuotaPlanRequest} extends {@link RequestModel}
  *
  * <p>DeleteQuotaPlanRequest</p>
@@ -97,7 +103,11 @@ public class DeleteQuotaPlanRequest extends Request {
         } 
 
         /**
-         * QuotaNickName
+         * <p>QuotaNickName</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_A</p>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -106,7 +116,11 @@ public class DeleteQuotaPlanRequest extends Request {
         }
 
         /**
-         * The name of the quota plan.
+         * <p>The name of the quota plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         public Builder planName(String planName) {
             this.putPathParameter("planName", planName);
@@ -115,7 +129,10 @@ public class DeleteQuotaPlanRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -124,7 +141,10 @@ public class DeleteQuotaPlanRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>416441016836866</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
@@ -49,7 +55,7 @@ public class ListUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dd4816687424611405643e3730</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -145,7 +160,10 @@ public class ListUsersResponseBody extends TeaModel {
             private String tenantId; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167835629082</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -153,7 +171,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bob@</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -161,7 +182,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account.
+             * <p>The type of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -169,7 +193,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The display name.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bob</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -177,7 +204,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1567253789</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -191,6 +221,12 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Integer pageNumber;
@@ -202,7 +238,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Integer totalCount;
 
         @com.aliyun.core.annotation.NameInMap("users")
-        private java.util.List < Users> users;
+        private java.util.List<Users> users;
 
         private Data(Builder builder) {
             this.pageNumber = builder.pageNumber;
@@ -243,7 +279,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return users
          */
-        public java.util.List < Users> getUsers() {
+        public java.util.List<Users> getUsers() {
             return this.users;
         }
 
@@ -251,10 +287,13 @@ public class ListUsersResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
-            private java.util.List < Users> users; 
+            private java.util.List<Users> users; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -262,7 +301,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -270,7 +312,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -278,9 +323,9 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The users.
+             * <p>The users.</p>
              */
-            public Builder users(java.util.List < Users> users) {
+            public Builder users(java.util.List<Users> users) {
                 this.users = users;
                 return this;
             }

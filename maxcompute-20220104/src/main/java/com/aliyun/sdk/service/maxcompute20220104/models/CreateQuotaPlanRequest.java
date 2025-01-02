@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQuotaPlanRequest} extends {@link RequestModel}
  *
  * <p>CreateQuotaPlanRequest</p>
@@ -96,7 +102,11 @@ public class CreateQuotaPlanRequest extends Request {
         } 
 
         /**
-         * QuotaNickName
+         * <p>QuotaNickName</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -105,7 +115,10 @@ public class CreateQuotaPlanRequest extends Request {
         }
 
         /**
-         * The request body parameters.
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;name&quot;: &quot;planA&quot;, // The quota is a level-1 quota. You can select only the fields that are related to the quota plan. &quot;quota&quot;: { &quot;name&quot;: &quot;a&quot;, &quot;nickName&quot;: &quot;aaa_nick&quot;, &quot;tenantId&quot;: &quot;10001&quot;, &quot;regionId&quot;: &quot;cn-hangzhou&quot;, &quot;parentId&quot;: &quot;0&quot;, &quot;cluster&quot;: &quot;AT-ODPS-TEST3&quot;, &quot;parameter&quot;: { &quot;minCU&quot;: 40, &quot;maxCU&quot;: 40, &quot;adhocCU&quot;: 0, &quot;elasticMinCU&quot;: 40, &quot;elasticMaxCU&quot;: 40, &quot;enablePreemptiveScheduling&quot;: false, &quot;forceReservedMin&quot;:true, &quot;enablePriority&quot;:false, &quot;singleJobCULimit&quot;:100, &quot;adhocQuotaBeginTimeInSec&quot;: 1345, &quot;adhocQuotaEndTimeInSec&quot;: 1234, &quot;ignoreAdhocQuota&quot;:false }, &quot;subQuotaInfoList&quot;: [ { &quot;nickName&quot;: &quot;WlmFuxiSecondaryOnlineQuotaTest&quot;, &quot;name&quot;: &quot;WlmFuxiSecondaryOnlineQuotaTest&quot;, &quot;type&quot;: &quot;FUXI_ONLINE&quot;, &quot;tenantId&quot;: &quot;10001&quot;, &quot;regionId&quot;: &quot;cn-hangzhou&quot;, &quot;cluster&quot;: &quot;AT-ODPS-TEST3&quot;, &quot;parameter&quot;: { &quot;minCU&quot;: 40, &quot;maxCU&quot;: 40, &quot;adhocCU&quot;: 0, &quot;elasticMinCU&quot;: 40, &quot;elasticMaxCU&quot;: 40, &quot;enablePreemptiveScheduling&quot;: false, &quot;forceReservedMin&quot;:true, &quot;enablePriority&quot;:false, &quot;singleJobCULimit&quot;:100, &quot;adhocQuotaBeginTimeInSec&quot;: 1345, &quot;adhocQuotaEndTimeInSec&quot;: 1234, &quot;ignoreAdhocQuota&quot;:false } } ] } }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
@@ -114,7 +127,10 @@ public class CreateQuotaPlanRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -123,7 +139,10 @@ public class CreateQuotaPlanRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>228451885265153</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

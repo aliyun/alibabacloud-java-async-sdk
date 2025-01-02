@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPackageResponseBody} extends {@link TeaModel}
  *
  * <p>GetPackageResponseBody</p>
@@ -85,7 +91,7 @@ public class GetPackageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +99,10 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040002</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +110,10 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -109,7 +121,10 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.
+         * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -117,7 +132,10 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b57ff8316614119858417939e3e54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +148,12 @@ public class GetPackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageResponseBody</p>
+     */
     public static class AllowedProjectList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("label")
         private String label;
@@ -169,7 +193,10 @@ public class GetPackageResponseBody extends TeaModel {
             private String project; 
 
             /**
-             * The security level for sensitive data.
+             * <p>The security level for sensitive data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -177,7 +204,10 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the MaxCompute project.
+             * <p>The name of the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proejctB</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -191,9 +221,15 @@ public class GetPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageResponseBody</p>
+     */
     public static class Function extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < String > actions;
+        private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -218,7 +254,7 @@ public class GetPackageResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -237,20 +273,23 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the function.
+             * <p>The operations that were performed on the function.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the function.
+             * <p>The name of the function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>function_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +297,10 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of schema.
+             * <p>The name of schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -272,9 +314,15 @@ public class GetPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < String > actions;
+        private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -299,7 +347,7 @@ public class GetPackageResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -318,20 +366,23 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the resource.
+             * <p>The operations that were performed on the resource.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>res_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -339,7 +390,10 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of schema.
+             * <p>The name of schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -353,9 +407,15 @@ public class GetPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageResponseBody</p>
+     */
     public static class Table extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < String > actions;
+        private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -380,7 +440,7 @@ public class GetPackageResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -399,20 +459,23 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String name; 
             private String schemaName; 
 
             /**
-             * The operations that were performed on the table.
+             * <p>The operations that were performed on the table.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dim_odps</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -420,7 +483,10 @@ public class GetPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of schema.
+             * <p>The name of schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -434,15 +500,21 @@ public class GetPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageResponseBody</p>
+     */
     public static class ResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("function")
-        private java.util.List < Function> function;
+        private java.util.List<Function> function;
 
         @com.aliyun.core.annotation.NameInMap("resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         @com.aliyun.core.annotation.NameInMap("table")
-        private java.util.List < Table> table;
+        private java.util.List<Table> table;
 
         private ResourceList(Builder builder) {
             this.function = builder.function;
@@ -461,49 +533,49 @@ public class GetPackageResponseBody extends TeaModel {
         /**
          * @return function
          */
-        public java.util.List < Function> getFunction() {
+        public java.util.List<Function> getFunction() {
             return this.function;
         }
 
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Function> function; 
-            private java.util.List < Resource> resource; 
-            private java.util.List < Table> table; 
+            private java.util.List<Function> function; 
+            private java.util.List<Resource> resource; 
+            private java.util.List<Table> table; 
 
             /**
-             * The functions.
+             * <p>The functions.</p>
              */
-            public Builder function(java.util.List < Function> function) {
+            public Builder function(java.util.List<Function> function) {
                 this.function = function;
                 return this;
             }
 
             /**
-             * The resources.
+             * <p>The resources.</p>
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }
 
             /**
-             * The tables.
+             * <p>The tables.</p>
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }
@@ -515,9 +587,15 @@ public class GetPackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPackageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowedProjectList")
-        private java.util.List < AllowedProjectList> allowedProjectList;
+        private java.util.List<AllowedProjectList> allowedProjectList;
 
         @com.aliyun.core.annotation.NameInMap("resourceList")
         private ResourceList resourceList;
@@ -538,7 +616,7 @@ public class GetPackageResponseBody extends TeaModel {
         /**
          * @return allowedProjectList
          */
-        public java.util.List < AllowedProjectList> getAllowedProjectList() {
+        public java.util.List<AllowedProjectList> getAllowedProjectList() {
             return this.allowedProjectList;
         }
 
@@ -550,19 +628,19 @@ public class GetPackageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AllowedProjectList> allowedProjectList; 
+            private java.util.List<AllowedProjectList> allowedProjectList; 
             private ResourceList resourceList; 
 
             /**
-             * The projects in which the package is installed.
+             * <p>The projects in which the package is installed.</p>
              */
-            public Builder allowedProjectList(java.util.List < AllowedProjectList> allowedProjectList) {
+            public Builder allowedProjectList(java.util.List<AllowedProjectList> allowedProjectList) {
                 this.allowedProjectList = allowedProjectList;
                 return this;
             }
 
             /**
-             * The details of the resources that are included in the package.
+             * <p>The details of the resources that are included in the package.</p>
              */
             public Builder resourceList(ResourceList resourceList) {
                 this.resourceList = resourceList;

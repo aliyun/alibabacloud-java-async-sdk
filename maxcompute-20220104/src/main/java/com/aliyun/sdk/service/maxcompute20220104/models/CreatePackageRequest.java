@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePackageRequest} extends {@link RequestModel}
  *
  * <p>CreatePackageRequest</p>
@@ -82,7 +88,11 @@ public class CreatePackageRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -91,7 +101,50 @@ public class CreatePackageRequest extends Request {
         }
 
         /**
-         * The request body parameters.
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;name&quot;: &quot;test_packege&quot;, 
+         *     &quot;resourceList&quot;: { 
+         *         &quot;table&quot;: [
+         *             {
+         *                 &quot;name&quot;: &quot;table_name&quot;,
+         *                 &quot;actions&quot;: [
+         *                     &quot;Describe&quot;,
+         *                     &quot;Select&quot;
+         *                 ]
+         *             },
+         *             {
+         *                 &quot;name&quot;: &quot;table_name&quot;,
+         *                 &quot;actions&quot;: [
+         *                     &quot;Describe&quot;,
+         *                     &quot;Select&quot;
+         *                 ]
+         *             }
+         *         ],
+         *         &quot;resource&quot;: [
+         *             {
+         *                 &quot;name&quot;: &quot;&quot;,
+         *                 &quot;actions&quot;: []
+         *             },
+         *             {
+         *                 &quot;name&quot;: &quot;&quot;,
+         *                 &quot;actions&quot;: []
+         *             }
+         *         ],
+         *         &quot;function&quot;: [
+         *             {
+         *                 &quot;name&quot;: &quot;&quot;,
+         *                 &quot;actions&quot;: []
+         *             },
+         *             {
+         *                 &quot;name&quot;: &quot;&quot;,
+         *                 &quot;actions&quot;: []
+         *             }
+         *         ]
+         *     }
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
@@ -100,7 +153,10 @@ public class CreatePackageRequest extends Request {
         }
 
         /**
-         * Specifies whether to install the package.
+         * <p>Specifies whether to install the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isInstall(Boolean isInstall) {
             this.putQueryParameter("isInstall", isInstall);

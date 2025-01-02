@@ -1,23 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateQuotaScheduleResponseBody} extends {@link TeaModel}
+ * 
+ * {@link DeleteMmsJobResponseBody} extends {@link TeaModel}
  *
- * <p>CreateQuotaScheduleResponseBody</p>
+ * <p>DeleteMmsJobResponseBody</p>
  */
-public class CreateQuotaScheduleResponseBody extends TeaModel {
+public class DeleteMmsJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private String data;
+    private Long data;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private CreateQuotaScheduleResponseBody(Builder builder) {
+    private DeleteMmsJobResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -26,14 +32,14 @@ public class CreateQuotaScheduleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateQuotaScheduleResponseBody create() {
+    public static DeleteMmsJobResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public Long getData() {
         return this.data;
     }
 
@@ -45,27 +51,27 @@ public class CreateQuotaScheduleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String data; 
+        private Long data; 
         private String requestId; 
 
         /**
-         * The returned result.
+         * data.
          */
-        public Builder data(String data) {
+        public Builder data(Long data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateQuotaScheduleResponseBody build() {
-            return new CreateQuotaScheduleResponseBody(this);
+        public DeleteMmsJobResponseBody build() {
+            return new DeleteMmsJobResponseBody(this);
         } 
 
     } 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTableInfoRequest} extends {@link RequestModel}
  *
  * <p>GetTableInfoRequest</p>
@@ -97,7 +103,11 @@ public class GetTableInfoRequest extends Request {
         } 
 
         /**
-         * projectName.
+         * <p>The name of the project to which the table or view belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -106,7 +116,11 @@ public class GetTableInfoRequest extends Request {
         }
 
         /**
-         * tableName.
+         * <p>The name of the table or view that you want to view.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sale_detail</p>
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);
@@ -115,7 +129,10 @@ public class GetTableInfoRequest extends Request {
         }
 
         /**
-         * schemaName.
+         * <p>The name of the schema to which the table or view belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("schemaName", schemaName);
@@ -124,7 +141,16 @@ public class GetTableInfoRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the table or view that you want to view. Valid values:</p>
+         * <ul>
+         * <li><strong>internal</strong>: internal table</li>
+         * <li><strong>external</strong>: external table</li>
+         * <li><strong>view</strong>: view</li>
+         * <li><strong>materializedView</strong>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>internal</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

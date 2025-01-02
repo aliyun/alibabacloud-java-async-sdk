@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePackageRequest} extends {@link RequestModel}
  *
  * <p>UpdatePackageRequest</p>
@@ -83,7 +89,11 @@ public class UpdatePackageRequest extends Request {
         } 
 
         /**
-         * The name of the MaxCompute project.
+         * <p>The name of the MaxCompute project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectA</p>
          */
         public Builder projectName(String projectName) {
             this.putPathParameter("projectName", projectName);
@@ -92,7 +102,11 @@ public class UpdatePackageRequest extends Request {
         }
 
         /**
-         * The name of the package.
+         * <p>The name of the package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>packageA</p>
          */
         public Builder packageName(String packageName) {
             this.putPathParameter("packageName", packageName);
@@ -101,7 +115,93 @@ public class UpdatePackageRequest extends Request {
         }
 
         /**
-         * The request body parameters.
+         * <p>The request body parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;add&quot;: {
+         *         &quot;allowedProjectList&quot;: [
+         *             {
+         *                 &quot;label&quot;: &quot;2&quot;,
+         *                 &quot;project&quot;: &quot;project_name&quot;
+         *             }
+         *         ],
+         *         &quot;resourceList&quot;: {
+         *             &quot;table&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;table_name&quot;,
+         *                     &quot;actions&quot;: [
+         *                         &quot;Describe&quot;,
+         *                         &quot;Select&quot;
+         *                     ]
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;table_name&quot;,
+         *                     &quot;actions&quot;: [
+         *                         &quot;Describe&quot;,
+         *                         &quot;Select&quot;
+         *                     ]
+         *                 }
+         *             ],
+         *             &quot;resource&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;,
+         *                     &quot;actions&quot;: []
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;,
+         *                     &quot;actions&quot;: []
+         *                 }
+         *             ],
+         *             &quot;function&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;,
+         *                     &quot;actions&quot;: []
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;,
+         *                     &quot;actions&quot;: []
+         *                 }
+         *             ]
+         *         }
+         *     },
+         *     &quot;remove&quot;: {
+         *         &quot;allowedProjectList&quot;: [
+         *             {
+         *                 &quot;project&quot;: &quot;project_name&quot;
+         *             },
+         *             {
+         *                 &quot;project&quot;: &quot;project_2&quot;
+         *             }
+         *         ],
+         *         &quot;resourceList&quot;: {
+         *             &quot;table&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;table_name&quot;
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;table_name&quot;
+         *                 }
+         *             ],
+         *             &quot;resource&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;
+         *                 }
+         *             ],
+         *             &quot;function&quot;: [
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;
+         *                 },
+         *                 {
+         *                     &quot;name&quot;: &quot;&quot;
+         *                 }
+         *             ]
+         *         }
+         *     }
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);
