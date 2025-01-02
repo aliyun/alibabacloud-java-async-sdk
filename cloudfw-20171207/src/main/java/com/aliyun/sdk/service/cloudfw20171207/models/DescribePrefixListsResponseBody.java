@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePrefixListsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PrefixList")
-    private java.util.List < PrefixList> prefixList;
+    private java.util.List<PrefixList> prefixList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     /**
      * @return prefixList
      */
-    public java.util.List < PrefixList> getPrefixList() {
+    public java.util.List<PrefixList> getPrefixList() {
         return this.prefixList;
     }
 
@@ -46,13 +51,13 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PrefixList> prefixList; 
+        private java.util.List<PrefixList> prefixList; 
         private String requestId; 
 
         /**
          * <p>Details about the prefix lists.</p>
          */
-        public Builder prefixList(java.util.List < PrefixList> prefixList) {
+        public Builder prefixList(java.util.List<PrefixList> prefixList) {
             this.prefixList = prefixList;
             return this;
         }

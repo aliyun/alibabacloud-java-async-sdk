@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclUuidList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > aclUuidList;
+    private java.util.List<String> aclUuidList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
@@ -44,7 +49,7 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
     /**
      * @return aclUuidList
      */
-    public java.util.List < String > getAclUuidList() {
+    public java.util.List<String> getAclUuidList() {
         return this.aclUuidList;
     }
 
@@ -56,7 +61,7 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchDeleteVpcFirewallControlPolicyRequest, Builder> {
-        private java.util.List < String > aclUuidList; 
+        private java.util.List<String> aclUuidList; 
         private String vpcFirewallId; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
          * <p>The UUIDs of access control policies.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aclUuidList(java.util.List < String > aclUuidList) {
+        public Builder aclUuidList(java.util.List<String> aclUuidList) {
             this.putQueryParameter("AclUuidList", aclUuidList);
             this.aclUuidList = aclUuidList;
             return this;

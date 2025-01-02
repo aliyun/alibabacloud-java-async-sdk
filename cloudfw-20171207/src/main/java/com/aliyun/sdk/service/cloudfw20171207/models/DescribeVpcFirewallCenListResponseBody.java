@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VpcFirewalls")
-    private java.util.List < VpcFirewalls> vpcFirewalls;
+    private java.util.List<VpcFirewalls> vpcFirewalls;
 
     private DescribeVpcFirewallCenListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     /**
      * @return vpcFirewalls
      */
-    public java.util.List < VpcFirewalls> getVpcFirewalls() {
+    public java.util.List<VpcFirewalls> getVpcFirewalls() {
         return this.vpcFirewalls;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpcFirewalls> vpcFirewalls; 
+        private java.util.List<VpcFirewalls> vpcFirewalls; 
 
         /**
          * <p>The ID of the request.</p>
@@ -84,9 +89,9 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the details about the VPC firewall.</p>
+         * <p>The information about the VPC firewalls.</p>
          */
-        public Builder vpcFirewalls(java.util.List < VpcFirewalls> vpcFirewalls) {
+        public Builder vpcFirewalls(java.util.List<VpcFirewalls> vpcFirewalls) {
             this.vpcFirewalls = vpcFirewalls;
             return this;
         }
@@ -196,7 +201,15 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleClass.
+             * <p>The level of the rule group for the IPS. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: loose.</li>
+             * <li><strong>2</strong>: medium.</li>
+             * <li><strong>3</strong>: strict.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleClass(Integer ruleClass) {
                 this.ruleClass = ruleClass;
@@ -306,7 +319,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
      */
     public static class VpcCidrTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntryList")
-        private java.util.List < RouteEntryList> routeEntryList;
+        private java.util.List<RouteEntryList> routeEntryList;
 
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
@@ -327,7 +340,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         /**
          * @return routeEntryList
          */
-        public java.util.List < RouteEntryList> getRouteEntryList() {
+        public java.util.List<RouteEntryList> getRouteEntryList() {
             return this.routeEntryList;
         }
 
@@ -339,13 +352,13 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < RouteEntryList> routeEntryList; 
+            private java.util.List<RouteEntryList> routeEntryList; 
             private String routeTableId; 
 
             /**
              * <p>An array that consists of the route entries for the VPC.</p>
              */
-            public Builder routeEntryList(java.util.List < RouteEntryList> routeEntryList) {
+            public Builder routeEntryList(java.util.List<RouteEntryList> routeEntryList) {
                 this.routeEntryList = routeEntryList;
                 return this;
             }
@@ -379,7 +392,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         private String authorizationStatus;
 
         @com.aliyun.core.annotation.NameInMap("DefendCidrList")
-        private java.util.List < String > defendCidrList;
+        private java.util.List<String> defendCidrList;
 
         @com.aliyun.core.annotation.NameInMap("ManualVSwitchId")
         private String manualVSwitchId;
@@ -409,7 +422,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         private String transitRouterType;
 
         @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
-        private java.util.List < VpcCidrTableList> vpcCidrTableList;
+        private java.util.List<VpcCidrTableList> vpcCidrTableList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -452,7 +465,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         /**
          * @return defendCidrList
          */
-        public java.util.List < String > getDefendCidrList() {
+        public java.util.List<String> getDefendCidrList() {
             return this.defendCidrList;
         }
 
@@ -522,7 +535,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         /**
          * @return vpcCidrTableList
          */
-        public java.util.List < VpcCidrTableList> getVpcCidrTableList() {
+        public java.util.List<VpcCidrTableList> getVpcCidrTableList() {
             return this.vpcCidrTableList;
         }
 
@@ -542,7 +555,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String authorizationStatus; 
-            private java.util.List < String > defendCidrList; 
+            private java.util.List<String> defendCidrList; 
             private String manualVSwitchId; 
             private String networkInstanceId; 
             private String networkInstanceName; 
@@ -552,7 +565,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             private String routeMode; 
             private String supportManualMode; 
             private String transitRouterType; 
-            private java.util.List < VpcCidrTableList> vpcCidrTableList; 
+            private java.util.List<VpcCidrTableList> vpcCidrTableList; 
             private String vpcId; 
             private String vpcName; 
 
@@ -570,7 +583,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the CIDR blocks that are protected by the VPC firewall.</p>
              */
-            public Builder defendCidrList(java.util.List < String > defendCidrList) {
+            public Builder defendCidrList(java.util.List<String> defendCidrList) {
                 this.defendCidrList = defendCidrList;
                 return this;
             }
@@ -694,7 +707,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the CIDR blocks of the VPC.</p>
              */
-            public Builder vpcCidrTableList(java.util.List < VpcCidrTableList> vpcCidrTableList) {
+            public Builder vpcCidrTableList(java.util.List<VpcCidrTableList> vpcCidrTableList) {
                 this.vpcCidrTableList = vpcCidrTableList;
                 return this;
             }
@@ -942,7 +955,7 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the intrusion prevention system (IPS) configuration.</p>
+             * <p>The intrusion prevention system (IPS) configurations.</p>
              */
             public Builder ipsConfig(IpsConfig ipsConfig) {
                 this.ipsConfig = ipsConfig;

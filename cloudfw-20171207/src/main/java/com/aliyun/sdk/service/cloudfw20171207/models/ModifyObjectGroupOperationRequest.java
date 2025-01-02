@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > objectList;
+    private java.util.List<String> objectList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectOperation")
@@ -92,7 +97,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
     /**
      * @return objectList
      */
-    public java.util.List < String > getObjectList() {
+    public java.util.List<String> getObjectList() {
         return this.objectList;
     }
 
@@ -121,7 +126,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
         private String comment; 
         private String direction; 
         private String lang; 
-        private java.util.List < String > objectList; 
+        private java.util.List<String> objectList; 
         private String objectOperation; 
         private String objectType; 
         private String sourceIp; 
@@ -191,7 +196,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
          * <p>The operation objects.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder objectList(java.util.List < String > objectList) {
+        public Builder objectList(java.util.List<String> objectList) {
             this.putQueryParameter("ObjectList", objectList);
             this.objectList = objectList;
             return this;

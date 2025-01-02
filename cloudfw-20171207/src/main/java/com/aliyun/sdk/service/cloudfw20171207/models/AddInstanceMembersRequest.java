@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddInstanceMembersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Members")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Members> members;
+    private java.util.List<Members> members;
 
     private AddInstanceMembersRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class AddInstanceMembersRequest extends Request {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
     public static final class Builder extends Request.Builder<AddInstanceMembersRequest, Builder> {
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
 
         private Builder() {
             super();
@@ -58,7 +63,7 @@ public class AddInstanceMembersRequest extends Request {
          * <p>The members.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             this.putQueryParameter("Members", members);
             this.members = members;
             return this;

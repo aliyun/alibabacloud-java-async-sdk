@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Whitelists")
-    private java.util.List < Whitelists> whitelists;
+    private java.util.List<Whitelists> whitelists;
 
     private DescribeVpcFirewallIPSWhitelistResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     /**
      * @return whitelists
      */
-    public java.util.List < Whitelists> getWhitelists() {
+    public java.util.List<Whitelists> getWhitelists() {
         return this.whitelists;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Whitelists> whitelists; 
+        private java.util.List<Whitelists> whitelists; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         /**
          * <p>The details of the IPS whitelist of the VPC firewall.</p>
          */
-        public Builder whitelists(java.util.List < Whitelists> whitelists) {
+        public Builder whitelists(java.util.List<Whitelists> whitelists) {
             this.whitelists = whitelists;
             return this;
         }
@@ -91,7 +96,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         private String vpcFirewallId;
 
         @com.aliyun.core.annotation.NameInMap("WhiteListValue")
-        private java.util.List < String > whiteListValue;
+        private java.util.List<String> whiteListValue;
 
         @com.aliyun.core.annotation.NameInMap("WhiteType")
         private Long whiteType;
@@ -136,7 +141,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
         /**
          * @return whiteListValue
          */
-        public java.util.List < String > getWhiteListValue() {
+        public java.util.List<String> getWhiteListValue() {
             return this.whiteListValue;
         }
 
@@ -151,7 +156,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             private Long listType; 
             private String listValue; 
             private String vpcFirewallId; 
-            private java.util.List < String > whiteListValue; 
+            private java.util.List<String> whiteListValue; 
             private Long whiteType; 
 
             /**
@@ -194,7 +199,7 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
             /**
              * <p>An array of entries in the list.</p>
              */
-            public Builder whiteListValue(java.util.List < String > whiteListValue) {
+            public Builder whiteListValue(java.util.List<String> whiteListValue) {
                 this.whiteListValue = whiteListValue;
                 return this;
             }

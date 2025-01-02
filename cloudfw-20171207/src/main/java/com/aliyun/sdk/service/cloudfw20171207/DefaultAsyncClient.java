@@ -1305,6 +1305,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the edition information about Cloud Firewall.</p>
+     * <h2><a href="#qps-"></a>Limits</h2>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
      * @param request the request parameters of DescribeUserBuyVersion  DescribeUserBuyVersionRequest
      * @return DescribeUserBuyVersionResponse
      */

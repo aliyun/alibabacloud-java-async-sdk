@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -537,7 +542,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
      */
     public static class VpcCidrTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntryList")
-        private java.util.List < RouteEntryList> routeEntryList;
+        private java.util.List<RouteEntryList> routeEntryList;
 
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
@@ -558,7 +563,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         /**
          * @return routeEntryList
          */
-        public java.util.List < RouteEntryList> getRouteEntryList() {
+        public java.util.List<RouteEntryList> getRouteEntryList() {
             return this.routeEntryList;
         }
 
@@ -570,13 +575,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < RouteEntryList> routeEntryList; 
+            private java.util.List<RouteEntryList> routeEntryList; 
             private String routeTableId; 
 
             /**
              * <p>The route entries for the VPC.</p>
              */
-            public Builder routeEntryList(java.util.List < RouteEntryList> routeEntryList) {
+            public Builder routeEntryList(java.util.List<RouteEntryList> routeEntryList) {
                 this.routeEntryList = routeEntryList;
                 return this;
             }
@@ -613,10 +618,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         private String attachmentName;
 
         @com.aliyun.core.annotation.NameInMap("DefendCidrList")
-        private java.util.List < String > defendCidrList;
+        private java.util.List<String> defendCidrList;
 
         @com.aliyun.core.annotation.NameInMap("EniList")
-        private java.util.List < EniList> eniList;
+        private java.util.List<EniList> eniList;
 
         @com.aliyun.core.annotation.NameInMap("ManualVSwitchId")
         private String manualVSwitchId;
@@ -649,7 +654,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         private String transitRouterType;
 
         @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
-        private java.util.List < VpcCidrTableList> vpcCidrTableList;
+        private java.util.List<VpcCidrTableList> vpcCidrTableList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -702,14 +707,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         /**
          * @return defendCidrList
          */
-        public java.util.List < String > getDefendCidrList() {
+        public java.util.List<String> getDefendCidrList() {
             return this.defendCidrList;
         }
 
         /**
          * @return eniList
          */
-        public java.util.List < EniList> getEniList() {
+        public java.util.List<EniList> getEniList() {
             return this.eniList;
         }
 
@@ -786,7 +791,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         /**
          * @return vpcCidrTableList
          */
-        public java.util.List < VpcCidrTableList> getVpcCidrTableList() {
+        public java.util.List<VpcCidrTableList> getVpcCidrTableList() {
             return this.vpcCidrTableList;
         }
 
@@ -807,8 +812,8 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String attachmentId; 
             private String attachmentName; 
-            private java.util.List < String > defendCidrList; 
-            private java.util.List < EniList> eniList; 
+            private java.util.List<String> defendCidrList; 
+            private java.util.List<EniList> eniList; 
             private String manualVSwitchId; 
             private String networkInstanceId; 
             private String networkInstanceName; 
@@ -819,7 +824,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             private String supportManualMode; 
             private String transitRouterId; 
             private String transitRouterType; 
-            private java.util.List < VpcCidrTableList> vpcCidrTableList; 
+            private java.util.List<VpcCidrTableList> vpcCidrTableList; 
             private String vpcId; 
             private String vpcName; 
 
@@ -848,7 +853,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the CIDR blocks that are protected by the VPC firewall.</p>
              */
-            public Builder defendCidrList(java.util.List < String > defendCidrList) {
+            public Builder defendCidrList(java.util.List<String> defendCidrList) {
                 this.defendCidrList = defendCidrList;
                 return this;
             }
@@ -856,7 +861,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             /**
              * <p>The Elastic Network Interfaces (ENIs).</p>
              */
-            public Builder eniList(java.util.List < EniList> eniList) {
+            public Builder eniList(java.util.List<EniList> eniList) {
                 this.eniList = eniList;
                 return this;
             }
@@ -986,7 +991,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the CIDR blocks of the VPC.</p>
              */
-            public Builder vpcCidrTableList(java.util.List < VpcCidrTableList> vpcCidrTableList) {
+            public Builder vpcCidrTableList(java.util.List<VpcCidrTableList> vpcCidrTableList) {
                 this.vpcCidrTableList = vpcCidrTableList;
                 return this;
             }

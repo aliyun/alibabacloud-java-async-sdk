@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeInstanceRiskLevelsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -42,7 +47,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -54,7 +59,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceRiskLevelsRequest, Builder> {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String lang; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         /**
          * <p>The information about the instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.putQueryParameter("Instances", instances);
             this.instances = instances;
             return this;
@@ -110,7 +115,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("InternetIp")
-        private java.util.List < String > internetIp;
+        private java.util.List<String> internetIp;
 
         @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
@@ -143,7 +148,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
         /**
          * @return internetIp
          */
-        public java.util.List < String > getInternetIp() {
+        public java.util.List<String> getInternetIp() {
             return this.internetIp;
         }
 
@@ -163,7 +168,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
 
         public static final class Builder {
             private String instanceId; 
-            private java.util.List < String > internetIp; 
+            private java.util.List<String> internetIp; 
             private String intranetIp; 
             private String uuid; 
 
@@ -181,7 +186,7 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
             /**
              * <p>The public IP addresses of instances.</p>
              */
-            public Builder internetIp(java.util.List < String > internetIp) {
+            public Builder internetIp(java.util.List<String> internetIp) {
                 this.internetIp = internetIp;
                 return this;
             }

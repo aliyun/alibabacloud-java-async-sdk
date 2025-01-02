@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRiskEventGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttackApp")
-    private java.util.List < String > attackApp;
+    private java.util.List<String> attackApp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttackType")
@@ -57,6 +62,10 @@ public class DescribeRiskEventGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallType")
     private String firewallType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOnlyPrivateAssoc")
+    private String isOnlyPrivateAssoc;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -116,6 +125,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         this.endTime = builder.endTime;
         this.eventName = builder.eventName;
         this.firewallType = builder.firewallType;
+        this.isOnlyPrivateAssoc = builder.isOnlyPrivateAssoc;
         this.lang = builder.lang;
         this.noLocation = builder.noLocation;
         this.order = builder.order;
@@ -145,7 +155,7 @@ public class DescribeRiskEventGroupRequest extends Request {
     /**
      * @return attackApp
      */
-    public java.util.List < String > getAttackApp() {
+    public java.util.List<String> getAttackApp() {
         return this.attackApp;
     }
 
@@ -217,6 +227,13 @@ public class DescribeRiskEventGroupRequest extends Request {
      */
     public String getFirewallType() {
         return this.firewallType;
+    }
+
+    /**
+     * @return isOnlyPrivateAssoc
+     */
+    public String getIsOnlyPrivateAssoc() {
+        return this.isOnlyPrivateAssoc;
     }
 
     /**
@@ -297,7 +314,7 @@ public class DescribeRiskEventGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRiskEventGroupRequest, Builder> {
-        private java.util.List < String > attackApp; 
+        private java.util.List<String> attackApp; 
         private String attackType; 
         private Long buyVersion; 
         private String currentPage; 
@@ -308,6 +325,7 @@ public class DescribeRiskEventGroupRequest extends Request {
         private String endTime; 
         private String eventName; 
         private String firewallType; 
+        private String isOnlyPrivateAssoc; 
         private String lang; 
         private String noLocation; 
         private String order; 
@@ -337,6 +355,7 @@ public class DescribeRiskEventGroupRequest extends Request {
             this.endTime = request.endTime;
             this.eventName = request.eventName;
             this.firewallType = request.firewallType;
+            this.isOnlyPrivateAssoc = request.isOnlyPrivateAssoc;
             this.lang = request.lang;
             this.noLocation = request.noLocation;
             this.order = request.order;
@@ -356,7 +375,7 @@ public class DescribeRiskEventGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
          */
-        public Builder attackApp(java.util.List < String > attackApp) {
+        public Builder attackApp(java.util.List<String> attackApp) {
             this.putQueryParameter("AttackApp", attackApp);
             this.attackApp = attackApp;
             return this;
@@ -519,6 +538,18 @@ public class DescribeRiskEventGroupRequest extends Request {
         public Builder firewallType(String firewallType) {
             this.putQueryParameter("FirewallType", firewallType);
             this.firewallType = firewallType;
+            return this;
+        }
+
+        /**
+         * <p>Whether to query only the data that has completed private network tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder isOnlyPrivateAssoc(String isOnlyPrivateAssoc) {
+            this.putQueryParameter("IsOnlyPrivateAssoc", isOnlyPrivateAssoc);
+            this.isOnlyPrivateAssoc = isOnlyPrivateAssoc;
             return this;
         }
 

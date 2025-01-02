@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Version")
-    private java.util.List < Version> version;
+    private java.util.List<Version> version;
 
     private DescribeSignatureLibVersionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     /**
      * @return version
      */
-    public java.util.List < Version> getVersion() {
+    public java.util.List<Version> getVersion() {
         return this.version;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Version> version; 
+        private java.util.List<Version> version; 
 
         /**
          * <p>The ID of the request.</p>
@@ -86,7 +91,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         /**
          * <p>The information about the versions.</p>
          */
-        public Builder version(java.util.List < Version> version) {
+        public Builder version(java.util.List<Version> version) {
             this.version = version;
             return this;
         }

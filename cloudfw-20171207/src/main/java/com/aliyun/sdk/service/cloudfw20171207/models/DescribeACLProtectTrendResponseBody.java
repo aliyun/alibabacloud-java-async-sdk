@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     private Long totalProtectCnt;
 
     @com.aliyun.core.annotation.NameInMap("TrendList")
-    private java.util.List < TrendList> trendList;
+    private java.util.List<TrendList> trendList;
 
     private DescribeACLProtectTrendResponseBody(Builder builder) {
         this.inProtectCnt = builder.inProtectCnt;
@@ -96,7 +101,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     /**
      * @return trendList
      */
-    public java.util.List < TrendList> getTrendList() {
+    public java.util.List<TrendList> getTrendList() {
         return this.trendList;
     }
 
@@ -107,7 +112,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         private Long outProtectCnt; 
         private String requestId; 
         private Long totalProtectCnt; 
-        private java.util.List < TrendList> trendList; 
+        private java.util.List<TrendList> trendList; 
 
         /**
          * <p>The number of internal requests that are blocked by the ACL feature.</p>
@@ -178,7 +183,7 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
         /**
          * <p>The statistics on the requests that are blocked by the ACL feature.</p>
          */
-        public Builder trendList(java.util.List < TrendList> trendList) {
+        public Builder trendList(java.util.List<TrendList> trendList) {
             this.trendList = trendList;
             return this;
         }

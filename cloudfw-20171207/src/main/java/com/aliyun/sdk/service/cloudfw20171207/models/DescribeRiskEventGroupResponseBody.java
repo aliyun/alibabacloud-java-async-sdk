@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRiskEventGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>An array that consists of the details of the intrusion events.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -660,7 +665,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         private Integer lastEventTime;
 
         @com.aliyun.core.annotation.NameInMap("ResourcePrivateIPList")
-        private java.util.List < ResourcePrivateIPList> resourcePrivateIPList;
+        private java.util.List<ResourcePrivateIPList> resourcePrivateIPList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
@@ -681,7 +686,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         private String srcIPTag;
 
         @com.aliyun.core.annotation.NameInMap("SrcPrivateIPList")
-        private java.util.List < String > srcPrivateIPList;
+        private java.util.List<String> srcPrivateIPList;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
@@ -809,7 +814,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * @return resourcePrivateIPList
          */
-        public java.util.List < ResourcePrivateIPList> getResourcePrivateIPList() {
+        public java.util.List<ResourcePrivateIPList> getResourcePrivateIPList() {
             return this.resourcePrivateIPList;
         }
 
@@ -858,7 +863,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
         /**
          * @return srcPrivateIPList
          */
-        public java.util.List < String > getSrcPrivateIPList() {
+        public java.util.List<String> getSrcPrivateIPList() {
             return this.srcPrivateIPList;
         }
 
@@ -902,14 +907,14 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             private Integer firstEventTime; 
             private IPLocationInfo IPLocationInfo; 
             private Integer lastEventTime; 
-            private java.util.List < ResourcePrivateIPList> resourcePrivateIPList; 
+            private java.util.List<ResourcePrivateIPList> resourcePrivateIPList; 
             private String resourceType; 
             private String ruleId; 
             private Integer ruleResult; 
             private Integer ruleSource; 
             private String srcIP; 
             private String srcIPTag; 
-            private java.util.List < String > srcPrivateIPList; 
+            private java.util.List<String> srcPrivateIPList; 
             private String tag; 
             private VpcDstInfo vpcDstInfo; 
             private VpcSrcInfo vpcSrcInfo; 
@@ -1057,7 +1062,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
              * <p>The information about the private IP address in the intrusion event. The value is an array that contains the following parameters: <strong>RegionNo</strong>, <strong>ResourceInstanceId</strong>, <strong>ResourceInstanceName</strong>, and <strong>ResourcePrivateIP</strong>.\</p>
              * <hr>
              */
-            public Builder resourcePrivateIPList(java.util.List < ResourcePrivateIPList> resourcePrivateIPList) {
+            public Builder resourcePrivateIPList(java.util.List<ResourcePrivateIPList> resourcePrivateIPList) {
                 this.resourcePrivateIPList = resourcePrivateIPList;
                 return this;
             }
@@ -1147,7 +1152,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the source private IP addresses in the intrusion event.</p>
              */
-            public Builder srcPrivateIPList(java.util.List < String > srcPrivateIPList) {
+            public Builder srcPrivateIPList(java.util.List<String> srcPrivateIPList) {
                 this.srcPrivateIPList = srcPrivateIPList;
                 return this;
             }

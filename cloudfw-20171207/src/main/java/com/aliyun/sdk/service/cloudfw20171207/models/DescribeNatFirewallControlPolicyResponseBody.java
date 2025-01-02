@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Policys")
-    private java.util.List < Policys> policys;
+    private java.util.List<Policys> policys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
     /**
      * @return policys
      */
-    public java.util.List < Policys> getPolicys() {
+    public java.util.List<Policys> getPolicys() {
         return this.policys;
     }
 
@@ -57,14 +62,14 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Policys> policys; 
+        private java.util.List<Policys> policys; 
         private String requestId; 
         private String totalCount; 
 
         /**
          * <p>The information about the access control policies.</p>
          */
-        public Builder policys(java.util.List < Policys> policys) {
+        public Builder policys(java.util.List<Policys> policys) {
             this.policys = policys;
             return this;
         }
@@ -111,7 +116,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String aclUuid;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
-        private java.util.List < String > applicationNameList;
+        private java.util.List<String> applicationNameList;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -126,7 +131,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String destPortGroup;
 
         @com.aliyun.core.annotation.NameInMap("DestPortGroupPorts")
-        private java.util.List < String > destPortGroupPorts;
+        private java.util.List<String> destPortGroupPorts;
 
         @com.aliyun.core.annotation.NameInMap("DestPortType")
         private String destPortType;
@@ -135,7 +140,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String destination;
 
         @com.aliyun.core.annotation.NameInMap("DestinationGroupCidrs")
-        private java.util.List < String > destinationGroupCidrs;
+        private java.util.List<String> destinationGroupCidrs;
 
         @com.aliyun.core.annotation.NameInMap("DestinationGroupType")
         private String destinationGroupType;
@@ -177,7 +182,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String release;
 
         @com.aliyun.core.annotation.NameInMap("RepeatDays")
-        private java.util.List < Long > repeatDays;
+        private java.util.List<Long> repeatDays;
 
         @com.aliyun.core.annotation.NameInMap("RepeatEndTime")
         private String repeatEndTime;
@@ -192,7 +197,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         private String source;
 
         @com.aliyun.core.annotation.NameInMap("SourceGroupCidrs")
-        private java.util.List < String > sourceGroupCidrs;
+        private java.util.List<String> sourceGroupCidrs;
 
         @com.aliyun.core.annotation.NameInMap("SourceGroupType")
         private String sourceGroupType;
@@ -268,7 +273,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * @return applicationNameList
          */
-        public java.util.List < String > getApplicationNameList() {
+        public java.util.List<String> getApplicationNameList() {
             return this.applicationNameList;
         }
 
@@ -303,7 +308,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * @return destPortGroupPorts
          */
-        public java.util.List < String > getDestPortGroupPorts() {
+        public java.util.List<String> getDestPortGroupPorts() {
             return this.destPortGroupPorts;
         }
 
@@ -324,7 +329,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * @return destinationGroupCidrs
          */
-        public java.util.List < String > getDestinationGroupCidrs() {
+        public java.util.List<String> getDestinationGroupCidrs() {
             return this.destinationGroupCidrs;
         }
 
@@ -422,7 +427,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * @return repeatDays
          */
-        public java.util.List < Long > getRepeatDays() {
+        public java.util.List<Long> getRepeatDays() {
             return this.repeatDays;
         }
 
@@ -457,7 +462,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         /**
          * @return sourceGroupCidrs
          */
-        public java.util.List < String > getSourceGroupCidrs() {
+        public java.util.List<String> getSourceGroupCidrs() {
             return this.sourceGroupCidrs;
         }
 
@@ -492,15 +497,15 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String aclAction; 
             private String aclUuid; 
-            private java.util.List < String > applicationNameList; 
+            private java.util.List<String> applicationNameList; 
             private Long createTime; 
             private String description; 
             private String destPort; 
             private String destPortGroup; 
-            private java.util.List < String > destPortGroupPorts; 
+            private java.util.List<String> destPortGroupPorts; 
             private String destPortType; 
             private String destination; 
-            private java.util.List < String > destinationGroupCidrs; 
+            private java.util.List<String> destinationGroupCidrs; 
             private String destinationGroupType; 
             private String destinationType; 
             private String dnsResult; 
@@ -514,12 +519,12 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             private Integer order; 
             private String proto; 
             private String release; 
-            private java.util.List < Long > repeatDays; 
+            private java.util.List<Long> repeatDays; 
             private String repeatEndTime; 
             private String repeatStartTime; 
             private String repeatType; 
             private String source; 
-            private java.util.List < String > sourceGroupCidrs; 
+            private java.util.List<String> sourceGroupCidrs; 
             private String sourceGroupType; 
             private String sourceType; 
             private String spreadCnt; 
@@ -555,7 +560,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             /**
              * <p>The application names.</p>
              */
-            public Builder applicationNameList(java.util.List < String > applicationNameList) {
+            public Builder applicationNameList(java.util.List<String> applicationNameList) {
                 this.applicationNameList = applicationNameList;
                 return this;
             }
@@ -607,7 +612,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             /**
              * <p>The ports in the destination port address book.</p>
              */
-            public Builder destPortGroupPorts(java.util.List < String > destPortGroupPorts) {
+            public Builder destPortGroupPorts(java.util.List<String> destPortGroupPorts) {
                 this.destPortGroupPorts = destPortGroupPorts;
                 return this;
             }
@@ -647,7 +652,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             /**
              * <p>The CIDR blocks in the destination address book.</p>
              */
-            public Builder destinationGroupCidrs(java.util.List < String > destinationGroupCidrs) {
+            public Builder destinationGroupCidrs(java.util.List<String> destinationGroupCidrs) {
                 this.destinationGroupCidrs = destinationGroupCidrs;
                 return this;
             }
@@ -840,7 +845,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
              * <p> If RepeatType is set to Monthly, the fields in the value of this parameter cannot be repeated.</p>
              * </blockquote>
              */
-            public Builder repeatDays(java.util.List < Long > repeatDays) {
+            public Builder repeatDays(java.util.List<Long> repeatDays) {
                 this.repeatDays = repeatDays;
                 return this;
             }
@@ -910,7 +915,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             /**
              * <p>The CIDR blocks in the source address book.</p>
              */
-            public Builder sourceGroupCidrs(java.util.List < String > sourceGroupCidrs) {
+            public Builder sourceGroupCidrs(java.util.List<String> sourceGroupCidrs) {
                 this.sourceGroupCidrs = sourceGroupCidrs;
                 return this;
             }

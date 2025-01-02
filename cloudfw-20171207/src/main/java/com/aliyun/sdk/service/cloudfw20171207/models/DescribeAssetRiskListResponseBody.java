@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAssetRiskListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssetList")
-    private java.util.List < AssetList> assetList;
+    private java.util.List<AssetList> assetList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
     /**
      * @return assetList
      */
-    public java.util.List < AssetList> getAssetList() {
+    public java.util.List<AssetList> getAssetList() {
         return this.assetList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AssetList> assetList; 
+        private java.util.List<AssetList> assetList; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The details of the assets.</p>
          */
-        public Builder assetList(java.util.List < AssetList> assetList) {
+        public Builder assetList(java.util.List<AssetList> assetList) {
             this.assetList = assetList;
             return this;
         }

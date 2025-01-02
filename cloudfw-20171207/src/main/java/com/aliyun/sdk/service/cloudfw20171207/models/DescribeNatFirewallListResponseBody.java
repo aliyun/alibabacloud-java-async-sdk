@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNatFirewallListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NatFirewallList")
-    private java.util.List < NatFirewallList> natFirewallList;
+    private java.util.List<NatFirewallList> natFirewallList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
     /**
      * @return natFirewallList
      */
-    public java.util.List < NatFirewallList> getNatFirewallList() {
+    public java.util.List<NatFirewallList> getNatFirewallList() {
         return this.natFirewallList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NatFirewallList> natFirewallList; 
+        private java.util.List<NatFirewallList> natFirewallList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The NAT firewalls.</p>
          */
-        public Builder natFirewallList(java.util.List < NatFirewallList> natFirewallList) {
+        public Builder natFirewallList(java.util.List<NatFirewallList> natFirewallList) {
             this.natFirewallList = natFirewallList;
             return this;
         }
@@ -239,7 +244,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         private String natGatewayName;
 
         @com.aliyun.core.annotation.NameInMap("NatRouteEntryList")
-        private java.util.List < NatRouteEntryList> natRouteEntryList;
+        private java.util.List<NatRouteEntryList> natRouteEntryList;
 
         @com.aliyun.core.annotation.NameInMap("ProxyId")
         private String proxyId;
@@ -324,7 +329,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         /**
          * @return natRouteEntryList
          */
-        public java.util.List < NatRouteEntryList> getNatRouteEntryList() {
+        public java.util.List<NatRouteEntryList> getNatRouteEntryList() {
             return this.natRouteEntryList;
         }
 
@@ -383,7 +388,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private Long memberUid; 
             private String natGatewayId; 
             private String natGatewayName; 
-            private java.util.List < NatRouteEntryList> natRouteEntryList; 
+            private java.util.List<NatRouteEntryList> natRouteEntryList; 
             private String proxyId; 
             private String proxyName; 
             private String proxyStatus; 
@@ -453,7 +458,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             /**
              * <p>The default route entries of the NAT gateway.</p>
              */
-            public Builder natRouteEntryList(java.util.List < NatRouteEntryList> natRouteEntryList) {
+            public Builder natRouteEntryList(java.util.List<NatRouteEntryList> natRouteEntryList) {
                 this.natRouteEntryList = natRouteEntryList;
                 return this;
             }

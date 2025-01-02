@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     private Long avgTotalBps;
 
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("MaxBandwidthTime")
     private Long maxBandwidthTime;
@@ -122,7 +127,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -215,7 +220,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         private Long avgOutBps; 
         private Long avgSession; 
         private Long avgTotalBps; 
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private Long maxBandwidthTime; 
         private Long maxDayExceedBytes; 
         private Long maxInBps; 
@@ -276,7 +281,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         /**
          * <p>The statistics on traffic.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }

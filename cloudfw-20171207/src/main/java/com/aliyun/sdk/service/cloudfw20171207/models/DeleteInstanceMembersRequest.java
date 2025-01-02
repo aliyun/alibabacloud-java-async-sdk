@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteInstanceMembersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberUids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > memberUids;
+    private java.util.List<Long> memberUids;
 
     private DeleteInstanceMembersRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeleteInstanceMembersRequest extends Request {
     /**
      * @return memberUids
      */
-    public java.util.List < Long > getMemberUids() {
+    public java.util.List<Long> getMemberUids() {
         return this.memberUids;
     }
 
     public static final class Builder extends Request.Builder<DeleteInstanceMembersRequest, Builder> {
-        private java.util.List < Long > memberUids; 
+        private java.util.List<Long> memberUids; 
 
         private Builder() {
             super();
@@ -61,7 +66,7 @@ public class DeleteInstanceMembersRequest extends Request {
          * <strong>example:</strong>
          * <p>1234123412341234</p>
          */
-        public Builder memberUids(java.util.List < Long > memberUids) {
+        public Builder memberUids(java.util.List<Long> memberUids) {
             this.putQueryParameter("MemberUids", memberUids);
             this.memberUids = memberUids;
             return this;

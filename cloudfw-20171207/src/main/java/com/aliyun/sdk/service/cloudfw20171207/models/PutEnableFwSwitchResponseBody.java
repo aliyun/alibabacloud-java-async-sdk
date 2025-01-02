@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutEnableFwSwitchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AbnormalResourceStatusList")
-    private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList;
+    private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     /**
      * @return abnormalResourceStatusList
      */
-    public java.util.List < AbnormalResourceStatusList> getAbnormalResourceStatusList() {
+    public java.util.List<AbnormalResourceStatusList> getAbnormalResourceStatusList() {
         return this.abnormalResourceStatusList;
     }
 
@@ -46,13 +51,13 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList; 
+        private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList; 
         private String requestId; 
 
         /**
          * <p>The status information of the asset when it is not synchronized to Cloud Firewall.</p>
          */
-        public Builder abnormalResourceStatusList(java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList) {
+        public Builder abnormalResourceStatusList(java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList) {
             this.abnormalResourceStatusList = abnormalResourceStatusList;
             return this;
         }

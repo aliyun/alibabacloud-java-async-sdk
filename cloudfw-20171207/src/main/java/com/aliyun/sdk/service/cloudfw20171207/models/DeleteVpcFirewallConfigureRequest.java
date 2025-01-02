@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DeleteVpcFirewallConfigureRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcFirewallIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vpcFirewallIdList;
+    private java.util.List<String> vpcFirewallIdList;
 
     private DeleteVpcFirewallConfigureRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class DeleteVpcFirewallConfigureRequest extends Request {
     /**
      * @return vpcFirewallIdList
      */
-    public java.util.List < String > getVpcFirewallIdList() {
+    public java.util.List<String> getVpcFirewallIdList() {
         return this.vpcFirewallIdList;
     }
 
     public static final class Builder extends Request.Builder<DeleteVpcFirewallConfigureRequest, Builder> {
         private String lang; 
         private String memberUid; 
-        private java.util.List < String > vpcFirewallIdList; 
+        private java.util.List<String> vpcFirewallIdList; 
 
         private Builder() {
             super();
@@ -114,7 +119,7 @@ public class DeleteVpcFirewallConfigureRequest extends Request {
          * <p>The instance IDs of VPC firewalls.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder vpcFirewallIdList(java.util.List < String > vpcFirewallIdList) {
+        public Builder vpcFirewallIdList(java.util.List<String> vpcFirewallIdList) {
             this.putQueryParameter("VpcFirewallIdList", vpcFirewallIdList);
             this.vpcFirewallIdList = vpcFirewallIdList;
             return this;

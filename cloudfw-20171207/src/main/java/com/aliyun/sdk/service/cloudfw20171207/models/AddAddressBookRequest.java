@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class AddAddressBookRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagList")
-    private java.util.List < TagList> tagList;
+    private java.util.List<TagList> tagList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagRelation")
@@ -130,7 +135,7 @@ public class AddAddressBookRequest extends Request {
     /**
      * @return tagList
      */
-    public java.util.List < TagList> getTagList() {
+    public java.util.List<TagList> getTagList() {
         return this.tagList;
     }
 
@@ -149,7 +154,7 @@ public class AddAddressBookRequest extends Request {
         private String groupType; 
         private String lang; 
         private String sourceIp; 
-        private java.util.List < TagList> tagList; 
+        private java.util.List<TagList> tagList; 
         private String tagRelation; 
 
         private Builder() {
@@ -281,7 +286,7 @@ public class AddAddressBookRequest extends Request {
         /**
          * <p>The ECS tags that you want to match.</p>
          */
-        public Builder tagList(java.util.List < TagList> tagList) {
+        public Builder tagList(java.util.List<TagList> tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
             return this;

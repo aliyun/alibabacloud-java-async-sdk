@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInternetOpenIpResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The data returned.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -120,7 +125,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         private Boolean hasAclRecommend;
 
         @com.aliyun.core.annotation.NameInMap("PortList")
-        private java.util.List < String > portList;
+        private java.util.List<String> portList;
 
         @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
@@ -135,7 +140,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         private String riskReason;
 
         @com.aliyun.core.annotation.NameInMap("ServiceNameList")
-        private java.util.List < String > serviceNameList;
+        private java.util.List<String> serviceNameList;
 
         @com.aliyun.core.annotation.NameInMap("SrcIpCnt")
         private Long srcIpCnt;
@@ -225,7 +230,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         /**
          * @return portList
          */
-        public java.util.List < String > getPortList() {
+        public java.util.List<String> getPortList() {
             return this.portList;
         }
 
@@ -260,7 +265,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         /**
          * @return serviceNameList
          */
-        public java.util.List < String > getServiceNameList() {
+        public java.util.List<String> getServiceNameList() {
             return this.serviceNameList;
         }
 
@@ -306,12 +311,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private String assetsType; 
             private Integer detailNum; 
             private Boolean hasAclRecommend; 
-            private java.util.List < String > portList; 
+            private java.util.List<String> portList; 
             private String publicIp; 
             private String regionNo; 
             private Integer riskLevel; 
             private String riskReason; 
-            private java.util.List < String > serviceNameList; 
+            private java.util.List<String> serviceNameList; 
             private Long srcIpCnt; 
             private Long totalReplyBytes; 
             private String trafficPercent1Day; 
@@ -397,7 +402,7 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             /**
              * <p>The list of ports.</p>
              */
-            public Builder portList(java.util.List < String > portList) {
+            public Builder portList(java.util.List<String> portList) {
                 this.portList = portList;
                 return this;
             }
@@ -455,13 +460,16 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             /**
              * <p>The list of applications.</p>
              */
-            public Builder serviceNameList(java.util.List < String > serviceNameList) {
+            public Builder serviceNameList(java.util.List<String> serviceNameList) {
                 this.serviceNameList = serviceNameList;
                 return this;
             }
 
             /**
-             * SrcIpCnt.
+             * <p>Number of source IPs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder srcIpCnt(Long srcIpCnt) {
                 this.srcIpCnt = srcIpCnt;
@@ -469,7 +477,10 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             }
 
             /**
-             * TotalReplyBytes.
+             * <p>Outbound traffic in the last 7 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder totalReplyBytes(Long totalReplyBytes) {
                 this.totalReplyBytes = totalReplyBytes;

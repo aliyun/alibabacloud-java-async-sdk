@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         private ResourceSpecStatistic resourceSpecStatistic; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>850A84******25g4d2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceSpecStatistic.
+         * <p>The statistics on specifications.</p>
          */
         public Builder resourceSpecStatistic(ResourceSpecStatistic resourceSpecStatistic) {
             this.resourceSpecStatistic = resourceSpecStatistic;
@@ -84,21 +92,6 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpNumUsed")
         private Integer ipNumUsed;
 
-        @com.aliyun.core.annotation.NameInMap("IsIpNumEnough")
-        private Integer isIpNumEnough;
-
-        @com.aliyun.core.annotation.NameInMap("IsRegionNumEnough")
-        private Integer isRegionNumEnough;
-
-        @com.aliyun.core.annotation.NameInMap("IsSuggestUpdate")
-        private Integer isSuggestUpdate;
-
-        @com.aliyun.core.annotation.NameInMap("RegionNumSpec")
-        private Integer regionNumSpec;
-
-        @com.aliyun.core.annotation.NameInMap("RegionNumUsed")
-        private Integer regionNumUsed;
-
         @com.aliyun.core.annotation.NameInMap("SensitiveDataIpNumSpec")
         private Long sensitiveDataIpNumSpec;
 
@@ -108,11 +101,6 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         private ResourceSpecStatistic(Builder builder) {
             this.ipNumSpec = builder.ipNumSpec;
             this.ipNumUsed = builder.ipNumUsed;
-            this.isIpNumEnough = builder.isIpNumEnough;
-            this.isRegionNumEnough = builder.isRegionNumEnough;
-            this.isSuggestUpdate = builder.isSuggestUpdate;
-            this.regionNumSpec = builder.regionNumSpec;
-            this.regionNumUsed = builder.regionNumUsed;
             this.sensitiveDataIpNumSpec = builder.sensitiveDataIpNumSpec;
             this.sensitiveDataIpNumUsed = builder.sensitiveDataIpNumUsed;
         }
@@ -140,41 +128,6 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * @return isIpNumEnough
-         */
-        public Integer getIsIpNumEnough() {
-            return this.isIpNumEnough;
-        }
-
-        /**
-         * @return isRegionNumEnough
-         */
-        public Integer getIsRegionNumEnough() {
-            return this.isRegionNumEnough;
-        }
-
-        /**
-         * @return isSuggestUpdate
-         */
-        public Integer getIsSuggestUpdate() {
-            return this.isSuggestUpdate;
-        }
-
-        /**
-         * @return regionNumSpec
-         */
-        public Integer getRegionNumSpec() {
-            return this.regionNumSpec;
-        }
-
-        /**
-         * @return regionNumUsed
-         */
-        public Integer getRegionNumUsed() {
-            return this.regionNumUsed;
-        }
-
-        /**
          * @return sensitiveDataIpNumSpec
          */
         public Long getSensitiveDataIpNumSpec() {
@@ -191,16 +144,14 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private Integer ipNumSpec; 
             private Integer ipNumUsed; 
-            private Integer isIpNumEnough; 
-            private Integer isRegionNumEnough; 
-            private Integer isSuggestUpdate; 
-            private Integer regionNumSpec; 
-            private Integer regionNumUsed; 
             private Long sensitiveDataIpNumSpec; 
             private Long sensitiveDataIpNumUsed; 
 
             /**
-             * IpNumSpec.
+             * <p>The number of public IP addresses that can be protected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ipNumSpec(Integer ipNumSpec) {
                 this.ipNumSpec = ipNumSpec;
@@ -208,7 +159,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * IpNumUsed.
+             * <p>The number of public IP addresses that are protected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ipNumUsed(Integer ipNumUsed) {
                 this.ipNumUsed = ipNumUsed;
@@ -216,47 +170,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * IsIpNumEnough.
-             */
-            public Builder isIpNumEnough(Integer isIpNumEnough) {
-                this.isIpNumEnough = isIpNumEnough;
-                return this;
-            }
-
-            /**
-             * IsRegionNumEnough.
-             */
-            public Builder isRegionNumEnough(Integer isRegionNumEnough) {
-                this.isRegionNumEnough = isRegionNumEnough;
-                return this;
-            }
-
-            /**
-             * IsSuggestUpdate.
-             */
-            public Builder isSuggestUpdate(Integer isSuggestUpdate) {
-                this.isSuggestUpdate = isSuggestUpdate;
-                return this;
-            }
-
-            /**
-             * RegionNumSpec.
-             */
-            public Builder regionNumSpec(Integer regionNumSpec) {
-                this.regionNumSpec = regionNumSpec;
-                return this;
-            }
-
-            /**
-             * RegionNumUsed.
-             */
-            public Builder regionNumUsed(Integer regionNumUsed) {
-                this.regionNumUsed = regionNumUsed;
-                return this;
-            }
-
-            /**
-             * SensitiveDataIpNumSpec.
+             * <p>The number of public IP addresses that can enable data leakage detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sensitiveDataIpNumSpec(Long sensitiveDataIpNumSpec) {
                 this.sensitiveDataIpNumSpec = sensitiveDataIpNumSpec;
@@ -264,7 +181,10 @@ public class DescribeAssetStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataIpNumUsed.
+             * <p>The number of public IP addresses that enabled data leakage detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sensitiveDataIpNumUsed(Long sensitiveDataIpNumUsed) {
                 this.sensitiveDataIpNumUsed = sensitiveDataIpNumUsed;

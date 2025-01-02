@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -319,7 +324,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
      */
     public static class VpcCidrTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntryList")
-        private java.util.List < RouteEntryList> routeEntryList;
+        private java.util.List<RouteEntryList> routeEntryList;
 
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
@@ -340,7 +345,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         /**
          * @return routeEntryList
          */
-        public java.util.List < RouteEntryList> getRouteEntryList() {
+        public java.util.List<RouteEntryList> getRouteEntryList() {
             return this.routeEntryList;
         }
 
@@ -352,13 +357,13 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < RouteEntryList> routeEntryList; 
+            private java.util.List<RouteEntryList> routeEntryList; 
             private String routeTableId; 
 
             /**
              * <p>The route entries of the local VPC.</p>
              */
-            public Builder routeEntryList(java.util.List < RouteEntryList> routeEntryList) {
+            public Builder routeEntryList(java.util.List<RouteEntryList> routeEntryList) {
                 this.routeEntryList = routeEntryList;
                 return this;
             }
@@ -401,7 +406,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         private String routerInterfaceId;
 
         @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
-        private java.util.List < VpcCidrTableList> vpcCidrTableList;
+        private java.util.List<VpcCidrTableList> vpcCidrTableList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -458,7 +463,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         /**
          * @return vpcCidrTableList
          */
-        public java.util.List < VpcCidrTableList> getVpcCidrTableList() {
+        public java.util.List<VpcCidrTableList> getVpcCidrTableList() {
             return this.vpcCidrTableList;
         }
 
@@ -481,7 +486,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             private String eniPrivateIpAddress; 
             private String regionNo; 
             private String routerInterfaceId; 
-            private java.util.List < VpcCidrTableList> vpcCidrTableList; 
+            private java.util.List<VpcCidrTableList> vpcCidrTableList; 
             private String vpcId; 
             private String vpcName; 
 
@@ -532,7 +537,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             /**
              * <p>The CIDR blocks of the local VPC.</p>
              */
-            public Builder vpcCidrTableList(java.util.List < VpcCidrTableList> vpcCidrTableList) {
+            public Builder vpcCidrTableList(java.util.List<VpcCidrTableList> vpcCidrTableList) {
                 this.vpcCidrTableList = vpcCidrTableList;
                 return this;
             }
@@ -647,7 +652,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
      */
     public static class PeerVpcVpcCidrTableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntryList")
-        private java.util.List < VpcCidrTableListRouteEntryList> routeEntryList;
+        private java.util.List<VpcCidrTableListRouteEntryList> routeEntryList;
 
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
@@ -668,7 +673,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         /**
          * @return routeEntryList
          */
-        public java.util.List < VpcCidrTableListRouteEntryList> getRouteEntryList() {
+        public java.util.List<VpcCidrTableListRouteEntryList> getRouteEntryList() {
             return this.routeEntryList;
         }
 
@@ -680,13 +685,13 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < VpcCidrTableListRouteEntryList> routeEntryList; 
+            private java.util.List<VpcCidrTableListRouteEntryList> routeEntryList; 
             private String routeTableId; 
 
             /**
              * <p>The route entries of the peer VPC.</p>
              */
-            public Builder routeEntryList(java.util.List < VpcCidrTableListRouteEntryList> routeEntryList) {
+            public Builder routeEntryList(java.util.List<VpcCidrTableListRouteEntryList> routeEntryList) {
                 this.routeEntryList = routeEntryList;
                 return this;
             }
@@ -729,7 +734,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         private String routerInterfaceId;
 
         @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
-        private java.util.List < PeerVpcVpcCidrTableList> vpcCidrTableList;
+        private java.util.List<PeerVpcVpcCidrTableList> vpcCidrTableList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -786,7 +791,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
         /**
          * @return vpcCidrTableList
          */
-        public java.util.List < PeerVpcVpcCidrTableList> getVpcCidrTableList() {
+        public java.util.List<PeerVpcVpcCidrTableList> getVpcCidrTableList() {
             return this.vpcCidrTableList;
         }
 
@@ -809,7 +814,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             private String eniPrivateIpAddress; 
             private String regionNo; 
             private String routerInterfaceId; 
-            private java.util.List < PeerVpcVpcCidrTableList> vpcCidrTableList; 
+            private java.util.List<PeerVpcVpcCidrTableList> vpcCidrTableList; 
             private String vpcId; 
             private String vpcName; 
 
@@ -860,7 +865,7 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
             /**
              * <p>The CIDR blocks of the peer VPC.</p>
              */
-            public Builder vpcCidrTableList(java.util.List < PeerVpcVpcCidrTableList> vpcCidrTableList) {
+            public Builder vpcCidrTableList(java.util.List<PeerVpcVpcCidrTableList> vpcCidrTableList) {
                 this.vpcCidrTableList = vpcCidrTableList;
                 return this;
             }

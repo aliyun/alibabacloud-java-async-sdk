@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -239,7 +244,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * HitContentType.
+         * <p>Type of the hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hitContentType(Integer hitContentType) {
             this.hitContentType = hitContentType;
@@ -247,7 +255,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * HitTo.
+         * <p>The position where the hit ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67</p>
          */
         public Builder hitTo(Integer hitTo) {
             this.hitTo = hitTo;
@@ -255,7 +266,10 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
         }
 
         /**
-         * ParsedContent.
+         * <p>Hit payload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2f636f6d706f7365722f73656e645f656d61696c3f746f3d6d61667740776f66736f7961792675726c3d687474703a2f2f302e302e302e303a31323334352f692f6431366530312f313664622f673670772f</p>
          */
         public Builder parsedContent(String parsedContent) {
             this.parsedContent = parsedContent;

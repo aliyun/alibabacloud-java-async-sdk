@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AclGroupList")
-    private java.util.List < AclGroupList> aclGroupList;
+    private java.util.List<AclGroupList> aclGroupList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     /**
      * @return aclGroupList
      */
-    public java.util.List < AclGroupList> getAclGroupList() {
+    public java.util.List<AclGroupList> getAclGroupList() {
         return this.aclGroupList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AclGroupList> aclGroupList; 
+        private java.util.List<AclGroupList> aclGroupList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The information about the policy groups.</p>
          */
-        public Builder aclGroupList(java.util.List < AclGroupList> aclGroupList) {
+        public Builder aclGroupList(java.util.List<AclGroupList> aclGroupList) {
             this.aclGroupList = aclGroupList;
             return this;
         }

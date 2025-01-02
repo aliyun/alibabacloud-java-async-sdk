@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PutEnableFwSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpaddrList")
-    private java.util.List < String > ipaddrList;
+    private java.util.List<String> ipaddrList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -22,11 +27,11 @@ public class PutEnableFwSwitchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionList")
-    private java.util.List < String > regionList;
+    private java.util.List<String> regionList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceTypeList")
-    private java.util.List < String > resourceTypeList;
+    private java.util.List<String> resourceTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -58,7 +63,7 @@ public class PutEnableFwSwitchRequest extends Request {
     /**
      * @return ipaddrList
      */
-    public java.util.List < String > getIpaddrList() {
+    public java.util.List<String> getIpaddrList() {
         return this.ipaddrList;
     }
 
@@ -72,14 +77,14 @@ public class PutEnableFwSwitchRequest extends Request {
     /**
      * @return regionList
      */
-    public java.util.List < String > getRegionList() {
+    public java.util.List<String> getRegionList() {
         return this.regionList;
     }
 
     /**
      * @return resourceTypeList
      */
-    public java.util.List < String > getResourceTypeList() {
+    public java.util.List<String> getResourceTypeList() {
         return this.resourceTypeList;
     }
 
@@ -91,10 +96,10 @@ public class PutEnableFwSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutEnableFwSwitchRequest, Builder> {
-        private java.util.List < String > ipaddrList; 
+        private java.util.List<String> ipaddrList; 
         private String lang; 
-        private java.util.List < String > regionList; 
-        private java.util.List < String > resourceTypeList; 
+        private java.util.List<String> regionList; 
+        private java.util.List<String> resourceTypeList; 
         private String sourceIp; 
 
         private Builder() {
@@ -119,7 +124,7 @@ public class PutEnableFwSwitchRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;192.0.X.X&quot;,&quot;192.0.X.X&quot;]</p>
          */
-        public Builder ipaddrList(java.util.List < String > ipaddrList) {
+        public Builder ipaddrList(java.util.List<String> ipaddrList) {
             this.putQueryParameter("IpaddrList", ipaddrList);
             this.ipaddrList = ipaddrList;
             return this;
@@ -150,7 +155,7 @@ public class PutEnableFwSwitchRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;cn-hangzhou&quot;,&quot;cn-shanghai&quot;]</p>
          */
-        public Builder regionList(java.util.List < String > regionList) {
+        public Builder regionList(java.util.List<String> regionList) {
             this.putQueryParameter("RegionList", regionList);
             this.regionList = regionList;
             return this;
@@ -179,7 +184,7 @@ public class PutEnableFwSwitchRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;EcsPublicIp&quot;,&quot;NatEip&quot;]</p>
          */
-        public Builder resourceTypeList(java.util.List < String > resourceTypeList) {
+        public Builder resourceTypeList(java.util.List<String> resourceTypeList) {
             this.putQueryParameter("ResourceTypeList", resourceTypeList);
             this.resourceTypeList = resourceTypeList;
             return this;

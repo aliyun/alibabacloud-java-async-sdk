@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -54,7 +59,10 @@ public class DescribeUserBuyVersionRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Instance ID. If the Instance ID is provided, the query will be based on this ID. If not provided, the latest instance will be queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfw_elasticity_public_cn-*******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

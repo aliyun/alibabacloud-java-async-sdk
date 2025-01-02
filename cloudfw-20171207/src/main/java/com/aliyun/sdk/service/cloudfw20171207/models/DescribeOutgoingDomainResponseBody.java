@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOutgoingDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainList")
-    private java.util.List < DomainList> domainList;
+    private java.util.List<DomainList> domainList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     /**
      * @return domainList
      */
-    public java.util.List < DomainList> getDomainList() {
+    public java.util.List<DomainList> getDomainList() {
         return this.domainList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainList> domainList; 
+        private java.util.List<DomainList> domainList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * <p>An array that consists of the domain names in outbound connections.</p>
+         * <p>The domain names in outbound connections.</p>
          */
-        public Builder domainList(java.util.List < DomainList> domainList) {
+        public Builder domainList(java.util.List<DomainList> domainList) {
             this.domainList = domainList;
             return this;
         }
@@ -272,7 +277,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         private String addressGroupUUID;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
-        private java.util.List < String > applicationNameList;
+        private java.util.List<String> applicationNameList;
 
         @com.aliyun.core.annotation.NameInMap("AssetCount")
         private Long assetCount;
@@ -332,7 +337,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         private Long sessionCount;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < TagList> tagList;
+        private java.util.List<TagList> tagList;
 
         @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
@@ -413,7 +418,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         /**
          * @return applicationNameList
          */
-        public java.util.List < String > getApplicationNameList() {
+        public java.util.List<String> getApplicationNameList() {
             return this.applicationNameList;
         }
 
@@ -553,7 +558,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < TagList> getTagList() {
+        public java.util.List<TagList> getTagList() {
             return this.tagList;
         }
 
@@ -570,7 +575,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             private String aclStatus; 
             private String addressGroupName; 
             private String addressGroupUUID; 
-            private java.util.List < String > applicationNameList; 
+            private java.util.List<String> applicationNameList; 
             private Long assetCount; 
             private String business; 
             private String categoryClassId; 
@@ -590,7 +595,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             private String securityReason; 
             private String securitySuggest; 
             private Long sessionCount; 
-            private java.util.List < TagList> tagList; 
+            private java.util.List<TagList> tagList; 
             private String totalBytes; 
 
             /**
@@ -657,15 +662,18 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationNameList.
+             * <p>The application names.</p>
              */
-            public Builder applicationNameList(java.util.List < String > applicationNameList) {
+            public Builder applicationNameList(java.util.List<String> applicationNameList) {
                 this.applicationNameList = applicationNameList;
                 return this;
             }
 
             /**
-             * AssetCount.
+             * <p>The outbound asset count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder assetCount(Long assetCount) {
                 this.assetCount = assetCount;
@@ -830,7 +838,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateAssetCount.
+             * <p>The outbound private asset count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder privateAssetCount(Long privateAssetCount) {
                 this.privateAssetCount = privateAssetCount;
@@ -900,7 +911,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             /**
              * <p>An array that consists of tags.</p>
              */
-            public Builder tagList(java.util.List < TagList> tagList) {
+            public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
                 return this;
             }

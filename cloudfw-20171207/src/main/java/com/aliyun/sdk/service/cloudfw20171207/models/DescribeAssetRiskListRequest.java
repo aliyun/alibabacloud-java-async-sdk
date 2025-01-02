@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAssetRiskListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpAddrList")
-    private java.util.List < String > ipAddrList;
+    private java.util.List<String> ipAddrList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpVersion")
@@ -53,7 +58,7 @@ public class DescribeAssetRiskListRequest extends Request {
     /**
      * @return ipAddrList
      */
-    public java.util.List < String > getIpAddrList() {
+    public java.util.List<String> getIpAddrList() {
         return this.ipAddrList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeAssetRiskListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAssetRiskListRequest, Builder> {
-        private java.util.List < String > ipAddrList; 
+        private java.util.List<String> ipAddrList; 
         private Integer ipVersion; 
         private String lang; 
         private String sourceIp; 
@@ -107,7 +112,7 @@ public class DescribeAssetRiskListRequest extends Request {
          * </li>
          * </ul>
          */
-        public Builder ipAddrList(java.util.List < String > ipAddrList) {
+        public Builder ipAddrList(java.util.List<String> ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);
             this.ipAddrList = ipAddrList;
             return this;

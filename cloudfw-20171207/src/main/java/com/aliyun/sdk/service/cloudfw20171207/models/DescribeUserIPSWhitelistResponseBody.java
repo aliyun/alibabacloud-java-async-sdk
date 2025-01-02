@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Ipv6Whitelists")
-    private java.util.List < Ipv6Whitelists> ipv6Whitelists;
+    private java.util.List<Ipv6Whitelists> ipv6Whitelists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Whitelists")
-    private java.util.List < Whitelists> whitelists;
+    private java.util.List<Whitelists> whitelists;
 
     private DescribeUserIPSWhitelistResponseBody(Builder builder) {
         this.ipv6Whitelists = builder.ipv6Whitelists;
@@ -38,7 +43,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
     /**
      * @return ipv6Whitelists
      */
-    public java.util.List < Ipv6Whitelists> getIpv6Whitelists() {
+    public java.util.List<Ipv6Whitelists> getIpv6Whitelists() {
         return this.ipv6Whitelists;
     }
 
@@ -52,19 +57,19 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
     /**
      * @return whitelists
      */
-    public java.util.List < Whitelists> getWhitelists() {
+    public java.util.List<Whitelists> getWhitelists() {
         return this.whitelists;
     }
 
     public static final class Builder {
-        private java.util.List < Ipv6Whitelists> ipv6Whitelists; 
+        private java.util.List<Ipv6Whitelists> ipv6Whitelists; 
         private String requestId; 
-        private java.util.List < Whitelists> whitelists; 
+        private java.util.List<Whitelists> whitelists; 
 
         /**
          * Ipv6Whitelists.
          */
-        public Builder ipv6Whitelists(java.util.List < Ipv6Whitelists> ipv6Whitelists) {
+        public Builder ipv6Whitelists(java.util.List<Ipv6Whitelists> ipv6Whitelists) {
             this.ipv6Whitelists = ipv6Whitelists;
             return this;
         }
@@ -80,7 +85,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         /**
          * Whitelists.
          */
-        public Builder whitelists(java.util.List < Whitelists> whitelists) {
+        public Builder whitelists(java.util.List<Whitelists> whitelists) {
             this.whitelists = whitelists;
             return this;
         }
@@ -108,7 +113,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         private String listValue;
 
         @com.aliyun.core.annotation.NameInMap("WhiteListValue")
-        private java.util.List < String > whiteListValue;
+        private java.util.List<String> whiteListValue;
 
         @com.aliyun.core.annotation.NameInMap("WhiteType")
         private Long whiteType;
@@ -153,7 +158,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         /**
          * @return whiteListValue
          */
-        public java.util.List < String > getWhiteListValue() {
+        public java.util.List<String> getWhiteListValue() {
             return this.whiteListValue;
         }
 
@@ -168,7 +173,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
             private Long direction; 
             private Long listType; 
             private String listValue; 
-            private java.util.List < String > whiteListValue; 
+            private java.util.List<String> whiteListValue; 
             private Long whiteType; 
 
             /**
@@ -198,7 +203,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
             /**
              * WhiteListValue.
              */
-            public Builder whiteListValue(java.util.List < String > whiteListValue) {
+            public Builder whiteListValue(java.util.List<String> whiteListValue) {
                 this.whiteListValue = whiteListValue;
                 return this;
             }
@@ -235,7 +240,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         private String listValue;
 
         @com.aliyun.core.annotation.NameInMap("WhiteListValue")
-        private java.util.List < String > whiteListValue;
+        private java.util.List<String> whiteListValue;
 
         @com.aliyun.core.annotation.NameInMap("WhiteType")
         private Long whiteType;
@@ -280,7 +285,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
         /**
          * @return whiteListValue
          */
-        public java.util.List < String > getWhiteListValue() {
+        public java.util.List<String> getWhiteListValue() {
             return this.whiteListValue;
         }
 
@@ -295,7 +300,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
             private Long direction; 
             private Long listType; 
             private String listValue; 
-            private java.util.List < String > whiteListValue; 
+            private java.util.List<String> whiteListValue; 
             private Long whiteType; 
 
             /**
@@ -325,7 +330,7 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
             /**
              * WhiteListValue.
              */
-            public Builder whiteListValue(java.util.List < String > whiteListValue) {
+            public Builder whiteListValue(java.util.List<String> whiteListValue) {
                 this.whiteListValue = whiteListValue;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicies")
-    private java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies;
+    private java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies;
 
     private DescribeTrFirewallV2RoutePolicyListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     /**
      * @return trFirewallRoutePolicies
      */
-    public java.util.List < TrFirewallRoutePolicies> getTrFirewallRoutePolicies() {
+    public java.util.List<TrFirewallRoutePolicies> getTrFirewallRoutePolicies() {
         return this.trFirewallRoutePolicies;
     }
 
     public static final class Builder {
         private String requestId; 
         private String totalCount; 
-        private java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies; 
+        private java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies; 
 
         /**
          * <p>The request ID.</p>
@@ -86,7 +91,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         /**
          * <p>The routing policies.</p>
          */
-        public Builder trFirewallRoutePolicies(java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies) {
+        public Builder trFirewallRoutePolicies(java.util.List<TrFirewallRoutePolicies> trFirewallRoutePolicies) {
             this.trFirewallRoutePolicies = trFirewallRoutePolicies;
             return this;
         }
@@ -251,7 +256,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
      */
     public static class TrFirewallRoutePolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestCandidateList")
-        private java.util.List < DestCandidateList> destCandidateList;
+        private java.util.List<DestCandidateList> destCandidateList;
 
         @com.aliyun.core.annotation.NameInMap("PolicyDescription")
         private String policyDescription;
@@ -266,7 +271,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         private String policyType;
 
         @com.aliyun.core.annotation.NameInMap("SrcCandidateList")
-        private java.util.List < SrcCandidateList> srcCandidateList;
+        private java.util.List<SrcCandidateList> srcCandidateList;
 
         @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
         private String trFirewallRoutePolicyId;
@@ -292,7 +297,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         /**
          * @return destCandidateList
          */
-        public java.util.List < DestCandidateList> getDestCandidateList() {
+        public java.util.List<DestCandidateList> getDestCandidateList() {
             return this.destCandidateList;
         }
 
@@ -327,7 +332,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         /**
          * @return srcCandidateList
          */
-        public java.util.List < SrcCandidateList> getSrcCandidateList() {
+        public java.util.List<SrcCandidateList> getSrcCandidateList() {
             return this.srcCandidateList;
         }
 
@@ -339,18 +344,18 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DestCandidateList> destCandidateList; 
+            private java.util.List<DestCandidateList> destCandidateList; 
             private String policyDescription; 
             private String policyName; 
             private String policyStatus; 
             private String policyType; 
-            private java.util.List < SrcCandidateList> srcCandidateList; 
+            private java.util.List<SrcCandidateList> srcCandidateList; 
             private String trFirewallRoutePolicyId; 
 
             /**
              * <p>The secondary traffic redirection instances.</p>
              */
-            public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
+            public Builder destCandidateList(java.util.List<DestCandidateList> destCandidateList) {
                 this.destCandidateList = destCandidateList;
                 return this;
             }
@@ -415,7 +420,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
             /**
              * <p>The primary traffic redirection instances.</p>
              */
-            public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
+            public Builder srcCandidateList(java.util.List<SrcCandidateList> srcCandidateList) {
                 this.srcCandidateList = srcCandidateList;
                 return this;
             }

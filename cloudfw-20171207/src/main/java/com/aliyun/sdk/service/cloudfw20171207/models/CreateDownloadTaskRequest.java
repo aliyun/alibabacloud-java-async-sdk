@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -21,6 +26,10 @@ public class CreateDownloadTaskRequest extends Request {
     private String taskData;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    private String taskType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeZone")
     private String timeZone;
 
@@ -28,6 +37,7 @@ public class CreateDownloadTaskRequest extends Request {
         super(builder);
         this.lang = builder.lang;
         this.taskData = builder.taskData;
+        this.taskType = builder.taskType;
         this.timeZone = builder.timeZone;
     }
 
@@ -59,6 +69,13 @@ public class CreateDownloadTaskRequest extends Request {
     }
 
     /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    /**
      * @return timeZone
      */
     public String getTimeZone() {
@@ -68,6 +85,7 @@ public class CreateDownloadTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDownloadTaskRequest, Builder> {
         private String lang; 
         private String taskData; 
+        private String taskType; 
         private String timeZone; 
 
         private Builder() {
@@ -78,6 +96,7 @@ public class CreateDownloadTaskRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.taskData = request.taskData;
+            this.taskType = request.taskType;
             this.timeZone = request.timeZone;
         } 
 
@@ -107,6 +126,18 @@ public class CreateDownloadTaskRequest extends Request {
         public Builder taskData(String taskData) {
             this.putQueryParameter("TaskData", taskData);
             this.taskData = taskData;
+            return this;
+        }
+
+        /**
+         * <p>The type of the task. For more information about task types, see the descriptions in the &quot;DescribeDownloadTaskType&quot; topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternetFirewallAsset</p>
+         */
+        public Builder taskType(String taskType) {
+            this.putQueryParameter("TaskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 

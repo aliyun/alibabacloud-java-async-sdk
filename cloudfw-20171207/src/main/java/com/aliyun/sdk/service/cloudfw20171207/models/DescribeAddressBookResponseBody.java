@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAddressBookResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Acls")
-    private java.util.List < Acls> acls;
+    private java.util.List<Acls> acls;
 
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
@@ -46,7 +51,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     /**
      * @return acls
      */
-    public java.util.List < Acls> getAcls() {
+    public java.util.List<Acls> getAcls() {
         return this.acls;
     }
 
@@ -79,7 +84,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Acls> acls; 
+        private java.util.List<Acls> acls; 
         private String pageNo; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         /**
          * <p>The information about the address book.</p>
          */
-        public Builder acls(java.util.List < Acls> acls) {
+        public Builder acls(java.util.List<Acls> acls) {
             this.acls = acls;
             return this;
         }
@@ -143,6 +148,73 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAddressBookResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAddressBookResponseBody</p>
+     */
+    public static class Addresses extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Address")
+        private String address;
+
+        @com.aliyun.core.annotation.NameInMap("Note")
+        private String note;
+
+        private Addresses(Builder builder) {
+            this.address = builder.address;
+            this.note = builder.note;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Addresses create() {
+            return builder().build();
+        }
+
+        /**
+         * @return address
+         */
+        public String getAddress() {
+            return this.address;
+        }
+
+        /**
+         * @return note
+         */
+        public String getNote() {
+            return this.note;
+        }
+
+        public static final class Builder {
+            private String address; 
+            private String note; 
+
+            /**
+             * Address.
+             */
+            public Builder address(String address) {
+                this.address = address;
+                return this;
+            }
+
+            /**
+             * Note.
+             */
+            public Builder note(String note) {
+                this.note = note;
+                return this;
+            }
+
+            public Addresses build() {
+                return new Addresses(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeAddressBookResponseBody} extends {@link TeaModel}
@@ -224,10 +296,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
      */
     public static class Acls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressList")
-        private java.util.List < String > addressList;
+        private java.util.List<String> addressList;
 
         @com.aliyun.core.annotation.NameInMap("AddressListCount")
         private Integer addressListCount;
+
+        @com.aliyun.core.annotation.NameInMap("Addresses")
+        private java.util.List<Addresses> addresses;
 
         @com.aliyun.core.annotation.NameInMap("AutoAddTagEcs")
         private Integer autoAddTagEcs;
@@ -248,7 +323,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         private Integer referenceCount;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < TagList> tagList;
+        private java.util.List<TagList> tagList;
 
         @com.aliyun.core.annotation.NameInMap("TagRelation")
         private String tagRelation;
@@ -256,6 +331,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         private Acls(Builder builder) {
             this.addressList = builder.addressList;
             this.addressListCount = builder.addressListCount;
+            this.addresses = builder.addresses;
             this.autoAddTagEcs = builder.autoAddTagEcs;
             this.description = builder.description;
             this.groupName = builder.groupName;
@@ -277,7 +353,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         /**
          * @return addressList
          */
-        public java.util.List < String > getAddressList() {
+        public java.util.List<String> getAddressList() {
             return this.addressList;
         }
 
@@ -286,6 +362,13 @@ public class DescribeAddressBookResponseBody extends TeaModel {
          */
         public Integer getAddressListCount() {
             return this.addressListCount;
+        }
+
+        /**
+         * @return addresses
+         */
+        public java.util.List<Addresses> getAddresses() {
+            return this.addresses;
         }
 
         /**
@@ -333,7 +416,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < TagList> getTagList() {
+        public java.util.List<TagList> getTagList() {
             return this.tagList;
         }
 
@@ -345,21 +428,22 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > addressList; 
+            private java.util.List<String> addressList; 
             private Integer addressListCount; 
+            private java.util.List<Addresses> addresses; 
             private Integer autoAddTagEcs; 
             private String description; 
             private String groupName; 
             private String groupType; 
             private String groupUuid; 
             private Integer referenceCount; 
-            private java.util.List < TagList> tagList; 
+            private java.util.List<TagList> tagList; 
             private String tagRelation; 
 
             /**
              * <p>The addresses in the address book.</p>
              */
-            public Builder addressList(java.util.List < String > addressList) {
+            public Builder addressList(java.util.List<String> addressList) {
                 this.addressList = addressList;
                 return this;
             }
@@ -372,6 +456,14 @@ public class DescribeAddressBookResponseBody extends TeaModel {
              */
             public Builder addressListCount(Integer addressListCount) {
                 this.addressListCount = addressListCount;
+                return this;
+            }
+
+            /**
+             * Addresses.
+             */
+            public Builder addresses(java.util.List<Addresses> addresses) {
+                this.addresses = addresses;
                 return this;
             }
 
@@ -456,7 +548,7 @@ public class DescribeAddressBookResponseBody extends TeaModel {
             /**
              * <p>The details about the ECS tags that can be automatically added to the address book.</p>
              */
-            public Builder tagList(java.util.List < TagList> tagList) {
+            public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
                 return this;
             }

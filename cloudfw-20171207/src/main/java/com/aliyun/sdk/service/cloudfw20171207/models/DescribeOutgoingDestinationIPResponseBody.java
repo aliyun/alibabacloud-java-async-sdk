@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DstIPList")
-    private java.util.List < DstIPList> dstIPList;
+    private java.util.List<DstIPList> dstIPList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     /**
      * @return dstIPList
      */
-    public java.util.List < DstIPList> getDstIPList() {
+    public java.util.List<DstIPList> getDstIPList() {
         return this.dstIPList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DstIPList> dstIPList; 
+        private java.util.List<DstIPList> dstIPList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The IP addresses in outbound connections.</p>
          */
-        public Builder dstIPList(java.util.List < DstIPList> dstIPList) {
+        public Builder dstIPList(java.util.List<DstIPList> dstIPList) {
             this.dstIPList = dstIPList;
             return this;
         }
@@ -362,9 +367,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             /**
              * <p>The risk level. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: low</li>
-             * <li><strong>2</strong>: medium</li>
-             * <li><strong>3</strong>: high</li>
+             * <li><strong>1</strong>: low.</li>
+             * <li><strong>2</strong>: medium.</li>
+             * <li><strong>3</strong>: high.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -432,10 +437,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         private String aclStatus;
 
         @com.aliyun.core.annotation.NameInMap("AddressGroupList")
-        private java.util.List < AddressGroupList> addressGroupList;
+        private java.util.List<AddressGroupList> addressGroupList;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationPortList")
-        private java.util.List < ApplicationPortList> applicationPortList;
+        private java.util.List<ApplicationPortList> applicationPortList;
 
         @com.aliyun.core.annotation.NameInMap("AssetCount")
         private Long assetCount;
@@ -492,7 +497,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         private Long sessionCount;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < TagList> tagList;
+        private java.util.List<TagList> tagList;
 
         @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
@@ -557,14 +562,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * @return addressGroupList
          */
-        public java.util.List < AddressGroupList> getAddressGroupList() {
+        public java.util.List<AddressGroupList> getAddressGroupList() {
             return this.addressGroupList;
         }
 
         /**
          * @return applicationPortList
          */
-        public java.util.List < ApplicationPortList> getApplicationPortList() {
+        public java.util.List<ApplicationPortList> getApplicationPortList() {
             return this.applicationPortList;
         }
 
@@ -697,7 +702,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < TagList> getTagList() {
+        public java.util.List<TagList> getTagList() {
             return this.tagList;
         }
 
@@ -712,8 +717,8 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String aclCoverage; 
             private String aclRecommendDetail; 
             private String aclStatus; 
-            private java.util.List < AddressGroupList> addressGroupList; 
-            private java.util.List < ApplicationPortList> applicationPortList; 
+            private java.util.List<AddressGroupList> addressGroupList; 
+            private java.util.List<ApplicationPortList> applicationPortList; 
             private Long assetCount; 
             private String categoryClassId; 
             private String categoryId; 
@@ -732,7 +737,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             private String securityReason; 
             private String securitySuggest; 
             private Long sessionCount; 
-            private java.util.List < TagList> tagList; 
+            private java.util.List<TagList> tagList; 
             private String totalBytes; 
 
             /**
@@ -779,21 +784,27 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             /**
              * <p>The information about the address book.</p>
              */
-            public Builder addressGroupList(java.util.List < AddressGroupList> addressGroupList) {
+            public Builder addressGroupList(java.util.List<AddressGroupList> addressGroupList) {
                 this.addressGroupList = addressGroupList;
                 return this;
             }
 
             /**
              * <p>The application ports.</p>
+             * <blockquote>
+             * <p> Only the first 100 application ports are displayed.</p>
+             * </blockquote>
              */
-            public Builder applicationPortList(java.util.List < ApplicationPortList> applicationPortList) {
+            public Builder applicationPortList(java.util.List<ApplicationPortList> applicationPortList) {
                 this.applicationPortList = applicationPortList;
                 return this;
             }
 
             /**
-             * AssetCount.
+             * <p>The outbound asset count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder assetCount(Long assetCount) {
                 this.assetCount = assetCount;
@@ -925,7 +936,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * LocationName.
+             * <p>Location name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>山东省青岛市</p>
              */
             public Builder locationName(String locationName) {
                 this.locationName = locationName;
@@ -944,7 +958,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateAssetCount.
+             * <p>The outbound private asset count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder privateAssetCount(Long privateAssetCount) {
                 this.privateAssetCount = privateAssetCount;
@@ -1014,7 +1031,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tagList(java.util.List < TagList> tagList) {
+            public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
                 return this;
             }

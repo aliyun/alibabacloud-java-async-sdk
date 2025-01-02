@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,10 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         private Long vpcNumber; 
 
         /**
-         * AliUid.
+         * <p>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>119898001566xxxx</p>
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -190,7 +198,16 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Expire.
+         * <p>The time when Cloud Firewall expires.</p>
+         * <blockquote>
+         * <p> The value is a timestamp in milliseconds.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> If you use Cloud Firewall that uses the pay-as-you-go billing method, ignore this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1726934400000</p>
          */
         public Builder expire(Long expire) {
             this.expire = expire;
@@ -198,7 +215,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of Cloud Firewall.</p>
+         * <blockquote>
+         * <p> If you use a trial of Cloud Firewall, ignore this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vipcloudfw-cn-xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -206,7 +229,17 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The status of Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: Cloud Firewall is running as expected.</li>
+         * <li><strong>init</strong>: Cloud Firewall is being initialized.</li>
+         * <li><strong>deleting</strong>: Cloud Firewall is being deleted.</li>
+         * <li><strong>abnormal</strong>: An exception occurs in Cloud Firewall.</li>
+         * <li><strong>free</strong>: Cloud Firewall is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -214,7 +247,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IpNumber.
+         * <p>The number of public IP addresses that can be protected.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder ipNumber(Long ipNumber) {
             this.ipNumber = ipNumber;
@@ -222,7 +261,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * LogStatus.
+         * <p>Indicates whether log delivery is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder logStatus(Boolean logStatus) {
             this.logStatus = logStatus;
@@ -230,7 +276,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * LogStorage.
+         * <p>The log storage capacity.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder logStorage(Long logStorage) {
             this.logStorage = logStorage;
@@ -238,7 +290,17 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * MaxOverflow.
+         * <p>The status of the burstable protected traffic feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1000000</strong>: enabled.</li>
+         * <li><strong>0</strong>: disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxOverflow(Long maxOverflow) {
             this.maxOverflow = maxOverflow;
@@ -246,7 +308,10 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F71B03EE-xxxxx-91D79CC6AA1A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +319,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The time when Cloud Firewall was activated.</p>
+         * <blockquote>
+         * <p> The value is a timestamp in milliseconds.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1692504764000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -262,7 +333,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * UserStatus.
+         * <p>Indicates whether Cloud Firewall is valid. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder userStatus(Boolean userStatus) {
             this.userStatus = userStatus;
@@ -270,7 +348,16 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The edition of Cloud Firewall. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Premium Edition.</li>
+         * <li><strong>3</strong>: Enterprise Edition.</li>
+         * <li><strong>4</strong>: Ultimate Edition.</li>
+         * <li><strong>10</strong>: Cloud Firewall that uses the pay-as-you-go billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -278,7 +365,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * VpcNumber.
+         * <p>The number of virtual private clouds (VPCs) that can be protected.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder vpcNumber(Long vpcNumber) {
             this.vpcNumber = vpcNumber;

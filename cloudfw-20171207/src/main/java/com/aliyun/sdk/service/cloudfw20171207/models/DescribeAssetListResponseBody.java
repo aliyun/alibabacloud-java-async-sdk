@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAssetListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Assets")
-    private java.util.List < Assets> assets;
+    private java.util.List<Assets> assets;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
     /**
      * @return assets
      */
-    public java.util.List < Assets> getAssets() {
+    public java.util.List<Assets> getAssets() {
         return this.assets;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Assets> assets; 
+        private java.util.List<Assets> assets; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * <p>The details about the assets that are protected by Cloud Firewall.</p>
+         * <p>The assets that are protected by Cloud Firewall.</p>
          */
-        public Builder assets(java.util.List < Assets> assets) {
+        public Builder assets(java.util.List<Assets> assets) {
             this.assets = assets;
             return this;
         }
@@ -479,7 +484,10 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * Last7DayOutTrafficBytes.
+             * <p>Outbound traffic in the last 7 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder last7DayOutTrafficBytes(Long last7DayOutTrafficBytes) {
                 this.last7DayOutTrafficBytes = last7DayOutTrafficBytes;
@@ -637,7 +645,10 @@ public class DescribeAssetListResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataStatus.
+             * <p>Data leakage detection enabled status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder sensitiveDataStatus(String sensitiveDataStatus) {
                 this.sensitiveDataStatus = sensitiveDataStatus;

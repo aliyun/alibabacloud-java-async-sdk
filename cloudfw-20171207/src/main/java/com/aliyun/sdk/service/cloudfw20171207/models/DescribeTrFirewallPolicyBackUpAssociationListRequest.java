@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CandidateList")
-    private java.util.List < CandidateList> candidateList;
+    private java.util.List<CandidateList> candidateList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallId")
@@ -52,7 +57,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
     /**
      * @return candidateList
      */
-    public java.util.List < CandidateList> getCandidateList() {
+    public java.util.List<CandidateList> getCandidateList() {
         return this.candidateList;
     }
 
@@ -78,7 +83,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
     }
 
     public static final class Builder extends Request.Builder<DescribeTrFirewallPolicyBackUpAssociationListRequest, Builder> {
-        private java.util.List < CandidateList> candidateList; 
+        private java.util.List<CandidateList> candidateList; 
         private String firewallId; 
         private String lang; 
         private String trFirewallRoutePolicyId; 
@@ -98,7 +103,7 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
         /**
          * <p>The traffic redirection instances.</p>
          */
-        public Builder candidateList(java.util.List < CandidateList> candidateList) {
+        public Builder candidateList(java.util.List<CandidateList> candidateList) {
             String candidateListShrink = shrink(candidateList, "CandidateList", "json");
             this.putQueryParameter("CandidateList", candidateListShrink);
             this.candidateList = candidateList;

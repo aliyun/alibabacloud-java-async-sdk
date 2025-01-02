@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class CreateSecurityProxyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatRouteEntryList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < NatRouteEntryList> natRouteEntryList;
+    private java.util.List<NatRouteEntryList> natRouteEntryList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyName")
@@ -113,7 +118,7 @@ public class CreateSecurityProxyRequest extends Request {
     /**
      * @return natRouteEntryList
      */
-    public java.util.List < NatRouteEntryList> getNatRouteEntryList() {
+    public java.util.List<NatRouteEntryList> getNatRouteEntryList() {
         return this.natRouteEntryList;
     }
 
@@ -170,7 +175,7 @@ public class CreateSecurityProxyRequest extends Request {
         private String firewallSwitch; 
         private String lang; 
         private String natGatewayId; 
-        private java.util.List < NatRouteEntryList> natRouteEntryList; 
+        private java.util.List<NatRouteEntryList> natRouteEntryList; 
         private String proxyName; 
         private String regionNo; 
         private Integer strictMode; 
@@ -247,7 +252,7 @@ public class CreateSecurityProxyRequest extends Request {
          * <p>The routes to be switched to the NAT gateway.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder natRouteEntryList(java.util.List < NatRouteEntryList> natRouteEntryList) {
+        public Builder natRouteEntryList(java.util.List<NatRouteEntryList> natRouteEntryList) {
             this.putQueryParameter("NatRouteEntryList", natRouteEntryList);
             this.natRouteEntryList = natRouteEntryList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
-    private java.util.List < String > applicationNameList;
+    private java.util.List<String> applicationNameList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -84,7 +89,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatDays")
-    private java.util.List < Long > repeatDays;
+    private java.util.List<Long> repeatDays;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatEndTime")
@@ -175,7 +180,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     /**
      * @return applicationNameList
      */
-    public java.util.List < String > getApplicationNameList() {
+    public java.util.List<String> getApplicationNameList() {
         return this.applicationNameList;
     }
 
@@ -273,7 +278,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     /**
      * @return repeatDays
      */
-    public java.util.List < Long > getRepeatDays() {
+    public java.util.List<Long> getRepeatDays() {
         return this.repeatDays;
     }
 
@@ -329,7 +334,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateVpcFirewallControlPolicyRequest, Builder> {
         private String aclAction; 
         private String applicationName; 
-        private java.util.List < String > applicationNameList; 
+        private java.util.List<String> applicationNameList; 
         private String description; 
         private String destPort; 
         private String destPortGroup; 
@@ -343,7 +348,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         private String newOrder; 
         private String proto; 
         private String release; 
-        private java.util.List < Long > repeatDays; 
+        private java.util.List<Long> repeatDays; 
         private String repeatEndTime; 
         private String repeatStartTime; 
         private String repeatType; 
@@ -434,7 +439,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         /**
          * <p>The application types supported by the access control policy.</p>
          */
-        public Builder applicationNameList(java.util.List < String > applicationNameList) {
+        public Builder applicationNameList(java.util.List<String> applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
             this.applicationNameList = applicationNameList;
             return this;
@@ -660,7 +665,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
          * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
          * </blockquote>
          */
-        public Builder repeatDays(java.util.List < Long > repeatDays) {
+        public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
             this.repeatDays = repeatDays;
             return this;

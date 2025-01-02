@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -62,11 +67,11 @@ public class DescribeInvadeEventListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcessStatusList")
-    private java.util.List < Integer > processStatusList;
+    private java.util.List<Integer> processStatusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevel")
-    private java.util.List < Integer > riskLevel;
+    private java.util.List<Integer> riskLevel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -197,14 +202,14 @@ public class DescribeInvadeEventListRequest extends Request {
     /**
      * @return processStatusList
      */
-    public java.util.List < Integer > getProcessStatusList() {
+    public java.util.List<Integer> getProcessStatusList() {
         return this.processStatusList;
     }
 
     /**
      * @return riskLevel
      */
-    public java.util.List < Integer > getRiskLevel() {
+    public java.util.List<Integer> getRiskLevel() {
         return this.riskLevel;
     }
 
@@ -235,8 +240,8 @@ public class DescribeInvadeEventListRequest extends Request {
         private String lang; 
         private Long memberUid; 
         private String pageSize; 
-        private java.util.List < Integer > processStatusList; 
-        private java.util.List < Integer > riskLevel; 
+        private java.util.List<Integer> processStatusList; 
+        private java.util.List<Integer> riskLevel; 
         private String sourceIp; 
         private String startTime; 
 
@@ -421,7 +426,7 @@ public class DescribeInvadeEventListRequest extends Request {
         /**
          * <p>The handling status of breach awareness events.</p>
          */
-        public Builder processStatusList(java.util.List < Integer > processStatusList) {
+        public Builder processStatusList(java.util.List<Integer> processStatusList) {
             this.putQueryParameter("ProcessStatusList", processStatusList);
             this.processStatusList = processStatusList;
             return this;
@@ -430,7 +435,7 @@ public class DescribeInvadeEventListRequest extends Request {
         /**
          * <p>The risk levels.</p>
          */
-        public Builder riskLevel(java.util.List < Integer > riskLevel) {
+        public Builder riskLevel(java.util.List<Integer> riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
             return this;

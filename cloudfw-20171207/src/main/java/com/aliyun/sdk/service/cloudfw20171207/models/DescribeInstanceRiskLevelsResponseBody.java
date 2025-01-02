@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceRisks")
-    private java.util.List < InstanceRisks> instanceRisks;
+    private java.util.List<InstanceRisks> instanceRisks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     /**
      * @return instanceRisks
      */
-    public java.util.List < InstanceRisks> getInstanceRisks() {
+    public java.util.List<InstanceRisks> getInstanceRisks() {
         return this.instanceRisks;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceRisks> instanceRisks; 
+        private java.util.List<InstanceRisks> instanceRisks; 
         private String requestId; 
 
         /**
          * <p>The information about the instances.</p>
          */
-        public Builder instanceRisks(java.util.List < InstanceRisks> instanceRisks) {
+        public Builder instanceRisks(java.util.List<InstanceRisks> instanceRisks) {
             this.instanceRisks = instanceRisks;
             return this;
         }
@@ -181,7 +186,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
      */
     public static class InstanceRisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -206,7 +211,7 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -225,14 +230,14 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String instanceId; 
             private String level; 
 
             /**
              * <p>The risk levels of the Elastic Compute Service (ECS) instance.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }

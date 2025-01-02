@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VpcList")
-    private java.util.List < VpcList> vpcList;
+    private java.util.List<VpcList> vpcList;
 
     private DescribeVpcListLiteResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
     /**
      * @return vpcList
      */
-    public java.util.List < VpcList> getVpcList() {
+    public java.util.List<VpcList> getVpcList() {
         return this.vpcList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VpcList> vpcList; 
+        private java.util.List<VpcList> vpcList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         /**
          * <p>The information about the VPCs.</p>
          */
-        public Builder vpcList(java.util.List < VpcList> vpcList) {
+        public Builder vpcList(java.util.List<VpcList> vpcList) {
             this.vpcList = vpcList;
             return this;
         }

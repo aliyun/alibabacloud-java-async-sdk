@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInvadeEventListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EventList")
-    private java.util.List < EventList> eventList;
+    private java.util.List<EventList> eventList;
 
     @com.aliyun.core.annotation.NameInMap("HighLevelPercent")
     private Integer highLevelPercent;
@@ -50,7 +55,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     /**
      * @return eventList
      */
-    public java.util.List < EventList> getEventList() {
+    public java.util.List<EventList> getEventList() {
         return this.eventList;
     }
 
@@ -90,7 +95,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EventList> eventList; 
+        private java.util.List<EventList> eventList; 
         private Integer highLevelPercent; 
         private Integer lowLevelPercent; 
         private Integer middleLevelPercent; 
@@ -100,7 +105,7 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
         /**
          * <p>An array that consists of breach awareness events.</p>
          */
-        public Builder eventList(java.util.List < EventList> eventList) {
+        public Builder eventList(java.util.List<EventList> eventList) {
             this.eventList = eventList;
             return this;
         }

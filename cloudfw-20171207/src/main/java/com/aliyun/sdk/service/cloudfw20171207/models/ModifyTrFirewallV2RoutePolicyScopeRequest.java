@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestCandidateList")
-    private java.util.List < DestCandidateList> destCandidateList;
+    private java.util.List<DestCandidateList> destCandidateList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallId")
@@ -31,7 +36,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcCandidateList")
-    private java.util.List < SrcCandidateList> srcCandidateList;
+    private java.util.List<SrcCandidateList> srcCandidateList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
@@ -64,7 +69,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     /**
      * @return destCandidateList
      */
-    public java.util.List < DestCandidateList> getDestCandidateList() {
+    public java.util.List<DestCandidateList> getDestCandidateList() {
         return this.destCandidateList;
     }
 
@@ -92,7 +97,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     /**
      * @return srcCandidateList
      */
-    public java.util.List < SrcCandidateList> getSrcCandidateList() {
+    public java.util.List<SrcCandidateList> getSrcCandidateList() {
         return this.srcCandidateList;
     }
 
@@ -104,11 +109,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTrFirewallV2RoutePolicyScopeRequest, Builder> {
-        private java.util.List < DestCandidateList> destCandidateList; 
+        private java.util.List<DestCandidateList> destCandidateList; 
         private String firewallId; 
         private String lang; 
         private String shouldRecover; 
-        private java.util.List < SrcCandidateList> srcCandidateList; 
+        private java.util.List<SrcCandidateList> srcCandidateList; 
         private String trFirewallRoutePolicyId; 
 
         private Builder() {
@@ -128,7 +133,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         /**
          * <p>The secondary traffic redirection instances.</p>
          */
-        public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
+        public Builder destCandidateList(java.util.List<DestCandidateList> destCandidateList) {
             String destCandidateListShrink = shrink(destCandidateList, "DestCandidateList", "json");
             this.putQueryParameter("DestCandidateList", destCandidateListShrink);
             this.destCandidateList = destCandidateList;
@@ -183,7 +188,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         /**
          * <p>The primary traffic redirection instances.</p>
          */
-        public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
+        public Builder srcCandidateList(java.util.List<SrcCandidateList> srcCandidateList) {
             String srcCandidateListShrink = shrink(srcCandidateList, "SrcCandidateList", "json");
             this.putQueryParameter("SrcCandidateList", srcCandidateListShrink);
             this.srcCandidateList = srcCandidateList;

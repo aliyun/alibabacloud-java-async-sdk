@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrafficList")
-    private java.util.List < TrafficList> trafficList;
+    private java.util.List<TrafficList> trafficList;
 
     private DescribePostpayTrafficDetailResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     /**
      * @return trafficList
      */
-    public java.util.List < TrafficList> getTrafficList() {
+    public java.util.List<TrafficList> getTrafficList() {
         return this.trafficList;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TrafficList> trafficList; 
+        private java.util.List<TrafficList> trafficList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -86,7 +91,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         /**
          * <p>The statistics on traffic.</p>
          */
-        public Builder trafficList(java.util.List < TrafficList> trafficList) {
+        public Builder trafficList(java.util.List<TrafficList> trafficList) {
             this.trafficList = trafficList;
             return this;
         }
@@ -282,7 +287,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionDuration.
+             * <p>Protection duration. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder protectionDuration(Long protectionDuration) {
                 this.protectionDuration = protectionDuration;
@@ -290,7 +298,10 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

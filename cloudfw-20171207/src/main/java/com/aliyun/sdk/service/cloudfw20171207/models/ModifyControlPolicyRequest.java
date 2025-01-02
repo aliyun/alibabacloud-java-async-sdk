@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ModifyControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
-    private java.util.List < String > applicationNameList;
+    private java.util.List<String> applicationNameList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -85,7 +90,7 @@ public class ModifyControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatDays")
-    private java.util.List < Long > repeatDays;
+    private java.util.List<Long> repeatDays;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatEndTime")
@@ -177,7 +182,7 @@ public class ModifyControlPolicyRequest extends Request {
     /**
      * @return applicationNameList
      */
-    public java.util.List < String > getApplicationNameList() {
+    public java.util.List<String> getApplicationNameList() {
         return this.applicationNameList;
     }
 
@@ -268,7 +273,7 @@ public class ModifyControlPolicyRequest extends Request {
     /**
      * @return repeatDays
      */
-    public java.util.List < Long > getRepeatDays() {
+    public java.util.List<Long> getRepeatDays() {
         return this.repeatDays;
     }
 
@@ -318,7 +323,7 @@ public class ModifyControlPolicyRequest extends Request {
         private String aclAction; 
         private String aclUuid; 
         private String applicationName; 
-        private java.util.List < String > applicationNameList; 
+        private java.util.List<String> applicationNameList; 
         private String description; 
         private String destPort; 
         private String destPortGroup; 
@@ -331,7 +336,7 @@ public class ModifyControlPolicyRequest extends Request {
         private String lang; 
         private String proto; 
         private String release; 
-        private java.util.List < Long > repeatDays; 
+        private java.util.List<Long> repeatDays; 
         private String repeatEndTime; 
         private String repeatStartTime; 
         private String repeatType; 
@@ -444,7 +449,7 @@ public class ModifyControlPolicyRequest extends Request {
          * <p> You must specify one of the ApplicationNameList and ApplicationName parameters. If you configure both ApplicationNameList and ApplicationName, only the value of ApplicationNameList is used.</p>
          * </blockquote>
          */
-        public Builder applicationNameList(java.util.List < String > applicationNameList) {
+        public Builder applicationNameList(java.util.List<String> applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
             this.applicationNameList = applicationNameList;
             return this;
@@ -663,7 +668,7 @@ public class ModifyControlPolicyRequest extends Request {
          * <p> If you set RepeatType to Monthly, the fields in the value of this parameter cannot be repeated.</p>
          * </blockquote>
          */
-        public Builder repeatDays(java.util.List < Long > repeatDays) {
+        public Builder repeatDays(java.util.List<Long> repeatDays) {
             this.putQueryParameter("RepeatDays", repeatDays);
             this.repeatDays = repeatDays;
             return this;

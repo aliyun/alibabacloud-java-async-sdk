@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FirewallRouteDetailList")
-    private java.util.List < FirewallRouteDetailList> firewallRouteDetailList;
+    private java.util.List<FirewallRouteDetailList> firewallRouteDetailList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     /**
      * @return firewallRouteDetailList
      */
-    public java.util.List < FirewallRouteDetailList> getFirewallRouteDetailList() {
+    public java.util.List<FirewallRouteDetailList> getFirewallRouteDetailList() {
         return this.firewallRouteDetailList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FirewallRouteDetailList> firewallRouteDetailList; 
+        private java.util.List<FirewallRouteDetailList> firewallRouteDetailList; 
         private String requestId; 
 
         /**
          * <p>The route tables of Cloud Firewall.</p>
          */
-        public Builder firewallRouteDetailList(java.util.List < FirewallRouteDetailList> firewallRouteDetailList) {
+        public Builder firewallRouteDetailList(java.util.List<FirewallRouteDetailList> firewallRouteDetailList) {
             this.firewallRouteDetailList = firewallRouteDetailList;
             return this;
         }
