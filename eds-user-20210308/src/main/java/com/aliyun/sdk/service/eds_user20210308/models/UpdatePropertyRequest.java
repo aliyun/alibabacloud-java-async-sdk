@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UpdatePropertyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PropertyValues")
-    private java.util.List < PropertyValues> propertyValues;
+    private java.util.List<PropertyValues> propertyValues;
 
     private UpdatePropertyRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class UpdatePropertyRequest extends Request {
     /**
      * @return propertyValues
      */
-    public java.util.List < PropertyValues> getPropertyValues() {
+    public java.util.List<PropertyValues> getPropertyValues() {
         return this.propertyValues;
     }
 
     public static final class Builder extends Request.Builder<UpdatePropertyRequest, Builder> {
         private Long propertyId; 
         private String propertyKey; 
-        private java.util.List < PropertyValues> propertyValues; 
+        private java.util.List<PropertyValues> propertyValues; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class UpdatePropertyRequest extends Request {
         /**
          * <p>The values of property.</p>
          */
-        public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
+        public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);
             this.propertyValues = propertyValues;
             return this;

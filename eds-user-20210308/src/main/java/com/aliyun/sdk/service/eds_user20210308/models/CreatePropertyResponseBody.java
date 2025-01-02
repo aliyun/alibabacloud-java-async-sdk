@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -274,10 +279,10 @@ public class CreatePropertyResponseBody extends TeaModel {
      */
     public static class SavePropertyValueModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedPropertyValues")
-        private java.util.List < FailedPropertyValues> failedPropertyValues;
+        private java.util.List<FailedPropertyValues> failedPropertyValues;
 
         @com.aliyun.core.annotation.NameInMap("SavePropertyValues")
-        private java.util.List < SavePropertyValues> savePropertyValues;
+        private java.util.List<SavePropertyValues> savePropertyValues;
 
         private SavePropertyValueModel(Builder builder) {
             this.failedPropertyValues = builder.failedPropertyValues;
@@ -295,25 +300,25 @@ public class CreatePropertyResponseBody extends TeaModel {
         /**
          * @return failedPropertyValues
          */
-        public java.util.List < FailedPropertyValues> getFailedPropertyValues() {
+        public java.util.List<FailedPropertyValues> getFailedPropertyValues() {
             return this.failedPropertyValues;
         }
 
         /**
          * @return savePropertyValues
          */
-        public java.util.List < SavePropertyValues> getSavePropertyValues() {
+        public java.util.List<SavePropertyValues> getSavePropertyValues() {
             return this.savePropertyValues;
         }
 
         public static final class Builder {
-            private java.util.List < FailedPropertyValues> failedPropertyValues; 
-            private java.util.List < SavePropertyValues> savePropertyValues; 
+            private java.util.List<FailedPropertyValues> failedPropertyValues; 
+            private java.util.List<SavePropertyValues> savePropertyValues; 
 
             /**
              * <p>The property values that failed to be created.</p>
              */
-            public Builder failedPropertyValues(java.util.List < FailedPropertyValues> failedPropertyValues) {
+            public Builder failedPropertyValues(java.util.List<FailedPropertyValues> failedPropertyValues) {
                 this.failedPropertyValues = failedPropertyValues;
                 return this;
             }
@@ -321,7 +326,7 @@ public class CreatePropertyResponseBody extends TeaModel {
             /**
              * <p>Details of the property values that were created.</p>
              */
-            public Builder savePropertyValues(java.util.List < SavePropertyValues> savePropertyValues) {
+            public Builder savePropertyValues(java.util.List<SavePropertyValues> savePropertyValues) {
                 this.savePropertyValues = savePropertyValues;
                 return this;
             }

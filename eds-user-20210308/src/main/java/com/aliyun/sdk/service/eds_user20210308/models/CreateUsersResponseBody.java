@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -366,10 +371,10 @@ public class CreateUsersResponseBody extends TeaModel {
      */
     public static class CreateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedUsers")
-        private java.util.List < CreatedUsers> createdUsers;
+        private java.util.List<CreatedUsers> createdUsers;
 
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        private java.util.List<FailedUsers> failedUsers;
 
         private CreateResult(Builder builder) {
             this.createdUsers = builder.createdUsers;
@@ -387,25 +392,25 @@ public class CreateUsersResponseBody extends TeaModel {
         /**
          * @return createdUsers
          */
-        public java.util.List < CreatedUsers> getCreatedUsers() {
+        public java.util.List<CreatedUsers> getCreatedUsers() {
             return this.createdUsers;
         }
 
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < CreatedUsers> createdUsers; 
-            private java.util.List < FailedUsers> failedUsers; 
+            private java.util.List<CreatedUsers> createdUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
 
             /**
              * <p>Details of the created convenience users.</p>
              */
-            public Builder createdUsers(java.util.List < CreatedUsers> createdUsers) {
+            public Builder createdUsers(java.util.List<CreatedUsers> createdUsers) {
                 this.createdUsers = createdUsers;
                 return this;
             }
@@ -413,7 +418,7 @@ public class CreateUsersResponseBody extends TeaModel {
             /**
              * <p>Details of the convenience users that failed to be created.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }

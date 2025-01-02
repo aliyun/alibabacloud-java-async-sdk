@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,10 +183,10 @@ public class RemoveUsersResponseBody extends TeaModel {
      */
     public static class RemoveUsersResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        private java.util.List<FailedUsers> failedUsers;
 
         @com.aliyun.core.annotation.NameInMap("RemovedUsers")
-        private java.util.List < String > removedUsers;
+        private java.util.List<String> removedUsers;
 
         private RemoveUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
@@ -199,25 +204,25 @@ public class RemoveUsersResponseBody extends TeaModel {
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         /**
          * @return removedUsers
          */
-        public java.util.List < String > getRemovedUsers() {
+        public java.util.List<String> getRemovedUsers() {
             return this.removedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < FailedUsers> failedUsers; 
-            private java.util.List < String > removedUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> removedUsers; 
 
             /**
              * <p>The convenience users that failed to be removed.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }
@@ -225,7 +230,7 @@ public class RemoveUsersResponseBody extends TeaModel {
             /**
              * <p>The convenience users that were removed.</p>
              */
-            public Builder removedUsers(java.util.List < String > removedUsers) {
+            public Builder removedUsers(java.util.List<String> removedUsers) {
                 this.removedUsers = removedUsers;
                 return this;
             }

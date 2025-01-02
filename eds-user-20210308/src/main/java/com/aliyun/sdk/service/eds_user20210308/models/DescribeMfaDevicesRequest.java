@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeMfaDevicesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -31,7 +36,7 @@ public class DescribeMfaDevicesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SerialNumbers")
-    private java.util.List < String > serialNumbers;
+    private java.util.List<String> serialNumbers;
 
     private DescribeMfaDevicesRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class DescribeMfaDevicesRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -86,16 +91,16 @@ public class DescribeMfaDevicesRequest extends Request {
     /**
      * @return serialNumbers
      */
-    public java.util.List < String > getSerialNumbers() {
+    public java.util.List<String> getSerialNumbers() {
         return this.serialNumbers;
     }
 
     public static final class Builder extends Request.Builder<DescribeMfaDevicesRequest, Builder> {
         private String adDomain; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> endUserIds; 
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < String > serialNumbers; 
+        private java.util.List<String> serialNumbers; 
 
         private Builder() {
             super();
@@ -128,7 +133,7 @@ public class DescribeMfaDevicesRequest extends Request {
          * <strong>example:</strong>
          * <p>test</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
@@ -164,7 +169,7 @@ public class DescribeMfaDevicesRequest extends Request {
          * <strong>example:</strong>
          * <p>c2d9ae94-a64b-4a0d-8024-9519ca50****</p>
          */
-        public Builder serialNumbers(java.util.List < String > serialNumbers) {
+        public Builder serialNumbers(java.util.List<String> serialNumbers) {
             this.putQueryParameter("SerialNumbers", serialNumbers);
             this.serialNumbers = serialNumbers;
             return this;

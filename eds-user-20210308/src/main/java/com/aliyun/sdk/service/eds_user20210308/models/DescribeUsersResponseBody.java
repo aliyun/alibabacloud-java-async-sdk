@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeUsersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < Users> users;
+    private java.util.List<Users> users;
 
     private DescribeUsersResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class DescribeUsersResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
 
         /**
          * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
@@ -86,7 +91,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         /**
          * <p>The information about the convenience users.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }
@@ -105,7 +110,7 @@ public class DescribeUsersResponseBody extends TeaModel {
      */
     public static class Extras extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssignedResourceCount")
-        private java.util.Map < String, ? > assignedResourceCount;
+        private java.util.Map<String, ?> assignedResourceCount;
 
         private Extras(Builder builder) {
             this.assignedResourceCount = builder.assignedResourceCount;
@@ -122,17 +127,17 @@ public class DescribeUsersResponseBody extends TeaModel {
         /**
          * @return assignedResourceCount
          */
-        public java.util.Map < String, ? > getAssignedResourceCount() {
+        public java.util.Map<String, ?> getAssignedResourceCount() {
             return this.assignedResourceCount;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > assignedResourceCount; 
+            private java.util.Map<String, ?> assignedResourceCount; 
 
             /**
              * AssignedResourceCount.
              */
-            public Builder assignedResourceCount(java.util.Map < String, ? > assignedResourceCount) {
+            public Builder assignedResourceCount(java.util.Map<String, ?> assignedResourceCount) {
                 this.assignedResourceCount = assignedResourceCount;
                 return this;
             }
@@ -313,7 +318,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         private Extras extras;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < Groups> groups;
+        private java.util.List<Groups> groups;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -331,7 +336,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         private String orgId;
 
         @com.aliyun.core.annotation.NameInMap("Orgs")
-        private java.util.List < Orgs> orgs;
+        private java.util.List<Orgs> orgs;
 
         @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
@@ -418,7 +423,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < Groups> getGroups() {
+        public java.util.List<Groups> getGroups() {
             return this.groups;
         }
 
@@ -460,7 +465,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         /**
          * @return orgs
          */
-        public java.util.List < Orgs> getOrgs() {
+        public java.util.List<Orgs> getOrgs() {
             return this.orgs;
         }
 
@@ -512,13 +517,13 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String email; 
             private String endUserId; 
             private Extras extras; 
-            private java.util.List < Groups> groups; 
+            private java.util.List<Groups> groups; 
             private Long id; 
             private Boolean isTenantManager; 
             private String jobNumber; 
             private String nickName; 
             private String orgId; 
-            private java.util.List < Orgs> orgs; 
+            private java.util.List<Orgs> orgs; 
             private String ownerType; 
             private String phone; 
             private String realNickName; 
@@ -581,7 +586,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             /**
              * <p>The user groups to which the convenience user belongs.</p>
              */
-            public Builder groups(java.util.List < Groups> groups) {
+            public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -647,7 +652,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             /**
              * <p>The organizations to which the convenience user belongs.</p>
              */
-            public Builder orgs(java.util.List < Orgs> orgs) {
+            public Builder orgs(java.util.List<Orgs> orgs) {
                 this.orgs = orgs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class DescribeUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
-    private java.util.List < String > excludeEndUserIds;
+    private java.util.List<String> excludeEndUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
@@ -30,11 +35,15 @@ public class DescribeUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResources")
-    private java.util.Map < String, Boolean > filterWithAssignedResources;
+    private java.util.Map<String, Boolean> filterWithAssignedResources;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsQueryAllSubOrgs")
+    private Boolean isQueryAllSubOrgs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -51,7 +60,7 @@ public class DescribeUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ShowExtras")
-    private java.util.Map < String, ? > showExtras;
+    private java.util.Map<String, ?> showExtras;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SolutionId")
@@ -65,6 +74,7 @@ public class DescribeUsersRequest extends Request {
         this.filter = builder.filter;
         this.filterWithAssignedResources = builder.filterWithAssignedResources;
         this.groupId = builder.groupId;
+        this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgId = builder.orgId;
@@ -95,14 +105,14 @@ public class DescribeUsersRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
     /**
      * @return excludeEndUserIds
      */
-    public java.util.List < String > getExcludeEndUserIds() {
+    public java.util.List<String> getExcludeEndUserIds() {
         return this.excludeEndUserIds;
     }
 
@@ -116,7 +126,7 @@ public class DescribeUsersRequest extends Request {
     /**
      * @return filterWithAssignedResources
      */
-    public java.util.Map < String, Boolean > getFilterWithAssignedResources() {
+    public java.util.Map<String, Boolean> getFilterWithAssignedResources() {
         return this.filterWithAssignedResources;
     }
 
@@ -125,6 +135,13 @@ public class DescribeUsersRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return isQueryAllSubOrgs
+     */
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     /**
@@ -151,7 +168,7 @@ public class DescribeUsersRequest extends Request {
     /**
      * @return showExtras
      */
-    public java.util.Map < String, ? > getShowExtras() {
+    public java.util.Map<String, ?> getShowExtras() {
         return this.showExtras;
     }
 
@@ -164,15 +181,16 @@ public class DescribeUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
         private String bizType; 
-        private java.util.List < String > endUserIds; 
-        private java.util.List < String > excludeEndUserIds; 
+        private java.util.List<String> endUserIds; 
+        private java.util.List<String> excludeEndUserIds; 
         private String filter; 
-        private java.util.Map < String, Boolean > filterWithAssignedResources; 
+        private java.util.Map<String, Boolean> filterWithAssignedResources; 
         private String groupId; 
+        private Boolean isQueryAllSubOrgs; 
         private Long maxResults; 
         private String nextToken; 
         private String orgId; 
-        private java.util.Map < String, ? > showExtras; 
+        private java.util.Map<String, ?> showExtras; 
         private String solutionId; 
 
         private Builder() {
@@ -187,6 +205,7 @@ public class DescribeUsersRequest extends Request {
             this.filter = request.filter;
             this.filterWithAssignedResources = request.filterWithAssignedResources;
             this.groupId = request.groupId;
+            this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgId = request.orgId;
@@ -206,7 +225,7 @@ public class DescribeUsersRequest extends Request {
         /**
          * <p>The list of usernames that must be exactly matched.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
@@ -215,7 +234,7 @@ public class DescribeUsersRequest extends Request {
         /**
          * <p>The list of usernames to be exactly excluded.</p>
          */
-        public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
+        public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putBodyParameter("ExcludeEndUserIds", excludeEndUserIds);
             this.excludeEndUserIds = excludeEndUserIds;
             return this;
@@ -236,7 +255,7 @@ public class DescribeUsersRequest extends Request {
         /**
          * FilterWithAssignedResources.
          */
-        public Builder filterWithAssignedResources(java.util.Map < String, Boolean > filterWithAssignedResources) {
+        public Builder filterWithAssignedResources(java.util.Map<String, Boolean> filterWithAssignedResources) {
             String filterWithAssignedResourcesShrink = shrink(filterWithAssignedResources, "FilterWithAssignedResources", "json");
             this.putBodyParameter("FilterWithAssignedResources", filterWithAssignedResourcesShrink);
             this.filterWithAssignedResources = filterWithAssignedResources;
@@ -252,6 +271,15 @@ public class DescribeUsersRequest extends Request {
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * IsQueryAllSubOrgs.
+         */
+        public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+            this.putBodyParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
+            this.isQueryAllSubOrgs = isQueryAllSubOrgs;
             return this;
         }
 
@@ -298,7 +326,7 @@ public class DescribeUsersRequest extends Request {
         /**
          * ShowExtras.
          */
-        public Builder showExtras(java.util.Map < String, ? > showExtras) {
+        public Builder showExtras(java.util.Map<String, ?> showExtras) {
             String showExtrasShrink = shrink(showExtras, "ShowExtras", "json");
             this.putBodyParameter("ShowExtras", showExtrasShrink);
             this.showExtras = showExtras;

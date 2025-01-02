@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,10 +183,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
      */
     public static class ResetUsersResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        private java.util.List<FailedUsers> failedUsers;
 
         @com.aliyun.core.annotation.NameInMap("ResetUsers")
-        private java.util.List < String > resetUsers;
+        private java.util.List<String> resetUsers;
 
         private ResetUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
@@ -199,25 +204,25 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         /**
          * @return resetUsers
          */
-        public java.util.List < String > getResetUsers() {
+        public java.util.List<String> getResetUsers() {
             return this.resetUsers;
         }
 
         public static final class Builder {
-            private java.util.List < FailedUsers> failedUsers; 
-            private java.util.List < String > resetUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> resetUsers; 
 
             /**
              * <p>The information about the convenience users whose passwords failed to be reset.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }
@@ -225,7 +230,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
             /**
              * <p>The convenience users to which the system sent a password reset email.</p>
              */
-            public Builder resetUsers(java.util.List < String > resetUsers) {
+            public Builder resetUsers(java.util.List<String> resetUsers) {
                 this.resetUsers = resetUsers;
                 return this;
             }

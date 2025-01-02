@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class FilterUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
-    private java.util.List < String > excludeEndUserIds;
+    private java.util.List<String> excludeEndUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
@@ -55,11 +60,11 @@ public class FilterUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PropertyFilterParam")
-    private java.util.List < PropertyFilterParam> propertyFilterParam;
+    private java.util.List<PropertyFilterParam> propertyFilterParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PropertyKeyValueFilterParam")
-    private java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam;
+    private java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -98,7 +103,7 @@ public class FilterUsersRequest extends Request {
     /**
      * @return excludeEndUserIds
      */
-    public java.util.List < String > getExcludeEndUserIds() {
+    public java.util.List<String> getExcludeEndUserIds() {
         return this.excludeEndUserIds;
     }
 
@@ -168,14 +173,14 @@ public class FilterUsersRequest extends Request {
     /**
      * @return propertyFilterParam
      */
-    public java.util.List < PropertyFilterParam> getPropertyFilterParam() {
+    public java.util.List<PropertyFilterParam> getPropertyFilterParam() {
         return this.propertyFilterParam;
     }
 
     /**
      * @return propertyKeyValueFilterParam
      */
-    public java.util.List < PropertyKeyValueFilterParam> getPropertyKeyValueFilterParam() {
+    public java.util.List<PropertyKeyValueFilterParam> getPropertyKeyValueFilterParam() {
         return this.propertyKeyValueFilterParam;
     }
 
@@ -187,7 +192,7 @@ public class FilterUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<FilterUsersRequest, Builder> {
-        private java.util.List < String > excludeEndUserIds; 
+        private java.util.List<String> excludeEndUserIds; 
         private String filter; 
         private Boolean includeDesktopCount; 
         private Boolean includeDesktopGroupCount; 
@@ -197,8 +202,8 @@ public class FilterUsersRequest extends Request {
         private OrderParam orderParam; 
         private String orgId; 
         private String ownerType; 
-        private java.util.List < PropertyFilterParam> propertyFilterParam; 
-        private java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam; 
+        private java.util.List<PropertyFilterParam> propertyFilterParam; 
+        private java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam; 
         private Integer status; 
 
         private Builder() {
@@ -225,7 +230,7 @@ public class FilterUsersRequest extends Request {
         /**
          * <p>The list of usernames to be precisely excluded.</p>
          */
-        public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
+        public Builder excludeEndUserIds(java.util.List<String> excludeEndUserIds) {
             this.putQueryParameter("ExcludeEndUserIds", excludeEndUserIds);
             this.excludeEndUserIds = excludeEndUserIds;
             return this;
@@ -369,7 +374,7 @@ public class FilterUsersRequest extends Request {
         /**
          * <p>The list of properties for fuzzy search.</p>
          */
-        public Builder propertyFilterParam(java.util.List < PropertyFilterParam> propertyFilterParam) {
+        public Builder propertyFilterParam(java.util.List<PropertyFilterParam> propertyFilterParam) {
             this.putQueryParameter("PropertyFilterParam", propertyFilterParam);
             this.propertyFilterParam = propertyFilterParam;
             return this;
@@ -378,7 +383,7 @@ public class FilterUsersRequest extends Request {
         /**
          * <p>The list of property names and property values.</p>
          */
-        public Builder propertyKeyValueFilterParam(java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
+        public Builder propertyKeyValueFilterParam(java.util.List<PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
             this.putQueryParameter("PropertyKeyValueFilterParam", propertyKeyValueFilterParam);
             this.propertyKeyValueFilterParam = propertyKeyValueFilterParam;
             return this;

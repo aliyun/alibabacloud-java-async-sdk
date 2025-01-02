@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ThirdApp extends TeaModel {
     private OidcSsoConfig oidcSsoConfig;
 
     @com.aliyun.core.annotation.NameInMap("Secrets")
-    private java.util.List < Secrets> secrets;
+    private java.util.List<Secrets> secrets;
 
     private ThirdApp(Builder builder) {
         this.appKey = builder.appKey;
@@ -63,7 +68,7 @@ public class ThirdApp extends TeaModel {
     /**
      * @return secrets
      */
-    public java.util.List < Secrets> getSecrets() {
+    public java.util.List<Secrets> getSecrets() {
         return this.secrets;
     }
 
@@ -71,7 +76,7 @@ public class ThirdApp extends TeaModel {
         private String appKey; 
         private String name; 
         private OidcSsoConfig oidcSsoConfig; 
-        private java.util.List < Secrets> secrets; 
+        private java.util.List<Secrets> secrets; 
 
         /**
          * AppKey.
@@ -100,7 +105,7 @@ public class ThirdApp extends TeaModel {
         /**
          * Secrets.
          */
-        public Builder secrets(java.util.List < Secrets> secrets) {
+        public Builder secrets(java.util.List<Secrets> secrets) {
             this.secrets = secrets;
             return this;
         }
@@ -338,19 +343,19 @@ public class ThirdApp extends TeaModel {
         private Endpoints endpoints;
 
         @com.aliyun.core.annotation.NameInMap("GrantScopes")
-        private java.util.List < String > grantScopes;
+        private java.util.List<String> grantScopes;
 
         @com.aliyun.core.annotation.NameInMap("GrantTypes")
-        private java.util.List < String > grantTypes;
+        private java.util.List<String> grantTypes;
 
         @com.aliyun.core.annotation.NameInMap("IdTokenAlgorithmType")
-        private Integer idTokenAlgorithmType;
+        private String idTokenAlgorithmType;
 
         @com.aliyun.core.annotation.NameInMap("IdTokenEffectiveTime")
         private Integer idTokenEffectiveTime;
 
         @com.aliyun.core.annotation.NameInMap("RedirectUris")
-        private java.util.List < String > redirectUris;
+        private java.util.List<String> redirectUris;
 
         @com.aliyun.core.annotation.NameInMap("RefreshTokenEffective")
         private Integer refreshTokenEffective;
@@ -407,21 +412,21 @@ public class ThirdApp extends TeaModel {
         /**
          * @return grantScopes
          */
-        public java.util.List < String > getGrantScopes() {
+        public java.util.List<String> getGrantScopes() {
             return this.grantScopes;
         }
 
         /**
          * @return grantTypes
          */
-        public java.util.List < String > getGrantTypes() {
+        public java.util.List<String> getGrantTypes() {
             return this.grantTypes;
         }
 
         /**
          * @return idTokenAlgorithmType
          */
-        public Integer getIdTokenAlgorithmType() {
+        public String getIdTokenAlgorithmType() {
             return this.idTokenAlgorithmType;
         }
 
@@ -435,7 +440,7 @@ public class ThirdApp extends TeaModel {
         /**
          * @return redirectUris
          */
-        public java.util.List < String > getRedirectUris() {
+        public java.util.List<String> getRedirectUris() {
             return this.redirectUris;
         }
 
@@ -451,11 +456,11 @@ public class ThirdApp extends TeaModel {
             private Integer codeEffectiveTime; 
             private Boolean enableAuthLogin; 
             private Endpoints endpoints; 
-            private java.util.List < String > grantScopes; 
-            private java.util.List < String > grantTypes; 
-            private Integer idTokenAlgorithmType; 
+            private java.util.List<String> grantScopes; 
+            private java.util.List<String> grantTypes; 
+            private String idTokenAlgorithmType; 
             private Integer idTokenEffectiveTime; 
-            private java.util.List < String > redirectUris; 
+            private java.util.List<String> redirectUris; 
             private Integer refreshTokenEffective; 
 
             /**
@@ -493,7 +498,7 @@ public class ThirdApp extends TeaModel {
             /**
              * GrantScopes.
              */
-            public Builder grantScopes(java.util.List < String > grantScopes) {
+            public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
                 return this;
             }
@@ -501,7 +506,7 @@ public class ThirdApp extends TeaModel {
             /**
              * GrantTypes.
              */
-            public Builder grantTypes(java.util.List < String > grantTypes) {
+            public Builder grantTypes(java.util.List<String> grantTypes) {
                 this.grantTypes = grantTypes;
                 return this;
             }
@@ -509,7 +514,7 @@ public class ThirdApp extends TeaModel {
             /**
              * IdTokenAlgorithmType.
              */
-            public Builder idTokenAlgorithmType(Integer idTokenAlgorithmType) {
+            public Builder idTokenAlgorithmType(String idTokenAlgorithmType) {
                 this.idTokenAlgorithmType = idTokenAlgorithmType;
                 return this;
             }
@@ -525,7 +530,7 @@ public class ThirdApp extends TeaModel {
             /**
              * RedirectUris.
              */
-            public Builder redirectUris(java.util.List < String > redirectUris) {
+            public Builder redirectUris(java.util.List<String> redirectUris) {
                 this.redirectUris = redirectUris;
                 return this;
             }

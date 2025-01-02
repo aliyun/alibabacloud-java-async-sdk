@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Orgs")
-    private java.util.List < Orgs> orgs;
+    private java.util.List<Orgs> orgs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
     /**
      * @return orgs
      */
-    public java.util.List < Orgs> getOrgs() {
+    public java.util.List<Orgs> getOrgs() {
         return this.orgs;
     }
 
@@ -58,7 +63,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Orgs> orgs; 
+        private java.util.List<Orgs> orgs; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         /**
          * <p>The organizations.</p>
          */
-        public Builder orgs(java.util.List < Orgs> orgs) {
+        public Builder orgs(java.util.List<Orgs> orgs) {
             this.orgs = orgs;
             return this;
         }

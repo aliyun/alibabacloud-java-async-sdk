@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class FilterUsersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < Users> users;
+    private java.util.List<Users> users;
 
     private FilterUsersResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class FilterUsersResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
@@ -86,7 +91,7 @@ public class FilterUsersResponseBody extends TeaModel {
         /**
          * <p>The information about the convenience user.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }
@@ -260,7 +265,7 @@ public class FilterUsersResponseBody extends TeaModel {
         private Integer propertyType;
 
         @com.aliyun.core.annotation.NameInMap("PropertyValues")
-        private java.util.List < PropertyValues> propertyValues;
+        private java.util.List<PropertyValues> propertyValues;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
@@ -309,7 +314,7 @@ public class FilterUsersResponseBody extends TeaModel {
         /**
          * @return propertyValues
          */
-        public java.util.List < PropertyValues> getPropertyValues() {
+        public java.util.List<PropertyValues> getPropertyValues() {
             return this.propertyValues;
         }
 
@@ -331,7 +336,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private Long propertyId; 
             private String propertyKey; 
             private Integer propertyType; 
-            private java.util.List < PropertyValues> propertyValues; 
+            private java.util.List<PropertyValues> propertyValues; 
             private Long userId; 
             private String userName; 
 
@@ -371,7 +376,7 @@ public class FilterUsersResponseBody extends TeaModel {
             /**
              * <p>The property values.</p>
              */
-            public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
+            public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
                 return this;
             }
@@ -461,7 +466,7 @@ public class FilterUsersResponseBody extends TeaModel {
         private Long status;
 
         @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
-        private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
+        private java.util.List<UserSetPropertiesModels> userSetPropertiesModels;
 
         private Users(Builder builder) {
             this.autoLockTime = builder.autoLockTime;
@@ -606,7 +611,7 @@ public class FilterUsersResponseBody extends TeaModel {
         /**
          * @return userSetPropertiesModels
          */
-        public java.util.List < UserSetPropertiesModels> getUserSetPropertiesModels() {
+        public java.util.List<UserSetPropertiesModels> getUserSetPropertiesModels() {
             return this.userSetPropertiesModels;
         }
 
@@ -627,7 +632,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private String realNickName; 
             private String remark; 
             private Long status; 
-            private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
+            private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
              * AutoLockTime.
@@ -849,7 +854,7 @@ public class FilterUsersResponseBody extends TeaModel {
             /**
              * <p>The information about the properties.</p>
              */
-            public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
+            public Builder userSetPropertiesModels(java.util.List<UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;
                 return this;
             }

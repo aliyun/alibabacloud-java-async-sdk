@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPropertyResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Properties")
-    private java.util.List < Properties> properties;
+    private java.util.List<Properties> properties;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListPropertyResponseBody extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.List < Properties> getProperties() {
+    public java.util.List<Properties> getProperties() {
         return this.properties;
     }
 
@@ -58,7 +63,7 @@ public class ListPropertyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Properties> properties; 
+        private java.util.List<Properties> properties; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ListPropertyResponseBody extends TeaModel {
         /**
          * <p>The information about the properties.</p>
          */
-        public Builder properties(java.util.List < Properties> properties) {
+        public Builder properties(java.util.List<Properties> properties) {
             this.properties = properties;
             return this;
         }
@@ -184,7 +189,7 @@ public class ListPropertyResponseBody extends TeaModel {
         private String propertyKey;
 
         @com.aliyun.core.annotation.NameInMap("PropertyValues")
-        private java.util.List < PropertyValues> propertyValues;
+        private java.util.List<PropertyValues> propertyValues;
 
         private Properties(Builder builder) {
             this.propertyId = builder.propertyId;
@@ -217,14 +222,14 @@ public class ListPropertyResponseBody extends TeaModel {
         /**
          * @return propertyValues
          */
-        public java.util.List < PropertyValues> getPropertyValues() {
+        public java.util.List<PropertyValues> getPropertyValues() {
             return this.propertyValues;
         }
 
         public static final class Builder {
             private Long propertyId; 
             private String propertyKey; 
-            private java.util.List < PropertyValues> propertyValues; 
+            private java.util.List<PropertyValues> propertyValues; 
 
             /**
              * <p>The ID of the property.</p>
@@ -251,7 +256,7 @@ public class ListPropertyResponseBody extends TeaModel {
             /**
              * <p>Details about the property values.</p>
              */
-            public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
+            public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
                 return this;
             }

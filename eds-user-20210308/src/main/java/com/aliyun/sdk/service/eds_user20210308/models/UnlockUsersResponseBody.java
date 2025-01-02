@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,10 +183,10 @@ public class UnlockUsersResponseBody extends TeaModel {
      */
     public static class UnlockUsersResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUsers")
-        private java.util.List < FailedUsers> failedUsers;
+        private java.util.List<FailedUsers> failedUsers;
 
         @com.aliyun.core.annotation.NameInMap("UnlockedUsers")
-        private java.util.List < String > unlockedUsers;
+        private java.util.List<String> unlockedUsers;
 
         private UnlockUsersResult(Builder builder) {
             this.failedUsers = builder.failedUsers;
@@ -199,25 +204,25 @@ public class UnlockUsersResponseBody extends TeaModel {
         /**
          * @return failedUsers
          */
-        public java.util.List < FailedUsers> getFailedUsers() {
+        public java.util.List<FailedUsers> getFailedUsers() {
             return this.failedUsers;
         }
 
         /**
          * @return unlockedUsers
          */
-        public java.util.List < String > getUnlockedUsers() {
+        public java.util.List<String> getUnlockedUsers() {
             return this.unlockedUsers;
         }
 
         public static final class Builder {
-            private java.util.List < FailedUsers> failedUsers; 
-            private java.util.List < String > unlockedUsers; 
+            private java.util.List<FailedUsers> failedUsers; 
+            private java.util.List<String> unlockedUsers; 
 
             /**
              * <p>The convenience users that failed to be unlocked.</p>
              */
-            public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
+            public Builder failedUsers(java.util.List<FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
                 return this;
             }
@@ -225,7 +230,7 @@ public class UnlockUsersResponseBody extends TeaModel {
             /**
              * <p>The convenience users that were unlocked.</p>
              */
-            public Builder unlockedUsers(java.util.List < String > unlockedUsers) {
+            public Builder unlockedUsers(java.util.List<String> unlockedUsers) {
                 this.unlockedUsers = unlockedUsers;
                 return this;
             }

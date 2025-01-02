@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMfaDevicesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MfaDevices")
-    private java.util.List < MfaDevices> mfaDevices;
+    private java.util.List<MfaDevices> mfaDevices;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
     /**
      * @return mfaDevices
      */
-    public java.util.List < MfaDevices> getMfaDevices() {
+    public java.util.List<MfaDevices> getMfaDevices() {
         return this.mfaDevices;
     }
 
@@ -57,14 +62,14 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MfaDevices> mfaDevices; 
+        private java.util.List<MfaDevices> mfaDevices; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The information about the virtual MFA devices.</p>
          */
-        public Builder mfaDevices(java.util.List < MfaDevices> mfaDevices) {
+        public Builder mfaDevices(java.util.List<MfaDevices> mfaDevices) {
             this.mfaDevices = mfaDevices;
             return this;
         }

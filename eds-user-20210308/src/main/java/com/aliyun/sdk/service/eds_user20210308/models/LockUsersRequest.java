@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class LockUsersRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Users")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > users;
+    private java.util.List<String> users;
 
     private LockUsersRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class LockUsersRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<LockUsersRequest, Builder> {
         private Boolean logoutSession; 
-        private java.util.List < String > users; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class LockUsersRequest extends Request {
          * <strong>example:</strong>
          * <p>test1</p>
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
             this.users = users;
             return this;
