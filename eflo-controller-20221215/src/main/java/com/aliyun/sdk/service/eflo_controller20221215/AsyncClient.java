@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateDiagnosticTask  CreateDiagnosticTaskRequest
+     * @return CreateDiagnosticTaskResponse
+     */
+    CompletableFuture<CreateDiagnosticTaskResponse> createDiagnosticTask(CreateDiagnosticTaskRequest request);
+
+    /**
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
      * @return DeleteClusterResponse
      */

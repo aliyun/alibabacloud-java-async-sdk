@@ -27,8 +27,11 @@ public class RunCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CommandContent")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String commandContent;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommandId")
+    private String commandId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ContentEncoding")
@@ -47,6 +50,10 @@ public class RunCommandRequest extends Request {
     private String frequency;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Launcher")
+    private String launcher;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -61,6 +68,10 @@ public class RunCommandRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RepeatMode")
     private String repeatMode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TerminationMode")
+    private String terminationMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Timeout")
@@ -79,14 +90,17 @@ public class RunCommandRequest extends Request {
         this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.commandContent = builder.commandContent;
+        this.commandId = builder.commandId;
         this.contentEncoding = builder.contentEncoding;
         this.description = builder.description;
         this.enableParameter = builder.enableParameter;
         this.frequency = builder.frequency;
+        this.launcher = builder.launcher;
         this.name = builder.name;
         this.nodeIdList = builder.nodeIdList;
         this.parameters = builder.parameters;
         this.repeatMode = builder.repeatMode;
+        this.terminationMode = builder.terminationMode;
         this.timeout = builder.timeout;
         this.username = builder.username;
         this.workingDir = builder.workingDir;
@@ -127,6 +141,13 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return commandId
+     */
+    public String getCommandId() {
+        return this.commandId;
+    }
+
+    /**
      * @return contentEncoding
      */
     public String getContentEncoding() {
@@ -152,6 +173,13 @@ public class RunCommandRequest extends Request {
      */
     public String getFrequency() {
         return this.frequency;
+    }
+
+    /**
+     * @return launcher
+     */
+    public String getLauncher() {
+        return this.launcher;
     }
 
     /**
@@ -183,6 +211,13 @@ public class RunCommandRequest extends Request {
     }
 
     /**
+     * @return terminationMode
+     */
+    public String getTerminationMode() {
+        return this.terminationMode;
+    }
+
+    /**
      * @return timeout
      */
     public Integer getTimeout() {
@@ -207,14 +242,17 @@ public class RunCommandRequest extends Request {
         private String regionId; 
         private String clientToken; 
         private String commandContent; 
+        private String commandId; 
         private String contentEncoding; 
         private String description; 
         private Boolean enableParameter; 
         private String frequency; 
+        private String launcher; 
         private String name; 
         private java.util.List<String> nodeIdList; 
         private java.util.Map<String, ?> parameters; 
         private String repeatMode; 
+        private String terminationMode; 
         private Integer timeout; 
         private String username; 
         private String workingDir; 
@@ -228,14 +266,17 @@ public class RunCommandRequest extends Request {
             this.regionId = request.regionId;
             this.clientToken = request.clientToken;
             this.commandContent = request.commandContent;
+            this.commandId = request.commandId;
             this.contentEncoding = request.contentEncoding;
             this.description = request.description;
             this.enableParameter = request.enableParameter;
             this.frequency = request.frequency;
+            this.launcher = request.launcher;
             this.name = request.name;
             this.nodeIdList = request.nodeIdList;
             this.parameters = request.parameters;
             this.repeatMode = request.repeatMode;
+            this.terminationMode = request.terminationMode;
             this.timeout = request.timeout;
             this.username = request.username;
             this.workingDir = request.workingDir;
@@ -272,7 +313,6 @@ public class RunCommandRequest extends Request {
          * <li>Custom parameter names can only contain a-zA-Z0-9-_, and are case-insensitive.</li>
          * <li>A single custom parameter name cannot exceed 64 bytes.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyAxMjM=</p>
@@ -280,6 +320,15 @@ public class RunCommandRequest extends Request {
         public Builder commandContent(String commandContent) {
             this.putBodyParameter("CommandContent", commandContent);
             this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * CommandId.
+         */
+        public Builder commandId(String commandId) {
+            this.putBodyParameter("CommandId", commandId);
+            this.commandId = commandId;
             return this;
         }
 
@@ -353,6 +402,15 @@ public class RunCommandRequest extends Request {
         }
 
         /**
+         * Launcher.
+         */
+        public Builder launcher(String launcher) {
+            this.putBodyParameter("Launcher", launcher);
+            this.launcher = launcher;
+            return this;
+        }
+
+        /**
          * <p>Command name.</p>
          * 
          * <strong>example:</strong>
@@ -415,6 +473,15 @@ public class RunCommandRequest extends Request {
         public Builder repeatMode(String repeatMode) {
             this.putBodyParameter("RepeatMode", repeatMode);
             this.repeatMode = repeatMode;
+            return this;
+        }
+
+        /**
+         * TerminationMode.
+         */
+        public Builder terminationMode(String terminationMode) {
+            this.putBodyParameter("TerminationMode", terminationMode);
+            this.terminationMode = terminationMode;
             return this;
         }
 
