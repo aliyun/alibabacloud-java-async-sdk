@@ -55,7 +55,10 @@ public class SendFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InvokeId.
+         * <p>Command execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz03la52z1zkvls</p>
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -63,7 +66,7 @@ public class SendFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>3C683243-7915-57FB-9570-A2932C1C0F78</p>

@@ -82,7 +82,13 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * <p>Filter the returned results based on Chinese or English. For more information, see RFC7231. Valid values:</p>
+         * <p>zh-CN
+         * en-US
+         * Default value: zh-CN</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);

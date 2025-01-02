@@ -151,7 +151,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i119982311660892626523</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -159,7 +162,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>Cluster Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -167,7 +173,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Start Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-30T02:00:00.852Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -175,7 +184,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Task Failure Message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -183,7 +195,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * NodeIds.
+         * <p>List of node IDs</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.nodeIds = nodeIds;
@@ -191,7 +203,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7FD7411-9395-52E8-AF42-EB3A4A55446D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -199,7 +214,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Steps.
+         * <p>Execution Steps</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -207,7 +222,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskState.
+         * <p>Task State</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder taskState(String taskState) {
             this.taskState = taskState;
@@ -215,7 +233,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>Task Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cut_cluster</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -223,7 +244,10 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>Update Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-30T03:40:14.852Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -329,7 +353,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * <p>Creation Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-30T2:00:00.852Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -337,7 +364,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Subtask Failure Message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -345,7 +375,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i158805051661047928377</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -353,7 +386,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskState.
+             * <p>Task Execution State</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -361,7 +397,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>Task Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cut_node_sub_task</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -369,7 +408,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-30T02:20:14.852Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -500,7 +542,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Message.
+             * <p>Step Failure Message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get taskinfo failed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -508,7 +553,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StageTag.
+             * <p>Stage Tag</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node scaling</p>
              */
             public Builder stageTag(String stageTag) {
                 this.stageTag = stageTag;
@@ -516,7 +564,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-30T2:00:00.852Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -524,7 +575,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>Step Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_vpd</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -532,7 +586,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepState.
+             * <p>Step Execution State</p>
+             * 
+             * <strong>example:</strong>
+             * <p>execution_success</p>
              */
             public Builder stepState(String stepState) {
                 this.stepState = stepState;
@@ -540,7 +597,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StepType.
+             * <p>Step Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
@@ -548,7 +608,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SubTasks.
+             * <p>Subtasks</p>
              */
             public Builder subTasks(java.util.List<SubTasks> subTasks) {
                 this.subTasks = subTasks;
@@ -556,7 +616,10 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-30T02:20:14.852Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

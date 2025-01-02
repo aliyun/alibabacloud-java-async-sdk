@@ -97,6 +97,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
+         * <p>Command execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);

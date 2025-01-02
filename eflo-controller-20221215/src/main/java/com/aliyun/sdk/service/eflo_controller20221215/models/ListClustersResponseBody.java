@@ -67,7 +67,7 @@ public class ListClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * <p>Cluster information</p>
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -75,7 +75,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The query token value returned by this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4f9a292c17072a2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -83,7 +86,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -297,7 +303,10 @@ public class ListClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterDescription.
+             * <p>Cluster description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PPU-cluster2 bz</p>
              */
             public Builder clusterDescription(String clusterDescription) {
                 this.clusterDescription = clusterDescription;
@@ -305,7 +314,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>Cluster ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i137590131672134915401</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -313,7 +325,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>Cluster name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cnp_test_cluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -321,7 +336,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * <p>Cluster type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AckEdgePro</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -329,7 +347,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Components.
+             * <p>Component information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder components(Object components) {
                 this.components = components;
@@ -337,7 +358,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ComputingIpVersion.
+             * <p>IP version of the computing network</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder computingIpVersion(String computingIpVersion) {
                 this.computingIpVersion = computingIpVersion;
@@ -345,7 +369,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672134938</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -353,7 +380,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HpnZone.
+             * <p>Cluster number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B1</p>
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -361,7 +391,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * <p>Number of nodes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -369,7 +402,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupCount.
+             * <p>Number of node groups</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeGroupCount(Long nodeGroupCount) {
                 this.nodeGroupCount = nodeGroupCount;
@@ -377,7 +413,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingState.
+             * <p>Cluster status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>initializing</p>
              */
             public Builder operatingState(String operatingState) {
                 this.operatingState = operatingState;
@@ -385,7 +424,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2ajbjoloa23q</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -393,7 +435,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i156365121663149566024</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -401,7 +446,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672134968</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -409,7 +457,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-0jlx4hol2bjboafzmffvd</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

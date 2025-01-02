@@ -55,7 +55,10 @@ public class ReimageNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15FBCD9B-C93F-54E8-A168-AADE7E66DAD2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,10 @@ public class ReimageNodesResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i158782151663841517926</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

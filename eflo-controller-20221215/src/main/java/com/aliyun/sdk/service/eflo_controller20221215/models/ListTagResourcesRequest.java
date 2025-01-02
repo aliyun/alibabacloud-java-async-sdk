@@ -118,7 +118,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>Query token (Token), the value should be the NextToken returned from the previous API call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -127,6 +130,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>List of resource IDs</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -148,6 +153,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Resource type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +166,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>List of tags</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -220,7 +226,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PodName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -228,7 +237,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WFT-OTC</p>
              */
             public Builder value(String value) {
                 this.value = value;

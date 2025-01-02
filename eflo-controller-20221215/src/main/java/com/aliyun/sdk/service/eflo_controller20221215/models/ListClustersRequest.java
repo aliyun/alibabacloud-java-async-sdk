@@ -110,7 +110,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of items per page for paginated queries, with a default value of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -119,7 +122,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Query token, which is the value of the NextToken parameter returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -128,7 +134,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bg6wyoox6jq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

@@ -67,7 +67,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Invocations.
+         * <p>Record of file distribution.</p>
          */
         public Builder invocations(Invocations invocations) {
             this.invocations = invocations;
@@ -75,7 +75,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -86,7 +86,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of commands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -216,7 +219,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreationTime.
+             * <p>The creation time of the file distribution task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-06T07:12:50Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -224,7 +230,29 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The failure reason code for file distribution. Possible values:</p>
+             * <ul>
+             * <li>Empty: The file was distributed normally. </li>
+             * <li>NodeNotExists: The specified instance does not exist or has been released. </li>
+             * <li>NodeReleased: The instance was released during the file distribution process. </li>
+             * <li>NodeNotRunning: The instance was not running when the file distribution task was created. </li>
+             * <li>AccountNotExists: The specified account does not exist. </li>
+             * <li>ClientNotRunning: The Cloud Assistant Agent is not running. </li>
+             * <li>ClientNotResponse: The Cloud Assistant Agent is not responding. </li>
+             * <li>ClientIsUpgrading: The Cloud Assistant Agent is currently being upgraded. </li>
+             * <li>ClientNeedUpgrade: The Cloud Assistant Agent needs to be upgraded. </li>
+             * <li>DeliveryTimeout: File delivery timed out. </li>
+             * <li>FileCreateFail: Failed to create the file. </li>
+             * <li>FileAlreadyExists: A file with the same name already exists at the specified path. </li>
+             * <li>FileContentInvalid: The file content is invalid. </li>
+             * <li>FileNameInvalid: The file name is invalid. </li>
+             * <li>FilePathInvalid: The file path is invalid. </li>
+             * <li>FileAuthorityInvalid: The file permissions are invalid. </li>
+             * <li>UserGroupNotExists: The user group specified for file delivery does not exist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -232,7 +260,30 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorInfo.
+             * <p>Details of the reason for command delivery failure or execution failure, possible values: </p>
+             * <ul>
+             * <li>Empty: The command executed normally. </li>
+             * <li>the specified instance does not exist: The specified instance does not exist or has been released. </li>
+             * <li>the node has been released when creating task: The instance was released during the command execution. </li>
+             * <li>the node is not running when creating task: The instance was not in a running state when the command was executed. </li>
+             * <li>the command is not applicable: The command is not applicable to the specified instance. </li>
+             * <li>the specified account does not exist: The specified account does not exist. </li>
+             * <li>the specified directory does not exist: The specified directory does not exist. </li>
+             * <li>the cron job expression is invalid: The specified execution time expression is invalid. </li>
+             * <li>the aliyun service is not running on the instance: The Cloud Assistant Agent is not running. </li>
+             * <li>the aliyun service in the instance does not respond: The Cloud Assistant Agent is not responding. </li>
+             * <li>the aliyun service in the node is upgrading now: The Cloud Assistant Agent is currently being upgraded. </li>
+             * <li>the aliyun service in the node needs upgrade: The Cloud Assistant Agent needs an upgrade. </li>
+             * <li>the command delivery has timed out: Command delivery has timed out. </li>
+             * <li>the command execution has timed out: Command execution has timed out. </li>
+             * <li>the command execution got an exception: An exception occurred during command execution. </li>
+             * <li>the command execution has been interrupted: The command execution was interrupted. </li>
+             * <li>the command execution exit code is not zero: The command execution completed with a non-zero exit code. </li>
+             * <li>the specified instance has been released: The instance was released during file delivery.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>the specified instance does not exists</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -240,7 +291,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>Completion time, format: &quot;2020-05-22T17:04:18&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-10T10:53:46.156+08:00</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -248,7 +302,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationStatus.
+             * <p>Status of the task on a single instance. Possible values:</p>
+             * <ul>
+             * <li>Pending: The system is validating or distributing the file.</li>
+             * <li>Invalid: The specified file parameters are incorrect, and validation failed.</li>
+             * <li>Running: The file is being distributed to the instance.</li>
+             * <li>Aborted: Failed to distribute the file to the instance.</li>
+             * <li>Success: The file distribution is complete.</li>
+             * <li>Failed: The file creation failed within the instance.</li>
+             * <li>Error: An exception occurred during file distribution and could not continue.</li>
+             * <li>Timeout: The file distribution timed out.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -256,7 +323,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-9lb3c15m81j</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -264,7 +334,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-30T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -272,7 +345,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-30T16:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -319,7 +395,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private java.util.List<InvokeNode> invokeNode; 
 
             /**
-             * InvokeNode.
+             * <p>Record of file distribution for the node.</p>
              */
             public Builder invokeNode(java.util.List<InvokeNode> invokeNode) {
                 this.invokeNode = invokeNode;
@@ -510,7 +586,12 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private String targetDir; 
 
             /**
-             * Content.
+             * <p>Output information after command execution.</p>
+             * <p>If ContentEncoding is specified as PlainText, the original output information is returned.
+             * If ContentEncoding is specified as Base64, the Base64 encoded output information is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Base64</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -518,7 +599,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>File content type.</p>
+             * <p>PlainText: Plain text.
+             * Base64: Base64 encoding.
+             * The default value is PlainText.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PlainText</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -526,7 +613,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>Creation time of the distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-10T10:53:46.156+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -534,7 +624,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Command description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述信息。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -542,7 +635,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * FileGroup.
+             * <p>The user group of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder fileGroup(String fileGroup) {
                 this.fileGroup = fileGroup;
@@ -550,7 +646,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * FileMode.
+             * <p>File permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0644</p>
              */
             public Builder fileMode(String fileMode) {
                 this.fileMode = fileMode;
@@ -558,7 +657,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOwner.
+             * <p>The owner of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder fileOwner(String fileOwner) {
                 this.fileOwner = fileOwner;
@@ -566,7 +668,24 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationStatus.
+             * <p>Overall status of the file distribution. The overall status depends on the common execution status of all instances involved in this distribution, possible values are:</p>
+             * <ul>
+             * <li>Pending: The system is verifying or distributing the file. If at least one instance has a file distribution status of Pending, the overall execution status will be Pending.</li>
+             * <li>Running: The file is being distributed on the instance. If at least one instance has a file distribution status of Running, the overall execution status will be Running.</li>
+             * <li>Success: All instances have a file distribution status of Success, then the overall execution status will be Success.</li>
+             * <li>Failed: All instances have a file distribution status of Failed, then the overall execution status will be Failed. If any of the following conditions occur for the file distribution status on an instance, the return value will be Failed:<ul>
+             * <li>The specified file parameters are incorrect, verification failed (Invalid).</li>
+             * <li>Failed to distribute the file to the instance (Aborted).</li>
+             * <li>The file creation failed within the instance (Failed).</li>
+             * <li>The file distribution timed out (Timeout).</li>
+             * <li>An exception occurred during file distribution and could not continue (Error).</li>
+             * </ul>
+             * </li>
+             * <li>PartialFailed: Some instances successfully received the file while others failed. If the file distribution status of all instances is either Success or Failed, the overall execution status will be PartialFailed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -574,7 +693,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeNodes.
+             * <p>Record of file distribution.</p>
              */
             public Builder invokeNodes(InvokeNodes invokeNodes) {
                 this.invokeNodes = invokeNodes;
@@ -582,7 +701,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the file distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +712,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * <p>Number of nodes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder nodeCount(Integer nodeCount) {
                 this.nodeCount = nodeCount;
@@ -598,7 +723,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Overwrite.
+             * <p>Whether to overwrite the file if a file with the same name already exists in the target directory.</p>
+             * <ul>
+             * <li>true: Overwrite.</li>
+             * <li>false: Do not overwrite.</li>
+             * </ul>
+             * <p>The default value is false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder overwrite(Boolean overwrite) {
                 this.overwrite = overwrite;
@@ -606,7 +739,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDir.
+             * <p>Target path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/user</p>
              */
             public Builder targetDir(String targetDir) {
                 this.targetDir = targetDir;
@@ -653,7 +789,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private java.util.List<Invocation> invocation; 
 
             /**
-             * Invocation.
+             * <p>Command execution ID.</p>
              */
             public Builder invocation(java.util.List<Invocation> invocation) {
                 this.invocation = invocation;

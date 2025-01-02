@@ -125,6 +125,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
+         * <p>Cluster ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of items per page in a paginated query, with a default value of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -146,7 +150,10 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Query token (Token), which is the value of the NextToken parameter returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -155,7 +162,10 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>Node group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa4c60d</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putBodyParameter("NodeGroupId", nodeGroupId);

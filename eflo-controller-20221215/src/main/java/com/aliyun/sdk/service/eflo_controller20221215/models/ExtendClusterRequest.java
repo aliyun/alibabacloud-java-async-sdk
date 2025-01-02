@@ -152,7 +152,10 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i15b480fbd2fcdbc2869cd80</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -161,7 +164,10 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * IgnoreFailedNodeTasks.
+         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -170,7 +176,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * IpAllocationPolicy.
+         * <p>IP allocation policy combination: Each policy can only choose one type, and multiple policies can be combined</p>
          */
         public Builder ipAllocationPolicy(java.util.List<IpAllocationPolicy> ipAllocationPolicy) {
             String ipAllocationPolicyShrink = shrink(ipAllocationPolicy, "IpAllocationPolicy", "json");
@@ -180,7 +186,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * NodeGroups.
+         * <p>Node Group</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -190,7 +196,10 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * VSwitchZoneId.
+         * <p>VSwitch availability zone ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-b</p>
          */
         public Builder vSwitchZoneId(String vSwitchZoneId) {
             this.putBodyParameter("VSwitchZoneId", vSwitchZoneId);
@@ -199,7 +208,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * VpdSubnets.
+         * <p>List of cluster subnets</p>
          */
         public Builder vpdSubnets(java.util.List<String> vpdSubnets) {
             String vpdSubnetsShrink = shrink(vpdSubnets, "VpdSubnets", "json");
@@ -260,7 +269,10 @@ public class ExtendClusterRequest extends Request {
             private String subnet; 
 
             /**
-             * Name.
+             * <p>Bond name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bond0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -268,7 +280,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Subnet.
+             * <p>IP source cluster subnet</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-3od2fe</p>
              */
             public Builder subnet(String subnet) {
                 this.subnet = subnet;
@@ -327,7 +342,10 @@ public class ExtendClusterRequest extends Request {
             private java.util.List<Bonds> bonds; 
 
             /**
-             * BondDefaultSubnet.
+             * <p>Default bond cluster subnet</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-3od2fe</p>
              */
             public Builder bondDefaultSubnet(String bondDefaultSubnet) {
                 this.bondDefaultSubnet = bondDefaultSubnet;
@@ -335,7 +353,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Bonds.
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<Bonds> bonds) {
                 this.bonds = bonds;
@@ -394,7 +412,10 @@ public class ExtendClusterRequest extends Request {
             private String subnet; 
 
             /**
-             * Name.
+             * <p>Bond name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bond0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +423,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Subnet.
+             * <p>IP source cluster subnet</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-fdo3dv</p>
              */
             public Builder subnet(String subnet) {
                 this.subnet = subnet;
@@ -461,7 +485,7 @@ public class ExtendClusterRequest extends Request {
             private String machineType; 
 
             /**
-             * Bonds.
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<MachineTypePolicyBonds> bonds) {
                 this.bonds = bonds;
@@ -469,7 +493,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * MachineType.
+             * <p>Machine Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>efg1.nvga1</p>
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -528,7 +555,10 @@ public class ExtendClusterRequest extends Request {
             private String subnet; 
 
             /**
-             * Name.
+             * <p>Bond name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bond0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -536,7 +566,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Subnet.
+             * <p>IP source cluster subnet</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subnet-fdo3dv</p>
              */
             public Builder subnet(String subnet) {
                 this.subnet = subnet;
@@ -595,7 +628,7 @@ public class ExtendClusterRequest extends Request {
             private String nodeId; 
 
             /**
-             * Bonds.
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<NodePolicyBonds> bonds) {
                 this.bonds = bonds;
@@ -603,7 +636,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-3fdodw2</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -674,7 +710,7 @@ public class ExtendClusterRequest extends Request {
             private java.util.List<NodePolicy> nodePolicy; 
 
             /**
-             * BondPolicy.
+             * <p>Specify the cluster subnet ID based on the bond name</p>
              */
             public Builder bondPolicy(BondPolicy bondPolicy) {
                 this.bondPolicy = bondPolicy;
@@ -682,7 +718,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * MachineTypePolicy.
+             * <p>Machine type allocation policy</p>
              */
             public Builder machineTypePolicy(java.util.List<MachineTypePolicy> machineTypePolicy) {
                 this.machineTypePolicy = machineTypePolicy;
@@ -690,7 +726,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * NodePolicy.
+             * <p>Node allocation policy</p>
              */
             public Builder nodePolicy(java.util.List<NodePolicy> nodePolicy) {
                 this.nodePolicy = nodePolicy;
@@ -785,7 +821,10 @@ public class ExtendClusterRequest extends Request {
             private String vpcId; 
 
             /**
-             * Hostname.
+             * <p>Hostname</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d044d220-33fd-11ed-86a6</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -793,7 +832,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * LoginPassword.
+             * <p>Login Password</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -801,7 +843,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-zvp2zdpy601</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -809,7 +854,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>VSwitch ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp169pi5fj151rrms4sia</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -817,7 +865,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -900,7 +951,10 @@ public class ExtendClusterRequest extends Request {
             private String zoneId; 
 
             /**
-             * NodeGroupId.
+             * <p>Node Group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i16d4883a46cbadeb4bc9</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -908,7 +962,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Nodes.
+             * <p>List of Nodes</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -916,7 +970,11 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * UserData.
+             * <p>Custom Data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/sh
+             * echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -924,7 +982,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * <p>Zone ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

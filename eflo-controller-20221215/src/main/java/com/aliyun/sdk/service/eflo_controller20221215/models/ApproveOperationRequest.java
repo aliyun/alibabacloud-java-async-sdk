@@ -96,7 +96,10 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -105,7 +108,10 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * <p>Operation Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RepairMachine</p>
          */
         public Builder operationType(String operationType) {
             this.putBodyParameter("OperationType", operationType);

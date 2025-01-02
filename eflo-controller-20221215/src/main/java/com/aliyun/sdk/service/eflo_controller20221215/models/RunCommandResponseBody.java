@@ -55,7 +55,10 @@ public class RunCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InvokeId.
+         * <p>ID of the command execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-7d2a745b412b4601b2d47f6a768d*</p>
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -63,7 +66,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>

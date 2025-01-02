@@ -105,6 +105,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>Region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>List of resource IDs</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -126,6 +128,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Resource type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +141,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Tags</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -198,7 +202,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -206,7 +213,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder value(String value) {
                 this.value = value;

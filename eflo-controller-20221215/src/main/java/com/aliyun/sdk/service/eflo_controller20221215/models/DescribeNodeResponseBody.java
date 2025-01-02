@@ -247,7 +247,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i116913051662373010974</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -255,7 +258,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>Cluster name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -263,7 +269,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-30T03:35:53Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -271,7 +280,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>Expiration time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-23T16:00:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -279,7 +291,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Hostname.
+         * <p>Hostname</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31d38530-241e-11ed-bc63-acde48001122</p>
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
@@ -287,7 +302,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HpnZone.
+         * <p>Cluster number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.hpnZone = hpnZone;
@@ -295,7 +313,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ImageId.
+         * <p>Image ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i190297201634099844192</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -303,7 +324,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>镜像名称</p>
+         * <p>Image name</p>
          * 
          * <strong>example:</strong>
          * <p>Centos7.9_all_0811</p>
@@ -314,7 +335,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * MachineType.
+         * <p>Machine type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>efg1.nvga1</p>
          */
         public Builder machineType(String machineType) {
             this.machineType = machineType;
@@ -322,7 +346,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Networks.
+         * <p>Network information</p>
          */
         public Builder networks(java.util.List<Networks> networks) {
             this.networks = networks;
@@ -330,7 +354,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupId.
+         * <p>Node group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-ec3c96ff0aa4c60d</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
@@ -338,7 +365,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupName.
+         * <p>Node group name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-default</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
@@ -346,7 +376,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * <p>Node ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -354,7 +387,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OperatingState.
+         * <p>Node status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Using</p>
          */
         public Builder operatingState(String operatingState) {
             this.operatingState = operatingState;
@@ -362,7 +398,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -370,7 +409,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>资源组ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmywpvugkh7kq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -378,7 +420,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Sn.
+         * <p>Unique machine identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sag42ckf4jx</p>
          */
         public Builder sn(String sn) {
             this.sn = sn;
@@ -386,7 +431,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>Zone ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -468,7 +516,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             private String vpdId; 
 
             /**
-             * BondName.
+             * <p>Network interface port information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bond0</p>
              */
             public Builder bondName(String bondName) {
                 this.bondName = bondName;
@@ -476,7 +527,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>Machine IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.254.235.44</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -484,7 +538,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * SubnetId.
+             * <p>Cluster subnet ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf68v51fldm5egmui5a6k</p>
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
@@ -492,7 +549,10 @@ public class DescribeNodeResponseBody extends TeaModel {
             }
 
             /**
-             * VpdId.
+             * <p>Cluster network ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpd-xcuhjyrj</p>
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

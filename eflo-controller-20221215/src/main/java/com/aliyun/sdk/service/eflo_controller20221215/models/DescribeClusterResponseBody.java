@@ -247,7 +247,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * ClusterDescription.
+         * <p>Cluster Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default cluster</p>
          */
         public Builder clusterDescription(String clusterDescription) {
             this.clusterDescription = clusterDescription;
@@ -255,7 +258,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i116913051662373010974</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -263,7 +269,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>Cluster Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Eflo-YJ-Test-Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -271,7 +280,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterType.
+         * <p>Cluster Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AckEdgePro</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -279,7 +291,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>Component Information</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -287,7 +299,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ComputingIpVersion.
+         * <p>Type of IP in the compute network</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder computingIpVersion(String computingIpVersion) {
             this.computingIpVersion = computingIpVersion;
@@ -295,7 +310,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-08T07:05:11Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -303,7 +321,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HpnZone.
+         * <p>Cluster Number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A2</p>
          */
         public Builder hpnZone(String hpnZone) {
             this.hpnZone = hpnZone;
@@ -311,7 +332,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Networks.
+         * <p>Network Information</p>
          */
         public Builder networks(java.util.List<Networks> networks) {
             this.networks = networks;
@@ -319,7 +340,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * NodeCount.
+         * <p>Number of Nodes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeCount(Long nodeCount) {
             this.nodeCount = nodeCount;
@@ -327,7 +351,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * NodeGroupCount.
+         * <p>Number of Node Groups</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeGroupCount(Long nodeGroupCount) {
             this.nodeGroupCount = nodeGroupCount;
@@ -335,7 +362,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OpenEniJumboFrame.
+         * <p>Open Eni Jumbo Frame</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder openEniJumboFrame(String openEniJumboFrame) {
             this.openEniJumboFrame = openEniJumboFrame;
@@ -343,7 +373,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OperatingState.
+         * <p>Cluster State</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder operatingState(String operatingState) {
             this.operatingState = operatingState;
@@ -351,7 +384,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -359,7 +395,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2k3rqlvv6ytq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -367,7 +406,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>Task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i152609221670466904596</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -375,7 +417,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>Update Time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-23T06:36:17.000Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -383,7 +428,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-0jlkqysom5dmcviymep3f</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -441,7 +489,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String componentType; 
 
             /**
-             * ComponentId.
+             * <p>Component ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i149549021660892626529</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -449,7 +500,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>Component Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACKEdge</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -496,7 +550,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             private String vpdId; 
 
             /**
-             * VpdId.
+             * <p>VPC Segment ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpd-iqd7xunc</p>
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

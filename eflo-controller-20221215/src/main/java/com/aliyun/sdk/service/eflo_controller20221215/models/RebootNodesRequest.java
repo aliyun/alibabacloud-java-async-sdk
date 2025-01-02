@@ -110,7 +110,10 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i15b480fbd2fcdbc2869cd80</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -119,7 +122,10 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * IgnoreFailedNodeTasks.
+         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -128,7 +134,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * <p>List of nodes</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");

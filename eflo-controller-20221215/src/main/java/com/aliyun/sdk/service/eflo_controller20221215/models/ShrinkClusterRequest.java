@@ -110,7 +110,10 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -119,7 +122,10 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * IgnoreFailedNodeTasks.
+         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder ignoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
             this.putBodyParameter("IgnoreFailedNodeTasks", ignoreFailedNodeTasks);
@@ -128,7 +134,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * NodeGroups.
+         * <p>Node group information</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -177,7 +183,10 @@ public class ShrinkClusterRequest extends Request {
             private String nodeId; 
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01poc-cn-zmb2ypjdc01</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -236,7 +245,10 @@ public class ShrinkClusterRequest extends Request {
             private java.util.List<Nodes> nodes; 
 
             /**
-             * NodeGroupId.
+             * <p>Node group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-3b6fbd24b1b845a0</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -244,7 +256,7 @@ public class ShrinkClusterRequest extends Request {
             }
 
             /**
-             * Nodes.
+             * <p>List of nodes</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

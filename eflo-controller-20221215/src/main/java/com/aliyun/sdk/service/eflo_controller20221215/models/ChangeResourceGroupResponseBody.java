@@ -43,7 +43,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>

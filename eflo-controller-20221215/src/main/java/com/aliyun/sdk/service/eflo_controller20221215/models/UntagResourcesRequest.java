@@ -118,7 +118,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Whether to remove all, only effective when TagKey.N is empty. Valid values:</p>
+         * <ul>
+         * <li>True, remove all</li>
+         * <li>False, do not remove all</li>
+         * </ul>
+         * <p>Default is False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -127,6 +135,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +148,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>List of resource IDs</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -148,6 +158,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Resource type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +171,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>List of tag keys</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);
