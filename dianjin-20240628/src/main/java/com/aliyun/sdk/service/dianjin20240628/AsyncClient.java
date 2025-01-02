@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetChatQuestionRespResponse> getChatQuestionResp(GetChatQuestionRespRequest request);
 
     /**
+     * @param request the request parameters of GetDialogAnalysisResult  GetDialogAnalysisResultRequest
+     * @return GetDialogAnalysisResultResponse
+     */
+    CompletableFuture<GetDialogAnalysisResultResponse> getDialogAnalysisResult(GetDialogAnalysisResultRequest request);
+
+    /**
      * @param request the request parameters of GetDocumentChunkList  GetDocumentChunkListRequest
      * @return GetDocumentChunkListResponse
      */
