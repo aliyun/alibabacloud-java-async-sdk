@@ -1192,6 +1192,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableNewArms")
         private Boolean enableNewArms;
 
+        @com.aliyun.core.annotation.NameInMap("Enabledle")
+        private Boolean enabledle;
+
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
@@ -1376,6 +1379,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
             this.enableIdle = builder.enableIdle;
             this.enableNewArms = builder.enableNewArms;
+            this.enabledle = builder.enabledle;
             this.envs = builder.envs;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
@@ -1585,6 +1589,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public Boolean getEnableNewArms() {
             return this.enableNewArms;
+        }
+
+        /**
+         * @return enabledle
+         */
+        public Boolean getEnabledle() {
+            return this.enabledle;
         }
 
         /**
@@ -1987,6 +1998,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Boolean enableGreyTagRoute; 
             private Boolean enableIdle; 
             private Boolean enableNewArms; 
+            private Boolean enabledle; 
             private String envs; 
             private String imagePullSecrets; 
             private String imageUrl; 
@@ -2284,6 +2296,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder enableNewArms(Boolean enableNewArms) {
                 this.enableNewArms = enableNewArms;
+                return this;
+            }
+
+            /**
+             * Enabledle.
+             */
+            public Builder enabledle(Boolean enabledle) {
+                this.enabledle = enabledle;
                 return this;
             }
 

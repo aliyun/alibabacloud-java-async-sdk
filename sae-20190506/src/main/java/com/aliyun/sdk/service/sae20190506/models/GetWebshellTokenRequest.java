@@ -23,6 +23,10 @@ public class GetWebshellTokenRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    private String containerName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PodName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String podName;
@@ -30,6 +34,7 @@ public class GetWebshellTokenRequest extends Request {
     private GetWebshellTokenRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.containerName = builder.containerName;
         this.podName = builder.podName;
     }
 
@@ -54,6 +59,13 @@ public class GetWebshellTokenRequest extends Request {
     }
 
     /**
+     * @return containerName
+     */
+    public String getContainerName() {
+        return this.containerName;
+    }
+
+    /**
      * @return podName
      */
     public String getPodName() {
@@ -62,6 +74,7 @@ public class GetWebshellTokenRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetWebshellTokenRequest, Builder> {
         private String appId; 
+        private String containerName; 
         private String podName; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class GetWebshellTokenRequest extends Request {
         private Builder(GetWebshellTokenRequest request) {
             super(request);
             this.appId = request.appId;
+            this.containerName = request.containerName;
             this.podName = request.podName;
         } 
 
@@ -83,6 +97,15 @@ public class GetWebshellTokenRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * ContainerName.
+         */
+        public Builder containerName(String containerName) {
+            this.putQueryParameter("ContainerName", containerName);
+            this.containerName = containerName;
             return this;
         }
 
