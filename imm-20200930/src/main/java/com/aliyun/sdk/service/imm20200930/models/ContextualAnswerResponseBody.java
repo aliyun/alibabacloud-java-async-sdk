@@ -20,11 +20,19 @@ public class ContextualAnswerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Answer")
     private Answer answer;
 
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ContextualAnswerResponseBody(Builder builder) {
         this.answer = builder.answer;
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -44,6 +52,20 @@ public class ContextualAnswerResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -52,6 +74,8 @@ public class ContextualAnswerResponseBody extends TeaModel {
 
     public static final class Builder {
         private Answer answer; 
+        private String code; 
+        private String message; 
         private String requestId; 
 
         /**
@@ -59,6 +83,22 @@ public class ContextualAnswerResponseBody extends TeaModel {
          */
         public Builder answer(Answer answer) {
             this.answer = answer;
+            return this;
+        }
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

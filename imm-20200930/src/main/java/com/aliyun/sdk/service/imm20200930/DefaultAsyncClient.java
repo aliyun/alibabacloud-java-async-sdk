@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.imm20200930;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.imm20200930.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -272,6 +273,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public ResponseIterable<ContextualAnswerResponseBody> contextualAnswerWithResponseIterable(ContextualAnswerRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ContextualAnswer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        ContextualAnswerResponseBodyIterator iterator = ContextualAnswerResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
     /**
      * @param request the request parameters of ContextualRetrieval  ContextualRetrievalRequest
      * @return ContextualRetrievalResponse
@@ -451,10 +462,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM).
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
      * <li>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
+     * <li>The region and project specified in the request to decode a blind watermark must match those in the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> request to encode the blind watermark.</li>
      * <li>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</li>
+     * <li>This operation is compatible with its earlier version DecodeBlindWatermark.</li>
      * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
@@ -782,23 +797,23 @@ public final class DefaultAsyncClient implements AsyncClient {
      *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
      * <li>The operation supports the following input formats:<ul>
-     * <li>Word documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html.</li>
-     * <li>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss.</li>
-     * <li>Table documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets.</li>
-     * <li>PDF documents: pdf.</li>
+     * <li>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</li>
+     * <li>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</li>
+     * <li>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</li>
+     * <li>PDF documents: pdf</li>
      * </ul>
      * </li>
      * <li>The operation supports the following output formats:<ul>
-     * <li>Image files: png and jpg.</li>
-     * <li>Text files: txt.</li>
-     * <li>PDF files: pdf.</li>
+     * <li>Image files: png and jpg</li>
+     * <li>Text files: txt</li>
+     * <li>PDF files: pdf</li>
      * </ul>
      * </li>
-     * <li>The operation supports an input document that is up to 200 MB in size.</li>
-     * <li>The maximum amount of conversion time allowed is 120 seconds. If you convert a file that is relatively large or contains complex content, the conversion may time out.</li>
+     * <li>Each input document can be up to 200 MB in size.</li>
+     * <li>The maximum conversion time is 120 seconds. If the document contains too much or complex content, the conversion may time out.</li>
      * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<ul>
      * <li>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</li>
-     * <li>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</li>
+     * <li>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</li>
      * <li>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</li>
      * <li>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</li>
      * </ul>

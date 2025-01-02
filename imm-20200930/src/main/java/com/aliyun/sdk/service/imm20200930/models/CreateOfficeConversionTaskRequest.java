@@ -529,13 +529,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>The end page of the conversion. The default value is -1, which converts the file until the last page of the file.</p>
+         * <p>The ending page for document conversion. The default value is -1, which converts the file until the last page of the file.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>If the source is a spreadsheet file, you need to specify the SheetIndex parameter.</p>
+         * <li><p>If the source is a spreadsheet file, specify the index number of the corresponding sheet instead.</p>
          * </li>
-         * <li><p>If the number of pages is large, we recommend that you convert only part of the file at a time. Otherwise, the conversion task may time out.</p>
+         * <li><p>If you convert a large number of pages within the document, we recommend that you split the pages into several document conversion tasks to prevent conversion timeouts.</p>
          * </li>
          * <li><p>This parameter takes effect only when you convert the file into an image. It does not take effect when you convert the file into a PDF or TXT file.</p>
          * </li>
@@ -551,7 +551,17 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * FirstPage.
+         * <p>Specifies whether to return only the first resulting image when you convert a spreadsheet document to images. The number of rows and the number of columns in the first image are determined by the automatic splitting process. Valid values:</p>
+         * <ul>
+         * <li>false (default): does not return only the first resulting image. All the resulting images are returned.</li>
+         * <li>true: returns only the first resulting image. A thumbnail is generated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when the <strong>LongPicture</strong> parameter is set to <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder firstPage(Boolean firstPage) {
             this.putQueryParameter("FirstPage", firstPage);
@@ -560,10 +570,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to convert all rows of a table document to one single image or a single-page PDF document when you convert the table document to an image or a PDF document. Valid values:</p>
+         * <p>Specifies whether to convert all rows of a spreadsheet document to one single image or a single-page PDF document when you convert the table document to an image or a PDF document. Valid values:</p>
          * <ul>
-         * <li>false: converts the document to multiple images or a multi-page PDF document. This is the default value.</li>
-         * <li>true: converts the document to one single image or a single-page PDF document.</li>
+         * <li>false (default): converts all rows of the document to multiple images or a multi-page PDF document. This is the default value.</li>
+         * <li>true: converts all rows of the document to one single image or a single-page PDF document.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -576,10 +586,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to convert all columns of a table document to one single image or a single-page PDF document when you convert the table document to an image or a PDF document. Valid values:</p>
+         * <p>Specifies whether to convert all columns of a spreadsheet document to one single image or a single-page PDF document when you convert the spreadsheet file to an image or a PDF document. Valid values:</p>
          * <ul>
-         * <li>false: converts the document to multiple images or a multi-page PDF document. This is the default value.</li>
-         * <li>true: converts the document to one single image or a single-page PDF document.</li>
+         * <li>false (default): converts all columns of the document to multiple images or a multi-page PDF document.</li>
+         * <li>true: converts all columns of the document to one single image or a single-page PDF document.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -592,7 +602,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * HoldLineFeed.
+         * <p>Specifies whether to retain line feeds in the output file when a document is converted to a text file. Valid values:</p>
+         * <ul>
+         * <li>false (default): does not retain the line feeds.</li>
+         * <li>true: retains the line feeds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder holdLineFeed(Boolean holdLineFeed) {
             this.putQueryParameter("HoldLineFeed", holdLineFeed);
@@ -601,7 +618,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * ImageDPI.
+         * <p>The dots per inch (DPI) of output images. Valid values: 96 to 600. Default value: 96.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder imageDPI(Long imageDPI) {
             this.putQueryParameter("ImageDPI", imageDPI);
@@ -610,7 +630,17 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * LongPicture.
+         * <p>Specifies whether to convert the document to a long image. Valid values:</p>
+         * <ul>
+         * <li>false (default): does not convert the document to a long image.</li>
+         * <li>true: converts the document to a long image.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can convert up to 20 pages of a document into a long image. If you convert more than 20 pages to a long image, an error may occur.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder longPicture(Boolean longPicture) {
             this.putQueryParameter("LongPicture", longPicture);
@@ -619,7 +649,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * LongText.
+         * <p>Specifies whether to convert the document to a long text file. Valid values:</p>
+         * <ul>
+         * <li>false (default): does not convert the document to a long text file. Each page of the document is converted to a text file.</li>
+         * <li>true: converts the entire document to a long text file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder longText(Boolean longText) {
             this.putQueryParameter("LongText", longText);
@@ -628,7 +665,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * MaxSheetColumn.
+         * <p>The maximum number of spreadsheet columns to be converted to an image. By default, all columns within the spreadsheet file are converted.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when the <strong>LongPicture</strong> parameter is set to <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxSheetColumn(Long maxSheetColumn) {
             this.putQueryParameter("MaxSheetColumn", maxSheetColumn);
@@ -637,7 +680,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * MaxSheetRow.
+         * <p>The maximum number of spreadsheet rows to be converted to an image. By default, all rows within the spreadsheet file are converted.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when the <strong>LongPicture</strong> parameter is set to <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxSheetRow(Long maxSheetRow) {
             this.putQueryParameter("MaxSheetRow", maxSheetRow);
@@ -656,7 +705,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * Pages.
+         * <p>The numbers of pages to be converted. This parameter takes precedence over the StartPage and EndPage parameters. The value of this parameter can be in different formats:</p>
+         * <ul>
+         * <li>If you specify pages separately by page number, separate page numbers with commas (,). Example: 1,2</li>
+         * <li>If you specify consecutive pages by using a page range, connect the starting and ending page numbers with a hyphen (-). Example: 1,2-4,7</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2-4,7</p>
          */
         public Builder pages(String pages) {
             this.putQueryParameter("Pages", pages);
@@ -665,7 +721,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * PaperHorizontal.
+         * <p>Specifies whether to place sheets of paper horizontally for converting a spreadsheet document to images. Conversion to images is similar to printing the content on a sheet of paper. Valid values:</p>
+         * <ul>
+         * <li>false (default): does not place sheets of paper horizontally. Paper sheets are placed vertically.</li>
+         * <li>true: places sheets of paper horizontally.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder paperHorizontal(Boolean paperHorizontal) {
             this.putQueryParameter("PaperHorizontal", paperHorizontal);
@@ -674,7 +737,18 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * PaperSize.
+         * <p>The paper size for converting a spreadsheet document to images. Conversion to images is similar to printing the content on a sheet of paper. Valid values:</p>
+         * <ul>
+         * <li>A0</li>
+         * <li>A2</li>
+         * <li>A4 (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when the <strong>FitToHeight</strong> and <strong>FitToWidth</strong> parameters are specified.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>A4</p>
          */
         public Builder paperSize(String paperSize) {
             this.putQueryParameter("PaperSize", paperSize);
@@ -683,7 +757,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password that protects the source document. To convert a password-protected document, specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -692,6 +769,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the project.<a href="~~478153~~"></a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -704,7 +782,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * Quality.
+         * <p>The quality of the output file. Valid values: 0 to 100. A smaller value indicates lower quality and better conversion performance. By default, the system specifies an appropriate value that provides an optimal balance between the quality and conversion performance based on the document content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder quality(Long quality) {
             this.putQueryParameter("Quality", quality);
@@ -713,7 +794,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * ScalePercentage.
+         * <p>The percentage scale relative to the source document. Valid values: 20 to 200. The default value is 100, which indicates that the document is not scaled.</p>
+         * <blockquote>
+         * <p> A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder scalePercentage(Long scalePercentage) {
             this.putQueryParameter("ScalePercentage", scalePercentage);
@@ -722,7 +809,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * SheetCount.
+         * <p>The number of sheets to be converted to an image. By default, all sheets within the spreadsheet file are converted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sheetCount(Long sheetCount) {
             this.putQueryParameter("SheetCount", sheetCount);
@@ -731,7 +821,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * SheetIndex.
+         * <p>The index number of the sheet to be converted to an image. The value ranges from 1 to the index number of the last sheet. By default, the conversion starts from the first sheet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sheetIndex(Long sheetIndex) {
             this.putQueryParameter("SheetIndex", sheetIndex);
@@ -740,7 +833,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * ShowComments.
+         * <p>Specifies whether to display comments in resulting images when a text document is converted to images. Valid values:</p>
+         * <ul>
+         * <li>false (default): does not display comments in resulting images.</li>
+         * <li>true: displays comments in resulting images.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showComments(Boolean showComments) {
             this.putQueryParameter("ShowComments", showComments);
@@ -749,7 +849,16 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The name extension of the source file. By default, the type of the source file is determined based on the name extension of the source object in OSS. If the object in OSS does not have a name extension, you can specify this parameter. Valid values:</p>
+         * <ul>
+         * <li>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</li>
+         * <li>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</li>
+         * <li>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</li>
+         * <li>PDF documents: pdf</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>doc</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -758,7 +867,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>The storage address of the source data.</p>
+         * <p>The URI of the source file.</p>
          * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
          * 
          * <strong>example:</strong>
@@ -781,13 +890,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>The start page of document conversion. Default value: 1.</p>
+         * <p>The starting page for document conversion. Default value: 1.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>If the document is a table file, specify the page number of the worksheet.</p>
+         * <li><p>If the document is a spreadsheet file, specify the index number of the corresponding sheet instead.</p>
          * </li>
-         * <li><p>This parameter takes effect only when you convert the document into an image. It does not take effect when you convert the document into a PDF or TXT file.</p>
+         * <li><p>This parameter takes effect only when you convert the file to an image format. It does not take effect when you convert the file into a PDF or TXT file.</p>
          * </li>
          * </ul>
          * 
@@ -801,7 +910,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags in dictionary format. You can use the custom tags to search for the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
          */
         public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -811,6 +923,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
+         * <p>The format of the output file. Valid values:</p>
+         * <ul>
+         * <li>png: a PNG image.</li>
+         * <li>jpg: a JPG image.</li>
+         * <li>pdf: a PDF file.</li>
+         * <li>txt: a TXT file. You can specify this value to extract the text content of the source document. Only presentation, text, or spreadsheet documents can be converted to a TXT file. If the source document is a spreadsheet, only one TXT is created and sheet-related parameters do not take effect.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -823,10 +942,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>The URI of the output file.</p>
-         * <p>Specify the URI in the <code>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/465762.html">TargetURI template</a>.</p>
+         * <p>The address template of the output file.</p>
+         * <p>Specify the value in the <code>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</code> format. For more information, see <a href="https://help.aliyun.com/document_detail/465762.html">TargetURI template</a>.</p>
          * <blockquote>
-         * <p> TargetURI and TargetURIPrefix cannot be empty at the same time.</p>
+         * <p> Specify at least one of the TargetURI and TargetURIPrefix parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -839,10 +958,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>The URI prefix of the output file.</p>
-         * <p>Specify the prefix in the <code>oss://${Bucket}/${Prefix}/</code> format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Prefix}</code> is the URI prefix of the output file.</p>
+         * <p>The prefix of the storage address of the output file.</p>
+         * <p>Specify the prefix in the <code>oss://${Bucket}/${Prefix}/</code> format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Prefix}</code> is the prefix of the output file.</p>
          * <blockquote>
-         * <p> TargetURI and TargetURIPrefix cannot be empty at the same time.</p>
+         * <p> Specify at least one of the TargetURI and TargetURIPrefix parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -855,7 +974,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * <p>The trim policy for converting a table file. Empty rows and columns may generate blank spaces in the output file if no appropriate trim policy is specified.</p>
+         * <p>The trim policy for converting a spreadsheet file. Empty rows and columns may generate blank spaces in the output file if no appropriate trim policy is specified.</p>
          */
         public Builder trimPolicy(TrimPolicy trimPolicy) {
             String trimPolicyShrink = shrink(trimPolicy, "TrimPolicy", "json");
@@ -865,7 +984,10 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum information length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;file_id&quot;: &quot;abc&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
