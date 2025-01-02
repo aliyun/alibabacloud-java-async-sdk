@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class GetConsumerListResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagVO")
-        private java.util.List < TagVO> tagVO;
+        private java.util.List<TagVO> tagVO;
 
         private Tags(Builder builder) {
             this.tagVO = builder.tagVO;
@@ -310,17 +315,17 @@ public class GetConsumerListResponseBody extends TeaModel {
         /**
          * @return tagVO
          */
-        public java.util.List < TagVO> getTagVO() {
+        public java.util.List<TagVO> getTagVO() {
             return this.tagVO;
         }
 
         public static final class Builder {
-            private java.util.List < TagVO> tagVO; 
+            private java.util.List<TagVO> tagVO; 
 
             /**
              * TagVO.
              */
-            public Builder tagVO(java.util.List < TagVO> tagVO) {
+            public Builder tagVO(java.util.List<TagVO> tagVO) {
                 this.tagVO = tagVO;
                 return this;
             }
@@ -345,6 +350,9 @@ public class GetConsumerListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerId")
         private String consumerId;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -360,6 +368,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         private ConsumerVO(Builder builder) {
             this.automaticallyCreatedGroup = builder.automaticallyCreatedGroup;
             this.consumerId = builder.consumerId;
+            this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
@@ -386,6 +395,13 @@ public class GetConsumerListResponseBody extends TeaModel {
          */
         public String getConsumerId() {
             return this.consumerId;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -419,6 +435,7 @@ public class GetConsumerListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean automaticallyCreatedGroup; 
             private String consumerId; 
+            private Long createTime; 
             private String instanceId; 
             private String regionId; 
             private String remark; 
@@ -426,6 +443,9 @@ public class GetConsumerListResponseBody extends TeaModel {
 
             /**
              * <p>Indicates that the consumer group was automatically created by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder automaticallyCreatedGroup(Boolean automaticallyCreatedGroup) {
                 this.automaticallyCreatedGroup = automaticallyCreatedGroup;
@@ -440,6 +460,17 @@ public class GetConsumerListResponseBody extends TeaModel {
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
+                return this;
+            }
+
+            /**
+             * <p>The timestamp that indicates when the consumer group was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729736584002</p>
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -499,7 +530,7 @@ public class GetConsumerListResponseBody extends TeaModel {
      */
     public static class ConsumerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerVO")
-        private java.util.List < ConsumerVO> consumerVO;
+        private java.util.List<ConsumerVO> consumerVO;
 
         private ConsumerList(Builder builder) {
             this.consumerVO = builder.consumerVO;
@@ -516,17 +547,17 @@ public class GetConsumerListResponseBody extends TeaModel {
         /**
          * @return consumerVO
          */
-        public java.util.List < ConsumerVO> getConsumerVO() {
+        public java.util.List<ConsumerVO> getConsumerVO() {
             return this.consumerVO;
         }
 
         public static final class Builder {
-            private java.util.List < ConsumerVO> consumerVO; 
+            private java.util.List<ConsumerVO> consumerVO; 
 
             /**
              * ConsumerVO.
              */
-            public Builder consumerVO(java.util.List < ConsumerVO> consumerVO) {
+            public Builder consumerVO(java.util.List<ConsumerVO> consumerVO) {
                 this.consumerVO = consumerVO;
                 return this;
             }

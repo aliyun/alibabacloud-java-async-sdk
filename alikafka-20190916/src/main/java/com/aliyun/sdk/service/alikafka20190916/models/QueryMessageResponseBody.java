@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QueryMessageResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("MessageList")
-    private java.util.List < MessageList> messageList;
+    private java.util.List<MessageList> messageList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class QueryMessageResponseBody extends TeaModel {
     /**
      * @return messageList
      */
-    public java.util.List < MessageList> getMessageList() {
+    public java.util.List<MessageList> getMessageList() {
         return this.messageList;
     }
 
@@ -81,7 +86,7 @@ public class QueryMessageResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String message; 
-        private java.util.List < MessageList> messageList; 
+        private java.util.List<MessageList> messageList; 
         private String requestId; 
         private Boolean success; 
 
@@ -110,7 +115,7 @@ public class QueryMessageResponseBody extends TeaModel {
         /**
          * <p>The messages.</p>
          */
-        public Builder messageList(java.util.List < MessageList> messageList) {
+        public Builder messageList(java.util.List<MessageList> messageList) {
             this.messageList = messageList;
             return this;
         }

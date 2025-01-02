@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
      */
     public static class WeeklyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WeeklyTypes")
-        private java.util.List < String > weeklyTypes;
+        private java.util.List<String> weeklyTypes;
 
         private WeeklyTypes(Builder builder) {
             this.weeklyTypes = builder.weeklyTypes;
@@ -168,17 +173,17 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         /**
          * @return weeklyTypes
          */
-        public java.util.List < String > getWeeklyTypes() {
+        public java.util.List<String> getWeeklyTypes() {
             return this.weeklyTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > weeklyTypes; 
+            private java.util.List<String> weeklyTypes; 
 
             /**
              * WeeklyTypes.
              */
-            public Builder weeklyTypes(java.util.List < String > weeklyTypes) {
+            public Builder weeklyTypes(java.util.List<String> weeklyTypes) {
                 this.weeklyTypes = weeklyTypes;
                 return this;
             }
@@ -535,7 +540,7 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
      */
     public static class DataScheduledScalingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScheduledScalingRules")
-        private java.util.List < ScheduledScalingRules> scheduledScalingRules;
+        private java.util.List<ScheduledScalingRules> scheduledScalingRules;
 
         private DataScheduledScalingRules(Builder builder) {
             this.scheduledScalingRules = builder.scheduledScalingRules;
@@ -552,17 +557,17 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
         /**
          * @return scheduledScalingRules
          */
-        public java.util.List < ScheduledScalingRules> getScheduledScalingRules() {
+        public java.util.List<ScheduledScalingRules> getScheduledScalingRules() {
             return this.scheduledScalingRules;
         }
 
         public static final class Builder {
-            private java.util.List < ScheduledScalingRules> scheduledScalingRules; 
+            private java.util.List<ScheduledScalingRules> scheduledScalingRules; 
 
             /**
              * ScheduledScalingRules.
              */
-            public Builder scheduledScalingRules(java.util.List < ScheduledScalingRules> scheduledScalingRules) {
+            public Builder scheduledScalingRules(java.util.List<ScheduledScalingRules> scheduledScalingRules) {
                 this.scheduledScalingRules = scheduledScalingRules;
                 return this;
             }

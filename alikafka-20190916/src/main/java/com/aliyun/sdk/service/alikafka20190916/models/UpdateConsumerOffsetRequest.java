@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UpdateConsumerOffsetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Offsets")
-    private java.util.List < Offsets> offsets;
+    private java.util.List<Offsets> offsets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -85,7 +90,7 @@ public class UpdateConsumerOffsetRequest extends Request {
     /**
      * @return offsets
      */
-    public java.util.List < Offsets> getOffsets() {
+    public java.util.List<Offsets> getOffsets() {
         return this.offsets;
     }
 
@@ -120,7 +125,7 @@ public class UpdateConsumerOffsetRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateConsumerOffsetRequest, Builder> {
         private String consumerId; 
         private String instanceId; 
-        private java.util.List < Offsets> offsets; 
+        private java.util.List<Offsets> offsets; 
         private String regionId; 
         private String resetType; 
         private String time; 
@@ -175,7 +180,7 @@ public class UpdateConsumerOffsetRequest extends Request {
         /**
          * <p>If you set resetType to offset, you can use this parameter to reset the consumer offset of each partition of a specific topic in the consumer group.</p>
          */
-        public Builder offsets(java.util.List < Offsets> offsets) {
+        public Builder offsets(java.util.List<Offsets> offsets) {
             String offsetsShrink = shrink(offsets, "Offsets", "json");
             this.putQueryParameter("Offsets", offsetsShrink);
             this.offsets = offsets;

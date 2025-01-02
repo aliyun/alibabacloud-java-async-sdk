@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.Map < String, ? > instanceIds;
+    private java.util.Map<String, ?> instanceIds;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
     /**
      * @return instanceIds
      */
-    public java.util.Map < String, ? > getInstanceIds() {
+    public java.util.Map<String, ?> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -80,7 +85,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.Map < String, ? > instanceIds; 
+        private java.util.Map<String, ?> instanceIds; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -102,7 +107,7 @@ public class GetAllInstanceIdListResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>[{&quot;cn-shenzhen&quot;: [&quot;alikafka_post-cn-7pp2btvo****&quot;],&quot;us-west-1&quot;: [&quot;alikafka_pre-cn-i7m2lxid****&quot;],&quot;cn-hangzhou&quot;: [&quot;alikafka_pre-cn-i7m2hflj****&quot;,&quot;alikafka_pre-cn-zvp2hsje****&quot;,&quot;alikafka_pre-cn-zvp2kvc9****&quot;]}]</p>
          */
-        public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
+        public Builder instanceIds(java.util.Map<String, ?> instanceIds) {
             this.instanceIds = instanceIds;
             return this;
         }

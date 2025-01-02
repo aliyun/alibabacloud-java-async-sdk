@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
      */
     public static class TopicSubscribeStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumerGroups")
-        private java.util.List < String > consumerGroups;
+        private java.util.List<String> consumerGroups;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
@@ -172,7 +177,7 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         /**
          * @return consumerGroups
          */
-        public java.util.List < String > getConsumerGroups() {
+        public java.util.List<String> getConsumerGroups() {
             return this.consumerGroups;
         }
 
@@ -184,13 +189,13 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > consumerGroups; 
+            private java.util.List<String> consumerGroups; 
             private String topic; 
 
             /**
              * <p>The groups that subscribe to the topic.</p>
              */
-            public Builder consumerGroups(java.util.List < String > consumerGroups) {
+            public Builder consumerGroups(java.util.List<String> consumerGroups) {
                 this.consumerGroups = consumerGroups;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -67,7 +72,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WeeklyTypes")
-    private java.util.List < String > weeklyTypes;
+    private java.util.List<String> weeklyTypes;
 
     private CreateScheduledScalingRuleRequest(Builder builder) {
         super(builder);
@@ -178,7 +183,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
     /**
      * @return weeklyTypes
      */
-    public java.util.List < String > getWeeklyTypes() {
+    public java.util.List<String> getWeeklyTypes() {
         return this.weeklyTypes;
     }
 
@@ -194,7 +199,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         private String ruleName; 
         private String scheduleType; 
         private String timeZone; 
-        private java.util.List < String > weeklyTypes; 
+        private java.util.List<String> weeklyTypes; 
 
         private Builder() {
             super();
@@ -390,7 +395,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         /**
          * <p>The day on which the scheduled scaling task is executed every week. You can specify multiple days.</p>
          */
-        public Builder weeklyTypes(java.util.List < String > weeklyTypes) {
+        public Builder weeklyTypes(java.util.List<String> weeklyTypes) {
             String weeklyTypesShrink = shrink(weeklyTypes, "WeeklyTypes", "json");
             this.putQueryParameter("WeeklyTypes", weeklyTypesShrink);
             this.weeklyTypes = weeklyTypes;

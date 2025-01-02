@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,10 +156,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
      */
     public static class InternetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedIpGroup")
-        private java.util.Map < String, String > allowedIpGroup;
+        private java.util.Map<String, String> allowedIpGroup;
 
         @com.aliyun.core.annotation.NameInMap("AllowedIpList")
-        private java.util.List < String > allowedIpList;
+        private java.util.List<String> allowedIpList;
 
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
@@ -176,14 +181,14 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         /**
          * @return allowedIpGroup
          */
-        public java.util.Map < String, String > getAllowedIpGroup() {
+        public java.util.Map<String, String> getAllowedIpGroup() {
             return this.allowedIpGroup;
         }
 
         /**
          * @return allowedIpList
          */
-        public java.util.List < String > getAllowedIpList() {
+        public java.util.List<String> getAllowedIpList() {
             return this.allowedIpList;
         }
 
@@ -195,14 +200,14 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > allowedIpGroup; 
-            private java.util.List < String > allowedIpList; 
+            private java.util.Map<String, String> allowedIpGroup; 
+            private java.util.List<String> allowedIpList; 
             private String portRange; 
 
             /**
              * <p>The group to which the IP address whitelist belongs.</p>
              */
-            public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
+            public Builder allowedIpGroup(java.util.Map<String, String> allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
                 return this;
             }
@@ -210,7 +215,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             /**
              * <p>The information about the IP address whitelist.</p>
              */
-            public Builder allowedIpList(java.util.List < String > allowedIpList) {
+            public Builder allowedIpList(java.util.List<String> allowedIpList) {
                 this.allowedIpList = allowedIpList;
                 return this;
             }
@@ -242,10 +247,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
      */
     public static class VpcList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedIpGroup")
-        private java.util.Map < String, String > allowedIpGroup;
+        private java.util.Map<String, String> allowedIpGroup;
 
         @com.aliyun.core.annotation.NameInMap("AllowedIpList")
-        private java.util.List < String > allowedIpList;
+        private java.util.List<String> allowedIpList;
 
         @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
@@ -267,14 +272,14 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         /**
          * @return allowedIpGroup
          */
-        public java.util.Map < String, String > getAllowedIpGroup() {
+        public java.util.Map<String, String> getAllowedIpGroup() {
             return this.allowedIpGroup;
         }
 
         /**
          * @return allowedIpList
          */
-        public java.util.List < String > getAllowedIpList() {
+        public java.util.List<String> getAllowedIpList() {
             return this.allowedIpList;
         }
 
@@ -286,14 +291,14 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > allowedIpGroup; 
-            private java.util.List < String > allowedIpList; 
+            private java.util.Map<String, String> allowedIpGroup; 
+            private java.util.List<String> allowedIpList; 
             private String portRange; 
 
             /**
              * <p>The group to which the IP address whitelist belongs.</p>
              */
-            public Builder allowedIpGroup(java.util.Map < String, String > allowedIpGroup) {
+            public Builder allowedIpGroup(java.util.Map<String, String> allowedIpGroup) {
                 this.allowedIpGroup = allowedIpGroup;
                 return this;
             }
@@ -301,7 +306,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             /**
              * <p>The information about the IP address whitelist.</p>
              */
-            public Builder allowedIpList(java.util.List < String > allowedIpList) {
+            public Builder allowedIpList(java.util.List<String> allowedIpList) {
                 this.allowedIpList = allowedIpList;
                 return this;
             }
@@ -336,10 +341,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         private Integer deployType;
 
         @com.aliyun.core.annotation.NameInMap("InternetList")
-        private java.util.List < InternetList> internetList;
+        private java.util.List<InternetList> internetList;
 
         @com.aliyun.core.annotation.NameInMap("VpcList")
-        private java.util.List < VpcList> vpcList;
+        private java.util.List<VpcList> vpcList;
 
         private AllowedList(Builder builder) {
             this.deployType = builder.deployType;
@@ -365,21 +370,21 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         /**
          * @return internetList
          */
-        public java.util.List < InternetList> getInternetList() {
+        public java.util.List<InternetList> getInternetList() {
             return this.internetList;
         }
 
         /**
          * @return vpcList
          */
-        public java.util.List < VpcList> getVpcList() {
+        public java.util.List<VpcList> getVpcList() {
             return this.vpcList;
         }
 
         public static final class Builder {
             private Integer deployType; 
-            private java.util.List < InternetList> internetList; 
-            private java.util.List < VpcList> vpcList; 
+            private java.util.List<InternetList> internetList; 
+            private java.util.List<VpcList> vpcList; 
 
             /**
              * <p>The deployment mode of the instance. Valid values:</p>
@@ -402,7 +407,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             /**
              * <p>The whitelist for access from the Internet.</p>
              */
-            public Builder internetList(java.util.List < InternetList> internetList) {
+            public Builder internetList(java.util.List<InternetList> internetList) {
                 this.internetList = internetList;
                 return this;
             }
@@ -410,7 +415,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             /**
              * <p>The whitelist for access from a virtual private cloud (VPC).</p>
              */
-            public Builder vpcList(java.util.List < VpcList> vpcList) {
+            public Builder vpcList(java.util.List<VpcList> vpcList) {
                 this.vpcList = vpcList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -370,7 +375,7 @@ public class DescribeAclsResponseBody extends TeaModel {
      */
     public static class KafkaAclList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KafkaAclVO")
-        private java.util.List < KafkaAclVO> kafkaAclVO;
+        private java.util.List<KafkaAclVO> kafkaAclVO;
 
         private KafkaAclList(Builder builder) {
             this.kafkaAclVO = builder.kafkaAclVO;
@@ -387,17 +392,17 @@ public class DescribeAclsResponseBody extends TeaModel {
         /**
          * @return kafkaAclVO
          */
-        public java.util.List < KafkaAclVO> getKafkaAclVO() {
+        public java.util.List<KafkaAclVO> getKafkaAclVO() {
             return this.kafkaAclVO;
         }
 
         public static final class Builder {
-            private java.util.List < KafkaAclVO> kafkaAclVO; 
+            private java.util.List<KafkaAclVO> kafkaAclVO; 
 
             /**
              * KafkaAclVO.
              */
-            public Builder kafkaAclVO(java.util.List < KafkaAclVO> kafkaAclVO) {
+            public Builder kafkaAclVO(java.util.List<KafkaAclVO> kafkaAclVO) {
                 this.kafkaAclVO = kafkaAclVO;
                 return this;
             }

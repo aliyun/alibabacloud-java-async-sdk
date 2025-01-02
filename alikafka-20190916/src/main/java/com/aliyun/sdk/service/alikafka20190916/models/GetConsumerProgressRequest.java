@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -112,7 +117,18 @@ public class GetConsumerProgressRequest extends Request {
         }
 
         /**
-         * HideLastTimestamp.
+         * <p>Specifies whether to hide LastTimestamp. Default value: false. We recommend that you set this parameter to true.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set this parameter to true, -1 is returned for LastTimestamp. If you set this parameter to false, a specific value is returned for LastTimestamp. This parameter is supported only by topics that use cloud storage on reserved instances.</p>
+         * </li>
+         * <li><p>A large amount of data is processed by this operation, which causes performance loss. We recommend that you set this parameter to true to accelerate processing.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hideLastTimestamp(Boolean hideLastTimestamp) {
             this.putQueryParameter("HideLastTimestamp", hideLastTimestamp);

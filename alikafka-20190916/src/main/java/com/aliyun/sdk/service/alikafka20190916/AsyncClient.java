@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     /**
+     * @param request the request parameters of CreatePostPayInstance  CreatePostPayInstanceRequest
+     * @return CreatePostPayInstanceResponse
+     */
+    CompletableFuture<CreatePostPayInstanceResponse> createPostPayInstance(CreatePostPayInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
@@ -51,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePostPayOrderResponse
      */
     CompletableFuture<CreatePostPayOrderResponse> createPostPayOrder(CreatePostPayOrderRequest request);
+
+    /**
+     * @param request the request parameters of CreatePrePayInstance  CreatePrePayInstanceRequest
+     * @return CreatePrePayInstanceResponse
+     */
+    CompletableFuture<CreatePrePayInstanceResponse> createPrePayInstance(CreatePrePayInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -117,7 +129,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+     * <h6><a href="#-serverless-"></a>This operation is available only for serverless ApsaraMQ for Kafka instances.</h6>
      * 
      * @param request the request parameters of DeleteScheduledScalingRule  DeleteScheduledScalingRuleRequest
      * @return DeleteScheduledScalingRuleResponse
@@ -168,7 +180,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * <h6><a href="#-serverless-"></a>**This operation is available only for serverless ApsaraMQ for Kafka instances.</h6>
      * 
      * @param request the request parameters of GetAutoScalingConfiguration  GetAutoScalingConfigurationRequest
      * @return GetAutoScalingConfigurationResponse
@@ -194,6 +206,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceListResponse> getInstanceList(GetInstanceListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  The IP information is obtained from the sampled logs generated for the requests that the client sends to the broker by calling the API operations of ApsaraMQ for Kafka.</p>
+     * <ul>
+     * <li>Statistics refers to the number of connections on different ports of an IP address within a specific period of time.</li>
+     * <li>If the broker is not of the latest minor version, the sampled logs may not be accurate. This may cause inaccurate IP information. Therefore, we recommend that you update your broker to the latest version at the earliest opportunity.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetKafkaClientIp  GetKafkaClientIpRequest
      * @return GetKafkaClientIpResponse
      */
@@ -243,7 +262,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * <h6><a href="#-serverless-"></a>This operation is available only for serverless ApsaraMQ for Kafka instances.</h6>
      * 
      * @param request the request parameters of ModifyScheduledScalingRule  ModifyScheduledScalingRuleRequest
      * @return ModifyScheduledScalingRuleResponse

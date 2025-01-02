@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -147,10 +152,8 @@ public class CreateSaslUserRequest extends Request {
          * <li>SCRAM-SHA-256</li>
          * </ul>
          * <blockquote>
+         * <p> This parameter is available only for ApsaraMQ for Kafka serverless instances.</p>
          * </blockquote>
-         * <ul>
-         * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SCRAM-SHA-256</p>

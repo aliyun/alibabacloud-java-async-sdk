@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
      */
     public static class ConsumerProgressRebalanceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RebalanceInfoList")
-        private java.util.List < RebalanceInfoList> rebalanceInfoList;
+        private java.util.List<RebalanceInfoList> rebalanceInfoList;
 
         private ConsumerProgressRebalanceInfoList(Builder builder) {
             this.rebalanceInfoList = builder.rebalanceInfoList;
@@ -333,17 +338,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return rebalanceInfoList
          */
-        public java.util.List < RebalanceInfoList> getRebalanceInfoList() {
+        public java.util.List<RebalanceInfoList> getRebalanceInfoList() {
             return this.rebalanceInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < RebalanceInfoList> rebalanceInfoList; 
+            private java.util.List<RebalanceInfoList> rebalanceInfoList; 
 
             /**
              * RebalanceInfoList.
              */
-            public Builder rebalanceInfoList(java.util.List < RebalanceInfoList> rebalanceInfoList) {
+            public Builder rebalanceInfoList(java.util.List<RebalanceInfoList> rebalanceInfoList) {
                 this.rebalanceInfoList = rebalanceInfoList;
                 return this;
             }
@@ -365,19 +370,31 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BrokerOffset")
         private Long brokerOffset;
 
+        @com.aliyun.core.annotation.NameInMap("ClientId")
+        private String clientId;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
         @com.aliyun.core.annotation.NameInMap("ConsumerOffset")
         private Long consumerOffset;
 
         @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("MemberId")
+        private String memberId;
+
         @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
         private OffsetList(Builder builder) {
             this.brokerOffset = builder.brokerOffset;
+            this.clientId = builder.clientId;
+            this.clientIp = builder.clientIp;
             this.consumerOffset = builder.consumerOffset;
             this.lastTimestamp = builder.lastTimestamp;
+            this.memberId = builder.memberId;
             this.partition = builder.partition;
         }
 
@@ -397,6 +414,20 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientId
+         */
+        public String getClientId() {
+            return this.clientId;
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
          * @return consumerOffset
          */
         public Long getConsumerOffset() {
@@ -411,6 +442,13 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberId
+         */
+        public String getMemberId() {
+            return this.memberId;
+        }
+
+        /**
          * @return partition
          */
         public Integer getPartition() {
@@ -419,8 +457,11 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long brokerOffset; 
+            private String clientId; 
+            private String clientIp; 
             private Long consumerOffset; 
             private Long lastTimestamp; 
+            private String memberId; 
             private Integer partition; 
 
             /**
@@ -431,6 +472,28 @@ public class GetConsumerProgressResponseBody extends TeaModel {
              */
             public Builder brokerOffset(Long brokerOffset) {
                 this.brokerOffset = brokerOffset;
+                return this;
+            }
+
+            /**
+             * <p>Client ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client-id-KafkaConsumerDemo</p>
+             */
+            public Builder clientId(String clientId) {
+                this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.11.3</p>
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
                 return this;
             }
 
@@ -453,6 +516,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
              */
             public Builder lastTimestamp(Long lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
+                return this;
+            }
+
+            /**
+             * <p>Member ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</p>
+             */
+            public Builder memberId(String memberId) {
+                this.memberId = memberId;
                 return this;
             }
 
@@ -482,7 +556,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
      */
     public static class TopicListOffsetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsetList")
-        private java.util.List < OffsetList> offsetList;
+        private java.util.List<OffsetList> offsetList;
 
         private TopicListOffsetList(Builder builder) {
             this.offsetList = builder.offsetList;
@@ -499,17 +573,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return offsetList
          */
-        public java.util.List < OffsetList> getOffsetList() {
+        public java.util.List<OffsetList> getOffsetList() {
             return this.offsetList;
         }
 
         public static final class Builder {
-            private java.util.List < OffsetList> offsetList; 
+            private java.util.List<OffsetList> offsetList; 
 
             /**
              * OffsetList.
              */
-            public Builder offsetList(java.util.List < OffsetList> offsetList) {
+            public Builder offsetList(java.util.List<OffsetList> offsetList) {
                 this.offsetList = offsetList;
                 return this;
             }
@@ -645,7 +719,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
      */
     public static class ConsumerProgressTopicList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopicList")
-        private java.util.List < TopicList> topicList;
+        private java.util.List<TopicList> topicList;
 
         private ConsumerProgressTopicList(Builder builder) {
             this.topicList = builder.topicList;
@@ -662,17 +736,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         /**
          * @return topicList
          */
-        public java.util.List < TopicList> getTopicList() {
+        public java.util.List<TopicList> getTopicList() {
             return this.topicList;
         }
 
         public static final class Builder {
-            private java.util.List < TopicList> topicList; 
+            private java.util.List<TopicList> topicList; 
 
             /**
              * TopicList.
              */
-            public Builder topicList(java.util.List < TopicList> topicList) {
+            public Builder topicList(java.util.List<TopicList> topicList) {
                 this.topicList = topicList;
                 return this;
             }

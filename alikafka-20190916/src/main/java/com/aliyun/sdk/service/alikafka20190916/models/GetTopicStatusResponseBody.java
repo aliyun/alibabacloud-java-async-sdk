@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
      */
     public static class TopicStatusOffsetTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsetTable")
-        private java.util.List < OffsetTable> offsetTable;
+        private java.util.List<OffsetTable> offsetTable;
 
         private TopicStatusOffsetTable(Builder builder) {
             this.offsetTable = builder.offsetTable;
@@ -310,17 +315,17 @@ public class GetTopicStatusResponseBody extends TeaModel {
         /**
          * @return offsetTable
          */
-        public java.util.List < OffsetTable> getOffsetTable() {
+        public java.util.List<OffsetTable> getOffsetTable() {
             return this.offsetTable;
         }
 
         public static final class Builder {
-            private java.util.List < OffsetTable> offsetTable; 
+            private java.util.List<OffsetTable> offsetTable; 
 
             /**
              * OffsetTable.
              */
-            public Builder offsetTable(java.util.List < OffsetTable> offsetTable) {
+            public Builder offsetTable(java.util.List<OffsetTable> offsetTable) {
                 this.offsetTable = offsetTable;
                 return this;
             }

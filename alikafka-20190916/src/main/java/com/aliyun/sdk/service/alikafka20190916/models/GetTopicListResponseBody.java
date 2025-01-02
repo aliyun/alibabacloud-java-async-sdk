@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class GetTopicListResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagVO")
-        private java.util.List < TagVO> tagVO;
+        private java.util.List<TagVO> tagVO;
 
         private Tags(Builder builder) {
             this.tagVO = builder.tagVO;
@@ -310,17 +315,17 @@ public class GetTopicListResponseBody extends TeaModel {
         /**
          * @return tagVO
          */
-        public java.util.List < TagVO> getTagVO() {
+        public java.util.List<TagVO> getTagVO() {
             return this.tagVO;
         }
 
         public static final class Builder {
-            private java.util.List < TagVO> tagVO; 
+            private java.util.List<TagVO> tagVO; 
 
             /**
              * TagVO.
              */
-            public Builder tagVO(java.util.List < TagVO> tagVO) {
+            public Builder tagVO(java.util.List<TagVO> tagVO) {
                 this.tagVO = tagVO;
                 return this;
             }
@@ -683,7 +688,7 @@ public class GetTopicListResponseBody extends TeaModel {
      */
     public static class TopicList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopicVO")
-        private java.util.List < TopicVO> topicVO;
+        private java.util.List<TopicVO> topicVO;
 
         private TopicList(Builder builder) {
             this.topicVO = builder.topicVO;
@@ -700,17 +705,17 @@ public class GetTopicListResponseBody extends TeaModel {
         /**
          * @return topicVO
          */
-        public java.util.List < TopicVO> getTopicVO() {
+        public java.util.List<TopicVO> getTopicVO() {
             return this.topicVO;
         }
 
         public static final class Builder {
-            private java.util.List < TopicVO> topicVO; 
+            private java.util.List<TopicVO> topicVO; 
 
             /**
              * TopicVO.
              */
-            public Builder topicVO(java.util.List < TopicVO> topicVO) {
+            public Builder topicVO(java.util.List<TopicVO> topicVO) {
                 this.topicVO = topicVO;
                 return this;
             }

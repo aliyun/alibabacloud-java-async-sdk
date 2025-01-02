@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -665,7 +670,7 @@ public class GetInstanceListResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagVO")
-        private java.util.List < TagVO> tagVO;
+        private java.util.List<TagVO> tagVO;
 
         private Tags(Builder builder) {
             this.tagVO = builder.tagVO;
@@ -682,17 +687,17 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * @return tagVO
          */
-        public java.util.List < TagVO> getTagVO() {
+        public java.util.List<TagVO> getTagVO() {
             return this.tagVO;
         }
 
         public static final class Builder {
-            private java.util.List < TagVO> tagVO; 
+            private java.util.List<TagVO> tagVO; 
 
             /**
              * TagVO.
              */
-            public Builder tagVO(java.util.List < TagVO> tagVO) {
+            public Builder tagVO(java.util.List<TagVO> tagVO) {
                 this.tagVO = tagVO;
                 return this;
             }
@@ -762,7 +767,7 @@ public class GetInstanceListResponseBody extends TeaModel {
      */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         private VSwitchIds(Builder builder) {
             this.vSwitchIds = builder.vSwitchIds;
@@ -779,17 +784,17 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
 
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -816,6 +821,9 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AutoCreateTopicEnable")
         private Boolean autoCreateTopicEnable;
+
+        @com.aliyun.core.annotation.NameInMap("BackupZoneId")
+        private String backupZoneId;
 
         @com.aliyun.core.annotation.NameInMap("ConfluentConfig")
         private ConfluentConfig confluentConfig;
@@ -889,6 +897,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SaslDomainEndpoint")
         private String saslDomainEndpoint;
 
+        @com.aliyun.core.annotation.NameInMap("SaslEndPoint")
+        private String saslEndPoint;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private String securityGroup;
 
@@ -940,6 +951,12 @@ public class GetInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
+        @com.aliyun.core.annotation.NameInMap("VpcSaslDomainEndpoint")
+        private String vpcSaslDomainEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("VpcSaslEndPoint")
+        private String vpcSaslEndPoint;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -947,6 +964,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.allConfig = builder.allConfig;
             this.autoCreateGroupEnable = builder.autoCreateGroupEnable;
             this.autoCreateTopicEnable = builder.autoCreateTopicEnable;
+            this.backupZoneId = builder.backupZoneId;
             this.confluentConfig = builder.confluentConfig;
             this.createTime = builder.createTime;
             this.defaultPartitionNum = builder.defaultPartitionNum;
@@ -971,6 +989,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.reservedSubscribeCapacity = builder.reservedSubscribeCapacity;
             this.resourceGroupId = builder.resourceGroupId;
             this.saslDomainEndpoint = builder.saslDomainEndpoint;
+            this.saslEndPoint = builder.saslEndPoint;
             this.securityGroup = builder.securityGroup;
             this.series = builder.series;
             this.serviceStatus = builder.serviceStatus;
@@ -988,6 +1007,8 @@ public class GetInstanceListResponseBody extends TeaModel {
             this.vSwitchIds = builder.vSwitchIds;
             this.viewInstanceStatusCode = builder.viewInstanceStatusCode;
             this.vpcId = builder.vpcId;
+            this.vpcSaslDomainEndpoint = builder.vpcSaslDomainEndpoint;
+            this.vpcSaslEndPoint = builder.vpcSaslEndPoint;
             this.zoneId = builder.zoneId;
         }
 
@@ -1018,6 +1039,13 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         public Boolean getAutoCreateTopicEnable() {
             return this.autoCreateTopicEnable;
+        }
+
+        /**
+         * @return backupZoneId
+         */
+        public String getBackupZoneId() {
+            return this.backupZoneId;
         }
 
         /**
@@ -1189,6 +1217,13 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return saslEndPoint
+         */
+        public String getSaslEndPoint() {
+            return this.saslEndPoint;
+        }
+
+        /**
          * @return securityGroup
          */
         public String getSecurityGroup() {
@@ -1308,6 +1343,20 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcSaslDomainEndpoint
+         */
+        public String getVpcSaslDomainEndpoint() {
+            return this.vpcSaslDomainEndpoint;
+        }
+
+        /**
+         * @return vpcSaslEndPoint
+         */
+        public String getVpcSaslEndPoint() {
+            return this.vpcSaslEndPoint;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -1318,6 +1367,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private String allConfig; 
             private Boolean autoCreateGroupEnable; 
             private Boolean autoCreateTopicEnable; 
+            private String backupZoneId; 
             private ConfluentConfig confluentConfig; 
             private Long createTime; 
             private Integer defaultPartitionNum; 
@@ -1342,6 +1392,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Integer reservedSubscribeCapacity; 
             private String resourceGroupId; 
             private String saslDomainEndpoint; 
+            private String saslEndPoint; 
             private String securityGroup; 
             private String series; 
             private Integer serviceStatus; 
@@ -1359,6 +1410,8 @@ public class GetInstanceListResponseBody extends TeaModel {
             private VSwitchIds vSwitchIds; 
             private Integer viewInstanceStatusCode; 
             private String vpcId; 
+            private String vpcSaslDomainEndpoint; 
+            private String vpcSaslEndPoint; 
             private String zoneId; 
 
             /**
@@ -1373,7 +1426,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * AutoCreateGroupEnable.
+             * <p>Indicates whether the flexible group creation feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreateGroupEnable(Boolean autoCreateGroupEnable) {
                 this.autoCreateGroupEnable = autoCreateGroupEnable;
@@ -1381,10 +1437,24 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * AutoCreateTopicEnable.
+             * <p>Indicates whether the automatic topic creation feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreateTopicEnable(Boolean autoCreateTopicEnable) {
                 this.autoCreateTopicEnable = autoCreateTopicEnable;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
+             */
+            public Builder backupZoneId(String backupZoneId) {
+                this.backupZoneId = backupZoneId;
                 return this;
             }
 
@@ -1408,7 +1478,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultPartitionNum.
+             * <p>The number of partitions in a topic that is automatically created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder defaultPartitionNum(Integer defaultPartitionNum) {
                 this.defaultPartitionNum = defaultPartitionNum;
@@ -1679,6 +1752,21 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The Simple Authentication and Security Layer (SASL) endpoint of the instance in IP address mode. ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
+             * <ul>
+             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
+             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.3.XX:9094,172.16.3.XX:9094,172.16.3.XX:9094</p>
+             */
+            public Builder saslEndPoint(String saslEndPoint) {
+                this.saslEndPoint = saslEndPoint;
+                return this;
+            }
+
+            /**
              * <p>The security group to which the instance belongs.</p>
              * <ul>
              * <li>If the instance is deployed in the ApsaraMQ for Kafka console or by calling the <a href="https://help.aliyun.com/document_detail/157786.html">StartInstance</a> operation without a security group configured, no value is returned.</li>
@@ -1862,7 +1950,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1911,6 +1999,36 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The SSL endpoint of the instance in domain name mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
+             * <ul>
+             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
+             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alikafka-post-cn-<strong><strong><strong>-1-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-</strong></strong></strong>-2-vpc.alikafka.aliyuncs.com:9095,alikafka-post-cn-******-3-vpc.alikafka.aliyuncs.com:9095</p>
+             */
+            public Builder vpcSaslDomainEndpoint(String vpcSaslDomainEndpoint) {
+                this.vpcSaslDomainEndpoint = vpcSaslDomainEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The Secure Sockets Layer (SSL) endpoint of the instance in IP address mode. You can use the endpoint to access the instance only in virtual private clouds (VPCs). ApsaraMQ for Kafka instances support endpoints in domain name mode and IP address mode.</p>
+             * <ul>
+             * <li>Endpoints in domain name mode: An endpoint in this mode consists of the domain name of the instance and a port number. The format of an endpoint in this mode is <code>{Instance domain name}:{Port number}</code>.</li>
+             * <li>Endpoints in IP address mode: An endpoint in this mode consists of the IP address of the broker and a port number. The format of an endpoint in this mode is <code>{Broker IP address}:{Port number}</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.3.XX:9095,172.16.3.XX:9095,172.16.3.XX:9095</p>
+             */
+            public Builder vpcSaslEndPoint(String vpcSaslEndPoint) {
+                this.vpcSaslEndPoint = vpcSaslEndPoint;
+                return this;
+            }
+
+            /**
              * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
@@ -1936,7 +2054,7 @@ public class GetInstanceListResponseBody extends TeaModel {
      */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceVO")
-        private java.util.List < InstanceVO> instanceVO;
+        private java.util.List<InstanceVO> instanceVO;
 
         private InstanceList(Builder builder) {
             this.instanceVO = builder.instanceVO;
@@ -1953,17 +2071,17 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * @return instanceVO
          */
-        public java.util.List < InstanceVO> getInstanceVO() {
+        public java.util.List<InstanceVO> getInstanceVO() {
             return this.instanceVO;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceVO> instanceVO; 
+            private java.util.List<InstanceVO> instanceVO; 
 
             /**
              * InstanceVO.
              */
-            public Builder instanceVO(java.util.List < InstanceVO> instanceVO) {
+            public Builder instanceVO(java.util.List<InstanceVO> instanceVO) {
                 this.instanceVO = instanceVO;
                 return this;
             }

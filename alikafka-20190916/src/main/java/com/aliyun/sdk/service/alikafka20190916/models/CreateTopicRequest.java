@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class CreateTopicRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Topic")
@@ -156,7 +161,7 @@ public class CreateTopicRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -177,7 +182,7 @@ public class CreateTopicRequest extends Request {
         private String regionId; 
         private String remark; 
         private Long replicationFactor; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String topic; 
 
         private Builder() {
@@ -216,7 +221,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * <p>The additional configurations.</p>
+         * <p>The additional configuration.</p>
          * <ul>
          * <li>The value must be in JSON format.</li>
          * <li>Set Key to <strong>replications</strong>. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.</li>
@@ -354,7 +359,7 @@ public class CreateTopicRequest extends Request {
         /**
          * <p>The tags that you want to add to the topic.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

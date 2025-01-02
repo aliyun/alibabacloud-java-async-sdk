@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -143,6 +148,7 @@ public class GetKafkaClientIpRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +161,13 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The ID of the consumer group.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set Type to byGroup.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>group_name</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -164,6 +176,7 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +189,7 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance is deployed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +202,7 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +215,15 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>The topic name.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is required only if you set Type to byTopic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_name</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);
@@ -209,6 +232,12 @@ public class GetKafkaClientIpRequest extends Request {
         }
 
         /**
+         * <p>The query method that you want to use to query the client IP addresses. Valid values:</p>
+         * <ul>
+         * <li>byInstance: queries the IP addresses of the clients that are connected to the instance within a specific period of time.</li>
+         * <li>byTopic: queries the IP addresses of the clients that are connected to a specific topic on the instance within a specific period of time.</li>
+         * <li>byGroup: queries the IP addresses of the clients that are connected to a specific group on the instance within a specific period of time.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

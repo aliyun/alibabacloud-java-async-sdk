@@ -12,35 +12,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpgradePrePayOrderRequest} extends {@link RequestModel}
+ * {@link CreatePrePayInstanceRequest} extends {@link RequestModel}
  *
- * <p>UpgradePrePayOrderRequest</p>
+ * <p>CreatePrePayInstanceRequest</p>
  */
-public class UpgradePrePayOrderRequest extends Request {
+public class CreatePrePayInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfluentConfig")
     private ConfluentConfig confluentConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployType")
+    private Integer deployType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Integer diskSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
+    private String diskType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    private Integer duration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EipMax")
     private Integer eipMax;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EipModel")
-    private Boolean eipModel;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String instanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IoMax")
-    private Integer ioMax;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IoMaxSpec")
@@ -60,34 +59,39 @@ public class UpgradePrePayOrderRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecType")
     private String specType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TopicQuota")
-    private Integer topicQuota;
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
-    private UpgradePrePayOrderRequest(Builder builder) {
+    private CreatePrePayInstanceRequest(Builder builder) {
         super(builder);
         this.confluentConfig = builder.confluentConfig;
+        this.deployType = builder.deployType;
         this.diskSize = builder.diskSize;
+        this.diskType = builder.diskType;
+        this.duration = builder.duration;
         this.eipMax = builder.eipMax;
-        this.eipModel = builder.eipModel;
-        this.instanceId = builder.instanceId;
-        this.ioMax = builder.ioMax;
         this.ioMaxSpec = builder.ioMaxSpec;
         this.paidType = builder.paidType;
         this.partitionNum = builder.partitionNum;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.specType = builder.specType;
-        this.topicQuota = builder.topicQuota;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpgradePrePayOrderRequest create() {
+    public static CreatePrePayInstanceRequest create() {
         return builder().build();
     }
 
@@ -104,6 +108,13 @@ public class UpgradePrePayOrderRequest extends Request {
     }
 
     /**
+     * @return deployType
+     */
+    public Integer getDeployType() {
+        return this.deployType;
+    }
+
+    /**
      * @return diskSize
      */
     public Integer getDiskSize() {
@@ -111,31 +122,24 @@ public class UpgradePrePayOrderRequest extends Request {
     }
 
     /**
+     * @return diskType
+     */
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    /**
+     * @return duration
+     */
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    /**
      * @return eipMax
      */
     public Integer getEipMax() {
         return this.eipMax;
-    }
-
-    /**
-     * @return eipModel
-     */
-    public Boolean getEipModel() {
-        return this.eipModel;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
-     * @return ioMax
-     */
-    public Integer getIoMax() {
-        return this.ioMax;
     }
 
     /**
@@ -167,6 +171,13 @@ public class UpgradePrePayOrderRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return specType
      */
     public String getSpecType() {
@@ -174,44 +185,46 @@ public class UpgradePrePayOrderRequest extends Request {
     }
 
     /**
-     * @return topicQuota
+     * @return tag
      */
-    public Integer getTopicQuota() {
-        return this.topicQuota;
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
-    public static final class Builder extends Request.Builder<UpgradePrePayOrderRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreatePrePayInstanceRequest, Builder> {
         private ConfluentConfig confluentConfig; 
+        private Integer deployType; 
         private Integer diskSize; 
+        private String diskType; 
+        private Integer duration; 
         private Integer eipMax; 
-        private Boolean eipModel; 
-        private String instanceId; 
-        private Integer ioMax; 
         private String ioMaxSpec; 
         private Integer paidType; 
         private Integer partitionNum; 
         private String regionId; 
+        private String resourceGroupId; 
         private String specType; 
-        private Integer topicQuota; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpgradePrePayOrderRequest request) {
+        private Builder(CreatePrePayInstanceRequest request) {
             super(request);
             this.confluentConfig = request.confluentConfig;
+            this.deployType = request.deployType;
             this.diskSize = request.diskSize;
+            this.diskType = request.diskType;
+            this.duration = request.duration;
             this.eipMax = request.eipMax;
-            this.eipModel = request.eipModel;
-            this.instanceId = request.instanceId;
-            this.ioMax = request.ioMax;
             this.ioMaxSpec = request.ioMaxSpec;
             this.paidType = request.paidType;
             this.partitionNum = request.partitionNum;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.specType = request.specType;
-            this.topicQuota = request.topicQuota;
+            this.tag = request.tag;
         } 
 
         /**
@@ -225,14 +238,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The size of the disk.</p>
-         * <ul>
-         * <li>The disk size that you specify must be greater than or equal to the current disk size of the instance.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>900</p>
+         * DeployType.
+         */
+        public Builder deployType(Integer deployType) {
+            this.putQueryParameter("DeployType", deployType);
+            this.deployType = deployType;
+            return this;
+        }
+
+        /**
+         * DiskSize.
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -241,20 +256,25 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The Internet traffic for the instance.</p>
-         * <ul>
-         * <li>The Internet traffic volume that you specify must be greater than or equal to the current Internet traffic volume of the instance.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.<blockquote>
-         * <ul>
-         * <li>If the <strong>EipModel</strong> parameter is set to <strong>true</strong>, set the <strong>EipMax</strong> parameter to a value that is greater than 0.</li>
-         * <li>If the <strong>EipModel</strong> parameter is set to <strong>false</strong>, set the <strong>EipMax</strong> parameter to <strong>0</strong>.</li>
-         * </ul>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>3</p>
+         * DiskType.
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
+            return this;
+        }
+
+        /**
+         * Duration.
+         */
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
+            return this;
+        }
+
+        /**
+         * EipMax.
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -263,61 +283,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access for the instance. Valid values:</p>
-         * <ul>
-         * <li>true: enables Internet access.</li>
-         * <li>false: disables Internet access.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        public Builder eipModel(Boolean eipModel) {
-            this.putQueryParameter("EipModel", eipModel);
-            this.eipModel = eipModel;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the instance.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>alikafka_post-cn-mp919o4v****</p>
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * <p>The maximum traffic for the instance. We recommend that you do not configure this parameter.</p>
-         * <ul>
-         * <li>The maximum traffic volume that you specify must be greater than or equal to the current maximum traffic volume of the instance.</li>
-         * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
-        public Builder ioMax(Integer ioMax) {
-            this.putQueryParameter("IoMax", ioMax);
-            this.ioMax = ioMax;
-            return this;
-        }
-
-        /**
-         * <p>The traffic specification of the instance. We recommend that you configure this parameter.</p>
-         * <ul>
-         * <li>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</li>
-         * <li>You must configure at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you configure only the IoMaxSpec parameter.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>alikafka.hw.2xlarge</p>
+         * IoMaxSpec.
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -335,15 +301,7 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of partitions. We recommend that you configure this parameter.</p>
-         * <ul>
-         * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
-         * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * PartitionNum.
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -352,7 +310,6 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,16 +322,16 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The edition of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>normal</strong>: Standard Edition (High Write)</li>
-         * <li><strong>professional</strong>: Professional Edition (High Write)</li>
-         * <li><strong>professionalForHighRead</strong>: Professional Edition (High Read)</li>
-         * </ul>
-         * <p>You cannot downgrade an instance from the Professional Edition to the Standard Edition. For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>professional</p>
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SpecType.
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -383,107 +340,80 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
-         * <p>The number of topics. We recommend that you do not configure this parameter.</p>
-         * <ul>
-         * <li>You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</li>
-         * <li>If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</li>
-         * <li>The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.</li>
-         * <li>For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * Tag.
          */
-        public Builder topicQuota(Integer topicQuota) {
-            this.putQueryParameter("TopicQuota", topicQuota);
-            this.topicQuota = topicQuota;
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
         @Override
-        public UpgradePrePayOrderRequest build() {
-            return new UpgradePrePayOrderRequest(this);
+        public CreatePrePayInstanceRequest build() {
+            return new CreatePrePayInstanceRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UpgradePrePayOrderRequest} extends {@link TeaModel}
+     * {@link CreatePrePayInstanceRequest} extends {@link TeaModel}
      *
-     * <p>UpgradePrePayOrderRequest</p>
+     * <p>CreatePrePayInstanceRequest</p>
      */
     public static class ConfluentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer connectCU;
 
         @com.aliyun.core.annotation.NameInMap("ConnectReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer connectReplica;
 
         @com.aliyun.core.annotation.NameInMap("ControlCenterCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 4)
         private Integer controlCenterCU;
 
         @com.aliyun.core.annotation.NameInMap("ControlCenterReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 1, minimum = 1)
         private Integer controlCenterReplica;
 
         @com.aliyun.core.annotation.NameInMap("ControlCenterStorage")
-        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 300)
         private Integer controlCenterStorage;
 
         @com.aliyun.core.annotation.NameInMap("KafkaCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 4)
         private Integer kafkaCU;
 
         @com.aliyun.core.annotation.NameInMap("KafkaReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 3)
         private Integer kafkaReplica;
 
         @com.aliyun.core.annotation.NameInMap("KafkaRestProxyCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 4)
         private Integer kafkaRestProxyCU;
 
         @com.aliyun.core.annotation.NameInMap("KafkaRestProxyReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 2)
         private Integer kafkaRestProxyReplica;
 
         @com.aliyun.core.annotation.NameInMap("KafkaStorage")
-        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 800)
         private Integer kafkaStorage;
 
         @com.aliyun.core.annotation.NameInMap("KsqlCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer ksqlCU;
 
         @com.aliyun.core.annotation.NameInMap("KsqlReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer ksqlReplica;
 
         @com.aliyun.core.annotation.NameInMap("KsqlStorage")
-        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 100)
         private Integer ksqlStorage;
 
         @com.aliyun.core.annotation.NameInMap("SchemaRegistryCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer schemaRegistryCU;
 
         @com.aliyun.core.annotation.NameInMap("SchemaRegistryReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 2)
         private Integer schemaRegistryReplica;
 
         @com.aliyun.core.annotation.NameInMap("ZooKeeperCU")
-        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 2)
         private Integer zooKeeperCU;
 
         @com.aliyun.core.annotation.NameInMap("ZooKeeperReplica")
-        @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 3)
         private Integer zooKeeperReplica;
 
         @com.aliyun.core.annotation.NameInMap("ZooKeeperStorage")
-        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 100)
         private Integer zooKeeperStorage;
 
         private ConfluentConfig(Builder builder) {
@@ -807,6 +737,77 @@ public class UpgradePrePayOrderRequest extends Request {
 
             public ConfluentConfig build() {
                 return new ConfluentConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreatePrePayInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePrePayInstanceRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteInstanceResponse} extends {@link TeaModel}
+ * {@link CreatePostPayInstanceResponse} extends {@link TeaModel}
  *
- * <p>DeleteInstanceResponse</p>
+ * <p>CreatePostPayInstanceResponse</p>
  */
-public class DeleteInstanceResponse extends Response {
+public class CreatePostPayInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DeleteInstanceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteInstanceResponseBody body;
+    private CreatePostPayInstanceResponseBody body;
 
-    private DeleteInstanceResponse(BuilderImpl builder) {
+    private CreatePostPayInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteInstanceResponse create() {
+    public static CreatePostPayInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DeleteInstanceResponse extends Response {
     /**
      * @return body
      */
-    public DeleteInstanceResponseBody getBody() {
+    public CreatePostPayInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<CreatePostPayInstanceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteInstanceResponseBody body);
+        Builder body(CreatePostPayInstanceResponseBody body);
 
         @Override
-        DeleteInstanceResponse build();
+        CreatePostPayInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteInstanceResponse, Builder>
+            extends Response.BuilderImpl<CreatePostPayInstanceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteInstanceResponseBody body; 
+        private CreatePostPayInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteInstanceResponse response) {
+        private BuilderImpl(CreatePostPayInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteInstanceResponseBody body) {
+        public Builder body(CreatePostPayInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteInstanceResponse build() {
-            return new DeleteInstanceResponse(this);
+        public CreatePostPayInstanceResponse build() {
+            return new CreatePostPayInstanceResponse(this);
         } 
 
     } 

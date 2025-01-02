@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -214,7 +219,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             /**
              * <p>The encryption method.</p>
              * <blockquote>
-             * <p> This field is available only for serverless ApsaraMQ for Kafka V3 instances.</p>
+             * <p> This parameter is available only for serverless ApsaraMQ for Kafka instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -279,7 +284,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
      */
     public static class SaslUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SaslUserVO")
-        private java.util.List < SaslUserVO> saslUserVO;
+        private java.util.List<SaslUserVO> saslUserVO;
 
         private SaslUserList(Builder builder) {
             this.saslUserVO = builder.saslUserVO;
@@ -296,17 +301,17 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         /**
          * @return saslUserVO
          */
-        public java.util.List < SaslUserVO> getSaslUserVO() {
+        public java.util.List<SaslUserVO> getSaslUserVO() {
             return this.saslUserVO;
         }
 
         public static final class Builder {
-            private java.util.List < SaslUserVO> saslUserVO; 
+            private java.util.List<SaslUserVO> saslUserVO; 
 
             /**
              * SaslUserVO.
              */
-            public Builder saslUserVO(java.util.List < SaslUserVO> saslUserVO) {
+            public Builder saslUserVO(java.util.List<SaslUserVO> saslUserVO) {
                 this.saslUserVO = saslUserVO;
                 return this;
             }
