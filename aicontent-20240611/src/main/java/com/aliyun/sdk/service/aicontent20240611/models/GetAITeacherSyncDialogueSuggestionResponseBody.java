@@ -163,15 +163,15 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
      * <p>GetAITeacherSyncDialogueSuggestionResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("chineseResult")
+        private String chineseResult;
+
         @com.aliyun.core.annotation.NameInMap("englishResult")
         private String englishResult;
 
-        @com.aliyun.core.annotation.NameInMap("englishResult1")
-        private String englishResult1;
-
         private Data(Builder builder) {
+            this.chineseResult = builder.chineseResult;
             this.englishResult = builder.englishResult;
-            this.englishResult1 = builder.englishResult1;
         }
 
         public static Builder builder() {
@@ -183,36 +183,36 @@ public class GetAITeacherSyncDialogueSuggestionResponseBody extends TeaModel {
         }
 
         /**
+         * @return chineseResult
+         */
+        public String getChineseResult() {
+            return this.chineseResult;
+        }
+
+        /**
          * @return englishResult
          */
         public String getEnglishResult() {
             return this.englishResult;
         }
 
-        /**
-         * @return englishResult1
-         */
-        public String getEnglishResult1() {
-            return this.englishResult1;
-        }
-
         public static final class Builder {
+            private String chineseResult; 
             private String englishResult; 
-            private String englishResult1; 
+
+            /**
+             * chineseResult.
+             */
+            public Builder chineseResult(String chineseResult) {
+                this.chineseResult = chineseResult;
+                return this;
+            }
 
             /**
              * englishResult.
              */
             public Builder englishResult(String englishResult) {
                 this.englishResult = englishResult;
-                return this;
-            }
-
-            /**
-             * englishResult1.
-             */
-            public Builder englishResult1(String englishResult1) {
-                this.englishResult1 = englishResult1;
                 return this;
             }
 
