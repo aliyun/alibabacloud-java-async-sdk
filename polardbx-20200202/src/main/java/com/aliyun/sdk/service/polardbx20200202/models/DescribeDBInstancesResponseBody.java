@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBInstances")
-    private java.util.List < DBInstances> DBInstances;
+    private java.util.List<DBInstances> DBInstances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
      * @return DBInstances
      */
-    public java.util.List < DBInstances> getDBInstances() {
+    public java.util.List<DBInstances> getDBInstances() {
         return this.DBInstances;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBInstances> DBInstances; 
+        private java.util.List<DBInstances> DBInstances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * DBInstances.
          */
-        public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+        public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
             this.DBInstances = DBInstances;
             return this;
         }
@@ -325,7 +330,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String columnarInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ColumnarReadDBInstances")
-        private java.util.List < String > columnarReadDBInstances;
+        private java.util.List<String> columnarReadDBInstances;
 
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -388,7 +393,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer nodeCount;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
@@ -401,7 +406,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String primaryZone;
 
         @com.aliyun.core.annotation.NameInMap("ReadDBInstances")
-        private java.util.List < String > readDBInstances;
+        private java.util.List<String> readDBInstances;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -425,7 +430,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Boolean supportBinlogX;
 
         @com.aliyun.core.annotation.NameInMap("TagSet")
-        private java.util.List < TagSet> tagSet;
+        private java.util.List<TagSet> tagSet;
 
         @com.aliyun.core.annotation.NameInMap("TertiaryZone")
         private String tertiaryZone;
@@ -536,7 +541,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return columnarReadDBInstances
          */
-        public java.util.List < String > getColumnarReadDBInstances() {
+        public java.util.List<String> getColumnarReadDBInstances() {
             return this.columnarReadDBInstances;
         }
 
@@ -683,7 +688,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -711,7 +716,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return readDBInstances
          */
-        public java.util.List < String > getReadDBInstances() {
+        public java.util.List<String> getReadDBInstances() {
             return this.readDBInstances;
         }
 
@@ -767,7 +772,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return tagSet
          */
-        public java.util.List < TagSet> getTagSet() {
+        public java.util.List<TagSet> getTagSet() {
             return this.tagSet;
         }
 
@@ -825,7 +830,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
             private String columnarInstanceName; 
-            private java.util.List < String > columnarReadDBInstances; 
+            private java.util.List<String> columnarReadDBInstances; 
             private String commodityCode; 
             private Boolean containBinlogX; 
             private String cpuType; 
@@ -846,11 +851,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String network; 
             private String nodeClass; 
             private Integer nodeCount; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String payType; 
             private String primaryInstanceId; 
             private String primaryZone; 
-            private java.util.List < String > readDBInstances; 
+            private java.util.List<String> readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
             private String secondaryZone; 
@@ -858,7 +863,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String status; 
             private Long storageUsed; 
             private Boolean supportBinlogX; 
-            private java.util.List < TagSet> tagSet; 
+            private java.util.List<TagSet> tagSet; 
             private String tertiaryZone; 
             private String topologyType; 
             private String type; 
@@ -902,7 +907,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * ColumnarReadDBInstances.
              */
-            public Builder columnarReadDBInstances(java.util.List < String > columnarReadDBInstances) {
+            public Builder columnarReadDBInstances(java.util.List<String> columnarReadDBInstances) {
                 this.columnarReadDBInstances = columnarReadDBInstances;
                 return this;
             }
@@ -1070,7 +1075,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -1103,7 +1108,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * ReadDBInstances.
              */
-            public Builder readDBInstances(java.util.List < String > readDBInstances) {
+            public Builder readDBInstances(java.util.List<String> readDBInstances) {
                 this.readDBInstances = readDBInstances;
                 return this;
             }
@@ -1167,7 +1172,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * TagSet.
              */
-            public Builder tagSet(java.util.List < TagSet> tagSet) {
+            public Builder tagSet(java.util.List<TagSet> tagSet) {
                 this.tagSet = tagSet;
                 return this;
             }

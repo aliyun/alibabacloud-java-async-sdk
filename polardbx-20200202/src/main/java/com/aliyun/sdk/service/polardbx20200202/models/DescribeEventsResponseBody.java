@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EventItems")
-    private java.util.List < EventItems> eventItems;
+    private java.util.List<EventItems> eventItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     /**
      * @return eventItems
      */
-    public java.util.List < EventItems> getEventItems() {
+    public java.util.List<EventItems> getEventItems() {
         return this.eventItems;
     }
 
@@ -79,7 +84,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EventItems> eventItems; 
+        private java.util.List<EventItems> eventItems; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * EventItems.
          */
-        public Builder eventItems(java.util.List < EventItems> eventItems) {
+        public Builder eventItems(java.util.List<EventItems> eventItems) {
             this.eventItems = eventItems;
             return this;
         }

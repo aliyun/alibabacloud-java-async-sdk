@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -189,7 +194,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private String DBInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("GroupItems")
-        private java.util.List < GroupItems> groupItems;
+        private java.util.List<GroupItems> groupItems;
 
         private Data(Builder builder) {
             this.DBInstanceName = builder.DBInstanceName;
@@ -214,13 +219,13 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         /**
          * @return groupItems
          */
-        public java.util.List < GroupItems> getGroupItems() {
+        public java.util.List<GroupItems> getGroupItems() {
             return this.groupItems;
         }
 
         public static final class Builder {
             private String DBInstanceName; 
-            private java.util.List < GroupItems> groupItems; 
+            private java.util.List<GroupItems> groupItems; 
 
             /**
              * DBInstanceName.
@@ -233,7 +238,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             /**
              * GroupItems.
              */
-            public Builder groupItems(java.util.List < GroupItems> groupItems) {
+            public Builder groupItems(java.util.List<GroupItems> groupItems) {
                 this.groupItems = groupItems;
                 return this;
             }

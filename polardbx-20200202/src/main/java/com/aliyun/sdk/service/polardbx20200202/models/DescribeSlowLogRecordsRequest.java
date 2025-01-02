@@ -12,27 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeBackupSetListRequest} extends {@link RequestModel}
+ * {@link DescribeSlowLogRecordsRequest} extends {@link RequestModel}
  *
- * <p>DescribeBackupSetListRequest</p>
+ * <p>DescribeSlowLogRecordsRequest</p>
  */
-public class DescribeBackupSetListRequest extends Request {
+public class DescribeSlowLogRecordsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CharacterType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String characterType;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DestCrossRegion")
-    private String destCrossRegion;
+    @com.aliyun.core.annotation.NameInMap("DBName")
+    private String DBName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeIds")
+    private String DBNodeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
-    private Long endTime;
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String endTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private Integer pageNumber;
+    @com.aliyun.core.annotation.NameInMap("Page")
+    private Integer page;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -45,14 +55,17 @@ public class DescribeBackupSetListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
-    private Long startTime;
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String startTime;
 
-    private DescribeBackupSetListRequest(Builder builder) {
+    private DescribeSlowLogRecordsRequest(Builder builder) {
         super(builder);
+        this.characterType = builder.characterType;
         this.DBInstanceName = builder.DBInstanceName;
-        this.destCrossRegion = builder.destCrossRegion;
+        this.DBName = builder.DBName;
+        this.DBNodeIds = builder.DBNodeIds;
         this.endTime = builder.endTime;
-        this.pageNumber = builder.pageNumber;
+        this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
@@ -62,13 +75,20 @@ public class DescribeBackupSetListRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeBackupSetListRequest create() {
+    public static DescribeSlowLogRecordsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return characterType
+     */
+    public String getCharacterType() {
+        return this.characterType;
     }
 
     /**
@@ -79,24 +99,31 @@ public class DescribeBackupSetListRequest extends Request {
     }
 
     /**
-     * @return destCrossRegion
+     * @return DBName
      */
-    public String getDestCrossRegion() {
-        return this.destCrossRegion;
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    /**
+     * @return DBNodeIds
+     */
+    public String getDBNodeIds() {
+        return this.DBNodeIds;
     }
 
     /**
      * @return endTime
      */
-    public Long getEndTime() {
+    public String getEndTime() {
         return this.endTime;
     }
 
     /**
-     * @return pageNumber
+     * @return page
      */
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getPage() {
+        return this.page;
     }
 
     /**
@@ -116,29 +143,33 @@ public class DescribeBackupSetListRequest extends Request {
     /**
      * @return startTime
      */
-    public Long getStartTime() {
+    public String getStartTime() {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeBackupSetListRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeSlowLogRecordsRequest, Builder> {
+        private String characterType; 
         private String DBInstanceName; 
-        private String destCrossRegion; 
-        private Long endTime; 
-        private Integer pageNumber; 
+        private String DBName; 
+        private String DBNodeIds; 
+        private String endTime; 
+        private Integer page; 
         private Integer pageSize; 
         private String regionId; 
-        private Long startTime; 
+        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeBackupSetListRequest request) {
+        private Builder(DescribeSlowLogRecordsRequest request) {
             super(request);
+            this.characterType = request.characterType;
             this.DBInstanceName = request.DBInstanceName;
-            this.destCrossRegion = request.destCrossRegion;
+            this.DBName = request.DBName;
+            this.DBNodeIds = request.DBNodeIds;
             this.endTime = request.endTime;
-            this.pageNumber = request.pageNumber;
+            this.page = request.page;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
@@ -148,7 +179,19 @@ public class DescribeBackupSetListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxc-xxxxxx</p>
+         * <p>polarx_cn</p>
+         */
+        public Builder characterType(String characterType) {
+            this.putQueryParameter("CharacterType", characterType);
+            this.characterType = characterType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-bjxxxxxxxx</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -157,29 +200,41 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * DestCrossRegion.
+         * DBName.
          */
-        public Builder destCrossRegion(String destCrossRegion) {
-            this.putQueryParameter("DestCrossRegion", destCrossRegion);
-            this.destCrossRegion = destCrossRegion;
+        public Builder DBName(String DBName) {
+            this.putQueryParameter("DBName", DBName);
+            this.DBName = DBName;
             return this;
         }
 
         /**
-         * EndTime.
+         * DBNodeIds.
          */
-        public Builder endTime(Long endTime) {
+        public Builder DBNodeIds(String DBNodeIds) {
+            this.putQueryParameter("DBNodeIds", DBNodeIds);
+            this.DBNodeIds = DBNodeIds;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-22T02:22Z</p>
+         */
+        public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
             return this;
         }
 
         /**
-         * PageNumber.
+         * Page.
          */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder page(Integer page) {
+            this.putQueryParameter("Page", page);
+            this.page = page;
             return this;
         }
 
@@ -205,17 +260,20 @@ public class DescribeBackupSetListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-09T02:26</p>
          */
-        public Builder startTime(Long startTime) {
+        public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
             return this;
         }
 
         @Override
-        public DescribeBackupSetListRequest build() {
-            return new DescribeBackupSetListRequest(this);
+        public DescribeSlowLogRecordsRequest build() {
+            return new DescribeSlowLogRecordsRequest(this);
         } 
 
     } 

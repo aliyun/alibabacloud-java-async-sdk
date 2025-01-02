@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -542,13 +547,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String columnarInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ColumnarReadDBInstances")
-        private java.util.List < String > columnarReadDBInstances;
+        private java.util.List<String> columnarReadDBInstances;
 
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
         @com.aliyun.core.annotation.NameInMap("ConnAddrs")
-        private java.util.List < ConnAddrs> connAddrs;
+        private java.util.List<ConnAddrs> connAddrs;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -566,7 +571,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private Integer DBNodeCount;
 
         @com.aliyun.core.annotation.NameInMap("DBNodes")
-        private java.util.List < DBNodes> DBNodes;
+        private java.util.List<DBNodes> DBNodes;
 
         @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
@@ -599,7 +604,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String gdnInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("GdnMemberList")
-        private java.util.List < GdnMemberList> gdnMemberList;
+        private java.util.List<GdnMemberList> gdnMemberList;
 
         @com.aliyun.core.annotation.NameInMap("GdnRole")
         private String gdnRole;
@@ -612,7 +617,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LTSVersions")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > LTSVersions;
+        private java.util.List<String> LTSVersions;
 
         @com.aliyun.core.annotation.NameInMap("LatestMinorVersion")
         private String latestMinorVersion;
@@ -646,7 +651,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String primaryZone;
 
         @com.aliyun.core.annotation.NameInMap("ReadDBInstances")
-        private java.util.List < String > readDBInstances;
+        private java.util.List<String> readDBInstances;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -676,7 +681,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private Long storageUsed;
 
         @com.aliyun.core.annotation.NameInMap("TagSet")
-        private java.util.List < TagSet> tagSet;
+        private java.util.List<TagSet> tagSet;
 
         @com.aliyun.core.annotation.NameInMap("TertiaryZone")
         private String tertiaryZone;
@@ -794,7 +799,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return columnarReadDBInstances
          */
-        public java.util.List < String > getColumnarReadDBInstances() {
+        public java.util.List<String> getColumnarReadDBInstances() {
             return this.columnarReadDBInstances;
         }
 
@@ -808,7 +813,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return connAddrs
          */
-        public java.util.List < ConnAddrs> getConnAddrs() {
+        public java.util.List<ConnAddrs> getConnAddrs() {
             return this.connAddrs;
         }
 
@@ -850,7 +855,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return DBNodes
          */
-        public java.util.List < DBNodes> getDBNodes() {
+        public java.util.List<DBNodes> getDBNodes() {
             return this.DBNodes;
         }
 
@@ -927,7 +932,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return gdnMemberList
          */
-        public java.util.List < GdnMemberList> getGdnMemberList() {
+        public java.util.List<GdnMemberList> getGdnMemberList() {
             return this.gdnMemberList;
         }
 
@@ -955,7 +960,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return LTSVersions
          */
-        public java.util.List < String > getLTSVersions() {
+        public java.util.List<String> getLTSVersions() {
             return this.LTSVersions;
         }
 
@@ -1032,7 +1037,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return readDBInstances
          */
-        public java.util.List < String > getReadDBInstances() {
+        public java.util.List<String> getReadDBInstances() {
             return this.readDBInstances;
         }
 
@@ -1102,7 +1107,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return tagSet
          */
-        public java.util.List < TagSet> getTagSet() {
+        public java.util.List<TagSet> getTagSet() {
             return this.tagSet;
         }
 
@@ -1153,15 +1158,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
             private String columnarInstanceName; 
-            private java.util.List < String > columnarReadDBInstances; 
+            private java.util.List<String> columnarReadDBInstances; 
             private String commodityCode; 
-            private java.util.List < ConnAddrs> connAddrs; 
+            private java.util.List<ConnAddrs> connAddrs; 
             private String connectionString; 
             private String createTime; 
             private String DBInstanceType; 
             private String DBNodeClass; 
             private Integer DBNodeCount; 
-            private java.util.List < DBNodes> DBNodes; 
+            private java.util.List<DBNodes> DBNodes; 
             private String DBType; 
             private String DBVersion; 
             private String description; 
@@ -1172,11 +1177,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String expireDate; 
             private String expired; 
             private String gdnInstanceName; 
-            private java.util.List < GdnMemberList> gdnMemberList; 
+            private java.util.List<GdnMemberList> gdnMemberList; 
             private String gdnRole; 
             private String id; 
             private Integer kindCode; 
-            private java.util.List < String > LTSVersions; 
+            private java.util.List<String> LTSVersions; 
             private String latestMinorVersion; 
             private String lockMode; 
             private String maintainEndTime; 
@@ -1187,7 +1192,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String port; 
             private String primaryInstanceId; 
             private String primaryZone; 
-            private java.util.List < String > readDBInstances; 
+            private java.util.List<String> readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean rightsSeparationEnabled; 
@@ -1197,7 +1202,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String specCategory; 
             private String status; 
             private Long storageUsed; 
-            private java.util.List < TagSet> tagSet; 
+            private java.util.List<TagSet> tagSet; 
             private String tertiaryZone; 
             private String topologyType; 
             private String type; 
@@ -1240,7 +1245,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * ColumnarReadDBInstances.
              */
-            public Builder columnarReadDBInstances(java.util.List < String > columnarReadDBInstances) {
+            public Builder columnarReadDBInstances(java.util.List<String> columnarReadDBInstances) {
                 this.columnarReadDBInstances = columnarReadDBInstances;
                 return this;
             }
@@ -1256,7 +1261,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * ConnAddrs.
              */
-            public Builder connAddrs(java.util.List < ConnAddrs> connAddrs) {
+            public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
                 return this;
             }
@@ -1304,7 +1309,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * DBNodes.
              */
-            public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
+            public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
                 this.DBNodes = DBNodes;
                 return this;
             }
@@ -1392,7 +1397,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * GdnMemberList.
              */
-            public Builder gdnMemberList(java.util.List < GdnMemberList> gdnMemberList) {
+            public Builder gdnMemberList(java.util.List<GdnMemberList> gdnMemberList) {
                 this.gdnMemberList = gdnMemberList;
                 return this;
             }
@@ -1424,7 +1429,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder LTSVersions(java.util.List < String > LTSVersions) {
+            public Builder LTSVersions(java.util.List<String> LTSVersions) {
                 this.LTSVersions = LTSVersions;
                 return this;
             }
@@ -1513,7 +1518,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * ReadDBInstances.
              */
-            public Builder readDBInstances(java.util.List < String > readDBInstances) {
+            public Builder readDBInstances(java.util.List<String> readDBInstances) {
                 this.readDBInstances = readDBInstances;
                 return this;
             }
@@ -1593,7 +1598,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * TagSet.
              */
-            public Builder tagSet(java.util.List < TagSet> tagSet) {
+            public Builder tagSet(java.util.List<TagSet> tagSet) {
                 this.tagSet = tagSet;
                 return this;
             }

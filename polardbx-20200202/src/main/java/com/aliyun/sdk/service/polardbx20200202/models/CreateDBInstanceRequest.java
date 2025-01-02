@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class CreateDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExtraParams")
-    private java.util.Map < String, String > extraParams;
+    private java.util.Map<String, String> extraParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsColumnarReadDBInstance")
@@ -246,7 +251,7 @@ public class CreateDBInstanceRequest extends Request {
     /**
      * @return extraParams
      */
-    public java.util.Map < String, String > getExtraParams() {
+    public java.util.Map<String, String> getExtraParams() {
         return this.extraParams;
     }
 
@@ -380,7 +385,7 @@ public class CreateDBInstanceRequest extends Request {
         private String dnClass; 
         private String dnStorageSpace; 
         private String engineVersion; 
-        private java.util.Map < String, String > extraParams; 
+        private java.util.Map<String, String> extraParams; 
         private Boolean isColumnarReadDBInstance; 
         private Boolean isReadDBInstance; 
         private String networkType; 
@@ -531,7 +536,7 @@ public class CreateDBInstanceRequest extends Request {
         /**
          * ExtraParams.
          */
-        public Builder extraParams(java.util.Map < String, String > extraParams) {
+        public Builder extraParams(java.util.Map<String, String> extraParams) {
             String extraParamsShrink = shrink(extraParams, "ExtraParams", "json");
             this.putQueryParameter("ExtraParams", extraParamsShrink);
             this.extraParams = extraParams;

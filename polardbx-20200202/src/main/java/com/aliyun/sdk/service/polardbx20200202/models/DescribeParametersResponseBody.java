@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigParameters")
-        private java.util.List < ConfigParameters> configParameters;
+        private java.util.List<ConfigParameters> configParameters;
 
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -265,7 +270,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String engineVersion;
 
         @com.aliyun.core.annotation.NameInMap("RunningParameters")
-        private java.util.List < RunningParameters> runningParameters;
+        private java.util.List<RunningParameters> runningParameters;
 
         private Data(Builder builder) {
             this.configParameters = builder.configParameters;
@@ -286,7 +291,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return configParameters
          */
-        public java.util.List < ConfigParameters> getConfigParameters() {
+        public java.util.List<ConfigParameters> getConfigParameters() {
             return this.configParameters;
         }
 
@@ -314,21 +319,21 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return runningParameters
          */
-        public java.util.List < RunningParameters> getRunningParameters() {
+        public java.util.List<RunningParameters> getRunningParameters() {
             return this.runningParameters;
         }
 
         public static final class Builder {
-            private java.util.List < ConfigParameters> configParameters; 
+            private java.util.List<ConfigParameters> configParameters; 
             private String DBInstanceId; 
             private String engine; 
             private String engineVersion; 
-            private java.util.List < RunningParameters> runningParameters; 
+            private java.util.List<RunningParameters> runningParameters; 
 
             /**
              * ConfigParameters.
              */
-            public Builder configParameters(java.util.List < ConfigParameters> configParameters) {
+            public Builder configParameters(java.util.List<ConfigParameters> configParameters) {
                 this.configParameters = configParameters;
                 return this;
             }
@@ -360,7 +365,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             /**
              * RunningParameters.
              */
-            public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
+            public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;
                 return this;
             }

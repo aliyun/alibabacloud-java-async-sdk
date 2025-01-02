@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CheckCloudResourceAuthorizedResponse} extends {@link TeaModel}
+ * {@link DescribeSlowLogRecordsResponse} extends {@link TeaModel}
  *
- * <p>CheckCloudResourceAuthorizedResponse</p>
+ * <p>DescribeSlowLogRecordsResponse</p>
  */
-public class CheckCloudResourceAuthorizedResponse extends Response {
+public class DescribeSlowLogRecordsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CheckCloudResourceAuthorizedResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CheckCloudResourceAuthorizedResponseBody body;
+    private DescribeSlowLogRecordsResponseBody body;
 
-    private CheckCloudResourceAuthorizedResponse(BuilderImpl builder) {
+    private DescribeSlowLogRecordsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CheckCloudResourceAuthorizedResponse create() {
+    public static DescribeSlowLogRecordsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CheckCloudResourceAuthorizedResponse extends Response {
     /**
      * @return body
      */
-    public CheckCloudResourceAuthorizedResponseBody getBody() {
+    public DescribeSlowLogRecordsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CheckCloudResourceAuthorizedResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeSlowLogRecordsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CheckCloudResourceAuthorizedResponseBody body);
+        Builder body(DescribeSlowLogRecordsResponseBody body);
 
         @Override
-        CheckCloudResourceAuthorizedResponse build();
+        DescribeSlowLogRecordsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CheckCloudResourceAuthorizedResponse, Builder>
+            extends Response.BuilderImpl<DescribeSlowLogRecordsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CheckCloudResourceAuthorizedResponseBody body; 
+        private DescribeSlowLogRecordsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CheckCloudResourceAuthorizedResponse response) {
+        private BuilderImpl(DescribeSlowLogRecordsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CheckCloudResourceAuthorizedResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CheckCloudResourceAuthorizedResponseBody body) {
+        public Builder body(DescribeSlowLogRecordsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CheckCloudResourceAuthorizedResponse build() {
-            return new CheckCloudResourceAuthorizedResponse(this);
+        public DescribeSlowLogRecordsResponse build() {
+            return new DescribeSlowLogRecordsResponse(this);
         } 
 
     } 

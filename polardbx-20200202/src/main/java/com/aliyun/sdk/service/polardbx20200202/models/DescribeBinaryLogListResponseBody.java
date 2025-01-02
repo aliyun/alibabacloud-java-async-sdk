@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBinaryLogListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LogList")
-    private java.util.List < LogList> logList;
+    private java.util.List<LogList> logList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     /**
      * @return logList
      */
-    public java.util.List < LogList> getLogList() {
+    public java.util.List<LogList> getLogList() {
         return this.logList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogList> logList; 
+        private java.util.List<LogList> logList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         /**
          * LogList.
          */
-        public Builder logList(java.util.List < LogList> logList) {
+        public Builder logList(java.util.List<LogList> logList) {
             this.logList = logList;
             return this;
         }

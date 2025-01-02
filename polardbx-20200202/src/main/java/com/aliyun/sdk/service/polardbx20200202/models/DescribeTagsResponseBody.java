@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagInfos")
-    private java.util.List < TagInfos> tagInfos;
+    private java.util.List<TagInfos> tagInfos;
 
     private DescribeTagsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeTagsResponseBody extends TeaModel {
     /**
      * @return tagInfos
      */
-    public java.util.List < TagInfos> getTagInfos() {
+    public java.util.List<TagInfos> getTagInfos() {
         return this.tagInfos;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TagInfos> tagInfos; 
+        private java.util.List<TagInfos> tagInfos; 
 
         /**
          * <p>Id of the request</p>
@@ -63,7 +68,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * TagInfos.
          */
-        public Builder tagInfos(java.util.List < TagInfos> tagInfos) {
+        public Builder tagInfos(java.util.List<TagInfos> tagInfos) {
             this.tagInfos = tagInfos;
             return this;
         }
@@ -82,7 +87,7 @@ public class DescribeTagsResponseBody extends TeaModel {
      */
     public static class TagInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
-        private java.util.List < String > DBInstanceIds;
+        private java.util.List<String> DBInstanceIds;
 
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -107,7 +112,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return DBInstanceIds
          */
-        public java.util.List < String > getDBInstanceIds() {
+        public java.util.List<String> getDBInstanceIds() {
             return this.DBInstanceIds;
         }
 
@@ -126,14 +131,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > DBInstanceIds; 
+            private java.util.List<String> DBInstanceIds; 
             private String tagKey; 
             private String tagValue; 
 
             /**
              * DBInstanceIds.
              */
-            public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
+            public Builder DBInstanceIds(java.util.List<String> DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
                 return this;
             }

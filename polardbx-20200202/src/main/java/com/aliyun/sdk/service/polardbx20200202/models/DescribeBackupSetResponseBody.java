@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackupSetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,7 +47,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -244,7 +249,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("OSSList")
-        private java.util.List < OSSList> OSSList;
+        private java.util.List<OSSList> OSSList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -313,7 +318,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
         /**
          * @return OSSList
          */
-        public java.util.List < OSSList> getOSSList() {
+        public java.util.List<OSSList> getOSSList() {
             return this.OSSList;
         }
 
@@ -331,7 +336,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             private Integer backupType; 
             private Long beginTime; 
             private Long endTime; 
-            private java.util.List < OSSList> OSSList; 
+            private java.util.List<OSSList> OSSList; 
             private Integer status; 
 
             /**
@@ -385,7 +390,7 @@ public class DescribeBackupSetResponseBody extends TeaModel {
             /**
              * OSSList.
              */
-            public Builder OSSList(java.util.List < OSSList> OSSList) {
+            public Builder OSSList(java.util.List<OSSList> OSSList) {
                 this.OSSList = OSSList;
                 return this;
             }

@@ -278,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityIpsResponse> describeSecurityIps(DescribeSecurityIpsRequest request);
 
     /**
+     * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
+     * @return DescribeSlowLogRecordsResponse
+     */
+    CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
+
+    /**
      * @param request the request parameters of DescribeTags  DescribeTagsRequest
      * @return DescribeTagsResponse
      */

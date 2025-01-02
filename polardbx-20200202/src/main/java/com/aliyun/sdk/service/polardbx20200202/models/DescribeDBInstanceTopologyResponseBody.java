@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -426,13 +431,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         private String azone;
 
         @com.aliyun.core.annotation.NameInMap("AzoneRoleList")
-        private java.util.List < AzoneRoleList> azoneRoleList;
+        private java.util.List<AzoneRoleList> azoneRoleList;
 
         @com.aliyun.core.annotation.NameInMap("CharacterType")
         private String characterType;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionIp")
-        private java.util.List < ConnectionIp> connectionIp;
+        private java.util.List<ConnectionIp> connectionIp;
 
         @com.aliyun.core.annotation.NameInMap("DBInstanceConnType")
         private Integer DBInstanceConnType;
@@ -559,7 +564,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return azoneRoleList
          */
-        public java.util.List < AzoneRoleList> getAzoneRoleList() {
+        public java.util.List<AzoneRoleList> getAzoneRoleList() {
             return this.azoneRoleList;
         }
 
@@ -573,7 +578,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return connectionIp
          */
-        public java.util.List < ConnectionIp> getConnectionIp() {
+        public java.util.List<ConnectionIp> getConnectionIp() {
             return this.connectionIp;
         }
 
@@ -741,9 +746,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean activated; 
             private String azone; 
-            private java.util.List < AzoneRoleList> azoneRoleList; 
+            private java.util.List<AzoneRoleList> azoneRoleList; 
             private String characterType; 
-            private java.util.List < ConnectionIp> connectionIp; 
+            private java.util.List<ConnectionIp> connectionIp; 
             private Integer DBInstanceConnType; 
             private String DBInstanceCreateTime; 
             private String DBInstanceDescription; 
@@ -787,7 +792,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * AzoneRoleList.
              */
-            public Builder azoneRoleList(java.util.List < AzoneRoleList> azoneRoleList) {
+            public Builder azoneRoleList(java.util.List<AzoneRoleList> azoneRoleList) {
                 this.azoneRoleList = azoneRoleList;
                 return this;
             }
@@ -803,7 +808,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * ConnectionIp.
              */
-            public Builder connectionIp(java.util.List < ConnectionIp> connectionIp) {
+            public Builder connectionIp(java.util.List<ConnectionIp> connectionIp) {
                 this.connectionIp = connectionIp;
                 return this;
             }
@@ -1037,10 +1042,10 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         private String engineVersion;
 
         @com.aliyun.core.annotation.NameInMap("HistoryItems")
-        private java.util.List < HistoryItems> historyItems;
+        private java.util.List<HistoryItems> historyItems;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private Integer lockMode;
@@ -1154,14 +1159,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return historyItems
          */
-        public java.util.List < HistoryItems> getHistoryItems() {
+        public java.util.List<HistoryItems> getHistoryItems() {
             return this.historyItems;
         }
 
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1204,8 +1209,8 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private Integer DBInstanceStorage; 
             private String engine; 
             private String engineVersion; 
-            private java.util.List < HistoryItems> historyItems; 
-            private java.util.List < Items> items; 
+            private java.util.List<HistoryItems> historyItems; 
+            private java.util.List<Items> items; 
             private Integer lockMode; 
             private String lockReason; 
             private String maintainEndTime; 
@@ -1294,7 +1299,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * HistoryItems.
              */
-            public Builder historyItems(java.util.List < HistoryItems> historyItems) {
+            public Builder historyItems(java.util.List<HistoryItems> historyItems) {
                 this.historyItems = historyItems;
                 return this;
             }
@@ -1302,7 +1307,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             /**
              * Items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

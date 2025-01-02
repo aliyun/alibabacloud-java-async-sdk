@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,7 +84,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -205,7 +210,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         private Long status;
 
         @com.aliyun.core.annotation.NameInMap("SubInsNames")
-        private java.util.List < String > subInsNames;
+        private java.util.List<String> subInsNames;
 
         @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
@@ -414,7 +419,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         /**
          * @return subInsNames
          */
-        public java.util.List < String > getSubInsNames() {
+        public java.util.List<String> getSubInsNames() {
             return this.subInsNames;
         }
 
@@ -469,7 +474,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             private String resultInfo; 
             private String startTime; 
             private Long status; 
-            private java.util.List < String > subInsNames; 
+            private java.util.List<String> subInsNames; 
             private String switchTime; 
             private String taskType; 
             private String taskTypeEn; 
@@ -654,7 +659,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             /**
              * SubInsNames.
              */
-            public Builder subInsNames(java.util.List < String > subInsNames) {
+            public Builder subInsNames(java.util.List<String> subInsNames) {
                 this.subInsNames = subInsNames;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -452,7 +457,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         private String commodityCode;
 
         @com.aliyun.core.annotation.NameInMap("ConnAddrs")
-        private java.util.List < ConnAddrs> connAddrs;
+        private java.util.List<ConnAddrs> connAddrs;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -470,7 +475,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         private Integer DBNodeCount;
 
         @com.aliyun.core.annotation.NameInMap("DBNodes")
-        private java.util.List < DBNodes> DBNodes;
+        private java.util.List<DBNodes> DBNodes;
 
         @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
@@ -504,7 +509,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LTSVersions")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > LTSVersions;
+        private java.util.List<String> LTSVersions;
 
         @com.aliyun.core.annotation.NameInMap("LatestMinorVersion")
         private String latestMinorVersion;
@@ -531,7 +536,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         private String port;
 
         @com.aliyun.core.annotation.NameInMap("ReadDBInstances")
-        private java.util.List < String > readDBInstances;
+        private java.util.List<String> readDBInstances;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -555,7 +560,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         private Long storageUsed;
 
         @com.aliyun.core.annotation.NameInMap("TagSet")
-        private java.util.List < TagSet> tagSet;
+        private java.util.List<TagSet> tagSet;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -646,7 +651,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * @return connAddrs
          */
-        public java.util.List < ConnAddrs> getConnAddrs() {
+        public java.util.List<ConnAddrs> getConnAddrs() {
             return this.connAddrs;
         }
 
@@ -688,7 +693,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * @return DBNodes
          */
-        public java.util.List < DBNodes> getDBNodes() {
+        public java.util.List<DBNodes> getDBNodes() {
             return this.DBNodes;
         }
 
@@ -765,7 +770,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * @return LTSVersions
          */
-        public java.util.List < String > getLTSVersions() {
+        public java.util.List<String> getLTSVersions() {
             return this.LTSVersions;
         }
 
@@ -828,7 +833,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * @return readDBInstances
          */
-        public java.util.List < String > getReadDBInstances() {
+        public java.util.List<String> getReadDBInstances() {
             return this.readDBInstances;
         }
 
@@ -884,7 +889,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
         /**
          * @return tagSet
          */
-        public java.util.List < TagSet> getTagSet() {
+        public java.util.List<TagSet> getTagSet() {
             return this.tagSet;
         }
 
@@ -920,13 +925,13 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
             private String commodityCode; 
-            private java.util.List < ConnAddrs> connAddrs; 
+            private java.util.List<ConnAddrs> connAddrs; 
             private String connectionString; 
             private String createTime; 
             private String DBInstanceType; 
             private String DBNodeClass; 
             private Integer DBNodeCount; 
-            private java.util.List < DBNodes> DBNodes; 
+            private java.util.List<DBNodes> DBNodes; 
             private String DBType; 
             private String DBVersion; 
             private String description; 
@@ -937,7 +942,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String expired; 
             private String id; 
             private Integer kindCode; 
-            private java.util.List < String > LTSVersions; 
+            private java.util.List<String> LTSVersions; 
             private String latestMinorVersion; 
             private String lockMode; 
             private String maintainEndTime; 
@@ -946,7 +951,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String network; 
             private String payType; 
             private String port; 
-            private java.util.List < String > readDBInstances; 
+            private java.util.List<String> readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean rightsSeparationEnabled; 
@@ -954,7 +959,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             private String series; 
             private String status; 
             private Long storageUsed; 
-            private java.util.List < TagSet> tagSet; 
+            private java.util.List<TagSet> tagSet; 
             private String type; 
             private String VPCId; 
             private String vSwitchId; 
@@ -987,7 +992,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             /**
              * ConnAddrs.
              */
-            public Builder connAddrs(java.util.List < ConnAddrs> connAddrs) {
+            public Builder connAddrs(java.util.List<ConnAddrs> connAddrs) {
                 this.connAddrs = connAddrs;
                 return this;
             }
@@ -1035,7 +1040,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             /**
              * DBNodes.
              */
-            public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
+            public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
                 this.DBNodes = DBNodes;
                 return this;
             }
@@ -1123,7 +1128,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder LTSVersions(java.util.List < String > LTSVersions) {
+            public Builder LTSVersions(java.util.List<String> LTSVersions) {
                 this.LTSVersions = LTSVersions;
                 return this;
             }
@@ -1195,7 +1200,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             /**
              * ReadDBInstances.
              */
-            public Builder readDBInstances(java.util.List < String > readDBInstances) {
+            public Builder readDBInstances(java.util.List<String> readDBInstances) {
                 this.readDBInstances = readDBInstances;
                 return this;
             }
@@ -1259,7 +1264,7 @@ public class DescribeDBInstanceViaEndpointResponseBody extends TeaModel {
             /**
              * TagSet.
              */
-            public Builder tagSet(java.util.List < TagSet> tagSet) {
+            public Builder tagSet(java.util.List<TagSet> tagSet) {
                 this.tagSet = tagSet;
                 return this;
             }

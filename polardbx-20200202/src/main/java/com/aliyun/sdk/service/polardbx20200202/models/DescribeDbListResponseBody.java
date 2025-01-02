@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDbListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,7 +47,7 @@ public class DescribeDbListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class DescribeDbListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class DescribeDbListResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -186,7 +191,7 @@ public class DescribeDbListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
-        private java.util.List < Accounts> accounts;
+        private java.util.List<Accounts> accounts;
 
         @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private String characterSetName;
@@ -219,7 +224,7 @@ public class DescribeDbListResponseBody extends TeaModel {
         /**
          * @return accounts
          */
-        public java.util.List < Accounts> getAccounts() {
+        public java.util.List<Accounts> getAccounts() {
             return this.accounts;
         }
 
@@ -252,7 +257,7 @@ public class DescribeDbListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Accounts> accounts; 
+            private java.util.List<Accounts> accounts; 
             private String characterSetName; 
             private String DBDescription; 
             private String DBInstanceName; 
@@ -261,7 +266,7 @@ public class DescribeDbListResponseBody extends TeaModel {
             /**
              * Accounts.
              */
-            public Builder accounts(java.util.List < Accounts> accounts) {
+            public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
                 return this;
             }
