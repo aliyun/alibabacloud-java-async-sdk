@@ -23,6 +23,10 @@ public class BackupFileRequest extends Request {
     private java.util.List<String> androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupAll")
+    private Boolean backupAll;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFileName")
     private String backupFileName;
 
@@ -54,6 +58,7 @@ public class BackupFileRequest extends Request {
     private BackupFileRequest(Builder builder) {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
+        this.backupAll = builder.backupAll;
         this.backupFileName = builder.backupFileName;
         this.backupFilePath = builder.backupFilePath;
         this.description = builder.description;
@@ -81,6 +86,13 @@ public class BackupFileRequest extends Request {
      */
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    /**
+     * @return backupAll
+     */
+    public Boolean getBackupAll() {
+        return this.backupAll;
     }
 
     /**
@@ -134,6 +146,7 @@ public class BackupFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<BackupFileRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
+        private Boolean backupAll; 
         private String backupFileName; 
         private String backupFilePath; 
         private String description; 
@@ -149,6 +162,7 @@ public class BackupFileRequest extends Request {
         private Builder(BackupFileRequest request) {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
+            this.backupAll = request.backupAll;
             this.backupFileName = request.backupFileName;
             this.backupFilePath = request.backupFilePath;
             this.description = request.description;
@@ -164,6 +178,15 @@ public class BackupFileRequest extends Request {
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
+            return this;
+        }
+
+        /**
+         * BackupAll.
+         */
+        public Builder backupAll(Boolean backupAll) {
+            this.putQueryParameter("BackupAll", backupAll);
+            this.backupAll = backupAll;
             return this;
         }
 

@@ -141,6 +141,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
+        private String instanceStatus;
+
         @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
@@ -193,6 +196,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             this.finishTime = builder.finishTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.instanceStatus = builder.instanceStatus;
             this.invokeId = builder.invokeId;
             this.level = builder.level;
             this.operator = builder.operator;
@@ -258,6 +262,13 @@ public class DescribeTasksResponseBody extends TeaModel {
          */
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        /**
+         * @return instanceStatus
+         */
+        public String getInstanceStatus() {
+            return this.instanceStatus;
         }
 
         /**
@@ -372,6 +383,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String finishTime; 
             private String instanceId; 
             private String instanceName; 
+            private String instanceStatus; 
             private String invokeId; 
             private Integer level; 
             private String operator; 
@@ -433,6 +445,14 @@ public class DescribeTasksResponseBody extends TeaModel {
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * InstanceStatus.
+             */
+            public Builder instanceStatus(String instanceStatus) {
+                this.instanceStatus = instanceStatus;
                 return this;
             }
 

@@ -23,6 +23,10 @@ public class RecoveryFileRequest extends Request {
     private java.util.List<String> androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupAll")
+    private Boolean backupAll;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFileId")
     private String backupFileId;
 
@@ -41,6 +45,7 @@ public class RecoveryFileRequest extends Request {
     private RecoveryFileRequest(Builder builder) {
         super(builder);
         this.androidInstanceIdList = builder.androidInstanceIdList;
+        this.backupAll = builder.backupAll;
         this.backupFileId = builder.backupFileId;
         this.backupFilePath = builder.backupFilePath;
         this.uploadEndpoint = builder.uploadEndpoint;
@@ -65,6 +70,13 @@ public class RecoveryFileRequest extends Request {
      */
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    /**
+     * @return backupAll
+     */
+    public Boolean getBackupAll() {
+        return this.backupAll;
     }
 
     /**
@@ -97,6 +109,7 @@ public class RecoveryFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<RecoveryFileRequest, Builder> {
         private java.util.List<String> androidInstanceIdList; 
+        private Boolean backupAll; 
         private String backupFileId; 
         private String backupFilePath; 
         private String uploadEndpoint; 
@@ -109,6 +122,7 @@ public class RecoveryFileRequest extends Request {
         private Builder(RecoveryFileRequest request) {
             super(request);
             this.androidInstanceIdList = request.androidInstanceIdList;
+            this.backupAll = request.backupAll;
             this.backupFileId = request.backupFileId;
             this.backupFilePath = request.backupFilePath;
             this.uploadEndpoint = request.uploadEndpoint;
@@ -121,6 +135,15 @@ public class RecoveryFileRequest extends Request {
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
+            return this;
+        }
+
+        /**
+         * BackupAll.
+         */
+        public Builder backupAll(Boolean backupAll) {
+            this.putQueryParameter("BackupAll", backupAll);
+            this.backupAll = backupAll;
             return this;
         }
 

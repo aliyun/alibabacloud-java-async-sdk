@@ -242,6 +242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
 
     /**
+     * @param request the request parameters of OperateApp  OperateAppRequest
+     * @return OperateAppResponse
+     */
+    CompletableFuture<OperateAppResponse> operateApp(OperateAppRequest request);
+
+    /**
      * @param request the request parameters of RebootAndroidInstancesInGroup  RebootAndroidInstancesInGroupRequest
      * @return RebootAndroidInstancesInGroupResponse
      */

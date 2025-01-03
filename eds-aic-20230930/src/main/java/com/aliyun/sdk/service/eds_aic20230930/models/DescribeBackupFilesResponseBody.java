@@ -149,6 +149,9 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidInstanceName")
         private String androidInstanceName;
 
+        @com.aliyun.core.annotation.NameInMap("BackupAll")
+        private Boolean backupAll;
+
         @com.aliyun.core.annotation.NameInMap("BackupFileId")
         private String backupFileId;
 
@@ -200,6 +203,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.androidInstanceId = builder.androidInstanceId;
             this.androidInstanceName = builder.androidInstanceName;
+            this.backupAll = builder.backupAll;
             this.backupFileId = builder.backupFileId;
             this.backupFileName = builder.backupFileName;
             this.backupFilePath = builder.backupFilePath;
@@ -238,6 +242,13 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
          */
         public String getAndroidInstanceName() {
             return this.androidInstanceName;
+        }
+
+        /**
+         * @return backupAll
+         */
+        public Boolean getBackupAll() {
+            return this.backupAll;
         }
 
         /**
@@ -355,6 +366,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public static final class Builder {
             private String androidInstanceId; 
             private String androidInstanceName; 
+            private Boolean backupAll; 
             private String backupFileId; 
             private String backupFileName; 
             private String backupFilePath; 
@@ -385,6 +397,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
              */
             public Builder androidInstanceName(String androidInstanceName) {
                 this.androidInstanceName = androidInstanceName;
+                return this;
+            }
+
+            /**
+             * BackupAll.
+             */
+            public Builder backupAll(Boolean backupAll) {
+                this.backupAll = backupAll;
                 return this;
             }
 

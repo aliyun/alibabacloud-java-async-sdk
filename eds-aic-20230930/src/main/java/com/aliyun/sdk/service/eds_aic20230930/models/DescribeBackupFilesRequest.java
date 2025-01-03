@@ -26,6 +26,10 @@ public class DescribeBackupFilesRequest extends Request {
     private String androidInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupAll")
+    private Boolean backupAll;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFileId")
     private String backupFileId;
 
@@ -70,6 +74,7 @@ public class DescribeBackupFilesRequest extends Request {
         super(builder);
         this.androidInstanceId = builder.androidInstanceId;
         this.androidInstanceName = builder.androidInstanceName;
+        this.backupAll = builder.backupAll;
         this.backupFileId = builder.backupFileId;
         this.backupFileName = builder.backupFileName;
         this.description = builder.description;
@@ -107,6 +112,13 @@ public class DescribeBackupFilesRequest extends Request {
      */
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    /**
+     * @return backupAll
+     */
+    public Boolean getBackupAll() {
+        return this.backupAll;
     }
 
     /**
@@ -182,6 +194,7 @@ public class DescribeBackupFilesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeBackupFilesRequest, Builder> {
         private String androidInstanceId; 
         private String androidInstanceName; 
+        private Boolean backupAll; 
         private String backupFileId; 
         private String backupFileName; 
         private String description; 
@@ -201,6 +214,7 @@ public class DescribeBackupFilesRequest extends Request {
             super(request);
             this.androidInstanceId = request.androidInstanceId;
             this.androidInstanceName = request.androidInstanceName;
+            this.backupAll = request.backupAll;
             this.backupFileId = request.backupFileId;
             this.backupFileName = request.backupFileName;
             this.description = request.description;
@@ -228,6 +242,15 @@ public class DescribeBackupFilesRequest extends Request {
         public Builder androidInstanceName(String androidInstanceName) {
             this.putQueryParameter("AndroidInstanceName", androidInstanceName);
             this.androidInstanceName = androidInstanceName;
+            return this;
+        }
+
+        /**
+         * BackupAll.
+         */
+        public Builder backupAll(Boolean backupAll) {
+            this.putQueryParameter("BackupAll", backupAll);
+            this.backupAll = backupAll;
             return this;
         }
 

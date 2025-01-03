@@ -305,6 +305,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
+        private String imageVersion;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
@@ -325,6 +328,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
+        private String publicIpAddress;
 
         @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
@@ -355,6 +361,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
             this.gmtModified = builder.gmtModified;
+            this.imageVersion = builder.imageVersion;
             this.instanceType = builder.instanceType;
             this.keyPairId = builder.keyPairId;
             this.memory = builder.memory;
@@ -362,6 +369,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
             this.policyGroupId = builder.policyGroupId;
+            this.publicIpAddress = builder.publicIpAddress;
             this.rate = builder.rate;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
@@ -489,6 +497,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageVersion
+         */
+        public String getImageVersion() {
+            return this.imageVersion;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
@@ -538,6 +553,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicIpAddress
+         */
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+        /**
          * @return rate
          */
         public Integer getRate() {
@@ -582,6 +604,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtExpired; 
             private String gmtModified; 
+            private String imageVersion; 
             private String instanceType; 
             private String keyPairId; 
             private Integer memory; 
@@ -589,6 +612,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String officeSiteId; 
             private String persistentAppInstanceId; 
             private String policyGroupId; 
+            private String publicIpAddress; 
             private Integer rate; 
             private String regionId; 
             private String renderingType; 
@@ -723,6 +747,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ImageVersion.
+             */
+            public Builder imageVersion(String imageVersion) {
+                this.imageVersion = imageVersion;
+                return this;
+            }
+
+            /**
              * InstanceType.
              */
             public Builder instanceType(String instanceType) {
@@ -775,6 +807,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
+                return this;
+            }
+
+            /**
+             * PublicIpAddress.
+             */
+            public Builder publicIpAddress(String publicIpAddress) {
+                this.publicIpAddress = publicIpAddress;
                 return this;
             }
 
