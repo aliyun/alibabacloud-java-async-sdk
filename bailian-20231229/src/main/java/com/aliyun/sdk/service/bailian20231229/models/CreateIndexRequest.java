@@ -95,6 +95,10 @@ public class CreateIndexRequest extends Request {
     private String structureType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("enableHeaders")
+    private Boolean enableHeaders;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("metaExtractColumns")
     private java.util.List<MetaExtractColumns> metaExtractColumns;
 
@@ -118,6 +122,7 @@ public class CreateIndexRequest extends Request {
         this.sinkType = builder.sinkType;
         this.sourceType = builder.sourceType;
         this.structureType = builder.structureType;
+        this.enableHeaders = builder.enableHeaders;
         this.metaExtractColumns = builder.metaExtractColumns;
     }
 
@@ -261,6 +266,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return enableHeaders
+     */
+    public Boolean getEnableHeaders() {
+        return this.enableHeaders;
+    }
+
+    /**
      * @return metaExtractColumns
      */
     public java.util.List<MetaExtractColumns> getMetaExtractColumns() {
@@ -286,6 +298,7 @@ public class CreateIndexRequest extends Request {
         private String sinkType; 
         private String sourceType; 
         private String structureType; 
+        private Boolean enableHeaders; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
 
         private Builder() {
@@ -312,6 +325,7 @@ public class CreateIndexRequest extends Request {
             this.sinkType = request.sinkType;
             this.sourceType = request.sourceType;
             this.structureType = request.structureType;
+            this.enableHeaders = request.enableHeaders;
             this.metaExtractColumns = request.metaExtractColumns;
         } 
 
@@ -576,6 +590,15 @@ public class CreateIndexRequest extends Request {
         public Builder structureType(String structureType) {
             this.putQueryParameter("StructureType", structureType);
             this.structureType = structureType;
+            return this;
+        }
+
+        /**
+         * enableHeaders.
+         */
+        public Builder enableHeaders(Boolean enableHeaders) {
+            this.putQueryParameter("enableHeaders", enableHeaders);
+            this.enableHeaders = enableHeaders;
             return this;
         }
 
