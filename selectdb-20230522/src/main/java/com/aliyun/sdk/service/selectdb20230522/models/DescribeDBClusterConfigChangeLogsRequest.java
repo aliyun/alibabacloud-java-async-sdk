@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDBClusterConfigChangeLogsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigKey")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String configKey;
 
     @com.aliyun.core.annotation.Query
@@ -135,10 +134,7 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>be.conf</p>
+         * ConfigKey.
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
