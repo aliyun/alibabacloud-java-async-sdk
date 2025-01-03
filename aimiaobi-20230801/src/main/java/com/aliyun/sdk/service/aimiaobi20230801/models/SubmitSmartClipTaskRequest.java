@@ -26,6 +26,10 @@ public class SubmitSmartClipTaskRequest extends Request {
     private EditingConfig editingConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendParam")
+    private String extendParam;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InputConfig")
     @com.aliyun.core.annotation.Validation(required = true)
     private InputConfig inputConfig;
@@ -43,6 +47,7 @@ public class SubmitSmartClipTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.editingConfig = builder.editingConfig;
+        this.extendParam = builder.extendParam;
         this.inputConfig = builder.inputConfig;
         this.outputConfig = builder.outputConfig;
         this.workspaceId = builder.workspaceId;
@@ -76,6 +81,13 @@ public class SubmitSmartClipTaskRequest extends Request {
     }
 
     /**
+     * @return extendParam
+     */
+    public String getExtendParam() {
+        return this.extendParam;
+    }
+
+    /**
      * @return inputConfig
      */
     public InputConfig getInputConfig() {
@@ -99,6 +111,7 @@ public class SubmitSmartClipTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitSmartClipTaskRequest, Builder> {
         private String regionId; 
         private EditingConfig editingConfig; 
+        private String extendParam; 
         private InputConfig inputConfig; 
         private OutputConfig outputConfig; 
         private String workspaceId; 
@@ -111,6 +124,7 @@ public class SubmitSmartClipTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.editingConfig = request.editingConfig;
+            this.extendParam = request.extendParam;
             this.inputConfig = request.inputConfig;
             this.outputConfig = request.outputConfig;
             this.workspaceId = request.workspaceId;
@@ -132,6 +146,15 @@ public class SubmitSmartClipTaskRequest extends Request {
             String editingConfigShrink = shrink(editingConfig, "EditingConfig", "json");
             this.putBodyParameter("EditingConfig", editingConfigShrink);
             this.editingConfig = editingConfig;
+            return this;
+        }
+
+        /**
+         * ExtendParam.
+         */
+        public Builder extendParam(String extendParam) {
+            this.putBodyParameter("ExtendParam", extendParam);
+            this.extendParam = extendParam;
             return this;
         }
 
@@ -171,6 +194,414 @@ public class SubmitSmartClipTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitSmartClipTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmartClipTaskRequest</p>
+     */
+    public static class BackgroundMusicConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Style")
+        private String style;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Double volume;
+
+        private BackgroundMusicConfig(Builder builder) {
+            this.style = builder.style;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackgroundMusicConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return style
+         */
+        public String getStyle() {
+            return this.style;
+        }
+
+        /**
+         * @return volume
+         */
+        public Double getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private String style; 
+            private Double volume; 
+
+            /**
+             * Style.
+             */
+            public Builder style(String style) {
+                this.style = style;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Double volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public BackgroundMusicConfig build() {
+                return new BackgroundMusicConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitSmartClipTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmartClipTaskRequest</p>
+     */
+    public static class MediaConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Double volume;
+
+        private MediaConfig(Builder builder) {
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MediaConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return volume
+         */
+        public Double getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private Double volume; 
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Double volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public MediaConfig build() {
+                return new MediaConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitSmartClipTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmartClipTaskRequest</p>
+     */
+    public static class AsrConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alignment")
+        private String alignment;
+
+        @com.aliyun.core.annotation.NameInMap("Font")
+        private String font;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
+        private String fontColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontSize")
+        private String fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("Spacing")
+        private String spacing;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Float x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Float y;
+
+        private AsrConfig(Builder builder) {
+            this.alignment = builder.alignment;
+            this.font = builder.font;
+            this.fontColor = builder.fontColor;
+            this.fontSize = builder.fontSize;
+            this.spacing = builder.spacing;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AsrConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alignment
+         */
+        public String getAlignment() {
+            return this.alignment;
+        }
+
+        /**
+         * @return font
+         */
+        public String getFont() {
+            return this.font;
+        }
+
+        /**
+         * @return fontColor
+         */
+        public String getFontColor() {
+            return this.fontColor;
+        }
+
+        /**
+         * @return fontSize
+         */
+        public String getFontSize() {
+            return this.fontSize;
+        }
+
+        /**
+         * @return spacing
+         */
+        public String getSpacing() {
+            return this.spacing;
+        }
+
+        /**
+         * @return x
+         */
+        public Float getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Float getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private String alignment; 
+            private String font; 
+            private String fontColor; 
+            private String fontSize; 
+            private String spacing; 
+            private Float x; 
+            private Float y; 
+
+            /**
+             * Alignment.
+             */
+            public Builder alignment(String alignment) {
+                this.alignment = alignment;
+                return this;
+            }
+
+            /**
+             * Font.
+             */
+            public Builder font(String font) {
+                this.font = font;
+                return this;
+            }
+
+            /**
+             * FontColor.
+             */
+            public Builder fontColor(String fontColor) {
+                this.fontColor = fontColor;
+                return this;
+            }
+
+            /**
+             * FontSize.
+             */
+            public Builder fontSize(String fontSize) {
+                this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * Spacing.
+             */
+            public Builder spacing(String spacing) {
+                this.spacing = spacing;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Float x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Float y) {
+                this.y = y;
+                return this;
+            }
+
+            public AsrConfig build() {
+                return new AsrConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitSmartClipTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitSmartClipTaskRequest</p>
+     */
+    public static class SpeechConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrConfig")
+        private AsrConfig asrConfig;
+
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
+        private Double speechRate;
+
+        @com.aliyun.core.annotation.NameInMap("Style")
+        private String style;
+
+        @com.aliyun.core.annotation.NameInMap("Voice")
+        private String voice;
+
+        @com.aliyun.core.annotation.NameInMap("Volume")
+        private Double volume;
+
+        private SpeechConfig(Builder builder) {
+            this.asrConfig = builder.asrConfig;
+            this.speechRate = builder.speechRate;
+            this.style = builder.style;
+            this.voice = builder.voice;
+            this.volume = builder.volume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpeechConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asrConfig
+         */
+        public AsrConfig getAsrConfig() {
+            return this.asrConfig;
+        }
+
+        /**
+         * @return speechRate
+         */
+        public Double getSpeechRate() {
+            return this.speechRate;
+        }
+
+        /**
+         * @return style
+         */
+        public String getStyle() {
+            return this.style;
+        }
+
+        /**
+         * @return voice
+         */
+        public String getVoice() {
+            return this.voice;
+        }
+
+        /**
+         * @return volume
+         */
+        public Double getVolume() {
+            return this.volume;
+        }
+
+        public static final class Builder {
+            private AsrConfig asrConfig; 
+            private Double speechRate; 
+            private String style; 
+            private String voice; 
+            private Double volume; 
+
+            /**
+             * AsrConfig.
+             */
+            public Builder asrConfig(AsrConfig asrConfig) {
+                this.asrConfig = asrConfig;
+                return this;
+            }
+
+            /**
+             * SpeechRate.
+             */
+            public Builder speechRate(Double speechRate) {
+                this.speechRate = speechRate;
+                return this;
+            }
+
+            /**
+             * Style.
+             */
+            public Builder style(String style) {
+                this.style = style;
+                return this;
+            }
+
+            /**
+             * Voice.
+             */
+            public Builder voice(String voice) {
+                this.voice = voice;
+                return this;
+            }
+
+            /**
+             * Volume.
+             */
+            public Builder volume(Double volume) {
+                this.volume = volume;
+                return this;
+            }
+
+            public SpeechConfig build() {
+                return new SpeechConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link SubmitSmartClipTaskRequest} extends {@link TeaModel}
@@ -305,10 +736,22 @@ public class SubmitSmartClipTaskRequest extends Request {
      * <p>SubmitSmartClipTaskRequest</p>
      */
     public static class EditingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackgroundMusicConfig")
+        private BackgroundMusicConfig backgroundMusicConfig;
+
+        @com.aliyun.core.annotation.NameInMap("MediaConfig")
+        private MediaConfig mediaConfig;
+
+        @com.aliyun.core.annotation.NameInMap("SpeechConfig")
+        private SpeechConfig speechConfig;
+
         @com.aliyun.core.annotation.NameInMap("TitleConfig")
         private TitleConfig titleConfig;
 
         private EditingConfig(Builder builder) {
+            this.backgroundMusicConfig = builder.backgroundMusicConfig;
+            this.mediaConfig = builder.mediaConfig;
+            this.speechConfig = builder.speechConfig;
             this.titleConfig = builder.titleConfig;
         }
 
@@ -321,6 +764,27 @@ public class SubmitSmartClipTaskRequest extends Request {
         }
 
         /**
+         * @return backgroundMusicConfig
+         */
+        public BackgroundMusicConfig getBackgroundMusicConfig() {
+            return this.backgroundMusicConfig;
+        }
+
+        /**
+         * @return mediaConfig
+         */
+        public MediaConfig getMediaConfig() {
+            return this.mediaConfig;
+        }
+
+        /**
+         * @return speechConfig
+         */
+        public SpeechConfig getSpeechConfig() {
+            return this.speechConfig;
+        }
+
+        /**
          * @return titleConfig
          */
         public TitleConfig getTitleConfig() {
@@ -328,7 +792,34 @@ public class SubmitSmartClipTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private BackgroundMusicConfig backgroundMusicConfig; 
+            private MediaConfig mediaConfig; 
+            private SpeechConfig speechConfig; 
             private TitleConfig titleConfig; 
+
+            /**
+             * BackgroundMusicConfig.
+             */
+            public Builder backgroundMusicConfig(BackgroundMusicConfig backgroundMusicConfig) {
+                this.backgroundMusicConfig = backgroundMusicConfig;
+                return this;
+            }
+
+            /**
+             * MediaConfig.
+             */
+            public Builder mediaConfig(MediaConfig mediaConfig) {
+                this.mediaConfig = mediaConfig;
+                return this;
+            }
+
+            /**
+             * SpeechConfig.
+             */
+            public Builder speechConfig(SpeechConfig speechConfig) {
+                this.speechConfig = speechConfig;
+                return this;
+            }
 
             /**
              * TitleConfig.
