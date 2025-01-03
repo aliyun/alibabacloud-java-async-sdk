@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableHBaseueModuleRequest} extends {@link RequestModel}
  *
  * <p>EnableHBaseueModuleRequest</p>
@@ -327,7 +333,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.putQueryParameter("CoreInstanceType", coreInstanceType);
@@ -354,7 +363,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * HbaseueClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
          */
         public Builder hbaseueClusterId(String hbaseueClusterId) {
             this.putQueryParameter("HbaseueClusterId", hbaseueClusterId);
@@ -381,7 +393,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * ModuleTypeName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>solr</p>
          */
         public Builder moduleTypeName(String moduleTypeName) {
             this.putQueryParameter("ModuleTypeName", moduleTypeName);
@@ -390,7 +405,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * NodeCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.putQueryParameter("NodeCount", nodeCount);
@@ -399,7 +417,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -426,7 +447,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -435,7 +459,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp120k6ixs4eog*****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -444,7 +471,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp191ipotqj1ssyl*****</p>
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);
@@ -453,7 +483,10 @@ public class EnableHBaseueModuleRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

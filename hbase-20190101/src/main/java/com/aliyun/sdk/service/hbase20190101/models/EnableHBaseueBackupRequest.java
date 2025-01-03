@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableHBaseueBackupRequest} extends {@link RequestModel}
  *
  * <p>EnableHBaseueBackupRequest</p>
@@ -115,7 +121,10 @@ public class EnableHBaseueBackupRequest extends Request {
         }
 
         /**
-         * HbaseueClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-m5eznlga4k5bcxxxx</p>
          */
         public Builder hbaseueClusterId(String hbaseueClusterId) {
             this.putQueryParameter("HbaseueClusterId", hbaseueClusterId);
@@ -124,7 +133,10 @@ public class EnableHBaseueBackupRequest extends Request {
         }
 
         /**
-         * NodeCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.putQueryParameter("NodeCount", nodeCount);

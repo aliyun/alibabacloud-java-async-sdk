@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchServiceRequest} extends {@link RequestModel}
  *
  * <p>SwitchServiceRequest</p>
@@ -84,7 +90,10 @@ public class SwitchServiceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-uf6r2hn2zrxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +102,10 @@ public class SwitchServiceRequest extends Request {
         }
 
         /**
-         * Operate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder operate(String operate) {
             this.putQueryParameter("Operate", operate);
@@ -102,7 +114,10 @@ public class SwitchServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HBaseProxy</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

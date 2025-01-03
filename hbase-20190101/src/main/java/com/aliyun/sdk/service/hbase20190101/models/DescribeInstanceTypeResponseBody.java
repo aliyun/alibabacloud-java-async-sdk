@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTypeResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypeResponseBody</p>
+     */
     public static class InstanceTypeSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuSize")
         private Long cpuSize;
@@ -151,9 +163,15 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypeResponseBody</p>
+     */
     public static class InstanceTypeSpecList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTypeSpec")
-        private java.util.List < InstanceTypeSpec> instanceTypeSpec;
+        private java.util.List<InstanceTypeSpec> instanceTypeSpec;
 
         private InstanceTypeSpecList(Builder builder) {
             this.instanceTypeSpec = builder.instanceTypeSpec;
@@ -170,17 +188,17 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
         /**
          * @return instanceTypeSpec
          */
-        public java.util.List < InstanceTypeSpec> getInstanceTypeSpec() {
+        public java.util.List<InstanceTypeSpec> getInstanceTypeSpec() {
             return this.instanceTypeSpec;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceTypeSpec> instanceTypeSpec; 
+            private java.util.List<InstanceTypeSpec> instanceTypeSpec; 
 
             /**
              * InstanceTypeSpec.
              */
-            public Builder instanceTypeSpec(java.util.List < InstanceTypeSpec> instanceTypeSpec) {
+            public Builder instanceTypeSpec(java.util.List<InstanceTypeSpec> instanceTypeSpec) {
                 this.instanceTypeSpec = instanceTypeSpec;
                 return this;
             }

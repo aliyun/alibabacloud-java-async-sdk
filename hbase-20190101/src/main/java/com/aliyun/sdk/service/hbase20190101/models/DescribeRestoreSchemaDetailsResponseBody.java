@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreSchemaDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreSchemaDetailsResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreSchemaDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSchemaDetailsResponseBody</p>
+     */
     public static class RestoreSchemaDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -191,9 +203,15 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreSchemaDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSchemaDetailsResponseBody</p>
+     */
     public static class RestoreSchemaDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RestoreSchemaDetail")
-        private java.util.List < RestoreSchemaDetail> restoreSchemaDetail;
+        private java.util.List<RestoreSchemaDetail> restoreSchemaDetail;
 
         private RestoreSchemaDetails(Builder builder) {
             this.restoreSchemaDetail = builder.restoreSchemaDetail;
@@ -210,17 +228,17 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         /**
          * @return restoreSchemaDetail
          */
-        public java.util.List < RestoreSchemaDetail> getRestoreSchemaDetail() {
+        public java.util.List<RestoreSchemaDetail> getRestoreSchemaDetail() {
             return this.restoreSchemaDetail;
         }
 
         public static final class Builder {
-            private java.util.List < RestoreSchemaDetail> restoreSchemaDetail; 
+            private java.util.List<RestoreSchemaDetail> restoreSchemaDetail; 
 
             /**
              * RestoreSchemaDetail.
              */
-            public Builder restoreSchemaDetail(java.util.List < RestoreSchemaDetail> restoreSchemaDetail) {
+            public Builder restoreSchemaDetail(java.util.List<RestoreSchemaDetail> restoreSchemaDetail) {
                 this.restoreSchemaDetail = restoreSchemaDetail;
                 return this;
             }
@@ -232,6 +250,12 @@ public class DescribeRestoreSchemaDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreSchemaDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSchemaDetailsResponseBody</p>
+     */
     public static class RestoreSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fail")
         private Integer fail;

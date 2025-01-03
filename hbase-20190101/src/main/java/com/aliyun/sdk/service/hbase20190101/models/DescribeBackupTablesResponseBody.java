@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupTablesResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTablesResponseBody</p>
+     */
     public static class BackupRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
@@ -331,9 +343,15 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTablesResponseBody</p>
+     */
     public static class BackupRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupRecord")
-        private java.util.List < BackupRecord> backupRecord;
+        private java.util.List<BackupRecord> backupRecord;
 
         private BackupRecords(Builder builder) {
             this.backupRecord = builder.backupRecord;
@@ -350,17 +368,17 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         /**
          * @return backupRecord
          */
-        public java.util.List < BackupRecord> getBackupRecord() {
+        public java.util.List<BackupRecord> getBackupRecord() {
             return this.backupRecord;
         }
 
         public static final class Builder {
-            private java.util.List < BackupRecord> backupRecord; 
+            private java.util.List<BackupRecord> backupRecord; 
 
             /**
              * BackupRecord.
              */
-            public Builder backupRecord(java.util.List < BackupRecord> backupRecord) {
+            public Builder backupRecord(java.util.List<BackupRecord> backupRecord) {
                 this.backupRecord = backupRecord;
                 return this;
             }
@@ -372,9 +390,15 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupTablesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
-        private java.util.List < String > table;
+        private java.util.List<String> table;
 
         private Tables(Builder builder) {
             this.table = builder.table;
@@ -391,17 +415,17 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < String > getTable() {
+        public java.util.List<String> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < String > table; 
+            private java.util.List<String> table; 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < String > table) {
+            public Builder table(java.util.List<String> table) {
                 this.table = table;
                 return this;
             }

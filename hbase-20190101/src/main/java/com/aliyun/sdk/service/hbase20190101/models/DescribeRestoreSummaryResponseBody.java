@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreSummaryResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSummaryResponseBody</p>
+     */
     public static class Rescord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BulkLoadProcess")
         private String bulkLoadProcess;
@@ -331,9 +343,15 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreSummaryResponseBody</p>
+     */
     public static class Rescords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rescord")
-        private java.util.List < Rescord> rescord;
+        private java.util.List<Rescord> rescord;
 
         private Rescords(Builder builder) {
             this.rescord = builder.rescord;
@@ -350,17 +368,17 @@ public class DescribeRestoreSummaryResponseBody extends TeaModel {
         /**
          * @return rescord
          */
-        public java.util.List < Rescord> getRescord() {
+        public java.util.List<Rescord> getRescord() {
             return this.rescord;
         }
 
         public static final class Builder {
-            private java.util.List < Rescord> rescord; 
+            private java.util.List<Rescord> rescord; 
 
             /**
              * Rescord.
              */
-            public Builder rescord(java.util.List < Rescord> rescord) {
+            public Builder rescord(java.util.List<Rescord> rescord) {
                 this.rescord = rescord;
                 return this;
             }

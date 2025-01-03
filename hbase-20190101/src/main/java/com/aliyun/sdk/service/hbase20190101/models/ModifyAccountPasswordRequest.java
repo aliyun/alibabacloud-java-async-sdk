@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountPasswordRequest</p>
@@ -84,7 +90,10 @@ public class ModifyAccountPasswordRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -93,7 +102,10 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +114,10 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * NewAccountPassword.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -376,7 +382,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.medium</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.putQueryParameter("CoreInstanceType", coreInstanceType);
@@ -412,7 +421,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -421,7 +433,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -439,7 +454,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * NodeCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.putQueryParameter("NodeCount", nodeCount);
@@ -448,7 +466,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -475,7 +496,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -520,7 +544,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

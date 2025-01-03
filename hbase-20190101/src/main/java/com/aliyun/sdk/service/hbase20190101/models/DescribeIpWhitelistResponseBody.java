@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIpWhitelistResponseBody</p>
@@ -70,9 +76,15 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIpWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpWhitelistResponseBody</p>
+     */
     public static class IpList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         private IpList(Builder builder) {
             this.ip = builder.ip;
@@ -89,17 +101,17 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
 
             /**
              * Ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
@@ -111,6 +123,12 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpWhitelistResponseBody</p>
+     */
     public static class Group extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -192,9 +210,15 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIpWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIpWhitelistResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Group")
-        private java.util.List < Group> group;
+        private java.util.List<Group> group;
 
         private Groups(Builder builder) {
             this.group = builder.group;
@@ -211,17 +235,17 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
         /**
          * @return group
          */
-        public java.util.List < Group> getGroup() {
+        public java.util.List<Group> getGroup() {
             return this.group;
         }
 
         public static final class Builder {
-            private java.util.List < Group> group; 
+            private java.util.List<Group> group; 
 
             /**
              * Group.
              */
-            public Builder group(java.util.List < Group> group) {
+            public Builder group(java.util.List<Group> group) {
                 this.group = group;
                 return this;
             }

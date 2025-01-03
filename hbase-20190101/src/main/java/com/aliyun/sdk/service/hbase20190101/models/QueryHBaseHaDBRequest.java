@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHBaseHaDBRequest} extends {@link RequestModel}
  *
  * <p>QueryHBaseHaDBRequest</p>
@@ -54,7 +60,10 @@ public class QueryHBaseHaDBRequest extends Request {
         } 
 
         /**
-         * BdsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-t4n3496whj23ia4k</p>
          */
         public Builder bdsId(String bdsId) {
             this.putQueryParameter("BdsId", bdsId);

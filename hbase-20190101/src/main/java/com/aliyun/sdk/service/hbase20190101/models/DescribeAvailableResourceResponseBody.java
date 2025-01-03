@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourceResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class InstanceTypeDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -131,6 +143,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class MasterResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -192,9 +210,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class MasterResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterResource")
-        private java.util.List < MasterResource> masterResource;
+        private java.util.List<MasterResource> masterResource;
 
         private MasterResources(Builder builder) {
             this.masterResource = builder.masterResource;
@@ -211,17 +235,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return masterResource
          */
-        public java.util.List < MasterResource> getMasterResource() {
+        public java.util.List<MasterResource> getMasterResource() {
             return this.masterResource;
         }
 
         public static final class Builder {
-            private java.util.List < MasterResource> masterResource; 
+            private java.util.List<MasterResource> masterResource; 
 
             /**
              * MasterResource.
              */
-            public Builder masterResource(java.util.List < MasterResource> masterResource) {
+            public Builder masterResource(java.util.List<MasterResource> masterResource) {
                 this.masterResource = masterResource;
                 return this;
             }
@@ -233,6 +257,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class DBInstanceStorageRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxSize")
         private Integer maxSize;
@@ -314,6 +344,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class CoreResourceInstanceTypeDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -375,6 +411,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class CoreResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceStorageRange")
         private DBInstanceStorageRange DBInstanceStorageRange;
@@ -476,9 +518,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class CoreResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoreResource")
-        private java.util.List < CoreResource> coreResource;
+        private java.util.List<CoreResource> coreResource;
 
         private CoreResources(Builder builder) {
             this.coreResource = builder.coreResource;
@@ -495,17 +543,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return coreResource
          */
-        public java.util.List < CoreResource> getCoreResource() {
+        public java.util.List<CoreResource> getCoreResource() {
             return this.coreResource;
         }
 
         public static final class Builder {
-            private java.util.List < CoreResource> coreResource; 
+            private java.util.List<CoreResource> coreResource; 
 
             /**
              * CoreResource.
              */
-            public Builder coreResource(java.util.List < CoreResource> coreResource) {
+            public Builder coreResource(java.util.List<CoreResource> coreResource) {
                 this.coreResource = coreResource;
                 return this;
             }
@@ -517,6 +565,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedStorageType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoreResources")
         private CoreResources coreResources;
@@ -578,9 +632,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedStorageTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedStorageType")
-        private java.util.List < SupportedStorageType> supportedStorageType;
+        private java.util.List<SupportedStorageType> supportedStorageType;
 
         private SupportedStorageTypes(Builder builder) {
             this.supportedStorageType = builder.supportedStorageType;
@@ -597,17 +657,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedStorageType
          */
-        public java.util.List < SupportedStorageType> getSupportedStorageType() {
+        public java.util.List<SupportedStorageType> getSupportedStorageType() {
             return this.supportedStorageType;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedStorageType> supportedStorageType; 
+            private java.util.List<SupportedStorageType> supportedStorageType; 
 
             /**
              * SupportedStorageType.
              */
-            public Builder supportedStorageType(java.util.List < SupportedStorageType> supportedStorageType) {
+            public Builder supportedStorageType(java.util.List<SupportedStorageType> supportedStorageType) {
                 this.supportedStorageType = supportedStorageType;
                 return this;
             }
@@ -619,6 +679,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -680,9 +746,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngineVersionSupportedCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedCategories")
-        private java.util.List < SupportedCategories> supportedCategories;
+        private java.util.List<SupportedCategories> supportedCategories;
 
         private SupportedEngineVersionSupportedCategories(Builder builder) {
             this.supportedCategories = builder.supportedCategories;
@@ -699,17 +771,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedCategories
          */
-        public java.util.List < SupportedCategories> getSupportedCategories() {
+        public java.util.List<SupportedCategories> getSupportedCategories() {
             return this.supportedCategories;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedCategories> supportedCategories; 
+            private java.util.List<SupportedCategories> supportedCategories; 
 
             /**
              * SupportedCategories.
              */
-            public Builder supportedCategories(java.util.List < SupportedCategories> supportedCategories) {
+            public Builder supportedCategories(java.util.List<SupportedCategories> supportedCategories) {
                 this.supportedCategories = supportedCategories;
                 return this;
             }
@@ -721,6 +793,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngineVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedCategories")
         private SupportedEngineVersionSupportedCategories supportedCategories;
@@ -782,9 +860,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngineVersion")
-        private java.util.List < SupportedEngineVersion> supportedEngineVersion;
+        private java.util.List<SupportedEngineVersion> supportedEngineVersion;
 
         private SupportedEngineVersions(Builder builder) {
             this.supportedEngineVersion = builder.supportedEngineVersion;
@@ -801,17 +885,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedEngineVersion
          */
-        public java.util.List < SupportedEngineVersion> getSupportedEngineVersion() {
+        public java.util.List<SupportedEngineVersion> getSupportedEngineVersion() {
             return this.supportedEngineVersion;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedEngineVersion> supportedEngineVersion; 
+            private java.util.List<SupportedEngineVersion> supportedEngineVersion; 
 
             /**
              * SupportedEngineVersion.
              */
-            public Builder supportedEngineVersion(java.util.List < SupportedEngineVersion> supportedEngineVersion) {
+            public Builder supportedEngineVersion(java.util.List<SupportedEngineVersion> supportedEngineVersion) {
                 this.supportedEngineVersion = supportedEngineVersion;
                 return this;
             }
@@ -823,6 +907,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -884,9 +974,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngine")
-        private java.util.List < SupportedEngine> supportedEngine;
+        private java.util.List<SupportedEngine> supportedEngine;
 
         private SupportedEngines(Builder builder) {
             this.supportedEngine = builder.supportedEngine;
@@ -903,17 +999,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedEngine
          */
-        public java.util.List < SupportedEngine> getSupportedEngine() {
+        public java.util.List<SupportedEngine> getSupportedEngine() {
             return this.supportedEngine;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedEngine> supportedEngine; 
+            private java.util.List<SupportedEngine> supportedEngine; 
 
             /**
              * SupportedEngine.
              */
-            public Builder supportedEngine(java.util.List < SupportedEngine> supportedEngine) {
+            public Builder supportedEngine(java.util.List<SupportedEngine> supportedEngine) {
                 this.supportedEngine = supportedEngine;
                 return this;
             }
@@ -925,6 +1021,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterResources")
         private MasterResources masterResources;
@@ -1026,9 +1128,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZone")
-        private java.util.List < AvailableZone> availableZone;
+        private java.util.List<AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {
             this.availableZone = builder.availableZone;
@@ -1045,17 +1153,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return availableZone
          */
-        public java.util.List < AvailableZone> getAvailableZone() {
+        public java.util.List<AvailableZone> getAvailableZone() {
             return this.availableZone;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableZone> availableZone; 
+            private java.util.List<AvailableZone> availableZone; 
 
             /**
              * AvailableZone.
              */
-            public Builder availableZone(java.util.List < AvailableZone> availableZone) {
+            public Builder availableZone(java.util.List<AvailableZone> availableZone) {
                 this.availableZone = availableZone;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantRequest} extends {@link RequestModel}
  *
  * <p>GrantRequest</p>
@@ -114,7 +120,10 @@ public class GrantRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -123,7 +132,10 @@ public class GrantRequest extends Request {
         }
 
         /**
-         * AclActions.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READ,WRITE</p>
          */
         public Builder aclActions(String aclActions) {
             this.putQueryParameter("AclActions", aclActions);
@@ -132,7 +144,10 @@ public class GrantRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -141,7 +156,10 @@ public class GrantRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -150,7 +168,10 @@ public class GrantRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

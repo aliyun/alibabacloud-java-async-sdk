@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMultiZoneClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMultiZoneClusterResponseBody</p>
@@ -1090,6 +1096,12 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMultiZoneClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneClusterResponseBody</p>
+     */
     public static class MultiZoneInstanceModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HdfsMinorVersion")
         private String hdfsMinorVersion;
@@ -1291,9 +1303,15 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneClusterResponseBody</p>
+     */
     public static class MultiZoneInstanceModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultiZoneInstanceModel")
-        private java.util.List < MultiZoneInstanceModel> multiZoneInstanceModel;
+        private java.util.List<MultiZoneInstanceModel> multiZoneInstanceModel;
 
         private MultiZoneInstanceModels(Builder builder) {
             this.multiZoneInstanceModel = builder.multiZoneInstanceModel;
@@ -1310,17 +1328,17 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         /**
          * @return multiZoneInstanceModel
          */
-        public java.util.List < MultiZoneInstanceModel> getMultiZoneInstanceModel() {
+        public java.util.List<MultiZoneInstanceModel> getMultiZoneInstanceModel() {
             return this.multiZoneInstanceModel;
         }
 
         public static final class Builder {
-            private java.util.List < MultiZoneInstanceModel> multiZoneInstanceModel; 
+            private java.util.List<MultiZoneInstanceModel> multiZoneInstanceModel; 
 
             /**
              * MultiZoneInstanceModel.
              */
-            public Builder multiZoneInstanceModel(java.util.List < MultiZoneInstanceModel> multiZoneInstanceModel) {
+            public Builder multiZoneInstanceModel(java.util.List<MultiZoneInstanceModel> multiZoneInstanceModel) {
                 this.multiZoneInstanceModel = multiZoneInstanceModel;
                 return this;
             }
@@ -1332,6 +1350,12 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneClusterResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1393,9 +1417,15 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMultiZoneClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMultiZoneClusterResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -1412,17 +1442,17 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

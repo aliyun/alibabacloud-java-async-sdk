@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreIncrDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreIncrDetailResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreIncrDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreIncrDetailResponseBody</p>
+     */
     public static class RestoreIncrDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;

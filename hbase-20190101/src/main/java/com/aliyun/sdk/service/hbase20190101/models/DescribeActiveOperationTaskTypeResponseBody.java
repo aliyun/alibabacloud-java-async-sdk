@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActiveOperationTaskTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActiveOperationTaskTypeResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TypeList")
-    private java.util.List < TypeList> typeList;
+    private java.util.List<TypeList> typeList;
 
     private DescribeActiveOperationTaskTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -40,13 +46,13 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     /**
      * @return typeList
      */
-    public java.util.List < TypeList> getTypeList() {
+    public java.util.List<TypeList> getTypeList() {
         return this.typeList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TypeList> typeList; 
+        private java.util.List<TypeList> typeList; 
 
         /**
          * RequestId.
@@ -59,7 +65,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         /**
          * TypeList.
          */
-        public Builder typeList(java.util.List < TypeList> typeList) {
+        public Builder typeList(java.util.List<TypeList> typeList) {
             this.typeList = typeList;
             return this;
         }
@@ -70,6 +76,12 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActiveOperationTaskTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActiveOperationTaskTypeResponseBody</p>
+     */
     public static class TypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;

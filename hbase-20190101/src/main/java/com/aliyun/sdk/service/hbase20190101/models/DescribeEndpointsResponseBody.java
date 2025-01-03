@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndpointsResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class ConnAddrInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
@@ -251,9 +263,15 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEndpointsResponseBody</p>
+     */
     public static class ConnAddrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnAddrInfo")
-        private java.util.List < ConnAddrInfo> connAddrInfo;
+        private java.util.List<ConnAddrInfo> connAddrInfo;
 
         private ConnAddrs(Builder builder) {
             this.connAddrInfo = builder.connAddrInfo;
@@ -270,17 +288,17 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         /**
          * @return connAddrInfo
          */
-        public java.util.List < ConnAddrInfo> getConnAddrInfo() {
+        public java.util.List<ConnAddrInfo> getConnAddrInfo() {
             return this.connAddrInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ConnAddrInfo> connAddrInfo; 
+            private java.util.List<ConnAddrInfo> connAddrInfo; 
 
             /**
              * ConnAddrInfo.
              */
-            public Builder connAddrInfo(java.util.List < ConnAddrInfo> connAddrInfo) {
+            public Builder connAddrInfo(java.util.List<ConnAddrInfo> connAddrInfo) {
                 this.connAddrInfo = connAddrInfo;
                 return this;
             }

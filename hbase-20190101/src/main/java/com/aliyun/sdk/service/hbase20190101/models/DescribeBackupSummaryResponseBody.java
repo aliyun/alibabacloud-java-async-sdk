@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupSummaryResponseBody</p>
@@ -90,6 +96,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSummaryResponseBody</p>
+     */
     public static class Record extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -251,9 +263,15 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSummaryResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Record")
-        private java.util.List < Record> record;
+        private java.util.List<Record> record;
 
         private Records(Builder builder) {
             this.record = builder.record;
@@ -270,17 +288,17 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         /**
          * @return record
          */
-        public java.util.List < Record> getRecord() {
+        public java.util.List<Record> getRecord() {
             return this.record;
         }
 
         public static final class Builder {
-            private java.util.List < Record> record; 
+            private java.util.List<Record> record; 
 
             /**
              * Record.
              */
-            public Builder record(java.util.List < Record> record) {
+            public Builder record(java.util.List<Record> record) {
                 this.record = record;
                 return this;
             }
@@ -292,6 +310,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSummaryResponseBody</p>
+     */
     public static class Full extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasMore")
         private String hasMore;
@@ -433,6 +457,12 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupSummaryResponseBody</p>
+     */
     public static class Incr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupLogSize")
         private String backupLogSize;

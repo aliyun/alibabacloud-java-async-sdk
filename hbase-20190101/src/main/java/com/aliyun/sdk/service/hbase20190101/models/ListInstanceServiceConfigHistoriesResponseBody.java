@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceServiceConfigHistoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceServiceConfigHistoriesResponseBody</p>
@@ -130,6 +136,12 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceServiceConfigHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceServiceConfigHistoriesResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigureName")
         private String configureName;
@@ -251,9 +263,15 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceServiceConfigHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceServiceConfigHistoriesResponseBody</p>
+     */
     public static class ConfigureHistoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
-        private java.util.List < Config> config;
+        private java.util.List<Config> config;
 
         private ConfigureHistoryList(Builder builder) {
             this.config = builder.config;
@@ -270,17 +288,17 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.List < Config> getConfig() {
+        public java.util.List<Config> getConfig() {
             return this.config;
         }
 
         public static final class Builder {
-            private java.util.List < Config> config; 
+            private java.util.List<Config> config; 
 
             /**
              * Config.
              */
-            public Builder config(java.util.List < Config> config) {
+            public Builder config(java.util.List<Config> config) {
                 this.config = config;
                 return this;
             }

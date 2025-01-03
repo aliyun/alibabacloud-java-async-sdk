@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EvaluateMultiZoneResourceRequest} extends {@link RequestModel}
  *
  * <p>EvaluateMultiZoneResourceRequest</p>
@@ -453,7 +459,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         } 
 
         /**
-         * ArbiterVSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxb****</p>
          */
         public Builder arbiterVSwitchId(String arbiterVSwitchId) {
             this.putQueryParameter("ArbiterVSwitchId", arbiterVSwitchId);
@@ -462,7 +471,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * ArbiterZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder arbiterZoneId(String arbiterZoneId) {
             this.putQueryParameter("ArbiterZoneId", arbiterZoneId);
@@ -471,7 +483,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * ArchVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder archVersion(String archVersion) {
             this.putQueryParameter("ArchVersion", archVersion);
@@ -507,7 +522,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreDiskSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder coreDiskSize(Integer coreDiskSize) {
             this.putQueryParameter("CoreDiskSize", coreDiskSize);
@@ -516,7 +534,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreDiskType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder coreDiskType(String coreDiskType) {
             this.putQueryParameter("CoreDiskType", coreDiskType);
@@ -525,7 +546,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.medium</p>
          */
         public Builder coreInstanceType(String coreInstanceType) {
             this.putQueryParameter("CoreInstanceType", coreInstanceType);
@@ -534,7 +558,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * CoreNodeCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder coreNodeCount(Integer coreNodeCount) {
             this.putQueryParameter("CoreNodeCount", coreNodeCount);
@@ -543,7 +570,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -552,7 +582,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -597,7 +630,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * MasterInstanceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase.sn1.medium</p>
          */
         public Builder masterInstanceType(String masterInstanceType) {
             this.putQueryParameter("MasterInstanceType", masterInstanceType);
@@ -606,7 +642,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * MultiZoneCombination.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-bef-aliyun-com</p>
          */
         public Builder multiZoneCombination(String multiZoneCombination) {
             this.putQueryParameter("MultiZoneCombination", multiZoneCombination);
@@ -615,7 +654,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -642,7 +684,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * PrimaryVSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxe*****</p>
          */
         public Builder primaryVSwitchId(String primaryVSwitchId) {
             this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
@@ -651,7 +696,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * PrimaryZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder primaryZoneId(String primaryZoneId) {
             this.putQueryParameter("PrimaryZoneId", primaryZoneId);
@@ -660,7 +708,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -678,7 +729,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * StandbyVSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-hangxzhouxf****</p>
          */
         public Builder standbyVSwitchId(String standbyVSwitchId) {
             this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
@@ -687,7 +741,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * StandbyZoneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder standbyZoneId(String standbyZoneId) {
             this.putQueryParameter("StandbyZoneId", standbyZoneId);
@@ -696,7 +753,10 @@ public class EvaluateMultiZoneResourceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp120k6ixs4eog*****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

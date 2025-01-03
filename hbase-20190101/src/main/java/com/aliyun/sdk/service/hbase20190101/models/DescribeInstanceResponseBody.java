@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
@@ -802,7 +808,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableHbaseProxy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableHbaseProxy(Boolean enableHbaseProxy) {
             this.enableHbaseProxy = enableHbaseProxy;
@@ -1111,9 +1120,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class NeedUpgradeComps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comps")
-        private java.util.List < String > comps;
+        private java.util.List<String> comps;
 
         private NeedUpgradeComps(Builder builder) {
             this.comps = builder.comps;
@@ -1130,17 +1145,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return comps
          */
-        public java.util.List < String > getComps() {
+        public java.util.List<String> getComps() {
             return this.comps;
         }
 
         public static final class Builder {
-            private java.util.List < String > comps; 
+            private java.util.List<String> comps; 
 
             /**
              * Comps.
              */
-            public Builder comps(java.util.List < String > comps) {
+            public Builder comps(java.util.List<String> comps) {
                 this.comps = comps;
                 return this;
             }
@@ -1152,6 +1167,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1213,9 +1234,15 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -1232,17 +1259,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

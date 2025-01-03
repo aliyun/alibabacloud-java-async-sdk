@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPlanConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPlanConfigRequest</p>
@@ -114,7 +120,10 @@ public class ModifyBackupPlanConfigRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-m5eznlga4k5bcxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +132,10 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
-         * FullBackupCycle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder fullBackupCycle(String fullBackupCycle) {
             this.putQueryParameter("FullBackupCycle", fullBackupCycle);
@@ -132,7 +144,10 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
-         * MinHFileBackupCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minHFileBackupCount(String minHFileBackupCount) {
             this.putQueryParameter("MinHFileBackupCount", minHFileBackupCount);
@@ -141,7 +156,10 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
-         * NextFullBackupDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-09T18:00:00Z</p>
          */
         public Builder nextFullBackupDate(String nextFullBackupDate) {
             this.putQueryParameter("NextFullBackupDate", nextFullBackupDate);
@@ -150,7 +168,12 @@ public class ModifyBackupPlanConfigRequest extends Request {
         }
 
         /**
-         * Tables.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder tables(String tables) {
             this.putQueryParameter("Tables", tables);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupsResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Backup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupDBNames")
         private String backupDBNames;
@@ -411,9 +423,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Backups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backup")
-        private java.util.List < Backup> backup;
+        private java.util.List<Backup> backup;
 
         private Backups(Builder builder) {
             this.backup = builder.backup;
@@ -430,17 +448,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backup
          */
-        public java.util.List < Backup> getBackup() {
+        public java.util.List<Backup> getBackup() {
             return this.backup;
         }
 
         public static final class Builder {
-            private java.util.List < Backup> backup; 
+            private java.util.List<Backup> backup; 
 
             /**
              * Backup.
              */
-            public Builder backup(java.util.List < Backup> backup) {
+            public Builder backup(java.util.List<Backup> backup) {
                 this.backup = backup;
                 return this;
             }

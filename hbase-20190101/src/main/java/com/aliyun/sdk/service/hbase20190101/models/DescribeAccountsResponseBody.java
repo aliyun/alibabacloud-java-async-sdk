@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
@@ -70,9 +76,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("account")
-        private java.util.List < String > account;
+        private java.util.List<String> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -89,17 +101,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < String > getAccount() {
+        public java.util.List<String> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < String > account; 
+            private java.util.List<String> account; 
 
             /**
              * account.
              */
-            public Builder account(java.util.List < String > account) {
+            public Builder account(java.util.List<String> account) {
                 this.account = account;
                 return this;
             }

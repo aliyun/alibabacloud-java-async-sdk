@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityGroupsRequest} extends {@link RequestModel}
  *
  * <p>ModifySecurityGroupsRequest</p>
@@ -69,7 +75,10 @@ public class ModifySecurityGroupsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp16f1441y6p2kv**</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +87,10 @@ public class ModifySecurityGroupsRequest extends Request {
         }
 
         /**
-         * SecurityGroupIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-t4ng4yyc916o81nu****,sg-x4gg4dyc9d6w********</p>
          */
         public Builder securityGroupIds(String securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);

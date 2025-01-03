@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHBaseHaDBRequest} extends {@link RequestModel}
  *
  * <p>DeleteHBaseHaDBRequest</p>
@@ -69,7 +75,10 @@ public class DeleteHBaseHaDBRequest extends Request {
         } 
 
         /**
-         * BdsId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-bp14112fd7g52s1****</p>
          */
         public Builder bdsId(String bdsId) {
             this.putQueryParameter("BdsId", bdsId);
@@ -78,7 +87,10 @@ public class DeleteHBaseHaDBRequest extends Request {
         }
 
         /**
-         * HaId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-sw2o0l01s4r76****</p>
          */
         public Builder haId(String haId) {
             this.putQueryParameter("HaId", haId);

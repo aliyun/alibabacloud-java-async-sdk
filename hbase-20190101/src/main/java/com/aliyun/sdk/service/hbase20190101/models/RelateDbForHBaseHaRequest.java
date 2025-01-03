@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RelateDbForHBaseHaRequest} extends {@link RequestModel}
  *
  * <p>RelateDbForHBaseHaRequest</p>
@@ -341,7 +347,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bds-t4nj9v2x85******</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -350,7 +359,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActive.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1w6krp539******</p>
          */
         public Builder haActive(String haActive) {
             this.putQueryParameter("HaActive", haActive);
@@ -368,7 +380,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaActiveDBType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder haActiveDBType(String haActiveDBType) {
             this.putQueryParameter("HaActiveDBType", haActiveDBType);
@@ -422,7 +437,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaMigrateType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder haMigrateType(String haMigrateType) {
             this.putQueryParameter("HaMigrateType", haMigrateType);
@@ -431,7 +449,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandby.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hb-bp1bl7iqzka******</p>
          */
         public Builder haStandby(String haStandby) {
             this.putQueryParameter("HaStandby", haStandby);
@@ -449,7 +470,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * HaStandbyDBType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbase</p>
          */
         public Builder haStandbyDBType(String haStandbyDBType) {
             this.putQueryParameter("HaStandbyDBType", haStandbyDBType);
@@ -512,7 +536,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * IsActiveStandard.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isActiveStandard(Boolean isActiveStandard) {
             this.putQueryParameter("IsActiveStandard", isActiveStandard);
@@ -521,7 +548,10 @@ public class RelateDbForHBaseHaRequest extends Request {
         }
 
         /**
-         * IsStandbyStandard.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isStandbyStandard(Boolean isStandbyStandard) {
             this.putQueryParameter("IsStandbyStandard", isStandbyStandard);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreFullDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestoreFullDetailsResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestoreFullDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreFullDetailsResponseBody</p>
+     */
     public static class RestoreFullDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
@@ -251,9 +263,15 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreFullDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreFullDetailsResponseBody</p>
+     */
     public static class RestoreFullDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RestoreFullDetail")
-        private java.util.List < RestoreFullDetail> restoreFullDetail;
+        private java.util.List<RestoreFullDetail> restoreFullDetail;
 
         private RestoreFullDetails(Builder builder) {
             this.restoreFullDetail = builder.restoreFullDetail;
@@ -270,17 +288,17 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
         /**
          * @return restoreFullDetail
          */
-        public java.util.List < RestoreFullDetail> getRestoreFullDetail() {
+        public java.util.List<RestoreFullDetail> getRestoreFullDetail() {
             return this.restoreFullDetail;
         }
 
         public static final class Builder {
-            private java.util.List < RestoreFullDetail> restoreFullDetail; 
+            private java.util.List<RestoreFullDetail> restoreFullDetail; 
 
             /**
              * RestoreFullDetail.
              */
-            public Builder restoreFullDetail(java.util.List < RestoreFullDetail> restoreFullDetail) {
+            public Builder restoreFullDetail(java.util.List<RestoreFullDetail> restoreFullDetail) {
                 this.restoreFullDetail = restoreFullDetail;
                 return this;
             }
@@ -292,6 +310,12 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestoreFullDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestoreFullDetailsResponseBody</p>
+     */
     public static class RestoreFull extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
