@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -414,7 +419,7 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("Regions")
-        private java.util.List < Regions> regions;
+        private java.util.List<Regions> regions;
 
         private CrossRegionCopyInfo(Builder builder) {
             this.enabled = builder.enabled;
@@ -439,13 +444,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * @return regions
          */
-        public java.util.List < Regions> getRegions() {
+        public java.util.List<Regions> getRegions() {
             return this.regions;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < Regions> regions; 
+            private java.util.List<Regions> regions; 
 
             /**
              * <p>Whether cross-region replication is enabled. The range of values:</p>
@@ -467,7 +472,7 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
             /**
              * <p>Destination region information.</p>
              */
-            public Builder regions(java.util.List < Regions> regions) {
+            public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
                 return this;
             }
@@ -747,7 +752,7 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private SpecialRetainRules(Builder builder) {
             this.enabled = builder.enabled;
@@ -772,13 +777,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * <p>Indicates whether the special retention is enabled.</p>
@@ -798,7 +803,7 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
             /**
              * <p>The special retention rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

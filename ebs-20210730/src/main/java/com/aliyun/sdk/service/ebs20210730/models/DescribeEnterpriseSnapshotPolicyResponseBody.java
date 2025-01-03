@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -93,7 +98,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
         private Long totalCount; 
 
@@ -133,7 +138,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         /**
          * <p>The returned snapshot policies.</p>
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
@@ -250,7 +255,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("Regions")
-        private java.util.List < Regions> regions;
+        private java.util.List<Regions> regions;
 
         private CrossRegionCopyInfo(Builder builder) {
             this.enabled = builder.enabled;
@@ -275,13 +280,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         /**
          * @return regions
          */
-        public java.util.List < Regions> getRegions() {
+        public java.util.List<Regions> getRegions() {
             return this.regions;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < Regions> regions; 
+            private java.util.List<Regions> regions; 
 
             /**
              * <p>Indicates whether the cross-region replication feature is enabled.</p>
@@ -297,7 +302,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             /**
              * <p>The destination regions that store snapshot copies.</p>
              */
-            public Builder regions(java.util.List < Regions> regions) {
+            public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
                 return this;
             }
@@ -559,7 +564,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private SpecialRetainRules(Builder builder) {
             this.enabled = builder.enabled;
@@ -584,13 +589,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * <p>Indicates whether the special retention period is enabled.</p>
@@ -606,7 +611,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             /**
              * <p>The special retention rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -758,7 +763,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("DiskIds")
-        private java.util.List < String > diskIds;
+        private java.util.List<String> diskIds;
 
         @com.aliyun.core.annotation.NameInMap("ManagedForEcs")
         private Boolean managedForEcs;
@@ -788,7 +793,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         private StorageRule storageRule;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TargetCount")
         private Integer targetCount;
@@ -847,7 +852,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         /**
          * @return diskIds
          */
-        public java.util.List < String > getDiskIds() {
+        public java.util.List<String> getDiskIds() {
             return this.diskIds;
         }
 
@@ -917,7 +922,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -939,7 +944,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private String createTime; 
             private CrossRegionCopyInfo crossRegionCopyInfo; 
             private String desc; 
-            private java.util.List < String > diskIds; 
+            private java.util.List<String> diskIds; 
             private Boolean managedForEcs; 
             private String name; 
             private String policyId; 
@@ -949,7 +954,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             private SpecialRetainRules specialRetainRules; 
             private String state; 
             private StorageRule storageRule; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer targetCount; 
             private String targetType; 
 
@@ -986,7 +991,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             /**
              * <p>The disks that are associated with the snapshot policy.</p>
              */
-            public Builder diskIds(java.util.List < String > diskIds) {
+            public Builder diskIds(java.util.List<String> diskIds) {
                 this.diskIds = diskIds;
                 return this;
             }
@@ -1081,7 +1086,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             /**
              * <p>the pair tags</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

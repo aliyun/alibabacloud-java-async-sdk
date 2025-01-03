@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -61,7 +66,7 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -81,7 +86,7 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSolutionInstanceConfigurationRequest, Builder> {
         private String clientToken; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String regionId; 
         private String solutionId; 
 
@@ -112,7 +117,7 @@ public class DescribeSolutionInstanceConfigurationRequest extends Request {
         /**
          * <p>The parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;

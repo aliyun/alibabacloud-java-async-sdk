@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MonitorData")
-    private java.util.List < MonitorData> monitorData;
+    private java.util.List<MonitorData> monitorData;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     /**
      * @return monitorData
      */
-    public java.util.List < MonitorData> getMonitorData() {
+    public java.util.List<MonitorData> getMonitorData() {
         return this.monitorData;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MonitorData> monitorData; 
+        private java.util.List<MonitorData> monitorData; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The near real-time monitoring data of the disk.</p>
          */
-        public Builder monitorData(java.util.List < MonitorData> monitorData) {
+        public Builder monitorData(java.util.List<MonitorData> monitorData) {
             this.monitorData = monitorData;
             return this;
         }

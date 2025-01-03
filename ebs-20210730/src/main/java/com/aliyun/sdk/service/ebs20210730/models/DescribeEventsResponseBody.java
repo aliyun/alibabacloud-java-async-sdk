@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceEvents")
-    private java.util.List < ResourceEvents> resourceEvents;
+    private java.util.List<ResourceEvents> resourceEvents;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -56,7 +61,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     /**
      * @return resourceEvents
      */
-    public java.util.List < ResourceEvents> getResourceEvents() {
+    public java.util.List<ResourceEvents> getResourceEvents() {
         return this.resourceEvents;
     }
 
@@ -70,7 +75,7 @@ public class DescribeEventsResponseBody extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceEvents> resourceEvents; 
+        private java.util.List<ResourceEvents> resourceEvents; 
         private Integer totalCount; 
 
         /**
@@ -98,7 +103,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         /**
          * <p>The events.</p>
          */
-        public Builder resourceEvents(java.util.List < ResourceEvents> resourceEvents) {
+        public Builder resourceEvents(java.util.List<ResourceEvents> resourceEvents) {
             this.resourceEvents = resourceEvents;
             return this;
         }
@@ -142,6 +147,9 @@ public class DescribeEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
+        @com.aliyun.core.annotation.NameInMap("ExtraAttributes")
+        private String extraAttributes;
+
         @com.aliyun.core.annotation.NameInMap("RecommendAction")
         private String recommendAction;
 
@@ -166,6 +174,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             this.eventLevel = builder.eventLevel;
             this.eventName = builder.eventName;
             this.eventType = builder.eventType;
+            this.extraAttributes = builder.extraAttributes;
             this.recommendAction = builder.recommendAction;
             this.recommendParams = builder.recommendParams;
             this.resourceId = builder.resourceId;
@@ -218,6 +227,13 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return extraAttributes
+         */
+        public String getExtraAttributes() {
+            return this.extraAttributes;
+        }
+
+        /**
          * @return recommendAction
          */
         public String getRecommendAction() {
@@ -265,6 +281,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String eventLevel; 
             private String eventName; 
             private String eventType; 
+            private String extraAttributes; 
             private String recommendAction; 
             private String recommendParams; 
             private String resourceId; 
@@ -348,6 +365,21 @@ public class DescribeEventsResponseBody extends TeaModel {
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
+                return this;
+            }
+
+            /**
+             * <p>Extra attributes of event, possible fields are:</p>
+             * <ul>
+             * <li>EcsInstanceId: ECS instance ID where the cloud disk is mounted;</li>
+             * <li>Adapter: cloud disk mount point.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;EcsInstanceId&quot;:&quot;i-uf6dkn9qpcw6y94g7ag7&quot;,&quot;Adapter&quot;:&quot;hda&quot;}</p>
+             */
+            public Builder extraAttributes(String extraAttributes) {
+                this.extraAttributes = extraAttributes;
                 return this;
             }
 

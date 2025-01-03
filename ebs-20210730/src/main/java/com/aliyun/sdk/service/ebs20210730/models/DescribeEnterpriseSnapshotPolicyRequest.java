@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskIds")
-    private java.util.List < String > diskIds;
+    private java.util.List<String> diskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -38,7 +43,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyIds")
-    private java.util.List < String > policyIds;
+    private java.util.List<String> policyIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -51,7 +56,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeEnterpriseSnapshotPolicyRequest(Builder builder) {
         super(builder);
@@ -90,7 +95,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
     /**
      * @return diskIds
      */
-    public java.util.List < String > getDiskIds() {
+    public java.util.List<String> getDiskIds() {
         return this.diskIds;
     }
 
@@ -125,7 +130,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
     /**
      * @return policyIds
      */
-    public java.util.List < String > getPolicyIds() {
+    public java.util.List<String> getPolicyIds() {
         return this.policyIds;
     }
 
@@ -146,21 +151,21 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeEnterpriseSnapshotPolicyRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > diskIds; 
+        private java.util.List<String> diskIds; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > policyIds; 
+        private java.util.List<String> policyIds; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -195,7 +200,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * <p>The IDs of disks.</p>
          */
-        public Builder diskIds(java.util.List < String > diskIds) {
+        public Builder diskIds(java.util.List<String> diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
             this.diskIds = diskIds;
             return this;
@@ -252,7 +257,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * <p>The IDs of enterprise-level snapshot policies.</p>
          */
-        public Builder policyIds(java.util.List < String > policyIds) {
+        public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;
@@ -286,7 +291,7 @@ public class DescribeEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * <p>The tags of the enterprise-level snapshot policies. Valid values of N: 1 to 20.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

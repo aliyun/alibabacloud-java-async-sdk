@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Drills")
-    private java.util.List < Drills> drills;
+    private java.util.List<Drills> drills;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
     /**
      * @return drills
      */
-    public java.util.List < Drills> getDrills() {
+    public java.util.List<Drills> getDrills() {
         return this.drills;
     }
 
@@ -90,7 +95,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Drills> drills; 
+        private java.util.List<Drills> drills; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -100,7 +105,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         /**
          * <p>The information of disaster recovery drills that were performed on the replication pair-consistent group.</p>
          */
-        public Builder drills(java.util.List < Drills> drills) {
+        public Builder drills(java.util.List<Drills> drills) {
             this.drills = drills;
             return this;
         }
@@ -285,7 +290,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         private String groupId;
 
         @com.aliyun.core.annotation.NameInMap("PairsInfo")
-        private java.util.List < PairsInfo> pairsInfo;
+        private java.util.List<PairsInfo> pairsInfo;
 
         @com.aliyun.core.annotation.NameInMap("RecoverPoint")
         private Long recoverPoint;
@@ -334,7 +339,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         /**
          * @return pairsInfo
          */
-        public java.util.List < PairsInfo> getPairsInfo() {
+        public java.util.List<PairsInfo> getPairsInfo() {
             return this.pairsInfo;
         }
 
@@ -369,7 +374,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
         public static final class Builder {
             private String drillId; 
             private String groupId; 
-            private java.util.List < PairsInfo> pairsInfo; 
+            private java.util.List<PairsInfo> pairsInfo; 
             private Long recoverPoint; 
             private Long startAt; 
             private String status; 
@@ -400,7 +405,7 @@ public class DescribeReplicaGroupDrillsResponseBody extends TeaModel {
             /**
              * <p>The information of replication pairs.</p>
              */
-            public Builder pairsInfo(java.util.List < PairsInfo> pairsInfo) {
+            public Builder pairsInfo(java.util.List<PairsInfo> pairsInfo) {
                 this.pairsInfo = pairsInfo;
                 return this;
             }

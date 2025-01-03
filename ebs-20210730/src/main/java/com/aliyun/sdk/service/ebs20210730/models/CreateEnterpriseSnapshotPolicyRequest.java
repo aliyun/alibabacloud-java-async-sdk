@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -62,7 +67,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
@@ -179,7 +184,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -202,7 +207,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         private SpecialRetainRules specialRetainRules; 
         private String state; 
         private StorageRule storageRule; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetType; 
 
         private Builder() {
@@ -361,7 +366,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -474,7 +479,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("Regions")
-        private java.util.List < Regions> regions;
+        private java.util.List<Regions> regions;
 
         private CrossRegionCopyInfo(Builder builder) {
             this.enabled = builder.enabled;
@@ -499,13 +504,13 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * @return regions
          */
-        public java.util.List < Regions> getRegions() {
+        public java.util.List<Regions> getRegions() {
             return this.regions;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < Regions> regions; 
+            private java.util.List<Regions> regions; 
 
             /**
              * <p>Whether cross-region replication is enabled. The range of values:</p>
@@ -527,7 +532,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             /**
              * <p>The list of destination regions.</p>
              */
-            public Builder regions(java.util.List < Regions> regions) {
+            public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;
                 return this;
             }
@@ -809,7 +814,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private SpecialRetainRules(Builder builder) {
             this.enabled = builder.enabled;
@@ -834,13 +839,13 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * <p>Indicates whether the special retention is enabled.</p>
@@ -860,7 +865,7 @@ public class CreateEnterpriseSnapshotPolicyRequest extends Request {
             /**
              * <p>The special retention rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

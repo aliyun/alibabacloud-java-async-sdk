@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Datas")
-    private java.util.List < Datas> datas;
+    private java.util.List<Datas> datas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetReportResponseBody extends TeaModel {
     /**
      * @return datas
      */
-    public java.util.List < Datas> getDatas() {
+    public java.util.List<Datas> getDatas() {
         return this.datas;
     }
 
@@ -46,13 +51,13 @@ public class GetReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Datas> datas; 
+        private java.util.List<Datas> datas; 
         private String requestId; 
 
         /**
          * <p>Data Details.</p>
          */
-        public Builder datas(java.util.List < Datas> datas) {
+        public Builder datas(java.util.List<Datas> datas) {
             this.datas = datas;
             return this;
         }
@@ -82,10 +87,10 @@ public class GetReportResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataPoints")
-        private java.util.Map < String, ? > dataPoints;
+        private java.util.Map<String, ?> dataPoints;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.Map < String, ? > labels;
+        private java.util.Map<String, ?> labels;
 
         private Data(Builder builder) {
             this.dataPoints = builder.dataPoints;
@@ -103,20 +108,20 @@ public class GetReportResponseBody extends TeaModel {
         /**
          * @return dataPoints
          */
-        public java.util.Map < String, ? > getDataPoints() {
+        public java.util.Map<String, ?> getDataPoints() {
             return this.dataPoints;
         }
 
         /**
          * @return labels
          */
-        public java.util.Map < String, ? > getLabels() {
+        public java.util.Map<String, ?> getLabels() {
             return this.labels;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > dataPoints; 
-            private java.util.Map < String, ? > labels; 
+            private java.util.Map<String, ?> dataPoints; 
+            private java.util.Map<String, ?> labels; 
 
             /**
              * <p>Data Points.</p>
@@ -133,7 +138,7 @@ public class GetReportResponseBody extends TeaModel {
              *   &quot;1727020800&quot;: 0.43
              * }</p>
              */
-            public Builder dataPoints(java.util.Map < String, ? > dataPoints) {
+            public Builder dataPoints(java.util.Map<String, ?> dataPoints) {
                 this.dataPoints = dataPoints;
                 return this;
             }
@@ -146,7 +151,7 @@ public class GetReportResponseBody extends TeaModel {
              *   &quot;category&quot;: &quot;cloud&quot;
              * }</p>
              */
-            public Builder labels(java.util.Map < String, ? > labels) {
+            public Builder labels(java.util.Map<String, ?> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -166,7 +171,7 @@ public class GetReportResponseBody extends TeaModel {
      */
     public static class Datas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -187,7 +192,7 @@ public class GetReportResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -199,13 +204,13 @@ public class GetReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String title; 
 
             /**
              * <p>Data.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

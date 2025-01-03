@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -46,13 +51,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
 
         /**
          * <p>Details about the regions.</p>
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
@@ -85,7 +90,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String localName;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypes")
-        private java.util.List < String > resourceTypes;
+        private java.util.List<String> resourceTypes;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -114,7 +119,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return resourceTypes
          */
-        public java.util.List < String > getResourceTypes() {
+        public java.util.List<String> getResourceTypes() {
             return this.resourceTypes;
         }
 
@@ -127,7 +132,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String localName; 
-            private java.util.List < String > resourceTypes; 
+            private java.util.List<String> resourceTypes; 
             private String zoneId; 
 
             /**
@@ -144,7 +149,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             /**
              * <p>The type of resource list.</p>
              */
-            public Builder resourceTypes(java.util.List < String > resourceTypes) {
+            public Builder resourceTypes(java.util.List<String> resourceTypes) {
                 this.resourceTypes = resourceTypes;
                 return this;
             }
@@ -184,7 +189,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < Zones> zones;
+        private java.util.List<Zones> zones;
 
         private Regions(Builder builder) {
             this.localName = builder.localName;
@@ -225,7 +230,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < Zones> getZones() {
+        public java.util.List<Zones> getZones() {
             return this.zones;
         }
 
@@ -233,7 +238,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String localName; 
             private String regionEndpoint; 
             private String regionId; 
-            private java.util.List < Zones> zones; 
+            private java.util.List<Zones> zones; 
 
             /**
              * <p>The name of the region.</p>
@@ -271,7 +276,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             /**
              * <p>Details about the zones.</p>
              */
-            public Builder zones(java.util.List < Zones> zones) {
+            public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;
                 return this;
             }

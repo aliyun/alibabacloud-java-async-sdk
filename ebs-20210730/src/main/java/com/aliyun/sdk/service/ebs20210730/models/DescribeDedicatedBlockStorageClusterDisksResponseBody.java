@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -268,7 +273,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         private Integer storageSetPartitionNumber;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Throughput")
         private Long throughput;
@@ -537,7 +542,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -593,7 +598,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             private String storageClusterId; 
             private String storageSetId; 
             private Integer storageSetPartitionNumber; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long throughput; 
             private String type; 
             private String zoneId; 
@@ -973,7 +978,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
             /**
              * <p>The tags of the cloud disk.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1030,7 +1035,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
      */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disk")
-        private java.util.List < Disk> disk;
+        private java.util.List<Disk> disk;
 
         private Disks(Builder builder) {
             this.disk = builder.disk;
@@ -1047,17 +1052,17 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
         /**
          * @return disk
          */
-        public java.util.List < Disk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
         public static final class Builder {
-            private java.util.List < Disk> disk; 
+            private java.util.List<Disk> disk; 
 
             /**
              * <p>Details about the cloud disks.</p>
              */
-            public Builder disk(java.util.List < Disk> disk) {
+            public Builder disk(java.util.List<Disk> disk) {
                 this.disk = disk;
                 return this;
             }

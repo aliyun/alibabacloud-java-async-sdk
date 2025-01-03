@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DiskInfos")
-    private java.util.List < DiskInfos> diskInfos;
+    private java.util.List<DiskInfos> diskInfos;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     /**
      * @return diskInfos
      */
-    public java.util.List < DiskInfos> getDiskInfos() {
+    public java.util.List<DiskInfos> getDiskInfos() {
         return this.diskInfos;
     }
 
@@ -68,7 +73,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DiskInfos> diskInfos; 
+        private java.util.List<DiskInfos> diskInfos; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
@@ -76,7 +81,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         /**
          * <p>Cloud disk information list.</p>
          */
-        public Builder diskInfos(java.util.List < DiskInfos> diskInfos) {
+        public Builder diskInfos(java.util.List<DiskInfos> diskInfos) {
             this.diskInfos = diskInfos;
             return this;
         }
@@ -225,7 +230,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         private Integer iops;
 
         @com.aliyun.core.annotation.NameInMap("LensTags")
-        private java.util.List < String > lensTags;
+        private java.util.List<String> lensTags;
 
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
@@ -240,7 +245,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         private Integer size;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -330,7 +335,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         /**
          * @return lensTags
          */
-        public java.util.List < String > getLensTags() {
+        public java.util.List<String> getLensTags() {
             return this.lensTags;
         }
 
@@ -365,7 +370,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -385,12 +390,12 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             private String diskStatus; 
             private String diskType; 
             private Integer iops; 
-            private java.util.List < String > lensTags; 
+            private java.util.List<String> lensTags; 
             private String performanceLevel; 
             private Integer provisionedIops; 
             private String regionId; 
             private Integer size; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String zoneId; 
 
             /**
@@ -505,7 +510,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             /**
              * <p>Event tags of the disk.</p>
              */
-            public Builder lensTags(java.util.List < String > lensTags) {
+            public Builder lensTags(java.util.List<String> lensTags) {
                 this.lensTags = lensTags;
                 return this;
             }
@@ -567,7 +572,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             /**
              * <p>Tags of the disk.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

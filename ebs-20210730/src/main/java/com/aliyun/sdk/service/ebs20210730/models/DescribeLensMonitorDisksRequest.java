@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,12 +22,16 @@ public class DescribeLensMonitorDisksRequest extends Request {
     private String diskCategory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskIdPattern")
+    private String diskIdPattern;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskIds")
-    private java.util.List < String > diskIds;
+    private java.util.List<String> diskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LensTags")
-    private java.util.List < String > lensTags;
+    private java.util.List<String> lensTags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -40,6 +49,7 @@ public class DescribeLensMonitorDisksRequest extends Request {
     private DescribeLensMonitorDisksRequest(Builder builder) {
         super(builder);
         this.diskCategory = builder.diskCategory;
+        this.diskIdPattern = builder.diskIdPattern;
         this.diskIds = builder.diskIds;
         this.lensTags = builder.lensTags;
         this.maxResults = builder.maxResults;
@@ -68,16 +78,23 @@ public class DescribeLensMonitorDisksRequest extends Request {
     }
 
     /**
+     * @return diskIdPattern
+     */
+    public String getDiskIdPattern() {
+        return this.diskIdPattern;
+    }
+
+    /**
      * @return diskIds
      */
-    public java.util.List < String > getDiskIds() {
+    public java.util.List<String> getDiskIds() {
         return this.diskIds;
     }
 
     /**
      * @return lensTags
      */
-    public java.util.List < String > getLensTags() {
+    public java.util.List<String> getLensTags() {
         return this.lensTags;
     }
 
@@ -104,8 +121,9 @@ public class DescribeLensMonitorDisksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeLensMonitorDisksRequest, Builder> {
         private String diskCategory; 
-        private java.util.List < String > diskIds; 
-        private java.util.List < String > lensTags; 
+        private String diskIdPattern; 
+        private java.util.List<String> diskIds; 
+        private java.util.List<String> lensTags; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -117,6 +135,7 @@ public class DescribeLensMonitorDisksRequest extends Request {
         private Builder(DescribeLensMonitorDisksRequest request) {
             super(request);
             this.diskCategory = request.diskCategory;
+            this.diskIdPattern = request.diskIdPattern;
             this.diskIds = request.diskIds;
             this.lensTags = request.lensTags;
             this.maxResults = request.maxResults;
@@ -145,12 +164,21 @@ public class DescribeLensMonitorDisksRequest extends Request {
         }
 
         /**
+         * DiskIdPattern.
+         */
+        public Builder diskIdPattern(String diskIdPattern) {
+            this.putQueryParameter("DiskIdPattern", diskIdPattern);
+            this.diskIdPattern = diskIdPattern;
+            return this;
+        }
+
+        /**
          * <p>The list of disks.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;d-1&quot;, &quot;d-2&quot;]</p>
          */
-        public Builder diskIds(java.util.List < String > diskIds) {
+        public Builder diskIds(java.util.List<String> diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
             this.diskIds = diskIds;
             return this;
@@ -174,7 +202,7 @@ public class DescribeLensMonitorDisksRequest extends Request {
          * <li>DiskSlowIOTriggerred: specifies the event that is triggered when the I/O speed on the disk is slow.</li>
          * </ul>
          */
-        public Builder lensTags(java.util.List < String > lensTags) {
+        public Builder lensTags(java.util.List<String> lensTags) {
             this.putQueryParameter("LensTags", lensTags);
             this.lensTags = lensTags;
             return this;

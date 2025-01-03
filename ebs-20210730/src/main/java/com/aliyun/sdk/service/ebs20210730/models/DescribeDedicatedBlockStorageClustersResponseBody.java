@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DedicatedBlockStorageClusters")
-    private java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters;
+    private java.util.List<DedicatedBlockStorageClusters> dedicatedBlockStorageClusters;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     /**
      * @return dedicatedBlockStorageClusters
      */
-    public java.util.List < DedicatedBlockStorageClusters> getDedicatedBlockStorageClusters() {
+    public java.util.List<DedicatedBlockStorageClusters> getDedicatedBlockStorageClusters() {
         return this.dedicatedBlockStorageClusters;
     }
 
@@ -90,7 +95,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static final class Builder {
-        private java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters; 
+        private java.util.List<DedicatedBlockStorageClusters> dedicatedBlockStorageClusters; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -100,7 +105,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         /**
          * <p>Details about the dedicated block storage clusters.</p>
          */
-        public Builder dedicatedBlockStorageClusters(java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters) {
+        public Builder dedicatedBlockStorageClusters(java.util.List<DedicatedBlockStorageClusters> dedicatedBlockStorageClusters) {
             this.dedicatedBlockStorageClusters = dedicatedBlockStorageClusters;
             return this;
         }
@@ -598,7 +603,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         private String supportedCategory;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -751,7 +756,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -786,7 +791,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             private String status; 
             private String storageDomain; 
             private String supportedCategory; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private String zoneId; 
 
@@ -981,7 +986,7 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             /**
              * <p>The tags of the dedicated block storage cluster.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

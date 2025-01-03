@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UnbindEnterpriseSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskTargets")
-    private java.util.List < String > diskTargets;
+    private java.util.List<String> diskTargets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyId")
@@ -61,7 +66,7 @@ public class UnbindEnterpriseSnapshotPolicyRequest extends Request {
     /**
      * @return diskTargets
      */
-    public java.util.List < String > getDiskTargets() {
+    public java.util.List<String> getDiskTargets() {
         return this.diskTargets;
     }
 
@@ -81,7 +86,7 @@ public class UnbindEnterpriseSnapshotPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<UnbindEnterpriseSnapshotPolicyRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > diskTargets; 
+        private java.util.List<String> diskTargets; 
         private String policyId; 
         private String regionId; 
 
@@ -112,7 +117,7 @@ public class UnbindEnterpriseSnapshotPolicyRequest extends Request {
         /**
          * <p>The list of disks.</p>
          */
-        public Builder diskTargets(java.util.List < String > diskTargets) {
+        public Builder diskTargets(java.util.List<String> diskTargets) {
             this.putQueryParameter("DiskTargets", diskTargets);
             this.diskTargets = diskTargets;
             return this;

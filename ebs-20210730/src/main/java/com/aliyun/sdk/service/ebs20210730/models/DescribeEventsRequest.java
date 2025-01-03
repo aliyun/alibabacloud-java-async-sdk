@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,6 +20,10 @@ public class DescribeEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventLevel")
+    private String eventLevel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventName")
@@ -53,6 +62,7 @@ public class DescribeEventsRequest extends Request {
     private DescribeEventsRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.eventLevel = builder.eventLevel;
         this.eventName = builder.eventName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -81,6 +91,13 @@ public class DescribeEventsRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return eventLevel
+     */
+    public String getEventLevel() {
+        return this.eventLevel;
     }
 
     /**
@@ -141,6 +158,7 @@ public class DescribeEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeEventsRequest, Builder> {
         private String endTime; 
+        private String eventLevel; 
         private String eventName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -157,6 +175,7 @@ public class DescribeEventsRequest extends Request {
         private Builder(DescribeEventsRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.eventLevel = request.eventLevel;
             this.eventName = request.eventName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -176,6 +195,23 @@ public class DescribeEventsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>The severity level of the event. Valid values:</p>
+         * <ul>
+         * <li><strong>INFO</strong></li>
+         * <li><strong>WARN</strong></li>
+         * <li><strong>CRITICAL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WARN</p>
+         */
+        public Builder eventLevel(String eventLevel) {
+            this.putQueryParameter("EventLevel", eventLevel);
+            this.eventLevel = eventLevel;
             return this;
         }
 
@@ -206,9 +242,9 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page. If you specify MaxResults, <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
+         * <p>The number of entries to return on each page. If you specify MaxResults, <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
          * <p>Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>Default value: 10</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

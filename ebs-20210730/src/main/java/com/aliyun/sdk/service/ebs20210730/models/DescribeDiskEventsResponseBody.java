@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDiskEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DiskEvents")
-    private java.util.List < DiskEvents> diskEvents;
+    private java.util.List<DiskEvents> diskEvents;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
     /**
      * @return diskEvents
      */
-    public java.util.List < DiskEvents> getDiskEvents() {
+    public java.util.List<DiskEvents> getDiskEvents() {
         return this.diskEvents;
     }
 
@@ -68,7 +73,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DiskEvents> diskEvents; 
+        private java.util.List<DiskEvents> diskEvents; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
@@ -76,7 +81,7 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
         /**
          * <p>The risk events of the disk.</p>
          */
-        public Builder diskEvents(java.util.List < DiskEvents> diskEvents) {
+        public Builder diskEvents(java.util.List<DiskEvents> diskEvents) {
             this.diskEvents = diskEvents;
             return this;
         }

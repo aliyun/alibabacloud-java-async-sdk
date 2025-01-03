@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMetricDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The disk monitoring data.</p>
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("ReplicaGroups")
-    private java.util.List < ReplicaGroups> replicaGroups;
+    private java.util.List<ReplicaGroups> replicaGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     /**
      * @return replicaGroups
      */
-    public java.util.List < ReplicaGroups> getReplicaGroups() {
+    public java.util.List<ReplicaGroups> getReplicaGroups() {
         return this.replicaGroups;
     }
 
@@ -93,7 +98,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ReplicaGroups> replicaGroups; 
+        private java.util.List<ReplicaGroups> replicaGroups; 
         private String requestId; 
         private Long totalCount; 
 
@@ -133,7 +138,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         /**
          * <p>The information about the replication pair-consistent groups.</p>
          */
-        public Builder replicaGroups(java.util.List < ReplicaGroups> replicaGroups) {
+        public Builder replicaGroups(java.util.List<ReplicaGroups> replicaGroups) {
             this.replicaGroups = replicaGroups;
             return this;
         }
@@ -265,7 +270,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private Long lastRecoverPoint;
 
         @com.aliyun.core.annotation.NameInMap("PairIds")
-        private java.util.List < byte[] > pairIds;
+        private java.util.List<byte[]> pairIds;
 
         @com.aliyun.core.annotation.NameInMap("PairNumber")
         private Long pairNumber;
@@ -304,7 +309,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private ReplicaGroups(Builder builder) {
             this.bandwidth = builder.bandwidth;
@@ -382,7 +387,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         /**
          * @return pairIds
          */
-        public java.util.List < byte[] > getPairIds() {
+        public java.util.List<byte[]> getPairIds() {
             return this.pairIds;
         }
 
@@ -473,7 +478,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -484,7 +489,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String destinationZoneId; 
             private String groupName; 
             private Long lastRecoverPoint; 
-            private java.util.List < byte[] > pairIds; 
+            private java.util.List<byte[]> pairIds; 
             private Long pairNumber; 
             private String primaryRegion; 
             private String primaryZone; 
@@ -497,7 +502,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String standbyRegion; 
             private String standbyZone; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The bandwidth value. Unit: Kbit/s. This parameter is not publicly available and has a system-preset value.</p>
@@ -568,7 +573,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             /**
              * <p>The IDs of replication pairs that belong to the replication pair-consistent group.</p>
              */
-            public Builder pairIds(java.util.List < byte[] > pairIds) {
+            public Builder pairIds(java.util.List<byte[]> pairIds) {
                 this.pairIds = pairIds;
                 return this;
             }
@@ -732,7 +737,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             /**
              * <p>The tags of the replication pair-consistent group.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

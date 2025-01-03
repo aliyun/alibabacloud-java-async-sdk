@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("ReplicaPairs")
-    private java.util.List < ReplicaPairs> replicaPairs;
+    private java.util.List<ReplicaPairs> replicaPairs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     /**
      * @return replicaPairs
      */
-    public java.util.List < ReplicaPairs> getReplicaPairs() {
+    public java.util.List<ReplicaPairs> getReplicaPairs() {
         return this.replicaPairs;
     }
 
@@ -93,7 +98,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ReplicaPairs> replicaPairs; 
+        private java.util.List<ReplicaPairs> replicaPairs; 
         private String requestId; 
         private Long totalCount; 
 
@@ -133,7 +138,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         /**
          * <p>Details about the replication pairs.</p>
          */
-        public Builder replicaPairs(java.util.List < ReplicaPairs> replicaPairs) {
+        public Builder replicaPairs(java.util.List<ReplicaPairs> replicaPairs) {
             this.replicaPairs = replicaPairs;
             return this;
         }
@@ -322,7 +327,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         private String statusMessage;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private ReplicaPairs(Builder builder) {
             this.bandwidth = builder.bandwidth;
@@ -539,7 +544,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -569,7 +574,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String standbyZone; 
             private String status; 
             private String statusMessage; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The bandwidth used to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s.</p>
@@ -886,7 +891,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             /**
              * <p>The tags of the replication pair.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
