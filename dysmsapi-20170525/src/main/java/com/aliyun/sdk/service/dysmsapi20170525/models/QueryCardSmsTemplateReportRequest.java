@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class QueryCardSmsTemplateReportRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateCodes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > templateCodes;
+    private java.util.List<String> templateCodes;
 
     private QueryCardSmsTemplateReportRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class QueryCardSmsTemplateReportRequest extends Request {
     /**
      * @return templateCodes
      */
-    public java.util.List < String > getTemplateCodes() {
+    public java.util.List<String> getTemplateCodes() {
         return this.templateCodes;
     }
 
     public static final class Builder extends Request.Builder<QueryCardSmsTemplateReportRequest, Builder> {
         private String endDate; 
         private String startDate; 
-        private java.util.List < String > templateCodes; 
+        private java.util.List<String> templateCodes; 
 
         private Builder() {
             super();
@@ -110,7 +115,7 @@ public class QueryCardSmsTemplateReportRequest extends Request {
          * <p>The array of message templates.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder templateCodes(java.util.List < String > templateCodes) {
+        public Builder templateCodes(java.util.List<String> templateCodes) {
             this.putQueryParameter("TemplateCodes", templateCodes);
             this.templateCodes = templateCodes;
             return this;

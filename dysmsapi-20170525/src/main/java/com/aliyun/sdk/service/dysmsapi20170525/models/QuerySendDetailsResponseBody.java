@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -375,7 +380,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
      */
     public static class SmsSendDetailDTOs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SmsSendDetailDTO")
-        private java.util.List < SmsSendDetailDTO> smsSendDetailDTO;
+        private java.util.List<SmsSendDetailDTO> smsSendDetailDTO;
 
         private SmsSendDetailDTOs(Builder builder) {
             this.smsSendDetailDTO = builder.smsSendDetailDTO;
@@ -392,17 +397,17 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         /**
          * @return smsSendDetailDTO
          */
-        public java.util.List < SmsSendDetailDTO> getSmsSendDetailDTO() {
+        public java.util.List<SmsSendDetailDTO> getSmsSendDetailDTO() {
             return this.smsSendDetailDTO;
         }
 
         public static final class Builder {
-            private java.util.List < SmsSendDetailDTO> smsSendDetailDTO; 
+            private java.util.List<SmsSendDetailDTO> smsSendDetailDTO; 
 
             /**
              * SmsSendDetailDTO.
              */
-            public Builder smsSendDetailDTO(java.util.List < SmsSendDetailDTO> smsSendDetailDTO) {
+            public Builder smsSendDetailDTO(java.util.List<SmsSendDetailDTO> smsSendDetailDTO) {
                 this.smsSendDetailDTO = smsSendDetailDTO;
                 return this;
             }

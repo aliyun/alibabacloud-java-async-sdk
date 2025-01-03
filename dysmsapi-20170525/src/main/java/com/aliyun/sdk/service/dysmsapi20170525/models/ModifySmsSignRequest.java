@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class ModifySmsSignRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SignFileList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SignFileList> signFileList;
+    private java.util.List<SignFileList> signFileList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SignName")
@@ -104,7 +109,7 @@ public class ModifySmsSignRequest extends Request {
     /**
      * @return signFileList
      */
-    public java.util.List < SignFileList> getSignFileList() {
+    public java.util.List<SignFileList> getSignFileList() {
         return this.signFileList;
     }
 
@@ -134,7 +139,7 @@ public class ModifySmsSignRequest extends Request {
         private String remark; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < SignFileList> signFileList; 
+        private java.util.List<SignFileList> signFileList; 
         private String signName; 
         private Integer signSource; 
         private Integer signType; 
@@ -202,7 +207,7 @@ public class ModifySmsSignRequest extends Request {
          * <p>The list of signature files.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder signFileList(java.util.List < SignFileList> signFileList) {
+        public Builder signFileList(java.util.List<SignFileList> signFileList) {
             this.putBodyParameter("SignFileList", signFileList);
             this.signFileList = signFileList;
             return this;

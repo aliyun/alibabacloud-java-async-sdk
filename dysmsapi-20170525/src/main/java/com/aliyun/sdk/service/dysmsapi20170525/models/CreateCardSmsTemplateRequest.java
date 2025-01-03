@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateCardSmsTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Template")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > template;
+    private java.util.Map<String, ?> template;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
@@ -68,7 +73,7 @@ public class CreateCardSmsTemplateRequest extends Request {
     /**
      * @return template
      */
-    public java.util.Map < String, ? > getTemplate() {
+    public java.util.Map<String, ?> getTemplate() {
         return this.template;
     }
 
@@ -82,7 +87,7 @@ public class CreateCardSmsTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCardSmsTemplateRequest, Builder> {
         private String factorys; 
         private String memo; 
-        private java.util.Map < String, ? > template; 
+        private java.util.Map<String, ?> template; 
         private String templateName; 
 
         private Builder() {
@@ -198,7 +203,7 @@ public class CreateCardSmsTemplateRequest extends Request {
          *        &quot;cardType&quot;:5
          * }</p>
          */
-        public Builder template(java.util.Map < String, ? > template) {
+        public Builder template(java.util.Map<String, ?> template) {
             String templateShrink = shrink(template, "Template", "json");
             this.putQueryParameter("Template", templateShrink);
             this.template = template;

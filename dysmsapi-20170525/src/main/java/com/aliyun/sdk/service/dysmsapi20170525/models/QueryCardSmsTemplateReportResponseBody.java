@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -136,7 +141,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("model")
-        private java.util.List < java.util.Map<String, ?>> model;
+        private java.util.List<java.util.Map<String, ?>> model;
 
         private Data(Builder builder) {
             this.model = builder.model;
@@ -153,17 +158,17 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         /**
          * @return model
          */
-        public java.util.List < java.util.Map<String, ?>> getModel() {
+        public java.util.List<java.util.Map<String, ?>> getModel() {
             return this.model;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> model; 
+            private java.util.List<java.util.Map<String, ?>> model; 
 
             /**
              * <p>The details of the data returned.</p>
              */
-            public Builder model(java.util.List < java.util.Map<String, ?>> model) {
+            public Builder model(java.util.List<java.util.Map<String, ?>> model) {
                 this.model = model;
                 return this;
             }

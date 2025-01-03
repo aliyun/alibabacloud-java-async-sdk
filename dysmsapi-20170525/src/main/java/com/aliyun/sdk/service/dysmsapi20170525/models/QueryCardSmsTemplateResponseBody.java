@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -136,7 +141,7 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Templates")
-        private java.util.List < java.util.Map<String, ?>> templates;
+        private java.util.List<java.util.Map<String, ?>> templates;
 
         private Data(Builder builder) {
             this.templates = builder.templates;
@@ -153,17 +158,17 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
         /**
          * @return templates
          */
-        public java.util.List < java.util.Map<String, ?>> getTemplates() {
+        public java.util.List<java.util.Map<String, ?>> getTemplates() {
             return this.templates;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> templates; 
+            private java.util.List<java.util.Map<String, ?>> templates; 
 
             /**
              * <p>The array of objects.</p>
              */
-            public Builder templates(java.util.List < java.util.Map<String, ?>> templates) {
+            public Builder templates(java.util.List<java.util.Map<String, ?>> templates) {
                 this.templates = templates;
                 return this;
             }

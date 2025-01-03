@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -572,7 +577,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
      */
     public static class FileUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
-        private java.util.List < String > fileUrl;
+        private java.util.List<String> fileUrl;
 
         private FileUrlList(Builder builder) {
             this.fileUrl = builder.fileUrl;
@@ -589,17 +594,17 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         /**
          * @return fileUrl
          */
-        public java.util.List < String > getFileUrl() {
+        public java.util.List<String> getFileUrl() {
             return this.fileUrl;
         }
 
         public static final class Builder {
-            private java.util.List < String > fileUrl; 
+            private java.util.List<String> fileUrl; 
 
             /**
              * FileUrl.
              */
-            public Builder fileUrl(java.util.List < String > fileUrl) {
+            public Builder fileUrl(java.util.List<String> fileUrl) {
                 this.fileUrl = fileUrl;
                 return this;
             }
@@ -619,7 +624,7 @@ public class GetSmsTemplateResponseBody extends TeaModel {
      */
     public static class MoreDataFileUrlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MoreDataFileUrl")
-        private java.util.List < String > moreDataFileUrl;
+        private java.util.List<String> moreDataFileUrl;
 
         private MoreDataFileUrlList(Builder builder) {
             this.moreDataFileUrl = builder.moreDataFileUrl;
@@ -636,17 +641,17 @@ public class GetSmsTemplateResponseBody extends TeaModel {
         /**
          * @return moreDataFileUrl
          */
-        public java.util.List < String > getMoreDataFileUrl() {
+        public java.util.List<String> getMoreDataFileUrl() {
             return this.moreDataFileUrl;
         }
 
         public static final class Builder {
-            private java.util.List < String > moreDataFileUrl; 
+            private java.util.List<String> moreDataFileUrl; 
 
             /**
              * MoreDataFileUrl.
              */
-            public Builder moreDataFileUrl(java.util.List < String > moreDataFileUrl) {
+            public Builder moreDataFileUrl(java.util.List<String> moreDataFileUrl) {
                 this.moreDataFileUrl = moreDataFileUrl;
                 return this;
             }

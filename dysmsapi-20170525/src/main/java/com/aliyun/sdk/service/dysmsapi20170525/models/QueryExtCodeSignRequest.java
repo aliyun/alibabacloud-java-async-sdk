@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QueryExtCodeSignRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExtCode")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String extCode;
 
     @com.aliyun.core.annotation.Query
@@ -39,7 +43,6 @@ public class QueryExtCodeSignRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SignName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String signName;
 
     private QueryExtCodeSignRequest(Builder builder) {
@@ -141,7 +144,6 @@ public class QueryExtCodeSignRequest extends Request {
 
         /**
          * <p>扩展码A3</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>01</p>
@@ -199,7 +201,6 @@ public class QueryExtCodeSignRequest extends Request {
 
         /**
          * <p>签名</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>

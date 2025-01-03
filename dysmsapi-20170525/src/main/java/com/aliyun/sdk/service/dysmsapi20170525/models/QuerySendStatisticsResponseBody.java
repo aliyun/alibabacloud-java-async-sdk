@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -274,7 +279,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetList")
-        private java.util.List < TargetList> targetList;
+        private java.util.List<TargetList> targetList;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
@@ -295,7 +300,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         /**
          * @return targetList
          */
-        public java.util.List < TargetList> getTargetList() {
+        public java.util.List<TargetList> getTargetList() {
             return this.targetList;
         }
 
@@ -307,13 +312,13 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TargetList> targetList; 
+            private java.util.List<TargetList> targetList; 
             private Long totalSize; 
 
             /**
              * <p>The details of the data returned.</p>
              */
-            public Builder targetList(java.util.List < TargetList> targetList) {
+            public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
                 return this;
             }

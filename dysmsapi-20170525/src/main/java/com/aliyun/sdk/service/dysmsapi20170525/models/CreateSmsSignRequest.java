@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateSmsSignRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MoreData")
-    private java.util.List < String > moreData;
+    private java.util.List<String> moreData;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -98,7 +103,7 @@ public class CreateSmsSignRequest extends Request {
     /**
      * @return moreData
      */
-    public java.util.List < String > getMoreData() {
+    public java.util.List<String> getMoreData() {
         return this.moreData;
     }
 
@@ -167,7 +172,7 @@ public class CreateSmsSignRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateSmsSignRequest, Builder> {
         private String applySceneContent; 
-        private java.util.List < String > moreData; 
+        private java.util.List<String> moreData; 
         private Long ownerId; 
         private Long qualificationId; 
         private String remark; 
@@ -223,7 +228,7 @@ public class CreateSmsSignRequest extends Request {
          * <p>Additional information to supplement uploaded business proof documents or screenshots, which helps reviewers understand your business details.</p>
          * <p>This parameter is optional; please fill it out based on your actual needs.</p>
          */
-        public Builder moreData(java.util.List < String > moreData) {
+        public Builder moreData(java.util.List<String> moreData) {
             String moreDataShrink = shrink(moreData, "MoreData", "json");
             this.putQueryParameter("MoreData", moreDataShrink);
             this.moreData = moreData;

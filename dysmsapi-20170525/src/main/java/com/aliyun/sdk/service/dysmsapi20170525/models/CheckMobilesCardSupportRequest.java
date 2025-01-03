@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CheckMobilesCardSupportRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Mobiles")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < java.util.Map<String, ?>> mobiles;
+    private java.util.List<java.util.Map<String, ?>> mobiles;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateCode")
@@ -44,7 +49,7 @@ public class CheckMobilesCardSupportRequest extends Request {
     /**
      * @return mobiles
      */
-    public java.util.List < java.util.Map<String, ?>> getMobiles() {
+    public java.util.List<java.util.Map<String, ?>> getMobiles() {
         return this.mobiles;
     }
 
@@ -56,7 +61,7 @@ public class CheckMobilesCardSupportRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckMobilesCardSupportRequest, Builder> {
-        private java.util.List < java.util.Map<String, ?>> mobiles; 
+        private java.util.List<java.util.Map<String, ?>> mobiles; 
         private String templateCode; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class CheckMobilesCardSupportRequest extends Request {
          * <p>The list of mobile phone numbers that receive messages.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder mobiles(java.util.List < java.util.Map<String, ?>> mobiles) {
+        public Builder mobiles(java.util.List<java.util.Map<String, ?>> mobiles) {
             this.putQueryParameter("Mobiles", mobiles);
             this.mobiles = mobiles;
             return this;

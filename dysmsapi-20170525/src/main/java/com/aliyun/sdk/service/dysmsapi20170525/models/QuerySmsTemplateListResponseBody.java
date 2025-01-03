@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SmsTemplateList")
-    private java.util.List < SmsTemplateList> smsTemplateList;
+    private java.util.List<SmsTemplateList> smsTemplateList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -89,7 +94,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     /**
      * @return smsTemplateList
      */
-    public java.util.List < SmsTemplateList> getSmsTemplateList() {
+    public java.util.List<SmsTemplateList> getSmsTemplateList() {
         return this.smsTemplateList;
     }
 
@@ -106,7 +111,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         private String message; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SmsTemplateList> smsTemplateList; 
+        private java.util.List<SmsTemplateList> smsTemplateList; 
         private Long totalCount; 
 
         /**
@@ -171,7 +176,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         /**
          * <p>The queried message templates.</p>
          */
-        public Builder smsTemplateList(java.util.List < SmsTemplateList> smsTemplateList) {
+        public Builder smsTemplateList(java.util.List<SmsTemplateList> smsTemplateList) {
             this.smsTemplateList = smsTemplateList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SmsSignList")
-    private java.util.List < SmsSignList> smsSignList;
+    private java.util.List<SmsSignList> smsSignList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -89,7 +94,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
     /**
      * @return smsSignList
      */
-    public java.util.List < SmsSignList> getSmsSignList() {
+    public java.util.List<SmsSignList> getSmsSignList() {
         return this.smsSignList;
     }
 
@@ -106,7 +111,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         private String message; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SmsSignList> smsSignList; 
+        private java.util.List<SmsSignList> smsSignList; 
         private Long totalCount; 
 
         /**
@@ -171,7 +176,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         /**
          * <p>The queried message signatures.</p>
          */
-        public Builder smsSignList(java.util.List < SmsSignList> smsSignList) {
+        public Builder smsSignList(java.util.List<SmsSignList> smsSignList) {
             this.smsSignList = smsSignList;
             return this;
         }

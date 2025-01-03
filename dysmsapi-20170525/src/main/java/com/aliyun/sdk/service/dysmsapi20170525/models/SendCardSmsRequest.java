@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SendCardSmsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CardObjects")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < CardObjects> cardObjects;
+    private java.util.List<CardObjects> cardObjects;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CardTemplateCode")
@@ -96,7 +101,7 @@ public class SendCardSmsRequest extends Request {
     /**
      * @return cardObjects
      */
-    public java.util.List < CardObjects> getCardObjects() {
+    public java.util.List<CardObjects> getCardObjects() {
         return this.cardObjects;
     }
 
@@ -178,7 +183,7 @@ public class SendCardSmsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendCardSmsRequest, Builder> {
-        private java.util.List < CardObjects> cardObjects; 
+        private java.util.List<CardObjects> cardObjects; 
         private String cardTemplateCode; 
         private String digitalTemplateCode; 
         private String digitalTemplateParam; 
@@ -215,7 +220,7 @@ public class SendCardSmsRequest extends Request {
          * <p>The objects of the message template.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder cardObjects(java.util.List < CardObjects> cardObjects) {
+        public Builder cardObjects(java.util.List<CardObjects> cardObjects) {
             this.putQueryParameter("CardObjects", cardObjects);
             this.cardObjects = cardObjects;
             return this;

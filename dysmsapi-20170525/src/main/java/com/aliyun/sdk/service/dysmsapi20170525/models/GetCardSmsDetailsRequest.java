@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,10 @@ public class GetCardSmsDetailsRequest extends Request {
         } 
 
         /**
-         * BizCardId.
+         * <p>Card SMS sending ID, which is the BizCardId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456^0</p>
          */
         public Builder bizCardId(String bizCardId) {
             this.putQueryParameter("BizCardId", bizCardId);
@@ -191,7 +199,10 @@ public class GetCardSmsDetailsRequest extends Request {
         }
 
         /**
-         * BizDigitId.
+         * <p>Digital SMS sending ID, which is the BizDigitalId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12346^0</p>
          */
         public Builder bizDigitId(String bizDigitId) {
             this.putQueryParameter("BizDigitId", bizDigitId);
@@ -200,7 +211,10 @@ public class GetCardSmsDetailsRequest extends Request {
         }
 
         /**
-         * BizSmsId.
+         * <p>Text SMS sending ID, which is the BizSmsId field in the response when calling SendCardSms or SendBatchCardSms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234576^0</p>
          */
         public Builder bizSmsId(String bizSmsId) {
             this.putQueryParameter("BizSmsId", bizSmsId);
@@ -209,7 +223,10 @@ public class GetCardSmsDetailsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>For paginated viewing of sending records, specify the current page number of the sending records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -227,7 +244,11 @@ public class GetCardSmsDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>For paginated viewing of sending records, specify the number of card SMS records to display per page.</p>
+         * <p>The value range is 1~50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -236,6 +257,7 @@ public class GetCardSmsDetailsRequest extends Request {
         }
 
         /**
+         * <p>Domestic phone number that received the SMS. Format: 11-digit phone number, for example, 1390000****.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,6 +288,8 @@ public class GetCardSmsDetailsRequest extends Request {
         }
 
         /**
+         * <p>Card SMS sending date, supports querying records from the last 30 days.</p>
+         * <p>Format: yyyyMMdd, for example, 20240112.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

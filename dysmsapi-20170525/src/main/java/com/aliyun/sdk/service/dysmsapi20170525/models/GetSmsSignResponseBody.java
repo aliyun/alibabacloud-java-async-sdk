@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetSmsSignResponseBody extends TeaModel {
     private String createDate;
 
     @com.aliyun.core.annotation.NameInMap("FileUrlList")
-    private java.util.List < String > fileUrlList;
+    private java.util.List<String> fileUrlList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -35,6 +40,9 @@ public class GetSmsSignResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("QualificationId")
     private Long qualificationId;
+
+    @com.aliyun.core.annotation.NameInMap("RegisterResult")
+    private Integer registerResult;
 
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
@@ -69,6 +77,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         this.message = builder.message;
         this.orderId = builder.orderId;
         this.qualificationId = builder.qualificationId;
+        this.registerResult = builder.registerResult;
         this.remark = builder.remark;
         this.requestId = builder.requestId;
         this.signCode = builder.signCode;
@@ -118,7 +127,7 @@ public class GetSmsSignResponseBody extends TeaModel {
     /**
      * @return fileUrlList
      */
-    public java.util.List < String > getFileUrlList() {
+    public java.util.List<String> getFileUrlList() {
         return this.fileUrlList;
     }
 
@@ -141,6 +150,13 @@ public class GetSmsSignResponseBody extends TeaModel {
      */
     public Long getQualificationId() {
         return this.qualificationId;
+    }
+
+    /**
+     * @return registerResult
+     */
+    public Integer getRegisterResult() {
+        return this.registerResult;
     }
 
     /**
@@ -204,10 +220,11 @@ public class GetSmsSignResponseBody extends TeaModel {
         private AuditInfo auditInfo; 
         private String code; 
         private String createDate; 
-        private java.util.List < String > fileUrlList; 
+        private java.util.List<String> fileUrlList; 
         private String message; 
         private String orderId; 
         private Long qualificationId; 
+        private Integer registerResult; 
         private String remark; 
         private String requestId; 
         private String signCode; 
@@ -265,7 +282,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         /**
          * <p>更多资料信息，补充上传业务证明文件或业务截图文件列表。</p>
          */
-        public Builder fileUrlList(java.util.List < String > fileUrlList) {
+        public Builder fileUrlList(java.util.List<String> fileUrlList) {
             this.fileUrlList = fileUrlList;
             return this;
         }
@@ -301,6 +318,14 @@ public class GetSmsSignResponseBody extends TeaModel {
          */
         public Builder qualificationId(Long qualificationId) {
             this.qualificationId = qualificationId;
+            return this;
+        }
+
+        /**
+         * RegisterResult.
+         */
+        public Builder registerResult(Integer registerResult) {
+            this.registerResult = registerResult;
             return this;
         }
 
