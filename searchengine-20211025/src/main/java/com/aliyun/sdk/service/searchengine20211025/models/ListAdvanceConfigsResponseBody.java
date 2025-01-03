@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListAdvanceConfigsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         /**
          * <p>The advanced configurations.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -216,7 +221,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("files")
-        private java.util.List < Files> files;
+        private java.util.List<Files> files;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -285,7 +290,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         /**
          * @return files
          */
-        public java.util.List < Files> getFiles() {
+        public java.util.List<Files> getFiles() {
             return this.files;
         }
 
@@ -316,7 +321,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             private String contentType; 
             private String creator; 
             private String desc; 
-            private java.util.List < Files> files; 
+            private java.util.List<Files> files; 
             private String name; 
             private String status; 
             private Long updateTime; 
@@ -389,7 +394,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             /**
              * <p>The files.</p>
              */
-            public Builder files(java.util.List < Files> files) {
+            public Builder files(java.util.List<Files> files) {
                 this.files = files;
                 return this;
             }

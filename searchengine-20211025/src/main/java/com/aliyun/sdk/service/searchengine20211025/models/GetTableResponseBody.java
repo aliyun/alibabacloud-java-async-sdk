@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1077,7 +1082,7 @@ public class GetTableResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataProcessConfig")
-        private java.util.List < DataProcessConfig> dataProcessConfig;
+        private java.util.List<DataProcessConfig> dataProcessConfig;
 
         @com.aliyun.core.annotation.NameInMap("dataProcessorCount")
         private Integer dataProcessorCount;
@@ -1086,7 +1091,7 @@ public class GetTableResponseBody extends TeaModel {
         private DataSource dataSource;
 
         @com.aliyun.core.annotation.NameInMap("fieldSchema")
-        private java.util.Map < String, String > fieldSchema;
+        private java.util.Map<String, String> fieldSchema;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1104,7 +1109,7 @@ public class GetTableResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("vectorIndex")
-        private java.util.List < VectorIndex> vectorIndex;
+        private java.util.List<VectorIndex> vectorIndex;
 
         private Result(Builder builder) {
             this.dataProcessConfig = builder.dataProcessConfig;
@@ -1130,7 +1135,7 @@ public class GetTableResponseBody extends TeaModel {
         /**
          * @return dataProcessConfig
          */
-        public java.util.List < DataProcessConfig> getDataProcessConfig() {
+        public java.util.List<DataProcessConfig> getDataProcessConfig() {
             return this.dataProcessConfig;
         }
 
@@ -1151,7 +1156,7 @@ public class GetTableResponseBody extends TeaModel {
         /**
          * @return fieldSchema
          */
-        public java.util.Map < String, String > getFieldSchema() {
+        public java.util.Map<String, String> getFieldSchema() {
             return this.fieldSchema;
         }
 
@@ -1193,26 +1198,26 @@ public class GetTableResponseBody extends TeaModel {
         /**
          * @return vectorIndex
          */
-        public java.util.List < VectorIndex> getVectorIndex() {
+        public java.util.List<VectorIndex> getVectorIndex() {
             return this.vectorIndex;
         }
 
         public static final class Builder {
-            private java.util.List < DataProcessConfig> dataProcessConfig; 
+            private java.util.List<DataProcessConfig> dataProcessConfig; 
             private Integer dataProcessorCount; 
             private DataSource dataSource; 
-            private java.util.Map < String, String > fieldSchema; 
+            private java.util.Map<String, String> fieldSchema; 
             private String name; 
             private Integer partitionCount; 
             private String primaryKey; 
             private String rawSchema; 
             private String status; 
-            private java.util.List < VectorIndex> vectorIndex; 
+            private java.util.List<VectorIndex> vectorIndex; 
 
             /**
              * <p>The configurations about field processing.</p>
              */
-            public Builder dataProcessConfig(java.util.List < DataProcessConfig> dataProcessConfig) {
+            public Builder dataProcessConfig(java.util.List<DataProcessConfig> dataProcessConfig) {
                 this.dataProcessConfig = dataProcessConfig;
                 return this;
             }
@@ -1236,7 +1241,7 @@ public class GetTableResponseBody extends TeaModel {
             /**
              * <p>The field. The value is a key-value pair in which the key indicates the field name and value indicates the field type.</p>
              */
-            public Builder fieldSchema(java.util.Map < String, String > fieldSchema) {
+            public Builder fieldSchema(java.util.Map<String, String> fieldSchema) {
                 this.fieldSchema = fieldSchema;
                 return this;
             }
@@ -1287,7 +1292,7 @@ public class GetTableResponseBody extends TeaModel {
             /**
              * <p>The index schema.</p>
              */
-            public Builder vectorIndex(java.util.List < VectorIndex> vectorIndex) {
+            public Builder vectorIndex(java.util.List<VectorIndex> vectorIndex) {
                 this.vectorIndex = vectorIndex;
                 return this;
             }

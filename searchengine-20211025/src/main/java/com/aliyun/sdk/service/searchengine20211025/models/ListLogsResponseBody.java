@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ListLogsResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.List < ? > result;
+        private java.util.List<?> result;
 
         @com.aliyun.core.annotation.NameInMap("totalCount")
         private Integer totalCount;
@@ -103,7 +108,7 @@ public class ListLogsResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < ? > getResult() {
+        public java.util.List<?> getResult() {
             return this.result;
         }
 
@@ -115,13 +120,13 @@ public class ListLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > result; 
+            private java.util.List<?> result; 
             private Integer totalCount; 
 
             /**
              * <p>The result.</p>
              */
-            public Builder result(java.util.List < ? > result) {
+            public Builder result(java.util.List<?> result) {
                 this.result = result;
                 return this;
             }

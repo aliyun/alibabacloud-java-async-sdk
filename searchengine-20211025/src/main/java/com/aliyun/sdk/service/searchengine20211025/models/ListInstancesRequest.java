@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -54,7 +59,7 @@ public class ListInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
@@ -157,7 +162,7 @@ public class ListInstancesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -172,7 +177,7 @@ public class ListInstancesRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private String table; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -304,7 +309,7 @@ public class ListInstancesRequest extends Request {
         /**
          * <p>The tags of the instance.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
             this.putQueryParameter("tags", tagsShrink);
             this.tags = tags;

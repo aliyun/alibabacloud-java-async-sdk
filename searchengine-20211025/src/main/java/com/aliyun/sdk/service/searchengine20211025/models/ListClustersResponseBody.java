@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListClustersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListClustersResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListClustersResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
          * <p>id of request</p>
@@ -63,7 +68,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * <p>The clusters.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -274,7 +279,7 @@ public class ListClustersResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
-        private java.util.Map < String, java.util.Map<String, ?>> config;
+        private java.util.Map<String, java.util.Map<String, ?>> config;
 
         @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
@@ -351,7 +356,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.Map < String, java.util.Map<String, ?>> getConfig() {
+        public java.util.Map<String, java.util.Map<String, ?>> getConfig() {
             return this.config;
         }
 
@@ -461,7 +466,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.Map<String, ?>> config; 
+            private java.util.Map<String, java.util.Map<String, ?>> config; 
             private String configUpdateTime; 
             private String createTime; 
             private String currentAdvanceConfigVersion; 
@@ -481,7 +486,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * <p>The configuration information.</p>
              */
-            public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
+            public Builder config(java.util.Map<String, java.util.Map<String, ?>> config) {
                 this.config = config;
                 return this;
             }

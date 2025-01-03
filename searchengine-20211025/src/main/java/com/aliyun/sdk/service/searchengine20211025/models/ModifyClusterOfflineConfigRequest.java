@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map < String, Integer > config;
+    private java.util.Map<String, Integer> config;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dataSourceName")
@@ -97,7 +102,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, Integer > getConfig() {
+    public java.util.Map<String, Integer> getConfig() {
         return this.config;
     }
 
@@ -153,7 +158,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyClusterOfflineConfigRequest, Builder> {
         private String instanceId; 
         private String buildMode; 
-        private java.util.Map < String, Integer > config; 
+        private java.util.Map<String, Integer> config; 
         private String dataSourceName; 
         private String dataSourceType; 
         private Integer dataTimeSec; 
@@ -208,7 +213,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         /**
          * <p>The configuration name, which is stored as a key.</p>
          */
-        public Builder config(java.util.Map < String, Integer > config) {
+        public Builder config(java.util.Map<String, Integer> config) {
             this.putBodyParameter("config", config);
             this.config = config;
             return this;

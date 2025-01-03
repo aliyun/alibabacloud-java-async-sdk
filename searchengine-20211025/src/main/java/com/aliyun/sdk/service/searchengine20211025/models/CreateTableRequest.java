@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dataProcessConfig")
-    private java.util.List < DataProcessConfig> dataProcessConfig;
+    private java.util.List<DataProcessConfig> dataProcessConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dataProcessorCount")
@@ -31,7 +36,7 @@ public class CreateTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fieldSchema")
-    private java.util.Map < String, String > fieldSchema;
+    private java.util.Map<String, String> fieldSchema;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
@@ -51,7 +56,7 @@ public class CreateTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vectorIndex")
-    private java.util.List < VectorIndex> vectorIndex;
+    private java.util.List<VectorIndex> vectorIndex;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -95,7 +100,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return dataProcessConfig
      */
-    public java.util.List < DataProcessConfig> getDataProcessConfig() {
+    public java.util.List<DataProcessConfig> getDataProcessConfig() {
         return this.dataProcessConfig;
     }
 
@@ -116,7 +121,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return fieldSchema
      */
-    public java.util.Map < String, String > getFieldSchema() {
+    public java.util.Map<String, String> getFieldSchema() {
         return this.fieldSchema;
     }
 
@@ -151,7 +156,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return vectorIndex
      */
-    public java.util.List < VectorIndex> getVectorIndex() {
+    public java.util.List<VectorIndex> getVectorIndex() {
         return this.vectorIndex;
     }
 
@@ -164,15 +169,15 @@ public class CreateTableRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateTableRequest, Builder> {
         private String instanceId; 
-        private java.util.List < DataProcessConfig> dataProcessConfig; 
+        private java.util.List<DataProcessConfig> dataProcessConfig; 
         private Integer dataProcessorCount; 
         private DataSource dataSource; 
-        private java.util.Map < String, String > fieldSchema; 
+        private java.util.Map<String, String> fieldSchema; 
         private String name; 
         private Integer partitionCount; 
         private String primaryKey; 
         private String rawSchema; 
-        private java.util.List < VectorIndex> vectorIndex; 
+        private java.util.List<VectorIndex> vectorIndex; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -210,7 +215,7 @@ public class CreateTableRequest extends Request {
         /**
          * <p>The configurations about field processing.</p>
          */
-        public Builder dataProcessConfig(java.util.List < DataProcessConfig> dataProcessConfig) {
+        public Builder dataProcessConfig(java.util.List<DataProcessConfig> dataProcessConfig) {
             this.putBodyParameter("dataProcessConfig", dataProcessConfig);
             this.dataProcessConfig = dataProcessConfig;
             return this;
@@ -240,7 +245,7 @@ public class CreateTableRequest extends Request {
         /**
          * <p>The fields.</p>
          */
-        public Builder fieldSchema(java.util.Map < String, String > fieldSchema) {
+        public Builder fieldSchema(java.util.Map<String, String> fieldSchema) {
             this.putBodyParameter("fieldSchema", fieldSchema);
             this.fieldSchema = fieldSchema;
             return this;
@@ -297,7 +302,7 @@ public class CreateTableRequest extends Request {
         /**
          * <p>The index schema.</p>
          */
-        public Builder vectorIndex(java.util.List < VectorIndex> vectorIndex) {
+        public Builder vectorIndex(java.util.List<VectorIndex> vectorIndex) {
             this.putBodyParameter("vectorIndex", vectorIndex);
             this.vectorIndex = vectorIndex;
             return this;

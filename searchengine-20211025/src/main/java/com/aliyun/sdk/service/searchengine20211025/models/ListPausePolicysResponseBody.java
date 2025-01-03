@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPausePolicysResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.Map < String, ResultValue > result;
+    private java.util.Map<String, ResultValue> result;
 
     private ListPausePolicysResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListPausePolicysResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.Map < String, ResultValue > getResult() {
+    public java.util.Map<String, ResultValue> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ResultValue > result; 
+        private java.util.Map<String, ResultValue> result; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListPausePolicysResponseBody extends TeaModel {
         /**
          * <p>The result.</p>
          */
-        public Builder result(java.util.Map < String, ResultValue > result) {
+        public Builder result(java.util.Map<String, ResultValue> result) {
             this.result = result;
             return this;
         }

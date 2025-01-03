@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -819,7 +824,7 @@ public class GetIndexResponseBody extends TeaModel {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("files")
-        private java.util.List < Files> files;
+        private java.util.List<Files> files;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -860,7 +865,7 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * @return files
          */
-        public java.util.List < Files> getFiles() {
+        public java.util.List<Files> getFiles() {
             return this.files;
         }
 
@@ -894,7 +899,7 @@ public class GetIndexResponseBody extends TeaModel {
 
         public static final class Builder {
             private String desc; 
-            private java.util.List < Files> files; 
+            private java.util.List<Files> files; 
             private String name; 
             private String status; 
             private Long updateTime; 
@@ -914,7 +919,7 @@ public class GetIndexResponseBody extends TeaModel {
             /**
              * <p>The information about the files.</p>
              */
-            public Builder files(java.util.List < Files> files) {
+            public Builder files(java.util.List<Files> files) {
                 this.files = files;
                 return this;
             }
@@ -987,13 +992,13 @@ public class GetIndexResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster")
-        private java.util.Map < String, ResultClusterValue > cluster;
+        private java.util.Map<String, ResultClusterValue> cluster;
 
         @com.aliyun.core.annotation.NameInMap("config")
-        private java.util.Map < String, java.util.Map<String, ?>> config;
+        private java.util.Map<String, java.util.Map<String, ?>> config;
 
         @com.aliyun.core.annotation.NameInMap("configWhenBuild")
-        private java.util.Map < String, java.util.Map<String, ?>> configWhenBuild;
+        private java.util.Map<String, java.util.Map<String, ?>> configWhenBuild;
 
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -1014,7 +1019,7 @@ public class GetIndexResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("extend")
-        private java.util.Map < String, java.util.List<String>> extend;
+        private java.util.Map<String, java.util.List<String>> extend;
 
         @com.aliyun.core.annotation.NameInMap("fullUpdateTime")
         private String fullUpdateTime;
@@ -1041,7 +1046,7 @@ public class GetIndexResponseBody extends TeaModel {
         private String updateTime;
 
         @com.aliyun.core.annotation.NameInMap("versions")
-        private java.util.List < Versions> versions;
+        private java.util.List<Versions> versions;
 
         private Result(Builder builder) {
             this.cluster = builder.cluster;
@@ -1076,21 +1081,21 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * @return cluster
          */
-        public java.util.Map < String, ResultClusterValue > getCluster() {
+        public java.util.Map<String, ResultClusterValue> getCluster() {
             return this.cluster;
         }
 
         /**
          * @return config
          */
-        public java.util.Map < String, java.util.Map<String, ?>> getConfig() {
+        public java.util.Map<String, java.util.Map<String, ?>> getConfig() {
             return this.config;
         }
 
         /**
          * @return configWhenBuild
          */
-        public java.util.Map < String, java.util.Map<String, ?>> getConfigWhenBuild() {
+        public java.util.Map<String, java.util.Map<String, ?>> getConfigWhenBuild() {
             return this.configWhenBuild;
         }
 
@@ -1139,7 +1144,7 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * @return extend
          */
-        public java.util.Map < String, java.util.List<String>> getExtend() {
+        public java.util.Map<String, java.util.List<String>> getExtend() {
             return this.extend;
         }
 
@@ -1202,21 +1207,21 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * @return versions
          */
-        public java.util.List < Versions> getVersions() {
+        public java.util.List<Versions> getVersions() {
             return this.versions;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ResultClusterValue > cluster; 
-            private java.util.Map < String, java.util.Map<String, ?>> config; 
-            private java.util.Map < String, java.util.Map<String, ?>> configWhenBuild; 
+            private java.util.Map<String, ResultClusterValue> cluster; 
+            private java.util.Map<String, java.util.Map<String, ?>> config; 
+            private java.util.Map<String, java.util.Map<String, ?>> configWhenBuild; 
             private String content; 
             private String createTime; 
             private String dataSource; 
             private DataSourceInfo dataSourceInfo; 
             private String description; 
             private String domain; 
-            private java.util.Map < String, java.util.List<String>> extend; 
+            private java.util.Map<String, java.util.List<String>> extend; 
             private String fullUpdateTime; 
             private Long fullVersion; 
             private String incUpdateTime; 
@@ -1225,12 +1230,12 @@ public class GetIndexResponseBody extends TeaModel {
             private String name; 
             private Integer partition; 
             private String updateTime; 
-            private java.util.List < Versions> versions; 
+            private java.util.List<Versions> versions; 
 
             /**
              * <p>The cluster information.</p>
              */
-            public Builder cluster(java.util.Map < String, ResultClusterValue > cluster) {
+            public Builder cluster(java.util.Map<String, ResultClusterValue> cluster) {
                 this.cluster = cluster;
                 return this;
             }
@@ -1238,7 +1243,7 @@ public class GetIndexResponseBody extends TeaModel {
             /**
              * <p>The configuration information.</p>
              */
-            public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
+            public Builder config(java.util.Map<String, java.util.Map<String, ?>> config) {
                 this.config = config;
                 return this;
             }
@@ -1246,7 +1251,7 @@ public class GetIndexResponseBody extends TeaModel {
             /**
              * <p>The configuration that takes effect next time.</p>
              */
-            public Builder configWhenBuild(java.util.Map < String, java.util.Map<String, ?>> configWhenBuild) {
+            public Builder configWhenBuild(java.util.Map<String, java.util.Map<String, ?>> configWhenBuild) {
                 this.configWhenBuild = configWhenBuild;
                 return this;
             }
@@ -1314,7 +1319,7 @@ public class GetIndexResponseBody extends TeaModel {
             /**
              * <p>Extended information</p>
              */
-            public Builder extend(java.util.Map < String, java.util.List<String>> extend) {
+            public Builder extend(java.util.Map<String, java.util.List<String>> extend) {
                 this.extend = extend;
                 return this;
             }
@@ -1419,7 +1424,7 @@ public class GetIndexResponseBody extends TeaModel {
             /**
              * <p>The information about the versions.</p>
              */
-            public Builder versions(java.util.List < Versions> versions) {
+            public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
                 return this;
             }

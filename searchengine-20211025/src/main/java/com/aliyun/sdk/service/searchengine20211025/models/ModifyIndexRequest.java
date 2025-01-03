@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ModifyIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cluster")
-    private java.util.Map < String, java.util.Map<String, ?>> cluster;
+    private java.util.Map<String, java.util.Map<String, ?>> cluster;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("clusterConfigName")
@@ -36,7 +41,7 @@ public class ModifyIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map < String, ConfigValue > config;
+    private java.util.Map<String, ConfigValue> config;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("content")
@@ -60,7 +65,7 @@ public class ModifyIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extend")
-    private java.util.Map < String, ? > extend;
+    private java.util.Map<String, ?> extend;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("mergeParallelNum")
@@ -135,7 +140,7 @@ public class ModifyIndexRequest extends Request {
     /**
      * @return cluster
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getCluster() {
+    public java.util.Map<String, java.util.Map<String, ?>> getCluster() {
         return this.cluster;
     }
 
@@ -149,7 +154,7 @@ public class ModifyIndexRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ConfigValue > getConfig() {
+    public java.util.Map<String, ConfigValue> getConfig() {
         return this.config;
     }
 
@@ -191,7 +196,7 @@ public class ModifyIndexRequest extends Request {
     /**
      * @return extend
      */
-    public java.util.Map < String, ? > getExtend() {
+    public java.util.Map<String, ?> getExtend() {
         return this.extend;
     }
 
@@ -227,15 +232,15 @@ public class ModifyIndexRequest extends Request {
         private String instanceId; 
         private String indexName; 
         private Integer buildParallelNum; 
-        private java.util.Map < String, java.util.Map<String, ?>> cluster; 
+        private java.util.Map<String, java.util.Map<String, ?>> cluster; 
         private String clusterConfigName; 
-        private java.util.Map < String, ConfigValue > config; 
+        private java.util.Map<String, ConfigValue> config; 
         private String content; 
         private String dataSource; 
         private DataSourceInfo dataSourceInfo; 
         private String description; 
         private String domain; 
-        private java.util.Map < String, ? > extend; 
+        private java.util.Map<String, ?> extend; 
         private Integer mergeParallelNum; 
         private Integer partition; 
         private String pushMode; 
@@ -306,7 +311,7 @@ public class ModifyIndexRequest extends Request {
         /**
          * <p>The cluster information.</p>
          */
-        public Builder cluster(java.util.Map < String, java.util.Map<String, ?>> cluster) {
+        public Builder cluster(java.util.Map<String, java.util.Map<String, ?>> cluster) {
             this.putBodyParameter("cluster", cluster);
             this.cluster = cluster;
             return this;
@@ -327,7 +332,7 @@ public class ModifyIndexRequest extends Request {
         /**
          * <p>The information about the offline configuration.</p>
          */
-        public Builder config(java.util.Map < String, ConfigValue > config) {
+        public Builder config(java.util.Map<String, ConfigValue> config) {
             this.putBodyParameter("config", config);
             this.config = config;
             return this;
@@ -393,7 +398,7 @@ public class ModifyIndexRequest extends Request {
         /**
          * extend.
          */
-        public Builder extend(java.util.Map < String, ? > extend) {
+        public Builder extend(java.util.Map<String, ?> extend) {
             this.putBodyParameter("extend", extend);
             this.extend = extend;
             return this;

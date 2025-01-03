@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The results returned.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -998,7 +1003,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("dataSourceDetails")
-        private java.util.List < DataSourceDetails> dataSourceDetails;
+        private java.util.List<DataSourceDetails> dataSourceDetails;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -1034,7 +1039,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
@@ -1099,7 +1104,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return dataSourceDetails
          */
-        public java.util.List < DataSourceDetails> getDataSourceDetails() {
+        public java.util.List<DataSourceDetails> getDataSourceDetails() {
             return this.dataSourceDetails;
         }
 
@@ -1183,7 +1188,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1212,7 +1217,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String chargeType; 
             private String commodityCode; 
             private String createTime; 
-            private java.util.List < DataSourceDetails> dataSourceDetails; 
+            private java.util.List<DataSourceDetails> dataSourceDetails; 
             private String description; 
             private String edition; 
             private String expiredTime; 
@@ -1224,7 +1229,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Spec spec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
             private String userName; 
             private String version; 
@@ -1265,7 +1270,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * dataSourceDetails.
              */
-            public Builder dataSourceDetails(java.util.List < DataSourceDetails> dataSourceDetails) {
+            public Builder dataSourceDetails(java.util.List<DataSourceDetails> dataSourceDetails) {
                 this.dataSourceDetails = dataSourceDetails;
                 return this;
             }
@@ -1382,7 +1387,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The tags of the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

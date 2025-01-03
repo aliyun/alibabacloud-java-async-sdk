@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,7 +93,7 @@ public class GetFileResponseBody extends TeaModel {
         private String dataSource;
 
         @com.aliyun.core.annotation.NameInMap("extend")
-        private java.util.Map < String, java.util.List<String>> extend;
+        private java.util.Map<String, java.util.List<String>> extend;
 
         @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
@@ -137,7 +142,7 @@ public class GetFileResponseBody extends TeaModel {
         /**
          * @return extend
          */
-        public java.util.Map < String, java.util.List<String>> getExtend() {
+        public java.util.Map<String, java.util.List<String>> getExtend() {
             return this.extend;
         }
 
@@ -172,7 +177,7 @@ public class GetFileResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String dataSource; 
-            private java.util.Map < String, java.util.List<String>> extend; 
+            private java.util.Map<String, java.util.List<String>> extend; 
             private String fullPathName; 
             private Boolean isDir; 
             private String name; 
@@ -203,7 +208,7 @@ public class GetFileResponseBody extends TeaModel {
             /**
              * <p>Extended information</p>
              */
-            public Builder extend(java.util.Map < String, java.util.List<String>> extend) {
+            public Builder extend(java.util.Map<String, java.util.List<String>> extend) {
                 this.extend = extend;
                 return this;
             }

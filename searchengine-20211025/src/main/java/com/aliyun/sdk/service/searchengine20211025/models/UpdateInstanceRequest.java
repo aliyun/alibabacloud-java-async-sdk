@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("components")
-    private java.util.List < Components> components;
+    private java.util.List<Components> components;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
@@ -59,7 +64,7 @@ public class UpdateInstanceRequest extends Request {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -79,7 +84,7 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private String description; 
         private String orderType; 
 
@@ -110,7 +115,7 @@ public class UpdateInstanceRequest extends Request {
         /**
          * <p>The information about the instance specification.</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.putBodyParameter("components", components);
             this.components = components;
             return this;

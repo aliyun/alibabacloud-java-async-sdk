@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class ExecuteSqlInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("combineParam")
-    private java.util.Map < String, ? > combineParam;
+    private java.util.Map<String, ?> combineParam;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("content")
@@ -42,19 +47,19 @@ public class ExecuteSqlInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dynamicParam")
-    private java.util.Map < String, ? > dynamicParam;
+    private java.util.Map<String, ?> dynamicParam;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("kvpair")
-    private java.util.Map < String, ? > kvpair;
+    private java.util.Map<String, ?> kvpair;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("params")
-    private java.util.Map < String, ? > params;
+    private java.util.Map<String, ?> params;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("staticParam")
-    private java.util.Map < String, ? > staticParam;
+    private java.util.Map<String, ?> staticParam;
 
     private ExecuteSqlInstanceRequest(Builder builder) {
         super(builder);
@@ -107,7 +112,7 @@ public class ExecuteSqlInstanceRequest extends Request {
     /**
      * @return combineParam
      */
-    public java.util.Map < String, ? > getCombineParam() {
+    public java.util.Map<String, ?> getCombineParam() {
         return this.combineParam;
     }
 
@@ -128,28 +133,28 @@ public class ExecuteSqlInstanceRequest extends Request {
     /**
      * @return dynamicParam
      */
-    public java.util.Map < String, ? > getDynamicParam() {
+    public java.util.Map<String, ?> getDynamicParam() {
         return this.dynamicParam;
     }
 
     /**
      * @return kvpair
      */
-    public java.util.Map < String, ? > getKvpair() {
+    public java.util.Map<String, ?> getKvpair() {
         return this.kvpair;
     }
 
     /**
      * @return params
      */
-    public java.util.Map < String, ? > getParams() {
+    public java.util.Map<String, ?> getParams() {
         return this.params;
     }
 
     /**
      * @return staticParam
      */
-    public java.util.Map < String, ? > getStaticParam() {
+    public java.util.Map<String, ?> getStaticParam() {
         return this.staticParam;
     }
 
@@ -157,13 +162,13 @@ public class ExecuteSqlInstanceRequest extends Request {
         private String instanceId; 
         private String database; 
         private Long sqlInstanceId; 
-        private java.util.Map < String, ? > combineParam; 
+        private java.util.Map<String, ?> combineParam; 
         private String content; 
         private String domain; 
-        private java.util.Map < String, ? > dynamicParam; 
-        private java.util.Map < String, ? > kvpair; 
-        private java.util.Map < String, ? > params; 
-        private java.util.Map < String, ? > staticParam; 
+        private java.util.Map<String, ?> dynamicParam; 
+        private java.util.Map<String, ?> kvpair; 
+        private java.util.Map<String, ?> params; 
+        private java.util.Map<String, ?> staticParam; 
 
         private Builder() {
             super();
@@ -222,7 +227,7 @@ public class ExecuteSqlInstanceRequest extends Request {
         /**
          * combineParam.
          */
-        public Builder combineParam(java.util.Map < String, ? > combineParam) {
+        public Builder combineParam(java.util.Map<String, ?> combineParam) {
             this.putBodyParameter("combineParam", combineParam);
             this.combineParam = combineParam;
             return this;
@@ -252,7 +257,7 @@ public class ExecuteSqlInstanceRequest extends Request {
         /**
          * dynamicParam.
          */
-        public Builder dynamicParam(java.util.Map < String, ? > dynamicParam) {
+        public Builder dynamicParam(java.util.Map<String, ?> dynamicParam) {
             this.putBodyParameter("dynamicParam", dynamicParam);
             this.dynamicParam = dynamicParam;
             return this;
@@ -261,7 +266,7 @@ public class ExecuteSqlInstanceRequest extends Request {
         /**
          * kvpair.
          */
-        public Builder kvpair(java.util.Map < String, ? > kvpair) {
+        public Builder kvpair(java.util.Map<String, ?> kvpair) {
             this.putBodyParameter("kvpair", kvpair);
             this.kvpair = kvpair;
             return this;
@@ -270,7 +275,7 @@ public class ExecuteSqlInstanceRequest extends Request {
         /**
          * params.
          */
-        public Builder params(java.util.Map < String, ? > params) {
+        public Builder params(java.util.Map<String, ?> params) {
             this.putBodyParameter("params", params);
             this.params = params;
             return this;
@@ -279,7 +284,7 @@ public class ExecuteSqlInstanceRequest extends Request {
         /**
          * staticParam.
          */
-        public Builder staticParam(java.util.Map < String, ? > staticParam) {
+        public Builder staticParam(java.util.Map<String, ?> staticParam) {
             this.putBodyParameter("staticParam", staticParam);
             this.staticParam = staticParam;
             return this;

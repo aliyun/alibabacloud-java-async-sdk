@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ModifyIndexVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ModifyIndexVersionRequestBody> body;
+    private java.util.List<ModifyIndexVersionRequestBody> body;
 
     private ModifyIndexVersionRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class ModifyIndexVersionRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ModifyIndexVersionRequestBody> getBody() {
+    public java.util.List<ModifyIndexVersionRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<ModifyIndexVersionRequest, Builder> {
         private String instanceId; 
         private String clusterName; 
-        private java.util.List < ModifyIndexVersionRequestBody> body; 
+        private java.util.List<ModifyIndexVersionRequestBody> body; 
 
         private Builder() {
             super();
@@ -113,7 +118,7 @@ public class ModifyIndexVersionRequest extends Request {
          * <strong>example:</strong>
          * <p>{}</p>
          */
-        public Builder body(java.util.List < ModifyIndexVersionRequestBody> body) {
+        public Builder body(java.util.List<ModifyIndexVersionRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

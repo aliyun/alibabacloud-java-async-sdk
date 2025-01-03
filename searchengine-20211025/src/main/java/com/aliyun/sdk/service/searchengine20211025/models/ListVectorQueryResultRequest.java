@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListVectorQueryResultRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.Map < String, ? > body;
+    private java.util.Map<String, ?> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("queryType")
@@ -72,7 +77,7 @@ public class ListVectorQueryResultRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, ? > getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 
@@ -93,7 +98,7 @@ public class ListVectorQueryResultRequest extends Request {
     public static final class Builder extends Request.Builder<ListVectorQueryResultRequest, Builder> {
         private String instanceId; 
         private String address; 
-        private java.util.Map < String, ? > body; 
+        private java.util.Map<String, ?> body; 
         private String queryType; 
         private String vectorQueryType; 
 
@@ -141,7 +146,7 @@ public class ListVectorQueryResultRequest extends Request {
          * <strong>example:</strong>
          * <p>{}</p>
          */
-        public Builder body(java.util.Map < String, ? > body) {
+        public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

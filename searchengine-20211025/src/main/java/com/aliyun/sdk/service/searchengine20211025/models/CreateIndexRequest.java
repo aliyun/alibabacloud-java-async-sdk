@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class CreateIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extend")
-    private java.util.Map < String, ? > extend;
+    private java.util.Map<String, ?> extend;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("mergeParallelNum")
@@ -130,7 +135,7 @@ public class CreateIndexRequest extends Request {
     /**
      * @return extend
      */
-    public java.util.Map < String, ? > getExtend() {
+    public java.util.Map<String, ?> getExtend() {
         return this.extend;
     }
 
@@ -169,7 +174,7 @@ public class CreateIndexRequest extends Request {
         private String dataSource; 
         private DataSourceInfo dataSourceInfo; 
         private String domain; 
-        private java.util.Map < String, ? > extend; 
+        private java.util.Map<String, ?> extend; 
         private Integer mergeParallelNum; 
         private String name; 
         private Integer partition; 
@@ -281,7 +286,7 @@ public class CreateIndexRequest extends Request {
          *         []
          *     }</p>
          */
-        public Builder extend(java.util.Map < String, ? > extend) {
+        public Builder extend(java.util.Map<String, ?> extend) {
             this.putBodyParameter("extend", extend);
             this.extend = extend;
             return this;

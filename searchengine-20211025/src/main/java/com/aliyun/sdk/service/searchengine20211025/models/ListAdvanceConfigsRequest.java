@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,6 +35,14 @@ public class ListAdvanceConfigsRequest extends Request {
     private Boolean newMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    private String pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private String pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
@@ -39,6 +52,8 @@ public class ListAdvanceConfigsRequest extends Request {
         this.dataSourceName = builder.dataSourceName;
         this.indexName = builder.indexName;
         this.newMode = builder.newMode;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.type = builder.type;
     }
 
@@ -84,6 +99,20 @@ public class ListAdvanceConfigsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -95,6 +124,8 @@ public class ListAdvanceConfigsRequest extends Request {
         private String dataSourceName; 
         private String indexName; 
         private Boolean newMode; 
+        private String pageNumber; 
+        private String pageSize; 
         private String type; 
 
         private Builder() {
@@ -107,6 +138,8 @@ public class ListAdvanceConfigsRequest extends Request {
             this.dataSourceName = request.dataSourceName;
             this.indexName = request.indexName;
             this.newMode = request.newMode;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.type = request.type;
         } 
 
@@ -156,6 +189,24 @@ public class ListAdvanceConfigsRequest extends Request {
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);
             this.newMode = newMode;
+            return this;
+        }
+
+        /**
+         * pageNumber.
+         */
+        public Builder pageNumber(String pageNumber) {
+            this.putQueryParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListClusterTasksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListClusterTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
          * <p>id of request</p>
@@ -63,7 +68,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         /**
          * <p>The index information.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -292,10 +297,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("taskNodes")
-        private java.util.List < TaskNodes> taskNodes;
+        private java.util.List<TaskNodes> taskNodes;
 
         @com.aliyun.core.annotation.NameInMap("time")
         private String time;
@@ -373,14 +378,14 @@ public class ListClusterTasksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return taskNodes
          */
-        public java.util.List < TaskNodes> getTaskNodes() {
+        public java.util.List<TaskNodes> getTaskNodes() {
             return this.taskNodes;
         }
 
@@ -412,8 +417,8 @@ public class ListClusterTasksResponseBody extends TeaModel {
             private String groupType; 
             private String name; 
             private String status; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < TaskNodes> taskNodes; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<TaskNodes> taskNodes; 
             private String time; 
             private String type; 
             private String user; 
@@ -487,7 +492,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             /**
              * <p>The tags of the progress bar.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -495,7 +500,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
             /**
              * <p>The task information.</p>
              */
-            public Builder taskNodes(java.util.List < TaskNodes> taskNodes) {
+            public Builder taskNodes(java.util.List<TaskNodes> taskNodes) {
                 this.taskNodes = taskNodes;
                 return this;
             }

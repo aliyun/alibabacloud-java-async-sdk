@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIndexesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListIndexesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListIndexesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListIndexesResponseBody extends TeaModel {
         /**
          * <p>The details of indexes.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -796,7 +801,7 @@ public class ListIndexesResponseBody extends TeaModel {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("files")
-        private java.util.List < Files> files;
+        private java.util.List<Files> files;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -837,7 +842,7 @@ public class ListIndexesResponseBody extends TeaModel {
         /**
          * @return files
          */
-        public java.util.List < Files> getFiles() {
+        public java.util.List<Files> getFiles() {
             return this.files;
         }
 
@@ -871,7 +876,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String desc; 
-            private java.util.List < Files> files; 
+            private java.util.List<Files> files; 
             private String name; 
             private String status; 
             private Long updateTime; 
@@ -891,7 +896,7 @@ public class ListIndexesResponseBody extends TeaModel {
             /**
              * <p>The files.</p>
              */
-            public Builder files(java.util.List < Files> files) {
+            public Builder files(java.util.List<Files> files) {
                 this.files = files;
                 return this;
             }
@@ -1006,7 +1011,7 @@ public class ListIndexesResponseBody extends TeaModel {
         private String updateTime;
 
         @com.aliyun.core.annotation.NameInMap("versions")
-        private java.util.List < Versions> versions;
+        private java.util.List<Versions> versions;
 
         private Result(Builder builder) {
             this.content = builder.content;
@@ -1135,7 +1140,7 @@ public class ListIndexesResponseBody extends TeaModel {
         /**
          * @return versions
          */
-        public java.util.List < Versions> getVersions() {
+        public java.util.List<Versions> getVersions() {
             return this.versions;
         }
 
@@ -1154,7 +1159,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private String name; 
             private Integer partition; 
             private String updateTime; 
-            private java.util.List < Versions> versions; 
+            private java.util.List<Versions> versions; 
 
             /**
              * <p>The index schema, which is a JSON string.</p>
@@ -1307,7 +1312,7 @@ public class ListIndexesResponseBody extends TeaModel {
             /**
              * <p>The index versions.</p>
              */
-            public Builder versions(java.util.List < Versions> versions) {
+            public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
                 return this;
             }

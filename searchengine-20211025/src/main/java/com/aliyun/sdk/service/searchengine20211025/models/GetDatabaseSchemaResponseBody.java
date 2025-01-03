@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private GetDatabaseSchemaResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
          * <p>id of request</p>
@@ -63,7 +68,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         /**
          * <p>List</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -88,7 +93,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         private String fieldType;
 
         @com.aliyun.core.annotation.NameInMap("fieldTypeDetail")
-        private java.util.Map < String, ? > fieldTypeDetail;
+        private java.util.Map<String, ?> fieldTypeDetail;
 
         @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
@@ -129,7 +134,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         /**
          * @return fieldTypeDetail
          */
-        public java.util.Map < String, ? > getFieldTypeDetail() {
+        public java.util.Map<String, ?> getFieldTypeDetail() {
             return this.fieldTypeDetail;
         }
 
@@ -150,7 +155,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldName; 
             private String fieldType; 
-            private java.util.Map < String, ? > fieldTypeDetail; 
+            private java.util.Map<String, ?> fieldTypeDetail; 
             private String indexName; 
             private String indexType; 
 
@@ -173,7 +178,7 @@ public class GetDatabaseSchemaResponseBody extends TeaModel {
             /**
              * fieldTypeDetail.
              */
-            public Builder fieldTypeDetail(java.util.Map < String, ? > fieldTypeDetail) {
+            public Builder fieldTypeDetail(java.util.Map<String, ?> fieldTypeDetail) {
                 this.fieldTypeDetail = fieldTypeDetail;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListRestQueryResultRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
-    private java.util.Map < String, ? > query;
+    private java.util.Map<String, ?> query;
 
     private ListRestQueryResultRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class ListRestQueryResultRequest extends Request {
     /**
      * @return query
      */
-    public java.util.Map < String, ? > getQuery() {
+    public java.util.Map<String, ?> getQuery() {
         return this.query;
     }
 
@@ -82,7 +87,7 @@ public class ListRestQueryResultRequest extends Request {
         private String instanceId; 
         private String address; 
         private String indexName; 
-        private java.util.Map < String, ? > query; 
+        private java.util.Map<String, ?> query; 
 
         private Builder() {
             super();
@@ -139,7 +144,7 @@ public class ListRestQueryResultRequest extends Request {
          * <strong>example:</strong>
          * <p>query%3Drelation_id%3A%221151274675_2%22%26%26cluster%3Dgeneral%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson</p>
          */
-        public Builder query(java.util.Map < String, ? > query) {
+        public Builder query(java.util.Map<String, ?> query) {
             this.putBodyParameter("query", query);
             this.query = query;
             return this;

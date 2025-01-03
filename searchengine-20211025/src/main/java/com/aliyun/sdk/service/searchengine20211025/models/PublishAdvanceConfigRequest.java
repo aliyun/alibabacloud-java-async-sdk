@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class PublishAdvanceConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("files")
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     private PublishAdvanceConfigRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class PublishAdvanceConfigRequest extends Request {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -83,7 +88,7 @@ public class PublishAdvanceConfigRequest extends Request {
         private String instanceId; 
         private String configName; 
         private String desc; 
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
 
         private Builder() {
             super();
@@ -138,7 +143,7 @@ public class PublishAdvanceConfigRequest extends Request {
         /**
          * <p>The files.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.putBodyParameter("files", files);
             this.files = files;
             return this;
@@ -162,7 +167,7 @@ public class PublishAdvanceConfigRequest extends Request {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.Map < String, FilesConfigVariablesValue > variables;
+        private java.util.Map<String, FilesConfigVariablesValue> variables;
 
         private Config(Builder builder) {
             this.content = builder.content;
@@ -187,13 +192,13 @@ public class PublishAdvanceConfigRequest extends Request {
         /**
          * @return variables
          */
-        public java.util.Map < String, FilesConfigVariablesValue > getVariables() {
+        public java.util.Map<String, FilesConfigVariablesValue> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, FilesConfigVariablesValue > variables; 
+            private java.util.Map<String, FilesConfigVariablesValue> variables; 
 
             /**
              * <p>The file content.</p>
@@ -209,7 +214,7 @@ public class PublishAdvanceConfigRequest extends Request {
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.Map < String, FilesConfigVariablesValue > variables) {
+            public Builder variables(java.util.Map<String, FilesConfigVariablesValue> variables) {
                 this.variables = variables;
                 return this;
             }

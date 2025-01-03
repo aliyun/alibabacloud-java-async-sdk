@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class PublishIndexVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.Map < String, ? > body;
+    private java.util.Map<String, ?> body;
 
     private PublishIndexVersionRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class PublishIndexVersionRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, ? > getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<PublishIndexVersionRequest, Builder> {
         private String instanceId; 
         private String indexName; 
-        private java.util.Map < String, ? > body; 
+        private java.util.Map<String, ?> body; 
 
         private Builder() {
             super();
@@ -115,7 +120,7 @@ public class PublishIndexVersionRequest extends Request {
          * <strong>example:</strong>
          * <p>{}</p>
          */
-        public Builder body(java.util.Map < String, ? > body) {
+        public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class PushDocumentsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ? > body;
+    private java.util.List<?> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pkField")
@@ -68,7 +73,7 @@ public class PushDocumentsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < ? > getBody() {
+    public java.util.List<?> getBody() {
         return this.body;
     }
 
@@ -82,7 +87,7 @@ public class PushDocumentsRequest extends Request {
     public static final class Builder extends Request.Builder<PushDocumentsRequest, Builder> {
         private String instanceId; 
         private String dataSourceName; 
-        private java.util.List < ? > body; 
+        private java.util.List<?> body; 
         private String pkField; 
 
         private Builder() {
@@ -126,7 +131,7 @@ public class PushDocumentsRequest extends Request {
         /**
          * <p>The request body.</p>
          */
-        public Builder body(java.util.List < ? > body) {
+        public Builder body(java.util.List<?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("components")
-    private java.util.List < Components> components;
+    private java.util.List<Components> components;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("order")
@@ -30,7 +35,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
@@ -64,7 +69,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -85,16 +90,16 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String chargeType; 
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private Order order; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -124,7 +129,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The information about the instance specification.</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.putBodyParameter("components", components);
             this.components = components;
             return this;
@@ -151,7 +156,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;

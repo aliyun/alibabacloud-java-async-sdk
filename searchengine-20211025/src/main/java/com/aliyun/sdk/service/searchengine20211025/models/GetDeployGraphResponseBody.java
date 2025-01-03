@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -676,22 +681,22 @@ public class GetDeployGraphResponseBody extends TeaModel {
      */
     public static class Graph extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("indexMetas")
-        private java.util.List < IndexMetas> indexMetas;
+        private java.util.List<IndexMetas> indexMetas;
 
         @com.aliyun.core.annotation.NameInMap("onlineMaster")
-        private java.util.List < OnlineMaster> onlineMaster;
+        private java.util.List<OnlineMaster> onlineMaster;
 
         @com.aliyun.core.annotation.NameInMap("tableIndexRelation")
-        private java.util.Map < String, java.util.List<String>> tableIndexRelation;
+        private java.util.Map<String, java.util.List<String>> tableIndexRelation;
 
         @com.aliyun.core.annotation.NameInMap("tableMetas")
-        private java.util.List < TableMetas> tableMetas;
+        private java.util.List<TableMetas> tableMetas;
 
         @com.aliyun.core.annotation.NameInMap("zoneIndexRelation")
-        private java.util.Map < String, java.util.List<String>> zoneIndexRelation;
+        private java.util.Map<String, java.util.List<String>> zoneIndexRelation;
 
         @com.aliyun.core.annotation.NameInMap("zoneMetas")
-        private java.util.List < ZoneMetas> zoneMetas;
+        private java.util.List<ZoneMetas> zoneMetas;
 
         private Graph(Builder builder) {
             this.indexMetas = builder.indexMetas;
@@ -713,57 +718,57 @@ public class GetDeployGraphResponseBody extends TeaModel {
         /**
          * @return indexMetas
          */
-        public java.util.List < IndexMetas> getIndexMetas() {
+        public java.util.List<IndexMetas> getIndexMetas() {
             return this.indexMetas;
         }
 
         /**
          * @return onlineMaster
          */
-        public java.util.List < OnlineMaster> getOnlineMaster() {
+        public java.util.List<OnlineMaster> getOnlineMaster() {
             return this.onlineMaster;
         }
 
         /**
          * @return tableIndexRelation
          */
-        public java.util.Map < String, java.util.List<String>> getTableIndexRelation() {
+        public java.util.Map<String, java.util.List<String>> getTableIndexRelation() {
             return this.tableIndexRelation;
         }
 
         /**
          * @return tableMetas
          */
-        public java.util.List < TableMetas> getTableMetas() {
+        public java.util.List<TableMetas> getTableMetas() {
             return this.tableMetas;
         }
 
         /**
          * @return zoneIndexRelation
          */
-        public java.util.Map < String, java.util.List<String>> getZoneIndexRelation() {
+        public java.util.Map<String, java.util.List<String>> getZoneIndexRelation() {
             return this.zoneIndexRelation;
         }
 
         /**
          * @return zoneMetas
          */
-        public java.util.List < ZoneMetas> getZoneMetas() {
+        public java.util.List<ZoneMetas> getZoneMetas() {
             return this.zoneMetas;
         }
 
         public static final class Builder {
-            private java.util.List < IndexMetas> indexMetas; 
-            private java.util.List < OnlineMaster> onlineMaster; 
-            private java.util.Map < String, java.util.List<String>> tableIndexRelation; 
-            private java.util.List < TableMetas> tableMetas; 
-            private java.util.Map < String, java.util.List<String>> zoneIndexRelation; 
-            private java.util.List < ZoneMetas> zoneMetas; 
+            private java.util.List<IndexMetas> indexMetas; 
+            private java.util.List<OnlineMaster> onlineMaster; 
+            private java.util.Map<String, java.util.List<String>> tableIndexRelation; 
+            private java.util.List<TableMetas> tableMetas; 
+            private java.util.Map<String, java.util.List<String>> zoneIndexRelation; 
+            private java.util.List<ZoneMetas> zoneMetas; 
 
             /**
              * <p>The index metadata.</p>
              */
-            public Builder indexMetas(java.util.List < IndexMetas> indexMetas) {
+            public Builder indexMetas(java.util.List<IndexMetas> indexMetas) {
                 this.indexMetas = indexMetas;
                 return this;
             }
@@ -771,7 +776,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             /**
              * <p>The metadata of online clusters.</p>
              */
-            public Builder onlineMaster(java.util.List < OnlineMaster> onlineMaster) {
+            public Builder onlineMaster(java.util.List<OnlineMaster> onlineMaster) {
                 this.onlineMaster = onlineMaster;
                 return this;
             }
@@ -779,7 +784,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             /**
              * <p>The association relationships between data sources and indexes.</p>
              */
-            public Builder tableIndexRelation(java.util.Map < String, java.util.List<String>> tableIndexRelation) {
+            public Builder tableIndexRelation(java.util.Map<String, java.util.List<String>> tableIndexRelation) {
                 this.tableIndexRelation = tableIndexRelation;
                 return this;
             }
@@ -787,7 +792,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             /**
              * <p>The metadata of data sources.</p>
              */
-            public Builder tableMetas(java.util.List < TableMetas> tableMetas) {
+            public Builder tableMetas(java.util.List<TableMetas> tableMetas) {
                 this.tableMetas = tableMetas;
                 return this;
             }
@@ -795,7 +800,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             /**
              * <p>The association relationships between zones and indexes.</p>
              */
-            public Builder zoneIndexRelation(java.util.Map < String, java.util.List<String>> zoneIndexRelation) {
+            public Builder zoneIndexRelation(java.util.Map<String, java.util.List<String>> zoneIndexRelation) {
                 this.zoneIndexRelation = zoneIndexRelation;
                 return this;
             }
@@ -803,7 +808,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             /**
              * <p>The zone metadata.</p>
              */
-            public Builder zoneMetas(java.util.List < ZoneMetas> zoneMetas) {
+            public Builder zoneMetas(java.util.List<ZoneMetas> zoneMetas) {
                 this.zoneMetas = zoneMetas;
                 return this;
             }

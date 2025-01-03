@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("variables")
-    private java.util.Map < String, VariablesValue > variables;
+    private java.util.Map<String, VariablesValue> variables;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("fileName")
@@ -81,7 +86,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
     /**
      * @return variables
      */
-    public java.util.Map < String, VariablesValue > getVariables() {
+    public java.util.Map<String, VariablesValue> getVariables() {
         return this.variables;
     }
 
@@ -96,7 +101,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         private String instanceId; 
         private String configName; 
         private String content; 
-        private java.util.Map < String, VariablesValue > variables; 
+        private java.util.Map<String, VariablesValue> variables; 
         private String fileName; 
 
         private Builder() {
@@ -153,7 +158,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         /**
          * <p>The variables.</p>
          */
-        public Builder variables(java.util.Map < String, VariablesValue > variables) {
+        public Builder variables(java.util.Map<String, VariablesValue> variables) {
             this.putBodyParameter("variables", variables);
             this.variables = variables;
             return this;

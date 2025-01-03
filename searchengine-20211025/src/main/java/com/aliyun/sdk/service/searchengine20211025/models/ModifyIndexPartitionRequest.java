@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ModifyIndexPartitionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("indexInfos")
-    private java.util.List < IndexInfos> indexInfos;
+    private java.util.List<IndexInfos> indexInfos;
 
     private ModifyIndexPartitionRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class ModifyIndexPartitionRequest extends Request {
     /**
      * @return indexInfos
      */
-    public java.util.List < IndexInfos> getIndexInfos() {
+    public java.util.List<IndexInfos> getIndexInfos() {
         return this.indexInfos;
     }
 
@@ -95,7 +100,7 @@ public class ModifyIndexPartitionRequest extends Request {
         private String dataSourceName; 
         private String domainName; 
         private Long generation; 
-        private java.util.List < IndexInfos> indexInfos; 
+        private java.util.List<IndexInfos> indexInfos; 
 
         private Builder() {
             super();
@@ -162,7 +167,7 @@ public class ModifyIndexPartitionRequest extends Request {
         /**
          * <p>The index information.</p>
          */
-        public Builder indexInfos(java.util.List < IndexInfos> indexInfos) {
+        public Builder indexInfos(java.util.List<IndexInfos> indexInfos) {
             this.putBodyParameter("indexInfos", indexInfos);
             this.indexInfos = indexInfos;
             return this;

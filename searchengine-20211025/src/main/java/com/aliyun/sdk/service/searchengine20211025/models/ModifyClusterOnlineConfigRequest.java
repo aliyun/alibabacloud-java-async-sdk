@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,11 +24,11 @@ public class ModifyClusterOnlineConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("clusters")
-    private java.util.List < String > clusters;
+    private java.util.List<String> clusters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("config")
-    private java.util.Map < String, Integer > config;
+    private java.util.Map<String, Integer> config;
 
     private ModifyClusterOnlineConfigRequest(Builder builder) {
         super(builder);
@@ -55,21 +60,21 @@ public class ModifyClusterOnlineConfigRequest extends Request {
     /**
      * @return clusters
      */
-    public java.util.List < String > getClusters() {
+    public java.util.List<String> getClusters() {
         return this.clusters;
     }
 
     /**
      * @return config
      */
-    public java.util.Map < String, Integer > getConfig() {
+    public java.util.Map<String, Integer> getConfig() {
         return this.config;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterOnlineConfigRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > clusters; 
-        private java.util.Map < String, Integer > config; 
+        private java.util.List<String> clusters; 
+        private java.util.Map<String, Integer> config; 
 
         private Builder() {
             super();
@@ -98,7 +103,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         /**
          * <p>The cluster information.</p>
          */
-        public Builder clusters(java.util.List < String > clusters) {
+        public Builder clusters(java.util.List<String> clusters) {
             this.putBodyParameter("clusters", clusters);
             this.clusters = clusters;
             return this;
@@ -107,7 +112,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         /**
          * <p>The configuration information.</p>
          */
-        public Builder config(java.util.Map < String, Integer > config) {
+        public Builder config(java.util.Map<String, Integer> config) {
             this.putBodyParameter("config", config);
             this.config = config;
             return this;

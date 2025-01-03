@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ModifyPausePolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.Map < String, BodyValue > body;
+    private java.util.Map<String, BodyValue> body;
 
     private ModifyPausePolicyRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ModifyPausePolicyRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, BodyValue > getBody() {
+    public java.util.Map<String, BodyValue> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<ModifyPausePolicyRequest, Builder> {
         private String instanceId; 
-        private java.util.Map < String, BodyValue > body; 
+        private java.util.Map<String, BodyValue> body; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class ModifyPausePolicyRequest extends Request {
         /**
          * <p>The request body.</p>
          */
-        public Builder body(java.util.Map < String, BodyValue > body) {
+        public Builder body(java.util.Map<String, BodyValue> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

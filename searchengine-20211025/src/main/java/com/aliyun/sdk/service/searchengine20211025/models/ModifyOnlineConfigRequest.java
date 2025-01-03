@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class ModifyOnlineConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.Map < String, String > body;
+    private java.util.Map<String, String> body;
 
     private ModifyOnlineConfigRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class ModifyOnlineConfigRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, String > getBody() {
+    public java.util.Map<String, String> getBody() {
         return this.body;
     }
 
@@ -84,7 +89,7 @@ public class ModifyOnlineConfigRequest extends Request {
         private String instanceId; 
         private String nodeName; 
         private String indexName; 
-        private java.util.Map < String, String > body; 
+        private java.util.Map<String, String> body; 
 
         private Builder() {
             super();
@@ -140,7 +145,7 @@ public class ModifyOnlineConfigRequest extends Request {
         /**
          * <p>The request body.</p>
          */
-        public Builder body(java.util.Map < String, String > body) {
+        public Builder body(java.util.Map<String, String> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

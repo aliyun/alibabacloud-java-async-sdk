@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ConfigValue extends TeaModel {
     private String desc;
 
     @com.aliyun.core.annotation.NameInMap("files")
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     private ConfigValue(Builder builder) {
         this.desc = builder.desc;
@@ -41,13 +46,13 @@ public class ConfigValue extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
     public static final class Builder {
         private String desc; 
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
 
         /**
          * <p>The description of the offline configuration.</p>
@@ -63,7 +68,7 @@ public class ConfigValue extends TeaModel {
         /**
          * <p>The files to be modified.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.files = files;
             return this;
         }
@@ -85,7 +90,7 @@ public class ConfigValue extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables;
+        private java.util.Map<String, ConfigValueFilesConfigVariablesValue> variables;
 
         private Config(Builder builder) {
             this.content = builder.content;
@@ -110,13 +115,13 @@ public class ConfigValue extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.Map < String, ConfigValueFilesConfigVariablesValue > getVariables() {
+        public java.util.Map<String, ConfigValueFilesConfigVariablesValue> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables; 
+            private java.util.Map<String, ConfigValueFilesConfigVariablesValue> variables; 
 
             /**
              * <p>The file content.</p>
@@ -132,7 +137,7 @@ public class ConfigValue extends TeaModel {
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables) {
+            public Builder variables(java.util.Map<String, ConfigValueFilesConfigVariablesValue> variables) {
                 this.variables = variables;
                 return this;
             }

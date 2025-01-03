@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -647,6 +652,9 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>GetInstanceResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bsVersion")
+        private String bsVersion;
+
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
@@ -693,7 +701,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
@@ -705,6 +713,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String version;
 
         private Result(Builder builder) {
+            this.bsVersion = builder.bsVersion;
             this.chargeType = builder.chargeType;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
@@ -732,6 +741,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return bsVersion
+         */
+        public String getBsVersion() {
+            return this.bsVersion;
         }
 
         /**
@@ -842,7 +858,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -868,6 +884,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bsVersion; 
             private String chargeType; 
             private String commodityCode; 
             private String createTime; 
@@ -883,10 +900,18 @@ public class GetInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Spec spec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
             private String userName; 
             private String version; 
+
+            /**
+             * bsVersion.
+             */
+            public Builder bsVersion(String bsVersion) {
+                this.bsVersion = bsVersion;
+                return this;
+            }
 
             /**
              * <p>The billing method.</p>
@@ -1056,7 +1081,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * <p>The tags of the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

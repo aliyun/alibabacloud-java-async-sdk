@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
         private String requestId;
 
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.Map < String, String > result;
+        private java.util.Map<String, String> result;
 
         private Result(Builder builder) {
             this.requestId = builder.requestId;
@@ -110,13 +115,13 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.Map < String, String > getResult() {
+        public java.util.Map<String, String> getResult() {
             return this.result;
         }
 
         public static final class Builder {
             private String requestId; 
-            private java.util.Map < String, String > result; 
+            private java.util.Map<String, String> result; 
 
             /**
              * <p>id of request</p>
@@ -132,7 +137,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
             /**
              * <p>The result.</p>
              */
-            public Builder result(java.util.Map < String, String > result) {
+            public Builder result(java.util.Map<String, String> result) {
                 this.result = result;
                 return this;
             }

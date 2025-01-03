@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -129,7 +134,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
      */
     public static class Odps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("partitions")
-        private java.util.Map < String, String > partitions;
+        private java.util.Map<String, String> partitions;
 
         private Odps(Builder builder) {
             this.partitions = builder.partitions;
@@ -146,17 +151,17 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         /**
          * @return partitions
          */
-        public java.util.Map < String, String > getPartitions() {
+        public java.util.Map<String, String> getPartitions() {
             return this.partitions;
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > partitions; 
+            private java.util.Map<String, String> partitions; 
 
             /**
              * partitions.
              */
-            public Builder partitions(java.util.Map < String, String > partitions) {
+            public Builder partitions(java.util.Map<String, String> partitions) {
                 this.partitions = partitions;
                 return this;
             }

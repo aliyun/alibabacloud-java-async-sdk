@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ListDatabasesResponseBody extends TeaModel {
      */
     public static class SqlInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
-        private java.util.List < ? > children;
+        private java.util.List<?> children;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -127,7 +132,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < ? > getChildren() {
+        public java.util.List<?> getChildren() {
             return this.children;
         }
 
@@ -181,7 +186,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > children; 
+            private java.util.List<?> children; 
             private Long id; 
             private Long instanceId; 
             private Integer isDir; 
@@ -193,7 +198,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * children.
              */
-            public Builder children(java.util.List < ? > children) {
+            public Builder children(java.util.List<?> children) {
                 this.children = children;
                 return this;
             }
@@ -272,7 +277,7 @@ public class ListDatabasesResponseBody extends TeaModel {
      */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
-        private java.util.List < ? > children;
+        private java.util.List<?> children;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -317,7 +322,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < ? > getChildren() {
+        public java.util.List<?> getChildren() {
             return this.children;
         }
 
@@ -371,7 +376,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > children; 
+            private java.util.List<?> children; 
             private Long id; 
             private Long instanceId; 
             private Integer isDir; 
@@ -383,7 +388,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * children.
              */
-            public Builder children(java.util.List < ? > children) {
+            public Builder children(java.util.List<?> children) {
                 this.children = children;
                 return this;
             }
@@ -462,7 +467,7 @@ public class ListDatabasesResponseBody extends TeaModel {
      */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("children")
-        private java.util.List < ? > children;
+        private java.util.List<?> children;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -507,7 +512,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < ? > getChildren() {
+        public java.util.List<?> getChildren() {
             return this.children;
         }
 
@@ -561,7 +566,7 @@ public class ListDatabasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > children; 
+            private java.util.List<?> children; 
             private Long id; 
             private Long instanceId; 
             private Integer isDir; 
@@ -573,7 +578,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * children.
              */
-            public Builder children(java.util.List < ? > children) {
+            public Builder children(java.util.List<?> children) {
                 this.children = children;
                 return this;
             }
@@ -655,16 +660,16 @@ public class ListDatabasesResponseBody extends TeaModel {
         private String database;
 
         @com.aliyun.core.annotation.NameInMap("functions")
-        private java.util.Map < String, java.util.List<ResultDatabasesFunctionsValue>> functions;
+        private java.util.Map<String, java.util.List<ResultDatabasesFunctionsValue>> functions;
 
         @com.aliyun.core.annotation.NameInMap("sqlInstances")
-        private java.util.List < SqlInstances> sqlInstances;
+        private java.util.List<SqlInstances> sqlInstances;
 
         @com.aliyun.core.annotation.NameInMap("tables")
-        private java.util.List < Tables> tables;
+        private java.util.List<Tables> tables;
 
         @com.aliyun.core.annotation.NameInMap("templates")
-        private java.util.List < Templates> templates;
+        private java.util.List<Templates> templates;
 
         private Databases(Builder builder) {
             this.database = builder.database;
@@ -692,37 +697,37 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return functions
          */
-        public java.util.Map < String, java.util.List<ResultDatabasesFunctionsValue>> getFunctions() {
+        public java.util.Map<String, java.util.List<ResultDatabasesFunctionsValue>> getFunctions() {
             return this.functions;
         }
 
         /**
          * @return sqlInstances
          */
-        public java.util.List < SqlInstances> getSqlInstances() {
+        public java.util.List<SqlInstances> getSqlInstances() {
             return this.sqlInstances;
         }
 
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
         /**
          * @return templates
          */
-        public java.util.List < Templates> getTemplates() {
+        public java.util.List<Templates> getTemplates() {
             return this.templates;
         }
 
         public static final class Builder {
             private String database; 
-            private java.util.Map < String, java.util.List<ResultDatabasesFunctionsValue>> functions; 
-            private java.util.List < SqlInstances> sqlInstances; 
-            private java.util.List < Tables> tables; 
-            private java.util.List < Templates> templates; 
+            private java.util.Map<String, java.util.List<ResultDatabasesFunctionsValue>> functions; 
+            private java.util.List<SqlInstances> sqlInstances; 
+            private java.util.List<Tables> tables; 
+            private java.util.List<Templates> templates; 
 
             /**
              * database.
@@ -735,7 +740,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * functions.
              */
-            public Builder functions(java.util.Map < String, java.util.List<ResultDatabasesFunctionsValue>> functions) {
+            public Builder functions(java.util.Map<String, java.util.List<ResultDatabasesFunctionsValue>> functions) {
                 this.functions = functions;
                 return this;
             }
@@ -743,7 +748,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * sqlInstances.
              */
-            public Builder sqlInstances(java.util.List < SqlInstances> sqlInstances) {
+            public Builder sqlInstances(java.util.List<SqlInstances> sqlInstances) {
                 this.sqlInstances = sqlInstances;
                 return this;
             }
@@ -751,7 +756,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * tables.
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -759,7 +764,7 @@ public class ListDatabasesResponseBody extends TeaModel {
             /**
              * templates.
              */
-            public Builder templates(java.util.List < Templates> templates) {
+            public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
                 return this;
             }
@@ -779,7 +784,7 @@ public class ListDatabasesResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("databases")
-        private java.util.List < Databases> databases;
+        private java.util.List<Databases> databases;
 
         private Result(Builder builder) {
             this.databases = builder.databases;
@@ -796,17 +801,17 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return databases
          */
-        public java.util.List < Databases> getDatabases() {
+        public java.util.List<Databases> getDatabases() {
             return this.databases;
         }
 
         public static final class Builder {
-            private java.util.List < Databases> databases; 
+            private java.util.List<Databases> databases; 
 
             /**
              * databases.
              */
-            public Builder databases(java.util.List < Databases> databases) {
+            public Builder databases(java.util.List<Databases> databases) {
                 this.databases = databases;
                 return this;
             }
