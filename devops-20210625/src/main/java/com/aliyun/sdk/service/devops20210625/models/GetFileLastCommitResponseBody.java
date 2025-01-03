@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileLastCommitResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileLastCommitResponseBody</p>
@@ -130,6 +136,12 @@ public class GetFileLastCommitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileLastCommitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileLastCommitResponseBody</p>
+     */
     public static class Signature extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gpgKeyId")
         private String gpgKeyId;
@@ -169,7 +181,10 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             private String verificationStatus; 
 
             /**
-             * GPG密钥ID
+             * <p>GPG密钥ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34d2c47c7ce46a5c4639c5ffe208</p>
              */
             public Builder gpgKeyId(String gpgKeyId) {
                 this.gpgKeyId = gpgKeyId;
@@ -191,6 +206,12 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFileLastCommitResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileLastCommitResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authorDate")
         private String authorDate;
@@ -220,7 +241,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        private java.util.List<String> parentIds;
 
         @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
@@ -321,7 +342,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -356,7 +377,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private Signature signature; 
             private String title; 
@@ -436,7 +457,7 @@ public class GetFileLastCommitResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }

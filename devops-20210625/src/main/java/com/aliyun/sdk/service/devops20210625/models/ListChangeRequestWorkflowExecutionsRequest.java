@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChangeRequestWorkflowExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListChangeRequestWorkflowExecutionsRequest</p>
@@ -169,7 +175,10 @@ public class ListChangeRequestWorkflowExecutionsRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -178,7 +187,10 @@ public class ListChangeRequestWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * sn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce51b31b996246ecaf874736838360b2</p>
          */
         public Builder sn(String sn) {
             this.putPathParameter("sn", sn);
@@ -223,7 +235,10 @@ public class ListChangeRequestWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * releaseStageSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e173f3c11db5445eb426ca33c92207c8</p>
          */
         public Builder releaseStageSn(String releaseStageSn) {
             this.putQueryParameter("releaseStageSn", releaseStageSn);
@@ -232,7 +247,10 @@ public class ListChangeRequestWorkflowExecutionsRequest extends Request {
         }
 
         /**
-         * releaseWorkflowSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce51b31b996246ecaf874736838360b2</p>
          */
         public Builder releaseWorkflowSn(String releaseWorkflowSn) {
             this.putQueryParameter("releaseWorkflowSn", releaseWorkflowSn);

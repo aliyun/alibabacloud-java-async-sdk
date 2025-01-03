@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPipelineRunRequest} extends {@link RequestModel}
  *
  * <p>GetPipelineRunRequest</p>
@@ -84,7 +90,10 @@ public class GetPipelineRunRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +102,10 @@ public class GetPipelineRunRequest extends Request {
         }
 
         /**
-         * pipelineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12222</p>
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -102,7 +114,10 @@ public class GetPipelineRunRequest extends Request {
         }
 
         /**
-         * pipelineRunId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);

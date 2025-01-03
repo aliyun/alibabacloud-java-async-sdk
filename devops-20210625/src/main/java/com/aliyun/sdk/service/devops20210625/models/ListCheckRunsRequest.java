@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckRunsRequest} extends {@link RequestModel}
  *
  * <p>ListCheckRunsRequest</p>
@@ -135,7 +141,10 @@ public class ListCheckRunsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -162,7 +171,10 @@ public class ListCheckRunsRequest extends Request {
         }
 
         /**
-         * ref.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40f4ccfe019cdd4a62d4acb0c57130106fc7e1be</p>
          */
         public Builder ref(String ref) {
             this.putQueryParameter("ref", ref);
@@ -171,7 +183,7 @@ public class ListCheckRunsRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);

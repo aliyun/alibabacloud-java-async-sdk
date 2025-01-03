@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReviewMergeRequestRequest} extends {@link RequestModel}
  *
  * <p>ReviewMergeRequestRequest</p>
@@ -27,7 +33,7 @@ public class ReviewMergeRequestRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("draftCommentIds")
-    private java.util.List < String > draftCommentIds;
+    private java.util.List<String> draftCommentIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("reviewComment")
@@ -91,7 +97,7 @@ public class ReviewMergeRequestRequest extends Request {
     /**
      * @return draftCommentIds
      */
-    public java.util.List < String > getDraftCommentIds() {
+    public java.util.List<String> getDraftCommentIds() {
         return this.draftCommentIds;
     }
 
@@ -120,7 +126,7 @@ public class ReviewMergeRequestRequest extends Request {
         private Long repositoryId; 
         private Long localId; 
         private String accessToken; 
-        private java.util.List < String > draftCommentIds; 
+        private java.util.List<String> draftCommentIds; 
         private String reviewComment; 
         private String reviewOpinion; 
         private String organizationId; 
@@ -141,7 +147,10 @@ public class ReviewMergeRequestRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2334743</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -150,7 +159,10 @@ public class ReviewMergeRequestRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder localId(Long localId) {
             this.putPathParameter("localId", localId);
@@ -170,7 +182,7 @@ public class ReviewMergeRequestRequest extends Request {
         /**
          * draftCommentIds.
          */
-        public Builder draftCommentIds(java.util.List < String > draftCommentIds) {
+        public Builder draftCommentIds(java.util.List<String> draftCommentIds) {
             this.putBodyParameter("draftCommentIds", draftCommentIds);
             this.draftCommentIds = draftCommentIds;
             return this;
@@ -186,7 +198,10 @@ public class ReviewMergeRequestRequest extends Request {
         }
 
         /**
-         * reviewOpinion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PASS</p>
          */
         public Builder reviewOpinion(String reviewOpinion) {
             this.putBodyParameter("reviewOpinion", reviewOpinion);
@@ -195,7 +210,10 @@ public class ReviewMergeRequestRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

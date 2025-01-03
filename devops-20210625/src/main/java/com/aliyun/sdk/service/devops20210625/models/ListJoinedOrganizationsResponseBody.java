@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJoinedOrganizationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJoinedOrganizationsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("organizations")
-    private java.util.List < Organizations> organizations;
+    private java.util.List<Organizations> organizations;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
     /**
      * @return organizations
      */
-    public java.util.List < Organizations> getOrganizations() {
+    public java.util.List<Organizations> getOrganizations() {
         return this.organizations;
     }
 
@@ -80,7 +86,7 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < Organizations> organizations; 
+        private java.util.List<Organizations> organizations; 
         private String requestId; 
         private Boolean success; 
 
@@ -103,7 +109,7 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
         /**
          * organizations.
          */
-        public Builder organizations(java.util.List < Organizations> organizations) {
+        public Builder organizations(java.util.List<Organizations> organizations) {
             this.organizations = organizations;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJoinedOrganizationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJoinedOrganizationsResponseBody</p>
+     */
     public static class Organizations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;

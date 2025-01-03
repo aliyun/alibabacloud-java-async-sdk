@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinPipelineGroupRequest} extends {@link RequestModel}
  *
  * <p>JoinPipelineGroupRequest</p>
@@ -84,7 +90,10 @@ public class JoinPipelineGroupRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +102,10 @@ public class JoinPipelineGroupRequest extends Request {
         }
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("groupId", groupId);
@@ -102,7 +114,10 @@ public class JoinPipelineGroupRequest extends Request {
         }
 
         /**
-         * pipelineIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122,122</p>
          */
         public Builder pipelineIds(String pipelineIds) {
             this.putQueryParameter("pipelineIds", pipelineIds);

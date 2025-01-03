@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteProtectedBranchRequest} extends {@link RequestModel}
  *
  * <p>DeleteProtectedBranchRequest</p>
@@ -98,7 +104,10 @@ public class DeleteProtectedBranchRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2813489</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -107,7 +116,10 @@ public class DeleteProtectedBranchRequest extends Request {
         }
 
         /**
-         * protectedBranchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5326</p>
          */
         public Builder protectedBranchId(Long protectedBranchId) {
             this.putPathParameter("protectedBranchId", protectedBranchId);
@@ -125,7 +137,10 @@ public class DeleteProtectedBranchRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>611b75680fc7bf0dbe1dce55</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

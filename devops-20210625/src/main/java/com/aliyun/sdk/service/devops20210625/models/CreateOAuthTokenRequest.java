@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOAuthTokenRequest} extends {@link RequestModel}
  *
  * <p>CreateOAuthTokenRequest</p>
@@ -127,7 +133,11 @@ public class CreateOAuthTokenRequest extends Request {
         } 
 
         /**
-         * clientId
+         * <p>clientId</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc7e0b3c00a3e58f46</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("clientId", clientId);
@@ -136,7 +146,11 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * client_secret
+         * <p>client_secret</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a433294edea39cae7e7870</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putBodyParameter("clientSecret", clientSecret);
@@ -154,7 +168,10 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * grantType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder grantType(String grantType) {
             this.putBodyParameter("grantType", grantType);
@@ -172,7 +189,10 @@ public class CreateOAuthTokenRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>read:repo</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);

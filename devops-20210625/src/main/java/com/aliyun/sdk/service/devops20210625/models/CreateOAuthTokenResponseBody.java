@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOAuthTokenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOAuthTokenResponseBody</p>
@@ -130,6 +136,12 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOAuthTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOAuthTokenResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessToken")
         private String accessToken;
@@ -201,7 +213,10 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30815</p>
              */
             public Builder id(String id) {
                 this.id = id;

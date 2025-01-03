@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppMembersRequest} extends {@link RequestModel}
  *
  * <p>CreateAppMembersRequest</p>
@@ -17,11 +23,11 @@ public class CreateAppMembersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("playerList")
-    private java.util.List < PlayerList> playerList;
+    private java.util.List<PlayerList> playerList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("roleNames")
-    private java.util.List < String > roleNames;
+    private java.util.List<String> roleNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("organizationId")
@@ -58,14 +64,14 @@ public class CreateAppMembersRequest extends Request {
     /**
      * @return playerList
      */
-    public java.util.List < PlayerList> getPlayerList() {
+    public java.util.List<PlayerList> getPlayerList() {
         return this.playerList;
     }
 
     /**
      * @return roleNames
      */
-    public java.util.List < String > getRoleNames() {
+    public java.util.List<String> getRoleNames() {
         return this.roleNames;
     }
 
@@ -78,8 +84,8 @@ public class CreateAppMembersRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAppMembersRequest, Builder> {
         private String appName; 
-        private java.util.List < PlayerList> playerList; 
-        private java.util.List < String > roleNames; 
+        private java.util.List<PlayerList> playerList; 
+        private java.util.List<String> roleNames; 
         private String organizationId; 
 
         private Builder() {
@@ -106,7 +112,7 @@ public class CreateAppMembersRequest extends Request {
         /**
          * playerList.
          */
-        public Builder playerList(java.util.List < PlayerList> playerList) {
+        public Builder playerList(java.util.List<PlayerList> playerList) {
             this.putBodyParameter("playerList", playerList);
             this.playerList = playerList;
             return this;
@@ -115,7 +121,7 @@ public class CreateAppMembersRequest extends Request {
         /**
          * roleNames.
          */
-        public Builder roleNames(java.util.List < String > roleNames) {
+        public Builder roleNames(java.util.List<String> roleNames) {
             this.putBodyParameter("roleNames", roleNames);
             this.roleNames = roleNames;
             return this;
@@ -137,6 +143,12 @@ public class CreateAppMembersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppMembersRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppMembersRequest</p>
+     */
     public static class PlayerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;

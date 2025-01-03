@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMergeRequestRequest} extends {@link RequestModel}
  *
  * <p>UpdateMergeRequestRequest</p>
@@ -126,7 +132,10 @@ public class UpdateMergeRequestRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>889910</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -135,7 +144,10 @@ public class UpdateMergeRequestRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder localId(Long localId) {
             this.putPathParameter("localId", localId);
@@ -171,7 +183,10 @@ public class UpdateMergeRequestRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

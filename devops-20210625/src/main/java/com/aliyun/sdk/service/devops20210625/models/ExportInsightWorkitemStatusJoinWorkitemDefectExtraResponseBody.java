@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody} extends {@link TeaModel}
  *
  * <p>ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody</p>
@@ -18,7 +24,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
@@ -55,7 +61,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -69,7 +75,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
     public static final class Builder {
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Long totalCount; 
 
         /**
@@ -91,7 +97,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -110,6 +116,12 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
 
     } 
 
+    /**
+     * 
+     * {@link ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignedToId")
         private String assignedToId;

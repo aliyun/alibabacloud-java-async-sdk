@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkitemCommentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateWorkitemCommentResponseBody</p>
@@ -109,7 +115,10 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +139,12 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkitemCommentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateWorkitemCommentResponseBody</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("account")
         private String account;
@@ -291,6 +306,12 @@ public class CreateWorkitemCommentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateWorkitemCommentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateWorkitemCommentResponseBody</p>
+     */
     public static class Comment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;

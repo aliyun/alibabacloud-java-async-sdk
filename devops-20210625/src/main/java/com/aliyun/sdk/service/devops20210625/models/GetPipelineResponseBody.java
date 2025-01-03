@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPipelineResponseBody} extends {@link TeaModel}
  *
  * <p>GetPipelineResponseBody</p>
@@ -130,6 +136,12 @@ public class GetPipelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
@@ -147,7 +159,7 @@ public class GetPipelineResponseBody extends TeaModel {
         private String credentialType;
 
         @com.aliyun.core.annotation.NameInMap("events")
-        private java.util.List < String > events;
+        private java.util.List<String> events;
 
         @com.aliyun.core.annotation.NameInMap("isBranchMode")
         private Boolean isBranchMode;
@@ -244,7 +256,7 @@ public class GetPipelineResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < String > getEvents() {
+        public java.util.List<String> getEvents() {
             return this.events;
         }
 
@@ -324,7 +336,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private Long credentialId; 
             private String credentialLabel; 
             private String credentialType; 
-            private java.util.List < String > events; 
+            private java.util.List<String> events; 
             private Boolean isBranchMode; 
             private Boolean isCloneDepth; 
             private Boolean isSubmodule; 
@@ -353,7 +365,10 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Credential Id
+             * <p>Credential Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder credentialId(Long credentialId) {
                 this.credentialId = credentialId;
@@ -361,7 +376,10 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Credential Label
+             * <p>Credential Label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>企业公钥</p>
              */
             public Builder credentialLabel(String credentialLabel) {
                 this.credentialLabel = credentialLabel;
@@ -369,7 +387,10 @@ public class GetPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Credential Type
+             * <p>Credential Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region-ssh</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -379,7 +400,7 @@ public class GetPipelineResponseBody extends TeaModel {
             /**
              * events.
              */
-            public Builder events(java.util.List < String > events) {
+            public Builder events(java.util.List<String> events) {
                 this.events = events;
                 return this;
             }
@@ -471,6 +492,12 @@ public class GetPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
@@ -552,6 +579,12 @@ public class GetPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
     public static class PipelineConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flow")
         private String flow;
@@ -560,7 +593,7 @@ public class GetPipelineResponseBody extends TeaModel {
         private String settings;
 
         @com.aliyun.core.annotation.NameInMap("sources")
-        private java.util.List < Sources> sources;
+        private java.util.List<Sources> sources;
 
         private PipelineConfig(Builder builder) {
             this.flow = builder.flow;
@@ -593,14 +626,14 @@ public class GetPipelineResponseBody extends TeaModel {
         /**
          * @return sources
          */
-        public java.util.List < Sources> getSources() {
+        public java.util.List<Sources> getSources() {
             return this.sources;
         }
 
         public static final class Builder {
             private String flow; 
             private String settings; 
-            private java.util.List < Sources> sources; 
+            private java.util.List<Sources> sources; 
 
             /**
              * flow.
@@ -621,7 +654,7 @@ public class GetPipelineResponseBody extends TeaModel {
             /**
              * sources.
              */
-            public Builder sources(java.util.List < Sources> sources) {
+            public Builder sources(java.util.List<Sources> sources) {
                 this.sources = sources;
                 return this;
             }
@@ -633,6 +666,12 @@ public class GetPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -694,6 +733,12 @@ public class GetPipelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
     public static class Pipeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
@@ -720,7 +765,7 @@ public class GetPipelineResponseBody extends TeaModel {
         private PipelineConfig pipelineConfig;
 
         @com.aliyun.core.annotation.NameInMap("tagList")
-        private java.util.List < TagList> tagList;
+        private java.util.List<TagList> tagList;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
@@ -805,7 +850,7 @@ public class GetPipelineResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < TagList> getTagList() {
+        public java.util.List<TagList> getTagList() {
             return this.tagList;
         }
 
@@ -825,7 +870,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private String modifierAccountId; 
             private String name; 
             private PipelineConfig pipelineConfig; 
-            private java.util.List < TagList> tagList; 
+            private java.util.List<TagList> tagList; 
             private Long updateTime; 
 
             /**
@@ -895,7 +940,7 @@ public class GetPipelineResponseBody extends TeaModel {
             /**
              * tagList.
              */
-            public Builder tagList(java.util.List < TagList> tagList) {
+            public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
                 return this;
             }

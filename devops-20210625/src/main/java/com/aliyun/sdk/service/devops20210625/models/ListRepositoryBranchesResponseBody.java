@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRepositoryBranchesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRepositoryBranchesResponseBody</p>
@@ -21,7 +27,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -70,7 +76,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -92,7 +98,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -123,7 +129,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRepositoryBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepositoryBranchesResponseBody</p>
+     */
     public static class Commit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authorEmail")
         private String authorEmail;
@@ -179,7 +191,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        private java.util.List<String> parentIds;
 
         @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
@@ -276,7 +288,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -304,7 +316,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private String title; 
 
@@ -383,7 +395,7 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }
@@ -411,6 +423,12 @@ public class ListRepositoryBranchesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRepositoryBranchesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRepositoryBranchesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("commit")
         private Commit commit;

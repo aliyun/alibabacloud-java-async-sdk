@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFlowTagRequest} extends {@link RequestModel}
  *
  * <p>CreateFlowTagRequest</p>
@@ -99,7 +105,10 @@ public class CreateFlowTagRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -108,7 +117,10 @@ public class CreateFlowTagRequest extends Request {
         }
 
         /**
-         * color.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#1F9AEF</p>
          */
         public Builder color(String color) {
             this.putQueryParameter("color", color);
@@ -117,7 +129,10 @@ public class CreateFlowTagRequest extends Request {
         }
 
         /**
-         * flowTagGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder flowTagGroupId(Long flowTagGroupId) {
             this.putQueryParameter("flowTagGroupId", flowTagGroupId);
@@ -126,7 +141,7 @@ public class CreateFlowTagRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommitWithMultipleFilesRequest} extends {@link RequestModel}
  *
  * <p>CreateCommitWithMultipleFilesRequest</p>
@@ -18,7 +24,7 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("actions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Actions> actions;
+    private java.util.List<Actions> actions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("branch")
@@ -72,7 +78,7 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
     /**
      * @return actions
      */
-    public java.util.List < Actions> getActions() {
+    public java.util.List<Actions> getActions() {
         return this.actions;
     }
 
@@ -106,7 +112,7 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCommitWithMultipleFilesRequest, Builder> {
         private String accessToken; 
-        private java.util.List < Actions> actions; 
+        private java.util.List<Actions> actions; 
         private String branch; 
         private String commitMessage; 
         private String organizationId; 
@@ -136,16 +142,19 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
         }
 
         /**
-         * actions.
+         * <p>This parameter is required.</p>
          */
-        public Builder actions(java.util.List < Actions> actions) {
+        public Builder actions(java.util.List<Actions> actions) {
             this.putBodyParameter("actions", actions);
             this.actions = actions;
             return this;
         }
 
         /**
-         * branch.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder branch(String branch) {
             this.putBodyParameter("branch", branch);
@@ -163,7 +172,10 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -172,7 +184,7 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);
@@ -187,6 +199,12 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCommitWithMultipleFilesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCommitWithMultipleFilesRequest</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("action")
         private String action;

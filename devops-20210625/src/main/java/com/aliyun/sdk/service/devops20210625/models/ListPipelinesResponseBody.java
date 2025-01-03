@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelinesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelinesResponseBody</p>
@@ -21,7 +27,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("pipelines")
-    private java.util.List < Pipelines> pipelines;
+    private java.util.List<Pipelines> pipelines;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -74,7 +80,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     /**
      * @return pipelines
      */
-    public java.util.List < Pipelines> getPipelines() {
+    public java.util.List<Pipelines> getPipelines() {
         return this.pipelines;
     }
 
@@ -103,7 +109,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String nextToken; 
-        private java.util.List < Pipelines> pipelines; 
+        private java.util.List<Pipelines> pipelines; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -135,7 +141,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         /**
          * pipelines.
          */
-        public Builder pipelines(java.util.List < Pipelines> pipelines) {
+        public Builder pipelines(java.util.List<Pipelines> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
@@ -170,6 +176,12 @@ public class ListPipelinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelinesResponseBody</p>
+     */
     public static class Pipelines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;

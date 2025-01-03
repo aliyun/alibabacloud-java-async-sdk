@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommitStatusRequest} extends {@link RequestModel}
  *
  * <p>CreateCommitStatusRequest</p>
@@ -182,7 +188,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * state.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder state(String state) {
             this.putBodyParameter("state", state);
@@ -200,7 +209,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -209,7 +221,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2080972</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);
@@ -218,7 +233,10 @@ public class CreateCommitStatusRequest extends Request {
         }
 
         /**
-         * sha.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e0c1a1299a2656bfc155650bbd2df5e628fa1f4c</p>
          */
         public Builder sha(String sha) {
             this.putQueryParameter("sha", sha);

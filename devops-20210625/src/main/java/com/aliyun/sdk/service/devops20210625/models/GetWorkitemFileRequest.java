@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemFileRequest} extends {@link RequestModel}
  *
  * <p>GetWorkitemFileRequest</p>
@@ -84,7 +90,10 @@ public class GetWorkitemFileRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60811b5eed6e867404f6xxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +102,10 @@ public class GetWorkitemFileRequest extends Request {
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11234455454355</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putPathParameter("workitemIdentifier", workitemIdentifier);
@@ -102,7 +114,10 @@ public class GetWorkitemFileRequest extends Request {
         }
 
         /**
-         * fileIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfsdfdsgdsfdsfff</p>
          */
         public Builder fileIdentifier(String fileIdentifier) {
             this.putPathParameter("fileIdentifier", fileIdentifier);

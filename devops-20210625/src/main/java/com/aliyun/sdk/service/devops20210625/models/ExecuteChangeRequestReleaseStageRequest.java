@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteChangeRequestReleaseStageRequest} extends {@link RequestModel}
  *
  * <p>ExecuteChangeRequestReleaseStageRequest</p>
@@ -28,7 +34,7 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("params")
-    private java.util.Map < String, ? > params;
+    private java.util.Map<String, ?> params;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("organizationId")
@@ -80,7 +86,7 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
     /**
      * @return params
      */
-    public java.util.Map < String, ? > getParams() {
+    public java.util.Map<String, ?> getParams() {
         return this.params;
     }
 
@@ -95,7 +101,7 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
         private String appName; 
         private String releaseWorkflowSn; 
         private String releaseStageSn; 
-        private java.util.Map < String, ? > params; 
+        private java.util.Map<String, ?> params; 
         private String organizationId; 
 
         private Builder() {
@@ -112,7 +118,10 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -121,7 +130,10 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
         }
 
         /**
-         * releaseWorkflowSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce51b31b996246ecaf8747368383****</p>
          */
         public Builder releaseWorkflowSn(String releaseWorkflowSn) {
             this.putPathParameter("releaseWorkflowSn", releaseWorkflowSn);
@@ -130,7 +142,10 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
         }
 
         /**
-         * releaseStageSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e173f3c11db5445eb426ca33c922****</p>
          */
         public Builder releaseStageSn(String releaseStageSn) {
             this.putPathParameter("releaseStageSn", releaseStageSn);
@@ -141,7 +156,7 @@ public class ExecuteChangeRequestReleaseStageRequest extends Request {
         /**
          * params.
          */
-        public Builder params(java.util.Map < String, ? > params) {
+        public Builder params(java.util.Map<String, ?> params) {
             this.putBodyParameter("params", params);
             this.params = params;
             return this;

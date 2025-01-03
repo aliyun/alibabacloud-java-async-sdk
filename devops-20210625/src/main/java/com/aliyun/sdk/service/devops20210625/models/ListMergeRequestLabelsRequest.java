@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMergeRequestLabelsRequest} extends {@link RequestModel}
  *
  * <p>ListMergeRequestLabelsRequest</p>
@@ -107,7 +113,10 @@ public class ListMergeRequestLabelsRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder localId(Long localId) {
             this.putQueryParameter("localId", localId);
@@ -116,7 +125,10 @@ public class ListMergeRequestLabelsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -125,7 +137,7 @@ public class ListMergeRequestLabelsRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);

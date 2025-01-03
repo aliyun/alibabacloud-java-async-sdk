@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerRepositoryMirrorSyncRequest} extends {@link RequestModel}
  *
  * <p>TriggerRepositoryMirrorSyncRequest</p>
@@ -111,7 +117,10 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -138,7 +147,10 @@ public class TriggerRepositoryMirrorSyncRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

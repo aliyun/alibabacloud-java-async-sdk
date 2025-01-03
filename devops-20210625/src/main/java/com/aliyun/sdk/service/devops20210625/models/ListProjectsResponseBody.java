@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectsResponseBody</p>
@@ -24,7 +30,7 @@ public class ListProjectsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("projects")
-    private java.util.List < Projects> projects;
+    private java.util.List<Projects> projects;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -85,7 +91,7 @@ public class ListProjectsResponseBody extends TeaModel {
     /**
      * @return projects
      */
-    public java.util.List < Projects> getProjects() {
+    public java.util.List<Projects> getProjects() {
         return this.projects;
     }
 
@@ -115,7 +121,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private String errorMsg; 
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < Projects> projects; 
+        private java.util.List<Projects> projects; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -155,7 +161,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * projects.
          */
-        public Builder projects(java.util.List < Projects> projects) {
+        public Builder projects(java.util.List<Projects> projects) {
             this.projects = projects;
             return this;
         }
@@ -190,6 +196,12 @@ public class ListProjectsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectsResponseBody</p>
+     */
     public static class Projects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;

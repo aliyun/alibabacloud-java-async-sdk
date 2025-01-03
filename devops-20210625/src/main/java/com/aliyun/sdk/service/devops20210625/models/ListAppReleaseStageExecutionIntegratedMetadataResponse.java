@@ -1,24 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppReleaseStageExecutionIntegratedMetadataResponse} extends {@link TeaModel}
  *
  * <p>ListAppReleaseStageExecutionIntegratedMetadataResponse</p>
  */
 public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body;
+    private java.util.List<ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body;
 
     private ListAppReleaseStageExecutionIntegratedMetadataResponse(BuilderImpl builder) {
         super(builder);
@@ -39,7 +45,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,17 +59,17 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
     /**
      * @return body
      */
-    public java.util.List < ListAppReleaseStageExecutionIntegratedMetadataResponseBody> getBody() {
+    public java.util.List<ListAppReleaseStageExecutionIntegratedMetadataResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<ListAppReleaseStageExecutionIntegratedMetadataResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body);
+        Builder body(java.util.List<ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body);
 
         @Override
         ListAppReleaseStageExecutionIntegratedMetadataResponse build();
@@ -73,9 +79,9 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
     private static final class BuilderImpl
             extends Response.BuilderImpl<ListAppReleaseStageExecutionIntegratedMetadataResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body; 
+        private java.util.List<ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -92,7 +98,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,7 +116,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
          * body.
          */
         @Override
-        public Builder body(java.util.List < ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body) {
+        public Builder body(java.util.List<ListAppReleaseStageExecutionIntegratedMetadataResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -122,6 +128,12 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
 
     } 
 
+    /**
+     * 
+     * {@link ListAppReleaseStageExecutionIntegratedMetadataResponse} extends {@link TeaModel}
+     *
+     * <p>ListAppReleaseStageExecutionIntegratedMetadataResponse</p>
+     */
     public static class ChangeRequests extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sn")
         private String sn;
@@ -243,6 +255,12 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppReleaseStageExecutionIntegratedMetadataResponse} extends {@link TeaModel}
+     *
+     * <p>ListAppReleaseStageExecutionIntegratedMetadataResponse</p>
+     */
     public static class ListAppReleaseStageExecutionIntegratedMetadataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("releaseBranch")
         private String releaseBranch;
@@ -257,7 +275,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
         private String repoType;
 
         @com.aliyun.core.annotation.NameInMap("changeRequests")
-        private java.util.List < ChangeRequests> changeRequests;
+        private java.util.List<ChangeRequests> changeRequests;
 
         private ListAppReleaseStageExecutionIntegratedMetadataResponseBody(Builder builder) {
             this.releaseBranch = builder.releaseBranch;
@@ -306,7 +324,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
         /**
          * @return changeRequests
          */
-        public java.util.List < ChangeRequests> getChangeRequests() {
+        public java.util.List<ChangeRequests> getChangeRequests() {
             return this.changeRequests;
         }
 
@@ -315,7 +333,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
             private String releaseRevision; 
             private String repoUrl; 
             private String repoType; 
-            private java.util.List < ChangeRequests> changeRequests; 
+            private java.util.List<ChangeRequests> changeRequests; 
 
             /**
              * releaseBranch.
@@ -352,7 +370,7 @@ public class ListAppReleaseStageExecutionIntegratedMetadataResponse extends Resp
             /**
              * changeRequests.
              */
-            public Builder changeRequests(java.util.List < ChangeRequests> changeRequests) {
+            public Builder changeRequests(java.util.List<ChangeRequests> changeRequests) {
                 this.changeRequests = changeRequests;
                 return this;
             }

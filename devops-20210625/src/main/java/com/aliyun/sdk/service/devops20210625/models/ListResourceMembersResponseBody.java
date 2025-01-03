@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceMembersResponseBody</p>
@@ -21,7 +27,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resourceMembers")
-    private java.util.List < ResourceMembers> resourceMembers;
+    private java.util.List<ResourceMembers> resourceMembers;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
     /**
      * @return resourceMembers
      */
-    public java.util.List < ResourceMembers> getResourceMembers() {
+    public java.util.List<ResourceMembers> getResourceMembers() {
         return this.resourceMembers;
     }
 
@@ -81,7 +87,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < ResourceMembers> resourceMembers; 
+        private java.util.List<ResourceMembers> resourceMembers; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class ListResourceMembersResponseBody extends TeaModel {
         /**
          * resourceMembers.
          */
-        public Builder resourceMembers(java.util.List < ResourceMembers> resourceMembers) {
+        public Builder resourceMembers(java.util.List<ResourceMembers> resourceMembers) {
             this.resourceMembers = resourceMembers;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListResourceMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceMembersResponseBody</p>
+     */
     public static class ResourceMembers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;

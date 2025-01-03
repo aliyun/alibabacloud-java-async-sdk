@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
  *
  * <p>GetPipelineRunResponseBody</p>
@@ -130,6 +136,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
@@ -211,6 +223,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class Sources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
@@ -292,12 +310,18 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disable")
         private Boolean disable;
 
         @com.aliyun.core.annotation.NameInMap("params")
-        private java.util.Map < String, ? > params;
+        private java.util.Map<String, ?> params;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -326,7 +350,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.Map < String, ? > getParams() {
+        public java.util.Map<String, ?> getParams() {
             return this.params;
         }
 
@@ -339,7 +363,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean disable; 
-            private java.util.Map < String, ? > params; 
+            private java.util.Map<String, ?> params; 
             private String type; 
 
             /**
@@ -353,7 +377,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             /**
              * params.
              */
-            public Builder params(java.util.Map < String, ? > params) {
+            public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
                 return this;
             }
@@ -373,9 +397,15 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < Actions> actions;
+        private java.util.List<Actions> actions;
 
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
@@ -416,7 +446,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -463,7 +493,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private Long endTime; 
             private Long id; 
             private String name; 
@@ -474,7 +504,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             /**
              * actions.
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -534,12 +564,18 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class StageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("jobs")
-        private java.util.List < Jobs> jobs;
+        private java.util.List<Jobs> jobs;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -576,7 +612,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
         /**
          * @return jobs
          */
-        public java.util.List < Jobs> getJobs() {
+        public java.util.List<Jobs> getJobs() {
             return this.jobs;
         }
 
@@ -603,7 +639,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long endTime; 
-            private java.util.List < Jobs> jobs; 
+            private java.util.List<Jobs> jobs; 
             private String name; 
             private Long startTime; 
             private String status; 
@@ -619,7 +655,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             /**
              * jobs.
              */
-            public Builder jobs(java.util.List < Jobs> jobs) {
+            public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
                 return this;
             }
@@ -655,6 +691,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class Stages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -716,6 +758,12 @@ public class GetPipelineRunResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPipelineRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineRunResponseBody</p>
+     */
     public static class PipelineRun extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
@@ -733,13 +781,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
         private Long pipelineRunId;
 
         @com.aliyun.core.annotation.NameInMap("sources")
-        private java.util.List < Sources> sources;
+        private java.util.List<Sources> sources;
 
         @com.aliyun.core.annotation.NameInMap("stageGroup")
-        private java.util.List < java.util.List < String > > stageGroup;
+        private java.util.List<java.util.List<String>> stageGroup;
 
         @com.aliyun.core.annotation.NameInMap("stages")
-        private java.util.List < Stages> stages;
+        private java.util.List<Stages> stages;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -810,21 +858,21 @@ public class GetPipelineRunResponseBody extends TeaModel {
         /**
          * @return sources
          */
-        public java.util.List < Sources> getSources() {
+        public java.util.List<Sources> getSources() {
             return this.sources;
         }
 
         /**
          * @return stageGroup
          */
-        public java.util.List < java.util.List < String > > getStageGroup() {
+        public java.util.List<java.util.List<String>> getStageGroup() {
             return this.stageGroup;
         }
 
         /**
          * @return stages
          */
-        public java.util.List < Stages> getStages() {
+        public java.util.List<Stages> getStages() {
             return this.stages;
         }
 
@@ -855,9 +903,9 @@ public class GetPipelineRunResponseBody extends TeaModel {
             private String modifierAccountId; 
             private Long pipelineId; 
             private Long pipelineRunId; 
-            private java.util.List < Sources> sources; 
-            private java.util.List < java.util.List < String > > stageGroup; 
-            private java.util.List < Stages> stages; 
+            private java.util.List<Sources> sources; 
+            private java.util.List<java.util.List<String>> stageGroup; 
+            private java.util.List<Stages> stages; 
             private String status; 
             private Integer triggerMode; 
             private Long updateTime; 
@@ -905,7 +953,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             /**
              * sources.
              */
-            public Builder sources(java.util.List < Sources> sources) {
+            public Builder sources(java.util.List<Sources> sources) {
                 this.sources = sources;
                 return this;
             }
@@ -913,7 +961,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             /**
              * stageGroup.
              */
-            public Builder stageGroup(java.util.List < java.util.List < String > > stageGroup) {
+            public Builder stageGroup(java.util.List<java.util.List<String>> stageGroup) {
                 this.stageGroup = stageGroup;
                 return this;
             }
@@ -921,7 +969,7 @@ public class GetPipelineRunResponseBody extends TeaModel {
             /**
              * stages.
              */
-            public Builder stages(java.util.List < Stages> stages) {
+            public Builder stages(java.util.List<Stages> stages) {
                 this.stages = stages;
                 return this;
             }

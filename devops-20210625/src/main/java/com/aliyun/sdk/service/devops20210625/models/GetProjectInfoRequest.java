@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProjectInfoRequest} extends {@link RequestModel}
  *
  * <p>GetProjectInfoRequest</p>
@@ -69,7 +75,10 @@ public class GetProjectInfoRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -78,7 +87,10 @@ public class GetProjectInfoRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8b2xxxxxxx09b07d23</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);

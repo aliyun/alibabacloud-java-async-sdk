@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationMembersResponseBody</p>
@@ -21,7 +27,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
     private Long pages;
 
     @com.aliyun.core.annotation.NameInMap("records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -70,7 +76,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -92,7 +98,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         private Long current; 
         private Long pageSize; 
         private Long pages; 
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
         private Long total; 
 
@@ -123,7 +129,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         /**
          * records.
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListApplicationMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationMembersResponseBody</p>
+     */
     public static class RoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
@@ -211,6 +223,12 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationMembersResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
@@ -225,7 +243,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("roleList")
-        private java.util.List < RoleList> roleList;
+        private java.util.List<RoleList> roleList;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -278,7 +296,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
         /**
          * @return roleList
          */
-        public java.util.List < RoleList> getRoleList() {
+        public java.util.List<RoleList> getRoleList() {
             return this.roleList;
         }
 
@@ -294,7 +312,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String id; 
-            private java.util.List < RoleList> roleList; 
+            private java.util.List<RoleList> roleList; 
             private String type; 
 
             /**
@@ -332,7 +350,7 @@ public class ListApplicationMembersResponseBody extends TeaModel {
             /**
              * roleList.
              */
-            public Builder roleList(java.util.List < RoleList> roleList) {
+            public Builder roleList(java.util.List<RoleList> roleList) {
                 this.roleList = roleList;
                 return this;
             }

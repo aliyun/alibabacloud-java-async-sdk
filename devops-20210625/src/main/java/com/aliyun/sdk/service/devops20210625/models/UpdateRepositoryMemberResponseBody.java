@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepositoryMemberResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateRepositoryMemberResponseBody</p>
@@ -130,6 +136,12 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRepositoryMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryMemberResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
@@ -397,7 +409,10 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             }
 
             /**
-             * web url
+             * <p>web url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;

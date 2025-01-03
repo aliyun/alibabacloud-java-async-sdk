@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePushRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePushRuleResponseBody</p>
@@ -130,6 +136,12 @@ public class CreatePushRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePushRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePushRuleResponseBody</p>
+     */
     public static class RuleInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
@@ -141,7 +153,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
         private String extraMessage;
 
         @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
-        private java.util.List < String > fileRuleRegexes;
+        private java.util.List<String> fileRuleRegexes;
 
         private RuleInfos(Builder builder) {
             this.checkerName = builder.checkerName;
@@ -182,7 +194,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
         /**
          * @return fileRuleRegexes
          */
-        public java.util.List < String > getFileRuleRegexes() {
+        public java.util.List<String> getFileRuleRegexes() {
             return this.fileRuleRegexes;
         }
 
@@ -190,7 +202,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             private String checkerName; 
             private String checkerType; 
             private String extraMessage; 
-            private java.util.List < String > fileRuleRegexes; 
+            private java.util.List<String> fileRuleRegexes; 
 
             /**
              * checkerName.
@@ -219,7 +231,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             /**
              * fileRuleRegexes.
              */
-            public Builder fileRuleRegexes(java.util.List < String > fileRuleRegexes) {
+            public Builder fileRuleRegexes(java.util.List<String> fileRuleRegexes) {
                 this.fileRuleRegexes = fileRuleRegexes;
                 return this;
             }
@@ -231,6 +243,12 @@ public class CreatePushRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePushRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreatePushRuleResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
@@ -242,7 +260,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("ruleInfos")
-        private java.util.List < RuleInfos> ruleInfos;
+        private java.util.List<RuleInfos> ruleInfos;
 
         private Result(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
@@ -283,7 +301,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
         /**
          * @return ruleInfos
          */
-        public java.util.List < RuleInfos> getRuleInfos() {
+        public java.util.List<RuleInfos> getRuleInfos() {
             return this.ruleInfos;
         }
 
@@ -291,7 +309,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
-            private java.util.List < RuleInfos> ruleInfos; 
+            private java.util.List<RuleInfos> ruleInfos; 
 
             /**
              * gmtCreate.
@@ -320,7 +338,7 @@ public class CreatePushRuleResponseBody extends TeaModel {
             /**
              * ruleInfos.
              */
-            public Builder ruleInfos(java.util.List < RuleInfos> ruleInfos) {
+            public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
                 this.ruleInfos = ruleInfos;
                 return this;
             }

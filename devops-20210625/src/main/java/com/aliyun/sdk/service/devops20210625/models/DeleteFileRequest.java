@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileRequest</p>
@@ -128,7 +134,10 @@ public class DeleteFileRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2709413</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -146,7 +155,10 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * branchName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder branchName(String branchName) {
             this.putQueryParameter("branchName", branchName);
@@ -155,7 +167,7 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * commitMessage.
+         * <p>This parameter is required.</p>
          */
         public Builder commitMessage(String commitMessage) {
             this.putQueryParameter("commitMessage", commitMessage);
@@ -164,7 +176,10 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * filePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/main/test.java</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("filePath", filePath);
@@ -173,7 +188,10 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefusePipelineValidateRequest} extends {@link RequestModel}
  *
  * <p>RefusePipelineValidateRequest</p>
@@ -99,7 +105,10 @@ public class RefusePipelineValidateRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -108,7 +117,11 @@ public class RefusePipelineValidateRequest extends Request {
         }
 
         /**
-         * 12222
+         * <p>12222</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流水线ID，可在流水线链接中获取，如<a href="https://flow.aliyun.com/pipelines/%E3%80%90PipelineId%E3%80%91/current">https://flow.aliyun.com/pipelines/【PipelineId】/current</a></p>
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -117,7 +130,10 @@ public class RefusePipelineValidateRequest extends Request {
         }
 
         /**
-         * pipelineRunId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>流水线运行实例id</p>
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);
@@ -126,7 +142,10 @@ public class RefusePipelineValidateRequest extends Request {
         }
 
         /**
-         * jobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);

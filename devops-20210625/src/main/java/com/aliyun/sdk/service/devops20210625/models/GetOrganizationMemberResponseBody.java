@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrganizationMemberResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrganizationMemberResponseBody</p>
@@ -130,6 +136,12 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOrganizationMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrganizationMemberResponseBody</p>
+     */
     public static class Identities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("externUid")
         private String externUid;
@@ -191,6 +203,12 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOrganizationMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrganizationMemberResponseBody</p>
+     */
     public static class Member extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -199,7 +217,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         private Long birthday;
 
         @com.aliyun.core.annotation.NameInMap("deptLists")
-        private java.util.List < String > deptLists;
+        private java.util.List<String> deptLists;
 
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;
@@ -276,7 +294,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         /**
          * @return deptLists
          */
-        public java.util.List < String > getDeptLists() {
+        public java.util.List<String> getDeptLists() {
             return this.deptLists;
         }
 
@@ -360,7 +378,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private Long birthday; 
-            private java.util.List < String > deptLists; 
+            private java.util.List<String> deptLists; 
             private String email; 
             private Long hiredDate; 
             private Identities identities; 
@@ -392,7 +410,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
             /**
              * deptLists.
              */
-            public Builder deptLists(java.util.List < String > deptLists) {
+            public Builder deptLists(java.util.List<String> deptLists) {
                 this.deptLists = deptLists;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkItemWorkFlowStatusRequest} extends {@link RequestModel}
  *
  * <p>ListWorkItemWorkFlowStatusRequest</p>
@@ -113,7 +119,10 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -122,7 +131,10 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>例：5e70xxxxxxcd000xxxxe96</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -131,7 +143,10 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * spaceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);
@@ -140,7 +155,10 @@ public class ListWorkItemWorkFlowStatusRequest extends Request {
         }
 
         /**
-         * workitemCategoryIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Req</p>
          */
         public Builder workitemCategoryIdentifier(String workitemCategoryIdentifier) {
             this.putQueryParameter("workitemCategoryIdentifier", workitemCategoryIdentifier);

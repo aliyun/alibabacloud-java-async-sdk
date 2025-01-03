@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResourceMemberRequest} extends {@link RequestModel}
  *
  * <p>DeleteResourceMemberRequest</p>
@@ -99,7 +105,10 @@ public class DeleteResourceMemberRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -108,7 +117,10 @@ public class DeleteResourceMemberRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline</p>
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("resourceType", resourceType);
@@ -117,7 +129,10 @@ public class DeleteResourceMemberRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder resourceId(Long resourceId) {
             this.putPathParameter("resourceId", resourceId);
@@ -126,7 +141,10 @@ public class DeleteResourceMemberRequest extends Request {
         }
 
         /**
-         * accountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2211221</p>
          */
         public Builder accountId(String accountId) {
             this.putPathParameter("accountId", accountId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommentRequest} extends {@link RequestModel}
  *
  * <p>CreateCommentRequest</p>
@@ -221,7 +227,10 @@ public class CreateCommentRequest extends Request {
         }
 
         /**
-         * commentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GLOBAL_COMMENT</p>
          */
         public Builder commentType(String commentType) {
             this.putBodyParameter("commentType", commentType);
@@ -230,7 +239,7 @@ public class CreateCommentRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -293,7 +302,10 @@ public class CreateCommentRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder localId(Long localId) {
             this.putQueryParameter("localId", localId);
@@ -302,7 +314,10 @@ public class CreateCommentRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -311,7 +326,7 @@ public class CreateCommentRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);

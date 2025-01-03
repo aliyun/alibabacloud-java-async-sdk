@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomFieldOptionRequest} extends {@link RequestModel}
  *
  * <p>GetCustomFieldOptionRequest</p>
@@ -114,7 +120,10 @@ public class GetCustomFieldOptionRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -123,7 +132,10 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * fieldId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1019xxxxx5f5c33xxxxx9920d44</p>
          */
         public Builder fieldId(String fieldId) {
             this.putPathParameter("fieldId", fieldId);
@@ -132,7 +144,10 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8bxxxxxxxxxxxxxxxx23</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putQueryParameter("spaceIdentifier", spaceIdentifier);
@@ -141,7 +156,10 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * spaceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder spaceType(String spaceType) {
             this.putQueryParameter("spaceType", spaceType);
@@ -150,7 +168,10 @@ public class GetCustomFieldOptionRequest extends Request {
         }
 
         /**
-         * workitemTypeIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9uyxxxx1re573f561dxxxxx</p>
          */
         public Builder workitemTypeIdentifier(String workitemTypeIdentifier) {
             this.putQueryParameter("workitemTypeIdentifier", workitemTypeIdentifier);

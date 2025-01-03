@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectMembersResponseBody</p>
@@ -18,7 +24,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
     private String errorMsg;
 
     @com.aliyun.core.annotation.NameInMap("members")
-    private java.util.List < Members> members;
+    private java.util.List<Members> members;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
@@ -80,7 +86,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMsg; 
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
         private String requestId; 
         private Boolean success; 
 
@@ -103,7 +109,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * members.
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             this.members = members;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectMembersResponseBody</p>
+     */
     public static class Division extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
@@ -171,6 +183,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectMembersResponseBody</p>
+     */
     public static class OrganizationUserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("organizationIdentifier")
         private String organizationIdentifier;
@@ -212,6 +230,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProjectMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectMembersResponseBody</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("account")
         private String account;
@@ -603,7 +627,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * 角色名称
+             * <p>角色名称</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

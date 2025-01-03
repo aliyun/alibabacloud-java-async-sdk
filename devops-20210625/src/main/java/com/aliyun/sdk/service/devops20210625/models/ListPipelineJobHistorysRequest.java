@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineJobHistorysRequest} extends {@link RequestModel}
  *
  * <p>ListPipelineJobHistorysRequest</p>
@@ -128,7 +134,10 @@ public class ListPipelineJobHistorysRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -137,7 +146,10 @@ public class ListPipelineJobHistorysRequest extends Request {
         }
 
         /**
-         * pipelineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -146,7 +158,10 @@ public class ListPipelineJobHistorysRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEPLOY</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -155,7 +170,10 @@ public class ListPipelineJobHistorysRequest extends Request {
         }
 
         /**
-         * identifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10_ssasasa</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("identifier", identifier);
@@ -164,7 +182,10 @@ public class ListPipelineJobHistorysRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);

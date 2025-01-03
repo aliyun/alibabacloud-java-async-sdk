@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTestcaseListResponseBody} extends {@link TeaModel}
  *
  * <p>GetTestcaseListResponseBody</p>
@@ -30,7 +36,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("testcase")
-    private java.util.List < Testcase> testcase;
+    private java.util.List<Testcase> testcase;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
@@ -99,7 +105,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
     /**
      * @return testcase
      */
-    public java.util.List < Testcase> getTestcase() {
+    public java.util.List<Testcase> getTestcase() {
         return this.testcase;
     }
 
@@ -117,7 +123,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < Testcase> testcase; 
+        private java.util.List<Testcase> testcase; 
         private Long totalCount; 
 
         /**
@@ -171,7 +177,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
         /**
          * testcase.
          */
-        public Builder testcase(java.util.List < Testcase> testcase) {
+        public Builder testcase(java.util.List<Testcase> testcase) {
             this.testcase = testcase;
             return this;
         }
@@ -190,6 +196,12 @@ public class GetTestcaseListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTestcaseListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTestcaseListResponseBody</p>
+     */
     public static class AssignedTo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignedToIdenttifier")
         private String assignedToIdenttifier;
@@ -251,6 +263,12 @@ public class GetTestcaseListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTestcaseListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTestcaseListResponseBody</p>
+     */
     public static class CustomFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldClassName")
         private String fieldClassName;
@@ -352,6 +370,12 @@ public class GetTestcaseListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTestcaseListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTestcaseListResponseBody</p>
+     */
     public static class Space extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
@@ -413,6 +437,12 @@ public class GetTestcaseListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTestcaseListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTestcaseListResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -474,6 +504,12 @@ public class GetTestcaseListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTestcaseListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTestcaseListResponseBody</p>
+     */
     public static class Testcase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignedTo")
         private AssignedTo assignedTo;
@@ -482,7 +518,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
         private String categoryIdentifier;
 
         @com.aliyun.core.annotation.NameInMap("customFields")
-        private java.util.List < CustomFields> customFields;
+        private java.util.List<CustomFields> customFields;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
@@ -497,7 +533,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
         private String subject;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Testcase(Builder builder) {
             this.assignedTo = builder.assignedTo;
@@ -535,7 +571,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
         /**
          * @return customFields
          */
-        public java.util.List < CustomFields> getCustomFields() {
+        public java.util.List<CustomFields> getCustomFields() {
             return this.customFields;
         }
 
@@ -570,19 +606,19 @@ public class GetTestcaseListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private AssignedTo assignedTo; 
             private String categoryIdentifier; 
-            private java.util.List < CustomFields> customFields; 
+            private java.util.List<CustomFields> customFields; 
             private Long gmtCreate; 
             private String identifier; 
             private Space space; 
             private String subject; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * assignedTo.
@@ -603,7 +639,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
             /**
              * customFields.
              */
-            public Builder customFields(java.util.List < CustomFields> customFields) {
+            public Builder customFields(java.util.List<CustomFields> customFields) {
                 this.customFields = customFields;
                 return this;
             }
@@ -643,7 +679,7 @@ public class GetTestcaseListResponseBody extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

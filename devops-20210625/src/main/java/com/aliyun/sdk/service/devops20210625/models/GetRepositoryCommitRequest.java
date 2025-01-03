@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepositoryCommitRequest} extends {@link RequestModel}
  *
  * <p>GetRepositoryCommitRequest</p>
@@ -112,7 +118,10 @@ public class GetRepositoryCommitRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2464454</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -121,7 +130,10 @@ public class GetRepositoryCommitRequest extends Request {
         }
 
         /**
-         * sha.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder sha(String sha) {
             this.putPathParameter("sha", sha);
@@ -139,7 +151,10 @@ public class GetRepositoryCommitRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

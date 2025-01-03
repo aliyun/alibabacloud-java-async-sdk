@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkItemInfoRequest} extends {@link RequestModel}
  *
  * <p>GetWorkItemInfoRequest</p>
@@ -69,7 +75,10 @@ public class GetWorkItemInfoRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5e706xxxxxx01xxx96</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -78,7 +87,10 @@ public class GetWorkItemInfoRequest extends Request {
         }
 
         /**
-         * workitemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce2xxxx21580baxxxx633f13</p>
          */
         public Builder workitemId(String workitemId) {
             this.putPathParameter("workitemId", workitemId);

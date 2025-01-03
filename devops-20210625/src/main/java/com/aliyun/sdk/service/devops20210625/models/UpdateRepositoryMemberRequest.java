@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepositoryMemberRequest} extends {@link RequestModel}
  *
  * <p>UpdateRepositoryMemberRequest</p>
@@ -43,7 +49,7 @@ public class UpdateRepositoryMemberRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("relatedInfos")
-    private java.util.List < RelatedInfos> relatedInfos;
+    private java.util.List<RelatedInfos> relatedInfos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("organizationId")
@@ -128,7 +134,7 @@ public class UpdateRepositoryMemberRequest extends Request {
     /**
      * @return relatedInfos
      */
-    public java.util.List < RelatedInfos> getRelatedInfos() {
+    public java.util.List<RelatedInfos> getRelatedInfos() {
         return this.relatedInfos;
     }
 
@@ -147,7 +153,7 @@ public class UpdateRepositoryMemberRequest extends Request {
         private String expireAt; 
         private String memberType; 
         private String relatedId; 
-        private java.util.List < RelatedInfos> relatedInfos; 
+        private java.util.List<RelatedInfos> relatedInfos; 
         private String organizationId; 
 
         private Builder() {
@@ -168,7 +174,10 @@ public class UpdateRepositoryMemberRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>889910</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -177,7 +186,10 @@ public class UpdateRepositoryMemberRequest extends Request {
         }
 
         /**
-         * aliyunPk.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232456789123467</p>
          */
         public Builder aliyunPk(String aliyunPk) {
             this.putPathParameter("aliyunPk", aliyunPk);
@@ -233,14 +245,17 @@ public class UpdateRepositoryMemberRequest extends Request {
         /**
          * relatedInfos.
          */
-        public Builder relatedInfos(java.util.List < RelatedInfos> relatedInfos) {
+        public Builder relatedInfos(java.util.List<RelatedInfos> relatedInfos) {
             this.putBodyParameter("relatedInfos", relatedInfos);
             this.relatedInfos = relatedInfos;
             return this;
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -255,6 +270,12 @@ public class UpdateRepositoryMemberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRepositoryMemberRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryMemberRequest</p>
+     */
     public static class RelatedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("relatedId")
         private String relatedId;

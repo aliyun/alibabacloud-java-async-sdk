@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPipelineEmasArtifactUrlRequest} extends {@link RequestModel}
  *
  * <p>GetPipelineEmasArtifactUrlRequest</p>
@@ -129,7 +135,10 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -138,7 +147,10 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
         }
 
         /**
-         * emasJobInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Psaxsa</p>
          */
         public Builder emasJobInstanceId(String emasJobInstanceId) {
             this.putPathParameter("emasJobInstanceId", emasJobInstanceId);
@@ -147,7 +159,10 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
         }
 
         /**
-         * md5.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assasas</p>
          */
         public Builder md5(String md5) {
             this.putPathParameter("md5", md5);
@@ -156,7 +171,10 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
         }
 
         /**
-         * pipelineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -165,7 +183,10 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
         }
 
         /**
-         * pipelineRunId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);
@@ -174,7 +195,10 @@ public class GetPipelineEmasArtifactUrlRequest extends Request {
         }
 
         /**
-         * serviceConnectionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder serviceConnectionId(Long serviceConnectionId) {
             this.putQueryParameter("serviceConnectionId", serviceConnectionId);

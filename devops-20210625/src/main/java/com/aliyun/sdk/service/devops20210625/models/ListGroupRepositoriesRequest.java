@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupRepositoriesRequest} extends {@link RequestModel}
  *
  * <p>ListGroupRepositoriesRequest</p>
@@ -125,7 +131,10 @@ public class ListGroupRepositoriesRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35117</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);
@@ -143,7 +152,10 @@ public class ListGroupRepositoriesRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60ee8a814690c27532d412f8</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

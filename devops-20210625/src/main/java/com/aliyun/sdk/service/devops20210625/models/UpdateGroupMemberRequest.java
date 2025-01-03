@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>UpdateGroupMemberRequest</p>
@@ -127,7 +133,10 @@ public class UpdateGroupMemberRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22901</p>
          */
         public Builder groupId(Long groupId) {
             this.putPathParameter("groupId", groupId);
@@ -145,7 +154,10 @@ public class UpdateGroupMemberRequest extends Request {
         }
 
         /**
-         * aliyunPk.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1789095186553536</p>
          */
         public Builder aliyunPk(String aliyunPk) {
             this.putQueryParameter("aliyunPk", aliyunPk);
@@ -154,7 +166,10 @@ public class UpdateGroupMemberRequest extends Request {
         }
 
         /**
-         * accessLevel.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder accessLevel(Integer accessLevel) {
             this.putBodyParameter("accessLevel", accessLevel);
@@ -172,7 +187,10 @@ public class UpdateGroupMemberRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>632bbfdf419338aaa2b1360a</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

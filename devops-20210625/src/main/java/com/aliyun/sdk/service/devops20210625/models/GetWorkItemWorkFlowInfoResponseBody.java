@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkItemWorkFlowInfoResponseBody</p>
@@ -130,6 +136,12 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemWorkFlowInfoResponseBody</p>
+     */
     public static class Statuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
@@ -371,6 +383,12 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemWorkFlowInfoResponseBody</p>
+     */
     public static class WorkflowActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -492,6 +510,12 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkItemWorkFlowInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkItemWorkFlowInfoResponseBody</p>
+     */
     public static class Workflow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
@@ -533,10 +557,10 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         private String statusOrder;
 
         @com.aliyun.core.annotation.NameInMap("statuses")
-        private java.util.List < Statuses> statuses;
+        private java.util.List<Statuses> statuses;
 
         @com.aliyun.core.annotation.NameInMap("workflowActions")
-        private java.util.List < WorkflowActions> workflowActions;
+        private java.util.List<WorkflowActions> workflowActions;
 
         private Workflow(Builder builder) {
             this.creator = builder.creator;
@@ -658,14 +682,14 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
         /**
          * @return statuses
          */
-        public java.util.List < Statuses> getStatuses() {
+        public java.util.List<Statuses> getStatuses() {
             return this.statuses;
         }
 
         /**
          * @return workflowActions
          */
-        public java.util.List < WorkflowActions> getWorkflowActions() {
+        public java.util.List<WorkflowActions> getWorkflowActions() {
             return this.workflowActions;
         }
 
@@ -683,8 +707,8 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             private String resourceType; 
             private String source; 
             private String statusOrder; 
-            private java.util.List < Statuses> statuses; 
-            private java.util.List < WorkflowActions> workflowActions; 
+            private java.util.List<Statuses> statuses; 
+            private java.util.List<WorkflowActions> workflowActions; 
 
             /**
              * creator.
@@ -793,7 +817,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             /**
              * statuses.
              */
-            public Builder statuses(java.util.List < Statuses> statuses) {
+            public Builder statuses(java.util.List<Statuses> statuses) {
                 this.statuses = statuses;
                 return this;
             }
@@ -801,7 +825,7 @@ public class GetWorkItemWorkFlowInfoResponseBody extends TeaModel {
             /**
              * workflowActions.
              */
-            public Builder workflowActions(java.util.List < WorkflowActions> workflowActions) {
+            public Builder workflowActions(java.util.List<WorkflowActions> workflowActions) {
                 this.workflowActions = workflowActions;
                 return this;
             }

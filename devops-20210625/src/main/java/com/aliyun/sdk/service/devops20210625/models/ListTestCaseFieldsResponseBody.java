@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTestCaseFieldsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTestCaseFieldsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
     private String errorMsg;
 
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -80,7 +86,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMsg; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String requestId; 
         private Boolean success; 
 
@@ -103,7 +109,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
         /**
          * fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTestCaseFieldsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTestCaseFieldsResponseBody</p>
+     */
     public static class Options extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
@@ -291,6 +303,12 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTestCaseFieldsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTestCaseFieldsResponseBody</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("className")
         private String className;
@@ -335,7 +353,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("options")
-        private java.util.List < Options> options;
+        private java.util.List<Options> options;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
@@ -472,7 +490,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
@@ -505,7 +523,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
             private String linkWithService; 
             private String modifier; 
             private String name; 
-            private java.util.List < Options> options; 
+            private java.util.List<Options> options; 
             private String resourceType; 
             private String type; 
 
@@ -624,7 +642,7 @@ public class ListTestCaseFieldsResponseBody extends TeaModel {
             /**
              * options.
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }

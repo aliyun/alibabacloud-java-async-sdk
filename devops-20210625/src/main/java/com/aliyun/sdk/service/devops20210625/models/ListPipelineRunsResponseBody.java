@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineRunsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("pipelineRuns")
-    private java.util.List < PipelineRuns> pipelineRuns;
+    private java.util.List<PipelineRuns> pipelineRuns;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -74,7 +80,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
     /**
      * @return pipelineRuns
      */
-    public java.util.List < PipelineRuns> getPipelineRuns() {
+    public java.util.List<PipelineRuns> getPipelineRuns() {
         return this.pipelineRuns;
     }
 
@@ -103,7 +109,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String nextToken; 
-        private java.util.List < PipelineRuns> pipelineRuns; 
+        private java.util.List<PipelineRuns> pipelineRuns; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -135,7 +141,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         /**
          * pipelineRuns.
          */
-        public Builder pipelineRuns(java.util.List < PipelineRuns> pipelineRuns) {
+        public Builder pipelineRuns(java.util.List<PipelineRuns> pipelineRuns) {
             this.pipelineRuns = pipelineRuns;
             return this;
         }
@@ -170,6 +176,12 @@ public class ListPipelineRunsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineRunsResponseBody</p>
+     */
     public static class PipelineRuns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;

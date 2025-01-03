@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProjectFieldResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateProjectFieldResponseBody</p>
@@ -117,7 +123,10 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         }
 
         /**
-         * true/false
+         * <p>true/false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +139,12 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProjectFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectFieldResponseBody</p>
+     */
     public static class FieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
@@ -231,6 +246,12 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProjectFieldResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateProjectFieldResponseBody</p>
+     */
     public static class Project extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -248,7 +269,7 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("fieldList")
-        private java.util.List < FieldList> fieldList;
+        private java.util.List<FieldList> fieldList;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
@@ -385,7 +406,7 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
         /**
          * @return fieldList
          */
-        public java.util.List < FieldList> getFieldList() {
+        public java.util.List<FieldList> getFieldList() {
             return this.fieldList;
         }
 
@@ -535,7 +556,7 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
             private String creator; 
             private String customCode; 
             private String description; 
-            private java.util.List < FieldList> fieldList; 
+            private java.util.List<FieldList> fieldList; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private String icon; 
@@ -600,7 +621,7 @@ public class UpdateProjectFieldResponseBody extends TeaModel {
             /**
              * fieldList.
              */
-            public Builder fieldList(java.util.List < FieldList> fieldList) {
+            public Builder fieldList(java.util.List<FieldList> fieldList) {
                 this.fieldList = fieldList;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPushRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPushRulesResponseBody</p>
@@ -21,7 +27,7 @@ public class ListPushRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -70,7 +76,7 @@ public class ListPushRulesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -92,7 +98,7 @@ public class ListPushRulesResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -123,7 +129,7 @@ public class ListPushRulesResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListPushRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPushRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPushRulesResponseBody</p>
+     */
     public static class RuleInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
@@ -161,7 +173,7 @@ public class ListPushRulesResponseBody extends TeaModel {
         private String extraMessage;
 
         @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
-        private java.util.List < String > fileRuleRegexes;
+        private java.util.List<String> fileRuleRegexes;
 
         private RuleInfos(Builder builder) {
             this.checkerName = builder.checkerName;
@@ -202,7 +214,7 @@ public class ListPushRulesResponseBody extends TeaModel {
         /**
          * @return fileRuleRegexes
          */
-        public java.util.List < String > getFileRuleRegexes() {
+        public java.util.List<String> getFileRuleRegexes() {
             return this.fileRuleRegexes;
         }
 
@@ -210,7 +222,7 @@ public class ListPushRulesResponseBody extends TeaModel {
             private String checkerName; 
             private String checkerType; 
             private String extraMessage; 
-            private java.util.List < String > fileRuleRegexes; 
+            private java.util.List<String> fileRuleRegexes; 
 
             /**
              * checkerName.
@@ -239,7 +251,7 @@ public class ListPushRulesResponseBody extends TeaModel {
             /**
              * fileRuleRegexes.
              */
-            public Builder fileRuleRegexes(java.util.List < String > fileRuleRegexes) {
+            public Builder fileRuleRegexes(java.util.List<String> fileRuleRegexes) {
                 this.fileRuleRegexes = fileRuleRegexes;
                 return this;
             }
@@ -251,6 +263,12 @@ public class ListPushRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPushRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPushRulesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
@@ -262,7 +280,7 @@ public class ListPushRulesResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("ruleInfos")
-        private java.util.List < RuleInfos> ruleInfos;
+        private java.util.List<RuleInfos> ruleInfos;
 
         private Result(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
@@ -303,7 +321,7 @@ public class ListPushRulesResponseBody extends TeaModel {
         /**
          * @return ruleInfos
          */
-        public java.util.List < RuleInfos> getRuleInfos() {
+        public java.util.List<RuleInfos> getRuleInfos() {
             return this.ruleInfos;
         }
 
@@ -311,7 +329,7 @@ public class ListPushRulesResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
-            private java.util.List < RuleInfos> ruleInfos; 
+            private java.util.List<RuleInfos> ruleInfos; 
 
             /**
              * gmtCreate.
@@ -340,7 +358,7 @@ public class ListPushRulesResponseBody extends TeaModel {
             /**
              * ruleInfos.
              */
-            public Builder ruleInfos(java.util.List < RuleInfos> ruleInfos) {
+            public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
                 this.ruleInfos = ruleInfos;
                 return this;
             }

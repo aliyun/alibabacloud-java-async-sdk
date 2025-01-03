@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepositoryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRepositoryResponseBody</p>
@@ -130,6 +136,12 @@ public class CreateRepositoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRepositoryResponseBody</p>
+     */
     public static class Namespace extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
@@ -289,7 +301,10 @@ public class CreateRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3194</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -351,6 +366,12 @@ public class CreateRepositoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRepositoryResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Import_from_svn")
         private Boolean importFromSvn;
@@ -666,7 +687,10 @@ public class CreateRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2959</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -738,7 +762,10 @@ public class CreateRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * web url
+             * <p>web url</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;

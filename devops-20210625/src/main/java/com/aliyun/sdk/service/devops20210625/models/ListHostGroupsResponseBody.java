@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHostGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHostGroupsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("hostGroups")
-    private java.util.List < HostGroups> hostGroups;
+    private java.util.List<HostGroups> hostGroups;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -67,7 +73,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
     /**
      * @return hostGroups
      */
-    public java.util.List < HostGroups> getHostGroups() {
+    public java.util.List<HostGroups> getHostGroups() {
         return this.hostGroups;
     }
 
@@ -102,7 +108,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < HostGroups> hostGroups; 
+        private java.util.List<HostGroups> hostGroups; 
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
@@ -127,7 +133,7 @@ public class ListHostGroupsResponseBody extends TeaModel {
         /**
          * hostGroups.
          */
-        public Builder hostGroups(java.util.List < HostGroups> hostGroups) {
+        public Builder hostGroups(java.util.List<HostGroups> hostGroups) {
             this.hostGroups = hostGroups;
             return this;
         }
@@ -170,6 +176,12 @@ public class ListHostGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHostGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHostGroupsResponseBody</p>
+     */
     public static class HostGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunRegion")
         private String aliyunRegion;
@@ -417,7 +429,10 @@ public class ListHostGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 323232
+             * <p>323232</p>
+             * 
+             * <strong>example:</strong>
+             * <p>部署组Id</p>
              */
             public Builder id(Long id) {
                 this.id = id;

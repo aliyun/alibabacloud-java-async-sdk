@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceAuthsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceAuthsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListServiceAuthsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("serviceAuths")
-    private java.util.List < ServiceAuths> serviceAuths;
+    private java.util.List<ServiceAuths> serviceAuths;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class ListServiceAuthsResponseBody extends TeaModel {
     /**
      * @return serviceAuths
      */
-    public java.util.List < ServiceAuths> getServiceAuths() {
+    public java.util.List<ServiceAuths> getServiceAuths() {
         return this.serviceAuths;
     }
 
@@ -81,7 +87,7 @@ public class ListServiceAuthsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < ServiceAuths> serviceAuths; 
+        private java.util.List<ServiceAuths> serviceAuths; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class ListServiceAuthsResponseBody extends TeaModel {
         /**
          * serviceAuths.
          */
-        public Builder serviceAuths(java.util.List < ServiceAuths> serviceAuths) {
+        public Builder serviceAuths(java.util.List<ServiceAuths> serviceAuths) {
             this.serviceAuths = serviceAuths;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListServiceAuthsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceAuthsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceAuthsResponseBody</p>
+     */
     public static class ServiceAuths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;

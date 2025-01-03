@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCodeupOrganizationRequest} extends {@link RequestModel}
  *
  * <p>GetCodeupOrganizationRequest</p>
@@ -68,7 +74,10 @@ public class GetCodeupOrganizationRequest extends Request {
         } 
 
         /**
-         * identity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder identity(String identity) {
             this.putPathParameter("identity", identity);

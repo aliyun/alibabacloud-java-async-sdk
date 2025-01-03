@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectMembersRequest} extends {@link RequestModel}
  *
  * <p>ListProjectMembersRequest</p>
@@ -84,7 +90,10 @@ public class ListProjectMembersRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +102,10 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e8bxxxxx2abd6e76aa209b07d23</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -102,7 +114,10 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * targetType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Space</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("targetType", targetType);

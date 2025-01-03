@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkitemRecordRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkitemRecordRequest</p>
@@ -158,7 +164,10 @@ public class CreateWorkitemRecordRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1e9903d8b3f1xxxxxf9286ef5</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -167,7 +176,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * actualTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder actualTime(String actualTime) {
             this.putBodyParameter("actualTime", actualTime);
@@ -185,7 +197,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * gmtEnd.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1646323200000</p>
          */
         public Builder gmtEnd(String gmtEnd) {
             this.putBodyParameter("gmtEnd", gmtEnd);
@@ -194,7 +209,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * gmtStart.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1667205617061</p>
          */
         public Builder gmtStart(String gmtStart) {
             this.putBodyParameter("gmtStart", gmtStart);
@@ -203,7 +221,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * recordUserIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1316458xxxxx41068</p>
          */
         public Builder recordUserIdentifier(String recordUserIdentifier) {
             this.putBodyParameter("recordUserIdentifier", recordUserIdentifier);
@@ -212,7 +233,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deafe5f33xxxxx6a259d8dafd</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -221,7 +245,10 @@ public class CreateWorkitemRecordRequest extends Request {
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

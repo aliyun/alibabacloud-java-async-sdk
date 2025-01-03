@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceCredentialsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("serviceCredentials")
-    private java.util.List < ServiceCredentials> serviceCredentials;
+    private java.util.List<ServiceCredentials> serviceCredentials;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     /**
      * @return serviceCredentials
      */
-    public java.util.List < ServiceCredentials> getServiceCredentials() {
+    public java.util.List<ServiceCredentials> getServiceCredentials() {
         return this.serviceCredentials;
     }
 
@@ -81,7 +87,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < ServiceCredentials> serviceCredentials; 
+        private java.util.List<ServiceCredentials> serviceCredentials; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         /**
          * serviceCredentials.
          */
-        public Builder serviceCredentials(java.util.List < ServiceCredentials> serviceCredentials) {
+        public Builder serviceCredentials(java.util.List<ServiceCredentials> serviceCredentials) {
             this.serviceCredentials = serviceCredentials;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceCredentialsResponseBody</p>
+     */
     public static class ServiceCredentials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;

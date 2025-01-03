@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileRequest</p>
@@ -172,7 +178,10 @@ public class UpdateFileRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2813489</p>
          */
         public Builder repositoryId(String repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -190,7 +199,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * branchName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder branchName(String branchName) {
             this.putBodyParameter("branchName", branchName);
@@ -199,7 +211,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * commitMessage.
+         * <p>This parameter is required.</p>
          */
         public Builder commitMessage(String commitMessage) {
             this.putBodyParameter("commitMessage", commitMessage);
@@ -208,7 +220,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -226,7 +238,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * newPath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/main/update.txt</p>
          */
         public Builder newPath(String newPath) {
             this.putBodyParameter("newPath", newPath);
@@ -235,7 +250,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * oldPath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/main/update.txt</p>
          */
         public Builder oldPath(String oldPath) {
             this.putBodyParameter("oldPath", oldPath);
@@ -244,7 +262,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

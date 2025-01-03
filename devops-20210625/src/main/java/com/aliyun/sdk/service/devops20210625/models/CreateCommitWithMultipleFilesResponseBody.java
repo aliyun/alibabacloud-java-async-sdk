@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommitWithMultipleFilesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCommitWithMultipleFilesResponseBody</p>
@@ -130,6 +136,12 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCommitWithMultipleFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommitWithMultipleFilesResponseBody</p>
+     */
     public static class Author extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
@@ -311,6 +323,12 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCommitWithMultipleFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommitWithMultipleFilesResponseBody</p>
+     */
     public static class Committer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
@@ -492,6 +510,12 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCommitWithMultipleFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommitWithMultipleFilesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("author")
         private Author author;
@@ -527,7 +551,7 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        private java.util.List<String> parentIds;
 
         @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
@@ -640,7 +664,7 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -670,7 +694,7 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private String title; 
 
@@ -765,7 +789,7 @@ public class CreateCommitWithMultipleFilesResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }

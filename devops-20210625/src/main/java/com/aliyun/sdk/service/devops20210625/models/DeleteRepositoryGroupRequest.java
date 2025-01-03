@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteRepositoryGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteRepositoryGroupRequest</p>
@@ -98,7 +104,10 @@ public class DeleteRepositoryGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22901</p>
          */
         public Builder groupId(Long groupId) {
             this.putPathParameter("groupId", groupId);
@@ -116,7 +125,7 @@ public class DeleteRepositoryGroupRequest extends Request {
         }
 
         /**
-         * reason.
+         * <p>This parameter is required.</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("reason", reason);
@@ -125,7 +134,10 @@ public class DeleteRepositoryGroupRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>624666bd54d036291ae13a36</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

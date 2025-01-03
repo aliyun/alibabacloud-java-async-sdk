@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectLabelsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectLabelsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListProjectLabelsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -70,7 +76,7 @@ public class ListProjectLabelsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -92,7 +98,7 @@ public class ListProjectLabelsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -123,7 +129,7 @@ public class ListProjectLabelsResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListProjectLabelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectLabelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectLabelsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("color")
         private String color;

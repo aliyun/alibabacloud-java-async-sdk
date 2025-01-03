@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMergeRequestChangeTreeResponseBody} extends {@link TeaModel}
  *
  * <p>GetMergeRequestChangeTreeResponseBody</p>
@@ -130,6 +136,12 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMergeRequestChangeTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestChangeTreeResponseBody</p>
+     */
     public static class ChangedFilesInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("addLines")
         private Long addLines;
@@ -311,12 +323,18 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMergeRequestChangeTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestChangeTreeResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("changedFilesCount")
         private Long changedFilesCount;
 
         @com.aliyun.core.annotation.NameInMap("changedFilesInfos")
-        private java.util.List < ChangedFilesInfos> changedFilesInfos;
+        private java.util.List<ChangedFilesInfos> changedFilesInfos;
 
         @com.aliyun.core.annotation.NameInMap("totalAddLines")
         private Long totalAddLines;
@@ -349,7 +367,7 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
         /**
          * @return changedFilesInfos
          */
-        public java.util.List < ChangedFilesInfos> getChangedFilesInfos() {
+        public java.util.List<ChangedFilesInfos> getChangedFilesInfos() {
             return this.changedFilesInfos;
         }
 
@@ -369,7 +387,7 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long changedFilesCount; 
-            private java.util.List < ChangedFilesInfos> changedFilesInfos; 
+            private java.util.List<ChangedFilesInfos> changedFilesInfos; 
             private Long totalAddLines; 
             private Long totalDelLines; 
 
@@ -384,7 +402,7 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
             /**
              * changedFilesInfos.
              */
-            public Builder changedFilesInfos(java.util.List < ChangedFilesInfos> changedFilesInfos) {
+            public Builder changedFilesInfos(java.util.List<ChangedFilesInfos> changedFilesInfos) {
                 this.changedFilesInfos = changedFilesInfos;
                 return this;
             }

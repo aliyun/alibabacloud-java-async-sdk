@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTestCaseResponseBody</p>
@@ -101,7 +107,10 @@ public class CreateTestCaseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18E50717-93A4-53BC-A30D-963F742A1CE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +139,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class AssignedTo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignIdentifier")
         private String assignIdentifier;
@@ -211,6 +226,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class Creator extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createIdentifier")
         private String createIdentifier;
@@ -272,6 +293,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class ExpectedResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expectContent")
         private String expectContent;
@@ -353,6 +380,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class Precondition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("preContent")
         private String preContent;
@@ -434,6 +467,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class StepContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stepContent")
         private String stepContent;
@@ -515,6 +554,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class DetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expectedResult")
         private ExpectedResult expectedResult;
@@ -616,6 +661,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class Directory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childIdentifier")
         private String childIdentifier;
@@ -627,7 +678,7 @@ public class CreateTestCaseResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("pathName")
-        private java.util.List < String > pathName;
+        private java.util.List<String> pathName;
 
         private Directory(Builder builder) {
             this.childIdentifier = builder.childIdentifier;
@@ -668,7 +719,7 @@ public class CreateTestCaseResponseBody extends TeaModel {
         /**
          * @return pathName
          */
-        public java.util.List < String > getPathName() {
+        public java.util.List<String> getPathName() {
             return this.pathName;
         }
 
@@ -676,7 +727,7 @@ public class CreateTestCaseResponseBody extends TeaModel {
             private String childIdentifier; 
             private String directoryIdentifier; 
             private String name; 
-            private java.util.List < String > pathName; 
+            private java.util.List<String> pathName; 
 
             /**
              * childIdentifier.
@@ -705,7 +756,7 @@ public class CreateTestCaseResponseBody extends TeaModel {
             /**
              * pathName.
              */
-            public Builder pathName(java.util.List < String > pathName) {
+            public Builder pathName(java.util.List<String> pathName) {
                 this.pathName = pathName;
                 return this;
             }
@@ -717,6 +768,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class Modifier extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modifyIdentifier")
         private String modifyIdentifier;
@@ -778,6 +835,12 @@ public class CreateTestCaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTestCaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTestCaseResponseBody</p>
+     */
     public static class Testcase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignedTo")
         private AssignedTo assignedTo;

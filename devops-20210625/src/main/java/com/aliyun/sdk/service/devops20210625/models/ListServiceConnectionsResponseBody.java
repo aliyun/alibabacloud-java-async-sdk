@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceConnectionsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("serviceConnections")
-    private java.util.List < ServiceConnections> serviceConnections;
+    private java.util.List<ServiceConnections> serviceConnections;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     /**
      * @return serviceConnections
      */
-    public java.util.List < ServiceConnections> getServiceConnections() {
+    public java.util.List<ServiceConnections> getServiceConnections() {
         return this.serviceConnections;
     }
 
@@ -81,7 +87,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < ServiceConnections> serviceConnections; 
+        private java.util.List<ServiceConnections> serviceConnections; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         /**
          * serviceConnections.
          */
-        public Builder serviceConnections(java.util.List < ServiceConnections> serviceConnections) {
+        public Builder serviceConnections(java.util.List<ServiceConnections> serviceConnections) {
             this.serviceConnections = serviceConnections;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceConnectionsResponseBody</p>
+     */
     public static class ServiceConnections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;

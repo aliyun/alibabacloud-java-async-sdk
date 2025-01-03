@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemCommentListResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkitemCommentListResponseBody</p>
  */
 public class GetWorkitemCommentListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("commentList")
-    private java.util.List < CommentList> commentList;
+    private java.util.List<CommentList> commentList;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -45,7 +51,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     /**
      * @return commentList
      */
-    public java.util.List < CommentList> getCommentList() {
+    public java.util.List<CommentList> getCommentList() {
         return this.commentList;
     }
 
@@ -78,7 +84,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CommentList> commentList; 
+        private java.util.List<CommentList> commentList; 
         private String errorCode; 
         private String errorMsg; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         /**
          * commentList.
          */
-        public Builder commentList(java.util.List < CommentList> commentList) {
+        public Builder commentList(java.util.List<CommentList> commentList) {
             this.commentList = commentList;
             return this;
         }
@@ -109,7 +115,10 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +139,12 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkitemCommentListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemCommentListResponseBody</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("account")
         private String account;
@@ -251,6 +266,12 @@ public class GetWorkitemCommentListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetWorkitemCommentListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemCommentListResponseBody</p>
+     */
     public static class CommentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;

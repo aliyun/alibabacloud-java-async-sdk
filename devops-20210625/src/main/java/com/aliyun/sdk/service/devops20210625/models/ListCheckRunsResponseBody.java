@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckRunsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -81,7 +87,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListCheckRunsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckRunsResponseBody</p>
+     */
     public static class Annotations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("annotationLevel")
         private String annotationLevel;
@@ -351,6 +363,12 @@ public class ListCheckRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckRunsResponseBody</p>
+     */
     public static class CheckSuite extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -392,6 +410,12 @@ public class ListCheckRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckRunsResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alt")
         private String alt;
@@ -473,9 +497,15 @@ public class ListCheckRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckRunsResponseBody</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("summary")
         private String summary;
@@ -504,7 +534,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
@@ -530,7 +560,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Images> images; 
+            private java.util.List<Images> images; 
             private String summary; 
             private String text; 
             private String title; 
@@ -538,7 +568,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
             /**
              * images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
@@ -574,6 +604,12 @@ public class ListCheckRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckRunsResponseBody</p>
+     */
     public static class Writer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -695,9 +731,15 @@ public class ListCheckRunsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckRunsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckRunsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("annotations")
-        private java.util.List < Annotations> annotations;
+        private java.util.List<Annotations> annotations;
 
         @com.aliyun.core.annotation.NameInMap("checkSuite")
         private CheckSuite checkSuite;
@@ -770,7 +812,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
@@ -873,7 +915,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
             private CheckSuite checkSuite; 
             private String completedAt; 
             private String conclusion; 
@@ -892,7 +934,7 @@ public class ListCheckRunsResponseBody extends TeaModel {
             /**
              * annotations.
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }

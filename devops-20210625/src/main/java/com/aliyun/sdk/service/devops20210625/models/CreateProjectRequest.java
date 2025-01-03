@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectRequest} extends {@link RequestModel}
  *
  * <p>CreateProjectRequest</p>
@@ -114,7 +120,10 @@ public class CreateProjectRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -123,7 +132,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * customCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCD</p>
          */
         public Builder customCode(String customCode) {
             this.putBodyParameter("customCode", customCode);
@@ -132,7 +144,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -141,7 +156,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -150,7 +168,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * templateIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>704eaxxxx5efede61xxx5</p>
          */
         public Builder templateIdentifier(String templateIdentifier) {
             this.putBodyParameter("templateIdentifier", templateIdentifier);

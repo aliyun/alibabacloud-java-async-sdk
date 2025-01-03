@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMergeRequestChangeTreeRequest} extends {@link RequestModel}
  *
  * <p>GetMergeRequestChangeTreeRequest</p>
@@ -137,7 +143,10 @@ public class GetMergeRequestChangeTreeRequest extends Request {
         }
 
         /**
-         * fromPatchSetBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5e733626d53f4b04a6aa0e23d4ff72b8</p>
          */
         public Builder fromPatchSetBizId(String fromPatchSetBizId) {
             this.putQueryParameter("fromPatchSetBizId", fromPatchSetBizId);
@@ -146,7 +155,10 @@ public class GetMergeRequestChangeTreeRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder localId(Long localId) {
             this.putQueryParameter("localId", localId);
@@ -155,7 +167,10 @@ public class GetMergeRequestChangeTreeRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -164,7 +179,7 @@ public class GetMergeRequestChangeTreeRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);
@@ -173,7 +188,10 @@ public class GetMergeRequestChangeTreeRequest extends Request {
         }
 
         /**
-         * toPatchSetBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>513fcfd81a9142d2bb0db4f72c0aa15b</p>
          */
         public Builder toPatchSetBizId(String toPatchSetBizId) {
             this.putQueryParameter("toPatchSetBizId", toPatchSetBizId);

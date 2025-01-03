@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTestResultListRequest} extends {@link RequestModel}
  *
  * <p>GetTestResultListRequest</p>
@@ -98,7 +104,10 @@ public class GetTestResultListRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -107,7 +116,7 @@ public class GetTestResultListRequest extends Request {
         }
 
         /**
-         * testPlanIdentifier.
+         * <p>This parameter is required.</p>
          */
         public Builder testPlanIdentifier(String testPlanIdentifier) {
             this.putPathParameter("testPlanIdentifier", testPlanIdentifier);
@@ -125,7 +134,10 @@ public class GetTestResultListRequest extends Request {
         }
 
         /**
-         * directoryIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e27b8eace6501ce51cf5d56784</p>
          */
         public Builder directoryIdentifier(String directoryIdentifier) {
             this.putBodyParameter("directoryIdentifier", directoryIdentifier);

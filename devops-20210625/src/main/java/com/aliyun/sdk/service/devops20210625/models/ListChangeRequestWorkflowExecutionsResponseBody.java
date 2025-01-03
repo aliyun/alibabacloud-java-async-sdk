@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChangeRequestWorkflowExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListChangeRequestWorkflowExecutionsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListChangeRequestWorkflowExecutionsResponseBody extends TeaModel {
     private Long pages;
 
     @com.aliyun.core.annotation.NameInMap("records")
-    private java.util.List < ? > records;
+    private java.util.List<?> records;
 
     @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
@@ -66,7 +72,7 @@ public class ListChangeRequestWorkflowExecutionsResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < ? > getRecords() {
+    public java.util.List<?> getRecords() {
         return this.records;
     }
 
@@ -81,7 +87,7 @@ public class ListChangeRequestWorkflowExecutionsResponseBody extends TeaModel {
         private Long current; 
         private Long pageSize; 
         private Long pages; 
-        private java.util.List < ? > records; 
+        private java.util.List<?> records; 
         private Long total; 
 
         /**
@@ -111,7 +117,7 @@ public class ListChangeRequestWorkflowExecutionsResponseBody extends TeaModel {
         /**
          * records.
          */
-        public Builder records(java.util.List < ? > records) {
+        public Builder records(java.util.List<?> records) {
             this.records = records;
             return this;
         }

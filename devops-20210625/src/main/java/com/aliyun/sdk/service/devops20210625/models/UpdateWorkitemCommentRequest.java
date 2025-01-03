@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWorkitemCommentRequest} extends {@link RequestModel}
  *
  * <p>UpdateWorkitemCommentRequest</p>
@@ -114,7 +120,10 @@ public class UpdateWorkitemCommentRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -123,7 +132,10 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * commentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1964584</p>
          */
         public Builder commentId(Long commentId) {
             this.putBodyParameter("commentId", commentId);
@@ -132,7 +144,7 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -141,7 +153,10 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * formatType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MARKDOWN/RICHTEXT</p>
          */
         public Builder formatType(String formatType) {
             this.putBodyParameter("formatType", formatType);
@@ -150,7 +165,10 @@ public class UpdateWorkitemCommentRequest extends Request {
         }
 
         /**
-         * workitemIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9144ef6b72d8exxxxx9e61a4d0</p>
          */
         public Builder workitemIdentifier(String workitemIdentifier) {
             this.putBodyParameter("workitemIdentifier", workitemIdentifier);

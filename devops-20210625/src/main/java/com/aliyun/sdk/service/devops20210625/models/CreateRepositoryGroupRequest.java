@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRepositoryGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateRepositoryGroupRequest</p>
@@ -183,7 +189,10 @@ public class CreateRepositoryGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-create-group</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -192,7 +201,10 @@ public class CreateRepositoryGroupRequest extends Request {
         }
 
         /**
-         * parentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26842</p>
          */
         public Builder parentId(Long parentId) {
             this.putBodyParameter("parentId", parentId);
@@ -201,7 +213,10 @@ public class CreateRepositoryGroupRequest extends Request {
         }
 
         /**
-         * path.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-create-group</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("path", path);
@@ -210,7 +225,10 @@ public class CreateRepositoryGroupRequest extends Request {
         }
 
         /**
-         * visibilityLevel.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder visibilityLevel(Integer visibilityLevel) {
             this.putBodyParameter("visibilityLevel", visibilityLevel);
@@ -219,7 +237,10 @@ public class CreateRepositoryGroupRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

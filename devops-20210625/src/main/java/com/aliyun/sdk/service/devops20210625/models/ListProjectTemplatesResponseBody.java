@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectTemplatesResponseBody</p>
@@ -24,7 +30,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("templates")
-    private java.util.List < Templates> templates;
+    private java.util.List<Templates> templates;
 
     private ListProjectTemplatesResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -73,7 +79,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
@@ -82,7 +88,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
 
         /**
          * errorCode.
@@ -119,7 +125,7 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
         /**
          * templates.
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("copyFrom")
         private String copyFrom;

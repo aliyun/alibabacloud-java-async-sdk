@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHostGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetHostGroupResponseBody</p>
@@ -130,6 +136,12 @@ public class GetHostGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHostGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostGroupResponseBody</p>
+     */
     public static class HostInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunRegionId")
         private String aliyunRegionId;
@@ -331,6 +343,12 @@ public class GetHostGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHostGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHostGroupResponseBody</p>
+     */
     public static class HostGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunRegion")
         private String aliyunRegion;
@@ -354,7 +372,7 @@ public class GetHostGroupResponseBody extends TeaModel {
         private String ecsType;
 
         @com.aliyun.core.annotation.NameInMap("hostInfos")
-        private java.util.List < HostInfos> hostInfos;
+        private java.util.List<HostInfos> hostInfos;
 
         @com.aliyun.core.annotation.NameInMap("hostNum")
         private Long hostNum;
@@ -455,7 +473,7 @@ public class GetHostGroupResponseBody extends TeaModel {
         /**
          * @return hostInfos
          */
-        public java.util.List < HostInfos> getHostInfos() {
+        public java.util.List<HostInfos> getHostInfos() {
             return this.hostInfos;
         }
 
@@ -516,7 +534,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             private String ecsLabelKey; 
             private String ecsLabelValue; 
             private String ecsType; 
-            private java.util.List < HostInfos> hostInfos; 
+            private java.util.List<HostInfos> hostInfos; 
             private Long hostNum; 
             private Long id; 
             private String modifierAccountId; 
@@ -584,7 +602,7 @@ public class GetHostGroupResponseBody extends TeaModel {
             /**
              * hostInfos.
              */
-            public Builder hostInfos(java.util.List < HostInfos> hostInfos) {
+            public Builder hostInfos(java.util.List<HostInfos> hostInfos) {
                 this.hostInfos = hostInfos;
                 return this;
             }

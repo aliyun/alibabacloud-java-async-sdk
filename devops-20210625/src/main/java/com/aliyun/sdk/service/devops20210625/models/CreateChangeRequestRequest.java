@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateChangeRequestRequest} extends {@link RequestModel}
  *
  * <p>CreateChangeRequestRequest</p>
@@ -170,7 +176,10 @@ public class CreateChangeRequestRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-name</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -179,7 +188,10 @@ public class CreateChangeRequestRequest extends Request {
         }
 
         /**
-         * appCodeRepoSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sn123</p>
          */
         public Builder appCodeRepoSn(String appCodeRepoSn) {
             this.putBodyParameter("appCodeRepoSn", appCodeRepoSn);
@@ -197,7 +209,10 @@ public class CreateChangeRequestRequest extends Request {
         }
 
         /**
-         * branchName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotfix/20240524</p>
          */
         public Builder branchName(String branchName) {
             this.putBodyParameter("branchName", branchName);
@@ -224,7 +239,7 @@ public class CreateChangeRequestRequest extends Request {
         }
 
         /**
-         * ownerId.
+         * <p>This parameter is required.</p>
          */
         public Builder ownerId(String ownerId) {
             this.putBodyParameter("ownerId", ownerId);
@@ -233,7 +248,7 @@ public class CreateChangeRequestRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

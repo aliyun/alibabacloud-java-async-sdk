@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkItemWorkFlowStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkItemWorkFlowStatusResponseBody</p>
@@ -21,7 +27,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("statuses")
-    private java.util.List < Statuses> statuses;
+    private java.util.List<Statuses> statuses;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -66,7 +72,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
     /**
      * @return statuses
      */
-    public java.util.List < Statuses> getStatuses() {
+    public java.util.List<Statuses> getStatuses() {
         return this.statuses;
     }
 
@@ -81,7 +87,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Statuses> statuses; 
+        private java.util.List<Statuses> statuses; 
         private Boolean success; 
 
         /**
@@ -111,7 +117,7 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
         /**
          * statuses.
          */
-        public Builder statuses(java.util.List < Statuses> statuses) {
+        public Builder statuses(java.util.List<Statuses> statuses) {
             this.statuses = statuses;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListWorkItemWorkFlowStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkItemWorkFlowStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkItemWorkFlowStatusResponseBody</p>
+     */
     public static class Statuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;

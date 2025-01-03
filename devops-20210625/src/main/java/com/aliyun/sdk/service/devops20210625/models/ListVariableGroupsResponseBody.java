@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVariableGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVariableGroupsResponseBody</p>
@@ -30,7 +36,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("variableGroups")
-    private java.util.List < VariableGroups> variableGroups;
+    private java.util.List<VariableGroups> variableGroups;
 
     private ListVariableGroupsResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -95,7 +101,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     /**
      * @return variableGroups
      */
-    public java.util.List < VariableGroups> getVariableGroups() {
+    public java.util.List<VariableGroups> getVariableGroups() {
         return this.variableGroups;
     }
 
@@ -106,7 +112,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
-        private java.util.List < VariableGroups> variableGroups; 
+        private java.util.List<VariableGroups> variableGroups; 
 
         /**
          * errorCode.
@@ -159,7 +165,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         /**
          * variableGroups.
          */
-        public Builder variableGroups(java.util.List < VariableGroups> variableGroups) {
+        public Builder variableGroups(java.util.List<VariableGroups> variableGroups) {
             this.variableGroups = variableGroups;
             return this;
         }
@@ -170,6 +176,12 @@ public class ListVariableGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVariableGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVariableGroupsResponseBody</p>
+     */
     public static class RelatedPipelines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -231,6 +243,12 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVariableGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVariableGroupsResponseBody</p>
+     */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isEncrypted")
         private Boolean isEncrypted;
@@ -312,6 +330,12 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVariableGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVariableGroupsResponseBody</p>
+     */
     public static class VariableGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
@@ -332,13 +356,13 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("relatedPipelines")
-        private java.util.List < RelatedPipelines> relatedPipelines;
+        private java.util.List<RelatedPipelines> relatedPipelines;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private VariableGroups(Builder builder) {
             this.createTime = builder.createTime;
@@ -405,7 +429,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         /**
          * @return relatedPipelines
          */
-        public java.util.List < RelatedPipelines> getRelatedPipelines() {
+        public java.util.List<RelatedPipelines> getRelatedPipelines() {
             return this.relatedPipelines;
         }
 
@@ -419,7 +443,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
@@ -430,9 +454,9 @@ public class ListVariableGroupsResponseBody extends TeaModel {
             private Long id; 
             private String modifierAccountId; 
             private String name; 
-            private java.util.List < RelatedPipelines> relatedPipelines; 
+            private java.util.List<RelatedPipelines> relatedPipelines; 
             private Long updateTime; 
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
 
             /**
              * createTime.
@@ -485,7 +509,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
             /**
              * relatedPipelines.
              */
-            public Builder relatedPipelines(java.util.List < RelatedPipelines> relatedPipelines) {
+            public Builder relatedPipelines(java.util.List<RelatedPipelines> relatedPipelines) {
                 this.relatedPipelines = relatedPipelines;
                 return this;
             }
@@ -501,7 +525,7 @@ public class ListVariableGroupsResponseBody extends TeaModel {
             /**
              * variables.
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileLastCommitRequest} extends {@link RequestModel}
  *
  * <p>GetFileLastCommitRequest</p>
@@ -127,7 +133,10 @@ public class GetFileLastCommitRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2825387</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -145,7 +154,10 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * filePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src/main/test.java</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("filePath", filePath);
@@ -154,7 +166,10 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -163,7 +178,10 @@ public class GetFileLastCommitRequest extends Request {
         }
 
         /**
-         * sha.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder sha(String sha) {
             this.putQueryParameter("sha", sha);

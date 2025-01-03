@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LinkMergeRequestLabelRequest} extends {@link RequestModel}
  *
  * <p>LinkMergeRequestLabelRequest</p>
@@ -18,7 +24,7 @@ public class LinkMergeRequestLabelRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("labelIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > labelIds;
+    private java.util.List<String> labelIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("localId")
@@ -67,7 +73,7 @@ public class LinkMergeRequestLabelRequest extends Request {
     /**
      * @return labelIds
      */
-    public java.util.List < String > getLabelIds() {
+    public java.util.List<String> getLabelIds() {
         return this.labelIds;
     }
 
@@ -94,7 +100,7 @@ public class LinkMergeRequestLabelRequest extends Request {
 
     public static final class Builder extends Request.Builder<LinkMergeRequestLabelRequest, Builder> {
         private String accessToken; 
-        private java.util.List < String > labelIds; 
+        private java.util.List<String> labelIds; 
         private Long localId; 
         private String organizationId; 
         private String repositoryIdentity; 
@@ -122,16 +128,19 @@ public class LinkMergeRequestLabelRequest extends Request {
         }
 
         /**
-         * labelIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder labelIds(java.util.List < String > labelIds) {
+        public Builder labelIds(java.util.List<String> labelIds) {
             this.putBodyParameter("labelIds", labelIds);
             this.labelIds = labelIds;
             return this;
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder localId(Long localId) {
             this.putQueryParameter("localId", localId);
@@ -140,7 +149,10 @@ public class LinkMergeRequestLabelRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -149,7 +161,7 @@ public class LinkMergeRequestLabelRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);

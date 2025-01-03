@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHostGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateHostGroupRequest</p>
@@ -197,7 +203,10 @@ public class CreateHostGroupRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -260,7 +269,7 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -269,7 +278,10 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * serviceConnectionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder serviceConnectionId(Long serviceConnectionId) {
             this.putBodyParameter("serviceConnectionId", serviceConnectionId);
@@ -287,7 +299,10 @@ public class CreateHostGroupRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWorkitemRequest} extends {@link RequestModel}
  *
  * <p>CreateWorkitemRequest</p>
@@ -36,7 +42,7 @@ public class CreateWorkitemRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fieldValueList")
-    private java.util.List < FieldValueList> fieldValueList;
+    private java.util.List<FieldValueList> fieldValueList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parent")
@@ -44,7 +50,7 @@ public class CreateWorkitemRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("participant")
-    private java.util.List < String > participant;
+    private java.util.List<String> participant;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("space")
@@ -63,7 +69,7 @@ public class CreateWorkitemRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sprint")
-    private java.util.List < String > sprint;
+    private java.util.List<String> sprint;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("subject")
@@ -72,11 +78,11 @@ public class CreateWorkitemRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tracker")
-    private java.util.List < String > tracker;
+    private java.util.List<String> tracker;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("verifier")
-    private java.util.List < String > verifier;
+    private java.util.List<String> verifier;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workitemType")
@@ -154,7 +160,7 @@ public class CreateWorkitemRequest extends Request {
     /**
      * @return fieldValueList
      */
-    public java.util.List < FieldValueList> getFieldValueList() {
+    public java.util.List<FieldValueList> getFieldValueList() {
         return this.fieldValueList;
     }
 
@@ -168,7 +174,7 @@ public class CreateWorkitemRequest extends Request {
     /**
      * @return participant
      */
-    public java.util.List < String > getParticipant() {
+    public java.util.List<String> getParticipant() {
         return this.participant;
     }
 
@@ -196,7 +202,7 @@ public class CreateWorkitemRequest extends Request {
     /**
      * @return sprint
      */
-    public java.util.List < String > getSprint() {
+    public java.util.List<String> getSprint() {
         return this.sprint;
     }
 
@@ -210,14 +216,14 @@ public class CreateWorkitemRequest extends Request {
     /**
      * @return tracker
      */
-    public java.util.List < String > getTracker() {
+    public java.util.List<String> getTracker() {
         return this.tracker;
     }
 
     /**
      * @return verifier
      */
-    public java.util.List < String > getVerifier() {
+    public java.util.List<String> getVerifier() {
         return this.verifier;
     }
 
@@ -234,16 +240,16 @@ public class CreateWorkitemRequest extends Request {
         private String category; 
         private String description; 
         private String descriptionFormat; 
-        private java.util.List < FieldValueList> fieldValueList; 
+        private java.util.List<FieldValueList> fieldValueList; 
         private String parent; 
-        private java.util.List < String > participant; 
+        private java.util.List<String> participant; 
         private String space; 
         private String spaceIdentifier; 
         private String spaceType; 
-        private java.util.List < String > sprint; 
+        private java.util.List<String> sprint; 
         private String subject; 
-        private java.util.List < String > tracker; 
-        private java.util.List < String > verifier; 
+        private java.util.List<String> tracker; 
+        private java.util.List<String> verifier; 
         private String workitemType; 
 
         private Builder() {
@@ -271,7 +277,10 @@ public class CreateWorkitemRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -280,7 +289,10 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * assignedTo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19xxxx31947xxxx</p>
          */
         public Builder assignedTo(String assignedTo) {
             this.putBodyParameter("assignedTo", assignedTo);
@@ -289,7 +301,10 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Req</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("category", category);
@@ -318,7 +333,7 @@ public class CreateWorkitemRequest extends Request {
         /**
          * fieldValueList.
          */
-        public Builder fieldValueList(java.util.List < FieldValueList> fieldValueList) {
+        public Builder fieldValueList(java.util.List<FieldValueList> fieldValueList) {
             this.putBodyParameter("fieldValueList", fieldValueList);
             this.fieldValueList = fieldValueList;
             return this;
@@ -336,14 +351,17 @@ public class CreateWorkitemRequest extends Request {
         /**
          * participant.
          */
-        public Builder participant(java.util.List < String > participant) {
+        public Builder participant(java.util.List<String> participant) {
             this.putBodyParameter("participant", participant);
             this.participant = participant;
             return this;
         }
 
         /**
-         * space.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd345xxxxx9q9845xxxxx34</p>
          */
         public Builder space(String space) {
             this.putBodyParameter("space", space);
@@ -352,7 +370,10 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * spaceIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asd345xxxxx9q9845xxxxx34</p>
          */
         public Builder spaceIdentifier(String spaceIdentifier) {
             this.putBodyParameter("spaceIdentifier", spaceIdentifier);
@@ -361,7 +382,10 @@ public class CreateWorkitemRequest extends Request {
         }
 
         /**
-         * spaceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Project</p>
          */
         public Builder spaceType(String spaceType) {
             this.putBodyParameter("spaceType", spaceType);
@@ -372,14 +396,17 @@ public class CreateWorkitemRequest extends Request {
         /**
          * sprint.
          */
-        public Builder sprint(java.util.List < String > sprint) {
+        public Builder sprint(java.util.List<String> sprint) {
             this.putBodyParameter("sprint", sprint);
             this.sprint = sprint;
             return this;
         }
 
         /**
-         * subject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试工作项</p>
          */
         public Builder subject(String subject) {
             this.putBodyParameter("subject", subject);
@@ -390,7 +417,7 @@ public class CreateWorkitemRequest extends Request {
         /**
          * tracker.
          */
-        public Builder tracker(java.util.List < String > tracker) {
+        public Builder tracker(java.util.List<String> tracker) {
             this.putBodyParameter("tracker", tracker);
             this.tracker = tracker;
             return this;
@@ -399,14 +426,17 @@ public class CreateWorkitemRequest extends Request {
         /**
          * verifier.
          */
-        public Builder verifier(java.util.List < String > verifier) {
+        public Builder verifier(java.util.List<String> verifier) {
             this.putBodyParameter("verifier", verifier);
             this.verifier = verifier;
             return this;
         }
 
         /**
-         * workitemType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9uyxxxxxre573f561dxxn40</p>
          */
         public Builder workitemType(String workitemType) {
             this.putBodyParameter("workitemType", workitemType);
@@ -421,6 +451,12 @@ public class CreateWorkitemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateWorkitemRequest} extends {@link TeaModel}
+     *
+     * <p>CreateWorkitemRequest</p>
+     */
     public static class FieldValueList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;

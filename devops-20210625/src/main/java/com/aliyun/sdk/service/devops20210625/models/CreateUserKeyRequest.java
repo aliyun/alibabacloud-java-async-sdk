@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserKeyRequest} extends {@link RequestModel}
  *
  * <p>CreateUserKeyRequest</p>
@@ -145,7 +151,10 @@ public class CreateUserKeyRequest extends Request {
         }
 
         /**
-         * keyScope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder keyScope(String keyScope) {
             this.putBodyParameter("keyScope", keyScope);
@@ -154,7 +163,10 @@ public class CreateUserKeyRequest extends Request {
         }
 
         /**
-         * publicKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder publicKey(String publicKey) {
             this.putBodyParameter("publicKey", publicKey);
@@ -163,7 +175,10 @@ public class CreateUserKeyRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSH Title</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -172,7 +187,10 @@ public class CreateUserKeyRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);

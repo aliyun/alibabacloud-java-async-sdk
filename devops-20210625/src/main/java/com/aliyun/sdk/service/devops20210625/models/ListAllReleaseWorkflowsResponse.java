@@ -1,24 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllReleaseWorkflowsResponse} extends {@link TeaModel}
  *
  * <p>ListAllReleaseWorkflowsResponse</p>
  */
 public class ListAllReleaseWorkflowsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < ListAllReleaseWorkflowsResponseBody> body;
+    private java.util.List<ListAllReleaseWorkflowsResponseBody> body;
 
     private ListAllReleaseWorkflowsResponse(BuilderImpl builder) {
         super(builder);
@@ -39,7 +45,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,17 +59,17 @@ public class ListAllReleaseWorkflowsResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < ListAllReleaseWorkflowsResponseBody> getBody() {
+    public java.util.List<ListAllReleaseWorkflowsResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<ListAllReleaseWorkflowsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < ListAllReleaseWorkflowsResponseBody> body);
+        Builder body(java.util.List<ListAllReleaseWorkflowsResponseBody> body);
 
         @Override
         ListAllReleaseWorkflowsResponse build();
@@ -73,9 +79,9 @@ public class ListAllReleaseWorkflowsResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<ListAllReleaseWorkflowsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < ListAllReleaseWorkflowsResponseBody> body; 
+        private java.util.List<ListAllReleaseWorkflowsResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -92,7 +98,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,7 +116,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < ListAllReleaseWorkflowsResponseBody> body) {
+        public Builder body(java.util.List<ListAllReleaseWorkflowsResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -122,6 +128,12 @@ public class ListAllReleaseWorkflowsResponse extends Response {
 
     } 
 
+    /**
+     * 
+     * {@link ListAllReleaseWorkflowsResponse} extends {@link TeaModel}
+     *
+     * <p>ListAllReleaseWorkflowsResponse</p>
+     */
     public static class VariableGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -203,6 +215,12 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAllReleaseWorkflowsResponse} extends {@link TeaModel}
+     *
+     * <p>ListAllReleaseWorkflowsResponse</p>
+     */
     public static class ReleaseStages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appName")
         private String appName;
@@ -220,7 +238,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         private String order;
 
         @com.aliyun.core.annotation.NameInMap("variableGroups")
-        private java.util.List < VariableGroups> variableGroups;
+        private java.util.List<VariableGroups> variableGroups;
 
         private ReleaseStages(Builder builder) {
             this.appName = builder.appName;
@@ -277,7 +295,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         /**
          * @return variableGroups
          */
-        public java.util.List < VariableGroups> getVariableGroups() {
+        public java.util.List<VariableGroups> getVariableGroups() {
             return this.variableGroups;
         }
 
@@ -287,7 +305,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             private String sn; 
             private String releaseWorkflowSn; 
             private String order; 
-            private java.util.List < VariableGroups> variableGroups; 
+            private java.util.List<VariableGroups> variableGroups; 
 
             /**
              * appName.
@@ -332,7 +350,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             /**
              * variableGroups.
              */
-            public Builder variableGroups(java.util.List < VariableGroups> variableGroups) {
+            public Builder variableGroups(java.util.List<VariableGroups> variableGroups) {
                 this.variableGroups = variableGroups;
                 return this;
             }
@@ -344,6 +362,12 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAllReleaseWorkflowsResponse} extends {@link TeaModel}
+     *
+     * <p>ListAllReleaseWorkflowsResponse</p>
+     */
     public static class ListAllReleaseWorkflowsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appName")
         private String appName;
@@ -358,7 +382,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         private String order;
 
         @com.aliyun.core.annotation.NameInMap("releaseStages")
-        private java.util.List < ReleaseStages> releaseStages;
+        private java.util.List<ReleaseStages> releaseStages;
 
         @com.aliyun.core.annotation.NameInMap("note")
         private String note;
@@ -411,7 +435,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
         /**
          * @return releaseStages
          */
-        public java.util.List < ReleaseStages> getReleaseStages() {
+        public java.util.List<ReleaseStages> getReleaseStages() {
             return this.releaseStages;
         }
 
@@ -427,7 +451,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             private String sn; 
             private String name; 
             private String order; 
-            private java.util.List < ReleaseStages> releaseStages; 
+            private java.util.List<ReleaseStages> releaseStages; 
             private String note; 
 
             /**
@@ -465,7 +489,7 @@ public class ListAllReleaseWorkflowsResponse extends Response {
             /**
              * releaseStages.
              */
-            public Builder releaseStages(java.util.List < ReleaseStages> releaseStages) {
+            public Builder releaseStages(java.util.List<ReleaseStages> releaseStages) {
                 this.releaseStages = releaseStages;
                 return this;
             }

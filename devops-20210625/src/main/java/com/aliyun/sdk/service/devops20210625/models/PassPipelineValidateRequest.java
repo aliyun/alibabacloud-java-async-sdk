@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PassPipelineValidateRequest} extends {@link RequestModel}
  *
  * <p>PassPipelineValidateRequest</p>
@@ -99,7 +105,10 @@ public class PassPipelineValidateRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -108,7 +117,10 @@ public class PassPipelineValidateRequest extends Request {
         }
 
         /**
-         * pipelineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11222</p>
          */
         public Builder pipelineId(Long pipelineId) {
             this.putPathParameter("pipelineId", pipelineId);
@@ -117,7 +129,10 @@ public class PassPipelineValidateRequest extends Request {
         }
 
         /**
-         * pipelineRunId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.putPathParameter("pipelineRunId", pipelineRunId);
@@ -126,7 +141,10 @@ public class PassPipelineValidateRequest extends Request {
         }
 
         /**
-         * jobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);

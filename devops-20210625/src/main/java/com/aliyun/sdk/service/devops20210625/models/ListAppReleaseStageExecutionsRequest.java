@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppReleaseStageExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListAppReleaseStageExecutionsRequest</p>
@@ -182,7 +188,10 @@ public class ListAppReleaseStageExecutionsRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -191,7 +200,10 @@ public class ListAppReleaseStageExecutionsRequest extends Request {
         }
 
         /**
-         * releaseWorkflowSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340beb481a334fd49b006816382f0c11</p>
          */
         public Builder releaseWorkflowSn(String releaseWorkflowSn) {
             this.putPathParameter("releaseWorkflowSn", releaseWorkflowSn);
@@ -200,7 +212,10 @@ public class ListAppReleaseStageExecutionsRequest extends Request {
         }
 
         /**
-         * releaseStageSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e173f3c11db5445eb426ca33c92207c8</p>
          */
         public Builder releaseStageSn(String releaseStageSn) {
             this.putPathParameter("releaseStageSn", releaseStageSn);

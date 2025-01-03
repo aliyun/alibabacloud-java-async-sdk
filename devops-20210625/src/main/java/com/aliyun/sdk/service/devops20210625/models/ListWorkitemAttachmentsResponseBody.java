@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemAttachmentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkitemAttachmentsResponseBody</p>
  */
 public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("attachments")
-    private java.util.List < Attachments> attachments;
+    private java.util.List<Attachments> attachments;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -45,7 +51,7 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     /**
      * @return attachments
      */
-    public java.util.List < Attachments> getAttachments() {
+    public java.util.List<Attachments> getAttachments() {
         return this.attachments;
     }
 
@@ -78,7 +84,7 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Attachments> attachments; 
+        private java.util.List<Attachments> attachments; 
         private String errorCode; 
         private String errorMsg; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
         /**
          * attachments.
          */
-        public Builder attachments(java.util.List < Attachments> attachments) {
+        public Builder attachments(java.util.List<Attachments> attachments) {
             this.attachments = attachments;
             return this;
         }
@@ -109,7 +115,10 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7B85D1B-D1C2-140F-A039-341859F130B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +139,12 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkitemAttachmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemAttachmentsResponseBody</p>
+     */
     public static class Attachments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;

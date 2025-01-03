@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWorkitemRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>GetWorkitemRelationsResponseBody</p>
@@ -18,7 +24,7 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
     private String errorMsg;
 
     @com.aliyun.core.annotation.NameInMap("relationList")
-    private java.util.List < RelationList> relationList;
+    private java.util.List<RelationList> relationList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
     /**
      * @return relationList
      */
-    public java.util.List < RelationList> getRelationList() {
+    public java.util.List<RelationList> getRelationList() {
         return this.relationList;
     }
 
@@ -80,7 +86,7 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMsg; 
-        private java.util.List < RelationList> relationList; 
+        private java.util.List<RelationList> relationList; 
         private String requestId; 
         private Boolean success; 
 
@@ -103,13 +109,16 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
         /**
          * relationList.
          */
-        public Builder relationList(java.util.List < RelationList> relationList) {
+        public Builder relationList(java.util.List<RelationList> relationList) {
             this.relationList = relationList;
             return this;
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASSDS-ASSASX-XSAXSA-XSAXSAXS</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +139,12 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWorkitemRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWorkitemRelationsResponseBody</p>
+     */
     public static class RelationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignedTo")
         private String assignedTo;

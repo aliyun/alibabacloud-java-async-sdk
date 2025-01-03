@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFlowTagGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetFlowTagGroupResponseBody</p>
@@ -130,6 +136,12 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFlowTagGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowTagGroupResponseBody</p>
+     */
     public static class FlowTagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("color")
         private String color;
@@ -251,12 +263,18 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFlowTagGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFlowTagGroupResponseBody</p>
+     */
     public static class FlowTagGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
         @com.aliyun.core.annotation.NameInMap("flowTagList")
-        private java.util.List < FlowTagList> flowTagList;
+        private java.util.List<FlowTagList> flowTagList;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -293,7 +311,7 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
         /**
          * @return flowTagList
          */
-        public java.util.List < FlowTagList> getFlowTagList() {
+        public java.util.List<FlowTagList> getFlowTagList() {
             return this.flowTagList;
         }
 
@@ -320,7 +338,7 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creatorAccountId; 
-            private java.util.List < FlowTagList> flowTagList; 
+            private java.util.List<FlowTagList> flowTagList; 
             private Long id; 
             private String modiferAccountId; 
             private String name; 
@@ -336,7 +354,7 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
             /**
              * flowTagList.
              */
-            public Builder flowTagList(java.util.List < FlowTagList> flowTagList) {
+            public Builder flowTagList(java.util.List<FlowTagList> flowTagList) {
                 this.flowTagList = flowTagList;
                 return this;
             }

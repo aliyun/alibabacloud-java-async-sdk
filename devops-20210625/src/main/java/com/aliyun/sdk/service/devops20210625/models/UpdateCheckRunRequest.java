@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCheckRunRequest} extends {@link RequestModel}
  *
  * <p>UpdateCheckRunRequest</p>
@@ -17,7 +23,7 @@ public class UpdateCheckRunRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("annotations")
-    private java.util.List < Annotations> annotations;
+    private java.util.List<Annotations> annotations;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("completedAt")
@@ -106,7 +112,7 @@ public class UpdateCheckRunRequest extends Request {
     /**
      * @return annotations
      */
-    public java.util.List < Annotations> getAnnotations() {
+    public java.util.List<Annotations> getAnnotations() {
         return this.annotations;
     }
 
@@ -189,7 +195,7 @@ public class UpdateCheckRunRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateCheckRunRequest, Builder> {
         private String accessToken; 
-        private java.util.List < Annotations> annotations; 
+        private java.util.List<Annotations> annotations; 
         private String completedAt; 
         private String conclusion; 
         private String detailsUrl; 
@@ -235,7 +241,7 @@ public class UpdateCheckRunRequest extends Request {
         /**
          * annotations.
          */
-        public Builder annotations(java.util.List < Annotations> annotations) {
+        public Builder annotations(java.util.List<Annotations> annotations) {
             this.putBodyParameter("annotations", annotations);
             this.annotations = annotations;
             return this;
@@ -314,7 +320,10 @@ public class UpdateCheckRunRequest extends Request {
         }
 
         /**
-         * checkRunId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder checkRunId(Long checkRunId) {
             this.putQueryParameter("checkRunId", checkRunId);
@@ -323,7 +332,10 @@ public class UpdateCheckRunRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -332,7 +344,7 @@ public class UpdateCheckRunRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);
@@ -347,6 +359,12 @@ public class UpdateCheckRunRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCheckRunRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCheckRunRequest</p>
+     */
     public static class Annotations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("annotationLevel")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -475,7 +493,10 @@ public class UpdateCheckRunRequest extends Request {
             private String title; 
 
             /**
-             * annotationLevel.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>failure</p>
              */
             public Builder annotationLevel(String annotationLevel) {
                 this.annotationLevel = annotationLevel;
@@ -491,7 +512,10 @@ public class UpdateCheckRunRequest extends Request {
             }
 
             /**
-             * endLine.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder endLine(Long endLine) {
                 this.endLine = endLine;
@@ -499,7 +523,7 @@ public class UpdateCheckRunRequest extends Request {
             }
 
             /**
-             * message.
+             * <p>This parameter is required.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -507,7 +531,10 @@ public class UpdateCheckRunRequest extends Request {
             }
 
             /**
-             * path.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo/test.txt</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -531,7 +558,10 @@ public class UpdateCheckRunRequest extends Request {
             }
 
             /**
-             * startLine.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startLine(Long startLine) {
                 this.startLine = startLine;
@@ -553,6 +583,12 @@ public class UpdateCheckRunRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCheckRunRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCheckRunRequest</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alt")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -606,7 +642,10 @@ public class UpdateCheckRunRequest extends Request {
             private String imageUrl; 
 
             /**
-             * alt.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-image-alt</p>
              */
             public Builder alt(String alt) {
                 this.alt = alt;
@@ -622,7 +661,10 @@ public class UpdateCheckRunRequest extends Request {
             }
 
             /**
-             * imageUrl.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -636,9 +678,15 @@ public class UpdateCheckRunRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCheckRunRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCheckRunRequest</p>
+     */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("summary")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -668,7 +716,7 @@ public class UpdateCheckRunRequest extends Request {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
@@ -694,7 +742,7 @@ public class UpdateCheckRunRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Images> images; 
+            private java.util.List<Images> images; 
             private String summary; 
             private String text; 
             private String title; 
@@ -702,13 +750,13 @@ public class UpdateCheckRunRequest extends Request {
             /**
              * images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
 
             /**
-             * summary.
+             * <p>This parameter is required.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;

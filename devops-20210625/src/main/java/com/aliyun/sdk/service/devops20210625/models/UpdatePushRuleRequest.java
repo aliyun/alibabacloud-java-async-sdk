@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePushRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdatePushRuleRequest</p>
@@ -27,7 +33,7 @@ public class UpdatePushRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ruleInfos")
-    private java.util.List < RuleInfos> ruleInfos;
+    private java.util.List<RuleInfos> ruleInfos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("organizationId")
@@ -80,7 +86,7 @@ public class UpdatePushRuleRequest extends Request {
     /**
      * @return ruleInfos
      */
-    public java.util.List < RuleInfos> getRuleInfos() {
+    public java.util.List<RuleInfos> getRuleInfos() {
         return this.ruleInfos;
     }
 
@@ -95,7 +101,7 @@ public class UpdatePushRuleRequest extends Request {
         private Long repositoryId; 
         private Long pushRuleId; 
         private String accessToken; 
-        private java.util.List < RuleInfos> ruleInfos; 
+        private java.util.List<RuleInfos> ruleInfos; 
         private String organizationId; 
 
         private Builder() {
@@ -112,7 +118,10 @@ public class UpdatePushRuleRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2709413</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -121,7 +130,10 @@ public class UpdatePushRuleRequest extends Request {
         }
 
         /**
-         * pushRuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2077</p>
          */
         public Builder pushRuleId(Long pushRuleId) {
             this.putPathParameter("pushRuleId", pushRuleId);
@@ -141,14 +153,17 @@ public class UpdatePushRuleRequest extends Request {
         /**
          * ruleInfos.
          */
-        public Builder ruleInfos(java.util.List < RuleInfos> ruleInfos) {
+        public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.putBodyParameter("ruleInfos", ruleInfos);
             this.ruleInfos = ruleInfos;
             return this;
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -163,6 +178,12 @@ public class UpdatePushRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePushRuleRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePushRuleRequest</p>
+     */
     public static class RuleInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
@@ -174,7 +195,7 @@ public class UpdatePushRuleRequest extends Request {
         private String extraMessage;
 
         @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
-        private java.util.List < String > fileRuleRegexes;
+        private java.util.List<String> fileRuleRegexes;
 
         private RuleInfos(Builder builder) {
             this.checkerName = builder.checkerName;
@@ -215,7 +236,7 @@ public class UpdatePushRuleRequest extends Request {
         /**
          * @return fileRuleRegexes
          */
-        public java.util.List < String > getFileRuleRegexes() {
+        public java.util.List<String> getFileRuleRegexes() {
             return this.fileRuleRegexes;
         }
 
@@ -223,7 +244,7 @@ public class UpdatePushRuleRequest extends Request {
             private String checkerName; 
             private String checkerType; 
             private String extraMessage; 
-            private java.util.List < String > fileRuleRegexes; 
+            private java.util.List<String> fileRuleRegexes; 
 
             /**
              * checkerName.
@@ -252,7 +273,7 @@ public class UpdatePushRuleRequest extends Request {
             /**
              * fileRuleRegexes.
              */
-            public Builder fileRuleRegexes(java.util.List < String > fileRuleRegexes) {
+            public Builder fileRuleRegexes(java.util.List<String> fileRuleRegexes) {
                 this.fileRuleRegexes = fileRuleRegexes;
                 return this;
             }

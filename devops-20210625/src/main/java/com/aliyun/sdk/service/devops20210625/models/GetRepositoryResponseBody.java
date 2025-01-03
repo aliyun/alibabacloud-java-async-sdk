@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRepositoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetRepositoryResponseBody</p>
@@ -130,6 +136,12 @@ public class GetRepositoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepositoryResponseBody</p>
+     */
     public static class Namespace extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
@@ -277,7 +289,10 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -331,6 +346,12 @@ public class GetRepositoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetRepositoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRepositoryResponseBody</p>
+     */
     public static class Repository extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("archive")
         private Boolean archive;
@@ -626,7 +647,10 @@ public class GetRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder id(Long id) {
                 this.id = id;

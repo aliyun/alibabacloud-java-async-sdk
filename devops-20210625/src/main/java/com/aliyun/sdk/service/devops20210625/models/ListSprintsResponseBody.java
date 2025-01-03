@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSprintsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSprintsResponseBody</p>
@@ -27,7 +33,7 @@ public class ListSprintsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("sprints")
-    private java.util.List < Sprints> sprints;
+    private java.util.List<Sprints> sprints;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -92,7 +98,7 @@ public class ListSprintsResponseBody extends TeaModel {
     /**
      * @return sprints
      */
-    public java.util.List < Sprints> getSprints() {
+    public java.util.List<Sprints> getSprints() {
         return this.sprints;
     }
 
@@ -116,7 +122,7 @@ public class ListSprintsResponseBody extends TeaModel {
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Sprints> sprints; 
+        private java.util.List<Sprints> sprints; 
         private Boolean success; 
         private Long totalCount; 
 
@@ -163,7 +169,7 @@ public class ListSprintsResponseBody extends TeaModel {
         /**
          * sprints.
          */
-        public Builder sprints(java.util.List < Sprints> sprints) {
+        public Builder sprints(java.util.List<Sprints> sprints) {
             this.sprints = sprints;
             return this;
         }
@@ -190,6 +196,12 @@ public class ListSprintsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSprintsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSprintsResponseBody</p>
+     */
     public static class Sprints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;

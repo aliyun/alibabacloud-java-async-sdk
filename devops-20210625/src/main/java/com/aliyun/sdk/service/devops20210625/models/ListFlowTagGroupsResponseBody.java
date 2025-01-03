@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFlowTagGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFlowTagGroupsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("flowTagGroups")
-    private java.util.List < FlowTagGroups> flowTagGroups;
+    private java.util.List<FlowTagGroups> flowTagGroups;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     /**
      * @return flowTagGroups
      */
-    public java.util.List < FlowTagGroups> getFlowTagGroups() {
+    public java.util.List<FlowTagGroups> getFlowTagGroups() {
         return this.flowTagGroups;
     }
 
@@ -80,7 +86,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < FlowTagGroups> flowTagGroups; 
+        private java.util.List<FlowTagGroups> flowTagGroups; 
         private String requestId; 
         private Boolean success; 
 
@@ -103,7 +109,7 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
         /**
          * flowTagGroups.
          */
-        public Builder flowTagGroups(java.util.List < FlowTagGroups> flowTagGroups) {
+        public Builder flowTagGroups(java.util.List<FlowTagGroups> flowTagGroups) {
             this.flowTagGroups = flowTagGroups;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFlowTagGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFlowTagGroupsResponseBody</p>
+     */
     public static class FlowTagGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;

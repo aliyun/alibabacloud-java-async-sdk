@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMergeRequestCommentsRequest} extends {@link RequestModel}
  *
  * <p>ListMergeRequestCommentsRequest</p>
@@ -25,7 +31,7 @@ public class ListMergeRequestCommentsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("patchSetBizIds")
-    private java.util.List < String > patchSetBizIds;
+    private java.util.List<String> patchSetBizIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resolved")
@@ -100,7 +106,7 @@ public class ListMergeRequestCommentsRequest extends Request {
     /**
      * @return patchSetBizIds
      */
-    public java.util.List < String > getPatchSetBizIds() {
+    public java.util.List<String> getPatchSetBizIds() {
         return this.patchSetBizIds;
     }
 
@@ -143,7 +149,7 @@ public class ListMergeRequestCommentsRequest extends Request {
         private String accessToken; 
         private String commentType; 
         private String filePath; 
-        private java.util.List < String > patchSetBizIds; 
+        private java.util.List<String> patchSetBizIds; 
         private Boolean resolved; 
         private String state; 
         private Long localId; 
@@ -197,7 +203,7 @@ public class ListMergeRequestCommentsRequest extends Request {
         /**
          * patchSetBizIds.
          */
-        public Builder patchSetBizIds(java.util.List < String > patchSetBizIds) {
+        public Builder patchSetBizIds(java.util.List<String> patchSetBizIds) {
             this.putBodyParameter("patchSetBizIds", patchSetBizIds);
             this.patchSetBizIds = patchSetBizIds;
             return this;
@@ -222,7 +228,10 @@ public class ListMergeRequestCommentsRequest extends Request {
         }
 
         /**
-         * localId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder localId(Long localId) {
             this.putQueryParameter("localId", localId);
@@ -231,7 +240,10 @@ public class ListMergeRequestCommentsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -240,7 +252,7 @@ public class ListMergeRequestCommentsRequest extends Request {
         }
 
         /**
-         * repositoryIdentity.
+         * <p>This parameter is required.</p>
          */
         public Builder repositoryIdentity(String repositoryIdentity) {
             this.putQueryParameter("repositoryIdentity", repositoryIdentity);

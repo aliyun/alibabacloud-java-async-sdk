@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemEstimateResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkitemEstimateResponseBody</p>
@@ -27,7 +33,7 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("workitemTimeEstimate")
-    private java.util.List < WorkitemTimeEstimate> workitemTimeEstimate;
+    private java.util.List<WorkitemTimeEstimate> workitemTimeEstimate;
 
     private ListWorkitemEstimateResponseBody(Builder builder) {
         this.code = builder.code;
@@ -84,7 +90,7 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
     /**
      * @return workitemTimeEstimate
      */
-    public java.util.List < WorkitemTimeEstimate> getWorkitemTimeEstimate() {
+    public java.util.List<WorkitemTimeEstimate> getWorkitemTimeEstimate() {
         return this.workitemTimeEstimate;
     }
 
@@ -94,7 +100,7 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < WorkitemTimeEstimate> workitemTimeEstimate; 
+        private java.util.List<WorkitemTimeEstimate> workitemTimeEstimate; 
 
         /**
          * code.
@@ -139,7 +145,7 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
         /**
          * workitemTimeEstimate.
          */
-        public Builder workitemTimeEstimate(java.util.List < WorkitemTimeEstimate> workitemTimeEstimate) {
+        public Builder workitemTimeEstimate(java.util.List<WorkitemTimeEstimate> workitemTimeEstimate) {
             this.workitemTimeEstimate = workitemTimeEstimate;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkitemEstimateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemEstimateResponseBody</p>
+     */
     public static class RecordUser extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
@@ -211,6 +223,12 @@ public class ListWorkitemEstimateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListWorkitemEstimateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemEstimateResponseBody</p>
+     */
     public static class WorkitemTimeEstimate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;

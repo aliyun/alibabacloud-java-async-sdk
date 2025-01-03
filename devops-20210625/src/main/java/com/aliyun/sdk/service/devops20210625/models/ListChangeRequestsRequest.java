@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChangeRequestsRequest} extends {@link RequestModel}
  *
  * <p>ListChangeRequestsRequest</p>
@@ -18,7 +24,7 @@ public class ListChangeRequestsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("appNameList")
-    private java.util.List < String > appNameList;
+    private java.util.List<String> appNameList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("displayNameKeyword")
@@ -39,7 +45,7 @@ public class ListChangeRequestsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ownerIdList")
-    private java.util.List < String > ownerIdList;
+    private java.util.List<String> ownerIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page")
@@ -59,7 +65,7 @@ public class ListChangeRequestsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("stateList")
-    private java.util.List < String > stateList;
+    private java.util.List<String> stateList;
 
     private ListChangeRequestsRequest(Builder builder) {
         super(builder);
@@ -100,7 +106,7 @@ public class ListChangeRequestsRequest extends Request {
     /**
      * @return appNameList
      */
-    public java.util.List < String > getAppNameList() {
+    public java.util.List<String> getAppNameList() {
         return this.appNameList;
     }
 
@@ -135,7 +141,7 @@ public class ListChangeRequestsRequest extends Request {
     /**
      * @return ownerIdList
      */
-    public java.util.List < String > getOwnerIdList() {
+    public java.util.List<String> getOwnerIdList() {
         return this.ownerIdList;
     }
 
@@ -170,23 +176,23 @@ public class ListChangeRequestsRequest extends Request {
     /**
      * @return stateList
      */
-    public java.util.List < String > getStateList() {
+    public java.util.List<String> getStateList() {
         return this.stateList;
     }
 
     public static final class Builder extends Request.Builder<ListChangeRequestsRequest, Builder> {
         private String appName; 
-        private java.util.List < String > appNameList; 
+        private java.util.List<String> appNameList; 
         private String displayNameKeyword; 
         private String nextToken; 
         private String orderBy; 
         private String organizationId; 
-        private java.util.List < String > ownerIdList; 
+        private java.util.List<String> ownerIdList; 
         private Integer page; 
         private String pagination; 
         private Integer perPage; 
         private String sort; 
-        private java.util.List < String > stateList; 
+        private java.util.List<String> stateList; 
 
         private Builder() {
             super();
@@ -209,7 +215,10 @@ public class ListChangeRequestsRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-name</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -220,7 +229,7 @@ public class ListChangeRequestsRequest extends Request {
         /**
          * appNameList.
          */
-        public Builder appNameList(java.util.List < String > appNameList) {
+        public Builder appNameList(java.util.List<String> appNameList) {
             String appNameListShrink = shrink(appNameList, "appNameList", "json");
             this.putQueryParameter("appNameList", appNameListShrink);
             this.appNameList = appNameList;
@@ -255,7 +264,10 @@ public class ListChangeRequestsRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66c0c9fffeb86b450c199fcd</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -266,7 +278,7 @@ public class ListChangeRequestsRequest extends Request {
         /**
          * ownerIdList.
          */
-        public Builder ownerIdList(java.util.List < String > ownerIdList) {
+        public Builder ownerIdList(java.util.List<String> ownerIdList) {
             String ownerIdListShrink = shrink(ownerIdList, "ownerIdList", "json");
             this.putQueryParameter("ownerIdList", ownerIdListShrink);
             this.ownerIdList = ownerIdList;
@@ -312,7 +324,7 @@ public class ListChangeRequestsRequest extends Request {
         /**
          * stateList.
          */
-        public Builder stateList(java.util.List < String > stateList) {
+        public Builder stateList(java.util.List<String> stateList) {
             String stateListShrink = shrink(stateList, "stateList", "json");
             this.putQueryParameter("stateList", stateListShrink);
             this.stateList = stateList;

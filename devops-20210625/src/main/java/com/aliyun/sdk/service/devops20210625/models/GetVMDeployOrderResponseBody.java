@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
  *
  * <p>GetVMDeployOrderResponseBody</p>
@@ -130,6 +136,12 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disable")
         private Boolean disable;
@@ -211,6 +223,12 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployMachinesActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("disable")
         private Boolean disable;
@@ -292,9 +310,15 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployMachines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < DeployMachinesActions> actions;
+        private java.util.List<DeployMachinesActions> actions;
 
         @com.aliyun.core.annotation.NameInMap("batchNum")
         private Integer batchNum;
@@ -339,7 +363,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < DeployMachinesActions> getActions() {
+        public java.util.List<DeployMachinesActions> getActions() {
             return this.actions;
         }
 
@@ -393,7 +417,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DeployMachinesActions> actions; 
+            private java.util.List<DeployMachinesActions> actions; 
             private Integer batchNum; 
             private String clientStatus; 
             private Long createTime; 
@@ -405,7 +429,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             /**
              * actions.
              */
-            public Builder actions(java.util.List < DeployMachinesActions> actions) {
+            public Builder actions(java.util.List<DeployMachinesActions> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -473,12 +497,18 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployMachineInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("batchNum")
         private Integer batchNum;
 
         @com.aliyun.core.annotation.NameInMap("deployMachines")
-        private java.util.List < DeployMachines> deployMachines;
+        private java.util.List<DeployMachines> deployMachines;
 
         @com.aliyun.core.annotation.NameInMap("hostGroupId")
         private Long hostGroupId;
@@ -507,7 +537,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return deployMachines
          */
-        public java.util.List < DeployMachines> getDeployMachines() {
+        public java.util.List<DeployMachines> getDeployMachines() {
             return this.deployMachines;
         }
 
@@ -520,7 +550,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer batchNum; 
-            private java.util.List < DeployMachines> deployMachines; 
+            private java.util.List<DeployMachines> deployMachines; 
             private Long hostGroupId; 
 
             /**
@@ -534,7 +564,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             /**
              * deployMachines.
              */
-            public Builder deployMachines(java.util.List < DeployMachines> deployMachines) {
+            public Builder deployMachines(java.util.List<DeployMachines> deployMachines) {
                 this.deployMachines = deployMachines;
                 return this;
             }
@@ -554,9 +584,15 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetVMDeployOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVMDeployOrderResponseBody</p>
+     */
     public static class DeployOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < Actions> actions;
+        private java.util.List<Actions> actions;
 
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
@@ -609,7 +645,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -677,7 +713,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private Long createTime; 
             private String creator; 
             private Integer currentBatch; 
@@ -691,7 +727,7 @@ public class GetVMDeployOrderResponseBody extends TeaModel {
             /**
              * actions.
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCommentResponseBody</p>
@@ -130,6 +136,12 @@ public class CreateCommentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCommentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommentResponseBody</p>
+     */
     public static class Author extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
@@ -291,6 +303,12 @@ public class CreateCommentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCommentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommentResponseBody</p>
+     */
     public static class RelatedPatchSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
@@ -452,6 +470,12 @@ public class CreateCommentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCommentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCommentResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("author")
         private Author author;

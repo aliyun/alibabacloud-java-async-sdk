@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkitemsResponseBody</p>
@@ -33,7 +39,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("workitems")
-    private java.util.List < Workitems> workitems;
+    private java.util.List<Workitems> workitems;
 
     private ListWorkitemsResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -106,7 +112,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
     /**
      * @return workitems
      */
-    public java.util.List < Workitems> getWorkitems() {
+    public java.util.List<Workitems> getWorkitems() {
         return this.workitems;
     }
 
@@ -118,7 +124,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
-        private java.util.List < Workitems> workitems; 
+        private java.util.List<Workitems> workitems; 
 
         /**
          * errorCode.
@@ -179,7 +185,7 @@ public class ListWorkitemsResponseBody extends TeaModel {
         /**
          * workitems.
          */
-        public Builder workitems(java.util.List < Workitems> workitems) {
+        public Builder workitems(java.util.List<Workitems> workitems) {
             this.workitems = workitems;
             return this;
         }
@@ -190,6 +196,12 @@ public class ListWorkitemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkitemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemsResponseBody</p>
+     */
     public static class Workitems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assignedTo")
         private String assignedTo;

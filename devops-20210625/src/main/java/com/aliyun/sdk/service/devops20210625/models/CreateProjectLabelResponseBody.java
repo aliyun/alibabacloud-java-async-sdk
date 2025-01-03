@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProjectLabelResponseBody} extends {@link TeaModel}
  *
  * <p>CreateProjectLabelResponseBody</p>
@@ -130,6 +136,12 @@ public class CreateProjectLabelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateProjectLabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateProjectLabelResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("color")
         private String color;

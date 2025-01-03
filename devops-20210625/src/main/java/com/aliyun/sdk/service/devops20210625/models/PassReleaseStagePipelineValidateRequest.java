@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PassReleaseStagePipelineValidateRequest} extends {@link RequestModel}
  *
  * <p>PassReleaseStagePipelineValidateRequest</p>
@@ -128,7 +134,10 @@ public class PassReleaseStagePipelineValidateRequest extends Request {
         } 
 
         /**
-         * appName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putPathParameter("appName", appName);
@@ -137,7 +146,10 @@ public class PassReleaseStagePipelineValidateRequest extends Request {
         }
 
         /**
-         * releaseWorkflowSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce51b31b996246ecaf8747368383****</p>
          */
         public Builder releaseWorkflowSn(String releaseWorkflowSn) {
             this.putPathParameter("releaseWorkflowSn", releaseWorkflowSn);
@@ -146,7 +158,10 @@ public class PassReleaseStagePipelineValidateRequest extends Request {
         }
 
         /**
-         * releaseStageSn.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e173f3c11db5445eb426ca33c922****</p>
          */
         public Builder releaseStageSn(String releaseStageSn) {
             this.putPathParameter("releaseStageSn", releaseStageSn);
@@ -155,7 +170,10 @@ public class PassReleaseStagePipelineValidateRequest extends Request {
         }
 
         /**
-         * executionNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executionNumber(String executionNumber) {
             this.putPathParameter("executionNumber", executionNumber);
@@ -164,7 +182,10 @@ public class PassReleaseStagePipelineValidateRequest extends Request {
         }
 
         /**
-         * jobId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>226241***</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("jobId", jobId);

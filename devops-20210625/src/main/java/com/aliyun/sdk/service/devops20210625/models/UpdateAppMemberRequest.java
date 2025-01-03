@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppMemberRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppMemberRequest</p>
@@ -21,7 +27,7 @@ public class UpdateAppMemberRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("roleNames")
-    private java.util.List < String > roleNames;
+    private java.util.List<String> roleNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("organizationId")
@@ -65,7 +71,7 @@ public class UpdateAppMemberRequest extends Request {
     /**
      * @return roleNames
      */
-    public java.util.List < String > getRoleNames() {
+    public java.util.List<String> getRoleNames() {
         return this.roleNames;
     }
 
@@ -79,7 +85,7 @@ public class UpdateAppMemberRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateAppMemberRequest, Builder> {
         private String appName; 
         private Player player; 
-        private java.util.List < String > roleNames; 
+        private java.util.List<String> roleNames; 
         private String organizationId; 
 
         private Builder() {
@@ -115,7 +121,7 @@ public class UpdateAppMemberRequest extends Request {
         /**
          * roleNames.
          */
-        public Builder roleNames(java.util.List < String > roleNames) {
+        public Builder roleNames(java.util.List<String> roleNames) {
             this.putBodyParameter("roleNames", roleNames);
             this.roleNames = roleNames;
             return this;
@@ -137,6 +143,12 @@ public class UpdateAppMemberRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAppMemberRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAppMemberRequest</p>
+     */
     public static class Player extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;

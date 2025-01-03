@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPipelineJobHistorysResponseBody} extends {@link TeaModel}
  *
  * <p>ListPipelineJobHistorysResponseBody</p>
@@ -18,7 +24,7 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("jobs")
-    private java.util.List < Jobs> jobs;
+    private java.util.List<Jobs> jobs;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -67,7 +73,7 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -102,7 +108,7 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
@@ -127,7 +133,7 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
         /**
          * jobs.
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
@@ -170,6 +176,12 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPipelineJobHistorysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPipelineJobHistorysResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("executeNumber")
         private Integer executeNumber;

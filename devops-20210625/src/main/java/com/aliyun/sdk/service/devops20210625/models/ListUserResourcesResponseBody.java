@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserResourcesResponseBody</p>
@@ -21,7 +27,7 @@ public class ListUserResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -70,7 +76,7 @@ public class ListUserResourcesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -92,7 +98,7 @@ public class ListUserResourcesResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
         private Long total; 
 
@@ -123,7 +129,7 @@ public class ListUserResourcesResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class GroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
@@ -391,6 +403,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class GroupRole extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
@@ -512,6 +530,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class GroupInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupInfo")
         private GroupInfo groupInfo;
@@ -573,6 +597,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class RepositoryInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
@@ -894,6 +924,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class RepositoryRole extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
@@ -1015,6 +1051,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class RepositoryInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("repositoryInfo")
         private RepositoryInfo repositoryInfo;
@@ -1076,6 +1118,12 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
@@ -1217,12 +1265,18 @@ public class ListUserResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserResourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupInfos")
-        private java.util.List < GroupInfos> groupInfos;
+        private java.util.List<GroupInfos> groupInfos;
 
         @com.aliyun.core.annotation.NameInMap("repositoryInfos")
-        private java.util.List < RepositoryInfos> repositoryInfos;
+        private java.util.List<RepositoryInfos> repositoryInfos;
 
         @com.aliyun.core.annotation.NameInMap("userInfo")
         private UserInfo userInfo;
@@ -1244,14 +1298,14 @@ public class ListUserResourcesResponseBody extends TeaModel {
         /**
          * @return groupInfos
          */
-        public java.util.List < GroupInfos> getGroupInfos() {
+        public java.util.List<GroupInfos> getGroupInfos() {
             return this.groupInfos;
         }
 
         /**
          * @return repositoryInfos
          */
-        public java.util.List < RepositoryInfos> getRepositoryInfos() {
+        public java.util.List<RepositoryInfos> getRepositoryInfos() {
             return this.repositoryInfos;
         }
 
@@ -1263,14 +1317,14 @@ public class ListUserResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < GroupInfos> groupInfos; 
-            private java.util.List < RepositoryInfos> repositoryInfos; 
+            private java.util.List<GroupInfos> groupInfos; 
+            private java.util.List<RepositoryInfos> repositoryInfos; 
             private UserInfo userInfo; 
 
             /**
              * groupInfos.
              */
-            public Builder groupInfos(java.util.List < GroupInfos> groupInfos) {
+            public Builder groupInfos(java.util.List<GroupInfos> groupInfos) {
                 this.groupInfos = groupInfos;
                 return this;
             }
@@ -1278,7 +1332,7 @@ public class ListUserResourcesResponseBody extends TeaModel {
             /**
              * repositoryInfos.
              */
-            public Builder repositoryInfos(java.util.List < RepositoryInfos> repositoryInfos) {
+            public Builder repositoryInfos(java.util.List<RepositoryInfos> repositoryInfos) {
                 this.repositoryInfos = repositoryInfos;
                 return this;
             }

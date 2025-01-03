@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRepositoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateRepositoryRequest</p>
@@ -70,11 +76,11 @@ public class UpdateRepositoryRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("projectCloneDownloadMethodList")
-    private java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList;
+    private java.util.List<ProjectCloneDownloadMethodList> projectCloneDownloadMethodList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("projectCloneDownloadRoleList")
-    private java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList;
+    private java.util.List<ProjectCloneDownloadRoleList> projectCloneDownloadRoleList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("snippetsEnabled")
@@ -231,14 +237,14 @@ public class UpdateRepositoryRequest extends Request {
     /**
      * @return projectCloneDownloadMethodList
      */
-    public java.util.List < ProjectCloneDownloadMethodList> getProjectCloneDownloadMethodList() {
+    public java.util.List<ProjectCloneDownloadMethodList> getProjectCloneDownloadMethodList() {
         return this.projectCloneDownloadMethodList;
     }
 
     /**
      * @return projectCloneDownloadRoleList
      */
-    public java.util.List < ProjectCloneDownloadRoleList> getProjectCloneDownloadRoleList() {
+    public java.util.List<ProjectCloneDownloadRoleList> getProjectCloneDownloadRoleList() {
         return this.projectCloneDownloadRoleList;
     }
 
@@ -285,8 +291,8 @@ public class UpdateRepositoryRequest extends Request {
         private String name; 
         private Boolean openCloneDownloadControl; 
         private String path; 
-        private java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList; 
-        private java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList; 
+        private java.util.List<ProjectCloneDownloadMethodList> projectCloneDownloadMethodList; 
+        private java.util.List<ProjectCloneDownloadRoleList> projectCloneDownloadRoleList; 
         private Boolean snippetsEnabled; 
         private Integer visibilityLevel; 
         private Boolean wikiEnabled; 
@@ -321,7 +327,10 @@ public class UpdateRepositoryRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2080398</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -449,7 +458,7 @@ public class UpdateRepositoryRequest extends Request {
         /**
          * projectCloneDownloadMethodList.
          */
-        public Builder projectCloneDownloadMethodList(java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList) {
+        public Builder projectCloneDownloadMethodList(java.util.List<ProjectCloneDownloadMethodList> projectCloneDownloadMethodList) {
             this.putBodyParameter("projectCloneDownloadMethodList", projectCloneDownloadMethodList);
             this.projectCloneDownloadMethodList = projectCloneDownloadMethodList;
             return this;
@@ -458,7 +467,7 @@ public class UpdateRepositoryRequest extends Request {
         /**
          * projectCloneDownloadRoleList.
          */
-        public Builder projectCloneDownloadRoleList(java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList) {
+        public Builder projectCloneDownloadRoleList(java.util.List<ProjectCloneDownloadRoleList> projectCloneDownloadRoleList) {
             this.putBodyParameter("projectCloneDownloadRoleList", projectCloneDownloadRoleList);
             this.projectCloneDownloadRoleList = projectCloneDownloadRoleList;
             return this;
@@ -492,7 +501,10 @@ public class UpdateRepositoryRequest extends Request {
         }
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60de7a6852743a5162b5f957</p>
          */
         public Builder organizationId(String organizationId) {
             this.putQueryParameter("organizationId", organizationId);
@@ -507,6 +519,12 @@ public class UpdateRepositoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRepositoryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryRequest</p>
+     */
     public static class ProjectCloneDownloadMethodList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowed")
         private Boolean allowed;
@@ -568,6 +586,12 @@ public class UpdateRepositoryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRepositoryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRepositoryRequest</p>
+     */
     public static class ProjectCloneDownloadRoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowed")
         private Boolean allowed;

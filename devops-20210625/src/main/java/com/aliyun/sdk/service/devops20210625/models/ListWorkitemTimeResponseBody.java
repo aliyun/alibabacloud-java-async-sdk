@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkitemTimeResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkitemTimeResponseBody</p>
@@ -27,7 +33,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("workitemTime")
-    private java.util.List < WorkitemTime> workitemTime;
+    private java.util.List<WorkitemTime> workitemTime;
 
     private ListWorkitemTimeResponseBody(Builder builder) {
         this.code = builder.code;
@@ -84,7 +90,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
     /**
      * @return workitemTime
      */
-    public java.util.List < WorkitemTime> getWorkitemTime() {
+    public java.util.List<WorkitemTime> getWorkitemTime() {
         return this.workitemTime;
     }
 
@@ -94,7 +100,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < WorkitemTime> workitemTime; 
+        private java.util.List<WorkitemTime> workitemTime; 
 
         /**
          * code.
@@ -139,7 +145,7 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
         /**
          * workitemTime.
          */
-        public Builder workitemTime(java.util.List < WorkitemTime> workitemTime) {
+        public Builder workitemTime(java.util.List<WorkitemTime> workitemTime) {
             this.workitemTime = workitemTime;
             return this;
         }
@@ -150,6 +156,12 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkitemTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkitemTimeResponseBody</p>
+     */
     public static class WorkitemTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actualTime")
         private Float actualTime;

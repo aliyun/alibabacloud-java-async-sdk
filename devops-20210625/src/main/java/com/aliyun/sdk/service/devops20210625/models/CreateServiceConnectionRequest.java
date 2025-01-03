@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceConnectionRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceConnectionRequest</p>
@@ -129,7 +135,10 @@ public class CreateServiceConnectionRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -138,7 +147,10 @@ public class CreateServiceConnectionRequest extends Request {
         }
 
         /**
-         * authType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREDENTIAL</p>
          */
         public Builder authType(String authType) {
             this.putBodyParameter("authType", authType);
@@ -147,7 +159,7 @@ public class CreateServiceConnectionRequest extends Request {
         }
 
         /**
-         * connectionName.
+         * <p>This parameter is required.</p>
          */
         public Builder connectionName(String connectionName) {
             this.putBodyParameter("connectionName", connectionName);
@@ -156,7 +168,10 @@ public class CreateServiceConnectionRequest extends Request {
         }
 
         /**
-         * connectionType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder connectionType(String connectionType) {
             this.putBodyParameter("connectionType", connectionType);
@@ -165,7 +180,10 @@ public class CreateServiceConnectionRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PERSON</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -174,7 +192,10 @@ public class CreateServiceConnectionRequest extends Request {
         }
 
         /**
-         * serviceAuthId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder serviceAuthId(Long serviceAuthId) {
             this.putBodyParameter("serviceAuthId", serviceAuthId);

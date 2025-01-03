@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationMembersResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationMembersResponseBody</p>
@@ -18,7 +24,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("members")
-    private java.util.List < Members> members;
+    private java.util.List<Members> members;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -67,7 +73,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
@@ -102,7 +108,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
@@ -127,7 +133,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         /**
          * members.
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             this.members = members;
             return this;
         }
@@ -170,6 +176,12 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationMembersResponseBody</p>
+     */
     public static class Identities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("externUid")
         private String externUid;
@@ -231,6 +243,12 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOrganizationMembersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationMembersResponseBody</p>
+     */
     public static class Members extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -239,7 +257,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         private Long birthday;
 
         @com.aliyun.core.annotation.NameInMap("deptLists")
-        private java.util.List < String > deptLists;
+        private java.util.List<String> deptLists;
 
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;
@@ -316,7 +334,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         /**
          * @return deptLists
          */
-        public java.util.List < String > getDeptLists() {
+        public java.util.List<String> getDeptLists() {
             return this.deptLists;
         }
 
@@ -400,7 +418,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private Long birthday; 
-            private java.util.List < String > deptLists; 
+            private java.util.List<String> deptLists; 
             private String email; 
             private Long hiredDate; 
             private Identities identities; 
@@ -432,7 +450,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             /**
              * deptLists.
              */
-            public Builder deptLists(java.util.List < String > deptLists) {
+            public Builder deptLists(java.util.List<String> deptLists) {
                 this.deptLists = deptLists;
                 return this;
             }

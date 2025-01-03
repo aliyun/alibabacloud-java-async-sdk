@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProtectedBranchesRequest} extends {@link RequestModel}
  *
  * <p>UpdateProtectedBranchesRequest</p>
@@ -28,19 +34,19 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("allowMergeRoles")
-    private java.util.List < Integer > allowMergeRoles;
+    private java.util.List<Integer> allowMergeRoles;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("allowMergeUserIds")
-    private java.util.List < String > allowMergeUserIds;
+    private java.util.List<String> allowMergeUserIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("allowPushRoles")
-    private java.util.List < Integer > allowPushRoles;
+    private java.util.List<Integer> allowPushRoles;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("allowPushUserIds")
-    private java.util.List < String > allowPushUserIds;
+    private java.util.List<String> allowPushUserIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("branch")
@@ -110,28 +116,28 @@ public class UpdateProtectedBranchesRequest extends Request {
     /**
      * @return allowMergeRoles
      */
-    public java.util.List < Integer > getAllowMergeRoles() {
+    public java.util.List<Integer> getAllowMergeRoles() {
         return this.allowMergeRoles;
     }
 
     /**
      * @return allowMergeUserIds
      */
-    public java.util.List < String > getAllowMergeUserIds() {
+    public java.util.List<String> getAllowMergeUserIds() {
         return this.allowMergeUserIds;
     }
 
     /**
      * @return allowPushRoles
      */
-    public java.util.List < Integer > getAllowPushRoles() {
+    public java.util.List<Integer> getAllowPushRoles() {
         return this.allowPushRoles;
     }
 
     /**
      * @return allowPushUserIds
      */
-    public java.util.List < String > getAllowPushUserIds() {
+    public java.util.List<String> getAllowPushUserIds() {
         return this.allowPushUserIds;
     }
 
@@ -167,10 +173,10 @@ public class UpdateProtectedBranchesRequest extends Request {
         private Long repositoryId; 
         private Long id; 
         private String accessToken; 
-        private java.util.List < Integer > allowMergeRoles; 
-        private java.util.List < String > allowMergeUserIds; 
-        private java.util.List < Integer > allowPushRoles; 
-        private java.util.List < String > allowPushUserIds; 
+        private java.util.List<Integer> allowMergeRoles; 
+        private java.util.List<String> allowMergeUserIds; 
+        private java.util.List<Integer> allowPushRoles; 
+        private java.util.List<String> allowPushUserIds; 
         private String branch; 
         private MergeRequestSetting mergeRequestSetting; 
         private TestSettingDTO testSettingDTO; 
@@ -196,7 +202,10 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
         /**
-         * repositoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2835387</p>
          */
         public Builder repositoryId(Long repositoryId) {
             this.putPathParameter("repositoryId", repositoryId);
@@ -205,7 +214,10 @@ public class UpdateProtectedBranchesRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19224</p>
          */
         public Builder id(Long id) {
             this.putPathParameter("id", id);
@@ -226,7 +238,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * allowMergeRoles.
          */
-        public Builder allowMergeRoles(java.util.List < Integer > allowMergeRoles) {
+        public Builder allowMergeRoles(java.util.List<Integer> allowMergeRoles) {
             this.putBodyParameter("allowMergeRoles", allowMergeRoles);
             this.allowMergeRoles = allowMergeRoles;
             return this;
@@ -235,7 +247,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * allowMergeUserIds.
          */
-        public Builder allowMergeUserIds(java.util.List < String > allowMergeUserIds) {
+        public Builder allowMergeUserIds(java.util.List<String> allowMergeUserIds) {
             this.putBodyParameter("allowMergeUserIds", allowMergeUserIds);
             this.allowMergeUserIds = allowMergeUserIds;
             return this;
@@ -244,7 +256,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * allowPushRoles.
          */
-        public Builder allowPushRoles(java.util.List < Integer > allowPushRoles) {
+        public Builder allowPushRoles(java.util.List<Integer> allowPushRoles) {
             this.putBodyParameter("allowPushRoles", allowPushRoles);
             this.allowPushRoles = allowPushRoles;
             return this;
@@ -253,7 +265,7 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * allowPushUserIds.
          */
-        public Builder allowPushUserIds(java.util.List < String > allowPushUserIds) {
+        public Builder allowPushUserIds(java.util.List<String> allowPushUserIds) {
             this.putBodyParameter("allowPushUserIds", allowPushUserIds);
             this.allowPushUserIds = allowPushUserIds;
             return this;
@@ -302,12 +314,18 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class MergeRequestSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowMergeRequestRoles")
-        private java.util.List < Integer > allowMergeRequestRoles;
+        private java.util.List<Integer> allowMergeRequestRoles;
 
         @com.aliyun.core.annotation.NameInMap("defaultAssignees")
-        private java.util.List < String > defaultAssignees;
+        private java.util.List<String> defaultAssignees;
 
         @com.aliyun.core.annotation.NameInMap("isAllowSelfApproval")
         private Boolean isAllowSelfApproval;
@@ -353,14 +371,14 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * @return allowMergeRequestRoles
          */
-        public java.util.List < Integer > getAllowMergeRequestRoles() {
+        public java.util.List<Integer> getAllowMergeRequestRoles() {
             return this.allowMergeRequestRoles;
         }
 
         /**
          * @return defaultAssignees
          */
-        public java.util.List < String > getDefaultAssignees() {
+        public java.util.List<String> getDefaultAssignees() {
             return this.defaultAssignees;
         }
 
@@ -414,8 +432,8 @@ public class UpdateProtectedBranchesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > allowMergeRequestRoles; 
-            private java.util.List < String > defaultAssignees; 
+            private java.util.List<Integer> allowMergeRequestRoles; 
+            private java.util.List<String> defaultAssignees; 
             private Boolean isAllowSelfApproval; 
             private Boolean isRequireDiscussionProcessed; 
             private Boolean isRequired; 
@@ -427,7 +445,7 @@ public class UpdateProtectedBranchesRequest extends Request {
             /**
              * allowMergeRequestRoles.
              */
-            public Builder allowMergeRequestRoles(java.util.List < Integer > allowMergeRequestRoles) {
+            public Builder allowMergeRequestRoles(java.util.List<Integer> allowMergeRequestRoles) {
                 this.allowMergeRequestRoles = allowMergeRequestRoles;
                 return this;
             }
@@ -435,7 +453,7 @@ public class UpdateProtectedBranchesRequest extends Request {
             /**
              * defaultAssignees.
              */
-            public Builder defaultAssignees(java.util.List < String > defaultAssignees) {
+            public Builder defaultAssignees(java.util.List<String> defaultAssignees) {
                 this.defaultAssignees = defaultAssignees;
                 return this;
             }
@@ -503,6 +521,12 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class CheckItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
@@ -564,9 +588,15 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class CheckConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("checkItems")
-        private java.util.List < CheckItems> checkItems;
+        private java.util.List<CheckItems> checkItems;
 
         private CheckConfig(Builder builder) {
             this.checkItems = builder.checkItems;
@@ -583,17 +613,17 @@ public class UpdateProtectedBranchesRequest extends Request {
         /**
          * @return checkItems
          */
-        public java.util.List < CheckItems> getCheckItems() {
+        public java.util.List<CheckItems> getCheckItems() {
             return this.checkItems;
         }
 
         public static final class Builder {
-            private java.util.List < CheckItems> checkItems; 
+            private java.util.List<CheckItems> checkItems; 
 
             /**
              * checkItems.
              */
-            public Builder checkItems(java.util.List < CheckItems> checkItems) {
+            public Builder checkItems(java.util.List<CheckItems> checkItems) {
                 this.checkItems = checkItems;
                 return this;
             }
@@ -605,6 +635,12 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class CheckTaskQualityConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bizNo")
         private String bizNo;
@@ -706,6 +742,12 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class CodeGuidelinesDetection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
@@ -767,6 +809,12 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class SensitiveInfoDetection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
@@ -828,6 +876,12 @@ public class UpdateProtectedBranchesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProtectedBranchesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProtectedBranchesRequest</p>
+     */
     public static class TestSettingDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("checkConfig")
         private CheckConfig checkConfig;

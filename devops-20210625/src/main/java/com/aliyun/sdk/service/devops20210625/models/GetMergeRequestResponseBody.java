@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
  *
  * <p>GetMergeRequestResponseBody</p>
@@ -130,6 +136,12 @@ public class GetMergeRequestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestResponseBody</p>
+     */
     public static class Author extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
@@ -271,6 +283,12 @@ public class GetMergeRequestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestResponseBody</p>
+     */
     public static class Reviewers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
@@ -492,6 +510,12 @@ public class GetMergeRequestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestResponseBody</p>
+     */
     public static class Subscribers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
@@ -633,6 +657,12 @@ public class GetMergeRequestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestResponseBody</p>
+     */
     public static class RequirementCheckItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("itemType")
         private String itemType;
@@ -694,9 +724,15 @@ public class GetMergeRequestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestResponseBody</p>
+     */
     public static class TodoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("requirementCheckItems")
-        private java.util.List < RequirementCheckItems> requirementCheckItems;
+        private java.util.List<RequirementCheckItems> requirementCheckItems;
 
         private TodoList(Builder builder) {
             this.requirementCheckItems = builder.requirementCheckItems;
@@ -713,17 +749,17 @@ public class GetMergeRequestResponseBody extends TeaModel {
         /**
          * @return requirementCheckItems
          */
-        public java.util.List < RequirementCheckItems> getRequirementCheckItems() {
+        public java.util.List<RequirementCheckItems> getRequirementCheckItems() {
             return this.requirementCheckItems;
         }
 
         public static final class Builder {
-            private java.util.List < RequirementCheckItems> requirementCheckItems; 
+            private java.util.List<RequirementCheckItems> requirementCheckItems; 
 
             /**
              * requirementCheckItems.
              */
-            public Builder requirementCheckItems(java.util.List < RequirementCheckItems> requirementCheckItems) {
+            public Builder requirementCheckItems(java.util.List<RequirementCheckItems> requirementCheckItems) {
                 this.requirementCheckItems = requirementCheckItems;
                 return this;
             }
@@ -735,6 +771,12 @@ public class GetMergeRequestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetMergeRequestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMergeRequestResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ahead")
         private Integer ahead;
@@ -776,7 +818,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
         private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("reviewers")
-        private java.util.List < Reviewers> reviewers;
+        private java.util.List<Reviewers> reviewers;
 
         @com.aliyun.core.annotation.NameInMap("sourceBranch")
         private String sourceBranch;
@@ -788,7 +830,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("subscribers")
-        private java.util.List < Subscribers> subscribers;
+        private java.util.List<Subscribers> subscribers;
 
         @com.aliyun.core.annotation.NameInMap("supportMergeFastForwardOnly")
         private Boolean supportMergeFastForwardOnly;
@@ -949,7 +991,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
         /**
          * @return reviewers
          */
-        public java.util.List < Reviewers> getReviewers() {
+        public java.util.List<Reviewers> getReviewers() {
             return this.reviewers;
         }
 
@@ -977,7 +1019,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
         /**
          * @return subscribers
          */
-        public java.util.List < Subscribers> getSubscribers() {
+        public java.util.List<Subscribers> getSubscribers() {
             return this.subscribers;
         }
 
@@ -1058,11 +1100,11 @@ public class GetMergeRequestResponseBody extends TeaModel {
             private String mrBizId; 
             private String mrType; 
             private Long projectId; 
-            private java.util.List < Reviewers> reviewers; 
+            private java.util.List<Reviewers> reviewers; 
             private String sourceBranch; 
             private Long sourceProjectId; 
             private String status; 
-            private java.util.List < Subscribers> subscribers; 
+            private java.util.List<Subscribers> subscribers; 
             private Boolean supportMergeFastForwardOnly; 
             private String targetBranch; 
             private Long targetProjectId; 
@@ -1180,7 +1222,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
             /**
              * reviewers.
              */
-            public Builder reviewers(java.util.List < Reviewers> reviewers) {
+            public Builder reviewers(java.util.List<Reviewers> reviewers) {
                 this.reviewers = reviewers;
                 return this;
             }
@@ -1212,7 +1254,7 @@ public class GetMergeRequestResponseBody extends TeaModel {
             /**
              * subscribers.
              */
-            public Builder subscribers(java.util.List < Subscribers> subscribers) {
+            public Builder subscribers(java.util.List<Subscribers> subscribers) {
                 this.subscribers = subscribers;
                 return this;
             }

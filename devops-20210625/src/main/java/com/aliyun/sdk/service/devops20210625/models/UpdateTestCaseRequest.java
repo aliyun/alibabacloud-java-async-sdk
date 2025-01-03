@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTestCaseRequest} extends {@link RequestModel}
  *
  * <p>UpdateTestCaseRequest</p>
@@ -24,7 +30,7 @@ public class UpdateTestCaseRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("updateWorkitemPropertyRequest")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest;
+    private java.util.List<UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest;
 
     private UpdateTestCaseRequest(Builder builder) {
         super(builder);
@@ -63,14 +69,14 @@ public class UpdateTestCaseRequest extends Request {
     /**
      * @return updateWorkitemPropertyRequest
      */
-    public java.util.List < UpdateWorkitemPropertyRequest> getUpdateWorkitemPropertyRequest() {
+    public java.util.List<UpdateWorkitemPropertyRequest> getUpdateWorkitemPropertyRequest() {
         return this.updateWorkitemPropertyRequest;
     }
 
     public static final class Builder extends Request.Builder<UpdateTestCaseRequest, Builder> {
         private String organizationId; 
         private String testcaseIdentifier; 
-        private java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest; 
+        private java.util.List<UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest; 
 
         private Builder() {
             super();
@@ -84,7 +90,10 @@ public class UpdateTestCaseRequest extends Request {
         } 
 
         /**
-         * organizationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5ebbc0228123212b59xxxxx</p>
          */
         public Builder organizationId(String organizationId) {
             this.putPathParameter("organizationId", organizationId);
@@ -93,7 +102,10 @@ public class UpdateTestCaseRequest extends Request {
         }
 
         /**
-         * testcaseIdentifier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4e22xxxxxxxxc64c16037fe76</p>
          */
         public Builder testcaseIdentifier(String testcaseIdentifier) {
             this.putPathParameter("testcaseIdentifier", testcaseIdentifier);
@@ -102,9 +114,9 @@ public class UpdateTestCaseRequest extends Request {
         }
 
         /**
-         * updateWorkitemPropertyRequest.
+         * <p>This parameter is required.</p>
          */
-        public Builder updateWorkitemPropertyRequest(java.util.List < UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest) {
+        public Builder updateWorkitemPropertyRequest(java.util.List<UpdateWorkitemPropertyRequest> updateWorkitemPropertyRequest) {
             this.putBodyParameter("updateWorkitemPropertyRequest", updateWorkitemPropertyRequest);
             this.updateWorkitemPropertyRequest = updateWorkitemPropertyRequest;
             return this;
@@ -117,6 +129,12 @@ public class UpdateTestCaseRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTestCaseRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTestCaseRequest</p>
+     */
     public static class UpdateWorkitemPropertyRequest extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -158,7 +176,10 @@ public class UpdateTestCaseRequest extends Request {
             private String fieldValue; 
 
             /**
-             * fieldIdentifier.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tc.type</p>
              */
             public Builder fieldIdentifier(String fieldIdentifier) {
                 this.fieldIdentifier = fieldIdentifier;
@@ -166,7 +187,10 @@ public class UpdateTestCaseRequest extends Request {
             }
 
             /**
-             * fieldValue.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a032xx28107xxxx53e87a9</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

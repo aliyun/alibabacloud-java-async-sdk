@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetCompareDetailResponseBody</p>
@@ -130,6 +136,12 @@ public class GetCompareDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Author extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
@@ -271,6 +283,12 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Committer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
@@ -412,6 +430,12 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Commits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("author")
         private Author author;
@@ -450,7 +474,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("parentIds")
-        private java.util.List < String > parentIds;
+        private java.util.List<String> parentIds;
 
         @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
@@ -571,7 +595,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
         /**
          * @return parentIds
          */
-        public java.util.List < String > getParentIds() {
+        public java.util.List<String> getParentIds() {
             return this.parentIds;
         }
 
@@ -602,7 +626,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             private String createdAt; 
             private String id; 
             private String message; 
-            private java.util.List < String > parentIds; 
+            private java.util.List<String> parentIds; 
             private String shortId; 
             private String title; 
 
@@ -705,7 +729,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             /**
              * parentIds.
              */
-            public Builder parentIds(java.util.List < String > parentIds) {
+            public Builder parentIds(java.util.List<String> parentIds) {
                 this.parentIds = parentIds;
                 return this;
             }
@@ -733,6 +757,12 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Diffs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aMode")
         private String aMode;
@@ -1014,15 +1044,21 @@ public class GetCompareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompareDetailResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("commits")
-        private java.util.List < Commits> commits;
+        private java.util.List<Commits> commits;
 
         @com.aliyun.core.annotation.NameInMap("diffs")
-        private java.util.List < Diffs> diffs;
+        private java.util.List<Diffs> diffs;
 
         @com.aliyun.core.annotation.NameInMap("messages")
-        private java.util.List < String > messages;
+        private java.util.List<String> messages;
 
         private Result(Builder builder) {
             this.commits = builder.commits;
@@ -1041,33 +1077,33 @@ public class GetCompareDetailResponseBody extends TeaModel {
         /**
          * @return commits
          */
-        public java.util.List < Commits> getCommits() {
+        public java.util.List<Commits> getCommits() {
             return this.commits;
         }
 
         /**
          * @return diffs
          */
-        public java.util.List < Diffs> getDiffs() {
+        public java.util.List<Diffs> getDiffs() {
             return this.diffs;
         }
 
         /**
          * @return messages
          */
-        public java.util.List < String > getMessages() {
+        public java.util.List<String> getMessages() {
             return this.messages;
         }
 
         public static final class Builder {
-            private java.util.List < Commits> commits; 
-            private java.util.List < Diffs> diffs; 
-            private java.util.List < String > messages; 
+            private java.util.List<Commits> commits; 
+            private java.util.List<Diffs> diffs; 
+            private java.util.List<String> messages; 
 
             /**
              * commits.
              */
-            public Builder commits(java.util.List < Commits> commits) {
+            public Builder commits(java.util.List<Commits> commits) {
                 this.commits = commits;
                 return this;
             }
@@ -1075,7 +1111,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             /**
              * diffs.
              */
-            public Builder diffs(java.util.List < Diffs> diffs) {
+            public Builder diffs(java.util.List<Diffs> diffs) {
                 this.diffs = diffs;
                 return this;
             }
@@ -1083,7 +1119,7 @@ public class GetCompareDetailResponseBody extends TeaModel {
             /**
              * messages.
              */
-            public Builder messages(java.util.List < String > messages) {
+            public Builder messages(java.util.List<String> messages) {
                 this.messages = messages;
                 return this;
             }
