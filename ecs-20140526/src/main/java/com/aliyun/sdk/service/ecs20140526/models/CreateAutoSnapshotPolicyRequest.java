@@ -459,11 +459,14 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Format description:</p>
+         * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. For example, 1 indicates 01:00:00. Format description:</p>
          * <ul>
          * <li>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</li>
-         * <li>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</li>
+         * <li>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</li>
          * </ul>
+         * <blockquote>
+         * <p> If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -539,7 +542,9 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String rolearn; 
 
             /**
-             * <p>This parameter is not publicly available.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>1000000000</p>
@@ -550,7 +555,9 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>This parameter is not publicly available.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>hide</p>
@@ -561,7 +568,9 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>This parameter is not publicly available.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>hide</p>
@@ -635,7 +644,9 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String KMSKeyId; 
 
             /**
-             * <p>This parameter is not publicly available.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              */
             public Builder arn(java.util.List<Arn> arn) {
                 this.arn = arn;
@@ -659,7 +670,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key used in cross-region snapshot replication and encryption.</p>
+             * <p>The ID of the Key Management Service (KMS) key used in cross-region snapshot replication and encryption.</p>
              * 
              * <strong>example:</strong>
              * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>

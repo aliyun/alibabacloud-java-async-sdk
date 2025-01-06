@@ -268,7 +268,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</p>
+         * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
          * <ul>
          * <li>60</li>
          * <li>600</li>

@@ -124,7 +124,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the security group belongs.</p>
+             * <p>The ID of the Alibaba Cloud account to which the security group whose rules reference the specified security group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456****</p>
@@ -135,7 +135,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
+             * <p>The ID of the security group whose rules reference the specified security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp67acfmxazb4j****</p>
@@ -244,7 +244,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * <p>Details about the security groups whose rules are referencing the specified security groups.</p>
+             * <p>Details about the security groups whose rules reference the specified security group.</p>
              */
             public Builder referencingSecurityGroups(ReferencingSecurityGroups referencingSecurityGroups) {
                 this.referencingSecurityGroups = referencingSecurityGroups;

@@ -140,7 +140,10 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>RAM用户的虚拟账号ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -149,7 +152,10 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * <p>资源主账号的账号名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECSforCloud</p>
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -158,7 +164,10 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * <p>资源主账号的ID，亦即UID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -167,7 +176,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query the available automatic snapshot policies.</p>
+         * <p>The ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25530.html">DescribeAutoSnapshotPolicyEx</a> operation to query the IDs of available automatic snapshot policies.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +189,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of the region to which the automatic snapshot policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

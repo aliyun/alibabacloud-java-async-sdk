@@ -281,7 +281,7 @@ public class StartImagePipelineExecutionRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p> This parameter is deprecated.</p>
          * </blockquote>
          */
         public Builder templateTag(java.util.List<TemplateTag> templateTag) {
@@ -410,7 +410,7 @@ public class StartImagePipelineExecutionRequest extends Request {
 
             /**
              * <blockquote>
-             * <p>This parameter is deprecated.</p>
+             * <p> This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -423,7 +423,7 @@ public class StartImagePipelineExecutionRequest extends Request {
 
             /**
              * <blockquote>
-             * <p>This parameter is deprecated.</p>
+             * <p> This parameter is deprecated.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

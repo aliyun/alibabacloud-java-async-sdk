@@ -523,7 +523,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>Security group rule N. Valid values of N: 1 to 100.</p>
+         * <p>The content of security group rules. You can specify 1 to 100 security group rules in a request.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -612,7 +612,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the security group rules. Valid values of N: 1 to 100.</p>
+         * <p>The security group rule IDs. You can specify 1 to 100 security group rule IDs in a request.</p>
          */
         public Builder securityGroupRuleId(java.util.List<String> securityGroupRuleId) {
             this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
@@ -901,7 +901,6 @@ public class RevokeSecurityGroupRequest extends Request {
 
             /**
              * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -914,7 +913,6 @@ public class RevokeSecurityGroupRequest extends Request {
             /**
              * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -934,7 +932,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>GRE.</li>
              * <li>ALL: All protocols are supported.</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -947,9 +944,8 @@ public class RevokeSecurityGroupRequest extends Request {
             /**
              * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * <blockquote>
-             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -962,7 +958,6 @@ public class RevokeSecurityGroupRequest extends Request {
 
             /**
              * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * <blockquote>
              * <p> This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>SourceCidrIp</code> in the same request.</p>
              * </blockquote>
@@ -984,7 +979,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
              * <p>If you specify only <code>SourceGroupId</code> when you remove access control configurations between security groups, you must set this parameter to intranet.</p>
              * <p>Default value: internet.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>intranet</p>
@@ -1001,7 +995,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
              * </ul>
              * <p>Default value: accept.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>accept</p>
@@ -1014,12 +1007,11 @@ public class RevokeSecurityGroupRequest extends Request {
             /**
              * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
              * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
              * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>1/200</p>
@@ -1032,7 +1024,6 @@ public class RevokeSecurityGroupRequest extends Request {
             /**
              * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
              * <p>Default value: 1.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1044,7 +1035,6 @@ public class RevokeSecurityGroupRequest extends Request {
 
             /**
              * <p>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -1061,12 +1051,11 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>If you specify <code>SourceGroupId</code> but do not specify <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code>, you must set NicType to intranet.</li>
              * <li>If you specify both <code>SourceGroupId</code> and <code>SourceCidrIp</code>, <code>SourceCidrIp</code> takes precedence.</li>
              * </ul>
-             * <p>When you specify this parameter, take note of the following items:</p>
+             * <p>When you specify SourceGroupId, take note of the following items:</p>
              * <ul>
-             * <li>In advanced security groups, security groups cannot be used as authorization objects.</li>
-             * <li>In each basic security group, up to 20 security groups can be used as authorization objects in security group rules.</li>
+             * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
+             * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp67acfmxa123b****</p>
@@ -1082,7 +1071,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>If both <code>SourceGroupOwnerAccount</code> and <code>SourceGroupOwnerId</code> are empty, access control on another security group in your Alibaba Cloud account is removed.</li>
              * <li>If you specify <code>SourceCidrIp</code>, <code>SourceGroupOwnerAccount</code> is ignored.</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
@@ -1098,7 +1086,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access control on another security group in your Alibaba Cloud account is removed.</li>
              * <li>If you specify <code>SourceCidrIp</code>, <code>SourceGroupOwnerId</code> is ignored.</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678910</p>
@@ -1117,7 +1104,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
              * </ul>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>80/80</p>
@@ -1134,7 +1120,6 @@ public class RevokeSecurityGroupRequest extends Request {
              * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
              * <li>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>pl-x1j1k5ykzqlixdcy****</p>

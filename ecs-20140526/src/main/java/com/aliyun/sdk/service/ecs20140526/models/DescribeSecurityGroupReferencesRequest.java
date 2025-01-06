@@ -172,7 +172,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the security group.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of N security groups that you want to query. Valid values of N: 1 to 10.</p>
+         * <p>The IDs of security groups. You can specify up to 10 IDs of security groups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

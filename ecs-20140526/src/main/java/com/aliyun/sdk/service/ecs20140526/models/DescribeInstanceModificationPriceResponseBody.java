@@ -681,7 +681,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion rules.</p>
+             * <p>The information about the promotion rules.</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

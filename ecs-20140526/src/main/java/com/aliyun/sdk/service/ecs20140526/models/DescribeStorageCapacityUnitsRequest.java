@@ -302,8 +302,8 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <p>Maximum value: 100.</p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>

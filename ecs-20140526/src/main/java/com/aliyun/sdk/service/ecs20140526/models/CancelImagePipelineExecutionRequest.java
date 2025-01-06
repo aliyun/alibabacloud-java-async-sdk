@@ -168,7 +168,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image build task.</p>
+         * <p>The ID of the image building task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the image build task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +231,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated.</p>
+         * <p> This parameter is not publicly available.</p>
          * </blockquote>
          */
         public Builder templateTag(java.util.List<TemplateTag> templateTag) {
@@ -293,7 +293,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is deprecated.</p>
+             * <p> This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class CancelImagePipelineExecutionRequest extends Request {
 
             /**
              * <blockquote>
-             * <p> This parameter is deprecated.</p>
+             * <p> This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

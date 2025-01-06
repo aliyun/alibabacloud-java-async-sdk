@@ -55,7 +55,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The managed instance.</p>
+         * <p>Details of the managed instances.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;

@@ -168,7 +168,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk that you want to roll back.</p>
+         * <p>The ID of the cloud disk that you want to roll back.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +234,7 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the snapshot that you want to use to roll back the disk.</p>
+         * <p>The ID of the snapshot that you want to use to roll back the cloud disk.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

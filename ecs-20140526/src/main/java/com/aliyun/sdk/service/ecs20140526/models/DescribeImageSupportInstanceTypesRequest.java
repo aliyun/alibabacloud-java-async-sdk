@@ -167,7 +167,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The scenario in which you want to use the image. Valid values:</p>
+         * <p>The scenario in which the image is used. Valid values:</p>
          * <ul>
          * <li>CreateEcs (default): instance creation</li>
          * <li>ChangeOS: replacement of the system disk or operating system</li>

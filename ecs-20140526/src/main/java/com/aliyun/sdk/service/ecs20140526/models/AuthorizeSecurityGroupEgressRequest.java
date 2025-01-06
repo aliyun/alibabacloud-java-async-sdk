@@ -557,7 +557,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>The security group rules. Valid values of N: 1 to 100.</p>
+         * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -905,11 +905,6 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
              * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
              * <li>If you specify both <code>DestGroupId</code> and <code>DestCidrIp</code>, <code>DestCidrIp</code> takes precedence.</li>
              * </ul>
-             * <p>When you specify this parameter, take note of the following items:</p>
-             * <ul>
-             * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
-             * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>sg-bp67acfmxazb4p****</p>
@@ -999,7 +994,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <p>The source IPv6 CIDR block or IPv6 address.</p>
              * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * <blockquote>
              * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>

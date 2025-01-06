@@ -22,6 +22,10 @@ public class ModifyDiskSpecRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
+    private String destinationZoneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskCategory")
     private String diskCategory;
 
@@ -65,6 +69,7 @@ public class ModifyDiskSpecRequest extends Request {
     private ModifyDiskSpecRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.destinationZoneId = builder.destinationZoneId;
         this.diskCategory = builder.diskCategory;
         this.diskId = builder.diskId;
         this.dryRun = builder.dryRun;
@@ -95,6 +100,13 @@ public class ModifyDiskSpecRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return destinationZoneId
+     */
+    public String getDestinationZoneId() {
+        return this.destinationZoneId;
     }
 
     /**
@@ -169,6 +181,7 @@ public class ModifyDiskSpecRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskSpecRequest, Builder> {
         private String sourceRegionId; 
+        private String destinationZoneId; 
         private String diskCategory; 
         private String diskId; 
         private Boolean dryRun; 
@@ -187,6 +200,7 @@ public class ModifyDiskSpecRequest extends Request {
         private Builder(ModifyDiskSpecRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.destinationZoneId = request.destinationZoneId;
             this.diskCategory = request.diskCategory;
             this.diskId = request.diskId;
             this.dryRun = request.dryRun;
@@ -205,6 +219,15 @@ public class ModifyDiskSpecRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * DestinationZoneId.
+         */
+        public Builder destinationZoneId(String destinationZoneId) {
+            this.putQueryParameter("DestinationZoneId", destinationZoneId);
+            this.destinationZoneId = destinationZoneId;
             return this;
         }
 

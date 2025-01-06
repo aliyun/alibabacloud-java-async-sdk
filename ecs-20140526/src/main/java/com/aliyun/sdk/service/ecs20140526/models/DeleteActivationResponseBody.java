@@ -55,7 +55,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>Details about the activation code and its usage information.</p>
          */
         public Builder activation(Activation activation) {
             this.activation = activation;
@@ -63,7 +63,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the activation code and its usage information.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4ECEEE12-56F1-4FBC-9AB1-890F74942176</p>
@@ -208,7 +208,10 @@ public class DeleteActivationResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * ActivationId.
+             * <p>The ID of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -216,7 +219,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that were deregistered.</p>
+             * <p>The time when the activation code was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T06:00:00Z</p>
@@ -227,7 +230,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+             * <p>The number of instances that were deregistered.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -238,7 +241,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of registered instances.</p>
+             * <p>The description of the activation code.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -249,7 +252,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the activation code.</p>
+             * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -260,7 +263,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+             * <p>The default instance name prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>test-InstanceName</p>
@@ -271,7 +274,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the activation code. Unit: hours.</p>
+             * <p>The IP addresses of the hosts that are allowed to use the activation code.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.0.0/0</p>
@@ -282,7 +285,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default instance name prefix.</p>
+             * <p>The number of instances that were registered.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -293,7 +296,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the activation code.</p>
+             * <p>The validity period of the activation code. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
