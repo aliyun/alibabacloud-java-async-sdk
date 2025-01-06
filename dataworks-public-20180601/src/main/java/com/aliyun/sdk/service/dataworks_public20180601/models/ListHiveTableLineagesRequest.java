@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHiveTableLineagesRequest} extends {@link RequestModel}
  *
  * <p>ListHiveTableLineagesRequest</p>
@@ -107,7 +113,10 @@ public class ListHiveTableLineagesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-D033DD5FB82436A6</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -116,7 +125,10 @@ public class ListHiveTableLineagesRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -125,7 +137,10 @@ public class ListHiveTableLineagesRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt_table_090901_emr</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

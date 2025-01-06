@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartCollectQualityResponseBody} extends {@link TeaModel}
  *
  * <p>StartCollectQualityResponseBody</p>
@@ -18,7 +24,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
     private String returnCode;
 
     @com.aliyun.core.annotation.NameInMap("ReturnValue")
-    private java.util.List < ReturnValue> returnValue;
+    private java.util.List<ReturnValue> returnValue;
 
     private StartCollectQualityResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -51,14 +57,14 @@ public class StartCollectQualityResponseBody extends TeaModel {
     /**
      * @return returnValue
      */
-    public java.util.List < ReturnValue> getReturnValue() {
+    public java.util.List<ReturnValue> getReturnValue() {
         return this.returnValue;
     }
 
     public static final class Builder {
         private String requestId; 
         private String returnCode; 
-        private java.util.List < ReturnValue> returnValue; 
+        private java.util.List<ReturnValue> returnValue; 
 
         /**
          * RequestId.
@@ -79,7 +85,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
         /**
          * ReturnValue.
          */
-        public Builder returnValue(java.util.List < ReturnValue> returnValue) {
+        public Builder returnValue(java.util.List<ReturnValue> returnValue) {
             this.returnValue = returnValue;
             return this;
         }
@@ -90,6 +96,12 @@ public class StartCollectQualityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartCollectQualityResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartCollectQualityResponseBody</p>
+     */
     public static class StrongMethodSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColName")
         private String colName;
@@ -231,6 +243,12 @@ public class StartCollectQualityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartCollectQualityResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartCollectQualityResponseBody</p>
+     */
     public static class WeakMethodSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColName")
         private String colName;
@@ -372,6 +390,12 @@ public class StartCollectQualityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartCollectQualityResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartCollectQualityResponseBody</p>
+     */
     public static class ReturnValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualExpression")
         private String actualExpression;
@@ -395,7 +419,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
         private String pluginName;
 
         @com.aliyun.core.annotation.NameInMap("StrongMethodSet")
-        private java.util.List < StrongMethodSet> strongMethodSet;
+        private java.util.List<StrongMethodSet> strongMethodSet;
 
         @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
@@ -404,7 +428,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("WeakMethodSet")
-        private java.util.List < WeakMethodSet> weakMethodSet;
+        private java.util.List<WeakMethodSet> weakMethodSet;
 
         private ReturnValue(Builder builder) {
             this.actualExpression = builder.actualExpression;
@@ -480,7 +504,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
         /**
          * @return strongMethodSet
          */
-        public java.util.List < StrongMethodSet> getStrongMethodSet() {
+        public java.util.List<StrongMethodSet> getStrongMethodSet() {
             return this.strongMethodSet;
         }
 
@@ -501,7 +525,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
         /**
          * @return weakMethodSet
          */
-        public java.util.List < WeakMethodSet> getWeakMethodSet() {
+        public java.util.List<WeakMethodSet> getWeakMethodSet() {
             return this.weakMethodSet;
         }
 
@@ -513,10 +537,10 @@ public class StartCollectQualityResponseBody extends TeaModel {
             private Long entityId; 
             private String matchExpression; 
             private String pluginName; 
-            private java.util.List < StrongMethodSet> strongMethodSet; 
+            private java.util.List<StrongMethodSet> strongMethodSet; 
             private String tableGuid; 
             private String taskId; 
-            private java.util.List < WeakMethodSet> weakMethodSet; 
+            private java.util.List<WeakMethodSet> weakMethodSet; 
 
             /**
              * ActualExpression.
@@ -577,7 +601,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
             /**
              * StrongMethodSet.
              */
-            public Builder strongMethodSet(java.util.List < StrongMethodSet> strongMethodSet) {
+            public Builder strongMethodSet(java.util.List<StrongMethodSet> strongMethodSet) {
                 this.strongMethodSet = strongMethodSet;
                 return this;
             }
@@ -601,7 +625,7 @@ public class StartCollectQualityResponseBody extends TeaModel {
             /**
              * WeakMethodSet.
              */
-            public Builder weakMethodSet(java.util.List < WeakMethodSet> weakMethodSet) {
+            public Builder weakMethodSet(java.util.List<WeakMethodSet> weakMethodSet) {
                 this.weakMethodSet = weakMethodSet;
                 return this;
             }

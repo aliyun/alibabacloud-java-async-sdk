@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGovernanceIssueTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListGovernanceIssueTablesResponseBody</p>
@@ -190,6 +196,12 @@ public class ListGovernanceIssueTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGovernanceIssueTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceIssueTablesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizDate")
         private String bizDate;
@@ -571,6 +583,12 @@ public class ListGovernanceIssueTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGovernanceIssueTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceIssueTablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -579,7 +597,7 @@ public class ListGovernanceIssueTablesResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < Tables> tables;
+        private java.util.List<Tables> tables;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -616,7 +634,7 @@ public class ListGovernanceIssueTablesResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
@@ -630,7 +648,7 @@ public class ListGovernanceIssueTablesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Tables> tables; 
+            private java.util.List<Tables> tables; 
             private Integer totalCount; 
 
             /**
@@ -652,7 +670,7 @@ public class ListGovernanceIssueTablesResponseBody extends TeaModel {
             /**
              * Tables.
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }

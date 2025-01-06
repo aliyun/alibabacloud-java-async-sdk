@@ -12,19 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetSwitchValueResponseBody} extends {@link TeaModel}
+ * {@link GetDataServiceFunctionResponseBody} extends {@link TeaModel}
  *
- * <p>GetSwitchValueResponseBody</p>
+ * <p>GetDataServiceFunctionResponseBody</p>
  */
-public class GetSwitchValueResponseBody extends TeaModel {
+public class GetDataServiceFunctionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
+
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
+    private String errCode;
+
+    @com.aliyun.core.annotation.NameInMap("ErrMsg")
+    private String errMsg;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetSwitchValueResponseBody(Builder builder) {
+    private GetDataServiceFunctionResponseBody(Builder builder) {
         this.data = builder.data;
+        this.errCode = builder.errCode;
+        this.errMsg = builder.errMsg;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +40,7 @@ public class GetSwitchValueResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetSwitchValueResponseBody create() {
+    public static GetDataServiceFunctionResponseBody create() {
         return builder().build();
     }
 
@@ -44,6 +52,20 @@ public class GetSwitchValueResponseBody extends TeaModel {
     }
 
     /**
+     * @return errCode
+     */
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    /**
+     * @return errMsg
+     */
+    public String getErrMsg() {
+        return this.errMsg;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -52,13 +74,31 @@ public class GetSwitchValueResponseBody extends TeaModel {
 
     public static final class Builder {
         private String data; 
+        private String errCode; 
+        private String errMsg; 
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Id of the request</p>
          */
         public Builder data(String data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * ErrCode.
+         */
+        public Builder errCode(String errCode) {
+            this.errCode = errCode;
+            return this;
+        }
+
+        /**
+         * ErrMsg.
+         */
+        public Builder errMsg(String errMsg) {
+            this.errMsg = errMsg;
             return this;
         }
 
@@ -70,8 +110,8 @@ public class GetSwitchValueResponseBody extends TeaModel {
             return this;
         }
 
-        public GetSwitchValueResponseBody build() {
-            return new GetSwitchValueResponseBody(this);
+        public GetDataServiceFunctionResponseBody build() {
+            return new GetDataServiceFunctionResponseBody(this);
         } 
 
     } 

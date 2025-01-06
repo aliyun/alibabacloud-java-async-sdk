@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileRequest</p>
@@ -96,7 +102,7 @@ public class DeleteFileRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +111,7 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>This parameter is required.</p>
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);

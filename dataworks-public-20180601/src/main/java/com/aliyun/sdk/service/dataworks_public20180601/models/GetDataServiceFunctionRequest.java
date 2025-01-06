@@ -12,31 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StartCollectQualityRequest} extends {@link RequestModel}
+ * {@link GetDataServiceFunctionRequest} extends {@link RequestModel}
  *
- * <p>StartCollectQualityRequest</p>
+ * <p>GetDataServiceFunctionRequest</p>
  */
-public class StartCollectQualityRequest extends Request {
+public class GetDataServiceFunctionRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("CallbackResultString")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String callbackResultString;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionId")
+    private Long functionId;
 
-    private StartCollectQualityRequest(Builder builder) {
+    private GetDataServiceFunctionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.callbackResultString = builder.callbackResultString;
+        this.functionId = builder.functionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static StartCollectQualityRequest create() {
+    public static GetDataServiceFunctionRequest create() {
         return builder().build();
     }
 
@@ -53,24 +52,24 @@ public class StartCollectQualityRequest extends Request {
     }
 
     /**
-     * @return callbackResultString
+     * @return functionId
      */
-    public String getCallbackResultString() {
-        return this.callbackResultString;
+    public Long getFunctionId() {
+        return this.functionId;
     }
 
-    public static final class Builder extends Request.Builder<StartCollectQualityRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDataServiceFunctionRequest, Builder> {
         private String regionId; 
-        private String callbackResultString; 
+        private Long functionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(StartCollectQualityRequest request) {
+        private Builder(GetDataServiceFunctionRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.callbackResultString = request.callbackResultString;
+            this.functionId = request.functionId;
         } 
 
         /**
@@ -83,17 +82,17 @@ public class StartCollectQualityRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * FunctionId.
          */
-        public Builder callbackResultString(String callbackResultString) {
-            this.putBodyParameter("CallbackResultString", callbackResultString);
-            this.callbackResultString = callbackResultString;
+        public Builder functionId(Long functionId) {
+            this.putQueryParameter("FunctionId", functionId);
+            this.functionId = functionId;
             return this;
         }
 
         @Override
-        public StartCollectQualityRequest build() {
-            return new StartCollectQualityRequest(this);
+        public GetDataServiceFunctionRequest build() {
+            return new GetDataServiceFunctionRequest(this);
         } 
 
     } 

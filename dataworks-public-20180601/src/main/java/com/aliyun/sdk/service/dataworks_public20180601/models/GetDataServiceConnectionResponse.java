@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListEmrHiveTablesResponse} extends {@link TeaModel}
+ * {@link GetDataServiceConnectionResponse} extends {@link TeaModel}
  *
- * <p>ListEmrHiveTablesResponse</p>
+ * <p>GetDataServiceConnectionResponse</p>
  */
-public class ListEmrHiveTablesResponse extends Response {
+public class GetDataServiceConnectionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListEmrHiveTablesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListEmrHiveTablesResponseBody body;
+    private GetDataServiceConnectionResponseBody body;
 
-    private ListEmrHiveTablesResponse(BuilderImpl builder) {
+    private GetDataServiceConnectionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListEmrHiveTablesResponse create() {
+    public static GetDataServiceConnectionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListEmrHiveTablesResponse extends Response {
     /**
      * @return body
      */
-    public ListEmrHiveTablesResponseBody getBody() {
+    public GetDataServiceConnectionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListEmrHiveTablesResponse, Builder> {
+    public interface Builder extends Response.Builder<GetDataServiceConnectionResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListEmrHiveTablesResponseBody body);
+        Builder body(GetDataServiceConnectionResponseBody body);
 
         @Override
-        ListEmrHiveTablesResponse build();
+        GetDataServiceConnectionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListEmrHiveTablesResponse, Builder>
+            extends Response.BuilderImpl<GetDataServiceConnectionResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListEmrHiveTablesResponseBody body; 
+        private GetDataServiceConnectionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListEmrHiveTablesResponse response) {
+        private BuilderImpl(GetDataServiceConnectionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListEmrHiveTablesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListEmrHiveTablesResponseBody body) {
+        public Builder body(GetDataServiceConnectionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListEmrHiveTablesResponse build() {
-            return new ListEmrHiveTablesResponse(this);
+        public GetDataServiceConnectionResponse build() {
+            return new GetDataServiceConnectionResponse(this);
         } 
 
     } 

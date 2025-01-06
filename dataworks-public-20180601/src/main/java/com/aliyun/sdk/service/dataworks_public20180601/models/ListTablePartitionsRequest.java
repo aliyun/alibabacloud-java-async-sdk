@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablePartitionsRequest} extends {@link RequestModel}
  *
  * <p>ListTablePartitionsRequest</p>
@@ -151,7 +157,10 @@ public class ListTablePartitionsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-2A51D3826C701234</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -160,7 +169,10 @@ public class ListTablePartitionsRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -178,7 +190,10 @@ public class ListTablePartitionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -187,7 +202,10 @@ public class ListTablePartitionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,7 +214,10 @@ public class ListTablePartitionsRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

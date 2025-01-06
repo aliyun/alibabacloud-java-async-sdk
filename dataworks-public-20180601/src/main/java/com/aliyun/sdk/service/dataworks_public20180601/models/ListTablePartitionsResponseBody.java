@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablePartitionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTablePartitionsResponseBody</p>
@@ -110,6 +116,12 @@ public class ListTablePartitionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTablePartitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablePartitionsResponseBody</p>
+     */
     public static class PagedData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -271,12 +283,18 @@ public class ListTablePartitionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTablePartitionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablePartitionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("PagedData")
-        private java.util.List < PagedData> pagedData;
+        private java.util.List<PagedData> pagedData;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -305,7 +323,7 @@ public class ListTablePartitionsResponseBody extends TeaModel {
         /**
          * @return pagedData
          */
-        public java.util.List < PagedData> getPagedData() {
+        public java.util.List<PagedData> getPagedData() {
             return this.pagedData;
         }
 
@@ -318,7 +336,7 @@ public class ListTablePartitionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer pageSize; 
-            private java.util.List < PagedData> pagedData; 
+            private java.util.List<PagedData> pagedData; 
             private Integer totalCount; 
 
             /**
@@ -332,7 +350,7 @@ public class ListTablePartitionsResponseBody extends TeaModel {
             /**
              * PagedData.
              */
-            public Builder pagedData(java.util.List < PagedData> pagedData) {
+            public Builder pagedData(java.util.List<PagedData> pagedData) {
                 this.pagedData = pagedData;
                 return this;
             }

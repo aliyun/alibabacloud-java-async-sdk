@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEmrHiveTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEmrHiveTablesResponseBody</p>
@@ -110,6 +116,12 @@ public class ListEmrHiveTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEmrHiveTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmrHiveTablesResponseBody</p>
+     */
     public static class PagedData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterBizId")
         private String clusterBizId;
@@ -571,6 +583,12 @@ public class ListEmrHiveTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEmrHiveTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmrHiveTablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -579,7 +597,7 @@ public class ListEmrHiveTablesResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("PagedData")
-        private java.util.List < PagedData> pagedData;
+        private java.util.List<PagedData> pagedData;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -616,7 +634,7 @@ public class ListEmrHiveTablesResponseBody extends TeaModel {
         /**
          * @return pagedData
          */
-        public java.util.List < PagedData> getPagedData() {
+        public java.util.List<PagedData> getPagedData() {
             return this.pagedData;
         }
 
@@ -630,7 +648,7 @@ public class ListEmrHiveTablesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < PagedData> pagedData; 
+            private java.util.List<PagedData> pagedData; 
             private Integer totalCount; 
 
             /**
@@ -652,7 +670,7 @@ public class ListEmrHiveTablesResponseBody extends TeaModel {
             /**
              * PagedData.
              */
-            public Builder pagedData(java.util.List < PagedData> pagedData) {
+            public Builder pagedData(java.util.List<PagedData> pagedData) {
                 this.pagedData = pagedData;
                 return this;
             }

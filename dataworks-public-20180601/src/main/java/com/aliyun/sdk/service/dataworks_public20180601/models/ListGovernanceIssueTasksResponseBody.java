@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGovernanceIssueTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListGovernanceIssueTasksResponseBody</p>
@@ -190,6 +196,12 @@ public class ListGovernanceIssueTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGovernanceIssueTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceIssueTasksResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizDate")
         private String bizDate;
@@ -391,6 +403,12 @@ public class ListGovernanceIssueTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGovernanceIssueTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceIssueTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -399,7 +417,7 @@ public class ListGovernanceIssueTasksResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Tasks")
-        private java.util.List < Tasks> tasks;
+        private java.util.List<Tasks> tasks;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -436,7 +454,7 @@ public class ListGovernanceIssueTasksResponseBody extends TeaModel {
         /**
          * @return tasks
          */
-        public java.util.List < Tasks> getTasks() {
+        public java.util.List<Tasks> getTasks() {
             return this.tasks;
         }
 
@@ -450,7 +468,7 @@ public class ListGovernanceIssueTasksResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Tasks> tasks; 
+            private java.util.List<Tasks> tasks; 
             private Integer totalCount; 
 
             /**
@@ -472,7 +490,7 @@ public class ListGovernanceIssueTasksResponseBody extends TeaModel {
             /**
              * Tasks.
              */
-            public Builder tasks(java.util.List < Tasks> tasks) {
+            public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
                 return this;
             }

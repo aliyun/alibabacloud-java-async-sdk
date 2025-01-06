@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchManualDagNodeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>SearchManualDagNodeInstanceResponseBody</p>
@@ -130,6 +136,12 @@ public class SearchManualDagNodeInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchManualDagNodeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchManualDagNodeInstanceResponseBody</p>
+     */
     public static class NodeInsInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private String beginRunningTime;
@@ -411,9 +423,15 @@ public class SearchManualDagNodeInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchManualDagNodeInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchManualDagNodeInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeInsInfo")
-        private java.util.List < NodeInsInfo> nodeInsInfo;
+        private java.util.List<NodeInsInfo> nodeInsInfo;
 
         private Data(Builder builder) {
             this.nodeInsInfo = builder.nodeInsInfo;
@@ -430,17 +448,17 @@ public class SearchManualDagNodeInstanceResponseBody extends TeaModel {
         /**
          * @return nodeInsInfo
          */
-        public java.util.List < NodeInsInfo> getNodeInsInfo() {
+        public java.util.List<NodeInsInfo> getNodeInsInfo() {
             return this.nodeInsInfo;
         }
 
         public static final class Builder {
-            private java.util.List < NodeInsInfo> nodeInsInfo; 
+            private java.util.List<NodeInsInfo> nodeInsInfo; 
 
             /**
              * NodeInsInfo.
              */
-            public Builder nodeInsInfo(java.util.List < NodeInsInfo> nodeInsInfo) {
+            public Builder nodeInsInfo(java.util.List<NodeInsInfo> nodeInsInfo) {
                 this.nodeInsInfo = nodeInsInfo;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGovernanceIssueDataServiceAPIsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGovernanceIssueDataServiceAPIsResponseBody</p>
@@ -190,6 +196,12 @@ public class ListGovernanceIssueDataServiceAPIsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGovernanceIssueDataServiceAPIsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceIssueDataServiceAPIsResponseBody</p>
+     */
     public static class APIs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
@@ -371,9 +383,15 @@ public class ListGovernanceIssueDataServiceAPIsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGovernanceIssueDataServiceAPIsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceIssueDataServiceAPIsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("APIs")
-        private java.util.List < APIs> APIs;
+        private java.util.List<APIs> APIs;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -402,7 +420,7 @@ public class ListGovernanceIssueDataServiceAPIsResponseBody extends TeaModel {
         /**
          * @return APIs
          */
-        public java.util.List < APIs> getAPIs() {
+        public java.util.List<APIs> getAPIs() {
             return this.APIs;
         }
 
@@ -428,7 +446,7 @@ public class ListGovernanceIssueDataServiceAPIsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < APIs> APIs; 
+            private java.util.List<APIs> APIs; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -436,7 +454,7 @@ public class ListGovernanceIssueDataServiceAPIsResponseBody extends TeaModel {
             /**
              * APIs.
              */
-            public Builder APIs(java.util.List < APIs> APIs) {
+            public Builder APIs(java.util.List<APIs> APIs) {
                 this.APIs = APIs;
                 return this;
             }

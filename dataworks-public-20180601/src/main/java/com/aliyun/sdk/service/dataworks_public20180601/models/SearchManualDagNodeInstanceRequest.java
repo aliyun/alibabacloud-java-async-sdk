@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchManualDagNodeInstanceRequest} extends {@link RequestModel}
  *
  * <p>SearchManualDagNodeInstanceRequest</p>
@@ -92,7 +98,10 @@ public class SearchManualDagNodeInstanceRequest extends Request {
         }
 
         /**
-         * DagId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123434234</p>
          */
         public Builder dagId(Long dagId) {
             this.putQueryParameter("DagId", dagId);
@@ -101,7 +110,10 @@ public class SearchManualDagNodeInstanceRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_odps_project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

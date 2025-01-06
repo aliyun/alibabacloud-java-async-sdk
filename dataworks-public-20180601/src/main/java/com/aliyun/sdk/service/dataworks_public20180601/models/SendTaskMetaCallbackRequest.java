@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendTaskMetaCallbackRequest} extends {@link RequestModel}
  *
  * <p>SendTaskMetaCallbackRequest</p>
@@ -32,7 +38,7 @@ public class SendTaskMetaCallbackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < String > resources;
+    private java.util.List<String> resources;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -122,7 +128,7 @@ public class SendTaskMetaCallbackRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < String > getResources() {
+    public java.util.List<String> getResources() {
         return this.resources;
     }
 
@@ -173,7 +179,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         private String code; 
         private String connectionInfo; 
         private Long endTime; 
-        private java.util.List < String > resources; 
+        private java.util.List<String> resources; 
         private Long startTime; 
         private String subType; 
         private String taskEnvParam; 
@@ -201,7 +207,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -210,7 +216,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>This parameter is required.</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -219,7 +225,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * ConnectionInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder connectionInfo(String connectionInfo) {
             this.putBodyParameter("ConnectionInfo", connectionInfo);
@@ -228,7 +234,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -239,14 +245,14 @@ public class SendTaskMetaCallbackRequest extends Request {
         /**
          * Resources.
          */
-        public Builder resources(java.util.List < String > resources) {
+        public Builder resources(java.util.List<String> resources) {
             this.putBodyParameter("Resources", resources);
             this.resources = resources;
             return this;
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -255,7 +261,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * SubType.
+         * <p>This parameter is required.</p>
          */
         public Builder subType(String subType) {
             this.putBodyParameter("SubType", subType);
@@ -264,7 +270,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * TaskEnvParam.
+         * <p>This parameter is required.</p>
          */
         public Builder taskEnvParam(String taskEnvParam) {
             this.putBodyParameter("TaskEnvParam", taskEnvParam);
@@ -273,7 +279,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -282,7 +288,7 @@ public class SendTaskMetaCallbackRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

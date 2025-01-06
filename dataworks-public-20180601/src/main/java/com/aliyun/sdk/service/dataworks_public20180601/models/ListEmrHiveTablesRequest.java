@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEmrHiveTablesRequest} extends {@link RequestModel}
  *
  * <p>ListEmrHiveTablesRequest</p>
@@ -122,7 +128,10 @@ public class ListEmrHiveTablesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-D033DD5FB82436A6</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +140,10 @@ public class ListEmrHiveTablesRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -140,7 +152,10 @@ public class ListEmrHiveTablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,7 +164,10 @@ public class ListEmrHiveTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

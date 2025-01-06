@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartTaskQualityResponseBody} extends {@link TeaModel}
  *
  * <p>StartTaskQualityResponseBody</p>
@@ -90,6 +96,12 @@ public class StartTaskQualityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartTaskQualityResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartTaskQualityResponseBody</p>
+     */
     public static class StrongMethodSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColName")
         private String colName;
@@ -231,6 +243,12 @@ public class StartTaskQualityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartTaskQualityResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartTaskQualityResponseBody</p>
+     */
     public static class WeakMethodSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColName")
         private String colName;
@@ -372,6 +390,12 @@ public class StartTaskQualityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartTaskQualityResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartTaskQualityResponseBody</p>
+     */
     public static class ReturnValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActualExpression")
         private String actualExpression;
@@ -398,7 +422,7 @@ public class StartTaskQualityResponseBody extends TeaModel {
         private Long statisticsFlag;
 
         @com.aliyun.core.annotation.NameInMap("StrongMethodSet")
-        private java.util.List < StrongMethodSet> strongMethodSet;
+        private java.util.List<StrongMethodSet> strongMethodSet;
 
         @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
@@ -410,7 +434,7 @@ public class StartTaskQualityResponseBody extends TeaModel {
         private Long triggerFlag;
 
         @com.aliyun.core.annotation.NameInMap("WeakMethodSet")
-        private java.util.List < WeakMethodSet> weakMethodSet;
+        private java.util.List<WeakMethodSet> weakMethodSet;
 
         private ReturnValue(Builder builder) {
             this.actualExpression = builder.actualExpression;
@@ -495,7 +519,7 @@ public class StartTaskQualityResponseBody extends TeaModel {
         /**
          * @return strongMethodSet
          */
-        public java.util.List < StrongMethodSet> getStrongMethodSet() {
+        public java.util.List<StrongMethodSet> getStrongMethodSet() {
             return this.strongMethodSet;
         }
 
@@ -523,7 +547,7 @@ public class StartTaskQualityResponseBody extends TeaModel {
         /**
          * @return weakMethodSet
          */
-        public java.util.List < WeakMethodSet> getWeakMethodSet() {
+        public java.util.List<WeakMethodSet> getWeakMethodSet() {
             return this.weakMethodSet;
         }
 
@@ -536,11 +560,11 @@ public class StartTaskQualityResponseBody extends TeaModel {
             private String matchExpression; 
             private String pluginName; 
             private Long statisticsFlag; 
-            private java.util.List < StrongMethodSet> strongMethodSet; 
+            private java.util.List<StrongMethodSet> strongMethodSet; 
             private String tableGuid; 
             private String taskId; 
             private Long triggerFlag; 
-            private java.util.List < WeakMethodSet> weakMethodSet; 
+            private java.util.List<WeakMethodSet> weakMethodSet; 
 
             /**
              * ActualExpression.
@@ -609,7 +633,7 @@ public class StartTaskQualityResponseBody extends TeaModel {
             /**
              * StrongMethodSet.
              */
-            public Builder strongMethodSet(java.util.List < StrongMethodSet> strongMethodSet) {
+            public Builder strongMethodSet(java.util.List<StrongMethodSet> strongMethodSet) {
                 this.strongMethodSet = strongMethodSet;
                 return this;
             }
@@ -641,7 +665,7 @@ public class StartTaskQualityResponseBody extends TeaModel {
             /**
              * WeakMethodSet.
              */
-            public Builder weakMethodSet(java.util.List < WeakMethodSet> weakMethodSet) {
+            public Builder weakMethodSet(java.util.List<WeakMethodSet> weakMethodSet) {
                 this.weakMethodSet = weakMethodSet;
                 return this;
             }

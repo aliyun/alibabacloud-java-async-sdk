@@ -12,43 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDataServiceApiContextRequest} extends {@link RequestModel}
+ * {@link GetDataServiceApiAuthMapContextRequest} extends {@link RequestModel}
  *
- * <p>GetDataServiceApiContextRequest</p>
+ * <p>GetDataServiceApiAuthMapContextRequest</p>
  */
-public class GetDataServiceApiContextRequest extends Request {
+public class GetDataServiceApiAuthMapContextRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApiId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long apiId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiStatus")
-    private Integer apiStatus;
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
+    private String apiPath;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CacheKey")
-    private String cacheKey;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ForPrivateResGroup")
-    private Boolean forPrivateResGroup;
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
-    private GetDataServiceApiContextRequest(Builder builder) {
+    private GetDataServiceApiAuthMapContextRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.apiId = builder.apiId;
-        this.apiStatus = builder.apiStatus;
-        this.cacheKey = builder.cacheKey;
-        this.forPrivateResGroup = builder.forPrivateResGroup;
+        this.apiPath = builder.apiPath;
+        this.projectId = builder.projectId;
         this.verbose = builder.verbose;
     }
 
@@ -56,7 +50,7 @@ public class GetDataServiceApiContextRequest extends Request {
         return new Builder();
     }
 
-    public static GetDataServiceApiContextRequest create() {
+    public static GetDataServiceApiAuthMapContextRequest create() {
         return builder().build();
     }
 
@@ -80,24 +74,17 @@ public class GetDataServiceApiContextRequest extends Request {
     }
 
     /**
-     * @return apiStatus
+     * @return apiPath
      */
-    public Integer getApiStatus() {
-        return this.apiStatus;
+    public String getApiPath() {
+        return this.apiPath;
     }
 
     /**
-     * @return cacheKey
+     * @return projectId
      */
-    public String getCacheKey() {
-        return this.cacheKey;
-    }
-
-    /**
-     * @return forPrivateResGroup
-     */
-    public Boolean getForPrivateResGroup() {
-        return this.forPrivateResGroup;
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -107,25 +94,23 @@ public class GetDataServiceApiContextRequest extends Request {
         return this.verbose;
     }
 
-    public static final class Builder extends Request.Builder<GetDataServiceApiContextRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetDataServiceApiAuthMapContextRequest, Builder> {
         private String regionId; 
         private Long apiId; 
-        private Integer apiStatus; 
-        private String cacheKey; 
-        private Boolean forPrivateResGroup; 
+        private String apiPath; 
+        private Long projectId; 
         private Boolean verbose; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDataServiceApiContextRequest request) {
+        private Builder(GetDataServiceApiAuthMapContextRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.apiId = request.apiId;
-            this.apiStatus = request.apiStatus;
-            this.cacheKey = request.cacheKey;
-            this.forPrivateResGroup = request.forPrivateResGroup;
+            this.apiPath = request.apiPath;
+            this.projectId = request.projectId;
             this.verbose = request.verbose;
         } 
 
@@ -139,11 +124,10 @@ public class GetDataServiceApiContextRequest extends Request {
         }
 
         /**
-         * <p>apiId</p>
-         * <p>This parameter is required.</p>
+         * <p>API ID</p>
          * 
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>1</p>
          */
         public Builder apiId(Long apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -152,29 +136,20 @@ public class GetDataServiceApiContextRequest extends Request {
         }
 
         /**
-         * ApiStatus.
+         * ApiPath.
          */
-        public Builder apiStatus(Integer apiStatus) {
-            this.putQueryParameter("ApiStatus", apiStatus);
-            this.apiStatus = apiStatus;
+        public Builder apiPath(String apiPath) {
+            this.putQueryParameter("ApiPath", apiPath);
+            this.apiPath = apiPath;
             return this;
         }
 
         /**
-         * CacheKey.
+         * ProjectId.
          */
-        public Builder cacheKey(String cacheKey) {
-            this.putQueryParameter("CacheKey", cacheKey);
-            this.cacheKey = cacheKey;
-            return this;
-        }
-
-        /**
-         * ForPrivateResGroup.
-         */
-        public Builder forPrivateResGroup(Boolean forPrivateResGroup) {
-            this.putQueryParameter("ForPrivateResGroup", forPrivateResGroup);
-            this.forPrivateResGroup = forPrivateResGroup;
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 
@@ -188,8 +163,8 @@ public class GetDataServiceApiContextRequest extends Request {
         }
 
         @Override
-        public GetDataServiceApiContextRequest build() {
-            return new GetDataServiceApiContextRequest(this);
+        public GetDataServiceApiAuthMapContextRequest build() {
+            return new GetDataServiceApiAuthMapContextRequest(this);
         } 
 
     } 

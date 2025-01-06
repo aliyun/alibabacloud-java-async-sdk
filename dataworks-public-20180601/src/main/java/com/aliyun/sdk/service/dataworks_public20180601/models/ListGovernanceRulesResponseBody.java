@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGovernanceRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListGovernanceRulesResponseBody</p>
@@ -190,6 +196,12 @@ public class ListGovernanceRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGovernanceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -371,6 +383,12 @@ public class ListGovernanceRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGovernanceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGovernanceRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -379,7 +397,7 @@ public class ListGovernanceRulesResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -416,7 +434,7 @@ public class ListGovernanceRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -430,7 +448,7 @@ public class ListGovernanceRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private Integer totalCount; 
 
             /**
@@ -452,7 +470,7 @@ public class ListGovernanceRulesResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

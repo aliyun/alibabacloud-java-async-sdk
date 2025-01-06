@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEmrHiveDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListEmrHiveDatabasesResponseBody</p>
  */
 public class ListEmrHiveDatabasesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -41,7 +47,7 @@ public class ListEmrHiveDatabasesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -67,7 +73,7 @@ public class ListEmrHiveDatabasesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -75,7 +81,7 @@ public class ListEmrHiveDatabasesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -110,6 +116,12 @@ public class ListEmrHiveDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEmrHiveDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmrHiveDatabasesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;

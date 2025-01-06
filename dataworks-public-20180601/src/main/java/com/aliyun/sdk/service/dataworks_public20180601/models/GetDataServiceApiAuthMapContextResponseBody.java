@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDataServiceApiContextResponseBody} extends {@link TeaModel}
+ * {@link GetDataServiceApiAuthMapContextResponseBody} extends {@link TeaModel}
  *
- * <p>GetDataServiceApiContextResponseBody</p>
+ * <p>GetDataServiceApiAuthMapContextResponseBody</p>
  */
-public class GetDataServiceApiContextResponseBody extends TeaModel {
+public class GetDataServiceApiAuthMapContextResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
@@ -29,7 +29,7 @@ public class GetDataServiceApiContextResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetDataServiceApiContextResponseBody(Builder builder) {
+    private GetDataServiceApiAuthMapContextResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMsg = builder.errMsg;
@@ -40,7 +40,7 @@ public class GetDataServiceApiContextResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetDataServiceApiContextResponseBody create() {
+    public static GetDataServiceApiAuthMapContextResponseBody create() {
         return builder().build();
     }
 
@@ -103,15 +103,18 @@ public class GetDataServiceApiContextResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-abc</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetDataServiceApiContextResponseBody build() {
-            return new GetDataServiceApiContextResponseBody(this);
+        public GetDataServiceApiAuthMapContextResponseBody build() {
+            return new GetDataServiceApiAuthMapContextResponseBody(this);
         } 
 
     } 

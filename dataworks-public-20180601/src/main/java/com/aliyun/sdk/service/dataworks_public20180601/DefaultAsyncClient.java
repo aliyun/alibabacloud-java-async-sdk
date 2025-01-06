@@ -64,6 +64,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateManualDag  CreateManualDagRequest
+     * @return CreateManualDagResponse
+     */
     @Override
     public CompletableFuture<CreateManualDagResponse> createManualDag(CreateManualDagRequest request) {
         try {
@@ -78,6 +82,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFile  DeleteFileRequest
+     * @return DeleteFileResponse
+     */
     @Override
     public CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request) {
         try {
@@ -92,6 +100,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEmrHiveTable  DescribeEmrHiveTableRequest
+     * @return DescribeEmrHiveTableResponse
+     */
     @Override
     public CompletableFuture<DescribeEmrHiveTableResponse> describeEmrHiveTable(DescribeEmrHiveTableRequest request) {
         try {
@@ -106,6 +118,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataServiceApiAuthMapContext  GetDataServiceApiAuthMapContextRequest
+     * @return GetDataServiceApiAuthMapContextResponse
+     */
+    @Override
+    public CompletableFuture<GetDataServiceApiAuthMapContextResponse> getDataServiceApiAuthMapContext(GetDataServiceApiAuthMapContextRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataServiceApiAuthMapContext").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataServiceApiAuthMapContextResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataServiceApiAuthMapContextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataServiceApiContext  GetDataServiceApiContextRequest
+     * @return GetDataServiceApiContextResponse
+     */
     @Override
     public CompletableFuture<GetDataServiceApiContextResponse> getDataServiceApiContext(GetDataServiceApiContextRequest request) {
         try {
@@ -120,6 +154,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataServiceConnection  GetDataServiceConnectionRequest
+     * @return GetDataServiceConnectionResponse
+     */
+    @Override
+    public CompletableFuture<GetDataServiceConnectionResponse> getDataServiceConnection(GetDataServiceConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataServiceConnection").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataServiceConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataServiceConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataServiceContextUpdateEvent  GetDataServiceContextUpdateEventRequest
+     * @return GetDataServiceContextUpdateEventResponse
+     */
     @Override
     public CompletableFuture<GetDataServiceContextUpdateEventResponse> getDataServiceContextUpdateEvent(GetDataServiceContextUpdateEventRequest request) {
         try {
@@ -134,6 +190,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDataServiceFunction  GetDataServiceFunctionRequest
+     * @return GetDataServiceFunctionResponse
+     */
+    @Override
+    public CompletableFuture<GetDataServiceFunctionResponse> getDataServiceFunction(GetDataServiceFunctionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataServiceFunction").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataServiceFunctionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataServiceFunctionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSwitchValue  GetSwitchValueRequest
+     * @return GetSwitchValueResponse
+     */
     @Override
     public CompletableFuture<GetSwitchValueResponse> getSwitchValue(GetSwitchValueRequest request) {
         try {
@@ -148,6 +226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTimeMachineTask  GetTimeMachineTaskRequest
+     * @return GetTimeMachineTaskResponse
+     */
     @Override
     public CompletableFuture<GetTimeMachineTaskResponse> getTimeMachineTask(GetTimeMachineTaskRequest request) {
         try {
@@ -162,6 +244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEmrHiveAuditLogs  ListEmrHiveAuditLogsRequest
+     * @return ListEmrHiveAuditLogsResponse
+     */
     @Override
     public CompletableFuture<ListEmrHiveAuditLogsResponse> listEmrHiveAuditLogs(ListEmrHiveAuditLogsRequest request) {
         try {
@@ -176,6 +262,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEmrHiveDatabases  ListEmrHiveDatabasesRequest
+     * @return ListEmrHiveDatabasesResponse
+     */
     @Override
     public CompletableFuture<ListEmrHiveDatabasesResponse> listEmrHiveDatabases(ListEmrHiveDatabasesRequest request) {
         try {
@@ -190,6 +280,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEmrHiveTables  ListEmrHiveTablesRequest
+     * @return ListEmrHiveTablesResponse
+     */
     @Override
     public CompletableFuture<ListEmrHiveTablesResponse> listEmrHiveTables(ListEmrHiveTablesRequest request) {
         try {
@@ -204,6 +298,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGovernanceIssueDataServiceAPIs  ListGovernanceIssueDataServiceAPIsRequest
+     * @return ListGovernanceIssueDataServiceAPIsResponse
+     */
     @Override
     public CompletableFuture<ListGovernanceIssueDataServiceAPIsResponse> listGovernanceIssueDataServiceAPIs(ListGovernanceIssueDataServiceAPIsRequest request) {
         try {
@@ -218,6 +316,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGovernanceIssueTables  ListGovernanceIssueTablesRequest
+     * @return ListGovernanceIssueTablesResponse
+     */
     @Override
     public CompletableFuture<ListGovernanceIssueTablesResponse> listGovernanceIssueTables(ListGovernanceIssueTablesRequest request) {
         try {
@@ -232,6 +334,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGovernanceIssueTasks  ListGovernanceIssueTasksRequest
+     * @return ListGovernanceIssueTasksResponse
+     */
     @Override
     public CompletableFuture<ListGovernanceIssueTasksResponse> listGovernanceIssueTasks(ListGovernanceIssueTasksRequest request) {
         try {
@@ -246,6 +352,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGovernanceRules  ListGovernanceRulesRequest
+     * @return ListGovernanceRulesResponse
+     */
     @Override
     public CompletableFuture<ListGovernanceRulesResponse> listGovernanceRules(ListGovernanceRulesRequest request) {
         try {
@@ -260,6 +370,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHiveColumnLineages  ListHiveColumnLineagesRequest
+     * @return ListHiveColumnLineagesResponse
+     */
     @Override
     public CompletableFuture<ListHiveColumnLineagesResponse> listHiveColumnLineages(ListHiveColumnLineagesRequest request) {
         try {
@@ -274,6 +388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHiveTableLineages  ListHiveTableLineagesRequest
+     * @return ListHiveTableLineagesResponse
+     */
     @Override
     public CompletableFuture<ListHiveTableLineagesResponse> listHiveTableLineages(ListHiveTableLineagesRequest request) {
         try {
@@ -288,6 +406,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTablePartitions  ListTablePartitionsRequest
+     * @return ListTablePartitionsResponse
+     */
     @Override
     public CompletableFuture<ListTablePartitionsResponse> listTablePartitions(ListTablePartitionsRequest request) {
         try {
@@ -302,6 +424,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenDataWorksStandardService  OpenDataWorksStandardServiceRequest
+     * @return OpenDataWorksStandardServiceResponse
+     */
     @Override
     public CompletableFuture<OpenDataWorksStandardServiceResponse> openDataWorksStandardService(OpenDataWorksStandardServiceRequest request) {
         try {
@@ -316,6 +442,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchManualDagNodeInstance  SearchManualDagNodeInstanceRequest
+     * @return SearchManualDagNodeInstanceResponse
+     */
     @Override
     public CompletableFuture<SearchManualDagNodeInstanceResponse> searchManualDagNodeInstance(SearchManualDagNodeInstanceRequest request) {
         try {
@@ -330,6 +460,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendTaskMetaCallback  SendTaskMetaCallbackRequest
+     * @return SendTaskMetaCallbackResponse
+     */
     @Override
     public CompletableFuture<SendTaskMetaCallbackResponse> sendTaskMetaCallback(SendTaskMetaCallbackRequest request) {
         try {
@@ -344,6 +478,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetSwitchValue  SetSwitchValueRequest
+     * @return SetSwitchValueResponse
+     */
     @Override
     public CompletableFuture<SetSwitchValueResponse> setSwitchValue(SetSwitchValueRequest request) {
         try {
@@ -358,6 +496,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartCollectQuality  StartCollectQualityRequest
+     * @return StartCollectQualityResponse
+     */
     @Override
     public CompletableFuture<StartCollectQualityResponse> startCollectQuality(StartCollectQualityRequest request) {
         try {
@@ -372,6 +514,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartDoCheckQuality  StartDoCheckQualityRequest
+     * @return StartDoCheckQualityResponse
+     */
     @Override
     public CompletableFuture<StartDoCheckQualityResponse> startDoCheckQuality(StartDoCheckQualityRequest request) {
         try {
@@ -386,6 +532,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartTaskQuality  StartTaskQualityRequest
+     * @return StartTaskQualityResponse
+     */
     @Override
     public CompletableFuture<StartTaskQualityResponse> startTaskQuality(StartTaskQualityRequest request) {
         try {
@@ -400,6 +550,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerDataLoader  TriggerDataLoaderRequest
+     * @return TriggerDataLoaderResponse
+     */
     @Override
     public CompletableFuture<TriggerDataLoaderResponse> triggerDataLoader(TriggerDataLoaderRequest request) {
         try {
@@ -414,6 +568,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerTimeMachineTask  TriggerTimeMachineTaskRequest
+     * @return TriggerTimeMachineTaskResponse
+     */
     @Override
     public CompletableFuture<TriggerTimeMachineTaskResponse> triggerTimeMachineTask(TriggerTimeMachineTaskRequest request) {
         try {

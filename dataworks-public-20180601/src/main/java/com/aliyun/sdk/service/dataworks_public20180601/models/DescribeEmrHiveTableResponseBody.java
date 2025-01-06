@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEmrHiveTableResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEmrHiveTableResponseBody</p>
@@ -110,6 +116,12 @@ public class DescribeEmrHiveTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEmrHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmrHiveTableResponseBody</p>
+     */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
@@ -271,6 +283,12 @@ public class DescribeEmrHiveTableResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEmrHiveTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmrHiveTableResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterBizId")
         private String clusterBizId;
@@ -279,7 +297,7 @@ public class DescribeEmrHiveTableResponseBody extends TeaModel {
         private String clusterBizName;
 
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -396,7 +414,7 @@ public class DescribeEmrHiveTableResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -550,7 +568,7 @@ public class DescribeEmrHiveTableResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterBizId; 
             private String clusterBizName; 
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String databaseName; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -592,7 +610,7 @@ public class DescribeEmrHiveTableResponseBody extends TeaModel {
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }

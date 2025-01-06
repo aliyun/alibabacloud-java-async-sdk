@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEmrHiveAuditLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEmrHiveAuditLogsResponseBody</p>
@@ -110,6 +116,12 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEmrHiveAuditLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmrHiveAuditLogsResponseBody</p>
+     */
     public static class PagedData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -118,7 +130,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         private Long eventTime;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < String > groups;
+        private java.util.List<String> groups;
 
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
@@ -163,7 +175,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
@@ -191,7 +203,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         public static final class Builder {
             private String database; 
             private Long eventTime; 
-            private java.util.List < String > groups; 
+            private java.util.List<String> groups; 
             private String operation; 
             private String table; 
             private String user; 
@@ -215,7 +227,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
             /**
              * Groups.
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -251,6 +263,12 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEmrHiveAuditLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEmrHiveAuditLogsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -259,7 +277,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("PagedData")
-        private java.util.List < PagedData> pagedData;
+        private java.util.List<PagedData> pagedData;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -296,7 +314,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         /**
          * @return pagedData
          */
-        public java.util.List < PagedData> getPagedData() {
+        public java.util.List<PagedData> getPagedData() {
             return this.pagedData;
         }
 
@@ -310,7 +328,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < PagedData> pagedData; 
+            private java.util.List<PagedData> pagedData; 
             private Integer totalCount; 
 
             /**
@@ -332,7 +350,7 @@ public class ListEmrHiveAuditLogsResponseBody extends TeaModel {
             /**
              * PagedData.
              */
-            public Builder pagedData(java.util.List < PagedData> pagedData) {
+            public Builder pagedData(java.util.List<PagedData> pagedData) {
                 this.pagedData = pagedData;
                 return this;
             }

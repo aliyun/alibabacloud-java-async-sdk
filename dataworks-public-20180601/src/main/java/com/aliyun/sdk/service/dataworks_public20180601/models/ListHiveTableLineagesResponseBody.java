@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHiveTableLineagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListHiveTableLineagesResponseBody</p>
@@ -110,6 +116,12 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHiveTableLineagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHiveTableLineagesResponseBody</p>
+     */
     public static class DownstreamLineages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -311,6 +323,12 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHiveTableLineagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHiveTableLineagesResponseBody</p>
+     */
     public static class UpstreamLineages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -512,15 +530,21 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHiveTableLineagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHiveTableLineagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownstreamLineages")
-        private java.util.List < DownstreamLineages> downstreamLineages;
+        private java.util.List<DownstreamLineages> downstreamLineages;
 
         @com.aliyun.core.annotation.NameInMap("DownstreamNumber")
         private Integer downstreamNumber;
 
         @com.aliyun.core.annotation.NameInMap("UpstreamLineages")
-        private java.util.List < UpstreamLineages> upstreamLineages;
+        private java.util.List<UpstreamLineages> upstreamLineages;
 
         @com.aliyun.core.annotation.NameInMap("UpstreamNumber")
         private Integer upstreamNumber;
@@ -543,7 +567,7 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
         /**
          * @return downstreamLineages
          */
-        public java.util.List < DownstreamLineages> getDownstreamLineages() {
+        public java.util.List<DownstreamLineages> getDownstreamLineages() {
             return this.downstreamLineages;
         }
 
@@ -557,7 +581,7 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
         /**
          * @return upstreamLineages
          */
-        public java.util.List < UpstreamLineages> getUpstreamLineages() {
+        public java.util.List<UpstreamLineages> getUpstreamLineages() {
             return this.upstreamLineages;
         }
 
@@ -569,15 +593,15 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DownstreamLineages> downstreamLineages; 
+            private java.util.List<DownstreamLineages> downstreamLineages; 
             private Integer downstreamNumber; 
-            private java.util.List < UpstreamLineages> upstreamLineages; 
+            private java.util.List<UpstreamLineages> upstreamLineages; 
             private Integer upstreamNumber; 
 
             /**
              * DownstreamLineages.
              */
-            public Builder downstreamLineages(java.util.List < DownstreamLineages> downstreamLineages) {
+            public Builder downstreamLineages(java.util.List<DownstreamLineages> downstreamLineages) {
                 this.downstreamLineages = downstreamLineages;
                 return this;
             }
@@ -593,7 +617,7 @@ public class ListHiveTableLineagesResponseBody extends TeaModel {
             /**
              * UpstreamLineages.
              */
-            public Builder upstreamLineages(java.util.List < UpstreamLineages> upstreamLineages) {
+            public Builder upstreamLineages(java.util.List<UpstreamLineages> upstreamLineages) {
                 this.upstreamLineages = upstreamLineages;
                 return this;
             }

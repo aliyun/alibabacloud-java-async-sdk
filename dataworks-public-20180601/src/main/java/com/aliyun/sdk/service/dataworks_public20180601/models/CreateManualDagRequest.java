@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20180601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateManualDagRequest} extends {@link RequestModel}
  *
  * <p>CreateManualDagRequest</p>
@@ -135,7 +141,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * Bizdate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-12 00:00:00</p>
          */
         public Builder bizdate(String bizdate) {
             this.putQueryParameter("Bizdate", bizdate);
@@ -153,7 +162,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * FlowName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_flow</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -171,7 +183,10 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
