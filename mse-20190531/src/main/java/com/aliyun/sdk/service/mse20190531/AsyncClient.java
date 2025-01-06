@@ -624,6 +624,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetKubernetesSourceResponse> getKubernetesSource(GetKubernetesSourceRequest request);
 
     /**
+     * @param request the request parameters of GetLocalityRule  GetLocalityRuleRequest
+     * @return GetLocalityRuleResponse
+     */
+    CompletableFuture<GetLocalityRuleResponse> getLocalityRule(GetLocalityRuleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the rules for graceful start and shutdown of an application.
      * You can query the rules for graceful start and shutdown of an application preferentially by using the AppId parameter.
@@ -1478,6 +1484,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIsolationRuleResponse
      */
     CompletableFuture<UpdateIsolationRuleResponse> updateIsolationRule(UpdateIsolationRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLocalityRule  UpdateLocalityRuleRequest
+     * @return UpdateLocalityRuleResponse
+     */
+    CompletableFuture<UpdateLocalityRuleResponse> updateLocalityRule(UpdateLocalityRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateMessageQueueRoute  UpdateMessageQueueRouteRequest
