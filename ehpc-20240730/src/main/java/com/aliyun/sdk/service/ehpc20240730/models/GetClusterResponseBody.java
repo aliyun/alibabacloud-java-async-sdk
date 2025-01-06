@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -72,11 +77,17 @@ public class GetClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaxCount")
     private String maxCount;
 
+    @com.aliyun.core.annotation.NameInMap("MonitorSpec")
+    private MonitorSpec monitorSpec;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("SchedulerSpec")
+    private SchedulerSpec schedulerSpec;
 
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
@@ -102,8 +113,10 @@ public class GetClusterResponseBody extends TeaModel {
         this.manager = builder.manager;
         this.maxCoreCount = builder.maxCoreCount;
         this.maxCount = builder.maxCount;
+        this.monitorSpec = builder.monitorSpec;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.schedulerSpec = builder.schedulerSpec;
         this.securityGroupId = builder.securityGroupId;
     }
 
@@ -256,6 +269,13 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     /**
+     * @return monitorSpec
+     */
+    public MonitorSpec getMonitorSpec() {
+        return this.monitorSpec;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -267,6 +287,13 @@ public class GetClusterResponseBody extends TeaModel {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    /**
+     * @return schedulerSpec
+     */
+    public SchedulerSpec getSchedulerSpec() {
+        return this.schedulerSpec;
     }
 
     /**
@@ -297,8 +324,10 @@ public class GetClusterResponseBody extends TeaModel {
         private Manager manager; 
         private String maxCoreCount; 
         private String maxCount; 
+        private MonitorSpec monitorSpec; 
         private String requestId; 
         private String resourceGroupId; 
+        private SchedulerSpec schedulerSpec; 
         private String securityGroupId; 
 
         /**
@@ -518,7 +547,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of the cluster management node.</p>
+         * <p>The management node configurations.</p>
          */
         public Builder manager(Manager manager) {
             this.manager = manager;
@@ -548,6 +577,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * MonitorSpec.
+         */
+        public Builder monitorSpec(MonitorSpec monitorSpec) {
+            this.monitorSpec = monitorSpec;
+            return this;
+        }
+
+        /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
@@ -566,6 +603,14 @@ public class GetClusterResponseBody extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SchedulerSpec.
+         */
+        public Builder schedulerSpec(SchedulerSpec schedulerSpec) {
+            this.schedulerSpec = schedulerSpec;
             return this;
         }
 
@@ -1206,6 +1251,100 @@ public class GetClusterResponseBody extends TeaModel {
 
             public Manager build() {
                 return new Manager(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
+    public static class MonitorSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableComputeLoadMonitor")
+        private Boolean enableComputeLoadMonitor;
+
+        private MonitorSpec(Builder builder) {
+            this.enableComputeLoadMonitor = builder.enableComputeLoadMonitor;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MonitorSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableComputeLoadMonitor
+         */
+        public Boolean getEnableComputeLoadMonitor() {
+            return this.enableComputeLoadMonitor;
+        }
+
+        public static final class Builder {
+            private Boolean enableComputeLoadMonitor; 
+
+            /**
+             * EnableComputeLoadMonitor.
+             */
+            public Builder enableComputeLoadMonitor(Boolean enableComputeLoadMonitor) {
+                this.enableComputeLoadMonitor = enableComputeLoadMonitor;
+                return this;
+            }
+
+            public MonitorSpec build() {
+                return new MonitorSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
+    public static class SchedulerSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableTopologyAwareness")
+        private Boolean enableTopologyAwareness;
+
+        private SchedulerSpec(Builder builder) {
+            this.enableTopologyAwareness = builder.enableTopologyAwareness;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableTopologyAwareness
+         */
+        public Boolean getEnableTopologyAwareness() {
+            return this.enableTopologyAwareness;
+        }
+
+        public static final class Builder {
+            private Boolean enableTopologyAwareness; 
+
+            /**
+             * EnableTopologyAwareness.
+             */
+            public Builder enableTopologyAwareness(Boolean enableTopologyAwareness) {
+                this.enableTopologyAwareness = enableTopologyAwareness;
+                return this;
+            }
+
+            public SchedulerSpec build() {
+                return new SchedulerSpec(this);
             } 
 
         } 

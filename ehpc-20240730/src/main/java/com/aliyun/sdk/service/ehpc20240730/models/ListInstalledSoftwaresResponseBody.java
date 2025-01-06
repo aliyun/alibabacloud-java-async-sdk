@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -343,7 +348,7 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
      */
     public static class AdditionalPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdditionalPackageInfos")
-        private java.util.List < AdditionalPackageInfos> additionalPackageInfos;
+        private java.util.List<AdditionalPackageInfos> additionalPackageInfos;
 
         private AdditionalPackages(Builder builder) {
             this.additionalPackageInfos = builder.additionalPackageInfos;
@@ -360,17 +365,17 @@ public class ListInstalledSoftwaresResponseBody extends TeaModel {
         /**
          * @return additionalPackageInfos
          */
-        public java.util.List < AdditionalPackageInfos> getAdditionalPackageInfos() {
+        public java.util.List<AdditionalPackageInfos> getAdditionalPackageInfos() {
             return this.additionalPackageInfos;
         }
 
         public static final class Builder {
-            private java.util.List < AdditionalPackageInfos> additionalPackageInfos; 
+            private java.util.List<AdditionalPackageInfos> additionalPackageInfos; 
 
             /**
              * AdditionalPackageInfos.
              */
-            public Builder additionalPackageInfos(java.util.List < AdditionalPackageInfos> additionalPackageInfos) {
+            public Builder additionalPackageInfos(java.util.List<AdditionalPackageInfos> additionalPackageInfos) {
                 this.additionalPackageInfos = additionalPackageInfos;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -295,7 +300,7 @@ public class ListUsersResponseBody extends TeaModel {
      */
     public static class Users extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserInfo")
-        private java.util.List < UserInfo> userInfo;
+        private java.util.List<UserInfo> userInfo;
 
         private Users(Builder builder) {
             this.userInfo = builder.userInfo;
@@ -312,17 +317,17 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * @return userInfo
          */
-        public java.util.List < UserInfo> getUserInfo() {
+        public java.util.List<UserInfo> getUserInfo() {
             return this.userInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UserInfo> userInfo; 
+            private java.util.List<UserInfo> userInfo; 
 
             /**
              * UserInfo.
              */
-            public Builder userInfo(java.util.List < UserInfo> userInfo) {
+            public Builder userInfo(java.util.List<UserInfo> userInfo) {
                 this.userInfo = userInfo;
                 return this;
             }

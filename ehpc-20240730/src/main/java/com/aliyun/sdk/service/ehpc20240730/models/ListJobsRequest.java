@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -165,6 +170,93 @@ public class ListJobsRequest extends Request {
      *
      * <p>ListJobsRequest</p>
      */
+    public static class Diagnosis extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Option")
+        private String option;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private String threshold;
+
+        private Diagnosis(Builder builder) {
+            this.operator = builder.operator;
+            this.option = builder.option;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Diagnosis create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return option
+         */
+        public String getOption() {
+            return this.option;
+        }
+
+        /**
+         * @return threshold
+         */
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String operator; 
+            private String option; 
+            private String threshold; 
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Option.
+             */
+            public Builder option(String option) {
+                this.option = option;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public Diagnosis build() {
+                return new Diagnosis(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListJobsRequest} extends {@link TeaModel}
+     *
+     * <p>ListJobsRequest</p>
+     */
     public static class SortBy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecuteOrder")
         private String executeOrder;
@@ -283,6 +375,9 @@ public class ListJobsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
         private String createTimeStart;
 
+        @com.aliyun.core.annotation.NameInMap("Diagnosis")
+        private java.util.List<Diagnosis> diagnosis;
+
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
@@ -290,20 +385,21 @@ public class ListJobsRequest extends Request {
         private String jobStatus;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < String > nodes;
+        private java.util.List<String> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Queues")
-        private java.util.List < String > queues;
+        private java.util.List<String> queues;
 
         @com.aliyun.core.annotation.NameInMap("SortBy")
         private SortBy sortBy;
 
         @com.aliyun.core.annotation.NameInMap("Users")
-        private java.util.List < String > users;
+        private java.util.List<String> users;
 
         private JobFilter(Builder builder) {
             this.createTimeEnd = builder.createTimeEnd;
             this.createTimeStart = builder.createTimeStart;
+            this.diagnosis = builder.diagnosis;
             this.jobName = builder.jobName;
             this.jobStatus = builder.jobStatus;
             this.nodes = builder.nodes;
@@ -335,6 +431,13 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * @return diagnosis
+         */
+        public java.util.List<Diagnosis> getDiagnosis() {
+            return this.diagnosis;
+        }
+
+        /**
          * @return jobName
          */
         public String getJobName() {
@@ -351,14 +454,14 @@ public class ListJobsRequest extends Request {
         /**
          * @return nodes
          */
-        public java.util.List < String > getNodes() {
+        public java.util.List<String> getNodes() {
             return this.nodes;
         }
 
         /**
          * @return queues
          */
-        public java.util.List < String > getQueues() {
+        public java.util.List<String> getQueues() {
             return this.queues;
         }
 
@@ -372,19 +475,20 @@ public class ListJobsRequest extends Request {
         /**
          * @return users
          */
-        public java.util.List < String > getUsers() {
+        public java.util.List<String> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
             private String createTimeEnd; 
             private String createTimeStart; 
+            private java.util.List<Diagnosis> diagnosis; 
             private String jobName; 
             private String jobStatus; 
-            private java.util.List < String > nodes; 
-            private java.util.List < String > queues; 
+            private java.util.List<String> nodes; 
+            private java.util.List<String> queues; 
             private SortBy sortBy; 
-            private java.util.List < String > users; 
+            private java.util.List<String> users; 
 
             /**
              * <p>The time when the job was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since 1970-01-01T00:00:00Z.</p>
@@ -405,6 +509,14 @@ public class ListJobsRequest extends Request {
              */
             public Builder createTimeStart(String createTimeStart) {
                 this.createTimeStart = createTimeStart;
+                return this;
+            }
+
+            /**
+             * Diagnosis.
+             */
+            public Builder diagnosis(java.util.List<Diagnosis> diagnosis) {
+                this.diagnosis = diagnosis;
                 return this;
             }
 
@@ -439,7 +551,7 @@ public class ListJobsRequest extends Request {
             /**
              * <p>The compute nodes that run the jobs.</p>
              */
-            public Builder nodes(java.util.List < String > nodes) {
+            public Builder nodes(java.util.List<String> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -447,7 +559,7 @@ public class ListJobsRequest extends Request {
             /**
              * <p>The queues to which the jobs belong.</p>
              */
-            public Builder queues(java.util.List < String > queues) {
+            public Builder queues(java.util.List<String> queues) {
                 this.queues = queues;
                 return this;
             }
@@ -463,7 +575,7 @@ public class ListJobsRequest extends Request {
             /**
              * <p>The users that run the jobs.</p>
              */
-            public Builder users(java.util.List < String > users) {
+            public Builder users(java.util.List<String> users) {
                 this.users = users;
                 return this;
             }

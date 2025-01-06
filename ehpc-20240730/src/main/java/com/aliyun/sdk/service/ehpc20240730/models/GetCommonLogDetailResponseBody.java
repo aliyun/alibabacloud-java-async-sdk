@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     private String clusterId;
 
     @com.aliyun.core.annotation.NameInMap("LogDetail")
-    private java.util.List < LogDetail> logDetail;
+    private java.util.List<LogDetail> logDetail;
 
     @com.aliyun.core.annotation.NameInMap("LogType")
     private String logType;
@@ -68,7 +73,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     /**
      * @return logDetail
      */
-    public java.util.List < LogDetail> getLogDetail() {
+    public java.util.List<LogDetail> getLogDetail() {
         return this.logDetail;
     }
 
@@ -103,7 +108,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String action; 
         private String clusterId; 
-        private java.util.List < LogDetail> logDetail; 
+        private java.util.List<LogDetail> logDetail; 
         private String logType; 
         private String operatorUid; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         /**
          * <p>The information about the logs.</p>
          */
-        public Builder logDetail(java.util.List < LogDetail> logDetail) {
+        public Builder logDetail(java.util.List<LogDetail> logDetail) {
             this.logDetail = logDetail;
             return this;
         }
@@ -151,7 +156,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the user who performed the action.</p>
+         * <p>The account ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>239***</p>
@@ -399,7 +404,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         private String stageName;
 
         @com.aliyun.core.annotation.NameInMap("Stages")
-        private java.util.List < Stages> stages;
+        private java.util.List<Stages> stages;
 
         private LogDetail(Builder builder) {
             this.stageName = builder.stageName;
@@ -424,13 +429,13 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
         /**
          * @return stages
          */
-        public java.util.List < Stages> getStages() {
+        public java.util.List<Stages> getStages() {
             return this.stages;
         }
 
         public static final class Builder {
             private String stageName; 
-            private java.util.List < Stages> stages; 
+            private java.util.List<Stages> stages; 
 
             /**
              * <p>The stage name of the log.</p>
@@ -446,7 +451,7 @@ public class GetCommonLogDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the log stages.</p>
              */
-            public Builder stages(java.util.List < Stages> stages) {
+            public Builder stages(java.util.List<Stages> stages) {
                 this.stages = stages;
                 return this;
             }

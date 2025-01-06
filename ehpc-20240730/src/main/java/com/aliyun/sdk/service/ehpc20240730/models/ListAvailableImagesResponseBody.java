@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAvailableImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -50,7 +55,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -90,7 +95,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -100,13 +105,17 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         /**
          * <p>The information about the images.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The page number of the returned page.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +126,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -141,8 +150,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +163,7 @@ public class ListAvailableImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -328,8 +337,8 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             /**
              * <p>The boot mode of the image. Valid values:</p>
              * <ul>
-             * <li>BIOS: Basic Input/Output System (BIOS)</li>
-             * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+             * <li>BIOS: Basic Input/Output System (BIOS).</li>
+             * <li>UEFI: Unified Extensible Firmware Interface (UEFI).</li>
              * </ul>
              * <blockquote>
              * <p> When you change the OS boot mode of an instance, you must make sure that the boot mode matches the boot mode of the associated image. Otherwise, the instance fails to be booted.</p>
@@ -379,9 +388,9 @@ public class ListAvailableImagesResponseBody extends TeaModel {
             /**
              * <p>The image source. Valid values:</p>
              * <ul>
-             * <li>system: system images</li>
-             * <li>self: custom images</li>
-             * <li>others: shared images</li>
+             * <li>system: system image.</li>
+             * <li>self: custom image.</li>
+             * <li>others: shared image.</li>
              * </ul>
              * 
              * <strong>example:</strong>

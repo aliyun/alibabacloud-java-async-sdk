@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DeleteUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("User")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < User> user;
+    private java.util.List<User> user;
 
     private DeleteUsersRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class DeleteUsersRequest extends Request {
     /**
      * @return user
      */
-    public java.util.List < User> getUser() {
+    public java.util.List<User> getUser() {
         return this.user;
     }
 
     public static final class Builder extends Request.Builder<DeleteUsersRequest, Builder> {
         private String clusterId; 
-        private java.util.List < User> user; 
+        private java.util.List<User> user; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class DeleteUsersRequest extends Request {
          * <p>The users that you want to delete.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder user(java.util.List < User> user) {
+        public Builder user(java.util.List<User> user) {
             String userShrink = shrink(user, "User", "json");
             this.putQueryParameter("User", userShrink);
             this.user = user;

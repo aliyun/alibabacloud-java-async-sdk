@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class AttachSharedStoragesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SharedStorages")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SharedStorages> sharedStorages;
+    private java.util.List<SharedStorages> sharedStorages;
 
     private AttachSharedStoragesRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class AttachSharedStoragesRequest extends Request {
     /**
      * @return sharedStorages
      */
-    public java.util.List < SharedStorages> getSharedStorages() {
+    public java.util.List<SharedStorages> getSharedStorages() {
         return this.sharedStorages;
     }
 
     public static final class Builder extends Request.Builder<AttachSharedStoragesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < SharedStorages> sharedStorages; 
+        private java.util.List<SharedStorages> sharedStorages; 
 
         private Builder() {
             super();
@@ -87,7 +92,7 @@ public class AttachSharedStoragesRequest extends Request {
          * <p>The information about the shared storage resources that you want to attach to the cluster.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sharedStorages(java.util.List < SharedStorages> sharedStorages) {
+        public Builder sharedStorages(java.util.List<SharedStorages> sharedStorages) {
             String sharedStoragesShrink = shrink(sharedStorages, "SharedStorages", "json");
             this.putQueryParameter("SharedStorages", sharedStoragesShrink);
             this.sharedStorages = sharedStorages;

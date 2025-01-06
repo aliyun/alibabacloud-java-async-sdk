@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListQueuesResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Queues")
-    private java.util.List < Queues> queues;
+    private java.util.List<Queues> queues;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class ListQueuesResponseBody extends TeaModel {
     /**
      * @return queues
      */
-    public java.util.List < Queues> getQueues() {
+    public java.util.List<Queues> getQueues() {
         return this.queues;
     }
 
@@ -93,7 +98,7 @@ public class ListQueuesResponseBody extends TeaModel {
         private String clusterId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Queues> queues; 
+        private java.util.List<Queues> queues; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -134,7 +139,7 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * <p>The information about the queues.</p>
          */
-        public Builder queues(java.util.List < Queues> queues) {
+        public Builder queues(java.util.List<Queues> queues) {
             this.queues = queues;
             return this;
         }
@@ -271,7 +276,7 @@ public class ListQueuesResponseBody extends TeaModel {
      */
     public static class Queues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeNodes")
-        private java.util.List < NodeTemplate > computeNodes;
+        private java.util.List<NodeTemplate> computeNodes;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -304,7 +309,7 @@ public class ListQueuesResponseBody extends TeaModel {
         private String updateTime;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         private Queues(Builder builder) {
             this.computeNodes = builder.computeNodes;
@@ -332,7 +337,7 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return computeNodes
          */
-        public java.util.List < NodeTemplate > getComputeNodes() {
+        public java.util.List<NodeTemplate> getComputeNodes() {
             return this.computeNodes;
         }
 
@@ -409,12 +414,12 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
         public static final class Builder {
-            private java.util.List < NodeTemplate > computeNodes; 
+            private java.util.List<NodeTemplate> computeNodes; 
             private String createTime; 
             private Boolean enableScaleIn; 
             private Boolean enableScaleOut; 
@@ -425,12 +430,12 @@ public class ListQueuesResponseBody extends TeaModel {
             private String queueName; 
             private Integer totalCores; 
             private String updateTime; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
 
             /**
              * <p>The hardware configurations of the compute nodes that are added in auto scale-outs. Up to five nodes are displayed.</p>
              */
-            public Builder computeNodes(java.util.List < NodeTemplate > computeNodes) {
+            public Builder computeNodes(java.util.List<NodeTemplate> computeNodes) {
                 this.computeNodes = computeNodes;
                 return this;
             }
@@ -553,7 +558,7 @@ public class ListQueuesResponseBody extends TeaModel {
             /**
              * <p>The vSwitches that can be used for added nodes during auto scale-outs. Up to three vSwitches are displayed.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

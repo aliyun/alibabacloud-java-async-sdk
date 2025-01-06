@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ListSoftwaresRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OsInfos")
-    private java.util.List < OsInfos> osInfos;
+    private java.util.List<OsInfos> osInfos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -83,7 +88,7 @@ public class ListSoftwaresRequest extends Request {
     /**
      * @return osInfos
      */
-    public java.util.List < OsInfos> getOsInfos() {
+    public java.util.List<OsInfos> getOsInfos() {
         return this.osInfos;
     }
 
@@ -105,7 +110,7 @@ public class ListSoftwaresRequest extends Request {
         private String category; 
         private String clusterId; 
         private String name; 
-        private java.util.List < OsInfos> osInfos; 
+        private java.util.List<OsInfos> osInfos; 
         private String pageNumber; 
         private String pageSize; 
 
@@ -162,14 +167,14 @@ public class ListSoftwaresRequest extends Request {
         /**
          * <p>The operating system (OS) information.</p>
          */
-        public Builder osInfos(java.util.List < OsInfos> osInfos) {
+        public Builder osInfos(java.util.List<OsInfos> osInfos) {
             this.putQueryParameter("OsInfos", osInfos);
             this.osInfos = osInfos;
             return this;
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the page to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

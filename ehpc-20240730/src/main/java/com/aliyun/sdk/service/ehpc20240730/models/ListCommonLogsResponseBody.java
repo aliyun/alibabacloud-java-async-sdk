@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCommonLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Logs")
-    private java.util.List < Logs> logs;
+    private java.util.List<Logs> logs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class ListCommonLogsResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < Logs> getLogs() {
+    public java.util.List<Logs> getLogs() {
         return this.logs;
     }
 
@@ -90,7 +95,7 @@ public class ListCommonLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Logs> logs; 
+        private java.util.List<Logs> logs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,9 +103,9 @@ public class ListCommonLogsResponseBody extends TeaModel {
         private String uid; 
 
         /**
-         * <p>The information about the returned logs.</p>
+         * <p>The brief information of operation logs.</p>
          */
-        public Builder logs(java.util.List < Logs> logs) {
+        public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
             return this;
         }
@@ -339,7 +344,7 @@ public class ListCommonLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who performed the action.</p>
+             * <p>The account ID of the operator.</p>
              * 
              * <strong>example:</strong>
              * <p>137***</p>

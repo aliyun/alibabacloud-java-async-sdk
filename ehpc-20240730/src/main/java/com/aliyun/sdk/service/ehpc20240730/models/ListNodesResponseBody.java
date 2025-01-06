@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    private java.util.List<Nodes> nodes;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -79,7 +84,7 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The information about the nodes.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
@@ -249,6 +254,9 @@ public class ListNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
+        private String deploymentSetId;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -302,6 +310,7 @@ public class ListNodesResponseBody extends TeaModel {
 
         private Nodes(Builder builder) {
             this.addTime = builder.addTime;
+            this.deploymentSetId = builder.deploymentSetId;
             this.expiredTime = builder.expiredTime;
             this.hostname = builder.hostname;
             this.htEnabled = builder.htEnabled;
@@ -334,6 +343,13 @@ public class ListNodesResponseBody extends TeaModel {
          */
         public String getAddTime() {
             return this.addTime;
+        }
+
+        /**
+         * @return deploymentSetId
+         */
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
         }
 
         /**
@@ -457,6 +473,7 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addTime; 
+            private String deploymentSetId; 
             private String expiredTime; 
             private String hostname; 
             private Boolean htEnabled; 
@@ -483,6 +500,14 @@ public class ListNodesResponseBody extends TeaModel {
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
+                return this;
+            }
+
+            /**
+             * DeploymentSetId.
+             */
+            public Builder deploymentSetId(String deploymentSetId) {
+                this.deploymentSetId = deploymentSetId;
                 return this;
             }
 

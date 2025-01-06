@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListQueuesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueNames")
-    private java.util.List < String > queueNames;
+    private java.util.List<String> queueNames;
 
     private ListQueuesRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class ListQueuesRequest extends Request {
     /**
      * @return queueNames
      */
-    public java.util.List < String > getQueueNames() {
+    public java.util.List<String> getQueueNames() {
         return this.queueNames;
     }
 
     public static final class Builder extends Request.Builder<ListQueuesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > queueNames; 
+        private java.util.List<String> queueNames; 
 
         private Builder() {
             super();
@@ -82,7 +87,7 @@ public class ListQueuesRequest extends Request {
         /**
          * <p>The names of the queues that you want to query. You can specify up to eight names.</p>
          */
-        public Builder queueNames(java.util.List < String > queueNames) {
+        public Builder queueNames(java.util.List<String> queueNames) {
             String queueNamesShrink = shrink(queueNames, "QueueNames", "json");
             this.putQueryParameter("QueueNames", queueNamesShrink);
             this.queueNames = queueNames;

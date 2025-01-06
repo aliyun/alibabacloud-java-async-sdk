@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAddonsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddonIds")
-    private java.util.List < String > addonIds;
+    private java.util.List<String> addonIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -53,7 +58,7 @@ public class ListAddonsRequest extends Request {
     /**
      * @return addonIds
      */
-    public java.util.List < String > getAddonIds() {
+    public java.util.List<String> getAddonIds() {
         return this.addonIds;
     }
 
@@ -79,7 +84,7 @@ public class ListAddonsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAddonsRequest, Builder> {
-        private java.util.List < String > addonIds; 
+        private java.util.List<String> addonIds; 
         private String clusterId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -99,7 +104,7 @@ public class ListAddonsRequest extends Request {
         /**
          * <p>The addon IDs.</p>
          */
-        public Builder addonIds(java.util.List < String > addonIds) {
+        public Builder addonIds(java.util.List<String> addonIds) {
             String addonIdsShrink = shrink(addonIds, "AddonIds", "json");
             this.putQueryParameter("AddonIds", addonIdsShrink);
             this.addonIds = addonIds;

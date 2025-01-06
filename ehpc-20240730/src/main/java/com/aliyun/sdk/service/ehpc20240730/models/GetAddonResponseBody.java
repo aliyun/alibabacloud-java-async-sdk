@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -257,7 +262,7 @@ public class GetAddonResponseBody extends TeaModel {
      */
     public static class ResourcesSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsResources")
-        private java.util.List < AddonNodeTemplate > ecsResources;
+        private java.util.List<AddonNodeTemplate> ecsResources;
 
         @com.aliyun.core.annotation.NameInMap("EipResource")
         private EipResource eipResource;
@@ -278,7 +283,7 @@ public class GetAddonResponseBody extends TeaModel {
         /**
          * @return ecsResources
          */
-        public java.util.List < AddonNodeTemplate > getEcsResources() {
+        public java.util.List<AddonNodeTemplate> getEcsResources() {
             return this.ecsResources;
         }
 
@@ -290,13 +295,13 @@ public class GetAddonResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AddonNodeTemplate > ecsResources; 
+            private java.util.List<AddonNodeTemplate> ecsResources; 
             private EipResource eipResource; 
 
             /**
              * <p>The Elastic Compute Service (ECS) resource configurations of the addon.</p>
              */
-            public Builder ecsResources(java.util.List < AddonNodeTemplate > ecsResources) {
+            public Builder ecsResources(java.util.List<AddonNodeTemplate> ecsResources) {
                 this.ecsResources = ecsResources;
                 return this;
             }
@@ -571,10 +576,10 @@ public class GetAddonResponseBody extends TeaModel {
      */
     public static class ServicesSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputParams")
-        private java.util.List < InputParams> inputParams;
+        private java.util.List<InputParams> inputParams;
 
         @com.aliyun.core.annotation.NameInMap("NetworkACL")
-        private java.util.List < NetworkACL> networkACL;
+        private java.util.List<NetworkACL> networkACL;
 
         @com.aliyun.core.annotation.NameInMap("ServiceAccessType")
         private String serviceAccessType;
@@ -605,14 +610,14 @@ public class GetAddonResponseBody extends TeaModel {
         /**
          * @return inputParams
          */
-        public java.util.List < InputParams> getInputParams() {
+        public java.util.List<InputParams> getInputParams() {
             return this.inputParams;
         }
 
         /**
          * @return networkACL
          */
-        public java.util.List < NetworkACL> getNetworkACL() {
+        public java.util.List<NetworkACL> getNetworkACL() {
             return this.networkACL;
         }
 
@@ -638,8 +643,8 @@ public class GetAddonResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < InputParams> inputParams; 
-            private java.util.List < NetworkACL> networkACL; 
+            private java.util.List<InputParams> inputParams; 
+            private java.util.List<NetworkACL> networkACL; 
             private String serviceAccessType; 
             private String serviceAccessUrl; 
             private String serviceName; 
@@ -647,7 +652,7 @@ public class GetAddonResponseBody extends TeaModel {
             /**
              * <p>The parameter configurations of the service.</p>
              */
-            public Builder inputParams(java.util.List < InputParams> inputParams) {
+            public Builder inputParams(java.util.List<InputParams> inputParams) {
                 this.inputParams = inputParams;
                 return this;
             }
@@ -655,7 +660,7 @@ public class GetAddonResponseBody extends TeaModel {
             /**
              * <p>The security group configurations of the service.</p>
              */
-            public Builder networkACL(java.util.List < NetworkACL> networkACL) {
+            public Builder networkACL(java.util.List<NetworkACL> networkACL) {
                 this.networkACL = networkACL;
                 return this;
             }
@@ -732,7 +737,7 @@ public class GetAddonResponseBody extends TeaModel {
         private ResourcesSpec resourcesSpec;
 
         @com.aliyun.core.annotation.NameInMap("ServicesSpec")
-        private java.util.List < ServicesSpec> servicesSpec;
+        private java.util.List<ServicesSpec> servicesSpec;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -814,7 +819,7 @@ public class GetAddonResponseBody extends TeaModel {
         /**
          * @return servicesSpec
          */
-        public java.util.List < ServicesSpec> getServicesSpec() {
+        public java.util.List<ServicesSpec> getServicesSpec() {
             return this.servicesSpec;
         }
 
@@ -840,7 +845,7 @@ public class GetAddonResponseBody extends TeaModel {
             private String label; 
             private String name; 
             private ResourcesSpec resourcesSpec; 
-            private java.util.List < ServicesSpec> servicesSpec; 
+            private java.util.List<ServicesSpec> servicesSpec; 
             private String status; 
             private String version; 
 
@@ -917,7 +922,7 @@ public class GetAddonResponseBody extends TeaModel {
             /**
              * <p>The service configurations of the addon.</p>
              */
-            public Builder servicesSpec(java.util.List < ServicesSpec> servicesSpec) {
+            public Builder servicesSpec(java.util.List<ServicesSpec> servicesSpec) {
                 this.servicesSpec = servicesSpec;
                 return this;
             }

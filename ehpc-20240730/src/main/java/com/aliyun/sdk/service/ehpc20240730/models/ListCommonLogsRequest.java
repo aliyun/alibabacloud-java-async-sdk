@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListCommonLogsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ActionName")
-    private java.util.List < String > actionName;
+    private java.util.List<String> actionName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ActionStatus")
@@ -94,7 +99,7 @@ public class ListCommonLogsRequest extends Request {
     /**
      * @return actionName
      */
-    public java.util.List < String > getActionName() {
+    public java.util.List<String> getActionName() {
         return this.actionName;
     }
 
@@ -176,7 +181,7 @@ public class ListCommonLogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCommonLogsRequest, Builder> {
-        private java.util.List < String > actionName; 
+        private java.util.List<String> actionName; 
         private String actionStatus; 
         private String clusterId; 
         private Long from; 
@@ -212,7 +217,7 @@ public class ListCommonLogsRequest extends Request {
         /**
          * <p>The action types.</p>
          */
-        public Builder actionName(java.util.List < String > actionName) {
+        public Builder actionName(java.util.List<String> actionName) {
             String actionNameShrink = shrink(actionName, "ActionName", "json");
             this.putQueryParameter("ActionName", actionNameShrink);
             this.actionName = actionName;
@@ -300,7 +305,7 @@ public class ListCommonLogsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user who performed the action.</p>
+         * <p>The account ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>137***</p>

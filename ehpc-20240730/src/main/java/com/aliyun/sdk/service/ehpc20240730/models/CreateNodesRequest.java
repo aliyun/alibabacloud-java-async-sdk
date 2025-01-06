@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,6 +28,10 @@ public class CreateNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
+    private String deploymentSetId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HPCInterConnect")
@@ -57,6 +66,7 @@ public class CreateNodesRequest extends Request {
         this.clusterId = builder.clusterId;
         this.computeNode = builder.computeNode;
         this.count = builder.count;
+        this.deploymentSetId = builder.deploymentSetId;
         this.HPCInterConnect = builder.HPCInterConnect;
         this.hostnamePrefix = builder.hostnamePrefix;
         this.hostnameSuffix = builder.hostnameSuffix;
@@ -98,6 +108,13 @@ public class CreateNodesRequest extends Request {
      */
     public Integer getCount() {
         return this.count;
+    }
+
+    /**
+     * @return deploymentSetId
+     */
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
     /**
@@ -153,6 +170,7 @@ public class CreateNodesRequest extends Request {
         private String clusterId; 
         private NodeTemplate computeNode; 
         private Integer count; 
+        private String deploymentSetId; 
         private String HPCInterConnect; 
         private String hostnamePrefix; 
         private String hostnameSuffix; 
@@ -170,6 +188,7 @@ public class CreateNodesRequest extends Request {
             this.clusterId = request.clusterId;
             this.computeNode = request.computeNode;
             this.count = request.count;
+            this.deploymentSetId = request.deploymentSetId;
             this.HPCInterConnect = request.HPCInterConnect;
             this.hostnamePrefix = request.hostnamePrefix;
             this.hostnameSuffix = request.hostnameSuffix;
@@ -216,6 +235,15 @@ public class CreateNodesRequest extends Request {
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
             this.count = count;
+            return this;
+        }
+
+        /**
+         * DeploymentSetId.
+         */
+        public Builder deploymentSetId(String deploymentSetId) {
+            this.putQueryParameter("DeploymentSetId", deploymentSetId);
+            this.deploymentSetId = deploymentSetId;
             return this;
         }
 

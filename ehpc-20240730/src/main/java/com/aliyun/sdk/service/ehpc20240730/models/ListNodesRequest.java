@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Hostnames")
-    private java.util.List < String > hostnames;
+    private java.util.List<String> hostnames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -30,11 +35,11 @@ public class ListNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
-    private java.util.List < String > privateIpAddress;
+    private java.util.List<String> privateIpAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueNames")
-    private java.util.List < String > queueNames;
+    private java.util.List<String> queueNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sequence")
@@ -46,7 +51,7 @@ public class ListNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     private ListNodesRequest(Builder builder) {
         super(builder);
@@ -84,7 +89,7 @@ public class ListNodesRequest extends Request {
     /**
      * @return hostnames
      */
-    public java.util.List < String > getHostnames() {
+    public java.util.List<String> getHostnames() {
         return this.hostnames;
     }
 
@@ -105,14 +110,14 @@ public class ListNodesRequest extends Request {
     /**
      * @return privateIpAddress
      */
-    public java.util.List < String > getPrivateIpAddress() {
+    public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
     /**
      * @return queueNames
      */
-    public java.util.List < String > getQueueNames() {
+    public java.util.List<String> getQueueNames() {
         return this.queueNames;
     }
 
@@ -133,20 +138,20 @@ public class ListNodesRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > hostnames; 
+        private java.util.List<String> hostnames; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > privateIpAddress; 
-        private java.util.List < String > queueNames; 
+        private java.util.List<String> privateIpAddress; 
+        private java.util.List<String> queueNames; 
         private String sequence; 
         private String sortBy; 
-        private java.util.List < String > status; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -180,7 +185,7 @@ public class ListNodesRequest extends Request {
         /**
          * <p>The hostnames of the compute nodes that you want to query.</p>
          */
-        public Builder hostnames(java.util.List < String > hostnames) {
+        public Builder hostnames(java.util.List<String> hostnames) {
             String hostnamesShrink = shrink(hostnames, "Hostnames", "json");
             this.putQueryParameter("Hostnames", hostnamesShrink);
             this.hostnames = hostnames;
@@ -214,7 +219,7 @@ public class ListNodesRequest extends Request {
         /**
          * <p>The IP addresses of the compute nodes that you want to query.</p>
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+        public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             String privateIpAddressShrink = shrink(privateIpAddress, "PrivateIpAddress", "json");
             this.putQueryParameter("PrivateIpAddress", privateIpAddressShrink);
             this.privateIpAddress = privateIpAddress;
@@ -224,7 +229,7 @@ public class ListNodesRequest extends Request {
         /**
          * <p>The queues to which the nodes belong.</p>
          */
-        public Builder queueNames(java.util.List < String > queueNames) {
+        public Builder queueNames(java.util.List<String> queueNames) {
             String queueNamesShrink = shrink(queueNames, "QueueNames", "json");
             this.putQueryParameter("QueueNames", queueNamesShrink);
             this.queueNames = queueNames;
@@ -232,7 +237,12 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the results are sorted in ascending or descending order. Valid values: forward (ascending) and backward (descending).</p>
+         * <p>Specifies whether the results are sorted in ascending or descending order. Valid values:</p>
+         * <ul>
+         * <li>Forward: ascending</li>
+         * <li>Backward: descending</li>
+         * </ul>
+         * <p>Default value: Forward.</p>
          * 
          * <strong>example:</strong>
          * <p>Forward</p>
@@ -244,7 +254,12 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The sorting method of the node list. Valid values: addedtime: sorted by the time when the node was added. hostname: sorted by hostname. Default value: addedtime.</p>
+         * <p>The sorting method of the node list. Valid values:</p>
+         * <ul>
+         * <li>AddedTime: sorts the nodes by the time that they were added.</li>
+         * <li>HostName: sorts the nodes by their hostnames.</li>
+         * </ul>
+         * <p>Default value: addedtime.</p>
          * 
          * <strong>example:</strong>
          * <p>AddedTime</p>
@@ -258,7 +273,7 @@ public class ListNodesRequest extends Request {
         /**
          * <p>The states of the compute nodes to be queried.</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             String statusShrink = shrink(status, "Status", "json");
             this.putQueryParameter("Status", statusShrink);
             this.status = status;

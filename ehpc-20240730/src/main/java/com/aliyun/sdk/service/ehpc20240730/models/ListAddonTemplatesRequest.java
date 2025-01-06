@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAddonTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddonNames")
-    private java.util.List < String > addonNames;
+    private java.util.List<String> addonNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterCategory")
@@ -57,7 +62,7 @@ public class ListAddonTemplatesRequest extends Request {
     /**
      * @return addonNames
      */
-    public java.util.List < String > getAddonNames() {
+    public java.util.List<String> getAddonNames() {
         return this.addonNames;
     }
 
@@ -90,7 +95,7 @@ public class ListAddonTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAddonTemplatesRequest, Builder> {
-        private java.util.List < String > addonNames; 
+        private java.util.List<String> addonNames; 
         private String clusterCategory; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -112,7 +117,7 @@ public class ListAddonTemplatesRequest extends Request {
         /**
          * <p>The addon names.</p>
          */
-        public Builder addonNames(java.util.List < String > addonNames) {
+        public Builder addonNames(java.util.List<String> addonNames) {
             this.putQueryParameter("AddonNames", addonNames);
             this.addonNames = addonNames;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    private java.util.List<Jobs> jobs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class ListJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -90,7 +95,7 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,9 +103,9 @@ public class ListJobsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The returned jobs.</p>
+         * <p>The jobs.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }
@@ -295,6 +300,125 @@ public class ListJobsResponseBody extends TeaModel {
      *
      * <p>ListJobsResponseBody</p>
      */
+    public static class ResourcesActualOccupied extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cores")
+        private String cores;
+
+        @com.aliyun.core.annotation.NameInMap("Gpus")
+        private String gpus;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private String memory;
+
+        @com.aliyun.core.annotation.NameInMap("Nodes")
+        private String nodes;
+
+        private ResourcesActualOccupied(Builder builder) {
+            this.cores = builder.cores;
+            this.gpus = builder.gpus;
+            this.memory = builder.memory;
+            this.nodes = builder.nodes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourcesActualOccupied create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cores
+         */
+        public String getCores() {
+            return this.cores;
+        }
+
+        /**
+         * @return gpus
+         */
+        public String getGpus() {
+            return this.gpus;
+        }
+
+        /**
+         * @return memory
+         */
+        public String getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return nodes
+         */
+        public String getNodes() {
+            return this.nodes;
+        }
+
+        public static final class Builder {
+            private String cores; 
+            private String gpus; 
+            private String memory; 
+            private String nodes; 
+
+            /**
+             * <p>The number of vCPUs that were used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
+             */
+            public Builder cores(String cores) {
+                this.cores = cores;
+                return this;
+            }
+
+            /**
+             * <p>The number of GPUs that were used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder gpus(String gpus) {
+                this.gpus = gpus;
+                return this;
+            }
+
+            /**
+             * <p>The size of memory that was used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536MB</p>
+             */
+            public Builder memory(String memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * <p>The number of compute nodes that were used to run the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder nodes(String nodes) {
+                this.nodes = nodes;
+                return this;
+            }
+
+            public ResourcesActualOccupied build() {
+                return new ResourcesActualOccupied(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJobsResponseBody</p>
+     */
     public static class JobSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayJobId")
         private String arrayJobId;
@@ -326,8 +450,14 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resources")
         private Resources resources;
 
+        @com.aliyun.core.annotation.NameInMap("ResourcesActualOccupied")
+        private ResourcesActualOccupied resourcesActualOccupied;
+
         @com.aliyun.core.annotation.NameInMap("RunasUser")
         private String runasUser;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
@@ -355,7 +485,9 @@ public class ListJobsResponseBody extends TeaModel {
             this.nodeList = builder.nodeList;
             this.priority = builder.priority;
             this.resources = builder.resources;
+            this.resourcesActualOccupied = builder.resourcesActualOccupied;
             this.runasUser = builder.runasUser;
+            this.startTime = builder.startTime;
             this.state = builder.state;
             this.stderrPath = builder.stderrPath;
             this.stdoutPath = builder.stdoutPath;
@@ -442,10 +574,24 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourcesActualOccupied
+         */
+        public ResourcesActualOccupied getResourcesActualOccupied() {
+            return this.resourcesActualOccupied;
+        }
+
+        /**
          * @return runasUser
          */
         public String getRunasUser() {
             return this.runasUser;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
         }
 
         /**
@@ -494,7 +640,9 @@ public class ListJobsResponseBody extends TeaModel {
             private String nodeList; 
             private String priority; 
             private Resources resources; 
+            private ResourcesActualOccupied resourcesActualOccupied; 
             private String runasUser; 
+            private String startTime; 
             private String state; 
             private String stderrPath; 
             private String stdoutPath; 
@@ -502,7 +650,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String variables; 
 
             /**
-             * <p>数组作业ID。</p>
+             * <p>The array job ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -513,7 +661,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数组子作业ID。</p>
+             * <p>The ID of the job in the array.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -613,6 +761,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourcesActualOccupied.
+             */
+            public Builder resourcesActualOccupied(ResourcesActualOccupied resourcesActualOccupied) {
+                this.resourcesActualOccupied = resourcesActualOccupied;
+                return this;
+            }
+
+            /**
              * <p>The user that ran the job.</p>
              * 
              * <strong>example:</strong>
@@ -620,6 +776,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder runasUser(String runasUser) {
                 this.runasUser = runasUser;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 

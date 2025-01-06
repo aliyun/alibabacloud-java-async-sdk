@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetQueueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The information about the queue.</p>
+         * <p>The queue configurations.</p>
          */
         public Builder queue(Queue queue) {
             this.queue = queue;
@@ -85,7 +90,7 @@ public class GetQueueResponseBody extends TeaModel {
         private String allocationStrategy;
 
         @com.aliyun.core.annotation.NameInMap("ComputeNodes")
-        private java.util.List < NodeTemplate > computeNodes;
+        private java.util.List<NodeTemplate> computeNodes;
 
         @com.aliyun.core.annotation.NameInMap("EnableScaleIn")
         private Boolean enableScaleIn;
@@ -106,7 +111,7 @@ public class GetQueueResponseBody extends TeaModel {
         private String interConnect;
 
         @com.aliyun.core.annotation.NameInMap("KeepAliveNodes")
-        private java.util.List < String > keepAliveNodes;
+        private java.util.List<String> keepAliveNodes;
 
         @com.aliyun.core.annotation.NameInMap("MaxCount")
         private Integer maxCount;
@@ -125,7 +130,7 @@ public class GetQueueResponseBody extends TeaModel {
         private String ramRole;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         private Queue(Builder builder) {
             this.allocationStrategy = builder.allocationStrategy;
@@ -163,7 +168,7 @@ public class GetQueueResponseBody extends TeaModel {
         /**
          * @return computeNodes
          */
-        public java.util.List < NodeTemplate > getComputeNodes() {
+        public java.util.List<NodeTemplate> getComputeNodes() {
             return this.computeNodes;
         }
 
@@ -212,7 +217,7 @@ public class GetQueueResponseBody extends TeaModel {
         /**
          * @return keepAliveNodes
          */
-        public java.util.List < String > getKeepAliveNodes() {
+        public java.util.List<String> getKeepAliveNodes() {
             return this.keepAliveNodes;
         }
 
@@ -254,26 +259,26 @@ public class GetQueueResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
         public static final class Builder {
             private String allocationStrategy; 
-            private java.util.List < NodeTemplate > computeNodes; 
+            private java.util.List<NodeTemplate> computeNodes; 
             private Boolean enableScaleIn; 
             private Boolean enableScaleOut; 
             private String hostnamePrefix; 
             private String hostnameSuffix; 
             private Integer initialCount; 
             private String interConnect; 
-            private java.util.List < String > keepAliveNodes; 
+            private java.util.List<String> keepAliveNodes; 
             private Integer maxCount; 
             private Long maxCountPerCycle; 
             private Integer minCount; 
             private String queueName; 
             private String ramRole; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
 
             /**
              * <p>The auto scale-out policy of the queue.</p>
@@ -289,7 +294,7 @@ public class GetQueueResponseBody extends TeaModel {
             /**
              * <p>The hardware configurations of the compute nodes in the queue.</p>
              */
-            public Builder computeNodes(java.util.List < NodeTemplate > computeNodes) {
+            public Builder computeNodes(java.util.List<NodeTemplate> computeNodes) {
                 this.computeNodes = computeNodes;
                 return this;
             }
@@ -375,7 +380,7 @@ public class GetQueueResponseBody extends TeaModel {
             /**
              * <p>The nodes for which deletion protection is enabled in the queue.</p>
              */
-            public Builder keepAliveNodes(java.util.List < String > keepAliveNodes) {
+            public Builder keepAliveNodes(java.util.List<String> keepAliveNodes) {
                 this.keepAliveNodes = keepAliveNodes;
                 return this;
             }
@@ -439,7 +444,7 @@ public class GetQueueResponseBody extends TeaModel {
             /**
              * <p>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

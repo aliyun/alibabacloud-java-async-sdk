@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DeleteNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     private DeleteNodesRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class DeleteNodesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteNodesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
 
         private Builder() {
             super();
@@ -82,7 +87,7 @@ public class DeleteNodesRequest extends Request {
         /**
          * <p>The instance IDs of the compute nodes that you want to delete.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;

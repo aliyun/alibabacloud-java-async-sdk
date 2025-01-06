@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,6 +65,14 @@ public class UpdateClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MaxCount")
     private Integer maxCount;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorSpec")
+    private MonitorSpec monitorSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulerSpec")
+    private SchedulerSpec schedulerSpec;
+
     private UpdateClusterRequest(Builder builder) {
         super(builder);
         this.clientVersion = builder.clientVersion;
@@ -74,6 +87,8 @@ public class UpdateClusterRequest extends Request {
         this.idleInterval = builder.idleInterval;
         this.maxCoreCount = builder.maxCoreCount;
         this.maxCount = builder.maxCount;
+        this.monitorSpec = builder.monitorSpec;
+        this.schedulerSpec = builder.schedulerSpec;
     }
 
     public static Builder builder() {
@@ -173,6 +188,20 @@ public class UpdateClusterRequest extends Request {
         return this.maxCount;
     }
 
+    /**
+     * @return monitorSpec
+     */
+    public MonitorSpec getMonitorSpec() {
+        return this.monitorSpec;
+    }
+
+    /**
+     * @return schedulerSpec
+     */
+    public SchedulerSpec getSchedulerSpec() {
+        return this.schedulerSpec;
+    }
+
     public static final class Builder extends Request.Builder<UpdateClusterRequest, Builder> {
         private String clientVersion; 
         private ClusterCustomConfiguration clusterCustomConfiguration; 
@@ -186,6 +215,8 @@ public class UpdateClusterRequest extends Request {
         private Integer idleInterval; 
         private Integer maxCoreCount; 
         private Integer maxCount; 
+        private MonitorSpec monitorSpec; 
+        private SchedulerSpec schedulerSpec; 
 
         private Builder() {
             super();
@@ -205,6 +236,8 @@ public class UpdateClusterRequest extends Request {
             this.idleInterval = request.idleInterval;
             this.maxCoreCount = request.maxCoreCount;
             this.maxCount = request.maxCount;
+            this.monitorSpec = request.monitorSpec;
+            this.schedulerSpec = request.schedulerSpec;
         } 
 
         /**
@@ -363,6 +396,26 @@ public class UpdateClusterRequest extends Request {
             return this;
         }
 
+        /**
+         * MonitorSpec.
+         */
+        public Builder monitorSpec(MonitorSpec monitorSpec) {
+            String monitorSpecShrink = shrink(monitorSpec, "MonitorSpec", "json");
+            this.putQueryParameter("MonitorSpec", monitorSpecShrink);
+            this.monitorSpec = monitorSpec;
+            return this;
+        }
+
+        /**
+         * SchedulerSpec.
+         */
+        public Builder schedulerSpec(SchedulerSpec schedulerSpec) {
+            String schedulerSpecShrink = shrink(schedulerSpec, "SchedulerSpec", "json");
+            this.putQueryParameter("SchedulerSpec", schedulerSpecShrink);
+            this.schedulerSpec = schedulerSpec;
+            return this;
+        }
+
         @Override
         public UpdateClusterRequest build() {
             return new UpdateClusterRequest(this);
@@ -438,6 +491,100 @@ public class UpdateClusterRequest extends Request {
 
             public ClusterCustomConfiguration build() {
                 return new ClusterCustomConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateClusterRequest</p>
+     */
+    public static class MonitorSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableComputeLoadMonitor")
+        private Boolean enableComputeLoadMonitor;
+
+        private MonitorSpec(Builder builder) {
+            this.enableComputeLoadMonitor = builder.enableComputeLoadMonitor;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MonitorSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableComputeLoadMonitor
+         */
+        public Boolean getEnableComputeLoadMonitor() {
+            return this.enableComputeLoadMonitor;
+        }
+
+        public static final class Builder {
+            private Boolean enableComputeLoadMonitor; 
+
+            /**
+             * EnableComputeLoadMonitor.
+             */
+            public Builder enableComputeLoadMonitor(Boolean enableComputeLoadMonitor) {
+                this.enableComputeLoadMonitor = enableComputeLoadMonitor;
+                return this;
+            }
+
+            public MonitorSpec build() {
+                return new MonitorSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateClusterRequest</p>
+     */
+    public static class SchedulerSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableTopologyAwareness")
+        private Boolean enableTopologyAwareness;
+
+        private SchedulerSpec(Builder builder) {
+            this.enableTopologyAwareness = builder.enableTopologyAwareness;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableTopologyAwareness
+         */
+        public Boolean getEnableTopologyAwareness() {
+            return this.enableTopologyAwareness;
+        }
+
+        public static final class Builder {
+            private Boolean enableTopologyAwareness; 
+
+            /**
+             * EnableTopologyAwareness.
+             */
+            public Builder enableTopologyAwareness(Boolean enableTopologyAwareness) {
+                this.enableTopologyAwareness = enableTopologyAwareness;
+                return this;
+            }
+
+            public SchedulerSpec build() {
+                return new SchedulerSpec(this);
             } 
 
         } 

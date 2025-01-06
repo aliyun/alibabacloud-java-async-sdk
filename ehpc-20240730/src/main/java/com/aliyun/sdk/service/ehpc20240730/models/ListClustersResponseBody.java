@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Clusters")
-    private java.util.List < Clusters> clusters;
+    private java.util.List<Clusters> clusters;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -46,7 +51,7 @@ public class ListClustersResponseBody extends TeaModel {
     /**
      * @return clusters
      */
-    public java.util.List < Clusters> getClusters() {
+    public java.util.List<Clusters> getClusters() {
         return this.clusters;
     }
 
@@ -79,7 +84,7 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Clusters> clusters; 
+        private java.util.List<Clusters> clusters; 
         private String pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * <p>The list of clusters.</p>
          */
-        public Builder clusters(java.util.List < Clusters> clusters) {
+        public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
             return this;
         }
@@ -411,7 +416,7 @@ public class ListClustersResponseBody extends TeaModel {
         private ResourcesSpec resourcesSpec;
 
         @com.aliyun.core.annotation.NameInMap("ServicesSpec")
-        private java.util.List < ServicesSpec> servicesSpec;
+        private java.util.List<ServicesSpec> servicesSpec;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -477,7 +482,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return servicesSpec
          */
-        public java.util.List < ServicesSpec> getServicesSpec() {
+        public java.util.List<ServicesSpec> getServicesSpec() {
             return this.servicesSpec;
         }
 
@@ -501,7 +506,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String label; 
             private String name; 
             private ResourcesSpec resourcesSpec; 
-            private java.util.List < ServicesSpec> servicesSpec; 
+            private java.util.List<ServicesSpec> servicesSpec; 
             private String status; 
             private String version; 
 
@@ -555,7 +560,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * <p>The information about the addon services.</p>
              */
-            public Builder servicesSpec(java.util.List < ServicesSpec> servicesSpec) {
+            public Builder servicesSpec(java.util.List<ServicesSpec> servicesSpec) {
                 this.servicesSpec = servicesSpec;
                 return this;
             }
@@ -1146,10 +1151,10 @@ public class ListClustersResponseBody extends TeaModel {
      */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdditionalPackages")
-        private java.util.List < AdditionalPackages> additionalPackages;
+        private java.util.List<AdditionalPackages> additionalPackages;
 
         @com.aliyun.core.annotation.NameInMap("Addons")
-        private java.util.List < Addons> addons;
+        private java.util.List<Addons> addons;
 
         @com.aliyun.core.annotation.NameInMap("ClusterCategory")
         private String clusterCategory;
@@ -1158,7 +1163,7 @@ public class ListClustersResponseBody extends TeaModel {
         private String clusterCreateTime;
 
         @com.aliyun.core.annotation.NameInMap("ClusterCredentials")
-        private java.util.List < String > clusterCredentials;
+        private java.util.List<String> clusterCredentials;
 
         @com.aliyun.core.annotation.NameInMap("ClusterCustomConfiguration")
         private ClusterCustomConfiguration clusterCustomConfiguration;
@@ -1255,14 +1260,14 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return additionalPackages
          */
-        public java.util.List < AdditionalPackages> getAdditionalPackages() {
+        public java.util.List<AdditionalPackages> getAdditionalPackages() {
             return this.additionalPackages;
         }
 
         /**
          * @return addons
          */
-        public java.util.List < Addons> getAddons() {
+        public java.util.List<Addons> getAddons() {
             return this.addons;
         }
 
@@ -1283,7 +1288,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return clusterCredentials
          */
-        public java.util.List < String > getClusterCredentials() {
+        public java.util.List<String> getClusterCredentials() {
             return this.clusterCredentials;
         }
 
@@ -1421,11 +1426,11 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AdditionalPackages> additionalPackages; 
-            private java.util.List < Addons> addons; 
+            private java.util.List<AdditionalPackages> additionalPackages; 
+            private java.util.List<Addons> addons; 
             private String clusterCategory; 
             private String clusterCreateTime; 
-            private java.util.List < String > clusterCredentials; 
+            private java.util.List<String> clusterCredentials; 
             private ClusterCustomConfiguration clusterCustomConfiguration; 
             private String clusterDescription; 
             private String clusterId; 
@@ -1449,7 +1454,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * <p>The information about installed software in the cluster.</p>
              */
-            public Builder additionalPackages(java.util.List < AdditionalPackages> additionalPackages) {
+            public Builder additionalPackages(java.util.List<AdditionalPackages> additionalPackages) {
                 this.additionalPackages = additionalPackages;
                 return this;
             }
@@ -1457,7 +1462,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * <p>The information about the addons in the cluster.</p>
              */
-            public Builder addons(java.util.List < Addons> addons) {
+            public Builder addons(java.util.List<Addons> addons) {
                 this.addons = addons;
                 return this;
             }
@@ -1495,7 +1500,7 @@ public class ListClustersResponseBody extends TeaModel {
              * <li>keypair: requires key pairs for logons.</li>
              * </ul>
              */
-            public Builder clusterCredentials(java.util.List < String > clusterCredentials) {
+            public Builder clusterCredentials(java.util.List<String> clusterCredentials) {
                 this.clusterCredentials = clusterCredentials;
                 return this;
             }

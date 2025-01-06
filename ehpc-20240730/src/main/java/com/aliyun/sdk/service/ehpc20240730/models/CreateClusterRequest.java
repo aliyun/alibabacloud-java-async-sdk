@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdditionalPackages")
-    private java.util.List < AdditionalPackages> additionalPackages;
+    private java.util.List<AdditionalPackages> additionalPackages;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Addons")
-    private java.util.List < Addons> addons;
+    private java.util.List<Addons> addons;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientVersion")
@@ -78,7 +83,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Queues")
-    private java.util.List < QueueTemplate > queues;
+    private java.util.List<QueueTemplate> queues;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -90,11 +95,11 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SharedStorages")
-    private java.util.List < SharedStorageTemplate > sharedStorages;
+    private java.util.List<SharedStorageTemplate> sharedStorages;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private CreateClusterRequest(Builder builder) {
         super(builder);
@@ -137,14 +142,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return additionalPackages
      */
-    public java.util.List < AdditionalPackages> getAdditionalPackages() {
+    public java.util.List<AdditionalPackages> getAdditionalPackages() {
         return this.additionalPackages;
     }
 
     /**
      * @return addons
      */
-    public java.util.List < Addons> getAddons() {
+    public java.util.List<Addons> getAddons() {
         return this.addons;
     }
 
@@ -249,7 +254,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return queues
      */
-    public java.util.List < QueueTemplate > getQueues() {
+    public java.util.List<QueueTemplate> getQueues() {
         return this.queues;
     }
 
@@ -270,20 +275,20 @@ public class CreateClusterRequest extends Request {
     /**
      * @return sharedStorages
      */
-    public java.util.List < SharedStorageTemplate > getSharedStorages() {
+    public java.util.List<SharedStorageTemplate> getSharedStorages() {
         return this.sharedStorages;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
-        private java.util.List < AdditionalPackages> additionalPackages; 
-        private java.util.List < Addons> addons; 
+        private java.util.List<AdditionalPackages> additionalPackages; 
+        private java.util.List<Addons> addons; 
         private String clientVersion; 
         private String clusterCategory; 
         private ClusterCredentials clusterCredentials; 
@@ -298,11 +303,11 @@ public class CreateClusterRequest extends Request {
         private Manager manager; 
         private Integer maxCoreCount; 
         private Integer maxCount; 
-        private java.util.List < QueueTemplate > queues; 
+        private java.util.List<QueueTemplate> queues; 
         private String resourceGroupId; 
         private String securityGroupId; 
-        private java.util.List < SharedStorageTemplate > sharedStorages; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<SharedStorageTemplate> sharedStorages; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -334,9 +339,9 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * AdditionalPackages.
+         * <p>The list of software that you want to install in the cluster. Valid values of N: 0 to 10.</p>
          */
-        public Builder additionalPackages(java.util.List < AdditionalPackages> additionalPackages) {
+        public Builder additionalPackages(java.util.List<AdditionalPackages> additionalPackages) {
             String additionalPackagesShrink = shrink(additionalPackages, "AdditionalPackages", "json");
             this.putQueryParameter("AdditionalPackages", additionalPackagesShrink);
             this.additionalPackages = additionalPackages;
@@ -344,9 +349,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Addons.
+         * <p>The configurations of the custom addons in the cluster. Only one addon is supported.</p>
          */
-        public Builder addons(java.util.List < Addons> addons) {
+        public Builder addons(java.util.List<Addons> addons) {
             String addonsShrink = shrink(addons, "Addons", "json");
             this.putQueryParameter("Addons", addonsShrink);
             this.addons = addons;
@@ -354,7 +359,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClientVersion.
+         * <p>The client version. By default, the latest version is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.0</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -363,7 +371,14 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterCategory.
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li>Standard</li>
+         * <li>Serverless</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder clusterCategory(String clusterCategory) {
             this.putQueryParameter("ClusterCategory", clusterCategory);
@@ -372,7 +387,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterCredentials.
+         * <p>The access credentials of the cluster.</p>
          */
         public Builder clusterCredentials(ClusterCredentials clusterCredentials) {
             String clusterCredentialsShrink = shrink(clusterCredentials, "ClusterCredentials", "json");
@@ -382,7 +397,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterCustomConfiguration.
+         * <p>The post-processing script of the cluster.</p>
          */
         public Builder clusterCustomConfiguration(ClusterCustomConfiguration clusterCustomConfiguration) {
             String clusterCustomConfigurationShrink = shrink(clusterCustomConfiguration, "ClusterCustomConfiguration", "json");
@@ -392,7 +407,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterDescription.
+         * <p>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slurm22.05.8-cluster-20240718</p>
          */
         public Builder clusterDescription(String clusterDescription) {
             this.putQueryParameter("ClusterDescription", clusterDescription);
@@ -401,7 +419,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterMode.
+         * <p>The deployment mode of the cluster. Valid values:</p>
+         * <ul>
+         * <li>Integrated</li>
+         * <li>Hybrid</li>
+         * <li>Custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Integrated</p>
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -410,7 +436,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slurm22.05.8-cluster-20240718</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -419,7 +448,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterVSwitchId.
+         * <p>The ID of the vSwitch that you want the cluster to use. The vSwitch must reside in the VPC that is specified by the <code>ClusterVpcId</code> parameter.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a> operation to query information about the created VPCs and vSwitches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-f8za5p0mwzgdu3wgx****</p>
          */
         public Builder clusterVSwitchId(String clusterVSwitchId) {
             this.putQueryParameter("ClusterVSwitchId", clusterVSwitchId);
@@ -428,7 +461,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ClusterVpcId.
+         * <p>The ID of the virtual private cloud (VPC) in which the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5efjevmclc0xdmys****</p>
          */
         public Builder clusterVpcId(String clusterVpcId) {
             this.putQueryParameter("ClusterVpcId", clusterVpcId);
@@ -437,7 +473,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the <a href="https://help.aliyun.com/document_detail/424406.html">DeleteCluster</a> operation. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -446,7 +490,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * IsEnterpriseSecurityGroup.
+         * <p>Specifies whether to use an advanced security group. Valid values:</p>
+         * <ul>
+         * <li>true: automatically creates and uses an advanced security group.</li>
+         * <li>false: automatically creates and uses a basic security group.</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/605897.html">Basic security groups and advanced security groups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
             this.putQueryParameter("IsEnterpriseSecurityGroup", isEnterpriseSecurityGroup);
@@ -455,7 +507,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Manager.
+         * <p>The configurations of the cluster management node.</p>
          */
         public Builder manager(Manager manager) {
             String managerShrink = shrink(manager, "Manager", "json");
@@ -465,7 +517,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * MaxCoreCount.
+         * <p>The maximum number of vCPUs that can be used by compute nodes in the cluster. Valid values: 0 to 100,000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder maxCoreCount(Integer maxCoreCount) {
             this.putQueryParameter("MaxCoreCount", maxCoreCount);
@@ -474,7 +529,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * MaxCount.
+         * <p>The maximum number of compute nodes that the cluster can manage. Valid values: 0 to 5,000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxCount(Integer maxCount) {
             this.putQueryParameter("MaxCount", maxCount);
@@ -483,9 +541,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Queues.
+         * <p>The configurations of the queues in the cluster. The number of queues can be 0 to 8.</p>
          */
-        public Builder queues(java.util.List < QueueTemplate > queues) {
+        public Builder queues(java.util.List<QueueTemplate> queues) {
             String queuesShrink = shrink(queues, "Queues", "json");
             this.putQueryParameter("Queues", queuesShrink);
             this.queues = queues;
@@ -493,7 +551,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the cluster belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the IDs of the resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -502,7 +564,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group to which the cluster belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query available security groups in the current region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp13n61xsydodfyg****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -511,9 +577,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * SharedStorages.
+         * <p>The configurations of shared storage in the cluster.</p>
          */
-        public Builder sharedStorages(java.util.List < SharedStorageTemplate > sharedStorages) {
+        public Builder sharedStorages(java.util.List<SharedStorageTemplate> sharedStorages) {
             String sharedStoragesShrink = shrink(sharedStorages, "SharedStorages", "json");
             this.putQueryParameter("SharedStorages", sharedStoragesShrink);
             this.sharedStorages = sharedStorages;
@@ -521,9 +587,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the cluster.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -582,7 +648,10 @@ public class CreateClusterRequest extends Request {
             private String version; 
 
             /**
-             * Name.
+             * <p>The name of the software that you want to install in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mpich</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +659,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the software that you want to install in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.0.3</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -675,6 +747,7 @@ public class CreateClusterRequest extends Request {
             private String version; 
 
             /**
+             * <p>The addon name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -686,7 +759,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * ResourcesSpec.
+             * <p>The resource configurations of the addon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;EipResource\&quot;: {\&quot;AutoCreate\&quot;: true}, \&quot;EcsResources\&quot;: [{\&quot;InstanceType\&quot;: \&quot;ecs.c7.xlarge\&quot;, \&quot;ImageId\&quot;: \&quot;centos_7_6_x64_20G_alibase_20211130.vhd\&quot;, \&quot;SystemDisk\&quot;: {\&quot;Category\&quot;: \&quot;cloud_essd\&quot;, \&quot;Size\&quot;: 40, \&quot;Level\&quot;: \&quot;PL0\&quot;}, \&quot;EnableHT\&quot;: true, \&quot;InstanceChargeType\&quot;: \&quot;PostPaid\&quot;, \&quot;SpotStrategy\&quot;: \&quot;NoSpot\&quot;}]}&quot;</p>
              */
             public Builder resourcesSpec(String resourcesSpec) {
                 this.resourcesSpec = resourcesSpec;
@@ -694,7 +770,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * ServicesSpec.
+             * <p>The service configurations of the addon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[{\&quot;ServiceName\&quot;: \&quot;SSH\&quot;, \&quot;ServiceAccessType\&quot;: null, \&quot;ServiceAccessUrl\&quot;: null, \&quot;NetworkACL\&quot;: [{\&quot;IpProtocol\&quot;: \&quot;TCP\&quot;, \&quot;Port\&quot;: 22, \&quot;SourceCidrIp\&quot;: \&quot;0.0.0.0/0\&quot;}]}, {\&quot;ServiceName\&quot;: \&quot;VNC\&quot;, \&quot;ServiceAccessType\&quot;: null, \&quot;ServiceAccessUrl\&quot;: null, \&quot;NetworkACL\&quot;: [{\&quot;IpProtocol\&quot;: \&quot;TCP\&quot;, \&quot;Port\&quot;: 12016, \&quot;SourceCidrIp\&quot;: \&quot;0.0.0.0/0\&quot;}]}, {\&quot;ServiceName\&quot;: \&quot;CLIENT\&quot;, \&quot;ServiceAccessType\&quot;: \&quot;URL\&quot;, \&quot;ServiceAccessUrl\&quot;: \&quot;\&quot;, \&quot;NetworkACL\&quot;: [{\&quot;IpProtocol\&quot;: \&quot;TCP\&quot;, \&quot;Port\&quot;: 12011, \&quot;SourceCidrIp\&quot;: \&quot;0.0.0.0/0\&quot;}]}]&quot;</p>
              */
             public Builder servicesSpec(String servicesSpec) {
                 this.servicesSpec = servicesSpec;
@@ -702,6 +781,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
+             * <p>The addon version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -764,7 +844,13 @@ public class CreateClusterRequest extends Request {
             private String password; 
 
             /**
-             * KeyPairName.
+             * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+             * <blockquote>
+             * <p> For more information, see <a href="https://help.aliyun.com/document_detail/51793.html">Create a key pair</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ali0824</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -772,7 +858,13 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password for the root user to log on to the node. The password must be 8 to 20 characters in length, and must contain at least 3 of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <code>() ~ ! @ # $ % ^ &amp; * - = + { } [ ] : ; \&quot; &lt; &gt; , . ? /</code></p>
+             * <blockquote>
+             * <p> We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -831,7 +923,10 @@ public class CreateClusterRequest extends Request {
             private String script; 
 
             /**
-             * Args.
+             * <p>The runtime parameters of the script after the cluster is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E-HPC cn-hangzhou</p>
              */
             public Builder args(String args) {
                 this.args = args;
@@ -839,7 +934,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Script.
+             * <p>The URL that is used to download the post-processing script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http://*****</p>
              */
             public Builder script(String script) {
                 this.script = script;
@@ -898,7 +996,14 @@ public class CreateClusterRequest extends Request {
             private String version; 
 
             /**
-             * Type.
+             * <p>The domain name resolution type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NIS: NIS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NIS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -906,10 +1011,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The version of the domain name resolution service.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.0</p>
+             * <p>2.31</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -968,7 +1073,14 @@ public class CreateClusterRequest extends Request {
             private String version; 
 
             /**
-             * Type.
+             * <p>The type of the domain account.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NIS: NIS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NIS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -976,10 +1088,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The version of the domain account service.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.0</p>
+             * <p>2.31</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1038,7 +1150,17 @@ public class CreateClusterRequest extends Request {
             private String version; 
 
             /**
-             * Type.
+             * <p>The scheduler type. Valid values:</p>
+             * <ul>
+             * <li>SLURM</li>
+             * <li>PBS</li>
+             * <li>OPENGRIDSCHEDULER</li>
+             * <li>LSF_PLUGIN</li>
+             * <li>PBS_PLUGIN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SLURM</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1046,10 +1168,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The scheduler version.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.0</p>
+             * <p>22.05.8</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1132,7 +1254,7 @@ public class CreateClusterRequest extends Request {
             private Scheduler scheduler; 
 
             /**
-             * DNS.
+             * <p>The configurations of the domain name resolution service.</p>
              */
             public Builder DNS(DNS DNS) {
                 this.DNS = DNS;
@@ -1140,7 +1262,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * DirectoryService.
+             * <p>The configurations of the directory service.</p>
              */
             public Builder directoryService(DirectoryService directoryService) {
                 this.directoryService = directoryService;
@@ -1148,7 +1270,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * ManagerNode.
+             * <p>The hardware configurations of the management node.</p>
              */
             public Builder managerNode(NodeTemplate managerNode) {
                 this.managerNode = managerNode;
@@ -1156,7 +1278,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Scheduler.
+             * <p>The configurations of the scheduler service.</p>
              */
             public Builder scheduler(Scheduler scheduler) {
                 this.scheduler = scheduler;
@@ -1215,7 +1337,10 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1223,7 +1348,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ehpc-hz-******</p>
              */
             public Builder value(String value) {
                 this.value = value;

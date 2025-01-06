@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UninstallSoftwaresRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdditionalPackages")
-    private java.util.List < AdditionalPackages> additionalPackages;
+    private java.util.List<AdditionalPackages> additionalPackages;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -42,7 +47,7 @@ public class UninstallSoftwaresRequest extends Request {
     /**
      * @return additionalPackages
      */
-    public java.util.List < AdditionalPackages> getAdditionalPackages() {
+    public java.util.List<AdditionalPackages> getAdditionalPackages() {
         return this.additionalPackages;
     }
 
@@ -54,7 +59,7 @@ public class UninstallSoftwaresRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UninstallSoftwaresRequest, Builder> {
-        private java.util.List < AdditionalPackages> additionalPackages; 
+        private java.util.List<AdditionalPackages> additionalPackages; 
         private String clusterId; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class UninstallSoftwaresRequest extends Request {
         /**
          * <p>The information about the software systems that you want to uninstall.</p>
          */
-        public Builder additionalPackages(java.util.List < AdditionalPackages> additionalPackages) {
+        public Builder additionalPackages(java.util.List<AdditionalPackages> additionalPackages) {
             String additionalPackagesShrink = shrink(additionalPackages, "AdditionalPackages", "json");
             this.putQueryParameter("AdditionalPackages", additionalPackagesShrink);
             this.additionalPackages = additionalPackages;

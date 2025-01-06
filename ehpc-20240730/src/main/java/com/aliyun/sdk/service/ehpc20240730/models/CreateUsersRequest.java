@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("User")
-    private java.util.List < User> user;
+    private java.util.List<User> user;
 
     private CreateUsersRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class CreateUsersRequest extends Request {
     /**
      * @return user
      */
-    public java.util.List < User> getUser() {
+    public java.util.List<User> getUser() {
         return this.user;
     }
 
     public static final class Builder extends Request.Builder<CreateUsersRequest, Builder> {
         private String clusterId; 
-        private java.util.List < User> user; 
+        private java.util.List<User> user; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class CreateUsersRequest extends Request {
         /**
          * <p>The users that you want to add.</p>
          */
-        public Builder user(java.util.List < User> user) {
+        public Builder user(java.util.List<User> user) {
             String userShrink = shrink(user, "User", "json");
             this.putQueryParameter("User", userShrink);
             this.user = user;

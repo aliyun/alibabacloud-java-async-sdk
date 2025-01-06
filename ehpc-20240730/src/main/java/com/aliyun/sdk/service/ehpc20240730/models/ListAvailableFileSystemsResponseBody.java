@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAvailableFileSystemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileSystemList")
-    private java.util.List < FileSystemList> fileSystemList;
+    private java.util.List<FileSystemList> fileSystemList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
     /**
      * @return fileSystemList
      */
-    public java.util.List < FileSystemList> getFileSystemList() {
+    public java.util.List<FileSystemList> getFileSystemList() {
         return this.fileSystemList;
     }
 
@@ -79,7 +84,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileSystemList> fileSystemList; 
+        private java.util.List<FileSystemList> fileSystemList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The file systems.</p>
          */
-        public Builder fileSystemList(java.util.List < FileSystemList> fileSystemList) {
+        public Builder fileSystemList(java.util.List<FileSystemList> fileSystemList) {
             this.fileSystemList = fileSystemList;
             return this;
         }
@@ -311,7 +316,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         private String fileSystemType;
 
         @com.aliyun.core.annotation.NameInMap("MountTargetList")
-        private java.util.List < MountTargetList> mountTargetList;
+        private java.util.List<MountTargetList> mountTargetList;
 
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
@@ -368,7 +373,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
         /**
          * @return mountTargetList
          */
-        public java.util.List < MountTargetList> getMountTargetList() {
+        public java.util.List<MountTargetList> getMountTargetList() {
             return this.mountTargetList;
         }
 
@@ -404,7 +409,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             private String createTime; 
             private String fileSystemId; 
             private String fileSystemType; 
-            private java.util.List < MountTargetList> mountTargetList; 
+            private java.util.List<MountTargetList> mountTargetList; 
             private String protocolType; 
             private String status; 
             private String storageType; 
@@ -450,7 +455,7 @@ public class ListAvailableFileSystemsResponseBody extends TeaModel {
             /**
              * <p>The mount targets of the file system.</p>
              */
-            public Builder mountTargetList(java.util.List < MountTargetList> mountTargetList) {
+            public Builder mountTargetList(java.util.List<MountTargetList> mountTargetList) {
                 this.mountTargetList = mountTargetList;
                 return this;
             }

@@ -40,6 +40,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>The file system that you want to attach must be created in advance in the same virtual private cloud (VPC) as the destination cluster. For more information, see <a href="https://help.aliyun.com/document_detail/27530.html">Create a file system</a> and <a href="https://help.aliyun.com/document_detail/27531.html">Manage mount targets</a>.</li>
+     * <li>E-HPC clusters support Apsara File Storage NAS file systems.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AttachSharedStorages  AttachSharedStoragesRequest
      * @return AttachSharedStoragesResponse
      */
@@ -58,6 +66,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</p>
+     * 
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -154,6 +166,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Make sure that data of the cluster to be deleted is backed up before you call this operation.</p>
+     * <blockquote>
+     * <p>After a cluster is released, you cannot restore the data stored in the cluster. Exercise caution when you release a cluster.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
      * @return DeleteClusterResponse
      */
@@ -382,6 +401,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>The cluster must be in the <code>Running</code> state.</li>
+     * <li>Clusters fall into two types:<ul>
+     * <li>Regular clusters on Alibaba Cloud Public Cloud</li>
+     * <li>Managed clusters on Alibaba Cloud Public Cloud</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of InstallAddon  InstallAddonRequest
      * @return InstallAddonResponse
      */
@@ -670,6 +701,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Take note of the following items when you call this operation:</p>
+     * <ul>
+     * <li>The cluster must be in the <code>Running</code> state.</li>
+     * <li>Clusters fall into the following types:<ul>
+     * <li>Regular clusters on Alibaba Cloud Public Cloud</li>
+     * <li>Managed clusters on Alibaba Cloud Public Cloud</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of UnInstallAddon  UnInstallAddonRequest
      * @return UnInstallAddonResponse
      */

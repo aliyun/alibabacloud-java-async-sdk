@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AddonNodeTemplate extends TeaModel {
     private Integer autoRenewPeriod;
 
     @com.aliyun.core.annotation.NameInMap("DataDisks")
-    private java.util.List < DataDisks> dataDisks;
+    private java.util.List<DataDisks> dataDisks;
 
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
@@ -112,7 +117,7 @@ public class AddonNodeTemplate extends TeaModel {
     /**
      * @return dataDisks
      */
-    public java.util.List < DataDisks> getDataDisks() {
+    public java.util.List<DataDisks> getDataDisks() {
         return this.dataDisks;
     }
 
@@ -217,7 +222,7 @@ public class AddonNodeTemplate extends TeaModel {
     public static final class Builder {
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
-        private java.util.List < DataDisks> dataDisks; 
+        private java.util.List<DataDisks> dataDisks; 
         private Integer duration; 
         private Boolean enableHT; 
         private String imageId; 
@@ -252,7 +257,7 @@ public class AddonNodeTemplate extends TeaModel {
         /**
          * DataDisks.
          */
-        public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+        public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }

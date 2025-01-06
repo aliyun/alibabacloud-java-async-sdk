@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAddonTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addons")
-    private java.util.List < Addons> addons;
+    private java.util.List<Addons> addons;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     /**
      * @return addons
      */
-    public java.util.List < Addons> getAddons() {
+    public java.util.List<Addons> getAddons() {
         return this.addons;
     }
 
@@ -79,7 +84,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Addons> addons; 
+        private java.util.List<Addons> addons; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListAddonTemplatesResponseBody extends TeaModel {
         /**
          * <p>The information about the addon templates.</p>
          */
-        public Builder addons(java.util.List < Addons> addons) {
+        public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
             return this;
         }

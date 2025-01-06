@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SharedStorages")
-    private java.util.List < SharedStorages> sharedStorages;
+    private java.util.List<SharedStorages> sharedStorages;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
@@ -45,7 +50,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
     /**
      * @return sharedStorages
      */
-    public java.util.List < SharedStorages> getSharedStorages() {
+    public java.util.List<SharedStorages> getSharedStorages() {
         return this.sharedStorages;
     }
 
@@ -58,7 +63,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SharedStorages> sharedStorages; 
+        private java.util.List<SharedStorages> sharedStorages; 
         private String success; 
 
         /**
@@ -75,7 +80,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         /**
          * <p>The information about the attached shared storage.</p>
          */
-        public Builder sharedStorages(java.util.List < SharedStorages> sharedStorages) {
+        public Builder sharedStorages(java.util.List<SharedStorages> sharedStorages) {
             this.sharedStorages = sharedStorages;
             return this;
         }
@@ -269,7 +274,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         private String fileSystemType;
 
         @com.aliyun.core.annotation.NameInMap("MountInfo")
-        private java.util.List < MountInfo> mountInfo;
+        private java.util.List<MountInfo> mountInfo;
 
         private SharedStorages(Builder builder) {
             this.fileSystemId = builder.fileSystemId;
@@ -310,7 +315,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
         /**
          * @return mountInfo
          */
-        public java.util.List < MountInfo> getMountInfo() {
+        public java.util.List<MountInfo> getMountInfo() {
             return this.mountInfo;
         }
 
@@ -318,7 +323,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             private String fileSystemId; 
             private String fileSystemProtocol; 
             private String fileSystemType; 
-            private java.util.List < MountInfo> mountInfo; 
+            private java.util.List<MountInfo> mountInfo; 
 
             /**
              * <p>The ID of the attached file system.</p>
@@ -365,7 +370,7 @@ public class ListSharedStoragesResponseBody extends TeaModel {
             /**
              * <p>The mount information.</p>
              */
-            public Builder mountInfo(java.util.List < MountInfo> mountInfo) {
+            public Builder mountInfo(java.util.List<MountInfo> mountInfo) {
                 this.mountInfo = mountInfo;
                 return this;
             }

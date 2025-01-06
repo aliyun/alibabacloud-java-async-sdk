@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20240730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     private UpdateNodesRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class UpdateNodesRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
     public static final class Builder extends Request.Builder<UpdateNodesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
 
         private Builder() {
             super();
@@ -82,7 +87,7 @@ public class UpdateNodesRequest extends Request {
         /**
          * <p>The information about the compute nodes that you want to update.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
             this.putQueryParameter("Instances", instancesShrink);
             this.instances = instances;
