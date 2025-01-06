@@ -55,7 +55,10 @@ public class CreateDiagnosticTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DiagnosticId.
+         * <p>Diagnosis ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>diag-i150553931717380274931</p>
          */
         public Builder diagnosticId(String diagnosticId) {
             this.diagnosticId = diagnosticId;
@@ -63,7 +66,10 @@ public class CreateDiagnosticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A511C02A-0127-51AA-A9F9-966382C9A1B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

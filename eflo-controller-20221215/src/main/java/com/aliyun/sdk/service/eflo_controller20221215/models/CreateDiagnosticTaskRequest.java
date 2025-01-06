@@ -124,7 +124,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * AiJobLogInfo.
+         * <p>Log information</p>
          */
         public Builder aiJobLogInfo(AiJobLogInfo aiJobLogInfo) {
             String aiJobLogInfoShrink = shrink(aiJobLogInfo, "AiJobLogInfo", "json");
@@ -134,7 +134,10 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i118913031696573280136</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -143,7 +146,10 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * DiagnosticType.
+         * <p>Diagnostic type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckByAiJobLogs</p>
          */
         public Builder diagnosticType(String diagnosticType) {
             this.putBodyParameter("DiagnosticType", diagnosticType);
@@ -152,7 +158,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>List of node IDs</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "simple");
@@ -213,7 +219,10 @@ public class CreateDiagnosticTaskRequest extends Request {
             private String logContent; 
 
             /**
-             * Datetime.
+             * <p>Sent date, in the format yyyymmdd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-05T10:10:01</p>
              */
             public Builder datetime(String datetime) {
                 this.datetime = datetime;
@@ -221,7 +230,10 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * LogContent.
+             * <p>Log content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -292,7 +304,10 @@ public class CreateDiagnosticTaskRequest extends Request {
             private String nodeId; 
 
             /**
-             * AiInstance.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder aiInstance(String aiInstance) {
                 this.aiInstance = aiInstance;
@@ -300,7 +315,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * Logs.
+             * <p>Log object</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -308,7 +323,10 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-tw-p2p2al5u1hn</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -379,7 +397,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             private String startTime; 
 
             /**
-             * AiJobLogs.
+             * <p>Task logs</p>
              */
             public Builder aiJobLogs(java.util.List<AiJobLogs> aiJobLogs) {
                 this.aiJobLogs = aiJobLogs;
@@ -387,7 +405,13 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>End time. In timestamp format, unit: seconds.</p>
+             * <blockquote>
+             * <p>Must be on the hour or half-hour mark.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-05T10:10:01</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -395,7 +419,13 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>Start time. In timestamp format, unit: seconds.</p>
+             * <blockquote>
+             * <p>Must be on the hour or half-hour mark.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-11T00:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
