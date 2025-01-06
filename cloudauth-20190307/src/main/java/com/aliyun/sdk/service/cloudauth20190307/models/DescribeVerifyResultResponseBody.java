@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -407,7 +412,7 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         private String idCardNumber;
 
         @com.aliyun.core.annotation.NameInMap("VideoUrls")
-        private java.util.List < String > videoUrls;
+        private java.util.List<String> videoUrls;
 
         private Material(Builder builder) {
             this.faceGlobalUrl = builder.faceGlobalUrl;
@@ -480,7 +485,7 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
         /**
          * @return videoUrls
          */
-        public java.util.List < String > getVideoUrls() {
+        public java.util.List<String> getVideoUrls() {
             return this.videoUrls;
         }
 
@@ -492,7 +497,7 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
             private IdCardInfo idCardInfo; 
             private String idCardName; 
             private String idCardNumber; 
-            private java.util.List < String > videoUrls; 
+            private java.util.List<String> videoUrls; 
 
             /**
              * FaceGlobalUrl.
@@ -553,7 +558,7 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
             /**
              * VideoUrls.
              */
-            public Builder videoUrls(java.util.List < String > videoUrls) {
+            public Builder videoUrls(java.util.List<String> videoUrls) {
                 this.videoUrls = videoUrls;
                 return this;
             }

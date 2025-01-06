@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -195,7 +200,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         private String result;
 
         @com.aliyun.core.annotation.NameInMap("RiskScore")
-        private java.util.Map < String, String > riskScore;
+        private java.util.Map<String, String> riskScore;
 
         @com.aliyun.core.annotation.NameInMap("RiskTag")
         private String riskTag;
@@ -252,7 +257,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
         /**
          * @return riskScore
          */
-        public java.util.Map < String, String > getRiskScore() {
+        public java.util.Map<String, String> getRiskScore() {
             return this.riskScore;
         }
 
@@ -288,7 +293,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             private String materialInfo; 
             private String ocrInfo; 
             private String result; 
-            private java.util.Map < String, String > riskScore; 
+            private java.util.Map<String, String> riskScore; 
             private String riskTag; 
             private String verifyDetail; 
             private String verifyResult; 
@@ -321,7 +326,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             /**
              * RiskScore.
              */
-            public Builder riskScore(java.util.Map < String, String > riskScore) {
+            public Builder riskScore(java.util.Map<String, String> riskScore) {
                 this.riskScore = riskScore;
                 return this;
             }

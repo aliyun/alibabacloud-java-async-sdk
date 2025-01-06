@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class RemoveWhiteListSettingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceCode")
@@ -54,7 +59,7 @@ public class RemoveWhiteListSettingRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
@@ -67,7 +72,7 @@ public class RemoveWhiteListSettingRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveWhiteListSettingRequest, Builder> {
         private String regionId; 
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
         private String serviceCode; 
 
         private Builder() {
@@ -93,7 +98,7 @@ public class RemoveWhiteListSettingRequest extends Request {
         /**
          * Ids.
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;

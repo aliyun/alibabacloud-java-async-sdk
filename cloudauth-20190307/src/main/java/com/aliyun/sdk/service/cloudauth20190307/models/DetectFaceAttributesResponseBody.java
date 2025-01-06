@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -654,7 +659,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
      */
     public static class FaceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceAttributesDetectInfo")
-        private java.util.List < FaceAttributesDetectInfo> faceAttributesDetectInfo;
+        private java.util.List<FaceAttributesDetectInfo> faceAttributesDetectInfo;
 
         private FaceInfos(Builder builder) {
             this.faceAttributesDetectInfo = builder.faceAttributesDetectInfo;
@@ -671,17 +676,17 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         /**
          * @return faceAttributesDetectInfo
          */
-        public java.util.List < FaceAttributesDetectInfo> getFaceAttributesDetectInfo() {
+        public java.util.List<FaceAttributesDetectInfo> getFaceAttributesDetectInfo() {
             return this.faceAttributesDetectInfo;
         }
 
         public static final class Builder {
-            private java.util.List < FaceAttributesDetectInfo> faceAttributesDetectInfo; 
+            private java.util.List<FaceAttributesDetectInfo> faceAttributesDetectInfo; 
 
             /**
              * FaceAttributesDetectInfo.
              */
-            public Builder faceAttributesDetectInfo(java.util.List < FaceAttributesDetectInfo> faceAttributesDetectInfo) {
+            public Builder faceAttributesDetectInfo(java.util.List<FaceAttributesDetectInfo> faceAttributesDetectInfo) {
                 this.faceAttributesDetectInfo = faceAttributesDetectInfo;
                 return this;
             }

@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetectFaceAttributesResponse> detectFaceAttributes(DetectFaceAttributesRequest request);
 
     /**
+     * @param request the request parameters of Id2MetaPeriodVerify  Id2MetaPeriodVerifyRequest
+     * @return Id2MetaPeriodVerifyResponse
+     */
+    CompletableFuture<Id2MetaPeriodVerifyResponse> id2MetaPeriodVerify(Id2MetaPeriodVerifyRequest request);
+
+    /**
      * @param request the request parameters of Id2MetaStandardVerify  Id2MetaStandardVerifyRequest
      * @return Id2MetaStandardVerifyResponse
      */
@@ -164,10 +170,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LivenessFaceVerifyResponse> livenessFaceVerify(LivenessFaceVerifyRequest request);
 
     /**
+     * @param request the request parameters of Mobile3MetaDetailStandardVerify  Mobile3MetaDetailStandardVerifyRequest
+     * @return Mobile3MetaDetailStandardVerifyResponse
+     */
+    CompletableFuture<Mobile3MetaDetailStandardVerifyResponse> mobile3MetaDetailStandardVerify(Mobile3MetaDetailStandardVerifyRequest request);
+
+    /**
      * @param request the request parameters of Mobile3MetaDetailVerify  Mobile3MetaDetailVerifyRequest
      * @return Mobile3MetaDetailVerifyResponse
      */
     CompletableFuture<Mobile3MetaDetailVerifyResponse> mobile3MetaDetailVerify(Mobile3MetaDetailVerifyRequest request);
+
+    /**
+     * @param request the request parameters of Mobile3MetaSimpleStandardVerify  Mobile3MetaSimpleStandardVerifyRequest
+     * @return Mobile3MetaSimpleStandardVerifyResponse
+     */
+    CompletableFuture<Mobile3MetaSimpleStandardVerifyResponse> mobile3MetaSimpleStandardVerify(Mobile3MetaSimpleStandardVerifyRequest request);
 
     /**
      * @param request the request parameters of Mobile3MetaSimpleVerify  Mobile3MetaSimpleVerifyRequest

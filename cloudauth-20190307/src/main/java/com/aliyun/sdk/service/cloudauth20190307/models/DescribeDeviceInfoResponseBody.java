@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
      */
     public static class DeviceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceInfo")
-        private java.util.List < DeviceInfo> deviceInfo;
+        private java.util.List<DeviceInfo> deviceInfo;
 
         private DeviceInfoList(Builder builder) {
             this.deviceInfo = builder.deviceInfo;
@@ -283,17 +288,17 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         /**
          * @return deviceInfo
          */
-        public java.util.List < DeviceInfo> getDeviceInfo() {
+        public java.util.List<DeviceInfo> getDeviceInfo() {
             return this.deviceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DeviceInfo> deviceInfo; 
+            private java.util.List<DeviceInfo> deviceInfo; 
 
             /**
              * DeviceInfo.
              */
-            public Builder deviceInfo(java.util.List < DeviceInfo> deviceInfo) {
+            public Builder deviceInfo(java.util.List<DeviceInfo> deviceInfo) {
                 this.deviceInfo = deviceInfo;
                 return this;
             }

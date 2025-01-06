@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class CredentialVerifyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantDetail")
-    private java.util.List < MerchantDetail> merchantDetail;
+    private java.util.List<MerchantDetail> merchantDetail;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantId")
@@ -170,7 +175,7 @@ public class CredentialVerifyRequest extends Request {
     /**
      * @return merchantDetail
      */
-    public java.util.List < MerchantDetail> getMerchantDetail() {
+    public java.util.List<MerchantDetail> getMerchantDetail() {
         return this.merchantDetail;
     }
 
@@ -219,7 +224,7 @@ public class CredentialVerifyRequest extends Request {
         private String imageUrl; 
         private String isCheck; 
         private String isOCR; 
-        private java.util.List < MerchantDetail> merchantDetail; 
+        private java.util.List<MerchantDetail> merchantDetail; 
         private String merchantId; 
         private String productCode; 
         private String prompt; 
@@ -333,7 +338,7 @@ public class CredentialVerifyRequest extends Request {
         /**
          * MerchantDetail.
          */
-        public Builder merchantDetail(java.util.List < MerchantDetail> merchantDetail) {
+        public Builder merchantDetail(java.util.List<MerchantDetail> merchantDetail) {
             String merchantDetailShrink = shrink(merchantDetail, "MerchantDetail", "json");
             this.putQueryParameter("MerchantDetail", merchantDetailShrink);
             this.merchantDetail = merchantDetail;

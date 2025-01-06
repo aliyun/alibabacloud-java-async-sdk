@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResultObject")
-    private java.util.List < ResultObject> resultObject;
+    private java.util.List<ResultObject> resultObject;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -97,7 +102,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
     /**
      * @return resultObject
      */
-    public java.util.List < ResultObject> getResultObject() {
+    public java.util.List<ResultObject> getResultObject() {
         return this.resultObject;
     }
 
@@ -128,7 +133,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         private String message; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ResultObject> resultObject; 
+        private java.util.List<ResultObject> resultObject; 
         private Boolean success; 
         private Integer totalItem; 
         private Integer totalPage; 
@@ -179,7 +184,7 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         /**
          * ResultObject.
          */
-        public Builder resultObject(java.util.List < ResultObject> resultObject) {
+        public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
             return this;
         }

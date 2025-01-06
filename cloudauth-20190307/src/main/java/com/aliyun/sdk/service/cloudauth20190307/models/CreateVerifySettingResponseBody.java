@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     private String solution;
 
     @com.aliyun.core.annotation.NameInMap("StepList")
-    private java.util.List < String > stepList;
+    private java.util.List<String> stepList;
 
     private CreateVerifySettingResponseBody(Builder builder) {
         this.bizName = builder.bizName;
@@ -74,7 +79,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     /**
      * @return stepList
      */
-    public java.util.List < String > getStepList() {
+    public java.util.List<String> getStepList() {
         return this.stepList;
     }
 
@@ -83,7 +88,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         private String bizType; 
         private String requestId; 
         private String solution; 
-        private java.util.List < String > stepList; 
+        private java.util.List<String> stepList; 
 
         /**
          * BizName.
@@ -120,7 +125,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
         /**
          * StepList.
          */
-        public Builder stepList(java.util.List < String > stepList) {
+        public Builder stepList(java.util.List<String> stepList) {
             this.stepList = stepList;
             return this;
         }
