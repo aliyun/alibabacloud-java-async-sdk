@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GrantRules")
-    private java.util.List < GrantRules> grantRules;
+    private java.util.List<GrantRules> grantRules;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     /**
      * @return grantRules
      */
-    public java.util.List < GrantRules> getGrantRules() {
+    public java.util.List<GrantRules> getGrantRules() {
         return this.grantRules;
     }
 
@@ -79,7 +84,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GrantRules> grantRules; 
+        private java.util.List<GrantRules> grantRules; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
         /**
          * <p>The permissions that are granted to the CEN instance.</p>
          */
-        public Builder grantRules(java.util.List < GrantRules> grantRules) {
+        public Builder grantRules(java.util.List<GrantRules> grantRules) {
             this.grantRules = grantRules;
             return this;
         }

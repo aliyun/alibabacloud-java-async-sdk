@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeFlowlogsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
@@ -251,7 +256,7 @@ public class DescribeFlowlogsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -287,7 +292,7 @@ public class DescribeFlowlogsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterAttachmentId; 
         private String transitRouterId; 
 
@@ -386,7 +391,11 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * FlowLogVersion.
+         * <p>The flow log version.</p>
+         * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder flowLogVersion(String flowLogVersion) {
             this.putQueryParameter("FlowLogVersion", flowLogVersion);
@@ -395,7 +404,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time window for collecting log data. Unit: seconds Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -435,7 +447,7 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -522,7 +534,7 @@ public class DescribeFlowlogsRequest extends Request {
          * <p>The information about the tags.</p>
          * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -541,7 +553,10 @@ public class DescribeFlowlogsRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The ID of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-uf654ttymmljlvh2x****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

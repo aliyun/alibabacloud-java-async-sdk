@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTransitRouterCidrResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CidrLists")
-    private java.util.List < CidrLists> cidrLists;
+    private java.util.List<CidrLists> cidrLists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
     /**
      * @return cidrLists
      */
-    public java.util.List < CidrLists> getCidrLists() {
+    public java.util.List<CidrLists> getCidrLists() {
         return this.cidrLists;
     }
 
@@ -46,13 +51,13 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CidrLists> cidrLists; 
+        private java.util.List<CidrLists> cidrLists; 
         private String requestId; 
 
         /**
          * <p>The information about the CIDR block.</p>
          */
-        public Builder cidrLists(java.util.List < CidrLists> cidrLists) {
+        public Builder cidrLists(java.util.List<CidrLists> cidrLists) {
             this.cidrLists = cidrLists;
             return this;
         }

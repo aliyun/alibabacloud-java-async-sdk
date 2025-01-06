@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GrantVSwitchEnis")
-    private java.util.List < GrantVSwitchEnis> grantVSwitchEnis;
+    private java.util.List<GrantVSwitchEnis> grantVSwitchEnis;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -46,7 +51,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     /**
      * @return grantVSwitchEnis
      */
-    public java.util.List < GrantVSwitchEnis> getGrantVSwitchEnis() {
+    public java.util.List<GrantVSwitchEnis> getGrantVSwitchEnis() {
         return this.grantVSwitchEnis;
     }
 
@@ -79,7 +84,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GrantVSwitchEnis> grantVSwitchEnis; 
+        private java.util.List<GrantVSwitchEnis> grantVSwitchEnis; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         /**
          * <p>The information about the ENI.</p>
          */
-        public Builder grantVSwitchEnis(java.util.List < GrantVSwitchEnis> grantVSwitchEnis) {
+        public Builder grantVSwitchEnis(java.util.List<GrantVSwitchEnis> grantVSwitchEnis) {
             this.grantVSwitchEnis = grantVSwitchEnis;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -302,7 +307,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
      */
     public static class Conflicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conflict")
-        private java.util.List < Conflict> conflict;
+        private java.util.List<Conflict> conflict;
 
         private Conflicts(Builder builder) {
             this.conflict = builder.conflict;
@@ -319,17 +324,17 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         /**
          * @return conflict
          */
-        public java.util.List < Conflict> getConflict() {
+        public java.util.List<Conflict> getConflict() {
             return this.conflict;
         }
 
         public static final class Builder {
-            private java.util.List < Conflict> conflict; 
+            private java.util.List<Conflict> conflict; 
 
             /**
              * Conflict.
              */
-            public Builder conflict(java.util.List < Conflict> conflict) {
+            public Builder conflict(java.util.List<Conflict> conflict) {
                 this.conflict = conflict;
                 return this;
             }
@@ -593,7 +598,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
      */
     public static class PublishedRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublishedRouteEntry")
-        private java.util.List < PublishedRouteEntry> publishedRouteEntry;
+        private java.util.List<PublishedRouteEntry> publishedRouteEntry;
 
         private PublishedRouteEntries(Builder builder) {
             this.publishedRouteEntry = builder.publishedRouteEntry;
@@ -610,17 +615,17 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         /**
          * @return publishedRouteEntry
          */
-        public java.util.List < PublishedRouteEntry> getPublishedRouteEntry() {
+        public java.util.List<PublishedRouteEntry> getPublishedRouteEntry() {
             return this.publishedRouteEntry;
         }
 
         public static final class Builder {
-            private java.util.List < PublishedRouteEntry> publishedRouteEntry; 
+            private java.util.List<PublishedRouteEntry> publishedRouteEntry; 
 
             /**
              * PublishedRouteEntry.
              */
-            public Builder publishedRouteEntry(java.util.List < PublishedRouteEntry> publishedRouteEntry) {
+            public Builder publishedRouteEntry(java.util.List<PublishedRouteEntry> publishedRouteEntry) {
                 this.publishedRouteEntry = publishedRouteEntry;
                 return this;
             }

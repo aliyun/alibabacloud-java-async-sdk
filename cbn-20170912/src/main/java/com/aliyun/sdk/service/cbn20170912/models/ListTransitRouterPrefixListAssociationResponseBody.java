@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PrefixLists")
-    private java.util.List < PrefixLists> prefixLists;
+    private java.util.List<PrefixLists> prefixLists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     /**
      * @return prefixLists
      */
-    public java.util.List < PrefixLists> getPrefixLists() {
+    public java.util.List<PrefixLists> getPrefixLists() {
         return this.prefixLists;
     }
 
@@ -81,7 +86,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PrefixLists> prefixLists; 
+        private java.util.List<PrefixLists> prefixLists; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
         /**
          * <p>A list of prefix lists.</p>
          */
-        public Builder prefixLists(java.util.List < PrefixLists> prefixLists) {
+        public Builder prefixLists(java.util.List<PrefixLists> prefixLists) {
             this.prefixLists = prefixLists;
             return this;
         }

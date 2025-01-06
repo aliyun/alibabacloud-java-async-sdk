@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,15 +49,15 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceTypes")
-    private java.util.List < String > destinationChildInstanceTypes;
+    private java.util.List<String> destinationChildInstanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationCidrBlocks")
-    private java.util.List < String > destinationCidrBlocks;
+    private java.util.List<String> destinationCidrBlocks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationInstanceIds")
-    private java.util.List < String > destinationInstanceIds;
+    private java.util.List<String> destinationInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationInstanceIdsReverseMatch")
@@ -60,11 +65,11 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationRegionIds")
-    private java.util.List < String > destinationRegionIds;
+    private java.util.List<String> destinationRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationRouteTableIds")
-    private java.util.List < String > destinationRouteTableIds;
+    private java.util.List<String> destinationRouteTableIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MapResult")
@@ -77,11 +82,11 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchAsns")
-    private java.util.List < Long > matchAsns;
+    private java.util.List<Long> matchAsns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchCommunitySet")
-    private java.util.List < String > matchCommunitySet;
+    private java.util.List<String> matchCommunitySet;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextPriority")
@@ -90,7 +95,7 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperateCommunitySet")
-    private java.util.List < String > operateCommunitySet;
+    private java.util.List<String> operateCommunitySet;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -107,7 +112,7 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrependAsPath")
-    private java.util.List < Long > prependAsPath;
+    private java.util.List<Long> prependAsPath;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Priority")
@@ -124,15 +129,15 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteTypes")
-    private java.util.List < String > routeTypes;
+    private java.util.List<String> routeTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceChildInstanceTypes")
-    private java.util.List < String > sourceChildInstanceTypes;
+    private java.util.List<String> sourceChildInstanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceInstanceIds")
-    private java.util.List < String > sourceInstanceIds;
+    private java.util.List<String> sourceInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceInstanceIdsReverseMatch")
@@ -140,11 +145,11 @@ public class CreateCenRouteMapRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceRegionIds")
-    private java.util.List < String > sourceRegionIds;
+    private java.util.List<String> sourceRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceRouteTableIds")
-    private java.util.List < String > sourceRouteTableIds;
+    private java.util.List<String> sourceRouteTableIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
@@ -258,21 +263,21 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return destinationChildInstanceTypes
      */
-    public java.util.List < String > getDestinationChildInstanceTypes() {
+    public java.util.List<String> getDestinationChildInstanceTypes() {
         return this.destinationChildInstanceTypes;
     }
 
     /**
      * @return destinationCidrBlocks
      */
-    public java.util.List < String > getDestinationCidrBlocks() {
+    public java.util.List<String> getDestinationCidrBlocks() {
         return this.destinationCidrBlocks;
     }
 
     /**
      * @return destinationInstanceIds
      */
-    public java.util.List < String > getDestinationInstanceIds() {
+    public java.util.List<String> getDestinationInstanceIds() {
         return this.destinationInstanceIds;
     }
 
@@ -286,14 +291,14 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return destinationRegionIds
      */
-    public java.util.List < String > getDestinationRegionIds() {
+    public java.util.List<String> getDestinationRegionIds() {
         return this.destinationRegionIds;
     }
 
     /**
      * @return destinationRouteTableIds
      */
-    public java.util.List < String > getDestinationRouteTableIds() {
+    public java.util.List<String> getDestinationRouteTableIds() {
         return this.destinationRouteTableIds;
     }
 
@@ -314,14 +319,14 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return matchAsns
      */
-    public java.util.List < Long > getMatchAsns() {
+    public java.util.List<Long> getMatchAsns() {
         return this.matchAsns;
     }
 
     /**
      * @return matchCommunitySet
      */
-    public java.util.List < String > getMatchCommunitySet() {
+    public java.util.List<String> getMatchCommunitySet() {
         return this.matchCommunitySet;
     }
 
@@ -335,7 +340,7 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return operateCommunitySet
      */
-    public java.util.List < String > getOperateCommunitySet() {
+    public java.util.List<String> getOperateCommunitySet() {
         return this.operateCommunitySet;
     }
 
@@ -363,7 +368,7 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return prependAsPath
      */
-    public java.util.List < Long > getPrependAsPath() {
+    public java.util.List<Long> getPrependAsPath() {
         return this.prependAsPath;
     }
 
@@ -391,21 +396,21 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return routeTypes
      */
-    public java.util.List < String > getRouteTypes() {
+    public java.util.List<String> getRouteTypes() {
         return this.routeTypes;
     }
 
     /**
      * @return sourceChildInstanceTypes
      */
-    public java.util.List < String > getSourceChildInstanceTypes() {
+    public java.util.List<String> getSourceChildInstanceTypes() {
         return this.sourceChildInstanceTypes;
     }
 
     /**
      * @return sourceInstanceIds
      */
-    public java.util.List < String > getSourceInstanceIds() {
+    public java.util.List<String> getSourceInstanceIds() {
         return this.sourceInstanceIds;
     }
 
@@ -419,14 +424,14 @@ public class CreateCenRouteMapRequest extends Request {
     /**
      * @return sourceRegionIds
      */
-    public java.util.List < String > getSourceRegionIds() {
+    public java.util.List<String> getSourceRegionIds() {
         return this.sourceRegionIds;
     }
 
     /**
      * @return sourceRouteTableIds
      */
-    public java.util.List < String > getSourceRouteTableIds() {
+    public java.util.List<String> getSourceRouteTableIds() {
         return this.sourceRouteTableIds;
     }
 
@@ -452,31 +457,31 @@ public class CreateCenRouteMapRequest extends Request {
         private String communityMatchMode; 
         private String communityOperateMode; 
         private String description; 
-        private java.util.List < String > destinationChildInstanceTypes; 
-        private java.util.List < String > destinationCidrBlocks; 
-        private java.util.List < String > destinationInstanceIds; 
+        private java.util.List<String> destinationChildInstanceTypes; 
+        private java.util.List<String> destinationCidrBlocks; 
+        private java.util.List<String> destinationInstanceIds; 
         private Boolean destinationInstanceIdsReverseMatch; 
-        private java.util.List < String > destinationRegionIds; 
-        private java.util.List < String > destinationRouteTableIds; 
+        private java.util.List<String> destinationRegionIds; 
+        private java.util.List<String> destinationRouteTableIds; 
         private String mapResult; 
         private String matchAddressType; 
-        private java.util.List < Long > matchAsns; 
-        private java.util.List < String > matchCommunitySet; 
+        private java.util.List<Long> matchAsns; 
+        private java.util.List<String> matchCommunitySet; 
         private Integer nextPriority; 
-        private java.util.List < String > operateCommunitySet; 
+        private java.util.List<String> operateCommunitySet; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer preference; 
-        private java.util.List < Long > prependAsPath; 
+        private java.util.List<Long> prependAsPath; 
         private Integer priority; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > routeTypes; 
-        private java.util.List < String > sourceChildInstanceTypes; 
-        private java.util.List < String > sourceInstanceIds; 
+        private java.util.List<String> routeTypes; 
+        private java.util.List<String> sourceChildInstanceTypes; 
+        private java.util.List<String> sourceInstanceIds; 
         private Boolean sourceInstanceIdsReverseMatch; 
-        private java.util.List < String > sourceRegionIds; 
-        private java.util.List < String > sourceRouteTableIds; 
+        private java.util.List<String> sourceRegionIds; 
+        private java.util.List<String> sourceRouteTableIds; 
         private String transitRouterRouteTableId; 
         private String transmitDirection; 
 
@@ -654,7 +659,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>VPC</p>
          */
-        public Builder destinationChildInstanceTypes(java.util.List < String > destinationChildInstanceTypes) {
+        public Builder destinationChildInstanceTypes(java.util.List<String> destinationChildInstanceTypes) {
             this.putQueryParameter("DestinationChildInstanceTypes", destinationChildInstanceTypes);
             this.destinationChildInstanceTypes = destinationChildInstanceTypes;
             return this;
@@ -668,7 +673,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>10.10.10.0/24</p>
          */
-        public Builder destinationCidrBlocks(java.util.List < String > destinationCidrBlocks) {
+        public Builder destinationCidrBlocks(java.util.List<String> destinationCidrBlocks) {
             this.putQueryParameter("DestinationCidrBlocks", destinationCidrBlocks);
             this.destinationCidrBlocks = destinationCidrBlocks;
             return this;
@@ -691,7 +696,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>vpc-afrfs434465fdf****</p>
          */
-        public Builder destinationInstanceIds(java.util.List < String > destinationInstanceIds) {
+        public Builder destinationInstanceIds(java.util.List<String> destinationInstanceIds) {
             this.putQueryParameter("DestinationInstanceIds", destinationInstanceIds);
             this.destinationInstanceIds = destinationInstanceIds;
             return this;
@@ -716,7 +721,7 @@ public class CreateCenRouteMapRequest extends Request {
         /**
          * <p>The destination region IDs of the route. You can specify at most 32 region IDs.</p>
          */
-        public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
+        public Builder destinationRegionIds(java.util.List<String> destinationRegionIds) {
             this.putQueryParameter("DestinationRegionIds", destinationRegionIds);
             this.destinationRegionIds = destinationRegionIds;
             return this;
@@ -731,7 +736,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>vtb-adefrgtr144vf****</p>
          */
-        public Builder destinationRouteTableIds(java.util.List < String > destinationRouteTableIds) {
+        public Builder destinationRouteTableIds(java.util.List<String> destinationRouteTableIds) {
             this.putQueryParameter("DestinationRouteTableIds", destinationRouteTableIds);
             this.destinationRouteTableIds = destinationRouteTableIds;
             return this;
@@ -781,7 +786,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>65501</p>
          */
-        public Builder matchAsns(java.util.List < Long > matchAsns) {
+        public Builder matchAsns(java.util.List<Long> matchAsns) {
             this.putQueryParameter("MatchAsns", matchAsns);
             this.matchAsns = matchAsns;
             return this;
@@ -798,7 +803,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>65501:1</p>
          */
-        public Builder matchCommunitySet(java.util.List < String > matchCommunitySet) {
+        public Builder matchCommunitySet(java.util.List<String> matchCommunitySet) {
             this.putQueryParameter("MatchCommunitySet", matchCommunitySet);
             this.matchCommunitySet = matchCommunitySet;
             return this;
@@ -832,7 +837,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>65501:1</p>
          */
-        public Builder operateCommunitySet(java.util.List < String > operateCommunitySet) {
+        public Builder operateCommunitySet(java.util.List<String> operateCommunitySet) {
             this.putQueryParameter("OperateCommunitySet", operateCommunitySet);
             this.operateCommunitySet = operateCommunitySet;
             return this;
@@ -882,7 +887,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>65501</p>
          */
-        public Builder prependAsPath(java.util.List < Long > prependAsPath) {
+        public Builder prependAsPath(java.util.List<Long> prependAsPath) {
             this.putQueryParameter("PrependAsPath", prependAsPath);
             this.prependAsPath = prependAsPath;
             return this;
@@ -934,7 +939,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>System</p>
          */
-        public Builder routeTypes(java.util.List < String > routeTypes) {
+        public Builder routeTypes(java.util.List<String> routeTypes) {
             this.putQueryParameter("RouteTypes", routeTypes);
             this.routeTypes = routeTypes;
             return this;
@@ -961,7 +966,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>VPC</p>
          */
-        public Builder sourceChildInstanceTypes(java.util.List < String > sourceChildInstanceTypes) {
+        public Builder sourceChildInstanceTypes(java.util.List<String> sourceChildInstanceTypes) {
             this.putQueryParameter("SourceChildInstanceTypes", sourceChildInstanceTypes);
             this.sourceChildInstanceTypes = sourceChildInstanceTypes;
             return this;
@@ -981,7 +986,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>vpc-adeg3544fdf34vf****</p>
          */
-        public Builder sourceInstanceIds(java.util.List < String > sourceInstanceIds) {
+        public Builder sourceInstanceIds(java.util.List<String> sourceInstanceIds) {
             this.putQueryParameter("SourceInstanceIds", sourceInstanceIds);
             this.sourceInstanceIds = sourceInstanceIds;
             return this;
@@ -1010,7 +1015,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
-        public Builder sourceRegionIds(java.util.List < String > sourceRegionIds) {
+        public Builder sourceRegionIds(java.util.List<String> sourceRegionIds) {
             this.putQueryParameter("SourceRegionIds", sourceRegionIds);
             this.sourceRegionIds = sourceRegionIds;
             return this;
@@ -1022,7 +1027,7 @@ public class CreateCenRouteMapRequest extends Request {
          * <strong>example:</strong>
          * <p>vtb-adfr233vf34rvd4****</p>
          */
-        public Builder sourceRouteTableIds(java.util.List < String > sourceRouteTableIds) {
+        public Builder sourceRouteTableIds(java.util.List<String> sourceRouteTableIds) {
             this.putQueryParameter("SourceRouteTableIds", sourceRouteTableIds);
             this.sourceRouteTableIds = sourceRouteTableIds;
             return this;

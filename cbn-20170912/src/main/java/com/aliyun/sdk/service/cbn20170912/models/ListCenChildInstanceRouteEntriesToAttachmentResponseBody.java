@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RouteEntry")
-    private java.util.List < RouteEntry> routeEntry;
+    private java.util.List<RouteEntry> routeEntry;
 
     private ListCenChildInstanceRouteEntriesToAttachmentResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     /**
      * @return routeEntry
      */
-    public java.util.List < RouteEntry> getRouteEntry() {
+    public java.util.List<RouteEntry> getRouteEntry() {
         return this.routeEntry;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < RouteEntry> routeEntry; 
+        private java.util.List<RouteEntry> routeEntry; 
 
         /**
          * <p>The token that determines the start point of the next query. Valid values:</p>
@@ -90,7 +95,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
         /**
          * <p>The detailed information about the route.</p>
          */
-        public Builder routeEntry(java.util.List < RouteEntry> routeEntry) {
+        public Builder routeEntry(java.util.List<RouteEntry> routeEntry) {
             this.routeEntry = routeEntry;
             return this;
         }

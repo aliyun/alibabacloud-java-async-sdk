@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,16 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableZones")
-    private java.util.List < String > availableZones;
+    private java.util.List<String> availableZones;
 
     @com.aliyun.core.annotation.NameInMap("MasterZones")
-    private java.util.List < String > masterZones;
+    private java.util.List<String> masterZones;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SlaveZones")
-    private java.util.List < String > slaveZones;
+    private java.util.List<String> slaveZones;
 
     @com.aliyun.core.annotation.NameInMap("SupportMulticast")
     private Boolean supportMulticast;
@@ -46,14 +51,14 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     /**
      * @return availableZones
      */
-    public java.util.List < String > getAvailableZones() {
+    public java.util.List<String> getAvailableZones() {
         return this.availableZones;
     }
 
     /**
      * @return masterZones
      */
-    public java.util.List < String > getMasterZones() {
+    public java.util.List<String> getMasterZones() {
         return this.masterZones;
     }
 
@@ -67,7 +72,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     /**
      * @return slaveZones
      */
-    public java.util.List < String > getSlaveZones() {
+    public java.util.List<String> getSlaveZones() {
         return this.slaveZones;
     }
 
@@ -79,16 +84,16 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > availableZones; 
-        private java.util.List < String > masterZones; 
+        private java.util.List<String> availableZones; 
+        private java.util.List<String> masterZones; 
         private String requestId; 
-        private java.util.List < String > slaveZones; 
+        private java.util.List<String> slaveZones; 
         private Boolean supportMulticast; 
 
         /**
          * <p>A list of zone IDs.</p>
          */
-        public Builder availableZones(java.util.List < String > availableZones) {
+        public Builder availableZones(java.util.List<String> availableZones) {
             this.availableZones = availableZones;
             return this;
         }
@@ -96,7 +101,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         /**
          * <p>A list of primary zones.</p>
          */
-        public Builder masterZones(java.util.List < String > masterZones) {
+        public Builder masterZones(java.util.List<String> masterZones) {
             this.masterZones = masterZones;
             return this;
         }
@@ -115,7 +120,7 @@ public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
         /**
          * <p>A list of secondary zone IDs.</p>
          */
-        public Builder slaveZones(java.util.List < String > slaveZones) {
+        public Builder slaveZones(java.util.List<String> slaveZones) {
             this.slaveZones = slaveZones;
             return this;
         }

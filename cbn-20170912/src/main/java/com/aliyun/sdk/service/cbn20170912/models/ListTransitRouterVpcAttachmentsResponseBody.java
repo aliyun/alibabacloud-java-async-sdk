@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachments")
-    private java.util.List < TransitRouterAttachments> transitRouterAttachments;
+    private java.util.List<TransitRouterAttachments> transitRouterAttachments;
 
     private ListTransitRouterVpcAttachmentsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     /**
      * @return transitRouterAttachments
      */
-    public java.util.List < TransitRouterAttachments> getTransitRouterAttachments() {
+    public java.util.List<TransitRouterAttachments> getTransitRouterAttachments() {
         return this.transitRouterAttachments;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
+        private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * <p>The information about the VPC connection.</p>
          */
-        public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
+        public Builder transitRouterAttachments(java.util.List<TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
             return this;
         }
@@ -345,7 +350,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
         private String transitRouterAttachmentDescription;
@@ -360,7 +365,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         private String transitRouterId;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
-        private java.util.Map < String, String > transitRouterVPCAttachmentOptions;
+        private java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -372,7 +377,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         private String vpcRegionId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneMappings")
-        private java.util.List < ZoneMappings> zoneMappings;
+        private java.util.List<ZoneMappings> zoneMappings;
 
         private TransitRouterAttachments(Builder builder) {
             this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
@@ -454,7 +459,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -489,7 +494,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * @return transitRouterVPCAttachmentOptions
          */
-        public java.util.Map < String, String > getTransitRouterVPCAttachmentOptions() {
+        public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
             return this.transitRouterVPCAttachmentOptions;
         }
 
@@ -517,7 +522,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         /**
          * @return zoneMappings
          */
-        public java.util.List < ZoneMappings> getZoneMappings() {
+        public java.util.List<ZoneMappings> getZoneMappings() {
             return this.zoneMappings;
         }
 
@@ -529,16 +534,16 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String orderType; 
             private String resourceType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterAttachmentDescription; 
             private String transitRouterAttachmentId; 
             private String transitRouterAttachmentName; 
             private String transitRouterId; 
-            private java.util.Map < String, String > transitRouterVPCAttachmentOptions; 
+            private java.util.Map<String, String> transitRouterVPCAttachmentOptions; 
             private String vpcId; 
             private Long vpcOwnerId; 
             private String vpcRegionId; 
-            private java.util.List < ZoneMappings> zoneMappings; 
+            private java.util.List<ZoneMappings> zoneMappings; 
 
             /**
              * <p>Indicates whether the Enterprise Edition transit router can automatically advertise routes to the VPC. Valid values:</p>
@@ -634,9 +639,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -686,9 +691,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterVPCAttachmentOptions.
+             * <p>The features of the VPC connection.</p>
              */
-            public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
+            public Builder transitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
                 this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
                 return this;
             }
@@ -729,7 +734,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             /**
              * <p>The primary and secondary zones, vSwitches, and ENIs of the VPC.</p>
              */
-            public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+            public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
                 this.zoneMappings = zoneMappings;
                 return this;
             }

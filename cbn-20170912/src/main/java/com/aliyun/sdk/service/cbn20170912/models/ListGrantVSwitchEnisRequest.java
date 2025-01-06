@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
-    private java.util.List < String > networkInterfaceId;
+    private java.util.List<String> networkInterfaceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
@@ -109,7 +114,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
     /**
      * @return networkInterfaceId
      */
-    public java.util.List < String > getNetworkInterfaceId() {
+    public java.util.List<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -179,7 +184,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
     public static final class Builder extends Request.Builder<ListGrantVSwitchEnisRequest, Builder> {
         private String cenId; 
         private Long maxResults; 
-        private java.util.List < String > networkInterfaceId; 
+        private java.util.List<String> networkInterfaceId; 
         private String networkInterfaceName; 
         private String nextToken; 
         private String ownerAccount; 
@@ -243,7 +248,7 @@ public class ListGrantVSwitchEnisRequest extends Request {
         /**
          * <p>The ID of ENI N. Valid values of N: 1 to 100.</p>
          */
-        public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
+        public Builder networkInterfaceId(java.util.List<String> networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
             this.networkInterfaceId = networkInterfaceId;
             return this;

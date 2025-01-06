@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMarkRuleIds")
-    private java.util.List < String > trafficMarkRuleIds;
+    private java.util.List<String> trafficMarkRuleIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
@@ -115,7 +120,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
     /**
      * @return trafficMarkRuleIds
      */
-    public java.util.List < String > getTrafficMarkRuleIds() {
+    public java.util.List<String> getTrafficMarkRuleIds() {
         return this.trafficMarkRuleIds;
     }
 
@@ -133,7 +138,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > trafficMarkRuleIds; 
+        private java.util.List<String> trafficMarkRuleIds; 
         private String trafficMarkingPolicyId; 
 
         private Builder() {
@@ -223,7 +228,7 @@ public class RemoveTraficMatchRuleFromTrafficMarkingPolicyRequest extends Reques
         /**
          * <p>The ID of the traffic classification rule.</p>
          */
-        public Builder trafficMarkRuleIds(java.util.List < String > trafficMarkRuleIds) {
+        public Builder trafficMarkRuleIds(java.util.List<String> trafficMarkRuleIds) {
             this.putQueryParameter("TrafficMarkRuleIds", trafficMarkRuleIds);
             this.trafficMarkRuleIds = trafficMarkRuleIds;
             return this;

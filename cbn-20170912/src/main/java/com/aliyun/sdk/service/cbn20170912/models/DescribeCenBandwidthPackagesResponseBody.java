@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class CenIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenId")
-        private java.util.List < String > cenId;
+        private java.util.List<String> cenId;
 
         private CenIds(Builder builder) {
             this.cenId = builder.cenId;
@@ -168,17 +173,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return cenId
          */
-        public java.util.List < String > getCenId() {
+        public java.util.List<String> getCenId() {
             return this.cenId;
         }
 
         public static final class Builder {
-            private java.util.List < String > cenId; 
+            private java.util.List<String> cenId; 
 
             /**
              * CenId.
              */
-            public Builder cenId(java.util.List < String > cenId) {
+            public Builder cenId(java.util.List<String> cenId) {
                 this.cenId = cenId;
                 return this;
             }
@@ -317,7 +322,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class OrginInterRegionBandwidthLimits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrginInterRegionBandwidthLimit")
-        private java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit;
+        private java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit;
 
         private OrginInterRegionBandwidthLimits(Builder builder) {
             this.orginInterRegionBandwidthLimit = builder.orginInterRegionBandwidthLimit;
@@ -334,17 +339,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return orginInterRegionBandwidthLimit
          */
-        public java.util.List < OrginInterRegionBandwidthLimit> getOrginInterRegionBandwidthLimit() {
+        public java.util.List<OrginInterRegionBandwidthLimit> getOrginInterRegionBandwidthLimit() {
             return this.orginInterRegionBandwidthLimit;
         }
 
         public static final class Builder {
-            private java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit; 
+            private java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit; 
 
             /**
              * OrginInterRegionBandwidthLimit.
              */
-            public Builder orginInterRegionBandwidthLimit(java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit) {
+            public Builder orginInterRegionBandwidthLimit(java.util.List<OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit) {
                 this.orginInterRegionBandwidthLimit = orginInterRegionBandwidthLimit;
                 return this;
             }
@@ -437,7 +442,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -454,17 +459,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -856,7 +861,6 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
              * <li><strong>china</strong>: Chinese mainland.</li>
              * <li><strong>asia-pacific</strong>: Asia Pacific</li>
              * <li><strong>europe</strong>: Europe</li>
-             * <li><strong>australia</strong>: Australia</li>
              * <li><strong>north-america</strong>: North America</li>
              * </ul>
              * 
@@ -874,7 +878,6 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
              * <li><strong>china</strong>: Chinese mainland.</li>
              * <li><strong>asia-pacific</strong>: Asia Pacific</li>
              * <li><strong>europe</strong>: Europe</li>
-             * <li><strong>australia</strong>: Australia</li>
              * <li><strong>north-america</strong>: North America</li>
              * </ul>
              * 
@@ -1046,7 +1049,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class CenBandwidthPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenBandwidthPackage")
-        private java.util.List < CenBandwidthPackage> cenBandwidthPackage;
+        private java.util.List<CenBandwidthPackage> cenBandwidthPackage;
 
         private CenBandwidthPackages(Builder builder) {
             this.cenBandwidthPackage = builder.cenBandwidthPackage;
@@ -1063,17 +1066,17 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return cenBandwidthPackage
          */
-        public java.util.List < CenBandwidthPackage> getCenBandwidthPackage() {
+        public java.util.List<CenBandwidthPackage> getCenBandwidthPackage() {
             return this.cenBandwidthPackage;
         }
 
         public static final class Builder {
-            private java.util.List < CenBandwidthPackage> cenBandwidthPackage; 
+            private java.util.List<CenBandwidthPackage> cenBandwidthPackage; 
 
             /**
              * CenBandwidthPackage.
              */
-            public Builder cenBandwidthPackage(java.util.List < CenBandwidthPackage> cenBandwidthPackage) {
+            public Builder cenBandwidthPackage(java.util.List<CenBandwidthPackage> cenBandwidthPackage) {
                 this.cenBandwidthPackage = cenBandwidthPackage;
                 return this;
             }

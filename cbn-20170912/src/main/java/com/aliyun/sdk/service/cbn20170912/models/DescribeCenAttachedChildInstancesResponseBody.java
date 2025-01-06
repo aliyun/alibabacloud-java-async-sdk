@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -350,7 +355,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
      */
     public static class ChildInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildInstance")
-        private java.util.List < ChildInstance> childInstance;
+        private java.util.List<ChildInstance> childInstance;
 
         private ChildInstances(Builder builder) {
             this.childInstance = builder.childInstance;
@@ -367,17 +372,17 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         /**
          * @return childInstance
          */
-        public java.util.List < ChildInstance> getChildInstance() {
+        public java.util.List<ChildInstance> getChildInstance() {
             return this.childInstance;
         }
 
         public static final class Builder {
-            private java.util.List < ChildInstance> childInstance; 
+            private java.util.List<ChildInstance> childInstance; 
 
             /**
              * ChildInstance.
              */
-            public Builder childInstance(java.util.List < ChildInstance> childInstance) {
+            public Builder childInstance(java.util.List<ChildInstance> childInstance) {
                 this.childInstance = childInstance;
                 return this;
             }

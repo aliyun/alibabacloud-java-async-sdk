@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
-    private java.util.Map < String, String > transitRouterVPCAttachmentOptions;
+    private java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 
     private UpdateTransitRouterVpcAttachmentAttributeRequest(Builder builder) {
         super(builder);
@@ -158,7 +163,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
     /**
      * @return transitRouterVPCAttachmentOptions
      */
-    public java.util.Map < String, String > getTransitRouterVPCAttachmentOptions() {
+    public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
         return this.transitRouterVPCAttachmentOptions;
     }
 
@@ -173,7 +178,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentId; 
         private String transitRouterAttachmentName; 
-        private java.util.Map < String, String > transitRouterVPCAttachmentOptions; 
+        private java.util.Map<String, String> transitRouterVPCAttachmentOptions; 
 
         private Builder() {
             super();
@@ -318,12 +323,9 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * <p>Feature configurations of the VPC connection.</p>
-         * <ul>
-         * <li>ipv6Support: specifies whether to enable IPv6. Valid values: true and false. The default value is the status of the VPC connection.</li>
-         * </ul>
+         * <p>The features of the VPC connection.</p>
          */
-        public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
+        public Builder transitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
             String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
             this.putQueryParameter("TransitRouterVPCAttachmentOptions", transitRouterVPCAttachmentOptionsShrink);
             this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;

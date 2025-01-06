@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicies")
-    private java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies;
+    private java.util.List<TrafficMarkingPolicies> trafficMarkingPolicies;
 
     private ListTrafficMarkingPoliciesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     /**
      * @return trafficMarkingPolicies
      */
-    public java.util.List < TrafficMarkingPolicies> getTrafficMarkingPolicies() {
+    public java.util.List<TrafficMarkingPolicies> getTrafficMarkingPolicies() {
         return this.trafficMarkingPolicies;
     }
 
@@ -83,7 +88,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies; 
+        private java.util.List<TrafficMarkingPolicies> trafficMarkingPolicies; 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -136,7 +141,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * <p>The information about the traffic marking policy.</p>
          */
-        public Builder trafficMarkingPolicies(java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies) {
+        public Builder trafficMarkingPolicies(java.util.List<TrafficMarkingPolicies> trafficMarkingPolicies) {
             this.trafficMarkingPolicies = trafficMarkingPolicies;
             return this;
         }
@@ -161,7 +166,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         private String dstCidr;
 
         @com.aliyun.core.annotation.NameInMap("DstPortRange")
-        private java.util.List < Integer > dstPortRange;
+        private java.util.List<Integer> dstPortRange;
 
         @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
@@ -173,7 +178,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         private String srcCidr;
 
         @com.aliyun.core.annotation.NameInMap("SrcPortRange")
-        private java.util.List < Integer > srcPortRange;
+        private java.util.List<Integer> srcPortRange;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleDescription")
         private String trafficMatchRuleDescription;
@@ -226,7 +231,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * @return dstPortRange
          */
-        public java.util.List < Integer > getDstPortRange() {
+        public java.util.List<Integer> getDstPortRange() {
             return this.dstPortRange;
         }
 
@@ -254,7 +259,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * @return srcPortRange
          */
-        public java.util.List < Integer > getSrcPortRange() {
+        public java.util.List<Integer> getSrcPortRange() {
             return this.srcPortRange;
         }
 
@@ -289,18 +294,21 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String addressFamily; 
             private String dstCidr; 
-            private java.util.List < Integer > dstPortRange; 
+            private java.util.List<Integer> dstPortRange; 
             private Integer matchDscp; 
             private String protocol; 
             private String srcCidr; 
-            private java.util.List < Integer > srcPortRange; 
+            private java.util.List<Integer> srcPortRange; 
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleId; 
             private String trafficMatchRuleName; 
             private String trafficMatchRuleStatus; 
 
             /**
-             * AddressFamily.
+             * <p>The address family. You can set the value to IPv4 or IPv6, or leave the value empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressFamily(String addressFamily) {
                 this.addressFamily = addressFamily;
@@ -308,7 +316,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination CIDR block that is used to match packets.</p>
+             * <p>The destination CIDR block of packets. IPv4 and IPv6 addresses are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.120.0/24</p>
@@ -321,7 +329,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             /**
              * <p>The destination port range used to match data packets.</p>
              */
-            public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
+            public Builder dstPortRange(java.util.List<Integer> dstPortRange) {
                 this.dstPortRange = dstPortRange;
                 return this;
             }
@@ -355,7 +363,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source CIDR block that is used to match packets.</p>
+             * <p>The source CIDR block of packets. IPv6 and IPv4 addresses are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.10.0/24</p>
@@ -368,7 +376,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             /**
              * <p>The source port range used to match data packets.</p>
              */
-            public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
+            public Builder srcPortRange(java.util.List<Integer> srcPortRange) {
                 this.srcPortRange = srcPortRange;
                 return this;
             }
@@ -455,7 +463,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         private String trafficMarkingPolicyStatus;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMatchRules")
-        private java.util.List < TrafficMatchRules> trafficMatchRules;
+        private java.util.List<TrafficMatchRules> trafficMatchRules;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
@@ -524,7 +532,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         /**
          * @return trafficMatchRules
          */
-        public java.util.List < TrafficMatchRules> getTrafficMatchRules() {
+        public java.util.List<TrafficMatchRules> getTrafficMatchRules() {
             return this.trafficMatchRules;
         }
 
@@ -542,7 +550,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             private String trafficMarkingPolicyId; 
             private String trafficMarkingPolicyName; 
             private String trafficMarkingPolicyStatus; 
-            private java.util.List < TrafficMatchRules> trafficMatchRules; 
+            private java.util.List<TrafficMatchRules> trafficMatchRules; 
             private String transitRouterId; 
 
             /**
@@ -621,7 +629,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             /**
              * <p>The traffic classification rules.</p>
              */
-            public Builder trafficMatchRules(java.util.List < TrafficMatchRules> trafficMatchRules) {
+            public Builder trafficMatchRules(java.util.List<TrafficMatchRules> trafficMatchRules) {
                 this.trafficMatchRules = trafficMatchRules;
                 return this;
             }

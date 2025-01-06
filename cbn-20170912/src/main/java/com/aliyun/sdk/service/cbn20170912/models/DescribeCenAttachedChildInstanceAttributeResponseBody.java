@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -359,7 +364,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
      */
     public static class Ipv6CidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ipv6CidrBlock")
-        private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
+        private java.util.List<Ipv6CidrBlock> ipv6CidrBlock;
 
         private Ipv6CidrBlocks(Builder builder) {
             this.ipv6CidrBlock = builder.ipv6CidrBlock;
@@ -376,17 +381,17 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         /**
          * @return ipv6CidrBlock
          */
-        public java.util.List < Ipv6CidrBlock> getIpv6CidrBlock() {
+        public java.util.List<Ipv6CidrBlock> getIpv6CidrBlock() {
             return this.ipv6CidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
+            private java.util.List<Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
              * ipv6CidrBlock.
              */
-            public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
+            public Builder ipv6CidrBlock(java.util.List<Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
                 return this;
             }
@@ -406,7 +411,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
      */
     public static class SecondaryCidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("secondaryCidrBlock")
-        private java.util.List < String > secondaryCidrBlock;
+        private java.util.List<String> secondaryCidrBlock;
 
         private SecondaryCidrBlocks(Builder builder) {
             this.secondaryCidrBlock = builder.secondaryCidrBlock;
@@ -423,17 +428,17 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         /**
          * @return secondaryCidrBlock
          */
-        public java.util.List < String > getSecondaryCidrBlock() {
+        public java.util.List<String> getSecondaryCidrBlock() {
             return this.secondaryCidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < String > secondaryCidrBlock; 
+            private java.util.List<String> secondaryCidrBlock; 
 
             /**
              * secondaryCidrBlock.
              */
-            public Builder secondaryCidrBlock(java.util.List < String > secondaryCidrBlock) {
+            public Builder secondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
                 this.secondaryCidrBlock = secondaryCidrBlock;
                 return this;
             }

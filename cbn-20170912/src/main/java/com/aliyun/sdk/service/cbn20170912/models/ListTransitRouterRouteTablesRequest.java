@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterId")
@@ -51,11 +56,11 @@ public class ListTransitRouterRouteTablesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableIds")
-    private java.util.List < String > transitRouterRouteTableIds;
+    private java.util.List<String> transitRouterRouteTableIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableNames")
-    private java.util.List < String > transitRouterRouteTableNames;
+    private java.util.List<String> transitRouterRouteTableNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableStatus")
@@ -147,7 +152,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -161,14 +166,14 @@ public class ListTransitRouterRouteTablesRequest extends Request {
     /**
      * @return transitRouterRouteTableIds
      */
-    public java.util.List < String > getTransitRouterRouteTableIds() {
+    public java.util.List<String> getTransitRouterRouteTableIds() {
         return this.transitRouterRouteTableIds;
     }
 
     /**
      * @return transitRouterRouteTableNames
      */
-    public java.util.List < String > getTransitRouterRouteTableNames() {
+    public java.util.List<String> getTransitRouterRouteTableNames() {
         return this.transitRouterRouteTableNames;
     }
 
@@ -194,10 +199,10 @@ public class ListTransitRouterRouteTablesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private RouteTableOptions routeTableOptions; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterId; 
-        private java.util.List < String > transitRouterRouteTableIds; 
-        private java.util.List < String > transitRouterRouteTableNames; 
+        private java.util.List<String> transitRouterRouteTableIds; 
+        private java.util.List<String> transitRouterRouteTableNames; 
         private String transitRouterRouteTableStatus; 
         private String transitRouterRouteTableType; 
 
@@ -299,7 +304,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
          * <p>The information about the tags.</p>
          * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -324,7 +329,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
          * <strong>example:</strong>
          * <p>vtb-bp1l8awdb4iuo9uwu****</p>
          */
-        public Builder transitRouterRouteTableIds(java.util.List < String > transitRouterRouteTableIds) {
+        public Builder transitRouterRouteTableIds(java.util.List<String> transitRouterRouteTableIds) {
             this.putQueryParameter("TransitRouterRouteTableIds", transitRouterRouteTableIds);
             this.transitRouterRouteTableIds = transitRouterRouteTableIds;
             return this;
@@ -340,7 +345,7 @@ public class ListTransitRouterRouteTablesRequest extends Request {
          * <strong>example:</strong>
          * <p>testname</p>
          */
-        public Builder transitRouterRouteTableNames(java.util.List < String > transitRouterRouteTableNames) {
+        public Builder transitRouterRouteTableNames(java.util.List<String> transitRouterRouteTableNames) {
             this.putQueryParameter("TransitRouterRouteTableNames", transitRouterRouteTableNames);
             this.transitRouterRouteTableNames = transitRouterRouteTableNames;
             return this;

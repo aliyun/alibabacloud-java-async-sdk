@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TrafficQosQueues")
-    private java.util.List < TrafficQosQueues> trafficQosQueues;
+    private java.util.List<TrafficQosQueues> trafficQosQueues;
 
     private ListCenInterRegionTrafficQosQueuesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     /**
      * @return trafficQosQueues
      */
-    public java.util.List < TrafficQosQueues> getTrafficQosQueues() {
+    public java.util.List<TrafficQosQueues> getTrafficQosQueues() {
         return this.trafficQosQueues;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TrafficQosQueues> trafficQosQueues; 
+        private java.util.List<TrafficQosQueues> trafficQosQueues; 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
@@ -90,7 +95,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         /**
          * <p>The information about the QoS queue.</p>
          */
-        public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
+        public Builder trafficQosQueues(java.util.List<TrafficQosQueues> trafficQosQueues) {
             this.trafficQosQueues = trafficQosQueues;
             return this;
         }
@@ -112,7 +117,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private String bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("Dscps")
-        private java.util.List < Integer > dscps;
+        private java.util.List<Integer> dscps;
 
         @com.aliyun.core.annotation.NameInMap("EffectiveBandwidth")
         private String effectiveBandwidth;
@@ -173,7 +178,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         /**
          * @return dscps
          */
-        public java.util.List < Integer > getDscps() {
+        public java.util.List<Integer> getDscps() {
             return this.dscps;
         }
 
@@ -242,7 +247,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bandwidth; 
-            private java.util.List < Integer > dscps; 
+            private java.util.List<Integer> dscps; 
             private String effectiveBandwidth; 
             private Integer remainBandwidthPercent; 
             private String status; 
@@ -254,8 +259,8 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * <p>带宽保障类型为按绝对值模式时，当前队列分配跨地域带宽的值。</p>
-             * <p>例如，<strong>1</strong>表示符合当前队列的流量报文最多只能使用1Mbps的跨地域带宽。</p>
+             * <p>The absolute bandwidth value that can be allocated to the current queue.</p>
+             * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1 Mbit/s of inter-region bandwidth.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -268,13 +273,13 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             /**
              * <p>The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.</p>
              */
-            public Builder dscps(java.util.List < Integer > dscps) {
+            public Builder dscps(java.util.List<Integer> dscps) {
                 this.dscps = dscps;
                 return this;
             }
 
             /**
-             * <p>当前队列实际生效的带宽值。</p>
+             * <p>The actual bandwidth of the current queue.</p>
              * 
              * <strong>example:</strong>
              * <p>1.35</p>
@@ -285,7 +290,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the inter-region bandwidth that can be consumed by the QoS queue.</p>
+             * <p>The percentage of bandwidth that can be allocated to the current queue.</p>
              * <p>A value of <strong>1</strong> indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.</p>
              * 
              * <strong>example:</strong>

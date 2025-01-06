@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class DestinationChildInstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceType")
-        private java.util.List < String > destinationChildInstanceType;
+        private java.util.List<String> destinationChildInstanceType;
 
         private DestinationChildInstanceTypes(Builder builder) {
             this.destinationChildInstanceType = builder.destinationChildInstanceType;
@@ -168,17 +173,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationChildInstanceType
          */
-        public java.util.List < String > getDestinationChildInstanceType() {
+        public java.util.List<String> getDestinationChildInstanceType() {
             return this.destinationChildInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationChildInstanceType; 
+            private java.util.List<String> destinationChildInstanceType; 
 
             /**
              * DestinationChildInstanceType.
              */
-            public Builder destinationChildInstanceType(java.util.List < String > destinationChildInstanceType) {
+            public Builder destinationChildInstanceType(java.util.List<String> destinationChildInstanceType) {
                 this.destinationChildInstanceType = destinationChildInstanceType;
                 return this;
             }
@@ -198,7 +203,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class DestinationCidrBlocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
-        private java.util.List < String > destinationCidrBlock;
+        private java.util.List<String> destinationCidrBlock;
 
         private DestinationCidrBlocks(Builder builder) {
             this.destinationCidrBlock = builder.destinationCidrBlock;
@@ -215,17 +220,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationCidrBlock
          */
-        public java.util.List < String > getDestinationCidrBlock() {
+        public java.util.List<String> getDestinationCidrBlock() {
             return this.destinationCidrBlock;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationCidrBlock; 
+            private java.util.List<String> destinationCidrBlock; 
 
             /**
              * DestinationCidrBlock.
              */
-            public Builder destinationCidrBlock(java.util.List < String > destinationCidrBlock) {
+            public Builder destinationCidrBlock(java.util.List<String> destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
                 return this;
             }
@@ -245,7 +250,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class DestinationInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationInstanceId")
-        private java.util.List < String > destinationInstanceId;
+        private java.util.List<String> destinationInstanceId;
 
         private DestinationInstanceIds(Builder builder) {
             this.destinationInstanceId = builder.destinationInstanceId;
@@ -262,17 +267,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationInstanceId
          */
-        public java.util.List < String > getDestinationInstanceId() {
+        public java.util.List<String> getDestinationInstanceId() {
             return this.destinationInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationInstanceId; 
+            private java.util.List<String> destinationInstanceId; 
 
             /**
              * DestinationInstanceId.
              */
-            public Builder destinationInstanceId(java.util.List < String > destinationInstanceId) {
+            public Builder destinationInstanceId(java.util.List<String> destinationInstanceId) {
                 this.destinationInstanceId = destinationInstanceId;
                 return this;
             }
@@ -292,7 +297,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class DestinationRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
-        private java.util.List < String > destinationRegionId;
+        private java.util.List<String> destinationRegionId;
 
         private DestinationRegionIds(Builder builder) {
             this.destinationRegionId = builder.destinationRegionId;
@@ -309,17 +314,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationRegionId
          */
-        public java.util.List < String > getDestinationRegionId() {
+        public java.util.List<String> getDestinationRegionId() {
             return this.destinationRegionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationRegionId; 
+            private java.util.List<String> destinationRegionId; 
 
             /**
              * DestinationRegionId.
              */
-            public Builder destinationRegionId(java.util.List < String > destinationRegionId) {
+            public Builder destinationRegionId(java.util.List<String> destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
                 return this;
             }
@@ -339,7 +344,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class DestinationRouteTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationRouteTableId")
-        private java.util.List < String > destinationRouteTableId;
+        private java.util.List<String> destinationRouteTableId;
 
         private DestinationRouteTableIds(Builder builder) {
             this.destinationRouteTableId = builder.destinationRouteTableId;
@@ -356,17 +361,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return destinationRouteTableId
          */
-        public java.util.List < String > getDestinationRouteTableId() {
+        public java.util.List<String> getDestinationRouteTableId() {
             return this.destinationRouteTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > destinationRouteTableId; 
+            private java.util.List<String> destinationRouteTableId; 
 
             /**
              * DestinationRouteTableId.
              */
-            public Builder destinationRouteTableId(java.util.List < String > destinationRouteTableId) {
+            public Builder destinationRouteTableId(java.util.List<String> destinationRouteTableId) {
                 this.destinationRouteTableId = destinationRouteTableId;
                 return this;
             }
@@ -386,7 +391,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class MatchAsns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchAsn")
-        private java.util.List < String > matchAsn;
+        private java.util.List<String> matchAsn;
 
         private MatchAsns(Builder builder) {
             this.matchAsn = builder.matchAsn;
@@ -403,17 +408,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return matchAsn
          */
-        public java.util.List < String > getMatchAsn() {
+        public java.util.List<String> getMatchAsn() {
             return this.matchAsn;
         }
 
         public static final class Builder {
-            private java.util.List < String > matchAsn; 
+            private java.util.List<String> matchAsn; 
 
             /**
              * MatchAsn.
              */
-            public Builder matchAsn(java.util.List < String > matchAsn) {
+            public Builder matchAsn(java.util.List<String> matchAsn) {
                 this.matchAsn = matchAsn;
                 return this;
             }
@@ -433,7 +438,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class MatchCommunitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchCommunity")
-        private java.util.List < String > matchCommunity;
+        private java.util.List<String> matchCommunity;
 
         private MatchCommunitySet(Builder builder) {
             this.matchCommunity = builder.matchCommunity;
@@ -450,17 +455,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return matchCommunity
          */
-        public java.util.List < String > getMatchCommunity() {
+        public java.util.List<String> getMatchCommunity() {
             return this.matchCommunity;
         }
 
         public static final class Builder {
-            private java.util.List < String > matchCommunity; 
+            private java.util.List<String> matchCommunity; 
 
             /**
              * MatchCommunity.
              */
-            public Builder matchCommunity(java.util.List < String > matchCommunity) {
+            public Builder matchCommunity(java.util.List<String> matchCommunity) {
                 this.matchCommunity = matchCommunity;
                 return this;
             }
@@ -480,7 +485,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class OperateCommunitySet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateCommunity")
-        private java.util.List < String > operateCommunity;
+        private java.util.List<String> operateCommunity;
 
         private OperateCommunitySet(Builder builder) {
             this.operateCommunity = builder.operateCommunity;
@@ -497,17 +502,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return operateCommunity
          */
-        public java.util.List < String > getOperateCommunity() {
+        public java.util.List<String> getOperateCommunity() {
             return this.operateCommunity;
         }
 
         public static final class Builder {
-            private java.util.List < String > operateCommunity; 
+            private java.util.List<String> operateCommunity; 
 
             /**
              * OperateCommunity.
              */
-            public Builder operateCommunity(java.util.List < String > operateCommunity) {
+            public Builder operateCommunity(java.util.List<String> operateCommunity) {
                 this.operateCommunity = operateCommunity;
                 return this;
             }
@@ -527,7 +532,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class PrependAsPath extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsPath")
-        private java.util.List < String > asPath;
+        private java.util.List<String> asPath;
 
         private PrependAsPath(Builder builder) {
             this.asPath = builder.asPath;
@@ -544,17 +549,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return asPath
          */
-        public java.util.List < String > getAsPath() {
+        public java.util.List<String> getAsPath() {
             return this.asPath;
         }
 
         public static final class Builder {
-            private java.util.List < String > asPath; 
+            private java.util.List<String> asPath; 
 
             /**
              * AsPath.
              */
-            public Builder asPath(java.util.List < String > asPath) {
+            public Builder asPath(java.util.List<String> asPath) {
                 this.asPath = asPath;
                 return this;
             }
@@ -574,7 +579,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class RouteTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteType")
-        private java.util.List < String > routeType;
+        private java.util.List<String> routeType;
 
         private RouteTypes(Builder builder) {
             this.routeType = builder.routeType;
@@ -591,17 +596,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return routeType
          */
-        public java.util.List < String > getRouteType() {
+        public java.util.List<String> getRouteType() {
             return this.routeType;
         }
 
         public static final class Builder {
-            private java.util.List < String > routeType; 
+            private java.util.List<String> routeType; 
 
             /**
              * RouteType.
              */
-            public Builder routeType(java.util.List < String > routeType) {
+            public Builder routeType(java.util.List<String> routeType) {
                 this.routeType = routeType;
                 return this;
             }
@@ -621,7 +626,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class SourceChildInstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceChildInstanceType")
-        private java.util.List < String > sourceChildInstanceType;
+        private java.util.List<String> sourceChildInstanceType;
 
         private SourceChildInstanceTypes(Builder builder) {
             this.sourceChildInstanceType = builder.sourceChildInstanceType;
@@ -638,17 +643,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceChildInstanceType
          */
-        public java.util.List < String > getSourceChildInstanceType() {
+        public java.util.List<String> getSourceChildInstanceType() {
             return this.sourceChildInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceChildInstanceType; 
+            private java.util.List<String> sourceChildInstanceType; 
 
             /**
              * SourceChildInstanceType.
              */
-            public Builder sourceChildInstanceType(java.util.List < String > sourceChildInstanceType) {
+            public Builder sourceChildInstanceType(java.util.List<String> sourceChildInstanceType) {
                 this.sourceChildInstanceType = sourceChildInstanceType;
                 return this;
             }
@@ -668,7 +673,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class SourceInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
-        private java.util.List < String > sourceInstanceId;
+        private java.util.List<String> sourceInstanceId;
 
         private SourceInstanceIds(Builder builder) {
             this.sourceInstanceId = builder.sourceInstanceId;
@@ -685,17 +690,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceInstanceId
          */
-        public java.util.List < String > getSourceInstanceId() {
+        public java.util.List<String> getSourceInstanceId() {
             return this.sourceInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceInstanceId; 
+            private java.util.List<String> sourceInstanceId; 
 
             /**
              * SourceInstanceId.
              */
-            public Builder sourceInstanceId(java.util.List < String > sourceInstanceId) {
+            public Builder sourceInstanceId(java.util.List<String> sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
                 return this;
             }
@@ -715,7 +720,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class SourceRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceRegionId")
-        private java.util.List < String > sourceRegionId;
+        private java.util.List<String> sourceRegionId;
 
         private SourceRegionIds(Builder builder) {
             this.sourceRegionId = builder.sourceRegionId;
@@ -732,17 +737,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceRegionId
          */
-        public java.util.List < String > getSourceRegionId() {
+        public java.util.List<String> getSourceRegionId() {
             return this.sourceRegionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceRegionId; 
+            private java.util.List<String> sourceRegionId; 
 
             /**
              * SourceRegionId.
              */
-            public Builder sourceRegionId(java.util.List < String > sourceRegionId) {
+            public Builder sourceRegionId(java.util.List<String> sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
                 return this;
             }
@@ -762,7 +767,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class SourceRouteTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceRouteTableId")
-        private java.util.List < String > sourceRouteTableId;
+        private java.util.List<String> sourceRouteTableId;
 
         private SourceRouteTableIds(Builder builder) {
             this.sourceRouteTableId = builder.sourceRouteTableId;
@@ -779,17 +784,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return sourceRouteTableId
          */
-        public java.util.List < String > getSourceRouteTableId() {
+        public java.util.List<String> getSourceRouteTableId() {
             return this.sourceRouteTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceRouteTableId; 
+            private java.util.List<String> sourceRouteTableId; 
 
             /**
              * SourceRouteTableId.
              */
-            public Builder sourceRouteTableId(java.util.List < String > sourceRouteTableId) {
+            public Builder sourceRouteTableId(java.util.List<String> sourceRouteTableId) {
                 this.sourceRouteTableId = sourceRouteTableId;
                 return this;
             }
@@ -1603,7 +1608,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
      */
     public static class RouteMaps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteMap")
-        private java.util.List < RouteMap> routeMap;
+        private java.util.List<RouteMap> routeMap;
 
         private RouteMaps(Builder builder) {
             this.routeMap = builder.routeMap;
@@ -1620,17 +1625,17 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
         /**
          * @return routeMap
          */
-        public java.util.List < RouteMap> getRouteMap() {
+        public java.util.List<RouteMap> getRouteMap() {
             return this.routeMap;
         }
 
         public static final class Builder {
-            private java.util.List < RouteMap> routeMap; 
+            private java.util.List<RouteMap> routeMap; 
 
             /**
              * RouteMap.
              */
-            public Builder routeMap(java.util.List < RouteMap> routeMap) {
+            public Builder routeMap(java.util.List<RouteMap> routeMap) {
                 this.routeMap = routeMap;
                 return this;
             }

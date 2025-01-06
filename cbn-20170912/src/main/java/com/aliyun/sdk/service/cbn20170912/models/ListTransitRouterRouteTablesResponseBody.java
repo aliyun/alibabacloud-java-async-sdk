@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTables")
-    private java.util.List < TransitRouterRouteTables> transitRouterRouteTables;
+    private java.util.List<TransitRouterRouteTables> transitRouterRouteTables;
 
     private ListTransitRouterRouteTablesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     /**
      * @return transitRouterRouteTables
      */
-    public java.util.List < TransitRouterRouteTables> getTransitRouterRouteTables() {
+    public java.util.List<TransitRouterRouteTables> getTransitRouterRouteTables() {
         return this.transitRouterRouteTables;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterRouteTables> transitRouterRouteTables; 
+        private java.util.List<TransitRouterRouteTables> transitRouterRouteTables; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         /**
          * <p>A list of route tables.</p>
          */
-        public Builder transitRouterRouteTables(java.util.List < TransitRouterRouteTables> transitRouterRouteTables) {
+        public Builder transitRouterRouteTables(java.util.List<TransitRouterRouteTables> transitRouterRouteTables) {
             this.transitRouterRouteTables = transitRouterRouteTables;
             return this;
         }
@@ -291,7 +296,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         private RouteTableOptions routeTableOptions;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
@@ -356,7 +361,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -406,7 +411,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             private String createTime; 
             private String regionId; 
             private RouteTableOptions routeTableOptions; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterId; 
             private String transitRouterRouteTableDescription; 
             private String transitRouterRouteTableId; 
@@ -448,7 +453,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

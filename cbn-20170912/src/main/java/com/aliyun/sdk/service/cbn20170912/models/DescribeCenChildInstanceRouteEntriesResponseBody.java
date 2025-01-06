@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
      */
     public static class AsPaths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsPath")
-        private java.util.List < String > asPath;
+        private java.util.List<String> asPath;
 
         private AsPaths(Builder builder) {
             this.asPath = builder.asPath;
@@ -168,17 +173,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * @return asPath
          */
-        public java.util.List < String > getAsPath() {
+        public java.util.List<String> getAsPath() {
             return this.asPath;
         }
 
         public static final class Builder {
-            private java.util.List < String > asPath; 
+            private java.util.List<String> asPath; 
 
             /**
              * AsPath.
              */
-            public Builder asPath(java.util.List < String > asPath) {
+            public Builder asPath(java.util.List<String> asPath) {
                 this.asPath = asPath;
                 return this;
             }
@@ -271,7 +276,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
      */
     public static class CenRouteMapRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenRouteMapRecord")
-        private java.util.List < CenRouteMapRecord> cenRouteMapRecord;
+        private java.util.List<CenRouteMapRecord> cenRouteMapRecord;
 
         private CenRouteMapRecords(Builder builder) {
             this.cenRouteMapRecord = builder.cenRouteMapRecord;
@@ -288,17 +293,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * @return cenRouteMapRecord
          */
-        public java.util.List < CenRouteMapRecord> getCenRouteMapRecord() {
+        public java.util.List<CenRouteMapRecord> getCenRouteMapRecord() {
             return this.cenRouteMapRecord;
         }
 
         public static final class Builder {
-            private java.util.List < CenRouteMapRecord> cenRouteMapRecord; 
+            private java.util.List<CenRouteMapRecord> cenRouteMapRecord; 
 
             /**
              * CenRouteMapRecord.
              */
-            public Builder cenRouteMapRecord(java.util.List < CenRouteMapRecord> cenRouteMapRecord) {
+            public Builder cenRouteMapRecord(java.util.List<CenRouteMapRecord> cenRouteMapRecord) {
                 this.cenRouteMapRecord = cenRouteMapRecord;
                 return this;
             }
@@ -318,7 +323,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
      */
     public static class Communities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Community")
-        private java.util.List < String > community;
+        private java.util.List<String> community;
 
         private Communities(Builder builder) {
             this.community = builder.community;
@@ -335,17 +340,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * @return community
          */
-        public java.util.List < String > getCommunity() {
+        public java.util.List<String> getCommunity() {
             return this.community;
         }
 
         public static final class Builder {
-            private java.util.List < String > community; 
+            private java.util.List<String> community; 
 
             /**
              * Community.
              */
-            public Builder community(java.util.List < String > community) {
+            public Builder community(java.util.List<String> community) {
                 this.community = community;
                 return this;
             }
@@ -462,9 +467,10 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
             /**
              * <p>The type of the peer network instance on which the overlapping routes are found. Valid values:</p>
              * <ul>
-             * <li><strong>VPC</strong></li>
-             * <li><strong>VBR</strong></li>
-             * <li><strong>CCN</strong></li>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>VBR</strong>: VBR</li>
+             * <li><strong>CCN</strong>: CCN instance</li>
+             * <li><strong>ECR</strong>: ECR</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -516,7 +522,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
      */
     public static class Conflicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conflict")
-        private java.util.List < Conflict> conflict;
+        private java.util.List<Conflict> conflict;
 
         private Conflicts(Builder builder) {
             this.conflict = builder.conflict;
@@ -533,17 +539,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * @return conflict
          */
-        public java.util.List < Conflict> getConflict() {
+        public java.util.List<Conflict> getConflict() {
             return this.conflict;
         }
 
         public static final class Builder {
-            private java.util.List < Conflict> conflict; 
+            private java.util.List<Conflict> conflict; 
 
             /**
              * Conflict.
              */
-            public Builder conflict(java.util.List < Conflict> conflict) {
+            public Builder conflict(java.util.List<Conflict> conflict) {
                 this.conflict = conflict;
                 return this;
             }
@@ -920,7 +926,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
      */
     public static class CenRouteEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenRouteEntry")
-        private java.util.List < CenRouteEntry> cenRouteEntry;
+        private java.util.List<CenRouteEntry> cenRouteEntry;
 
         private CenRouteEntries(Builder builder) {
             this.cenRouteEntry = builder.cenRouteEntry;
@@ -937,17 +943,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * @return cenRouteEntry
          */
-        public java.util.List < CenRouteEntry> getCenRouteEntry() {
+        public java.util.List<CenRouteEntry> getCenRouteEntry() {
             return this.cenRouteEntry;
         }
 
         public static final class Builder {
-            private java.util.List < CenRouteEntry> cenRouteEntry; 
+            private java.util.List<CenRouteEntry> cenRouteEntry; 
 
             /**
              * CenRouteEntry.
              */
-            public Builder cenRouteEntry(java.util.List < CenRouteEntry> cenRouteEntry) {
+            public Builder cenRouteEntry(java.util.List<CenRouteEntry> cenRouteEntry) {
                 this.cenRouteEntry = cenRouteEntry;
                 return this;
             }

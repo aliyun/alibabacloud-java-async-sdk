@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -267,6 +272,7 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends Request {
          * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
          * <li><strong>VBR</strong>: virtual border router (VBR)</li>
          * <li><strong>CCN</strong>: Cloud Connect Network (CCN) instance</li>
+         * <li><strong>ECR</strong>: Express Connect Router (ECR)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

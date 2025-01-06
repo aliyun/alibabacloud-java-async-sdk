@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
      */
     public static class Cidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cidr")
-        private java.util.List < String > cidr;
+        private java.util.List<String> cidr;
 
         private Cidrs(Builder builder) {
             this.cidr = builder.cidr;
@@ -168,17 +173,17 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         /**
          * @return cidr
          */
-        public java.util.List < String > getCidr() {
+        public java.util.List<String> getCidr() {
             return this.cidr;
         }
 
         public static final class Builder {
-            private java.util.List < String > cidr; 
+            private java.util.List<String> cidr; 
 
             /**
              * Cidr.
              */
-            public Builder cidr(java.util.List < String > cidr) {
+            public Builder cidr(java.util.List<String> cidr) {
                 this.cidr = cidr;
                 return this;
             }
@@ -411,7 +416,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
      */
     public static class RouteServiceEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteServiceEntry")
-        private java.util.List < RouteServiceEntry> routeServiceEntry;
+        private java.util.List<RouteServiceEntry> routeServiceEntry;
 
         private RouteServiceEntries(Builder builder) {
             this.routeServiceEntry = builder.routeServiceEntry;
@@ -428,17 +433,17 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         /**
          * @return routeServiceEntry
          */
-        public java.util.List < RouteServiceEntry> getRouteServiceEntry() {
+        public java.util.List<RouteServiceEntry> getRouteServiceEntry() {
             return this.routeServiceEntry;
         }
 
         public static final class Builder {
-            private java.util.List < RouteServiceEntry> routeServiceEntry; 
+            private java.util.List<RouteServiceEntry> routeServiceEntry; 
 
             /**
              * RouteServiceEntry.
              */
-            public Builder routeServiceEntry(java.util.List < RouteServiceEntry> routeServiceEntry) {
+            public Builder routeServiceEntry(java.util.List<RouteServiceEntry> routeServiceEntry) {
                 this.routeServiceEntry = routeServiceEntry;
                 return this;
             }

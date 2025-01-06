@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -395,7 +400,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
      */
     public static class VbrHealthChecks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VbrHealthCheck")
-        private java.util.List < VbrHealthCheck> vbrHealthCheck;
+        private java.util.List<VbrHealthCheck> vbrHealthCheck;
 
         private VbrHealthChecks(Builder builder) {
             this.vbrHealthCheck = builder.vbrHealthCheck;
@@ -412,17 +417,17 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
         /**
          * @return vbrHealthCheck
          */
-        public java.util.List < VbrHealthCheck> getVbrHealthCheck() {
+        public java.util.List<VbrHealthCheck> getVbrHealthCheck() {
             return this.vbrHealthCheck;
         }
 
         public static final class Builder {
-            private java.util.List < VbrHealthCheck> vbrHealthCheck; 
+            private java.util.List<VbrHealthCheck> vbrHealthCheck; 
 
             /**
              * VbrHealthCheck.
              */
-            public Builder vbrHealthCheck(java.util.List < VbrHealthCheck> vbrHealthCheck) {
+            public Builder vbrHealthCheck(java.util.List<VbrHealthCheck> vbrHealthCheck) {
                 this.vbrHealthCheck = vbrHealthCheck;
                 return this;
             }

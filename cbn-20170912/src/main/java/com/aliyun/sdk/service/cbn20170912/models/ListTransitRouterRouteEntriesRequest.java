@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteFilter")
-    private java.util.List < RouteFilter> routeFilter;
+    private java.util.List<RouteFilter> routeFilter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
@@ -52,11 +57,11 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryIds")
-    private java.util.List < String > transitRouterRouteEntryIds;
+    private java.util.List<String> transitRouterRouteEntryIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNames")
-    private java.util.List < String > transitRouterRouteEntryNames;
+    private java.util.List<String> transitRouterRouteEntryNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopId")
@@ -184,7 +189,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     /**
      * @return routeFilter
      */
-    public java.util.List < RouteFilter> getRouteFilter() {
+    public java.util.List<RouteFilter> getRouteFilter() {
         return this.routeFilter;
     }
 
@@ -198,14 +203,14 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     /**
      * @return transitRouterRouteEntryIds
      */
-    public java.util.List < String > getTransitRouterRouteEntryIds() {
+    public java.util.List<String> getTransitRouterRouteEntryIds() {
         return this.transitRouterRouteEntryIds;
     }
 
     /**
      * @return transitRouterRouteEntryNames
      */
-    public java.util.List < String > getTransitRouterRouteEntryNames() {
+    public java.util.List<String> getTransitRouterRouteEntryNames() {
         return this.transitRouterRouteEntryNames;
     }
 
@@ -280,10 +285,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         private String prefixListId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < RouteFilter> routeFilter; 
+        private java.util.List<RouteFilter> routeFilter; 
         private String transitRouterRouteEntryDestinationCidrBlock; 
-        private java.util.List < String > transitRouterRouteEntryIds; 
-        private java.util.List < String > transitRouterRouteEntryNames; 
+        private java.util.List<String> transitRouterRouteEntryIds; 
+        private java.util.List<String> transitRouterRouteEntryNames; 
         private String transitRouterRouteEntryNextHopId; 
         private String transitRouterRouteEntryNextHopResourceId; 
         private String transitRouterRouteEntryNextHopResourceType; 
@@ -401,7 +406,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder routeFilter(java.util.List < RouteFilter> routeFilter) {
+        public Builder routeFilter(java.util.List<RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
             this.routeFilter = routeFilter;
             return this;
@@ -425,7 +430,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
          * <strong>example:</strong>
          * <p>rte-oklkgwmj97z6dn****</p>
          */
-        public Builder transitRouterRouteEntryIds(java.util.List < String > transitRouterRouteEntryIds) {
+        public Builder transitRouterRouteEntryIds(java.util.List<String> transitRouterRouteEntryIds) {
             this.putQueryParameter("TransitRouterRouteEntryIds", transitRouterRouteEntryIds);
             this.transitRouterRouteEntryIds = transitRouterRouteEntryIds;
             return this;
@@ -437,7 +442,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
          * <strong>example:</strong>
          * <p>testname</p>
          */
-        public Builder transitRouterRouteEntryNames(java.util.List < String > transitRouterRouteEntryNames) {
+        public Builder transitRouterRouteEntryNames(java.util.List<String> transitRouterRouteEntryNames) {
             this.putQueryParameter("TransitRouterRouteEntryNames", transitRouterRouteEntryNames);
             this.transitRouterRouteEntryNames = transitRouterRouteEntryNames;
             return this;
@@ -599,7 +604,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private RouteFilter(Builder builder) {
             this.key = builder.key;
@@ -624,13 +629,13 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The match pattern for filtering CIDR blocks. Valid values:</p>
@@ -653,7 +658,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
             /**
              * <p>The filter value.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -58,7 +63,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     private ListTransitRouterMulticastDomainAssociationsRequest(Builder builder) {
         super(builder);
@@ -169,7 +174,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -185,7 +190,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         private String resourceType; 
         private String transitRouterAttachmentId; 
         private String transitRouterMulticastDomainId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -336,7 +341,7 @@ public class ListTransitRouterMulticastDomainAssociationsRequest extends Request
         /**
          * <p>The IDs of vSwitches.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;

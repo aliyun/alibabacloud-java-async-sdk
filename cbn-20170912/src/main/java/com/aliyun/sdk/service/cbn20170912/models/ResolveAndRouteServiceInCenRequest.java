@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccessRegionIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > accessRegionIds;
+    private java.util.List<String> accessRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CenId")
@@ -92,7 +97,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
     /**
      * @return accessRegionIds
      */
-    public java.util.List < String > getAccessRegionIds() {
+    public java.util.List<String> getAccessRegionIds() {
         return this.accessRegionIds;
     }
 
@@ -167,7 +172,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResolveAndRouteServiceInCenRequest, Builder> {
-        private java.util.List < String > accessRegionIds; 
+        private java.util.List<String> accessRegionIds; 
         private String cenId; 
         private String clientToken; 
         private String description; 
@@ -205,7 +210,7 @@ public class ResolveAndRouteServiceInCenRequest extends Request {
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
-        public Builder accessRegionIds(java.util.List < String > accessRegionIds) {
+        public Builder accessRegionIds(java.util.List<String> accessRegionIds) {
             this.putQueryParameter("AccessRegionIds", accessRegionIds);
             this.accessRegionIds = accessRegionIds;
             return this;

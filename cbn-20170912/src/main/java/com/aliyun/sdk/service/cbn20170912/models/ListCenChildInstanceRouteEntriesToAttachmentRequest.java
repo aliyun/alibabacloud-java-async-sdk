@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteFilter")
-    private java.util.List < RouteFilter> routeFilter;
+    private java.util.List<RouteFilter> routeFilter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceType")
@@ -145,7 +150,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
     /**
      * @return routeFilter
      */
-    public java.util.List < RouteFilter> getRouteFilter() {
+    public java.util.List<RouteFilter> getRouteFilter() {
         return this.routeFilter;
     }
 
@@ -172,7 +177,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < RouteFilter> routeFilter; 
+        private java.util.List<RouteFilter> routeFilter; 
         private String serviceType; 
         private String transitRouterAttachmentId; 
 
@@ -287,7 +292,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         /**
          * <p>The filter condition for the destination CIDR block.</p>
          */
-        public Builder routeFilter(java.util.List < RouteFilter> routeFilter) {
+        public Builder routeFilter(java.util.List<RouteFilter> routeFilter) {
             this.putQueryParameter("RouteFilter", routeFilter);
             this.routeFilter = routeFilter;
             return this;
@@ -336,7 +341,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private RouteFilter(Builder builder) {
             this.key = builder.key;
@@ -361,13 +366,13 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The match mode of the route.</p>
@@ -386,7 +391,7 @@ public class ListCenChildInstanceRouteEntriesToAttachmentRequest extends Request
             /**
              * <p>The destination CIDR blocks.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

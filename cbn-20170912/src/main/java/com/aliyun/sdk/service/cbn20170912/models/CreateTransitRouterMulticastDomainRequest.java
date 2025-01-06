@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,6 +30,10 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private Options options;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -46,7 +55,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterId")
@@ -65,6 +74,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         this.cenId = builder.cenId;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.options = builder.options;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -111,6 +121,13 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
     }
 
     /**
+     * @return options
+     */
+    public Options getOptions() {
+        return this.options;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -148,7 +165,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -177,12 +194,13 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         private String cenId; 
         private String clientToken; 
         private Boolean dryRun; 
+        private Options options; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterId; 
         private String transitRouterMulticastDomainDescription; 
         private String transitRouterMulticastDomainName; 
@@ -196,6 +214,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
             this.cenId = request.cenId;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.options = request.options;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -245,6 +264,15 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(Options options) {
+            this.putQueryParameter("Options", options);
+            this.options = options;
             return this;
         }
 
@@ -301,7 +329,7 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
          * <p>The information about the tags.</p>
          * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -352,6 +380,53 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTransitRouterMulticastDomainRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTransitRouterMulticastDomainRequest</p>
+     */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Igmpv2Support")
+        private String igmpv2Support;
+
+        private Options(Builder builder) {
+            this.igmpv2Support = builder.igmpv2Support;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return igmpv2Support
+         */
+        public String getIgmpv2Support() {
+            return this.igmpv2Support;
+        }
+
+        public static final class Builder {
+            private String igmpv2Support; 
+
+            /**
+             * Igmpv2Support.
+             */
+            public Builder igmpv2Support(String igmpv2Support) {
+                this.igmpv2Support = igmpv2Support;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateTransitRouterMulticastDomainRequest} extends {@link TeaModel}

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomains")
-    private java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains;
+    private java.util.List<TransitRouterMulticastDomains> transitRouterMulticastDomains;
 
     private ListTransitRouterMulticastDomainsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     /**
      * @return transitRouterMulticastDomains
      */
-    public java.util.List < TransitRouterMulticastDomains> getTransitRouterMulticastDomains() {
+    public java.util.List<TransitRouterMulticastDomains> getTransitRouterMulticastDomains() {
         return this.transitRouterMulticastDomains;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains; 
+        private java.util.List<TransitRouterMulticastDomains> transitRouterMulticastDomains; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         /**
          * <p>The information about the multicast domain.</p>
          */
-        public Builder transitRouterMulticastDomains(java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains) {
+        public Builder transitRouterMulticastDomains(java.util.List<TransitRouterMulticastDomains> transitRouterMulticastDomains) {
             this.transitRouterMulticastDomains = transitRouterMulticastDomains;
             return this;
         }
@@ -147,6 +152,53 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTransitRouterMulticastDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTransitRouterMulticastDomainsResponseBody</p>
+     */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Igmpv2Support")
+        private String igmpv2Support;
+
+        private Options(Builder builder) {
+            this.igmpv2Support = builder.igmpv2Support;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return igmpv2Support
+         */
+        public String getIgmpv2Support() {
+            return this.igmpv2Support;
+        }
+
+        public static final class Builder {
+            private String igmpv2Support; 
+
+            /**
+             * Igmpv2Support.
+             */
+            public Builder igmpv2Support(String igmpv2Support) {
+                this.igmpv2Support = igmpv2Support;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListTransitRouterMulticastDomainsResponseBody} extends {@link TeaModel}
@@ -230,6 +282,9 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private Options options;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -237,7 +292,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
@@ -253,6 +308,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
         private TransitRouterMulticastDomains(Builder builder) {
             this.cenId = builder.cenId;
+            this.options = builder.options;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -278,6 +334,13 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return options
+         */
+        public Options getOptions() {
+            return this.options;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -294,7 +357,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -328,9 +391,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cenId; 
+            private Options options; 
             private String regionId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterId; 
             private String transitRouterMulticastDomainDescription; 
             private String transitRouterMulticastDomainId; 
@@ -344,6 +408,14 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(Options options) {
+                this.options = options;
                 return this;
             }
 
@@ -374,7 +446,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

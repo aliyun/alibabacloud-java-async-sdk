@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -380,7 +385,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
      */
     public static class GrantRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GrantRule")
-        private java.util.List < GrantRule> grantRule;
+        private java.util.List<GrantRule> grantRule;
 
         private GrantRules(Builder builder) {
             this.grantRule = builder.grantRule;
@@ -397,17 +402,17 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         /**
          * @return grantRule
          */
-        public java.util.List < GrantRule> getGrantRule() {
+        public java.util.List<GrantRule> getGrantRule() {
             return this.grantRule;
         }
 
         public static final class Builder {
-            private java.util.List < GrantRule> grantRule; 
+            private java.util.List<GrantRule> grantRule; 
 
             /**
              * GrantRule.
              */
-            public Builder grantRule(java.util.List < GrantRule> grantRule) {
+            public Builder grantRule(java.util.List<GrantRule> grantRule) {
                 this.grantRule = grantRule;
                 return this;
             }

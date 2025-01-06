@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    private java.util.List<String> networkInterfaceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -39,7 +44,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomains")
-    private java.util.List < String > peerTransitRouterMulticastDomains;
+    private java.util.List<String> peerTransitRouterMulticastDomains;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -105,7 +110,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -126,7 +131,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
     /**
      * @return peerTransitRouterMulticastDomains
      */
-    public java.util.List < String > getPeerTransitRouterMulticastDomains() {
+    public java.util.List<String> getPeerTransitRouterMulticastDomains() {
         return this.peerTransitRouterMulticastDomains;
     }
 
@@ -155,10 +160,10 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         private String clientToken; 
         private Boolean dryRun; 
         private String groupIpAddress; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > peerTransitRouterMulticastDomains; 
+        private java.util.List<String> peerTransitRouterMulticastDomains; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String transitRouterMulticastDomainId; 
@@ -226,7 +231,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         /**
          * <p>The IDs of elastic network interfaces (ENIs).</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
@@ -253,7 +258,7 @@ public class DeregisterTransitRouterMulticastGroupMembersRequest extends Request
         /**
          * <p>The ID of the multicast domain that is in a different region.</p>
          */
-        public Builder peerTransitRouterMulticastDomains(java.util.List < String > peerTransitRouterMulticastDomains) {
+        public Builder peerTransitRouterMulticastDomains(java.util.List<String> peerTransitRouterMulticastDomains) {
             this.putQueryParameter("PeerTransitRouterMulticastDomains", peerTransitRouterMulticastDomains);
             this.peerTransitRouterMulticastDomains = peerTransitRouterMulticastDomains;
             return this;

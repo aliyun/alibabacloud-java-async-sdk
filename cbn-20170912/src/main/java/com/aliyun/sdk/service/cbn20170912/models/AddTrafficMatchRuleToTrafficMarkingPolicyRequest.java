@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficMatchRules")
-    private java.util.List < TrafficMatchRules> trafficMatchRules;
+    private java.util.List<TrafficMatchRules> trafficMatchRules;
 
     private AddTrafficMatchRuleToTrafficMarkingPolicyRequest(Builder builder) {
         super(builder);
@@ -122,7 +127,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
     /**
      * @return trafficMatchRules
      */
-    public java.util.List < TrafficMatchRules> getTrafficMatchRules() {
+    public java.util.List<TrafficMatchRules> getTrafficMatchRules() {
         return this.trafficMatchRules;
     }
 
@@ -134,7 +139,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String trafficMarkingPolicyId; 
-        private java.util.List < TrafficMatchRules> trafficMatchRules; 
+        private java.util.List<TrafficMatchRules> trafficMatchRules; 
 
         private Builder() {
             super();
@@ -237,7 +242,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
          * <p>The traffic classification rules.</p>
          * <p>You can add at most 50 traffic classification rules in each call.</p>
          */
-        public Builder trafficMatchRules(java.util.List < TrafficMatchRules> trafficMatchRules) {
+        public Builder trafficMatchRules(java.util.List<TrafficMatchRules> trafficMatchRules) {
             this.putQueryParameter("TrafficMatchRules", trafficMatchRules);
             this.trafficMatchRules = trafficMatchRules;
             return this;
@@ -264,7 +269,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         private String dstCidr;
 
         @com.aliyun.core.annotation.NameInMap("DstPortRange")
-        private java.util.List < Integer > dstPortRange;
+        private java.util.List<Integer> dstPortRange;
 
         @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
@@ -276,7 +281,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         private String srcCidr;
 
         @com.aliyun.core.annotation.NameInMap("SrcPortRange")
-        private java.util.List < Integer > srcPortRange;
+        private java.util.List<Integer> srcPortRange;
 
         @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleDescription")
         private String trafficMatchRuleDescription;
@@ -321,7 +326,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         /**
          * @return dstPortRange
          */
-        public java.util.List < Integer > getDstPortRange() {
+        public java.util.List<Integer> getDstPortRange() {
             return this.dstPortRange;
         }
 
@@ -349,7 +354,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         /**
          * @return srcPortRange
          */
-        public java.util.List < Integer > getSrcPortRange() {
+        public java.util.List<Integer> getSrcPortRange() {
             return this.srcPortRange;
         }
 
@@ -370,11 +375,11 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         public static final class Builder {
             private String addressFamily; 
             private String dstCidr; 
-            private java.util.List < Integer > dstPortRange; 
+            private java.util.List<Integer> dstPortRange; 
             private Integer matchDscp; 
             private String protocol; 
             private String srcCidr; 
-            private java.util.List < Integer > srcPortRange; 
+            private java.util.List<Integer> srcPortRange; 
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleName; 
 
@@ -411,7 +416,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
              * <li>If you enter two port numbers and one of them is -1, the other port must also be -1. In this case, packets are considered a match regardless of the destination port.</li>
              * </ul>
              */
-            public Builder dstPortRange(java.util.List < Integer > dstPortRange) {
+            public Builder dstPortRange(java.util.List<Integer> dstPortRange) {
                 this.dstPortRange = dstPortRange;
                 return this;
             }
@@ -480,7 +485,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
              * <li>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</li>
              * </ul>
              */
-            public Builder srcPortRange(java.util.List < Integer > srcPortRange) {
+            public Builder srcPortRange(java.util.List<Integer> srcPortRange) {
                 this.srcPortRange = srcPortRange;
                 return this;
             }

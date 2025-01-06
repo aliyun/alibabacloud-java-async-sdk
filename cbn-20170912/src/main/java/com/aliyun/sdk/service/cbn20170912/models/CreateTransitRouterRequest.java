@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,11 +57,11 @@ public class CreateTransitRouterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterCidrList")
-    private java.util.List < TransitRouterCidrList> transitRouterCidrList;
+    private java.util.List<TransitRouterCidrList> transitRouterCidrList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterDescription")
@@ -162,14 +167,14 @@ public class CreateTransitRouterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return transitRouterCidrList
      */
-    public java.util.List < TransitRouterCidrList> getTransitRouterCidrList() {
+    public java.util.List<TransitRouterCidrList> getTransitRouterCidrList() {
         return this.transitRouterCidrList;
     }
 
@@ -197,8 +202,8 @@ public class CreateTransitRouterRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean supportMulticast; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < TransitRouterCidrList> transitRouterCidrList; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<TransitRouterCidrList> transitRouterCidrList; 
         private String transitRouterDescription; 
         private String transitRouterName; 
 
@@ -338,7 +343,7 @@ public class CreateTransitRouterRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -347,7 +352,7 @@ public class CreateTransitRouterRequest extends Request {
         /**
          * <p>The CIDR blocks to be added to the transit router.</p>
          */
-        public Builder transitRouterCidrList(java.util.List < TransitRouterCidrList> transitRouterCidrList) {
+        public Builder transitRouterCidrList(java.util.List<TransitRouterCidrList> transitRouterCidrList) {
             String transitRouterCidrListShrink = shrink(transitRouterCidrList, "TransitRouterCidrList", "json");
             this.putQueryParameter("TransitRouterCidrList", transitRouterCidrListShrink);
             this.transitRouterCidrList = transitRouterCidrList;

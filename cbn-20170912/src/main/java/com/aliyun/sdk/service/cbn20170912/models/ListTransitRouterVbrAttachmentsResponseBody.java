@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachments")
-    private java.util.List < TransitRouterAttachments> transitRouterAttachments;
+    private java.util.List<TransitRouterAttachments> transitRouterAttachments;
 
     private ListTransitRouterVbrAttachmentsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
     /**
      * @return transitRouterAttachments
      */
-    public java.util.List < TransitRouterAttachments> getTransitRouterAttachments() {
+    public java.util.List<TransitRouterAttachments> getTransitRouterAttachments() {
         return this.transitRouterAttachments;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
+        private java.util.List<TransitRouterAttachments> transitRouterAttachments; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -132,7 +137,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * <p>A list of VBR connections.</p>
          */
-        public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
+        public Builder transitRouterAttachments(java.util.List<TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
             return this;
         }
@@ -242,7 +247,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
         private String transitRouterAttachmentDescription;
@@ -335,7 +340,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -395,7 +400,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             private String orderType; 
             private String resourceType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String transitRouterAttachmentDescription; 
             private String transitRouterAttachmentId; 
             private String transitRouterAttachmentName; 
@@ -494,7 +499,7 @@ public class ListTransitRouterVbrAttachmentsResponseBody extends TeaModel {
             /**
              * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

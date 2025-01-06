@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntries")
-    private java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries;
+    private java.util.List<TransitRouterRouteEntries> transitRouterRouteEntries;
 
     private ListTransitRouterRouteEntriesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
     /**
      * @return transitRouterRouteEntries
      */
-    public java.util.List < TransitRouterRouteEntries> getTransitRouterRouteEntries() {
+    public java.util.List<TransitRouterRouteEntries> getTransitRouterRouteEntries() {
         return this.transitRouterRouteEntries;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries; 
+        private java.util.List<TransitRouterRouteEntries> transitRouterRouteEntries; 
 
         /**
          * <p>The number of entries per page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>A list of route entries.</p>
          */
-        public Builder transitRouterRouteEntries(java.util.List < TransitRouterRouteEntries> transitRouterRouteEntries) {
+        public Builder transitRouterRouteEntries(java.util.List<TransitRouterRouteEntries> transitRouterRouteEntries) {
             this.transitRouterRouteEntries = transitRouterRouteEntries;
             return this;
         }
@@ -155,10 +160,10 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
      */
     public static class PathAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsPaths")
-        private java.util.List < String > asPaths;
+        private java.util.List<String> asPaths;
 
         @com.aliyun.core.annotation.NameInMap("Communities")
-        private java.util.List < String > communities;
+        private java.util.List<String> communities;
 
         @com.aliyun.core.annotation.NameInMap("OriginInstanceId")
         private String originInstanceId;
@@ -192,14 +197,14 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         /**
          * @return asPaths
          */
-        public java.util.List < String > getAsPaths() {
+        public java.util.List<String> getAsPaths() {
             return this.asPaths;
         }
 
         /**
          * @return communities
          */
-        public java.util.List < String > getCommunities() {
+        public java.util.List<String> getCommunities() {
             return this.communities;
         }
 
@@ -232,8 +237,8 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > asPaths; 
-            private java.util.List < String > communities; 
+            private java.util.List<String> asPaths; 
+            private java.util.List<String> communities; 
             private String originInstanceId; 
             private String originInstanceType; 
             private String originRouteType; 
@@ -242,7 +247,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             /**
              * <p>The route AS path.</p>
              */
-            public Builder asPaths(java.util.List < String > asPaths) {
+            public Builder asPaths(java.util.List<String> asPaths) {
                 this.asPaths = asPaths;
                 return this;
             }
@@ -250,7 +255,7 @@ public class ListTransitRouterRouteEntriesResponseBody extends TeaModel {
             /**
              * <p>The route community.</p>
              */
-            public Builder communities(java.util.List < String > communities) {
+            public Builder communities(java.util.List<String> communities) {
                 this.communities = communities;
                 return this;
             }

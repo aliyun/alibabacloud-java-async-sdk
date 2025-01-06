@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -371,7 +376,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
      */
     public static class CenInterRegionBandwidthLimits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CenInterRegionBandwidthLimit")
-        private java.util.List < CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit;
+        private java.util.List<CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit;
 
         private CenInterRegionBandwidthLimits(Builder builder) {
             this.cenInterRegionBandwidthLimit = builder.cenInterRegionBandwidthLimit;
@@ -388,17 +393,17 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         /**
          * @return cenInterRegionBandwidthLimit
          */
-        public java.util.List < CenInterRegionBandwidthLimit> getCenInterRegionBandwidthLimit() {
+        public java.util.List<CenInterRegionBandwidthLimit> getCenInterRegionBandwidthLimit() {
             return this.cenInterRegionBandwidthLimit;
         }
 
         public static final class Builder {
-            private java.util.List < CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit; 
+            private java.util.List<CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit; 
 
             /**
              * CenInterRegionBandwidthLimit.
              */
-            public Builder cenInterRegionBandwidthLimit(java.util.List < CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit) {
+            public Builder cenInterRegionBandwidthLimit(java.util.List<CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit) {
                 this.cenInterRegionBandwidthLimit = cenInterRegionBandwidthLimit;
                 return this;
             }

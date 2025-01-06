@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -222,7 +227,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         } 
 
         /**
-         * <p>按照实际的生效带宽值进行过滤，只允许输入正整数，单位Mbps。</p>
+         * <p>The filter works based on the actual bandwidth. Enter a positive integer. Unit: Mbit/s.</p>
          */
         public Builder effectiveBandwidthFilter(EffectiveBandwidthFilter effectiveBandwidthFilter) {
             this.putQueryParameter("EffectiveBandwidthFilter", effectiveBandwidthFilter);
@@ -420,7 +425,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
             private Long lte; 
 
             /**
-             * <p>实际生效带宽大于或等于指定带宽值。</p>
+             * <p>The actual bandwidth is equal to or larger than the specified value.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -431,7 +436,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
             }
 
             /**
-             * <p>实际生效带宽小于或等于指定带宽值。</p>
+             * <p>The actual bandwidth is equal to or smaller than the specified value.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

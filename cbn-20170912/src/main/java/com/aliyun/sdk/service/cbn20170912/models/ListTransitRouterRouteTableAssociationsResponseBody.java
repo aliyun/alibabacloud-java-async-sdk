@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterAssociations")
-    private java.util.List < TransitRouterAssociations> transitRouterAssociations;
+    private java.util.List<TransitRouterAssociations> transitRouterAssociations;
 
     private ListTransitRouterRouteTableAssociationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
     /**
      * @return transitRouterAssociations
      */
-    public java.util.List < TransitRouterAssociations> getTransitRouterAssociations() {
+    public java.util.List<TransitRouterAssociations> getTransitRouterAssociations() {
         return this.transitRouterAssociations;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterAssociations> transitRouterAssociations; 
+        private java.util.List<TransitRouterAssociations> transitRouterAssociations; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterRouteTableAssociationsResponseBody extends TeaMode
         /**
          * <p>A list of associated forwarding correlations.</p>
          */
-        public Builder transitRouterAssociations(java.util.List < TransitRouterAssociations> transitRouterAssociations) {
+        public Builder transitRouterAssociations(java.util.List<TransitRouterAssociations> transitRouterAssociations) {
             this.transitRouterAssociations = transitRouterAssociations;
             return this;
         }

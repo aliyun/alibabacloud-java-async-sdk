@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -321,7 +326,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
      */
     public static class PrivateZoneInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateZoneInfo")
-        private java.util.List < PrivateZoneInfo> privateZoneInfo;
+        private java.util.List<PrivateZoneInfo> privateZoneInfo;
 
         private PrivateZoneInfos(Builder builder) {
             this.privateZoneInfo = builder.privateZoneInfo;
@@ -338,17 +343,17 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
         /**
          * @return privateZoneInfo
          */
-        public java.util.List < PrivateZoneInfo> getPrivateZoneInfo() {
+        public java.util.List<PrivateZoneInfo> getPrivateZoneInfo() {
             return this.privateZoneInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PrivateZoneInfo> privateZoneInfo; 
+            private java.util.List<PrivateZoneInfo> privateZoneInfo; 
 
             /**
              * PrivateZoneInfo.
              */
-            public Builder privateZoneInfo(java.util.List < PrivateZoneInfo> privateZoneInfo) {
+            public Builder privateZoneInfo(java.util.List<PrivateZoneInfo> privateZoneInfo) {
                 this.privateZoneInfo = privateZoneInfo;
                 return this;
             }

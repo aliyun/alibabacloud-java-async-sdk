@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
-    private java.util.List < String > networkInterfaceIds;
+    private java.util.List<String> networkInterfaceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -50,7 +55,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomains")
-    private java.util.List < String > peerTransitRouterMulticastDomains;
+    private java.util.List<String> peerTransitRouterMulticastDomains;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
@@ -78,7 +83,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     private ListTransitRouterMulticastGroupsRequest(Builder builder) {
         super(builder);
@@ -152,7 +157,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
@@ -180,7 +185,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
     /**
      * @return peerTransitRouterMulticastDomains
      */
-    public java.util.List < String > getPeerTransitRouterMulticastDomains() {
+    public java.util.List<String> getPeerTransitRouterMulticastDomains() {
         return this.peerTransitRouterMulticastDomains;
     }
 
@@ -229,7 +234,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -239,18 +244,18 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         private Boolean isGroupMember; 
         private Boolean isGroupSource; 
         private Long maxResults; 
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > peerTransitRouterMulticastDomains; 
+        private java.util.List<String> peerTransitRouterMulticastDomains; 
         private String resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
         private String transitRouterAttachmentId; 
         private String transitRouterMulticastDomainId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
 
         private Builder() {
             super();
@@ -366,7 +371,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         /**
          * <p>The IDs of ENIs.</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
             this.networkInterfaceIds = networkInterfaceIds;
             return this;
@@ -409,7 +414,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         /**
          * <p>The ID of the inter-region multicast domain.</p>
          */
-        public Builder peerTransitRouterMulticastDomains(java.util.List < String > peerTransitRouterMulticastDomains) {
+        public Builder peerTransitRouterMulticastDomains(java.util.List<String> peerTransitRouterMulticastDomains) {
             this.putQueryParameter("PeerTransitRouterMulticastDomains", peerTransitRouterMulticastDomains);
             this.peerTransitRouterMulticastDomains = peerTransitRouterMulticastDomains;
             return this;
@@ -490,7 +495,7 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         /**
          * <p>The vSwitch IDs.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;

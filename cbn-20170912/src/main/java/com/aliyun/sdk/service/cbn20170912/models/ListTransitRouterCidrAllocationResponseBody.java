@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterCidrAllocations")
-    private java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations;
+    private java.util.List<TransitRouterCidrAllocations> transitRouterCidrAllocations;
 
     private ListTransitRouterCidrAllocationResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     /**
      * @return transitRouterCidrAllocations
      */
-    public java.util.List < TransitRouterCidrAllocations> getTransitRouterCidrAllocations() {
+    public java.util.List<TransitRouterCidrAllocations> getTransitRouterCidrAllocations() {
         return this.transitRouterCidrAllocations;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations; 
+        private java.util.List<TransitRouterCidrAllocations> transitRouterCidrAllocations; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -140,7 +145,7 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
         /**
          * <p>The information about the CIDR blocks that have IP addresses allocated to network instances.</p>
          */
-        public Builder transitRouterCidrAllocations(java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations) {
+        public Builder transitRouterCidrAllocations(java.util.List<TransitRouterCidrAllocations> transitRouterCidrAllocations) {
             this.transitRouterCidrAllocations = transitRouterCidrAllocations;
             return this;
         }

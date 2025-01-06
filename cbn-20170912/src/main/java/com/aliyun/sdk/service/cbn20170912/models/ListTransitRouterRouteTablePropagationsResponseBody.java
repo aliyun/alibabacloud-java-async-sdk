@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterPropagations")
-    private java.util.List < TransitRouterPropagations> transitRouterPropagations;
+    private java.util.List<TransitRouterPropagations> transitRouterPropagations;
 
     private ListTransitRouterRouteTablePropagationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     /**
      * @return transitRouterPropagations
      */
-    public java.util.List < TransitRouterPropagations> getTransitRouterPropagations() {
+    public java.util.List<TransitRouterPropagations> getTransitRouterPropagations() {
         return this.transitRouterPropagations;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterPropagations> transitRouterPropagations; 
+        private java.util.List<TransitRouterPropagations> transitRouterPropagations; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -132,7 +137,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         /**
          * <p>A list of route learning correlations.</p>
          */
-        public Builder transitRouterPropagations(java.util.List < TransitRouterPropagations> transitRouterPropagations) {
+        public Builder transitRouterPropagations(java.util.List<TransitRouterPropagations> transitRouterPropagations) {
             this.transitRouterPropagations = transitRouterPropagations;
             return this;
         }

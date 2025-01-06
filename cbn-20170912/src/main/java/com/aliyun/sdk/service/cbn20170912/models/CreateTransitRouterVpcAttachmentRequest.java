@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -54,7 +59,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
@@ -70,7 +75,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
-    private java.util.Map < String, String > transitRouterVPCAttachmentOptions;
+    private java.util.Map<String, String> transitRouterVPCAttachmentOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -84,7 +89,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CreateTransitRouterVpcAttachmentRequest(Builder builder) {
         super(builder);
@@ -194,7 +199,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -222,7 +227,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     /**
      * @return transitRouterVPCAttachmentOptions
      */
-    public java.util.Map < String, String > getTransitRouterVPCAttachmentOptions() {
+    public java.util.Map<String, String> getTransitRouterVPCAttachmentOptions() {
         return this.transitRouterVPCAttachmentOptions;
     }
 
@@ -243,7 +248,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -258,14 +263,14 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentName; 
         private String transitRouterId; 
-        private java.util.Map < String, String > transitRouterVPCAttachmentOptions; 
+        private java.util.Map<String, String> transitRouterVPCAttachmentOptions; 
         private String vpcId; 
         private Long vpcOwnerId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -418,7 +423,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * <p>The information about the tags.</p>
          * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -463,9 +468,9 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterVPCAttachmentOptions.
+         * <p>Feature configurations of the VPC connection.</p>
          */
-        public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
+        public Builder transitRouterVPCAttachmentOptions(java.util.Map<String, String> transitRouterVPCAttachmentOptions) {
             String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
             this.putQueryParameter("TransitRouterVPCAttachmentOptions", transitRouterVPCAttachmentOptionsShrink);
             this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
@@ -505,7 +510,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * <p>You can specify at most 10 zones.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;

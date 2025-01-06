@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListTransitRoutersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FeatureFilter")
-    private java.util.List < FeatureFilter> featureFilter;
+    private java.util.List<FeatureFilter> featureFilter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -54,7 +59,7 @@ public class ListTransitRoutersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterId")
@@ -109,7 +114,7 @@ public class ListTransitRoutersRequest extends Request {
     /**
      * @return featureFilter
      */
-    public java.util.List < FeatureFilter> getFeatureFilter() {
+    public java.util.List<FeatureFilter> getFeatureFilter() {
         return this.featureFilter;
     }
 
@@ -172,7 +177,7 @@ public class ListTransitRoutersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -199,7 +204,7 @@ public class ListTransitRoutersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListTransitRoutersRequest, Builder> {
         private String cenId; 
-        private java.util.List < FeatureFilter> featureFilter; 
+        private java.util.List<FeatureFilter> featureFilter; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -208,7 +213,7 @@ public class ListTransitRoutersRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String transitRouterId; 
         private String transitRouterName; 
         private String type; 
@@ -250,7 +255,7 @@ public class ListTransitRoutersRequest extends Request {
         /**
          * <p>The field that is used to enable or disable a feature of the transit router.</p>
          */
-        public Builder featureFilter(java.util.List < FeatureFilter> featureFilter) {
+        public Builder featureFilter(java.util.List<FeatureFilter> featureFilter) {
             this.putQueryParameter("FeatureFilter", featureFilter);
             this.featureFilter = featureFilter;
             return this;
@@ -352,7 +357,7 @@ public class ListTransitRoutersRequest extends Request {
          * <p>The information about the tags.</p>
          * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -417,7 +422,7 @@ public class ListTransitRoutersRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private FeatureFilter(Builder builder) {
             this.key = builder.key;
@@ -442,13 +447,13 @@ public class ListTransitRoutersRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The value of the field that is used to enable or disable a feature of the transit router. Supported fields:</p>
@@ -471,7 +476,7 @@ public class ListTransitRoutersRequest extends Request {
              * <li><strong>Disabled</strong>: disables multicast.</li>
              * </ul>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

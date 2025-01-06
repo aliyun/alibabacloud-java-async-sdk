@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouters")
-    private java.util.List < TransitRouters> transitRouters;
+    private java.util.List<TransitRouters> transitRouters;
 
     private ListTransitRoutersResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     /**
      * @return transitRouters
      */
-    public java.util.List < TransitRouters> getTransitRouters() {
+    public java.util.List<TransitRouters> getTransitRouters() {
         return this.transitRouters;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouters> transitRouters; 
+        private java.util.List<TransitRouters> transitRouters; 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -132,7 +137,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         /**
          * <p>A list of transit routers.</p>
          */
-        public Builder transitRouters(java.util.List < TransitRouters> transitRouters) {
+        public Builder transitRouters(java.util.List<TransitRouters> transitRouters) {
             this.transitRouters = transitRouters;
             return this;
         }
@@ -392,10 +397,10 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         private Boolean supportMulticast;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterCidrList")
-        private java.util.List < TransitRouterCidrList> transitRouterCidrList;
+        private java.util.List<TransitRouterCidrList> transitRouterCidrList;
 
         @com.aliyun.core.annotation.NameInMap("TransitRouterDescription")
         private String transitRouterDescription;
@@ -477,14 +482,14 @@ public class ListTransitRoutersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return transitRouterCidrList
          */
-        public java.util.List < TransitRouterCidrList> getTransitRouterCidrList() {
+        public java.util.List<TransitRouterCidrList> getTransitRouterCidrList() {
             return this.transitRouterCidrList;
         }
 
@@ -523,8 +528,8 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private Boolean supportMulticast; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < TransitRouterCidrList> transitRouterCidrList; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<TransitRouterCidrList> transitRouterCidrList; 
             private String transitRouterDescription; 
             private String transitRouterId; 
             private String transitRouterName; 
@@ -611,7 +616,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             /**
              * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -619,7 +624,7 @@ public class ListTransitRoutersResponseBody extends TeaModel {
             /**
              * <p>The CIDR blocks of the transit router.</p>
              */
-            public Builder transitRouterCidrList(java.util.List < TransitRouterCidrList> transitRouterCidrList) {
+            public Builder transitRouterCidrList(java.util.List<TransitRouterCidrList> transitRouterCidrList) {
                 this.transitRouterCidrList = transitRouterCidrList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dscps")
-    private java.util.List < Integer > dscps;
+    private java.util.List<Integer> dscps;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -114,7 +119,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
     /**
      * @return dscps
      */
-    public java.util.List < Integer > getDscps() {
+    public java.util.List<Integer> getDscps() {
         return this.dscps;
     }
 
@@ -178,7 +183,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         private Long bandwidth; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < Integer > dscps; 
+        private java.util.List<Integer> dscps; 
         private String ownerAccount; 
         private Long ownerId; 
         private String qosQueueDescription; 
@@ -209,8 +214,8 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         } 
 
         /**
-         * <p>按带宽绝对值模式分配时，当前队列可使用的跨地域带宽的绝对值，单位Mbps。</p>
-         * <p>输入数字即可，无需输入单位。</p>
+         * <p>The absolute bandwidth value that can be allocated to the current queue. Unit: Mbit/s.</p>
+         * <p>Enter a number. You do not need to enter a unit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +258,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         /**
          * <p>The differentiated services code point (DSCP) value used to match packets in the queue.</p>
          */
-        public Builder dscps(java.util.List < Integer > dscps) {
+        public Builder dscps(java.util.List<Integer> dscps) {
             this.putQueryParameter("Dscps", dscps);
             this.dscps = dscps;
             return this;
@@ -317,7 +322,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends Request
         }
 
         /**
-         * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+         * <p>The percentage of bandwidth that can be allocated to the current queue.</p>
          * <p>Enter a number. You do not need to enter a percent sign (%).</p>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddZoneMappings")
-    private java.util.List < AddZoneMappings> addZoneMappings;
+    private java.util.List<AddZoneMappings> addZoneMappings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -34,7 +39,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveZoneMappings")
-    private java.util.List < RemoveZoneMappings> removeZoneMappings;
+    private java.util.List<RemoveZoneMappings> removeZoneMappings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -78,7 +83,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
     /**
      * @return addZoneMappings
      */
-    public java.util.List < AddZoneMappings> getAddZoneMappings() {
+    public java.util.List<AddZoneMappings> getAddZoneMappings() {
         return this.addZoneMappings;
     }
 
@@ -113,7 +118,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
     /**
      * @return removeZoneMappings
      */
-    public java.util.List < RemoveZoneMappings> getRemoveZoneMappings() {
+    public java.util.List<RemoveZoneMappings> getRemoveZoneMappings() {
         return this.removeZoneMappings;
     }
 
@@ -139,12 +144,12 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTransitRouterVpcAttachmentZonesRequest, Builder> {
-        private java.util.List < AddZoneMappings> addZoneMappings; 
+        private java.util.List<AddZoneMappings> addZoneMappings; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < RemoveZoneMappings> removeZoneMappings; 
+        private java.util.List<RemoveZoneMappings> removeZoneMappings; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String transitRouterAttachmentId; 
@@ -169,7 +174,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         /**
          * <p>The zones and vSwitches that you want to add to the VPC connection.</p>
          */
-        public Builder addZoneMappings(java.util.List < AddZoneMappings> addZoneMappings) {
+        public Builder addZoneMappings(java.util.List<AddZoneMappings> addZoneMappings) {
             this.putQueryParameter("AddZoneMappings", addZoneMappings);
             this.addZoneMappings = addZoneMappings;
             return this;
@@ -228,7 +233,7 @@ public class UpdateTransitRouterVpcAttachmentZonesRequest extends Request {
         /**
          * <p>The zones and vSwitches that you want to remove from the VPC connection.</p>
          */
-        public Builder removeZoneMappings(java.util.List < RemoveZoneMappings> removeZoneMappings) {
+        public Builder removeZoneMappings(java.util.List<RemoveZoneMappings> removeZoneMappings) {
             this.putQueryParameter("RemoveZoneMappings", removeZoneMappings);
             this.removeZoneMappings = removeZoneMappings;
             return this;

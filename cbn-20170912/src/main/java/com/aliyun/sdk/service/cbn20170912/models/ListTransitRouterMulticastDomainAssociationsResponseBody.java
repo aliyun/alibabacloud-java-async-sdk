@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastAssociations")
-    private java.util.List < TransitRouterMulticastAssociations> transitRouterMulticastAssociations;
+    private java.util.List<TransitRouterMulticastAssociations> transitRouterMulticastAssociations;
 
     private ListTransitRouterMulticastDomainAssociationsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     /**
      * @return transitRouterMulticastAssociations
      */
-    public java.util.List < TransitRouterMulticastAssociations> getTransitRouterMulticastAssociations() {
+    public java.util.List<TransitRouterMulticastAssociations> getTransitRouterMulticastAssociations() {
         return this.transitRouterMulticastAssociations;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterMulticastAssociations> transitRouterMulticastAssociations; 
+        private java.util.List<TransitRouterMulticastAssociations> transitRouterMulticastAssociations; 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
         /**
          * <p>The information about the resource associated with the multicast domain.</p>
          */
-        public Builder transitRouterMulticastAssociations(java.util.List < TransitRouterMulticastAssociations> transitRouterMulticastAssociations) {
+        public Builder transitRouterMulticastAssociations(java.util.List<TransitRouterMulticastAssociations> transitRouterMulticastAssociations) {
             this.transitRouterMulticastAssociations = transitRouterMulticastAssociations;
             return this;
         }

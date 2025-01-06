@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastGroups")
-    private java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups;
+    private java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups;
 
     private ListTransitRouterMulticastGroupsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     /**
      * @return transitRouterMulticastGroups
      */
-    public java.util.List < TransitRouterMulticastGroups> getTransitRouterMulticastGroups() {
+    public java.util.List<TransitRouterMulticastGroups> getTransitRouterMulticastGroups() {
         return this.transitRouterMulticastGroups;
     }
 
@@ -83,7 +88,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups; 
+        private java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups; 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -136,7 +141,7 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
         /**
          * <p>A list of multicast groups.</p>
          */
-        public Builder transitRouterMulticastGroups(java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups) {
+        public Builder transitRouterMulticastGroups(java.util.List<TransitRouterMulticastGroups> transitRouterMulticastGroups) {
             this.transitRouterMulticastGroups = transitRouterMulticastGroups;
             return this;
         }

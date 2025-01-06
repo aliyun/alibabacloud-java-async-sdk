@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,6 +24,10 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private Options options;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -53,6 +62,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.options = builder.options;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -87,6 +97,13 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return options
+     */
+    public Options getOptions() {
+        return this.options;
     }
 
     /**
@@ -141,6 +158,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyTransitRouterMulticastDomainRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private Options options; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -157,6 +175,7 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.options = request.options;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -192,6 +211,15 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(Options options) {
+            this.putQueryParameter("Options", options);
+            this.options = options;
             return this;
         }
 
@@ -277,4 +305,51 @@ public class ModifyTransitRouterMulticastDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyTransitRouterMulticastDomainRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTransitRouterMulticastDomainRequest</p>
+     */
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Igmpv2Support")
+        private String igmpv2Support;
+
+        private Options(Builder builder) {
+            this.igmpv2Support = builder.igmpv2Support;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return igmpv2Support
+         */
+        public String getIgmpv2Support() {
+            return this.igmpv2Support;
+        }
+
+        public static final class Builder {
+            private String igmpv2Support; 
+
+            /**
+             * Igmpv2Support.
+             */
+            public Builder igmpv2Support(String igmpv2Support) {
+                this.igmpv2Support = igmpv2Support;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
 }

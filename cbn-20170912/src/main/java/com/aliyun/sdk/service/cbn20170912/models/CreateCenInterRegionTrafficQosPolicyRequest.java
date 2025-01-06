@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficQosQueues")
-    private java.util.List < TrafficQosQueues> trafficQosQueues;
+    private java.util.List<TrafficQosQueues> trafficQosQueues;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
@@ -157,7 +162,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     /**
      * @return trafficQosQueues
      */
-    public java.util.List < TrafficQosQueues> getTrafficQosQueues() {
+    public java.util.List<TrafficQosQueues> getTrafficQosQueues() {
         return this.trafficQosQueues;
     }
 
@@ -185,7 +190,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         private Long resourceOwnerId; 
         private String trafficQosPolicyDescription; 
         private String trafficQosPolicyName; 
-        private java.util.List < TrafficQosQueues> trafficQosQueues; 
+        private java.util.List<TrafficQosQueues> trafficQosQueues; 
         private String transitRouterAttachmentId; 
         private String transitRouterId; 
 
@@ -210,7 +215,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         } 
 
         /**
-         * BandwidthGuaranteeMode.
+         * <p>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</p>
+         * <ul>
+         * <li><strong>byBandwidth</strong>: allocates an absolute bandwidth value for the QoS queue.</li>
+         * <li><strong>byBandwidthPercent</strong> (default): allocates a bandwidth percentage for the OoS queue.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>byBandwidthPercent</p>
          */
         public Builder bandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
             this.putQueryParameter("BandwidthGuaranteeMode", bandwidthGuaranteeMode);
@@ -313,7 +325,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
          * <p>The information about the QoS queue.</p>
          * <p>You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.</p>
          */
-        public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
+        public Builder trafficQosQueues(java.util.List<TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
             this.trafficQosQueues = trafficQosQueues;
             return this;
@@ -363,7 +375,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         private String bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("Dscps")
-        private java.util.List < Integer > dscps;
+        private java.util.List<Integer> dscps;
 
         @com.aliyun.core.annotation.NameInMap("QosQueueDescription")
         private String qosQueueDescription;
@@ -400,7 +412,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         /**
          * @return dscps
          */
-        public java.util.List < Integer > getDscps() {
+        public java.util.List<Integer> getDscps() {
             return this.dscps;
         }
 
@@ -427,13 +439,21 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
         public static final class Builder {
             private String bandwidth; 
-            private java.util.List < Integer > dscps; 
+            private java.util.List<Integer> dscps; 
             private String qosQueueDescription; 
             private String qosQueueName; 
             private String remainBandwidthPercent; 
 
             /**
-             * Bandwidth.
+             * <p>The absolute bandwidth that can be consumed by the QoS queue. Unit: Mbit/s.</p>
+             * <p>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</p>
+             * <p>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</p>
+             * <blockquote>
+             * <p> The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -444,14 +464,14 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
              * <p>The Differentiated Services Code Point (DSCP) value that matches the current queue.</p>
              * <p>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</p>
              */
-            public Builder dscps(java.util.List < Integer > dscps) {
+            public Builder dscps(java.util.List<Integer> dscps) {
                 this.dscps = dscps;
                 return this;
             }
 
             /**
              * <p>The description of the current queue.</p>
-             * <p>Each QoS policy supports at most three queues. You can specify a description for each queue.</p>
+             * <p>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</p>
              * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
              * 
              * <strong>example:</strong>
@@ -477,7 +497,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
             /**
              * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
-             * <p>Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.</p>
+             * <p>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</p>
              * <p>For example, a value of <strong>1</strong> specifies that the queue can consume 1% of the inter-region bandwidth.</p>
              * <blockquote>
              * <p> The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -196,7 +201,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the CEN instance.</p>
+         * <p>The CEN instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-7qthudw0ll6jmc****</p>
@@ -263,7 +268,10 @@ public class ModifyFlowLogAttributeRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time window for collecting log data. Unit: seconds. Valid values: <strong>60</strong> or <strong>600</strong> Default value: <strong>600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);

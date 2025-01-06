@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -268,17 +273,17 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -547,7 +552,11 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowLogVersion.
+             * <p>The flow log version.</p>
+             * <p>Flow logs are automatically created in the latest version, which is <strong>3</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder flowLogVersion(String flowLogVersion) {
                 this.flowLogVersion = flowLogVersion;
@@ -566,7 +575,11 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogFormatString.
+             * <p>The string that defines the format of the flow log. Format:</p>
+             * <p><code>${Field 1}${Field 2}${Field 3}</code></p>
+             * 
+             * <strong>example:</strong>
+             * <p>${srcaddr}${dstaddr}${bytes}</p>
              */
             public Builder logFormatString(String logFormatString) {
                 this.logFormatString = logFormatString;
@@ -622,7 +635,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of tags.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -641,7 +654,10 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * <p>The ID of the transit router.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr-bp1g9313sx675zr1lajmj</p>
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -663,7 +679,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
      */
     public static class FlowLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowLog")
-        private java.util.List < FlowLog> flowLog;
+        private java.util.List<FlowLog> flowLog;
 
         private FlowLogs(Builder builder) {
             this.flowLog = builder.flowLog;
@@ -680,17 +696,17 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         /**
          * @return flowLog
          */
-        public java.util.List < FlowLog> getFlowLog() {
+        public java.util.List<FlowLog> getFlowLog() {
             return this.flowLog;
         }
 
         public static final class Builder {
-            private java.util.List < FlowLog> flowLog; 
+            private java.util.List<FlowLog> flowLog; 
 
             /**
              * FlowLog.
              */
-            public Builder flowLog(java.util.List < FlowLog> flowLog) {
+            public Builder flowLog(java.util.List<FlowLog> flowLog) {
                 this.flowLog = flowLog;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -302,7 +307,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
      */
     public static class RouteConflicts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteConflict")
-        private java.util.List < RouteConflict> routeConflict;
+        private java.util.List<RouteConflict> routeConflict;
 
         private RouteConflicts(Builder builder) {
             this.routeConflict = builder.routeConflict;
@@ -319,17 +324,17 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
         /**
          * @return routeConflict
          */
-        public java.util.List < RouteConflict> getRouteConflict() {
+        public java.util.List<RouteConflict> getRouteConflict() {
             return this.routeConflict;
         }
 
         public static final class Builder {
-            private java.util.List < RouteConflict> routeConflict; 
+            private java.util.List<RouteConflict> routeConflict; 
 
             /**
              * RouteConflict.
              */
-            public Builder routeConflict(java.util.List < RouteConflict> routeConflict) {
+            public Builder routeConflict(java.util.List<RouteConflict> routeConflict) {
                 this.routeConflict = routeConflict;
                 return this;
             }
