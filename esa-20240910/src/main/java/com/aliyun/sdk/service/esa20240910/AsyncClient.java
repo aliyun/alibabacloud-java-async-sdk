@@ -438,6 +438,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDDoSAllEventListResponse> describeDDoSAllEventList(DescribeDDoSAllEventListRequest request);
 
     /**
+     * @param request the request parameters of DescribeDDoSBpsList  DescribeDDoSBpsListRequest
+     * @return DescribeDDoSBpsListResponse
+     */
+    CompletableFuture<DescribeDDoSBpsListResponse> describeDDoSBpsList(DescribeDDoSBpsListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDDoSL7QpsList  DescribeDDoSL7QpsListRequest
+     * @return DescribeDDoSL7QpsListResponse
+     */
+    CompletableFuture<DescribeDDoSL7QpsListResponse> describeDDoSL7QpsList(DescribeDDoSL7QpsListRequest request);
+
+    /**
      * @param request the request parameters of DescribeHttpDDoSAttackIntelligentProtection  DescribeHttpDDoSAttackIntelligentProtectionRequest
      * @return DescribeHttpDDoSAttackIntelligentProtectionResponse
      */
