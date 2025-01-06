@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20240712.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NearbySearchNovaRequest</p>
  */
 public class NearbySearchNovaRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cityLimit")
+    private Boolean cityLimit;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keywords")
     private String keywords;
@@ -42,6 +51,7 @@ public class NearbySearchNovaRequest extends Request {
 
     private NearbySearchNovaRequest(Builder builder) {
         super(builder);
+        this.cityLimit = builder.cityLimit;
         this.keywords = builder.keywords;
         this.latitude = builder.latitude;
         this.longitude = builder.longitude;
@@ -62,6 +72,13 @@ public class NearbySearchNovaRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cityLimit
+     */
+    public Boolean getCityLimit() {
+        return this.cityLimit;
     }
 
     /**
@@ -114,6 +131,7 @@ public class NearbySearchNovaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<NearbySearchNovaRequest, Builder> {
+        private Boolean cityLimit; 
         private String keywords; 
         private String latitude; 
         private String longitude; 
@@ -128,6 +146,7 @@ public class NearbySearchNovaRequest extends Request {
 
         private Builder(NearbySearchNovaRequest request) {
             super(request);
+            this.cityLimit = request.cityLimit;
             this.keywords = request.keywords;
             this.latitude = request.latitude;
             this.longitude = request.longitude;
@@ -136,6 +155,15 @@ public class NearbySearchNovaRequest extends Request {
             this.size = request.size;
             this.types = request.types;
         } 
+
+        /**
+         * cityLimit.
+         */
+        public Builder cityLimit(Boolean cityLimit) {
+            this.putQueryParameter("cityLimit", cityLimit);
+            this.cityLimit = cityLimit;
+            return this;
+        }
 
         /**
          * keywords.

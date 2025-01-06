@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20240712.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1201,7 +1206,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         private String viaNum;
 
         @com.aliyun.core.annotation.NameInMap("viaStops")
-        private java.util.List < ViaStops> viaStops;
+        private java.util.List<ViaStops> viaStops;
 
         private Buslines(Builder builder) {
             this.arrivalStop = builder.arrivalStop;
@@ -1322,7 +1327,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         /**
          * @return viaStops
          */
-        public java.util.List < ViaStops> getViaStops() {
+        public java.util.List<ViaStops> getViaStops() {
             return this.viaStops;
         }
 
@@ -1340,7 +1345,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String startTime; 
             private String type; 
             private String viaNum; 
-            private java.util.List < ViaStops> viaStops; 
+            private java.util.List<ViaStops> viaStops; 
 
             /**
              * arrivalStop.
@@ -1449,7 +1454,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             /**
              * viaStops.
              */
-            public Builder viaStops(java.util.List < ViaStops> viaStops) {
+            public Builder viaStops(java.util.List<ViaStops> viaStops) {
                 this.viaStops = viaStops;
                 return this;
             }
@@ -1469,7 +1474,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
      */
     public static class Bus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buslines")
-        private java.util.List < Buslines> buslines;
+        private java.util.List<Buslines> buslines;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
@@ -1490,7 +1495,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         /**
          * @return buslines
          */
-        public java.util.List < Buslines> getBuslines() {
+        public java.util.List<Buslines> getBuslines() {
             return this.buslines;
         }
 
@@ -1502,13 +1507,13 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Buslines> buslines; 
+            private java.util.List<Buslines> buslines; 
             private String index; 
 
             /**
              * buslines.
              */
-            public Builder buslines(java.util.List < Buslines> buslines) {
+            public Builder buslines(java.util.List<Buslines> buslines) {
                 this.buslines = buslines;
                 return this;
             }
@@ -1918,7 +1923,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("spaces")
-        private java.util.List < Spaces> spaces;
+        private java.util.List<Spaces> spaces;
 
         @com.aliyun.core.annotation.NameInMap("time")
         private String time;
@@ -1995,7 +2000,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         /**
          * @return spaces
          */
-        public java.util.List < Spaces> getSpaces() {
+        public java.util.List<Spaces> getSpaces() {
             return this.spaces;
         }
 
@@ -2027,7 +2032,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String id; 
             private String index; 
             private String name; 
-            private java.util.List < Spaces> spaces; 
+            private java.util.List<Spaces> spaces; 
             private String time; 
             private String trip; 
             private String type; 
@@ -2083,7 +2088,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             /**
              * spaces.
              */
-            public Builder spaces(java.util.List < Spaces> spaces) {
+            public Builder spaces(java.util.List<Spaces> spaces) {
                 this.spaces = spaces;
                 return this;
             }
@@ -2857,7 +2862,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         private String origin;
 
         @com.aliyun.core.annotation.NameInMap("steps")
-        private java.util.List < Steps> steps;
+        private java.util.List<Steps> steps;
 
         private Walking(Builder builder) {
             this.cost = builder.cost;
@@ -2914,7 +2919,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         /**
          * @return steps
          */
-        public java.util.List < Steps> getSteps() {
+        public java.util.List<Steps> getSteps() {
             return this.steps;
         }
 
@@ -2924,7 +2929,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String distanceMeter; 
             private String index; 
             private String origin; 
-            private java.util.List < Steps> steps; 
+            private java.util.List<Steps> steps; 
 
             /**
              * cost.
@@ -2969,7 +2974,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             /**
              * steps.
              */
-            public Builder steps(java.util.List < Steps> steps) {
+            public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;
                 return this;
             }
@@ -3105,7 +3110,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         private String nightflag;
 
         @com.aliyun.core.annotation.NameInMap("segments")
-        private java.util.List < Segments> segments;
+        private java.util.List<Segments> segments;
 
         @com.aliyun.core.annotation.NameInMap("walkingDistanceMeter")
         private String walkingDistanceMeter;
@@ -3150,7 +3155,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         /**
          * @return segments
          */
-        public java.util.List < Segments> getSegments() {
+        public java.util.List<Segments> getSegments() {
             return this.segments;
         }
 
@@ -3165,7 +3170,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private PathsCost cost; 
             private String distanceMeter; 
             private String nightflag; 
-            private java.util.List < Segments> segments; 
+            private java.util.List<Segments> segments; 
             private String walkingDistanceMeter; 
 
             /**
@@ -3195,7 +3200,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             /**
              * segments.
              */
-            public Builder segments(java.util.List < Segments> segments) {
+            public Builder segments(java.util.List<Segments> segments) {
                 this.segments = segments;
                 return this;
             }
@@ -3244,7 +3249,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         private String originLongitude;
 
         @com.aliyun.core.annotation.NameInMap("paths")
-        private java.util.List < Paths> paths;
+        private java.util.List<Paths> paths;
 
         private Data(Builder builder) {
             this.cost = builder.cost;
@@ -3317,7 +3322,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < Paths> getPaths() {
+        public java.util.List<Paths> getPaths() {
             return this.paths;
         }
 
@@ -3329,7 +3334,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             private String distanceMeter; 
             private String originLatitude; 
             private String originLongitude; 
-            private java.util.List < Paths> paths; 
+            private java.util.List<Paths> paths; 
 
             /**
              * cost.
@@ -3390,7 +3395,7 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < Paths> paths) {
+            public Builder paths(java.util.List<Paths> paths) {
                 this.paths = paths;
                 return this;
             }

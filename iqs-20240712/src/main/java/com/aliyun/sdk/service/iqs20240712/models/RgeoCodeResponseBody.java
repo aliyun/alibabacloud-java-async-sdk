@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20240712.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -530,7 +535,7 @@ public class RgeoCodeResponseBody extends TeaModel {
         private Building building;
 
         @com.aliyun.core.annotation.NameInMap("businessAreas")
-        private java.util.List < BusinessAreas> businessAreas;
+        private java.util.List<BusinessAreas> businessAreas;
 
         @com.aliyun.core.annotation.NameInMap("city")
         private String city;
@@ -599,7 +604,7 @@ public class RgeoCodeResponseBody extends TeaModel {
         /**
          * @return businessAreas
          */
-        public java.util.List < BusinessAreas> getBusinessAreas() {
+        public java.util.List<BusinessAreas> getBusinessAreas() {
             return this.businessAreas;
         }
 
@@ -682,7 +687,7 @@ public class RgeoCodeResponseBody extends TeaModel {
 
         public static final class Builder {
             private Building building; 
-            private java.util.List < BusinessAreas> businessAreas; 
+            private java.util.List<BusinessAreas> businessAreas; 
             private String city; 
             private String cityCode; 
             private String country; 
@@ -706,7 +711,7 @@ public class RgeoCodeResponseBody extends TeaModel {
             /**
              * businessAreas.
              */
-            public Builder businessAreas(java.util.List < BusinessAreas> businessAreas) {
+            public Builder businessAreas(java.util.List<BusinessAreas> businessAreas) {
                 this.businessAreas = businessAreas;
                 return this;
             }

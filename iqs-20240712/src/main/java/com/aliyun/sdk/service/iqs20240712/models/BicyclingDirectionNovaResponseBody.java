@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20240712.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -632,7 +637,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
         private String restriction;
 
         @com.aliyun.core.annotation.NameInMap("steps")
-        private java.util.List < Steps> steps;
+        private java.util.List<Steps> steps;
 
         private Paths(Builder builder) {
             this.cost = builder.cost;
@@ -681,7 +686,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
         /**
          * @return steps
          */
-        public java.util.List < Steps> getSteps() {
+        public java.util.List<Steps> getSteps() {
             return this.steps;
         }
 
@@ -690,7 +695,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
             private String distanceMeter; 
             private String durationSecond; 
             private String restriction; 
-            private java.util.List < Steps> steps; 
+            private java.util.List<Steps> steps; 
 
             /**
              * cost.
@@ -727,7 +732,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
             /**
              * steps.
              */
-            public Builder steps(java.util.List < Steps> steps) {
+            public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;
                 return this;
             }
@@ -762,7 +767,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
         private String originLongitude;
 
         @com.aliyun.core.annotation.NameInMap("paths")
-        private java.util.List < Paths> paths;
+        private java.util.List<Paths> paths;
 
         @com.aliyun.core.annotation.NameInMap("taxiCost")
         private String taxiCost;
@@ -823,7 +828,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < Paths> getPaths() {
+        public java.util.List<Paths> getPaths() {
             return this.paths;
         }
 
@@ -840,7 +845,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
             private String destinationLongitude; 
             private String originLatitude; 
             private String originLongitude; 
-            private java.util.List < Paths> paths; 
+            private java.util.List<Paths> paths; 
             private String taxiCost; 
 
             /**
@@ -886,7 +891,7 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < Paths> paths) {
+            public Builder paths(java.util.List<Paths> paths) {
                 this.paths = paths;
                 return this;
             }

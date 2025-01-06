@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20240712.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PlaceSearchNovaRequest</p>
  */
 public class PlaceSearchNovaRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cityLimit")
+    private Boolean cityLimit;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keywords")
     private String keywords;
@@ -34,6 +43,7 @@ public class PlaceSearchNovaRequest extends Request {
 
     private PlaceSearchNovaRequest(Builder builder) {
         super(builder);
+        this.cityLimit = builder.cityLimit;
         this.keywords = builder.keywords;
         this.page = builder.page;
         this.region = builder.region;
@@ -52,6 +62,13 @@ public class PlaceSearchNovaRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cityLimit
+     */
+    public Boolean getCityLimit() {
+        return this.cityLimit;
     }
 
     /**
@@ -90,6 +107,7 @@ public class PlaceSearchNovaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PlaceSearchNovaRequest, Builder> {
+        private Boolean cityLimit; 
         private String keywords; 
         private Integer page; 
         private String region; 
@@ -102,12 +120,22 @@ public class PlaceSearchNovaRequest extends Request {
 
         private Builder(PlaceSearchNovaRequest request) {
             super(request);
+            this.cityLimit = request.cityLimit;
             this.keywords = request.keywords;
             this.page = request.page;
             this.region = request.region;
             this.size = request.size;
             this.types = request.types;
         } 
+
+        /**
+         * cityLimit.
+         */
+        public Builder cityLimit(Boolean cityLimit) {
+            this.putQueryParameter("cityLimit", cityLimit);
+            this.cityLimit = cityLimit;
+            return this;
+        }
 
         /**
          * keywords.

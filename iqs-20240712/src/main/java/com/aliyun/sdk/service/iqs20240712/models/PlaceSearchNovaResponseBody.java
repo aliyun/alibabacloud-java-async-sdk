@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20240712.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PlaceSearchNovaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private Integer errorCode;
@@ -46,7 +51,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -414,7 +419,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("latitude")
         private String latitude;
@@ -519,7 +524,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
@@ -587,7 +592,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
             private String districtCode; 
             private String districtName; 
             private String id; 
-            private java.util.List < Images> images; 
+            private java.util.List<Images> images; 
             private String latitude; 
             private String longitude; 
             private Metadata metadata; 
@@ -656,7 +661,7 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
             /**
              * images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
