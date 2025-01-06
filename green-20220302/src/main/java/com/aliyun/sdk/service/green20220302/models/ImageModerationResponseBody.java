@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1441,7 +1446,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private LogoDataLocation location;
 
         @com.aliyun.core.annotation.NameInMap("Logo")
-        private java.util.List < Logo> logo;
+        private java.util.List<Logo> logo;
 
         private LogoData(Builder builder) {
             this.location = builder.location;
@@ -1466,13 +1471,13 @@ public class ImageModerationResponseBody extends TeaModel {
         /**
          * @return logo
          */
-        public java.util.List < Logo> getLogo() {
+        public java.util.List<Logo> getLogo() {
             return this.logo;
         }
 
         public static final class Builder {
             private LogoDataLocation location; 
-            private java.util.List < Logo> logo; 
+            private java.util.List<Logo> logo; 
 
             /**
              * <p>Location information.</p>
@@ -1485,7 +1490,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>Logo information.</p>
              */
-            public Builder logo(java.util.List < Logo> logo) {
+            public Builder logo(java.util.List<Logo> logo) {
                 this.logo = logo;
                 return this;
             }
@@ -1819,7 +1824,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private String figureName;
 
         @com.aliyun.core.annotation.NameInMap("Location")
-        private java.util.List < PublicFigureLocation> location;
+        private java.util.List<PublicFigureLocation> location;
 
         private PublicFigure(Builder builder) {
             this.figureId = builder.figureId;
@@ -1852,14 +1857,14 @@ public class ImageModerationResponseBody extends TeaModel {
         /**
          * @return location
          */
-        public java.util.List < PublicFigureLocation> getLocation() {
+        public java.util.List<PublicFigureLocation> getLocation() {
             return this.location;
         }
 
         public static final class Builder {
             private String figureId; 
             private String figureName; 
-            private java.util.List < PublicFigureLocation> location; 
+            private java.util.List<PublicFigureLocation> location; 
 
             /**
              * <p>Identified person coding information.</p>
@@ -1886,7 +1891,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>the data array of location info</p>
              */
-            public Builder location(java.util.List < PublicFigureLocation> location) {
+            public Builder location(java.util.List<PublicFigureLocation> location) {
                 this.location = location;
                 return this;
             }
@@ -2264,13 +2269,13 @@ public class ImageModerationResponseBody extends TeaModel {
      */
     public static class TextInImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomText")
-        private java.util.List < CustomText> customText;
+        private java.util.List<CustomText> customText;
 
         @com.aliyun.core.annotation.NameInMap("OcrResult")
-        private java.util.List < TextInImageOcrResult> ocrResult;
+        private java.util.List<TextInImageOcrResult> ocrResult;
 
         @com.aliyun.core.annotation.NameInMap("RiskWord")
-        private java.util.List < String > riskWord;
+        private java.util.List<String> riskWord;
 
         private TextInImage(Builder builder) {
             this.customText = builder.customText;
@@ -2289,33 +2294,33 @@ public class ImageModerationResponseBody extends TeaModel {
         /**
          * @return customText
          */
-        public java.util.List < CustomText> getCustomText() {
+        public java.util.List<CustomText> getCustomText() {
             return this.customText;
         }
 
         /**
          * @return ocrResult
          */
-        public java.util.List < TextInImageOcrResult> getOcrResult() {
+        public java.util.List<TextInImageOcrResult> getOcrResult() {
             return this.ocrResult;
         }
 
         /**
          * @return riskWord
          */
-        public java.util.List < String > getRiskWord() {
+        public java.util.List<String> getRiskWord() {
             return this.riskWord;
         }
 
         public static final class Builder {
-            private java.util.List < CustomText> customText; 
-            private java.util.List < TextInImageOcrResult> ocrResult; 
-            private java.util.List < String > riskWord; 
+            private java.util.List<CustomText> customText; 
+            private java.util.List<TextInImageOcrResult> ocrResult; 
+            private java.util.List<String> riskWord; 
 
             /**
              * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
              */
-            public Builder customText(java.util.List < CustomText> customText) {
+            public Builder customText(java.util.List<CustomText> customText) {
                 this.customText = customText;
                 return this;
             }
@@ -2323,7 +2328,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>Returns the text information in the recognized image.</p>
              */
-            public Builder ocrResult(java.util.List < TextInImageOcrResult> ocrResult) {
+            public Builder ocrResult(java.util.List<TextInImageOcrResult> ocrResult) {
                 this.ocrResult = ocrResult;
                 return this;
             }
@@ -2331,7 +2336,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
              */
-            public Builder riskWord(java.util.List < String > riskWord) {
+            public Builder riskWord(java.util.List<String> riskWord) {
                 this.riskWord = riskWord;
                 return this;
             }
@@ -2401,22 +2406,22 @@ public class ImageModerationResponseBody extends TeaModel {
      */
     public static class Ext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
-        private java.util.List < CustomImage> customImage;
+        private java.util.List<CustomImage> customImage;
 
         @com.aliyun.core.annotation.NameInMap("FaceData")
-        private java.util.List < FaceData> faceData;
+        private java.util.List<FaceData> faceData;
 
         @com.aliyun.core.annotation.NameInMap("LogoData")
-        private java.util.List < LogoData> logoData;
+        private java.util.List<LogoData> logoData;
 
         @com.aliyun.core.annotation.NameInMap("OcrResult")
-        private java.util.List < OcrResult> ocrResult;
+        private java.util.List<OcrResult> ocrResult;
 
         @com.aliyun.core.annotation.NameInMap("PublicFigure")
-        private java.util.List < PublicFigure> publicFigure;
+        private java.util.List<PublicFigure> publicFigure;
 
         @com.aliyun.core.annotation.NameInMap("Recognition")
-        private java.util.List < Recognition> recognition;
+        private java.util.List<Recognition> recognition;
 
         @com.aliyun.core.annotation.NameInMap("TextInImage")
         private TextInImage textInImage;
@@ -2446,42 +2451,42 @@ public class ImageModerationResponseBody extends TeaModel {
         /**
          * @return customImage
          */
-        public java.util.List < CustomImage> getCustomImage() {
+        public java.util.List<CustomImage> getCustomImage() {
             return this.customImage;
         }
 
         /**
          * @return faceData
          */
-        public java.util.List < FaceData> getFaceData() {
+        public java.util.List<FaceData> getFaceData() {
             return this.faceData;
         }
 
         /**
          * @return logoData
          */
-        public java.util.List < LogoData> getLogoData() {
+        public java.util.List<LogoData> getLogoData() {
             return this.logoData;
         }
 
         /**
          * @return ocrResult
          */
-        public java.util.List < OcrResult> getOcrResult() {
+        public java.util.List<OcrResult> getOcrResult() {
             return this.ocrResult;
         }
 
         /**
          * @return publicFigure
          */
-        public java.util.List < PublicFigure> getPublicFigure() {
+        public java.util.List<PublicFigure> getPublicFigure() {
             return this.publicFigure;
         }
 
         /**
          * @return recognition
          */
-        public java.util.List < Recognition> getRecognition() {
+        public java.util.List<Recognition> getRecognition() {
             return this.recognition;
         }
 
@@ -2500,19 +2505,19 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomImage> customImage; 
-            private java.util.List < FaceData> faceData; 
-            private java.util.List < LogoData> logoData; 
-            private java.util.List < OcrResult> ocrResult; 
-            private java.util.List < PublicFigure> publicFigure; 
-            private java.util.List < Recognition> recognition; 
+            private java.util.List<CustomImage> customImage; 
+            private java.util.List<FaceData> faceData; 
+            private java.util.List<LogoData> logoData; 
+            private java.util.List<OcrResult> ocrResult; 
+            private java.util.List<PublicFigure> publicFigure; 
+            private java.util.List<Recognition> recognition; 
             private TextInImage textInImage; 
             private VlContent vlContent; 
 
             /**
              * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
              */
-            public Builder customImage(java.util.List < CustomImage> customImage) {
+            public Builder customImage(java.util.List<CustomImage> customImage) {
                 this.customImage = customImage;
                 return this;
             }
@@ -2520,7 +2525,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>The returned face attribute information</p>
              */
-            public Builder faceData(java.util.List < FaceData> faceData) {
+            public Builder faceData(java.util.List<FaceData> faceData) {
                 this.faceData = faceData;
                 return this;
             }
@@ -2528,7 +2533,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>Logo information.</p>
              */
-            public Builder logoData(java.util.List < LogoData> logoData) {
+            public Builder logoData(java.util.List<LogoData> logoData) {
                 this.logoData = logoData;
                 return this;
             }
@@ -2536,7 +2541,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>Returns the text information in the recognized image.</p>
              */
-            public Builder ocrResult(java.util.List < OcrResult> ocrResult) {
+            public Builder ocrResult(java.util.List<OcrResult> ocrResult) {
                 this.ocrResult = ocrResult;
                 return this;
             }
@@ -2544,7 +2549,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>Person information list.</p>
              */
-            public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
+            public Builder publicFigure(java.util.List<PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
                 return this;
             }
@@ -2552,7 +2557,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>The result of image recognition.</p>
              */
-            public Builder recognition(java.util.List < Recognition> recognition) {
+            public Builder recognition(java.util.List<Recognition> recognition) {
                 this.recognition = recognition;
                 return this;
             }
@@ -2690,7 +2695,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private Ext ext;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -2727,7 +2732,7 @@ public class ImageModerationResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -2741,7 +2746,7 @@ public class ImageModerationResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private Ext ext; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private String riskLevel; 
 
             /**
@@ -2769,7 +2774,7 @@ public class ImageModerationResponseBody extends TeaModel {
             /**
              * <p>The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

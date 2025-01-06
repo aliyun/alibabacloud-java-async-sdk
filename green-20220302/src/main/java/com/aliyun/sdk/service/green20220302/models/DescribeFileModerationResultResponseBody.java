@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -346,7 +351,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("LabelResult")
-        private java.util.List < LabelResult> labelResult;
+        private java.util.List<LabelResult> labelResult;
 
         @com.aliyun.core.annotation.NameInMap("Location")
         private Location location;
@@ -383,7 +388,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         /**
          * @return labelResult
          */
-        public java.util.List < LabelResult> getLabelResult() {
+        public java.util.List<LabelResult> getLabelResult() {
             return this.labelResult;
         }
 
@@ -410,7 +415,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < LabelResult> labelResult; 
+            private java.util.List<LabelResult> labelResult; 
             private Location location; 
             private String riskLevel; 
             private String service; 
@@ -429,7 +434,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             /**
              * <p>The label information.</p>
              */
-            public Builder labelResult(java.util.List < LabelResult> labelResult) {
+            public Builder labelResult(java.util.List<LabelResult> labelResult) {
                 this.labelResult = labelResult;
                 return this;
             }
@@ -690,7 +695,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
      */
     public static class PageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageResult")
-        private java.util.List < ImageResult> imageResult;
+        private java.util.List<ImageResult> imageResult;
 
         @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
@@ -699,7 +704,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private Integer pageNum;
 
         @com.aliyun.core.annotation.NameInMap("TextResult")
-        private java.util.List < TextResult> textResult;
+        private java.util.List<TextResult> textResult;
 
         @com.aliyun.core.annotation.NameInMap("TextUrl")
         private String textUrl;
@@ -723,7 +728,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         /**
          * @return imageResult
          */
-        public java.util.List < ImageResult> getImageResult() {
+        public java.util.List<ImageResult> getImageResult() {
             return this.imageResult;
         }
 
@@ -744,7 +749,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         /**
          * @return textResult
          */
-        public java.util.List < TextResult> getTextResult() {
+        public java.util.List<TextResult> getTextResult() {
             return this.textResult;
         }
 
@@ -756,16 +761,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ImageResult> imageResult; 
+            private java.util.List<ImageResult> imageResult; 
             private String imageUrl; 
             private Integer pageNum; 
-            private java.util.List < TextResult> textResult; 
+            private java.util.List<TextResult> textResult; 
             private String textUrl; 
 
             /**
              * <p>The image moderation results.</p>
              */
-            public Builder imageResult(java.util.List < ImageResult> imageResult) {
+            public Builder imageResult(java.util.List<ImageResult> imageResult) {
                 this.imageResult = imageResult;
                 return this;
             }
@@ -795,7 +800,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             /**
              * <p>The text moderation results.</p>
              */
-            public Builder textResult(java.util.List < TextResult> textResult) {
+            public Builder textResult(java.util.List<TextResult> textResult) {
                 this.textResult = textResult;
                 return this;
             }
@@ -922,7 +927,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
      */
     public static class ImageSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageLabels")
-        private java.util.List < ImageLabels> imageLabels;
+        private java.util.List<ImageLabels> imageLabels;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -943,7 +948,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         /**
          * @return imageLabels
          */
-        public java.util.List < ImageLabels> getImageLabels() {
+        public java.util.List<ImageLabels> getImageLabels() {
             return this.imageLabels;
         }
 
@@ -955,13 +960,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ImageLabels> imageLabels; 
+            private java.util.List<ImageLabels> imageLabels; 
             private String riskLevel; 
 
             /**
              * <p>Image Label</p>
              */
-            public Builder imageLabels(java.util.List < ImageLabels> imageLabels) {
+            public Builder imageLabels(java.util.List<ImageLabels> imageLabels) {
                 this.imageLabels = imageLabels;
                 return this;
             }
@@ -1068,7 +1073,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("TextLabels")
-        private java.util.List < TextLabels> textLabels;
+        private java.util.List<TextLabels> textLabels;
 
         private TextSummary(Builder builder) {
             this.riskLevel = builder.riskLevel;
@@ -1093,13 +1098,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         /**
          * @return textLabels
          */
-        public java.util.List < TextLabels> getTextLabels() {
+        public java.util.List<TextLabels> getTextLabels() {
             return this.textLabels;
         }
 
         public static final class Builder {
             private String riskLevel; 
-            private java.util.List < TextLabels> textLabels; 
+            private java.util.List<TextLabels> textLabels; 
 
             /**
              * <p>Risk Level</p>
@@ -1115,7 +1120,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             /**
              * <p>Text Label</p>
              */
-            public Builder textLabels(java.util.List < TextLabels> textLabels) {
+            public Builder textLabels(java.util.List<TextLabels> textLabels) {
                 this.textLabels = textLabels;
                 return this;
             }
@@ -1231,7 +1236,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private String docType;
 
         @com.aliyun.core.annotation.NameInMap("PageResult")
-        private java.util.List < PageResult> pageResult;
+        private java.util.List<PageResult> pageResult;
 
         @com.aliyun.core.annotation.NameInMap("PageSummary")
         private PageSummary pageSummary;
@@ -1276,7 +1281,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         /**
          * @return pageResult
          */
-        public java.util.List < PageResult> getPageResult() {
+        public java.util.List<PageResult> getPageResult() {
             return this.pageResult;
         }
 
@@ -1304,7 +1309,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String docType; 
-            private java.util.List < PageResult> pageResult; 
+            private java.util.List<PageResult> pageResult; 
             private PageSummary pageSummary; 
             private String riskLevel; 
             private String url; 
@@ -1334,7 +1339,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the moderation results.</p>
              */
-            public Builder pageResult(java.util.List < PageResult> pageResult) {
+            public Builder pageResult(java.util.List<PageResult> pageResult) {
                 this.pageResult = pageResult;
                 return this;
             }

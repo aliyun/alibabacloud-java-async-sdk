@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -504,13 +509,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
      */
     public static class AudioResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioSummarys")
-        private java.util.List < AudioSummarys> audioSummarys;
+        private java.util.List<AudioSummarys> audioSummarys;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("SliceDetails")
-        private java.util.List < SliceDetails> sliceDetails;
+        private java.util.List<SliceDetails> sliceDetails;
 
         private AudioResult(Builder builder) {
             this.audioSummarys = builder.audioSummarys;
@@ -529,7 +534,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * @return audioSummarys
          */
-        public java.util.List < AudioSummarys> getAudioSummarys() {
+        public java.util.List<AudioSummarys> getAudioSummarys() {
             return this.audioSummarys;
         }
 
@@ -543,19 +548,19 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * @return sliceDetails
          */
-        public java.util.List < SliceDetails> getSliceDetails() {
+        public java.util.List<SliceDetails> getSliceDetails() {
             return this.sliceDetails;
         }
 
         public static final class Builder {
-            private java.util.List < AudioSummarys> audioSummarys; 
+            private java.util.List<AudioSummarys> audioSummarys; 
             private String riskLevel; 
-            private java.util.List < SliceDetails> sliceDetails; 
+            private java.util.List<SliceDetails> sliceDetails; 
 
             /**
              * <p>Summary of voice labels.</p>
              */
-            public Builder audioSummarys(java.util.List < AudioSummarys> audioSummarys) {
+            public Builder audioSummarys(java.util.List<AudioSummarys> audioSummarys) {
                 this.audioSummarys = audioSummarys;
                 return this;
             }
@@ -574,7 +579,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.</p>
              */
-            public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
+            public Builder sliceDetails(java.util.List<SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
                 return this;
             }
@@ -909,19 +914,19 @@ public class VideoModerationResultResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
-        private java.util.List < CustomImage> customImage;
+        private java.util.List<CustomImage> customImage;
 
         @com.aliyun.core.annotation.NameInMap("PublicFigure")
-        private java.util.List < PublicFigure> publicFigure;
+        private java.util.List<PublicFigure> publicFigure;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
         @com.aliyun.core.annotation.NameInMap("TextInImage")
-        private java.util.Map < String, ? > textInImage;
+        private java.util.Map<String, ?> textInImage;
 
         private Results(Builder builder) {
             this.customImage = builder.customImage;
@@ -942,21 +947,21 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * @return customImage
          */
-        public java.util.List < CustomImage> getCustomImage() {
+        public java.util.List<CustomImage> getCustomImage() {
             return this.customImage;
         }
 
         /**
          * @return publicFigure
          */
-        public java.util.List < PublicFigure> getPublicFigure() {
+        public java.util.List<PublicFigure> getPublicFigure() {
             return this.publicFigure;
         }
 
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -970,21 +975,21 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * @return textInImage
          */
-        public java.util.Map < String, ? > getTextInImage() {
+        public java.util.Map<String, ?> getTextInImage() {
             return this.textInImage;
         }
 
         public static final class Builder {
-            private java.util.List < CustomImage> customImage; 
-            private java.util.List < PublicFigure> publicFigure; 
-            private java.util.List < Result> result; 
+            private java.util.List<CustomImage> customImage; 
+            private java.util.List<PublicFigure> publicFigure; 
+            private java.util.List<Result> result; 
             private String service; 
-            private java.util.Map < String, ? > textInImage; 
+            private java.util.Map<String, ?> textInImage; 
 
             /**
              * <p>If a custom image library is hit, information about the custom image library is returned.</p>
              */
-            public Builder customImage(java.util.List < CustomImage> customImage) {
+            public Builder customImage(java.util.List<CustomImage> customImage) {
                 this.customImage = customImage;
                 return this;
             }
@@ -992,7 +997,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>If the video contains a specific figure, the code of the identified figure is returned.</p>
              */
-            public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
+            public Builder publicFigure(java.util.List<PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
                 return this;
             }
@@ -1000,7 +1005,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -1019,7 +1024,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>The information about the text hit in the image is returned.</p>
              */
-            public Builder textInImage(java.util.Map < String, ? > textInImage) {
+            public Builder textInImage(java.util.Map<String, ?> textInImage) {
                 this.textInImage = textInImage;
                 return this;
             }
@@ -1042,7 +1047,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Float offset;
 
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -1079,7 +1084,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
@@ -1106,7 +1111,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float offset; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
             private String riskLevel; 
             private String tempUrl; 
             private Long timestamp; 
@@ -1125,7 +1130,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }
@@ -1181,10 +1186,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Integer frameNum;
 
         @com.aliyun.core.annotation.NameInMap("FrameSummarys")
-        private java.util.List < FrameSummarys> frameSummarys;
+        private java.util.List<FrameSummarys> frameSummarys;
 
         @com.aliyun.core.annotation.NameInMap("Frames")
-        private java.util.List < Frames> frames;
+        private java.util.List<Frames> frames;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -1214,14 +1219,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         /**
          * @return frameSummarys
          */
-        public java.util.List < FrameSummarys> getFrameSummarys() {
+        public java.util.List<FrameSummarys> getFrameSummarys() {
             return this.frameSummarys;
         }
 
         /**
          * @return frames
          */
-        public java.util.List < Frames> getFrames() {
+        public java.util.List<Frames> getFrames() {
             return this.frames;
         }
 
@@ -1234,8 +1239,8 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer frameNum; 
-            private java.util.List < FrameSummarys> frameSummarys; 
-            private java.util.List < Frames> frames; 
+            private java.util.List<FrameSummarys> frameSummarys; 
+            private java.util.List<Frames> frames; 
             private String riskLevel; 
 
             /**
@@ -1252,7 +1257,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>The summary of the labels against which captured frames are matched.</p>
              */
-            public Builder frameSummarys(java.util.List < FrameSummarys> frameSummarys) {
+            public Builder frameSummarys(java.util.List<FrameSummarys> frameSummarys) {
                 this.frameSummarys = frameSummarys;
                 return this;
             }
@@ -1260,7 +1265,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             /**
              * <p>The information about the frames that match the labels.</p>
              */
-            public Builder frames(java.util.List < Frames> frames) {
+            public Builder frames(java.util.List<Frames> frames) {
                 this.frames = frames;
                 return this;
             }

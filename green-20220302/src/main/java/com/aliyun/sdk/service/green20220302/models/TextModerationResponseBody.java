@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -130,6 +135,12 @@ public class TextModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("dataId")
+        private String dataId;
+
+        @com.aliyun.core.annotation.NameInMap("descriptions")
+        private String descriptions;
+
         @com.aliyun.core.annotation.NameInMap("deviceId")
         private String deviceId;
 
@@ -141,6 +152,8 @@ public class TextModerationResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.accountId = builder.accountId;
+            this.dataId = builder.dataId;
+            this.descriptions = builder.descriptions;
             this.deviceId = builder.deviceId;
             this.labels = builder.labels;
             this.reason = builder.reason;
@@ -159,6 +172,20 @@ public class TextModerationResponseBody extends TeaModel {
          */
         public String getAccountId() {
             return this.accountId;
+        }
+
+        /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
+        }
+
+        /**
+         * @return descriptions
+         */
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         /**
@@ -184,6 +211,8 @@ public class TextModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountId; 
+            private String dataId; 
+            private String descriptions; 
             private String deviceId; 
             private String labels; 
             private String reason; 
@@ -196,6 +225,22 @@ public class TextModerationResponseBody extends TeaModel {
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * dataId.
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * descriptions.
+             */
+            public Builder descriptions(String descriptions) {
+                this.descriptions = descriptions;
                 return this;
             }
 

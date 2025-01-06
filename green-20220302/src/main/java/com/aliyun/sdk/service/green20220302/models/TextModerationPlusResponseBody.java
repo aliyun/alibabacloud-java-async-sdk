@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -300,7 +305,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private Float confidence;
 
         @com.aliyun.core.annotation.NameInMap("CustomizedHit")
-        private java.util.List < CustomizedHit> customizedHit;
+        private java.util.List<CustomizedHit> customizedHit;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -337,7 +342,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         /**
          * @return customizedHit
          */
-        public java.util.List < CustomizedHit> getCustomizedHit() {
+        public java.util.List<CustomizedHit> getCustomizedHit() {
             return this.customizedHit;
         }
 
@@ -364,7 +369,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float confidence; 
-            private java.util.List < CustomizedHit> customizedHit; 
+            private java.util.List<CustomizedHit> customizedHit; 
             private String description; 
             private String label; 
             private String riskWords; 
@@ -383,7 +388,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             /**
              * <p>The custom term hit by the moderated content.</p>
              */
-            public Builder customizedHit(java.util.List < CustomizedHit> customizedHit) {
+            public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
                 return this;
             }
@@ -436,10 +441,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advice")
-        private java.util.List < Advice> advice;
+        private java.util.List<Advice> advice;
+
+        @com.aliyun.core.annotation.NameInMap("DataId")
+        private String dataId;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -449,6 +457,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.advice = builder.advice;
+            this.dataId = builder.dataId;
             this.result = builder.result;
             this.riskLevel = builder.riskLevel;
             this.score = builder.score;
@@ -465,14 +474,21 @@ public class TextModerationPlusResponseBody extends TeaModel {
         /**
          * @return advice
          */
-        public java.util.List < Advice> getAdvice() {
+        public java.util.List<Advice> getAdvice() {
             return this.advice;
+        }
+
+        /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
         }
 
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -491,23 +507,32 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Advice> advice; 
-            private java.util.List < Result> result; 
+            private java.util.List<Advice> advice; 
+            private String dataId; 
+            private java.util.List<Result> result; 
             private String riskLevel; 
             private Float score; 
 
             /**
              * <p>The suggestion.</p>
              */
-            public Builder advice(java.util.List < Advice> advice) {
+            public Builder advice(java.util.List<Advice> advice) {
                 this.advice = advice;
+                return this;
+            }
+
+            /**
+             * DataId.
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
                 return this;
             }
 
             /**
              * <p>The results.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

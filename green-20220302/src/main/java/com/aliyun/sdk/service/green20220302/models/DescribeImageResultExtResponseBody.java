@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -370,13 +375,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
      */
     public static class TextInImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomTexts")
-        private java.util.List < CustomTexts> customTexts;
+        private java.util.List<CustomTexts> customTexts;
 
         @com.aliyun.core.annotation.NameInMap("OcrDatas")
-        private java.util.List < String > ocrDatas;
+        private java.util.List<String> ocrDatas;
 
         @com.aliyun.core.annotation.NameInMap("RiskWords")
-        private java.util.List < String > riskWords;
+        private java.util.List<String> riskWords;
 
         private TextInImage(Builder builder) {
             this.customTexts = builder.customTexts;
@@ -395,33 +400,33 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         /**
          * @return customTexts
          */
-        public java.util.List < CustomTexts> getCustomTexts() {
+        public java.util.List<CustomTexts> getCustomTexts() {
             return this.customTexts;
         }
 
         /**
          * @return ocrDatas
          */
-        public java.util.List < String > getOcrDatas() {
+        public java.util.List<String> getOcrDatas() {
             return this.ocrDatas;
         }
 
         /**
          * @return riskWords
          */
-        public java.util.List < String > getRiskWords() {
+        public java.util.List<String> getRiskWords() {
             return this.riskWords;
         }
 
         public static final class Builder {
-            private java.util.List < CustomTexts> customTexts; 
-            private java.util.List < String > ocrDatas; 
-            private java.util.List < String > riskWords; 
+            private java.util.List<CustomTexts> customTexts; 
+            private java.util.List<String> ocrDatas; 
+            private java.util.List<String> riskWords; 
 
             /**
              * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
              */
-            public Builder customTexts(java.util.List < CustomTexts> customTexts) {
+            public Builder customTexts(java.util.List<CustomTexts> customTexts) {
                 this.customTexts = customTexts;
                 return this;
             }
@@ -429,7 +434,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             /**
              * <p>Returns the text information in the recognized image.</p>
              */
-            public Builder ocrDatas(java.util.List < String > ocrDatas) {
+            public Builder ocrDatas(java.util.List<String> ocrDatas) {
                 this.ocrDatas = ocrDatas;
                 return this;
             }
@@ -437,7 +442,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             /**
              * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
              */
-            public Builder riskWords(java.util.List < String > riskWords) {
+            public Builder riskWords(java.util.List<String> riskWords) {
                 this.riskWords = riskWords;
                 return this;
             }
@@ -457,10 +462,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
-        private java.util.List < CustomImage> customImage;
+        private java.util.List<CustomImage> customImage;
 
         @com.aliyun.core.annotation.NameInMap("PublicFigure")
-        private java.util.List < PublicFigure> publicFigure;
+        private java.util.List<PublicFigure> publicFigure;
 
         @com.aliyun.core.annotation.NameInMap("TextInImage")
         private TextInImage textInImage;
@@ -482,14 +487,14 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         /**
          * @return customImage
          */
-        public java.util.List < CustomImage> getCustomImage() {
+        public java.util.List<CustomImage> getCustomImage() {
             return this.customImage;
         }
 
         /**
          * @return publicFigure
          */
-        public java.util.List < PublicFigure> getPublicFigure() {
+        public java.util.List<PublicFigure> getPublicFigure() {
             return this.publicFigure;
         }
 
@@ -501,14 +506,14 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomImage> customImage; 
-            private java.util.List < PublicFigure> publicFigure; 
+            private java.util.List<CustomImage> customImage; 
+            private java.util.List<PublicFigure> publicFigure; 
             private TextInImage textInImage; 
 
             /**
              * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
              */
-            public Builder customImage(java.util.List < CustomImage> customImage) {
+            public Builder customImage(java.util.List<CustomImage> customImage) {
                 this.customImage = customImage;
                 return this;
             }
@@ -516,7 +521,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             /**
              * <p>Person information list.</p>
              */
-            public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
+            public Builder publicFigure(java.util.List<PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
                 return this;
             }

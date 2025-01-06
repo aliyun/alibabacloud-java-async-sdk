@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -140,7 +145,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private String labels;
 
         @com.aliyun.core.annotation.NameInMap("OriginAlgoResult")
-        private java.util.Map < String, ? > originAlgoResult;
+        private java.util.Map<String, ?> originAlgoResult;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -221,7 +226,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         /**
          * @return originAlgoResult
          */
-        public java.util.Map < String, ? > getOriginAlgoResult() {
+        public java.util.Map<String, ?> getOriginAlgoResult() {
             return this.originAlgoResult;
         }
 
@@ -286,7 +291,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private Long endTimestamp; 
             private String extend; 
             private String labels; 
-            private java.util.Map < String, ? > originAlgoResult; 
+            private java.util.Map<String, ?> originAlgoResult; 
             private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
@@ -346,7 +351,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder originAlgoResult(java.util.Map < String, ? > originAlgoResult) {
+            public Builder originAlgoResult(java.util.Map<String, ?> originAlgoResult) {
                 this.originAlgoResult = originAlgoResult;
                 return this;
             }
@@ -463,7 +468,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("SliceDetails")
-        private java.util.List < SliceDetails> sliceDetails;
+        private java.util.List<SliceDetails> sliceDetails;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -512,7 +517,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         /**
          * @return sliceDetails
          */
-        public java.util.List < SliceDetails> getSliceDetails() {
+        public java.util.List<SliceDetails> getSliceDetails() {
             return this.sliceDetails;
         }
 
@@ -534,7 +539,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String dataId; 
             private String liveId; 
             private String riskLevel; 
-            private java.util.List < SliceDetails> sliceDetails; 
+            private java.util.List<SliceDetails> sliceDetails; 
             private String taskId; 
             private String url; 
 
@@ -574,7 +579,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             /**
              * <p>The moderation results of audio segments.</p>
              */
-            public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
+            public Builder sliceDetails(java.util.List<SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
                 return this;
             }
