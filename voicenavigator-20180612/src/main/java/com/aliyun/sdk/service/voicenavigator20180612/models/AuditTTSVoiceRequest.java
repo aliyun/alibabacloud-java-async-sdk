@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuditTTSVoiceRequest} extends {@link RequestModel}
  *
  * <p>AuditTTSVoiceRequest</p>
@@ -211,7 +217,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -238,7 +247,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * SpeechRate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder speechRate(String speechRate) {
             this.putQueryParameter("SpeechRate", speechRate);
@@ -247,7 +259,7 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>This parameter is required.</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);
@@ -256,7 +268,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Voice.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aixia</p>
          */
         public Builder voice(String voice) {
             this.putQueryParameter("Voice", voice);
@@ -265,7 +280,10 @@ public class AuditTTSVoiceRequest extends Request {
         }
 
         /**
-         * Volume.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder volume(String volume) {
             this.putQueryParameter("Volume", volume);

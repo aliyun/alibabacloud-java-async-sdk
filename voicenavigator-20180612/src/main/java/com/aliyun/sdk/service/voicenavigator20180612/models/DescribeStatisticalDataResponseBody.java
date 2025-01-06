@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStatisticalDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStatisticalDataResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     private Long resolvedQuestionTotalNum;
 
     @com.aliyun.core.annotation.NameInMap("StatisticalDataReports")
-    private java.util.List < StatisticalDataReports> statisticalDataReports;
+    private java.util.List<StatisticalDataReports> statisticalDataReports;
 
     @com.aliyun.core.annotation.NameInMap("TotalDialoguePassRate")
     private String totalDialoguePassRate;
@@ -78,7 +84,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     /**
      * @return statisticalDataReports
      */
-    public java.util.List < StatisticalDataReports> getStatisticalDataReports() {
+    public java.util.List<StatisticalDataReports> getStatisticalDataReports() {
         return this.statisticalDataReports;
     }
 
@@ -114,7 +120,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         private Long conversationTotalNum; 
         private String requestId; 
         private Long resolvedQuestionTotalNum; 
-        private java.util.List < StatisticalDataReports> statisticalDataReports; 
+        private java.util.List<StatisticalDataReports> statisticalDataReports; 
         private String totalDialoguePassRate; 
         private String totalKnowledgeHitRate; 
         private String totalResolutionRate; 
@@ -147,7 +153,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         /**
          * StatisticalDataReports.
          */
-        public Builder statisticalDataReports(java.util.List < StatisticalDataReports> statisticalDataReports) {
+        public Builder statisticalDataReports(java.util.List<StatisticalDataReports> statisticalDataReports) {
             this.statisticalDataReports = statisticalDataReports;
             return this;
         }
@@ -190,6 +196,12 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStatisticalDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStatisticalDataResponseBody</p>
+     */
     public static class StatisticalDataReports extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DialoguePassRate")
         private String dialoguePassRate;

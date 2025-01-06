@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyGreetingConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyGreetingConfigRequest</p>
@@ -98,7 +104,7 @@ public class ModifyGreetingConfigRequest extends Request {
         } 
 
         /**
-         * GreetingWords.
+         * <p>This parameter is required.</p>
          */
         public Builder greetingWords(String greetingWords) {
             this.putQueryParameter("GreetingWords", greetingWords);
@@ -107,7 +113,10 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +134,10 @@ public class ModifyGreetingConfigRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbotIntent</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySilenceTimeoutConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifySilenceTimeoutConfigRequest</p>
@@ -172,7 +178,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         } 
 
         /**
-         * FinalAction.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TransferToAgent</p>
          */
         public Builder finalAction(String finalAction) {
             this.putQueryParameter("FinalAction", finalAction);
@@ -190,7 +199,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * FinalPrompt.
+         * <p>This parameter is required.</p>
          */
         public Builder finalPrompt(String finalPrompt) {
             this.putQueryParameter("FinalPrompt", finalPrompt);
@@ -199,7 +208,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +229,7 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * Prompt.
+         * <p>This parameter is required.</p>
          */
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
@@ -226,7 +238,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbotIntent</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -235,7 +250,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);
@@ -244,7 +262,10 @@ public class ModifySilenceTimeoutConfigRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateUploadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateUploadUrlResponseBody</p>
@@ -150,6 +156,12 @@ public class GenerateUploadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateUploadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateUploadUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;

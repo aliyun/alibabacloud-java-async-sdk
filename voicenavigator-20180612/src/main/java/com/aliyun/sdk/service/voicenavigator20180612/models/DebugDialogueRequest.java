@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DebugDialogueRequest} extends {@link RequestModel}
  *
  * <p>DebugDialogueRequest</p>
@@ -107,7 +113,10 @@ public class DebugDialogueRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7cefbff0-8d50-4d6f-b93c-73cee23c1555</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -116,7 +125,10 @@ public class DebugDialogueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +137,7 @@ public class DebugDialogueRequest extends Request {
         }
 
         /**
-         * Utterance.
+         * <p>This parameter is required.</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

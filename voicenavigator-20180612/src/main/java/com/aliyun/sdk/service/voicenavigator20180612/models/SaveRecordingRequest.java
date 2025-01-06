@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveRecordingRequest} extends {@link RequestModel}
  *
  * <p>SaveRecordingRequest</p>
@@ -172,7 +178,10 @@ public class SaveRecordingRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -181,7 +190,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -190,7 +202,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e6bef0db439d4048bfcf45322491becf.wav</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -199,7 +214,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test/record/</p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -208,7 +226,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -226,7 +247,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582267398628</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -235,7 +259,10 @@ public class SaveRecordingRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Source</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

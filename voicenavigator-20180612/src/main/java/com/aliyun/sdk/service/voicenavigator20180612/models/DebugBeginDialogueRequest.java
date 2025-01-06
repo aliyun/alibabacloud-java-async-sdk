@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DebugBeginDialogueRequest} extends {@link RequestModel}
  *
  * <p>DebugBeginDialogueRequest</p>
@@ -121,7 +127,10 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
-         * CallingNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135815*****</p>
          */
         public Builder callingNumber(String callingNumber) {
             this.putQueryParameter("CallingNumber", callingNumber);
@@ -130,7 +139,10 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8a503680-815d-473e-a9b0-e010f47a64d2</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -148,7 +160,10 @@ public class DebugBeginDialogueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8a503680-815d-473e-a9b0-e010f47a64d2</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

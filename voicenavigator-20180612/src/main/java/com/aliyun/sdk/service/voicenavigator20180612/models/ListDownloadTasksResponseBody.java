@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListDownloadTasksResponseBody</p>
@@ -150,6 +156,12 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDownloadTasksResponseBody</p>
+     */
     public static class DownloadTaskFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
@@ -251,9 +263,15 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDownloadTasksResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadTaskFiles")
-        private java.util.List < DownloadTaskFiles> downloadTaskFiles;
+        private java.util.List<DownloadTaskFiles> downloadTaskFiles;
 
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
@@ -286,7 +304,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         /**
          * @return downloadTaskFiles
          */
-        public java.util.List < DownloadTaskFiles> getDownloadTaskFiles() {
+        public java.util.List<DownloadTaskFiles> getDownloadTaskFiles() {
             return this.downloadTaskFiles;
         }
 
@@ -319,7 +337,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DownloadTaskFiles> downloadTaskFiles; 
+            private java.util.List<DownloadTaskFiles> downloadTaskFiles; 
             private Long expireTime; 
             private String status; 
             private String taskId; 
@@ -328,7 +346,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             /**
              * DownloadTaskFiles.
              */
-            public Builder downloadTaskFiles(java.util.List < DownloadTaskFiles> downloadTaskFiles) {
+            public Builder downloadTaskFiles(java.util.List<DownloadTaskFiles> downloadTaskFiles) {
                 this.downloadTaskFiles = downloadTaskFiles;
                 return this;
             }
@@ -372,9 +390,15 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDownloadTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDownloadTasksResponseBody</p>
+     */
     public static class DownloadTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -403,7 +427,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -429,7 +453,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -437,7 +461,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStatisticalDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeStatisticalDataRequest</p>
@@ -115,7 +121,10 @@ public class DescribeStatisticalDataRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +133,10 @@ public class DescribeStatisticalDataRequest extends Request {
         }
 
         /**
-         * TimeUnit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day/Hour</p>
          */
         public Builder timeUnit(String timeUnit) {
             this.putQueryParameter("TimeUnit", timeUnit);

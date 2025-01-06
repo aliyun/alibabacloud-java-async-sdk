@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConversationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConversationsResponseBody</p>
  */
 public class ListConversationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Conversations")
-    private java.util.List < Conversations> conversations;
+    private java.util.List<Conversations> conversations;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -45,7 +51,7 @@ public class ListConversationsResponseBody extends TeaModel {
     /**
      * @return conversations
      */
-    public java.util.List < Conversations> getConversations() {
+    public java.util.List<Conversations> getConversations() {
         return this.conversations;
     }
 
@@ -78,7 +84,7 @@ public class ListConversationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Conversations> conversations; 
+        private java.util.List<Conversations> conversations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListConversationsResponseBody extends TeaModel {
         /**
          * Conversations.
          */
-        public Builder conversations(java.util.List < Conversations> conversations) {
+        public Builder conversations(java.util.List<Conversations> conversations) {
             this.conversations = conversations;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListConversationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConversationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConversationsResponseBody</p>
+     */
     public static class Conversations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
@@ -144,7 +156,7 @@ public class ListConversationsResponseBody extends TeaModel {
         private String dsReport;
 
         @com.aliyun.core.annotation.NameInMap("DsReportTitles")
-        private java.util.List < String > dsReportTitles;
+        private java.util.List<String> dsReportTitles;
 
         @com.aliyun.core.annotation.NameInMap("EndReason")
         private Integer endReason;
@@ -225,7 +237,7 @@ public class ListConversationsResponseBody extends TeaModel {
         /**
          * @return dsReportTitles
          */
-        public java.util.List < String > getDsReportTitles() {
+        public java.util.List<String> getDsReportTitles() {
             return this.dsReportTitles;
         }
 
@@ -290,7 +302,7 @@ public class ListConversationsResponseBody extends TeaModel {
             private String callingNumber; 
             private String conversationId; 
             private String dsReport; 
-            private java.util.List < String > dsReportTitles; 
+            private java.util.List<String> dsReportTitles; 
             private Integer endReason; 
             private Long endTime; 
             private Boolean hasLastPlaybackCompleted; 
@@ -335,7 +347,7 @@ public class ListConversationsResponseBody extends TeaModel {
             /**
              * DsReportTitles.
              */
-            public Builder dsReportTitles(java.util.List < String > dsReportTitles) {
+            public Builder dsReportTitles(java.util.List<String> dsReportTitles) {
                 this.dsReportTitles = dsReportTitles;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     private String abilityType;
 
     @com.aliyun.core.annotation.NameInMap("ApplicableOperations")
-    private java.util.List < String > applicableOperations;
+    private java.util.List<String> applicableOperations;
 
     @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Long concurrency;
@@ -84,7 +90,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     /**
      * @return applicableOperations
      */
-    public java.util.List < String > getApplicableOperations() {
+    public java.util.List<String> getApplicableOperations() {
         return this.applicableOperations;
     }
 
@@ -167,7 +173,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String abilityType; 
-        private java.util.List < String > applicableOperations; 
+        private java.util.List<String> applicableOperations; 
         private Long concurrency; 
         private String description; 
         private String instanceId; 
@@ -191,7 +197,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         /**
          * ApplicableOperations.
          */
-        public Builder applicableOperations(java.util.List < String > applicableOperations) {
+        public Builder applicableOperations(java.util.List<String> applicableOperations) {
             this.applicableOperations = applicableOperations;
             return this;
         }

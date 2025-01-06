@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DialogueRequest} extends {@link RequestModel}
  *
  * <p>DialogueRequest</p>
@@ -181,7 +187,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -199,7 +208,10 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21e0b2a3-168d-4ba7-9009-afc42666eb54</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +229,7 @@ public class DialogueRequest extends Request {
         }
 
         /**
-         * Utterance.
+         * <p>This parameter is required.</p>
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

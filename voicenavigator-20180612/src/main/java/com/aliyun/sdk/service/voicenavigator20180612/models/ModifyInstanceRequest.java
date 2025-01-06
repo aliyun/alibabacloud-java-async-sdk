@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceRequest</p>
@@ -97,7 +103,10 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
-         * Concurrency.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Long concurrency) {
             this.putQueryParameter("Concurrency", concurrency);
@@ -115,7 +124,10 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12f407b22cbe4890ac595f09985848d5</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
