@@ -27,6 +27,10 @@ public class ConvertPostPayOrderRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidType")
+    private Integer paidType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -35,6 +39,7 @@ public class ConvertPostPayOrderRequest extends Request {
         super(builder);
         this.duration = builder.duration;
         this.instanceId = builder.instanceId;
+        this.paidType = builder.paidType;
         this.regionId = builder.regionId;
     }
 
@@ -66,6 +71,13 @@ public class ConvertPostPayOrderRequest extends Request {
     }
 
     /**
+     * @return paidType
+     */
+    public Integer getPaidType() {
+        return this.paidType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -75,6 +87,7 @@ public class ConvertPostPayOrderRequest extends Request {
     public static final class Builder extends Request.Builder<ConvertPostPayOrderRequest, Builder> {
         private Integer duration; 
         private String instanceId; 
+        private Integer paidType; 
         private String regionId; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class ConvertPostPayOrderRequest extends Request {
             super(request);
             this.duration = request.duration;
             this.instanceId = request.instanceId;
+            this.paidType = request.paidType;
             this.regionId = request.regionId;
         } 
 
@@ -115,6 +129,15 @@ public class ConvertPostPayOrderRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PaidType.
+         */
+        public Builder paidType(Integer paidType) {
+            this.putQueryParameter("PaidType", paidType);
+            this.paidType = paidType;
             return this;
         }
 
