@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -122,7 +127,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.Map < String, String > meta;
+        private java.util.Map<String, String> meta;
 
         private Chunks(Builder builder) {
             this.content = builder.content;
@@ -147,13 +152,13 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, String > getMeta() {
+        public java.util.Map<String, String> getMeta() {
             return this.meta;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, String > meta; 
+            private java.util.Map<String, String> meta; 
 
             /**
              * content.
@@ -166,7 +171,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             /**
              * meta.
              */
-            public Builder meta(java.util.Map < String, String > meta) {
+            public Builder meta(java.util.Map<String, String> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -189,7 +194,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.Map < String, String > meta;
+        private java.util.Map<String, String> meta;
 
         private RichTexts(Builder builder) {
             this.content = builder.content;
@@ -214,13 +219,13 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, String > getMeta() {
+        public java.util.Map<String, String> getMeta() {
             return this.meta;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, String > meta; 
+            private java.util.Map<String, String> meta; 
 
             /**
              * content.
@@ -233,7 +238,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             /**
              * meta.
              */
-            public Builder meta(java.util.Map < String, String > meta) {
+            public Builder meta(java.util.Map<String, String> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -256,7 +261,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.Map < String, String > meta;
+        private java.util.Map<String, String> meta;
 
         private Sentences(Builder builder) {
             this.content = builder.content;
@@ -281,13 +286,13 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.Map < String, String > getMeta() {
+        public java.util.Map<String, String> getMeta() {
             return this.meta;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, String > meta; 
+            private java.util.Map<String, String> meta; 
 
             /**
              * content.
@@ -300,7 +305,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             /**
              * meta.
              */
-            public Builder meta(java.util.Map < String, String > meta) {
+            public Builder meta(java.util.Map<String, String> meta) {
                 this.meta = meta;
                 return this;
             }
@@ -320,16 +325,16 @@ public class GetDocumentSplitResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunks")
-        private java.util.List < Chunks> chunks;
+        private java.util.List<Chunks> chunks;
 
         @com.aliyun.core.annotation.NameInMap("nodes")
-        private java.util.List < java.util.Map<String, String>> nodes;
+        private java.util.List<java.util.Map<String, String>> nodes;
 
         @com.aliyun.core.annotation.NameInMap("rich_texts")
-        private java.util.List < RichTexts> richTexts;
+        private java.util.List<RichTexts> richTexts;
 
         @com.aliyun.core.annotation.NameInMap("sentences")
-        private java.util.List < Sentences> sentences;
+        private java.util.List<Sentences> sentences;
 
         private Result(Builder builder) {
             this.chunks = builder.chunks;
@@ -349,41 +354,41 @@ public class GetDocumentSplitResponseBody extends TeaModel {
         /**
          * @return chunks
          */
-        public java.util.List < Chunks> getChunks() {
+        public java.util.List<Chunks> getChunks() {
             return this.chunks;
         }
 
         /**
          * @return nodes
          */
-        public java.util.List < java.util.Map<String, String>> getNodes() {
+        public java.util.List<java.util.Map<String, String>> getNodes() {
             return this.nodes;
         }
 
         /**
          * @return richTexts
          */
-        public java.util.List < RichTexts> getRichTexts() {
+        public java.util.List<RichTexts> getRichTexts() {
             return this.richTexts;
         }
 
         /**
          * @return sentences
          */
-        public java.util.List < Sentences> getSentences() {
+        public java.util.List<Sentences> getSentences() {
             return this.sentences;
         }
 
         public static final class Builder {
-            private java.util.List < Chunks> chunks; 
-            private java.util.List < java.util.Map<String, String>> nodes; 
-            private java.util.List < RichTexts> richTexts; 
-            private java.util.List < Sentences> sentences; 
+            private java.util.List<Chunks> chunks; 
+            private java.util.List<java.util.Map<String, String>> nodes; 
+            private java.util.List<RichTexts> richTexts; 
+            private java.util.List<Sentences> sentences; 
 
             /**
              * chunks.
              */
-            public Builder chunks(java.util.List < Chunks> chunks) {
+            public Builder chunks(java.util.List<Chunks> chunks) {
                 this.chunks = chunks;
                 return this;
             }
@@ -391,7 +396,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             /**
              * nodes.
              */
-            public Builder nodes(java.util.List < java.util.Map<String, String>> nodes) {
+            public Builder nodes(java.util.List<java.util.Map<String, String>> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -399,7 +404,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             /**
              * rich_texts.
              */
-            public Builder richTexts(java.util.List < RichTexts> richTexts) {
+            public Builder richTexts(java.util.List<RichTexts> richTexts) {
                 this.richTexts = richTexts;
                 return this;
             }
@@ -407,7 +412,7 @@ public class GetDocumentSplitResponseBody extends TeaModel {
             /**
              * sentences.
              */
-            public Builder sentences(java.util.List < Sentences> sentences) {
+            public Builder sentences(java.util.List<Sentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }

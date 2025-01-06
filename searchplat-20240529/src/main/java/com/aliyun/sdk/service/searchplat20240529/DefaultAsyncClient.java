@@ -166,6 +166,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetPrediction  GetPredictionRequest
+     * @return GetPredictionResponse
+     */
+    @Override
+    public CompletableFuture<GetPredictionResponse> getPrediction(GetPredictionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPrediction").setMethod(HttpMethod.POST).setPathRegex("/v3/openapi/deployments/{deployment_id}/predict").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPredictionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPredictionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetQueryAnalysis  GetQueryAnalysisRequest
      * @return GetQueryAnalysisResponse
      */

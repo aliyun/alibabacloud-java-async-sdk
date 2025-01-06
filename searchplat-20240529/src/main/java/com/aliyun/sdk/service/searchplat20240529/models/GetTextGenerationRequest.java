@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,11 +34,11 @@ public class GetTextGenerationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messages")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Messages> messages;
+    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, String > parameters;
+    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
@@ -86,14 +91,14 @@ public class GetTextGenerationRequest extends Request {
     /**
      * @return messages
      */
-    public java.util.List < Messages> getMessages() {
+    public java.util.List<Messages> getMessages() {
         return this.messages;
     }
 
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
@@ -108,8 +113,8 @@ public class GetTextGenerationRequest extends Request {
         private String workspaceName; 
         private String serviceId; 
         private String csiLevel; 
-        private java.util.List < Messages> messages; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.List<Messages> messages; 
+        private java.util.Map<String, String> parameters; 
         private Boolean stream; 
 
         private Builder() {
@@ -156,7 +161,7 @@ public class GetTextGenerationRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder messages(java.util.List < Messages> messages) {
+        public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("messages", messages);
             this.messages = messages;
             return this;
@@ -165,7 +170,7 @@ public class GetTextGenerationRequest extends Request {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;

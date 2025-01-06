@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetDocumentRankRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > docs;
+    private java.util.List<String> docs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
@@ -70,7 +75,7 @@ public class GetDocumentRankRequest extends Request {
     /**
      * @return docs
      */
-    public java.util.List < String > getDocs() {
+    public java.util.List<String> getDocs() {
         return this.docs;
     }
 
@@ -84,7 +89,7 @@ public class GetDocumentRankRequest extends Request {
     public static final class Builder extends Request.Builder<GetDocumentRankRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List < String > docs; 
+        private java.util.List<String> docs; 
         private String query; 
 
         private Builder() {
@@ -120,7 +125,7 @@ public class GetDocumentRankRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder docs(java.util.List < String > docs) {
+        public Builder docs(java.util.List<String> docs) {
             this.putBodyParameter("docs", docs);
             this.docs = docs;
             return this;

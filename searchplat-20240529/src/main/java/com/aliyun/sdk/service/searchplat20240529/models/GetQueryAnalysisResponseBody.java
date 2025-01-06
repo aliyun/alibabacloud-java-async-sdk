@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -122,13 +127,13 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         private String intent;
 
         @com.aliyun.core.annotation.NameInMap("queries")
-        private java.util.List < String > queries;
+        private java.util.List<String> queries;
 
         @com.aliyun.core.annotation.NameInMap("query")
         private String query;
 
         @com.aliyun.core.annotation.NameInMap("sql")
-        private java.util.Map < String, ? > sql;
+        private java.util.Map<String, ?> sql;
 
         private Result(Builder builder) {
             this.intent = builder.intent;
@@ -155,7 +160,7 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         /**
          * @return queries
          */
-        public java.util.List < String > getQueries() {
+        public java.util.List<String> getQueries() {
             return this.queries;
         }
 
@@ -169,15 +174,15 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         /**
          * @return sql
          */
-        public java.util.Map < String, ? > getSql() {
+        public java.util.Map<String, ?> getSql() {
             return this.sql;
         }
 
         public static final class Builder {
             private String intent; 
-            private java.util.List < String > queries; 
+            private java.util.List<String> queries; 
             private String query; 
-            private java.util.Map < String, ? > sql; 
+            private java.util.Map<String, ?> sql; 
 
             /**
              * intent.
@@ -190,7 +195,7 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
             /**
              * queries.
              */
-            public Builder queries(java.util.List < String > queries) {
+            public Builder queries(java.util.List<String> queries) {
                 this.queries = queries;
                 return this;
             }
@@ -206,7 +211,7 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
             /**
              * sql.
              */
-            public Builder sql(java.util.Map < String, ? > sql) {
+            public Builder sql(java.util.Map<String, ?> sql) {
                 this.sql = sql;
                 return this;
             }

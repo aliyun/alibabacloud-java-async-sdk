@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetTextSparseEmbeddingRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("input")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > input;
+    private java.util.List<String> input;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("input_type")
@@ -74,7 +79,7 @@ public class GetTextSparseEmbeddingRequest extends Request {
     /**
      * @return input
      */
-    public java.util.List < String > getInput() {
+    public java.util.List<String> getInput() {
         return this.input;
     }
 
@@ -95,7 +100,7 @@ public class GetTextSparseEmbeddingRequest extends Request {
     public static final class Builder extends Request.Builder<GetTextSparseEmbeddingRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List < String > input; 
+        private java.util.List<String> input; 
         private String inputType; 
         private Boolean returnToken; 
 
@@ -133,7 +138,7 @@ public class GetTextSparseEmbeddingRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder input(java.util.List < String > input) {
+        public Builder input(java.util.List<String> input) {
             this.putBodyParameter("input", input);
             this.input = input;
             return this;

@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageAnalyzeTaskStatusResponse> getImageAnalyzeTaskStatus(GetImageAnalyzeTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetPrediction  GetPredictionRequest
+     * @return GetPredictionResponse
+     */
+    CompletableFuture<GetPredictionResponse> getPrediction(GetPredictionRequest request);
+
+    /**
      * @param request the request parameters of GetQueryAnalysis  GetQueryAnalysisRequest
      * @return GetQueryAnalysisResponse
      */

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDocumentSplitResponse} extends {@link TeaModel}
+ * {@link GetPredictionResponse} extends {@link TeaModel}
  *
- * <p>GetDocumentSplitResponse</p>
+ * <p>GetPredictionResponse</p>
  */
-public class GetDocumentSplitResponse extends Response {
+public class GetPredictionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetDocumentSplitResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetDocumentSplitResponseBody body;
+    private String body;
 
-    private GetDocumentSplitResponse(BuilderImpl builder) {
+    private GetPredictionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetDocumentSplitResponse create() {
+    public static GetPredictionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetDocumentSplitResponse extends Response {
     /**
      * @return body
      */
-    public GetDocumentSplitResponseBody getBody() {
+    public String getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetDocumentSplitResponse, Builder> {
+    public interface Builder extends Response.Builder<GetPredictionResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetDocumentSplitResponseBody body);
+        Builder body(String body);
 
         @Override
-        GetDocumentSplitResponse build();
+        GetPredictionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetDocumentSplitResponse, Builder>
+            extends Response.BuilderImpl<GetPredictionResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetDocumentSplitResponseBody body; 
+        private String body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetDocumentSplitResponse response) {
+        private BuilderImpl(GetPredictionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetDocumentSplitResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetDocumentSplitResponseBody body) {
+        public Builder body(String body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetDocumentSplitResponse build() {
-            return new GetDocumentSplitResponse(this);
+        public GetPredictionResponse build() {
+            return new GetPredictionResponse(this);
         } 
 
     } 

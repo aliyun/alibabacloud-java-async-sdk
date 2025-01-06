@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class GetDocumentRankResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scores")
-        private java.util.List < Scores> scores;
+        private java.util.List<Scores> scores;
 
         private Result(Builder builder) {
             this.scores = builder.scores;
@@ -203,17 +208,17 @@ public class GetDocumentRankResponseBody extends TeaModel {
         /**
          * @return scores
          */
-        public java.util.List < Scores> getScores() {
+        public java.util.List<Scores> getScores() {
             return this.scores;
         }
 
         public static final class Builder {
-            private java.util.List < Scores> scores; 
+            private java.util.List<Scores> scores; 
 
             /**
              * scores.
              */
-            public Builder scores(java.util.List < Scores> scores) {
+            public Builder scores(java.util.List<Scores> scores) {
                 this.scores = scores;
                 return this;
             }

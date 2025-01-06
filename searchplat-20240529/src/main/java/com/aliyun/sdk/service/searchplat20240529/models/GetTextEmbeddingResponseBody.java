@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -119,7 +124,7 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
      */
     public static class Embeddings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embedding")
-        private java.util.List < Double > embedding;
+        private java.util.List<Double> embedding;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
@@ -140,7 +145,7 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         /**
          * @return embedding
          */
-        public java.util.List < Double > getEmbedding() {
+        public java.util.List<Double> getEmbedding() {
             return this.embedding;
         }
 
@@ -152,13 +157,13 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Double > embedding; 
+            private java.util.List<Double> embedding; 
             private Integer index; 
 
             /**
              * embedding.
              */
-            public Builder embedding(java.util.List < Double > embedding) {
+            public Builder embedding(java.util.List<Double> embedding) {
                 this.embedding = embedding;
                 return this;
             }
@@ -186,7 +191,7 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embeddings")
-        private java.util.List < Embeddings> embeddings;
+        private java.util.List<Embeddings> embeddings;
 
         private Result(Builder builder) {
             this.embeddings = builder.embeddings;
@@ -203,17 +208,17 @@ public class GetTextEmbeddingResponseBody extends TeaModel {
         /**
          * @return embeddings
          */
-        public java.util.List < Embeddings> getEmbeddings() {
+        public java.util.List<Embeddings> getEmbeddings() {
             return this.embeddings;
         }
 
         public static final class Builder {
-            private java.util.List < Embeddings> embeddings; 
+            private java.util.List<Embeddings> embeddings; 
 
             /**
              * embeddings.
              */
-            public Builder embeddings(java.util.List < Embeddings> embeddings) {
+            public Builder embeddings(java.util.List<Embeddings> embeddings) {
                 this.embeddings = embeddings;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
      */
     public static class SparseEmbeddings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embedding")
-        private java.util.List < Embedding> embedding;
+        private java.util.List<Embedding> embedding;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
@@ -227,7 +232,7 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         /**
          * @return embedding
          */
-        public java.util.List < Embedding> getEmbedding() {
+        public java.util.List<Embedding> getEmbedding() {
             return this.embedding;
         }
 
@@ -239,13 +244,13 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Embedding> embedding; 
+            private java.util.List<Embedding> embedding; 
             private Integer index; 
 
             /**
              * embedding.
              */
-            public Builder embedding(java.util.List < Embedding> embedding) {
+            public Builder embedding(java.util.List<Embedding> embedding) {
                 this.embedding = embedding;
                 return this;
             }
@@ -273,7 +278,7 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sparse_embeddings")
-        private java.util.List < SparseEmbeddings> sparseEmbeddings;
+        private java.util.List<SparseEmbeddings> sparseEmbeddings;
 
         private Result(Builder builder) {
             this.sparseEmbeddings = builder.sparseEmbeddings;
@@ -290,17 +295,17 @@ public class GetTextSparseEmbeddingResponseBody extends TeaModel {
         /**
          * @return sparseEmbeddings
          */
-        public java.util.List < SparseEmbeddings> getSparseEmbeddings() {
+        public java.util.List<SparseEmbeddings> getSparseEmbeddings() {
             return this.sparseEmbeddings;
         }
 
         public static final class Builder {
-            private java.util.List < SparseEmbeddings> sparseEmbeddings; 
+            private java.util.List<SparseEmbeddings> sparseEmbeddings; 
 
             /**
              * sparse_embeddings.
              */
-            public Builder sparseEmbeddings(java.util.List < SparseEmbeddings> sparseEmbeddings) {
+            public Builder sparseEmbeddings(java.util.List<SparseEmbeddings> sparseEmbeddings) {
                 this.sparseEmbeddings = sparseEmbeddings;
                 return this;
             }

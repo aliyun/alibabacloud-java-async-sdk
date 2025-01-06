@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class GetEmbeddingTuningRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("input")
-    private java.util.List < java.util.List < Float > > input;
+    private java.util.List<java.util.List<Float>> input;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     private GetEmbeddingTuningRequest(Builder builder) {
         super(builder);
@@ -66,22 +71,22 @@ public class GetEmbeddingTuningRequest extends Request {
     /**
      * @return input
      */
-    public java.util.List < java.util.List < Float > > getInput() {
+    public java.util.List<java.util.List<Float>> getInput() {
         return this.input;
     }
 
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
     public static final class Builder extends Request.Builder<GetEmbeddingTuningRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List < java.util.List < Float > > input; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.List<java.util.List<Float>> input; 
+        private java.util.Map<String, ?> parameters; 
 
         private Builder() {
             super();
@@ -116,7 +121,7 @@ public class GetEmbeddingTuningRequest extends Request {
         /**
          * input.
          */
-        public Builder input(java.util.List < java.util.List < Float > > input) {
+        public Builder input(java.util.List<java.util.List<Float>> input) {
             this.putBodyParameter("input", input);
             this.input = input;
             return this;
@@ -125,7 +130,7 @@ public class GetEmbeddingTuningRequest extends Request {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;

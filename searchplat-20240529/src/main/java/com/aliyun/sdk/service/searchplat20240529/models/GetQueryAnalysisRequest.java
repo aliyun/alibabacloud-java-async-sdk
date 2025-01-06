@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,11 +29,11 @@ public class GetQueryAnalysisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("functions")
-    private java.util.List < Functions> functions;
+    private java.util.List<Functions> functions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("history")
-    private java.util.List < History> history;
+    private java.util.List<History> history;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
@@ -74,14 +79,14 @@ public class GetQueryAnalysisRequest extends Request {
     /**
      * @return functions
      */
-    public java.util.List < Functions> getFunctions() {
+    public java.util.List<Functions> getFunctions() {
         return this.functions;
     }
 
     /**
      * @return history
      */
-    public java.util.List < History> getHistory() {
+    public java.util.List<History> getHistory() {
         return this.history;
     }
 
@@ -95,8 +100,8 @@ public class GetQueryAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<GetQueryAnalysisRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
-        private java.util.List < Functions> functions; 
-        private java.util.List < History> history; 
+        private java.util.List<Functions> functions; 
+        private java.util.List<History> history; 
         private String query; 
 
         private Builder() {
@@ -133,7 +138,7 @@ public class GetQueryAnalysisRequest extends Request {
         /**
          * functions.
          */
-        public Builder functions(java.util.List < Functions> functions) {
+        public Builder functions(java.util.List<Functions> functions) {
             this.putBodyParameter("functions", functions);
             this.functions = functions;
             return this;
@@ -142,7 +147,7 @@ public class GetQueryAnalysisRequest extends Request {
         /**
          * history.
          */
-        public Builder history(java.util.List < History> history) {
+        public Builder history(java.util.List<History> history) {
             this.putBodyParameter("history", history);
             this.history = history;
             return this;
@@ -175,7 +180,7 @@ public class GetQueryAnalysisRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.Map < String, ? > parameters;
+        private java.util.Map<String, ?> parameters;
 
         private Functions(Builder builder) {
             this.name = builder.name;
@@ -200,13 +205,13 @@ public class GetQueryAnalysisRequest extends Request {
         /**
          * @return parameters
          */
-        public java.util.Map < String, ? > getParameters() {
+        public java.util.Map<String, ?> getParameters() {
             return this.parameters;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.Map < String, ? > parameters; 
+            private java.util.Map<String, ?> parameters; 
 
             /**
              * name.
@@ -219,7 +224,7 @@ public class GetQueryAnalysisRequest extends Request {
             /**
              * parameters.
              */
-            public Builder parameters(java.util.Map < String, ? > parameters) {
+            public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchplat20240529.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -119,7 +124,7 @@ public class GetEmbeddingTuningResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
-        private java.util.List < java.util.List < Float > > output;
+        private java.util.List<java.util.List<Float>> output;
 
         private Result(Builder builder) {
             this.output = builder.output;
@@ -136,17 +141,17 @@ public class GetEmbeddingTuningResponseBody extends TeaModel {
         /**
          * @return output
          */
-        public java.util.List < java.util.List < Float > > getOutput() {
+        public java.util.List<java.util.List<Float>> getOutput() {
             return this.output;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.List < Float > > output; 
+            private java.util.List<java.util.List<Float>> output; 
 
             /**
              * output.
              */
-            public Builder output(java.util.List < java.util.List < Float > > output) {
+            public Builder output(java.util.List<java.util.List<Float>> output) {
                 this.output = output;
                 return this;
             }
