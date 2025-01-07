@@ -43,7 +43,10 @@ public class UnassociateEipAddressWithRCInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDEAC7BF-D64B-54A1-9051-BE9AC0990E68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

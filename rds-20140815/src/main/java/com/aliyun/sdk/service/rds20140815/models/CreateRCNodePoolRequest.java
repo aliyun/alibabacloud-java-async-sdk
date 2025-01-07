@@ -134,6 +134,10 @@ public class CreateRCNodePoolRequest extends Request {
     private String spotStrategy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportCase")
+    private String supportCase;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -180,6 +184,7 @@ public class CreateRCNodePoolRequest extends Request {
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.spotStrategy = builder.spotStrategy;
+        this.supportCase = builder.supportCase;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -396,6 +401,13 @@ public class CreateRCNodePoolRequest extends Request {
     }
 
     /**
+     * @return supportCase
+     */
+    public String getSupportCase() {
+        return this.supportCase;
+    }
+
+    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -452,6 +464,7 @@ public class CreateRCNodePoolRequest extends Request {
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private String spotStrategy; 
+        private String supportCase; 
         private SystemDisk systemDisk; 
         private java.util.List<Tag> tag; 
         private String vSwitchId; 
@@ -491,6 +504,7 @@ public class CreateRCNodePoolRequest extends Request {
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.spotStrategy = request.spotStrategy;
+            this.supportCase = request.supportCase;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -747,6 +761,15 @@ public class CreateRCNodePoolRequest extends Request {
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
             this.spotStrategy = spotStrategy;
+            return this;
+        }
+
+        /**
+         * SupportCase.
+         */
+        public Builder supportCase(String supportCase) {
+            this.putQueryParameter("SupportCase", supportCase);
+            this.supportCase = supportCase;
             return this;
         }
 

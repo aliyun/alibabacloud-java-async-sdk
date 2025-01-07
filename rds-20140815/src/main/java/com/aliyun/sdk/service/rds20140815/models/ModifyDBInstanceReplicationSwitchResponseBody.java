@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AttachRCDiskResponseBody} extends {@link TeaModel}
+ * {@link ModifyDBInstanceReplicationSwitchResponseBody} extends {@link TeaModel}
  *
- * <p>AttachRCDiskResponseBody</p>
+ * <p>ModifyDBInstanceReplicationSwitchResponseBody</p>
  */
-public class AttachRCDiskResponseBody extends TeaModel {
+public class ModifyDBInstanceReplicationSwitchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private AttachRCDiskResponseBody(Builder builder) {
+    private ModifyDBInstanceReplicationSwitchResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class AttachRCDiskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AttachRCDiskResponseBody create() {
+    public static ModifyDBInstanceReplicationSwitchResponseBody create() {
         return builder().build();
     }
 
@@ -43,18 +43,18 @@ public class AttachRCDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>C19D1668-70CB-5421-AA91-D6D8EE3AB664</p>
+         * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public AttachRCDiskResponseBody build() {
-            return new AttachRCDiskResponseBody(this);
+        public ModifyDBInstanceReplicationSwitchResponseBody build() {
+            return new ModifyDBInstanceReplicationSwitchResponseBody(this);
         } 
 
     } 

@@ -586,7 +586,14 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * CompressionMode.
+         * <p>Whether to enable storage compression.</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder compressionMode(String compressionMode) {
             this.putQueryParameter("CompressionMode", compressionMode);

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeDiagnosticReportListResponse} extends {@link TeaModel}
+ * {@link ModifyDBInstanceReplicationSwitchResponse} extends {@link TeaModel}
  *
- * <p>DescribeDiagnosticReportListResponse</p>
+ * <p>ModifyDBInstanceReplicationSwitchResponse</p>
  */
-public class DescribeDiagnosticReportListResponse extends Response {
+public class ModifyDBInstanceReplicationSwitchResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeDiagnosticReportListResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeDiagnosticReportListResponseBody body;
+    private ModifyDBInstanceReplicationSwitchResponseBody body;
 
-    private DescribeDiagnosticReportListResponse(BuilderImpl builder) {
+    private ModifyDBInstanceReplicationSwitchResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeDiagnosticReportListResponse create() {
+    public static ModifyDBInstanceReplicationSwitchResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeDiagnosticReportListResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDiagnosticReportListResponseBody getBody() {
+    public ModifyDBInstanceReplicationSwitchResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDiagnosticReportListResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyDBInstanceReplicationSwitchResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeDiagnosticReportListResponseBody body);
+        Builder body(ModifyDBInstanceReplicationSwitchResponseBody body);
 
         @Override
-        DescribeDiagnosticReportListResponse build();
+        ModifyDBInstanceReplicationSwitchResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDiagnosticReportListResponse, Builder>
+            extends Response.BuilderImpl<ModifyDBInstanceReplicationSwitchResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeDiagnosticReportListResponseBody body; 
+        private ModifyDBInstanceReplicationSwitchResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDiagnosticReportListResponse response) {
+        private BuilderImpl(ModifyDBInstanceReplicationSwitchResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeDiagnosticReportListResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDiagnosticReportListResponseBody body) {
+        public Builder body(ModifyDBInstanceReplicationSwitchResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDiagnosticReportListResponse build() {
-            return new DescribeDiagnosticReportListResponse(this);
+        public ModifyDBInstanceReplicationSwitchResponse build() {
+            return new ModifyDBInstanceReplicationSwitchResponse(this);
         } 
 
     } 

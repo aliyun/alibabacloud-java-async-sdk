@@ -2086,7 +2086,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CompressionMode.
+             * <p>The storage compression mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on, off</p>
              */
             public Builder compressionMode(String compressionMode) {
                 this.compressionMode = compressionMode;
@@ -2094,7 +2097,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CompressionRatio.
+             * <p>The storage compression ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.25</p>
              */
             public Builder compressionRatio(String compressionRatio) {
                 this.compressionRatio = compressionRatio;
@@ -2817,7 +2823,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SupportCompression.
+             * <p>Indicates whether the storage compression mode can be enabled for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true, false</p>
              */
             public Builder supportCompression(Boolean supportCompression) {
                 this.supportCompression = supportCompression;

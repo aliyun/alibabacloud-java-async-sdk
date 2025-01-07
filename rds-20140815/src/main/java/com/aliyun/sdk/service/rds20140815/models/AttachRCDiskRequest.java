@@ -116,6 +116,7 @@ public class AttachRCDiskRequest extends Request {
         }
 
         /**
+         * <p>The disk ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +129,7 @@ public class AttachRCDiskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +142,7 @@ public class AttachRCDiskRequest extends Request {
         }
 
         /**
+         * <p>The region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

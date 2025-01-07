@@ -43,7 +43,10 @@ public class SyncRCSecurityGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300333A0-68E5-59CE-94AD-75153D17639E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

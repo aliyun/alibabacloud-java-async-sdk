@@ -129,7 +129,10 @@ public class ReplaceRCInstanceSystemDiskRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>The image ID that is used when you reinstall the OS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-2zec4lvlhcdkyd13****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -138,7 +141,10 @@ public class ReplaceRCInstanceSystemDiskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-m5ei7b1w38w2l91x****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +153,10 @@ public class ReplaceRCInstanceSystemDiskRequest extends Request {
         }
 
         /**
-         * IsLocalDisk.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder isLocalDisk(Boolean isLocalDisk) {
             this.putQueryParameter("IsLocalDisk", isLocalDisk);
@@ -156,7 +165,10 @@ public class ReplaceRCInstanceSystemDiskRequest extends Request {
         }
 
         /**
-         * KeyPairName.
+         * <p>The name of the new key pair. If you do not specify this parameter, you must reset the key pair after the OS is reinstalled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -165,7 +177,14 @@ public class ReplaceRCInstanceSystemDiskRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The new logon password of the RDS Custom instance. If you do not specify this parameter, you must reset the logon password after the OS is reinstalled.</p>
+         * <ul>
+         * <li>The value must be 8 to 30 characters in length.</li>
+         * <li>The value must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters include: ( ) ` ~ ! @ # $ % ^ &amp; * - _ + =</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testPassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -174,7 +193,10 @@ public class ReplaceRCInstanceSystemDiskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

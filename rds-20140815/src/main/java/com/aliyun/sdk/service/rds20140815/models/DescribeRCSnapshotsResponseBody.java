@@ -486,6 +486,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
 
             /**
              * <p>The snapshot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-2ze8klip00xcogcwer76</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;

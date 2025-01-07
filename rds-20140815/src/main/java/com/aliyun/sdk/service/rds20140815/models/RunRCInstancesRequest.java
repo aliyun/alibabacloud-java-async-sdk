@@ -35,6 +35,10 @@ public class RunRCInstancesRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateAckEdgeParam")
+    private CreateAckEdgeParam createAckEdgeParam;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateExtraParam")
     private String createExtraParam;
 
@@ -155,6 +159,7 @@ public class RunRCInstancesRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.clientToken = builder.clientToken;
+        this.createAckEdgeParam = builder.createAckEdgeParam;
         this.createExtraParam = builder.createExtraParam;
         this.createMode = builder.createMode;
         this.dataDisk = builder.dataDisk;
@@ -224,6 +229,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return createAckEdgeParam
+     */
+    public CreateAckEdgeParam getCreateAckEdgeParam() {
+        return this.createAckEdgeParam;
     }
 
     /**
@@ -427,6 +439,7 @@ public class RunRCInstancesRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String clientToken; 
+        private CreateAckEdgeParam createAckEdgeParam; 
         private String createExtraParam; 
         private String createMode; 
         private java.util.List<DataDisk> dataDisk; 
@@ -466,6 +479,7 @@ public class RunRCInstancesRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.clientToken = request.clientToken;
+            this.createAckEdgeParam = request.createAckEdgeParam;
             this.createExtraParam = request.createExtraParam;
             this.createMode = request.createMode;
             this.dataDisk = request.dataDisk;
@@ -554,6 +568,16 @@ public class RunRCInstancesRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CreateAckEdgeParam.
+         */
+        public Builder createAckEdgeParam(CreateAckEdgeParam createAckEdgeParam) {
+            String createAckEdgeParamShrink = shrink(createAckEdgeParam, "CreateAckEdgeParam", "json");
+            this.putQueryParameter("CreateAckEdgeParam", createAckEdgeParamShrink);
+            this.createAckEdgeParam = createAckEdgeParam;
             return this;
         }
 
@@ -895,6 +919,73 @@ public class RunRCInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunRCInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>RunRCInstancesRequest</p>
+     */
+    public static class CreateAckEdgeParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("NodePoolId")
+        private String nodePoolId;
+
+        private CreateAckEdgeParam(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.nodePoolId = builder.nodePoolId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CreateAckEdgeParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return nodePoolId
+         */
+        public String getNodePoolId() {
+            return this.nodePoolId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String nodePoolId; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * NodePoolId.
+             */
+            public Builder nodePoolId(String nodePoolId) {
+                this.nodePoolId = nodePoolId;
+                return this;
+            }
+
+            public CreateAckEdgeParam build() {
+                return new CreateAckEdgeParam(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link RunRCInstancesRequest} extends {@link TeaModel}

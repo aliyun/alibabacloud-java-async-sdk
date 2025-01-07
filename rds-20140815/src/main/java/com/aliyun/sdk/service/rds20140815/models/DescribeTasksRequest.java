@@ -245,7 +245,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
