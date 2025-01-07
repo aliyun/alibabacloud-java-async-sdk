@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueueUpStreamBindingsRequest} extends {@link RequestModel}
  *
  * <p>ListQueueUpStreamBindingsRequest</p>
@@ -127,7 +133,7 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +142,11 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for RabbitMQ instance.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1880770869023***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +155,10 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,7 +167,10 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
+         * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -163,7 +179,11 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * The queue name.
+         * <p>The queue name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QueueTest</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -172,7 +192,11 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * The virtual host (vhost) name.
+         * <p>The virtual host (vhost) name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putQueryParameter("VirtualHost", virtualHost);

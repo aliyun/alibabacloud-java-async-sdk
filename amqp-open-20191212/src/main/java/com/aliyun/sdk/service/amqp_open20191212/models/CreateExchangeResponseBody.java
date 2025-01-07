@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExchangeResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExchangeResponseBody</p>
@@ -37,7 +43,10 @@ public class CreateExchangeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>021788F6-E50C-4BD6-9F80-66B0A19A6***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

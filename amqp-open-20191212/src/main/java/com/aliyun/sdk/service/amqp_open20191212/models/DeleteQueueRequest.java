@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQueueRequest} extends {@link RequestModel}
  *
  * <p>DeleteQueueRequest</p>
@@ -98,7 +104,7 @@ public class DeleteQueueRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +113,11 @@ public class DeleteQueueRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1880770869023***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +126,11 @@ public class DeleteQueueRequest extends Request {
         }
 
         /**
-         * The queue name.
+         * <p>The queue name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoQueue</p>
          */
         public Builder queueName(String queueName) {
             this.putBodyParameter("QueueName", queueName);
@@ -125,7 +139,11 @@ public class DeleteQueueRequest extends Request {
         }
 
         /**
-         * The vhost name.
+         * <p>The vhost name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

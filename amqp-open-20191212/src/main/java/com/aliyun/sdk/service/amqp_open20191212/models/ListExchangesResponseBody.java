@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExchangesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExchangesResponseBody</p>
@@ -49,7 +55,7 @@ public class ListExchangesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class ListExchangesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEBA5E0C-50D0-4FA6-A794-4901E5465***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,9 +79,15 @@ public class ListExchangesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExchangesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExchangesResponseBody</p>
+     */
     public static class Exchanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.Map < String, ? > attributes;
+        private java.util.Map<String, ?> attributes;
 
         @com.aliyun.core.annotation.NameInMap("AutoDeleteState")
         private Boolean autoDeleteState;
@@ -109,7 +124,7 @@ public class ListExchangesResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.Map < String, ? > getAttributes() {
+        public java.util.Map<String, ?> getAttributes() {
             return this.attributes;
         }
 
@@ -149,7 +164,7 @@ public class ListExchangesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > attributes; 
+            private java.util.Map<String, ?> attributes; 
             private Boolean autoDeleteState; 
             private Long createTime; 
             private String exchangeType; 
@@ -157,15 +172,21 @@ public class ListExchangesResponseBody extends TeaModel {
             private String vHostName; 
 
             /**
-             * The attributes. This parameter is unavailable in the current version.
+             * <p>The attributes. This parameter is unavailable in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
-            public Builder attributes(java.util.Map < String, ? > attributes) {
+            public Builder attributes(java.util.Map<String, ?> attributes) {
                 this.attributes = attributes;
                 return this;
             }
 
             /**
-             * Indicates whether the exchange was automatically deleted.
+             * <p>Indicates whether the exchange was automatically deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoDeleteState(Boolean autoDeleteState) {
                 this.autoDeleteState = autoDeleteState;
@@ -173,7 +194,10 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the exchange was created. Unit: milliseconds.
+             * <p>The timestamp that indicates when the exchange was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1580886216000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -181,7 +205,10 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * The exchange type.
+             * <p>The exchange type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DIRECT</p>
              */
             public Builder exchangeType(String exchangeType) {
                 this.exchangeType = exchangeType;
@@ -189,7 +216,10 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * The exchange name.
+             * <p>The exchange name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amq.direct</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +227,10 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * The vhost name.
+             * <p>The vhost name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vHostName(String vHostName) {
                 this.vHostName = vHostName;
@@ -211,9 +244,15 @@ public class ListExchangesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListExchangesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExchangesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exchanges")
-        private java.util.List < Exchanges> exchanges;
+        private java.util.List<Exchanges> exchanges;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -238,7 +277,7 @@ public class ListExchangesResponseBody extends TeaModel {
         /**
          * @return exchanges
          */
-        public java.util.List < Exchanges> getExchanges() {
+        public java.util.List<Exchanges> getExchanges() {
             return this.exchanges;
         }
 
@@ -257,20 +296,23 @@ public class ListExchangesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Exchanges> exchanges; 
+            private java.util.List<Exchanges> exchanges; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * The exchanges.
+             * <p>The exchanges.</p>
              */
-            public Builder exchanges(java.util.List < Exchanges> exchanges) {
+            public Builder exchanges(java.util.List<Exchanges> exchanges) {
                 this.exchanges = exchanges;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -278,11 +320,14 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * The token that marks the end of the current returned page.``
-             * <p>
+             * <p>The token that marks the end of the current returned page.``</p>
+             * <ul>
+             * <li>If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``</li>
+             * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``</li>
+             * </ul>
              * 
-             * *   If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``
-             * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``
+             * <strong>example:</strong>
+             * <p>AAAANDQBYW1xcC1jbi03cHAybXdiY3AwMGEBdmhvc3QBAXNkZndhYWJhATE2NDkzMTM4OTU5NDIB4o3z1pPwWzk4aYuiRffi8R6-****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

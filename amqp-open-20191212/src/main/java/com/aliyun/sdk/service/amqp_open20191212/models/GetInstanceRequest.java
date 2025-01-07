@@ -12,20 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAccountsRequest} extends {@link RequestModel}
+ * {@link GetInstanceRequest} extends {@link RequestModel}
  *
- * <p>ListAccountsRequest</p>
+ * <p>GetInstanceRequest</p>
  */
-public class ListAccountsRequest extends Request {
+public class GetInstanceRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private ListAccountsRequest(Builder builder) {
+    private GetInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
@@ -35,7 +36,7 @@ public class ListAccountsRequest extends Request {
         return new Builder();
     }
 
-    public static ListAccountsRequest create() {
+    public static GetInstanceRequest create() {
         return builder().build();
     }
 
@@ -58,7 +59,7 @@ public class ListAccountsRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<ListAccountsRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetInstanceRequest, Builder> {
         private String regionId; 
         private String instanceId; 
 
@@ -66,14 +67,14 @@ public class ListAccountsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAccountsRequest request) {
+        private Builder(GetInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -82,10 +83,10 @@ public class ListAccountsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraMQ for RabbitMQ instance for which you want to query the static username and password.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>amqp-cn-20p****04</p>
+         * <p>amqp-cn-v0h1kb9nu***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,8 +95,8 @@ public class ListAccountsRequest extends Request {
         }
 
         @Override
-        public ListAccountsRequest build() {
-            return new ListAccountsRequest(this);
+        public GetInstanceRequest build() {
+            return new GetInstanceRequest(this);
         } 
 
     } 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccountRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccountRequest</p>
@@ -92,10 +98,12 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/472730.html">ListAccounts</a> operation to view the timestamp.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListAccounts](~~472730~~) operation to view the timestamp.
+         * <strong>example:</strong>
+         * <p>1671175303522</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.putQueryParameter("CreateTimestamp", createTimestamp);
@@ -104,7 +112,11 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * The pair of username and password that you want to delete.
+         * <p>The pair of username and password that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MjphbXFwLWNuLXVxbTJ5cjc3djAwMzpMVEFJNXQ4YmVNbVZNMWVSWnRFSjZ2Zm1=</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
@@ -20,6 +26,10 @@ public class UpdateInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedInstance")
+    private Boolean encryptedInstance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -27,6 +37,10 @@ public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+    private String kmsKeyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxConnections")
@@ -73,8 +87,10 @@ public class UpdateInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
+        this.encryptedInstance = builder.encryptedInstance;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.kmsKeyId = builder.kmsKeyId;
         this.maxConnections = builder.maxConnections;
         this.maxEipTps = builder.maxEipTps;
         this.maxPrivateTps = builder.maxPrivateTps;
@@ -115,6 +131,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return encryptedInstance
+     */
+    public Boolean getEncryptedInstance() {
+        return this.encryptedInstance;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -126,6 +149,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     /**
@@ -201,8 +231,10 @@ public class UpdateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String regionId; 
         private String clientToken; 
+        private Boolean encryptedInstance; 
         private String instanceId; 
         private String instanceType; 
+        private String kmsKeyId; 
         private Integer maxConnections; 
         private Long maxEipTps; 
         private Long maxPrivateTps; 
@@ -222,8 +254,10 @@ public class UpdateInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.clientToken = request.clientToken;
+            this.encryptedInstance = request.encryptedInstance;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.kmsKeyId = request.kmsKeyId;
             this.maxConnections = request.maxConnections;
             this.maxEipTps = request.maxEipTps;
             this.maxPrivateTps = request.maxPrivateTps;
@@ -255,7 +289,19 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * EncryptedInstance.
+         */
+        public Builder encryptedInstance(Boolean encryptedInstance) {
+            this.putQueryParameter("EncryptedInstance", encryptedInstance);
+            this.encryptedInstance = encryptedInstance;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-jtexxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -269,6 +315,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * KmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 
@@ -300,7 +355,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueueConsumersRequest} extends {@link RequestModel}
  *
  * <p>ListQueueConsumersRequest</p>
@@ -127,7 +133,7 @@ public class ListQueueConsumersRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -136,7 +142,11 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for RabbitMQ instance.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188077086902***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +155,10 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
+         * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -154,10 +167,11 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * The number of data entries to return. If you do not configure this parameter, the default value 1 is used.
-         * <p>
+         * <p>The number of data entries to return. If you do not configure this parameter, the default value 1 is used.</p>
+         * <p>Valid values: 1 to 100.</p>
          * 
-         * Valid values: 1 to 100.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder queryCount(Integer queryCount) {
             this.putQueryParameter("QueryCount", queryCount);
@@ -166,7 +180,11 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * The name of the queue for which you want to query online consumers.
+         * <p>The name of the queue for which you want to query online consumers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queue-rabbit-springboot-advance5</p>
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);
@@ -175,7 +193,11 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * The virtual host (vhost) name.
+         * <p>The virtual host (vhost) name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putQueryParameter("VirtualHost", virtualHost);

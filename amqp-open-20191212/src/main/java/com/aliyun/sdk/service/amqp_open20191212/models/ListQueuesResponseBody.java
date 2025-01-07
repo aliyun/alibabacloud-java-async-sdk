@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListQueuesResponseBody</p>
@@ -49,7 +55,7 @@ public class ListQueuesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +63,10 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE811989-9F02-42CE-97A6-2239CB5C2***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,9 +79,15 @@ public class ListQueuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class Queues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.Map < String, ? > attributes;
+        private java.util.Map<String, ?> attributes;
 
         @com.aliyun.core.annotation.NameInMap("AutoDeleteState")
         private Boolean autoDeleteState;
@@ -117,7 +132,7 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.Map < String, ? > getAttributes() {
+        public java.util.Map<String, ?> getAttributes() {
             return this.attributes;
         }
 
@@ -171,7 +186,7 @@ public class ListQueuesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > attributes; 
+            private java.util.Map<String, ?> attributes; 
             private Boolean autoDeleteState; 
             private Long createTime; 
             private Boolean exclusiveState; 
@@ -181,15 +196,21 @@ public class ListQueuesResponseBody extends TeaModel {
             private String vHostName; 
 
             /**
-             * The attributes.
+             * <p>The attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
-            public Builder attributes(java.util.Map < String, ? > attributes) {
+            public Builder attributes(java.util.Map<String, ?> attributes) {
                 this.attributes = attributes;
                 return this;
             }
 
             /**
-             * Indicates whether the queue was automatically deleted.
+             * <p>Indicates whether the queue was automatically deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoDeleteState(Boolean autoDeleteState) {
                 this.autoDeleteState = autoDeleteState;
@@ -197,7 +218,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the queue was created.
+             * <p>The time when the queue was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1580887085240</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -205,7 +229,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the queue is an exclusive queue.
+             * <p>Indicates whether the queue is an exclusive queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exclusiveState(Boolean exclusiveState) {
                 this.exclusiveState = exclusiveState;
@@ -213,7 +240,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when messages in the queue were last consumed.
+             * <p>The time when messages in the queue were last consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1680887085240</p>
              */
             public Builder lastConsumeTime(Long lastConsumeTime) {
                 this.lastConsumeTime = lastConsumeTime;
@@ -221,7 +251,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The queue name.
+             * <p>The queue name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QueueTest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -229,7 +262,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ApsaraMQ for RabbitMQ instance to which the queue belongs.
+             * <p>The ID of the ApsaraMQ for RabbitMQ instance to which the queue belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1880770869023***</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -237,7 +273,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The vhost name.
+             * <p>The vhost name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vHostName(String vHostName) {
                 this.vHostName = vHostName;
@@ -251,6 +290,12 @@ public class ListQueuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListQueuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQueuesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -259,7 +304,7 @@ public class ListQueuesResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("Queues")
-        private java.util.List < Queues> queues;
+        private java.util.List<Queues> queues;
 
         private Data(Builder builder) {
             this.maxResults = builder.maxResults;
@@ -292,17 +337,20 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * @return queues
          */
-        public java.util.List < Queues> getQueues() {
+        public java.util.List<Queues> getQueues() {
             return this.queues;
         }
 
         public static final class Builder {
             private Integer maxResults; 
             private String nextToken; 
-            private java.util.List < Queues> queues; 
+            private java.util.List<Queues> queues; 
 
             /**
-             * The maximum number of entries returned.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -310,7 +358,10 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.
+             * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>caebacccb2be03f84eb48b699f0a****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -318,9 +369,9 @@ public class ListQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The queues.
+             * <p>The queues.</p>
              */
-            public Builder queues(java.util.List < Queues> queues) {
+            public Builder queues(java.util.List<Queues> queues) {
                 this.queues = queues;
                 return this;
             }

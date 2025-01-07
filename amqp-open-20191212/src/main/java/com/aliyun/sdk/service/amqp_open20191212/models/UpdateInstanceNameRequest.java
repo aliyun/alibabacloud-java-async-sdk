@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceNameRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceNameRequest</p>
@@ -83,7 +89,7 @@ public class UpdateInstanceNameRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +98,11 @@ public class UpdateInstanceNameRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for RabbitMQ instance for which you want to update the name.
+         * <p>The ID of the ApsaraMQ for RabbitMQ instance for which you want to update the name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-zvp2ajsj****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +111,11 @@ public class UpdateInstanceNameRequest extends Request {
         }
 
         /**
-         * The new name of the instance. No limits are imposed on the value. We recommend that you set this parameter to a maximum of 64 characters in length.
+         * <p>The new name of the instance. No limits are imposed on the value. We recommend that you set this parameter to a maximum of 64 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-ZVp2ajsj****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);

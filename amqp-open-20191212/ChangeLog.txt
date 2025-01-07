@@ -1,3 +1,6 @@
+2025-01-07 Version: 1.0.6
+- Generated java-async 2019-12-12 for amqp-open.
+
 2024-08-14 Version: 1.0.4
 - Generated java-async 2019-12-12 for amqp-open.
 

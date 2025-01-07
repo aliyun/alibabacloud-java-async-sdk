@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBindingRequest} extends {@link RequestModel}
  *
  * <p>DeleteBindingRequest</p>
@@ -17,7 +23,6 @@ public class DeleteBindingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BindingKey")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String bindingKey;
 
     @com.aliyun.core.annotation.Body
@@ -143,7 +148,7 @@ public class DeleteBindingRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -152,7 +157,10 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * The binding key.
+         * <p>The binding key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.test.</p>
          */
         public Builder bindingKey(String bindingKey) {
             this.putBodyParameter("BindingKey", bindingKey);
@@ -161,11 +169,15 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * The type of the object that you want to unbind from the source exchange. Valid values:
-         * <p>
+         * <p>The type of the object that you want to unbind from the source exchange. Valid values:</p>
+         * <ul>
+         * <li><strong>QUEUE</strong></li>
+         * <li><strong>EXCHANGE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **QUEUE**
-         * *   **EXCHANGE**
+         * <strong>example:</strong>
+         * <p>QUEUE</p>
          */
         public Builder bindingType(String bindingType) {
             this.putBodyParameter("BindingType", bindingType);
@@ -174,7 +186,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * The name of the object that you want to unbind from the source exchange.
+         * <p>The name of the object that you want to unbind from the source exchange.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoQueue</p>
          */
         public Builder destinationName(String destinationName) {
             this.putBodyParameter("DestinationName", destinationName);
@@ -183,7 +199,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-v0h1kb9nu***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -192,7 +212,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * The name of the source exchange.
+         * <p>The name of the source exchange.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NormalEX</p>
          */
         public Builder sourceExchange(String sourceExchange) {
             this.putBodyParameter("SourceExchange", sourceExchange);
@@ -201,7 +225,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * The vhost name.
+         * <p>The vhost name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

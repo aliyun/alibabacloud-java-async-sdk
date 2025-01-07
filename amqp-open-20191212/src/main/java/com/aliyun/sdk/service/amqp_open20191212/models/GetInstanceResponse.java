@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateVirtualHostResponse} extends {@link TeaModel}
+ * {@link GetInstanceResponse} extends {@link TeaModel}
  *
- * <p>CreateVirtualHostResponse</p>
+ * <p>GetInstanceResponse</p>
  */
-public class CreateVirtualHostResponse extends Response {
+public class GetInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateVirtualHostResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateVirtualHostResponseBody body;
+    private GetInstanceResponseBody body;
 
-    private CreateVirtualHostResponse(BuilderImpl builder) {
+    private GetInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateVirtualHostResponse create() {
+    public static GetInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateVirtualHostResponse extends Response {
     /**
      * @return body
      */
-    public CreateVirtualHostResponseBody getBody() {
+    public GetInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateVirtualHostResponse, Builder> {
+    public interface Builder extends Response.Builder<GetInstanceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateVirtualHostResponseBody body);
+        Builder body(GetInstanceResponseBody body);
 
         @Override
-        CreateVirtualHostResponse build();
+        GetInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateVirtualHostResponse, Builder>
+            extends Response.BuilderImpl<GetInstanceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateVirtualHostResponseBody body; 
+        private GetInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateVirtualHostResponse response) {
+        private BuilderImpl(GetInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateVirtualHostResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateVirtualHostResponseBody body) {
+        public Builder body(GetInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateVirtualHostResponse build() {
-            return new CreateVirtualHostResponse(this);
+        public GetInstanceResponse build() {
+            return new GetInstanceResponse(this);
         } 
 
     } 
