@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -852,7 +857,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         private Integer segmentIndex;
 
         @com.aliyun.core.annotation.NameInMap("stop_city")
-        private java.util.List < String > stopCity;
+        private java.util.List<String> stopCity;
 
         private FlightInfoList(Builder builder) {
             this.airlineCode = builder.airlineCode;
@@ -1045,7 +1050,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         /**
          * @return stopCity
          */
-        public java.util.List < String > getStopCity() {
+        public java.util.List<String> getStopCity() {
             return this.stopCity;
         }
 
@@ -1072,7 +1077,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String flightNo; 
             private Integer journeyIndex; 
             private Integer segmentIndex; 
-            private java.util.List < String > stopCity; 
+            private java.util.List<String> stopCity; 
 
             /**
              * airline_code.
@@ -1253,7 +1258,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * stop_city.
              */
-            public Builder stopCity(java.util.List < String > stopCity) {
+            public Builder stopCity(java.util.List<String> stopCity) {
                 this.stopCity = stopCity;
                 return this;
             }
@@ -3302,19 +3307,19 @@ public class FlightOrderQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_change_ticket_info_list")
-        private java.util.List < FlightChangeTicketInfoList> flightChangeTicketInfoList;
+        private java.util.List<FlightChangeTicketInfoList> flightChangeTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("flight_info_list")
-        private java.util.List < FlightInfoList> flightInfoList;
+        private java.util.List<FlightInfoList> flightInfoList;
 
         @com.aliyun.core.annotation.NameInMap("flight_refund_ticket_info_list")
-        private java.util.List < FlightRefundTicketInfoList> flightRefundTicketInfoList;
+        private java.util.List<FlightRefundTicketInfoList> flightRefundTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("flight_ticket_info_list")
-        private java.util.List < FlightTicketInfoList> flightTicketInfoList;
+        private java.util.List<FlightTicketInfoList> flightTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("insurance_info_list")
-        private java.util.List < InsuranceInfoList> insuranceInfoList;
+        private java.util.List<InsuranceInfoList> insuranceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
@@ -3323,10 +3328,10 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         private OrderBaseInfo orderBaseInfo;
 
         @com.aliyun.core.annotation.NameInMap("passenger_info_list")
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         private Module(Builder builder) {
             this.flightChangeTicketInfoList = builder.flightChangeTicketInfoList;
@@ -3351,35 +3356,35 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         /**
          * @return flightChangeTicketInfoList
          */
-        public java.util.List < FlightChangeTicketInfoList> getFlightChangeTicketInfoList() {
+        public java.util.List<FlightChangeTicketInfoList> getFlightChangeTicketInfoList() {
             return this.flightChangeTicketInfoList;
         }
 
         /**
          * @return flightInfoList
          */
-        public java.util.List < FlightInfoList> getFlightInfoList() {
+        public java.util.List<FlightInfoList> getFlightInfoList() {
             return this.flightInfoList;
         }
 
         /**
          * @return flightRefundTicketInfoList
          */
-        public java.util.List < FlightRefundTicketInfoList> getFlightRefundTicketInfoList() {
+        public java.util.List<FlightRefundTicketInfoList> getFlightRefundTicketInfoList() {
             return this.flightRefundTicketInfoList;
         }
 
         /**
          * @return flightTicketInfoList
          */
-        public java.util.List < FlightTicketInfoList> getFlightTicketInfoList() {
+        public java.util.List<FlightTicketInfoList> getFlightTicketInfoList() {
             return this.flightTicketInfoList;
         }
 
         /**
          * @return insuranceInfoList
          */
-        public java.util.List < InsuranceInfoList> getInsuranceInfoList() {
+        public java.util.List<InsuranceInfoList> getInsuranceInfoList() {
             return this.insuranceInfoList;
         }
 
@@ -3400,32 +3405,32 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < FlightChangeTicketInfoList> flightChangeTicketInfoList; 
-            private java.util.List < FlightInfoList> flightInfoList; 
-            private java.util.List < FlightRefundTicketInfoList> flightRefundTicketInfoList; 
-            private java.util.List < FlightTicketInfoList> flightTicketInfoList; 
-            private java.util.List < InsuranceInfoList> insuranceInfoList; 
+            private java.util.List<FlightChangeTicketInfoList> flightChangeTicketInfoList; 
+            private java.util.List<FlightInfoList> flightInfoList; 
+            private java.util.List<FlightRefundTicketInfoList> flightRefundTicketInfoList; 
+            private java.util.List<FlightTicketInfoList> flightTicketInfoList; 
+            private java.util.List<InsuranceInfoList> insuranceInfoList; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
 
             /**
              * flight_change_ticket_info_list.
              */
-            public Builder flightChangeTicketInfoList(java.util.List < FlightChangeTicketInfoList> flightChangeTicketInfoList) {
+            public Builder flightChangeTicketInfoList(java.util.List<FlightChangeTicketInfoList> flightChangeTicketInfoList) {
                 this.flightChangeTicketInfoList = flightChangeTicketInfoList;
                 return this;
             }
@@ -3433,7 +3438,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * flight_info_list.
              */
-            public Builder flightInfoList(java.util.List < FlightInfoList> flightInfoList) {
+            public Builder flightInfoList(java.util.List<FlightInfoList> flightInfoList) {
                 this.flightInfoList = flightInfoList;
                 return this;
             }
@@ -3441,7 +3446,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * flight_refund_ticket_info_list.
              */
-            public Builder flightRefundTicketInfoList(java.util.List < FlightRefundTicketInfoList> flightRefundTicketInfoList) {
+            public Builder flightRefundTicketInfoList(java.util.List<FlightRefundTicketInfoList> flightRefundTicketInfoList) {
                 this.flightRefundTicketInfoList = flightRefundTicketInfoList;
                 return this;
             }
@@ -3449,7 +3454,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * flight_ticket_info_list.
              */
-            public Builder flightTicketInfoList(java.util.List < FlightTicketInfoList> flightTicketInfoList) {
+            public Builder flightTicketInfoList(java.util.List<FlightTicketInfoList> flightTicketInfoList) {
                 this.flightTicketInfoList = flightTicketInfoList;
                 return this;
             }
@@ -3457,7 +3462,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * insurance_info_list.
              */
-            public Builder insuranceInfoList(java.util.List < InsuranceInfoList> insuranceInfoList) {
+            public Builder insuranceInfoList(java.util.List<InsuranceInfoList> insuranceInfoList) {
                 this.insuranceInfoList = insuranceInfoList;
                 return this;
             }
@@ -3481,7 +3486,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_info_list.
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }
@@ -3489,7 +3494,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }

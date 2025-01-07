@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,10 +271,10 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
      */
     public static class RoomInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_date")
-        private java.util.List < String > cancelDate;
+        private java.util.List<String> cancelDate;
 
         @com.aliyun.core.annotation.NameInMap("room_daily_refund_infos")
-        private java.util.List < RoomDailyRefundInfos> roomDailyRefundInfos;
+        private java.util.List<RoomDailyRefundInfos> roomDailyRefundInfos;
 
         @com.aliyun.core.annotation.NameInMap("room_no")
         private Integer roomNo;
@@ -291,14 +296,14 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         /**
          * @return cancelDate
          */
-        public java.util.List < String > getCancelDate() {
+        public java.util.List<String> getCancelDate() {
             return this.cancelDate;
         }
 
         /**
          * @return roomDailyRefundInfos
          */
-        public java.util.List < RoomDailyRefundInfos> getRoomDailyRefundInfos() {
+        public java.util.List<RoomDailyRefundInfos> getRoomDailyRefundInfos() {
             return this.roomDailyRefundInfos;
         }
 
@@ -310,14 +315,14 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > cancelDate; 
-            private java.util.List < RoomDailyRefundInfos> roomDailyRefundInfos; 
+            private java.util.List<String> cancelDate; 
+            private java.util.List<RoomDailyRefundInfos> roomDailyRefundInfos; 
             private Integer roomNo; 
 
             /**
              * cancel_date.
              */
-            public Builder cancelDate(java.util.List < String > cancelDate) {
+            public Builder cancelDate(java.util.List<String> cancelDate) {
                 this.cancelDate = cancelDate;
                 return this;
             }
@@ -325,7 +330,7 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
             /**
              * room_daily_refund_infos.
              */
-            public Builder roomDailyRefundInfos(java.util.List < RoomDailyRefundInfos> roomDailyRefundInfos) {
+            public Builder roomDailyRefundInfos(java.util.List<RoomDailyRefundInfos> roomDailyRefundInfos) {
                 this.roomDailyRefundInfos = roomDailyRefundInfos;
                 return this;
             }
@@ -377,7 +382,7 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         private String remarks;
 
         @com.aliyun.core.annotation.NameInMap("room_info_list")
-        private java.util.List < RoomInfoList> roomInfoList;
+        private java.util.List<RoomInfoList> roomInfoList;
 
         @com.aliyun.core.annotation.NameInMap("sale_order_id")
         private String saleOrderId;
@@ -474,7 +479,7 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         /**
          * @return roomInfoList
          */
-        public java.util.List < RoomInfoList> getRoomInfoList() {
+        public java.util.List<RoomInfoList> getRoomInfoList() {
             return this.roomInfoList;
         }
 
@@ -515,7 +520,7 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
             private String gmtModified; 
             private String reason; 
             private String remarks; 
-            private java.util.List < RoomInfoList> roomInfoList; 
+            private java.util.List<RoomInfoList> roomInfoList; 
             private String saleOrderId; 
             private Integer source; 
             private Integer status; 
@@ -588,7 +593,7 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
             /**
              * room_info_list.
              */
-            public Builder roomInfoList(java.util.List < RoomInfoList> roomInfoList) {
+            public Builder roomInfoList(java.util.List<RoomInfoList> roomInfoList) {
                 this.roomInfoList = roomInfoList;
                 return this;
             }

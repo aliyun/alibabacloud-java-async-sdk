@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class HotelPricePullRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("hotel_ids")
-    private java.util.List < String > hotelIds;
+    private java.util.List<String> hotelIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("payment_type")
@@ -95,7 +100,7 @@ public class HotelPricePullRequest extends Request {
     /**
      * @return hotelIds
      */
-    public java.util.List < String > getHotelIds() {
+    public java.util.List<String> getHotelIds() {
         return this.hotelIds;
     }
 
@@ -118,7 +123,7 @@ public class HotelPricePullRequest extends Request {
         private String checkIn; 
         private String checkOut; 
         private Integer cityCode; 
-        private java.util.List < String > hotelIds; 
+        private java.util.List<String> hotelIds; 
         private Integer paymentType; 
         private String xAcsBtripCorpToken; 
 
@@ -176,7 +181,7 @@ public class HotelPricePullRequest extends Request {
         /**
          * hotel_ids.
          */
-        public Builder hotelIds(java.util.List < String > hotelIds) {
+        public Builder hotelIds(java.util.List<String> hotelIds) {
             String hotelIdsShrink = shrink(hotelIds, "hotel_ids", "json");
             this.putQueryParameter("hotel_ids", hotelIdsShrink);
             this.hotelIds = hotelIds;

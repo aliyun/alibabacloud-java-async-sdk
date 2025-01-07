@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1649,10 +1654,10 @@ public class CarOrderQueryResponseBody extends TeaModel {
         private OrderBaseInfo orderBaseInfo;
 
         @com.aliyun.core.annotation.NameInMap("passenger_list")
-        private java.util.List < PassengerList> passengerList;
+        private java.util.List<PassengerList> passengerList;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         private Module(Builder builder) {
             this.carInfo = builder.carInfo;
@@ -1694,14 +1699,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerList> getPassengerList() {
+        public java.util.List<PassengerList> getPassengerList() {
             return this.passengerList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
@@ -1709,8 +1714,8 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private CarInfo carInfo; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerList> passengerList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PassengerList> passengerList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
 
             /**
              * car_info.
@@ -1739,7 +1744,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_list.
              */
-            public Builder passengerList(java.util.List < PassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }
@@ -1747,7 +1752,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }

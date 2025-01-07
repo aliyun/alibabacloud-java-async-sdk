@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class FlightRefundPreCalRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("passenger_segment_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList;
+    private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -68,7 +73,7 @@ public class FlightRefundPreCalRequest extends Request {
     /**
      * @return passengerSegmentInfoList
      */
-    public java.util.List < PassengerSegmentInfoList> getPassengerSegmentInfoList() {
+    public java.util.List<PassengerSegmentInfoList> getPassengerSegmentInfoList() {
         return this.passengerSegmentInfoList;
     }
 
@@ -82,7 +87,7 @@ public class FlightRefundPreCalRequest extends Request {
     public static final class Builder extends Request.Builder<FlightRefundPreCalRequest, Builder> {
         private String disOrderId; 
         private String isVoluntary; 
-        private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList; 
+        private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -121,7 +126,7 @@ public class FlightRefundPreCalRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
+        public Builder passengerSegmentInfoList(java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
             this.putQueryParameter("passenger_segment_info_list", passengerSegmentInfoListShrink);
             this.passengerSegmentInfoList = passengerSegmentInfoList;

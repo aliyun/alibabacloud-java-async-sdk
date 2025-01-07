@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class FlightModifyCancelV2ResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.Map < String, ? > module;
+    private java.util.Map<String, ?> module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class FlightModifyCancelV2ResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.Map < String, ? > getModule() {
+    public java.util.Map<String, ?> getModule() {
         return this.module;
     }
 
@@ -92,7 +97,7 @@ public class FlightModifyCancelV2ResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.Map < String, ? > module; 
+        private java.util.Map<String, ?> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class FlightModifyCancelV2ResponseBody extends TeaModel {
         /**
          * <p>module</p>
          */
-        public Builder module(java.util.Map < String, ? > module) {
+        public Builder module(java.util.Map<String, ?> module) {
             this.module = module;
             return this;
         }

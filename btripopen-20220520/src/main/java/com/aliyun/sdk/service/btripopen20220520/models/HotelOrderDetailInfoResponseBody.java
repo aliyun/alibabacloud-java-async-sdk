@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
      */
     public static class BtripHotelCancelPolicyDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
-        private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
+        private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
 
         @com.aliyun.core.annotation.NameInMap("cancel_policy_type")
         private Integer cancelPolicyType;
@@ -247,7 +252,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         /**
          * @return btripHotelCancelPolicyInfoDTOList
          */
-        public java.util.List < BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
+        public java.util.List<BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
             return this.btripHotelCancelPolicyInfoDTOList;
         }
 
@@ -259,13 +264,13 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
+            private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
 
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
              */
-            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
+            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
                 this.btripHotelCancelPolicyInfoDTOList = btripHotelCancelPolicyInfoDTOList;
                 return this;
             }
@@ -1354,7 +1359,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         private Integer cardType;
 
         @com.aliyun.core.annotation.NameInMap("cost_center_info_list")
-        private java.util.List < CostCenterInfoList> costCenterInfoList;
+        private java.util.List<CostCenterInfoList> costCenterInfoList;
 
         @com.aliyun.core.annotation.NameInMap("customer_type")
         private Integer customerType;
@@ -1443,7 +1448,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         /**
          * @return costCenterInfoList
          */
-        public java.util.List < CostCenterInfoList> getCostCenterInfoList() {
+        public java.util.List<CostCenterInfoList> getCostCenterInfoList() {
             return this.costCenterInfoList;
         }
 
@@ -1548,7 +1553,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String cardNo; 
             private Integer cardType; 
-            private java.util.List < CostCenterInfoList> costCenterInfoList; 
+            private java.util.List<CostCenterInfoList> costCenterInfoList; 
             private Integer customerType; 
             private String departmentId; 
             private String departmentName; 
@@ -1583,7 +1588,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             /**
              * cost_center_info_list.
              */
-            public Builder costCenterInfoList(java.util.List < CostCenterInfoList> costCenterInfoList) {
+            public Builder costCenterInfoList(java.util.List<CostCenterInfoList> costCenterInfoList) {
                 this.costCenterInfoList = costCenterInfoList;
                 return this;
             }
@@ -1950,7 +1955,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         private HotelDetailInfo hotelDetailInfo;
 
         @com.aliyun.core.annotation.NameInMap("hotel_sale_order_room_infos")
-        private java.util.List < HotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos;
+        private java.util.List<HotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos;
 
         @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
@@ -1962,7 +1967,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         private String lastArrivalTime;
 
         @com.aliyun.core.annotation.NameInMap("occupant_info_list")
-        private java.util.List < OccupantInfoList> occupantInfoList;
+        private java.util.List<OccupantInfoList> occupantInfoList;
 
         @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
@@ -1992,7 +1997,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         private Long refundServiceFee;
 
         @com.aliyun.core.annotation.NameInMap("room_night_price_info_list")
-        private java.util.List < RoomNightPriceInfoList> roomNightPriceInfoList;
+        private java.util.List<RoomNightPriceInfoList> roomNightPriceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("room_number")
         private Integer roomNumber;
@@ -2183,7 +2188,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         /**
          * @return hotelSaleOrderRoomInfos
          */
-        public java.util.List < HotelSaleOrderRoomInfos> getHotelSaleOrderRoomInfos() {
+        public java.util.List<HotelSaleOrderRoomInfos> getHotelSaleOrderRoomInfos() {
             return this.hotelSaleOrderRoomInfos;
         }
 
@@ -2211,7 +2216,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         /**
          * @return occupantInfoList
          */
-        public java.util.List < OccupantInfoList> getOccupantInfoList() {
+        public java.util.List<OccupantInfoList> getOccupantInfoList() {
             return this.occupantInfoList;
         }
 
@@ -2281,7 +2286,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         /**
          * @return roomNightPriceInfoList
          */
-        public java.util.List < RoomNightPriceInfoList> getRoomNightPriceInfoList() {
+        public java.util.List<RoomNightPriceInfoList> getRoomNightPriceInfoList() {
             return this.roomNightPriceInfoList;
         }
 
@@ -2358,11 +2363,11 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Boolean earlyDeparture; 
             private Integer guestCount; 
             private HotelDetailInfo hotelDetailInfo; 
-            private java.util.List < HotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos; 
+            private java.util.List<HotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos; 
             private InvoiceInfo invoiceInfo; 
             private String itemId; 
             private String lastArrivalTime; 
-            private java.util.List < OccupantInfoList> occupantInfoList; 
+            private java.util.List<OccupantInfoList> occupantInfoList; 
             private Integer orderStatus; 
             private String orderStatusDesc; 
             private String outConfirmCode; 
@@ -2372,7 +2377,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private Long refundPrice; 
             private String refundReason; 
             private Long refundServiceFee; 
-            private java.util.List < RoomNightPriceInfoList> roomNightPriceInfoList; 
+            private java.util.List<RoomNightPriceInfoList> roomNightPriceInfoList; 
             private Integer roomNumber; 
             private String roomTypeName; 
             private String sellerId; 
@@ -2513,7 +2518,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             /**
              * hotel_sale_order_room_infos.
              */
-            public Builder hotelSaleOrderRoomInfos(java.util.List < HotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos) {
+            public Builder hotelSaleOrderRoomInfos(java.util.List<HotelSaleOrderRoomInfos> hotelSaleOrderRoomInfos) {
                 this.hotelSaleOrderRoomInfos = hotelSaleOrderRoomInfos;
                 return this;
             }
@@ -2545,7 +2550,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             /**
              * occupant_info_list.
              */
-            public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
+            public Builder occupantInfoList(java.util.List<OccupantInfoList> occupantInfoList) {
                 this.occupantInfoList = occupantInfoList;
                 return this;
             }
@@ -2625,7 +2630,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             /**
              * room_night_price_info_list.
              */
-            public Builder roomNightPriceInfoList(java.util.List < RoomNightPriceInfoList> roomNightPriceInfoList) {
+            public Builder roomNightPriceInfoList(java.util.List<RoomNightPriceInfoList> roomNightPriceInfoList) {
                 this.roomNightPriceInfoList = roomNightPriceInfoList;
                 return this;
             }

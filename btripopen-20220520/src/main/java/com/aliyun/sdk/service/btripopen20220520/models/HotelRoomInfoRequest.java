@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class HotelRoomInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("room_ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > roomIds;
+    private java.util.List<Long> roomIds;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -43,7 +48,7 @@ public class HotelRoomInfoRequest extends Request {
     /**
      * @return roomIds
      */
-    public java.util.List < Long > getRoomIds() {
+    public java.util.List<Long> getRoomIds() {
         return this.roomIds;
     }
 
@@ -55,7 +60,7 @@ public class HotelRoomInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<HotelRoomInfoRequest, Builder> {
-        private java.util.List < Long > roomIds; 
+        private java.util.List<Long> roomIds; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -71,7 +76,7 @@ public class HotelRoomInfoRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder roomIds(java.util.List < Long > roomIds) {
+        public Builder roomIds(java.util.List<Long> roomIds) {
             String roomIdsShrink = shrink(roomIds, "room_ids", "json");
             this.putQueryParameter("room_ids", roomIdsShrink);
             this.roomIds = roomIds;

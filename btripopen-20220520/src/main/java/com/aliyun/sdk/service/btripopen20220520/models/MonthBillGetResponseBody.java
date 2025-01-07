@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class MonthBillGetResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.List < Module> module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class MonthBillGetResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -92,7 +97,7 @@ public class MonthBillGetResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class MonthBillGetResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -185,11 +190,17 @@ public class MonthBillGetResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mailBillDate")
         private Long mailBillDate;
 
+        @com.aliyun.core.annotation.NameInMap("mealAmount")
+        private Double mealAmount;
+
         @com.aliyun.core.annotation.NameInMap("serviceAmount")
         private Double serviceAmount;
 
         @com.aliyun.core.annotation.NameInMap("trainAmount")
         private Double trainAmount;
+
+        @com.aliyun.core.annotation.NameInMap("vasAmount")
+        private Double vasAmount;
 
         private MonthAccountBillDetail(Builder builder) {
             this.billConfirmed = builder.billConfirmed;
@@ -201,8 +212,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             this.ieFlightAmount = builder.ieFlightAmount;
             this.ieHotelAmount = builder.ieHotelAmount;
             this.mailBillDate = builder.mailBillDate;
+            this.mealAmount = builder.mealAmount;
             this.serviceAmount = builder.serviceAmount;
             this.trainAmount = builder.trainAmount;
+            this.vasAmount = builder.vasAmount;
         }
 
         public static Builder builder() {
@@ -277,6 +290,13 @@ public class MonthBillGetResponseBody extends TeaModel {
         }
 
         /**
+         * @return mealAmount
+         */
+        public Double getMealAmount() {
+            return this.mealAmount;
+        }
+
+        /**
          * @return serviceAmount
          */
         public Double getServiceAmount() {
@@ -290,6 +310,13 @@ public class MonthBillGetResponseBody extends TeaModel {
             return this.trainAmount;
         }
 
+        /**
+         * @return vasAmount
+         */
+        public Double getVasAmount() {
+            return this.vasAmount;
+        }
+
         public static final class Builder {
             private Integer billConfirmed; 
             private Double carAmount; 
@@ -300,8 +327,10 @@ public class MonthBillGetResponseBody extends TeaModel {
             private Double ieFlightAmount; 
             private Double ieHotelAmount; 
             private Long mailBillDate; 
+            private Double mealAmount; 
             private Double serviceAmount; 
             private Double trainAmount; 
+            private Double vasAmount; 
 
             /**
              * billConfirmed.
@@ -397,6 +426,14 @@ public class MonthBillGetResponseBody extends TeaModel {
             }
 
             /**
+             * mealAmount.
+             */
+            public Builder mealAmount(Double mealAmount) {
+                this.mealAmount = mealAmount;
+                return this;
+            }
+
+            /**
              * <p>服务费金额（单位：元）</p>
              * 
              * <strong>example:</strong>
@@ -415,6 +452,14 @@ public class MonthBillGetResponseBody extends TeaModel {
              */
             public Builder trainAmount(Double trainAmount) {
                 this.trainAmount = trainAmount;
+                return this;
+            }
+
+            /**
+             * vasAmount.
+             */
+            public Builder vasAmount(Double vasAmount) {
+                this.vasAmount = vasAmount;
                 return this;
             }
 

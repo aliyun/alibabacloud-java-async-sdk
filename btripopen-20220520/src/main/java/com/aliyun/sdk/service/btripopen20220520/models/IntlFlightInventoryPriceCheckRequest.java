@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("passenger_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PassengerList> passengerList;
+    private java.util.List<PassengerList> passengerList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("user_id")
@@ -102,7 +107,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
     /**
      * @return passengerList
      */
-    public java.util.List < PassengerList> getPassengerList() {
+    public java.util.List<PassengerList> getPassengerList() {
         return this.passengerList;
     }
 
@@ -132,7 +137,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         private String language; 
         private Long orderPrice; 
         private String otaItemId; 
-        private java.util.List < PassengerList> passengerList; 
+        private java.util.List<PassengerList> passengerList; 
         private String userId; 
         private String userName; 
         private String xAcsBtripCorpToken; 
@@ -195,7 +200,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder passengerList(java.util.List < PassengerList> passengerList) {
+        public Builder passengerList(java.util.List<PassengerList> passengerList) {
             String passengerListShrink = shrink(passengerList, "passenger_list", "json");
             this.putQueryParameter("passenger_list", passengerListShrink);
             this.passengerList = passengerList;
@@ -580,7 +585,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         private String projectTitle;
 
         @com.aliyun.core.annotation.NameInMap("subsidiary_cert_info_list")
-        private java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList;
+        private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -758,7 +763,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
         /**
          * @return subsidiaryCertInfoList
          */
-        public java.util.List < SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
+        public java.util.List<SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
             return this.subsidiaryCertInfoList;
         }
 
@@ -796,7 +801,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             private String phone; 
             private String projectCode; 
             private String projectTitle; 
-            private java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList; 
+            private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList; 
             private String userId; 
             private Integer userType; 
 
@@ -964,7 +969,7 @@ public class IntlFlightInventoryPriceCheckRequest extends Request {
             /**
              * subsidiary_cert_info_list.
              */
-            public Builder subsidiaryCertInfoList(java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList) {
+            public Builder subsidiaryCertInfoList(java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList) {
                 this.subsidiaryCertInfoList = subsidiaryCertInfoList;
                 return this;
             }

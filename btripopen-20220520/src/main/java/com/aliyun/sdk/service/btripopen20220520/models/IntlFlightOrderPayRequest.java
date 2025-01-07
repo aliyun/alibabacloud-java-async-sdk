@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IntlFlightOrderPayRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ext_params")
-    private java.util.Map < String, ? > extParams;
+    private java.util.Map<String, ?> extParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("isv_name")
@@ -62,7 +67,7 @@ public class IntlFlightOrderPayRequest extends Request {
     /**
      * @return extParams
      */
-    public java.util.Map < String, ? > getExtParams() {
+    public java.util.Map<String, ?> getExtParams() {
         return this.extParams;
     }
 
@@ -102,7 +107,7 @@ public class IntlFlightOrderPayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IntlFlightOrderPayRequest, Builder> {
-        private java.util.Map < String, ? > extParams; 
+        private java.util.Map<String, ?> extParams; 
         private String isvName; 
         private String orderId; 
         private String outOrderId; 
@@ -126,7 +131,7 @@ public class IntlFlightOrderPayRequest extends Request {
         /**
          * ext_params.
          */
-        public Builder extParams(java.util.Map < String, ? > extParams) {
+        public Builder extParams(java.util.Map<String, ?> extParams) {
             String extParamsShrink = shrink(extParams, "ext_params", "json");
             this.putQueryParameter("ext_params", extParamsShrink);
             this.extParams = extParams;

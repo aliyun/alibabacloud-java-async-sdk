@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -579,10 +584,10 @@ public class TripTaskQueryResponseBody extends TeaModel {
         private Boolean needRefresh;
 
         @com.aliyun.core.annotation.NameInMap("record_tasks")
-        private java.util.List < RecordTasks> recordTasks;
+        private java.util.List<RecordTasks> recordTasks;
 
         @com.aliyun.core.annotation.NameInMap("running_tasks")
-        private java.util.List < RunningTasks> runningTasks;
+        private java.util.List<RunningTasks> runningTasks;
 
         private Module(Builder builder) {
             this.needRefresh = builder.needRefresh;
@@ -608,21 +613,21 @@ public class TripTaskQueryResponseBody extends TeaModel {
         /**
          * @return recordTasks
          */
-        public java.util.List < RecordTasks> getRecordTasks() {
+        public java.util.List<RecordTasks> getRecordTasks() {
             return this.recordTasks;
         }
 
         /**
          * @return runningTasks
          */
-        public java.util.List < RunningTasks> getRunningTasks() {
+        public java.util.List<RunningTasks> getRunningTasks() {
             return this.runningTasks;
         }
 
         public static final class Builder {
             private Boolean needRefresh; 
-            private java.util.List < RecordTasks> recordTasks; 
-            private java.util.List < RunningTasks> runningTasks; 
+            private java.util.List<RecordTasks> recordTasks; 
+            private java.util.List<RunningTasks> runningTasks; 
 
             /**
              * needRefresh.
@@ -635,7 +640,7 @@ public class TripTaskQueryResponseBody extends TeaModel {
             /**
              * record_tasks.
              */
-            public Builder recordTasks(java.util.List < RecordTasks> recordTasks) {
+            public Builder recordTasks(java.util.List<RecordTasks> recordTasks) {
                 this.recordTasks = recordTasks;
                 return this;
             }
@@ -643,7 +648,7 @@ public class TripTaskQueryResponseBody extends TeaModel {
             /**
              * running_tasks.
              */
-            public Builder runningTasks(java.util.List < RunningTasks> runningTasks) {
+            public Builder runningTasks(java.util.List<RunningTasks> runningTasks) {
                 this.runningTasks = runningTasks;
                 return this;
             }

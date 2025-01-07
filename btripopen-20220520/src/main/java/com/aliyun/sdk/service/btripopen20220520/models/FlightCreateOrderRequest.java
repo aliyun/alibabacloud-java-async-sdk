@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,7 +65,7 @@ public class FlightCreateOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("order_attr")
-    private java.util.Map < String, ? > orderAttr;
+    private java.util.Map<String, ?> orderAttr;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("order_params")
@@ -92,7 +97,7 @@ public class FlightCreateOrderRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("traveler_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TravelerInfoList> travelerInfoList;
+    private java.util.List<TravelerInfoList> travelerInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("trip_type")
@@ -213,7 +218,7 @@ public class FlightCreateOrderRequest extends Request {
     /**
      * @return orderAttr
      */
-    public java.util.Map < String, ? > getOrderAttr() {
+    public java.util.Map<String, ?> getOrderAttr() {
         return this.orderAttr;
     }
 
@@ -262,7 +267,7 @@ public class FlightCreateOrderRequest extends Request {
     /**
      * @return travelerInfoList
      */
-    public java.util.List < TravelerInfoList> getTravelerInfoList() {
+    public java.util.List<TravelerInfoList> getTravelerInfoList() {
         return this.travelerInfoList;
     }
 
@@ -291,14 +296,14 @@ public class FlightCreateOrderRequest extends Request {
         private String depCityCode; 
         private String depDate; 
         private String disOrderId; 
-        private java.util.Map < String, ? > orderAttr; 
+        private java.util.Map<String, ?> orderAttr; 
         private String orderParams; 
         private String otaItemId; 
         private Long price; 
         private String receiptAddress; 
         private Integer receiptTarget; 
         private String receiptTitle; 
-        private java.util.List < TravelerInfoList> travelerInfoList; 
+        private java.util.List<TravelerInfoList> travelerInfoList; 
         private Integer tripType; 
         private String xAcsBtripCorpToken; 
 
@@ -439,7 +444,7 @@ public class FlightCreateOrderRequest extends Request {
         /**
          * order_attr.
          */
-        public Builder orderAttr(java.util.Map < String, ? > orderAttr) {
+        public Builder orderAttr(java.util.Map<String, ?> orderAttr) {
             String orderAttrShrink = shrink(orderAttr, "order_attr", "json");
             this.putBodyParameter("order_attr", orderAttrShrink);
             this.orderAttr = orderAttr;
@@ -512,7 +517,7 @@ public class FlightCreateOrderRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
+        public Builder travelerInfoList(java.util.List<TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
             this.putBodyParameter("traveler_info_list", travelerInfoListShrink);
             this.travelerInfoList = travelerInfoList;

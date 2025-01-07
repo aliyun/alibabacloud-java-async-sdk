@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AddEmployeeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("base_city_code_list")
-    private java.util.List < String > baseCityCodeList;
+    private java.util.List<String> baseCityCodeList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("birthday")
@@ -30,11 +35,11 @@ public class AddEmployeeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cert_list")
-    private java.util.List < CertList> certList;
+    private java.util.List<CertList> certList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("custom_role_code_list")
-    private java.util.List < String > customRoleCodeList;
+    private java.util.List<String> customRoleCodeList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("email")
@@ -66,7 +71,7 @@ public class AddEmployeeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_dept_id_list")
-    private java.util.List < String > outDeptIdList;
+    private java.util.List<String> outDeptIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("phone")
@@ -158,7 +163,7 @@ public class AddEmployeeRequest extends Request {
     /**
      * @return baseCityCodeList
      */
-    public java.util.List < String > getBaseCityCodeList() {
+    public java.util.List<String> getBaseCityCodeList() {
         return this.baseCityCodeList;
     }
 
@@ -172,14 +177,14 @@ public class AddEmployeeRequest extends Request {
     /**
      * @return certList
      */
-    public java.util.List < CertList> getCertList() {
+    public java.util.List<CertList> getCertList() {
         return this.certList;
     }
 
     /**
      * @return customRoleCodeList
      */
-    public java.util.List < String > getCustomRoleCodeList() {
+    public java.util.List<String> getCustomRoleCodeList() {
         return this.customRoleCodeList;
     }
 
@@ -235,7 +240,7 @@ public class AddEmployeeRequest extends Request {
     /**
      * @return outDeptIdList
      */
-    public java.util.List < String > getOutDeptIdList() {
+    public java.util.List<String> getOutDeptIdList() {
         return this.outDeptIdList;
     }
 
@@ -298,10 +303,10 @@ public class AddEmployeeRequest extends Request {
     public static final class Builder extends Request.Builder<AddEmployeeRequest, Builder> {
         private String attribute; 
         private String avatar; 
-        private java.util.List < String > baseCityCodeList; 
+        private java.util.List<String> baseCityCodeList; 
         private String birthday; 
-        private java.util.List < CertList> certList; 
-        private java.util.List < String > customRoleCodeList; 
+        private java.util.List<CertList> certList; 
+        private java.util.List<String> customRoleCodeList; 
         private String email; 
         private String gender; 
         private Boolean isAdmin; 
@@ -309,7 +314,7 @@ public class AddEmployeeRequest extends Request {
         private Boolean isDeptLeader; 
         private String jobNo; 
         private String managerUserId; 
-        private java.util.List < String > outDeptIdList; 
+        private java.util.List<String> outDeptIdList; 
         private String phone; 
         private String positionLevel; 
         private String realName; 
@@ -370,7 +375,7 @@ public class AddEmployeeRequest extends Request {
         /**
          * base_city_code_list.
          */
-        public Builder baseCityCodeList(java.util.List < String > baseCityCodeList) {
+        public Builder baseCityCodeList(java.util.List<String> baseCityCodeList) {
             String baseCityCodeListShrink = shrink(baseCityCodeList, "base_city_code_list", "json");
             this.putBodyParameter("base_city_code_list", baseCityCodeListShrink);
             this.baseCityCodeList = baseCityCodeList;
@@ -389,7 +394,7 @@ public class AddEmployeeRequest extends Request {
         /**
          * cert_list.
          */
-        public Builder certList(java.util.List < CertList> certList) {
+        public Builder certList(java.util.List<CertList> certList) {
             String certListShrink = shrink(certList, "cert_list", "json");
             this.putBodyParameter("cert_list", certListShrink);
             this.certList = certList;
@@ -399,7 +404,7 @@ public class AddEmployeeRequest extends Request {
         /**
          * custom_role_code_list.
          */
-        public Builder customRoleCodeList(java.util.List < String > customRoleCodeList) {
+        public Builder customRoleCodeList(java.util.List<String> customRoleCodeList) {
             String customRoleCodeListShrink = shrink(customRoleCodeList, "custom_role_code_list", "json");
             this.putBodyParameter("custom_role_code_list", customRoleCodeListShrink);
             this.customRoleCodeList = customRoleCodeList;
@@ -472,7 +477,7 @@ public class AddEmployeeRequest extends Request {
         /**
          * out_dept_id_list.
          */
-        public Builder outDeptIdList(java.util.List < String > outDeptIdList) {
+        public Builder outDeptIdList(java.util.List<String> outDeptIdList) {
             String outDeptIdListShrink = shrink(outDeptIdList, "out_dept_id_list", "json");
             this.putBodyParameter("out_dept_id_list", outDeptIdListShrink);
             this.outDeptIdList = outDeptIdList;

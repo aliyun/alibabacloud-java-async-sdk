@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -913,7 +918,7 @@ public class InsureOrderDetailResponseBody extends TeaModel {
         private String insOrderId;
 
         @com.aliyun.core.annotation.NameInMap("insure_order_detail_list")
-        private java.util.List < InsureOrderDetailList> insureOrderDetailList;
+        private java.util.List<InsureOrderDetailList> insureOrderDetailList;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -950,7 +955,7 @@ public class InsureOrderDetailResponseBody extends TeaModel {
         /**
          * @return insureOrderDetailList
          */
-        public java.util.List < InsureOrderDetailList> getInsureOrderDetailList() {
+        public java.util.List<InsureOrderDetailList> getInsureOrderDetailList() {
             return this.insureOrderDetailList;
         }
 
@@ -964,7 +969,7 @@ public class InsureOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Applicant applicant; 
             private String insOrderId; 
-            private java.util.List < InsureOrderDetailList> insureOrderDetailList; 
+            private java.util.List<InsureOrderDetailList> insureOrderDetailList; 
             private String status; 
 
             /**
@@ -986,7 +991,7 @@ public class InsureOrderDetailResponseBody extends TeaModel {
             /**
              * insure_order_detail_list.
              */
-            public Builder insureOrderDetailList(java.util.List < InsureOrderDetailList> insureOrderDetailList) {
+            public Builder insureOrderDetailList(java.util.List<InsureOrderDetailList> insureOrderDetailList) {
                 this.insureOrderDetailList = insureOrderDetailList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class HotelOrderChangeApplyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("room_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RoomInfoList> roomInfoList;
+    private java.util.List<RoomInfoList> roomInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sale_order_id")
@@ -87,7 +92,7 @@ public class HotelOrderChangeApplyRequest extends Request {
     /**
      * @return roomInfoList
      */
-    public java.util.List < RoomInfoList> getRoomInfoList() {
+    public java.util.List<RoomInfoList> getRoomInfoList() {
         return this.roomInfoList;
     }
 
@@ -109,7 +114,7 @@ public class HotelOrderChangeApplyRequest extends Request {
         private String btripUserId; 
         private String disOrderId; 
         private String reason; 
-        private java.util.List < RoomInfoList> roomInfoList; 
+        private java.util.List<RoomInfoList> roomInfoList; 
         private String saleOrderId; 
         private String xAcsBtripCorpToken; 
 
@@ -160,7 +165,7 @@ public class HotelOrderChangeApplyRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder roomInfoList(java.util.List < RoomInfoList> roomInfoList) {
+        public Builder roomInfoList(java.util.List<RoomInfoList> roomInfoList) {
             String roomInfoListShrink = shrink(roomInfoList, "room_info_list", "json");
             this.putBodyParameter("room_info_list", roomInfoListShrink);
             this.roomInfoList = roomInfoList;
@@ -204,7 +209,7 @@ public class HotelOrderChangeApplyRequest extends Request {
     public static class RoomInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cancel_date")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > cancelDate;
+        private java.util.List<String> cancelDate;
 
         @com.aliyun.core.annotation.NameInMap("room_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -226,7 +231,7 @@ public class HotelOrderChangeApplyRequest extends Request {
         /**
          * @return cancelDate
          */
-        public java.util.List < String > getCancelDate() {
+        public java.util.List<String> getCancelDate() {
             return this.cancelDate;
         }
 
@@ -238,13 +243,13 @@ public class HotelOrderChangeApplyRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > cancelDate; 
+            private java.util.List<String> cancelDate; 
             private Integer roomNo; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder cancelDate(java.util.List < String > cancelDate) {
+            public Builder cancelDate(java.util.List<String> cancelDate) {
                 this.cancelDate = cancelDate;
                 return this;
             }

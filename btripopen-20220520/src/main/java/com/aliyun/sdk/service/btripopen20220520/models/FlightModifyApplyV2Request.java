@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class FlightModifyApplyV2Request extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passenger_segment_relations")
-    private java.util.List < PassengerSegmentRelations> passengerSegmentRelations;
+    private java.util.List<PassengerSegmentRelations> passengerSegmentRelations;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("reason")
@@ -141,7 +146,7 @@ public class FlightModifyApplyV2Request extends Request {
     /**
      * @return passengerSegmentRelations
      */
-    public java.util.List < PassengerSegmentRelations> getPassengerSegmentRelations() {
+    public java.util.List<PassengerSegmentRelations> getPassengerSegmentRelations() {
         return this.passengerSegmentRelations;
     }
 
@@ -181,7 +186,7 @@ public class FlightModifyApplyV2Request extends Request {
         private Long orderId; 
         private String outOrderId; 
         private String outSubOrderId; 
-        private java.util.List < PassengerSegmentRelations> passengerSegmentRelations; 
+        private java.util.List<PassengerSegmentRelations> passengerSegmentRelations; 
         private String reason; 
         private String sessionId; 
         private Boolean voluntary; 
@@ -273,7 +278,7 @@ public class FlightModifyApplyV2Request extends Request {
         /**
          * passenger_segment_relations.
          */
-        public Builder passengerSegmentRelations(java.util.List < PassengerSegmentRelations> passengerSegmentRelations) {
+        public Builder passengerSegmentRelations(java.util.List<PassengerSegmentRelations> passengerSegmentRelations) {
             String passengerSegmentRelationsShrink = shrink(passengerSegmentRelations, "passenger_segment_relations", "json");
             this.putBodyParameter("passenger_segment_relations", passengerSegmentRelationsShrink);
             this.passengerSegmentRelations = passengerSegmentRelations;
@@ -337,7 +342,7 @@ public class FlightModifyApplyV2Request extends Request {
         private String passengerId;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        private java.util.List<String> segmentIdList;
 
         private PassengerSegmentRelations(Builder builder) {
             this.passengerId = builder.passengerId;
@@ -362,13 +367,13 @@ public class FlightModifyApplyV2Request extends Request {
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
             private String passengerId; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * passenger_id.
@@ -381,7 +386,7 @@ public class FlightModifyApplyV2Request extends Request {
             /**
              * segment_id_list.
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }

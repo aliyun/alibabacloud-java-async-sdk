@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -269,7 +274,7 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         private String insOrderId;
 
         @com.aliyun.core.annotation.NameInMap("ins_order_policy_list")
-        private java.util.List < InsOrderPolicyList> insOrderPolicyList;
+        private java.util.List<InsOrderPolicyList> insOrderPolicyList;
 
         private Module(Builder builder) {
             this.insOrderId = builder.insOrderId;
@@ -294,13 +299,13 @@ public class InsureOrderApplyResponseBody extends TeaModel {
         /**
          * @return insOrderPolicyList
          */
-        public java.util.List < InsOrderPolicyList> getInsOrderPolicyList() {
+        public java.util.List<InsOrderPolicyList> getInsOrderPolicyList() {
             return this.insOrderPolicyList;
         }
 
         public static final class Builder {
             private String insOrderId; 
-            private java.util.List < InsOrderPolicyList> insOrderPolicyList; 
+            private java.util.List<InsOrderPolicyList> insOrderPolicyList; 
 
             /**
              * ins_order_id.
@@ -313,7 +318,7 @@ public class InsureOrderApplyResponseBody extends TeaModel {
             /**
              * ins_order_policy_list.
              */
-            public Builder insOrderPolicyList(java.util.List < InsOrderPolicyList> insOrderPolicyList) {
+            public Builder insOrderPolicyList(java.util.List<InsOrderPolicyList> insOrderPolicyList) {
                 this.insOrderPolicyList = insOrderPolicyList;
                 return this;
             }

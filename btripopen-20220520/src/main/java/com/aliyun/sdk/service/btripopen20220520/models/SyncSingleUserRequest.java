@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class SyncSingleUserRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("third_depart_id_list")
-    private java.util.List < String > thirdDepartIdList;
+    private java.util.List<String> thirdDepartIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_id")
@@ -150,7 +155,7 @@ public class SyncSingleUserRequest extends Request {
     /**
      * @return thirdDepartIdList
      */
-    public java.util.List < String > getThirdDepartIdList() {
+    public java.util.List<String> getThirdDepartIdList() {
         return this.thirdDepartIdList;
     }
 
@@ -184,7 +189,7 @@ public class SyncSingleUserRequest extends Request {
         private String position; 
         private String positionLevel; 
         private String realNameEn; 
-        private java.util.List < String > thirdDepartIdList; 
+        private java.util.List<String> thirdDepartIdList; 
         private String userId; 
         private String userName; 
         private String xAcsBtripSoCorpToken; 
@@ -284,7 +289,7 @@ public class SyncSingleUserRequest extends Request {
         /**
          * third_depart_id_list.
          */
-        public Builder thirdDepartIdList(java.util.List < String > thirdDepartIdList) {
+        public Builder thirdDepartIdList(java.util.List<String> thirdDepartIdList) {
             String thirdDepartIdListShrink = shrink(thirdDepartIdList, "third_depart_id_list", "json");
             this.putBodyParameter("third_depart_id_list", thirdDepartIdListShrink);
             this.thirdDepartIdList = thirdDepartIdList;

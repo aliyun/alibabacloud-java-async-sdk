@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -656,7 +661,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         private String address;
 
         @com.aliyun.core.annotation.NameInMap("business_area_with_city")
-        private java.util.List < BusinessAreaWithCity> businessAreaWithCity;
+        private java.util.List<BusinessAreaWithCity> businessAreaWithCity;
 
         @com.aliyun.core.annotation.NameInMap("city_code")
         private Integer cityCode;
@@ -721,7 +726,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         /**
          * @return businessAreaWithCity
          */
-        public java.util.List < BusinessAreaWithCity> getBusinessAreaWithCity() {
+        public java.util.List<BusinessAreaWithCity> getBusinessAreaWithCity() {
             return this.businessAreaWithCity;
         }
 
@@ -797,7 +802,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String address; 
-            private java.util.List < BusinessAreaWithCity> businessAreaWithCity; 
+            private java.util.List<BusinessAreaWithCity> businessAreaWithCity; 
             private Integer cityCode; 
             private String cityName; 
             private String displayName; 
@@ -820,7 +825,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             /**
              * business_area_with_city.
              */
-            public Builder businessAreaWithCity(java.util.List < BusinessAreaWithCity> businessAreaWithCity) {
+            public Builder businessAreaWithCity(java.util.List<BusinessAreaWithCity> businessAreaWithCity) {
                 this.businessAreaWithCity = businessAreaWithCity;
                 return this;
             }
@@ -970,7 +975,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         private String icon;
 
         @com.aliyun.core.annotation.NameInMap("popular_infos")
-        private java.util.List < PopularInfos> popularInfos;
+        private java.util.List<PopularInfos> popularInfos;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -999,7 +1004,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         /**
          * @return popularInfos
          */
-        public java.util.List < PopularInfos> getPopularInfos() {
+        public java.util.List<PopularInfos> getPopularInfos() {
             return this.popularInfos;
         }
 
@@ -1012,7 +1017,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String icon; 
-            private java.util.List < PopularInfos> popularInfos; 
+            private java.util.List<PopularInfos> popularInfos; 
             private String title; 
 
             /**
@@ -1026,7 +1031,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             /**
              * popular_infos.
              */
-            public Builder popularInfos(java.util.List < PopularInfos> popularInfos) {
+            public Builder popularInfos(java.util.List<PopularInfos> popularInfos) {
                 this.popularInfos = popularInfos;
                 return this;
             }
@@ -1054,13 +1059,13 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("guess_suggest_infos")
-        private java.util.List < GuessSuggestInfos> guessSuggestInfos;
+        private java.util.List<GuessSuggestInfos> guessSuggestInfos;
 
         @com.aliyun.core.annotation.NameInMap("keyword_suggest_infos")
-        private java.util.List < KeywordSuggestInfos> keywordSuggestInfos;
+        private java.util.List<KeywordSuggestInfos> keywordSuggestInfos;
 
         @com.aliyun.core.annotation.NameInMap("popular_suggest_infos")
-        private java.util.List < PopularSuggestInfos> popularSuggestInfos;
+        private java.util.List<PopularSuggestInfos> popularSuggestInfos;
 
         @com.aliyun.core.annotation.NameInMap("tips")
         private String tips;
@@ -1083,21 +1088,21 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         /**
          * @return guessSuggestInfos
          */
-        public java.util.List < GuessSuggestInfos> getGuessSuggestInfos() {
+        public java.util.List<GuessSuggestInfos> getGuessSuggestInfos() {
             return this.guessSuggestInfos;
         }
 
         /**
          * @return keywordSuggestInfos
          */
-        public java.util.List < KeywordSuggestInfos> getKeywordSuggestInfos() {
+        public java.util.List<KeywordSuggestInfos> getKeywordSuggestInfos() {
             return this.keywordSuggestInfos;
         }
 
         /**
          * @return popularSuggestInfos
          */
-        public java.util.List < PopularSuggestInfos> getPopularSuggestInfos() {
+        public java.util.List<PopularSuggestInfos> getPopularSuggestInfos() {
             return this.popularSuggestInfos;
         }
 
@@ -1109,15 +1114,15 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < GuessSuggestInfos> guessSuggestInfos; 
-            private java.util.List < KeywordSuggestInfos> keywordSuggestInfos; 
-            private java.util.List < PopularSuggestInfos> popularSuggestInfos; 
+            private java.util.List<GuessSuggestInfos> guessSuggestInfos; 
+            private java.util.List<KeywordSuggestInfos> keywordSuggestInfos; 
+            private java.util.List<PopularSuggestInfos> popularSuggestInfos; 
             private String tips; 
 
             /**
              * guess_suggest_infos.
              */
-            public Builder guessSuggestInfos(java.util.List < GuessSuggestInfos> guessSuggestInfos) {
+            public Builder guessSuggestInfos(java.util.List<GuessSuggestInfos> guessSuggestInfos) {
                 this.guessSuggestInfos = guessSuggestInfos;
                 return this;
             }
@@ -1125,7 +1130,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             /**
              * keyword_suggest_infos.
              */
-            public Builder keywordSuggestInfos(java.util.List < KeywordSuggestInfos> keywordSuggestInfos) {
+            public Builder keywordSuggestInfos(java.util.List<KeywordSuggestInfos> keywordSuggestInfos) {
                 this.keywordSuggestInfos = keywordSuggestInfos;
                 return this;
             }
@@ -1133,7 +1138,7 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
             /**
              * popular_suggest_infos.
              */
-            public Builder popularSuggestInfos(java.util.List < PopularSuggestInfos> popularSuggestInfos) {
+            public Builder popularSuggestInfos(java.util.List<PopularSuggestInfos> popularSuggestInfos) {
                 this.popularSuggestInfos = popularSuggestInfos;
                 return this;
             }

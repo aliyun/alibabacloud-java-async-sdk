@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,22 +18,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cabin_quantity_list")
-    private java.util.List < CabinQuantityList> cabinQuantityList;
+    private java.util.List<CabinQuantityList> cabinQuantityList;
 
     @com.aliyun.core.annotation.NameInMap("search_price")
     private SearchPrice searchPrice;
 
     @com.aliyun.core.annotation.NameInMap("segment_price_list")
-    private java.util.List < SegmentPriceList> segmentPriceList;
+    private java.util.List<SegmentPriceList> segmentPriceList;
 
     @com.aliyun.core.annotation.NameInMap("id")
     private String id;
 
     @com.aliyun.core.annotation.NameInMap("cabin_quantity")
-    private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue > cabinQuantity;
+    private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue> cabinQuantity;
 
     @com.aliyun.core.annotation.NameInMap("segment_price")
-    private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue > segmentPrice;
+    private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue> segmentPrice;
 
     private ModuleFlightItemListBestPriceItemShoppingItemMapValue(Builder builder) {
         this.cabinQuantityList = builder.cabinQuantityList;
@@ -50,7 +55,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     /**
      * @return cabinQuantityList
      */
-    public java.util.List < CabinQuantityList> getCabinQuantityList() {
+    public java.util.List<CabinQuantityList> getCabinQuantityList() {
         return this.cabinQuantityList;
     }
 
@@ -64,7 +69,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     /**
      * @return segmentPriceList
      */
-    public java.util.List < SegmentPriceList> getSegmentPriceList() {
+    public java.util.List<SegmentPriceList> getSegmentPriceList() {
         return this.segmentPriceList;
     }
 
@@ -78,29 +83,29 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     /**
      * @return cabinQuantity
      */
-    public java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue > getCabinQuantity() {
+    public java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue> getCabinQuantity() {
         return this.cabinQuantity;
     }
 
     /**
      * @return segmentPrice
      */
-    public java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue > getSegmentPrice() {
+    public java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue> getSegmentPrice() {
         return this.segmentPrice;
     }
 
     public static final class Builder {
-        private java.util.List < CabinQuantityList> cabinQuantityList; 
+        private java.util.List<CabinQuantityList> cabinQuantityList; 
         private SearchPrice searchPrice; 
-        private java.util.List < SegmentPriceList> segmentPriceList; 
+        private java.util.List<SegmentPriceList> segmentPriceList; 
         private String id; 
-        private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue > cabinQuantity; 
-        private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue > segmentPrice; 
+        private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue> cabinQuantity; 
+        private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue> segmentPrice; 
 
         /**
          * cabin_quantity_list.
          */
-        public Builder cabinQuantityList(java.util.List < CabinQuantityList> cabinQuantityList) {
+        public Builder cabinQuantityList(java.util.List<CabinQuantityList> cabinQuantityList) {
             this.cabinQuantityList = cabinQuantityList;
             return this;
         }
@@ -116,7 +121,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         /**
          * segment_price_list.
          */
-        public Builder segmentPriceList(java.util.List < SegmentPriceList> segmentPriceList) {
+        public Builder segmentPriceList(java.util.List<SegmentPriceList> segmentPriceList) {
             this.segmentPriceList = segmentPriceList;
             return this;
         }
@@ -135,7 +140,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         /**
          * cabin_quantity.
          */
-        public Builder cabinQuantity(java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue > cabinQuantity) {
+        public Builder cabinQuantity(java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityValue> cabinQuantity) {
             this.cabinQuantity = cabinQuantity;
             return this;
         }
@@ -143,7 +148,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         /**
          * segment_price.
          */
-        public Builder segmentPrice(java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue > segmentPrice) {
+        public Builder segmentPrice(java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceValue> segmentPrice) {
             this.segmentPrice = segmentPrice;
             return this;
         }

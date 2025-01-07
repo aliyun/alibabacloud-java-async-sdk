@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class TrainApplyChangeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("change_train_info_s")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ChangeTrainInfoS> changeTrainInfoS;
+    private java.util.List<ChangeTrainInfoS> changeTrainInfoS;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("force_match")
@@ -83,7 +88,7 @@ public class TrainApplyChangeRequest extends Request {
     /**
      * @return changeTrainInfoS
      */
-    public java.util.List < ChangeTrainInfoS> getChangeTrainInfoS() {
+    public java.util.List<ChangeTrainInfoS> getChangeTrainInfoS() {
         return this.changeTrainInfoS;
     }
 
@@ -131,7 +136,7 @@ public class TrainApplyChangeRequest extends Request {
 
     public static final class Builder extends Request.Builder<TrainApplyChangeRequest, Builder> {
         private String acceptNoSeat; 
-        private java.util.List < ChangeTrainInfoS> changeTrainInfoS; 
+        private java.util.List<ChangeTrainInfoS> changeTrainInfoS; 
         private String forceMatch; 
         private Boolean isPayNow; 
         private String orderId; 
@@ -167,7 +172,7 @@ public class TrainApplyChangeRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder changeTrainInfoS(java.util.List < ChangeTrainInfoS> changeTrainInfoS) {
+        public Builder changeTrainInfoS(java.util.List<ChangeTrainInfoS> changeTrainInfoS) {
             String changeTrainInfoSShrink = shrink(changeTrainInfoS, "change_train_info_s", "json");
             this.putQueryParameter("change_train_info_s", changeTrainInfoSShrink);
             this.changeTrainInfoS = changeTrainInfoS;
@@ -500,7 +505,7 @@ public class TrainApplyChangeRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("change_ticket_info_s")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ChangeTicketInfoS> changeTicketInfoS;
+        private java.util.List<ChangeTicketInfoS> changeTicketInfoS;
 
         @com.aliyun.core.annotation.NameInMap("choose_bed_s")
         private String chooseBedS;
@@ -558,7 +563,7 @@ public class TrainApplyChangeRequest extends Request {
         /**
          * @return changeTicketInfoS
          */
-        public java.util.List < ChangeTicketInfoS> getChangeTicketInfoS() {
+        public java.util.List<ChangeTicketInfoS> getChangeTicketInfoS() {
             return this.changeTicketInfoS;
         }
 
@@ -613,7 +618,7 @@ public class TrainApplyChangeRequest extends Request {
 
         public static final class Builder {
             private String arrStationCode; 
-            private java.util.List < ChangeTicketInfoS> changeTicketInfoS; 
+            private java.util.List<ChangeTicketInfoS> changeTicketInfoS; 
             private String chooseBedS; 
             private String chooseSeatS; 
             private String depStationCode; 
@@ -636,7 +641,7 @@ public class TrainApplyChangeRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder changeTicketInfoS(java.util.List < ChangeTicketInfoS> changeTicketInfoS) {
+            public Builder changeTicketInfoS(java.util.List<ChangeTicketInfoS> changeTicketInfoS) {
                 this.changeTicketInfoS = changeTicketInfoS;
                 return this;
             }

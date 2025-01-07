@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -439,7 +444,7 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         private String arrStationCode;
 
         @com.aliyun.core.annotation.NameInMap("change_ticket_details")
-        private java.util.List < ChangeTicketDetails> changeTicketDetails;
+        private java.util.List<ChangeTicketDetails> changeTicketDetails;
 
         @com.aliyun.core.annotation.NameInMap("dep_station_code")
         private String depStationCode;
@@ -476,7 +481,7 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         /**
          * @return changeTicketDetails
          */
-        public java.util.List < ChangeTicketDetails> getChangeTicketDetails() {
+        public java.util.List<ChangeTicketDetails> getChangeTicketDetails() {
             return this.changeTicketDetails;
         }
 
@@ -503,7 +508,7 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String arrStationCode; 
-            private java.util.List < ChangeTicketDetails> changeTicketDetails; 
+            private java.util.List<ChangeTicketDetails> changeTicketDetails; 
             private String depStationCode; 
             private String depTime; 
             private String trainNo; 
@@ -519,7 +524,7 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
             /**
              * change_ticket_details.
              */
-            public Builder changeTicketDetails(java.util.List < ChangeTicketDetails> changeTicketDetails) {
+            public Builder changeTicketDetails(java.util.List<ChangeTicketDetails> changeTicketDetails) {
                 this.changeTicketDetails = changeTicketDetails;
                 return this;
             }
@@ -563,7 +568,7 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_train_details")
-        private java.util.List < ChangeTrainDetails> changeTrainDetails;
+        private java.util.List<ChangeTrainDetails> changeTrainDetails;
 
         @com.aliyun.core.annotation.NameInMap("distribute_order_id")
         private String distributeOrderId;
@@ -588,7 +593,7 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         /**
          * @return changeTrainDetails
          */
-        public java.util.List < ChangeTrainDetails> getChangeTrainDetails() {
+        public java.util.List<ChangeTrainDetails> getChangeTrainDetails() {
             return this.changeTrainDetails;
         }
 
@@ -607,14 +612,14 @@ public class TrainFeeCalculateChangeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeTrainDetails> changeTrainDetails; 
+            private java.util.List<ChangeTrainDetails> changeTrainDetails; 
             private String distributeOrderId; 
             private String orderId; 
 
             /**
              * change_train_details.
              */
-            public Builder changeTrainDetails(java.util.List < ChangeTrainDetails> changeTrainDetails) {
+            public Builder changeTrainDetails(java.util.List<ChangeTrainDetails> changeTrainDetails) {
                 this.changeTrainDetails = changeTrainDetails;
                 return this;
             }

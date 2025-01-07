@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class FlightListingSearchV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cabin_type_list")
-    private java.util.List < Integer > cabinTypeList;
+    private java.util.List<Integer> cabinTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("direct_only")
@@ -48,7 +53,7 @@ public class FlightListingSearchV2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_journeys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SearchJourneys> searchJourneys;
+    private java.util.List<SearchJourneys> searchJourneys;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_mode")
@@ -103,7 +108,7 @@ public class FlightListingSearchV2Request extends Request {
     /**
      * @return cabinTypeList
      */
-    public java.util.List < Integer > getCabinTypeList() {
+    public java.util.List<Integer> getCabinTypeList() {
         return this.cabinTypeList;
     }
 
@@ -152,7 +157,7 @@ public class FlightListingSearchV2Request extends Request {
     /**
      * @return searchJourneys
      */
-    public java.util.List < SearchJourneys> getSearchJourneys() {
+    public java.util.List<SearchJourneys> getSearchJourneys() {
         return this.searchJourneys;
     }
 
@@ -179,14 +184,14 @@ public class FlightListingSearchV2Request extends Request {
 
     public static final class Builder extends Request.Builder<FlightListingSearchV2Request, Builder> {
         private String airlineCode; 
-        private java.util.List < Integer > cabinTypeList; 
+        private java.util.List<Integer> cabinTypeList; 
         private Boolean directOnly; 
         private String isvName; 
         private Boolean needMultiClassPrice; 
         private Boolean needQueryServiceFee; 
         private Boolean needShareFlight; 
         private Boolean needYCBestPrice; 
-        private java.util.List < SearchJourneys> searchJourneys; 
+        private java.util.List<SearchJourneys> searchJourneys; 
         private Integer searchMode; 
         private Integer tripType; 
         private String xAcsBtripCorpToken; 
@@ -223,7 +228,7 @@ public class FlightListingSearchV2Request extends Request {
         /**
          * cabin_type_list.
          */
-        public Builder cabinTypeList(java.util.List < Integer > cabinTypeList) {
+        public Builder cabinTypeList(java.util.List<Integer> cabinTypeList) {
             String cabinTypeListShrink = shrink(cabinTypeList, "cabin_type_list", "json");
             this.putQueryParameter("cabin_type_list", cabinTypeListShrink);
             this.cabinTypeList = cabinTypeList;
@@ -290,7 +295,7 @@ public class FlightListingSearchV2Request extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder searchJourneys(java.util.List < SearchJourneys> searchJourneys) {
+        public Builder searchJourneys(java.util.List<SearchJourneys> searchJourneys) {
             String searchJourneysShrink = shrink(searchJourneys, "search_journeys", "json");
             this.putQueryParameter("search_journeys", searchJourneysShrink);
             this.searchJourneys = searchJourneys;
@@ -524,7 +529,7 @@ public class FlightListingSearchV2Request extends Request {
         private String depDate;
 
         @com.aliyun.core.annotation.NameInMap("selected_flights")
-        private java.util.List < SelectedFlights> selectedFlights;
+        private java.util.List<SelectedFlights> selectedFlights;
 
         private SearchJourneys(Builder builder) {
             this.arrCityCode = builder.arrCityCode;
@@ -565,7 +570,7 @@ public class FlightListingSearchV2Request extends Request {
         /**
          * @return selectedFlights
          */
-        public java.util.List < SelectedFlights> getSelectedFlights() {
+        public java.util.List<SelectedFlights> getSelectedFlights() {
             return this.selectedFlights;
         }
 
@@ -573,7 +578,7 @@ public class FlightListingSearchV2Request extends Request {
             private String arrCityCode; 
             private String depCityCode; 
             private String depDate; 
-            private java.util.List < SelectedFlights> selectedFlights; 
+            private java.util.List<SelectedFlights> selectedFlights; 
 
             /**
              * <p>This parameter is required.</p>
@@ -611,7 +616,7 @@ public class FlightListingSearchV2Request extends Request {
             /**
              * selected_flights.
              */
-            public Builder selectedFlights(java.util.List < SelectedFlights> selectedFlights) {
+            public Builder selectedFlights(java.util.List<SelectedFlights> selectedFlights) {
                 this.selectedFlights = selectedFlights;
                 return this;
             }

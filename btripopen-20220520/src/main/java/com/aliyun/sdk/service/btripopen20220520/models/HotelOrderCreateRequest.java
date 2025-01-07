@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -71,7 +76,7 @@ public class HotelOrderCreateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("occupant_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OccupantInfoList> occupantInfoList;
+    private java.util.List<OccupantInfoList> occupantInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("person_pay_price")
@@ -248,7 +253,7 @@ public class HotelOrderCreateRequest extends Request {
     /**
      * @return occupantInfoList
      */
-    public java.util.List < OccupantInfoList> getOccupantInfoList() {
+    public java.util.List<OccupantInfoList> getOccupantInfoList() {
         return this.occupantInfoList;
     }
 
@@ -335,7 +340,7 @@ public class HotelOrderCreateRequest extends Request {
         private InvoiceInfo invoiceInfo; 
         private Long itemId; 
         private String itineraryNo; 
-        private java.util.List < OccupantInfoList> occupantInfoList; 
+        private java.util.List<OccupantInfoList> occupantInfoList; 
         private Long personPayPrice; 
         private PromotionInfo promotionInfo; 
         private Long ratePlanId; 
@@ -514,7 +519,7 @@ public class HotelOrderCreateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
+        public Builder occupantInfoList(java.util.List<OccupantInfoList> occupantInfoList) {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
             this.putBodyParameter("occupant_info_list", occupantInfoListShrink);
             this.occupantInfoList = occupantInfoList;
@@ -1497,7 +1502,7 @@ public class HotelOrderCreateRequest extends Request {
      */
     public static class PromotionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("promotion_detail_info_list")
-        private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;
+        private java.util.List<PromotionDetailInfoList> promotionDetailInfoList;
 
         @com.aliyun.core.annotation.NameInMap("promotion_total_price")
         private Long promotionTotalPrice;
@@ -1518,7 +1523,7 @@ public class HotelOrderCreateRequest extends Request {
         /**
          * @return promotionDetailInfoList
          */
-        public java.util.List < PromotionDetailInfoList> getPromotionDetailInfoList() {
+        public java.util.List<PromotionDetailInfoList> getPromotionDetailInfoList() {
             return this.promotionDetailInfoList;
         }
 
@@ -1530,13 +1535,13 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < PromotionDetailInfoList> promotionDetailInfoList; 
+            private java.util.List<PromotionDetailInfoList> promotionDetailInfoList; 
             private Long promotionTotalPrice; 
 
             /**
              * promotion_detail_info_list.
              */
-            public Builder promotionDetailInfoList(java.util.List < PromotionDetailInfoList> promotionDetailInfoList) {
+            public Builder promotionDetailInfoList(java.util.List<PromotionDetailInfoList> promotionDetailInfoList) {
                 this.promotionDetailInfoList = promotionDetailInfoList;
                 return this;
             }

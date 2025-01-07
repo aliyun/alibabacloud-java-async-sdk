@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1212,7 +1217,7 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         private String outApplyId;
 
         @com.aliyun.core.annotation.NameInMap("sub_order_refund_list")
-        private java.util.List < SubOrderRefundList> subOrderRefundList;
+        private java.util.List<SubOrderRefundList> subOrderRefundList;
 
         private Module(Builder builder) {
             this.applyId = builder.applyId;
@@ -1277,7 +1282,7 @@ public class InsureRefundDetailResponseBody extends TeaModel {
         /**
          * @return subOrderRefundList
          */
-        public java.util.List < SubOrderRefundList> getSubOrderRefundList() {
+        public java.util.List<SubOrderRefundList> getSubOrderRefundList() {
             return this.subOrderRefundList;
         }
 
@@ -1288,7 +1293,7 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             private String insOrderId; 
             private InsureOrder insureOrder; 
             private String outApplyId; 
-            private java.util.List < SubOrderRefundList> subOrderRefundList; 
+            private java.util.List<SubOrderRefundList> subOrderRefundList; 
 
             /**
              * apply_id.
@@ -1341,7 +1346,7 @@ public class InsureRefundDetailResponseBody extends TeaModel {
             /**
              * sub_order_refund_list.
              */
-            public Builder subOrderRefundList(java.util.List < SubOrderRefundList> subOrderRefundList) {
+            public Builder subOrderRefundList(java.util.List<SubOrderRefundList> subOrderRefundList) {
                 this.subOrderRefundList = subOrderRefundList;
                 return this;
             }

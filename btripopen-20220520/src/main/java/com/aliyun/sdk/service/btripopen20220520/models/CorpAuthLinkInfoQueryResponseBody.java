@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -313,7 +318,7 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("link_corps")
-        private java.util.List < LinkCorps> linkCorps;
+        private java.util.List<LinkCorps> linkCorps;
 
         @com.aliyun.core.annotation.NameInMap("org_corp")
         private OrgCorp orgCorp;
@@ -334,7 +339,7 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         /**
          * @return linkCorps
          */
-        public java.util.List < LinkCorps> getLinkCorps() {
+        public java.util.List<LinkCorps> getLinkCorps() {
             return this.linkCorps;
         }
 
@@ -346,13 +351,13 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LinkCorps> linkCorps; 
+            private java.util.List<LinkCorps> linkCorps; 
             private OrgCorp orgCorp; 
 
             /**
              * link_corps.
              */
-            public Builder linkCorps(java.util.List < LinkCorps> linkCorps) {
+            public Builder linkCorps(java.util.List<LinkCorps> linkCorps) {
                 this.linkCorps = linkCorps;
                 return this;
             }

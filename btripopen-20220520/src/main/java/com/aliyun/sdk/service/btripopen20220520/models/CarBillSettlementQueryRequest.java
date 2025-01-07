@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CarBillSettlementQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_batch")
+    private String billBatch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
@@ -24,13 +33,19 @@ public class CarBillSettlementQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("period_end")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String periodEnd;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("period_start")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String periodStart;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scroll_id")
+    private String scrollId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scroll_mod")
+    private Boolean scrollMod;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
@@ -38,10 +53,13 @@ public class CarBillSettlementQueryRequest extends Request {
 
     private CarBillSettlementQueryRequest(Builder builder) {
         super(builder);
+        this.billBatch = builder.billBatch;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.periodEnd = builder.periodEnd;
         this.periodStart = builder.periodStart;
+        this.scrollId = builder.scrollId;
+        this.scrollMod = builder.scrollMod;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
 
@@ -56,6 +74,13 @@ public class CarBillSettlementQueryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return billBatch
+     */
+    public String getBillBatch() {
+        return this.billBatch;
     }
 
     /**
@@ -87,6 +112,20 @@ public class CarBillSettlementQueryRequest extends Request {
     }
 
     /**
+     * @return scrollId
+     */
+    public String getScrollId() {
+        return this.scrollId;
+    }
+
+    /**
+     * @return scrollMod
+     */
+    public Boolean getScrollMod() {
+        return this.scrollMod;
+    }
+
+    /**
      * @return xAcsBtripSoCorpToken
      */
     public String getXAcsBtripSoCorpToken() {
@@ -94,10 +133,13 @@ public class CarBillSettlementQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CarBillSettlementQueryRequest, Builder> {
+        private String billBatch; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
         private String periodStart; 
+        private String scrollId; 
+        private Boolean scrollMod; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -106,12 +148,24 @@ public class CarBillSettlementQueryRequest extends Request {
 
         private Builder(CarBillSettlementQueryRequest request) {
             super(request);
+            this.billBatch = request.billBatch;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.periodEnd = request.periodEnd;
             this.periodStart = request.periodStart;
+            this.scrollId = request.scrollId;
+            this.scrollMod = request.scrollMod;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
+
+        /**
+         * bill_batch.
+         */
+        public Builder billBatch(String billBatch) {
+            this.putQueryParameter("bill_batch", billBatch);
+            this.billBatch = billBatch;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -138,10 +192,7 @@ public class CarBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-01</p>
+         * period_end.
          */
         public Builder periodEnd(String periodEnd) {
             this.putQueryParameter("period_end", periodEnd);
@@ -150,14 +201,29 @@ public class CarBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-01</p>
+         * period_start.
          */
         public Builder periodStart(String periodStart) {
             this.putQueryParameter("period_start", periodStart);
             this.periodStart = periodStart;
+            return this;
+        }
+
+        /**
+         * scroll_id.
+         */
+        public Builder scrollId(String scrollId) {
+            this.putQueryParameter("scroll_id", scrollId);
+            this.scrollId = scrollId;
+            return this;
+        }
+
+        /**
+         * scroll_mod.
+         */
+        public Builder scrollMod(Boolean scrollMod) {
+            this.putQueryParameter("scroll_mod", scrollMod);
+            this.scrollMod = scrollMod;
             return this;
         }
 

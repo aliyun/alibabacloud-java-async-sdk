@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class FlightRefundApplyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extra")
-    private java.util.Map < String, String > extra;
+    private java.util.Map<String, String> extra;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("is_voluntary")
@@ -47,7 +52,7 @@ public class FlightRefundApplyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passenger_segment_info_list")
-    private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList;
+    private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("personal_refund_price")
@@ -64,7 +69,7 @@ public class FlightRefundApplyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("refund_voucher_info")
-    private java.util.List < String > refundVoucherInfo;
+    private java.util.List<String> refundVoucherInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("session_id")
@@ -142,7 +147,7 @@ public class FlightRefundApplyRequest extends Request {
     /**
      * @return extra
      */
-    public java.util.Map < String, String > getExtra() {
+    public java.util.Map<String, String> getExtra() {
         return this.extra;
     }
 
@@ -163,7 +168,7 @@ public class FlightRefundApplyRequest extends Request {
     /**
      * @return passengerSegmentInfoList
      */
-    public java.util.List < PassengerSegmentInfoList> getPassengerSegmentInfoList() {
+    public java.util.List<PassengerSegmentInfoList> getPassengerSegmentInfoList() {
         return this.passengerSegmentInfoList;
     }
 
@@ -191,7 +196,7 @@ public class FlightRefundApplyRequest extends Request {
     /**
      * @return refundVoucherInfo
      */
-    public java.util.List < String > getRefundVoucherInfo() {
+    public java.util.List<String> getRefundVoucherInfo() {
         return this.refundVoucherInfo;
     }
 
@@ -221,14 +226,14 @@ public class FlightRefundApplyRequest extends Request {
         private String disOrderId; 
         private String disSubOrderId; 
         private String displayRefundMoney; 
-        private java.util.Map < String, String > extra; 
+        private java.util.Map<String, String> extra; 
         private Integer isVoluntary; 
         private String itemUnitIds; 
-        private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList; 
+        private java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList; 
         private Long personalRefundPrice; 
         private String reasonDetail; 
         private Integer reasonType; 
-        private java.util.List < String > refundVoucherInfo; 
+        private java.util.List<String> refundVoucherInfo; 
         private String sessionId; 
         private Long totalRefundPrice; 
         private String xAcsBtripCorpToken; 
@@ -304,7 +309,7 @@ public class FlightRefundApplyRequest extends Request {
         /**
          * extra.
          */
-        public Builder extra(java.util.Map < String, String > extra) {
+        public Builder extra(java.util.Map<String, String> extra) {
             String extraShrink = shrink(extra, "extra", "json");
             this.putBodyParameter("extra", extraShrink);
             this.extra = extra;
@@ -338,7 +343,7 @@ public class FlightRefundApplyRequest extends Request {
         /**
          * passenger_segment_info_list.
          */
-        public Builder passengerSegmentInfoList(java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList) {
+        public Builder passengerSegmentInfoList(java.util.List<PassengerSegmentInfoList> passengerSegmentInfoList) {
             String passengerSegmentInfoListShrink = shrink(passengerSegmentInfoList, "passenger_segment_info_list", "json");
             this.putBodyParameter("passenger_segment_info_list", passengerSegmentInfoListShrink);
             this.passengerSegmentInfoList = passengerSegmentInfoList;
@@ -378,7 +383,7 @@ public class FlightRefundApplyRequest extends Request {
         /**
          * refund_voucher_info.
          */
-        public Builder refundVoucherInfo(java.util.List < String > refundVoucherInfo) {
+        public Builder refundVoucherInfo(java.util.List<String> refundVoucherInfo) {
             String refundVoucherInfoShrink = shrink(refundVoucherInfo, "refund_voucher_info", "json");
             this.putBodyParameter("refund_voucher_info", refundVoucherInfoShrink);
             this.refundVoucherInfo = refundVoucherInfo;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.List < Module> module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("more_page")
     private Boolean morePage;
@@ -68,7 +73,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -103,7 +108,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private Boolean morePage; 
         private String requestId; 
         private Boolean success; 
@@ -128,7 +133,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -318,7 +323,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         private Long disable;
 
         @com.aliyun.core.annotation.NameInMap("entity_d_o_s")
-        private java.util.List < EntityDOS> entityDOS;
+        private java.util.List<EntityDOS> entityDOS;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -383,7 +388,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
         /**
          * @return entityDOS
          */
-        public java.util.List < EntityDOS> getEntityDOS() {
+        public java.util.List<EntityDOS> getEntityDOS() {
             return this.entityDOS;
         }
 
@@ -433,7 +438,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
             private String alipayNo; 
             private String corpId; 
             private Long disable; 
-            private java.util.List < EntityDOS> entityDOS; 
+            private java.util.List<EntityDOS> entityDOS; 
             private Long id; 
             private String number; 
             private Long ruleCode; 
@@ -468,7 +473,7 @@ public class CostCenterQueryResponseBody extends TeaModel {
             /**
              * entity_d_o_s.
              */
-            public Builder entityDOS(java.util.List < EntityDOS> entityDOS) {
+            public Builder entityDOS(java.util.List<EntityDOS> entityDOS) {
                 this.entityDOS = entityDOS;
                 return this;
             }

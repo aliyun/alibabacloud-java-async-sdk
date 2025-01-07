@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,13 +164,13 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      */
     public static class BestPriceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
-        private java.util.List < String > agreementPriceCodes;
+        private java.util.List<String> agreementPriceCodes;
 
         @com.aliyun.core.annotation.NameInMap("item_type")
         private String itemType;
 
         @com.aliyun.core.annotation.NameInMap("shopping_item_map")
-        private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > shoppingItemMap;
+        private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap;
 
         private BestPriceItem(Builder builder) {
             this.agreementPriceCodes = builder.agreementPriceCodes;
@@ -184,7 +189,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return agreementPriceCodes
          */
-        public java.util.List < String > getAgreementPriceCodes() {
+        public java.util.List<String> getAgreementPriceCodes() {
             return this.agreementPriceCodes;
         }
 
@@ -198,19 +203,19 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return shoppingItemMap
          */
-        public java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > getShoppingItemMap() {
+        public java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> getShoppingItemMap() {
             return this.shoppingItemMap;
         }
 
         public static final class Builder {
-            private java.util.List < String > agreementPriceCodes; 
+            private java.util.List<String> agreementPriceCodes; 
             private String itemType; 
-            private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > shoppingItemMap; 
+            private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap; 
 
             /**
              * agreement_price_codes.
              */
-            public Builder agreementPriceCodes(java.util.List < String > agreementPriceCodes) {
+            public Builder agreementPriceCodes(java.util.List<String> agreementPriceCodes) {
                 this.agreementPriceCodes = agreementPriceCodes;
                 return this;
             }
@@ -226,7 +231,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             /**
              * shopping_item_map.
              */
-            public Builder shoppingItemMap(java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > shoppingItemMap) {
+            public Builder shoppingItemMap(java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap) {
                 this.shoppingItemMap = shoppingItemMap;
                 return this;
             }
@@ -799,7 +804,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         private String stopCityName;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_names")
-        private java.util.List < String > stopCityNames;
+        private java.util.List<String> stopCityNames;
 
         @com.aliyun.core.annotation.NameInMap("stop_dep_term")
         private String stopDepTerm;
@@ -876,7 +881,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return stopCityNames
          */
-        public java.util.List < String > getStopCityNames() {
+        public java.util.List<String> getStopCityNames() {
             return this.stopCityNames;
         }
 
@@ -908,7 +913,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String stopArrTime; 
             private String stopCityCode; 
             private String stopCityName; 
-            private java.util.List < String > stopCityNames; 
+            private java.util.List<String> stopCityNames; 
             private String stopDepTerm; 
             private String stopDepTime; 
             private String stopTime; 
@@ -964,7 +969,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             /**
              * stop_city_names.
              */
-            public Builder stopCityNames(java.util.List < String > stopCityNames) {
+            public Builder stopCityNames(java.util.List<String> stopCityNames) {
                 this.stopCityNames = stopCityNames;
                 return this;
             }
@@ -1659,7 +1664,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         private Integer duration;
 
         @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
-        private java.util.List < FlightSegmentInfos> flightSegmentInfos;
+        private java.util.List<FlightSegmentInfos> flightSegmentInfos;
 
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -1740,7 +1745,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return flightSegmentInfos
          */
-        public java.util.List < FlightSegmentInfos> getFlightSegmentInfos() {
+        public java.util.List<FlightSegmentInfos> getFlightSegmentInfos() {
             return this.flightSegmentInfos;
         }
 
@@ -1766,7 +1771,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String depCityName; 
             private String depTime; 
             private Integer duration; 
-            private java.util.List < FlightSegmentInfos> flightSegmentInfos; 
+            private java.util.List<FlightSegmentInfos> flightSegmentInfos; 
             private Integer journeyIndex; 
             private Integer transferTime; 
 
@@ -1832,7 +1837,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             /**
              * flight_segment_infos.
              */
-            public Builder flightSegmentInfos(java.util.List < FlightSegmentInfos> flightSegmentInfos) {
+            public Builder flightSegmentInfos(java.util.List<FlightSegmentInfos> flightSegmentInfos) {
                 this.flightSegmentInfos = flightSegmentInfos;
                 return this;
             }
@@ -1871,7 +1876,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         private BestPriceItem bestPriceItem;
 
         @com.aliyun.core.annotation.NameInMap("flight_journey_infos")
-        private java.util.List < FlightJourneyInfos> flightJourneyInfos;
+        private java.util.List<FlightJourneyInfos> flightJourneyInfos;
 
         private FlightItemList(Builder builder) {
             this.bestPriceItem = builder.bestPriceItem;
@@ -1896,13 +1901,13 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return flightJourneyInfos
          */
-        public java.util.List < FlightJourneyInfos> getFlightJourneyInfos() {
+        public java.util.List<FlightJourneyInfos> getFlightJourneyInfos() {
             return this.flightJourneyInfos;
         }
 
         public static final class Builder {
             private BestPriceItem bestPriceItem; 
-            private java.util.List < FlightJourneyInfos> flightJourneyInfos; 
+            private java.util.List<FlightJourneyInfos> flightJourneyInfos; 
 
             /**
              * best_price_item.
@@ -1915,7 +1920,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             /**
              * flight_journey_infos.
              */
-            public Builder flightJourneyInfos(java.util.List < FlightJourneyInfos> flightJourneyInfos) {
+            public Builder flightJourneyInfos(java.util.List<FlightJourneyInfos> flightJourneyInfos) {
                 this.flightJourneyInfos = flightJourneyInfos;
                 return this;
             }
@@ -1935,7 +1940,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_item_list")
-        private java.util.List < FlightItemList> flightItemList;
+        private java.util.List<FlightItemList> flightItemList;
 
         @com.aliyun.core.annotation.NameInMap("need_continue")
         private Boolean needContinue;
@@ -1964,7 +1969,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return flightItemList
          */
-        public java.util.List < FlightItemList> getFlightItemList() {
+        public java.util.List<FlightItemList> getFlightItemList() {
             return this.flightItemList;
         }
 
@@ -1990,7 +1995,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FlightItemList> flightItemList; 
+            private java.util.List<FlightItemList> flightItemList; 
             private Boolean needContinue; 
             private String queryRecordId; 
             private String token; 
@@ -1998,7 +2003,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             /**
              * flight_item_list.
              */
-            public Builder flightItemList(java.util.List < FlightItemList> flightItemList) {
+            public Builder flightItemList(java.util.List<FlightItemList> flightItemList) {
                 this.flightItemList = flightItemList;
                 return this;
             }

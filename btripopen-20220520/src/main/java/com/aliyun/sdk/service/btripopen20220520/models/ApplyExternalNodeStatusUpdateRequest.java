@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operation_records")
-    private java.util.List < OperationRecords> operationRecords;
+    private java.util.List<OperationRecords> operationRecords;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("process_action_result")
@@ -61,7 +66,7 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
     /**
      * @return operationRecords
      */
-    public java.util.List < OperationRecords> getOperationRecords() {
+    public java.util.List<OperationRecords> getOperationRecords() {
         return this.operationRecords;
     }
 
@@ -81,7 +86,7 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApplyExternalNodeStatusUpdateRequest, Builder> {
         private String nodeId; 
-        private java.util.List < OperationRecords> operationRecords; 
+        private java.util.List<OperationRecords> operationRecords; 
         private String processActionResult; 
         private String xAcsBtripCorpToken; 
 
@@ -112,7 +117,7 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
         /**
          * operation_records.
          */
-        public Builder operationRecords(java.util.List < OperationRecords> operationRecords) {
+        public Builder operationRecords(java.util.List<OperationRecords> operationRecords) {
             String operationRecordsShrink = shrink(operationRecords, "operation_records", "json");
             this.putBodyParameter("operation_records", operationRecordsShrink);
             this.operationRecords = operationRecords;

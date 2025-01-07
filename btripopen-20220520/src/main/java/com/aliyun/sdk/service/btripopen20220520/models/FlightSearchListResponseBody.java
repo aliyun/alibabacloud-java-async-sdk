@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -587,7 +592,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class BaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
-        private java.util.List < String > baggageDesc;
+        private java.util.List<String> baggageDesc;
 
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_type")
         private Integer baggageSubContentType;
@@ -624,7 +629,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageDesc
          */
-        public java.util.List < String > getBaggageDesc() {
+        public java.util.List<String> getBaggageDesc() {
             return this.baggageDesc;
         }
 
@@ -664,7 +669,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > baggageDesc; 
+            private java.util.List<String> baggageDesc; 
             private Integer baggageSubContentType; 
             private Description description; 
             private ImageDO imageDO; 
@@ -674,7 +679,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_desc.
              */
-            public Builder baggageDesc(java.util.List < String > baggageDesc) {
+            public Builder baggageDesc(java.util.List<String> baggageDesc) {
                 this.baggageDesc = baggageDesc;
                 return this;
             }
@@ -734,10 +739,10 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class BaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_visualizes")
-        private java.util.List < BaggageSubContentVisualizes> baggageSubContentVisualizes;
+        private java.util.List<BaggageSubContentVisualizes> baggageSubContentVisualizes;
 
         @com.aliyun.core.annotation.NameInMap("extra_content_visualizes")
-        private java.util.List < ? > extraContentVisualizes;
+        private java.util.List<?> extraContentVisualizes;
 
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -767,14 +772,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageSubContentVisualizes
          */
-        public java.util.List < BaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
+        public java.util.List<BaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
             return this.baggageSubContentVisualizes;
         }
 
         /**
          * @return extraContentVisualizes
          */
-        public java.util.List < ? > getExtraContentVisualizes() {
+        public java.util.List<?> getExtraContentVisualizes() {
             return this.extraContentVisualizes;
         }
 
@@ -800,8 +805,8 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BaggageSubContentVisualizes> baggageSubContentVisualizes; 
-            private java.util.List < ? > extraContentVisualizes; 
+            private java.util.List<BaggageSubContentVisualizes> baggageSubContentVisualizes; 
+            private java.util.List<?> extraContentVisualizes; 
             private Boolean isStruct; 
             private String ptc; 
             private String title; 
@@ -809,7 +814,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_sub_content_visualizes.
              */
-            public Builder baggageSubContentVisualizes(java.util.List < BaggageSubContentVisualizes> baggageSubContentVisualizes) {
+            public Builder baggageSubContentVisualizes(java.util.List<BaggageSubContentVisualizes> baggageSubContentVisualizes) {
                 this.baggageSubContentVisualizes = baggageSubContentVisualizes;
                 return this;
             }
@@ -817,7 +822,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_content_visualizes.
              */
-            public Builder extraContentVisualizes(java.util.List < ? > extraContentVisualizes) {
+            public Builder extraContentVisualizes(java.util.List<?> extraContentVisualizes) {
                 this.extraContentVisualizes = extraContentVisualizes;
                 return this;
             }
@@ -951,7 +956,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class BaggageItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
-        private java.util.List < BaggageSubItems> baggageSubItems;
+        private java.util.List<BaggageSubItems> baggageSubItems;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
@@ -988,7 +993,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageSubItems
          */
-        public java.util.List < BaggageSubItems> getBaggageSubItems() {
+        public java.util.List<BaggageSubItems> getBaggageSubItems() {
             return this.baggageSubItems;
         }
 
@@ -1028,7 +1033,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BaggageSubItems> baggageSubItems; 
+            private java.util.List<BaggageSubItems> baggageSubItems; 
             private Integer index; 
             private String tableHead; 
             private Tips tips; 
@@ -1038,7 +1043,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_sub_items.
              */
-            public Builder baggageSubItems(java.util.List < BaggageSubItems> baggageSubItems) {
+            public Builder baggageSubItems(java.util.List<BaggageSubItems> baggageSubItems) {
                 this.baggageSubItems = baggageSubItems;
                 return this;
             }
@@ -1248,7 +1253,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < Info> info;
+        private java.util.List<Info> info;
 
         private ChangeRule(Builder builder) {
             this.able = builder.able;
@@ -1273,13 +1278,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < Info> getInfo() {
+        public java.util.List<Info> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < Info> info; 
+            private java.util.List<Info> info; 
 
             /**
              * able.
@@ -1292,7 +1297,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < Info> info) {
+            public Builder info(java.util.List<Info> info) {
                 this.info = info;
                 return this;
             }
@@ -1472,7 +1477,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String ptc;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_contents")
-        private java.util.List < RefundSubContents> refundSubContents;
+        private java.util.List<RefundSubContents> refundSubContents;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -1509,7 +1514,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubContents
          */
-        public java.util.List < RefundSubContents> getRefundSubContents() {
+        public java.util.List<RefundSubContents> getRefundSubContents() {
             return this.refundSubContents;
         }
 
@@ -1523,7 +1528,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isStruct; 
             private String ptc; 
-            private java.util.List < RefundSubContents> refundSubContents; 
+            private java.util.List<RefundSubContents> refundSubContents; 
             private String title; 
 
             /**
@@ -1548,7 +1553,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_contents.
              */
-            public Builder refundSubContents(java.util.List < RefundSubContents> refundSubContents) {
+            public Builder refundSubContents(java.util.List<RefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
                 return this;
             }
@@ -1576,16 +1581,16 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class ChangeRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
-        private java.util.List < ExtraContents> extraContents;
+        private java.util.List<ExtraContents> extraContents;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_items")
-        private java.util.List < RefundSubItems> refundSubItems;
+        private java.util.List<RefundSubItems> refundSubItems;
 
         @com.aliyun.core.annotation.NameInMap("sub_table_head")
-        private java.util.List < String > subTableHead;
+        private java.util.List<String> subTableHead;
 
         @com.aliyun.core.annotation.NameInMap("table_head")
         private String tableHead;
@@ -1617,7 +1622,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return extraContents
          */
-        public java.util.List < ExtraContents> getExtraContents() {
+        public java.util.List<ExtraContents> getExtraContents() {
             return this.extraContents;
         }
 
@@ -1631,14 +1636,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubItems
          */
-        public java.util.List < RefundSubItems> getRefundSubItems() {
+        public java.util.List<RefundSubItems> getRefundSubItems() {
             return this.refundSubItems;
         }
 
         /**
          * @return subTableHead
          */
-        public java.util.List < String > getSubTableHead() {
+        public java.util.List<String> getSubTableHead() {
             return this.subTableHead;
         }
 
@@ -1664,10 +1669,10 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ExtraContents> extraContents; 
+            private java.util.List<ExtraContents> extraContents; 
             private Integer index; 
-            private java.util.List < RefundSubItems> refundSubItems; 
-            private java.util.List < String > subTableHead; 
+            private java.util.List<RefundSubItems> refundSubItems; 
+            private java.util.List<String> subTableHead; 
             private String tableHead; 
             private String title; 
             private Integer type; 
@@ -1675,7 +1680,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_contents.
              */
-            public Builder extraContents(java.util.List < ExtraContents> extraContents) {
+            public Builder extraContents(java.util.List<ExtraContents> extraContents) {
                 this.extraContents = extraContents;
                 return this;
             }
@@ -1691,7 +1696,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_items.
              */
-            public Builder refundSubItems(java.util.List < RefundSubItems> refundSubItems) {
+            public Builder refundSubItems(java.util.List<RefundSubItems> refundSubItems) {
                 this.refundSubItems = refundSubItems;
                 return this;
             }
@@ -1699,7 +1704,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * sub_table_head.
              */
-            public Builder subTableHead(java.util.List < String > subTableHead) {
+            public Builder subTableHead(java.util.List<String> subTableHead) {
                 this.subTableHead = subTableHead;
                 return this;
             }
@@ -1893,7 +1898,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < RefundRuleInfo> info;
+        private java.util.List<RefundRuleInfo> info;
 
         private RefundRule(Builder builder) {
             this.able = builder.able;
@@ -1918,13 +1923,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < RefundRuleInfo> getInfo() {
+        public java.util.List<RefundRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < RefundRuleInfo> info; 
+            private java.util.List<RefundRuleInfo> info; 
 
             /**
              * able.
@@ -1937,7 +1942,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < RefundRuleInfo> info) {
+            public Builder info(java.util.List<RefundRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -2117,7 +2122,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String ptc;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_contents")
-        private java.util.List < RefundSubItemsRefundSubContents> refundSubContents;
+        private java.util.List<RefundSubItemsRefundSubContents> refundSubContents;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -2154,7 +2159,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubContents
          */
-        public java.util.List < RefundSubItemsRefundSubContents> getRefundSubContents() {
+        public java.util.List<RefundSubItemsRefundSubContents> getRefundSubContents() {
             return this.refundSubContents;
         }
 
@@ -2168,7 +2173,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isStruct; 
             private String ptc; 
-            private java.util.List < RefundSubItemsRefundSubContents> refundSubContents; 
+            private java.util.List<RefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
 
             /**
@@ -2193,7 +2198,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_contents.
              */
-            public Builder refundSubContents(java.util.List < RefundSubItemsRefundSubContents> refundSubContents) {
+            public Builder refundSubContents(java.util.List<RefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
                 return this;
             }
@@ -2221,16 +2226,16 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class RefundRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
-        private java.util.List < RefundRuleItemExtraContents> extraContents;
+        private java.util.List<RefundRuleItemExtraContents> extraContents;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_items")
-        private java.util.List < RefundRuleItemRefundSubItems> refundSubItems;
+        private java.util.List<RefundRuleItemRefundSubItems> refundSubItems;
 
         @com.aliyun.core.annotation.NameInMap("sub_table_head")
-        private java.util.List < String > subTableHead;
+        private java.util.List<String> subTableHead;
 
         @com.aliyun.core.annotation.NameInMap("table_head")
         private String tableHead;
@@ -2262,7 +2267,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return extraContents
          */
-        public java.util.List < RefundRuleItemExtraContents> getExtraContents() {
+        public java.util.List<RefundRuleItemExtraContents> getExtraContents() {
             return this.extraContents;
         }
 
@@ -2276,14 +2281,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubItems
          */
-        public java.util.List < RefundRuleItemRefundSubItems> getRefundSubItems() {
+        public java.util.List<RefundRuleItemRefundSubItems> getRefundSubItems() {
             return this.refundSubItems;
         }
 
         /**
          * @return subTableHead
          */
-        public java.util.List < String > getSubTableHead() {
+        public java.util.List<String> getSubTableHead() {
             return this.subTableHead;
         }
 
@@ -2309,10 +2314,10 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < RefundRuleItemExtraContents> extraContents; 
+            private java.util.List<RefundRuleItemExtraContents> extraContents; 
             private Integer index; 
-            private java.util.List < RefundRuleItemRefundSubItems> refundSubItems; 
-            private java.util.List < String > subTableHead; 
+            private java.util.List<RefundRuleItemRefundSubItems> refundSubItems; 
+            private java.util.List<String> subTableHead; 
             private String tableHead; 
             private String title; 
             private Integer type; 
@@ -2320,7 +2325,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_contents.
              */
-            public Builder extraContents(java.util.List < RefundRuleItemExtraContents> extraContents) {
+            public Builder extraContents(java.util.List<RefundRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
                 return this;
             }
@@ -2336,7 +2341,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_items.
              */
-            public Builder refundSubItems(java.util.List < RefundRuleItemRefundSubItems> refundSubItems) {
+            public Builder refundSubItems(java.util.List<RefundRuleItemRefundSubItems> refundSubItems) {
                 this.refundSubItems = refundSubItems;
                 return this;
             }
@@ -2344,7 +2349,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * sub_table_head.
              */
-            public Builder subTableHead(java.util.List < String > subTableHead) {
+            public Builder subTableHead(java.util.List<String> subTableHead) {
                 this.subTableHead = subTableHead;
                 return this;
             }
@@ -2538,7 +2543,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < SignRuleInfo> info;
+        private java.util.List<SignRuleInfo> info;
 
         private SignRule(Builder builder) {
             this.able = builder.able;
@@ -2563,13 +2568,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < SignRuleInfo> getInfo() {
+        public java.util.List<SignRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < SignRuleInfo> info; 
+            private java.util.List<SignRuleInfo> info; 
 
             /**
              * able.
@@ -2582,7 +2587,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < SignRuleInfo> info) {
+            public Builder info(java.util.List<SignRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -2752,7 +2757,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < UpgradeRuleInfo> info;
+        private java.util.List<UpgradeRuleInfo> info;
 
         private UpgradeRule(Builder builder) {
             this.able = builder.able;
@@ -2777,13 +2782,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < UpgradeRuleInfo> getInfo() {
+        public java.util.List<UpgradeRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < UpgradeRuleInfo> info; 
+            private java.util.List<UpgradeRuleInfo> info; 
 
             /**
              * able.
@@ -2796,7 +2801,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < UpgradeRuleInfo> info) {
+            public Builder info(java.util.List<UpgradeRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -3073,7 +3078,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String discount;
 
         @com.aliyun.core.annotation.NameInMap("flight_rule_list")
-        private java.util.List < FlightRuleList> flightRuleList;
+        private java.util.List<FlightRuleList> flightRuleList;
 
         @com.aliyun.core.annotation.NameInMap("flight_rule_list_str")
         private String flightRuleListStr;
@@ -3226,7 +3231,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return flightRuleList
          */
-        public java.util.List < FlightRuleList> getFlightRuleList() {
+        public java.util.List<FlightRuleList> getFlightRuleList() {
             return this.flightRuleList;
         }
 
@@ -3339,7 +3344,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String className; 
             private String classRule; 
             private String discount; 
-            private java.util.List < FlightRuleList> flightRuleList; 
+            private java.util.List<FlightRuleList> flightRuleList; 
             private String flightRuleListStr; 
             private Integer invoiceType; 
             private Boolean isProtocol; 
@@ -3438,7 +3443,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * flight_rule_list.
              */
-            public Builder flightRuleList(java.util.List < FlightRuleList> flightRuleList) {
+            public Builder flightRuleList(java.util.List<FlightRuleList> flightRuleList) {
                 this.flightRuleList = flightRuleList;
                 return this;
             }
@@ -3911,7 +3916,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class BaggageSubItemsBaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
-        private java.util.List < String > baggageDesc;
+        private java.util.List<String> baggageDesc;
 
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_type")
         private Integer baggageSubContentType;
@@ -3948,7 +3953,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageDesc
          */
-        public java.util.List < String > getBaggageDesc() {
+        public java.util.List<String> getBaggageDesc() {
             return this.baggageDesc;
         }
 
@@ -3988,7 +3993,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > baggageDesc; 
+            private java.util.List<String> baggageDesc; 
             private Integer baggageSubContentType; 
             private BaggageSubContentVisualizesDescription description; 
             private BaggageSubContentVisualizesImageDO imageDO; 
@@ -3998,7 +4003,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_desc.
              */
-            public Builder baggageDesc(java.util.List < String > baggageDesc) {
+            public Builder baggageDesc(java.util.List<String> baggageDesc) {
                 this.baggageDesc = baggageDesc;
                 return this;
             }
@@ -4058,10 +4063,10 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class BaggageItemBaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_visualizes")
-        private java.util.List < BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes;
+        private java.util.List<BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes;
 
         @com.aliyun.core.annotation.NameInMap("extra_content_visualizes")
-        private java.util.List < ? > extraContentVisualizes;
+        private java.util.List<?> extraContentVisualizes;
 
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -4091,14 +4096,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageSubContentVisualizes
          */
-        public java.util.List < BaggageSubItemsBaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
+        public java.util.List<BaggageSubItemsBaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
             return this.baggageSubContentVisualizes;
         }
 
         /**
          * @return extraContentVisualizes
          */
-        public java.util.List < ? > getExtraContentVisualizes() {
+        public java.util.List<?> getExtraContentVisualizes() {
             return this.extraContentVisualizes;
         }
 
@@ -4124,8 +4129,8 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes; 
-            private java.util.List < ? > extraContentVisualizes; 
+            private java.util.List<BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes; 
+            private java.util.List<?> extraContentVisualizes; 
             private Boolean isStruct; 
             private String ptc; 
             private String title; 
@@ -4133,7 +4138,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_sub_content_visualizes.
              */
-            public Builder baggageSubContentVisualizes(java.util.List < BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
+            public Builder baggageSubContentVisualizes(java.util.List<BaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
                 this.baggageSubContentVisualizes = baggageSubContentVisualizes;
                 return this;
             }
@@ -4141,7 +4146,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_content_visualizes.
              */
-            public Builder extraContentVisualizes(java.util.List < ? > extraContentVisualizes) {
+            public Builder extraContentVisualizes(java.util.List<?> extraContentVisualizes) {
                 this.extraContentVisualizes = extraContentVisualizes;
                 return this;
             }
@@ -4275,7 +4280,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class FlightRuleListBaggageItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
-        private java.util.List < BaggageItemBaggageSubItems> baggageSubItems;
+        private java.util.List<BaggageItemBaggageSubItems> baggageSubItems;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
@@ -4312,7 +4317,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageSubItems
          */
-        public java.util.List < BaggageItemBaggageSubItems> getBaggageSubItems() {
+        public java.util.List<BaggageItemBaggageSubItems> getBaggageSubItems() {
             return this.baggageSubItems;
         }
 
@@ -4352,7 +4357,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BaggageItemBaggageSubItems> baggageSubItems; 
+            private java.util.List<BaggageItemBaggageSubItems> baggageSubItems; 
             private Integer index; 
             private String tableHead; 
             private BaggageItemTips tips; 
@@ -4362,7 +4367,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_sub_items.
              */
-            public Builder baggageSubItems(java.util.List < BaggageItemBaggageSubItems> baggageSubItems) {
+            public Builder baggageSubItems(java.util.List<BaggageItemBaggageSubItems> baggageSubItems) {
                 this.baggageSubItems = baggageSubItems;
                 return this;
             }
@@ -4572,7 +4577,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < ChangeRuleInfo> info;
+        private java.util.List<ChangeRuleInfo> info;
 
         private FlightRuleListChangeRule(Builder builder) {
             this.able = builder.able;
@@ -4597,13 +4602,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < ChangeRuleInfo> getInfo() {
+        public java.util.List<ChangeRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < ChangeRuleInfo> info; 
+            private java.util.List<ChangeRuleInfo> info; 
 
             /**
              * able.
@@ -4616,7 +4621,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < ChangeRuleInfo> info) {
+            public Builder info(java.util.List<ChangeRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -4796,7 +4801,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String ptc;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_contents")
-        private java.util.List < ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents;
+        private java.util.List<ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -4833,7 +4838,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubContents
          */
-        public java.util.List < ChangeRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
+        public java.util.List<ChangeRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
             return this.refundSubContents;
         }
 
@@ -4847,7 +4852,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isStruct; 
             private String ptc; 
-            private java.util.List < ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
+            private java.util.List<ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
 
             /**
@@ -4872,7 +4877,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_contents.
              */
-            public Builder refundSubContents(java.util.List < ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
+            public Builder refundSubContents(java.util.List<ChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
                 return this;
             }
@@ -4900,16 +4905,16 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class FlightRuleListChangeRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
-        private java.util.List < ChangeRuleItemExtraContents> extraContents;
+        private java.util.List<ChangeRuleItemExtraContents> extraContents;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_items")
-        private java.util.List < ChangeRuleItemRefundSubItems> refundSubItems;
+        private java.util.List<ChangeRuleItemRefundSubItems> refundSubItems;
 
         @com.aliyun.core.annotation.NameInMap("sub_table_head")
-        private java.util.List < String > subTableHead;
+        private java.util.List<String> subTableHead;
 
         @com.aliyun.core.annotation.NameInMap("table_head")
         private String tableHead;
@@ -4941,7 +4946,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return extraContents
          */
-        public java.util.List < ChangeRuleItemExtraContents> getExtraContents() {
+        public java.util.List<ChangeRuleItemExtraContents> getExtraContents() {
             return this.extraContents;
         }
 
@@ -4955,14 +4960,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubItems
          */
-        public java.util.List < ChangeRuleItemRefundSubItems> getRefundSubItems() {
+        public java.util.List<ChangeRuleItemRefundSubItems> getRefundSubItems() {
             return this.refundSubItems;
         }
 
         /**
          * @return subTableHead
          */
-        public java.util.List < String > getSubTableHead() {
+        public java.util.List<String> getSubTableHead() {
             return this.subTableHead;
         }
 
@@ -4988,10 +4993,10 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeRuleItemExtraContents> extraContents; 
+            private java.util.List<ChangeRuleItemExtraContents> extraContents; 
             private Integer index; 
-            private java.util.List < ChangeRuleItemRefundSubItems> refundSubItems; 
-            private java.util.List < String > subTableHead; 
+            private java.util.List<ChangeRuleItemRefundSubItems> refundSubItems; 
+            private java.util.List<String> subTableHead; 
             private String tableHead; 
             private String title; 
             private Integer type; 
@@ -4999,7 +5004,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_contents.
              */
-            public Builder extraContents(java.util.List < ChangeRuleItemExtraContents> extraContents) {
+            public Builder extraContents(java.util.List<ChangeRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
                 return this;
             }
@@ -5015,7 +5020,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_items.
              */
-            public Builder refundSubItems(java.util.List < ChangeRuleItemRefundSubItems> refundSubItems) {
+            public Builder refundSubItems(java.util.List<ChangeRuleItemRefundSubItems> refundSubItems) {
                 this.refundSubItems = refundSubItems;
                 return this;
             }
@@ -5023,7 +5028,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * sub_table_head.
              */
-            public Builder subTableHead(java.util.List < String > subTableHead) {
+            public Builder subTableHead(java.util.List<String> subTableHead) {
                 this.subTableHead = subTableHead;
                 return this;
             }
@@ -5217,7 +5222,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < FlightRuleListRefundRuleInfo> info;
+        private java.util.List<FlightRuleListRefundRuleInfo> info;
 
         private FlightRuleListRefundRule(Builder builder) {
             this.able = builder.able;
@@ -5242,13 +5247,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < FlightRuleListRefundRuleInfo> getInfo() {
+        public java.util.List<FlightRuleListRefundRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < FlightRuleListRefundRuleInfo> info; 
+            private java.util.List<FlightRuleListRefundRuleInfo> info; 
 
             /**
              * able.
@@ -5261,7 +5266,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < FlightRuleListRefundRuleInfo> info) {
+            public Builder info(java.util.List<FlightRuleListRefundRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -5441,7 +5446,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String ptc;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_contents")
-        private java.util.List < RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents;
+        private java.util.List<RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -5478,7 +5483,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubContents
          */
-        public java.util.List < RefundRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
+        public java.util.List<RefundRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
             return this.refundSubContents;
         }
 
@@ -5492,7 +5497,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isStruct; 
             private String ptc; 
-            private java.util.List < RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
+            private java.util.List<RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
 
             /**
@@ -5517,7 +5522,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_contents.
              */
-            public Builder refundSubContents(java.util.List < RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
+            public Builder refundSubContents(java.util.List<RefundRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
                 return this;
             }
@@ -5545,16 +5550,16 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class FlightRuleListRefundRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
-        private java.util.List < FlightRuleListRefundRuleItemExtraContents> extraContents;
+        private java.util.List<FlightRuleListRefundRuleItemExtraContents> extraContents;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_items")
-        private java.util.List < FlightRuleListRefundRuleItemRefundSubItems> refundSubItems;
+        private java.util.List<FlightRuleListRefundRuleItemRefundSubItems> refundSubItems;
 
         @com.aliyun.core.annotation.NameInMap("sub_table_head")
-        private java.util.List < String > subTableHead;
+        private java.util.List<String> subTableHead;
 
         @com.aliyun.core.annotation.NameInMap("table_head")
         private String tableHead;
@@ -5586,7 +5591,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return extraContents
          */
-        public java.util.List < FlightRuleListRefundRuleItemExtraContents> getExtraContents() {
+        public java.util.List<FlightRuleListRefundRuleItemExtraContents> getExtraContents() {
             return this.extraContents;
         }
 
@@ -5600,14 +5605,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubItems
          */
-        public java.util.List < FlightRuleListRefundRuleItemRefundSubItems> getRefundSubItems() {
+        public java.util.List<FlightRuleListRefundRuleItemRefundSubItems> getRefundSubItems() {
             return this.refundSubItems;
         }
 
         /**
          * @return subTableHead
          */
-        public java.util.List < String > getSubTableHead() {
+        public java.util.List<String> getSubTableHead() {
             return this.subTableHead;
         }
 
@@ -5633,10 +5638,10 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FlightRuleListRefundRuleItemExtraContents> extraContents; 
+            private java.util.List<FlightRuleListRefundRuleItemExtraContents> extraContents; 
             private Integer index; 
-            private java.util.List < FlightRuleListRefundRuleItemRefundSubItems> refundSubItems; 
-            private java.util.List < String > subTableHead; 
+            private java.util.List<FlightRuleListRefundRuleItemRefundSubItems> refundSubItems; 
+            private java.util.List<String> subTableHead; 
             private String tableHead; 
             private String title; 
             private Integer type; 
@@ -5644,7 +5649,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_contents.
              */
-            public Builder extraContents(java.util.List < FlightRuleListRefundRuleItemExtraContents> extraContents) {
+            public Builder extraContents(java.util.List<FlightRuleListRefundRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
                 return this;
             }
@@ -5660,7 +5665,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_items.
              */
-            public Builder refundSubItems(java.util.List < FlightRuleListRefundRuleItemRefundSubItems> refundSubItems) {
+            public Builder refundSubItems(java.util.List<FlightRuleListRefundRuleItemRefundSubItems> refundSubItems) {
                 this.refundSubItems = refundSubItems;
                 return this;
             }
@@ -5668,7 +5673,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * sub_table_head.
              */
-            public Builder subTableHead(java.util.List < String > subTableHead) {
+            public Builder subTableHead(java.util.List<String> subTableHead) {
                 this.subTableHead = subTableHead;
                 return this;
             }
@@ -5862,7 +5867,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < FlightRuleListSignRuleInfo> info;
+        private java.util.List<FlightRuleListSignRuleInfo> info;
 
         private FlightRuleListSignRule(Builder builder) {
             this.able = builder.able;
@@ -5887,13 +5892,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < FlightRuleListSignRuleInfo> getInfo() {
+        public java.util.List<FlightRuleListSignRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < FlightRuleListSignRuleInfo> info; 
+            private java.util.List<FlightRuleListSignRuleInfo> info; 
 
             /**
              * able.
@@ -5906,7 +5911,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < FlightRuleListSignRuleInfo> info) {
+            public Builder info(java.util.List<FlightRuleListSignRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -6076,7 +6081,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < FlightRuleListUpgradeRuleInfo> info;
+        private java.util.List<FlightRuleListUpgradeRuleInfo> info;
 
         private FlightRuleListUpgradeRule(Builder builder) {
             this.able = builder.able;
@@ -6101,13 +6106,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < FlightRuleListUpgradeRuleInfo> getInfo() {
+        public java.util.List<FlightRuleListUpgradeRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < FlightRuleListUpgradeRuleInfo> info; 
+            private java.util.List<FlightRuleListUpgradeRuleInfo> info; 
 
             /**
              * able.
@@ -6120,7 +6125,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < FlightRuleListUpgradeRuleInfo> info) {
+            public Builder info(java.util.List<FlightRuleListUpgradeRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -6922,7 +6927,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class BaggageItemBaggageSubItemsBaggageSubContentVisualizes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_desc")
-        private java.util.List < String > baggageDesc;
+        private java.util.List<String> baggageDesc;
 
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_type")
         private Integer baggageSubContentType;
@@ -6959,7 +6964,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageDesc
          */
-        public java.util.List < String > getBaggageDesc() {
+        public java.util.List<String> getBaggageDesc() {
             return this.baggageDesc;
         }
 
@@ -6999,7 +7004,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > baggageDesc; 
+            private java.util.List<String> baggageDesc; 
             private Integer baggageSubContentType; 
             private BaggageSubItemsBaggageSubContentVisualizesDescription description; 
             private BaggageSubItemsBaggageSubContentVisualizesImageDO imageDO; 
@@ -7009,7 +7014,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_desc.
              */
-            public Builder baggageDesc(java.util.List < String > baggageDesc) {
+            public Builder baggageDesc(java.util.List<String> baggageDesc) {
                 this.baggageDesc = baggageDesc;
                 return this;
             }
@@ -7069,10 +7074,10 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class TransferFlightRuleListBaggageItemBaggageSubItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_content_visualizes")
-        private java.util.List < BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes;
+        private java.util.List<BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes;
 
         @com.aliyun.core.annotation.NameInMap("extra_content_visualizes")
-        private java.util.List < ? > extraContentVisualizes;
+        private java.util.List<?> extraContentVisualizes;
 
         @com.aliyun.core.annotation.NameInMap("is_struct")
         private Boolean isStruct;
@@ -7102,14 +7107,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageSubContentVisualizes
          */
-        public java.util.List < BaggageItemBaggageSubItemsBaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
+        public java.util.List<BaggageItemBaggageSubItemsBaggageSubContentVisualizes> getBaggageSubContentVisualizes() {
             return this.baggageSubContentVisualizes;
         }
 
         /**
          * @return extraContentVisualizes
          */
-        public java.util.List < ? > getExtraContentVisualizes() {
+        public java.util.List<?> getExtraContentVisualizes() {
             return this.extraContentVisualizes;
         }
 
@@ -7135,8 +7140,8 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes; 
-            private java.util.List < ? > extraContentVisualizes; 
+            private java.util.List<BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes; 
+            private java.util.List<?> extraContentVisualizes; 
             private Boolean isStruct; 
             private String ptc; 
             private String title; 
@@ -7144,7 +7149,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_sub_content_visualizes.
              */
-            public Builder baggageSubContentVisualizes(java.util.List < BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
+            public Builder baggageSubContentVisualizes(java.util.List<BaggageItemBaggageSubItemsBaggageSubContentVisualizes> baggageSubContentVisualizes) {
                 this.baggageSubContentVisualizes = baggageSubContentVisualizes;
                 return this;
             }
@@ -7152,7 +7157,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_content_visualizes.
              */
-            public Builder extraContentVisualizes(java.util.List < ? > extraContentVisualizes) {
+            public Builder extraContentVisualizes(java.util.List<?> extraContentVisualizes) {
                 this.extraContentVisualizes = extraContentVisualizes;
                 return this;
             }
@@ -7286,7 +7291,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class TransferFlightRuleListBaggageItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baggage_sub_items")
-        private java.util.List < TransferFlightRuleListBaggageItemBaggageSubItems> baggageSubItems;
+        private java.util.List<TransferFlightRuleListBaggageItemBaggageSubItems> baggageSubItems;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
@@ -7323,7 +7328,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return baggageSubItems
          */
-        public java.util.List < TransferFlightRuleListBaggageItemBaggageSubItems> getBaggageSubItems() {
+        public java.util.List<TransferFlightRuleListBaggageItemBaggageSubItems> getBaggageSubItems() {
             return this.baggageSubItems;
         }
 
@@ -7363,7 +7368,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TransferFlightRuleListBaggageItemBaggageSubItems> baggageSubItems; 
+            private java.util.List<TransferFlightRuleListBaggageItemBaggageSubItems> baggageSubItems; 
             private Integer index; 
             private String tableHead; 
             private TransferFlightRuleListBaggageItemTips tips; 
@@ -7373,7 +7378,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * baggage_sub_items.
              */
-            public Builder baggageSubItems(java.util.List < TransferFlightRuleListBaggageItemBaggageSubItems> baggageSubItems) {
+            public Builder baggageSubItems(java.util.List<TransferFlightRuleListBaggageItemBaggageSubItems> baggageSubItems) {
                 this.baggageSubItems = baggageSubItems;
                 return this;
             }
@@ -7583,7 +7588,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < TransferFlightRuleListChangeRuleInfo> info;
+        private java.util.List<TransferFlightRuleListChangeRuleInfo> info;
 
         private TransferFlightRuleListChangeRule(Builder builder) {
             this.able = builder.able;
@@ -7608,13 +7613,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < TransferFlightRuleListChangeRuleInfo> getInfo() {
+        public java.util.List<TransferFlightRuleListChangeRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < TransferFlightRuleListChangeRuleInfo> info; 
+            private java.util.List<TransferFlightRuleListChangeRuleInfo> info; 
 
             /**
              * able.
@@ -7627,7 +7632,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < TransferFlightRuleListChangeRuleInfo> info) {
+            public Builder info(java.util.List<TransferFlightRuleListChangeRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -7807,7 +7812,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String ptc;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_contents")
-        private java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents;
+        private java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -7844,7 +7849,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubContents
          */
-        public java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
+        public java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
             return this.refundSubContents;
         }
 
@@ -7858,7 +7863,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isStruct; 
             private String ptc; 
-            private java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
+            private java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
 
             /**
@@ -7883,7 +7888,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_contents.
              */
-            public Builder refundSubContents(java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
+            public Builder refundSubContents(java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
                 return this;
             }
@@ -7911,16 +7916,16 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class TransferFlightRuleListChangeRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
-        private java.util.List < TransferFlightRuleListChangeRuleItemExtraContents> extraContents;
+        private java.util.List<TransferFlightRuleListChangeRuleItemExtraContents> extraContents;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_items")
-        private java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItems> refundSubItems;
+        private java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItems> refundSubItems;
 
         @com.aliyun.core.annotation.NameInMap("sub_table_head")
-        private java.util.List < String > subTableHead;
+        private java.util.List<String> subTableHead;
 
         @com.aliyun.core.annotation.NameInMap("table_head")
         private String tableHead;
@@ -7952,7 +7957,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return extraContents
          */
-        public java.util.List < TransferFlightRuleListChangeRuleItemExtraContents> getExtraContents() {
+        public java.util.List<TransferFlightRuleListChangeRuleItemExtraContents> getExtraContents() {
             return this.extraContents;
         }
 
@@ -7966,14 +7971,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubItems
          */
-        public java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItems> getRefundSubItems() {
+        public java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItems> getRefundSubItems() {
             return this.refundSubItems;
         }
 
         /**
          * @return subTableHead
          */
-        public java.util.List < String > getSubTableHead() {
+        public java.util.List<String> getSubTableHead() {
             return this.subTableHead;
         }
 
@@ -7999,10 +8004,10 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TransferFlightRuleListChangeRuleItemExtraContents> extraContents; 
+            private java.util.List<TransferFlightRuleListChangeRuleItemExtraContents> extraContents; 
             private Integer index; 
-            private java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItems> refundSubItems; 
-            private java.util.List < String > subTableHead; 
+            private java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItems> refundSubItems; 
+            private java.util.List<String> subTableHead; 
             private String tableHead; 
             private String title; 
             private Integer type; 
@@ -8010,7 +8015,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_contents.
              */
-            public Builder extraContents(java.util.List < TransferFlightRuleListChangeRuleItemExtraContents> extraContents) {
+            public Builder extraContents(java.util.List<TransferFlightRuleListChangeRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
                 return this;
             }
@@ -8026,7 +8031,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_items.
              */
-            public Builder refundSubItems(java.util.List < TransferFlightRuleListChangeRuleItemRefundSubItems> refundSubItems) {
+            public Builder refundSubItems(java.util.List<TransferFlightRuleListChangeRuleItemRefundSubItems> refundSubItems) {
                 this.refundSubItems = refundSubItems;
                 return this;
             }
@@ -8034,7 +8039,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * sub_table_head.
              */
-            public Builder subTableHead(java.util.List < String > subTableHead) {
+            public Builder subTableHead(java.util.List<String> subTableHead) {
                 this.subTableHead = subTableHead;
                 return this;
             }
@@ -8228,7 +8233,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < TransferFlightRuleListRefundRuleInfo> info;
+        private java.util.List<TransferFlightRuleListRefundRuleInfo> info;
 
         private TransferFlightRuleListRefundRule(Builder builder) {
             this.able = builder.able;
@@ -8253,13 +8258,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < TransferFlightRuleListRefundRuleInfo> getInfo() {
+        public java.util.List<TransferFlightRuleListRefundRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < TransferFlightRuleListRefundRuleInfo> info; 
+            private java.util.List<TransferFlightRuleListRefundRuleInfo> info; 
 
             /**
              * able.
@@ -8272,7 +8277,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < TransferFlightRuleListRefundRuleInfo> info) {
+            public Builder info(java.util.List<TransferFlightRuleListRefundRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -8452,7 +8457,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String ptc;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_contents")
-        private java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents;
+        private java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -8489,7 +8494,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubContents
          */
-        public java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
+        public java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> getRefundSubContents() {
             return this.refundSubContents;
         }
 
@@ -8503,7 +8508,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isStruct; 
             private String ptc; 
-            private java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
+            private java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents; 
             private String title; 
 
             /**
@@ -8528,7 +8533,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_contents.
              */
-            public Builder refundSubContents(java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
+            public Builder refundSubContents(java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItemsRefundSubContents> refundSubContents) {
                 this.refundSubContents = refundSubContents;
                 return this;
             }
@@ -8556,16 +8561,16 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class TransferFlightRuleListRefundRuleItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("extra_contents")
-        private java.util.List < TransferFlightRuleListRefundRuleItemExtraContents> extraContents;
+        private java.util.List<TransferFlightRuleListRefundRuleItemExtraContents> extraContents;
 
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
         @com.aliyun.core.annotation.NameInMap("refund_sub_items")
-        private java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItems> refundSubItems;
+        private java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItems> refundSubItems;
 
         @com.aliyun.core.annotation.NameInMap("sub_table_head")
-        private java.util.List < String > subTableHead;
+        private java.util.List<String> subTableHead;
 
         @com.aliyun.core.annotation.NameInMap("table_head")
         private String tableHead;
@@ -8597,7 +8602,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return extraContents
          */
-        public java.util.List < TransferFlightRuleListRefundRuleItemExtraContents> getExtraContents() {
+        public java.util.List<TransferFlightRuleListRefundRuleItemExtraContents> getExtraContents() {
             return this.extraContents;
         }
 
@@ -8611,14 +8616,14 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return refundSubItems
          */
-        public java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItems> getRefundSubItems() {
+        public java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItems> getRefundSubItems() {
             return this.refundSubItems;
         }
 
         /**
          * @return subTableHead
          */
-        public java.util.List < String > getSubTableHead() {
+        public java.util.List<String> getSubTableHead() {
             return this.subTableHead;
         }
 
@@ -8644,10 +8649,10 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TransferFlightRuleListRefundRuleItemExtraContents> extraContents; 
+            private java.util.List<TransferFlightRuleListRefundRuleItemExtraContents> extraContents; 
             private Integer index; 
-            private java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItems> refundSubItems; 
-            private java.util.List < String > subTableHead; 
+            private java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItems> refundSubItems; 
+            private java.util.List<String> subTableHead; 
             private String tableHead; 
             private String title; 
             private Integer type; 
@@ -8655,7 +8660,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * extra_contents.
              */
-            public Builder extraContents(java.util.List < TransferFlightRuleListRefundRuleItemExtraContents> extraContents) {
+            public Builder extraContents(java.util.List<TransferFlightRuleListRefundRuleItemExtraContents> extraContents) {
                 this.extraContents = extraContents;
                 return this;
             }
@@ -8671,7 +8676,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * refund_sub_items.
              */
-            public Builder refundSubItems(java.util.List < TransferFlightRuleListRefundRuleItemRefundSubItems> refundSubItems) {
+            public Builder refundSubItems(java.util.List<TransferFlightRuleListRefundRuleItemRefundSubItems> refundSubItems) {
                 this.refundSubItems = refundSubItems;
                 return this;
             }
@@ -8679,7 +8684,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * sub_table_head.
              */
-            public Builder subTableHead(java.util.List < String > subTableHead) {
+            public Builder subTableHead(java.util.List<String> subTableHead) {
                 this.subTableHead = subTableHead;
                 return this;
             }
@@ -8873,7 +8878,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < TransferFlightRuleListSignRuleInfo> info;
+        private java.util.List<TransferFlightRuleListSignRuleInfo> info;
 
         private TransferFlightRuleListSignRule(Builder builder) {
             this.able = builder.able;
@@ -8898,13 +8903,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < TransferFlightRuleListSignRuleInfo> getInfo() {
+        public java.util.List<TransferFlightRuleListSignRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < TransferFlightRuleListSignRuleInfo> info; 
+            private java.util.List<TransferFlightRuleListSignRuleInfo> info; 
 
             /**
              * able.
@@ -8917,7 +8922,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < TransferFlightRuleListSignRuleInfo> info) {
+            public Builder info(java.util.List<TransferFlightRuleListSignRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -9087,7 +9092,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private Boolean able;
 
         @com.aliyun.core.annotation.NameInMap("info")
-        private java.util.List < TransferFlightRuleListUpgradeRuleInfo> info;
+        private java.util.List<TransferFlightRuleListUpgradeRuleInfo> info;
 
         private TransferFlightRuleListUpgradeRule(Builder builder) {
             this.able = builder.able;
@@ -9112,13 +9117,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < TransferFlightRuleListUpgradeRuleInfo> getInfo() {
+        public java.util.List<TransferFlightRuleListUpgradeRuleInfo> getInfo() {
             return this.info;
         }
 
         public static final class Builder {
             private Boolean able; 
-            private java.util.List < TransferFlightRuleListUpgradeRuleInfo> info; 
+            private java.util.List<TransferFlightRuleListUpgradeRuleInfo> info; 
 
             /**
              * able.
@@ -9131,7 +9136,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * info.
              */
-            public Builder info(java.util.List < TransferFlightRuleListUpgradeRuleInfo> info) {
+            public Builder info(java.util.List<TransferFlightRuleListUpgradeRuleInfo> info) {
                 this.info = info;
                 return this;
             }
@@ -9402,7 +9407,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String transferFlightNo;
 
         @com.aliyun.core.annotation.NameInMap("transfer_flight_rule_list")
-        private java.util.List < TransferFlightRuleList> transferFlightRuleList;
+        private java.util.List<TransferFlightRuleList> transferFlightRuleList;
 
         private TransferInfo(Builder builder) {
             this.flightSize = builder.flightSize;
@@ -9483,7 +9488,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return transferFlightRuleList
          */
-        public java.util.List < TransferFlightRuleList> getTransferFlightRuleList() {
+        public java.util.List<TransferFlightRuleList> getTransferFlightRuleList() {
             return this.transferFlightRuleList;
         }
 
@@ -9496,7 +9501,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private TransferDepAirportInfo transferDepAirportInfo; 
             private String transferDepDate; 
             private String transferFlightNo; 
-            private java.util.List < TransferFlightRuleList> transferFlightRuleList; 
+            private java.util.List<TransferFlightRuleList> transferFlightRuleList; 
 
             /**
              * flight_size.
@@ -9565,7 +9570,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * transfer_flight_rule_list.
              */
-            public Builder transferFlightRuleList(java.util.List < TransferFlightRuleList> transferFlightRuleList) {
+            public Builder transferFlightRuleList(java.util.List<TransferFlightRuleList> transferFlightRuleList) {
                 this.transferFlightRuleList = transferFlightRuleList;
                 return this;
             }
@@ -9606,7 +9611,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String cabinClass;
 
         @com.aliyun.core.annotation.NameInMap("cabin_info_list")
-        private java.util.List < CabinInfoList> cabinInfoList;
+        private java.util.List<CabinInfoList> cabinInfoList;
 
         @com.aliyun.core.annotation.NameInMap("carrier_airline")
         private String carrierAirline;
@@ -9633,7 +9638,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         private String flightNo;
 
         @com.aliyun.core.annotation.NameInMap("flight_rule_list")
-        private java.util.List < FlightListFlightRuleList> flightRuleList;
+        private java.util.List<FlightListFlightRuleList> flightRuleList;
 
         @com.aliyun.core.annotation.NameInMap("flight_rule_list_str")
         private String flightRuleListStr;
@@ -9819,7 +9824,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return cabinInfoList
          */
-        public java.util.List < CabinInfoList> getCabinInfoList() {
+        public java.util.List<CabinInfoList> getCabinInfoList() {
             return this.cabinInfoList;
         }
 
@@ -9882,7 +9887,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return flightRuleList
          */
-        public java.util.List < FlightListFlightRuleList> getFlightRuleList() {
+        public java.util.List<FlightListFlightRuleList> getFlightRuleList() {
             return this.flightRuleList;
         }
 
@@ -10076,7 +10081,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private Integer buildPrice; 
             private String cabin; 
             private String cabinClass; 
-            private java.util.List < CabinInfoList> cabinInfoList; 
+            private java.util.List<CabinInfoList> cabinInfoList; 
             private String carrierAirline; 
             private String carrierNo; 
             private String classRule; 
@@ -10085,7 +10090,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             private String depDate; 
             private Integer discount; 
             private String flightNo; 
-            private java.util.List < FlightListFlightRuleList> flightRuleList; 
+            private java.util.List<FlightListFlightRuleList> flightRuleList; 
             private String flightRuleListStr; 
             private String flightSize; 
             private String flightType; 
@@ -10172,7 +10177,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * cabin_info_list.
              */
-            public Builder cabinInfoList(java.util.List < CabinInfoList> cabinInfoList) {
+            public Builder cabinInfoList(java.util.List<CabinInfoList> cabinInfoList) {
                 this.cabinInfoList = cabinInfoList;
                 return this;
             }
@@ -10244,7 +10249,7 @@ public class FlightSearchListResponseBody extends TeaModel {
             /**
              * flight_rule_list.
              */
-            public Builder flightRuleList(java.util.List < FlightListFlightRuleList> flightRuleList) {
+            public Builder flightRuleList(java.util.List<FlightListFlightRuleList> flightRuleList) {
                 this.flightRuleList = flightRuleList;
                 return this;
             }
@@ -10472,7 +10477,7 @@ public class FlightSearchListResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_list")
-        private java.util.List < FlightList> flightList;
+        private java.util.List<FlightList> flightList;
 
         @com.aliyun.core.annotation.NameInMap("is_replace_pnr")
         private Boolean isReplacePnr;
@@ -10493,7 +10498,7 @@ public class FlightSearchListResponseBody extends TeaModel {
         /**
          * @return flightList
          */
-        public java.util.List < FlightList> getFlightList() {
+        public java.util.List<FlightList> getFlightList() {
             return this.flightList;
         }
 
@@ -10505,13 +10510,13 @@ public class FlightSearchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FlightList> flightList; 
+            private java.util.List<FlightList> flightList; 
             private Boolean isReplacePnr; 
 
             /**
              * flight_list.
              */
-            public Builder flightList(java.util.List < FlightList> flightList) {
+            public Builder flightList(java.util.List<FlightList> flightList) {
                 this.flightList = flightList;
                 return this;
             }

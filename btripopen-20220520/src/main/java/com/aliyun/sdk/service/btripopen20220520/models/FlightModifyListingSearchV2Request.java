@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class FlightModifyListingSearchV2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cabin_class")
-    private java.util.List < Integer > cabinClass;
+    private java.util.List<Integer> cabinClass;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dep_date")
-    private java.util.List < String > depDate;
+    private java.util.List<String> depDate;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("interface_caller_is_support_retry")
@@ -38,7 +43,7 @@ public class FlightModifyListingSearchV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("passenger_segment_relations")
-    private java.util.List < PassengerSegmentRelations> passengerSegmentRelations;
+    private java.util.List<PassengerSegmentRelations> passengerSegmentRelations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_mode")
@@ -50,7 +55,7 @@ public class FlightModifyListingSearchV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("selected_segments")
-    private java.util.List < SelectedSegments> selectedSegments;
+    private java.util.List<SelectedSegments> selectedSegments;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("session_id")
@@ -97,14 +102,14 @@ public class FlightModifyListingSearchV2Request extends Request {
     /**
      * @return cabinClass
      */
-    public java.util.List < Integer > getCabinClass() {
+    public java.util.List<Integer> getCabinClass() {
         return this.cabinClass;
     }
 
     /**
      * @return depDate
      */
-    public java.util.List < String > getDepDate() {
+    public java.util.List<String> getDepDate() {
         return this.depDate;
     }
 
@@ -139,7 +144,7 @@ public class FlightModifyListingSearchV2Request extends Request {
     /**
      * @return passengerSegmentRelations
      */
-    public java.util.List < PassengerSegmentRelations> getPassengerSegmentRelations() {
+    public java.util.List<PassengerSegmentRelations> getPassengerSegmentRelations() {
         return this.passengerSegmentRelations;
     }
 
@@ -160,7 +165,7 @@ public class FlightModifyListingSearchV2Request extends Request {
     /**
      * @return selectedSegments
      */
-    public java.util.List < SelectedSegments> getSelectedSegments() {
+    public java.util.List<SelectedSegments> getSelectedSegments() {
         return this.selectedSegments;
     }
 
@@ -186,16 +191,16 @@ public class FlightModifyListingSearchV2Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<FlightModifyListingSearchV2Request, Builder> {
-        private java.util.List < Integer > cabinClass; 
-        private java.util.List < String > depDate; 
+        private java.util.List<Integer> cabinClass; 
+        private java.util.List<String> depDate; 
         private Boolean interfaceCallerIsSupportRetry; 
         private String isvName; 
         private Long orderId; 
         private String outOrderId; 
-        private java.util.List < PassengerSegmentRelations> passengerSegmentRelations; 
+        private java.util.List<PassengerSegmentRelations> passengerSegmentRelations; 
         private Integer searchMode; 
         private String searchRetryToken; 
-        private java.util.List < SelectedSegments> selectedSegments; 
+        private java.util.List<SelectedSegments> selectedSegments; 
         private String sessionId; 
         private Boolean voluntary; 
         private String xAcsBtripCorpToken; 
@@ -224,7 +229,7 @@ public class FlightModifyListingSearchV2Request extends Request {
         /**
          * cabin_class.
          */
-        public Builder cabinClass(java.util.List < Integer > cabinClass) {
+        public Builder cabinClass(java.util.List<Integer> cabinClass) {
             String cabinClassShrink = shrink(cabinClass, "cabin_class", "json");
             this.putQueryParameter("cabin_class", cabinClassShrink);
             this.cabinClass = cabinClass;
@@ -234,7 +239,7 @@ public class FlightModifyListingSearchV2Request extends Request {
         /**
          * dep_date.
          */
-        public Builder depDate(java.util.List < String > depDate) {
+        public Builder depDate(java.util.List<String> depDate) {
             String depDateShrink = shrink(depDate, "dep_date", "json");
             this.putQueryParameter("dep_date", depDateShrink);
             this.depDate = depDate;
@@ -280,7 +285,7 @@ public class FlightModifyListingSearchV2Request extends Request {
         /**
          * passenger_segment_relations.
          */
-        public Builder passengerSegmentRelations(java.util.List < PassengerSegmentRelations> passengerSegmentRelations) {
+        public Builder passengerSegmentRelations(java.util.List<PassengerSegmentRelations> passengerSegmentRelations) {
             String passengerSegmentRelationsShrink = shrink(passengerSegmentRelations, "passenger_segment_relations", "json");
             this.putQueryParameter("passenger_segment_relations", passengerSegmentRelationsShrink);
             this.passengerSegmentRelations = passengerSegmentRelations;
@@ -308,7 +313,7 @@ public class FlightModifyListingSearchV2Request extends Request {
         /**
          * selected_segments.
          */
-        public Builder selectedSegments(java.util.List < SelectedSegments> selectedSegments) {
+        public Builder selectedSegments(java.util.List<SelectedSegments> selectedSegments) {
             String selectedSegmentsShrink = shrink(selectedSegments, "selected_segments", "json");
             this.putQueryParameter("selected_segments", selectedSegmentsShrink);
             this.selectedSegments = selectedSegments;
@@ -360,7 +365,7 @@ public class FlightModifyListingSearchV2Request extends Request {
         private String passengerId;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        private java.util.List<String> segmentIdList;
 
         private PassengerSegmentRelations(Builder builder) {
             this.passengerId = builder.passengerId;
@@ -385,13 +390,13 @@ public class FlightModifyListingSearchV2Request extends Request {
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
             private String passengerId; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * passenger_id.
@@ -404,7 +409,7 @@ public class FlightModifyListingSearchV2Request extends Request {
             /**
              * segment_id_list.
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }

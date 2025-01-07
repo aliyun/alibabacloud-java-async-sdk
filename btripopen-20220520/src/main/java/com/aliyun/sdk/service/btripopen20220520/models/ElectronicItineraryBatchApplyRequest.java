@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ElectronicItineraryBatchApplyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("apply_itinerary_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ApplyItineraryList> applyItineraryList;
+    private java.util.List<ApplyItineraryList> applyItineraryList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("can_reprint")
@@ -48,7 +53,7 @@ public class ElectronicItineraryBatchApplyRequest extends Request {
     /**
      * @return applyItineraryList
      */
-    public java.util.List < ApplyItineraryList> getApplyItineraryList() {
+    public java.util.List<ApplyItineraryList> getApplyItineraryList() {
         return this.applyItineraryList;
     }
 
@@ -67,7 +72,7 @@ public class ElectronicItineraryBatchApplyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ElectronicItineraryBatchApplyRequest, Builder> {
-        private java.util.List < ApplyItineraryList> applyItineraryList; 
+        private java.util.List<ApplyItineraryList> applyItineraryList; 
         private Boolean canReprint; 
         private String xAcsBtripSoCorpToken; 
 
@@ -85,7 +90,7 @@ public class ElectronicItineraryBatchApplyRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder applyItineraryList(java.util.List < ApplyItineraryList> applyItineraryList) {
+        public Builder applyItineraryList(java.util.List<ApplyItineraryList> applyItineraryList) {
             String applyItineraryListShrink = shrink(applyItineraryList, "apply_itinerary_list", "json");
             this.putBodyParameter("apply_itinerary_list", applyItineraryListShrink);
             this.applyItineraryList = applyItineraryList;

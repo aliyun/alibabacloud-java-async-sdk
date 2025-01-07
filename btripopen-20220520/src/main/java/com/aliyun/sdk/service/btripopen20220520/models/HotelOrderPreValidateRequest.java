@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class HotelOrderPreValidateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("daily_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DailyList> dailyList;
+    private java.util.List<DailyList> dailyList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("item_id")
@@ -43,7 +48,7 @@ public class HotelOrderPreValidateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("occupant_info_list")
-    private java.util.List < OccupantInfoList> occupantInfoList;
+    private java.util.List<OccupantInfoList> occupantInfoList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("rate_plan_id")
@@ -134,7 +139,7 @@ public class HotelOrderPreValidateRequest extends Request {
     /**
      * @return dailyList
      */
-    public java.util.List < DailyList> getDailyList() {
+    public java.util.List<DailyList> getDailyList() {
         return this.dailyList;
     }
 
@@ -155,7 +160,7 @@ public class HotelOrderPreValidateRequest extends Request {
     /**
      * @return occupantInfoList
      */
-    public java.util.List < OccupantInfoList> getOccupantInfoList() {
+    public java.util.List<OccupantInfoList> getOccupantInfoList() {
         return this.occupantInfoList;
     }
 
@@ -212,10 +217,10 @@ public class HotelOrderPreValidateRequest extends Request {
         private String btripUserId; 
         private String checkIn; 
         private String checkOut; 
-        private java.util.List < DailyList> dailyList; 
+        private java.util.List<DailyList> dailyList; 
         private Long itemId; 
         private Integer numberOfAdultsPerRoom; 
-        private java.util.List < OccupantInfoList> occupantInfoList; 
+        private java.util.List<OccupantInfoList> occupantInfoList; 
         private Long ratePlanId; 
         private Long roomId; 
         private Integer roomNum; 
@@ -285,7 +290,7 @@ public class HotelOrderPreValidateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder dailyList(java.util.List < DailyList> dailyList) {
+        public Builder dailyList(java.util.List<DailyList> dailyList) {
             String dailyListShrink = shrink(dailyList, "daily_list", "json");
             this.putQueryParameter("daily_list", dailyListShrink);
             this.dailyList = dailyList;
@@ -316,7 +321,7 @@ public class HotelOrderPreValidateRequest extends Request {
         /**
          * occupant_info_list.
          */
-        public Builder occupantInfoList(java.util.List < OccupantInfoList> occupantInfoList) {
+        public Builder occupantInfoList(java.util.List<OccupantInfoList> occupantInfoList) {
             String occupantInfoListShrink = shrink(occupantInfoList, "occupant_info_list", "json");
             this.putQueryParameter("occupant_info_list", occupantInfoListShrink);
             this.occupantInfoList = occupantInfoList;

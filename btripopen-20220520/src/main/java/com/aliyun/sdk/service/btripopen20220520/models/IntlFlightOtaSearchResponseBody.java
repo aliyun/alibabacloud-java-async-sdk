@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -712,7 +717,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private String stopCityName;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_names")
-        private java.util.List < String > stopCityNames;
+        private java.util.List<String> stopCityNames;
 
         @com.aliyun.core.annotation.NameInMap("stop_dep_term")
         private String stopDepTerm;
@@ -789,7 +794,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return stopCityNames
          */
-        public java.util.List < String > getStopCityNames() {
+        public java.util.List<String> getStopCityNames() {
             return this.stopCityNames;
         }
 
@@ -821,7 +826,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             private String stopArrTime; 
             private String stopCityCode; 
             private String stopCityName; 
-            private java.util.List < String > stopCityNames; 
+            private java.util.List<String> stopCityNames; 
             private String stopDepTerm; 
             private String stopDepTime; 
             private String stopTime; 
@@ -877,7 +882,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * stop_city_names.
              */
-            public Builder stopCityNames(java.util.List < String > stopCityNames) {
+            public Builder stopCityNames(java.util.List<String> stopCityNames) {
                 this.stopCityNames = stopCityNames;
                 return this;
             }
@@ -994,10 +999,10 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private Integer depCityVisaType;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_visa_remarks")
-        private java.util.List < String > stopCityVisaRemarks;
+        private java.util.List<String> stopCityVisaRemarks;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_visa_types")
-        private java.util.List < Integer > stopCityVisaTypes;
+        private java.util.List<Integer> stopCityVisaTypes;
 
         private SegmentVisaRemark(Builder builder) {
             this.depCityVisaRemark = builder.depCityVisaRemark;
@@ -1031,22 +1036,22 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return stopCityVisaRemarks
          */
-        public java.util.List < String > getStopCityVisaRemarks() {
+        public java.util.List<String> getStopCityVisaRemarks() {
             return this.stopCityVisaRemarks;
         }
 
         /**
          * @return stopCityVisaTypes
          */
-        public java.util.List < Integer > getStopCityVisaTypes() {
+        public java.util.List<Integer> getStopCityVisaTypes() {
             return this.stopCityVisaTypes;
         }
 
         public static final class Builder {
             private String depCityVisaRemark; 
             private Integer depCityVisaType; 
-            private java.util.List < String > stopCityVisaRemarks; 
-            private java.util.List < Integer > stopCityVisaTypes; 
+            private java.util.List<String> stopCityVisaRemarks; 
+            private java.util.List<Integer> stopCityVisaTypes; 
 
             /**
              * dep_city_visa_remark.
@@ -1067,7 +1072,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * stop_city_visa_remarks.
              */
-            public Builder stopCityVisaRemarks(java.util.List < String > stopCityVisaRemarks) {
+            public Builder stopCityVisaRemarks(java.util.List<String> stopCityVisaRemarks) {
                 this.stopCityVisaRemarks = stopCityVisaRemarks;
                 return this;
             }
@@ -1075,7 +1080,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * stop_city_visa_types.
              */
-            public Builder stopCityVisaTypes(java.util.List < Integer > stopCityVisaTypes) {
+            public Builder stopCityVisaTypes(java.util.List<Integer> stopCityVisaTypes) {
                 this.stopCityVisaTypes = stopCityVisaTypes;
                 return this;
             }
@@ -1783,7 +1788,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private Integer duration;
 
         @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
-        private java.util.List < FlightSegmentInfos> flightSegmentInfos;
+        private java.util.List<FlightSegmentInfos> flightSegmentInfos;
 
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
@@ -1864,7 +1869,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return flightSegmentInfos
          */
-        public java.util.List < FlightSegmentInfos> getFlightSegmentInfos() {
+        public java.util.List<FlightSegmentInfos> getFlightSegmentInfos() {
             return this.flightSegmentInfos;
         }
 
@@ -1890,7 +1895,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             private String depCityName; 
             private String depTime; 
             private Integer duration; 
-            private java.util.List < FlightSegmentInfos> flightSegmentInfos; 
+            private java.util.List<FlightSegmentInfos> flightSegmentInfos; 
             private Integer journeyIndex; 
             private Integer transferTime; 
 
@@ -1953,7 +1958,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * flight_segment_infos.
              */
-            public Builder flightSegmentInfos(java.util.List < FlightSegmentInfos> flightSegmentInfos) {
+            public Builder flightSegmentInfos(java.util.List<FlightSegmentInfos> flightSegmentInfos) {
                 this.flightSegmentInfos = flightSegmentInfos;
                 return this;
             }
@@ -2193,7 +2198,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private String baggageDigest;
 
         @com.aliyun.core.annotation.NameInMap("baggage_info_map")
-        private java.util.Map < String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
+        private java.util.Map<String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("structured_baggage")
         private Boolean structuredBaggage;
@@ -2222,7 +2227,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return baggageInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> getBaggageInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> getBaggageInfoMap() {
             return this.baggageInfoMap;
         }
 
@@ -2235,7 +2240,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
 
         public static final class Builder {
             private String baggageDigest; 
-            private java.util.Map < String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
             private Boolean structuredBaggage; 
 
             /**
@@ -2249,7 +2254,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * baggage_info_map.
              */
-            public Builder baggageInfoMap(java.util.Map < String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap) {
+            public Builder baggageInfoMap(java.util.Map<String, java.util.List<ModuleItemListSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap) {
                 this.baggageInfoMap = baggageInfoMap;
                 return this;
             }
@@ -2283,7 +2288,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private Boolean changeFeeInd;
 
         @com.aliyun.core.annotation.NameInMap("offer_penalty_info_map")
-        private java.util.Map < String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
+        private java.util.Map<String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("refund_change_digest")
         private String refundChangeDigest;
@@ -2324,7 +2329,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return offerPenaltyInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> getOfferPenaltyInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> getOfferPenaltyInfoMap() {
             return this.offerPenaltyInfoMap;
         }
 
@@ -2345,7 +2350,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean cancelFeeInd; 
             private Boolean changeFeeInd; 
-            private java.util.Map < String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
             private String refundChangeDigest; 
             private Boolean structuredRefund; 
 
@@ -2368,7 +2373,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * offer_penalty_info_map.
              */
-            public Builder offerPenaltyInfoMap(java.util.Map < String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap) {
+            public Builder offerPenaltyInfoMap(java.util.Map<String, java.util.List<ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap) {
                 this.offerPenaltyInfoMap = offerPenaltyInfoMap;
                 return this;
             }
@@ -2410,10 +2415,10 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private RefundChangeRule refundChangeRule;
 
         @com.aliyun.core.annotation.NameInMap("segment_keys")
-        private java.util.List < String > segmentKeys;
+        private java.util.List<String> segmentKeys;
 
         @com.aliyun.core.annotation.NameInMap("shopping_item_map")
-        private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValue > shoppingItemMap;
+        private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValue> shoppingItemMap;
 
         @com.aliyun.core.annotation.NameInMap("uniq_key")
         private String uniqKey;
@@ -2451,14 +2456,14 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return segmentKeys
          */
-        public java.util.List < String > getSegmentKeys() {
+        public java.util.List<String> getSegmentKeys() {
             return this.segmentKeys;
         }
 
         /**
          * @return shoppingItemMap
          */
-        public java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValue > getShoppingItemMap() {
+        public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValue> getShoppingItemMap() {
             return this.shoppingItemMap;
         }
 
@@ -2472,8 +2477,8 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         public static final class Builder {
             private BaggageRule baggageRule; 
             private RefundChangeRule refundChangeRule; 
-            private java.util.List < String > segmentKeys; 
-            private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValue > shoppingItemMap; 
+            private java.util.List<String> segmentKeys; 
+            private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValue> shoppingItemMap; 
             private String uniqKey; 
 
             /**
@@ -2495,7 +2500,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * segment_keys.
              */
-            public Builder segmentKeys(java.util.List < String > segmentKeys) {
+            public Builder segmentKeys(java.util.List<String> segmentKeys) {
                 this.segmentKeys = segmentKeys;
                 return this;
             }
@@ -2503,7 +2508,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * shopping_item_map.
              */
-            public Builder shoppingItemMap(java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValue > shoppingItemMap) {
+            public Builder shoppingItemMap(java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValue> shoppingItemMap) {
                 this.shoppingItemMap = shoppingItemMap;
                 return this;
             }
@@ -2531,10 +2536,10 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
      */
     public static class ItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
-        private java.util.List < String > agreementPriceCodes;
+        private java.util.List<String> agreementPriceCodes;
 
         @com.aliyun.core.annotation.NameInMap("flight_rule_info_list")
-        private java.util.List < FlightRuleInfoList> flightRuleInfoList;
+        private java.util.List<FlightRuleInfoList> flightRuleInfoList;
 
         @com.aliyun.core.annotation.NameInMap("item_id")
         private String itemId;
@@ -2543,13 +2548,13 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         private String itemType;
 
         @com.aliyun.core.annotation.NameInMap("shopping_item_map")
-        private java.util.Map < String, ModuleItemListShoppingItemMapValue > shoppingItemMap;
+        private java.util.Map<String, ModuleItemListShoppingItemMapValue> shoppingItemMap;
 
         @com.aliyun.core.annotation.NameInMap("sub_item_position_map")
-        private java.util.Map < String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap;
+        private java.util.Map<String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap;
 
         @com.aliyun.core.annotation.NameInMap("sub_items")
-        private java.util.List < SubItems> subItems;
+        private java.util.List<SubItems> subItems;
 
         private ItemList(Builder builder) {
             this.agreementPriceCodes = builder.agreementPriceCodes;
@@ -2572,14 +2577,14 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return agreementPriceCodes
          */
-        public java.util.List < String > getAgreementPriceCodes() {
+        public java.util.List<String> getAgreementPriceCodes() {
             return this.agreementPriceCodes;
         }
 
         /**
          * @return flightRuleInfoList
          */
-        public java.util.List < FlightRuleInfoList> getFlightRuleInfoList() {
+        public java.util.List<FlightRuleInfoList> getFlightRuleInfoList() {
             return this.flightRuleInfoList;
         }
 
@@ -2600,37 +2605,37 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return shoppingItemMap
          */
-        public java.util.Map < String, ModuleItemListShoppingItemMapValue > getShoppingItemMap() {
+        public java.util.Map<String, ModuleItemListShoppingItemMapValue> getShoppingItemMap() {
             return this.shoppingItemMap;
         }
 
         /**
          * @return subItemPositionMap
          */
-        public java.util.Map < String, java.util.List<ModuleItemListSubItemPositionMapValue>> getSubItemPositionMap() {
+        public java.util.Map<String, java.util.List<ModuleItemListSubItemPositionMapValue>> getSubItemPositionMap() {
             return this.subItemPositionMap;
         }
 
         /**
          * @return subItems
          */
-        public java.util.List < SubItems> getSubItems() {
+        public java.util.List<SubItems> getSubItems() {
             return this.subItems;
         }
 
         public static final class Builder {
-            private java.util.List < String > agreementPriceCodes; 
-            private java.util.List < FlightRuleInfoList> flightRuleInfoList; 
+            private java.util.List<String> agreementPriceCodes; 
+            private java.util.List<FlightRuleInfoList> flightRuleInfoList; 
             private String itemId; 
             private String itemType; 
-            private java.util.Map < String, ModuleItemListShoppingItemMapValue > shoppingItemMap; 
-            private java.util.Map < String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap; 
-            private java.util.List < SubItems> subItems; 
+            private java.util.Map<String, ModuleItemListShoppingItemMapValue> shoppingItemMap; 
+            private java.util.Map<String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap; 
+            private java.util.List<SubItems> subItems; 
 
             /**
              * agreement_price_codes.
              */
-            public Builder agreementPriceCodes(java.util.List < String > agreementPriceCodes) {
+            public Builder agreementPriceCodes(java.util.List<String> agreementPriceCodes) {
                 this.agreementPriceCodes = agreementPriceCodes;
                 return this;
             }
@@ -2638,7 +2643,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * flight_rule_info_list.
              */
-            public Builder flightRuleInfoList(java.util.List < FlightRuleInfoList> flightRuleInfoList) {
+            public Builder flightRuleInfoList(java.util.List<FlightRuleInfoList> flightRuleInfoList) {
                 this.flightRuleInfoList = flightRuleInfoList;
                 return this;
             }
@@ -2662,7 +2667,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * shopping_item_map.
              */
-            public Builder shoppingItemMap(java.util.Map < String, ModuleItemListShoppingItemMapValue > shoppingItemMap) {
+            public Builder shoppingItemMap(java.util.Map<String, ModuleItemListShoppingItemMapValue> shoppingItemMap) {
                 this.shoppingItemMap = shoppingItemMap;
                 return this;
             }
@@ -2670,7 +2675,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * sub_item_position_map.
              */
-            public Builder subItemPositionMap(java.util.Map < String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap) {
+            public Builder subItemPositionMap(java.util.Map<String, java.util.List<ModuleItemListSubItemPositionMapValue>> subItemPositionMap) {
                 this.subItemPositionMap = subItemPositionMap;
                 return this;
             }
@@ -2678,7 +2683,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * sub_items.
              */
-            public Builder subItems(java.util.List < SubItems> subItems) {
+            public Builder subItems(java.util.List<SubItems> subItems) {
                 this.subItems = subItems;
                 return this;
             }
@@ -2698,10 +2703,10 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_journey_infos")
-        private java.util.List < FlightJourneyInfos> flightJourneyInfos;
+        private java.util.List<FlightJourneyInfos> flightJourneyInfos;
 
         @com.aliyun.core.annotation.NameInMap("item_list")
-        private java.util.List < ItemList> itemList;
+        private java.util.List<ItemList> itemList;
 
         private Module(Builder builder) {
             this.flightJourneyInfos = builder.flightJourneyInfos;
@@ -2719,25 +2724,25 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
         /**
          * @return flightJourneyInfos
          */
-        public java.util.List < FlightJourneyInfos> getFlightJourneyInfos() {
+        public java.util.List<FlightJourneyInfos> getFlightJourneyInfos() {
             return this.flightJourneyInfos;
         }
 
         /**
          * @return itemList
          */
-        public java.util.List < ItemList> getItemList() {
+        public java.util.List<ItemList> getItemList() {
             return this.itemList;
         }
 
         public static final class Builder {
-            private java.util.List < FlightJourneyInfos> flightJourneyInfos; 
-            private java.util.List < ItemList> itemList; 
+            private java.util.List<FlightJourneyInfos> flightJourneyInfos; 
+            private java.util.List<ItemList> itemList; 
 
             /**
              * flight_journey_infos.
              */
-            public Builder flightJourneyInfos(java.util.List < FlightJourneyInfos> flightJourneyInfos) {
+            public Builder flightJourneyInfos(java.util.List<FlightJourneyInfos> flightJourneyInfos) {
                 this.flightJourneyInfos = flightJourneyInfos;
                 return this;
             }
@@ -2745,7 +2750,7 @@ public class IntlFlightOtaSearchResponseBody extends TeaModel {
             /**
              * item_list.
              */
-            public Builder itemList(java.util.List < ItemList> itemList) {
+            public Builder itemList(java.util.List<ItemList> itemList) {
                 this.itemList = itemList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -411,7 +416,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         private Object newSegment;
 
         @com.aliyun.core.annotation.NameInMap("passenger_names")
-        private java.util.List < String > passengerNames;
+        private java.util.List<String> passengerNames;
 
         private FlightChange(Builder builder) {
             this.changeDesc = builder.changeDesc;
@@ -460,7 +465,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return passengerNames
          */
-        public java.util.List < String > getPassengerNames() {
+        public java.util.List<String> getPassengerNames() {
             return this.passengerNames;
         }
 
@@ -469,7 +474,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String changeStatus; 
             private String changeStatusCode; 
             private Object newSegment; 
-            private java.util.List < String > passengerNames; 
+            private java.util.List<String> passengerNames; 
 
             /**
              * change_desc.
@@ -506,7 +511,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             /**
              * passenger_names.
              */
-            public Builder passengerNames(java.util.List < String > passengerNames) {
+            public Builder passengerNames(java.util.List<String> passengerNames) {
                 this.passengerNames = passengerNames;
                 return this;
             }
@@ -1362,7 +1367,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         private Integer gender;
 
         @com.aliyun.core.annotation.NameInMap("origin_ticket_nos")
-        private java.util.List < String > originTicketNos;
+        private java.util.List<String> originTicketNos;
 
         @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
@@ -1380,7 +1385,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         private Long pid;
 
         @com.aliyun.core.annotation.NameInMap("ticket_nos")
-        private java.util.List < String > ticketNos;
+        private java.util.List<String> ticketNos;
 
         private TravelerInfoDTOS(Builder builder) {
             this.birthDate = builder.birthDate;
@@ -1443,7 +1448,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return originTicketNos
          */
-        public java.util.List < String > getOriginTicketNos() {
+        public java.util.List<String> getOriginTicketNos() {
             return this.originTicketNos;
         }
 
@@ -1485,7 +1490,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return ticketNos
          */
-        public java.util.List < String > getTicketNos() {
+        public java.util.List<String> getTicketNos() {
             return this.ticketNos;
         }
 
@@ -1495,13 +1500,13 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private Integer certType; 
             private ChangeFee changeFee; 
             private Integer gender; 
-            private java.util.List < String > originTicketNos; 
+            private java.util.List<String> originTicketNos; 
             private String passengerId; 
             private String passengerName; 
             private Integer passengerType; 
             private String phone; 
             private Long pid; 
-            private java.util.List < String > ticketNos; 
+            private java.util.List<String> ticketNos; 
 
             /**
              * birth_date.
@@ -1546,7 +1551,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             /**
              * origin_ticket_nos.
              */
-            public Builder originTicketNos(java.util.List < String > originTicketNos) {
+            public Builder originTicketNos(java.util.List<String> originTicketNos) {
                 this.originTicketNos = originTicketNos;
                 return this;
             }
@@ -1594,7 +1599,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             /**
              * ticket_nos.
              */
-            public Builder ticketNos(java.util.List < String > ticketNos) {
+            public Builder ticketNos(java.util.List<String> ticketNos) {
                 this.ticketNos = ticketNos;
                 return this;
             }
@@ -1635,7 +1640,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         private ContactInfoDTO contactInfoDTO;
 
         @com.aliyun.core.annotation.NameInMap("dest_flight_info_d_t_o_s")
-        private java.util.List < DestFlightInfoDTOS> destFlightInfoDTOS;
+        private java.util.List<DestFlightInfoDTOS> destFlightInfoDTOS;
 
         @com.aliyun.core.annotation.NameInMap("last_pay_time")
         private String lastPayTime;
@@ -1671,7 +1676,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         private Long totalServiceFeePrice;
 
         @com.aliyun.core.annotation.NameInMap("traveler_info_d_t_o_s")
-        private java.util.List < TravelerInfoDTOS> travelerInfoDTOS;
+        private java.util.List<TravelerInfoDTOS> travelerInfoDTOS;
 
         private Module(Builder builder) {
             this.applyTime = builder.applyTime;
@@ -1756,7 +1761,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return destFlightInfoDTOS
          */
-        public java.util.List < DestFlightInfoDTOS> getDestFlightInfoDTOS() {
+        public java.util.List<DestFlightInfoDTOS> getDestFlightInfoDTOS() {
             return this.destFlightInfoDTOS;
         }
 
@@ -1840,7 +1845,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return travelerInfoDTOS
          */
-        public java.util.List < TravelerInfoDTOS> getTravelerInfoDTOS() {
+        public java.util.List<TravelerInfoDTOS> getTravelerInfoDTOS() {
             return this.travelerInfoDTOS;
         }
 
@@ -1852,7 +1857,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String bookuserPhone; 
             private String changeFailReason; 
             private ContactInfoDTO contactInfoDTO; 
-            private java.util.List < DestFlightInfoDTOS> destFlightInfoDTOS; 
+            private java.util.List<DestFlightInfoDTOS> destFlightInfoDTOS; 
             private String lastPayTime; 
             private Long orderId; 
             private String outOrderId; 
@@ -1864,7 +1869,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String ticketTime; 
             private Long totalPrice; 
             private Long totalServiceFeePrice; 
-            private java.util.List < TravelerInfoDTOS> travelerInfoDTOS; 
+            private java.util.List<TravelerInfoDTOS> travelerInfoDTOS; 
 
             /**
              * apply_time.
@@ -1925,7 +1930,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             /**
              * dest_flight_info_d_t_o_s.
              */
-            public Builder destFlightInfoDTOS(java.util.List < DestFlightInfoDTOS> destFlightInfoDTOS) {
+            public Builder destFlightInfoDTOS(java.util.List<DestFlightInfoDTOS> destFlightInfoDTOS) {
                 this.destFlightInfoDTOS = destFlightInfoDTOS;
                 return this;
             }
@@ -2021,7 +2026,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             /**
              * traveler_info_d_t_o_s.
              */
-            public Builder travelerInfoDTOS(java.util.List < TravelerInfoDTOS> travelerInfoDTOS) {
+            public Builder travelerInfoDTOS(java.util.List<TravelerInfoDTOS> travelerInfoDTOS) {
                 this.travelerInfoDTOS = travelerInfoDTOS;
                 return this;
             }

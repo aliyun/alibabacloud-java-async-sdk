@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class GroupDepartSaveRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sub_corp_id_list")
-    private java.util.List < String > subCorpIdList;
+    private java.util.List<String> subCorpIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sync_group")
@@ -110,7 +115,7 @@ public class GroupDepartSaveRequest extends Request {
     /**
      * @return subCorpIdList
      */
-    public java.util.List < String > getSubCorpIdList() {
+    public java.util.List<String> getSubCorpIdList() {
         return this.subCorpIdList;
     }
 
@@ -134,7 +139,7 @@ public class GroupDepartSaveRequest extends Request {
         private String outerDeptId; 
         private String outerDeptPid; 
         private Integer status; 
-        private java.util.List < String > subCorpIdList; 
+        private java.util.List<String> subCorpIdList; 
         private Boolean syncGroup; 
         private String xAcsBtripCorpToken; 
 
@@ -208,7 +213,7 @@ public class GroupDepartSaveRequest extends Request {
         /**
          * sub_corp_id_list.
          */
-        public Builder subCorpIdList(java.util.List < String > subCorpIdList) {
+        public Builder subCorpIdList(java.util.List<String> subCorpIdList) {
             String subCorpIdListShrink = shrink(subCorpIdList, "sub_corp_id_list", "json");
             this.putBodyParameter("sub_corp_id_list", subCorpIdListShrink);
             this.subCorpIdList = subCorpIdList;

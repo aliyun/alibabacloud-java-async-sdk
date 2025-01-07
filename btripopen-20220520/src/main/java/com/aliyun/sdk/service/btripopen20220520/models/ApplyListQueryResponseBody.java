@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module_list")
-    private java.util.List < ModuleList> moduleList;
+    private java.util.List<ModuleList> moduleList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
     /**
      * @return moduleList
      */
-    public java.util.List < ModuleList> getModuleList() {
+    public java.util.List<ModuleList> getModuleList() {
         return this.moduleList;
     }
 
@@ -92,7 +97,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < ModuleList> moduleList; 
+        private java.util.List<ModuleList> moduleList; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * module_list.
          */
-        public Builder moduleList(java.util.List < ModuleList> moduleList) {
+        public Builder moduleList(java.util.List<ModuleList> moduleList) {
             this.moduleList = moduleList;
             return this;
         }
@@ -1284,7 +1289,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String attribute;
 
         @com.aliyun.core.annotation.NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        private java.util.List<CarCitySet> carCitySet;
 
         @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
@@ -1349,7 +1354,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
         }
 
@@ -1425,7 +1430,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String attribute; 
-            private java.util.List < CarCitySet> carCitySet; 
+            private java.util.List<CarCitySet> carCitySet; 
             private String costCenterName; 
             private String departId; 
             private String invoiceName; 
@@ -1448,7 +1453,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
                 return this;
             }
@@ -1551,7 +1556,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String applyShowId;
 
         @com.aliyun.core.annotation.NameInMap("approver_list")
-        private java.util.List < ApproverList> approverList;
+        private java.util.List<ApproverList> approverList;
 
         @com.aliyun.core.annotation.NameInMap("car_rule")
         private CarRule carRule;
@@ -1569,7 +1574,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String departName;
 
         @com.aliyun.core.annotation.NameInMap("external_traveler_list")
-        private java.util.List < ExternalTravelerList> externalTravelerList;
+        private java.util.List<ExternalTravelerList> externalTravelerList;
 
         @com.aliyun.core.annotation.NameInMap("flow_code")
         private String flowCode;
@@ -1584,13 +1589,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_list")
-        private java.util.List < ItineraryList> itineraryList;
+        private java.util.List<ItineraryList> itineraryList;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_rule")
         private Integer itineraryRule;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_set_list")
-        private java.util.List < ItinerarySetList> itinerarySetList;
+        private java.util.List<ItinerarySetList> itinerarySetList;
 
         @com.aliyun.core.annotation.NameInMap("job_no")
         private String jobNo;
@@ -1614,7 +1619,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String thirdpartId;
 
         @com.aliyun.core.annotation.NameInMap("traveler_list")
-        private java.util.List < TravelerList> travelerList;
+        private java.util.List<TravelerList> travelerList;
 
         @com.aliyun.core.annotation.NameInMap("trip_cause")
         private String tripCause;
@@ -1688,7 +1693,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return approverList
          */
-        public java.util.List < ApproverList> getApproverList() {
+        public java.util.List<ApproverList> getApproverList() {
             return this.approverList;
         }
 
@@ -1730,7 +1735,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return externalTravelerList
          */
-        public java.util.List < ExternalTravelerList> getExternalTravelerList() {
+        public java.util.List<ExternalTravelerList> getExternalTravelerList() {
             return this.externalTravelerList;
         }
 
@@ -1765,7 +1770,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return itineraryList
          */
-        public java.util.List < ItineraryList> getItineraryList() {
+        public java.util.List<ItineraryList> getItineraryList() {
             return this.itineraryList;
         }
 
@@ -1779,7 +1784,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return itinerarySetList
          */
-        public java.util.List < ItinerarySetList> getItinerarySetList() {
+        public java.util.List<ItinerarySetList> getItinerarySetList() {
             return this.itinerarySetList;
         }
 
@@ -1835,7 +1840,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         /**
          * @return travelerList
          */
-        public java.util.List < TravelerList> getTravelerList() {
+        public java.util.List<TravelerList> getTravelerList() {
             return this.travelerList;
         }
 
@@ -1890,20 +1895,20 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applyShowId; 
-            private java.util.List < ApproverList> approverList; 
+            private java.util.List<ApproverList> approverList; 
             private CarRule carRule; 
             private String corpId; 
             private String corpName; 
             private String departId; 
             private String departName; 
-            private java.util.List < ExternalTravelerList> externalTravelerList; 
+            private java.util.List<ExternalTravelerList> externalTravelerList; 
             private String flowCode; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
-            private java.util.List < ItineraryList> itineraryList; 
+            private java.util.List<ItineraryList> itineraryList; 
             private Integer itineraryRule; 
-            private java.util.List < ItinerarySetList> itinerarySetList; 
+            private java.util.List<ItinerarySetList> itinerarySetList; 
             private String jobNo; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1911,7 +1916,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String statusDesc; 
             private String thirdpartBusinessId; 
             private String thirdpartId; 
-            private java.util.List < TravelerList> travelerList; 
+            private java.util.List<TravelerList> travelerList; 
             private String tripCause; 
             private Integer tripDay; 
             private String tripTitle; 
@@ -1931,7 +1936,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * approver_list.
              */
-            public Builder approverList(java.util.List < ApproverList> approverList) {
+            public Builder approverList(java.util.List<ApproverList> approverList) {
                 this.approverList = approverList;
                 return this;
             }
@@ -1979,7 +1984,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * external_traveler_list.
              */
-            public Builder externalTravelerList(java.util.List < ExternalTravelerList> externalTravelerList) {
+            public Builder externalTravelerList(java.util.List<ExternalTravelerList> externalTravelerList) {
                 this.externalTravelerList = externalTravelerList;
                 return this;
             }
@@ -2019,7 +2024,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * itinerary_list.
              */
-            public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
+            public Builder itineraryList(java.util.List<ItineraryList> itineraryList) {
                 this.itineraryList = itineraryList;
                 return this;
             }
@@ -2035,7 +2040,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * itinerary_set_list.
              */
-            public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
+            public Builder itinerarySetList(java.util.List<ItinerarySetList> itinerarySetList) {
                 this.itinerarySetList = itinerarySetList;
                 return this;
             }
@@ -2099,7 +2104,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             /**
              * traveler_list.
              */
-            public Builder travelerList(java.util.List < TravelerList> travelerList) {
+            public Builder travelerList(java.util.List<TravelerList> travelerList) {
                 this.travelerList = travelerList;
                 return this;
             }

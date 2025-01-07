@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class ApplyInvoiceTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("invoice_task_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < InvoiceTaskList> invoiceTaskList;
+    private java.util.List<InvoiceTaskList> invoiceTaskList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
@@ -56,7 +61,7 @@ public class ApplyInvoiceTaskRequest extends Request {
     /**
      * @return invoiceTaskList
      */
-    public java.util.List < InvoiceTaskList> getInvoiceTaskList() {
+    public java.util.List<InvoiceTaskList> getInvoiceTaskList() {
         return this.invoiceTaskList;
     }
 
@@ -69,7 +74,7 @@ public class ApplyInvoiceTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApplyInvoiceTaskRequest, Builder> {
         private String billDate; 
-        private java.util.List < InvoiceTaskList> invoiceTaskList; 
+        private java.util.List<InvoiceTaskList> invoiceTaskList; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class ApplyInvoiceTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder invoiceTaskList(java.util.List < InvoiceTaskList> invoiceTaskList) {
+        public Builder invoiceTaskList(java.util.List<InvoiceTaskList> invoiceTaskList) {
             String invoiceTaskListShrink = shrink(invoiceTaskList, "invoice_task_list", "json");
             this.putBodyParameter("invoice_task_list", invoiceTaskListShrink);
             this.invoiceTaskList = invoiceTaskList;

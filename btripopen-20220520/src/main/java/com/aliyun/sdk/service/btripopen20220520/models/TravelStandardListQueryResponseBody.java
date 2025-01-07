@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,7 +167,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
      */
     public static class MainReserveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("open_service_type_list")
-        private java.util.List < String > openServiceTypeList;
+        private java.util.List<String> openServiceTypeList;
 
         @com.aliyun.core.annotation.NameInMap("rule_code")
         private Long ruleCode;
@@ -195,7 +200,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         /**
          * @return openServiceTypeList
          */
-        public java.util.List < String > getOpenServiceTypeList() {
+        public java.util.List<String> getOpenServiceTypeList() {
             return this.openServiceTypeList;
         }
 
@@ -228,7 +233,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > openServiceTypeList; 
+            private java.util.List<String> openServiceTypeList; 
             private Long ruleCode; 
             private String ruleDesc; 
             private Long ruleId; 
@@ -237,7 +242,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
             /**
              * open_service_type_list.
              */
-            public Builder openServiceTypeList(java.util.List < String > openServiceTypeList) {
+            public Builder openServiceTypeList(java.util.List<String> openServiceTypeList) {
                 this.openServiceTypeList = openServiceTypeList;
                 return this;
             }
@@ -356,7 +361,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
      */
     public static class ReserveRuleDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data_list")
-        private java.util.List < DataList> dataList;
+        private java.util.List<DataList> dataList;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
@@ -381,7 +386,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         /**
          * @return dataList
          */
-        public java.util.List < DataList> getDataList() {
+        public java.util.List<DataList> getDataList() {
             return this.dataList;
         }
 
@@ -400,14 +405,14 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataList> dataList; 
+            private java.util.List<DataList> dataList; 
             private String title; 
             private String type; 
 
             /**
              * data_list.
              */
-            public Builder dataList(java.util.List < DataList> dataList) {
+            public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
                 return this;
             }
@@ -446,7 +451,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         private MainReserveRule mainReserveRule;
 
         @com.aliyun.core.annotation.NameInMap("reserve_rule_desc")
-        private java.util.List < ReserveRuleDesc> reserveRuleDesc;
+        private java.util.List<ReserveRuleDesc> reserveRuleDesc;
 
         @com.aliyun.core.annotation.NameInMap("scope")
         private Integer scope;
@@ -475,7 +480,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         /**
          * @return reserveRuleDesc
          */
-        public java.util.List < ReserveRuleDesc> getReserveRuleDesc() {
+        public java.util.List<ReserveRuleDesc> getReserveRuleDesc() {
             return this.reserveRuleDesc;
         }
 
@@ -488,7 +493,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private MainReserveRule mainReserveRule; 
-            private java.util.List < ReserveRuleDesc> reserveRuleDesc; 
+            private java.util.List<ReserveRuleDesc> reserveRuleDesc; 
             private Integer scope; 
 
             /**
@@ -502,7 +507,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
             /**
              * reserve_rule_desc.
              */
-            public Builder reserveRuleDesc(java.util.List < ReserveRuleDesc> reserveRuleDesc) {
+            public Builder reserveRuleDesc(java.util.List<ReserveRuleDesc> reserveRuleDesc) {
                 this.reserveRuleDesc = reserveRuleDesc;
                 return this;
             }
@@ -530,7 +535,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("total_size")
         private Integer totalSize;
@@ -551,7 +556,7 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -563,13 +568,13 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer totalSize; 
 
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

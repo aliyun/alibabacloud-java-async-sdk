@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.List < Module> module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
@@ -68,7 +73,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -103,7 +108,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
@@ -128,7 +133,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -546,7 +551,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         private String payTime;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
@@ -585,7 +590,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         private Integer serviceType;
 
         @com.aliyun.core.annotation.NameInMap("special_types")
-        private java.util.List < String > specialTypes;
+        private java.util.List<String> specialTypes;
 
         @com.aliyun.core.annotation.NameInMap("taken_time")
         private String takenTime;
@@ -612,7 +617,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         private Double travelDistance;
 
         @com.aliyun.core.annotation.NameInMap("user_affiliate_list")
-        private java.util.List < UserAffiliateList> userAffiliateList;
+        private java.util.List<UserAffiliateList> userAffiliateList;
 
         @com.aliyun.core.annotation.NameInMap("user_confirm")
         private Integer userConfirm;
@@ -903,7 +908,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
@@ -994,7 +999,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         /**
          * @return specialTypes
          */
-        public java.util.List < String > getSpecialTypes() {
+        public java.util.List<String> getSpecialTypes() {
             return this.specialTypes;
         }
 
@@ -1057,7 +1062,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         /**
          * @return userAffiliateList
          */
-        public java.util.List < UserAffiliateList> getUserAffiliateList() {
+        public java.util.List<UserAffiliateList> getUserAffiliateList() {
             return this.userAffiliateList;
         }
 
@@ -1113,7 +1118,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private Integer orderStatus; 
             private String passengerName; 
             private String payTime; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
             private String projectCode; 
             private Long projectId; 
             private String projectTitle; 
@@ -1126,7 +1131,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private String realToCityAdCode; 
             private String realToCityName; 
             private Integer serviceType; 
-            private java.util.List < String > specialTypes; 
+            private java.util.List<String> specialTypes; 
             private String takenTime; 
             private String thirdpartApplyId; 
             private String thirdpartBusinessId; 
@@ -1135,7 +1140,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private String toCityAdCode; 
             private String toCityName; 
             private Double travelDistance; 
-            private java.util.List < UserAffiliateList> userAffiliateList; 
+            private java.util.List<UserAffiliateList> userAffiliateList; 
             private Integer userConfirm; 
             private String userId; 
             private String userName; 
@@ -1383,7 +1388,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }
@@ -1487,7 +1492,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             /**
              * special_types.
              */
-            public Builder specialTypes(java.util.List < String > specialTypes) {
+            public Builder specialTypes(java.util.List<String> specialTypes) {
                 this.specialTypes = specialTypes;
                 return this;
             }
@@ -1559,7 +1564,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             /**
              * user_affiliate_list.
              */
-            public Builder userAffiliateList(java.util.List < UserAffiliateList> userAffiliateList) {
+            public Builder userAffiliateList(java.util.List<UserAffiliateList> userAffiliateList) {
                 this.userAffiliateList = userAffiliateList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class TrainOrderCreateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("book_train_infos")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < BookTrainInfos> bookTrainInfos;
+    private java.util.List<BookTrainInfos> bookTrainInfos;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("btrip_user_id")
@@ -56,7 +61,7 @@ public class TrainOrderCreateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passenger_open_info_s")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PassengerOpenInfoS> passengerOpenInfoS;
+    private java.util.List<PassengerOpenInfoS> passengerOpenInfoS;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -100,7 +105,7 @@ public class TrainOrderCreateRequest extends Request {
     /**
      * @return bookTrainInfos
      */
-    public java.util.List < BookTrainInfos> getBookTrainInfos() {
+    public java.util.List<BookTrainInfos> getBookTrainInfos() {
         return this.bookTrainInfos;
     }
 
@@ -156,7 +161,7 @@ public class TrainOrderCreateRequest extends Request {
     /**
      * @return passengerOpenInfoS
      */
-    public java.util.List < PassengerOpenInfoS> getPassengerOpenInfoS() {
+    public java.util.List<PassengerOpenInfoS> getPassengerOpenInfoS() {
         return this.passengerOpenInfoS;
     }
 
@@ -169,7 +174,7 @@ public class TrainOrderCreateRequest extends Request {
 
     public static final class Builder extends Request.Builder<TrainOrderCreateRequest, Builder> {
         private String acceptNoSeat; 
-        private java.util.List < BookTrainInfos> bookTrainInfos; 
+        private java.util.List<BookTrainInfos> bookTrainInfos; 
         private String btripUserId; 
         private String btripUserName; 
         private BusinessInfo businessInfo; 
@@ -177,7 +182,7 @@ public class TrainOrderCreateRequest extends Request {
         private String forceMatch; 
         private Boolean isPayNow; 
         private String outOrderId; 
-        private java.util.List < PassengerOpenInfoS> passengerOpenInfoS; 
+        private java.util.List<PassengerOpenInfoS> passengerOpenInfoS; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -211,7 +216,7 @@ public class TrainOrderCreateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder bookTrainInfos(java.util.List < BookTrainInfos> bookTrainInfos) {
+        public Builder bookTrainInfos(java.util.List<BookTrainInfos> bookTrainInfos) {
             String bookTrainInfosShrink = shrink(bookTrainInfos, "book_train_infos", "json");
             this.putBodyParameter("book_train_infos", bookTrainInfosShrink);
             this.bookTrainInfos = bookTrainInfos;
@@ -292,7 +297,7 @@ public class TrainOrderCreateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder passengerOpenInfoS(java.util.List < PassengerOpenInfoS> passengerOpenInfoS) {
+        public Builder passengerOpenInfoS(java.util.List<PassengerOpenInfoS> passengerOpenInfoS) {
             String passengerOpenInfoSShrink = shrink(passengerOpenInfoS, "passenger_open_info_s", "json");
             this.putBodyParameter("passenger_open_info_s", passengerOpenInfoSShrink);
             this.passengerOpenInfoS = passengerOpenInfoS;
@@ -451,7 +456,7 @@ public class TrainOrderCreateRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("book_ticket_infos")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < BookTicketInfos> bookTicketInfos;
+        private java.util.List<BookTicketInfos> bookTicketInfos;
 
         @com.aliyun.core.annotation.NameInMap("choose_beds")
         private String chooseBeds;
@@ -499,7 +504,7 @@ public class TrainOrderCreateRequest extends Request {
         /**
          * @return bookTicketInfos
          */
-        public java.util.List < BookTicketInfos> getBookTicketInfos() {
+        public java.util.List<BookTicketInfos> getBookTicketInfos() {
             return this.bookTicketInfos;
         }
 
@@ -540,7 +545,7 @@ public class TrainOrderCreateRequest extends Request {
 
         public static final class Builder {
             private String arrStationCode; 
-            private java.util.List < BookTicketInfos> bookTicketInfos; 
+            private java.util.List<BookTicketInfos> bookTicketInfos; 
             private String chooseBeds; 
             private String chooseSeats; 
             private String depStationCode; 
@@ -561,7 +566,7 @@ public class TrainOrderCreateRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder bookTicketInfos(java.util.List < BookTicketInfos> bookTicketInfos) {
+            public Builder bookTicketInfos(java.util.List<BookTicketInfos> bookTicketInfos) {
                 this.bookTicketInfos = bookTicketInfos;
                 return this;
             }

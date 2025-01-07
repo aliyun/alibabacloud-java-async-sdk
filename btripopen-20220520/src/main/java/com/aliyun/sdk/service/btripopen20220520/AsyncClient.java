@@ -554,6 +554,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FlightSearchListResponse> flightSearchList(FlightSearchListRequest request);
 
     /**
+     * @param request the request parameters of FuPointBillSettlementQuery  FuPointBillSettlementQueryRequest
+     * @return FuPointBillSettlementQueryResponse
+     */
+    CompletableFuture<FuPointBillSettlementQueryResponse> fuPointBillSettlementQuery(FuPointBillSettlementQueryRequest request);
+
+    /**
      * @param request the request parameters of GroupCorpToken  GroupCorpTokenRequest
      * @return GroupCorpTokenResponse
      */
@@ -920,6 +926,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MonthBillGetResponse> monthBillGet(MonthBillGetRequest request);
 
     /**
+     * @param request the request parameters of OrderRefundDetailQuery  OrderRefundDetailQueryRequest
+     * @return OrderRefundDetailQueryResponse
+     */
+    CompletableFuture<OrderRefundDetailQueryResponse> orderRefundDetailQuery(OrderRefundDetailQueryRequest request);
+
+    /**
      * @param request the request parameters of ProjectAdd  ProjectAddRequest
      * @return ProjectAddResponse
      */
@@ -936,6 +948,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ProjectModifyResponse
      */
     CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
+
+    /**
+     * @param request the request parameters of QueryCorpDetailInfo  QueryCorpDetailInfoRequest
+     * @return QueryCorpDetailInfoResponse
+     */
+    CompletableFuture<QueryCorpDetailInfoResponse> queryCorpDetailInfo(QueryCorpDetailInfoRequest request);
 
     /**
      * @param request the request parameters of QueryEmployeeDetail  QueryEmployeeDetailRequest

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -162,7 +167,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
      */
     public static class MainReserveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("open_service_type_list")
-        private java.util.List < String > openServiceTypeList;
+        private java.util.List<String> openServiceTypeList;
 
         @com.aliyun.core.annotation.NameInMap("rule_code")
         private Long ruleCode;
@@ -195,7 +200,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         /**
          * @return openServiceTypeList
          */
-        public java.util.List < String > getOpenServiceTypeList() {
+        public java.util.List<String> getOpenServiceTypeList() {
             return this.openServiceTypeList;
         }
 
@@ -228,7 +233,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > openServiceTypeList; 
+            private java.util.List<String> openServiceTypeList; 
             private Long ruleCode; 
             private String ruleDesc; 
             private Long ruleId; 
@@ -237,7 +242,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
             /**
              * open_service_type_list.
              */
-            public Builder openServiceTypeList(java.util.List < String > openServiceTypeList) {
+            public Builder openServiceTypeList(java.util.List<String> openServiceTypeList) {
                 this.openServiceTypeList = openServiceTypeList;
                 return this;
             }
@@ -359,7 +364,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         private MainReserveRule mainReserveRule;
 
         @com.aliyun.core.annotation.NameInMap("module_config_list")
-        private java.util.List < ModuleConfigList> moduleConfigList;
+        private java.util.List<ModuleConfigList> moduleConfigList;
 
         private ReserveRule(Builder builder) {
             this.mainReserveRule = builder.mainReserveRule;
@@ -384,13 +389,13 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         /**
          * @return moduleConfigList
          */
-        public java.util.List < ModuleConfigList> getModuleConfigList() {
+        public java.util.List<ModuleConfigList> getModuleConfigList() {
             return this.moduleConfigList;
         }
 
         public static final class Builder {
             private MainReserveRule mainReserveRule; 
-            private java.util.List < ModuleConfigList> moduleConfigList; 
+            private java.util.List<ModuleConfigList> moduleConfigList; 
 
             /**
              * main_reserve_rule.
@@ -403,7 +408,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
             /**
              * module_config_list.
              */
-            public Builder moduleConfigList(java.util.List < ModuleConfigList> moduleConfigList) {
+            public Builder moduleConfigList(java.util.List<ModuleConfigList> moduleConfigList) {
                 this.moduleConfigList = moduleConfigList;
                 return this;
             }
@@ -423,7 +428,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("activated_service_type_list")
-        private java.util.List < String > activatedServiceTypeList;
+        private java.util.List<String> activatedServiceTypeList;
 
         @com.aliyun.core.annotation.NameInMap("reserve_rule")
         private ReserveRule reserveRule;
@@ -444,7 +449,7 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         /**
          * @return activatedServiceTypeList
          */
-        public java.util.List < String > getActivatedServiceTypeList() {
+        public java.util.List<String> getActivatedServiceTypeList() {
             return this.activatedServiceTypeList;
         }
 
@@ -456,13 +461,13 @@ public class TravelStandardQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > activatedServiceTypeList; 
+            private java.util.List<String> activatedServiceTypeList; 
             private ReserveRule reserveRule; 
 
             /**
              * activated_service_type_list.
              */
-            public Builder activatedServiceTypeList(java.util.List < String > activatedServiceTypeList) {
+            public Builder activatedServiceTypeList(java.util.List<String> activatedServiceTypeList) {
                 this.activatedServiceTypeList = activatedServiceTypeList;
                 return this;
             }

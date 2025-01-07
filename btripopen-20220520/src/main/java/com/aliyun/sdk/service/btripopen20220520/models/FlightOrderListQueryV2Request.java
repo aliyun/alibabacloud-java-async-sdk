@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,15 +23,15 @@ public class FlightOrderListQueryV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("approve_id")
-    private java.util.List < String > approveId;
+    private java.util.List<String> approveId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("booker_id")
-    private java.util.List < String > bookerId;
+    private java.util.List<String> bookerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("depart_id")
-    private java.util.List < String > departId;
+    private java.util.List<String> departId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("end_date")
@@ -46,11 +51,11 @@ public class FlightOrderListQueryV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("supplier")
-    private java.util.List < String > supplier;
+    private java.util.List<String> supplier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("thirdpart_approve_id")
-    private java.util.List < String > thirdpartApproveId;
+    private java.util.List<String> thirdpartApproveId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("update_end_date")
@@ -104,21 +109,21 @@ public class FlightOrderListQueryV2Request extends Request {
     /**
      * @return approveId
      */
-    public java.util.List < String > getApproveId() {
+    public java.util.List<String> getApproveId() {
         return this.approveId;
     }
 
     /**
      * @return bookerId
      */
-    public java.util.List < String > getBookerId() {
+    public java.util.List<String> getBookerId() {
         return this.bookerId;
     }
 
     /**
      * @return departId
      */
-    public java.util.List < String > getDepartId() {
+    public java.util.List<String> getDepartId() {
         return this.departId;
     }
 
@@ -153,14 +158,14 @@ public class FlightOrderListQueryV2Request extends Request {
     /**
      * @return supplier
      */
-    public java.util.List < String > getSupplier() {
+    public java.util.List<String> getSupplier() {
         return this.supplier;
     }
 
     /**
      * @return thirdpartApproveId
      */
-    public java.util.List < String > getThirdpartApproveId() {
+    public java.util.List<String> getThirdpartApproveId() {
         return this.thirdpartApproveId;
     }
 
@@ -187,15 +192,15 @@ public class FlightOrderListQueryV2Request extends Request {
 
     public static final class Builder extends Request.Builder<FlightOrderListQueryV2Request, Builder> {
         private String regionId; 
-        private java.util.List < String > approveId; 
-        private java.util.List < String > bookerId; 
-        private java.util.List < String > departId; 
+        private java.util.List<String> approveId; 
+        private java.util.List<String> bookerId; 
+        private java.util.List<String> departId; 
         private String endDate; 
         private Integer pageSize; 
         private String scrollId; 
         private String startDate; 
-        private java.util.List < String > supplier; 
-        private java.util.List < String > thirdpartApproveId; 
+        private java.util.List<String> supplier; 
+        private java.util.List<String> thirdpartApproveId; 
         private String updateEndDate; 
         private String updateStartDate; 
         private String xAcsBtripCorpToken; 
@@ -233,7 +238,7 @@ public class FlightOrderListQueryV2Request extends Request {
         /**
          * approve_id.
          */
-        public Builder approveId(java.util.List < String > approveId) {
+        public Builder approveId(java.util.List<String> approveId) {
             String approveIdShrink = shrink(approveId, "approve_id", "json");
             this.putQueryParameter("approve_id", approveIdShrink);
             this.approveId = approveId;
@@ -243,7 +248,7 @@ public class FlightOrderListQueryV2Request extends Request {
         /**
          * booker_id.
          */
-        public Builder bookerId(java.util.List < String > bookerId) {
+        public Builder bookerId(java.util.List<String> bookerId) {
             String bookerIdShrink = shrink(bookerId, "booker_id", "json");
             this.putQueryParameter("booker_id", bookerIdShrink);
             this.bookerId = bookerId;
@@ -253,7 +258,7 @@ public class FlightOrderListQueryV2Request extends Request {
         /**
          * depart_id.
          */
-        public Builder departId(java.util.List < String > departId) {
+        public Builder departId(java.util.List<String> departId) {
             String departIdShrink = shrink(departId, "depart_id", "json");
             this.putQueryParameter("depart_id", departIdShrink);
             this.departId = departId;
@@ -299,7 +304,7 @@ public class FlightOrderListQueryV2Request extends Request {
         /**
          * supplier.
          */
-        public Builder supplier(java.util.List < String > supplier) {
+        public Builder supplier(java.util.List<String> supplier) {
             String supplierShrink = shrink(supplier, "supplier", "json");
             this.putQueryParameter("supplier", supplierShrink);
             this.supplier = supplier;
@@ -309,7 +314,7 @@ public class FlightOrderListQueryV2Request extends Request {
         /**
          * thirdpart_approve_id.
          */
-        public Builder thirdpartApproveId(java.util.List < String > thirdpartApproveId) {
+        public Builder thirdpartApproveId(java.util.List<String> thirdpartApproveId) {
             String thirdpartApproveIdShrink = shrink(thirdpartApproveId, "thirdpart_approve_id", "json");
             this.putQueryParameter("thirdpart_approve_id", thirdpartApproveIdShrink);
             this.thirdpartApproveId = thirdpartApproveId;

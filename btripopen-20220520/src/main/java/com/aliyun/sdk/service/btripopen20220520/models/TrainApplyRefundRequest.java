@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class TrainApplyRefundRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("refund_train_infos")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RefundTrainInfos> refundTrainInfos;
+    private java.util.List<RefundTrainInfos> refundTrainInfos;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -82,7 +87,7 @@ public class TrainApplyRefundRequest extends Request {
     /**
      * @return refundTrainInfos
      */
-    public java.util.List < RefundTrainInfos> getRefundTrainInfos() {
+    public java.util.List<RefundTrainInfos> getRefundTrainInfos() {
         return this.refundTrainInfos;
     }
 
@@ -97,7 +102,7 @@ public class TrainApplyRefundRequest extends Request {
         private String orderId; 
         private String outOrderId; 
         private String outRefundId; 
-        private java.util.List < RefundTrainInfos> refundTrainInfos; 
+        private java.util.List<RefundTrainInfos> refundTrainInfos; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -152,7 +157,7 @@ public class TrainApplyRefundRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder refundTrainInfos(java.util.List < RefundTrainInfos> refundTrainInfos) {
+        public Builder refundTrainInfos(java.util.List<RefundTrainInfos> refundTrainInfos) {
             String refundTrainInfosShrink = shrink(refundTrainInfos, "refund_train_infos", "json");
             this.putBodyParameter("refund_train_infos", refundTrainInfosShrink);
             this.refundTrainInfos = refundTrainInfos;
@@ -311,7 +316,7 @@ public class TrainApplyRefundRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("refund_passenger_infos")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < RefundPassengerInfos> refundPassengerInfos;
+        private java.util.List<RefundPassengerInfos> refundPassengerInfos;
 
         @com.aliyun.core.annotation.NameInMap("train_no")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -341,7 +346,7 @@ public class TrainApplyRefundRequest extends Request {
         /**
          * @return refundPassengerInfos
          */
-        public java.util.List < RefundPassengerInfos> getRefundPassengerInfos() {
+        public java.util.List<RefundPassengerInfos> getRefundPassengerInfos() {
             return this.refundPassengerInfos;
         }
 
@@ -354,7 +359,7 @@ public class TrainApplyRefundRequest extends Request {
 
         public static final class Builder {
             private String depTime; 
-            private java.util.List < RefundPassengerInfos> refundPassengerInfos; 
+            private java.util.List<RefundPassengerInfos> refundPassengerInfos; 
             private String trainNo; 
 
             /**
@@ -371,7 +376,7 @@ public class TrainApplyRefundRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder refundPassengerInfos(java.util.List < RefundPassengerInfos> refundPassengerInfos) {
+            public Builder refundPassengerInfos(java.util.List<RefundPassengerInfos> refundPassengerInfos) {
                 this.refundPassengerInfos = refundPassengerInfos;
                 return this;
             }

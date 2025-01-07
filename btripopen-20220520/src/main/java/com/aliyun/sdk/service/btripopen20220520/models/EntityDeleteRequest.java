@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class EntityDeleteRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("entity_d_o_list")
-    private java.util.List < EntityDOList> entityDOList;
+    private java.util.List<EntityDOList> entityDOList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("thirdpart_id")
@@ -61,7 +66,7 @@ public class EntityDeleteRequest extends Request {
     /**
      * @return entityDOList
      */
-    public java.util.List < EntityDOList> getEntityDOList() {
+    public java.util.List<EntityDOList> getEntityDOList() {
         return this.entityDOList;
     }
 
@@ -81,7 +86,7 @@ public class EntityDeleteRequest extends Request {
 
     public static final class Builder extends Request.Builder<EntityDeleteRequest, Builder> {
         private Boolean delAll; 
-        private java.util.List < EntityDOList> entityDOList; 
+        private java.util.List<EntityDOList> entityDOList; 
         private String thirdpartId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -112,7 +117,7 @@ public class EntityDeleteRequest extends Request {
         /**
          * entity_d_o_list.
          */
-        public Builder entityDOList(java.util.List < EntityDOList> entityDOList) {
+        public Builder entityDOList(java.util.List<EntityDOList> entityDOList) {
             String entityDOListShrink = shrink(entityDOList, "entity_d_o_list", "json");
             this.putBodyParameter("entity_d_o_list", entityDOListShrink);
             this.entityDOList = entityDOList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -486,7 +491,7 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         private Integer failType;
 
         @com.aliyun.core.annotation.NameInMap("passenger_changed_price_info_list")
-        private java.util.List < PassengerChangedPriceInfoList> passengerChangedPriceInfoList;
+        private java.util.List<PassengerChangedPriceInfoList> passengerChangedPriceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("render_key")
         private String renderKey;
@@ -523,7 +528,7 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         /**
          * @return passengerChangedPriceInfoList
          */
-        public java.util.List < PassengerChangedPriceInfoList> getPassengerChangedPriceInfoList() {
+        public java.util.List<PassengerChangedPriceInfoList> getPassengerChangedPriceInfoList() {
             return this.passengerChangedPriceInfoList;
         }
 
@@ -537,7 +542,7 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean checkSuccess; 
             private Integer failType; 
-            private java.util.List < PassengerChangedPriceInfoList> passengerChangedPriceInfoList; 
+            private java.util.List<PassengerChangedPriceInfoList> passengerChangedPriceInfoList; 
             private String renderKey; 
 
             /**
@@ -559,7 +564,7 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             /**
              * passenger_changed_price_info_list.
              */
-            public Builder passengerChangedPriceInfoList(java.util.List < PassengerChangedPriceInfoList> passengerChangedPriceInfoList) {
+            public Builder passengerChangedPriceInfoList(java.util.List<PassengerChangedPriceInfoList> passengerChangedPriceInfoList) {
                 this.passengerChangedPriceInfoList = passengerChangedPriceInfoList;
                 return this;
             }

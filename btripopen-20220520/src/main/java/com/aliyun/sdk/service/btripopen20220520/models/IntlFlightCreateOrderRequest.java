@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class IntlFlightCreateOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("extra_info")
-    private java.util.Map < String, String > extraInfo;
+    private java.util.Map<String, String> extraInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("isv_name")
@@ -51,7 +56,7 @@ public class IntlFlightCreateOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("passenger_list")
-    private java.util.List < PassengerList> passengerList;
+    private java.util.List<PassengerList> passengerList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("render_key")
@@ -136,7 +141,7 @@ public class IntlFlightCreateOrderRequest extends Request {
     /**
      * @return extraInfo
      */
-    public java.util.Map < String, String > getExtraInfo() {
+    public java.util.Map<String, String> getExtraInfo() {
         return this.extraInfo;
     }
 
@@ -171,7 +176,7 @@ public class IntlFlightCreateOrderRequest extends Request {
     /**
      * @return passengerList
      */
-    public java.util.List < PassengerList> getPassengerList() {
+    public java.util.List<PassengerList> getPassengerList() {
         return this.passengerList;
     }
 
@@ -215,12 +220,12 @@ public class IntlFlightCreateOrderRequest extends Request {
         private Boolean asyncCreateOrderMode; 
         private ContactInfo contactInfo; 
         private CostCenter costCenter; 
-        private java.util.Map < String, String > extraInfo; 
+        private java.util.Map<String, String> extraInfo; 
         private String isvName; 
         private String language; 
         private String otaItemId; 
         private String outOrderId; 
-        private java.util.List < PassengerList> passengerList; 
+        private java.util.List<PassengerList> passengerList; 
         private String renderKey; 
         private Long totalPriceCent; 
         private String userId; 
@@ -294,7 +299,7 @@ public class IntlFlightCreateOrderRequest extends Request {
         /**
          * extra_info.
          */
-        public Builder extraInfo(java.util.Map < String, String > extraInfo) {
+        public Builder extraInfo(java.util.Map<String, String> extraInfo) {
             String extraInfoShrink = shrink(extraInfo, "extra_info", "json");
             this.putQueryParameter("extra_info", extraInfoShrink);
             this.extraInfo = extraInfo;
@@ -340,7 +345,7 @@ public class IntlFlightCreateOrderRequest extends Request {
         /**
          * passenger_list.
          */
-        public Builder passengerList(java.util.List < PassengerList> passengerList) {
+        public Builder passengerList(java.util.List<PassengerList> passengerList) {
             String passengerListShrink = shrink(passengerList, "passenger_list", "json");
             this.putQueryParameter("passenger_list", passengerListShrink);
             this.passengerList = passengerList;
@@ -938,7 +943,7 @@ public class IntlFlightCreateOrderRequest extends Request {
         private String projectTitle;
 
         @com.aliyun.core.annotation.NameInMap("subsidiary_cert_info_list")
-        private java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList;
+        private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1116,7 +1121,7 @@ public class IntlFlightCreateOrderRequest extends Request {
         /**
          * @return subsidiaryCertInfoList
          */
-        public java.util.List < SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
+        public java.util.List<SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
             return this.subsidiaryCertInfoList;
         }
 
@@ -1154,7 +1159,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             private String phone; 
             private String projectCode; 
             private String projectTitle; 
-            private java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList; 
+            private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList; 
             private String userId; 
             private Integer userType; 
 
@@ -1325,7 +1330,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             /**
              * subsidiary_cert_info_list.
              */
-            public Builder subsidiaryCertInfoList(java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList) {
+            public Builder subsidiaryCertInfoList(java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList) {
                 this.subsidiaryCertInfoList = subsidiaryCertInfoList;
                 return this;
             }

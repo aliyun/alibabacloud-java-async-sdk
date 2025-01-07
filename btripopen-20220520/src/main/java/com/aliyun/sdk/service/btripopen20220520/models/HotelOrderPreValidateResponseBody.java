@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -329,10 +334,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
      */
     public static class PromotionInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ext_attr_map")
-        private java.util.Map < String, String > extAttrMap;
+        private java.util.Map<String, String> extAttrMap;
 
         @com.aliyun.core.annotation.NameInMap("promotion_detail_info_list")
-        private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;
+        private java.util.List<PromotionDetailInfoList> promotionDetailInfoList;
 
         @com.aliyun.core.annotation.NameInMap("promotion_total_price")
         private Long promotionTotalPrice;
@@ -354,14 +359,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         /**
          * @return extAttrMap
          */
-        public java.util.Map < String, String > getExtAttrMap() {
+        public java.util.Map<String, String> getExtAttrMap() {
             return this.extAttrMap;
         }
 
         /**
          * @return promotionDetailInfoList
          */
-        public java.util.List < PromotionDetailInfoList> getPromotionDetailInfoList() {
+        public java.util.List<PromotionDetailInfoList> getPromotionDetailInfoList() {
             return this.promotionDetailInfoList;
         }
 
@@ -373,14 +378,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > extAttrMap; 
-            private java.util.List < PromotionDetailInfoList> promotionDetailInfoList; 
+            private java.util.Map<String, String> extAttrMap; 
+            private java.util.List<PromotionDetailInfoList> promotionDetailInfoList; 
             private Long promotionTotalPrice; 
 
             /**
              * ext_attr_map.
              */
-            public Builder extAttrMap(java.util.Map < String, String > extAttrMap) {
+            public Builder extAttrMap(java.util.Map<String, String> extAttrMap) {
                 this.extAttrMap = extAttrMap;
                 return this;
             }
@@ -388,7 +393,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             /**
              * promotion_detail_info_list.
              */
-            public Builder promotionDetailInfoList(java.util.List < PromotionDetailInfoList> promotionDetailInfoList) {
+            public Builder promotionDetailInfoList(java.util.List<PromotionDetailInfoList> promotionDetailInfoList) {
                 this.promotionDetailInfoList = promotionDetailInfoList;
                 return this;
             }
@@ -690,7 +695,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
      */
     public static class BtripHotelCancelPolicyDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
-        private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
+        private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
 
         @com.aliyun.core.annotation.NameInMap("cancel_policy_type")
         private Integer cancelPolicyType;
@@ -719,7 +724,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         /**
          * @return btripHotelCancelPolicyInfoDTOList
          */
-        public java.util.List < BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
+        public java.util.List<BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
             return this.btripHotelCancelPolicyInfoDTOList;
         }
 
@@ -745,7 +750,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
+            private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
             private String content; 
             private String shortDesc; 
@@ -753,7 +758,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
              */
-            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
+            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
                 this.btripHotelCancelPolicyInfoDTOList = btripHotelCancelPolicyInfoDTOList;
                 return this;
             }
@@ -1053,7 +1058,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         private PromotionInfo promotionInfo;
 
         @com.aliyun.core.annotation.NameInMap("rate_plan_daily")
-        private java.util.List < RatePlanDaily> ratePlanDaily;
+        private java.util.List<RatePlanDaily> ratePlanDaily;
 
         @com.aliyun.core.annotation.NameInMap("rate_plan_id")
         private Long ratePlanId;
@@ -1106,7 +1111,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         /**
          * @return ratePlanDaily
          */
-        public java.util.List < RatePlanDaily> getRatePlanDaily() {
+        public java.util.List<RatePlanDaily> getRatePlanDaily() {
             return this.ratePlanDaily;
         }
 
@@ -1135,7 +1140,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private String extendInfo; 
             private String itineraryNo; 
             private PromotionInfo promotionInfo; 
-            private java.util.List < RatePlanDaily> ratePlanDaily; 
+            private java.util.List<RatePlanDaily> ratePlanDaily; 
             private Long ratePlanId; 
             private RatePlanInfo ratePlanInfo; 
             private String validateResKey; 
@@ -1167,7 +1172,7 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             /**
              * rate_plan_daily.
              */
-            public Builder ratePlanDaily(java.util.List < RatePlanDaily> ratePlanDaily) {
+            public Builder ratePlanDaily(java.util.List<RatePlanDaily> ratePlanDaily) {
                 this.ratePlanDaily = ratePlanDaily;
                 return this;
             }

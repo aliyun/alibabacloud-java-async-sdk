@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.List < Module> module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -92,7 +97,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -309,7 +314,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
      */
     public static class BedInfoGroupList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_infos")
-        private java.util.List < BedInfos> bedInfos;
+        private java.util.List<BedInfos> bedInfos;
 
         private BedInfoGroupList(Builder builder) {
             this.bedInfos = builder.bedInfos;
@@ -326,17 +331,17 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         /**
          * @return bedInfos
          */
-        public java.util.List < BedInfos> getBedInfos() {
+        public java.util.List<BedInfos> getBedInfos() {
             return this.bedInfos;
         }
 
         public static final class Builder {
-            private java.util.List < BedInfos> bedInfos; 
+            private java.util.List<BedInfos> bedInfos; 
 
             /**
              * bed_infos.
              */
-            public Builder bedInfos(java.util.List < BedInfos> bedInfos) {
+            public Builder bedInfos(java.util.List<BedInfos> bedInfos) {
                 this.bedInfos = bedInfos;
                 return this;
             }
@@ -590,10 +595,10 @@ public class HotelRoomInfoResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_info_group_list")
-        private java.util.List < BedInfoGroupList> bedInfoGroupList;
+        private java.util.List<BedInfoGroupList> bedInfoGroupList;
 
         @com.aliyun.core.annotation.NameInMap("bed_infos")
-        private java.util.List < ModuleBedInfos> bedInfos;
+        private java.util.List<ModuleBedInfos> bedInfos;
 
         @com.aliyun.core.annotation.NameInMap("extra_bed")
         private Integer extraBed;
@@ -617,7 +622,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         private String roomFacilities;
 
         @com.aliyun.core.annotation.NameInMap("room_facility_list")
-        private java.util.List < String > roomFacilityList;
+        private java.util.List<String> roomFacilityList;
 
         @com.aliyun.core.annotation.NameInMap("room_id")
         private String roomId;
@@ -626,7 +631,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         private String roomImage;
 
         @com.aliyun.core.annotation.NameInMap("room_images")
-        private java.util.List < RoomImages> roomImages;
+        private java.util.List<RoomImages> roomImages;
 
         @com.aliyun.core.annotation.NameInMap("room_name")
         private String roomName;
@@ -687,14 +692,14 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         /**
          * @return bedInfoGroupList
          */
-        public java.util.List < BedInfoGroupList> getBedInfoGroupList() {
+        public java.util.List<BedInfoGroupList> getBedInfoGroupList() {
             return this.bedInfoGroupList;
         }
 
         /**
          * @return bedInfos
          */
-        public java.util.List < ModuleBedInfos> getBedInfos() {
+        public java.util.List<ModuleBedInfos> getBedInfos() {
             return this.bedInfos;
         }
 
@@ -750,7 +755,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         /**
          * @return roomFacilityList
          */
-        public java.util.List < String > getRoomFacilityList() {
+        public java.util.List<String> getRoomFacilityList() {
             return this.roomFacilityList;
         }
 
@@ -771,7 +776,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         /**
          * @return roomImages
          */
-        public java.util.List < RoomImages> getRoomImages() {
+        public java.util.List<RoomImages> getRoomImages() {
             return this.roomImages;
         }
 
@@ -832,8 +837,8 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BedInfoGroupList> bedInfoGroupList; 
-            private java.util.List < ModuleBedInfos> bedInfos; 
+            private java.util.List<BedInfoGroupList> bedInfoGroupList; 
+            private java.util.List<ModuleBedInfos> bedInfos; 
             private Integer extraBed; 
             private String extraBedDesc; 
             private String floor; 
@@ -841,10 +846,10 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             private Integer maxOccupancy; 
             private String roomDesc; 
             private String roomFacilities; 
-            private java.util.List < String > roomFacilityList; 
+            private java.util.List<String> roomFacilityList; 
             private String roomId; 
             private String roomImage; 
-            private java.util.List < RoomImages> roomImages; 
+            private java.util.List<RoomImages> roomImages; 
             private String roomName; 
             private Integer roomType; 
             private String roomarea; 
@@ -857,7 +862,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             /**
              * bed_info_group_list.
              */
-            public Builder bedInfoGroupList(java.util.List < BedInfoGroupList> bedInfoGroupList) {
+            public Builder bedInfoGroupList(java.util.List<BedInfoGroupList> bedInfoGroupList) {
                 this.bedInfoGroupList = bedInfoGroupList;
                 return this;
             }
@@ -865,7 +870,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             /**
              * bed_infos.
              */
-            public Builder bedInfos(java.util.List < ModuleBedInfos> bedInfos) {
+            public Builder bedInfos(java.util.List<ModuleBedInfos> bedInfos) {
                 this.bedInfos = bedInfos;
                 return this;
             }
@@ -929,7 +934,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             /**
              * room_facility_list.
              */
-            public Builder roomFacilityList(java.util.List < String > roomFacilityList) {
+            public Builder roomFacilityList(java.util.List<String> roomFacilityList) {
                 this.roomFacilityList = roomFacilityList;
                 return this;
             }
@@ -953,7 +958,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
             /**
              * room_images.
              */
-            public Builder roomImages(java.util.List < RoomImages> roomImages) {
+            public Builder roomImages(java.util.List<RoomImages> roomImages) {
                 this.roomImages = roomImages;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,15 +23,15 @@ public class IFlightOrderListQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("apply_id_list")
-    private java.util.List < String > applyIdList;
+    private java.util.List<String> applyIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("book_type_list")
-    private java.util.List < Integer > bookTypeList;
+    private java.util.List<Integer> bookTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("booker_id")
-    private java.util.List < String > bookerId;
+    private java.util.List<String> bookerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("end_date")
@@ -46,7 +51,7 @@ public class IFlightOrderListQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("third_part_apply_id_list")
-    private java.util.List < String > thirdPartApplyIdList;
+    private java.util.List<String> thirdPartApplyIdList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -89,21 +94,21 @@ public class IFlightOrderListQueryRequest extends Request {
     /**
      * @return applyIdList
      */
-    public java.util.List < String > getApplyIdList() {
+    public java.util.List<String> getApplyIdList() {
         return this.applyIdList;
     }
 
     /**
      * @return bookTypeList
      */
-    public java.util.List < Integer > getBookTypeList() {
+    public java.util.List<Integer> getBookTypeList() {
         return this.bookTypeList;
     }
 
     /**
      * @return bookerId
      */
-    public java.util.List < String > getBookerId() {
+    public java.util.List<String> getBookerId() {
         return this.bookerId;
     }
 
@@ -138,7 +143,7 @@ public class IFlightOrderListQueryRequest extends Request {
     /**
      * @return thirdPartApplyIdList
      */
-    public java.util.List < String > getThirdPartApplyIdList() {
+    public java.util.List<String> getThirdPartApplyIdList() {
         return this.thirdPartApplyIdList;
     }
 
@@ -151,14 +156,14 @@ public class IFlightOrderListQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<IFlightOrderListQueryRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > applyIdList; 
-        private java.util.List < Integer > bookTypeList; 
-        private java.util.List < String > bookerId; 
+        private java.util.List<String> applyIdList; 
+        private java.util.List<Integer> bookTypeList; 
+        private java.util.List<String> bookerId; 
         private String endDate; 
         private Integer pageSize; 
         private String scrollId; 
         private String startDate; 
-        private java.util.List < String > thirdPartApplyIdList; 
+        private java.util.List<String> thirdPartApplyIdList; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -191,7 +196,7 @@ public class IFlightOrderListQueryRequest extends Request {
         /**
          * apply_id_list.
          */
-        public Builder applyIdList(java.util.List < String > applyIdList) {
+        public Builder applyIdList(java.util.List<String> applyIdList) {
             String applyIdListShrink = shrink(applyIdList, "apply_id_list", "json");
             this.putQueryParameter("apply_id_list", applyIdListShrink);
             this.applyIdList = applyIdList;
@@ -201,7 +206,7 @@ public class IFlightOrderListQueryRequest extends Request {
         /**
          * book_type_list.
          */
-        public Builder bookTypeList(java.util.List < Integer > bookTypeList) {
+        public Builder bookTypeList(java.util.List<Integer> bookTypeList) {
             String bookTypeListShrink = shrink(bookTypeList, "book_type_list", "json");
             this.putQueryParameter("book_type_list", bookTypeListShrink);
             this.bookTypeList = bookTypeList;
@@ -211,7 +216,7 @@ public class IFlightOrderListQueryRequest extends Request {
         /**
          * booker_id.
          */
-        public Builder bookerId(java.util.List < String > bookerId) {
+        public Builder bookerId(java.util.List<String> bookerId) {
             String bookerIdShrink = shrink(bookerId, "booker_id", "json");
             this.putQueryParameter("booker_id", bookerIdShrink);
             this.bookerId = bookerId;
@@ -257,7 +262,7 @@ public class IFlightOrderListQueryRequest extends Request {
         /**
          * third_part_apply_id_list.
          */
-        public Builder thirdPartApplyIdList(java.util.List < String > thirdPartApplyIdList) {
+        public Builder thirdPartApplyIdList(java.util.List<String> thirdPartApplyIdList) {
             String thirdPartApplyIdListShrink = shrink(thirdPartApplyIdList, "third_part_apply_id_list", "json");
             this.putQueryParameter("third_part_apply_id_list", thirdPartApplyIdListShrink);
             this.thirdPartApplyIdList = thirdPartApplyIdList;

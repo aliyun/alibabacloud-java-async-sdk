@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -229,7 +234,7 @@ public class HotelPricePullResponseBody extends TeaModel {
      */
     public static class BtripHotelCancelPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
-        private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
+        private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
 
         @com.aliyun.core.annotation.NameInMap("cancel_policy_type")
         private Integer cancelPolicyType;
@@ -250,7 +255,7 @@ public class HotelPricePullResponseBody extends TeaModel {
         /**
          * @return btripHotelCancelPolicyInfoDTOList
          */
-        public java.util.List < BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
+        public java.util.List<BtripHotelCancelPolicyInfoDTOList> getBtripHotelCancelPolicyInfoDTOList() {
             return this.btripHotelCancelPolicyInfoDTOList;
         }
 
@@ -262,13 +267,13 @@ public class HotelPricePullResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
+            private java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList; 
             private Integer cancelPolicyType; 
 
             /**
              * btrip_hotel_cancel_policy_info_d_t_o_list.
              */
-            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
+            public Builder btripHotelCancelPolicyInfoDTOList(java.util.List<BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList) {
                 this.btripHotelCancelPolicyInfoDTOList = btripHotelCancelPolicyInfoDTOList;
                 return this;
             }
@@ -457,7 +462,7 @@ public class HotelPricePullResponseBody extends TeaModel {
         private Integer quota;
 
         @com.aliyun.core.annotation.NameInMap("rate_dailys")
-        private java.util.List < RateDailys> rateDailys;
+        private java.util.List<RateDailys> rateDailys;
 
         @com.aliyun.core.annotation.NameInMap("rate_id")
         private String rateId;
@@ -638,7 +643,7 @@ public class HotelPricePullResponseBody extends TeaModel {
         /**
          * @return rateDailys
          */
-        public java.util.List < RateDailys> getRateDailys() {
+        public java.util.List<RateDailys> getRateDailys() {
             return this.rateDailys;
         }
 
@@ -696,7 +701,7 @@ public class HotelPricePullResponseBody extends TeaModel {
             private Long price; 
             private String promotionInfo; 
             private Integer quota; 
-            private java.util.List < RateDailys> rateDailys; 
+            private java.util.List<RateDailys> rateDailys; 
             private String rateId; 
             private String ratePlanName; 
             private String rpId; 
@@ -850,7 +855,7 @@ public class HotelPricePullResponseBody extends TeaModel {
             /**
              * rate_dailys.
              */
-            public Builder rateDailys(java.util.List < RateDailys> rateDailys) {
+            public Builder rateDailys(java.util.List<RateDailys> rateDailys) {
                 this.rateDailys = rateDailys;
                 return this;
             }
@@ -931,10 +936,10 @@ public class HotelPricePullResponseBody extends TeaModel {
         private String networkService;
 
         @com.aliyun.core.annotation.NameInMap("pics")
-        private java.util.List < String > pics;
+        private java.util.List<String> pics;
 
         @com.aliyun.core.annotation.NameInMap("rates")
-        private java.util.List < Rates> rates;
+        private java.util.List<Rates> rates;
 
         @com.aliyun.core.annotation.NameInMap("room_id")
         private String roomId;
@@ -1024,14 +1029,14 @@ public class HotelPricePullResponseBody extends TeaModel {
         /**
          * @return pics
          */
-        public java.util.List < String > getPics() {
+        public java.util.List<String> getPics() {
             return this.pics;
         }
 
         /**
          * @return rates
          */
-        public java.util.List < Rates> getRates() {
+        public java.util.List<Rates> getRates() {
             return this.rates;
         }
 
@@ -1071,8 +1076,8 @@ public class HotelPricePullResponseBody extends TeaModel {
             private String floor; 
             private Integer maxOccupancy; 
             private String networkService; 
-            private java.util.List < String > pics; 
-            private java.util.List < Rates> rates; 
+            private java.util.List<String> pics; 
+            private java.util.List<Rates> rates; 
             private String roomId; 
             private String roomName; 
             private Integer status; 
@@ -1137,7 +1142,7 @@ public class HotelPricePullResponseBody extends TeaModel {
             /**
              * pics.
              */
-            public Builder pics(java.util.List < String > pics) {
+            public Builder pics(java.util.List<String> pics) {
                 this.pics = pics;
                 return this;
             }
@@ -1145,7 +1150,7 @@ public class HotelPricePullResponseBody extends TeaModel {
             /**
              * rates.
              */
-            public Builder rates(java.util.List < Rates> rates) {
+            public Builder rates(java.util.List<Rates> rates) {
                 this.rates = rates;
                 return this;
             }
@@ -1206,7 +1211,7 @@ public class HotelPricePullResponseBody extends TeaModel {
         private String hotelName;
 
         @com.aliyun.core.annotation.NameInMap("rooms")
-        private java.util.List < Rooms> rooms;
+        private java.util.List<Rooms> rooms;
 
         @com.aliyun.core.annotation.NameInMap("search_id")
         private String searchId;
@@ -1251,7 +1256,7 @@ public class HotelPricePullResponseBody extends TeaModel {
         /**
          * @return rooms
          */
-        public java.util.List < Rooms> getRooms() {
+        public java.util.List<Rooms> getRooms() {
             return this.rooms;
         }
 
@@ -1266,7 +1271,7 @@ public class HotelPricePullResponseBody extends TeaModel {
             private String address; 
             private String hotelId; 
             private String hotelName; 
-            private java.util.List < Rooms> rooms; 
+            private java.util.List<Rooms> rooms; 
             private String searchId; 
 
             /**
@@ -1296,7 +1301,7 @@ public class HotelPricePullResponseBody extends TeaModel {
             /**
              * rooms.
              */
-            public Builder rooms(java.util.List < Rooms> rooms) {
+            public Builder rooms(java.util.List<Rooms> rooms) {
                 this.rooms = rooms;
                 return this;
             }
@@ -1324,7 +1329,7 @@ public class HotelPricePullResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_price_infos")
-        private java.util.List < HotelPriceInfos> hotelPriceInfos;
+        private java.util.List<HotelPriceInfos> hotelPriceInfos;
 
         private Module(Builder builder) {
             this.hotelPriceInfos = builder.hotelPriceInfos;
@@ -1341,17 +1346,17 @@ public class HotelPricePullResponseBody extends TeaModel {
         /**
          * @return hotelPriceInfos
          */
-        public java.util.List < HotelPriceInfos> getHotelPriceInfos() {
+        public java.util.List<HotelPriceInfos> getHotelPriceInfos() {
             return this.hotelPriceInfos;
         }
 
         public static final class Builder {
-            private java.util.List < HotelPriceInfos> hotelPriceInfos; 
+            private java.util.List<HotelPriceInfos> hotelPriceInfos; 
 
             /**
              * hotel_price_infos.
              */
-            public Builder hotelPriceInfos(java.util.List < HotelPriceInfos> hotelPriceInfos) {
+            public Builder hotelPriceInfos(java.util.List<HotelPriceInfos> hotelPriceInfos) {
                 this.hotelPriceInfos = hotelPriceInfos;
                 return this;
             }

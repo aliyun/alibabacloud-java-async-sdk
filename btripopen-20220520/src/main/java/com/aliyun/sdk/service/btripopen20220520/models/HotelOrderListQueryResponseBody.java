@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.List < Module> module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
@@ -68,7 +73,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -103,7 +108,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
@@ -128,7 +133,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -731,7 +736,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         private String orderTypeDesc;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
@@ -764,7 +769,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         private String thirdpartProjectId;
 
         @com.aliyun.core.annotation.NameInMap("user_affiliate_list")
-        private java.util.List < UserAffiliateList> userAffiliateList;
+        private java.util.List<UserAffiliateList> userAffiliateList;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
@@ -1024,7 +1029,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
@@ -1101,7 +1106,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         /**
          * @return userAffiliateList
          */
-        public java.util.List < UserAffiliateList> getUserAffiliateList() {
+        public java.util.List<UserAffiliateList> getUserAffiliateList() {
             return this.userAffiliateList;
         }
 
@@ -1148,7 +1153,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private String orderStatusDesc; 
             private Integer orderType; 
             private String orderTypeDesc; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
             private String projectCode; 
             private Long projectId; 
             private String projectTitle; 
@@ -1159,7 +1164,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private String thirdpartBusinessId; 
             private String thirdpartItineraryId; 
             private String thirdpartProjectId; 
-            private java.util.List < UserAffiliateList> userAffiliateList; 
+            private java.util.List<UserAffiliateList> userAffiliateList; 
             private String userId; 
             private String userName; 
 
@@ -1390,7 +1395,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }
@@ -1478,7 +1483,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             /**
              * user_affiliate_list.
              */
-            public Builder userAffiliateList(java.util.List < UserAffiliateList> userAffiliateList) {
+            public Builder userAffiliateList(java.util.List<UserAffiliateList> userAffiliateList) {
                 this.userAffiliateList = userAffiliateList;
                 return this;
             }

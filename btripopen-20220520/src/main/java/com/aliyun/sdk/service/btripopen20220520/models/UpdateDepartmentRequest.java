@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdateDepartmentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("manager_employee_id_list")
-    private java.util.List < String > managerEmployeeIdList;
+    private java.util.List<String> managerEmployeeIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_dept_id")
@@ -66,7 +71,7 @@ public class UpdateDepartmentRequest extends Request {
     /**
      * @return managerEmployeeIdList
      */
-    public java.util.List < String > getManagerEmployeeIdList() {
+    public java.util.List<String> getManagerEmployeeIdList() {
         return this.managerEmployeeIdList;
     }
 
@@ -93,7 +98,7 @@ public class UpdateDepartmentRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDepartmentRequest, Builder> {
         private String deptName; 
-        private java.util.List < String > managerEmployeeIdList; 
+        private java.util.List<String> managerEmployeeIdList; 
         private String outDeptId; 
         private String outDeptPid; 
         private String xAcsBtripCorpToken; 
@@ -123,7 +128,7 @@ public class UpdateDepartmentRequest extends Request {
         /**
          * manager_employee_id_list.
          */
-        public Builder managerEmployeeIdList(java.util.List < String > managerEmployeeIdList) {
+        public Builder managerEmployeeIdList(java.util.List<String> managerEmployeeIdList) {
             String managerEmployeeIdListShrink = shrink(managerEmployeeIdList, "manager_employee_id_list", "json");
             this.putBodyParameter("manager_employee_id_list", managerEmployeeIdListShrink);
             this.managerEmployeeIdList = managerEmployeeIdList;

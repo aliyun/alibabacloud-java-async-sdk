@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -308,7 +313,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         private String saleFlag;
 
         @com.aliyun.core.annotation.NameInMap("seat_infos")
-        private java.util.List < SeatInfos> seatInfos;
+        private java.util.List<SeatInfos> seatInfos;
 
         @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
@@ -429,7 +434,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         /**
          * @return seatInfos
          */
-        public java.util.List < SeatInfos> getSeatInfos() {
+        public java.util.List<SeatInfos> getSeatInfos() {
             return this.seatInfos;
         }
 
@@ -460,7 +465,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
             private Integer isStartStation; 
             private String price; 
             private String saleFlag; 
-            private java.util.List < SeatInfos> seatInfos; 
+            private java.util.List<SeatInfos> seatInfos; 
             private String trainNo; 
             private String trainType; 
 
@@ -563,7 +568,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
             /**
              * seat_infos.
              */
-            public Builder seatInfos(java.util.List < SeatInfos> seatInfos) {
+            public Builder seatInfos(java.util.List<SeatInfos> seatInfos) {
                 this.seatInfos = seatInfos;
                 return this;
             }
@@ -742,7 +747,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         private String saleFlag;
 
         @com.aliyun.core.annotation.NameInMap("seat_infos")
-        private java.util.List < TransferDetailListSeatInfos> seatInfos;
+        private java.util.List<TransferDetailListSeatInfos> seatInfos;
 
         @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
@@ -863,7 +868,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         /**
          * @return seatInfos
          */
-        public java.util.List < TransferDetailListSeatInfos> getSeatInfos() {
+        public java.util.List<TransferDetailListSeatInfos> getSeatInfos() {
             return this.seatInfos;
         }
 
@@ -894,7 +899,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
             private Integer isStartStation; 
             private String price; 
             private String saleFlag; 
-            private java.util.List < TransferDetailListSeatInfos> seatInfos; 
+            private java.util.List<TransferDetailListSeatInfos> seatInfos; 
             private String trainNo; 
             private String trainType; 
 
@@ -997,7 +1002,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
             /**
              * seat_infos.
              */
-            public Builder seatInfos(java.util.List < TransferDetailListSeatInfos> seatInfos) {
+            public Builder seatInfos(java.util.List<TransferDetailListSeatInfos> seatInfos) {
                 this.seatInfos = seatInfos;
                 return this;
             }
@@ -1033,7 +1038,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
      */
     public static class TrainTransferStationSearchVO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("transfer_detail_list")
-        private java.util.List < TransferDetailList> transferDetailList;
+        private java.util.List<TransferDetailList> transferDetailList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_type")
         private String transferType;
@@ -1054,7 +1059,7 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         /**
          * @return transferDetailList
          */
-        public java.util.List < TransferDetailList> getTransferDetailList() {
+        public java.util.List<TransferDetailList> getTransferDetailList() {
             return this.transferDetailList;
         }
 
@@ -1066,13 +1071,13 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TransferDetailList> transferDetailList; 
+            private java.util.List<TransferDetailList> transferDetailList; 
             private String transferType; 
 
             /**
              * transfer_detail_list.
              */
-            public Builder transferDetailList(java.util.List < TransferDetailList> transferDetailList) {
+            public Builder transferDetailList(java.util.List<TransferDetailList> transferDetailList) {
                 this.transferDetailList = transferDetailList;
                 return this;
             }

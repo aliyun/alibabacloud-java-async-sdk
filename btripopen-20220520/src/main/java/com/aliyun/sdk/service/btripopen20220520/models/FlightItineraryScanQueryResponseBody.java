@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -477,7 +482,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         private String department;
 
         @com.aliyun.core.annotation.NameInMap("flights")
-        private java.util.List < Flights> flights;
+        private java.util.List<Flights> flights;
 
         @com.aliyun.core.annotation.NameInMap("fuel_surcharge")
         private String fuelSurcharge;
@@ -630,7 +635,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         /**
          * @return flights
          */
-        public java.util.List < Flights> getFlights() {
+        public java.util.List<Flights> getFlights() {
             return this.flights;
         }
 
@@ -795,7 +800,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             private String build; 
             private String costCenter; 
             private String department; 
-            private java.util.List < Flights> flights; 
+            private java.util.List<Flights> flights; 
             private String fuelSurcharge; 
             private String id; 
             private String insurance; 
@@ -873,7 +878,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             /**
              * <p>机票行程明细</p>
              */
-            public Builder flights(java.util.List < Flights> flights) {
+            public Builder flights(java.util.List<Flights> flights) {
                 this.flights = flights;
                 return this;
             }
@@ -1078,7 +1083,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("page_no")
         private Integer pageNo;
@@ -1111,7 +1116,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1144,7 +1149,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer totalPage; 
@@ -1153,7 +1158,7 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

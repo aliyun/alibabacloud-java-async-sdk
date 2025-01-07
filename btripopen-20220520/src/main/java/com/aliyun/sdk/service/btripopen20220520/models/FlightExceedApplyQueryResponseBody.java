@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1106,7 +1111,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         private ApplyIntentionInfoDo applyIntentionInfoDo;
 
         @com.aliyun.core.annotation.NameInMap("apply_intention_info_do_list")
-        private java.util.List < ApplyIntentionInfoDoList> applyIntentionInfoDoList;
+        private java.util.List<ApplyIntentionInfoDoList> applyIntentionInfoDoList;
 
         @com.aliyun.core.annotation.NameInMap("apply_recommend_flights")
         private ApplyRecommendFlights applyRecommendFlights;
@@ -1187,7 +1192,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         /**
          * @return applyIntentionInfoDoList
          */
-        public java.util.List < ApplyIntentionInfoDoList> getApplyIntentionInfoDoList() {
+        public java.util.List<ApplyIntentionInfoDoList> getApplyIntentionInfoDoList() {
             return this.applyIntentionInfoDoList;
         }
 
@@ -1278,7 +1283,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long applyId; 
             private ApplyIntentionInfoDo applyIntentionInfoDo; 
-            private java.util.List < ApplyIntentionInfoDoList> applyIntentionInfoDoList; 
+            private java.util.List<ApplyIntentionInfoDoList> applyIntentionInfoDoList; 
             private ApplyRecommendFlights applyRecommendFlights; 
             private String btripCause; 
             private String corpId; 
@@ -1311,7 +1316,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             /**
              * apply_intention_info_do_list.
              */
-            public Builder applyIntentionInfoDoList(java.util.List < ApplyIntentionInfoDoList> applyIntentionInfoDoList) {
+            public Builder applyIntentionInfoDoList(java.util.List<ApplyIntentionInfoDoList> applyIntentionInfoDoList) {
                 this.applyIntentionInfoDoList = applyIntentionInfoDoList;
                 return this;
             }

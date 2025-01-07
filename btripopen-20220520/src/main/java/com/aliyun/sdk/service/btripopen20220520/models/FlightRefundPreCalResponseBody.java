@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -439,7 +444,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         private String itemUnitId;
 
         @com.aliyun.core.annotation.NameInMap("multi_refund_cal_list")
-        private java.util.List < MultiRefundCalList> multiRefundCalList;
+        private java.util.List<MultiRefundCalList> multiRefundCalList;
 
         @com.aliyun.core.annotation.NameInMap("pre_refund_money")
         private Long preRefundMoney;
@@ -448,7 +453,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         private Long refundFee;
 
         @com.aliyun.core.annotation.NameInMap("return_reason")
-        private java.util.List < ReturnReason> returnReason;
+        private java.util.List<ReturnReason> returnReason;
 
         @com.aliyun.core.annotation.NameInMap("session_id")
         private String sessionId;
@@ -492,7 +497,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         /**
          * @return multiRefundCalList
          */
-        public java.util.List < MultiRefundCalList> getMultiRefundCalList() {
+        public java.util.List<MultiRefundCalList> getMultiRefundCalList() {
             return this.multiRefundCalList;
         }
 
@@ -513,7 +518,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         /**
          * @return returnReason
          */
-        public java.util.List < ReturnReason> getReturnReason() {
+        public java.util.List<ReturnReason> getReturnReason() {
             return this.returnReason;
         }
 
@@ -534,10 +539,10 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean flightChange; 
             private String itemUnitId; 
-            private java.util.List < MultiRefundCalList> multiRefundCalList; 
+            private java.util.List<MultiRefundCalList> multiRefundCalList; 
             private Long preRefundMoney; 
             private Long refundFee; 
-            private java.util.List < ReturnReason> returnReason; 
+            private java.util.List<ReturnReason> returnReason; 
             private String sessionId; 
             private String tips; 
 
@@ -560,7 +565,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             /**
              * multi_refund_cal_list.
              */
-            public Builder multiRefundCalList(java.util.List < MultiRefundCalList> multiRefundCalList) {
+            public Builder multiRefundCalList(java.util.List<MultiRefundCalList> multiRefundCalList) {
                 this.multiRefundCalList = multiRefundCalList;
                 return this;
             }
@@ -584,7 +589,7 @@ public class FlightRefundPreCalResponseBody extends TeaModel {
             /**
              * return_reason.
              */
-            public Builder returnReason(java.util.List < ReturnReason> returnReason) {
+            public Builder returnReason(java.util.List<ReturnReason> returnReason) {
                 this.returnReason = returnReason;
                 return this;
             }

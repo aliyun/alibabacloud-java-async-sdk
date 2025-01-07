@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -268,6 +273,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cascade_department")
         private String cascadeDepartment;
 
+        @com.aliyun.core.annotation.NameInMap("category_desc")
+        private String categoryDesc;
+
         @com.aliyun.core.annotation.NameInMap("change_fee")
         private Double changeFee;
 
@@ -327,6 +335,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("fee_type")
         private String feeType;
+
+        @com.aliyun.core.annotation.NameInMap("fee_type_desc")
+        private String feeTypeDesc;
 
         @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
@@ -418,6 +429,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
+        @com.aliyun.core.annotation.NameInMap("settle_type_desc")
+        private String settleTypeDesc;
+
         @com.aliyun.core.annotation.NameInMap("settlement_fee")
         private Double settlementFee;
 
@@ -432,6 +446,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
+
+        @com.aliyun.core.annotation.NameInMap("status_desc")
+        private String statusDesc;
 
         @com.aliyun.core.annotation.NameInMap("sub_order_id")
         private String subOrderId;
@@ -451,11 +468,17 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("trade")
         private String trade;
 
+        @com.aliyun.core.annotation.NameInMap("trade_action_desc")
+        private String tradeActionDesc;
+
         @com.aliyun.core.annotation.NameInMap("traveler_id")
         private String travelerId;
 
         @com.aliyun.core.annotation.NameInMap("traveler_job_no")
         private String travelerJobNo;
+
+        @com.aliyun.core.annotation.NameInMap("traveler_member_type")
+        private String travelerMemberType;
 
         @com.aliyun.core.annotation.NameInMap("traveler_name")
         private String travelerName;
@@ -500,6 +523,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.cabinClass = builder.cabinClass;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
+            this.categoryDesc = builder.categoryDesc;
             this.changeFee = builder.changeFee;
             this.changeResult = builder.changeResult;
             this.corpPayOrderFee = builder.corpPayOrderFee;
@@ -520,6 +544,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.discount = builder.discount;
             this.exceedReason = builder.exceedReason;
             this.feeType = builder.feeType;
+            this.feeTypeDesc = builder.feeTypeDesc;
             this.flightNo = builder.flightNo;
             this.index = builder.index;
             this.insOrderId = builder.insOrderId;
@@ -550,19 +575,23 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.sealPrice = builder.sealPrice;
             this.segmentType = builder.segmentType;
             this.serviceFee = builder.serviceFee;
+            this.settleTypeDesc = builder.settleTypeDesc;
             this.settlementFee = builder.settlementFee;
             this.settlementGrantFee = builder.settlementGrantFee;
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.status = builder.status;
+            this.statusDesc = builder.statusDesc;
             this.subOrderId = builder.subOrderId;
             this.taxFee = builder.taxFee;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
             this.ticketId = builder.ticketId;
             this.trade = builder.trade;
+            this.tradeActionDesc = builder.tradeActionDesc;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
+            this.travelerMemberType = builder.travelerMemberType;
             this.travelerName = builder.travelerName;
             this.voucherType = builder.voucherType;
             this.voucherTypeDesc = builder.voucherTypeDesc;
@@ -788,6 +817,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return categoryDesc
+         */
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
+        /**
          * @return changeFee
          */
         public Double getChangeFee() {
@@ -925,6 +961,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getFeeType() {
             return this.feeType;
+        }
+
+        /**
+         * @return feeTypeDesc
+         */
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
         }
 
         /**
@@ -1138,6 +1181,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return settleTypeDesc
+         */
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
+        /**
          * @return settlementFee
          */
         public Double getSettlementFee() {
@@ -1170,6 +1220,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public Integer getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return statusDesc
+         */
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
         /**
@@ -1215,6 +1272,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return tradeActionDesc
+         */
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
+        }
+
+        /**
          * @return travelerId
          */
         public String getTravelerId() {
@@ -1226,6 +1290,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        /**
+         * @return travelerMemberType
+         */
+        public String getTravelerMemberType() {
+            return this.travelerMemberType;
         }
 
         /**
@@ -1287,6 +1358,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String cabinClass; 
             private String capitalDirection; 
             private String cascadeDepartment; 
+            private String categoryDesc; 
             private Double changeFee; 
             private String changeResult; 
             private Double corpPayOrderFee; 
@@ -1307,6 +1379,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String discount; 
             private String exceedReason; 
             private String feeType; 
+            private String feeTypeDesc; 
             private String flightNo; 
             private String index; 
             private String insOrderId; 
@@ -1337,19 +1410,23 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Double sealPrice; 
             private String segmentType; 
             private Double serviceFee; 
+            private String settleTypeDesc; 
             private Double settlementFee; 
             private Double settlementGrantFee; 
             private String settlementTime; 
             private String settlementType; 
             private Integer status; 
+            private String statusDesc; 
             private String subOrderId; 
             private Double taxFee; 
             private String taxRate; 
             private String thirdItineraryId; 
             private String ticketId; 
             private String trade; 
+            private String tradeActionDesc; 
             private String travelerId; 
             private String travelerJobNo; 
+            private String travelerMemberType; 
             private String travelerName; 
             private Integer voucherType; 
             private String voucherTypeDesc; 
@@ -1596,6 +1673,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * category_desc.
+             */
+            public Builder categoryDesc(String categoryDesc) {
+                this.categoryDesc = categoryDesc;
+                return this;
+            }
+
+            /**
              * change_fee.
              */
             public Builder changeFee(Double changeFee) {
@@ -1752,6 +1837,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder feeType(String feeType) {
                 this.feeType = feeType;
+                return this;
+            }
+
+            /**
+             * fee_type_desc.
+             */
+            public Builder feeTypeDesc(String feeTypeDesc) {
+                this.feeTypeDesc = feeTypeDesc;
                 return this;
             }
 
@@ -1996,6 +2089,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * settle_type_desc.
+             */
+            public Builder settleTypeDesc(String settleTypeDesc) {
+                this.settleTypeDesc = settleTypeDesc;
+                return this;
+            }
+
+            /**
              * settlement_fee.
              */
             public Builder settlementFee(Double settlementFee) {
@@ -2032,6 +2133,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * status_desc.
+             */
+            public Builder statusDesc(String statusDesc) {
+                this.statusDesc = statusDesc;
                 return this;
             }
 
@@ -2087,6 +2196,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * trade_action_desc.
+             */
+            public Builder tradeActionDesc(String tradeActionDesc) {
+                this.tradeActionDesc = tradeActionDesc;
+                return this;
+            }
+
+            /**
              * traveler_id.
              */
             public Builder travelerId(String travelerId) {
@@ -2099,6 +2216,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder travelerJobNo(String travelerJobNo) {
                 this.travelerJobNo = travelerJobNo;
+                return this;
+            }
+
+            /**
+             * traveler_member_type.
+             */
+            public Builder travelerMemberType(String travelerMemberType) {
+                this.travelerMemberType = travelerMemberType;
                 return this;
             }
 
@@ -2155,13 +2280,16 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         private String corpId;
 
         @com.aliyun.core.annotation.NameInMap("data_list")
-        private java.util.List < DataList> dataList;
+        private java.util.List<DataList> dataList;
 
         @com.aliyun.core.annotation.NameInMap("period_end")
         private String periodEnd;
 
         @com.aliyun.core.annotation.NameInMap("period_start")
         private String periodStart;
+
+        @com.aliyun.core.annotation.NameInMap("scroll_id")
+        private String scrollId;
 
         @com.aliyun.core.annotation.NameInMap("total_num")
         private Long totalNum;
@@ -2172,6 +2300,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.dataList = builder.dataList;
             this.periodEnd = builder.periodEnd;
             this.periodStart = builder.periodStart;
+            this.scrollId = builder.scrollId;
             this.totalNum = builder.totalNum;
         }
 
@@ -2200,7 +2329,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         /**
          * @return dataList
          */
-        public java.util.List < DataList> getDataList() {
+        public java.util.List<DataList> getDataList() {
             return this.dataList;
         }
 
@@ -2219,6 +2348,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return scrollId
+         */
+        public String getScrollId() {
+            return this.scrollId;
+        }
+
+        /**
          * @return totalNum
          */
         public Long getTotalNum() {
@@ -2228,9 +2364,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer category; 
             private String corpId; 
-            private java.util.List < DataList> dataList; 
+            private java.util.List<DataList> dataList; 
             private String periodEnd; 
             private String periodStart; 
+            private String scrollId; 
             private Long totalNum; 
 
             /**
@@ -2252,7 +2389,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             /**
              * data_list.
              */
-            public Builder dataList(java.util.List < DataList> dataList) {
+            public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
                 return this;
             }
@@ -2270,6 +2407,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder periodStart(String periodStart) {
                 this.periodStart = periodStart;
+                return this;
+            }
+
+            /**
+             * scroll_id.
+             */
+            public Builder scrollId(String scrollId) {
+                this.scrollId = scrollId;
                 return this;
             }
 

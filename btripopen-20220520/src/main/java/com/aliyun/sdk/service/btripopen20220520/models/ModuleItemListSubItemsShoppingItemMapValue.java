@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,10 +24,10 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     private String id;
 
     @com.aliyun.core.annotation.NameInMap("cabin_quantity")
-    private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity;
+    private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity;
 
     @com.aliyun.core.annotation.NameInMap("segment_price")
-    private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice;
+    private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice;
 
     private ModuleItemListSubItemsShoppingItemMapValue(Builder builder) {
         this.searchPrice = builder.searchPrice;
@@ -56,22 +61,22 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     /**
      * @return cabinQuantity
      */
-    public java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > getCabinQuantity() {
+    public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> getCabinQuantity() {
         return this.cabinQuantity;
     }
 
     /**
      * @return segmentPrice
      */
-    public java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > getSegmentPrice() {
+    public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> getSegmentPrice() {
         return this.segmentPrice;
     }
 
     public static final class Builder {
         private SearchPrice searchPrice; 
         private String id; 
-        private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity; 
-        private java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice; 
+        private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity; 
+        private java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice; 
 
         /**
          * search_price.
@@ -95,7 +100,7 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
         /**
          * cabin_quantity.
          */
-        public Builder cabinQuantity(java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity) {
+        public Builder cabinQuantity(java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity) {
             this.cabinQuantity = cabinQuantity;
             return this;
         }
@@ -103,7 +108,7 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
         /**
          * segment_price.
          */
-        public Builder segmentPrice(java.util.Map < String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice) {
+        public Builder segmentPrice(java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice) {
             this.segmentPrice = segmentPrice;
             return this;
         }

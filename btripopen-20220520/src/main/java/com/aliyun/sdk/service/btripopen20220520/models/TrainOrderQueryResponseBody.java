@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -2141,7 +2146,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_ticket_info_list")
-        private java.util.List < ChangeTicketInfoList> changeTicketInfoList;
+        private java.util.List<ChangeTicketInfoList> changeTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
@@ -2150,16 +2155,16 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         private OrderBaseInfo orderBaseInfo;
 
         @com.aliyun.core.annotation.NameInMap("passenger_info_list")
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("refund_ticket_info_list")
-        private java.util.List < RefundTicketInfoList> refundTicketInfoList;
+        private java.util.List<RefundTicketInfoList> refundTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("ticket_info_list")
-        private java.util.List < TicketInfoList> ticketInfoList;
+        private java.util.List<TicketInfoList> ticketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("train_info")
         private TrainInfo trainInfo;
@@ -2186,7 +2191,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         /**
          * @return changeTicketInfoList
          */
-        public java.util.List < ChangeTicketInfoList> getChangeTicketInfoList() {
+        public java.util.List<ChangeTicketInfoList> getChangeTicketInfoList() {
             return this.changeTicketInfoList;
         }
 
@@ -2207,28 +2212,28 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
         /**
          * @return refundTicketInfoList
          */
-        public java.util.List < RefundTicketInfoList> getRefundTicketInfoList() {
+        public java.util.List<RefundTicketInfoList> getRefundTicketInfoList() {
             return this.refundTicketInfoList;
         }
 
         /**
          * @return ticketInfoList
          */
-        public java.util.List < TicketInfoList> getTicketInfoList() {
+        public java.util.List<TicketInfoList> getTicketInfoList() {
             return this.ticketInfoList;
         }
 
@@ -2240,19 +2245,19 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeTicketInfoList> changeTicketInfoList; 
+            private java.util.List<ChangeTicketInfoList> changeTicketInfoList; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
-            private java.util.List < RefundTicketInfoList> refundTicketInfoList; 
-            private java.util.List < TicketInfoList> ticketInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
+            private java.util.List<RefundTicketInfoList> refundTicketInfoList; 
+            private java.util.List<TicketInfoList> ticketInfoList; 
             private TrainInfo trainInfo; 
 
             /**
              * change_ticket_info_list.
              */
-            public Builder changeTicketInfoList(java.util.List < ChangeTicketInfoList> changeTicketInfoList) {
+            public Builder changeTicketInfoList(java.util.List<ChangeTicketInfoList> changeTicketInfoList) {
                 this.changeTicketInfoList = changeTicketInfoList;
                 return this;
             }
@@ -2276,7 +2281,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_info_list.
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }
@@ -2284,7 +2289,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }
@@ -2292,7 +2297,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * refund_ticket_info_list.
              */
-            public Builder refundTicketInfoList(java.util.List < RefundTicketInfoList> refundTicketInfoList) {
+            public Builder refundTicketInfoList(java.util.List<RefundTicketInfoList> refundTicketInfoList) {
                 this.refundTicketInfoList = refundTicketInfoList;
                 return this;
             }
@@ -2300,7 +2305,7 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             /**
              * ticket_info_list.
              */
-            public Builder ticketInfoList(java.util.List < TicketInfoList> ticketInfoList) {
+            public Builder ticketInfoList(java.util.List<TicketInfoList> ticketInfoList) {
                 this.ticketInfoList = ticketInfoList;
                 return this;
             }

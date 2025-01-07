@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class HotelSearchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("brand_code")
-    private java.util.List < String > brandCode;
+    private java.util.List<String> brandCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("btrip_user_id")
@@ -94,7 +99,7 @@ public class HotelSearchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("shids")
-    private java.util.List < Long > shids;
+    private java.util.List<Long> shids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("sort_code")
@@ -159,7 +164,7 @@ public class HotelSearchRequest extends Request {
     /**
      * @return brandCode
      */
-    public java.util.List < String > getBrandCode() {
+    public java.util.List<String> getBrandCode() {
         return this.brandCode;
     }
 
@@ -285,7 +290,7 @@ public class HotelSearchRequest extends Request {
     /**
      * @return shids
      */
-    public java.util.List < Long > getShids() {
+    public java.util.List<Long> getShids() {
         return this.shids;
     }
 
@@ -312,7 +317,7 @@ public class HotelSearchRequest extends Request {
 
     public static final class Builder extends Request.Builder<HotelSearchRequest, Builder> {
         private String adultNum; 
-        private java.util.List < String > brandCode; 
+        private java.util.List<String> brandCode; 
         private String btripUserId; 
         private String checkInDate; 
         private String checkOutDate; 
@@ -330,7 +335,7 @@ public class HotelSearchRequest extends Request {
         private Integer pageSize; 
         private Integer payOverType; 
         private Integer paymentType; 
-        private java.util.List < Long > shids; 
+        private java.util.List<Long> shids; 
         private Integer sortCode; 
         private Integer superMan; 
         private String xAcsBtripCorpToken; 
@@ -378,7 +383,7 @@ public class HotelSearchRequest extends Request {
         /**
          * brand_code.
          */
-        public Builder brandCode(java.util.List < String > brandCode) {
+        public Builder brandCode(java.util.List<String> brandCode) {
             String brandCodeShrink = shrink(brandCode, "brand_code", "json");
             this.putQueryParameter("brand_code", brandCodeShrink);
             this.brandCode = brandCode;
@@ -553,7 +558,7 @@ public class HotelSearchRequest extends Request {
         /**
          * shids.
          */
-        public Builder shids(java.util.List < Long > shids) {
+        public Builder shids(java.util.List<Long> shids) {
             String shidsShrink = shrink(shids, "shids", "json");
             this.putQueryParameter("shids", shidsShrink);
             this.shids = shids;

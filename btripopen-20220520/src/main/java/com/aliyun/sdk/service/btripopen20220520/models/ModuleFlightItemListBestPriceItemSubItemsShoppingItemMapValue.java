@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
     private String id;
 
     @com.aliyun.core.annotation.NameInMap("cabin_quantity")
-    private java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity;
+    private java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity;
 
     @com.aliyun.core.annotation.NameInMap("search_price")
     private SearchPrice searchPrice;
 
     @com.aliyun.core.annotation.NameInMap("segment_price")
-    private java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice;
+    private java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice;
 
     private ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue(Builder builder) {
         this.id = builder.id;
@@ -49,7 +54,7 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
     /**
      * @return cabinQuantity
      */
-    public java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue > getCabinQuantity() {
+    public java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue> getCabinQuantity() {
         return this.cabinQuantity;
     }
 
@@ -63,15 +68,15 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
     /**
      * @return segmentPrice
      */
-    public java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue > getSegmentPrice() {
+    public java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue> getSegmentPrice() {
         return this.segmentPrice;
     }
 
     public static final class Builder {
         private String id; 
-        private java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity; 
+        private java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity; 
         private SearchPrice searchPrice; 
-        private java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice; 
+        private java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice; 
 
         /**
          * <p>id</p>
@@ -87,7 +92,7 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
         /**
          * cabin_quantity.
          */
-        public Builder cabinQuantity(java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue > cabinQuantity) {
+        public Builder cabinQuantity(java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue> cabinQuantity) {
             this.cabinQuantity = cabinQuantity;
             return this;
         }
@@ -103,7 +108,7 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
         /**
          * segment_price.
          */
-        public Builder segmentPrice(java.util.Map < String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue > segmentPrice) {
+        public Builder segmentPrice(java.util.Map<String, ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceValue> segmentPrice) {
             this.segmentPrice = segmentPrice;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,11 +49,11 @@ public class IntlFlightOtaSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_journeys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SearchJourneys> searchJourneys;
+    private java.util.List<SearchJourneys> searchJourneys;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_passenger_list")
-    private java.util.List < SearchPassengerList> searchPassengerList;
+    private java.util.List<SearchPassengerList> searchPassengerList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("supplier_code")
@@ -144,14 +149,14 @@ public class IntlFlightOtaSearchRequest extends Request {
     /**
      * @return searchJourneys
      */
-    public java.util.List < SearchJourneys> getSearchJourneys() {
+    public java.util.List<SearchJourneys> getSearchJourneys() {
         return this.searchJourneys;
     }
 
     /**
      * @return searchPassengerList
      */
-    public java.util.List < SearchPassengerList> getSearchPassengerList() {
+    public java.util.List<SearchPassengerList> getSearchPassengerList() {
         return this.searchPassengerList;
     }
 
@@ -184,8 +189,8 @@ public class IntlFlightOtaSearchRequest extends Request {
         private String isvName; 
         private String language; 
         private Boolean needShareFlight; 
-        private java.util.List < SearchJourneys> searchJourneys; 
-        private java.util.List < SearchPassengerList> searchPassengerList; 
+        private java.util.List<SearchJourneys> searchJourneys; 
+        private java.util.List<SearchPassengerList> searchPassengerList; 
         private String supplierCode; 
         private Integer tripType; 
         private String xAcsBtripCorpToken; 
@@ -279,7 +284,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder searchJourneys(java.util.List < SearchJourneys> searchJourneys) {
+        public Builder searchJourneys(java.util.List<SearchJourneys> searchJourneys) {
             String searchJourneysShrink = shrink(searchJourneys, "search_journeys", "json");
             this.putQueryParameter("search_journeys", searchJourneysShrink);
             this.searchJourneys = searchJourneys;
@@ -289,7 +294,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         /**
          * search_passenger_list.
          */
-        public Builder searchPassengerList(java.util.List < SearchPassengerList> searchPassengerList) {
+        public Builder searchPassengerList(java.util.List<SearchPassengerList> searchPassengerList) {
             String searchPassengerListShrink = shrink(searchPassengerList, "search_passenger_list", "json");
             this.putQueryParameter("search_passenger_list", searchPassengerListShrink);
             this.searchPassengerList = searchPassengerList;
@@ -560,7 +565,7 @@ public class IntlFlightOtaSearchRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("selected_flights")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < SelectedFlights> selectedFlights;
+        private java.util.List<SelectedFlights> selectedFlights;
 
         private SearchJourneys(Builder builder) {
             this.arrCityCode = builder.arrCityCode;
@@ -601,7 +606,7 @@ public class IntlFlightOtaSearchRequest extends Request {
         /**
          * @return selectedFlights
          */
-        public java.util.List < SelectedFlights> getSelectedFlights() {
+        public java.util.List<SelectedFlights> getSelectedFlights() {
             return this.selectedFlights;
         }
 
@@ -609,7 +614,7 @@ public class IntlFlightOtaSearchRequest extends Request {
             private String arrCityCode; 
             private String depCityCode; 
             private String depDate; 
-            private java.util.List < SelectedFlights> selectedFlights; 
+            private java.util.List<SelectedFlights> selectedFlights; 
 
             /**
              * <p>This parameter is required.</p>
@@ -647,7 +652,7 @@ public class IntlFlightOtaSearchRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder selectedFlights(java.util.List < SelectedFlights> selectedFlights) {
+            public Builder selectedFlights(java.util.List<SelectedFlights> selectedFlights) {
                 this.selectedFlights = selectedFlights;
                 return this;
             }

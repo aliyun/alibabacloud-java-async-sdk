@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class TrainStationSearchResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cities")
-        private java.util.List < Cities> cities;
+        private java.util.List<Cities> cities;
 
         private Module(Builder builder) {
             this.cities = builder.cities;
@@ -243,17 +248,17 @@ public class TrainStationSearchResponseBody extends TeaModel {
         /**
          * @return cities
          */
-        public java.util.List < Cities> getCities() {
+        public java.util.List<Cities> getCities() {
             return this.cities;
         }
 
         public static final class Builder {
-            private java.util.List < Cities> cities; 
+            private java.util.List<Cities> cities; 
 
             /**
              * cities.
              */
-            public Builder cities(java.util.List < Cities> cities) {
+            public Builder cities(java.util.List<Cities> cities) {
                 this.cities = cities;
                 return this;
             }

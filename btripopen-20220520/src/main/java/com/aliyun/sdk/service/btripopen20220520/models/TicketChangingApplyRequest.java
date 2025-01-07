@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class TicketChangingApplyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modify_flight_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ModifyFlightInfoList> modifyFlightInfoList;
+    private java.util.List<ModifyFlightInfoList> modifyFlightInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ota_item_id")
@@ -103,7 +108,7 @@ public class TicketChangingApplyRequest extends Request {
     /**
      * @return modifyFlightInfoList
      */
-    public java.util.List < ModifyFlightInfoList> getModifyFlightInfoList() {
+    public java.util.List<ModifyFlightInfoList> getModifyFlightInfoList() {
         return this.modifyFlightInfoList;
     }
 
@@ -146,7 +151,7 @@ public class TicketChangingApplyRequest extends Request {
         private String disOrderId; 
         private String disSubOrderId; 
         private Integer isVoluntary; 
-        private java.util.List < ModifyFlightInfoList> modifyFlightInfoList; 
+        private java.util.List<ModifyFlightInfoList> modifyFlightInfoList; 
         private String otaItemId; 
         private String reason; 
         private String sessionId; 
@@ -206,7 +211,7 @@ public class TicketChangingApplyRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder modifyFlightInfoList(java.util.List < ModifyFlightInfoList> modifyFlightInfoList) {
+        public Builder modifyFlightInfoList(java.util.List<ModifyFlightInfoList> modifyFlightInfoList) {
             String modifyFlightInfoListShrink = shrink(modifyFlightInfoList, "modify_flight_info_list", "json");
             this.putBodyParameter("modify_flight_info_list", modifyFlightInfoListShrink);
             this.modifyFlightInfoList = modifyFlightInfoList;
@@ -395,7 +400,7 @@ public class TicketChangingApplyRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("passenger_info_list")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
         private ModifyFlightInfoList(Builder builder) {
             this.arrCity = builder.arrCity;
@@ -452,7 +457,7 @@ public class TicketChangingApplyRequest extends Request {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
@@ -462,7 +467,7 @@ public class TicketChangingApplyRequest extends Request {
             private String depCity; 
             private String depDate; 
             private String flightNo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
 
             /**
              * <p>This parameter is required.</p>
@@ -519,7 +524,7 @@ public class TicketChangingApplyRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }

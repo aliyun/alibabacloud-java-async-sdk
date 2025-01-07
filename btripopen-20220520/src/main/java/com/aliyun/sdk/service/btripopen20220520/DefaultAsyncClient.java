@@ -1642,6 +1642,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of FuPointBillSettlementQuery  FuPointBillSettlementQueryRequest
+     * @return FuPointBillSettlementQueryResponse
+     */
+    @Override
+    public CompletableFuture<FuPointBillSettlementQueryResponse> fuPointBillSettlementQuery(FuPointBillSettlementQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FuPointBillSettlementQuery").setMethod(HttpMethod.GET).setPathRegex("/fupoint/v1/bill-settlement").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FuPointBillSettlementQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FuPointBillSettlementQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GroupCorpToken  GroupCorpTokenRequest
      * @return GroupCorpTokenResponse
      */
@@ -2740,6 +2758,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of OrderRefundDetailQuery  OrderRefundDetailQueryRequest
+     * @return OrderRefundDetailQueryResponse
+     */
+    @Override
+    public CompletableFuture<OrderRefundDetailQueryResponse> orderRefundDetailQuery(OrderRefundDetailQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OrderRefundDetailQuery").setMethod(HttpMethod.POST).setPathRegex("/coop-hotel/v1/refund/action/detail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OrderRefundDetailQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OrderRefundDetailQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ProjectAdd  ProjectAddRequest
      * @return ProjectAddResponse
      */
@@ -2788,6 +2824,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ProjectModifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryCorpDetailInfo  QueryCorpDetailInfoRequest
+     * @return QueryCorpDetailInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryCorpDetailInfoResponse> queryCorpDetailInfo(QueryCorpDetailInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryCorpDetailInfo").setMethod(HttpMethod.GET).setPathRegex("/corps/v1/corps/detail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryCorpDetailInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryCorpDetailInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

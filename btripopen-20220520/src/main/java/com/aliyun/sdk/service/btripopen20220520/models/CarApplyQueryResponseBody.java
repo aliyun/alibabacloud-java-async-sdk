@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CarApplyQueryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("apply_list")
-    private java.util.List < ApplyList> applyList;
+    private java.util.List<ApplyList> applyList;
 
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
@@ -54,7 +59,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
     /**
      * @return applyList
      */
-    public java.util.List < ApplyList> getApplyList() {
+    public java.util.List<ApplyList> getApplyList() {
         return this.applyList;
     }
 
@@ -101,7 +106,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApplyList> applyList; 
+        private java.util.List<ApplyList> applyList; 
         private String code; 
         private String message; 
         private String requestId; 
@@ -112,7 +117,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         /**
          * apply_list.
          */
-        public Builder applyList(java.util.List < ApplyList> applyList) {
+        public Builder applyList(java.util.List<ApplyList> applyList) {
             this.applyList = applyList;
             return this;
         }
@@ -720,7 +725,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
      */
     public static class TravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        private java.util.List<CarCitySet> carCitySet;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
@@ -741,7 +746,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
         }
 
@@ -753,13 +758,13 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CarCitySet> carCitySet; 
+            private java.util.List<CarCitySet> carCitySet; 
             private String userId; 
 
             /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
                 return this;
             }
@@ -787,7 +792,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
      */
     public static class ApplyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("approver_list")
-        private java.util.List < ApproverList> approverList;
+        private java.util.List<ApproverList> approverList;
 
         @com.aliyun.core.annotation.NameInMap("business_type")
         private String businessType;
@@ -805,7 +810,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_list")
-        private java.util.List < ItineraryList> itineraryList;
+        private java.util.List<ItineraryList> itineraryList;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
@@ -823,7 +828,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         private String thirdpartId;
 
         @com.aliyun.core.annotation.NameInMap("traveler_standard")
-        private java.util.List < TravelerStandard> travelerStandard;
+        private java.util.List<TravelerStandard> travelerStandard;
 
         @com.aliyun.core.annotation.NameInMap("trip_cause")
         private String tripCause;
@@ -868,7 +873,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         /**
          * @return approverList
          */
-        public java.util.List < ApproverList> getApproverList() {
+        public java.util.List<ApproverList> getApproverList() {
             return this.approverList;
         }
 
@@ -910,7 +915,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         /**
          * @return itineraryList
          */
-        public java.util.List < ItineraryList> getItineraryList() {
+        public java.util.List<ItineraryList> getItineraryList() {
             return this.itineraryList;
         }
 
@@ -952,7 +957,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
         /**
          * @return travelerStandard
          */
-        public java.util.List < TravelerStandard> getTravelerStandard() {
+        public java.util.List<TravelerStandard> getTravelerStandard() {
             return this.travelerStandard;
         }
 
@@ -985,19 +990,19 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApproverList> approverList; 
+            private java.util.List<ApproverList> approverList; 
             private String businessType; 
             private String departId; 
             private String departName; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.List < ItineraryList> itineraryList; 
+            private java.util.List<ItineraryList> itineraryList; 
             private Long orderId; 
             private String relatedThirdApplyId; 
             private Integer status; 
             private String statusDesc; 
             private String thirdpartId; 
-            private java.util.List < TravelerStandard> travelerStandard; 
+            private java.util.List<TravelerStandard> travelerStandard; 
             private String tripCause; 
             private String tripTitle; 
             private String userId; 
@@ -1006,7 +1011,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
             /**
              * approver_list.
              */
-            public Builder approverList(java.util.List < ApproverList> approverList) {
+            public Builder approverList(java.util.List<ApproverList> approverList) {
                 this.approverList = approverList;
                 return this;
             }
@@ -1054,7 +1059,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
             /**
              * itinerary_list.
              */
-            public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
+            public Builder itineraryList(java.util.List<ItineraryList> itineraryList) {
                 this.itineraryList = itineraryList;
                 return this;
             }
@@ -1102,7 +1107,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
             /**
              * traveler_standard.
              */
-            public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+            public Builder travelerStandard(java.util.List<TravelerStandard> travelerStandard) {
                 this.travelerStandard = travelerStandard;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -284,7 +289,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private Object newSegment;
 
         @com.aliyun.core.annotation.NameInMap("passenger_names")
-        private java.util.List < String > passengerNames;
+        private java.util.List<String> passengerNames;
 
         private FlightChange(Builder builder) {
             this.changeDesc = builder.changeDesc;
@@ -333,7 +338,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return passengerNames
          */
-        public java.util.List < String > getPassengerNames() {
+        public java.util.List<String> getPassengerNames() {
             return this.passengerNames;
         }
 
@@ -342,7 +347,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String changeStatus; 
             private String changeStatusCode; 
             private Object newSegment; 
-            private java.util.List < String > passengerNames; 
+            private java.util.List<String> passengerNames; 
 
             /**
              * change_desc.
@@ -379,7 +384,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * passenger_names.
              */
-            public Builder passengerNames(java.util.List < String > passengerNames) {
+            public Builder passengerNames(java.util.List<String> passengerNames) {
                 this.passengerNames = passengerNames;
                 return this;
             }
@@ -1567,7 +1572,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private String refundChangeDetails;
 
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         private Journeys(Builder builder) {
             this.allFlyDuration = builder.allFlyDuration;
@@ -1712,7 +1717,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -1733,7 +1738,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private Boolean isTransfer; 
             private String journeyTitle; 
             private String refundChangeDetails; 
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
 
             /**
              * all_fly_duration.
@@ -1869,7 +1874,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * segment_list.
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -1889,7 +1894,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
      */
     public static class FlightTaleInfoDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("journeys")
-        private java.util.List < Journeys> journeys;
+        private java.util.List<Journeys> journeys;
 
         @com.aliyun.core.annotation.NameInMap("notice_tips")
         private String noticeTips;
@@ -1918,7 +1923,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return journeys
          */
-        public java.util.List < Journeys> getJourneys() {
+        public java.util.List<Journeys> getJourneys() {
             return this.journeys;
         }
 
@@ -1944,7 +1949,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Journeys> journeys; 
+            private java.util.List<Journeys> journeys; 
             private String noticeTips; 
             private String tripType; 
             private Integer tripTypeCode; 
@@ -1952,7 +1957,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * journeys.
              */
-            public Builder journeys(java.util.List < Journeys> journeys) {
+            public Builder journeys(java.util.List<Journeys> journeys) {
                 this.journeys = journeys;
                 return this;
             }
@@ -2632,7 +2637,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private String pcc;
 
         @com.aliyun.core.annotation.NameInMap("segment_open_ticket_list")
-        private java.util.List < SegmentOpenTicketList> segmentOpenTicketList;
+        private java.util.List<SegmentOpenTicketList> segmentOpenTicketList;
 
         @com.aliyun.core.annotation.NameInMap("ticket_auth_memo")
         private String ticketAuthMemo;
@@ -2701,7 +2706,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return segmentOpenTicketList
          */
-        public java.util.List < SegmentOpenTicketList> getSegmentOpenTicketList() {
+        public java.util.List<SegmentOpenTicketList> getSegmentOpenTicketList() {
             return this.segmentOpenTicketList;
         }
 
@@ -2745,7 +2750,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String journeyTitle; 
             private String openTicketStatus; 
             private String pcc; 
-            private java.util.List < SegmentOpenTicketList> segmentOpenTicketList; 
+            private java.util.List<SegmentOpenTicketList> segmentOpenTicketList; 
             private String ticketAuthMemo; 
             private Integer ticketAuthStatus; 
             private String ticketNo; 
@@ -2790,7 +2795,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * segment_open_ticket_list.
              */
-            public Builder segmentOpenTicketList(java.util.List < SegmentOpenTicketList> segmentOpenTicketList) {
+            public Builder segmentOpenTicketList(java.util.List<SegmentOpenTicketList> segmentOpenTicketList) {
                 this.segmentOpenTicketList = segmentOpenTicketList;
                 return this;
             }
@@ -2868,7 +2873,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private Credential credential;
 
         @com.aliyun.core.annotation.NameInMap("credentials")
-        private java.util.List < Credentials> credentials;
+        private java.util.List<Credentials> credentials;
 
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;
@@ -2922,10 +2927,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private String shengPiPinyin;
 
         @com.aliyun.core.annotation.NameInMap("ticket_nos")
-        private java.util.List < String > ticketNos;
+        private java.util.List<String> ticketNos;
 
         @com.aliyun.core.annotation.NameInMap("tickets")
-        private java.util.List < Tickets> tickets;
+        private java.util.List<Tickets> tickets;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
@@ -3017,7 +3022,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return credentials
          */
-        public java.util.List < Credentials> getCredentials() {
+        public java.util.List<Credentials> getCredentials() {
             return this.credentials;
         }
 
@@ -3143,14 +3148,14 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return ticketNos
          */
-        public java.util.List < String > getTicketNos() {
+        public java.util.List<String> getTicketNos() {
             return this.ticketNos;
         }
 
         /**
          * @return tickets
          */
-        public java.util.List < Tickets> getTickets() {
+        public java.util.List<Tickets> getTickets() {
             return this.tickets;
         }
 
@@ -3175,7 +3180,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String country; 
             private String countryCode; 
             private Credential credential; 
-            private java.util.List < Credentials> credentials; 
+            private java.util.List<Credentials> credentials; 
             private String email; 
             private String enFirstName; 
             private String enLastName; 
@@ -3193,8 +3198,8 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private String outPassengerId; 
             private String phone; 
             private String shengPiPinyin; 
-            private java.util.List < String > ticketNos; 
-            private java.util.List < Tickets> tickets; 
+            private java.util.List<String> ticketNos; 
+            private java.util.List<Tickets> tickets; 
             private Integer type; 
             private String userId; 
 
@@ -3249,7 +3254,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * credentials.
              */
-            public Builder credentials(java.util.List < Credentials> credentials) {
+            public Builder credentials(java.util.List<Credentials> credentials) {
                 this.credentials = credentials;
                 return this;
             }
@@ -3393,7 +3398,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * ticket_nos.
              */
-            public Builder ticketNos(java.util.List < String > ticketNos) {
+            public Builder ticketNos(java.util.List<String> ticketNos) {
                 this.ticketNos = ticketNos;
                 return this;
             }
@@ -3401,7 +3406,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * tickets.
              */
-            public Builder tickets(java.util.List < Tickets> tickets) {
+            public Builder tickets(java.util.List<Tickets> tickets) {
                 this.tickets = tickets;
                 return this;
             }
@@ -3485,10 +3490,10 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         private String outOrderId;
 
         @com.aliyun.core.annotation.NameInMap("passenger_list")
-        private java.util.List < PassengerList> passengerList;
+        private java.util.List<PassengerList> passengerList;
 
         @com.aliyun.core.annotation.NameInMap("passenger_segment_map")
-        private java.util.Map < String, String > passengerSegmentMap;
+        private java.util.Map<String, String> passengerSegmentMap;
 
         @com.aliyun.core.annotation.NameInMap("pay_time")
         private String payTime;
@@ -3654,14 +3659,14 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerList> getPassengerList() {
+        public java.util.List<PassengerList> getPassengerList() {
             return this.passengerList;
         }
 
         /**
          * @return passengerSegmentMap
          */
-        public java.util.Map < String, String > getPassengerSegmentMap() {
+        public java.util.Map<String, String> getPassengerSegmentMap() {
             return this.passengerSegmentMap;
         }
 
@@ -3717,8 +3722,8 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             private Long orderId; 
             private Long orderPrice; 
             private String outOrderId; 
-            private java.util.List < PassengerList> passengerList; 
-            private java.util.Map < String, String > passengerSegmentMap; 
+            private java.util.List<PassengerList> passengerList; 
+            private java.util.Map<String, String> passengerSegmentMap; 
             private String payTime; 
             private Long saleprice; 
             private Boolean sendcpsms; 
@@ -3856,7 +3861,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
             /**
              * passenger_list.
              */
-            public Builder passengerList(java.util.List < PassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }
@@ -3865,7 +3870,7 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
              * <p>key :passengerId</p>
              * <p>value :segmentId</p>
              */
-            public Builder passengerSegmentMap(java.util.Map < String, String > passengerSegmentMap) {
+            public Builder passengerSegmentMap(java.util.Map<String, String> passengerSegmentMap) {
                 this.passengerSegmentMap = passengerSegmentMap;
                 return this;
             }

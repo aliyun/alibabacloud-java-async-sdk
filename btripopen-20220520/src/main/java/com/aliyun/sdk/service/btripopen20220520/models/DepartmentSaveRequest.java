@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DepartmentSaveRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("depart_list")
-    private java.util.List < DepartList> departList;
+    private java.util.List<DepartList> departList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
@@ -42,7 +47,7 @@ public class DepartmentSaveRequest extends Request {
     /**
      * @return departList
      */
-    public java.util.List < DepartList> getDepartList() {
+    public java.util.List<DepartList> getDepartList() {
         return this.departList;
     }
 
@@ -54,7 +59,7 @@ public class DepartmentSaveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DepartmentSaveRequest, Builder> {
-        private java.util.List < DepartList> departList; 
+        private java.util.List<DepartList> departList; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class DepartmentSaveRequest extends Request {
         /**
          * depart_list.
          */
-        public Builder departList(java.util.List < DepartList> departList) {
+        public Builder departList(java.util.List<DepartList> departList) {
             String departListShrink = shrink(departList, "depart_list", "json");
             this.putBodyParameter("depart_list", departListShrink);
             this.departList = departList;

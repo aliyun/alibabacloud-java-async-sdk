@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityV
     private String quantity;
 
     @com.aliyun.core.annotation.NameInMap("link_cabins")
-    private java.util.List < String > linkCabins;
+    private java.util.List<String> linkCabins;
 
     @com.aliyun.core.annotation.NameInMap("reshop_change_cabin")
     private Boolean reshopChangeCabin;
@@ -112,7 +117,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityV
     /**
      * @return linkCabins
      */
-    public java.util.List < String > getLinkCabins() {
+    public java.util.List<String> getLinkCabins() {
         return this.linkCabins;
     }
 
@@ -151,7 +156,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityV
         private String cabinClassMemo; 
         private String specification; 
         private String quantity; 
-        private java.util.List < String > linkCabins; 
+        private java.util.List<String> linkCabins; 
         private Boolean reshopChangeCabin; 
         private Integer childCabinType; 
         private String infantBasicCabin; 
@@ -208,7 +213,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityV
         /**
          * link_cabins.
          */
-        public Builder linkCabins(java.util.List < String > linkCabins) {
+        public Builder linkCabins(java.util.List<String> linkCabins) {
             this.linkCabins = linkCabins;
             return this;
         }

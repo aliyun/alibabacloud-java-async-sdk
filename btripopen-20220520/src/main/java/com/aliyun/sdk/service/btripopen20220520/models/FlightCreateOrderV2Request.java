@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class FlightCreateOrderV2Request extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("travelers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Travelers> travelers;
+    private java.util.List<Travelers> travelers;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -155,7 +160,7 @@ public class FlightCreateOrderV2Request extends Request {
     /**
      * @return travelers
      */
-    public java.util.List < Travelers> getTravelers() {
+    public java.util.List<Travelers> getTravelers() {
         return this.travelers;
     }
 
@@ -176,7 +181,7 @@ public class FlightCreateOrderV2Request extends Request {
         private String otaItemId; 
         private String outOrderId; 
         private Long totalPriceCent; 
-        private java.util.List < Travelers> travelers; 
+        private java.util.List<Travelers> travelers; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -289,7 +294,7 @@ public class FlightCreateOrderV2Request extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder travelers(java.util.List < Travelers> travelers) {
+        public Builder travelers(java.util.List<Travelers> travelers) {
             String travelersShrink = shrink(travelers, "travelers", "json");
             this.putBodyParameter("travelers", travelersShrink);
             this.travelers = travelers;

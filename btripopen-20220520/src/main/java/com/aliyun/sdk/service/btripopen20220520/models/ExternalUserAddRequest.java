@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ExternalUserAddRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cert_request_list")
-    private java.util.List < CertRequestList> certRequestList;
+    private java.util.List<CertRequestList> certRequestList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("email")
@@ -87,7 +92,7 @@ public class ExternalUserAddRequest extends Request {
     /**
      * @return certRequestList
      */
-    public java.util.List < CertRequestList> getCertRequestList() {
+    public java.util.List<CertRequestList> getCertRequestList() {
         return this.certRequestList;
     }
 
@@ -142,7 +147,7 @@ public class ExternalUserAddRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExternalUserAddRequest, Builder> {
         private String birthday; 
-        private java.util.List < CertRequestList> certRequestList; 
+        private java.util.List<CertRequestList> certRequestList; 
         private String email; 
         private String externalUserId; 
         private String phone; 
@@ -180,7 +185,7 @@ public class ExternalUserAddRequest extends Request {
         /**
          * cert_request_list.
          */
-        public Builder certRequestList(java.util.List < CertRequestList> certRequestList) {
+        public Builder certRequestList(java.util.List<CertRequestList> certRequestList) {
             String certRequestListShrink = shrink(certRequestList, "cert_request_list", "json");
             this.putBodyParameter("cert_request_list", certRequestListShrink);
             this.certRequestList = certRequestList;

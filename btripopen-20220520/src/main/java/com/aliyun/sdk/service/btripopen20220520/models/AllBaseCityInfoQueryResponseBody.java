@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -180,7 +185,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("other_name_list")
-        private java.util.List < String > otherNameList;
+        private java.util.List<String> otherNameList;
 
         private AllCityBaseInfoList(Builder builder) {
             this.adcode = builder.adcode;
@@ -245,7 +250,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         /**
          * @return otherNameList
          */
-        public java.util.List < String > getOtherNameList() {
+        public java.util.List<String> getOtherNameList() {
             return this.otherNameList;
         }
 
@@ -256,7 +261,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             private String cityName; 
             private String cnNameTree; 
             private Long id; 
-            private java.util.List < String > otherNameList; 
+            private java.util.List<String> otherNameList; 
 
             /**
              * adcode.
@@ -309,7 +314,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
             /**
              * other_name_list.
              */
-            public Builder otherNameList(java.util.List < String > otherNameList) {
+            public Builder otherNameList(java.util.List<String> otherNameList) {
                 this.otherNameList = otherNameList;
                 return this;
             }
@@ -329,7 +334,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("all_city_base_info_list")
-        private java.util.List < AllCityBaseInfoList> allCityBaseInfoList;
+        private java.util.List<AllCityBaseInfoList> allCityBaseInfoList;
 
         private Module(Builder builder) {
             this.allCityBaseInfoList = builder.allCityBaseInfoList;
@@ -346,17 +351,17 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
         /**
          * @return allCityBaseInfoList
          */
-        public java.util.List < AllCityBaseInfoList> getAllCityBaseInfoList() {
+        public java.util.List<AllCityBaseInfoList> getAllCityBaseInfoList() {
             return this.allCityBaseInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < AllCityBaseInfoList> allCityBaseInfoList; 
+            private java.util.List<AllCityBaseInfoList> allCityBaseInfoList; 
 
             /**
              * all_city_base_info_list.
              */
-            public Builder allCityBaseInfoList(java.util.List < AllCityBaseInfoList> allCityBaseInfoList) {
+            public Builder allCityBaseInfoList(java.util.List<AllCityBaseInfoList> allCityBaseInfoList) {
                 this.allCityBaseInfoList = allCityBaseInfoList;
                 return this;
             }

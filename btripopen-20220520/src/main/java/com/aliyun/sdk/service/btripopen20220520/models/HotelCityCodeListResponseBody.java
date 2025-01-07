@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private java.util.List < Module> module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public java.util.List < Module> getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -92,7 +97,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Module> module; 
+        private java.util.List<Module> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -116,7 +121,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(java.util.List < Module> module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -232,7 +237,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         private String cityName;
 
         @com.aliyun.core.annotation.NameInMap("districts")
-        private java.util.List < Districts> districts;
+        private java.util.List<Districts> districts;
 
         private Citys(Builder builder) {
             this.cityCode = builder.cityCode;
@@ -265,14 +270,14 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         /**
          * @return districts
          */
-        public java.util.List < Districts> getDistricts() {
+        public java.util.List<Districts> getDistricts() {
             return this.districts;
         }
 
         public static final class Builder {
             private String cityCode; 
             private String cityName; 
-            private java.util.List < Districts> districts; 
+            private java.util.List<Districts> districts; 
 
             /**
              * city_code.
@@ -293,7 +298,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
             /**
              * districts.
              */
-            public Builder districts(java.util.List < Districts> districts) {
+            public Builder districts(java.util.List<Districts> districts) {
                 this.districts = districts;
                 return this;
             }
@@ -313,7 +318,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("citys")
-        private java.util.List < Citys> citys;
+        private java.util.List<Citys> citys;
 
         @com.aliyun.core.annotation.NameInMap("provice_code")
         private String proviceCode;
@@ -338,7 +343,7 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         /**
          * @return citys
          */
-        public java.util.List < Citys> getCitys() {
+        public java.util.List<Citys> getCitys() {
             return this.citys;
         }
 
@@ -357,14 +362,14 @@ public class HotelCityCodeListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Citys> citys; 
+            private java.util.List<Citys> citys; 
             private String proviceCode; 
             private String provinceName; 
 
             /**
              * citys.
              */
-            public Builder citys(java.util.List < Citys> citys) {
+            public Builder citys(java.util.List<Citys> citys) {
                 this.citys = citys;
                 return this;
             }

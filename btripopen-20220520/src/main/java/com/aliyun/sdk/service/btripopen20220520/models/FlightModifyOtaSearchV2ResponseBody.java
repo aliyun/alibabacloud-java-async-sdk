@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -766,7 +771,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
      */
     public static class AgentInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute_show_info_map")
-        private java.util.Map < String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap;
+        private java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("best_discount")
         private Double bestDiscount;
@@ -823,7 +828,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         /**
          * @return attributeShowInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
             return this.attributeShowInfoMap;
         }
 
@@ -898,7 +903,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap; 
             private Double bestDiscount; 
             private CabinClassInfo cabinClassInfo; 
             private Integer cabinCode; 
@@ -913,7 +918,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             /**
              * attribute_show_info_map.
              */
-            public Builder attributeShowInfoMap(java.util.Map < String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap) {
+            public Builder attributeShowInfoMap(java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap) {
                 this.attributeShowInfoMap = attributeShowInfoMap;
                 return this;
             }
@@ -1617,7 +1622,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
      */
     public static class AgentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute_show_info_map")
-        private java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap;
+        private java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("best_discount")
         private Double bestDiscount;
@@ -1674,7 +1679,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         /**
          * @return attributeShowInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
             return this.attributeShowInfoMap;
         }
 
@@ -1749,7 +1754,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap; 
             private Double bestDiscount; 
             private AgentInfoCabinClassInfo cabinClassInfo; 
             private Integer cabinCode; 
@@ -1764,7 +1769,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             /**
              * attribute_show_info_map.
              */
-            public Builder attributeShowInfoMap(java.util.Map < String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap) {
+            public Builder attributeShowInfoMap(java.util.Map<String, java.util.List<ModuleAgentInfoAttributeShowInfoMapValue>> attributeShowInfoMap) {
                 this.attributeShowInfoMap = attributeShowInfoMap;
                 return this;
             }
@@ -3143,7 +3148,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentInfos")
-        private java.util.List < AgentInfos> agentInfos;
+        private java.util.List<AgentInfos> agentInfos;
 
         @com.aliyun.core.annotation.NameInMap("agent_info")
         private AgentInfo agentInfo;
@@ -3152,7 +3157,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         private String cacheKey;
 
         @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
-        private java.util.List < java.util.List < FlightSegmentInfos> > flightSegmentInfos;
+        private java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos;
 
         @com.aliyun.core.annotation.NameInMap("passenger_count")
         private PassengerCount passengerCount;
@@ -3180,7 +3185,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         /**
          * @return agentInfos
          */
-        public java.util.List < AgentInfos> getAgentInfos() {
+        public java.util.List<AgentInfos> getAgentInfos() {
             return this.agentInfos;
         }
 
@@ -3201,7 +3206,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         /**
          * @return flightSegmentInfos
          */
-        public java.util.List < java.util.List < FlightSegmentInfos> > getFlightSegmentInfos() {
+        public java.util.List<java.util.List<FlightSegmentInfos>> getFlightSegmentInfos() {
             return this.flightSegmentInfos;
         }
 
@@ -3220,17 +3225,17 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AgentInfos> agentInfos; 
+            private java.util.List<AgentInfos> agentInfos; 
             private AgentInfo agentInfo; 
             private String cacheKey; 
-            private java.util.List < java.util.List < FlightSegmentInfos> > flightSegmentInfos; 
+            private java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos; 
             private PassengerCount passengerCount; 
             private String sessionId; 
 
             /**
              * agentInfos.
              */
-            public Builder agentInfos(java.util.List < AgentInfos> agentInfos) {
+            public Builder agentInfos(java.util.List<AgentInfos> agentInfos) {
                 this.agentInfos = agentInfos;
                 return this;
             }
@@ -3254,7 +3259,7 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
             /**
              * flight_segment_infos.
              */
-            public Builder flightSegmentInfos(java.util.List < java.util.List < FlightSegmentInfos> > flightSegmentInfos) {
+            public Builder flightSegmentInfos(java.util.List<java.util.List<FlightSegmentInfos>> flightSegmentInfos) {
                 this.flightSegmentInfos = flightSegmentInfos;
                 return this;
             }

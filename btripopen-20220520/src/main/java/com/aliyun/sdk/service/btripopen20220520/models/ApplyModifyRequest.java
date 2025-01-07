@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class ApplyModifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("external_traveler_list")
-    private java.util.List < ExternalTravelerList> externalTravelerList;
+    private java.util.List<ExternalTravelerList> externalTravelerList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("external_traveler_standard")
@@ -74,7 +79,7 @@ public class ApplyModifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("itinerary_list")
-    private java.util.List < ItineraryList> itineraryList;
+    private java.util.List<ItineraryList> itineraryList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("itinerary_rule")
@@ -82,7 +87,7 @@ public class ApplyModifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("itinerary_set_list")
-    private java.util.List < ItinerarySetList> itinerarySetList;
+    private java.util.List<ItinerarySetList> itinerarySetList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("limit_traveler")
@@ -127,11 +132,11 @@ public class ApplyModifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("traveler_list")
-    private java.util.List < TravelerList> travelerList;
+    private java.util.List<TravelerList> travelerList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("traveler_standard")
-    private java.util.List < TravelerStandard> travelerStandard;
+    private java.util.List<TravelerStandard> travelerStandard;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("trip_cause")
@@ -282,7 +287,7 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return externalTravelerList
      */
-    public java.util.List < ExternalTravelerList> getExternalTravelerList() {
+    public java.util.List<ExternalTravelerList> getExternalTravelerList() {
         return this.externalTravelerList;
     }
 
@@ -331,7 +336,7 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return itineraryList
      */
-    public java.util.List < ItineraryList> getItineraryList() {
+    public java.util.List<ItineraryList> getItineraryList() {
         return this.itineraryList;
     }
 
@@ -345,7 +350,7 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return itinerarySetList
      */
-    public java.util.List < ItinerarySetList> getItinerarySetList() {
+    public java.util.List<ItinerarySetList> getItinerarySetList() {
         return this.itinerarySetList;
     }
 
@@ -422,14 +427,14 @@ public class ApplyModifyRequest extends Request {
     /**
      * @return travelerList
      */
-    public java.util.List < TravelerList> getTravelerList() {
+    public java.util.List<TravelerList> getTravelerList() {
         return this.travelerList;
     }
 
     /**
      * @return travelerStandard
      */
-    public java.util.List < TravelerStandard> getTravelerStandard() {
+    public java.util.List<TravelerStandard> getTravelerStandard() {
         return this.travelerStandard;
     }
 
@@ -498,16 +503,16 @@ public class ApplyModifyRequest extends Request {
         private String departId; 
         private String departName; 
         private String extendField; 
-        private java.util.List < ExternalTravelerList> externalTravelerList; 
+        private java.util.List<ExternalTravelerList> externalTravelerList; 
         private ExternalTravelerStandard externalTravelerStandard; 
         private Long flightBudget; 
         private Long hotelBudget; 
         private HotelShare hotelShare; 
         private Long intlFlightBudget; 
         private Long intlHotelBudget; 
-        private java.util.List < ItineraryList> itineraryList; 
+        private java.util.List<ItineraryList> itineraryList; 
         private Integer itineraryRule; 
-        private java.util.List < ItinerarySetList> itinerarySetList; 
+        private java.util.List<ItinerarySetList> itinerarySetList; 
         private Integer limitTraveler; 
         private String paymentDepartmentId; 
         private String paymentDepartmentName; 
@@ -518,8 +523,8 @@ public class ApplyModifyRequest extends Request {
         private String thirdpartDepartId; 
         private Integer togetherBookRule; 
         private Long trainBudget; 
-        private java.util.List < TravelerList> travelerList; 
-        private java.util.List < TravelerStandard> travelerStandard; 
+        private java.util.List<TravelerList> travelerList; 
+        private java.util.List<TravelerStandard> travelerStandard; 
         private String tripCause; 
         private Integer tripDay; 
         private String tripTitle; 
@@ -655,7 +660,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * external_traveler_list.
          */
-        public Builder externalTravelerList(java.util.List < ExternalTravelerList> externalTravelerList) {
+        public Builder externalTravelerList(java.util.List<ExternalTravelerList> externalTravelerList) {
             String externalTravelerListShrink = shrink(externalTravelerList, "external_traveler_list", "json");
             this.putBodyParameter("external_traveler_list", externalTravelerListShrink);
             this.externalTravelerList = externalTravelerList;
@@ -721,7 +726,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * itinerary_list.
          */
-        public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
+        public Builder itineraryList(java.util.List<ItineraryList> itineraryList) {
             String itineraryListShrink = shrink(itineraryList, "itinerary_list", "json");
             this.putBodyParameter("itinerary_list", itineraryListShrink);
             this.itineraryList = itineraryList;
@@ -740,7 +745,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * itinerary_set_list.
          */
-        public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
+        public Builder itinerarySetList(java.util.List<ItinerarySetList> itinerarySetList) {
             String itinerarySetListShrink = shrink(itinerarySetList, "itinerary_set_list", "json");
             this.putBodyParameter("itinerary_set_list", itinerarySetListShrink);
             this.itinerarySetList = itinerarySetList;
@@ -846,7 +851,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * traveler_list.
          */
-        public Builder travelerList(java.util.List < TravelerList> travelerList) {
+        public Builder travelerList(java.util.List<TravelerList> travelerList) {
             String travelerListShrink = shrink(travelerList, "traveler_list", "json");
             this.putBodyParameter("traveler_list", travelerListShrink);
             this.travelerList = travelerList;
@@ -856,7 +861,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * traveler_standard.
          */
-        public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+        public Builder travelerStandard(java.util.List<TravelerStandard> travelerStandard) {
             String travelerStandardShrink = shrink(travelerStandard, "traveler_standard", "json");
             this.putBodyParameter("traveler_standard", travelerStandardShrink);
             this.travelerStandard = travelerStandard;
@@ -1212,10 +1217,10 @@ public class ApplyModifyRequest extends Request {
         private Long flightRuleCode;
 
         @com.aliyun.core.annotation.NameInMap("hotel_citys")
-        private java.util.List < HotelCitys> hotelCitys;
+        private java.util.List<HotelCitys> hotelCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
-        private java.util.List < HotelIntlCitys> hotelIntlCitys;
+        private java.util.List<HotelIntlCitys> hotelIntlCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
         private Long hotelIntlRuleCode;
@@ -1305,14 +1310,14 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return hotelCitys
          */
-        public java.util.List < HotelCitys> getHotelCitys() {
+        public java.util.List<HotelCitys> getHotelCitys() {
             return this.hotelCitys;
         }
 
         /**
          * @return hotelIntlCitys
          */
-        public java.util.List < HotelIntlCitys> getHotelIntlCitys() {
+        public java.util.List<HotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
         }
 
@@ -1365,8 +1370,8 @@ public class ApplyModifyRequest extends Request {
             private String flightCabins; 
             private Long flightIntlRuleCode; 
             private Long flightRuleCode; 
-            private java.util.List < HotelCitys> hotelCitys; 
-            private java.util.List < HotelIntlCitys> hotelIntlCitys; 
+            private java.util.List<HotelCitys> hotelCitys; 
+            private java.util.List<HotelIntlCitys> hotelIntlCitys; 
             private Long hotelIntlRuleCode; 
             private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
@@ -1425,7 +1430,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_citys.
              */
-            public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
+            public Builder hotelCitys(java.util.List<HotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
                 return this;
             }
@@ -1433,7 +1438,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_intl_citys.
              */
-            public Builder hotelIntlCitys(java.util.List < HotelIntlCitys> hotelIntlCitys) {
+            public Builder hotelIntlCitys(java.util.List<HotelIntlCitys> hotelIntlCitys) {
                 this.hotelIntlCitys = hotelIntlCitys;
                 return this;
             }
@@ -1980,10 +1985,10 @@ public class ApplyModifyRequest extends Request {
         private Long flightRuleCode;
 
         @com.aliyun.core.annotation.NameInMap("hotel_citys")
-        private java.util.List < ExternalTravelerStandardHotelCitys> hotelCitys;
+        private java.util.List<ExternalTravelerStandardHotelCitys> hotelCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
-        private java.util.List < ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
+        private java.util.List<ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
         private Long hotelIntlRuleCode;
@@ -2073,14 +2078,14 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return hotelCitys
          */
-        public java.util.List < ExternalTravelerStandardHotelCitys> getHotelCitys() {
+        public java.util.List<ExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
         }
 
         /**
          * @return hotelIntlCitys
          */
-        public java.util.List < ExternalTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+        public java.util.List<ExternalTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
         }
 
@@ -2133,8 +2138,8 @@ public class ApplyModifyRequest extends Request {
             private String flightCabins; 
             private Long flightIntlRuleCode; 
             private Long flightRuleCode; 
-            private java.util.List < ExternalTravelerStandardHotelCitys> hotelCitys; 
-            private java.util.List < ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys; 
+            private java.util.List<ExternalTravelerStandardHotelCitys> hotelCitys; 
+            private java.util.List<ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys; 
             private Long hotelIntlRuleCode; 
             private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
@@ -2193,7 +2198,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_citys.
              */
-            public Builder hotelCitys(java.util.List < ExternalTravelerStandardHotelCitys> hotelCitys) {
+            public Builder hotelCitys(java.util.List<ExternalTravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
                 return this;
             }
@@ -2201,7 +2206,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_intl_citys.
              */
-            public Builder hotelIntlCitys(java.util.List < ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys) {
+            public Builder hotelIntlCitys(java.util.List<ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys) {
                 this.hotelIntlCitys = hotelIntlCitys;
                 return this;
             }
@@ -2436,7 +2441,7 @@ public class ApplyModifyRequest extends Request {
         private String projectTitle;
 
         @com.aliyun.core.annotation.NameInMap("province_travel_city_adcodes")
-        private java.util.List < String > provinceTravelCityAdcodes;
+        private java.util.List<String> provinceTravelCityAdcodes;
 
         @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
@@ -2591,7 +2596,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return provinceTravelCityAdcodes
          */
-        public java.util.List < String > getProvinceTravelCityAdcodes() {
+        public java.util.List<String> getProvinceTravelCityAdcodes() {
             return this.provinceTravelCityAdcodes;
         }
 
@@ -2639,7 +2644,7 @@ public class ApplyModifyRequest extends Request {
             private Boolean needTraffic; 
             private String projectCode; 
             private String projectTitle; 
-            private java.util.List < String > provinceTravelCityAdcodes; 
+            private java.util.List<String> provinceTravelCityAdcodes; 
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
@@ -2777,7 +2782,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * province_travel_city_adcodes.
              */
-            public Builder provinceTravelCityAdcodes(java.util.List < String > provinceTravelCityAdcodes) {
+            public Builder provinceTravelCityAdcodes(java.util.List<String> provinceTravelCityAdcodes) {
                 this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
                 return this;
             }
@@ -2915,7 +2920,7 @@ public class ApplyModifyRequest extends Request {
         private String projectTitle;
 
         @com.aliyun.core.annotation.NameInMap("province_travel_city_adcodes")
-        private java.util.List < String > provinceTravelCityAdcodes;
+        private java.util.List<String> provinceTravelCityAdcodes;
 
         @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
@@ -3032,7 +3037,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return provinceTravelCityAdcodes
          */
-        public java.util.List < String > getProvinceTravelCityAdcodes() {
+        public java.util.List<String> getProvinceTravelCityAdcodes() {
             return this.provinceTravelCityAdcodes;
         }
 
@@ -3069,7 +3074,7 @@ public class ApplyModifyRequest extends Request {
             private ItinerarySetListItineraryTravelStandard itineraryTravelStandard; 
             private String projectCode; 
             private String projectTitle; 
-            private java.util.List < String > provinceTravelCityAdcodes; 
+            private java.util.List<String> provinceTravelCityAdcodes; 
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
@@ -3174,7 +3179,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * province_travel_city_adcodes.
              */
-            public Builder provinceTravelCityAdcodes(java.util.List < String > provinceTravelCityAdcodes) {
+            public Builder provinceTravelCityAdcodes(java.util.List<String> provinceTravelCityAdcodes) {
                 this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
                 return this;
             }
@@ -3737,7 +3742,7 @@ public class ApplyModifyRequest extends Request {
         private Integer businessDiscount;
 
         @com.aliyun.core.annotation.NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        private java.util.List<CarCitySet> carCitySet;
 
         @com.aliyun.core.annotation.NameInMap("economy_discount")
         private Integer economyDiscount;
@@ -3755,10 +3760,10 @@ public class ApplyModifyRequest extends Request {
         private Long flightRuleCode;
 
         @com.aliyun.core.annotation.NameInMap("hotel_citys")
-        private java.util.List < TravelerStandardHotelCitys> hotelCitys;
+        private java.util.List<TravelerStandardHotelCitys> hotelCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
-        private java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys;
+        private java.util.List<TravelerStandardHotelIntlCitys> hotelIntlCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
         private Long hotelIntlRuleCode;
@@ -3818,7 +3823,7 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
         }
 
@@ -3860,14 +3865,14 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return hotelCitys
          */
-        public java.util.List < TravelerStandardHotelCitys> getHotelCitys() {
+        public java.util.List<TravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
         }
 
         /**
          * @return hotelIntlCitys
          */
-        public java.util.List < TravelerStandardHotelIntlCitys> getHotelIntlCitys() {
+        public java.util.List<TravelerStandardHotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
         }
 
@@ -3922,14 +3927,14 @@ public class ApplyModifyRequest extends Request {
 
         public static final class Builder {
             private Integer businessDiscount; 
-            private java.util.List < CarCitySet> carCitySet; 
+            private java.util.List<CarCitySet> carCitySet; 
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
             private Long flightIntlRuleCode; 
             private Long flightRuleCode; 
-            private java.util.List < TravelerStandardHotelCitys> hotelCitys; 
-            private java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys; 
+            private java.util.List<TravelerStandardHotelCitys> hotelCitys; 
+            private java.util.List<TravelerStandardHotelIntlCitys> hotelIntlCitys; 
             private Long hotelIntlRuleCode; 
             private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
@@ -3949,7 +3954,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
                 return this;
             }
@@ -3997,7 +4002,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_citys.
              */
-            public Builder hotelCitys(java.util.List < TravelerStandardHotelCitys> hotelCitys) {
+            public Builder hotelCitys(java.util.List<TravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
                 return this;
             }
@@ -4005,7 +4010,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_intl_citys.
              */
-            public Builder hotelIntlCitys(java.util.List < TravelerStandardHotelIntlCitys> hotelIntlCitys) {
+            public Builder hotelIntlCitys(java.util.List<TravelerStandardHotelIntlCitys> hotelIntlCitys) {
                 this.hotelIntlCitys = hotelIntlCitys;
                 return this;
             }

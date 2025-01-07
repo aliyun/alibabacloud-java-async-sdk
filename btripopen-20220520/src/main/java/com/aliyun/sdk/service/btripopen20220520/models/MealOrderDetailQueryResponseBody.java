@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -176,6 +181,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("corp_refund_amount")
         private Long corpRefundAmount;
 
+        @com.aliyun.core.annotation.NameInMap("meal_reason")
+        private String mealReason;
+
         @com.aliyun.core.annotation.NameInMap("merchant_name")
         private String merchantName;
 
@@ -227,6 +235,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             this.corpId = builder.corpId;
             this.corpPayAmount = builder.corpPayAmount;
             this.corpRefundAmount = builder.corpRefundAmount;
+            this.mealReason = builder.mealReason;
             this.merchantName = builder.merchantName;
             this.orderId = builder.orderId;
             this.orderStatus = builder.orderStatus;
@@ -285,6 +294,13 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
          */
         public Long getCorpRefundAmount() {
             return this.corpRefundAmount;
+        }
+
+        /**
+         * @return mealReason
+         */
+        public String getMealReason() {
+            return this.mealReason;
         }
 
         /**
@@ -398,6 +414,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             private String corpId; 
             private Long corpPayAmount; 
             private Long corpRefundAmount; 
+            private String mealReason; 
             private String merchantName; 
             private String orderId; 
             private Integer orderStatus; 
@@ -451,6 +468,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
              */
             public Builder corpRefundAmount(Long corpRefundAmount) {
                 this.corpRefundAmount = corpRefundAmount;
+                return this;
+            }
+
+            /**
+             * meal_reason.
+             */
+            public Builder mealReason(String mealReason) {
+                this.mealReason = mealReason;
                 return this;
             }
 

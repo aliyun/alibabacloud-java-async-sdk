@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1071,7 +1076,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         private String extra;
 
         @com.aliyun.core.annotation.NameInMap("flight_info_list")
-        private java.util.List < FlightInfoList> flightInfoList;
+        private java.util.List<FlightInfoList> flightInfoList;
 
         @com.aliyun.core.annotation.NameInMap("last_pay_time")
         private String lastPayTime;
@@ -1101,7 +1106,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         private Long totalUpgradePrice;
 
         @com.aliyun.core.annotation.NameInMap("traveler_info_list")
-        private java.util.List < TravelerInfoList> travelerInfoList;
+        private java.util.List<TravelerInfoList> travelerInfoList;
 
         private Module(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
@@ -1176,7 +1181,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         /**
          * @return flightInfoList
          */
-        public java.util.List < FlightInfoList> getFlightInfoList() {
+        public java.util.List<FlightInfoList> getFlightInfoList() {
             return this.flightInfoList;
         }
 
@@ -1246,7 +1251,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
         /**
          * @return travelerInfoList
          */
-        public java.util.List < TravelerInfoList> getTravelerInfoList() {
+        public java.util.List<TravelerInfoList> getTravelerInfoList() {
             return this.travelerInfoList;
         }
 
@@ -1257,7 +1262,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
             private String disOrderId; 
             private String disSubOrderId; 
             private String extra; 
-            private java.util.List < FlightInfoList> flightInfoList; 
+            private java.util.List<FlightInfoList> flightInfoList; 
             private String lastPayTime; 
             private Integer payStatus; 
             private String payTime; 
@@ -1267,7 +1272,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
             private Long totalChangePrice; 
             private Long totalPrice; 
             private Long totalUpgradePrice; 
-            private java.util.List < TravelerInfoList> travelerInfoList; 
+            private java.util.List<TravelerInfoList> travelerInfoList; 
 
             /**
              * alipay_trade_no.
@@ -1320,7 +1325,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
             /**
              * flight_info_list.
              */
-            public Builder flightInfoList(java.util.List < FlightInfoList> flightInfoList) {
+            public Builder flightInfoList(java.util.List<FlightInfoList> flightInfoList) {
                 this.flightInfoList = flightInfoList;
                 return this;
             }
@@ -1400,7 +1405,7 @@ public class TicketChangingDetailResponseBody extends TeaModel {
             /**
              * traveler_info_list.
              */
-            public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
+            public Builder travelerInfoList(java.util.List<TravelerInfoList> travelerInfoList) {
                 this.travelerInfoList = travelerInfoList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,11 +40,11 @@ public class InsureOrderRefundRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("policy_no_list")
-    private java.util.List < String > policyNoList;
+    private java.util.List<String> policyNoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sub_ins_order_ids")
-    private java.util.List < String > subInsOrderIds;
+    private java.util.List<String> subInsOrderIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("supplier_code")
@@ -113,14 +118,14 @@ public class InsureOrderRefundRequest extends Request {
     /**
      * @return policyNoList
      */
-    public java.util.List < String > getPolicyNoList() {
+    public java.util.List<String> getPolicyNoList() {
         return this.policyNoList;
     }
 
     /**
      * @return subInsOrderIds
      */
-    public java.util.List < String > getSubInsOrderIds() {
+    public java.util.List<String> getSubInsOrderIds() {
         return this.subInsOrderIds;
     }
 
@@ -144,8 +149,8 @@ public class InsureOrderRefundRequest extends Request {
         private String buyerName; 
         private String isvName; 
         private String outApplyId; 
-        private java.util.List < String > policyNoList; 
-        private java.util.List < String > subInsOrderIds; 
+        private java.util.List<String> policyNoList; 
+        private java.util.List<String> subInsOrderIds; 
         private String supplierCode; 
         private String xAcsBtripCorpToken; 
 
@@ -217,7 +222,7 @@ public class InsureOrderRefundRequest extends Request {
         /**
          * policy_no_list.
          */
-        public Builder policyNoList(java.util.List < String > policyNoList) {
+        public Builder policyNoList(java.util.List<String> policyNoList) {
             String policyNoListShrink = shrink(policyNoList, "policy_no_list", "json");
             this.putBodyParameter("policy_no_list", policyNoListShrink);
             this.policyNoList = policyNoList;
@@ -227,7 +232,7 @@ public class InsureOrderRefundRequest extends Request {
         /**
          * sub_ins_order_ids.
          */
-        public Builder subInsOrderIds(java.util.List < String > subInsOrderIds) {
+        public Builder subInsOrderIds(java.util.List<String> subInsOrderIds) {
             String subInsOrderIdsShrink = shrink(subInsOrderIds, "sub_ins_order_ids", "json");
             this.putBodyParameter("sub_ins_order_ids", subInsOrderIdsShrink);
             this.subInsOrderIds = subInsOrderIds;

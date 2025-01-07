@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -194,7 +199,7 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         private String outDeptId;
 
         @com.aliyun.core.annotation.NameInMap("out_dept_id_list")
-        private java.util.List < String > outDeptIdList;
+        private java.util.List<String> outDeptIdList;
 
         @com.aliyun.core.annotation.NameInMap("out_employee_id")
         private String outEmployeeId;
@@ -255,7 +260,7 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         /**
          * @return outDeptIdList
          */
-        public java.util.List < String > getOutDeptIdList() {
+        public java.util.List<String> getOutDeptIdList() {
             return this.outDeptIdList;
         }
 
@@ -285,7 +290,7 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
             private String jobNumber; 
             private String nickName; 
             private String outDeptId; 
-            private java.util.List < String > outDeptIdList; 
+            private java.util.List<String> outDeptIdList; 
             private String outEmployeeId; 
             private String realName; 
             private String realNameEn; 
@@ -325,7 +330,7 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
             /**
              * out_dept_id_list.
              */
-            public Builder outDeptIdList(java.util.List < String > outDeptIdList) {
+            public Builder outDeptIdList(java.util.List<String> outDeptIdList) {
                 this.outDeptIdList = outDeptIdList;
                 return this;
             }

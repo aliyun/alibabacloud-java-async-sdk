@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -326,7 +331,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_asking_price_details")
-        private java.util.List < HotelAskingPriceDetails> hotelAskingPriceDetails;
+        private java.util.List<HotelAskingPriceDetails> hotelAskingPriceDetails;
 
         private Module(Builder builder) {
             this.hotelAskingPriceDetails = builder.hotelAskingPriceDetails;
@@ -343,17 +348,17 @@ public class HotelAskingPriceResponseBody extends TeaModel {
         /**
          * @return hotelAskingPriceDetails
          */
-        public java.util.List < HotelAskingPriceDetails> getHotelAskingPriceDetails() {
+        public java.util.List<HotelAskingPriceDetails> getHotelAskingPriceDetails() {
             return this.hotelAskingPriceDetails;
         }
 
         public static final class Builder {
-            private java.util.List < HotelAskingPriceDetails> hotelAskingPriceDetails; 
+            private java.util.List<HotelAskingPriceDetails> hotelAskingPriceDetails; 
 
             /**
              * hotel_asking_price_details.
              */
-            public Builder hotelAskingPriceDetails(java.util.List < HotelAskingPriceDetails> hotelAskingPriceDetails) {
+            public Builder hotelAskingPriceDetails(java.util.List<HotelAskingPriceDetails> hotelAskingPriceDetails) {
                 this.hotelAskingPriceDetails = hotelAskingPriceDetails;
                 return this;
             }

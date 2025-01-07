@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -960,10 +965,10 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private Integer depCityVisaType;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_visa_remarks")
-        private java.util.List < String > stopCityVisaRemarks;
+        private java.util.List<String> stopCityVisaRemarks;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_visa_types")
-        private java.util.List < Integer > stopCityVisaTypes;
+        private java.util.List<Integer> stopCityVisaTypes;
 
         private SegmentVisaRemark(Builder builder) {
             this.depCityVisaRemark = builder.depCityVisaRemark;
@@ -997,22 +1002,22 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return stopCityVisaRemarks
          */
-        public java.util.List < String > getStopCityVisaRemarks() {
+        public java.util.List<String> getStopCityVisaRemarks() {
             return this.stopCityVisaRemarks;
         }
 
         /**
          * @return stopCityVisaTypes
          */
-        public java.util.List < Integer > getStopCityVisaTypes() {
+        public java.util.List<Integer> getStopCityVisaTypes() {
             return this.stopCityVisaTypes;
         }
 
         public static final class Builder {
             private String depCityVisaRemark; 
             private Integer depCityVisaType; 
-            private java.util.List < String > stopCityVisaRemarks; 
-            private java.util.List < Integer > stopCityVisaTypes; 
+            private java.util.List<String> stopCityVisaRemarks; 
+            private java.util.List<Integer> stopCityVisaTypes; 
 
             /**
              * dep_city_visa_remark.
@@ -1033,7 +1038,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * stop_city_visa_remarks.
              */
-            public Builder stopCityVisaRemarks(java.util.List < String > stopCityVisaRemarks) {
+            public Builder stopCityVisaRemarks(java.util.List<String> stopCityVisaRemarks) {
                 this.stopCityVisaRemarks = stopCityVisaRemarks;
                 return this;
             }
@@ -1041,7 +1046,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * stop_city_visa_types.
              */
-            public Builder stopCityVisaTypes(java.util.List < Integer > stopCityVisaTypes) {
+            public Builder stopCityVisaTypes(java.util.List<Integer> stopCityVisaTypes) {
                 this.stopCityVisaTypes = stopCityVisaTypes;
                 return this;
             }
@@ -1323,7 +1328,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private SegmentVisaRemark segmentVisaRemark;
 
         @com.aliyun.core.annotation.NameInMap("stop_city_list")
-        private java.util.List < StopCityList> stopCityList;
+        private java.util.List<StopCityList> stopCityList;
 
         @com.aliyun.core.annotation.NameInMap("stop_quantity")
         private Integer stopQuantity;
@@ -1544,7 +1549,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return stopCityList
          */
-        public java.util.List < StopCityList> getStopCityList() {
+        public java.util.List<StopCityList> getStopCityList() {
             return this.stopCityList;
         }
 
@@ -1581,7 +1586,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             private Integer segmentIndex; 
             private String segmentKey; 
             private SegmentVisaRemark segmentVisaRemark; 
-            private java.util.List < StopCityList> stopCityList; 
+            private java.util.List<StopCityList> stopCityList; 
             private Integer stopQuantity; 
 
             /**
@@ -1787,7 +1792,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * stop_city_list.
              */
-            public Builder stopCityList(java.util.List < StopCityList> stopCityList) {
+            public Builder stopCityList(java.util.List<StopCityList> stopCityList) {
                 this.stopCityList = stopCityList;
                 return this;
             }
@@ -1833,7 +1838,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private Integer journeyIndex;
 
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
@@ -1906,7 +1911,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -1931,7 +1936,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             private String depCityName; 
             private String depDate; 
             private Integer journeyIndex; 
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
             private Integer transferTime; 
 
@@ -1986,7 +1991,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * segment_list.
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -2025,7 +2030,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private String baggageDigest;
 
         @com.aliyun.core.annotation.NameInMap("baggage_info_map")
-        private java.util.Map < String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
+        private java.util.Map<String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("structured_baggage")
         private Boolean structuredBaggage;
@@ -2054,7 +2059,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return baggageInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> getBaggageInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> getBaggageInfoMap() {
             return this.baggageInfoMap;
         }
 
@@ -2067,7 +2072,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String baggageDigest; 
-            private java.util.Map < String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> baggageInfoMap; 
             private Boolean structuredBaggage; 
 
             /**
@@ -2081,7 +2086,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * baggage_info_map.
              */
-            public Builder baggageInfoMap(java.util.Map < String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> baggageInfoMap) {
+            public Builder baggageInfoMap(java.util.Map<String, java.util.List<ModuleOrderItemListBaggageRuleBaggageInfoMapValue>> baggageInfoMap) {
                 this.baggageInfoMap = baggageInfoMap;
                 return this;
             }
@@ -2322,7 +2327,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private Boolean changeFeeInd;
 
         @com.aliyun.core.annotation.NameInMap("offer_penalty_info_map")
-        private java.util.Map < String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
+        private java.util.Map<String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("refund_change_digest")
         private String refundChangeDigest;
@@ -2363,7 +2368,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return offerPenaltyInfoMap
          */
-        public java.util.Map < String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> getOfferPenaltyInfoMap() {
+        public java.util.Map<String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> getOfferPenaltyInfoMap() {
             return this.offerPenaltyInfoMap;
         }
 
@@ -2384,7 +2389,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean cancelFeeInd; 
             private Boolean changeFeeInd; 
-            private java.util.Map < String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
+            private java.util.Map<String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap; 
             private String refundChangeDigest; 
             private Boolean structuredRefund; 
 
@@ -2407,7 +2412,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * offer_penalty_info_map.
              */
-            public Builder offerPenaltyInfoMap(java.util.Map < String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap) {
+            public Builder offerPenaltyInfoMap(java.util.Map<String, java.util.List<ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap) {
                 this.offerPenaltyInfoMap = offerPenaltyInfoMap;
                 return this;
             }
@@ -2446,13 +2451,13 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private BaggageRule baggageRule;
 
         @com.aliyun.core.annotation.NameInMap("passenger_price_list")
-        private java.util.List < PassengerPriceList> passengerPriceList;
+        private java.util.List<PassengerPriceList> passengerPriceList;
 
         @com.aliyun.core.annotation.NameInMap("refund_change_rule")
         private RefundChangeRule refundChangeRule;
 
         @com.aliyun.core.annotation.NameInMap("segment_key_list")
-        private java.util.List < String > segmentKeyList;
+        private java.util.List<String> segmentKeyList;
 
         private OrderItemList(Builder builder) {
             this.baggageRule = builder.baggageRule;
@@ -2479,7 +2484,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return passengerPriceList
          */
-        public java.util.List < PassengerPriceList> getPassengerPriceList() {
+        public java.util.List<PassengerPriceList> getPassengerPriceList() {
             return this.passengerPriceList;
         }
 
@@ -2493,15 +2498,15 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return segmentKeyList
          */
-        public java.util.List < String > getSegmentKeyList() {
+        public java.util.List<String> getSegmentKeyList() {
             return this.segmentKeyList;
         }
 
         public static final class Builder {
             private BaggageRule baggageRule; 
-            private java.util.List < PassengerPriceList> passengerPriceList; 
+            private java.util.List<PassengerPriceList> passengerPriceList; 
             private RefundChangeRule refundChangeRule; 
-            private java.util.List < String > segmentKeyList; 
+            private java.util.List<String> segmentKeyList; 
 
             /**
              * baggage_rule.
@@ -2514,7 +2519,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * passenger_price_list.
              */
-            public Builder passengerPriceList(java.util.List < PassengerPriceList> passengerPriceList) {
+            public Builder passengerPriceList(java.util.List<PassengerPriceList> passengerPriceList) {
                 this.passengerPriceList = passengerPriceList;
                 return this;
             }
@@ -2530,7 +2535,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * segment_key_list.
              */
-            public Builder segmentKeyList(java.util.List < String > segmentKeyList) {
+            public Builder segmentKeyList(java.util.List<String> segmentKeyList) {
                 this.segmentKeyList = segmentKeyList;
                 return this;
             }
@@ -2853,7 +2858,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private String ticketNo;
 
         @com.aliyun.core.annotation.NameInMap("ticket_segment_list")
-        private java.util.List < TicketSegmentList> ticketSegmentList;
+        private java.util.List<TicketSegmentList> ticketSegmentList;
 
         private TicketList(Builder builder) {
             this.issueTime = builder.issueTime;
@@ -2894,7 +2899,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return ticketSegmentList
          */
-        public java.util.List < TicketSegmentList> getTicketSegmentList() {
+        public java.util.List<TicketSegmentList> getTicketSegmentList() {
             return this.ticketSegmentList;
         }
 
@@ -2902,7 +2907,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             private String issueTime; 
             private PriceInfo priceInfo; 
             private String ticketNo; 
-            private java.util.List < TicketSegmentList> ticketSegmentList; 
+            private java.util.List<TicketSegmentList> ticketSegmentList; 
 
             /**
              * issue_time.
@@ -2931,7 +2936,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * ticket_segment_list.
              */
-            public Builder ticketSegmentList(java.util.List < TicketSegmentList> ticketSegmentList) {
+            public Builder ticketSegmentList(java.util.List<TicketSegmentList> ticketSegmentList) {
                 this.ticketSegmentList = ticketSegmentList;
                 return this;
             }
@@ -2954,7 +2959,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private Long passengerId;
 
         @com.aliyun.core.annotation.NameInMap("ticket_list")
-        private java.util.List < TicketList> ticketList;
+        private java.util.List<TicketList> ticketList;
 
         private PassengerItemDetailList(Builder builder) {
             this.passengerId = builder.passengerId;
@@ -2979,13 +2984,13 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return ticketList
          */
-        public java.util.List < TicketList> getTicketList() {
+        public java.util.List<TicketList> getTicketList() {
             return this.ticketList;
         }
 
         public static final class Builder {
             private Long passengerId; 
-            private java.util.List < TicketList> ticketList; 
+            private java.util.List<TicketList> ticketList; 
 
             /**
              * passenger_id.
@@ -2998,7 +3003,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * ticket_list.
              */
-            public Builder ticketList(java.util.List < TicketList> ticketList) {
+            public Builder ticketList(java.util.List<TicketList> ticketList) {
                 this.ticketList = ticketList;
                 return this;
             }
@@ -3332,7 +3337,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private String projectTitle;
 
         @com.aliyun.core.annotation.NameInMap("subsidiary_cert_info_list")
-        private java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList;
+        private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
@@ -3517,7 +3522,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return subsidiaryCertInfoList
          */
-        public java.util.List < SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
+        public java.util.List<SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
             return this.subsidiaryCertInfoList;
         }
 
@@ -3556,7 +3561,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             private String phone; 
             private String projectCode; 
             private String projectTitle; 
-            private java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList; 
+            private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList; 
             private String userId; 
             private Integer userType; 
 
@@ -3723,7 +3728,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * subsidiary_cert_info_list.
              */
-            public Builder subsidiaryCertInfoList(java.util.List < SubsidiaryCertInfoList> subsidiaryCertInfoList) {
+            public Builder subsidiaryCertInfoList(java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList) {
                 this.subsidiaryCertInfoList = subsidiaryCertInfoList;
                 return this;
             }
@@ -3783,25 +3788,25 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         private String createTimeStr;
 
         @com.aliyun.core.annotation.NameInMap("ext_info_map")
-        private java.util.Map < String, String > extInfoMap;
+        private java.util.Map<String, String> extInfoMap;
 
         @com.aliyun.core.annotation.NameInMap("journey_list")
-        private java.util.List < JourneyList> journeyList;
+        private java.util.List<JourneyList> journeyList;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
         @com.aliyun.core.annotation.NameInMap("order_item_list")
-        private java.util.List < OrderItemList> orderItemList;
+        private java.util.List<OrderItemList> orderItemList;
 
         @com.aliyun.core.annotation.NameInMap("out_order_id")
         private String outOrderId;
 
         @com.aliyun.core.annotation.NameInMap("passenger_item_detail_list")
-        private java.util.List < PassengerItemDetailList> passengerItemDetailList;
+        private java.util.List<PassengerItemDetailList> passengerItemDetailList;
 
         @com.aliyun.core.annotation.NameInMap("passenger_list")
-        private java.util.List < PassengerList> passengerList;
+        private java.util.List<PassengerList> passengerList;
 
         @com.aliyun.core.annotation.NameInMap("pay_expire_time")
         private Long payExpireTime;
@@ -3932,14 +3937,14 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return extInfoMap
          */
-        public java.util.Map < String, String > getExtInfoMap() {
+        public java.util.Map<String, String> getExtInfoMap() {
             return this.extInfoMap;
         }
 
         /**
          * @return journeyList
          */
-        public java.util.List < JourneyList> getJourneyList() {
+        public java.util.List<JourneyList> getJourneyList() {
             return this.journeyList;
         }
 
@@ -3953,7 +3958,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return orderItemList
          */
-        public java.util.List < OrderItemList> getOrderItemList() {
+        public java.util.List<OrderItemList> getOrderItemList() {
             return this.orderItemList;
         }
 
@@ -3967,14 +3972,14 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         /**
          * @return passengerItemDetailList
          */
-        public java.util.List < PassengerItemDetailList> getPassengerItemDetailList() {
+        public java.util.List<PassengerItemDetailList> getPassengerItemDetailList() {
             return this.passengerItemDetailList;
         }
 
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerList> getPassengerList() {
+        public java.util.List<PassengerList> getPassengerList() {
             return this.passengerList;
         }
 
@@ -4064,13 +4069,13 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             private ContactInfo contactInfo; 
             private Long createTime; 
             private String createTimeStr; 
-            private java.util.Map < String, String > extInfoMap; 
-            private java.util.List < JourneyList> journeyList; 
+            private java.util.Map<String, String> extInfoMap; 
+            private java.util.List<JourneyList> journeyList; 
             private Long orderId; 
-            private java.util.List < OrderItemList> orderItemList; 
+            private java.util.List<OrderItemList> orderItemList; 
             private String outOrderId; 
-            private java.util.List < PassengerItemDetailList> passengerItemDetailList; 
-            private java.util.List < PassengerList> passengerList; 
+            private java.util.List<PassengerItemDetailList> passengerItemDetailList; 
+            private java.util.List<PassengerList> passengerList; 
             private Long payExpireTime; 
             private String payExpireTimeStr; 
             private Integer payStatus; 
@@ -4150,7 +4155,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * ext_info_map.
              */
-            public Builder extInfoMap(java.util.Map < String, String > extInfoMap) {
+            public Builder extInfoMap(java.util.Map<String, String> extInfoMap) {
                 this.extInfoMap = extInfoMap;
                 return this;
             }
@@ -4158,7 +4163,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * journey_list.
              */
-            public Builder journeyList(java.util.List < JourneyList> journeyList) {
+            public Builder journeyList(java.util.List<JourneyList> journeyList) {
                 this.journeyList = journeyList;
                 return this;
             }
@@ -4174,7 +4179,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * order_item_list.
              */
-            public Builder orderItemList(java.util.List < OrderItemList> orderItemList) {
+            public Builder orderItemList(java.util.List<OrderItemList> orderItemList) {
                 this.orderItemList = orderItemList;
                 return this;
             }
@@ -4190,7 +4195,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * passenger_item_detail_list.
              */
-            public Builder passengerItemDetailList(java.util.List < PassengerItemDetailList> passengerItemDetailList) {
+            public Builder passengerItemDetailList(java.util.List<PassengerItemDetailList> passengerItemDetailList) {
                 this.passengerItemDetailList = passengerItemDetailList;
                 return this;
             }
@@ -4198,7 +4203,7 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
             /**
              * passenger_list.
              */
-            public Builder passengerList(java.util.List < PassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }

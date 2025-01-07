@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -4319,7 +4324,7 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("direct_flight_list")
-        private java.util.List < DirectFlightList> directFlightList;
+        private java.util.List<DirectFlightList> directFlightList;
 
         @com.aliyun.core.annotation.NameInMap("next_req_wait_time")
         private Long nextReqWaitTime;
@@ -4334,7 +4339,7 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         private String sessionId;
 
         @com.aliyun.core.annotation.NameInMap("transfer_flight_list")
-        private java.util.List < TransferFlightList> transferFlightList;
+        private java.util.List<TransferFlightList> transferFlightList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_title")
         private String transferTitle;
@@ -4360,7 +4365,7 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         /**
          * @return directFlightList
          */
-        public java.util.List < DirectFlightList> getDirectFlightList() {
+        public java.util.List<DirectFlightList> getDirectFlightList() {
             return this.directFlightList;
         }
 
@@ -4395,7 +4400,7 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         /**
          * @return transferFlightList
          */
-        public java.util.List < TransferFlightList> getTransferFlightList() {
+        public java.util.List<TransferFlightList> getTransferFlightList() {
             return this.transferFlightList;
         }
 
@@ -4407,18 +4412,18 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DirectFlightList> directFlightList; 
+            private java.util.List<DirectFlightList> directFlightList; 
             private Long nextReqWaitTime; 
             private Boolean retry; 
             private String searchRetryToken; 
             private String sessionId; 
-            private java.util.List < TransferFlightList> transferFlightList; 
+            private java.util.List<TransferFlightList> transferFlightList; 
             private String transferTitle; 
 
             /**
              * direct_flight_list.
              */
-            public Builder directFlightList(java.util.List < DirectFlightList> directFlightList) {
+            public Builder directFlightList(java.util.List<DirectFlightList> directFlightList) {
                 this.directFlightList = directFlightList;
                 return this;
             }
@@ -4458,7 +4463,7 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
             /**
              * transfer_flight_list.
              */
-            public Builder transferFlightList(java.util.List < TransferFlightList> transferFlightList) {
+            public Builder transferFlightList(java.util.List<TransferFlightList> transferFlightList) {
                 this.transferFlightList = transferFlightList;
                 return this;
             }

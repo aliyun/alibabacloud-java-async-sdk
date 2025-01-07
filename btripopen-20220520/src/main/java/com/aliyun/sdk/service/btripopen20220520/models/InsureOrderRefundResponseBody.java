@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -252,7 +257,7 @@ public class InsureOrderRefundResponseBody extends TeaModel {
         private String insOrderId;
 
         @com.aliyun.core.annotation.NameInMap("ins_refund_list")
-        private java.util.List < InsRefundList> insRefundList;
+        private java.util.List<InsRefundList> insRefundList;
 
         @com.aliyun.core.annotation.NameInMap("out_apply_id")
         private String outApplyId;
@@ -289,7 +294,7 @@ public class InsureOrderRefundResponseBody extends TeaModel {
         /**
          * @return insRefundList
          */
-        public java.util.List < InsRefundList> getInsRefundList() {
+        public java.util.List<InsRefundList> getInsRefundList() {
             return this.insRefundList;
         }
 
@@ -303,7 +308,7 @@ public class InsureOrderRefundResponseBody extends TeaModel {
         public static final class Builder {
             private String applyId; 
             private String insOrderId; 
-            private java.util.List < InsRefundList> insRefundList; 
+            private java.util.List<InsRefundList> insRefundList; 
             private String outApplyId; 
 
             /**
@@ -325,7 +330,7 @@ public class InsureOrderRefundResponseBody extends TeaModel {
             /**
              * ins_refund_list.
              */
-            public Builder insRefundList(java.util.List < InsRefundList> insRefundList) {
+            public Builder insRefundList(java.util.List<InsRefundList> insRefundList) {
                 this.insRefundList = insRefundList;
                 return this;
             }

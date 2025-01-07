@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class HotelSearchResponseBody extends TeaModel {
      */
     public static class DiscountDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("label_name")
-        private java.util.List < String > labelName;
+        private java.util.List<String> labelName;
 
         @com.aliyun.core.annotation.NameInMap("money_desc")
         private String moneyDesc;
@@ -180,7 +185,7 @@ public class HotelSearchResponseBody extends TeaModel {
         /**
          * @return labelName
          */
-        public java.util.List < String > getLabelName() {
+        public java.util.List<String> getLabelName() {
             return this.labelName;
         }
 
@@ -192,13 +197,13 @@ public class HotelSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > labelName; 
+            private java.util.List<String> labelName; 
             private String moneyDesc; 
 
             /**
              * label_name.
              */
-            public Builder labelName(java.util.List < String > labelName) {
+            public Builder labelName(java.util.List<String> labelName) {
                 this.labelName = labelName;
                 return this;
             }
@@ -232,7 +237,7 @@ public class HotelSearchResponseBody extends TeaModel {
         private String dinamicLabel;
 
         @com.aliyun.core.annotation.NameInMap("discount_detail")
-        private java.util.List < DiscountDetail> discountDetail;
+        private java.util.List<DiscountDetail> discountDetail;
 
         @com.aliyun.core.annotation.NameInMap("sub_title")
         private String subTitle;
@@ -273,7 +278,7 @@ public class HotelSearchResponseBody extends TeaModel {
         /**
          * @return discountDetail
          */
-        public java.util.List < DiscountDetail> getDiscountDetail() {
+        public java.util.List<DiscountDetail> getDiscountDetail() {
             return this.discountDetail;
         }
 
@@ -294,7 +299,7 @@ public class HotelSearchResponseBody extends TeaModel {
         public static final class Builder {
             private String cashReduceTotal; 
             private String dinamicLabel; 
-            private java.util.List < DiscountDetail> discountDetail; 
+            private java.util.List<DiscountDetail> discountDetail; 
             private String subTitle; 
             private String title; 
 
@@ -317,7 +322,7 @@ public class HotelSearchResponseBody extends TeaModel {
             /**
              * discount_detail.
              */
-            public Builder discountDetail(java.util.List < DiscountDetail> discountDetail) {
+            public Builder discountDetail(java.util.List<DiscountDetail> discountDetail) {
                 this.discountDetail = discountDetail;
                 return this;
             }
@@ -760,7 +765,7 @@ public class HotelSearchResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         private Module(Builder builder) {
             this.items = builder.items;
@@ -777,17 +782,17 @@ public class HotelSearchResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
 
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -272,7 +277,7 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_ticket_list")
-        private java.util.List < ApplyTicketList> applyTicketList;
+        private java.util.List<ApplyTicketList> applyTicketList;
 
         @com.aliyun.core.annotation.NameInMap("batch_apply_no")
         private String batchApplyNo;
@@ -293,7 +298,7 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         /**
          * @return applyTicketList
          */
-        public java.util.List < ApplyTicketList> getApplyTicketList() {
+        public java.util.List<ApplyTicketList> getApplyTicketList() {
             return this.applyTicketList;
         }
 
@@ -305,13 +310,13 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApplyTicketList> applyTicketList; 
+            private java.util.List<ApplyTicketList> applyTicketList; 
             private String batchApplyNo; 
 
             /**
              * apply_ticket_list.
              */
-            public Builder applyTicketList(java.util.List < ApplyTicketList> applyTicketList) {
+            public Builder applyTicketList(java.util.List<ApplyTicketList> applyTicketList) {
                 this.applyTicketList = applyTicketList;
                 return this;
             }

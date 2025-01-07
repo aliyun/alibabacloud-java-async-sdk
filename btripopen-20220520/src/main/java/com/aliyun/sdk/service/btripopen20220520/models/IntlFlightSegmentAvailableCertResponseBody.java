@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
      */
     public static class SegmentAvailableCertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_types")
-        private java.util.List < Integer > certTypes;
+        private java.util.List<Integer> certTypes;
 
         @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPosition segmentPosition;
@@ -247,7 +252,7 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         /**
          * @return certTypes
          */
-        public java.util.List < Integer > getCertTypes() {
+        public java.util.List<Integer> getCertTypes() {
             return this.certTypes;
         }
 
@@ -259,13 +264,13 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > certTypes; 
+            private java.util.List<Integer> certTypes; 
             private SegmentPosition segmentPosition; 
 
             /**
              * cert_types.
              */
-            public Builder certTypes(java.util.List < Integer > certTypes) {
+            public Builder certTypes(java.util.List<Integer> certTypes) {
                 this.certTypes = certTypes;
                 return this;
             }
@@ -293,7 +298,7 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_available_cert_list")
-        private java.util.List < SegmentAvailableCertList> segmentAvailableCertList;
+        private java.util.List<SegmentAvailableCertList> segmentAvailableCertList;
 
         private Module(Builder builder) {
             this.segmentAvailableCertList = builder.segmentAvailableCertList;
@@ -310,17 +315,17 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
         /**
          * @return segmentAvailableCertList
          */
-        public java.util.List < SegmentAvailableCertList> getSegmentAvailableCertList() {
+        public java.util.List<SegmentAvailableCertList> getSegmentAvailableCertList() {
             return this.segmentAvailableCertList;
         }
 
         public static final class Builder {
-            private java.util.List < SegmentAvailableCertList> segmentAvailableCertList; 
+            private java.util.List<SegmentAvailableCertList> segmentAvailableCertList; 
 
             /**
              * segment_available_cert_list.
              */
-            public Builder segmentAvailableCertList(java.util.List < SegmentAvailableCertList> segmentAvailableCertList) {
+            public Builder segmentAvailableCertList(java.util.List<SegmentAvailableCertList> segmentAvailableCertList) {
                 this.segmentAvailableCertList = segmentAvailableCertList;
                 return this;
             }

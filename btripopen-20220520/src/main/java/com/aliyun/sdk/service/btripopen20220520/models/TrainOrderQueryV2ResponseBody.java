@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -2314,6 +2319,18 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("run_time")
         private Long runTime;
 
+        @com.aliyun.core.annotation.NameInMap("sub_from_city_ad_code")
+        private String subFromCityAdCode;
+
+        @com.aliyun.core.annotation.NameInMap("sub_from_city_ad_name")
+        private String subFromCityAdName;
+
+        @com.aliyun.core.annotation.NameInMap("sub_to_city_code")
+        private String subToCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("sub_to_city_name")
+        private String subToCityName;
+
         @com.aliyun.core.annotation.NameInMap("to_city_ad_code")
         private String toCityAdCode;
 
@@ -2327,7 +2344,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         private String trainNo;
 
         @com.aliyun.core.annotation.NameInMap("train_ticket_infos")
-        private java.util.List < TrainTicketInfos> trainTicketInfos;
+        private java.util.List<TrainTicketInfos> trainTicketInfos;
 
         private TrainInfoList(Builder builder) {
             this.arrTime = builder.arrTime;
@@ -2337,6 +2354,10 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.fromStationName = builder.fromStationName;
             this.itemId = builder.itemId;
             this.runTime = builder.runTime;
+            this.subFromCityAdCode = builder.subFromCityAdCode;
+            this.subFromCityAdName = builder.subFromCityAdName;
+            this.subToCityCode = builder.subToCityCode;
+            this.subToCityName = builder.subToCityName;
             this.toCityAdCode = builder.toCityAdCode;
             this.toCityName = builder.toCityName;
             this.toStationName = builder.toStationName;
@@ -2402,6 +2423,34 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return subFromCityAdCode
+         */
+        public String getSubFromCityAdCode() {
+            return this.subFromCityAdCode;
+        }
+
+        /**
+         * @return subFromCityAdName
+         */
+        public String getSubFromCityAdName() {
+            return this.subFromCityAdName;
+        }
+
+        /**
+         * @return subToCityCode
+         */
+        public String getSubToCityCode() {
+            return this.subToCityCode;
+        }
+
+        /**
+         * @return subToCityName
+         */
+        public String getSubToCityName() {
+            return this.subToCityName;
+        }
+
+        /**
          * @return toCityAdCode
          */
         public String getToCityAdCode() {
@@ -2432,7 +2481,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         /**
          * @return trainTicketInfos
          */
-        public java.util.List < TrainTicketInfos> getTrainTicketInfos() {
+        public java.util.List<TrainTicketInfos> getTrainTicketInfos() {
             return this.trainTicketInfos;
         }
 
@@ -2444,11 +2493,15 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String fromStationName; 
             private Long itemId; 
             private Long runTime; 
+            private String subFromCityAdCode; 
+            private String subFromCityAdName; 
+            private String subToCityCode; 
+            private String subToCityName; 
             private String toCityAdCode; 
             private String toCityName; 
             private String toStationName; 
             private String trainNo; 
-            private java.util.List < TrainTicketInfos> trainTicketInfos; 
+            private java.util.List<TrainTicketInfos> trainTicketInfos; 
 
             /**
              * arr_time.
@@ -2510,6 +2563,38 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             }
 
             /**
+             * sub_from_city_ad_code.
+             */
+            public Builder subFromCityAdCode(String subFromCityAdCode) {
+                this.subFromCityAdCode = subFromCityAdCode;
+                return this;
+            }
+
+            /**
+             * sub_from_city_ad_name.
+             */
+            public Builder subFromCityAdName(String subFromCityAdName) {
+                this.subFromCityAdName = subFromCityAdName;
+                return this;
+            }
+
+            /**
+             * sub_to_city_code.
+             */
+            public Builder subToCityCode(String subToCityCode) {
+                this.subToCityCode = subToCityCode;
+                return this;
+            }
+
+            /**
+             * sub_to_city_name.
+             */
+            public Builder subToCityName(String subToCityName) {
+                this.subToCityName = subToCityName;
+                return this;
+            }
+
+            /**
              * to_city_ad_code.
              */
             public Builder toCityAdCode(String toCityAdCode) {
@@ -2544,7 +2629,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             /**
              * train_ticket_infos.
              */
-            public Builder trainTicketInfos(java.util.List < TrainTicketInfos> trainTicketInfos) {
+            public Builder trainTicketInfos(java.util.List<TrainTicketInfos> trainTicketInfos) {
                 this.trainTicketInfos = trainTicketInfos;
                 return this;
             }
@@ -2596,6 +2681,24 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
+        @com.aliyun.core.annotation.NameInMap("sub_from_city_ad_code")
+        private String subFromCityAdCode;
+
+        @com.aliyun.core.annotation.NameInMap("sub_from_city_ad_name")
+        private String subFromCityAdName;
+
+        @com.aliyun.core.annotation.NameInMap("sub_middle_city_code")
+        private String subMiddleCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("sub_middle_city_name")
+        private String subMiddleCityName;
+
+        @com.aliyun.core.annotation.NameInMap("sub_to_city_code")
+        private String subToCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("sub_to_city_name")
+        private String subToCityName;
+
         @com.aliyun.core.annotation.NameInMap("to_city_ad_code")
         private String toCityAdCode;
 
@@ -2620,6 +2723,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.middleStation = builder.middleStation;
             this.middleType = builder.middleType;
             this.startTime = builder.startTime;
+            this.subFromCityAdCode = builder.subFromCityAdCode;
+            this.subFromCityAdName = builder.subFromCityAdName;
+            this.subMiddleCityCode = builder.subMiddleCityCode;
+            this.subMiddleCityName = builder.subMiddleCityName;
+            this.subToCityCode = builder.subToCityCode;
+            this.subToCityName = builder.subToCityName;
             this.toCityAdCode = builder.toCityAdCode;
             this.toCityName = builder.toCityName;
             this.toStationName = builder.toStationName;
@@ -2712,6 +2821,48 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return subFromCityAdCode
+         */
+        public String getSubFromCityAdCode() {
+            return this.subFromCityAdCode;
+        }
+
+        /**
+         * @return subFromCityAdName
+         */
+        public String getSubFromCityAdName() {
+            return this.subFromCityAdName;
+        }
+
+        /**
+         * @return subMiddleCityCode
+         */
+        public String getSubMiddleCityCode() {
+            return this.subMiddleCityCode;
+        }
+
+        /**
+         * @return subMiddleCityName
+         */
+        public String getSubMiddleCityName() {
+            return this.subMiddleCityName;
+        }
+
+        /**
+         * @return subToCityCode
+         */
+        public String getSubToCityCode() {
+            return this.subToCityCode;
+        }
+
+        /**
+         * @return subToCityName
+         */
+        public String getSubToCityName() {
+            return this.subToCityName;
+        }
+
+        /**
          * @return toCityAdCode
          */
         public String getToCityAdCode() {
@@ -2751,6 +2902,12 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String middleStation; 
             private String middleType; 
             private String startTime; 
+            private String subFromCityAdCode; 
+            private String subFromCityAdName; 
+            private String subMiddleCityCode; 
+            private String subMiddleCityName; 
+            private String subToCityCode; 
+            private String subToCityName; 
             private String toCityAdCode; 
             private String toCityName; 
             private String toStationName; 
@@ -2845,6 +3002,54 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             }
 
             /**
+             * sub_from_city_ad_code.
+             */
+            public Builder subFromCityAdCode(String subFromCityAdCode) {
+                this.subFromCityAdCode = subFromCityAdCode;
+                return this;
+            }
+
+            /**
+             * sub_from_city_ad_name.
+             */
+            public Builder subFromCityAdName(String subFromCityAdName) {
+                this.subFromCityAdName = subFromCityAdName;
+                return this;
+            }
+
+            /**
+             * sub_middle_city_code.
+             */
+            public Builder subMiddleCityCode(String subMiddleCityCode) {
+                this.subMiddleCityCode = subMiddleCityCode;
+                return this;
+            }
+
+            /**
+             * sub_middle_city_name.
+             */
+            public Builder subMiddleCityName(String subMiddleCityName) {
+                this.subMiddleCityName = subMiddleCityName;
+                return this;
+            }
+
+            /**
+             * sub_to_city_code.
+             */
+            public Builder subToCityCode(String subToCityCode) {
+                this.subToCityCode = subToCityCode;
+                return this;
+            }
+
+            /**
+             * sub_to_city_name.
+             */
+            public Builder subToCityName(String subToCityName) {
+                this.subToCityName = subToCityName;
+                return this;
+            }
+
+            /**
              * to_city_ad_code.
              */
             public Builder toCityAdCode(String toCityAdCode) {
@@ -2891,7 +3096,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
      */
     public static class TrainOrderInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_info_list")
-        private java.util.List < TrainInfoList> trainInfoList;
+        private java.util.List<TrainInfoList> trainInfoList;
 
         @com.aliyun.core.annotation.NameInMap("train_transfer_info")
         private TrainTransferInfo trainTransferInfo;
@@ -2912,7 +3117,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         /**
          * @return trainInfoList
          */
-        public java.util.List < TrainInfoList> getTrainInfoList() {
+        public java.util.List<TrainInfoList> getTrainInfoList() {
             return this.trainInfoList;
         }
 
@@ -2924,13 +3129,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TrainInfoList> trainInfoList; 
+            private java.util.List<TrainInfoList> trainInfoList; 
             private TrainTransferInfo trainTransferInfo; 
 
             /**
              * train_info_list.
              */
-            public Builder trainInfoList(java.util.List < TrainInfoList> trainInfoList) {
+            public Builder trainInfoList(java.util.List<TrainInfoList> trainInfoList) {
                 this.trainInfoList = trainInfoList;
                 return this;
             }
@@ -2958,7 +3163,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_ticket_info_list")
-        private java.util.List < ChangeTicketInfoList> changeTicketInfoList;
+        private java.util.List<ChangeTicketInfoList> changeTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
@@ -2967,13 +3172,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         private OrderBaseInfo orderBaseInfo;
 
         @com.aliyun.core.annotation.NameInMap("passenger_info_list")
-        private java.util.List < PassengerInfoList> passengerInfoList;
+        private java.util.List<PassengerInfoList> passengerInfoList;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("refund_ticket_info_list")
-        private java.util.List < RefundTicketInfoList> refundTicketInfoList;
+        private java.util.List<RefundTicketInfoList> refundTicketInfoList;
 
         @com.aliyun.core.annotation.NameInMap("train_order_info")
         private TrainOrderInfo trainOrderInfo;
@@ -2999,7 +3204,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         /**
          * @return changeTicketInfoList
          */
-        public java.util.List < ChangeTicketInfoList> getChangeTicketInfoList() {
+        public java.util.List<ChangeTicketInfoList> getChangeTicketInfoList() {
             return this.changeTicketInfoList;
         }
 
@@ -3020,21 +3225,21 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         /**
          * @return passengerInfoList
          */
-        public java.util.List < PassengerInfoList> getPassengerInfoList() {
+        public java.util.List<PassengerInfoList> getPassengerInfoList() {
             return this.passengerInfoList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
         /**
          * @return refundTicketInfoList
          */
-        public java.util.List < RefundTicketInfoList> getRefundTicketInfoList() {
+        public java.util.List<RefundTicketInfoList> getRefundTicketInfoList() {
             return this.refundTicketInfoList;
         }
 
@@ -3046,18 +3251,18 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeTicketInfoList> changeTicketInfoList; 
+            private java.util.List<ChangeTicketInfoList> changeTicketInfoList; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerInfoList> passengerInfoList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
-            private java.util.List < RefundTicketInfoList> refundTicketInfoList; 
+            private java.util.List<PassengerInfoList> passengerInfoList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
+            private java.util.List<RefundTicketInfoList> refundTicketInfoList; 
             private TrainOrderInfo trainOrderInfo; 
 
             /**
              * change_ticket_info_list.
              */
-            public Builder changeTicketInfoList(java.util.List < ChangeTicketInfoList> changeTicketInfoList) {
+            public Builder changeTicketInfoList(java.util.List<ChangeTicketInfoList> changeTicketInfoList) {
                 this.changeTicketInfoList = changeTicketInfoList;
                 return this;
             }
@@ -3081,7 +3286,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             /**
              * passenger_info_list.
              */
-            public Builder passengerInfoList(java.util.List < PassengerInfoList> passengerInfoList) {
+            public Builder passengerInfoList(java.util.List<PassengerInfoList> passengerInfoList) {
                 this.passengerInfoList = passengerInfoList;
                 return this;
             }
@@ -3089,7 +3294,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }
@@ -3097,7 +3302,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             /**
              * refund_ticket_info_list.
              */
-            public Builder refundTicketInfoList(java.util.List < RefundTicketInfoList> refundTicketInfoList) {
+            public Builder refundTicketInfoList(java.util.List<RefundTicketInfoList> refundTicketInfoList) {
                 this.refundTicketInfoList = refundTicketInfoList;
                 return this;
             }

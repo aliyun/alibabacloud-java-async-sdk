@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CooperatorHotelBillSettlementQueryRequest</p>
  */
 public class CooperatorHotelBillSettlementQueryRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_batch")
+    private String billBatch;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cooperator_id")
     private String cooperatorId;
@@ -28,12 +37,19 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("period_end")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String periodEnd;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("period_start")
     private String periodStart;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scroll_id")
+    private String scrollId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scroll_mod")
+    private Boolean scrollMod;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -41,11 +57,14 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
 
     private CooperatorHotelBillSettlementQueryRequest(Builder builder) {
         super(builder);
+        this.billBatch = builder.billBatch;
         this.cooperatorId = builder.cooperatorId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.periodEnd = builder.periodEnd;
         this.periodStart = builder.periodStart;
+        this.scrollId = builder.scrollId;
+        this.scrollMod = builder.scrollMod;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -60,6 +79,13 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return billBatch
+     */
+    public String getBillBatch() {
+        return this.billBatch;
     }
 
     /**
@@ -98,6 +124,20 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
     }
 
     /**
+     * @return scrollId
+     */
+    public String getScrollId() {
+        return this.scrollId;
+    }
+
+    /**
+     * @return scrollMod
+     */
+    public Boolean getScrollMod() {
+        return this.scrollMod;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
@@ -105,11 +145,14 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CooperatorHotelBillSettlementQueryRequest, Builder> {
+        private String billBatch; 
         private String cooperatorId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
         private String periodStart; 
+        private String scrollId; 
+        private Boolean scrollMod; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -118,13 +161,25 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
 
         private Builder(CooperatorHotelBillSettlementQueryRequest request) {
             super(request);
+            this.billBatch = request.billBatch;
             this.cooperatorId = request.cooperatorId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.periodEnd = request.periodEnd;
             this.periodStart = request.periodStart;
+            this.scrollId = request.scrollId;
+            this.scrollMod = request.scrollMod;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * bill_batch.
+         */
+        public Builder billBatch(String billBatch) {
+            this.putQueryParameter("bill_batch", billBatch);
+            this.billBatch = billBatch;
+            return this;
+        }
 
         /**
          * cooperator_id.
@@ -160,10 +215,7 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-10-02</p>
+         * period_end.
          */
         public Builder periodEnd(String periodEnd) {
             this.putQueryParameter("period_end", periodEnd);
@@ -177,6 +229,24 @@ public class CooperatorHotelBillSettlementQueryRequest extends Request {
         public Builder periodStart(String periodStart) {
             this.putQueryParameter("period_start", periodStart);
             this.periodStart = periodStart;
+            return this;
+        }
+
+        /**
+         * scroll_id.
+         */
+        public Builder scrollId(String scrollId) {
+            this.putQueryParameter("scroll_id", scrollId);
+            this.scrollId = scrollId;
+            return this;
+        }
+
+        /**
+         * scroll_mod.
+         */
+        public Builder scrollMod(Boolean scrollMod) {
+            this.putQueryParameter("scroll_mod", scrollMod);
+            this.scrollMod = scrollMod;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1617,7 +1622,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         private String applyId;
 
         @com.aliyun.core.annotation.NameInMap("exceed_apply")
-        private java.util.List < ExceedApply> exceedApply;
+        private java.util.List<ExceedApply> exceedApply;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_no")
         private String itineraryNo;
@@ -1662,7 +1667,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         /**
          * @return exceedApply
          */
-        public java.util.List < ExceedApply> getExceedApply() {
+        public java.util.List<ExceedApply> getExceedApply() {
             return this.exceedApply;
         }
 
@@ -1677,7 +1682,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private String applyBusinessId; 
             private String applyBusinessName; 
             private String applyId; 
-            private java.util.List < ExceedApply> exceedApply; 
+            private java.util.List<ExceedApply> exceedApply; 
             private String itineraryNo; 
 
             /**
@@ -1707,7 +1712,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             /**
              * exceed_apply.
              */
-            public Builder exceedApply(java.util.List < ExceedApply> exceedApply) {
+            public Builder exceedApply(java.util.List<ExceedApply> exceedApply) {
                 this.exceedApply = exceedApply;
                 return this;
             }
@@ -2322,7 +2327,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         private String roomTypeName;
 
         @com.aliyun.core.annotation.NameInMap("traver_infos")
-        private java.util.List < TraverInfos> traverInfos;
+        private java.util.List<TraverInfos> traverInfos;
 
         private RoomTraverInfo(Builder builder) {
             this.liveRoomNo = builder.liveRoomNo;
@@ -2355,14 +2360,14 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         /**
          * @return traverInfos
          */
-        public java.util.List < TraverInfos> getTraverInfos() {
+        public java.util.List<TraverInfos> getTraverInfos() {
             return this.traverInfos;
         }
 
         public static final class Builder {
             private String liveRoomNo; 
             private String roomTypeName; 
-            private java.util.List < TraverInfos> traverInfos; 
+            private java.util.List<TraverInfos> traverInfos; 
 
             /**
              * live_room_no.
@@ -2383,7 +2388,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             /**
              * traver_infos.
              */
-            public Builder traverInfos(java.util.List < TraverInfos> traverInfos) {
+            public Builder traverInfos(java.util.List<TraverInfos> traverInfos) {
                 this.traverInfos = traverInfos;
                 return this;
             }
@@ -2415,10 +2420,10 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         private HotelOrderFeeInfo hotelOrderFeeInfo;
 
         @com.aliyun.core.annotation.NameInMap("hotel_order_refund_info")
-        private java.util.List < HotelOrderRefundInfo> hotelOrderRefundInfo;
+        private java.util.List<HotelOrderRefundInfo> hotelOrderRefundInfo;
 
         @com.aliyun.core.annotation.NameInMap("room_traver_info")
-        private java.util.List < RoomTraverInfo> roomTraverInfo;
+        private java.util.List<RoomTraverInfo> roomTraverInfo;
 
         private Module(Builder builder) {
             this.baseOrderInfo = builder.baseOrderInfo;
@@ -2468,14 +2473,14 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         /**
          * @return hotelOrderRefundInfo
          */
-        public java.util.List < HotelOrderRefundInfo> getHotelOrderRefundInfo() {
+        public java.util.List<HotelOrderRefundInfo> getHotelOrderRefundInfo() {
             return this.hotelOrderRefundInfo;
         }
 
         /**
          * @return roomTraverInfo
          */
-        public java.util.List < RoomTraverInfo> getRoomTraverInfo() {
+        public java.util.List<RoomTraverInfo> getRoomTraverInfo() {
             return this.roomTraverInfo;
         }
 
@@ -2484,8 +2489,8 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             private BookerInfo bookerInfo; 
             private HotelInfo hotelInfo; 
             private HotelOrderFeeInfo hotelOrderFeeInfo; 
-            private java.util.List < HotelOrderRefundInfo> hotelOrderRefundInfo; 
-            private java.util.List < RoomTraverInfo> roomTraverInfo; 
+            private java.util.List<HotelOrderRefundInfo> hotelOrderRefundInfo; 
+            private java.util.List<RoomTraverInfo> roomTraverInfo; 
 
             /**
              * base_order_info.
@@ -2522,7 +2527,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             /**
              * hotel_order_refund_info.
              */
-            public Builder hotelOrderRefundInfo(java.util.List < HotelOrderRefundInfo> hotelOrderRefundInfo) {
+            public Builder hotelOrderRefundInfo(java.util.List<HotelOrderRefundInfo> hotelOrderRefundInfo) {
                 this.hotelOrderRefundInfo = hotelOrderRefundInfo;
                 return this;
             }
@@ -2530,7 +2535,7 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
             /**
              * room_traver_info.
              */
-            public Builder roomTraverInfo(java.util.List < RoomTraverInfo> roomTraverInfo) {
+            public Builder roomTraverInfo(java.util.List<RoomTraverInfo> roomTraverInfo) {
                 this.roomTraverInfo = roomTraverInfo;
                 return this;
             }

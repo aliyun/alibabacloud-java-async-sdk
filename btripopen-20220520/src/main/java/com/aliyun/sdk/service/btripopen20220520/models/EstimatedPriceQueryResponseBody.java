@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -750,7 +755,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
      */
     public static class TrafficFee extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("btrip_routes")
-        private java.util.List < BtripRoutes> btripRoutes;
+        private java.util.List<BtripRoutes> btripRoutes;
 
         @com.aliyun.core.annotation.NameInMap("err_msg")
         private String errMsg;
@@ -783,7 +788,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         /**
          * @return btripRoutes
          */
-        public java.util.List < BtripRoutes> getBtripRoutes() {
+        public java.util.List<BtripRoutes> getBtripRoutes() {
             return this.btripRoutes;
         }
 
@@ -816,7 +821,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BtripRoutes> btripRoutes; 
+            private java.util.List<BtripRoutes> btripRoutes; 
             private String errMsg; 
             private Long maxFee; 
             private Long minFee; 
@@ -825,7 +830,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
             /**
              * btrip_routes.
              */
-            public Builder btripRoutes(java.util.List < BtripRoutes> btripRoutes) {
+            public Builder btripRoutes(java.util.List<BtripRoutes> btripRoutes) {
                 this.btripRoutes = btripRoutes;
                 return this;
             }
@@ -877,7 +882,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("hotel_fee_detail")
-        private java.util.List < HotelFeeDetail> hotelFeeDetail;
+        private java.util.List<HotelFeeDetail> hotelFeeDetail;
 
         @com.aliyun.core.annotation.NameInMap("total_hotel_fee")
         private Long totalHotelFee;
@@ -902,7 +907,7 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         /**
          * @return hotelFeeDetail
          */
-        public java.util.List < HotelFeeDetail> getHotelFeeDetail() {
+        public java.util.List<HotelFeeDetail> getHotelFeeDetail() {
             return this.hotelFeeDetail;
         }
 
@@ -921,14 +926,14 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HotelFeeDetail> hotelFeeDetail; 
+            private java.util.List<HotelFeeDetail> hotelFeeDetail; 
             private Long totalHotelFee; 
             private TrafficFee trafficFee; 
 
             /**
              * hotel_fee_detail.
              */
-            public Builder hotelFeeDetail(java.util.List < HotelFeeDetail> hotelFeeDetail) {
+            public Builder hotelFeeDetail(java.util.List<HotelFeeDetail> hotelFeeDetail) {
                 this.hotelFeeDetail = hotelFeeDetail;
                 return this;
             }

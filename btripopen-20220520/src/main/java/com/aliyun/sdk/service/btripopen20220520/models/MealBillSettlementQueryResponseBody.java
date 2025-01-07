@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -185,6 +190,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cascade_department")
         private String cascadeDepartment;
 
+        @com.aliyun.core.annotation.NameInMap("category_desc")
+        private String categoryDesc;
+
         @com.aliyun.core.annotation.NameInMap("consume_report_address")
         private String consumeReportAddress;
 
@@ -215,6 +223,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_type")
         private String feeType;
 
+        @com.aliyun.core.annotation.NameInMap("fee_type_desc")
+        private String feeTypeDesc;
+
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
@@ -232,6 +243,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("meal_city_code")
         private String mealCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("meal_reason")
+        private String mealReason;
 
         @com.aliyun.core.annotation.NameInMap("meal_rule")
         private String mealRule;
@@ -272,6 +286,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
+        @com.aliyun.core.annotation.NameInMap("settle_type_desc")
+        private String settleTypeDesc;
+
         @com.aliyun.core.annotation.NameInMap("settlement_fee")
         private Double settlementFee;
 
@@ -287,6 +304,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
+        @com.aliyun.core.annotation.NameInMap("status_desc")
+        private String statusDesc;
+
         @com.aliyun.core.annotation.NameInMap("store_address")
         private String storeAddress;
 
@@ -301,6 +321,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
+
+        @com.aliyun.core.annotation.NameInMap("trade_action_desc")
+        private String tradeActionDesc;
 
         @com.aliyun.core.annotation.NameInMap("traveler_id")
         private String travelerId;
@@ -330,6 +353,7 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             this.bookerName = builder.bookerName;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
+            this.categoryDesc = builder.categoryDesc;
             this.consumeReportAddress = builder.consumeReportAddress;
             this.consumeReportCity = builder.consumeReportCity;
             this.consumeReportCityCode = builder.consumeReportCityCode;
@@ -340,12 +364,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.feeType = builder.feeType;
+            this.feeTypeDesc = builder.feeTypeDesc;
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
             this.mainApplyId = builder.mainApplyId;
             this.mealAddress = builder.mealAddress;
             this.mealCity = builder.mealCity;
             this.mealCityCode = builder.mealCityCode;
+            this.mealReason = builder.mealReason;
             this.mealRule = builder.mealRule;
             this.mealScene = builder.mealScene;
             this.merchantCategory = builder.merchantCategory;
@@ -359,16 +385,19 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             this.projectName = builder.projectName;
             this.remark = builder.remark;
             this.serviceFee = builder.serviceFee;
+            this.settleTypeDesc = builder.settleTypeDesc;
             this.settlementFee = builder.settlementFee;
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.shareDinner = builder.shareDinner;
             this.status = builder.status;
+            this.statusDesc = builder.statusDesc;
             this.storeAddress = builder.storeAddress;
             this.taxRate = builder.taxRate;
             this.thirdInvoiceId = builder.thirdInvoiceId;
             this.thirdPartBusinessId = builder.thirdPartBusinessId;
             this.thirdpartApplyId = builder.thirdpartApplyId;
+            this.tradeActionDesc = builder.tradeActionDesc;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerMemberTypeName = builder.travelerMemberTypeName;
@@ -449,6 +478,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return categoryDesc
+         */
+        public String getCategoryDesc() {
+            return this.categoryDesc;
+        }
+
+        /**
          * @return consumeReportAddress
          */
         public String getConsumeReportAddress() {
@@ -519,6 +555,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return feeTypeDesc
+         */
+        public String getFeeTypeDesc() {
+            return this.feeTypeDesc;
+        }
+
+        /**
          * @return index
          */
         public String getIndex() {
@@ -558,6 +601,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getMealCityCode() {
             return this.mealCityCode;
+        }
+
+        /**
+         * @return mealReason
+         */
+        public String getMealReason() {
+            return this.mealReason;
         }
 
         /**
@@ -652,6 +702,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return settleTypeDesc
+         */
+        public String getSettleTypeDesc() {
+            return this.settleTypeDesc;
+        }
+
+        /**
          * @return settlementFee
          */
         public Double getSettlementFee() {
@@ -687,6 +744,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusDesc
+         */
+        public String getStatusDesc() {
+            return this.statusDesc;
+        }
+
+        /**
          * @return storeAddress
          */
         public String getStoreAddress() {
@@ -719,6 +783,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getThirdpartApplyId() {
             return this.thirdpartApplyId;
+        }
+
+        /**
+         * @return tradeActionDesc
+         */
+        public String getTradeActionDesc() {
+            return this.tradeActionDesc;
         }
 
         /**
@@ -773,6 +844,7 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             private String bookerName; 
             private String capitalDirection; 
             private String cascadeDepartment; 
+            private String categoryDesc; 
             private String consumeReportAddress; 
             private String consumeReportCity; 
             private String consumeReportCityCode; 
@@ -783,12 +855,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             private String department; 
             private String departmentId; 
             private String feeType; 
+            private String feeTypeDesc; 
             private String index; 
             private String invoiceTitle; 
             private String mainApplyId; 
             private String mealAddress; 
             private String mealCity; 
             private String mealCityCode; 
+            private String mealReason; 
             private String mealRule; 
             private String mealScene; 
             private String merchantCategory; 
@@ -802,16 +876,19 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             private String projectName; 
             private String remark; 
             private Double serviceFee; 
+            private String settleTypeDesc; 
             private Double settlementFee; 
             private String settlementTime; 
             private String settlementType; 
             private String shareDinner; 
             private Integer status; 
+            private String statusDesc; 
             private String storeAddress; 
             private String taxRate; 
             private String thirdInvoiceId; 
             private String thirdPartBusinessId; 
             private String thirdpartApplyId; 
+            private String tradeActionDesc; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerMemberTypeName; 
@@ -888,6 +965,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
+                return this;
+            }
+
+            /**
+             * category_desc.
+             */
+            public Builder categoryDesc(String categoryDesc) {
+                this.categoryDesc = categoryDesc;
                 return this;
             }
 
@@ -972,6 +1057,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * fee_type_desc.
+             */
+            public Builder feeTypeDesc(String feeTypeDesc) {
+                this.feeTypeDesc = feeTypeDesc;
+                return this;
+            }
+
+            /**
              * index.
              */
             public Builder index(String index) {
@@ -1016,6 +1109,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder mealCityCode(String mealCityCode) {
                 this.mealCityCode = mealCityCode;
+                return this;
+            }
+
+            /**
+             * meal_reason.
+             */
+            public Builder mealReason(String mealReason) {
+                this.mealReason = mealReason;
                 return this;
             }
 
@@ -1124,6 +1225,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * settle_type_desc.
+             */
+            public Builder settleTypeDesc(String settleTypeDesc) {
+                this.settleTypeDesc = settleTypeDesc;
+                return this;
+            }
+
+            /**
              * settlement_fee.
              */
             public Builder settlementFee(Double settlementFee) {
@@ -1164,6 +1273,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * status_desc.
+             */
+            public Builder statusDesc(String statusDesc) {
+                this.statusDesc = statusDesc;
+                return this;
+            }
+
+            /**
              * store_address.
              */
             public Builder storeAddress(String storeAddress) {
@@ -1200,6 +1317,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
+                return this;
+            }
+
+            /**
+             * trade_action_desc.
+             */
+            public Builder tradeActionDesc(String tradeActionDesc) {
+                this.tradeActionDesc = tradeActionDesc;
                 return this;
             }
 
@@ -1272,7 +1397,7 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         private String corpId;
 
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
@@ -1282,6 +1407,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("period_start")
         private String periodStart;
+
+        @com.aliyun.core.annotation.NameInMap("scroll_id")
+        private String scrollId;
 
         @com.aliyun.core.annotation.NameInMap("total_num")
         private Long totalNum;
@@ -1296,6 +1424,7 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.periodEnd = builder.periodEnd;
             this.periodStart = builder.periodStart;
+            this.scrollId = builder.scrollId;
             this.totalNum = builder.totalNum;
             this.totalSize = builder.totalSize;
         }
@@ -1325,7 +1454,7 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1351,6 +1480,13 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return scrollId
+         */
+        public String getScrollId() {
+            return this.scrollId;
+        }
+
+        /**
          * @return totalNum
          */
         public Long getTotalNum() {
@@ -1367,10 +1503,11 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer category; 
             private String corpId; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private String orderId; 
             private String periodEnd; 
             private String periodStart; 
+            private String scrollId; 
             private Long totalNum; 
             private Long totalSize; 
 
@@ -1393,7 +1530,7 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -1419,6 +1556,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder periodStart(String periodStart) {
                 this.periodStart = periodStart;
+                return this;
+            }
+
+            /**
+             * scroll_id.
+             */
+            public Builder scrollId(String scrollId) {
+                this.scrollId = scrollId;
                 return this;
             }
 

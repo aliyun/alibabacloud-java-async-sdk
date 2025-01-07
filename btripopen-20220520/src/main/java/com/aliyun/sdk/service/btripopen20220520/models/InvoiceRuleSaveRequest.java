@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class InvoiceRuleSaveRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("entities")
-    private java.util.List < Entities> entities;
+    private java.util.List<Entities> entities;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scope")
@@ -65,7 +70,7 @@ public class InvoiceRuleSaveRequest extends Request {
     /**
      * @return entities
      */
-    public java.util.List < Entities> getEntities() {
+    public java.util.List<Entities> getEntities() {
         return this.entities;
     }
 
@@ -92,7 +97,7 @@ public class InvoiceRuleSaveRequest extends Request {
 
     public static final class Builder extends Request.Builder<InvoiceRuleSaveRequest, Builder> {
         private Boolean allEmploye; 
-        private java.util.List < Entities> entities; 
+        private java.util.List<Entities> entities; 
         private Integer scope; 
         private String thirdPartId; 
         private String xAcsBtripSoCorpToken; 
@@ -122,7 +127,7 @@ public class InvoiceRuleSaveRequest extends Request {
         /**
          * entities.
          */
-        public Builder entities(java.util.List < Entities> entities) {
+        public Builder entities(java.util.List<Entities> entities) {
             String entitiesShrink = shrink(entities, "entities", "json");
             this.putBodyParameter("entities", entitiesShrink);
             this.entities = entities;

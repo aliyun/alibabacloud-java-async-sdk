@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class TicketChangingFlightListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("traveler_info_list")
-    private java.util.List < TravelerInfoList> travelerInfoList;
+    private java.util.List<TravelerInfoList> travelerInfoList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -104,7 +109,7 @@ public class TicketChangingFlightListRequest extends Request {
     /**
      * @return travelerInfoList
      */
-    public java.util.List < TravelerInfoList> getTravelerInfoList() {
+    public java.util.List<TravelerInfoList> getTravelerInfoList() {
         return this.travelerInfoList;
     }
 
@@ -121,7 +126,7 @@ public class TicketChangingFlightListRequest extends Request {
         private String depDate; 
         private String disOrderId; 
         private Integer isVoluntary; 
-        private java.util.List < TravelerInfoList> travelerInfoList; 
+        private java.util.List<TravelerInfoList> travelerInfoList; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -193,7 +198,7 @@ public class TicketChangingFlightListRequest extends Request {
         /**
          * traveler_info_list.
          */
-        public Builder travelerInfoList(java.util.List < TravelerInfoList> travelerInfoList) {
+        public Builder travelerInfoList(java.util.List<TravelerInfoList> travelerInfoList) {
             String travelerInfoListShrink = shrink(travelerInfoList, "traveler_info_list", "json");
             this.putQueryParameter("traveler_info_list", travelerInfoListShrink);
             this.travelerInfoList = travelerInfoList;

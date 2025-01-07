@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class InsureOrderCreateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ins_person_and_segment_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList;
+    private java.util.List<InsPersonAndSegmentList> insPersonAndSegmentList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isv_name")
@@ -107,7 +112,7 @@ public class InsureOrderCreateRequest extends Request {
     /**
      * @return insPersonAndSegmentList
      */
-    public java.util.List < InsPersonAndSegmentList> getInsPersonAndSegmentList() {
+    public java.util.List<InsPersonAndSegmentList> getInsPersonAndSegmentList() {
         return this.insPersonAndSegmentList;
     }
 
@@ -157,7 +162,7 @@ public class InsureOrderCreateRequest extends Request {
         private Applicant applicant; 
         private String btripUserId; 
         private String buyerName; 
-        private java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList; 
+        private java.util.List<InsPersonAndSegmentList> insPersonAndSegmentList; 
         private String isvName; 
         private String outInsOrderId; 
         private String outOrderId; 
@@ -214,7 +219,7 @@ public class InsureOrderCreateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder insPersonAndSegmentList(java.util.List < InsPersonAndSegmentList> insPersonAndSegmentList) {
+        public Builder insPersonAndSegmentList(java.util.List<InsPersonAndSegmentList> insPersonAndSegmentList) {
             String insPersonAndSegmentListShrink = shrink(insPersonAndSegmentList, "ins_person_and_segment_list", "json");
             this.putBodyParameter("ins_person_and_segment_list", insPersonAndSegmentListShrink);
             this.insPersonAndSegmentList = insPersonAndSegmentList;

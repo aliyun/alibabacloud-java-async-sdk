@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IsvUserSaveRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_list")
-    private java.util.List < UserList> userList;
+    private java.util.List<UserList> userList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
@@ -42,7 +47,7 @@ public class IsvUserSaveRequest extends Request {
     /**
      * @return userList
      */
-    public java.util.List < UserList> getUserList() {
+    public java.util.List<UserList> getUserList() {
         return this.userList;
     }
 
@@ -54,7 +59,7 @@ public class IsvUserSaveRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IsvUserSaveRequest, Builder> {
-        private java.util.List < UserList> userList; 
+        private java.util.List<UserList> userList; 
         private String xAcsBtripSoCorpToken; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class IsvUserSaveRequest extends Request {
         /**
          * user_list.
          */
-        public Builder userList(java.util.List < UserList> userList) {
+        public Builder userList(java.util.List<UserList> userList) {
             String userListShrink = shrink(userList, "user_list", "json");
             this.putBodyParameter("user_list", userListShrink);
             this.userList = userList;
@@ -234,7 +239,7 @@ public class IsvUserSaveRequest extends Request {
         private String birthday;
 
         @com.aliyun.core.annotation.NameInMap("cert_list")
-        private java.util.List < CertList> certList;
+        private java.util.List<CertList> certList;
 
         @com.aliyun.core.annotation.NameInMap("depart_id")
         private Long departId;
@@ -270,13 +275,13 @@ public class IsvUserSaveRequest extends Request {
         private String realNameEn;
 
         @com.aliyun.core.annotation.NameInMap("role_id_list")
-        private java.util.List < String > roleIdList;
+        private java.util.List<String> roleIdList;
 
         @com.aliyun.core.annotation.NameInMap("third_depart_id")
         private String thirdDepartId;
 
         @com.aliyun.core.annotation.NameInMap("third_depart_id_list")
-        private java.util.List < String > thirdDepartIdList;
+        private java.util.List<String> thirdDepartIdList;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -337,7 +342,7 @@ public class IsvUserSaveRequest extends Request {
         /**
          * @return certList
          */
-        public java.util.List < CertList> getCertList() {
+        public java.util.List<CertList> getCertList() {
             return this.certList;
         }
 
@@ -421,7 +426,7 @@ public class IsvUserSaveRequest extends Request {
         /**
          * @return roleIdList
          */
-        public java.util.List < String > getRoleIdList() {
+        public java.util.List<String> getRoleIdList() {
             return this.roleIdList;
         }
 
@@ -435,7 +440,7 @@ public class IsvUserSaveRequest extends Request {
         /**
          * @return thirdDepartIdList
          */
-        public java.util.List < String > getThirdDepartIdList() {
+        public java.util.List<String> getThirdDepartIdList() {
             return this.thirdDepartIdList;
         }
 
@@ -463,7 +468,7 @@ public class IsvUserSaveRequest extends Request {
         public static final class Builder {
             private String baseCityCode; 
             private String birthday; 
-            private java.util.List < CertList> certList; 
+            private java.util.List<CertList> certList; 
             private Long departId; 
             private String email; 
             private String gender; 
@@ -475,9 +480,9 @@ public class IsvUserSaveRequest extends Request {
             private String position; 
             private String positionLevel; 
             private String realNameEn; 
-            private java.util.List < String > roleIdList; 
+            private java.util.List<String> roleIdList; 
             private String thirdDepartId; 
-            private java.util.List < String > thirdDepartIdList; 
+            private java.util.List<String> thirdDepartIdList; 
             private String userId; 
             private String userName; 
             private String userNick; 
@@ -501,7 +506,7 @@ public class IsvUserSaveRequest extends Request {
             /**
              * cert_list.
              */
-            public Builder certList(java.util.List < CertList> certList) {
+            public Builder certList(java.util.List<CertList> certList) {
                 this.certList = certList;
                 return this;
             }
@@ -597,7 +602,7 @@ public class IsvUserSaveRequest extends Request {
             /**
              * role_id_list.
              */
-            public Builder roleIdList(java.util.List < String > roleIdList) {
+            public Builder roleIdList(java.util.List<String> roleIdList) {
                 this.roleIdList = roleIdList;
                 return this;
             }
@@ -613,7 +618,7 @@ public class IsvUserSaveRequest extends Request {
             /**
              * third_depart_id_list.
              */
-            public Builder thirdDepartIdList(java.util.List < String > thirdDepartIdList) {
+            public Builder thirdDepartIdList(java.util.List<String> thirdDepartIdList) {
                 this.thirdDepartIdList = thirdDepartIdList;
                 return this;
             }

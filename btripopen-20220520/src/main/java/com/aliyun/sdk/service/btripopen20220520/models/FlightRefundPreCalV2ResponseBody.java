@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -359,7 +364,7 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("multi_refund_fee_d_t_o_s")
-        private java.util.List < MultiRefundFeeDTOS> multiRefundFeeDTOS;
+        private java.util.List<MultiRefundFeeDTOS> multiRefundFeeDTOS;
 
         @com.aliyun.core.annotation.NameInMap("pre_refund_money")
         private Long preRefundMoney;
@@ -368,7 +373,7 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         private Long refundChargeFee;
 
         @com.aliyun.core.annotation.NameInMap("refund_reason_option_d_t_o_s")
-        private java.util.List < RefundReasonOptionDTOS> refundReasonOptionDTOS;
+        private java.util.List<RefundReasonOptionDTOS> refundReasonOptionDTOS;
 
         @com.aliyun.core.annotation.NameInMap("service_charge_fee")
         private Long serviceChargeFee;
@@ -392,7 +397,7 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         /**
          * @return multiRefundFeeDTOS
          */
-        public java.util.List < MultiRefundFeeDTOS> getMultiRefundFeeDTOS() {
+        public java.util.List<MultiRefundFeeDTOS> getMultiRefundFeeDTOS() {
             return this.multiRefundFeeDTOS;
         }
 
@@ -413,7 +418,7 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         /**
          * @return refundReasonOptionDTOS
          */
-        public java.util.List < RefundReasonOptionDTOS> getRefundReasonOptionDTOS() {
+        public java.util.List<RefundReasonOptionDTOS> getRefundReasonOptionDTOS() {
             return this.refundReasonOptionDTOS;
         }
 
@@ -425,16 +430,16 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MultiRefundFeeDTOS> multiRefundFeeDTOS; 
+            private java.util.List<MultiRefundFeeDTOS> multiRefundFeeDTOS; 
             private Long preRefundMoney; 
             private Long refundChargeFee; 
-            private java.util.List < RefundReasonOptionDTOS> refundReasonOptionDTOS; 
+            private java.util.List<RefundReasonOptionDTOS> refundReasonOptionDTOS; 
             private Long serviceChargeFee; 
 
             /**
              * multi_refund_fee_d_t_o_s.
              */
-            public Builder multiRefundFeeDTOS(java.util.List < MultiRefundFeeDTOS> multiRefundFeeDTOS) {
+            public Builder multiRefundFeeDTOS(java.util.List<MultiRefundFeeDTOS> multiRefundFeeDTOS) {
                 this.multiRefundFeeDTOS = multiRefundFeeDTOS;
                 return this;
             }
@@ -458,7 +463,7 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
             /**
              * refund_reason_option_d_t_o_s.
              */
-            public Builder refundReasonOptionDTOS(java.util.List < RefundReasonOptionDTOS> refundReasonOptionDTOS) {
+            public Builder refundReasonOptionDTOS(java.util.List<RefundReasonOptionDTOS> refundReasonOptionDTOS) {
                 this.refundReasonOptionDTOS = refundReasonOptionDTOS;
                 return this;
             }

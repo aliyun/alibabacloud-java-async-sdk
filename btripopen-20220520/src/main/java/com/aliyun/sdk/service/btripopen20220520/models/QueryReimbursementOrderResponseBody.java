@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -180,7 +185,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         private String remark;
 
         @com.aliyun.core.annotation.NameInMap("remind_tag_list")
-        private java.util.List < String > remindTagList;
+        private java.util.List<String> remindTagList;
 
         @com.aliyun.core.annotation.NameInMap("settlement_amount")
         private String settlementAmount;
@@ -249,7 +254,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         /**
          * @return remindTagList
          */
-        public java.util.List < String > getRemindTagList() {
+        public java.util.List<String> getRemindTagList() {
             return this.remindTagList;
         }
 
@@ -280,7 +285,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String feeType; 
             private String orderId; 
             private String remark; 
-            private java.util.List < String > remindTagList; 
+            private java.util.List<String> remindTagList; 
             private String settlementAmount; 
             private String settlementTime; 
             private Integer voucherType; 
@@ -328,7 +333,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             /**
              * remind_tag_list.
              */
-            public Builder remindTagList(java.util.List < String > remindTagList) {
+            public Builder remindTagList(java.util.List<String> remindTagList) {
                 this.remindTagList = remindTagList;
                 return this;
             }
@@ -528,7 +533,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         private String expenseCity;
 
         @com.aliyun.core.annotation.NameInMap("expense_compositions")
-        private java.util.List < ExpenseCompositions> expenseCompositions;
+        private java.util.List<ExpenseCompositions> expenseCompositions;
 
         @com.aliyun.core.annotation.NameInMap("expense_time")
         private String expenseTime;
@@ -540,7 +545,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         private String expenseTypeCode;
 
         @com.aliyun.core.annotation.NameInMap("invoice_infos")
-        private java.util.List < InvoiceInfos> invoiceInfos;
+        private java.util.List<InvoiceInfos> invoiceInfos;
 
         @com.aliyun.core.annotation.NameInMap("reimb_expense_id")
         private Long reimbExpenseId;
@@ -597,7 +602,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         /**
          * @return expenseCompositions
          */
-        public java.util.List < ExpenseCompositions> getExpenseCompositions() {
+        public java.util.List<ExpenseCompositions> getExpenseCompositions() {
             return this.expenseCompositions;
         }
 
@@ -625,7 +630,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         /**
          * @return invoiceInfos
          */
-        public java.util.List < InvoiceInfos> getInvoiceInfos() {
+        public java.util.List<InvoiceInfos> getInvoiceInfos() {
             return this.invoiceInfos;
         }
 
@@ -654,11 +659,11 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String amount; 
             private String currency; 
             private String expenseCity; 
-            private java.util.List < ExpenseCompositions> expenseCompositions; 
+            private java.util.List<ExpenseCompositions> expenseCompositions; 
             private String expenseTime; 
             private String expenseType; 
             private String expenseTypeCode; 
-            private java.util.List < InvoiceInfos> invoiceInfos; 
+            private java.util.List<InvoiceInfos> invoiceInfos; 
             private Long reimbExpenseId; 
             private String remark; 
             private String settlementType; 
@@ -690,7 +695,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             /**
              * expense_compositions.
              */
-            public Builder expenseCompositions(java.util.List < ExpenseCompositions> expenseCompositions) {
+            public Builder expenseCompositions(java.util.List<ExpenseCompositions> expenseCompositions) {
                 this.expenseCompositions = expenseCompositions;
                 return this;
             }
@@ -722,7 +727,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             /**
              * invoice_infos.
              */
-            public Builder invoiceInfos(java.util.List < InvoiceInfos> invoiceInfos) {
+            public Builder invoiceInfos(java.util.List<InvoiceInfos> invoiceInfos) {
                 this.invoiceInfos = invoiceInfos;
                 return this;
             }
@@ -995,7 +1000,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         private String costCenterName;
 
         @com.aliyun.core.annotation.NameInMap("expenses")
-        private java.util.List < Expenses> expenses;
+        private java.util.List<Expenses> expenses;
 
         @com.aliyun.core.annotation.NameInMap("expenses_cover_dept_id")
         private String expensesCoverDeptId;
@@ -1016,13 +1021,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         private String isDeleted;
 
         @com.aliyun.core.annotation.NameInMap("itineraries")
-        private java.util.List < Itineraries> itineraries;
+        private java.util.List<Itineraries> itineraries;
 
         @com.aliyun.core.annotation.NameInMap("payment_finish_time")
         private String paymentFinishTime;
 
         @com.aliyun.core.annotation.NameInMap("payment_infos")
-        private java.util.List < PaymentInfos> paymentInfos;
+        private java.util.List<PaymentInfos> paymentInfos;
 
         @com.aliyun.core.annotation.NameInMap("personal_amount")
         private String personalAmount;
@@ -1132,7 +1137,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         /**
          * @return expenses
          */
-        public java.util.List < Expenses> getExpenses() {
+        public java.util.List<Expenses> getExpenses() {
             return this.expenses;
         }
 
@@ -1181,7 +1186,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         /**
          * @return itineraries
          */
-        public java.util.List < Itineraries> getItineraries() {
+        public java.util.List<Itineraries> getItineraries() {
             return this.itineraries;
         }
 
@@ -1195,7 +1200,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         /**
          * @return paymentInfos
          */
-        public java.util.List < PaymentInfos> getPaymentInfos() {
+        public java.util.List<PaymentInfos> getPaymentInfos() {
             return this.paymentInfos;
         }
 
@@ -1282,16 +1287,16 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private String corpId; 
             private String costCenterCode; 
             private String costCenterName; 
-            private java.util.List < Expenses> expenses; 
+            private java.util.List<Expenses> expenses; 
             private String expensesCoverDeptId; 
             private String expensesCoverDeptName; 
             private String expensesCoverInvoiceTitle; 
             private String gmtCreate; 
             private String gmtModified; 
             private String isDeleted; 
-            private java.util.List < Itineraries> itineraries; 
+            private java.util.List<Itineraries> itineraries; 
             private String paymentFinishTime; 
-            private java.util.List < PaymentInfos> paymentInfos; 
+            private java.util.List<PaymentInfos> paymentInfos; 
             private String personalAmount; 
             private String processEndTime; 
             private String projectCode; 
@@ -1347,7 +1352,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             /**
              * expenses.
              */
-            public Builder expenses(java.util.List < Expenses> expenses) {
+            public Builder expenses(java.util.List<Expenses> expenses) {
                 this.expenses = expenses;
                 return this;
             }
@@ -1403,7 +1408,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             /**
              * itineraries.
              */
-            public Builder itineraries(java.util.List < Itineraries> itineraries) {
+            public Builder itineraries(java.util.List<Itineraries> itineraries) {
                 this.itineraries = itineraries;
                 return this;
             }
@@ -1419,7 +1424,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             /**
              * payment_infos.
              */
-            public Builder paymentInfos(java.util.List < PaymentInfos> paymentInfos) {
+            public Builder paymentInfos(java.util.List<PaymentInfos> paymentInfos) {
                 this.paymentInfos = paymentInfos;
                 return this;
             }

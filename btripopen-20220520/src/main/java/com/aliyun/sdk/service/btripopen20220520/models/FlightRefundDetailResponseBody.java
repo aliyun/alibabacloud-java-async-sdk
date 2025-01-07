@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -287,7 +292,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         private Long refundFee;
 
         @com.aliyun.core.annotation.NameInMap("refund_fee_list")
-        private java.util.List < RefundFeeList> refundFeeList;
+        private java.util.List<RefundFeeList> refundFeeList;
 
         @com.aliyun.core.annotation.NameInMap("refund_price")
         private Long refundPrice;
@@ -368,7 +373,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
         /**
          * @return refundFeeList
          */
-        public java.util.List < RefundFeeList> getRefundFeeList() {
+        public java.util.List<RefundFeeList> getRefundFeeList() {
             return this.refundFeeList;
         }
 
@@ -394,7 +399,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             private Integer isVoluntary; 
             private String reason; 
             private Long refundFee; 
-            private java.util.List < RefundFeeList> refundFeeList; 
+            private java.util.List<RefundFeeList> refundFeeList; 
             private Long refundPrice; 
             private String status; 
 
@@ -457,7 +462,7 @@ public class FlightRefundDetailResponseBody extends TeaModel {
             /**
              * refund_fee_list.
              */
-            public Builder refundFeeList(java.util.List < RefundFeeList> refundFeeList) {
+            public Builder refundFeeList(java.util.List<RefundFeeList> refundFeeList) {
                 this.refundFeeList = refundFeeList;
                 return this;
             }

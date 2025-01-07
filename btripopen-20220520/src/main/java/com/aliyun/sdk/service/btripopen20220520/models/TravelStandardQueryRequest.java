@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class TravelStandardQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("service_type_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > serviceTypeList;
+    private java.util.List<String> serviceTypeList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -69,7 +74,7 @@ public class TravelStandardQueryRequest extends Request {
     /**
      * @return serviceTypeList
      */
-    public java.util.List < String > getServiceTypeList() {
+    public java.util.List<String> getServiceTypeList() {
         return this.serviceTypeList;
     }
 
@@ -83,7 +88,7 @@ public class TravelStandardQueryRequest extends Request {
     public static final class Builder extends Request.Builder<TravelStandardQueryRequest, Builder> {
         private Boolean fromGroup; 
         private Long ruleCode; 
-        private java.util.List < String > serviceTypeList; 
+        private java.util.List<String> serviceTypeList; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -125,7 +130,7 @@ public class TravelStandardQueryRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder serviceTypeList(java.util.List < String > serviceTypeList) {
+        public Builder serviceTypeList(java.util.List<String> serviceTypeList) {
             String serviceTypeListShrink = shrink(serviceTypeList, "service_type_list", "json");
             this.putQueryParameter("service_type_list", serviceTypeListShrink);
             this.serviceTypeList = serviceTypeList;

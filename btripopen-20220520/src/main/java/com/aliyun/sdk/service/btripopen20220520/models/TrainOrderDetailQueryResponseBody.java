@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -418,7 +423,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String arriveTime;
 
         @com.aliyun.core.annotation.NameInMap("book_ticket_infos")
-        private java.util.List < BookTicketInfos> bookTicketInfos;
+        private java.util.List<BookTicketInfos> bookTicketInfos;
 
         @com.aliyun.core.annotation.NameInMap("dep_station_code")
         private String depStationCode;
@@ -475,7 +480,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return bookTicketInfos
          */
-        public java.util.List < BookTicketInfos> getBookTicketInfos() {
+        public java.util.List<BookTicketInfos> getBookTicketInfos() {
             return this.bookTicketInfos;
         }
 
@@ -511,7 +516,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String arrStationCode; 
             private String arrStationName; 
             private String arriveTime; 
-            private java.util.List < BookTicketInfos> bookTicketInfos; 
+            private java.util.List<BookTicketInfos> bookTicketInfos; 
             private String depStationCode; 
             private String depStationName; 
             private String depTime; 
@@ -544,7 +549,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * book_ticket_infos.
              */
-            public Builder bookTicketInfos(java.util.List < BookTicketInfos> bookTicketInfos) {
+            public Builder bookTicketInfos(java.util.List<BookTicketInfos> bookTicketInfos) {
                 this.bookTicketInfos = bookTicketInfos;
                 return this;
             }
@@ -596,7 +601,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
      */
     public static class BookInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("book_train_infos")
-        private java.util.List < BookTrainInfos> bookTrainInfos;
+        private java.util.List<BookTrainInfos> bookTrainInfos;
 
         @com.aliyun.core.annotation.NameInMap("fail_code")
         private String failCode;
@@ -633,7 +638,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return bookTrainInfos
          */
-        public java.util.List < BookTrainInfos> getBookTrainInfos() {
+        public java.util.List<BookTrainInfos> getBookTrainInfos() {
             return this.bookTrainInfos;
         }
 
@@ -673,7 +678,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BookTrainInfos> bookTrainInfos; 
+            private java.util.List<BookTrainInfos> bookTrainInfos; 
             private String failCode; 
             private String failMsg; 
             private String lastPayTime; 
@@ -683,7 +688,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * book_train_infos.
              */
-            public Builder bookTrainInfos(java.util.List < BookTrainInfos> bookTrainInfos) {
+            public Builder bookTrainInfos(java.util.List<BookTrainInfos> bookTrainInfos) {
                 this.bookTrainInfos = bookTrainInfos;
                 return this;
             }
@@ -1059,7 +1064,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String arriveTime;
 
         @com.aliyun.core.annotation.NameInMap("change_ticket_infos")
-        private java.util.List < ChangeTicketInfos> changeTicketInfos;
+        private java.util.List<ChangeTicketInfos> changeTicketInfos;
 
         @com.aliyun.core.annotation.NameInMap("dep_station_code")
         private String depStationCode;
@@ -1116,7 +1121,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return changeTicketInfos
          */
-        public java.util.List < ChangeTicketInfos> getChangeTicketInfos() {
+        public java.util.List<ChangeTicketInfos> getChangeTicketInfos() {
             return this.changeTicketInfos;
         }
 
@@ -1152,7 +1157,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String arrStationCode; 
             private String arrStationName; 
             private String arriveTime; 
-            private java.util.List < ChangeTicketInfos> changeTicketInfos; 
+            private java.util.List<ChangeTicketInfos> changeTicketInfos; 
             private String depStationCode; 
             private String depStationName; 
             private String depTime; 
@@ -1185,7 +1190,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * change_ticket_infos.
              */
-            public Builder changeTicketInfos(java.util.List < ChangeTicketInfos> changeTicketInfos) {
+            public Builder changeTicketInfos(java.util.List<ChangeTicketInfos> changeTicketInfos) {
                 this.changeTicketInfos = changeTicketInfos;
                 return this;
             }
@@ -1240,7 +1245,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String changeApplyId;
 
         @com.aliyun.core.annotation.NameInMap("change_train_infos")
-        private java.util.List < ChangeTrainInfos> changeTrainInfos;
+        private java.util.List<ChangeTrainInfos> changeTrainInfos;
 
         @com.aliyun.core.annotation.NameInMap("limit_pay_time")
         private String limitPayTime;
@@ -1277,7 +1282,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return changeTrainInfos
          */
-        public java.util.List < ChangeTrainInfos> getChangeTrainInfos() {
+        public java.util.List<ChangeTrainInfos> getChangeTrainInfos() {
             return this.changeTrainInfos;
         }
 
@@ -1304,7 +1309,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String changeApplyId; 
-            private java.util.List < ChangeTrainInfos> changeTrainInfos; 
+            private java.util.List<ChangeTrainInfos> changeTrainInfos; 
             private String limitPayTime; 
             private String outChangeApplyId; 
             private String status; 
@@ -1320,7 +1325,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * change_train_infos.
              */
-            public Builder changeTrainInfos(java.util.List < ChangeTrainInfos> changeTrainInfos) {
+            public Builder changeTrainInfos(java.util.List<ChangeTrainInfos> changeTrainInfos) {
                 this.changeTrainInfos = changeTrainInfos;
                 return this;
             }
@@ -1434,7 +1439,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String offlineRefundId;
 
         @com.aliyun.core.annotation.NameInMap("offline_refund_infos")
-        private java.util.List < OfflineRefundInfos> offlineRefundInfos;
+        private java.util.List<OfflineRefundInfos> offlineRefundInfos;
 
         @com.aliyun.core.annotation.NameInMap("offline_refund_type")
         private String offlineRefundType;
@@ -1467,7 +1472,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return offlineRefundInfos
          */
-        public java.util.List < OfflineRefundInfos> getOfflineRefundInfos() {
+        public java.util.List<OfflineRefundInfos> getOfflineRefundInfos() {
             return this.offlineRefundInfos;
         }
 
@@ -1487,7 +1492,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String offlineRefundId; 
-            private java.util.List < OfflineRefundInfos> offlineRefundInfos; 
+            private java.util.List<OfflineRefundInfos> offlineRefundInfos; 
             private String offlineRefundType; 
             private Long refundTotalPrice; 
 
@@ -1502,7 +1507,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * offline_refund_infos.
              */
-            public Builder offlineRefundInfos(java.util.List < OfflineRefundInfos> offlineRefundInfos) {
+            public Builder offlineRefundInfos(java.util.List<OfflineRefundInfos> offlineRefundInfos) {
                 this.offlineRefundInfos = offlineRefundInfos;
                 return this;
             }
@@ -2094,7 +2099,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String depTime;
 
         @com.aliyun.core.annotation.NameInMap("refund_ticket_infos")
-        private java.util.List < RefundTicketInfos> refundTicketInfos;
+        private java.util.List<RefundTicketInfos> refundTicketInfos;
 
         @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
@@ -2155,7 +2160,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return refundTicketInfos
          */
-        public java.util.List < RefundTicketInfos> getRefundTicketInfos() {
+        public java.util.List<RefundTicketInfos> getRefundTicketInfos() {
             return this.refundTicketInfos;
         }
 
@@ -2172,7 +2177,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String depStationCode; 
             private String depStationName; 
             private String depTime; 
-            private java.util.List < RefundTicketInfos> refundTicketInfos; 
+            private java.util.List<RefundTicketInfos> refundTicketInfos; 
             private String trainNo; 
 
             /**
@@ -2218,7 +2223,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * refund_ticket_infos.
              */
-            public Builder refundTicketInfos(java.util.List < RefundTicketInfos> refundTicketInfos) {
+            public Builder refundTicketInfos(java.util.List<RefundTicketInfos> refundTicketInfos) {
                 this.refundTicketInfos = refundTicketInfos;
                 return this;
             }
@@ -2258,7 +2263,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String refundId;
 
         @com.aliyun.core.annotation.NameInMap("refund_train_info")
-        private java.util.List < RefundTrainInfo> refundTrainInfo;
+        private java.util.List<RefundTrainInfo> refundTrainInfo;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -2311,7 +2316,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return refundTrainInfo
          */
-        public java.util.List < RefundTrainInfo> getRefundTrainInfo() {
+        public java.util.List<RefundTrainInfo> getRefundTrainInfo() {
             return this.refundTrainInfo;
         }
 
@@ -2327,7 +2332,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             private String failMsg; 
             private String outRefundId; 
             private String refundId; 
-            private java.util.List < RefundTrainInfo> refundTrainInfo; 
+            private java.util.List<RefundTrainInfo> refundTrainInfo; 
             private String status; 
 
             /**
@@ -2368,7 +2373,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * refund_train_info.
              */
-            public Builder refundTrainInfo(java.util.List < RefundTrainInfo> refundTrainInfo) {
+            public Builder refundTrainInfo(java.util.List<RefundTrainInfo> refundTrainInfo) {
                 this.refundTrainInfo = refundTrainInfo;
                 return this;
             }
@@ -2399,10 +2404,10 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private BookInfos bookInfos;
 
         @com.aliyun.core.annotation.NameInMap("change_infos")
-        private java.util.List < ChangeInfos> changeInfos;
+        private java.util.List<ChangeInfos> changeInfos;
 
         @com.aliyun.core.annotation.NameInMap("offlineRefundDetails")
-        private java.util.List < OfflineRefundDetails> offlineRefundDetails;
+        private java.util.List<OfflineRefundDetails> offlineRefundDetails;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
@@ -2411,10 +2416,10 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         private String outOrderId;
 
         @com.aliyun.core.annotation.NameInMap("passenger_info_s")
-        private java.util.List < PassengerInfoS> passengerInfoS;
+        private java.util.List<PassengerInfoS> passengerInfoS;
 
         @com.aliyun.core.annotation.NameInMap("refund_infos")
-        private java.util.List < RefundInfos> refundInfos;
+        private java.util.List<RefundInfos> refundInfos;
 
         private Module(Builder builder) {
             this.bookInfos = builder.bookInfos;
@@ -2444,14 +2449,14 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return changeInfos
          */
-        public java.util.List < ChangeInfos> getChangeInfos() {
+        public java.util.List<ChangeInfos> getChangeInfos() {
             return this.changeInfos;
         }
 
         /**
          * @return offlineRefundDetails
          */
-        public java.util.List < OfflineRefundDetails> getOfflineRefundDetails() {
+        public java.util.List<OfflineRefundDetails> getOfflineRefundDetails() {
             return this.offlineRefundDetails;
         }
 
@@ -2472,25 +2477,25 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
         /**
          * @return passengerInfoS
          */
-        public java.util.List < PassengerInfoS> getPassengerInfoS() {
+        public java.util.List<PassengerInfoS> getPassengerInfoS() {
             return this.passengerInfoS;
         }
 
         /**
          * @return refundInfos
          */
-        public java.util.List < RefundInfos> getRefundInfos() {
+        public java.util.List<RefundInfos> getRefundInfos() {
             return this.refundInfos;
         }
 
         public static final class Builder {
             private BookInfos bookInfos; 
-            private java.util.List < ChangeInfos> changeInfos; 
-            private java.util.List < OfflineRefundDetails> offlineRefundDetails; 
+            private java.util.List<ChangeInfos> changeInfos; 
+            private java.util.List<OfflineRefundDetails> offlineRefundDetails; 
             private String orderId; 
             private String outOrderId; 
-            private java.util.List < PassengerInfoS> passengerInfoS; 
-            private java.util.List < RefundInfos> refundInfos; 
+            private java.util.List<PassengerInfoS> passengerInfoS; 
+            private java.util.List<RefundInfos> refundInfos; 
 
             /**
              * book_infos.
@@ -2503,7 +2508,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * change_infos.
              */
-            public Builder changeInfos(java.util.List < ChangeInfos> changeInfos) {
+            public Builder changeInfos(java.util.List<ChangeInfos> changeInfos) {
                 this.changeInfos = changeInfos;
                 return this;
             }
@@ -2511,7 +2516,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * offlineRefundDetails.
              */
-            public Builder offlineRefundDetails(java.util.List < OfflineRefundDetails> offlineRefundDetails) {
+            public Builder offlineRefundDetails(java.util.List<OfflineRefundDetails> offlineRefundDetails) {
                 this.offlineRefundDetails = offlineRefundDetails;
                 return this;
             }
@@ -2535,7 +2540,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * passenger_info_s.
              */
-            public Builder passengerInfoS(java.util.List < PassengerInfoS> passengerInfoS) {
+            public Builder passengerInfoS(java.util.List<PassengerInfoS> passengerInfoS) {
                 this.passengerInfoS = passengerInfoS;
                 return this;
             }
@@ -2543,7 +2548,7 @@ public class TrainOrderDetailQueryResponseBody extends TeaModel {
             /**
              * refund_infos.
              */
-            public Builder refundInfos(java.util.List < RefundInfos> refundInfos) {
+            public Builder refundInfos(java.util.List<RefundInfos> refundInfos) {
                 this.refundInfos = refundInfos;
                 return this;
             }

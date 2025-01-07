@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class TicketChangingPayRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extra")
-    private java.util.Map < String, String > extra;
+    private java.util.Map<String, String> extra;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("personal_pay_price")
@@ -91,7 +96,7 @@ public class TicketChangingPayRequest extends Request {
     /**
      * @return extra
      */
-    public java.util.Map < String, String > getExtra() {
+    public java.util.Map<String, String> getExtra() {
         return this.extra;
     }
 
@@ -120,7 +125,7 @@ public class TicketChangingPayRequest extends Request {
         private Long corpPayPrice; 
         private String disOrderId; 
         private String disSubOrderId; 
-        private java.util.Map < String, String > extra; 
+        private java.util.Map<String, String> extra; 
         private Long personalPayPrice; 
         private Long totalPayPrice; 
         private String xAcsBtripCorpToken; 
@@ -176,7 +181,7 @@ public class TicketChangingPayRequest extends Request {
         /**
          * extra.
          */
-        public Builder extra(java.util.Map < String, String > extra) {
+        public Builder extra(java.util.Map<String, String> extra) {
             String extraShrink = shrink(extra, "extra", "json");
             this.putBodyParameter("extra", extraShrink);
             this.extra = extra;

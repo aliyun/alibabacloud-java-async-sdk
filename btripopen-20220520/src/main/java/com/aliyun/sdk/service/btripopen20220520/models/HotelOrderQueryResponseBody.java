@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -600,7 +605,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         private String departName;
 
         @com.aliyun.core.annotation.NameInMap("exceed_apply_nos")
-        private java.util.List < String > exceedApplyNos;
+        private java.util.List<String> exceedApplyNos;
 
         @com.aliyun.core.annotation.NameInMap("extend_field")
         private String extendField;
@@ -729,7 +734,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         /**
          * @return exceedApplyNos
          */
-        public java.util.List < String > getExceedApplyNos() {
+        public java.util.List<String> getExceedApplyNos() {
             return this.exceedApplyNos;
         }
 
@@ -839,7 +844,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private String corpName; 
             private String departId; 
             private String departName; 
-            private java.util.List < String > exceedApplyNos; 
+            private java.util.List<String> exceedApplyNos; 
             private String extendField; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -914,7 +919,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             /**
              * exceed_apply_nos.
              */
-            public Builder exceedApplyNos(java.util.List < String > exceedApplyNos) {
+            public Builder exceedApplyNos(java.util.List<String> exceedApplyNos) {
                 this.exceedApplyNos = exceedApplyNos;
                 return this;
             }
@@ -1529,10 +1534,10 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         private OrderBaseInfo orderBaseInfo;
 
         @com.aliyun.core.annotation.NameInMap("passenger_list")
-        private java.util.List < PassengerList> passengerList;
+        private java.util.List<PassengerList> passengerList;
 
         @com.aliyun.core.annotation.NameInMap("price_info_list")
-        private java.util.List < PriceInfoList> priceInfoList;
+        private java.util.List<PriceInfoList> priceInfoList;
 
         private Module(Builder builder) {
             this.hotelInfo = builder.hotelInfo;
@@ -1574,14 +1579,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerList> getPassengerList() {
+        public java.util.List<PassengerList> getPassengerList() {
             return this.passengerList;
         }
 
         /**
          * @return priceInfoList
          */
-        public java.util.List < PriceInfoList> getPriceInfoList() {
+        public java.util.List<PriceInfoList> getPriceInfoList() {
             return this.priceInfoList;
         }
 
@@ -1589,8 +1594,8 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private HotelInfo hotelInfo; 
             private InvoiceInfo invoiceInfo; 
             private OrderBaseInfo orderBaseInfo; 
-            private java.util.List < PassengerList> passengerList; 
-            private java.util.List < PriceInfoList> priceInfoList; 
+            private java.util.List<PassengerList> passengerList; 
+            private java.util.List<PriceInfoList> priceInfoList; 
 
             /**
              * hotel_info.
@@ -1619,7 +1624,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             /**
              * passenger_list.
              */
-            public Builder passengerList(java.util.List < PassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }
@@ -1627,7 +1632,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             /**
              * price_info_list.
              */
-            public Builder priceInfoList(java.util.List < PriceInfoList> priceInfoList) {
+            public Builder priceInfoList(java.util.List<PriceInfoList> priceInfoList) {
                 this.priceInfoList = priceInfoList;
                 return this;
             }

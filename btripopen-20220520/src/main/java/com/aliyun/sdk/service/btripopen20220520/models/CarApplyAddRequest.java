@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -83,7 +88,7 @@ public class CarApplyAddRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("traveler_standard")
-    private java.util.List < TravelerStandard> travelerStandard;
+    private java.util.List<TravelerStandard> travelerStandard;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_id")
@@ -237,7 +242,7 @@ public class CarApplyAddRequest extends Request {
     /**
      * @return travelerStandard
      */
-    public java.util.List < TravelerStandard> getTravelerStandard() {
+    public java.util.List<TravelerStandard> getTravelerStandard() {
         return this.travelerStandard;
     }
 
@@ -271,7 +276,7 @@ public class CarApplyAddRequest extends Request {
         private Integer timesType; 
         private Integer timesUsed; 
         private String title; 
-        private java.util.List < TravelerStandard> travelerStandard; 
+        private java.util.List<TravelerStandard> travelerStandard; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -457,7 +462,7 @@ public class CarApplyAddRequest extends Request {
         /**
          * traveler_standard.
          */
-        public Builder travelerStandard(java.util.List < TravelerStandard> travelerStandard) {
+        public Builder travelerStandard(java.util.List<TravelerStandard> travelerStandard) {
             String travelerStandardShrink = shrink(travelerStandard, "traveler_standard", "json");
             this.putBodyParameter("traveler_standard", travelerStandardShrink);
             this.travelerStandard = travelerStandard;
@@ -569,7 +574,7 @@ public class CarApplyAddRequest extends Request {
      */
     public static class TravelerStandard extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("car_city_set")
-        private java.util.List < CarCitySet> carCitySet;
+        private java.util.List<CarCitySet> carCitySet;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -591,7 +596,7 @@ public class CarApplyAddRequest extends Request {
         /**
          * @return carCitySet
          */
-        public java.util.List < CarCitySet> getCarCitySet() {
+        public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
         }
 
@@ -603,13 +608,13 @@ public class CarApplyAddRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < CarCitySet> carCitySet; 
+            private java.util.List<CarCitySet> carCitySet; 
             private String userId; 
 
             /**
              * car_city_set.
              */
-            public Builder carCitySet(java.util.List < CarCitySet> carCitySet) {
+            public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
                 return this;
             }

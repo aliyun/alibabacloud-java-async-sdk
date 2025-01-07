@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class IsvRuleSaveRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("bookuser_list")
-    private java.util.List < BookuserList> bookuserList;
+    private java.util.List<BookuserList> bookuserList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rule_need")
@@ -84,7 +89,7 @@ public class IsvRuleSaveRequest extends Request {
     /**
      * @return bookuserList
      */
-    public java.util.List < BookuserList> getBookuserList() {
+    public java.util.List<BookuserList> getBookuserList() {
         return this.bookuserList;
     }
 
@@ -119,7 +124,7 @@ public class IsvRuleSaveRequest extends Request {
     public static final class Builder extends Request.Builder<IsvRuleSaveRequest, Builder> {
         private Boolean applyNeed; 
         private String bookType; 
-        private java.util.List < BookuserList> bookuserList; 
+        private java.util.List<BookuserList> bookuserList; 
         private Boolean ruleNeed; 
         private Integer status; 
         private String userId; 
@@ -161,7 +166,7 @@ public class IsvRuleSaveRequest extends Request {
         /**
          * bookuser_list.
          */
-        public Builder bookuserList(java.util.List < BookuserList> bookuserList) {
+        public Builder bookuserList(java.util.List<BookuserList> bookuserList) {
             String bookuserListShrink = shrink(bookuserList, "bookuser_list", "json");
             this.putBodyParameter("bookuser_list", bookuserListShrink);
             this.bookuserList = bookuserList;
