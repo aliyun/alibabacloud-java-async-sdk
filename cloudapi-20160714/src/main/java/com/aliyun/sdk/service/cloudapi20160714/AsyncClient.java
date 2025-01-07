@@ -1414,6 +1414,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstanceVpcAttributeForConsole  ModifyInstanceVpcAttributeForConsoleRequest
+     * @return ModifyInstanceVpcAttributeForConsoleResponse
+     */
+    CompletableFuture<ModifyInstanceVpcAttributeForConsoleResponse> modifyInstanceVpcAttributeForConsole(ModifyInstanceVpcAttributeForConsoleRequest request);
+
+    /**
      * @param request the request parameters of ModifyIntranetDomainPolicy  ModifyIntranetDomainPolicyRequest
      * @return ModifyIntranetDomainPolicyResponse
      */

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApiGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BasePath")
+    private String basePath;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableTagAuth")
     private Boolean enableTagAuth;
 
@@ -55,6 +59,7 @@ public class DescribeApiGroupsRequest extends Request {
 
     private DescribeApiGroupsRequest(Builder builder) {
         super(builder);
+        this.basePath = builder.basePath;
         this.enableTagAuth = builder.enableTagAuth;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
@@ -77,6 +82,13 @@ public class DescribeApiGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return basePath
+     */
+    public String getBasePath() {
+        return this.basePath;
     }
 
     /**
@@ -143,6 +155,7 @@ public class DescribeApiGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeApiGroupsRequest, Builder> {
+        private String basePath; 
         private Boolean enableTagAuth; 
         private String groupId; 
         private String groupName; 
@@ -159,6 +172,7 @@ public class DescribeApiGroupsRequest extends Request {
 
         private Builder(DescribeApiGroupsRequest request) {
             super(request);
+            this.basePath = request.basePath;
             this.enableTagAuth = request.enableTagAuth;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
@@ -169,6 +183,15 @@ public class DescribeApiGroupsRequest extends Request {
             this.sort = request.sort;
             this.tag = request.tag;
         } 
+
+        /**
+         * BasePath.
+         */
+        public Builder basePath(String basePath) {
+            this.putQueryParameter("BasePath", basePath);
+            this.basePath = basePath;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable tag verification.</p>
