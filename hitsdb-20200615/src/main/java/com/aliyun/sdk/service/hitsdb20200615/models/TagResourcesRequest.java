@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -28,7 +34,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -51,7 +57,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -103,7 +109,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -138,7 +144,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -146,12 +152,12 @@ public class TagResourcesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -189,7 +195,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instances you want to associate tags with are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
+         * <p>The ID of the region in which the instances you want to associate tags with are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,9 +208,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The list of resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -225,7 +236,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -243,9 +258,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to associate with the resource.
+         * <p>The tags that you want to associate with the resource.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -258,6 +274,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -298,10 +320,14 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to associate with the resource.
-             * <p>
+             * <p>The key of the tag that you want to associate with the resource.</p>
+             * <blockquote>
+             * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * > You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -309,10 +335,13 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that you want to associate with the resource.
-             * <p>
+             * <p>The value of the tag that you want to associate with the resource.</p>
+             * <blockquote>
+             * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * </blockquote>
              * 
-             * > You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.
+             * <strong>example:</strong>
+             * <p>2.2.8</p>
              */
             public Builder value(String value) {
                 this.value = value;

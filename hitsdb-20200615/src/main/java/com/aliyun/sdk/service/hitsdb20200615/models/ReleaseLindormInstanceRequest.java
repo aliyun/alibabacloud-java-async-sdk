@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseLindormInstanceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseLindormInstanceRequest</p>
@@ -163,7 +169,10 @@ public class ReleaseLindormInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the instance immediately. If you set this parameter to false, data in the released instance is retained for seven days before it is completely deleted. If you set this parameter to true, data in the released instance is immediately deleted. The default value is false.
+         * <p>Specifies whether to release the instance immediately. If you set this parameter to false, data in the released instance is retained for seven days before it is completely deleted. If you set this parameter to true, data in the released instance is immediately deleted. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder immediately(Boolean immediately) {
             this.putQueryParameter("Immediately", immediately);
@@ -172,7 +181,11 @@ public class ReleaseLindormInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> interface.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1z3506imz2f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

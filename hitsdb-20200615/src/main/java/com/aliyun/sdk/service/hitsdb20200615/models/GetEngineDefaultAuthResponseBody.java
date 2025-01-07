@@ -1,18 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEngineDefaultAuthResponseBody} extends {@link TeaModel}
  *
  * <p>GetEngineDefaultAuthResponseBody</p>
  */
 public class GetEngineDefaultAuthResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("AuthInfos")
-    private java.util.List < AuthInfos> authInfos;
+    private java.util.List<AuthInfos> authInfos;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -21,6 +30,7 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
     private String requestId;
 
     private GetEngineDefaultAuthResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.authInfos = builder.authInfos;
         this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
@@ -35,9 +45,16 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return authInfos
      */
-    public java.util.List < AuthInfos> getAuthInfos() {
+    public java.util.List<AuthInfos> getAuthInfos() {
         return this.authInfos;
     }
 
@@ -56,14 +73,23 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AuthInfos> authInfos; 
+        private String accessDeniedDetail; 
+        private java.util.List<AuthInfos> authInfos; 
         private String instanceId; 
         private String requestId; 
 
         /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
          * AuthInfos.
          */
-        public Builder authInfos(java.util.List < AuthInfos> authInfos) {
+        public Builder authInfos(java.util.List<AuthInfos> authInfos) {
             this.authInfos = authInfos;
             return this;
         }
@@ -90,6 +116,12 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEngineDefaultAuthResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEngineDefaultAuthResponseBody</p>
+     */
     public static class AuthInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;

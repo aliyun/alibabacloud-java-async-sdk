@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewLindormInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewLindormInstanceRequest</p>
@@ -171,11 +177,15 @@ public class RenewLindormInstanceRequest extends Request {
         } 
 
         /**
-         * The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.
-         * <p>
+         * <p>The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
+         * <ul>
+         * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If PricingCycle is set to **Month**, set this parameter to an integer that ranges from **1** to **9**.
-         * *   If PricingCycle is set to **Year**, set this parameter to an integer that ranges from **1** to **3**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -184,7 +194,11 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to renew. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the instance ID.
+         * <p>The ID of the instance that you want to renew. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1z3506imz2f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -211,11 +225,15 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * The period based on which you are charged for the instance. Valid values:
-         * <p>
+         * <p>The period based on which you are charged for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: You are charged for the instance based on months.</li>
+         * <li><strong>Year</strong>: You are charged for the instance based on years.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Month**: You are charged for the instance based on months.
-         * *   **Year**: You are charged for the instance based on years.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -224,7 +242,11 @@ public class RenewLindormInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance that you want to renew is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
+         * <p>The ID of the region in which the instance that you want to renew is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

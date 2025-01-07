@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -31,7 +37,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -53,7 +59,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
@@ -113,7 +119,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -148,7 +154,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -157,12 +163,12 @@ public class ListTagResourcesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -183,10 +189,13 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token used to start the next query to retrieve more results.
-         * <p>
+         * <p>The token used to start the next query to retrieve more results.</p>
+         * <blockquote>
+         * <p>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned for the query to perform the next query.</p>
+         * </blockquote>
          * 
-         * > This parameter is not required in the first query. If not all results are returned in one query, you can pass in the **NextToken** value returned for the query to perform the next query.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -213,7 +222,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instances whose tags you want to query are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
+         * <p>The ID of the region in which the instances whose tags you want to query are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,9 +235,9 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * <p>The list of resource IDs.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -249,7 +262,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **INSTANCE**.
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -267,9 +284,9 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags associated with the instances you want to query.
+         * <p>The list of tags associated with the instances you want to query.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -282,6 +299,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -321,10 +344,13 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The keys of the tags associated with the instances you want to query.
-             * <p>
+             * <p>The keys of the tags associated with the instances you want to query.</p>
+             * <blockquote>
+             * <p>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+             * </blockquote>
              * 
-             * > You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -332,10 +358,13 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The values of the tags associated with the instances you want to query.
-             * <p>
+             * <p>The values of the tags associated with the instances you want to query.</p>
+             * <blockquote>
+             * <p>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+             * </blockquote>
              * 
-             * > You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.
+             * <strong>example:</strong>
+             * <p>2.2.8</p>
              */
             public Builder value(String value) {
                 this.value = value;

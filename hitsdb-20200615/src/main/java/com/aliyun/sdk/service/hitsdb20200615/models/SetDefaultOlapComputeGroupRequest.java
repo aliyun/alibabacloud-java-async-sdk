@@ -1,24 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateLdpsNamespaceRequest} extends {@link RequestModel}
+ * 
+ * {@link SetDefaultOlapComputeGroupRequest} extends {@link RequestModel}
  *
- * <p>CreateLdpsNamespaceRequest</p>
+ * <p>SetDefaultOlapComputeGroupRequest</p>
  */
-public class CreateLdpsNamespaceRequest extends Request {
+public class SetDefaultOlapComputeGroupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String groupName;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Namespace")
-    private String namespace;
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
+    private Boolean isDefault;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -46,10 +57,11 @@ public class CreateLdpsNamespaceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    private CreateLdpsNamespaceRequest(Builder builder) {
+    private SetDefaultOlapComputeGroupRequest(Builder builder) {
         super(builder);
+        this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
-        this.namespace = builder.namespace;
+        this.isDefault = builder.isDefault;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -62,13 +74,20 @@ public class CreateLdpsNamespaceRequest extends Request {
         return new Builder();
     }
 
-    public static CreateLdpsNamespaceRequest create() {
+    public static SetDefaultOlapComputeGroupRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
     }
 
     /**
@@ -79,10 +98,10 @@ public class CreateLdpsNamespaceRequest extends Request {
     }
 
     /**
-     * @return namespace
+     * @return isDefault
      */
-    public String getNamespace() {
-        return this.namespace;
+    public Boolean getIsDefault() {
+        return this.isDefault;
     }
 
     /**
@@ -127,9 +146,10 @@ public class CreateLdpsNamespaceRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<CreateLdpsNamespaceRequest, Builder> {
+    public static final class Builder extends Request.Builder<SetDefaultOlapComputeGroupRequest, Builder> {
+        private String groupName; 
         private String instanceId; 
-        private String namespace; 
+        private Boolean isDefault; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -141,10 +161,11 @@ public class CreateLdpsNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateLdpsNamespaceRequest request) {
+        private Builder(SetDefaultOlapComputeGroupRequest request) {
             super(request);
+            this.groupName = request.groupName;
             this.instanceId = request.instanceId;
-            this.namespace = request.namespace;
+            this.isDefault = request.isDefault;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -154,7 +175,16 @@ public class CreateLdpsNamespaceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -163,11 +193,11 @@ public class CreateLdpsNamespaceRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * IsDefault.
          */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
+        public Builder isDefault(Boolean isDefault) {
+            this.putQueryParameter("IsDefault", isDefault);
+            this.isDefault = isDefault;
             return this;
         }
 
@@ -226,8 +256,8 @@ public class CreateLdpsNamespaceRequest extends Request {
         }
 
         @Override
-        public CreateLdpsNamespaceRequest build() {
-            return new CreateLdpsNamespaceRequest(this);
+        public SetDefaultOlapComputeGroupRequest build() {
+            return new SetDefaultOlapComputeGroupRequest(this);
         } 
 
     } 

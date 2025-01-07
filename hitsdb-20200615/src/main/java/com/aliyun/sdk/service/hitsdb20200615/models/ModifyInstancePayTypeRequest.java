@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstancePayTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstancePayTypeRequest</p>
@@ -192,11 +198,14 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. The parameter is required if the instance is an subscription instance.
-         * <p>
+         * <p>The subscription duration of the instance. The parameter is required if the instance is an subscription instance.</p>
+         * <ul>
+         * <li>If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.</li>
+         * <li>If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.</li>
+         * </ul>
          * 
-         * *   If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.
-         * *   If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -205,7 +214,11 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1z3506imz2f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -232,11 +245,15 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PREPAY**: subscription.
-         * *   **POSTPAY**: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -245,11 +262,14 @@ public class ModifyInstancePayTypeRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration for the instance. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration for the instance. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
          * 
-         * *   Month
-         * *   Year
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

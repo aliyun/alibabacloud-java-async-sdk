@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLindormInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetLindormInstanceRequest</p>
@@ -149,11 +155,15 @@ public class GetLindormInstanceRequest extends Request {
         }
 
         /**
-         * The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:
-         * <p>
+         * <p>The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:</p>
+         * <ul>
+         * <li><strong>cloud_efficiency</strong>: The nodes use the Standard type of storage.</li>
+         * <li><strong>cloud_ssd</strong>: The nodes use the Performance type of storage.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cloud_efficiency**: The nodes use the Standard type of storage.
-         * *   **cloud_ssd**: The nodes use the Performance type of storage.
+         * <strong>example:</strong>
+         * <p>ld-bp1o3y0yme2i2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

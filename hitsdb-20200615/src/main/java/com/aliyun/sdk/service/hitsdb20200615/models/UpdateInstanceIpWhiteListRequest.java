@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceIpWhiteListRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceIpWhiteListRequest</p>
@@ -192,7 +198,10 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * Specifies whether to clear all IP addresses and CIDR blocks in the whitelist.
+         * <p>Specifies whether to clear all IP addresses and CIDR blocks in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder delete(Boolean delete) {
             this.putQueryParameter("Delete", delete);
@@ -201,7 +210,10 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * The name of the IP whitelist. Default value: user.
+         * <p>The name of the IP whitelist. Default value: user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -210,7 +222,11 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.
+         * <p>The ID of the instance for which you want to configure a whitelist. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1z3506imz2f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -255,10 +271,14 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * The IP addresses or CIDR blocks that you want to add to the whitelist.
-         * <p>
+         * <p>The IP addresses or CIDR blocks that you want to add to the whitelist.</p>
+         * <blockquote>
+         * <p> If you add 127.0.0.1 to the whitelist, all IP addresses cannot be used to access the Lindorm instance. If you add the CIDR block 192.168.0.0/24 to the whitelist, you can use all IP addresses in the CIDR block to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If you add 127.0.0.1 to the whitelist, all IP addresses cannot be used to access the Lindorm instance. If you add the CIDR block 192.168.0.0/24 to the whitelist, you can use all IP addresses in the CIDR block to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with commas (,).
+         * <strong>example:</strong>
+         * <p>106.11.XX.XX/24</p>
          */
         public Builder securityIpList(String securityIpList) {
             this.putQueryParameter("SecurityIpList", securityIpList);

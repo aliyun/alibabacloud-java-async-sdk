@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagResources")
-    private java.util.List < TagResources> tagResources;
+    private java.util.List<TagResources> tagResources;
 
     private ListTagResourcesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -51,20 +57,23 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResources> getTagResources() {
+    public java.util.List<TagResources> getTagResources() {
         return this.tagResources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TagResources> tagResources; 
+        private java.util.List<TagResources> tagResources; 
 
         /**
-         * The token used to start the next query.
-         * <p>
+         * <p>The token used to start the next query.</p>
+         * <blockquote>
+         * <p>If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</p>
+         * </blockquote>
          * 
-         * > If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.
+         * <strong>example:</strong>
+         * <p>212db86****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -72,7 +81,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05CB115C-91CB-529F-9098-50C1F6CB3BD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,9 +92,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of resources.
+         * <p>The list of resources.</p>
          */
-        public Builder tagResources(java.util.List < TagResources> tagResources) {
+        public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
             return this;
         }
@@ -93,6 +105,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -156,7 +174,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource, which is the ID of the instance.
+             * <p>The ID of the resource, which is the ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-bp17j28j2y7pm****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -164,7 +185,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resources. The returned value is fixed to **ALIYUN::HITSDB::INSTANCE**.
+             * <p>The type of the resources. The returned value is fixed to <strong>ALIYUN::HITSDB::INSTANCE</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::HITSDB::INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -172,7 +196,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag associated with the instance.
+             * <p>The key of the tag associated with the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -180,7 +207,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag associated with the instance.
+             * <p>The value of the tag associated with the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.8</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchLSQLV3MySQLServiceRequest} extends {@link RequestModel}
  *
  * <p>SwitchLSQLV3MySQLServiceRequest</p>
@@ -164,11 +170,15 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         /**
-         * The type of the operation. Valid value:
-         * <p>
+         * <p>The type of the operation. Valid value:</p>
+         * <ul>
+         * <li>1: enables the MySQL compatibility feature.</li>
+         * <li>0: disables the MySQL compatibility feature.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: enables the MySQL compatibility feature.
-         * *   0: disables the MySQL compatibility feature.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -177,7 +187,11 @@ public class SwitchLSQLV3MySQLServiceRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1o3y0yme2i2****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -1,20 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLdpsComputeGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLdpsComputeGroupResponseBody</p>
  */
 public class CreateLdpsComputeGroupResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLdpsComputeGroupResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.requestId = builder.requestId;
     }
 
@@ -27,6 +37,13 @@ public class CreateLdpsComputeGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -34,7 +51,16 @@ public class CreateLdpsComputeGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * RequestId.

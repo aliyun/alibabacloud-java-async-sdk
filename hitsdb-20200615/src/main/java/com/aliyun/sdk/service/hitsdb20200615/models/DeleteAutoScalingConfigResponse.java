@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateLdpsNamespaceResponse} extends {@link TeaModel}
+ * 
+ * {@link DeleteAutoScalingConfigResponse} extends {@link TeaModel}
  *
- * <p>CreateLdpsNamespaceResponse</p>
+ * <p>DeleteAutoScalingConfigResponse</p>
  */
-public class CreateLdpsNamespaceResponse extends Response {
+public class DeleteAutoScalingConfigResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateLdpsNamespaceResponseBody body;
+    private DeleteAutoScalingConfigResponseBody body;
 
-    private CreateLdpsNamespaceResponse(BuilderImpl builder) {
+    private DeleteAutoScalingConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateLdpsNamespaceResponse create() {
+    public static DeleteAutoScalingConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class CreateLdpsNamespaceResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class CreateLdpsNamespaceResponse extends Response {
     /**
      * @return body
      */
-    public CreateLdpsNamespaceResponseBody getBody() {
+    public DeleteAutoScalingConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateLdpsNamespaceResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteAutoScalingConfigResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateLdpsNamespaceResponseBody body);
+        Builder body(DeleteAutoScalingConfigResponseBody body);
 
         @Override
-        CreateLdpsNamespaceResponse build();
+        DeleteAutoScalingConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateLdpsNamespaceResponse, Builder>
+            extends Response.BuilderImpl<DeleteAutoScalingConfigResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateLdpsNamespaceResponseBody body; 
+        private DeleteAutoScalingConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateLdpsNamespaceResponse response) {
+        private BuilderImpl(DeleteAutoScalingConfigResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class CreateLdpsNamespaceResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class CreateLdpsNamespaceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateLdpsNamespaceResponseBody body) {
+        public Builder body(DeleteAutoScalingConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateLdpsNamespaceResponse build() {
-            return new CreateLdpsNamespaceResponse(this);
+        public DeleteAutoScalingConfigResponse build() {
+            return new DeleteAutoScalingConfigResponse(this);
         } 
 
     } 

@@ -1,20 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateLdpsNamespaceResponseBody} extends {@link TeaModel}
+ * 
+ * {@link SetDefaultOlapComputeGroupResponseBody} extends {@link TeaModel}
  *
- * <p>CreateLdpsNamespaceResponseBody</p>
+ * <p>SetDefaultOlapComputeGroupResponseBody</p>
  */
-public class CreateLdpsNamespaceResponseBody extends TeaModel {
+public class SetDefaultOlapComputeGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateLdpsNamespaceResponseBody(Builder builder) {
+    private SetDefaultOlapComputeGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +28,7 @@ public class CreateLdpsNamespaceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateLdpsNamespaceResponseBody create() {
+    public static SetDefaultOlapComputeGroupResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +50,8 @@ public class CreateLdpsNamespaceResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateLdpsNamespaceResponseBody build() {
-            return new CreateLdpsNamespaceResponseBody(this);
+        public SetDefaultOlapComputeGroupResponseBody build() {
+            return new SetDefaultOlapComputeGroupResponseBody(this);
         } 
 
     } 

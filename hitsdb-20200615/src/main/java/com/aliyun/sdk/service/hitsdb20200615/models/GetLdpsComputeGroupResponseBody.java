@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLdpsComputeGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetLdpsComputeGroupResponseBody</p>
@@ -15,7 +21,7 @@ public class GetLdpsComputeGroupResponseBody extends TeaModel {
     private String groupName;
 
     @com.aliyun.core.annotation.NameInMap("Properties")
-    private java.util.Map < String, ? > properties;
+    private java.util.Map<String, ?> properties;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -44,7 +50,7 @@ public class GetLdpsComputeGroupResponseBody extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.Map < String, ? > getProperties() {
+    public java.util.Map<String, ?> getProperties() {
         return this.properties;
     }
 
@@ -57,7 +63,7 @@ public class GetLdpsComputeGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String groupName; 
-        private java.util.Map < String, ? > properties; 
+        private java.util.Map<String, ?> properties; 
         private String requestId; 
 
         /**
@@ -71,7 +77,7 @@ public class GetLdpsComputeGroupResponseBody extends TeaModel {
         /**
          * Properties.
          */
-        public Builder properties(java.util.Map < String, ? > properties) {
+        public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
             return this;
         }
