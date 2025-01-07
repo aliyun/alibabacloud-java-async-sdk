@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ChangeCheckConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddedCheck")
-    private java.util.List < AddedCheck> addedCheck;
+    private java.util.List<AddedCheck> addedCheck;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigRequirementIds")
@@ -30,7 +35,7 @@ public class ChangeCheckConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CycleDays")
-    private java.util.List < Integer > cycleDays;
+    private java.util.List<Integer> cycleDays;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableAddCheck")
@@ -50,11 +55,11 @@ public class ChangeCheckConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemovedCheck")
-    private java.util.List < RemovedCheck> removedCheck;
+    private java.util.List<RemovedCheck> removedCheck;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StandardIds")
-    private java.util.List < Long > standardIds;
+    private java.util.List<Long> standardIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -66,7 +71,7 @@ public class ChangeCheckConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
-    private java.util.List < String > vendors;
+    private java.util.List<String> vendors;
 
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
@@ -102,7 +107,7 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return addedCheck
      */
-    public java.util.List < AddedCheck> getAddedCheck() {
+    public java.util.List<AddedCheck> getAddedCheck() {
         return this.addedCheck;
     }
 
@@ -130,7 +135,7 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return cycleDays
      */
-    public java.util.List < Integer > getCycleDays() {
+    public java.util.List<Integer> getCycleDays() {
         return this.cycleDays;
     }
 
@@ -165,14 +170,14 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return removedCheck
      */
-    public java.util.List < RemovedCheck> getRemovedCheck() {
+    public java.util.List<RemovedCheck> getRemovedCheck() {
         return this.removedCheck;
     }
 
     /**
      * @return standardIds
      */
-    public java.util.List < Long > getStandardIds() {
+    public java.util.List<Long> getStandardIds() {
         return this.standardIds;
     }
 
@@ -193,25 +198,25 @@ public class ChangeCheckConfigRequest extends Request {
     /**
      * @return vendors
      */
-    public java.util.List < String > getVendors() {
+    public java.util.List<String> getVendors() {
         return this.vendors;
     }
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
-        private java.util.List < AddedCheck> addedCheck; 
+        private java.util.List<AddedCheck> addedCheck; 
         private ConfigRequirementIds configRequirementIds; 
         private ConfigStandardIds configStandardIds; 
         private String configure; 
-        private java.util.List < Integer > cycleDays; 
+        private java.util.List<Integer> cycleDays; 
         private Boolean enableAddCheck; 
         private Boolean enableAutoCheck; 
         private Integer endTime; 
         private String regionId; 
-        private java.util.List < RemovedCheck> removedCheck; 
-        private java.util.List < Long > standardIds; 
+        private java.util.List<RemovedCheck> removedCheck; 
+        private java.util.List<Long> standardIds; 
         private Integer startTime; 
         private Boolean systemConfig; 
-        private java.util.List < String > vendors; 
+        private java.util.List<String> vendors; 
 
         private Builder() {
             super();
@@ -241,7 +246,7 @@ public class ChangeCheckConfigRequest extends Request {
          * <p> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
          * </blockquote>
          */
-        public Builder addedCheck(java.util.List < AddedCheck> addedCheck) {
+        public Builder addedCheck(java.util.List<AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
             this.addedCheck = addedCheck;
             return this;
@@ -274,9 +279,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the check item. Valid values:</p>
+         * <p>The configuration of the check item. Valid value:</p>
          * <ul>
-         * <li><strong>all</strong></li>
+         * <li><strong>all</strong>: Add all check items.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -291,7 +296,7 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * <p>The days in a week on which a check is performed.</p>
          */
-        public Builder cycleDays(java.util.List < Integer > cycleDays) {
+        public Builder cycleDays(java.util.List<Integer> cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
             this.cycleDays = cycleDays;
             return this;
@@ -368,7 +373,7 @@ public class ChangeCheckConfigRequest extends Request {
          * <p> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</p>
          * </blockquote>
          */
-        public Builder removedCheck(java.util.List < RemovedCheck> removedCheck) {
+        public Builder removedCheck(java.util.List<RemovedCheck> removedCheck) {
             this.putQueryParameter("RemovedCheck", removedCheck);
             this.removedCheck = removedCheck;
             return this;
@@ -377,7 +382,7 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * <p>An array that consists of the information about the check item.</p>
          */
-        public Builder standardIds(java.util.List < Long > standardIds) {
+        public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
             this.standardIds = standardIds;
             return this;
@@ -396,7 +401,14 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * SystemConfig.
+         * <p>Specifies whether to use the configuration automatically generated by the system. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder systemConfig(Boolean systemConfig) {
             this.putQueryParameter("SystemConfig", systemConfig);
@@ -405,9 +417,9 @@ public class ChangeCheckConfigRequest extends Request {
         }
 
         /**
-         * <p>The service provider (SP) of the cloud asset.</p>
+         * <p>The cloud service providers.</p>
          */
-        public Builder vendors(java.util.List < String > vendors) {
+        public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);
             this.vendors = vendors;
             return this;
@@ -504,10 +516,10 @@ public class ChangeCheckConfigRequest extends Request {
      */
     public static class ConfigRequirementIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddIds")
-        private java.util.List < Long > addIds;
+        private java.util.List<Long> addIds;
 
         @com.aliyun.core.annotation.NameInMap("RemoveIds")
-        private java.util.List < Long > removeIds;
+        private java.util.List<Long> removeIds;
 
         private ConfigRequirementIds(Builder builder) {
             this.addIds = builder.addIds;
@@ -525,25 +537,25 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * @return addIds
          */
-        public java.util.List < Long > getAddIds() {
+        public java.util.List<Long> getAddIds() {
             return this.addIds;
         }
 
         /**
          * @return removeIds
          */
-        public java.util.List < Long > getRemoveIds() {
+        public java.util.List<Long> getRemoveIds() {
             return this.removeIds;
         }
 
         public static final class Builder {
-            private java.util.List < Long > addIds; 
-            private java.util.List < Long > removeIds; 
+            private java.util.List<Long> addIds; 
+            private java.util.List<Long> removeIds; 
 
             /**
              * <p>The requirement IDs that you want to add to the policy.</p>
              */
-            public Builder addIds(java.util.List < Long > addIds) {
+            public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
                 return this;
             }
@@ -551,7 +563,7 @@ public class ChangeCheckConfigRequest extends Request {
             /**
              * <p>The requirement IDs that you want to remove from the policy.</p>
              */
-            public Builder removeIds(java.util.List < Long > removeIds) {
+            public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
                 return this;
             }
@@ -571,10 +583,10 @@ public class ChangeCheckConfigRequest extends Request {
      */
     public static class ConfigStandardIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddIds")
-        private java.util.List < Long > addIds;
+        private java.util.List<Long> addIds;
 
         @com.aliyun.core.annotation.NameInMap("RemoveIds")
-        private java.util.List < Long > removeIds;
+        private java.util.List<Long> removeIds;
 
         private ConfigStandardIds(Builder builder) {
             this.addIds = builder.addIds;
@@ -592,25 +604,25 @@ public class ChangeCheckConfigRequest extends Request {
         /**
          * @return addIds
          */
-        public java.util.List < Long > getAddIds() {
+        public java.util.List<Long> getAddIds() {
             return this.addIds;
         }
 
         /**
          * @return removeIds
          */
-        public java.util.List < Long > getRemoveIds() {
+        public java.util.List<Long> getRemoveIds() {
             return this.removeIds;
         }
 
         public static final class Builder {
-            private java.util.List < Long > addIds; 
-            private java.util.List < Long > removeIds; 
+            private java.util.List<Long> addIds; 
+            private java.util.List<Long> removeIds; 
 
             /**
              * <p>The standard IDs that you want to add to the policy.</p>
              */
-            public Builder addIds(java.util.List < Long > addIds) {
+            public Builder addIds(java.util.List<Long> addIds) {
                 this.addIds = addIds;
                 return this;
             }
@@ -618,7 +630,7 @@ public class ChangeCheckConfigRequest extends Request {
             /**
              * <p>The standard IDs that you want to remove from the policy.</p>
              */
-            public Builder removeIds(java.util.List < Long > removeIds) {
+            public Builder removeIds(java.util.List<Long> removeIds) {
                 this.removeIds = removeIds;
                 return this;
             }

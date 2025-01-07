@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCheckItemResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckItems")
-    private java.util.List < CheckItems> checkItems;
+    private java.util.List<CheckItems> checkItems;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListCheckItemResponseBody extends TeaModel {
     /**
      * @return checkItems
      */
-    public java.util.List < CheckItems> getCheckItems() {
+    public java.util.List<CheckItems> getCheckItems() {
         return this.checkItems;
     }
 
@@ -57,14 +62,14 @@ public class ListCheckItemResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckItems> checkItems; 
+        private java.util.List<CheckItems> checkItems; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The check items.</p>
          */
-        public Builder checkItems(java.util.List < CheckItems> checkItems) {
+        public Builder checkItems(java.util.List<CheckItems> checkItems) {
             this.checkItems = checkItems;
             return this;
         }
@@ -326,7 +331,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         private String checkShowName;
 
         @com.aliyun.core.annotation.NameInMap("CustomConfigs")
-        private java.util.List < CustomConfigs> customConfigs;
+        private java.util.List<CustomConfigs> customConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private Description description;
@@ -344,7 +349,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         private String riskLevel;
 
         @com.aliyun.core.annotation.NameInMap("SectionIds")
-        private java.util.List < Long > sectionIds;
+        private java.util.List<Long> sectionIds;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
@@ -387,7 +392,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         /**
          * @return customConfigs
          */
-        public java.util.List < CustomConfigs> getCustomConfigs() {
+        public java.util.List<CustomConfigs> getCustomConfigs() {
             return this.customConfigs;
         }
 
@@ -429,7 +434,7 @@ public class ListCheckItemResponseBody extends TeaModel {
         /**
          * @return sectionIds
          */
-        public java.util.List < Long > getSectionIds() {
+        public java.util.List<Long> getSectionIds() {
             return this.sectionIds;
         }
 
@@ -443,13 +448,13 @@ public class ListCheckItemResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private String checkShowName; 
-            private java.util.List < CustomConfigs> customConfigs; 
+            private java.util.List<CustomConfigs> customConfigs; 
             private Description description; 
             private Integer estimatedCount; 
             private String instanceSubType; 
             private String instanceType; 
             private String riskLevel; 
-            private java.util.List < Long > sectionIds; 
+            private java.util.List<Long> sectionIds; 
             private String vendor; 
 
             /**
@@ -477,7 +482,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             /**
              * <p>The check items.</p>
              */
-            public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
+            public Builder customConfigs(java.util.List<CustomConfigs> customConfigs) {
                 this.customConfigs = customConfigs;
                 return this;
             }
@@ -567,7 +572,7 @@ public class ListCheckItemResponseBody extends TeaModel {
              * <li><strong>POLARDB</strong>: PolarDB.</li>
              * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL.</li>
              * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-             * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS).</li>
+             * <li><strong>NAS</strong>: File Storage NAS (NAS).</li>
              * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP).</li>
              * <li><strong>EIP</strong>: Elastic IP Address (EIP).</li>
              * </ul>
@@ -599,7 +604,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             /**
              * <p>The IDs of the sections associated with the check items.</p>
              */
-            public Builder sectionIds(java.util.List < Long > sectionIds) {
+            public Builder sectionIds(java.util.List<Long> sectionIds) {
                 this.sectionIds = sectionIds;
                 return this;
             }

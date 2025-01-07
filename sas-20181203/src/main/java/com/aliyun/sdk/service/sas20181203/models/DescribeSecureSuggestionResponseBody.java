@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Suggestions")
-    private java.util.List < Suggestions> suggestions;
+    private java.util.List<Suggestions> suggestions;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     /**
      * @return suggestions
      */
-    public java.util.List < Suggestions> getSuggestions() {
+    public java.util.List<Suggestions> getSuggestions() {
         return this.suggestions;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Suggestions> suggestions; 
+        private java.util.List<Suggestions> suggestions; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         /**
          * <p>The suggestions on how to handle the risks.</p>
          */
-        public Builder suggestions(java.util.List < Suggestions> suggestions) {
+        public Builder suggestions(java.util.List<Suggestions> suggestions) {
             this.suggestions = suggestions;
             return this;
         }
@@ -241,7 +246,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
      */
     public static class Suggestions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.List < Detail> detail;
+        private java.util.List<Detail> detail;
 
         @com.aliyun.core.annotation.NameInMap("Points")
         private Integer points;
@@ -266,7 +271,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
@@ -285,14 +290,14 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
             private Integer points; 
             private String suggestType; 
 
             /**
              * <p>The details of the suggestion.</p>
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }

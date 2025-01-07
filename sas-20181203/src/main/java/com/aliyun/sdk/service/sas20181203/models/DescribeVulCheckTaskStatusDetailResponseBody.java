@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskStatuses")
-    private java.util.List < TaskStatuses> taskStatuses;
+    private java.util.List<TaskStatuses> taskStatuses;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     /**
      * @return taskStatuses
      */
-    public java.util.List < TaskStatuses> getTaskStatuses() {
+    public java.util.List<TaskStatuses> getTaskStatuses() {
         return this.taskStatuses;
     }
 
@@ -58,7 +63,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TaskStatuses> taskStatuses; 
+        private java.util.List<TaskStatuses> taskStatuses; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the status information about the vulnerability scan tasks on the server.</p>
          */
-        public Builder taskStatuses(java.util.List < TaskStatuses> taskStatuses) {
+        public Builder taskStatuses(java.util.List<TaskStatuses> taskStatuses) {
             this.taskStatuses = taskStatuses;
             return this;
         }
@@ -217,7 +222,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("TaskStatusList")
-        private java.util.List < TaskStatusList> taskStatusList;
+        private java.util.List<TaskStatusList> taskStatusList;
 
         private TaskStatuses(Builder builder) {
             this.taskId = builder.taskId;
@@ -242,13 +247,13 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         /**
          * @return taskStatusList
          */
-        public java.util.List < TaskStatusList> getTaskStatusList() {
+        public java.util.List<TaskStatusList> getTaskStatusList() {
             return this.taskStatusList;
         }
 
         public static final class Builder {
             private String taskId; 
-            private java.util.List < TaskStatusList> taskStatusList; 
+            private java.util.List<TaskStatusList> taskStatusList; 
 
             /**
              * <p>The ID of the main task.</p>
@@ -264,7 +269,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of status information about the vulnerability scan subtask.</p>
              */
-            public Builder taskStatusList(java.util.List < TaskStatusList> taskStatusList) {
+            public Builder taskStatusList(java.util.List<TaskStatusList> taskStatusList) {
                 this.taskStatusList = taskStatusList;
                 return this;
             }

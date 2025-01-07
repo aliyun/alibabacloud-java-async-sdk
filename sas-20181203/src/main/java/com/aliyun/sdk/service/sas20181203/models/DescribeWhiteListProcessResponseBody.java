@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Processes")
-    private java.util.List < Processes> processes;
+    private java.util.List<Processes> processes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
     /**
      * @return processes
      */
-    public java.util.List < Processes> getProcesses() {
+    public java.util.List<Processes> getProcesses() {
         return this.processes;
     }
 
@@ -93,7 +98,7 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < Processes> processes; 
+        private java.util.List<Processes> processes; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -133,7 +138,7 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         /**
          * <p>The information about the processes.</p>
          */
-        public Builder processes(java.util.List < Processes> processes) {
+        public Builder processes(java.util.List<Processes> processes) {
             this.processes = processes;
             return this;
         }

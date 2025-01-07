@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeConcernNecessityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConcernNecessity")
-    private java.util.List < String > concernNecessity;
+    private java.util.List<String> concernNecessity;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
     /**
      * @return concernNecessity
      */
-    public java.util.List < String > getConcernNecessity() {
+    public java.util.List<String> getConcernNecessity() {
         return this.concernNecessity;
     }
 
@@ -46,7 +51,7 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > concernNecessity; 
+        private java.util.List<String> concernNecessity; 
         private String requestId; 
 
         /**
@@ -57,7 +62,7 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
          * <li>nntf: low</li>
          * </ul>
          */
-        public Builder concernNecessity(java.util.List < String > concernNecessity) {
+        public Builder concernNecessity(java.util.List<String> concernNecessity) {
             this.concernNecessity = concernNecessity;
             return this;
         }

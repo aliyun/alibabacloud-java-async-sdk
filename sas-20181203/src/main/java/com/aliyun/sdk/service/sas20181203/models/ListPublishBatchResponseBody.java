@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPublishBatchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BatchList")
-    private java.util.List < BatchList> batchList;
+    private java.util.List<BatchList> batchList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListPublishBatchResponseBody extends TeaModel {
     /**
      * @return batchList
      */
-    public java.util.List < BatchList> getBatchList() {
+    public java.util.List<BatchList> getBatchList() {
         return this.batchList;
     }
 
@@ -57,20 +62,20 @@ public class ListPublishBatchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BatchList> batchList; 
+        private java.util.List<BatchList> batchList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * BatchList.
+         * <p>The information about the release batches.</p>
          */
-        public Builder batchList(java.util.List < BatchList> batchList) {
+        public Builder batchList(java.util.List<BatchList> batchList) {
             this.batchList = batchList;
             return this;
         }
 
         /**
-         * PageInfo.
+         * <p>The page information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -220,7 +228,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * BatchId.
+             * <p>The ID of the release batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1371</p>
              */
             public Builder batchId(Long batchId) {
                 this.batchId = batchId;
@@ -228,7 +239,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * BatchInterval.
+             * <p>The interval between two release batches. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder batchInterval(Integer batchInterval) {
                 this.batchInterval = batchInterval;
@@ -236,7 +250,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * BatchName.
+             * <p>The name of the release batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder batchName(String batchName) {
                 this.batchName = batchName;
@@ -244,7 +261,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * BatchNo.
+             * <p>The current batch number during a batch release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2147483647</p>
              */
             public Builder batchNo(Integer batchNo) {
                 this.batchNo = batchNo;
@@ -252,7 +272,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * BatchProcess.
+             * <p>The progress of the release batch. This parameter indicates the number of servers that are upgraded in the release batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder batchProcess(Integer batchProcess) {
                 this.batchProcess = batchProcess;
@@ -260,7 +283,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * BatchTotal.
+             * <p>The total number of batches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder batchTotal(Integer batchTotal) {
                 this.batchTotal = batchTotal;
@@ -268,7 +294,15 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * OperationBase.
+             * <p>The asset selection dimension. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: instance.</li>
+             * <li><strong>1</strong>: machine group.</li>
+             * <li><strong>2</strong>: Virtual Private Cloud (VPC) ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder operationBase(Integer operationBase) {
                 this.operationBase = operationBase;
@@ -276,7 +310,17 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The publish status of the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not started.</li>
+             * <li><strong>1</strong>: publishing.</li>
+             * <li><strong>2</strong>: published.</li>
+             * <li><strong>3</strong>: publish suspended.</li>
+             * <li><strong>4</strong>: forcibly upgrading.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -284,7 +328,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The destination version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.9</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -355,7 +402,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -363,7 +413,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -371,7 +424,10 @@ public class ListPublishBatchResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

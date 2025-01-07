@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
     private Integer delTargetCount;
 
     @com.aliyun.core.annotation.NameInMap("ImageRepoList")
-    private java.util.List < ImageRepoList> imageRepoList;
+    private java.util.List<ImageRepoList> imageRepoList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -71,7 +76,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
     /**
      * @return imageRepoList
      */
-    public java.util.List < ImageRepoList> getImageRepoList() {
+    public java.util.List<ImageRepoList> getImageRepoList() {
         return this.imageRepoList;
     }
 
@@ -93,7 +98,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         private Integer addTargetCount; 
         private Integer allTargetCount; 
         private Integer delTargetCount; 
-        private java.util.List < ImageRepoList> imageRepoList; 
+        private java.util.List<ImageRepoList> imageRepoList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
@@ -133,7 +138,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about image repositories.</p>
          */
-        public Builder imageRepoList(java.util.List < ImageRepoList> imageRepoList) {
+        public Builder imageRepoList(java.util.List<ImageRepoList> imageRepoList) {
             this.imageRepoList = imageRepoList;
             return this;
         }

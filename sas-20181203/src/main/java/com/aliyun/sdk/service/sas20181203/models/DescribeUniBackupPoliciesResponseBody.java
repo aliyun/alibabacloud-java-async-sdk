@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UniBackupPolicies")
-    private java.util.List < UniBackupPolicies> uniBackupPolicies;
+    private java.util.List<UniBackupPolicies> uniBackupPolicies;
 
     private DescribeUniBackupPoliciesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     /**
      * @return uniBackupPolicies
      */
-    public java.util.List < UniBackupPolicies> getUniBackupPolicies() {
+    public java.util.List<UniBackupPolicies> getUniBackupPolicies() {
         return this.uniBackupPolicies;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < UniBackupPolicies> uniBackupPolicies; 
+        private java.util.List<UniBackupPolicies> uniBackupPolicies; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the anti-ransomware policies.</p>
          */
-        public Builder uniBackupPolicies(java.util.List < UniBackupPolicies> uniBackupPolicies) {
+        public Builder uniBackupPolicies(java.util.List<UniBackupPolicies> uniBackupPolicies) {
             this.uniBackupPolicies = uniBackupPolicies;
             return this;
         }

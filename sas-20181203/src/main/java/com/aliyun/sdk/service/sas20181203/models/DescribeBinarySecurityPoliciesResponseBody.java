@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BinarySecurityPolicies")
-    private java.util.List < BinarySecurityPolicies> binarySecurityPolicies;
+    private java.util.List<BinarySecurityPolicies> binarySecurityPolicies;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
     /**
      * @return binarySecurityPolicies
      */
-    public java.util.List < BinarySecurityPolicies> getBinarySecurityPolicies() {
+    public java.util.List<BinarySecurityPolicies> getBinarySecurityPolicies() {
         return this.binarySecurityPolicies;
     }
 
@@ -57,14 +62,14 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BinarySecurityPolicies> binarySecurityPolicies; 
+        private java.util.List<BinarySecurityPolicies> binarySecurityPolicies; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The information about security policies.</p>
          */
-        public Builder binarySecurityPolicies(java.util.List < BinarySecurityPolicies> binarySecurityPolicies) {
+        public Builder binarySecurityPolicies(java.util.List<BinarySecurityPolicies> binarySecurityPolicies) {
             this.binarySecurityPolicies = binarySecurityPolicies;
             return this;
         }
@@ -105,7 +110,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List < String > namespaces;
+        private java.util.List<String> namespaces;
 
         private Clusters(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -130,13 +135,13 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return namespaces
          */
-        public java.util.List < String > getNamespaces() {
+        public java.util.List<String> getNamespaces() {
             return this.namespaces;
         }
 
         public static final class Builder {
             private String clusterId; 
-            private java.util.List < String > namespaces; 
+            private java.util.List<String> namespaces; 
 
             /**
              * <p>The ID of the cluster.</p>
@@ -152,7 +157,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             /**
              * <p>The namespaces.</p>
              */
-            public Builder namespaces(java.util.List < String > namespaces) {
+            public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }
@@ -172,13 +177,13 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
      */
     public static class BinarySecurityPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clusters")
-        private java.util.List < Clusters> clusters;
+        private java.util.List<Clusters> clusters;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Policy")
-        private java.util.Map < String, ? > policy;
+        private java.util.Map<String, ?> policy;
 
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
@@ -205,7 +210,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return clusters
          */
-        public java.util.List < Clusters> getClusters() {
+        public java.util.List<Clusters> getClusters() {
             return this.clusters;
         }
 
@@ -219,7 +224,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return policy
          */
-        public java.util.Map < String, ? > getPolicy() {
+        public java.util.Map<String, ?> getPolicy() {
             return this.policy;
         }
 
@@ -238,16 +243,16 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Clusters> clusters; 
+            private java.util.List<Clusters> clusters; 
             private String name; 
-            private java.util.Map < String, ? > policy; 
+            private java.util.Map<String, ?> policy; 
             private String remark; 
             private String status; 
 
             /**
              * <p>The information about clusters.</p>
              */
-            public Builder clusters(java.util.List < Clusters> clusters) {
+            public Builder clusters(java.util.List<Clusters> clusters) {
                 this.clusters = clusters;
                 return this;
             }
@@ -273,7 +278,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;PolicyMode&quot;:&quot;requireAttestor&quot;,&quot;RequiredAttestors&quot;:[&quot;test-xcs-04-11-hhht&quot;]}</p>
              */
-            public Builder policy(java.util.Map < String, ? > policy) {
+            public Builder policy(java.util.Map<String, ?> policy) {
                 this.policy = policy;
                 return this;
             }

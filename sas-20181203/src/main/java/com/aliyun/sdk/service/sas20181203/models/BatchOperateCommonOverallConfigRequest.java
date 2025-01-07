@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class BatchOperateCommonOverallConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TypeList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > typeList;
+    private java.util.List<String> typeList;
 
     private BatchOperateCommonOverallConfigRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class BatchOperateCommonOverallConfigRequest extends Request {
     /**
      * @return typeList
      */
-    public java.util.List < String > getTypeList() {
+    public java.util.List<String> getTypeList() {
         return this.typeList;
     }
 
     public static final class Builder extends Request.Builder<BatchOperateCommonOverallConfigRequest, Builder> {
         private String config; 
-        private java.util.List < String > typeList; 
+        private java.util.List<String> typeList; 
 
         private Builder() {
             super();
@@ -162,7 +167,7 @@ public class BatchOperateCommonOverallConfigRequest extends Request {
          * </ul>
          * <p>This parameter is required.</p>
          */
-        public Builder typeList(java.util.List < String > typeList) {
+        public Builder typeList(java.util.List<String> typeList) {
             this.putQueryParameter("TypeList", typeList);
             this.typeList = typeList;
             return this;

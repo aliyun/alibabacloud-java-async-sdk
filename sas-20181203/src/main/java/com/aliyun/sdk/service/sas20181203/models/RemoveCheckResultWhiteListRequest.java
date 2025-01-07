@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
@@ -59,7 +64,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
     }
 
@@ -79,7 +84,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveCheckResultWhiteListRequest, Builder> {
         private String checkGroupId; 
-        private java.util.List < Long > checkIds; 
+        private java.util.List<Long> checkIds; 
         private Long ruleId; 
         private String type; 
 
@@ -108,16 +113,22 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The IDs of check items.</p>
+         * <p>The IDs of the check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
             return this;
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the whitelist rule.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of whitelist rules.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

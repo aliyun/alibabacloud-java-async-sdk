@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SetImageSensitiveFileStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdList")
+    private java.util.List<Long> idList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageUuids")
     private String imageUuids;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    private java.util.List<String> scanRange;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SensitiveFileKey")
@@ -26,7 +39,9 @@ public class SetImageSensitiveFileStatusRequest extends Request {
 
     private SetImageSensitiveFileStatusRequest(Builder builder) {
         super(builder);
+        this.idList = builder.idList;
         this.imageUuids = builder.imageUuids;
+        this.scanRange = builder.scanRange;
         this.sensitiveFileKey = builder.sensitiveFileKey;
         this.status = builder.status;
     }
@@ -45,10 +60,24 @@ public class SetImageSensitiveFileStatusRequest extends Request {
     }
 
     /**
+     * @return idList
+     */
+    public java.util.List<Long> getIdList() {
+        return this.idList;
+    }
+
+    /**
      * @return imageUuids
      */
     public String getImageUuids() {
         return this.imageUuids;
+    }
+
+    /**
+     * @return scanRange
+     */
+    public java.util.List<String> getScanRange() {
+        return this.scanRange;
     }
 
     /**
@@ -66,7 +95,9 @@ public class SetImageSensitiveFileStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetImageSensitiveFileStatusRequest, Builder> {
+        private java.util.List<Long> idList; 
         private String imageUuids; 
+        private java.util.List<String> scanRange; 
         private String sensitiveFileKey; 
         private Integer status; 
 
@@ -76,10 +107,21 @@ public class SetImageSensitiveFileStatusRequest extends Request {
 
         private Builder(SetImageSensitiveFileStatusRequest request) {
             super(request);
+            this.idList = request.idList;
             this.imageUuids = request.imageUuids;
+            this.scanRange = request.scanRange;
             this.sensitiveFileKey = request.sensitiveFileKey;
             this.status = request.status;
         } 
+
+        /**
+         * IdList.
+         */
+        public Builder idList(java.util.List<Long> idList) {
+            this.putQueryParameter("IdList", idList);
+            this.idList = idList;
+            return this;
+        }
 
         /**
          * <p>The UUID of the image. Separate multiple UUIDs with commas (,).</p>
@@ -90,6 +132,16 @@ public class SetImageSensitiveFileStatusRequest extends Request {
         public Builder imageUuids(String imageUuids) {
             this.putQueryParameter("ImageUuids", imageUuids);
             this.imageUuids = imageUuids;
+            return this;
+        }
+
+        /**
+         * ScanRange.
+         */
+        public Builder scanRange(java.util.List<String> scanRange) {
+            String scanRangeShrink = shrink(scanRange, "ScanRange", "json");
+            this.putQueryParameter("ScanRange", scanRangeShrink);
+            this.scanRange = scanRange;
             return this;
         }
 

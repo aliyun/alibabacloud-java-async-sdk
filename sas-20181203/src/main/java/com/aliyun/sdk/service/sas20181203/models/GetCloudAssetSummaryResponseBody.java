@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -187,7 +192,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
              * <li><strong>19</strong>: PolarDB</li>
              * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
              * <li><strong>21</strong>: Microservices Engine (MSE)</li>
-             * <li><strong>22</strong>: Apsara File Storage NAS (NAS)</li>
+             * <li><strong>22</strong>: File Storage NAS (NAS)</li>
              * <li><strong>23</strong>: Data Security Center (DSC)</li>
              * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
              * <li><strong>25</strong>: Identity as a Service (IDaaS) - Enterprise Identity Access Management (EIAM)</li>
@@ -258,7 +263,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
      */
     public static class GroupedFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudAssetSummaryMetas")
-        private java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas;
+        private java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas;
 
         @com.aliyun.core.annotation.NameInMap("InstanceCountTotal")
         private Integer instanceCountTotal;
@@ -283,7 +288,7 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         /**
          * @return cloudAssetSummaryMetas
          */
-        public java.util.List < CloudAssetSummaryMetas> getCloudAssetSummaryMetas() {
+        public java.util.List<CloudAssetSummaryMetas> getCloudAssetSummaryMetas() {
             return this.cloudAssetSummaryMetas;
         }
 
@@ -302,14 +307,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas; 
+            private java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas; 
             private Integer instanceCountTotal; 
             private Integer instanceRiskCountTotal; 
 
             /**
              * <p>The statistics of cloud services.</p>
              */
-            public Builder cloudAssetSummaryMetas(java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas) {
+            public Builder cloudAssetSummaryMetas(java.util.List<CloudAssetSummaryMetas> cloudAssetSummaryMetas) {
                 this.cloudAssetSummaryMetas = cloudAssetSummaryMetas;
                 return this;
             }

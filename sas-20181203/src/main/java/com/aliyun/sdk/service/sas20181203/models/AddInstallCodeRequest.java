@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,6 +34,10 @@ public class AddInstallCodeRequest extends Request {
     private String os;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateLinkId")
+    private Long privateLinkId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyCluster")
     private String proxyCluster;
 
@@ -42,6 +51,7 @@ public class AddInstallCodeRequest extends Request {
         this.groupId = builder.groupId;
         this.onlyImage = builder.onlyImage;
         this.os = builder.os;
+        this.privateLinkId = builder.privateLinkId;
         this.proxyCluster = builder.proxyCluster;
         this.vendorName = builder.vendorName;
     }
@@ -88,6 +98,13 @@ public class AddInstallCodeRequest extends Request {
     }
 
     /**
+     * @return privateLinkId
+     */
+    public Long getPrivateLinkId() {
+        return this.privateLinkId;
+    }
+
+    /**
      * @return proxyCluster
      */
     public String getProxyCluster() {
@@ -106,6 +123,7 @@ public class AddInstallCodeRequest extends Request {
         private Long groupId; 
         private Boolean onlyImage; 
         private String os; 
+        private Long privateLinkId; 
         private String proxyCluster; 
         private String vendorName; 
 
@@ -119,6 +137,7 @@ public class AddInstallCodeRequest extends Request {
             this.groupId = request.groupId;
             this.onlyImage = request.onlyImage;
             this.os = request.os;
+            this.privateLinkId = request.privateLinkId;
             this.proxyCluster = request.proxyCluster;
             this.vendorName = request.vendorName;
         } 
@@ -170,11 +189,10 @@ public class AddInstallCodeRequest extends Request {
         }
 
         /**
-         * <p>The operating system of the instance. Default value: <strong>linux</strong>. Valid values:</p>
+         * <p>The operating system of the asset. Default value: <strong>linux</strong>. Valid values:</p>
          * <ul>
          * <li><strong>linux</strong></li>
          * <li><strong>windows</strong></li>
-         * <li><strong>windows-2003</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,6 +201,18 @@ public class AddInstallCodeRequest extends Request {
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
             this.os = os;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the PrivateLink endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72845</p>
+         */
+        public Builder privateLinkId(Long privateLinkId) {
+            this.putQueryParameter("PrivateLinkId", privateLinkId);
+            this.privateLinkId = privateLinkId;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,7 +104,11 @@ public class AddPublishBatchRequest extends Request {
         } 
 
         /**
+         * <p>The name of the release batch.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder batchName(String batchName) {
             this.putQueryParameter("BatchName", batchName);
@@ -108,6 +117,7 @@ public class AddPublishBatchRequest extends Request {
         }
 
         /**
+         * <p>The interval between two release batches.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +130,15 @@ public class AddPublishBatchRequest extends Request {
         }
 
         /**
-         * OperationBase.
+         * <p>The dimension based on which the asset is selected. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: selects the asset by instance.</li>
+         * <li><strong>1</strong>: selects the asset by machine group.</li>
+         * <li><strong>2</strong>: selects the asset by the ID of the instance that is deployed in the virtual private cloud (VPC).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operationBase(Integer operationBase) {
             this.putQueryParameter("OperationBase", operationBase);
@@ -129,6 +147,7 @@ public class AddPublishBatchRequest extends Request {
         }
 
         /**
+         * <p>The version to which you want to upgrade the agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

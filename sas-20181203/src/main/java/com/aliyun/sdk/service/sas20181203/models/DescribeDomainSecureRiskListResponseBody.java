@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
     private Integer riskCount;
 
     @com.aliyun.core.annotation.NameInMap("RiskList")
-    private java.util.List < RiskList> riskList;
+    private java.util.List<RiskList> riskList;
 
     private DescribeDomainSecureRiskListResponseBody(Builder builder) {
         this.noSslCount = builder.noSslCount;
@@ -63,7 +68,7 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
     /**
      * @return riskList
      */
-    public java.util.List < RiskList> getRiskList() {
+    public java.util.List<RiskList> getRiskList() {
         return this.riskList;
     }
 
@@ -71,10 +76,13 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         private Integer noSslCount; 
         private String requestId; 
         private Integer riskCount; 
-        private java.util.List < RiskList> riskList; 
+        private java.util.List<RiskList> riskList; 
 
         /**
-         * NoSslCount.
+         * <p>The number of the websites for which no certificates are installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noSslCount(Integer noSslCount) {
             this.noSslCount = noSslCount;
@@ -82,7 +90,10 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * RiskCount.
+         * <p>The number of risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskCount(Integer riskCount) {
             this.riskCount = riskCount;
@@ -98,9 +112,9 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * RiskList.
+         * <p>The risks.</p>
          */
-        public Builder riskList(java.util.List < RiskList> riskList) {
+        public Builder riskList(java.util.List<RiskList> riskList) {
             this.riskList = riskList;
             return this;
         }
@@ -131,7 +145,7 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         private Integer sslStatus;
 
         @com.aliyun.core.annotation.NameInMap("UuidList")
-        private java.util.List < String > uuidList;
+        private java.util.List<String> uuidList;
 
         @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
@@ -184,7 +198,7 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
         /**
          * @return uuidList
          */
-        public java.util.List < String > getUuidList() {
+        public java.util.List<String> getUuidList() {
             return this.uuidList;
         }
 
@@ -200,11 +214,14 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
             private String domain; 
             private String sslBrand; 
             private Integer sslStatus; 
-            private java.util.List < String > uuidList; 
+            private java.util.List<String> uuidList; 
             private Integer vulCount; 
 
             /**
-             * AlarmCount.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -212,7 +229,10 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -220,7 +240,10 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * SslBrand.
+             * <p>The issuer of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>globalsign</p>
              */
             public Builder sslBrand(String sslBrand) {
                 this.sslBrand = sslBrand;
@@ -228,7 +251,14 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * SslStatus.
+             * <p>Indicates whether the certificate is configured. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sslStatus(Integer sslStatus) {
                 this.sslStatus = sslStatus;
@@ -236,15 +266,18 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * UuidList.
+             * <p>The UUIDs of the backend servers of the website.</p>
              */
-            public Builder uuidList(java.util.List < String > uuidList) {
+            public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
                 return this;
             }
 
             /**
-             * VulCount.
+             * <p>The number of vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;

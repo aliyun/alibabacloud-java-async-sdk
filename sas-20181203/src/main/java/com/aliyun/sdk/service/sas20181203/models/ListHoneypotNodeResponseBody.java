@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("HoneypotNodeList")
-    private java.util.List < HoneypotNodeList> honeypotNodeList;
+    private java.util.List<HoneypotNodeList> honeypotNodeList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -61,7 +66,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     /**
      * @return honeypotNodeList
      */
-    public java.util.List < HoneypotNodeList> getHoneypotNodeList() {
+    public java.util.List<HoneypotNodeList> getHoneypotNodeList() {
         return this.honeypotNodeList;
     }
 
@@ -102,7 +107,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < HoneypotNodeList> honeypotNodeList; 
+        private java.util.List<HoneypotNodeList> honeypotNodeList; 
         private Integer httpStatusCode; 
         private String message; 
         private PageInfo pageInfo; 
@@ -123,7 +128,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the management nodes.</p>
          */
-        public Builder honeypotNodeList(java.util.List < HoneypotNodeList> honeypotNodeList) {
+        public Builder honeypotNodeList(java.util.List<HoneypotNodeList> honeypotNodeList) {
             this.honeypotNodeList = honeypotNodeList;
             return this;
         }
@@ -231,7 +236,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         private Integer probeUsedCount;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
-        private java.util.List < String > securityGroupProbeIpList;
+        private java.util.List<String> securityGroupProbeIpList;
 
         @com.aliyun.core.annotation.NameInMap("TotalStatus")
         private Integer totalStatus;
@@ -344,7 +349,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
         /**
          * @return securityGroupProbeIpList
          */
-        public java.util.List < String > getSecurityGroupProbeIpList() {
+        public java.util.List<String> getSecurityGroupProbeIpList() {
             return this.securityGroupProbeIpList;
         }
 
@@ -374,7 +379,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             private String nodeName; 
             private Integer probeTotalCount; 
             private Integer probeUsedCount; 
-            private java.util.List < String > securityGroupProbeIpList; 
+            private java.util.List<String> securityGroupProbeIpList; 
             private Integer totalStatus; 
             private Boolean upgradeAvailable; 
 
@@ -510,7 +515,7 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the CIDR blocks that are allowed to access the management node.</p>
              */
-            public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+            public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
                 this.securityGroupProbeIpList = securityGroupProbeIpList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scope")
-    private java.util.List < Scope> scope;
+    private java.util.List<Scope> scope;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Whitelist")
@@ -114,7 +119,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
     /**
      * @return scope
      */
-    public java.util.List < Scope> getScope() {
+    public java.util.List<Scope> getScope() {
         return this.scope;
     }
 
@@ -132,7 +137,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         private String ruleName; 
         private Integer ruleSwitch; 
         private Integer ruleType; 
-        private java.util.List < Scope> scope; 
+        private java.util.List<Scope> scope; 
         private Whitelist whitelist; 
 
         private Builder() {
@@ -241,7 +246,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         /**
          * <p>The effective scope of the rule.</p>
          */
-        public Builder scope(java.util.List < Scope> scope) {
+        public Builder scope(java.util.List<Scope> scope) {
             this.putQueryParameter("Scope", scope);
             this.scope = scope;
             return this;
@@ -278,7 +283,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List < String > namespaces;
+        private java.util.List<String> namespaces;
 
         private Scope(Builder builder) {
             this.allNamespace = builder.allNamespace;
@@ -311,14 +316,14 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         /**
          * @return namespaces
          */
-        public java.util.List < String > getNamespaces() {
+        public java.util.List<String> getNamespaces() {
             return this.namespaces;
         }
 
         public static final class Builder {
             private Integer allNamespace; 
             private String clusterId; 
-            private java.util.List < String > namespaces; 
+            private java.util.List<String> namespaces; 
 
             /**
              * <p>Specifies whether to include all namespaces. Valid values:</p>
@@ -352,7 +357,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             /**
              * <p>The namespaces.</p>
              */
-            public Builder namespaces(java.util.List < String > namespaces) {
+            public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }
@@ -372,13 +377,13 @@ public class ModifyContainerDefenseRuleRequest extends Request {
      */
     public static class Whitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hash")
-        private java.util.List < String > hash;
+        private java.util.List<String> hash;
 
         @com.aliyun.core.annotation.NameInMap("Image")
-        private java.util.List < String > image;
+        private java.util.List<String> image;
 
         @com.aliyun.core.annotation.NameInMap("Path")
-        private java.util.List < String > path;
+        private java.util.List<String> path;
 
         private Whitelist(Builder builder) {
             this.hash = builder.hash;
@@ -397,28 +402,28 @@ public class ModifyContainerDefenseRuleRequest extends Request {
         /**
          * @return hash
          */
-        public java.util.List < String > getHash() {
+        public java.util.List<String> getHash() {
             return this.hash;
         }
 
         /**
          * @return image
          */
-        public java.util.List < String > getImage() {
+        public java.util.List<String> getImage() {
             return this.image;
         }
 
         /**
          * @return path
          */
-        public java.util.List < String > getPath() {
+        public java.util.List<String> getPath() {
             return this.path;
         }
 
         public static final class Builder {
-            private java.util.List < String > hash; 
-            private java.util.List < String > image; 
-            private java.util.List < String > path; 
+            private java.util.List<String> hash; 
+            private java.util.List<String> image; 
+            private java.util.List<String> path; 
 
             /**
              * <p>The hash values of the files that need to be added to the whitelist.</p>
@@ -426,7 +431,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
              * <p> This parameter is not supported.</p>
              * </blockquote>
              */
-            public Builder hash(java.util.List < String > hash) {
+            public Builder hash(java.util.List<String> hash) {
                 this.hash = hash;
                 return this;
             }
@@ -434,7 +439,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             /**
              * <p>The images that need to be added to the whitelist.</p>
              */
-            public Builder image(java.util.List < String > image) {
+            public Builder image(java.util.List<String> image) {
                 this.image = image;
                 return this;
             }
@@ -442,7 +447,7 @@ public class ModifyContainerDefenseRuleRequest extends Request {
             /**
              * <p>The paths to the files that need to be added to the whitelist.</p>
              */
-            public Builder path(java.util.List < String > path) {
+            public Builder path(java.util.List<String> path) {
                 this.path = path;
                 return this;
             }

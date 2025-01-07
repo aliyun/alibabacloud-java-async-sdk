@@ -237,6 +237,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckStsTokenAuthResponse> checkStsTokenAuth(CheckStsTokenAuthRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to check whether the remaining quota of the vulnerability fixing feature is sufficient in free trial scenarios. This operation does not trigger vulnerability fixing.</p>
+     * 
      * @param request the request parameters of CheckTrialFixCount  CheckTrialFixCountRequest
      * @return CheckTrialFixCountResponse
      */
@@ -438,6 +441,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMaliciousNoteResponse> createMaliciousNote(CreateMaliciousNoteRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * @param request the request parameters of CreateMonitorAccount  CreateMonitorAccountRequest
      * @return CreateMonitorAccountResponse
      */
@@ -489,6 +495,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOssScanConfigResponse> createOssScanConfig(CreateOssScanConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * @param request the request parameters of CreateRdDefaultSyncList  CreateRdDefaultSyncListRequest
      * @return CreateRdDefaultSyncListResponse
      */
@@ -985,7 +994,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAppVulScanCycleResponse> describeAppVulScanCycle(DescribeAppVulScanCycleRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @param request  the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
+     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @description This operation will be discontinued soon. You must call the [GetAssetDetailByUuid](~~GetAssetDetailByUuid~~) operation to query the details of the server.
+     * 
+     * @param request the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
      * @return DescribeAssetDetailByUuidResponse
      */
     @Deprecated
@@ -1014,12 +1025,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAssetsSecurityEventSummaryResponse
      */
     CompletableFuture<DescribeAssetsSecurityEventSummaryResponse> describeAssetsSecurityEventSummary(DescribeAssetsSecurityEventSummaryRequest request);
-
-    /**
-     * @param request the request parameters of DescribeAttachRecords  DescribeAttachRecordsRequest
-     * @return DescribeAttachRecordsResponse
-     */
-    CompletableFuture<DescribeAttachRecordsResponse> describeAttachRecords(DescribeAttachRecordsRequest request);
 
     /**
      * @param request the request parameters of DescribeAttackAnalysisData  DescribeAttackAnalysisDataRequest
@@ -1821,12 +1826,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeImageScanAuthCountResponse> describeImageScanAuthCount(DescribeImageScanAuthCountRequest request);
 
     /**
-     * @param request the request parameters of DescribeImageScanAuthorization  DescribeImageScanAuthorizationRequest
-     * @return DescribeImageScanAuthorizationResponse
-     */
-    CompletableFuture<DescribeImageScanAuthorizationResponse> describeImageScanAuthorization(DescribeImageScanAuthorizationRequest request);
-
-    /**
      * @param request the request parameters of DescribeImageSensitiveFileByKey  DescribeImageSensitiveFileByKeyRequest
      * @return DescribeImageSensitiveFileByKeyResponse
      */
@@ -2526,12 +2525,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserBaselineAuthorizationResponse> describeUserBaselineAuthorization(DescribeUserBaselineAuthorizationRequest request);
 
     /**
-     * @param request the request parameters of DescribeUserLayoutAuthorization  DescribeUserLayoutAuthorizationRequest
-     * @return DescribeUserLayoutAuthorizationResponse
-     */
-    CompletableFuture<DescribeUserLayoutAuthorizationResponse> describeUserLayoutAuthorization(DescribeUserLayoutAuthorizationRequest request);
-
-    /**
      * @param request the request parameters of DescribeUserSetting  DescribeUserSettingRequest
      * @return DescribeUserSettingResponse
      */
@@ -3093,13 +3086,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request);
 
     /**
-     * @deprecated OpenAPI GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.  * @param request  the request parameters of GetClientInstallationStatistic  GetClientInstallationStatisticRequest
-     * @return GetClientInstallationStatisticResponse
-     */
-    @Deprecated
-    CompletableFuture<GetClientInstallationStatisticResponse> getClientInstallationStatistic(GetClientInstallationStatisticRequest request);
-
-    /**
      * @param request the request parameters of GetClientRatioStatistic  GetClientRatioStatisticRequest
      * @return GetClientRatioStatisticResponse
      */
@@ -3427,6 +3413,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * @param request the request parameters of GetRdTree  GetRdTreeRequest
      * @return GetRdTreeResponse
      */
@@ -3493,6 +3482,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSwitchRegionDetailResponse> getSwitchRegionDetail(GetSwitchRegionDetailRequest request);
 
     /**
+     * @param request the request parameters of GetTenantCheckAvailable  GetTenantCheckAvailableRequest
+     * @return GetTenantCheckAvailableResponse
+     */
+    CompletableFuture<GetTenantCheckAvailableResponse> getTenantCheckAvailable(GetTenantCheckAvailableRequest request);
+
+    /**
      * @param request the request parameters of GetUserLang  GetUserLangRequest
      * @return GetUserLangResponse
      */
@@ -3541,9 +3536,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IgnoreCheckItemsResponse> ignoreCheckItems(IgnoreCheckItemsRequest request);
 
     /**
-     * @param request the request parameters of IgnoreHcCheckWarnings  IgnoreHcCheckWarningsRequest
+     * @deprecated OpenAPI IgnoreHcCheckWarnings is deprecated, please use Sas::2018-12-03::IgnoreCheckItems instead.  * @param request  the request parameters of IgnoreHcCheckWarnings  IgnoreHcCheckWarningsRequest
      * @return IgnoreHcCheckWarningsResponse
      */
+    @Deprecated
     CompletableFuture<IgnoreHcCheckWarningsResponse> ignoreHcCheckWarnings(IgnoreHcCheckWarningsRequest request);
 
     /**
@@ -3580,12 +3576,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallPmAgentResponse
      */
     CompletableFuture<InstallPmAgentResponse> installPmAgent(InstallPmAgentRequest request);
-
-    /**
-     * @param request the request parameters of InstallRaspAttach  InstallRaspAttachRequest
-     * @return InstallRaspAttachResponse
-     */
-    CompletableFuture<InstallRaspAttachResponse> installRaspAttach(InstallRaspAttachRequest request);
 
     /**
      * @param request the request parameters of InstallUniBackupAgent  InstallUniBackupAgentRequest
@@ -3789,6 +3779,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterPluginInfoResponse> listClusterPluginInfo(ListClusterPluginInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detection results of files only if the files are pushed to the cloud for detection and in the form of packages. You can repeatedly query the detection results of files within 5 hours because the results are retained for 5 hours. For more information about how to push a file to the cloud for detection, see the CreateFileDetect operation. For more information about how to query file detection results, see the GetFileDetectResult operation.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the required MD5 hash value before you call this operation.
+     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
+     * 1\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
+     * 2\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.</p>
+     * 
      * @param request the request parameters of ListCompressFileDetectResult  ListCompressFileDetectResultRequest
      * @return ListCompressFileDetectResultResponse
      */
@@ -3982,6 +3979,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListOpaClusterStrategyNewResponse
      */
     CompletableFuture<ListOpaClusterStrategyNewResponse> listOpaClusterStrategyNew(ListOpaClusterStrategyNewRequest request);
+
+    /**
+     * @param request the request parameters of ListOperationProcess  ListOperationProcessRequest
+     * @return ListOperationProcessResponse
+     */
+    CompletableFuture<ListOperationProcessResponse> listOperationProcess(ListOperationProcessRequest request);
+
+    /**
+     * @param request the request parameters of ListOperationProcessDetail  ListOperationProcessDetailRequest
+     * @return ListOperationProcessDetailResponse
+     */
+    CompletableFuture<ListOperationProcessDetailResponse> listOperationProcessDetail(ListOperationProcessDetailRequest request);
 
     /**
      * @param request the request parameters of ListOssBucket  ListOssBucketRequest
@@ -4214,6 +4223,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBackupPolicyStatusResponse> modifyBackupPolicyStatus(ModifyBackupPolicyStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.</p>
+     * 
      * @param request the request parameters of ModifyClearLogstoreStorage  ModifyClearLogstoreStorageRequest
      * @return ModifyClearLogstoreStorageResponse
      */
@@ -4445,7 +4457,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySearchConditionResponse> modifySearchCondition(ModifySearchConditionRequest request);
 
     /**
-     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated  * @description This operation is phased out. You can use the ChangeCheckConfig operation.
+     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.  * @description This operation is phased out. You can use the ChangeCheckConfig operation.
      * 
      * @param request the request parameters of ModifySecurityCheckScheduleConfig  ModifySecurityCheckScheduleConfigRequest
      * @return ModifySecurityCheckScheduleConfigResponse
@@ -4725,6 +4737,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublicCreateImageScanTaskResponse> publicCreateImageScanTask(PublicCreateImageScanTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call the PublicPreCheckImageScanTask operation to estimate the quota for container image scan to be consumed by the task. This ensures that you know the quota to be consumed before you perform the task. If the remaining quota for container image scan is less than the quota to be consumed by the task, you must purchase a sufficient quota. This prevents the task from being stopped due to an insufficient quota.
+     * If you do not specify the optional parameters when you call this operation, the total number of protected images and the quota for container image scan to be consumed by scanning all the protected images are queried. If you specify the optional parameters, the number of images that meet the specified conditions and the quota for container image scan to be consumed by scanning the images are queried.</p>
+     * 
      * @param request the request parameters of PublicPreCheckImageScanTask  PublicPreCheckImageScanTaskRequest
      * @return PublicPreCheckImageScanTaskResponse
      */
@@ -4997,7 +5013,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSyncRefreshRegionResponse> setSyncRefreshRegion(SetSyncRefreshRegionRequest request);
 
     /**
-     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated  * @param request  the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
+     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.  * @param request  the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
      * @return StartBaselineSecurityCheckResponse
      */
     @Deprecated
@@ -5052,6 +5068,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitOperationTaskResponse> submitOperationTask(SubmitOperationTaskRequest request);
 
     /**
+     * @param request the request parameters of SubmitTenantCheck  SubmitTenantCheckRequest
+     * @return SubmitTenantCheckResponse
+     */
+    CompletableFuture<SubmitTenantCheckResponse> submitTenantCheck(SubmitTenantCheckRequest request);
+
+    /**
      * @param request the request parameters of TriggerCheck  TriggerCheckRequest
      * @return TriggerCheckResponse
      */
@@ -5091,12 +5113,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallBackupClientResponse
      */
     CompletableFuture<UninstallBackupClientResponse> uninstallBackupClient(UninstallBackupClientRequest request);
-
-    /**
-     * @param request the request parameters of UninstallRaspAttach  UninstallRaspAttachRequest
-     * @return UninstallRaspAttachResponse
-     */
-    CompletableFuture<UninstallRaspAttachResponse> uninstallRaspAttach(UninstallRaspAttachRequest request);
 
     /**
      * @param request the request parameters of UninstallUniBackupAgent  UninstallUniBackupAgentRequest

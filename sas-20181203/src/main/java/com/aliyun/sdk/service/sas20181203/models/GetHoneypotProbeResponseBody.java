@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -283,7 +288,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         private String probeId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceIpList")
-        private java.util.List < String > serviceIpList;
+        private java.util.List<String> serviceIpList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -328,7 +333,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         /**
          * @return serviceIpList
          */
-        public java.util.List < String > getServiceIpList() {
+        public java.util.List<String> getServiceIpList() {
             return this.serviceIpList;
         }
 
@@ -343,7 +348,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             private Long id; 
             private String ports; 
             private String probeId; 
-            private java.util.List < String > serviceIpList; 
+            private java.util.List<String> serviceIpList; 
             private Integer status; 
 
             /**
@@ -385,7 +390,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The IP addresses that are monitored.</p>
              */
-            public Builder serviceIpList(java.util.List < String > serviceIpList) {
+            public Builder serviceIpList(java.util.List<String> serviceIpList) {
                 this.serviceIpList = serviceIpList;
                 return this;
             }
@@ -684,13 +689,13 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         private String bindId;
 
         @com.aliyun.core.annotation.NameInMap("BindPortList")
-        private java.util.List < BindPortList> bindPortList;
+        private java.util.List<BindPortList> bindPortList;
 
         @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceIpList")
-        private java.util.List < String > serviceIpList;
+        private java.util.List<String> serviceIpList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -721,7 +726,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         /**
          * @return bindPortList
          */
-        public java.util.List < BindPortList> getBindPortList() {
+        public java.util.List<BindPortList> getBindPortList() {
             return this.bindPortList;
         }
 
@@ -735,7 +740,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         /**
          * @return serviceIpList
          */
-        public java.util.List < String > getServiceIpList() {
+        public java.util.List<String> getServiceIpList() {
             return this.serviceIpList;
         }
 
@@ -748,9 +753,9 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bindId; 
-            private java.util.List < BindPortList> bindPortList; 
+            private java.util.List<BindPortList> bindPortList; 
             private String honeypotId; 
-            private java.util.List < String > serviceIpList; 
+            private java.util.List<String> serviceIpList; 
             private Integer status; 
 
             /**
@@ -767,7 +772,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The ports that are bound to the probe.</p>
              */
-            public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
+            public Builder bindPortList(java.util.List<BindPortList> bindPortList) {
                 this.bindPortList = bindPortList;
                 return this;
             }
@@ -786,7 +791,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The IP addresses that are monitored.</p>
              */
-            public Builder serviceIpList(java.util.List < String > serviceIpList) {
+            public Builder serviceIpList(java.util.List<String> serviceIpList) {
                 this.serviceIpList = serviceIpList;
                 return this;
             }
@@ -824,10 +829,10 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         private Boolean arp;
 
         @com.aliyun.core.annotation.NameInMap("CanListenIpList")
-        private java.util.List < String > canListenIpList;
+        private java.util.List<String> canListenIpList;
 
         @com.aliyun.core.annotation.NameInMap("CidrList")
-        private java.util.List < String > cidrList;
+        private java.util.List<String> cidrList;
 
         @com.aliyun.core.annotation.NameInMap("ControlNode")
         private ControlNode controlNode;
@@ -845,13 +850,13 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         private HoneyPotProbeScanPort honeyPotProbeScanPort;
 
         @com.aliyun.core.annotation.NameInMap("HoneypotProbeBindList")
-        private java.util.List < HoneypotProbeBindList> honeypotProbeBindList;
+        private java.util.List<HoneypotProbeBindList> honeypotProbeBindList;
 
         @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
 
         @com.aliyun.core.annotation.NameInMap("ListenIpList")
-        private java.util.List < String > listenIpList;
+        private java.util.List<String> listenIpList;
 
         @com.aliyun.core.annotation.NameInMap("MemoryLoad")
         private Double memoryLoad;
@@ -925,14 +930,14 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         /**
          * @return canListenIpList
          */
-        public java.util.List < String > getCanListenIpList() {
+        public java.util.List<String> getCanListenIpList() {
             return this.canListenIpList;
         }
 
         /**
          * @return cidrList
          */
-        public java.util.List < String > getCidrList() {
+        public java.util.List<String> getCidrList() {
             return this.cidrList;
         }
 
@@ -974,7 +979,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         /**
          * @return honeypotProbeBindList
          */
-        public java.util.List < HoneypotProbeBindList> getHoneypotProbeBindList() {
+        public java.util.List<HoneypotProbeBindList> getHoneypotProbeBindList() {
             return this.honeypotProbeBindList;
         }
 
@@ -988,7 +993,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         /**
          * @return listenIpList
          */
-        public java.util.List < String > getListenIpList() {
+        public java.util.List<String> getListenIpList() {
             return this.listenIpList;
         }
 
@@ -1064,16 +1069,16 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean arp; 
-            private java.util.List < String > canListenIpList; 
-            private java.util.List < String > cidrList; 
+            private java.util.List<String> canListenIpList; 
+            private java.util.List<String> cidrList; 
             private ControlNode controlNode; 
             private Double cpuLoad; 
             private Long deployTime; 
             private String displayName; 
             private HoneyPotProbeScanPort honeyPotProbeScanPort; 
-            private java.util.List < HoneypotProbeBindList> honeypotProbeBindList; 
+            private java.util.List<HoneypotProbeBindList> honeypotProbeBindList; 
             private String hostIp; 
-            private java.util.List < String > listenIpList; 
+            private java.util.List<String> listenIpList; 
             private Double memoryLoad; 
             private String osType; 
             private Boolean ping; 
@@ -1099,7 +1104,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the IP addresses that can be monitored.</p>
              */
-            public Builder canListenIpList(java.util.List < String > canListenIpList) {
+            public Builder canListenIpList(java.util.List<String> canListenIpList) {
                 this.canListenIpList = canListenIpList;
                 return this;
             }
@@ -1107,7 +1112,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The CIDR blocks of the probe deployed in a virtual private cloud (VPC).</p>
              */
-            public Builder cidrList(java.util.List < String > cidrList) {
+            public Builder cidrList(java.util.List<String> cidrList) {
                 this.cidrList = cidrList;
                 return this;
             }
@@ -1164,7 +1169,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>The honeypots that are bound to the probe.</p>
              */
-            public Builder honeypotProbeBindList(java.util.List < HoneypotProbeBindList> honeypotProbeBindList) {
+            public Builder honeypotProbeBindList(java.util.List<HoneypotProbeBindList> honeypotProbeBindList) {
                 this.honeypotProbeBindList = honeypotProbeBindList;
                 return this;
             }
@@ -1183,7 +1188,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the IP addresses that can be monitored.</p>
              */
-            public Builder listenIpList(java.util.List < String > listenIpList) {
+            public Builder listenIpList(java.util.List<String> listenIpList) {
                 this.listenIpList = listenIpList;
                 return this;
             }

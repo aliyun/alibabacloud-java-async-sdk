@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCheckConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CycleDays")
-    private java.util.List < Integer > cycleDays;
+    private java.util.List<Integer> cycleDays;
 
     @com.aliyun.core.annotation.NameInMap("EnableAddCheck")
     private Boolean enableAddCheck;
@@ -28,10 +33,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SelectedChecks")
-    private java.util.List < SelectedChecks> selectedChecks;
+    private java.util.List<SelectedChecks> selectedChecks;
 
     @com.aliyun.core.annotation.NameInMap("Standards")
-    private java.util.List < Standards> standards;
+    private java.util.List<Standards> standards;
 
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Integer startTime;
@@ -58,7 +63,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
     /**
      * @return cycleDays
      */
-    public java.util.List < Integer > getCycleDays() {
+    public java.util.List<Integer> getCycleDays() {
         return this.cycleDays;
     }
 
@@ -93,14 +98,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
     /**
      * @return selectedChecks
      */
-    public java.util.List < SelectedChecks> getSelectedChecks() {
+    public java.util.List<SelectedChecks> getSelectedChecks() {
         return this.selectedChecks;
     }
 
     /**
      * @return standards
      */
-    public java.util.List < Standards> getStandards() {
+    public java.util.List<Standards> getStandards() {
         return this.standards;
     }
 
@@ -112,19 +117,19 @@ public class GetCheckConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Integer > cycleDays; 
+        private java.util.List<Integer> cycleDays; 
         private Boolean enableAddCheck; 
         private Boolean enableAutoCheck; 
         private Integer endTime; 
         private String requestId; 
-        private java.util.List < SelectedChecks> selectedChecks; 
-        private java.util.List < Standards> standards; 
+        private java.util.List<SelectedChecks> selectedChecks; 
+        private java.util.List<Standards> standards; 
         private Integer startTime; 
 
         /**
          * <p>The days in a week on which an automatic check is performed.</p>
          */
-        public Builder cycleDays(java.util.List < Integer > cycleDays) {
+        public Builder cycleDays(java.util.List<Integer> cycleDays) {
             this.cycleDays = cycleDays;
             return this;
         }
@@ -190,7 +195,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         /**
          * <p>The check items selected in the policy.</p>
          */
-        public Builder selectedChecks(java.util.List < SelectedChecks> selectedChecks) {
+        public Builder selectedChecks(java.util.List<SelectedChecks> selectedChecks) {
             this.selectedChecks = selectedChecks;
             return this;
         }
@@ -198,7 +203,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         /**
          * <p>The information about the check items.</p>
          */
-        public Builder standards(java.util.List < Standards> standards) {
+        public Builder standards(java.util.List<Standards> standards) {
             this.standards = standards;
             return this;
         }

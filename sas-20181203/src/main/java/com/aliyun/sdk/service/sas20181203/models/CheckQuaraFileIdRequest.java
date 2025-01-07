@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CheckQuaraFileIdRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QuaraFileIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > quaraFileIds;
+    private java.util.List<String> quaraFileIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -44,7 +49,7 @@ public class CheckQuaraFileIdRequest extends Request {
     /**
      * @return quaraFileIds
      */
-    public java.util.List < String > getQuaraFileIds() {
+    public java.util.List<String> getQuaraFileIds() {
         return this.quaraFileIds;
     }
 
@@ -56,7 +61,7 @@ public class CheckQuaraFileIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckQuaraFileIdRequest, Builder> {
-        private java.util.List < String > quaraFileIds; 
+        private java.util.List<String> quaraFileIds; 
         private String uuid; 
 
         private Builder() {
@@ -76,7 +81,7 @@ public class CheckQuaraFileIdRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder quaraFileIds(java.util.List < String > quaraFileIds) {
+        public Builder quaraFileIds(java.util.List<String> quaraFileIds) {
             this.putQueryParameter("QuaraFileIds", quaraFileIds);
             this.quaraFileIds = quaraFileIds;
             return this;

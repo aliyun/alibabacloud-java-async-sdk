@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class QueryIncidentVertexNodesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EdgeLabelList")
-    private java.util.List < String > edgeLabelList;
+    private java.util.List<String> edgeLabelList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Offset")
@@ -59,7 +64,7 @@ public class QueryIncidentVertexNodesRequest extends Request {
     /**
      * @return edgeLabelList
      */
-    public java.util.List < String > getEdgeLabelList() {
+    public java.util.List<String> getEdgeLabelList() {
         return this.edgeLabelList;
     }
 
@@ -92,7 +97,7 @@ public class QueryIncidentVertexNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryIncidentVertexNodesRequest, Builder> {
-        private java.util.List < String > edgeLabelList; 
+        private java.util.List<String> edgeLabelList; 
         private Long offset; 
         private Integer size; 
         private String vertexId; 
@@ -114,7 +119,7 @@ public class QueryIncidentVertexNodesRequest extends Request {
         /**
          * <p>The types of the edges that you want to query.</p>
          */
-        public Builder edgeLabelList(java.util.List < String > edgeLabelList) {
+        public Builder edgeLabelList(java.util.List<String> edgeLabelList) {
             String edgeLabelListShrink = shrink(edgeLabelList, "EdgeLabelList", "simple");
             this.putBodyParameter("EdgeLabelList", edgeLabelListShrink);
             this.edgeLabelList = edgeLabelList;

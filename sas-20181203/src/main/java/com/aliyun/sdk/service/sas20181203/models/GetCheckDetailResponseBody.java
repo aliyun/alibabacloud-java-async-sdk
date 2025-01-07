@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
     private AssistInfo assistInfo;
 
     @com.aliyun.core.annotation.NameInMap("CustomConfigs")
-    private java.util.List < CustomConfigs> customConfigs;
+    private java.util.List<CustomConfigs> customConfigs;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private Description description;
@@ -67,7 +72,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
     /**
      * @return customConfigs
      */
-    public java.util.List < CustomConfigs> getCustomConfigs() {
+    public java.util.List<CustomConfigs> getCustomConfigs() {
         return this.customConfigs;
     }
 
@@ -115,7 +120,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private AssistInfo assistInfo; 
-        private java.util.List < CustomConfigs> customConfigs; 
+        private java.util.List<CustomConfigs> customConfigs; 
         private Description description; 
         private String repairReset; 
         private RepairSetting repairSetting; 
@@ -134,7 +139,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         /**
          * <p>The custom configuration items of the check item.</p>
          */
-        public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
+        public Builder customConfigs(java.util.List<CustomConfigs> customConfigs) {
             this.customConfigs = customConfigs;
             return this;
         }
@@ -624,7 +629,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         private String emptyParamSwitch;
 
         @com.aliyun.core.annotation.NameInMap("ExclusiveName")
-        private java.util.List < String > exclusiveName;
+        private java.util.List<String> exclusiveName;
 
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
@@ -705,7 +710,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         /**
          * @return exclusiveName
          */
-        public java.util.List < String > getExclusiveName() {
+        public java.util.List<String> getExclusiveName() {
             return this.exclusiveName;
         }
 
@@ -757,7 +762,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String dataTransformType; 
             private String defaultValue; 
             private String emptyParamSwitch; 
-            private java.util.List < String > exclusiveName; 
+            private java.util.List<String> exclusiveName; 
             private String flowId; 
             private String name; 
             private String showName; 
@@ -811,7 +816,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             /**
              * ExclusiveName.
              */
-            public Builder exclusiveName(java.util.List < String > exclusiveName) {
+            public Builder exclusiveName(java.util.List<String> exclusiveName) {
                 this.exclusiveName = exclusiveName;
                 return this;
             }
@@ -891,10 +896,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
      */
     public static class RepairSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowStep")
-        private java.util.List < FlowStep> flowStep;
+        private java.util.List<FlowStep> flowStep;
 
         @com.aliyun.core.annotation.NameInMap("RepairConfigs")
-        private java.util.List < RepairConfigs> repairConfigs;
+        private java.util.List<RepairConfigs> repairConfigs;
 
         @com.aliyun.core.annotation.NameInMap("RepairReset")
         private Boolean repairReset;
@@ -924,14 +929,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
         /**
          * @return flowStep
          */
-        public java.util.List < FlowStep> getFlowStep() {
+        public java.util.List<FlowStep> getFlowStep() {
             return this.flowStep;
         }
 
         /**
          * @return repairConfigs
          */
-        public java.util.List < RepairConfigs> getRepairConfigs() {
+        public java.util.List<RepairConfigs> getRepairConfigs() {
             return this.repairConfigs;
         }
 
@@ -957,8 +962,8 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FlowStep> flowStep; 
-            private java.util.List < RepairConfigs> repairConfigs; 
+            private java.util.List<FlowStep> flowStep; 
+            private java.util.List<RepairConfigs> repairConfigs; 
             private Boolean repairReset; 
             private Boolean repairSupport; 
             private Integer repairSupportType; 
@@ -966,7 +971,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             /**
              * FlowStep.
              */
-            public Builder flowStep(java.util.List < FlowStep> flowStep) {
+            public Builder flowStep(java.util.List<FlowStep> flowStep) {
                 this.flowStep = flowStep;
                 return this;
             }
@@ -974,7 +979,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
             /**
              * RepairConfigs.
              */
-            public Builder repairConfigs(java.util.List < RepairConfigs> repairConfigs) {
+            public Builder repairConfigs(java.util.List<RepairConfigs> repairConfigs) {
                 this.repairConfigs = repairConfigs;
                 return this;
             }

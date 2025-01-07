@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ModifyInterceptionTargetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageList")
-    private java.util.List < String > imageList;
+    private java.util.List<String> imageList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -27,7 +32,7 @@ public class ModifyInterceptionTargetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagList")
-    private java.util.List < String > tagList;
+    private java.util.List<String> tagList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetId")
@@ -78,7 +83,7 @@ public class ModifyInterceptionTargetRequest extends Request {
     /**
      * @return imageList
      */
-    public java.util.List < String > getImageList() {
+    public java.util.List<String> getImageList() {
         return this.imageList;
     }
 
@@ -92,7 +97,7 @@ public class ModifyInterceptionTargetRequest extends Request {
     /**
      * @return tagList
      */
-    public java.util.List < String > getTagList() {
+    public java.util.List<String> getTagList() {
         return this.tagList;
     }
 
@@ -119,9 +124,9 @@ public class ModifyInterceptionTargetRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyInterceptionTargetRequest, Builder> {
         private String appName; 
-        private java.util.List < String > imageList; 
+        private java.util.List<String> imageList; 
         private String namespace; 
-        private java.util.List < String > tagList; 
+        private java.util.List<String> tagList; 
         private Long targetId; 
         private String targetName; 
         private String targetType; 
@@ -162,7 +167,7 @@ public class ModifyInterceptionTargetRequest extends Request {
          * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          */
-        public Builder imageList(java.util.List < String > imageList) {
+        public Builder imageList(java.util.List<String> imageList) {
             this.putQueryParameter("ImageList", imageList);
             this.imageList = imageList;
             return this;
@@ -190,7 +195,7 @@ public class ModifyInterceptionTargetRequest extends Request {
          * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          */
-        public Builder tagList(java.util.List < String > tagList) {
+        public Builder tagList(java.util.List<String> tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VulAutoRepairConfigList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList;
+    private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList;
 
     private CreateVulAutoRepairConfigRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class CreateVulAutoRepairConfigRequest extends Request {
     /**
      * @return vulAutoRepairConfigList
      */
-    public java.util.List < VulAutoRepairConfigList> getVulAutoRepairConfigList() {
+    public java.util.List<VulAutoRepairConfigList> getVulAutoRepairConfigList() {
         return this.vulAutoRepairConfigList;
     }
 
     public static final class Builder extends Request.Builder<CreateVulAutoRepairConfigRequest, Builder> {
         private String reason; 
         private String type; 
-        private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList; 
+        private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class CreateVulAutoRepairConfigRequest extends Request {
          * <p>The vulnerabilities that can be automatically fixed.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder vulAutoRepairConfigList(java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList) {
+        public Builder vulAutoRepairConfigList(java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList) {
             this.putQueryParameter("VulAutoRepairConfigList", vulAutoRepairConfigList);
             this.vulAutoRepairConfigList = vulAutoRepairConfigList;
             return this;

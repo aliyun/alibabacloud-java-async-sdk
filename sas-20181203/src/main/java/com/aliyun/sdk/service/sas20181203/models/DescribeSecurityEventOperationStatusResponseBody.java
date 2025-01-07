@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -183,7 +188,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
      */
     public static class SecurityEventOperationStatusResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityEventOperationStatuses")
-        private java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses;
+        private java.util.List<SecurityEventOperationStatuses> securityEventOperationStatuses;
 
         @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
@@ -204,7 +209,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         /**
          * @return securityEventOperationStatuses
          */
-        public java.util.List < SecurityEventOperationStatuses> getSecurityEventOperationStatuses() {
+        public java.util.List<SecurityEventOperationStatuses> getSecurityEventOperationStatuses() {
             return this.securityEventOperationStatuses;
         }
 
@@ -216,13 +221,13 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses; 
+            private java.util.List<SecurityEventOperationStatuses> securityEventOperationStatuses; 
             private String taskStatus; 
 
             /**
              * <p>An array consisting of the status of the alert events handled by the task.</p>
              */
-            public Builder securityEventOperationStatuses(java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses) {
+            public Builder securityEventOperationStatuses(java.util.List<SecurityEventOperationStatuses> securityEventOperationStatuses) {
                 this.securityEventOperationStatuses = securityEventOperationStatuses;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterConfigList")
-    private java.util.List < ClusterConfigList> clusterConfigList;
+    private java.util.List<ClusterConfigList> clusterConfigList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     /**
      * @return clusterConfigList
      */
-    public java.util.List < ClusterConfigList> getClusterConfigList() {
+    public java.util.List<ClusterConfigList> getClusterConfigList() {
         return this.clusterConfigList;
     }
 
@@ -57,14 +62,14 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterConfigList> clusterConfigList; 
+        private java.util.List<ClusterConfigList> clusterConfigList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the configurations of the cluster.</p>
          */
-        public Builder clusterConfigList(java.util.List < ClusterConfigList> clusterConfigList) {
+        public Builder clusterConfigList(java.util.List<ClusterConfigList> clusterConfigList) {
             this.clusterConfigList = clusterConfigList;
             return this;
         }

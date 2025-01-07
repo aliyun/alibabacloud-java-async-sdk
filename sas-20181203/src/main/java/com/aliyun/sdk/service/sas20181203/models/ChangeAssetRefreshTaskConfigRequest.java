@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ChangeAssetRefreshTaskConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetRefreshConfigs")
-    private java.util.List < AssetRefreshConfigs> assetRefreshConfigs;
+    private java.util.List<AssetRefreshConfigs> assetRefreshConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -42,7 +47,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
     /**
      * @return assetRefreshConfigs
      */
-    public java.util.List < AssetRefreshConfigs> getAssetRefreshConfigs() {
+    public java.util.List<AssetRefreshConfigs> getAssetRefreshConfigs() {
         return this.assetRefreshConfigs;
     }
 
@@ -54,7 +59,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeAssetRefreshTaskConfigRequest, Builder> {
-        private java.util.List < AssetRefreshConfigs> assetRefreshConfigs; 
+        private java.util.List<AssetRefreshConfigs> assetRefreshConfigs; 
         private String regionId; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         /**
          * <p>The asset synchronization configuration.</p>
          */
-        public Builder assetRefreshConfigs(java.util.List < AssetRefreshConfigs> assetRefreshConfigs) {
+        public Builder assetRefreshConfigs(java.util.List<AssetRefreshConfigs> assetRefreshConfigs) {
             this.putQueryParameter("AssetRefreshConfigs", assetRefreshConfigs);
             this.assetRefreshConfigs = assetRefreshConfigs;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("MachineList")
-    private java.util.List < MachineList> machineList;
+    private java.util.List<MachineList> machineList;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
     /**
      * @return machineList
      */
-    public java.util.List < MachineList> getMachineList() {
+    public java.util.List<MachineList> getMachineList() {
         return this.machineList;
     }
 
@@ -80,7 +85,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < MachineList> machineList; 
+        private java.util.List<MachineList> machineList; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -99,7 +104,7 @@ public class DescribeOfflineMachinesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about servers.</p>
          */
-        public Builder machineList(java.util.List < MachineList> machineList) {
+        public Builder machineList(java.util.List<MachineList> machineList) {
             this.machineList = machineList;
             return this;
         }

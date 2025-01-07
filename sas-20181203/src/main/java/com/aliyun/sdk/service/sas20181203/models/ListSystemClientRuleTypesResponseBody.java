@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleTypes")
-    private java.util.List < String > ruleTypes;
+    private java.util.List<String> ruleTypes;
 
     private ListSystemClientRuleTypesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,16 +46,19 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
     /**
      * @return ruleTypes
      */
-    public java.util.List < String > getRuleTypes() {
+    public java.util.List<String> getRuleTypes() {
         return this.ruleTypes;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > ruleTypes; 
+        private java.util.List<String> ruleTypes; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,9 +66,9 @@ public class ListSystemClientRuleTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleTypes.
+         * <p>An array that consists of the rule types.</p>
          */
-        public Builder ruleTypes(java.util.List < String > ruleTypes) {
+        public Builder ruleTypes(java.util.List<String> ruleTypes) {
             this.ruleTypes = ruleTypes;
             return this;
         }

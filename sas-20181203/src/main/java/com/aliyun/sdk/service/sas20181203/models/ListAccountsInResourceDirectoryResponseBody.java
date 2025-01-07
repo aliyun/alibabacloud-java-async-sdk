@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accounts")
-    private java.util.List < Accounts> accounts;
+    private java.util.List<Accounts> accounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     /**
      * @return accounts
      */
-    public java.util.List < Accounts> getAccounts() {
+    public java.util.List<Accounts> getAccounts() {
         return this.accounts;
     }
 
@@ -46,13 +51,13 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Accounts> accounts; 
+        private java.util.List<Accounts> accounts; 
         private String requestId; 
 
         /**
          * <p>The members in the resource directory.</p>
          */
-        public Builder accounts(java.util.List < Accounts> accounts) {
+        public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
             return this;
         }

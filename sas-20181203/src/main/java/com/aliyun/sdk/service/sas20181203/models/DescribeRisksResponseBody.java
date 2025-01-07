@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRisksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Risks")
-    private java.util.List < Risks> risks;
+    private java.util.List<Risks> risks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeRisksResponseBody extends TeaModel {
     /**
      * @return risks
      */
-    public java.util.List < Risks> getRisks() {
+    public java.util.List<Risks> getRisks() {
         return this.risks;
     }
 
@@ -58,7 +63,7 @@ public class DescribeRisksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Risks> risks; 
+        private java.util.List<Risks> risks; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         /**
          * <p>The baselines.</p>
          */
-        public Builder risks(java.util.List < Risks> risks) {
+        public Builder risks(java.util.List<Risks> risks) {
             this.risks = risks;
             return this;
         }

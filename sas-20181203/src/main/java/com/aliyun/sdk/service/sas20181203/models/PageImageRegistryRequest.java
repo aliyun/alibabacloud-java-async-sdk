@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,11 +31,11 @@ public class PageImageRegistryRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegistryTypeInList")
-    private java.util.List < String > registryTypeInList;
+    private java.util.List<String> registryTypeInList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegistryTypeNotInList")
-    private java.util.List < String > registryTypeNotInList;
+    private java.util.List<String> registryTypeNotInList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -83,14 +88,14 @@ public class PageImageRegistryRequest extends Request {
     /**
      * @return registryTypeInList
      */
-    public java.util.List < String > getRegistryTypeInList() {
+    public java.util.List<String> getRegistryTypeInList() {
         return this.registryTypeInList;
     }
 
     /**
      * @return registryTypeNotInList
      */
-    public java.util.List < String > getRegistryTypeNotInList() {
+    public java.util.List<String> getRegistryTypeNotInList() {
         return this.registryTypeNotInList;
     }
 
@@ -105,8 +110,8 @@ public class PageImageRegistryRequest extends Request {
         private Integer currentPage; 
         private Integer pageSize; 
         private String registryNameLike; 
-        private java.util.List < String > registryTypeInList; 
-        private java.util.List < String > registryTypeNotInList; 
+        private java.util.List<String> registryTypeInList; 
+        private java.util.List<String> registryTypeNotInList; 
         private String sourceIp; 
 
         private Builder() {
@@ -162,7 +167,7 @@ public class PageImageRegistryRequest extends Request {
         /**
          * <p>The types of image repositories.</p>
          */
-        public Builder registryTypeInList(java.util.List < String > registryTypeInList) {
+        public Builder registryTypeInList(java.util.List<String> registryTypeInList) {
             this.putBodyParameter("RegistryTypeInList", registryTypeInList);
             this.registryTypeInList = registryTypeInList;
             return this;
@@ -171,7 +176,7 @@ public class PageImageRegistryRequest extends Request {
         /**
          * <p>The types of excluded image repositories.</p>
          */
-        public Builder registryTypeNotInList(java.util.List < String > registryTypeNotInList) {
+        public Builder registryTypeNotInList(java.util.List<String> registryTypeNotInList) {
             this.putBodyParameter("RegistryTypeNotInList", registryTypeNotInList);
             this.registryTypeNotInList = registryTypeNotInList;
             return this;

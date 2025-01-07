@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,10 @@ public class DescribeDataSourceRequest extends Request {
         } 
 
         /**
-         * ConfigType.
+         * <p>The method that is used to send alert notifications. Set the value to DingTalk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -91,7 +99,14 @@ public class DescribeDataSourceRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +115,10 @@ public class DescribeDataSourceRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.155.<em>.</em></p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

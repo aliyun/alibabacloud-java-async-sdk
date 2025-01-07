@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,8 +27,16 @@ public class FixCheckWarningsRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
+    private Integer retentionDays;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskId")
     private Long riskId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotName")
+    private String snapshotName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -37,7 +50,9 @@ public class FixCheckWarningsRequest extends Request {
         super(builder);
         this.checkParams = builder.checkParams;
         this.lang = builder.lang;
+        this.retentionDays = builder.retentionDays;
         this.riskId = builder.riskId;
+        this.snapshotName = builder.snapshotName;
         this.sourceIp = builder.sourceIp;
         this.uuids = builder.uuids;
     }
@@ -70,10 +85,24 @@ public class FixCheckWarningsRequest extends Request {
     }
 
     /**
+     * @return retentionDays
+     */
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    /**
      * @return riskId
      */
     public Long getRiskId() {
         return this.riskId;
+    }
+
+    /**
+     * @return snapshotName
+     */
+    public String getSnapshotName() {
+        return this.snapshotName;
     }
 
     /**
@@ -93,7 +122,9 @@ public class FixCheckWarningsRequest extends Request {
     public static final class Builder extends Request.Builder<FixCheckWarningsRequest, Builder> {
         private String checkParams; 
         private String lang; 
+        private Integer retentionDays; 
         private Long riskId; 
+        private String snapshotName; 
         private String sourceIp; 
         private String uuids; 
 
@@ -105,7 +136,9 @@ public class FixCheckWarningsRequest extends Request {
             super(request);
             this.checkParams = request.checkParams;
             this.lang = request.lang;
+            this.retentionDays = request.retentionDays;
             this.riskId = request.riskId;
+            this.snapshotName = request.snapshotName;
             this.sourceIp = request.sourceIp;
             this.uuids = request.uuids;
         } 
@@ -151,6 +184,15 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
+         * RetentionDays.
+         */
+        public Builder retentionDays(Integer retentionDays) {
+            this.putQueryParameter("RetentionDays", retentionDays);
+            this.retentionDays = retentionDays;
+            return this;
+        }
+
+        /**
          * <p>The ID of the baseline risk item.</p>
          * <blockquote>
          * <p> To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs.</p>
@@ -162,6 +204,15 @@ public class FixCheckWarningsRequest extends Request {
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
             this.riskId = riskId;
+            return this;
+        }
+
+        /**
+         * SnapshotName.
+         */
+        public Builder snapshotName(String snapshotName) {
+            this.putQueryParameter("SnapshotName", snapshotName);
+            this.snapshotName = snapshotName;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IllegalCustomConfigs")
-    private java.util.List < IllegalCustomConfigs> illegalCustomConfigs;
+    private java.util.List<IllegalCustomConfigs> illegalCustomConfigs;
 
     @com.aliyun.core.annotation.NameInMap("IllegalRepairConfigs")
-    private java.util.List < IllegalRepairConfigs> illegalRepairConfigs;
+    private java.util.List<IllegalRepairConfigs> illegalRepairConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     /**
      * @return illegalCustomConfigs
      */
-    public java.util.List < IllegalCustomConfigs> getIllegalCustomConfigs() {
+    public java.util.List<IllegalCustomConfigs> getIllegalCustomConfigs() {
         return this.illegalCustomConfigs;
     }
 
     /**
      * @return illegalRepairConfigs
      */
-    public java.util.List < IllegalRepairConfigs> getIllegalRepairConfigs() {
+    public java.util.List<IllegalRepairConfigs> getIllegalRepairConfigs() {
         return this.illegalRepairConfigs;
     }
 
@@ -57,14 +62,14 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IllegalCustomConfigs> illegalCustomConfigs; 
-        private java.util.List < IllegalRepairConfigs> illegalRepairConfigs; 
+        private java.util.List<IllegalCustomConfigs> illegalCustomConfigs; 
+        private java.util.List<IllegalRepairConfigs> illegalRepairConfigs; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the invalid custom configuration items of the check item.</p>
          */
-        public Builder illegalCustomConfigs(java.util.List < IllegalCustomConfigs> illegalCustomConfigs) {
+        public Builder illegalCustomConfigs(java.util.List<IllegalCustomConfigs> illegalCustomConfigs) {
             this.illegalCustomConfigs = illegalCustomConfigs;
             return this;
         }
@@ -72,7 +77,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the invalid parameters required for fixing risk items.</p>
          */
-        public Builder illegalRepairConfigs(java.util.List < IllegalRepairConfigs> illegalRepairConfigs) {
+        public Builder illegalRepairConfigs(java.util.List<IllegalRepairConfigs> illegalRepairConfigs) {
             this.illegalRepairConfigs = illegalRepairConfigs;
             return this;
         }

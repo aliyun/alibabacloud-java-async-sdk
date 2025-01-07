@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityEventOperationsResponse")
-    private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse;
+    private java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse;
 
     private AdvanceSecurityEventOperationsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
     /**
      * @return securityEventOperationsResponse
      */
-    public java.util.List < SecurityEventOperationsResponse> getSecurityEventOperationsResponse() {
+    public java.util.List<SecurityEventOperationsResponse> getSecurityEventOperationsResponse() {
         return this.securityEventOperationsResponse;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse; 
+        private java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * <p>The operation performed on the alert event.</p>
          */
-        public Builder securityEventOperationsResponse(java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse) {
+        public Builder securityEventOperationsResponse(java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse) {
             this.securityEventOperationsResponse = securityEventOperationsResponse;
             return this;
         }
@@ -94,7 +99,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         private String markMisValue;
 
         @com.aliyun.core.annotation.NameInMap("SupportedMisType")
-        private java.util.List < String > supportedMisType;
+        private java.util.List<String> supportedMisType;
 
         private MarkField(Builder builder) {
             this.filedAliasName = builder.filedAliasName;
@@ -143,7 +148,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * @return supportedMisType
          */
-        public java.util.List < String > getSupportedMisType() {
+        public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
         }
 
@@ -152,7 +157,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private String filedName; 
             private String markMisType; 
             private String markMisValue; 
-            private java.util.List < String > supportedMisType; 
+            private java.util.List<String> supportedMisType; 
 
             /**
              * <p>The alias of the field that is used in the whitelist rule.</p>
@@ -215,7 +220,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
              * <li><strong>strNotEqual</strong>: does not equal</li>
              * </ul>
              */
-            public Builder supportedMisType(java.util.List < String > supportedMisType) {
+            public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
                 return this;
             }
@@ -244,7 +249,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         private String markMisValue;
 
         @com.aliyun.core.annotation.NameInMap("SupportedMisType")
-        private java.util.List < String > supportedMisType;
+        private java.util.List<String> supportedMisType;
 
         private MarkFieldsSource(Builder builder) {
             this.filedAliasName = builder.filedAliasName;
@@ -285,7 +290,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * @return supportedMisType
          */
-        public java.util.List < String > getSupportedMisType() {
+        public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
         }
 
@@ -293,7 +298,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private String filedAliasName; 
             private String filedName; 
             private String markMisValue; 
-            private java.util.List < String > supportedMisType; 
+            private java.util.List<String> supportedMisType; 
 
             /**
              * <p>The alias of the field that can be used in the whitelist rule.</p>
@@ -338,7 +343,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
              * <li><strong>strNotEqual</strong>: does not equal</li>
              * </ul>
              */
-            public Builder supportedMisType(java.util.List < String > supportedMisType) {
+            public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
                 return this;
             }
@@ -358,10 +363,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
      */
     public static class SecurityEventOperationsResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MarkField")
-        private java.util.List < MarkField> markField;
+        private java.util.List<MarkField> markField;
 
         @com.aliyun.core.annotation.NameInMap("MarkFieldsSource")
-        private java.util.List < MarkFieldsSource> markFieldsSource;
+        private java.util.List<MarkFieldsSource> markFieldsSource;
 
         @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
@@ -391,14 +396,14 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * @return markField
          */
-        public java.util.List < MarkField> getMarkField() {
+        public java.util.List<MarkField> getMarkField() {
             return this.markField;
         }
 
         /**
          * @return markFieldsSource
          */
-        public java.util.List < MarkFieldsSource> getMarkFieldsSource() {
+        public java.util.List<MarkFieldsSource> getMarkFieldsSource() {
             return this.markFieldsSource;
         }
 
@@ -424,8 +429,8 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MarkField> markField; 
-            private java.util.List < MarkFieldsSource> markFieldsSource; 
+            private java.util.List<MarkField> markField; 
+            private java.util.List<MarkFieldsSource> markFieldsSource; 
             private String operationCode; 
             private String operationParams; 
             private Boolean userCanOperate; 
@@ -433,7 +438,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             /**
              * <p>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to <strong>advance_mark_mis_info</strong>.</p>
              */
-            public Builder markField(java.util.List < MarkField> markField) {
+            public Builder markField(java.util.List<MarkField> markField) {
                 this.markField = markField;
                 return this;
             }
@@ -441,7 +446,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             /**
              * <p>The metadata configuration returned by the advanced whitelist rule.</p>
              */
-            public Builder markFieldsSource(java.util.List < MarkFieldsSource> markFieldsSource) {
+            public Builder markFieldsSource(java.util.List<MarkFieldsSource> markFieldsSource) {
                 this.markFieldsSource = markFieldsSource;
                 return this;
             }

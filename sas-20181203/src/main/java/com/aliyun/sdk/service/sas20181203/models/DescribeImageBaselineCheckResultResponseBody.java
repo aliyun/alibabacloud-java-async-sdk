@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BaselineResult")
-    private java.util.List < BaselineResult> baselineResult;
+    private java.util.List<BaselineResult> baselineResult;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
     /**
      * @return baselineResult
      */
-    public java.util.List < BaselineResult> getBaselineResult() {
+    public java.util.List<BaselineResult> getBaselineResult() {
         return this.baselineResult;
     }
 
@@ -57,14 +62,14 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BaselineResult> baselineResult; 
+        private java.util.List<BaselineResult> baselineResult; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the check results of image baselines.</p>
          */
-        public Builder baselineResult(java.util.List < BaselineResult> baselineResult) {
+        public Builder baselineResult(java.util.List<BaselineResult> baselineResult) {
             this.baselineResult = baselineResult;
             return this;
         }

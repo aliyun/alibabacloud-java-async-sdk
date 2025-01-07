@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteInterceptionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
-    private java.util.List < Long > ruleIds;
+    private java.util.List<Long> ruleIds;
 
     private DeleteInterceptionRuleRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DeleteInterceptionRuleRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < Long > getRuleIds() {
+    public java.util.List<Long> getRuleIds() {
         return this.ruleIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteInterceptionRuleRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Long > ruleIds; 
+        private java.util.List<Long> ruleIds; 
 
         private Builder() {
             super();
@@ -87,7 +92,7 @@ public class DeleteInterceptionRuleRequest extends Request {
         /**
          * <p>The IDs of the rules that you want to delete.</p>
          */
-        public Builder ruleIds(java.util.List < Long > ruleIds) {
+        public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;

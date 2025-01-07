@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    private java.util.List<String> riskLevelList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcIp")
@@ -102,7 +107,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -132,7 +137,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         private Long endTimeStamp; 
         private String lang; 
         private Integer pageSize; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
         private Long startTimeStamp; 
         private String statisticsType; 
@@ -208,7 +213,7 @@ public class GetHoneypotAttackStatisticsRequest extends Request {
         /**
          * <p>The risk levels.</p>
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;

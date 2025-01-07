@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPluginForUuidResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AegisUuidTargetPluginConfigList")
-    private java.util.List < AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList;
+    private java.util.List<AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
@@ -42,7 +47,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
     /**
      * @return aegisUuidTargetPluginConfigList
      */
-    public java.util.List < AegisUuidTargetPluginConfigList> getAegisUuidTargetPluginConfigList() {
+    public java.util.List<AegisUuidTargetPluginConfigList> getAegisUuidTargetPluginConfigList() {
         return this.aegisUuidTargetPluginConfigList;
     }
 
@@ -68,7 +73,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList; 
+        private java.util.List<AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList; 
         private Integer code; 
         private String message; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the plug-ins.</p>
          */
-        public Builder aegisUuidTargetPluginConfigList(java.util.List < AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList) {
+        public Builder aegisUuidTargetPluginConfigList(java.util.List<AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList) {
             this.aegisUuidTargetPluginConfigList = aegisUuidTargetPluginConfigList;
             return this;
         }
@@ -266,7 +271,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
      */
     public static class AegisUuidTargetPluginConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AegisSuspiciousConfigList")
-        private java.util.List < AegisSuspiciousConfigList> aegisSuspiciousConfigList;
+        private java.util.List<AegisSuspiciousConfigList> aegisSuspiciousConfigList;
 
         @com.aliyun.core.annotation.NameInMap("PluginInstallCode")
         private String pluginInstallCode;
@@ -303,7 +308,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         /**
          * @return aegisSuspiciousConfigList
          */
-        public java.util.List < AegisSuspiciousConfigList> getAegisSuspiciousConfigList() {
+        public java.util.List<AegisSuspiciousConfigList> getAegisSuspiciousConfigList() {
             return this.aegisSuspiciousConfigList;
         }
 
@@ -343,7 +348,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AegisSuspiciousConfigList> aegisSuspiciousConfigList; 
+            private java.util.List<AegisSuspiciousConfigList> aegisSuspiciousConfigList; 
             private String pluginInstallCode; 
             private String pluginName; 
             private Boolean pluginOnlineInstalled; 
@@ -353,7 +358,7 @@ public class ListPluginForUuidResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the configurations of plug-ins.</p>
              */
-            public Builder aegisSuspiciousConfigList(java.util.List < AegisSuspiciousConfigList> aegisSuspiciousConfigList) {
+            public Builder aegisSuspiciousConfigList(java.util.List<AegisSuspiciousConfigList> aegisSuspiciousConfigList) {
                 this.aegisSuspiciousConfigList = aegisSuspiciousConfigList;
                 return this;
             }

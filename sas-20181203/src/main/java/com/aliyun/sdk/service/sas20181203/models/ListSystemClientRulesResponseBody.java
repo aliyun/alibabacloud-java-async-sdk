@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleList")
-    private java.util.List < RuleList> ruleList;
+    private java.util.List<RuleList> ruleList;
 
     private ListSystemClientRulesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
     /**
      * @return ruleList
      */
-    public java.util.List < RuleList> getRuleList() {
+    public java.util.List<RuleList> getRuleList() {
         return this.ruleList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RuleList> ruleList; 
+        private java.util.List<RuleList> ruleList; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the system defense rules.</p>
          */
-        public Builder ruleList(java.util.List < RuleList> ruleList) {
+        public Builder ruleList(java.util.List<RuleList> ruleList) {
             this.ruleList = ruleList;
             return this;
         }
@@ -280,7 +285,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         private String platform;
 
         @com.aliyun.core.annotation.NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        private java.util.List<Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -345,7 +350,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
@@ -395,7 +400,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             private String aggregationName; 
             private String description; 
             private String platform; 
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
             private Long ruleId; 
             private String ruleName; 
             private Integer ruleType; 
@@ -444,7 +449,7 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
             /**
              * <p>An array that consists of policies.</p>
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityEventOperationsResponse")
-    private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse;
+    private java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse;
 
     private DescribeSecurityEventOperationsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     /**
      * @return securityEventOperationsResponse
      */
-    public java.util.List < SecurityEventOperationsResponse> getSecurityEventOperationsResponse() {
+    public java.util.List<SecurityEventOperationsResponse> getSecurityEventOperationsResponse() {
         return this.securityEventOperationsResponse;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse; 
+        private java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -61,9 +66,9 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array consisting of the operations that you can perform to handle the alert event.</p>
+         * <p>The operations that are performed to handle the alert.</p>
          */
-        public Builder securityEventOperationsResponse(java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse) {
+        public Builder securityEventOperationsResponse(java.util.List<SecurityEventOperationsResponse> securityEventOperationsResponse) {
             this.securityEventOperationsResponse = securityEventOperationsResponse;
             return this;
         }
@@ -203,7 +208,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Description.
+             * <p>The description of the field that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -211,7 +219,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * FillType.
+             * <p>Indicates whether the value of the field can be changed.</p>
+             * <ul>
+             * <li><strong>CUSTOM</strong>: The value of the field can be changed.</li>
+             * <li><strong>SYSTEM</strong>: The value of the field cannot be changed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder fillType(String fillType) {
                 this.fillType = fillType;
@@ -219,7 +234,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLength.
+             * <p>The maximum length of the field that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -227,7 +245,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinLength.
+             * <p>The minimum length of the field that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder minLength(Integer minLength) {
                 this.minLength = minLength;
@@ -235,7 +256,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the field that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -243,7 +267,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the parameter is required. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -251,7 +282,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * <p>The display name of the field that can be used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pid</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -259,7 +293,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * ShowValue.
+             * <p>The display name of the field that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1791</p>
              */
             public Builder showValue(String showValue) {
                 this.showValue = showValue;
@@ -267,7 +304,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the field that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1791</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -301,7 +341,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         private String markMisValue;
 
         @com.aliyun.core.annotation.NameInMap("SupportedMisType")
-        private java.util.List < String > supportedMisType;
+        private java.util.List<String> supportedMisType;
 
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
@@ -354,7 +394,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * @return supportedMisType
          */
-        public java.util.List < String > getSupportedMisType() {
+        public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
         }
 
@@ -370,7 +410,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String filedName; 
             private String markMisType; 
             private String markMisValue; 
-            private java.util.List < String > supportedMisType; 
+            private java.util.List<String> supportedMisType; 
             private String uuid; 
 
             /**
@@ -427,7 +467,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the operations that are supported by the method to add the alert event to the whitelist.</p>
              */
-            public Builder supportedMisType(java.util.List < String > supportedMisType) {
+            public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
                 return this;
             }
@@ -467,7 +507,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         private String markMisValue;
 
         @com.aliyun.core.annotation.NameInMap("SupportedMisType")
-        private java.util.List < String > supportedMisType;
+        private java.util.List<String> supportedMisType;
 
         private MarkFieldsSource(Builder builder) {
             this.filedAliasName = builder.filedAliasName;
@@ -508,7 +548,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * @return supportedMisType
          */
-        public java.util.List < String > getSupportedMisType() {
+        public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
         }
 
@@ -516,7 +556,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             private String filedAliasName; 
             private String filedName; 
             private String markMisValue; 
-            private java.util.List < String > supportedMisType; 
+            private java.util.List<String> supportedMisType; 
 
             /**
              * <p>The alias of the field that can be used in the whitelist rule.</p>
@@ -554,7 +594,7 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the operations that are supported by the method to add the alert event to the whitelist.</p>
              */
-            public Builder supportedMisType(java.util.List < String > supportedMisType) {
+            public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
                 return this;
             }
@@ -574,13 +614,13 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
      */
     public static class SecurityEventOperationsResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MappingMarkFields")
-        private java.util.List < MappingMarkFields> mappingMarkFields;
+        private java.util.List<MappingMarkFields> mappingMarkFields;
 
         @com.aliyun.core.annotation.NameInMap("MarkField")
-        private java.util.List < MarkField> markField;
+        private java.util.List<MarkField> markField;
 
         @com.aliyun.core.annotation.NameInMap("MarkFieldsSource")
-        private java.util.List < MarkFieldsSource> markFieldsSource;
+        private java.util.List<MarkFieldsSource> markFieldsSource;
 
         @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
@@ -611,21 +651,21 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         /**
          * @return mappingMarkFields
          */
-        public java.util.List < MappingMarkFields> getMappingMarkFields() {
+        public java.util.List<MappingMarkFields> getMappingMarkFields() {
             return this.mappingMarkFields;
         }
 
         /**
          * @return markField
          */
-        public java.util.List < MarkField> getMarkField() {
+        public java.util.List<MarkField> getMarkField() {
             return this.markField;
         }
 
         /**
          * @return markFieldsSource
          */
-        public java.util.List < MarkFieldsSource> getMarkFieldsSource() {
+        public java.util.List<MarkFieldsSource> getMarkFieldsSource() {
             return this.markFieldsSource;
         }
 
@@ -651,39 +691,39 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MappingMarkFields> mappingMarkFields; 
-            private java.util.List < MarkField> markField; 
-            private java.util.List < MarkFieldsSource> markFieldsSource; 
+            private java.util.List<MappingMarkFields> mappingMarkFields; 
+            private java.util.List<MarkField> markField; 
+            private java.util.List<MarkFieldsSource> markFieldsSource; 
             private String operationCode; 
             private String operationParams; 
             private Boolean userCanOperate; 
 
             /**
-             * MappingMarkFields.
+             * <p>The objects on which the operations are performed. This parameter is required when you add the alert to the whitelist by configuring precise defense rules.</p>
              */
-            public Builder mappingMarkFields(java.util.List < MappingMarkFields> mappingMarkFields) {
+            public Builder mappingMarkFields(java.util.List<MappingMarkFields> mappingMarkFields) {
                 this.mappingMarkFields = mappingMarkFields;
                 return this;
             }
 
             /**
-             * <p>An array consisting of the configuration information that is used when the value of the OperationCode parameter is <strong>advance_mark_mis_info</strong>.</p>
+             * <p>The configurations that are used when the value of the OperationCode parameter is <strong>advance_mark_mis_info</strong>.</p>
              */
-            public Builder markField(java.util.List < MarkField> markField) {
+            public Builder markField(java.util.List<MarkField> markField) {
                 this.markField = markField;
                 return this;
             }
 
             /**
-             * <p>An array consisting of the configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</p>
+             * <p>The configuration items that can be used when the value of the OperationCode parameter is advance_mark_mis_info.</p>
              */
-            public Builder markFieldsSource(java.util.List < MarkFieldsSource> markFieldsSource) {
+            public Builder markFieldsSource(java.util.List<MarkFieldsSource> markFieldsSource) {
                 this.markFieldsSource = markFieldsSource;
                 return this;
             }
 
             /**
-             * <p>The operation that you can perform to handle the alert. Valid values:</p>
+             * <p>The operation that is performed to handle the alert. Valid values:</p>
              * <ul>
              * <li><strong>block_ip</strong>: blocks the source IP address.</li>
              * <li><strong>advance_mark_mis_info</strong>: adds the alert to the whitelist.</li>
@@ -692,9 +732,13 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
              * <li><strong>kill_process</strong>: terminates the malicious process.</li>
              * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
              * <li><strong>kill_and_quara</strong>: terminates the malicious process and quarantines the source file.</li>
-             * <li><strong>disable_malicious_defense</strong>: stops the container on which the alerting files or processes exist.</li>
+             * <li><strong>disable_malicious_defense</strong>: disables the malicious behavior defense feature.</li>
              * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
              * <li><strong>quara</strong>: quarantines the source file of the malicious process.</li>
+             * <li><strong>defense_mark_mis_info</strong>: enables the precise defense feature but disables the notification feature.</li>
+             * <li><strong>rm_defense_mark_mis_info</strong>: enables the notification feature.</li>
+             * <li><strong>rm_mark_mis_info</strong>: removes the alert from the whitelist.</li>
+             * <li><strong>cancle_manual</strong>: cancels marking the alert as manually handled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -706,9 +750,9 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the operation that you can perform to handle the alert event.</p>
+             * <p>The configuration of the operation that is performed to handle the alert.</p>
              * <blockquote>
-             * <p> If the value of the OperationCode parameter is <code>kill_and_quara</code> or <code>block_ip</code>, the OperationParams parameter is required. If the value of the OperationCode parameter is a different value, the OperationParams parameter can be left empty.</p>
+             * <p> If the value of the <strong>OperationCode</strong> parameter is <strong>kill_and_quara</strong> or <strong>block_ip</strong>, the OperationParams parameter is required. If the value of the <strong>OperationCode</strong> parameter is a different value, the OperationParams parameter can be left empty.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -720,10 +764,10 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether you can handle the alert event in the current edition of Security Center. Valid values:</p>
+             * <p>Indicates whether you can handle the alert in the current edition of Security Center. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>

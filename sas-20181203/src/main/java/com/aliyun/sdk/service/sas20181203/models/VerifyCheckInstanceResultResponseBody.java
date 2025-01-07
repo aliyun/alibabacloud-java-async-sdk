@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,14 +87,18 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailInstances")
-        private java.util.List < String > failInstances;
+        private java.util.List<String> failInstances;
 
         @com.aliyun.core.annotation.NameInMap("OperateCode")
         private String operateCode;
 
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
         private Data(Builder builder) {
             this.failInstances = builder.failInstances;
             this.operateCode = builder.operateCode;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -103,7 +112,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         /**
          * @return failInstances
          */
-        public java.util.List < String > getFailInstances() {
+        public java.util.List<String> getFailInstances() {
             return this.failInstances;
         }
 
@@ -114,14 +123,22 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             return this.operateCode;
         }
 
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
         public static final class Builder {
-            private java.util.List < String > failInstances; 
+            private java.util.List<String> failInstances; 
             private String operateCode; 
+            private String taskId; 
 
             /**
              * <p>An array consisting of instances that failed the check.</p>
              */
-            public Builder failInstances(java.util.List < String > failInstances) {
+            public Builder failInstances(java.util.List<String> failInstances) {
                 this.failInstances = failInstances;
                 return this;
             }
@@ -138,6 +155,14 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterInfoListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterList")
-    private java.util.List < ClusterList> clusterList;
+    private java.util.List<ClusterList> clusterList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
     /**
      * @return clusterList
      */
-    public java.util.List < ClusterList> getClusterList() {
+    public java.util.List<ClusterList> getClusterList() {
         return this.clusterList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterList> clusterList; 
+        private java.util.List<ClusterList> clusterList; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the information about clusters.</p>
          */
-        public Builder clusterList(java.util.List < ClusterList> clusterList) {
+        public Builder clusterList(java.util.List<ClusterList> clusterList) {
             this.clusterList = clusterList;
             return this;
         }

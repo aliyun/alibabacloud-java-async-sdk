@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RestoreJobs")
-    private java.util.List < RestoreJobs> restoreJobs;
+    private java.util.List<RestoreJobs> restoreJobs;
 
     private DescribeRestoreJobsResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
     /**
      * @return restoreJobs
      */
-    public java.util.List < RestoreJobs> getRestoreJobs() {
+    public java.util.List<RestoreJobs> getRestoreJobs() {
         return this.restoreJobs;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RestoreJobs> restoreJobs; 
+        private java.util.List<RestoreJobs> restoreJobs; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         /**
          * <p>The details about the restoration tasks.</p>
          */
-        public Builder restoreJobs(java.util.List < RestoreJobs> restoreJobs) {
+        public Builder restoreJobs(java.util.List<RestoreJobs> restoreJobs) {
             this.restoreJobs = restoreJobs;
             return this;
         }

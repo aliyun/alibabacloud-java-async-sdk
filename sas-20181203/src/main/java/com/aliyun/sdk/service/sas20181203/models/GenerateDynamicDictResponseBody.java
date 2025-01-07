@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateDynamicDictResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("KeywordList")
-    private java.util.List < String > keywordList;
+    private java.util.List<String> keywordList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
     /**
      * @return keywordList
      */
-    public java.util.List < String > getKeywordList() {
+    public java.util.List<String> getKeywordList() {
         return this.keywordList;
     }
 
@@ -46,13 +51,13 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > keywordList; 
+        private java.util.List<String> keywordList; 
         private String requestId; 
 
         /**
          * <p>The custom weak passwords.</p>
          */
-        public Builder keywordList(java.util.List < String > keywordList) {
+        public Builder keywordList(java.util.List<String> keywordList) {
             this.keywordList = keywordList;
             return this;
         }

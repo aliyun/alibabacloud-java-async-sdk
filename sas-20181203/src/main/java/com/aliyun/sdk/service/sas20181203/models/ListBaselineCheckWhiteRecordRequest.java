@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListBaselineCheckWhiteRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckItemFuzzy")
@@ -34,7 +39,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordIds")
-    private java.util.List < Long > recordIds;
+    private java.util.List<Long> recordIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
@@ -67,7 +72,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
     }
 
@@ -102,7 +107,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
     /**
      * @return recordIds
      */
-    public java.util.List < Long > getRecordIds() {
+    public java.util.List<Long> getRecordIds() {
         return this.recordIds;
     }
 
@@ -114,12 +119,12 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListBaselineCheckWhiteRecordRequest, Builder> {
-        private java.util.List < Long > checkIds; 
+        private java.util.List<Long> checkIds; 
         private String checkItemFuzzy; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
-        private java.util.List < Long > recordIds; 
+        private java.util.List<Long> recordIds; 
         private String source; 
 
         private Builder() {
@@ -140,7 +145,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         /**
          * <p>The IDs of check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             String checkIdsShrink = shrink(checkIds, "CheckIds", "json");
             this.putQueryParameter("CheckIds", checkIdsShrink);
             this.checkIds = checkIds;
@@ -202,7 +207,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         /**
          * <p>The IDs of the whitelist rules.</p>
          */
-        public Builder recordIds(java.util.List < Long > recordIds) {
+        public Builder recordIds(java.util.List<Long> recordIds) {
             String recordIdsShrink = shrink(recordIds, "RecordIds", "json");
             this.putQueryParameter("RecordIds", recordIdsShrink);
             this.recordIds = recordIds;

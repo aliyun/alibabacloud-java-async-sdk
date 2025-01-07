@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeAttachRecordsResponse} extends {@link TeaModel}
+ * {@link SubmitTenantCheckResponse} extends {@link TeaModel}
  *
- * <p>DescribeAttachRecordsResponse</p>
+ * <p>SubmitTenantCheckResponse</p>
  */
-public class DescribeAttachRecordsResponse extends Response {
+public class SubmitTenantCheckResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeAttachRecordsResponseBody body;
+    private SubmitTenantCheckResponseBody body;
 
-    private DescribeAttachRecordsResponse(BuilderImpl builder) {
+    private SubmitTenantCheckResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeAttachRecordsResponse create() {
+    public static SubmitTenantCheckResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -40,7 +45,7 @@ public class DescribeAttachRecordsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class DescribeAttachRecordsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeAttachRecordsResponseBody getBody() {
+    public SubmitTenantCheckResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeAttachRecordsResponse, Builder> {
+    public interface Builder extends Response.Builder<SubmitTenantCheckResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeAttachRecordsResponseBody body);
+        Builder body(SubmitTenantCheckResponseBody body);
 
         @Override
-        DescribeAttachRecordsResponse build();
+        SubmitTenantCheckResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeAttachRecordsResponse, Builder>
+            extends Response.BuilderImpl<SubmitTenantCheckResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeAttachRecordsResponseBody body; 
+        private SubmitTenantCheckResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeAttachRecordsResponse response) {
+        private BuilderImpl(SubmitTenantCheckResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class DescribeAttachRecordsResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class DescribeAttachRecordsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeAttachRecordsResponseBody body) {
+        public Builder body(SubmitTenantCheckResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeAttachRecordsResponse build() {
-            return new DescribeAttachRecordsResponse(this);
+        public SubmitTenantCheckResponse build() {
+            return new SubmitTenantCheckResponse(this);
         } 
 
     } 

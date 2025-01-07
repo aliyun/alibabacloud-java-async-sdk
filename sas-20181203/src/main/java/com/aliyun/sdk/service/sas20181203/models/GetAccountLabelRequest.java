@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class GetAccountLabelRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LabelList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > labelList;
+    private java.util.List<String> labelList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -43,7 +48,7 @@ public class GetAccountLabelRequest extends Request {
     /**
      * @return labelList
      */
-    public java.util.List < String > getLabelList() {
+    public java.util.List<String> getLabelList() {
         return this.labelList;
     }
 
@@ -55,7 +60,7 @@ public class GetAccountLabelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAccountLabelRequest, Builder> {
-        private java.util.List < String > labelList; 
+        private java.util.List<String> labelList; 
         private String lang; 
 
         private Builder() {
@@ -69,16 +74,24 @@ public class GetAccountLabelRequest extends Request {
         } 
 
         /**
+         * <p>The tags.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder labelList(java.util.List < String > labelList) {
+        public Builder labelList(java.util.List<String> labelList) {
             this.putQueryParameter("LabelList", labelList);
             this.labelList = labelList;
             return this;
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

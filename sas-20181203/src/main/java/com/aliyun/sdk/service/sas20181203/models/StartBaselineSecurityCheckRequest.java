@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class StartBaselineSecurityCheckRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ItemIds")
-    private java.util.List < Long > itemIds;
+    private java.util.List<Long> itemIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -58,7 +63,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < Long > getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 
@@ -91,7 +96,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartBaselineSecurityCheckRequest, Builder> {
-        private java.util.List < Long > itemIds; 
+        private java.util.List<Long> itemIds; 
         private String lang; 
         private Long resourceOwnerId; 
         private String sourceIp; 
@@ -116,7 +121,7 @@ public class StartBaselineSecurityCheckRequest extends Request {
          * <p>To perform a check task on cloud service configurations, you must specify the ID of the check item. You can call the <a href="~~DescribeRiskItemType~~">DescribeRiskItemType</a> operation to query the IDs of check items.</p>
          * </blockquote>
          */
-        public Builder itemIds(java.util.List < Long > itemIds) {
+        public Builder itemIds(java.util.List<Long> itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
             this.itemIds = itemIds;
             return this;

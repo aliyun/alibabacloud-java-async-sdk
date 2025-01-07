@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckSecurityEventIdRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
-    private java.util.List < String > securityEventIds;
+    private java.util.List<String> securityEventIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -43,7 +48,7 @@ public class CheckSecurityEventIdRequest extends Request {
     /**
      * @return securityEventIds
      */
-    public java.util.List < String > getSecurityEventIds() {
+    public java.util.List<String> getSecurityEventIds() {
         return this.securityEventIds;
     }
 
@@ -55,7 +60,7 @@ public class CheckSecurityEventIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckSecurityEventIdRequest, Builder> {
-        private java.util.List < String > securityEventIds; 
+        private java.util.List<String> securityEventIds; 
         private String uuid; 
 
         private Builder() {
@@ -77,7 +82,7 @@ public class CheckSecurityEventIdRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;1234567&quot;,&quot;98765432&quot;]</p>
          */
-        public Builder securityEventIds(java.util.List < String > securityEventIds) {
+        public Builder securityEventIds(java.util.List<String> securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
             this.securityEventIds = securityEventIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCheckResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckResultList")
-    private java.util.List < CheckResultList> checkResultList;
+    private java.util.List<CheckResultList> checkResultList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCheckResultResponseBody extends TeaModel {
     /**
      * @return checkResultList
      */
-    public java.util.List < CheckResultList> getCheckResultList() {
+    public java.util.List<CheckResultList> getCheckResultList() {
         return this.checkResultList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCheckResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckResultList> checkResultList; 
+        private java.util.List<CheckResultList> checkResultList; 
         private String requestId; 
 
         /**
          * <p>The check results.</p>
          */
-        public Builder checkResultList(java.util.List < CheckResultList> checkResultList) {
+        public Builder checkResultList(java.util.List<CheckResultList> checkResultList) {
             this.checkResultList = checkResultList;
             return this;
         }

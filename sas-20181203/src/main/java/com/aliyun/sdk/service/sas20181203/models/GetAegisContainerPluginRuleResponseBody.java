@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -106,13 +111,13 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         private String ruleTemplateName;
 
         @com.aliyun.core.annotation.NameInMap("SelectedPolicy")
-        private java.util.List < String > selectedPolicy;
+        private java.util.List<String> selectedPolicy;
 
         @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
         @com.aliyun.core.annotation.NameInMap("WhiteImages")
-        private java.util.List < String > whiteImages;
+        private java.util.List<String> whiteImages;
 
         private Data(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
@@ -195,7 +200,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         /**
          * @return selectedPolicy
          */
-        public java.util.List < String > getSelectedPolicy() {
+        public java.util.List<String> getSelectedPolicy() {
             return this.selectedPolicy;
         }
 
@@ -209,7 +214,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         /**
          * @return whiteImages
          */
-        public java.util.List < String > getWhiteImages() {
+        public java.util.List<String> getWhiteImages() {
             return this.whiteImages;
         }
 
@@ -222,9 +227,9 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleTemplateId; 
             private String ruleTemplateName; 
-            private java.util.List < String > selectedPolicy; 
+            private java.util.List<String> selectedPolicy; 
             private String switchId; 
-            private java.util.List < String > whiteImages; 
+            private java.util.List<String> whiteImages; 
 
             /**
              * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
@@ -322,7 +327,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             /**
              * <p>The rule items.</p>
              */
-            public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
+            public Builder selectedPolicy(java.util.List<String> selectedPolicy) {
                 this.selectedPolicy = selectedPolicy;
                 return this;
             }
@@ -341,7 +346,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             /**
              * <p>The images that are added to the whitelist.</p>
              */
-            public Builder whiteImages(java.util.List < String > whiteImages) {
+            public Builder whiteImages(java.util.List<String> whiteImages) {
                 this.whiteImages = whiteImages;
                 return this;
             }

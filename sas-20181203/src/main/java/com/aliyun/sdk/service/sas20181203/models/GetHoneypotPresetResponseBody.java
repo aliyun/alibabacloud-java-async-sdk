@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -277,7 +282,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         private String controlNodeName;
 
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        private java.util.List<FileInfoList> fileInfoList;
 
         @com.aliyun.core.annotation.NameInMap("HoneypotImageDisplayName")
         private String honeypotImageDisplayName;
@@ -330,7 +335,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
@@ -385,7 +390,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String controlNodeName; 
-            private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List<FileInfoList> fileInfoList; 
             private String honeypotImageDisplayName; 
             private String honeypotImageName; 
             private String honeypotPresetId; 
@@ -408,7 +413,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the configurations of the uploaded file.</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateVirusScanOnceTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanPath")
-    private java.util.List < String > scanPath;
+    private java.util.List<String> scanPath;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanType")
@@ -47,7 +52,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     /**
      * @return scanPath
      */
-    public java.util.List < String > getScanPath() {
+    public java.util.List<String> getScanPath() {
         return this.scanPath;
     }
 
@@ -66,7 +71,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirusScanOnceTaskRequest, Builder> {
-        private java.util.List < String > scanPath; 
+        private java.util.List<String> scanPath; 
         private String scanType; 
         private String selectionKey; 
 
@@ -84,7 +89,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         /**
          * <p>The information about the scan path that is required for a custom scan.</p>
          */
-        public Builder scanPath(java.util.List < String > scanPath) {
+        public Builder scanPath(java.util.List<String> scanPath) {
             this.putQueryParameter("ScanPath", scanPath);
             this.scanPath = scanPath;
             return this;

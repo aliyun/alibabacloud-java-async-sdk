@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ListBackupRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    private java.util.List<String> statusList;
 
     private ListBackupRecordRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class ListBackupRecordRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -108,7 +113,7 @@ public class ListBackupRecordRequest extends Request {
         private Integer currentPage; 
         private String machineRemark; 
         private Integer pageSize; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -195,7 +200,7 @@ public class ListBackupRecordRequest extends Request {
          * <li><strong>PARTIAL_COMPLETE</strong>: The backup task is partially successful.</li>
          * </ul>
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

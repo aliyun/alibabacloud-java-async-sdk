@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExclusiveFileType")
-    private java.util.List < String > exclusiveFileType;
+    private java.util.List<String> exclusiveFileType;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
     /**
      * @return exclusiveFileType
      */
-    public java.util.List < String > getExclusiveFileType() {
+    public java.util.List<String> getExclusiveFileType() {
         return this.exclusiveFileType;
     }
 
@@ -57,20 +62,23 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > exclusiveFileType; 
+        private java.util.List<String> exclusiveFileType; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * ExclusiveFileType.
+         * <p>An array that consists of the types of the files that are excluded from web tamper proofing.</p>
          */
-        public Builder exclusiveFileType(java.util.List < String > exclusiveFileType) {
+        public Builder exclusiveFileType(java.util.List<String> exclusiveFileType) {
             this.exclusiveFileType = exclusiveFileType;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CCD7D51-5E81-5FF5-BD74-813DDD248430</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeWebLockExclusiveFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of types of the files that are excluded from web tamper proofing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

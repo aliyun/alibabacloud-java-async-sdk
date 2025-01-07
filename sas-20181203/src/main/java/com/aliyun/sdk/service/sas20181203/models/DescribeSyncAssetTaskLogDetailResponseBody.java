@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskRecordDetails")
-    private java.util.List < TaskRecordDetails> taskRecordDetails;
+    private java.util.List<TaskRecordDetails> taskRecordDetails;
 
     private DescribeSyncAssetTaskLogDetailResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
     /**
      * @return taskRecordDetails
      */
-    public java.util.List < TaskRecordDetails> getTaskRecordDetails() {
+    public java.util.List<TaskRecordDetails> getTaskRecordDetails() {
         return this.taskRecordDetails;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < TaskRecordDetails> taskRecordDetails; 
+        private java.util.List<TaskRecordDetails> taskRecordDetails; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         /**
          * <p>The details of the tasks.</p>
          */
-        public Builder taskRecordDetails(java.util.List < TaskRecordDetails> taskRecordDetails) {
+        public Builder taskRecordDetails(java.util.List<TaskRecordDetails> taskRecordDetails) {
             this.taskRecordDetails = taskRecordDetails;
             return this;
         }

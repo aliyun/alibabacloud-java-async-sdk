@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UploadUrlList")
-    private java.util.List < UploadUrlList> uploadUrlList;
+    private java.util.List<UploadUrlList> uploadUrlList;
 
     private CreateFileDetectUploadUrlResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     /**
      * @return uploadUrlList
      */
-    public java.util.List < UploadUrlList> getUploadUrlList() {
+    public java.util.List<UploadUrlList> getUploadUrlList() {
         return this.uploadUrlList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UploadUrlList> uploadUrlList; 
+        private java.util.List<UploadUrlList> uploadUrlList; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the parameters that are required to upload a file.</p>
          */
-        public Builder uploadUrlList(java.util.List < UploadUrlList> uploadUrlList) {
+        public Builder uploadUrlList(java.util.List<UploadUrlList> uploadUrlList) {
             this.uploadUrlList = uploadUrlList;
             return this;
         }

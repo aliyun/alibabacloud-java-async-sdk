@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,13 @@ public class SetImageBuildRiskStatusRequest extends Request {
         } 
 
         /**
-         * ImageUuids.
+         * <p>The UUIDs of images. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the UUIDs of images.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>f382fccd88b94c5c8c864def681*****,ac32fccd88b94c5c8c864def681*****</p>
          */
         public Builder imageUuids(String imageUuids) {
             this.putQueryParameter("ImageUuids", imageUuids);
@@ -91,7 +102,10 @@ public class SetImageBuildRiskStatusRequest extends Request {
         }
 
         /**
-         * RiskKey.
+         * <p>The keyword of the image build command risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>risk.type</p>
          */
         public Builder riskKey(String riskKey) {
             this.putQueryParameter("RiskKey", riskKey);
@@ -100,7 +114,15 @@ public class SetImageBuildRiskStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the image build command risk. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled.</li>
+         * <li><strong>1</strong>: ignored.</li>
+         * <li><strong>2</strong>: false positive.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

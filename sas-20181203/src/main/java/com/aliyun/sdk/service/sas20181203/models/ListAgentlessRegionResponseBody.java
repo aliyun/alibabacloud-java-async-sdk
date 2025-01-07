@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAgentlessRegionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RegionList")
-    private java.util.List < String > regionList;
+    private java.util.List<String> regionList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     /**
      * @return regionList
      */
-    public java.util.List < String > getRegionList() {
+    public java.util.List<String> getRegionList() {
         return this.regionList;
     }
 
@@ -46,13 +51,13 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > regionList; 
+        private java.util.List<String> regionList; 
         private String requestId; 
 
         /**
          * <p>The information about the regions.</p>
          */
-        public Builder regionList(java.util.List < String > regionList) {
+        public Builder regionList(java.util.List<String> regionList) {
             this.regionList = regionList;
             return this;
         }

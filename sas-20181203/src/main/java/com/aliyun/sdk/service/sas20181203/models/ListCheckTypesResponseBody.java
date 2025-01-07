@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -68,7 +73,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -103,7 +108,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         /**
          * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -201,10 +206,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
      */
     public static class CheckDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffiliatedRiskTypes")
-        private java.util.List < String > affiliatedRiskTypes;
+        private java.util.List<String> affiliatedRiskTypes;
 
         @com.aliyun.core.annotation.NameInMap("AffiliatedRisks")
-        private java.util.List < String > affiliatedRisks;
+        private java.util.List<String> affiliatedRisks;
 
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
@@ -230,14 +235,14 @@ public class ListCheckTypesResponseBody extends TeaModel {
         /**
          * @return affiliatedRiskTypes
          */
-        public java.util.List < String > getAffiliatedRiskTypes() {
+        public java.util.List<String> getAffiliatedRiskTypes() {
             return this.affiliatedRiskTypes;
         }
 
         /**
          * @return affiliatedRisks
          */
-        public java.util.List < String > getAffiliatedRisks() {
+        public java.util.List<String> getAffiliatedRisks() {
             return this.affiliatedRisks;
         }
 
@@ -256,15 +261,15 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > affiliatedRiskTypes; 
-            private java.util.List < String > affiliatedRisks; 
+            private java.util.List<String> affiliatedRiskTypes; 
+            private java.util.List<String> affiliatedRisks; 
             private Long checkId; 
             private String checkItem; 
 
             /**
              * <p>The list of the baseline categories of attribution.</p>
              */
-            public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
+            public Builder affiliatedRiskTypes(java.util.List<String> affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
                 return this;
             }
@@ -272,7 +277,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             /**
              * <p>The list of baselines attribution.</p>
              */
-            public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
+            public Builder affiliatedRisks(java.util.List<String> affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
                 return this;
             }
@@ -314,7 +319,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckDetails")
-        private java.util.List < CheckDetails> checkDetails;
+        private java.util.List<CheckDetails> checkDetails;
 
         @com.aliyun.core.annotation.NameInMap("CheckType")
         private String checkType;
@@ -339,7 +344,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         /**
          * @return checkDetails
          */
-        public java.util.List < CheckDetails> getCheckDetails() {
+        public java.util.List<CheckDetails> getCheckDetails() {
             return this.checkDetails;
         }
 
@@ -358,14 +363,14 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CheckDetails> checkDetails; 
+            private java.util.List<CheckDetails> checkDetails; 
             private String checkType; 
             private String checkTypeDisName; 
 
             /**
              * <p>The detail of check items.</p>
              */
-            public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
+            public Builder checkDetails(java.util.List<CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
                 return this;
             }

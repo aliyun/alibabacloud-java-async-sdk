@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageFixTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BuildTasks")
-    private java.util.List < BuildTasks> buildTasks;
+    private java.util.List<BuildTasks> buildTasks;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     /**
      * @return buildTasks
      */
-    public java.util.List < BuildTasks> getBuildTasks() {
+    public java.util.List<BuildTasks> getBuildTasks() {
         return this.buildTasks;
     }
 
@@ -57,14 +62,14 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BuildTasks> buildTasks; 
+        private java.util.List<BuildTasks> buildTasks; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The tasks returned.</p>
          */
-        public Builder buildTasks(java.util.List < BuildTasks> buildTasks) {
+        public Builder buildTasks(java.util.List<BuildTasks> buildTasks) {
             this.buildTasks = buildTasks;
             return this;
         }

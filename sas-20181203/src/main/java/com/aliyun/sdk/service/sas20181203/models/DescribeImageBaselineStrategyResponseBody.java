@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -181,7 +186,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         private String baselineItem;
 
         @com.aliyun.core.annotation.NameInMap("BaselineItemList")
-        private java.util.List < BaselineItemList> baselineItemList;
+        private java.util.List<BaselineItemList> baselineItemList;
 
         @com.aliyun.core.annotation.NameInMap("SelectedItemCount")
         private Integer selectedItemCount;
@@ -226,7 +231,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         /**
          * @return baselineItemList
          */
-        public java.util.List < BaselineItemList> getBaselineItemList() {
+        public java.util.List<BaselineItemList> getBaselineItemList() {
             return this.baselineItemList;
         }
 
@@ -267,7 +272,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
         public static final class Builder {
             private String baselineItem; 
-            private java.util.List < BaselineItemList> baselineItemList; 
+            private java.util.List<BaselineItemList> baselineItemList; 
             private Integer selectedItemCount; 
             private Long strategyId; 
             private String strategyName; 
@@ -288,7 +293,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             /**
              * <p>An array that contains the baselines.</p>
              */
-            public Builder baselineItemList(java.util.List < BaselineItemList> baselineItemList) {
+            public Builder baselineItemList(java.util.List<BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
                 return this;
             }

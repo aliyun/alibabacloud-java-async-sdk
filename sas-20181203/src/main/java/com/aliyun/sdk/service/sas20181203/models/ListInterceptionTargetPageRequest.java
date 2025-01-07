@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListInterceptionTargetPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageList")
-    private java.util.List < String > imageList;
+    private java.util.List<String> imageList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -34,7 +39,7 @@ public class ListInterceptionTargetPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagList")
-    private java.util.List < String > tagList;
+    private java.util.List<String> tagList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetName")
@@ -86,7 +91,7 @@ public class ListInterceptionTargetPageRequest extends Request {
     /**
      * @return imageList
      */
-    public java.util.List < String > getImageList() {
+    public java.util.List<String> getImageList() {
         return this.imageList;
     }
 
@@ -107,7 +112,7 @@ public class ListInterceptionTargetPageRequest extends Request {
     /**
      * @return tagList
      */
-    public java.util.List < String > getTagList() {
+    public java.util.List<String> getTagList() {
         return this.tagList;
     }
 
@@ -128,10 +133,10 @@ public class ListInterceptionTargetPageRequest extends Request {
     public static final class Builder extends Request.Builder<ListInterceptionTargetPageRequest, Builder> {
         private String appName; 
         private Integer currentPage; 
-        private java.util.List < String > imageList; 
+        private java.util.List<String> imageList; 
         private String namespace; 
         private Integer pageSize; 
-        private java.util.List < String > tagList; 
+        private java.util.List<String> tagList; 
         private String targetName; 
         private String targetType; 
 
@@ -178,7 +183,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         /**
          * <p>The images of the network object.</p>
          */
-        public Builder imageList(java.util.List < String > imageList) {
+        public Builder imageList(java.util.List<String> imageList) {
             this.putQueryParameter("ImageList", imageList);
             this.imageList = imageList;
             return this;
@@ -214,7 +219,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         /**
          * <p>The labels specified for the network object.</p>
          */
-        public Builder tagList(java.util.List < String > tagList) {
+        public Builder tagList(java.util.List<String> tagList) {
             this.putQueryParameter("TagList", tagList);
             this.tagList = tagList;
             return this;

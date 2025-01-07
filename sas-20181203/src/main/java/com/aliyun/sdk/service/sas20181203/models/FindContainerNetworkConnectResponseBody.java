@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class FindContainerNetworkConnectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Connects")
-    private java.util.List < Connects> connects;
+    private java.util.List<Connects> connects;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     /**
      * @return connects
      */
-    public java.util.List < Connects> getConnects() {
+    public java.util.List<Connects> getConnects() {
         return this.connects;
     }
 
@@ -57,14 +62,14 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Connects> connects; 
+        private java.util.List<Connects> connects; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The information about the network connections.</p>
          */
-        public Builder connects(java.util.List < Connects> connects) {
+        public Builder connects(java.util.List<Connects> connects) {
             this.connects = connects;
             return this;
         }

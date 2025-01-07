@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,14 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ModifyResult.
+         * <p>Indicates whether the collection frequency of asset fingerprints is modified. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder modifyResult(Boolean modifyResult) {
             this.modifyResult = modifyResult;
@@ -58,7 +70,10 @@ public class ModifyPropertyScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0D1DF51-D879-55A8-B6C7-7D3B913EF34D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

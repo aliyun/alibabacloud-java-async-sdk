@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateFileProtectRemarkRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
-    private java.util.List < String > remark;
+    private java.util.List<String> remark;
 
     private UpdateFileProtectRemarkRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class UpdateFileProtectRemarkRequest extends Request {
     /**
      * @return remark
      */
-    public java.util.List < String > getRemark() {
+    public java.util.List<String> getRemark() {
         return this.remark;
     }
 
     public static final class Builder extends Request.Builder<UpdateFileProtectRemarkRequest, Builder> {
         private Long id; 
-        private java.util.List < String > remark; 
+        private java.util.List<String> remark; 
 
         private Builder() {
             super();
@@ -82,7 +87,7 @@ public class UpdateFileProtectRemarkRequest extends Request {
         /**
          * <p>The remarks.</p>
          */
-        public Builder remark(java.util.List < String > remark) {
+        public Builder remark(java.util.List<String> remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
             return this;

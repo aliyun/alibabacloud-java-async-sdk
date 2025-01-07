@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private DeleteBackupPolicyMachineRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
@@ -83,7 +88,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         private Long policyId; 
         private String policyVersion; 
         private String uuid; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -154,7 +159,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
          * <p>You must specify at least one of the <code>UuidList</code> and <code>Uuid</code> parameters.</p>
          * </blockquote>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListHoneypotProbeUuidResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -68,7 +73,7 @@ public class ListHoneypotProbeUuidResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -103,7 +108,7 @@ public class ListHoneypotProbeUuidResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class ListHoneypotProbeUuidResponseBody extends TeaModel {
         /**
          * <p>The resources of the probe.</p>
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }

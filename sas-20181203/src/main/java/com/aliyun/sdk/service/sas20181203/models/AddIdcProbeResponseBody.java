@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddIdcProbeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AddIdcProbeFailedList")
-    private java.util.List < AddIdcProbeFailedList> addIdcProbeFailedList;
+    private java.util.List<AddIdcProbeFailedList> addIdcProbeFailedList;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
@@ -38,7 +43,7 @@ public class AddIdcProbeResponseBody extends TeaModel {
     /**
      * @return addIdcProbeFailedList
      */
-    public java.util.List < AddIdcProbeFailedList> getAddIdcProbeFailedList() {
+    public java.util.List<AddIdcProbeFailedList> getAddIdcProbeFailedList() {
         return this.addIdcProbeFailedList;
     }
 
@@ -57,14 +62,14 @@ public class AddIdcProbeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AddIdcProbeFailedList> addIdcProbeFailedList; 
+        private java.util.List<AddIdcProbeFailedList> addIdcProbeFailedList; 
         private String count; 
         private String requestId; 
 
         /**
          * <p>The records of failure.</p>
          */
-        public Builder addIdcProbeFailedList(java.util.List < AddIdcProbeFailedList> addIdcProbeFailedList) {
+        public Builder addIdcProbeFailedList(java.util.List<AddIdcProbeFailedList> addIdcProbeFailedList) {
             this.addIdcProbeFailedList = addIdcProbeFailedList;
             return this;
         }

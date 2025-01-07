@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,10 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
         private VulStat vulStat; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,7 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * VulStat.
+         * <p>The statistics of the vulnerabilities.</p>
          */
         public Builder vulStat(VulStat vulStat) {
             this.vulStat = vulStat;
@@ -128,7 +136,10 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
             private String nntfCount; 
 
             /**
-             * AsapCount.
+             * <p>The number of high-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder asapCount(String asapCount) {
                 this.asapCount = asapCount;
@@ -136,7 +147,10 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * LaterCount.
+             * <p>The number of medium-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder laterCount(String laterCount) {
                 this.laterCount = laterCount;
@@ -144,7 +158,10 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NntfCount.
+             * <p>The number of low-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nntfCount(String nntfCount) {
                 this.nntfCount = nntfCount;

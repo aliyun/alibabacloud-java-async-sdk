@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("GroupedVulItems")
-    private java.util.List < GroupedVulItems> groupedVulItems;
+    private java.util.List<GroupedVulItems> groupedVulItems;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     /**
      * @return groupedVulItems
      */
-    public java.util.List < GroupedVulItems> getGroupedVulItems() {
+    public java.util.List<GroupedVulItems> getGroupedVulItems() {
         return this.groupedVulItems;
     }
 
@@ -80,7 +85,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < GroupedVulItems> groupedVulItems; 
+        private java.util.List<GroupedVulItems> groupedVulItems; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -99,7 +104,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         /**
          * <p>The information about the urgent vulnerabilities.</p>
          */
-        public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
+        public Builder groupedVulItems(java.util.List<GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
             return this;
         }

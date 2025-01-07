@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCheckStructureResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckStructureResponse")
-    private java.util.List < CheckStructureResponse> checkStructureResponse;
+    private java.util.List<CheckStructureResponse> checkStructureResponse;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
     /**
      * @return checkStructureResponse
      */
-    public java.util.List < CheckStructureResponse> getCheckStructureResponse() {
+    public java.util.List<CheckStructureResponse> getCheckStructureResponse() {
         return this.checkStructureResponse;
     }
 
@@ -46,13 +51,13 @@ public class GetCheckStructureResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckStructureResponse> checkStructureResponse; 
+        private java.util.List<CheckStructureResponse> checkStructureResponse; 
         private String requestId; 
 
         /**
          * <p>The structure information about check items provided by the configuration assessment feature.</p>
          */
-        public Builder checkStructureResponse(java.util.List < CheckStructureResponse> checkStructureResponse) {
+        public Builder checkStructureResponse(java.util.List<CheckStructureResponse> checkStructureResponse) {
             this.checkStructureResponse = checkStructureResponse;
             return this;
         }
@@ -158,7 +163,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Sections")
-        private java.util.List < Sections> sections;
+        private java.util.List<Sections> sections;
 
         @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
@@ -191,7 +196,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
         /**
          * @return sections
          */
-        public java.util.List < Sections> getSections() {
+        public java.util.List<Sections> getSections() {
             return this.sections;
         }
 
@@ -211,7 +216,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
-            private java.util.List < Sections> sections; 
+            private java.util.List<Sections> sections; 
             private String showName; 
             private Integer totalCheckCount; 
 
@@ -229,7 +234,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
             /**
              * <p>The information about the sections of check items.</p>
              */
-            public Builder sections(java.util.List < Sections> sections) {
+            public Builder sections(java.util.List<Sections> sections) {
                 this.sections = sections;
                 return this;
             }
@@ -274,7 +279,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Requirements")
-        private java.util.List < Requirements> requirements;
+        private java.util.List<Requirements> requirements;
 
         @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
@@ -307,7 +312,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
         /**
          * @return requirements
          */
-        public java.util.List < Requirements> getRequirements() {
+        public java.util.List<Requirements> getRequirements() {
             return this.requirements;
         }
 
@@ -327,7 +332,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
-            private java.util.List < Requirements> requirements; 
+            private java.util.List<Requirements> requirements; 
             private String showName; 
             private String type; 
 
@@ -345,7 +350,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
             /**
              * <p>The standards of the check items.</p>
              */
-            public Builder requirements(java.util.List < Requirements> requirements) {
+            public Builder requirements(java.util.List<Requirements> requirements) {
                 this.requirements = requirements;
                 return this;
             }
@@ -395,7 +400,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
         private String standardType;
 
         @com.aliyun.core.annotation.NameInMap("Standards")
-        private java.util.List < Standards> standards;
+        private java.util.List<Standards> standards;
 
         private CheckStructureResponse(Builder builder) {
             this.standardType = builder.standardType;
@@ -420,13 +425,13 @@ public class GetCheckStructureResponseBody extends TeaModel {
         /**
          * @return standards
          */
-        public java.util.List < Standards> getStandards() {
+        public java.util.List<Standards> getStandards() {
             return this.standards;
         }
 
         public static final class Builder {
             private String standardType; 
-            private java.util.List < Standards> standards; 
+            private java.util.List<Standards> standards; 
 
             /**
              * <p>The type of the check item.</p>
@@ -447,7 +452,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
             /**
              * <p>The structure information about the check items of the business type.</p>
              */
-            public Builder standards(java.util.List < Standards> standards) {
+            public Builder standards(java.util.List<Standards> standards) {
                 this.standards = standards;
                 return this;
             }

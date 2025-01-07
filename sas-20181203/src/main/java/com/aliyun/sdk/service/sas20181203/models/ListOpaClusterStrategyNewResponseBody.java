@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -68,7 +73,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -103,7 +108,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         /**
          * <p>The rules.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -204,16 +209,16 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         private Integer clusterCount;
 
         @com.aliyun.core.annotation.NameInMap("ClusterIdList")
-        private java.util.List < String > clusterIdList;
+        private java.util.List<String> clusterIdList;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("ImageName")
-        private java.util.List < String > imageName;
+        private java.util.List<String> imageName;
 
         @com.aliyun.core.annotation.NameInMap("Label")
-        private java.util.List < String > label;
+        private java.util.List<String> label;
 
         @com.aliyun.core.annotation.NameInMap("MaliciousImage")
         private Boolean maliciousImage;
@@ -265,7 +270,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         /**
          * @return clusterIdList
          */
-        public java.util.List < String > getClusterIdList() {
+        public java.util.List<String> getClusterIdList() {
             return this.clusterIdList;
         }
 
@@ -279,14 +284,14 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         /**
          * @return imageName
          */
-        public java.util.List < String > getImageName() {
+        public java.util.List<String> getImageName() {
             return this.imageName;
         }
 
         /**
          * @return label
          */
-        public java.util.List < String > getLabel() {
+        public java.util.List<String> getLabel() {
             return this.label;
         }
 
@@ -321,10 +326,10 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
         public static final class Builder {
             private Integer action; 
             private Integer clusterCount; 
-            private java.util.List < String > clusterIdList; 
+            private java.util.List<String> clusterIdList; 
             private String description; 
-            private java.util.List < String > imageName; 
-            private java.util.List < String > label; 
+            private java.util.List<String> imageName; 
+            private java.util.List<String> label; 
             private Boolean maliciousImage; 
             private Long strategyId; 
             private String strategyName; 
@@ -360,7 +365,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             /**
              * <p>The clusters on which the rule takes effect.</p>
              */
-            public Builder clusterIdList(java.util.List < String > clusterIdList) {
+            public Builder clusterIdList(java.util.List<String> clusterIdList) {
                 this.clusterIdList = clusterIdList;
                 return this;
             }
@@ -379,7 +384,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             /**
              * <p>The image names.</p>
              */
-            public Builder imageName(java.util.List < String > imageName) {
+            public Builder imageName(java.util.List<String> imageName) {
                 this.imageName = imageName;
                 return this;
             }
@@ -387,7 +392,7 @@ public class ListOpaClusterStrategyNewResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the container.</p>
              */
-            public Builder label(java.util.List < String > label) {
+            public Builder label(java.util.List<String> label) {
                 this.label = label;
                 return this;
             }

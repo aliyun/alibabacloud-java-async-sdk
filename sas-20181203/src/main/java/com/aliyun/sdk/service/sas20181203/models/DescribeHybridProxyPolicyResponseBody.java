@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("PolicyList")
-    private java.util.List < PolicyList> policyList;
+    private java.util.List<PolicyList> policyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
     /**
      * @return policyList
      */
-    public java.util.List < PolicyList> getPolicyList() {
+    public java.util.List<PolicyList> getPolicyList() {
         return this.policyList;
     }
 
@@ -58,11 +63,14 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < PolicyList> policyList; 
+        private java.util.List<PolicyList> policyList; 
         private String requestId; 
 
         /**
-         * Count.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,15 +78,18 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyList.
+         * <p>The data collection configurations of the proxy cluster.</p>
          */
-        public Builder policyList(java.util.List < PolicyList> policyList) {
+        public Builder policyList(java.util.List<PolicyList> policyList) {
             this.policyList = policyList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7A1B40A-7EED-55A0-BCBC-2F83A486F0AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,7 +159,10 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Config.
+             * <p>The value of the policy configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -156,7 +170,10 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file. After you configure a blocking policy, the blocked data is written to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -164,7 +181,15 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the policy that you configured. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong></li>
+             * <li><strong>net</strong></li>
+             * <li><strong>process</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -186,7 +211,7 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
      */
     public static class PolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Info")
-        private java.util.List < Info> info;
+        private java.util.List<Info> info;
 
         @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
@@ -207,7 +232,7 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         /**
          * @return info
          */
-        public java.util.List < Info> getInfo() {
+        public java.util.List<Info> getInfo() {
             return this.info;
         }
 
@@ -219,19 +244,26 @@ public class DescribeHybridProxyPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Info> info; 
+            private java.util.List<Info> info; 
             private String policyType; 
 
             /**
-             * Info.
+             * <p>The information about the policy.</p>
              */
-            public Builder info(java.util.List < Info> info) {
+            public Builder info(java.util.List<Info> info) {
                 this.info = info;
                 return this;
             }
 
             /**
-             * PolicyType.
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>limitFrequency</strong></li>
+             * <li><strong>limitBandWidth</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>limitBandWidth</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

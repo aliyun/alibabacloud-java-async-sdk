@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -350,7 +355,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
      */
     public static class PushTaskRsp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushTaskResultList")
-        private java.util.List < PushTaskResultList> pushTaskResultList;
+        private java.util.List<PushTaskResultList> pushTaskResultList;
 
         private PushTaskRsp(Builder builder) {
             this.pushTaskResultList = builder.pushTaskResultList;
@@ -367,17 +372,17 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         /**
          * @return pushTaskResultList
          */
-        public java.util.List < PushTaskResultList> getPushTaskResultList() {
+        public java.util.List<PushTaskResultList> getPushTaskResultList() {
             return this.pushTaskResultList;
         }
 
         public static final class Builder {
-            private java.util.List < PushTaskResultList> pushTaskResultList; 
+            private java.util.List<PushTaskResultList> pushTaskResultList; 
 
             /**
              * <p>An array consisting of the servers on which security check tasks failed.</p>
              */
-            public Builder pushTaskResultList(java.util.List < PushTaskResultList> pushTaskResultList) {
+            public Builder pushTaskResultList(java.util.List<PushTaskResultList> pushTaskResultList) {
                 this.pushTaskResultList = pushTaskResultList;
                 return this;
             }

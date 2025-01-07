@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VulList")
-    private java.util.List < VulList> vulList;
+    private java.util.List<VulList> vulList;
 
     private DescribeDomainSecureVulListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,17 +57,20 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
     /**
      * @return vulList
      */
-    public java.util.List < VulList> getVulList() {
+    public java.util.List<VulList> getVulList() {
         return this.vulList;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VulList> vulList; 
+        private java.util.List<VulList> vulList; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +78,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of vulnerabilities returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -78,9 +89,9 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
         }
 
         /**
-         * VulList.
+         * <p>The domain name-related vulnerabilities.</p>
          */
-        public Builder vulList(java.util.List < VulList> vulList) {
+        public Builder vulList(java.util.List<VulList> vulList) {
             this.vulList = vulList;
             return this;
         }
@@ -220,7 +231,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AliasName.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CESA-2023:3555: python Security Update</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -228,7 +242,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * AsapCount.
+             * <p>The number of the vulnerabilities that have the <strong>high</strong> priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -236,7 +253,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtLast.
+             * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639371446000</p>
              */
             public Builder gmtLast(Long gmtLast) {
                 this.gmtLast = gmtLast;
@@ -244,7 +264,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * HandledCount.
+             * <p>The number of handled vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder handledCount(Integer handledCount) {
                 this.handledCount = handledCount;
@@ -252,7 +275,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * LaterCount.
+             * <p>The number of the vulnerabilities that have the <strong>medium</strong> priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -260,7 +286,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oval:com.redhat.rhsa:def:20170574</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -268,7 +297,10 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * NntfCount.
+             * <p>The number of the vulnerabilities that have the <strong>low</strong> priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -276,7 +308,18 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag that is added to the vulnerability. Valid values:</p>
+             * <ul>
+             * <li>Restart required</li>
+             * <li>Remote utilization</li>
+             * <li>EXP exists</li>
+             * <li>Available</li>
+             * <li>Elevation of Privilege</li>
+             * <li>Code Execution</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Code Execution</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -284,7 +327,17 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the vulnerability. Default value: cve. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerability.</li>
+             * <li><strong>sys</strong>: Windows system vulnerability.</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+             * <li><strong>app</strong>: application vulnerability that is detected by network scanning.</li>
+             * <li><strong>sca</strong>: application vulnerability that is detected by using software component analysis.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder type(String type) {
                 this.type = type;

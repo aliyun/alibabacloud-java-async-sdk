@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeChartListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ChartList")
-    private java.util.List < ChartList> chartList;
+    private java.util.List<ChartList> chartList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeChartListResponseBody extends TeaModel {
     /**
      * @return chartList
      */
-    public java.util.List < ChartList> getChartList() {
+    public java.util.List<ChartList> getChartList() {
         return this.chartList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeChartListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ChartList> chartList; 
+        private java.util.List<ChartList> chartList; 
         private String requestId; 
 
         /**
          * <p>The charts.</p>
          */
-        public Builder chartList(java.util.List < ChartList> chartList) {
+        public Builder chartList(java.util.List<ChartList> chartList) {
             this.chartList = chartList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StatisticsDetails")
-    private java.util.List < StatisticsDetails> statisticsDetails;
+    private java.util.List<StatisticsDetails> statisticsDetails;
 
     private DescribeExposedStatisticsDetailResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     /**
      * @return statisticsDetails
      */
-    public java.util.List < StatisticsDetails> getStatisticsDetails() {
+    public java.util.List<StatisticsDetails> getStatisticsDetails() {
         return this.statisticsDetails;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < StatisticsDetails> statisticsDetails; 
+        private java.util.List<StatisticsDetails> statisticsDetails; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the gateway assets, ports, system components, or public IP addresses that are exposed on the Internet and are returned.</p>
          */
-        public Builder statisticsDetails(java.util.List < StatisticsDetails> statisticsDetails) {
+        public Builder statisticsDetails(java.util.List<StatisticsDetails> statisticsDetails) {
             this.statisticsDetails = statisticsDetails;
             return this;
         }

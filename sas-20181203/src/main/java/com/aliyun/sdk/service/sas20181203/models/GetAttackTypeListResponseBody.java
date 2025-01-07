@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAttackTypeListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AttackTypeList")
-    private java.util.List < AttackTypeList> attackTypeList;
+    private java.util.List<AttackTypeList> attackTypeList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetAttackTypeListResponseBody extends TeaModel {
     /**
      * @return attackTypeList
      */
-    public java.util.List < AttackTypeList> getAttackTypeList() {
+    public java.util.List<AttackTypeList> getAttackTypeList() {
         return this.attackTypeList;
     }
 
@@ -46,19 +51,22 @@ public class GetAttackTypeListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttackTypeList> attackTypeList; 
+        private java.util.List<AttackTypeList> attackTypeList; 
         private String requestId; 
 
         /**
-         * AttackTypeList.
+         * <p>The attack types.</p>
          */
-        public Builder attackTypeList(java.util.List < AttackTypeList> attackTypeList) {
+        public Builder attackTypeList(java.util.List<AttackTypeList> attackTypeList) {
             this.attackTypeList = attackTypeList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Label.
+             * <p>The description of the attack type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas.attack.type.type12</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -136,7 +147,15 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             }
 
             /**
-             * Status_Type.
+             * <p>The attack source. Valid values:</p>
+             * <ul>
+             * <li><strong>cfw</strong>: Cloud Firewall</li>
+             * <li><strong>alinet</strong>: network defense plug-in</li>
+             * <li><strong>waf</strong>: Web Application Firewall (WAF)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alinet</p>
              */
             public Builder statusType(String statusType) {
                 this.statusType = statusType;
@@ -144,7 +163,10 @@ public class GetAttackTypeListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the attack type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>upload</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("Propertys")
-    private java.util.List < Propertys> propertys;
+    private java.util.List<Propertys> propertys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
     /**
      * @return propertys
      */
-    public java.util.List < Propertys> getPropertys() {
+    public java.util.List<Propertys> getPropertys() {
         return this.propertys;
     }
 
@@ -58,7 +63,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < Propertys> propertys; 
+        private java.util.List<Propertys> propertys; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         /**
          * <p>The details of the software asset.</p>
          */
-        public Builder propertys(java.util.List < Propertys> propertys) {
+        public Builder propertys(java.util.List<Propertys> propertys) {
             this.propertys = propertys;
             return this;
         }

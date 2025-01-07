@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListCloudAssetInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAssetTypes")
-    private java.util.List < CloudAssetTypes> cloudAssetTypes;
+    private java.util.List<CloudAssetTypes> cloudAssetTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Criteria")
@@ -63,7 +68,7 @@ public class ListCloudAssetInstancesRequest extends Request {
     /**
      * @return cloudAssetTypes
      */
-    public java.util.List < CloudAssetTypes> getCloudAssetTypes() {
+    public java.util.List<CloudAssetTypes> getCloudAssetTypes() {
         return this.cloudAssetTypes;
     }
 
@@ -103,7 +108,7 @@ public class ListCloudAssetInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCloudAssetInstancesRequest, Builder> {
-        private java.util.List < CloudAssetTypes> cloudAssetTypes; 
+        private java.util.List<CloudAssetTypes> cloudAssetTypes; 
         private String criteria; 
         private Integer currentPage; 
         private String logicalExp; 
@@ -127,7 +132,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         /**
          * <p>The details of the cloud asset.</p>
          */
-        public Builder cloudAssetTypes(java.util.List < CloudAssetTypes> cloudAssetTypes) {
+        public Builder cloudAssetTypes(java.util.List<CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
             this.cloudAssetTypes = cloudAssetTypes;
             return this;

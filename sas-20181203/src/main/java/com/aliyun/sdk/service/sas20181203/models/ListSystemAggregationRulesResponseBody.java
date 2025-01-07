@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSystemAggregationRulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AggregationList")
-    private java.util.List < AggregationList> aggregationList;
+    private java.util.List<AggregationList> aggregationList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
     /**
      * @return aggregationList
      */
-    public java.util.List < AggregationList> getAggregationList() {
+    public java.util.List<AggregationList> getAggregationList() {
         return this.aggregationList;
     }
 
@@ -57,14 +62,14 @@ public class ListSystemAggregationRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AggregationList> aggregationList; 
+        private java.util.List<AggregationList> aggregationList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the details about the aggregation types.</p>
          */
-        public Builder aggregationList(java.util.List < AggregationList> aggregationList) {
+        public Builder aggregationList(java.util.List<AggregationList> aggregationList) {
             this.aggregationList = aggregationList;
             return this;
         }

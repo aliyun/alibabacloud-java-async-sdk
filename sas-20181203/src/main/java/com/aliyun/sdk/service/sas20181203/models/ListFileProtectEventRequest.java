@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListFileProtectEventRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertLevels")
-    private java.util.List < Integer > alertLevels;
+    private java.util.List<Integer> alertLevels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -98,7 +103,7 @@ public class ListFileProtectEventRequest extends Request {
     /**
      * @return alertLevels
      */
-    public java.util.List < Integer > getAlertLevels() {
+    public java.util.List<Integer> getAlertLevels() {
         return this.alertLevels;
     }
 
@@ -187,7 +192,7 @@ public class ListFileProtectEventRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListFileProtectEventRequest, Builder> {
-        private java.util.List < Integer > alertLevels; 
+        private java.util.List<Integer> alertLevels; 
         private Integer currentPage; 
         private Long endTime; 
         private String instanceId; 
@@ -225,7 +230,7 @@ public class ListFileProtectEventRequest extends Request {
         /**
          * <p>The severities of alerts.</p>
          */
-        public Builder alertLevels(java.util.List < Integer > alertLevels) {
+        public Builder alertLevels(java.util.List<Integer> alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
             this.alertLevels = alertLevels;
             return this;

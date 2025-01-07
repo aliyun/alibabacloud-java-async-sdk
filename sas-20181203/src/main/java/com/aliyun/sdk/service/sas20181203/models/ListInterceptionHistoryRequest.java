@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ListInterceptionHistoryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InterceptionTypes")
-    private java.util.List < Integer > interceptionTypes;
+    private java.util.List<Integer> interceptionTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -100,7 +105,7 @@ public class ListInterceptionHistoryRequest extends Request {
     /**
      * @return interceptionTypes
      */
-    public java.util.List < Integer > getInterceptionTypes() {
+    public java.util.List<Integer> getInterceptionTypes() {
         return this.interceptionTypes;
     }
 
@@ -130,7 +135,7 @@ public class ListInterceptionHistoryRequest extends Request {
         private Integer currentPage; 
         private Long endTime; 
         private String historyName; 
-        private java.util.List < Integer > interceptionTypes; 
+        private java.util.List<Integer> interceptionTypes; 
         private String lang; 
         private Integer pageSize; 
         private Long startTime; 
@@ -202,7 +207,7 @@ public class ListInterceptionHistoryRequest extends Request {
         /**
          * <p>The types of exceptions.</p>
          */
-        public Builder interceptionTypes(java.util.List < Integer > interceptionTypes) {
+        public Builder interceptionTypes(java.util.List<Integer> interceptionTypes) {
             this.putQueryParameter("InterceptionTypes", interceptionTypes);
             this.interceptionTypes = interceptionTypes;
             return this;

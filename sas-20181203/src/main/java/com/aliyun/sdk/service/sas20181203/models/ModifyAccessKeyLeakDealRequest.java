@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdList")
-    private java.util.List < Long > idList;
+    private java.util.List<Long> idList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
@@ -60,7 +65,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
     /**
      * @return idList
      */
-    public java.util.List < Long > getIdList() {
+    public java.util.List<Long> getIdList() {
         return this.idList;
     }
 
@@ -80,7 +85,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyAccessKeyLeakDealRequest, Builder> {
         private Long id; 
-        private java.util.List < Long > idList; 
+        private java.util.List<Long> idList; 
         private String remark; 
         private String type; 
 
@@ -114,7 +119,7 @@ public class ModifyAccessKeyLeakDealRequest extends Request {
         /**
          * <p>The IDs of AccessKey pair leaks.</p>
          */
-        public Builder idList(java.util.List < Long > idList) {
+        public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
             this.idList = idList;
             return this;

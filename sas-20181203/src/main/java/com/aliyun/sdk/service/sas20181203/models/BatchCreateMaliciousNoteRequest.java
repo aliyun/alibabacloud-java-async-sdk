@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BatchCreateMaliciousNoteRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageMaliciousFileList")
-    private java.util.List < ImageMaliciousFileList> imageMaliciousFileList;
+    private java.util.List<ImageMaliciousFileList> imageMaliciousFileList;
 
     private BatchCreateMaliciousNoteRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class BatchCreateMaliciousNoteRequest extends Request {
     /**
      * @return imageMaliciousFileList
      */
-    public java.util.List < ImageMaliciousFileList> getImageMaliciousFileList() {
+    public java.util.List<ImageMaliciousFileList> getImageMaliciousFileList() {
         return this.imageMaliciousFileList;
     }
 
     public static final class Builder extends Request.Builder<BatchCreateMaliciousNoteRequest, Builder> {
-        private java.util.List < ImageMaliciousFileList> imageMaliciousFileList; 
+        private java.util.List<ImageMaliciousFileList> imageMaliciousFileList; 
 
         private Builder() {
             super();
@@ -54,9 +59,9 @@ public class BatchCreateMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * ImageMaliciousFileList.
+         * <p>The batches.</p>
          */
-        public Builder imageMaliciousFileList(java.util.List < ImageMaliciousFileList> imageMaliciousFileList) {
+        public Builder imageMaliciousFileList(java.util.List<ImageMaliciousFileList> imageMaliciousFileList) {
             this.putQueryParameter("ImageMaliciousFileList", imageMaliciousFileList);
             this.imageMaliciousFileList = imageMaliciousFileList;
             return this;
@@ -114,7 +119,13 @@ public class BatchCreateMaliciousNoteRequest extends Request {
             private String note; 
 
             /**
-             * EventId.
+             * <p>The ID of the alert.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the alert IDs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -122,7 +133,10 @@ public class BatchCreateMaliciousNoteRequest extends Request {
             }
 
             /**
-             * Note.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Malware sample</p>
              */
             public Builder note(String note) {
                 this.note = note;

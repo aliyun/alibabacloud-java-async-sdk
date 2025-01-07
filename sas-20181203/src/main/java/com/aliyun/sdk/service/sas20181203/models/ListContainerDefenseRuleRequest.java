@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListContainerDefenseRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < Conditions> conditions;
+    private java.util.List<Conditions> conditions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -62,7 +67,7 @@ public class ListContainerDefenseRuleRequest extends Request {
     /**
      * @return conditions
      */
-    public java.util.List < Conditions> getConditions() {
+    public java.util.List<Conditions> getConditions() {
         return this.conditions;
     }
 
@@ -102,7 +107,7 @@ public class ListContainerDefenseRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListContainerDefenseRuleRequest, Builder> {
-        private java.util.List < Conditions> conditions; 
+        private java.util.List<Conditions> conditions; 
         private Integer currentPage; 
         private Integer isDefaultRule; 
         private String lang; 
@@ -126,7 +131,7 @@ public class ListContainerDefenseRuleRequest extends Request {
         /**
          * <p>The details of the condition.</p>
          */
-        public Builder conditions(java.util.List < Conditions> conditions) {
+        public Builder conditions(java.util.List<Conditions> conditions) {
             this.putQueryParameter("Conditions", conditions);
             this.conditions = conditions;
             return this;

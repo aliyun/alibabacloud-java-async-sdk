@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,7 +93,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         private String targetDefault;
 
         @com.aliyun.core.annotation.NameInMap("TargetList")
-        private java.util.List < String > targetList;
+        private java.util.List<String> targetList;
 
         @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
@@ -133,7 +138,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         /**
          * @return targetList
          */
-        public java.util.List < String > getTargetList() {
+        public java.util.List<String> getTargetList() {
             return this.targetList;
         }
 
@@ -161,7 +166,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
         public static final class Builder {
             private String flag; 
             private String targetDefault; 
-            private java.util.List < String > targetList; 
+            private java.util.List<String> targetList; 
             private String targetType; 
             private String totalCount; 
             private String type; 
@@ -198,7 +203,7 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
              * <p> If <strong>uuid</strong> is returned for the <strong>TargetType</strong> parameter, <strong>UUIDs</strong> of the servers are returned. If <strong>groupId</strong> is returned for the <strong>TargetType</strong> parameter, IDs of the server groups are returned.</p>
              * </blockquote>
              */
-            public Builder targetList(java.util.List < String > targetList) {
+            public Builder targetList(java.util.List<String> targetList) {
                 this.targetList = targetList;
                 return this;
             }

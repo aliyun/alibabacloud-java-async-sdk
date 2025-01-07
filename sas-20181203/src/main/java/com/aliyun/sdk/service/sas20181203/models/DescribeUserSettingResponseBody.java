@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserSettingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertLevels")
-    private java.util.List < String > alertLevels;
+    private java.util.List<String> alertLevels;
 
     @com.aliyun.core.annotation.NameInMap("InvalidWarningKeepDays")
     private Integer invalidWarningKeepDays;
@@ -38,7 +43,7 @@ public class DescribeUserSettingResponseBody extends TeaModel {
     /**
      * @return alertLevels
      */
-    public java.util.List < String > getAlertLevels() {
+    public java.util.List<String> getAlertLevels() {
         return this.alertLevels;
     }
 
@@ -57,14 +62,14 @@ public class DescribeUserSettingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > alertLevels; 
+        private java.util.List<String> alertLevels; 
         private Integer invalidWarningKeepDays; 
         private String requestId; 
 
         /**
          * <p>The severities of alerts. If this parameter is empty, no custom alerts are generated.</p>
          */
-        public Builder alertLevels(java.util.List < String > alertLevels) {
+        public Builder alertLevels(java.util.List<String> alertLevels) {
             this.alertLevels = alertLevels;
             return this;
         }

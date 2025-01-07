@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstallCodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstallCodes")
-    private java.util.List < InstallCodes> installCodes;
+    private java.util.List<InstallCodes> installCodes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     /**
      * @return installCodes
      */
-    public java.util.List < InstallCodes> getInstallCodes() {
+    public java.util.List<InstallCodes> getInstallCodes() {
         return this.installCodes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstallCodes> installCodes; 
+        private java.util.List<InstallCodes> installCodes; 
         private String requestId; 
 
         /**
          * <p>The information about the installation commands.</p>
          */
-        public Builder installCodes(java.util.List < InstallCodes> installCodes) {
+        public Builder installCodes(java.util.List<InstallCodes> installCodes) {
             this.installCodes = installCodes;
             return this;
         }
@@ -99,6 +104,9 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateLinkEndpointId")
+        private Long privateLinkEndpointId;
+
         @com.aliyun.core.annotation.NameInMap("ProxyCluster")
         private String proxyCluster;
 
@@ -112,6 +120,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.onlyImage = builder.onlyImage;
             this.os = builder.os;
+            this.privateLinkEndpointId = builder.privateLinkEndpointId;
             this.proxyCluster = builder.proxyCluster;
             this.vendorName = builder.vendorName;
         }
@@ -167,6 +176,13 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateLinkEndpointId
+         */
+        public Long getPrivateLinkEndpointId() {
+            return this.privateLinkEndpointId;
+        }
+
+        /**
          * @return proxyCluster
          */
         public String getProxyCluster() {
@@ -187,6 +203,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private String groupName; 
             private Boolean onlyImage; 
             private String os; 
+            private Long privateLinkEndpointId; 
             private String proxyCluster; 
             private String vendorName; 
 
@@ -261,6 +278,17 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
              */
             public Builder os(String os) {
                 this.os = os;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the PrivateLink endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
+             */
+            public Builder privateLinkEndpointId(Long privateLinkEndpointId) {
+                this.privateLinkEndpointId = privateLinkEndpointId;
                 return this;
             }
 

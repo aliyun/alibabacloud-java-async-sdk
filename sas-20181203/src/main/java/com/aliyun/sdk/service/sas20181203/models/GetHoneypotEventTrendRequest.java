@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetHoneypotEventTrendRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    private java.util.List<String> riskLevelList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcIp")
@@ -72,7 +77,7 @@ public class GetHoneypotEventTrendRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -93,7 +98,7 @@ public class GetHoneypotEventTrendRequest extends Request {
     public static final class Builder extends Request.Builder<GetHoneypotEventTrendRequest, Builder> {
         private Long endTimeStamp; 
         private String lang; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
         private Long startTimeStamp; 
 
@@ -141,7 +146,7 @@ public class GetHoneypotEventTrendRequest extends Request {
         /**
          * <p>The risk levels of the alert events.</p>
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomConfigs")
-    private java.util.List < CustomConfigs> customConfigs;
+    private java.util.List<CustomConfigs> customConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -26,7 +31,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepairConfigs")
-    private java.util.List < RepairConfigs> repairConfigs;
+    private java.util.List<RepairConfigs> repairConfigs;
 
     private ChangeCheckCustomConfigRequest(Builder builder) {
         super(builder);
@@ -59,7 +64,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
     /**
      * @return customConfigs
      */
-    public java.util.List < CustomConfigs> getCustomConfigs() {
+    public java.util.List<CustomConfigs> getCustomConfigs() {
         return this.customConfigs;
     }
 
@@ -73,15 +78,15 @@ public class ChangeCheckCustomConfigRequest extends Request {
     /**
      * @return repairConfigs
      */
-    public java.util.List < RepairConfigs> getRepairConfigs() {
+    public java.util.List<RepairConfigs> getRepairConfigs() {
         return this.repairConfigs;
     }
 
     public static final class Builder extends Request.Builder<ChangeCheckCustomConfigRequest, Builder> {
         private Long checkId; 
-        private java.util.List < CustomConfigs> customConfigs; 
+        private java.util.List<CustomConfigs> customConfigs; 
         private String regionId; 
-        private java.util.List < RepairConfigs> repairConfigs; 
+        private java.util.List<RepairConfigs> repairConfigs; 
 
         private Builder() {
             super();
@@ -113,7 +118,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         /**
          * <p>The custom configuration items of the check item.</p>
          */
-        public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
+        public Builder customConfigs(java.util.List<CustomConfigs> customConfigs) {
             this.putQueryParameter("CustomConfigs", customConfigs);
             this.customConfigs = customConfigs;
             return this;
@@ -138,7 +143,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         /**
          * <p>The parameters required for fixing risk items.</p>
          */
-        public Builder repairConfigs(java.util.List < RepairConfigs> repairConfigs) {
+        public Builder repairConfigs(java.util.List<RepairConfigs> repairConfigs) {
             this.putQueryParameter("RepairConfigs", repairConfigs);
             this.repairConfigs = repairConfigs;
             return this;

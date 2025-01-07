@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,12 +24,12 @@ public class UpdateFileProtectRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileOps")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > fileOps;
+    private java.util.List<String> fileOps;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilePaths")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > filePaths;
+    private java.util.List<String> filePaths;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -33,7 +38,7 @@ public class UpdateFileProtectRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcPaths")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > procPaths;
+    private java.util.List<String> procPaths;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleAction")
@@ -83,14 +88,14 @@ public class UpdateFileProtectRuleRequest extends Request {
     /**
      * @return fileOps
      */
-    public java.util.List < String > getFileOps() {
+    public java.util.List<String> getFileOps() {
         return this.fileOps;
     }
 
     /**
      * @return filePaths
      */
-    public java.util.List < String > getFilePaths() {
+    public java.util.List<String> getFilePaths() {
         return this.filePaths;
     }
 
@@ -104,7 +109,7 @@ public class UpdateFileProtectRuleRequest extends Request {
     /**
      * @return procPaths
      */
-    public java.util.List < String > getProcPaths() {
+    public java.util.List<String> getProcPaths() {
         return this.procPaths;
     }
 
@@ -131,10 +136,10 @@ public class UpdateFileProtectRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateFileProtectRuleRequest, Builder> {
         private Integer alertLevel; 
-        private java.util.List < String > fileOps; 
-        private java.util.List < String > filePaths; 
+        private java.util.List<String> fileOps; 
+        private java.util.List<String> filePaths; 
         private Long id; 
-        private java.util.List < String > procPaths; 
+        private java.util.List<String> procPaths; 
         private String ruleAction; 
         private String ruleName; 
         private Integer status; 
@@ -177,7 +182,7 @@ public class UpdateFileProtectRuleRequest extends Request {
          * <p>The operations that you want to perform on the files.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder fileOps(java.util.List < String > fileOps) {
+        public Builder fileOps(java.util.List<String> fileOps) {
             this.putQueryParameter("FileOps", fileOps);
             this.fileOps = fileOps;
             return this;
@@ -187,7 +192,7 @@ public class UpdateFileProtectRuleRequest extends Request {
          * <p>The paths to the monitored files. Wildcard characters are supported.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder filePaths(java.util.List < String > filePaths) {
+        public Builder filePaths(java.util.List<String> filePaths) {
             this.putQueryParameter("FilePaths", filePaths);
             this.filePaths = filePaths;
             return this;
@@ -209,7 +214,7 @@ public class UpdateFileProtectRuleRequest extends Request {
          * <p>The paths to the monitored processes.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder procPaths(java.util.List < String > procPaths) {
+        public Builder procPaths(java.util.List<String> procPaths) {
             this.putQueryParameter("ProcPaths", procPaths);
             this.procPaths = procPaths;
             return this;

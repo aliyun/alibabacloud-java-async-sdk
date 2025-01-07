@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>843E4805-****-7EE12FA8DBFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +124,17 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
             private Boolean pass; 
 
             /**
-             * ModuleName.
+             * <p>The name of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>Ransom</strong>: The anti-ransomware policy is enabled.</li>
+             * <li><strong>WebLock</strong>: The web tamper proofing feature is enabled.</li>
+             * <li><strong>Rasp</strong>: Applications are added to the application protection feature.</li>
+             * <li><strong>Image</strong>: The container images that can be scanned are specified.</li>
+             * <li><strong>Virus</strong>: The periodic virus scan policy is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ransom</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -124,7 +142,14 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Pass.
+             * <p>Indicates whether the service module passed the status check. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pass(Boolean pass) {
                 this.pass = pass;
@@ -146,7 +171,7 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleConfigResults")
-        private java.util.List < ModuleConfigResults> moduleConfigResults;
+        private java.util.List<ModuleConfigResults> moduleConfigResults;
 
         private Data(Builder builder) {
             this.moduleConfigResults = builder.moduleConfigResults;
@@ -163,17 +188,17 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         /**
          * @return moduleConfigResults
          */
-        public java.util.List < ModuleConfigResults> getModuleConfigResults() {
+        public java.util.List<ModuleConfigResults> getModuleConfigResults() {
             return this.moduleConfigResults;
         }
 
         public static final class Builder {
-            private java.util.List < ModuleConfigResults> moduleConfigResults; 
+            private java.util.List<ModuleConfigResults> moduleConfigResults; 
 
             /**
-             * ModuleConfigResults.
+             * <p>The check results of the service modules.</p>
              */
-            public Builder moduleConfigResults(java.util.List < ModuleConfigResults> moduleConfigResults) {
+            public Builder moduleConfigResults(java.util.List<ModuleConfigResults> moduleConfigResults) {
                 this.moduleConfigResults = moduleConfigResults;
                 return this;
             }

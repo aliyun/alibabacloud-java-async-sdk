@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -124,7 +129,10 @@ public class DescribeImageBuildRiskByKeyRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,7 +141,10 @@ public class DescribeImageBuildRiskByKeyRequest extends Request {
         }
 
         /**
-         * ImageUuid.
+         * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a910053dd4710173ecc9e9d8931f****</p>
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -142,7 +153,14 @@ public class DescribeImageBuildRiskByKeyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +169,13 @@ public class DescribeImageBuildRiskByKeyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +184,13 @@ public class DescribeImageBuildRiskByKeyRequest extends Request {
         }
 
         /**
-         * RiskKey.
+         * <p>The key of the risk rule. </p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeImageBuildRiskList~~">DescribeImageBuildRiskList</a> operation to obtain the value of <strong>RiskKey</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>no_user</p>
          */
         public Builder riskKey(String riskKey) {
             this.putQueryParameter("RiskKey", riskKey);
@@ -169,7 +199,15 @@ public class DescribeImageBuildRiskByKeyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the alert event. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled.</li>
+         * <li><strong>1</strong>: ignored.</li>
+         * <li><strong>2</strong>: false positive.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

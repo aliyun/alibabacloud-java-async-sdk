@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPrivateK8sResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PrivateK8sInfos")
-    private java.util.List < PrivateK8sInfos> privateK8sInfos;
+    private java.util.List<PrivateK8sInfos> privateK8sInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPrivateK8sResponseBody extends TeaModel {
     /**
      * @return privateK8sInfos
      */
-    public java.util.List < PrivateK8sInfos> getPrivateK8sInfos() {
+    public java.util.List<PrivateK8sInfos> getPrivateK8sInfos() {
         return this.privateK8sInfos;
     }
 
@@ -46,19 +51,22 @@ public class ListPrivateK8sResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PrivateK8sInfos> privateK8sInfos; 
+        private java.util.List<PrivateK8sInfos> privateK8sInfos; 
         private String requestId; 
 
         /**
-         * PrivateK8sInfos.
+         * <p>The information about the self-managed Kubernetes clusters.</p>
          */
-        public Builder privateK8sInfos(java.util.List < PrivateK8sInfos> privateK8sInfos) {
+        public Builder privateK8sInfos(java.util.List<PrivateK8sInfos> privateK8sInfos) {
             this.privateK8sInfos = privateK8sInfos;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52870893-48A7-5A9E-9E05-6253E5B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -200,7 +208,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -208,7 +219,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * ApiServerIp.
+             * <p>The IP address of the API server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder apiServerIp(String apiServerIp) {
                 this.apiServerIp = apiServerIp;
@@ -216,7 +230,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -224,7 +241,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -232,7 +252,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * K8sVersion.
+             * <p>The version of Kubernetes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.18</p>
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -240,7 +263,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * KubeConfig.
+             * <p>The server configuration of Kubernetes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder kubeConfig(String kubeConfig) {
                 this.kubeConfig = kubeConfig;
@@ -248,7 +274,14 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Internet.</li>
+             * <li><strong>2</strong>: VPC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netType(Long netType) {
                 this.netType = netType;
@@ -256,7 +289,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -264,7 +300,10 @@ public class ListPrivateK8sResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zet5l358k6z0gnz*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

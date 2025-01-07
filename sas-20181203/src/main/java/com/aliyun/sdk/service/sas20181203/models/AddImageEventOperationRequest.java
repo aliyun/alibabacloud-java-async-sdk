@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,6 +34,10 @@ public class AddImageEventOperationRequest extends Request {
     private String eventType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Note")
+    private String note;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationCode")
     private String operationCode;
 
@@ -36,14 +45,20 @@ public class AddImageEventOperationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Scenarios")
     private String scenarios;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private AddImageEventOperationRequest(Builder builder) {
         super(builder);
         this.conditions = builder.conditions;
         this.eventKey = builder.eventKey;
         this.eventName = builder.eventName;
         this.eventType = builder.eventType;
+        this.note = builder.note;
         this.operationCode = builder.operationCode;
         this.scenarios = builder.scenarios;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -88,6 +103,13 @@ public class AddImageEventOperationRequest extends Request {
     }
 
     /**
+     * @return note
+     */
+    public String getNote() {
+        return this.note;
+    }
+
+    /**
      * @return operationCode
      */
     public String getOperationCode() {
@@ -101,13 +123,22 @@ public class AddImageEventOperationRequest extends Request {
         return this.scenarios;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<AddImageEventOperationRequest, Builder> {
         private String conditions; 
         private String eventKey; 
         private String eventName; 
         private String eventType; 
+        private String note; 
         private String operationCode; 
         private String scenarios; 
+        private String source; 
 
         private Builder() {
             super();
@@ -119,8 +150,10 @@ public class AddImageEventOperationRequest extends Request {
             this.eventKey = request.eventKey;
             this.eventName = request.eventName;
             this.eventType = request.eventType;
+            this.note = request.note;
             this.operationCode = request.operationCode;
             this.scenarios = request.scenarios;
+            this.source = request.source;
         } 
 
         /**
@@ -180,6 +213,15 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
+         * Note.
+         */
+        public Builder note(String note) {
+            this.putQueryParameter("Note", note);
+            this.note = note;
+            return this;
+        }
+
+        /**
          * <p>The operation code.</p>
          * <ul>
          * <li>Set the value to <strong>whitelist</strong> to add the alert item to the whitelist.</li>
@@ -207,6 +249,15 @@ public class AddImageEventOperationRequest extends Request {
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);
             this.scenarios = scenarios;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

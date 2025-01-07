@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     private String advice;
 
     @com.aliyun.core.annotation.NameInMap("CheckDetailAssetInfo")
-    private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo;
+    private java.util.List<java.util.Map<String, String>> checkDetailAssetInfo;
 
     @com.aliyun.core.annotation.NameInMap("CheckDetailColumns")
-    private java.util.List < CheckDetailColumns> checkDetailColumns;
+    private java.util.List<CheckDetailColumns> checkDetailColumns;
 
     @com.aliyun.core.annotation.NameInMap("CheckId")
     private Long checkId;
@@ -73,14 +78,14 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     /**
      * @return checkDetailAssetInfo
      */
-    public java.util.List < java.util.Map<String, String>> getCheckDetailAssetInfo() {
+    public java.util.List<java.util.Map<String, String>> getCheckDetailAssetInfo() {
         return this.checkDetailAssetInfo;
     }
 
     /**
      * @return checkDetailColumns
      */
-    public java.util.List < CheckDetailColumns> getCheckDetailColumns() {
+    public java.util.List<CheckDetailColumns> getCheckDetailColumns() {
         return this.checkDetailColumns;
     }
 
@@ -135,8 +140,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String advice; 
-        private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo; 
-        private java.util.List < CheckDetailColumns> checkDetailColumns; 
+        private java.util.List<java.util.Map<String, String>> checkDetailAssetInfo; 
+        private java.util.List<CheckDetailColumns> checkDetailColumns; 
         private Long checkId; 
         private String description; 
         private String item; 
@@ -159,7 +164,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * <p>List of asset details to check.</p>
          */
-        public Builder checkDetailAssetInfo(java.util.List < java.util.Map<String, String>> checkDetailAssetInfo) {
+        public Builder checkDetailAssetInfo(java.util.List<java.util.Map<String, String>> checkDetailAssetInfo) {
             this.checkDetailAssetInfo = checkDetailAssetInfo;
             return this;
         }
@@ -167,7 +172,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * <p>Detection content details.</p>
          */
-        public Builder checkDetailColumns(java.util.List < CheckDetailColumns> checkDetailColumns) {
+        public Builder checkDetailColumns(java.util.List<CheckDetailColumns> checkDetailColumns) {
             this.checkDetailColumns = checkDetailColumns;
             return this;
         }
@@ -374,7 +379,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
      */
     public static class CheckDetailColumns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Grids")
-        private java.util.List < Grids> grids;
+        private java.util.List<Grids> grids;
 
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -403,7 +408,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         /**
          * @return grids
          */
-        public java.util.List < Grids> getGrids() {
+        public java.util.List<Grids> getGrids() {
             return this.grids;
         }
 
@@ -429,7 +434,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Grids> grids; 
+            private java.util.List<Grids> grids; 
             private String key; 
             private String showName; 
             private String type; 
@@ -437,7 +442,7 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
             /**
              * <p>Detection content list.</p>
              */
-            public Builder grids(java.util.List < Grids> grids) {
+            public Builder grids(java.util.List<Grids> grids) {
                 this.grids = grids;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExposedInstanceListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExposedInstances")
-    private java.util.List < ExposedInstances> exposedInstances;
+    private java.util.List<ExposedInstances> exposedInstances;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
     /**
      * @return exposedInstances
      */
-    public java.util.List < ExposedInstances> getExposedInstances() {
+    public java.util.List<ExposedInstances> getExposedInstances() {
         return this.exposedInstances;
     }
 
@@ -57,14 +62,14 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExposedInstances> exposedInstances; 
+        private java.util.List<ExposedInstances> exposedInstances; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * <p>An array that consists of the details about the exposed asset.</p>
+         * <p>The details of the exposures.</p>
          */
-        public Builder exposedInstances(java.util.List < ExposedInstances> exposedInstances) {
+        public Builder exposedInstances(java.util.List<ExposedInstances> exposedInstances) {
             this.exposedInstances = exposedInstances;
             return this;
         }
@@ -378,7 +383,20 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an ECS instance.</li>
+             * <li><strong>1</strong>: a SLB instance.</li>
+             * <li><strong>2</strong>: a NAT gateway.</li>
+             * <li><strong>3</strong>: an ApsaraDB RDS instance.</li>
+             * <li><strong>4</strong>: an ApsaraDB for MongoDB instance.</li>
+             * <li><strong>5</strong>: an ApsaraDB for Redis instance.</li>
+             * <li><strong>6</strong>: a container image.</li>
+             * <li><strong>7</strong>: a container.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -386,7 +404,17 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAssetInfo.
+             * <p>The JSON string that specifies the information about a database asset, which contains the following fields.</p>
+             * <ul>
+             * <li>assetSubType: the asset subtype.</li>
+             * <li>assetSubTypeName: the name of the asset subtype.</li>
+             * <li>assetType: the type of the asset.</li>
+             * <li>assetTypeName: the name of the asset type.</li>
+             * <li>vendor: the service provider of the asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{assetSubTypeName&quot;:&quot;INSTANCE&quot;,&quot;assetType&quot;:3,&quot;assetTypeName&quot;:&quot;RDS&quot;,&quot;vendor&quot;:0}</p>
              */
             public Builder cloudAssetInfo(String cloudAssetInfo) {
                 this.cloudAssetInfo = cloudAssetInfo;
@@ -394,7 +422,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CspmAlarmCount.
+             * <p>The number of CSPM risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cspmAlarmCount(Integer cspmAlarmCount) {
                 this.cspmAlarmCount = cspmAlarmCount;
@@ -402,7 +433,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of servers that are exposed on the Internet.</p>
+             * <p>The number of weak password risks.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -448,10 +479,11 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             /**
              * <p>The resource from which the asset is exposed. Valid values:</p>
              * <ul>
-             * <li><strong>INTERNET_IP</strong>: the public IP address of an ECS instance</li>
-             * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
-             * <li><strong>EIP</strong>: an elastic IP address (EIP)</li>
-             * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+             * <li><strong>INTERNET_IP</strong>: the public IP address of an ECS instance.</li>
+             * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance.</li>
+             * <li><strong>EIP</strong>: an elastic IP address (EIP).</li>
+             * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the Destination Network Address Translation (DNAT) feature.</li>
+             * <li><strong>DB_CONNECTION</strong>: the public endpoint of a database.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -463,12 +495,13 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.</p>
+             * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
              * <ul>
              * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, this parameter is empty.</li>
              * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the SLB instance.</li>
              * <li>If the value of the ExposureType parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
              * <li>If the value of the ExposureType parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+             * <li>If the value of the ExposureType parameter is <strong>DB_CONNECTION</strong>, the value of this parameter is the ID of the database.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -502,7 +535,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the server.</p>
+             * <p>The instance ID of the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp1g6wxdwps7s9dz****</p>
@@ -513,7 +546,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the server.</p>
+             * <p>The name of the asset.</p>
              * 
              * <strong>example:</strong>
              * <p>abc_centos7.2_005</p>
@@ -568,7 +601,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the server resides.</p>
+             * <p>The ID of the region in which the asset resides.</p>
              * <blockquote>
              * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
              * </blockquote>
@@ -593,7 +626,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the server.</p>
+             * <p>The UUID of the server or the instance ID of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>dd803d9e-a337-4add-9c5b-7d503e08****</p>
@@ -712,7 +745,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries about the servers that are exposed on the Internet.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

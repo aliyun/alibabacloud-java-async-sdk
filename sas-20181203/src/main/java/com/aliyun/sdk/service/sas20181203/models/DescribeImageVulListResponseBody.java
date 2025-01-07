@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VulRecords")
-    private java.util.List < VulRecords> vulRecords;
+    private java.util.List<VulRecords> vulRecords;
 
     private DescribeImageVulListResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
@@ -74,7 +79,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     /**
      * @return vulRecords
      */
-    public java.util.List < VulRecords> getVulRecords() {
+    public java.util.List<VulRecords> getVulRecords() {
         return this.vulRecords;
     }
 
@@ -83,7 +88,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VulRecords> vulRecords; 
+        private java.util.List<VulRecords> vulRecords; 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -132,7 +137,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * <p>The vulnerabilities.</p>
          */
-        public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
+        public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
             return this;
         }
@@ -160,7 +165,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         private String matchDetail;
 
         @com.aliyun.core.annotation.NameInMap("MatchList")
-        private java.util.List < String > matchList;
+        private java.util.List<String> matchList;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -217,7 +222,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * @return matchList
          */
-        public java.util.List < String > getMatchList() {
+        public java.util.List<String> getMatchList() {
             return this.matchList;
         }
 
@@ -253,7 +258,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String fullVersion; 
             private String layer; 
             private String matchDetail; 
-            private java.util.List < String > matchList; 
+            private java.util.List<String> matchList; 
             private String name; 
             private String path; 
             private String updateCmd; 
@@ -298,7 +303,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[&quot;libseccomp2 version less than equals 2.3.3-4&quot;]</p>
              */
-            public Builder matchList(java.util.List < String > matchList) {
+            public Builder matchList(java.util.List<String> matchList) {
                 this.matchList = matchList;
                 return this;
             }
@@ -368,7 +373,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         private String osRelease;
 
         @com.aliyun.core.annotation.NameInMap("RpmEntityList")
-        private java.util.List < RpmEntityList> rpmEntityList;
+        private java.util.List<RpmEntityList> rpmEntityList;
 
         private ExtendContentJson(Builder builder) {
             this.os = builder.os;
@@ -401,14 +406,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * @return rpmEntityList
          */
-        public java.util.List < RpmEntityList> getRpmEntityList() {
+        public java.util.List<RpmEntityList> getRpmEntityList() {
             return this.rpmEntityList;
         }
 
         public static final class Builder {
             private String os; 
             private String osRelease; 
-            private java.util.List < RpmEntityList> rpmEntityList; 
+            private java.util.List<RpmEntityList> rpmEntityList; 
 
             /**
              * <p>The name of the operating system.</p>
@@ -435,7 +440,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             /**
              * <p>The details of the packages of the software that has the vulnerability.</p>
              */
-            public Builder rpmEntityList(java.util.List < RpmEntityList> rpmEntityList) {
+            public Builder rpmEntityList(java.util.List<RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
                 return this;
             }
@@ -497,7 +502,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         private Long lastTs;
 
         @com.aliyun.core.annotation.NameInMap("Layers")
-        private java.util.List < String > layers;
+        private java.util.List<String> layers;
 
         @com.aliyun.core.annotation.NameInMap("MaliciousSource")
         private String maliciousSource;
@@ -698,7 +703,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         /**
          * @return layers
          */
-        public java.util.List < String > getLayers() {
+        public java.util.List<String> getLayers() {
             return this.layers;
         }
 
@@ -843,7 +848,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Long lastTs; 
-            private java.util.List < String > layers; 
+            private java.util.List<String> layers; 
             private String maliciousSource; 
             private Long modifyTs; 
             private String name; 
@@ -1025,7 +1030,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             /**
              * <p>The image layers.</p>
              */
-            public Builder layers(java.util.List < String > layers) {
+            public Builder layers(java.util.List<String> layers) {
                 this.layers = layers;
                 return this;
             }

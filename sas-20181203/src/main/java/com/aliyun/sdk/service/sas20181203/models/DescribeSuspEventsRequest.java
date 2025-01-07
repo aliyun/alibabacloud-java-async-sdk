@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeSuspEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetsTypeList")
-    private java.util.List < String > assetsTypeList;
+    private java.util.List<String> assetsTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -74,7 +79,7 @@ public class DescribeSuspEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperateErrorCodeList")
-    private java.util.List < String > operateErrorCodeList;
+    private java.util.List<String> operateErrorCodeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperateTimeEnd")
@@ -114,7 +119,7 @@ public class DescribeSuspEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceAliUids")
-    private java.util.List < Long > sourceAliUids;
+    private java.util.List<Long> sourceAliUids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -214,7 +219,7 @@ public class DescribeSuspEventsRequest extends Request {
     /**
      * @return assetsTypeList
      */
-    public java.util.List < String > getAssetsTypeList() {
+    public java.util.List<String> getAssetsTypeList() {
         return this.assetsTypeList;
     }
 
@@ -312,7 +317,7 @@ public class DescribeSuspEventsRequest extends Request {
     /**
      * @return operateErrorCodeList
      */
-    public java.util.List < String > getOperateErrorCodeList() {
+    public java.util.List<String> getOperateErrorCodeList() {
         return this.operateErrorCodeList;
     }
 
@@ -382,7 +387,7 @@ public class DescribeSuspEventsRequest extends Request {
     /**
      * @return sourceAliUids
      */
-    public java.util.List < Long > getSourceAliUids() {
+    public java.util.List<Long> getSourceAliUids() {
         return this.sourceAliUids;
     }
 
@@ -451,7 +456,7 @@ public class DescribeSuspEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSuspEventsRequest, Builder> {
         private String alarmUniqueInfo; 
-        private java.util.List < String > assetsTypeList; 
+        private java.util.List<String> assetsTypeList; 
         private String clusterId; 
         private String containerFieldName; 
         private String containerFieldValue; 
@@ -465,7 +470,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String levels; 
         private Integer multiAccountActionType; 
         private String name; 
-        private java.util.List < String > operateErrorCodeList; 
+        private java.util.List<String> operateErrorCodeList; 
         private String operateTimeEnd; 
         private String operateTimeStart; 
         private String pageSize; 
@@ -475,7 +480,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String sortColumn; 
         private String sortType; 
         private String source; 
-        private java.util.List < Long > sourceAliUids; 
+        private java.util.List<Long> sourceAliUids; 
         private String sourceIp; 
         private String status; 
         private String strictMode; 
@@ -547,7 +552,7 @@ public class DescribeSuspEventsRequest extends Request {
         /**
          * <p>The types of the assets.</p>
          */
-        public Builder assetsTypeList(java.util.List < String > assetsTypeList) {
+        public Builder assetsTypeList(java.util.List<String> assetsTypeList) {
             this.putQueryParameter("AssetsTypeList", assetsTypeList);
             this.assetsTypeList = assetsTypeList;
             return this;
@@ -713,7 +718,14 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * MultiAccountActionType.
+         * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the current account.</li>
+         * <li><strong>1</strong>: all accounts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder multiAccountActionType(Integer multiAccountActionType) {
             this.putQueryParameter("MultiAccountActionType", multiAccountActionType);
@@ -736,7 +748,7 @@ public class DescribeSuspEventsRequest extends Request {
         /**
          * <p>An array that consists of the handling result codes of alert events.</p>
          */
-        public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
+        public Builder operateErrorCodeList(java.util.List<String> operateErrorCodeList) {
             this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
             this.operateErrorCodeList = operateErrorCodeList;
             return this;
@@ -803,7 +815,7 @@ public class DescribeSuspEventsRequest extends Request {
          * <li><strong>Vulnerability exploitation</strong></li>
          * <li><strong>Malicious process (on-premises threat detection)</strong></li>
          * <li><strong>Trusted exception</strong></li>
-         * <li><strong>Operations to manage other resources</strong></li>
+         * <li><strong>Others</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -896,9 +908,9 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * SourceAliUids.
+         * <p>The IDs of the Alibaba Cloud accounts within which alerts are generated.</p>
          */
-        public Builder sourceAliUids(java.util.List < Long > sourceAliUids) {
+        public Builder sourceAliUids(java.util.List<Long> sourceAliUids) {
             String sourceAliUidsShrink = shrink(sourceAliUids, "SourceAliUids", "simple");
             this.putQueryParameter("SourceAliUids", sourceAliUidsShrink);
             this.sourceAliUids = sourceAliUids;

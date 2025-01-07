@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VulWhitelists")
-    private java.util.List < VulWhitelists> vulWhitelists;
+    private java.util.List<VulWhitelists> vulWhitelists;
 
     private DescribeVulWhitelistResponseBody(Builder builder) {
         this.count = builder.count;
@@ -85,7 +90,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     /**
      * @return vulWhitelists
      */
-    public java.util.List < VulWhitelists> getVulWhitelists() {
+    public java.util.List<VulWhitelists> getVulWhitelists() {
         return this.vulWhitelists;
     }
 
@@ -95,7 +100,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VulWhitelists> vulWhitelists; 
+        private java.util.List<VulWhitelists> vulWhitelists; 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -155,7 +160,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         /**
          * <p>An array that consists of information about the whitelist of vulnerabilities.</p>
          */
-        public Builder vulWhitelists(java.util.List < VulWhitelists> vulWhitelists) {
+        public Builder vulWhitelists(java.util.List<VulWhitelists> vulWhitelists) {
             this.vulWhitelists = vulWhitelists;
             return this;
         }

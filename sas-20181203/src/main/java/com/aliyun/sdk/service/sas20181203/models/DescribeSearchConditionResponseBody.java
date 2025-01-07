@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSearchConditionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConditionList")
-    private java.util.List < ConditionList> conditionList;
+    private java.util.List<ConditionList> conditionList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
     /**
      * @return conditionList
      */
-    public java.util.List < ConditionList> getConditionList() {
+    public java.util.List<ConditionList> getConditionList() {
         return this.conditionList;
     }
 
@@ -46,19 +51,22 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConditionList> conditionList; 
+        private java.util.List<ConditionList> conditionList; 
         private String requestId; 
 
         /**
-         * ConditionList.
+         * <p>An array that consists of the filter conditions.</p>
          */
-        public Builder conditionList(java.util.List < ConditionList> conditionList) {
+        public Builder conditionList(java.util.List<ConditionList> conditionList) {
             this.conditionList = conditionList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3AEC47AF-8CFA-485E-AC9A-3A8ABC06EA7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +148,14 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * ConditionType.
+             * <p>The type of the filter condition. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: default filter conditions.</li>
+             * <li><strong>user</strong>: custom filter conditions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder conditionType(String conditionType) {
                 this.conditionType = conditionType;
@@ -148,7 +163,35 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             }
 
             /**
-             * FilterConditions.
+             * <p>The filter condition. The value of this parameter is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><p><strong>filterParams</strong>: the parameters of the filter condition. The value of this field is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><p><strong>labelKey</strong>: the key for rendering.</p>
+             * </li>
+             * <li><p><strong>label</strong>: the display name.</p>
+             * </li>
+             * <li><p><strong>value</strong>: the value of the filter condition. The value of this field is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the filter item.</li>
+             * <li><strong>value</strong>: the value of the filter item.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </li>
+             * <li><p><strong>LogicalExp</strong>: the logical relationship among the filter conditions. Valid values:</p>
+             * <ul>
+             * <li><strong>AND</strong>: The filter conditions are evaluated by using a logical <strong>AND</strong>.</li>
+             * <li><strong>OR</strong>: The filter conditions are evaluated by using a logical <strong>OR</strong>.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p> If the value of <strong>ConditionType</strong> is <strong>system</strong>, <strong>labelKey</strong> is returned. The labelKey field is used only for internationalization rendering.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;filterParams&quot;:[{&quot;labelKey&quot;:&quot;a|b&quot;,&quot;value&quot;:&quot;{\&quot;name\&quot;:\&quot;sadsasd\&quot;,\&quot;value\&quot;:\&quot;dasdsdas\&quot;}&quot;}],&quot;LogicalExp&quot;:&quot;OR&quot;}</p>
              */
             public Builder filterConditions(String filterConditions) {
                 this.filterConditions = filterConditions;
@@ -156,7 +199,10 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The filter condition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StopMachine</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -164,7 +210,10 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
             }
 
             /**
-             * NameKey.
+             * <p>The key of the filter condition name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop_machine</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;

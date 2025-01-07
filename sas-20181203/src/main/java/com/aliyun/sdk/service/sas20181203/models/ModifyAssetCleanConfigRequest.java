@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyAssetCleanConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetCleanConfigs")
-    private java.util.List < AssetCleanConfigs> assetCleanConfigs;
+    private java.util.List<AssetCleanConfigs> assetCleanConfigs;
 
     private ModifyAssetCleanConfigRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ModifyAssetCleanConfigRequest extends Request {
     /**
      * @return assetCleanConfigs
      */
-    public java.util.List < AssetCleanConfigs> getAssetCleanConfigs() {
+    public java.util.List<AssetCleanConfigs> getAssetCleanConfigs() {
         return this.assetCleanConfigs;
     }
 
     public static final class Builder extends Request.Builder<ModifyAssetCleanConfigRequest, Builder> {
-        private java.util.List < AssetCleanConfigs> assetCleanConfigs; 
+        private java.util.List<AssetCleanConfigs> assetCleanConfigs; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class ModifyAssetCleanConfigRequest extends Request {
         /**
          * <p>The asset cleanup configurations.</p>
          */
-        public Builder assetCleanConfigs(java.util.List < AssetCleanConfigs> assetCleanConfigs) {
+        public Builder assetCleanConfigs(java.util.List<AssetCleanConfigs> assetCleanConfigs) {
             this.putQueryParameter("AssetCleanConfigs", assetCleanConfigs);
             this.assetCleanConfigs = assetCleanConfigs;
             return this;

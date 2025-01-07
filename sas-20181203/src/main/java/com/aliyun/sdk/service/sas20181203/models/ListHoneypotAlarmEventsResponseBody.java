@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HoneypotAlarmEvents")
-    private java.util.List < HoneypotAlarmEvents> honeypotAlarmEvents;
+    private java.util.List<HoneypotAlarmEvents> honeypotAlarmEvents;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     /**
      * @return honeypotAlarmEvents
      */
-    public java.util.List < HoneypotAlarmEvents> getHoneypotAlarmEvents() {
+    public java.util.List<HoneypotAlarmEvents> getHoneypotAlarmEvents() {
         return this.honeypotAlarmEvents;
     }
 
@@ -57,14 +62,14 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HoneypotAlarmEvents> honeypotAlarmEvents; 
+        private java.util.List<HoneypotAlarmEvents> honeypotAlarmEvents; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The alert events.</p>
          */
-        public Builder honeypotAlarmEvents(java.util.List < HoneypotAlarmEvents> honeypotAlarmEvents) {
+        public Builder honeypotAlarmEvents(java.util.List<HoneypotAlarmEvents> honeypotAlarmEvents) {
             this.honeypotAlarmEvents = honeypotAlarmEvents;
             return this;
         }
@@ -242,7 +247,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         private Long lastTime;
 
         @com.aliyun.core.annotation.NameInMap("MergeFieldList")
-        private java.util.List < MergeFieldList> mergeFieldList;
+        private java.util.List<MergeFieldList> mergeFieldList;
 
         @com.aliyun.core.annotation.NameInMap("OperateStatus")
         private Integer operateStatus;
@@ -323,7 +328,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         /**
          * @return mergeFieldList
          */
-        public java.util.List < MergeFieldList> getMergeFieldList() {
+        public java.util.List<MergeFieldList> getMergeFieldList() {
             return this.mergeFieldList;
         }
 
@@ -349,7 +354,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private Integer eventCount; 
             private Long firstTime; 
             private Long lastTime; 
-            private java.util.List < MergeFieldList> mergeFieldList; 
+            private java.util.List<MergeFieldList> mergeFieldList; 
             private Integer operateStatus; 
             private String riskLevel; 
 
@@ -433,7 +438,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             /**
              * <p>The risk information.</p>
              */
-            public Builder mergeFieldList(java.util.List < MergeFieldList> mergeFieldList) {
+            public Builder mergeFieldList(java.util.List<MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
                 return this;
             }

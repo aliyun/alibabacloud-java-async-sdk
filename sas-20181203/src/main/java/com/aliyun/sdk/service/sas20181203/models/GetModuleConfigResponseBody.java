@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("ModuleConfigList")
-    private java.util.List < ModuleConfigList> moduleConfigList;
+    private java.util.List<ModuleConfigList> moduleConfigList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -53,7 +58,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
     /**
      * @return moduleConfigList
      */
-    public java.util.List < ModuleConfigList> getModuleConfigList() {
+    public java.util.List<ModuleConfigList> getModuleConfigList() {
         return this.moduleConfigList;
     }
 
@@ -80,7 +85,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer httpStatusCode; 
-        private java.util.List < ModuleConfigList> moduleConfigList; 
+        private java.util.List<ModuleConfigList> moduleConfigList; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the configurations of the module.</p>
          */
-        public Builder moduleConfigList(java.util.List < ModuleConfigList> moduleConfigList) {
+        public Builder moduleConfigList(java.util.List<ModuleConfigList> moduleConfigList) {
             this.moduleConfigList = moduleConfigList;
             return this;
         }
@@ -316,7 +321,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         private String configName;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -345,7 +350,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -358,7 +363,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String configName; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private String moduleName; 
 
             /**
@@ -375,7 +380,7 @@ public class GetModuleConfigResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the configuration items.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

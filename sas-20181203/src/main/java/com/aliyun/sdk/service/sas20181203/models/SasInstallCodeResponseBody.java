@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,10 @@ public class SasInstallCodeResponseBody extends TeaModel {
         private String data; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B256A525-7E42-4BB9-A27C-9017FDDFF1A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class SasInstallCodeResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The installation verification code that is used to run the installation command when you manually install the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eD****</p>
          */
         public Builder data(String data) {
             this.data = data;

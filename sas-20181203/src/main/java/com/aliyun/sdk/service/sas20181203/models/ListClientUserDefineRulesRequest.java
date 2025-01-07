@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ListClientUserDefineRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
-    private java.util.List < Integer > type;
+    private java.util.List<Integer> type;
 
     private ListClientUserDefineRulesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class ListClientUserDefineRulesRequest extends Request {
     /**
      * @return type
      */
-    public java.util.List < Integer > getType() {
+    public java.util.List<Integer> getType() {
         return this.type;
     }
 
@@ -83,7 +88,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
-        private java.util.List < Integer > type; 
+        private java.util.List<Integer> type; 
 
         private Builder() {
             super();
@@ -138,7 +143,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         /**
          * <p>The types of rules.</p>
          */
-        public Builder type(java.util.List < Integer > type) {
+        public Builder type(java.util.List<Integer> type) {
             this.putQueryParameter("Type", type);
             this.type = type;
             return this;

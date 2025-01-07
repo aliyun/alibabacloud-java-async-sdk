@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -255,7 +260,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrialRecordList")
-        private java.util.List < TrialRecordList> trialRecordList;
+        private java.util.List<TrialRecordList> trialRecordList;
 
         private Data(Builder builder) {
             this.trialRecordList = builder.trialRecordList;
@@ -272,17 +277,17 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         /**
          * @return trialRecordList
          */
-        public java.util.List < TrialRecordList> getTrialRecordList() {
+        public java.util.List<TrialRecordList> getTrialRecordList() {
             return this.trialRecordList;
         }
 
         public static final class Builder {
-            private java.util.List < TrialRecordList> trialRecordList; 
+            private java.util.List<TrialRecordList> trialRecordList; 
 
             /**
              * <p>The information about the trial use.</p>
              */
-            public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
+            public Builder trialRecordList(java.util.List<TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateInterceptionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DstTargetList")
-    private java.util.Map < String, ? > dstTargetList;
+    private java.util.Map<String, ?> dstTargetList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InterceptType")
@@ -52,7 +57,7 @@ public class CreateInterceptionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcTarget")
-    private java.util.Map < String, ? > srcTarget;
+    private java.util.Map<String, ?> srcTarget;
 
     private CreateInterceptionRuleRequest(Builder builder) {
         super(builder);
@@ -97,7 +102,7 @@ public class CreateInterceptionRuleRequest extends Request {
     /**
      * @return dstTargetList
      */
-    public java.util.Map < String, ? > getDstTargetList() {
+    public java.util.Map<String, ?> getDstTargetList() {
         return this.dstTargetList;
     }
 
@@ -139,20 +144,20 @@ public class CreateInterceptionRuleRequest extends Request {
     /**
      * @return srcTarget
      */
-    public java.util.Map < String, ? > getSrcTarget() {
+    public java.util.Map<String, ?> getSrcTarget() {
         return this.srcTarget;
     }
 
     public static final class Builder extends Request.Builder<CreateInterceptionRuleRequest, Builder> {
         private String clusterId; 
         private String clusterName; 
-        private java.util.Map < String, ? > dstTargetList; 
+        private java.util.Map<String, ?> dstTargetList; 
         private Long interceptType; 
         private Long orderIndex; 
         private String ruleName; 
         private Integer ruleSwitch; 
         private String ruleType; 
-        private java.util.Map < String, ? > srcTarget; 
+        private java.util.Map<String, ?> srcTarget; 
 
         private Builder() {
             super();
@@ -217,7 +222,7 @@ public class CreateInterceptionRuleRequest extends Request {
          *       }
          * ]</p>
          */
-        public Builder dstTargetList(java.util.Map < String, ? > dstTargetList) {
+        public Builder dstTargetList(java.util.Map<String, ?> dstTargetList) {
             String dstTargetListShrink = shrink(dstTargetList, "DstTargetList", "json");
             this.putQueryParameter("DstTargetList", dstTargetListShrink);
             this.dstTargetList = dstTargetList;
@@ -309,7 +314,7 @@ public class CreateInterceptionRuleRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;targetId&quot;:301940}</p>
          */
-        public Builder srcTarget(java.util.Map < String, ? > srcTarget) {
+        public Builder srcTarget(java.util.Map<String, ?> srcTarget) {
             String srcTargetShrink = shrink(srcTarget, "SrcTarget", "json");
             this.putQueryParameter("SrcTarget", srcTargetShrink);
             this.srcTarget = srcTarget;

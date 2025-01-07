@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    private java.util.List<String> scanRange;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -47,7 +52,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
-    private java.util.List < String > uuids;
+    private java.util.List<String> uuids;
 
     private DescribeImageBaselineItemListRequest(Builder builder) {
         super(builder);
@@ -120,7 +125,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -134,7 +139,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
@@ -145,9 +150,9 @@ public class DescribeImageBaselineItemListRequest extends Request {
         private String imageUuid; 
         private String lang; 
         private Integer pageSize; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
         private String status; 
-        private java.util.List < String > uuids; 
+        private java.util.List<String> uuids; 
 
         private Builder() {
             super();
@@ -246,7 +251,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         /**
          * <p>The types of the assets that are scanned.</p>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;
@@ -273,7 +278,7 @@ public class DescribeImageBaselineItemListRequest extends Request {
         /**
          * <p>The UUIDs of images.</p>
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;

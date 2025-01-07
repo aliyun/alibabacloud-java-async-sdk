@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SubmitOperationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationTaskInstances")
-    private java.util.List < OperationTaskInstances> operationTaskInstances;
+    private java.util.List<OperationTaskInstances> operationTaskInstances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelationKey")
@@ -31,7 +36,7 @@ public class SubmitOperationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepairTempParam")
-    private java.util.List < RepairTempParam> repairTempParam;
+    private java.util.List<RepairTempParam> repairTempParam;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -78,7 +83,7 @@ public class SubmitOperationTaskRequest extends Request {
     /**
      * @return operationTaskInstances
      */
-    public java.util.List < OperationTaskInstances> getOperationTaskInstances() {
+    public java.util.List<OperationTaskInstances> getOperationTaskInstances() {
         return this.operationTaskInstances;
     }
 
@@ -92,7 +97,7 @@ public class SubmitOperationTaskRequest extends Request {
     /**
      * @return repairTempParam
      */
-    public java.util.List < RepairTempParam> getRepairTempParam() {
+    public java.util.List<RepairTempParam> getRepairTempParam() {
         return this.repairTempParam;
     }
 
@@ -106,9 +111,9 @@ public class SubmitOperationTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitOperationTaskRequest, Builder> {
         private Long checkId; 
         private String dimensionType; 
-        private java.util.List < OperationTaskInstances> operationTaskInstances; 
+        private java.util.List<OperationTaskInstances> operationTaskInstances; 
         private String relationKey; 
-        private java.util.List < RepairTempParam> repairTempParam; 
+        private java.util.List<RepairTempParam> repairTempParam; 
         private String type; 
 
         private Builder() {
@@ -126,6 +131,10 @@ public class SubmitOperationTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +147,14 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * DimensionType.
+         * <p>The dimension of the task that you want to submit. Valid values:</p>
+         * <ul>
+         * <li>Instance dimension: INSTANCE</li>
+         * <li>Check item dimension: CHECK_ID</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ID</p>
          */
         public Builder dimensionType(String dimensionType) {
             this.putQueryParameter("DimensionType", dimensionType);
@@ -147,16 +163,22 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * OperationTaskInstances.
+         * <p>The asset information required to submit the tasks for instances.</p>
          */
-        public Builder operationTaskInstances(java.util.List < OperationTaskInstances> operationTaskInstances) {
+        public Builder operationTaskInstances(java.util.List<OperationTaskInstances> operationTaskInstances) {
             this.putQueryParameter("OperationTaskInstances", operationTaskInstances);
             this.operationTaskInstances = operationTaskInstances;
             return this;
         }
 
         /**
-         * RelationKey.
+         * <p>提交操作关联的跨页选择关联Key。</p>
+         * <blockquote>
+         * <p>您可调用<a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a>接口BusinessType字段获取关联Key。</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CSPM_OPERATION_RELATION_KEY_173***</p>
          */
         public Builder relationKey(String relationKey) {
             this.putQueryParameter("RelationKey", relationKey);
@@ -165,15 +187,20 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * RepairTempParam.
+         * <p>The temporary parameters required for the repair task.</p>
          */
-        public Builder repairTempParam(java.util.List < RepairTempParam> repairTempParam) {
+        public Builder repairTempParam(java.util.List<RepairTempParam> repairTempParam) {
             this.putQueryParameter("RepairTempParam", repairTempParam);
             this.repairTempParam = repairTempParam;
             return this;
         }
 
         /**
+         * <p>The type of the task that you want to submit. Valid values:</p>
+         * <ul>
+         * <li>Repair task: REPAIR</li>
+         * <li>Rollback task: ROLLBACK</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +288,10 @@ public class SubmitOperationTaskRequest extends Request {
             private String vendor; 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6533m4vuo3oa33****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -269,7 +299,10 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -277,7 +310,10 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task that you want to roll back</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7d0b10e35e80c9e5ebac5f1054****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -285,7 +321,17 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * Vendor.
+             * <p>The service provider of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+             * <li><strong>1</strong>: an asset outside Alibaba Cloud.</li>
+             * <li><strong>2</strong>: an asset in a data center.</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider.</li>
+             * <li><strong>8</strong>: a lightweight asset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -344,7 +390,10 @@ public class SubmitOperationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the temporary repair parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPPort</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -352,7 +401,10 @@ public class SubmitOperationTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the temporary repair parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1XX.1XX</p>
              */
             public Builder value(String value) {
                 this.value = value;

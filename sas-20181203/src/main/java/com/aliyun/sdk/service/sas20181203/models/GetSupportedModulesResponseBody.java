@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SupportedModuleResponse")
-    private java.util.List < SupportedModuleResponse> supportedModuleResponse;
+    private java.util.List<SupportedModuleResponse> supportedModuleResponse;
 
     private GetSupportedModulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetSupportedModulesResponseBody extends TeaModel {
     /**
      * @return supportedModuleResponse
      */
-    public java.util.List < SupportedModuleResponse> getSupportedModuleResponse() {
+    public java.util.List<SupportedModuleResponse> getSupportedModuleResponse() {
         return this.supportedModuleResponse;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SupportedModuleResponse> supportedModuleResponse; 
+        private java.util.List<SupportedModuleResponse> supportedModuleResponse; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         /**
          * <p>The supported modules. The module information is classified by cloud service provider.</p>
          */
-        public Builder supportedModuleResponse(java.util.List < SupportedModuleResponse> supportedModuleResponse) {
+        public Builder supportedModuleResponse(java.util.List<SupportedModuleResponse> supportedModuleResponse) {
             this.supportedModuleResponse = supportedModuleResponse;
             return this;
         }
@@ -161,7 +166,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
      */
     public static class SupportedModuleResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedModules")
-        private java.util.List < SupportedModules> supportedModules;
+        private java.util.List<SupportedModules> supportedModules;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
@@ -182,7 +187,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         /**
          * @return supportedModules
          */
-        public java.util.List < SupportedModules> getSupportedModules() {
+        public java.util.List<SupportedModules> getSupportedModules() {
             return this.supportedModules;
         }
 
@@ -194,13 +199,13 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SupportedModules> supportedModules; 
+            private java.util.List<SupportedModules> supportedModules; 
             private String vendor; 
 
             /**
              * <p>The modules supported by the cloud service provider.</p>
              */
-            public Builder supportedModules(java.util.List < SupportedModules> supportedModules) {
+            public Builder supportedModules(java.util.List<SupportedModules> supportedModules) {
                 this.supportedModules = supportedModules;
                 return this;
             }

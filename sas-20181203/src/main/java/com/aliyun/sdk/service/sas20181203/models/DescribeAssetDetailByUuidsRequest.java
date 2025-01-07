@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,9 +104,9 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         }
 
         /**
-         * <p>资源目录成员账号主账号ID。</p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
          * <blockquote>
-         * <p>调用<a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a>接口可以获取该参数。</p>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -114,7 +119,10 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         }
 
         /**
-         * <p>The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).</p>
+         * <p>The UUIDs of the instances. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of instances.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

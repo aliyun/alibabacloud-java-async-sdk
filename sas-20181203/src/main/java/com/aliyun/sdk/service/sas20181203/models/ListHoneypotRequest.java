@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListHoneypotRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HoneypotIds")
-    private java.util.List < String > honeypotIds;
+    private java.util.List<String> honeypotIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HoneypotName")
@@ -69,7 +74,7 @@ public class ListHoneypotRequest extends Request {
     /**
      * @return honeypotIds
      */
-    public java.util.List < String > getHoneypotIds() {
+    public java.util.List<String> getHoneypotIds() {
         return this.honeypotIds;
     }
 
@@ -103,7 +108,7 @@ public class ListHoneypotRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListHoneypotRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < String > honeypotIds; 
+        private java.util.List<String> honeypotIds; 
         private String honeypotName; 
         private String nodeId; 
         private String nodeName; 
@@ -138,7 +143,7 @@ public class ListHoneypotRequest extends Request {
         /**
          * <p>The IDs of the honeypots.</p>
          */
-        public Builder honeypotIds(java.util.List < String > honeypotIds) {
+        public Builder honeypotIds(java.util.List<String> honeypotIds) {
             this.putQueryParameter("HoneypotIds", honeypotIds);
             this.honeypotIds = honeypotIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeVulCheckTaskStatusDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
-    private java.util.List < String > taskIds;
+    private java.util.List<String> taskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -47,14 +52,14 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -66,8 +71,8 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVulCheckTaskStatusDetailRequest, Builder> {
-        private java.util.List < String > taskIds; 
-        private java.util.List < String > types; 
+        private java.util.List<String> taskIds; 
+        private java.util.List<String> types; 
         private String uuid; 
 
         private Builder() {
@@ -84,7 +89,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         /**
          * <p>The task IDs.</p>
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
             this.taskIds = taskIds;
             return this;
@@ -93,7 +98,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         /**
          * <p>The types of the vulnerabilities that are detected by the tasks.</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;

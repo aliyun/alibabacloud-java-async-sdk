@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ModifyBackupPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Policy")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > policy;
+    private java.util.Map<String, ?> policy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyRegionId")
@@ -38,7 +43,7 @@ public class ModifyBackupPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private ModifyBackupPolicyRequest(Builder builder) {
         super(builder);
@@ -80,7 +85,7 @@ public class ModifyBackupPolicyRequest extends Request {
     /**
      * @return policy
      */
-    public java.util.Map < String, ? > getPolicy() {
+    public java.util.Map<String, ?> getPolicy() {
         return this.policy;
     }
 
@@ -101,17 +106,17 @@ public class ModifyBackupPolicyRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
     public static final class Builder extends Request.Builder<ModifyBackupPolicyRequest, Builder> {
         private Long id; 
         private String name; 
-        private java.util.Map < String, ? > policy; 
+        private java.util.Map<String, ?> policy; 
         private String policyRegionId; 
         private String policyVersion; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -179,7 +184,7 @@ public class ModifyBackupPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;Source&quot;:[&quot;home&quot;,&quot;admin&quot;]}</p>
          */
-        public Builder policy(java.util.Map < String, ? > policy) {
+        public Builder policy(java.util.Map<String, ?> policy) {
             String policyShrink = shrink(policy, "Policy", "json");
             this.putQueryParameter("Policy", policyShrink);
             this.policy = policy;
@@ -222,7 +227,7 @@ public class ModifyBackupPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

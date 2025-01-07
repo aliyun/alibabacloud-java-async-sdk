@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LevelsOn")
-    private java.util.List < String > levelsOn;
+    private java.util.List<String> levelsOn;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
     /**
      * @return levelsOn
      */
-    public java.util.List < String > getLevelsOn() {
+    public java.util.List<String> getLevelsOn() {
         return this.levelsOn;
     }
 
@@ -46,7 +51,7 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > levelsOn; 
+        private java.util.List<String> levelsOn; 
         private String requestId; 
 
         /**
@@ -57,7 +62,7 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
          * <li><strong>serious</strong></li>
          * </ul>
          */
-        public Builder levelsOn(java.util.List < String > levelsOn) {
+        public Builder levelsOn(java.util.List<String> levelsOn) {
             this.levelsOn = levelsOn;
             return this;
         }

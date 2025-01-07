@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TracingJudge")
-    private java.util.Map < String, Integer > tracingJudge;
+    private java.util.Map<String, Integer> tracingJudge;
 
     private QueryIncidentTracingJudgeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
     /**
      * @return tracingJudge
      */
-    public java.util.Map < String, Integer > getTracingJudge() {
+    public java.util.Map<String, Integer> getTracingJudge() {
         return this.tracingJudge;
     }
 
     public static final class Builder {
         private String requestId; 
         private Boolean success; 
-        private java.util.Map < String, Integer > tracingJudge; 
+        private java.util.Map<String, Integer> tracingJudge; 
 
         /**
          * <p>The request ID.</p>
@@ -90,7 +95,7 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         /**
          * <p>The request result.</p>
          */
-        public Builder tracingJudge(java.util.Map < String, Integer > tracingJudge) {
+        public Builder tracingJudge(java.util.Map<String, Integer> tracingJudge) {
             this.tracingJudge = tracingJudge;
             return this;
         }

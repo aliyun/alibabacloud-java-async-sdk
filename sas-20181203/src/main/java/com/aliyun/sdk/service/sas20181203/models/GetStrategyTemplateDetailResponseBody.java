@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -228,10 +233,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
      */
     public static class Baseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < Item> item;
+        private java.util.List<Item> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private Baseline(Builder builder) {
             this.item = builder.item;
@@ -249,25 +254,25 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<Item> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The baseline items.</p>
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }
@@ -280,7 +285,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
              * <li><strong>low</strong></li>
              * </ul>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -373,10 +378,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
      */
     public static class MaliciousFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < MaliciousFileItem> item;
+        private java.util.List<MaliciousFileItem> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private MaliciousFile(Builder builder) {
             this.item = builder.item;
@@ -394,25 +399,25 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < MaliciousFileItem> getItem() {
+        public java.util.List<MaliciousFileItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < MaliciousFileItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<MaliciousFileItem> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The items on which malicious samples are detected.</p>
              */
-            public Builder item(java.util.List < MaliciousFileItem> item) {
+            public Builder item(java.util.List<MaliciousFileItem> item) {
                 this.item = item;
                 return this;
             }
@@ -420,7 +425,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The severities of the malicious samples.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -513,10 +518,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
      */
     public static class Vul extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < VulItem> item;
+        private java.util.List<VulItem> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private Vul(Builder builder) {
             this.item = builder.item;
@@ -534,25 +539,25 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < VulItem> getItem() {
+        public java.util.List<VulItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < VulItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<VulItem> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The items on which vulnerabilities are detected.</p>
              */
-            public Builder item(java.util.List < VulItem> item) {
+            public Builder item(java.util.List<VulItem> item) {
                 this.item = item;
                 return this;
             }
@@ -560,7 +565,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The severities of the vulnerabilities.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -679,16 +684,16 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("ImageName")
-        private java.util.List < String > imageName;
+        private java.util.List<String> imageName;
 
         @com.aliyun.core.annotation.NameInMap("Label")
-        private java.util.List < String > label;
+        private java.util.List<String> label;
 
         @com.aliyun.core.annotation.NameInMap("MaliciousImage")
         private Boolean maliciousImage;
 
         @com.aliyun.core.annotation.NameInMap("Namespace")
-        private java.util.List < String > namespace;
+        private java.util.List<String> namespace;
 
         @com.aliyun.core.annotation.NameInMap("RuleAction")
         private Integer ruleAction;
@@ -706,7 +711,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         private Boolean unScanedImage;
 
         @com.aliyun.core.annotation.NameInMap("WhiteList")
-        private java.util.List < String > whiteList;
+        private java.util.List<String> whiteList;
 
         private Data(Builder builder) {
             this.alarmDetail = builder.alarmDetail;
@@ -764,14 +769,14 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         /**
          * @return imageName
          */
-        public java.util.List < String > getImageName() {
+        public java.util.List<String> getImageName() {
             return this.imageName;
         }
 
         /**
          * @return label
          */
-        public java.util.List < String > getLabel() {
+        public java.util.List<String> getLabel() {
             return this.label;
         }
 
@@ -785,7 +790,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         /**
          * @return namespace
          */
-        public java.util.List < String > getNamespace() {
+        public java.util.List<String> getNamespace() {
             return this.namespace;
         }
 
@@ -827,7 +832,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         /**
          * @return whiteList
          */
-        public java.util.List < String > getWhiteList() {
+        public java.util.List<String> getWhiteList() {
             return this.whiteList;
         }
 
@@ -836,16 +841,16 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String description; 
-            private java.util.List < String > imageName; 
-            private java.util.List < String > label; 
+            private java.util.List<String> imageName; 
+            private java.util.List<String> label; 
             private Boolean maliciousImage; 
-            private java.util.List < String > namespace; 
+            private java.util.List<String> namespace; 
             private Integer ruleAction; 
             private Long strategyId; 
             private String strategyName; 
             private Long strategyTemplateId; 
             private Boolean unScanedImage; 
-            private java.util.List < String > whiteList; 
+            private java.util.List<String> whiteList; 
 
             /**
              * <p>The configuration of the rule.</p>
@@ -891,7 +896,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The names of images.</p>
              */
-            public Builder imageName(java.util.List < String > imageName) {
+            public Builder imageName(java.util.List<String> imageName) {
                 this.imageName = imageName;
                 return this;
             }
@@ -899,7 +904,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the containers.</p>
              */
-            public Builder label(java.util.List < String > label) {
+            public Builder label(java.util.List<String> label) {
                 this.label = label;
                 return this;
             }
@@ -922,7 +927,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The namespaces.</p>
              */
-            public Builder namespace(java.util.List < String > namespace) {
+            public Builder namespace(java.util.List<String> namespace) {
                 this.namespace = namespace;
                 return this;
             }
@@ -994,7 +999,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             /**
              * <p>The whitelists of tags that are added to images.</p>
              */
-            public Builder whiteList(java.util.List < String > whiteList) {
+            public Builder whiteList(java.util.List<String> whiteList) {
                 this.whiteList = whiteList;
                 return this;
             }

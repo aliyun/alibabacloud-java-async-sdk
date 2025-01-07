@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateFileDetectUploadUrlRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HashKeyContextList")
-    private java.util.List < HashKeyContextList> hashKeyContextList;
+    private java.util.List<HashKeyContextList> hashKeyContextList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HashKeyList")
-    private java.util.List < String > hashKeyList;
+    private java.util.List<String> hashKeyList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -48,14 +53,14 @@ public class CreateFileDetectUploadUrlRequest extends Request {
     /**
      * @return hashKeyContextList
      */
-    public java.util.List < HashKeyContextList> getHashKeyContextList() {
+    public java.util.List<HashKeyContextList> getHashKeyContextList() {
         return this.hashKeyContextList;
     }
 
     /**
      * @return hashKeyList
      */
-    public java.util.List < String > getHashKeyList() {
+    public java.util.List<String> getHashKeyList() {
         return this.hashKeyList;
     }
 
@@ -67,8 +72,8 @@ public class CreateFileDetectUploadUrlRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFileDetectUploadUrlRequest, Builder> {
-        private java.util.List < HashKeyContextList> hashKeyContextList; 
-        private java.util.List < String > hashKeyList; 
+        private java.util.List<HashKeyContextList> hashKeyContextList; 
+        private java.util.List<String> hashKeyList; 
         private Integer type; 
 
         private Builder() {
@@ -88,7 +93,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
          * <p>You must specify at least one of the <strong>HashKeyList</strong> and <strong>HashKeyContextList</strong> parameters.</p>
          * </blockquote>
          */
-        public Builder hashKeyContextList(java.util.List < HashKeyContextList> hashKeyContextList) {
+        public Builder hashKeyContextList(java.util.List<HashKeyContextList> hashKeyContextList) {
             this.putQueryParameter("HashKeyContextList", hashKeyContextList);
             this.hashKeyContextList = hashKeyContextList;
             return this;
@@ -103,7 +108,7 @@ public class CreateFileDetectUploadUrlRequest extends Request {
          * <strong>example:</strong>
          * <p>CreateFileDetectUploadUrl</p>
          */
-        public Builder hashKeyList(java.util.List < String > hashKeyList) {
+        public Builder hashKeyList(java.util.List<String> hashKeyList) {
             this.putQueryParameter("HashKeyList", hashKeyList);
             this.hashKeyList = hashKeyList;
             return this;

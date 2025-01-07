@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -203,7 +208,14 @@ public class DescribeOnceTaskRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the task. Valid values include the following values:</p>
+         * <ul>
+         * <li><strong>schedule</strong>: automatic scheduling of Cloud Security Scanner.</li>
+         * <li><strong>console</strong>: one-click detection in the Cloud Security Scanner console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Task")
-    private java.util.List < Task> task;
+    private java.util.List<Task> task;
 
     private DescribeImageLatestScanTaskResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
     /**
      * @return task
      */
-    public java.util.List < Task> getTask() {
+    public java.util.List<Task> getTask() {
         return this.task;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Task> task; 
+        private java.util.List<Task> task; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the task.</p>
          */
-        public Builder task(java.util.List < Task> task) {
+        public Builder task(java.util.List<Task> task) {
             this.task = task;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCloudAssetInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -42,7 +47,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -68,7 +73,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
         /**
          * <p>The details of the cloud assets.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -484,7 +489,7 @@ public class ListCloudAssetInstancesResponseBody extends TeaModel {
              * <li><strong>19</strong>: PolarDB</li>
              * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
              * <li><strong>21</strong>: Microservices Engine (MSE)</li>
-             * <li><strong>22</strong>: Apsara File Storage NAS (NAS)</li>
+             * <li><strong>22</strong>: File Storage NAS (NAS)</li>
              * <li><strong>23</strong>: Data Security Center (DSC)</li>
              * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
              * <li><strong>25</strong>: Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM)</li>

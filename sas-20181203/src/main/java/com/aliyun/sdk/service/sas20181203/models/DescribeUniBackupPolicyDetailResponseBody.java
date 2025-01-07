@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
      */
     public static class FullPlan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
-        private java.util.List < String > days;
+        private java.util.List<String> days;
 
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
@@ -111,7 +116,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         /**
          * @return days
          */
-        public java.util.List < String > getDays() {
+        public java.util.List<String> getDays() {
             return this.days;
         }
 
@@ -137,7 +142,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > days; 
+            private java.util.List<String> days; 
             private Integer interval; 
             private String planType; 
             private String startTime; 
@@ -145,7 +150,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the days of a week on which the backup is performed.</p>
              */
-            public Builder days(java.util.List < String > days) {
+            public Builder days(java.util.List<String> days) {
                 this.days = days;
                 return this;
             }
@@ -203,7 +208,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
      */
     public static class IncPlan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
-        private java.util.List < String > days;
+        private java.util.List<String> days;
 
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
@@ -232,7 +237,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         /**
          * @return days
          */
-        public java.util.List < String > getDays() {
+        public java.util.List<String> getDays() {
             return this.days;
         }
 
@@ -258,7 +263,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > days; 
+            private java.util.List<String> days; 
             private Integer interval; 
             private String planType; 
             private String startTime; 
@@ -266,7 +271,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the days of a week on which the backup is performed.</p>
              */
-            public Builder days(java.util.List < String > days) {
+            public Builder days(java.util.List<String> days) {
                 this.days = days;
                 return this;
             }

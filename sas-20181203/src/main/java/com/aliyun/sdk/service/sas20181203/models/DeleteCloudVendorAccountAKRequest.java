@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteCloudVendorAccountAKRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthModules")
-    private java.util.List < String > authModules;
+    private java.util.List<String> authModules;
 
     private DeleteCloudVendorAccountAKRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DeleteCloudVendorAccountAKRequest extends Request {
     /**
      * @return authModules
      */
-    public java.util.List < String > getAuthModules() {
+    public java.util.List<String> getAuthModules() {
         return this.authModules;
     }
 
     public static final class Builder extends Request.Builder<DeleteCloudVendorAccountAKRequest, Builder> {
         private Long authId; 
-        private java.util.List < String > authModules; 
+        private java.util.List<String> authModules; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class DeleteCloudVendorAccountAKRequest extends Request {
         /**
          * <p>The modules that are associated with the AccessKey pair.</p>
          */
-        public Builder authModules(java.util.List < String > authModules) {
+        public Builder authModules(java.util.List<String> authModules) {
             this.putQueryParameter("AuthModules", authModules);
             this.authModules = authModules;
             return this;

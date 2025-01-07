@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class BindAuthToMachineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Bind")
-    private java.util.List < String > bind;
+    private java.util.List<String> bind;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BindAll")
@@ -50,7 +55,7 @@ public class BindAuthToMachineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnBind")
-    private java.util.List < String > unBind;
+    private java.util.List<String> unBind;
 
     private BindAuthToMachineRequest(Builder builder) {
         super(builder);
@@ -96,7 +101,7 @@ public class BindAuthToMachineRequest extends Request {
     /**
      * @return bind
      */
-    public java.util.List < String > getBind() {
+    public java.util.List<String> getBind() {
         return this.bind;
     }
 
@@ -145,21 +150,21 @@ public class BindAuthToMachineRequest extends Request {
     /**
      * @return unBind
      */
-    public java.util.List < String > getUnBind() {
+    public java.util.List<String> getUnBind() {
         return this.unBind;
     }
 
     public static final class Builder extends Request.Builder<BindAuthToMachineRequest, Builder> {
         private Integer authVersion; 
         private Integer autoBind; 
-        private java.util.List < String > bind; 
+        private java.util.List<String> bind; 
         private Boolean bindAll; 
         private String criteria; 
         private Integer isPreBind; 
         private String logicalExp; 
         private String ntmVersion; 
         private Long preBindOrderId; 
-        private java.util.List < String > unBind; 
+        private java.util.List<String> unBind; 
 
         private Builder() {
             super();
@@ -220,7 +225,7 @@ public class BindAuthToMachineRequest extends Request {
          * <p> You must specify at least one of the <strong>Bind</strong> and <strong>UnBind</strong> parameters.</p>
          * </blockquote>
          */
-        public Builder bind(java.util.List < String > bind) {
+        public Builder bind(java.util.List<String> bind) {
             this.putQueryParameter("Bind", bind);
             this.bind = bind;
             return this;
@@ -329,7 +334,7 @@ public class BindAuthToMachineRequest extends Request {
          * <p> You must specify at least one of the <strong>Bind</strong> and <strong>UnBind</strong> parameters.</p>
          * </blockquote>
          */
-        public Builder unBind(java.util.List < String > unBind) {
+        public Builder unBind(java.util.List<String> unBind) {
             this.putQueryParameter("UnBind", unBind);
             this.unBind = unBind;
             return this;

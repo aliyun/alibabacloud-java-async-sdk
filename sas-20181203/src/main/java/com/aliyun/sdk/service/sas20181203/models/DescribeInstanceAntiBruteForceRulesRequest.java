@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private DescribeInstanceAntiBruteForceRulesRequest(Builder builder) {
         super(builder);
@@ -85,7 +90,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
@@ -94,7 +99,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
         private Integer pageSize; 
         private Long resourceOwnerId; 
         private String sourceIp; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -160,7 +165,7 @@ public class DescribeInstanceAntiBruteForceRulesRequest extends Request {
          * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
          * </blockquote>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

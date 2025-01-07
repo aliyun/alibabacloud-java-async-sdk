@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContainerInstanceList")
-    private java.util.List < ContainerInstanceList> containerInstanceList;
+    private java.util.List<ContainerInstanceList> containerInstanceList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     /**
      * @return containerInstanceList
      */
-    public java.util.List < ContainerInstanceList> getContainerInstanceList() {
+    public java.util.List<ContainerInstanceList> getContainerInstanceList() {
         return this.containerInstanceList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContainerInstanceList> containerInstanceList; 
+        private java.util.List<ContainerInstanceList> containerInstanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The details of the container asset.</p>
          */
-        public Builder containerInstanceList(java.util.List < ContainerInstanceList> containerInstanceList) {
+        public Builder containerInstanceList(java.util.List<ContainerInstanceList> containerInstanceList) {
             this.containerInstanceList = containerInstanceList;
             return this;
         }

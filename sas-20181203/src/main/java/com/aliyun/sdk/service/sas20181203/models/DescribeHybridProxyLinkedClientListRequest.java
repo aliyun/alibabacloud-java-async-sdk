@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -124,7 +129,10 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         } 
 
         /**
-         * ClusterName.
+         * <p>The name of the proxy cluster. You can query the name of the proxy cluster in the Security Center console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>office-proxy</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -133,7 +141,10 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -142,7 +153,10 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +165,10 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * ProxyUuid.
+         * <p>The UUID of the proxy node. You can call the DescribeHybridProxyList operation to query the UUID of the proxy node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612XXXX</p>
          */
         public Builder proxyUuid(String proxyUuid) {
             this.putQueryParameter("ProxyUuid", proxyUuid);
@@ -160,7 +177,10 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The description of the proxy cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -169,7 +189,10 @@ public class DescribeHybridProxyLinkedClientListRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the server on which the Security Center agent is installed. You can query the UUID by querying asset information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80d2f7d6-31a9-4d7f-8ff4-7ecc42f89ca****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

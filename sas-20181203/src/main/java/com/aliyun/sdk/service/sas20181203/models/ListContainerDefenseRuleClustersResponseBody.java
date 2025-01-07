@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterList")
-    private java.util.List < ClusterList> clusterList;
+    private java.util.List<ClusterList> clusterList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -54,7 +59,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
     /**
      * @return clusterList
      */
-    public java.util.List < ClusterList> getClusterList() {
+    public java.util.List<ClusterList> getClusterList() {
         return this.clusterList;
     }
 
@@ -101,7 +106,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterList> clusterList; 
+        private java.util.List<ClusterList> clusterList; 
         private String code; 
         private Integer count; 
         private Integer httpStatusCode; 
@@ -112,7 +117,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         /**
          * <p>The clusters.</p>
          */
-        public Builder clusterList(java.util.List < ClusterList> clusterList) {
+        public Builder clusterList(java.util.List<ClusterList> clusterList) {
             this.clusterList = clusterList;
             return this;
         }
@@ -207,7 +212,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List < String > namespaces;
+        private java.util.List<String> namespaces;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -244,7 +249,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         /**
          * @return namespaces
          */
-        public java.util.List < String > getNamespaces() {
+        public java.util.List<String> getNamespaces() {
             return this.namespaces;
         }
 
@@ -258,7 +263,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer allNamespace; 
             private String clusterId; 
-            private java.util.List < String > namespaces; 
+            private java.util.List<String> namespaces; 
             private Long ruleId; 
 
             /**
@@ -290,7 +295,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             /**
              * <p>The namespaces.</p>
              */
-            public Builder namespaces(java.util.List < String > namespaces) {
+            public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }

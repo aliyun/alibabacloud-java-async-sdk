@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CriteriaList")
-    private java.util.List < CriteriaList> criteriaList;
+    private java.util.List<CriteriaList> criteriaList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
     /**
      * @return criteriaList
      */
-    public java.util.List < CriteriaList> getCriteriaList() {
+    public java.util.List<CriteriaList> getCriteriaList() {
         return this.criteriaList;
     }
 
@@ -46,13 +51,13 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CriteriaList> criteriaList; 
+        private java.util.List<CriteriaList> criteriaList; 
         private String requestId; 
 
         /**
          * <p>The information about the search condition.</p>
          */
-        public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
+        public Builder criteriaList(java.util.List<CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
             return this;
         }

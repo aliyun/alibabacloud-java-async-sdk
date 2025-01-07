@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddSasContainerWebDefenseRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PathConfDTOList")
-    private java.util.List < PathConfDTOList> pathConfDTOList;
+    private java.util.List<PathConfDTOList> pathConfDTOList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
@@ -43,7 +48,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
     /**
      * @return pathConfDTOList
      */
-    public java.util.List < PathConfDTOList> getPathConfDTOList() {
+    public java.util.List<PathConfDTOList> getPathConfDTOList() {
         return this.pathConfDTOList;
     }
 
@@ -55,7 +60,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddSasContainerWebDefenseRuleRequest, Builder> {
-        private java.util.List < PathConfDTOList> pathConfDTOList; 
+        private java.util.List<PathConfDTOList> pathConfDTOList; 
         private String ruleName; 
 
         private Builder() {
@@ -71,7 +76,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
         /**
          * <p>The paths that you want to protect.</p>
          */
-        public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
+        public Builder pathConfDTOList(java.util.List<PathConfDTOList> pathConfDTOList) {
             this.putQueryParameter("PathConfDTOList", pathConfDTOList);
             this.pathConfDTOList = pathConfDTOList;
             return this;
@@ -134,7 +139,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("ProcessPathList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > processPathList;
+        private java.util.List<String> processPathList;
 
         private PathConfDTOList(Builder builder) {
             this.backupPath = builder.backupPath;
@@ -223,7 +228,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
         /**
          * @return processPathList
          */
-        public java.util.List < String > getProcessPathList() {
+        public java.util.List<String> getProcessPathList() {
             return this.processPathList;
         }
 
@@ -237,7 +242,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
             private Integer guardType; 
             private String includeFile; 
             private String includeFileType; 
-            private java.util.List < String > processPathList; 
+            private java.util.List<String> processPathList; 
 
             /**
              * <p>The backup path.</p>
@@ -352,7 +357,7 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
              * <p>The processes that you want to add to the whitelist.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder processPathList(java.util.List < String > processPathList) {
+            public Builder processPathList(java.util.List<String> processPathList) {
                 this.processPathList = processPathList;
                 return this;
             }

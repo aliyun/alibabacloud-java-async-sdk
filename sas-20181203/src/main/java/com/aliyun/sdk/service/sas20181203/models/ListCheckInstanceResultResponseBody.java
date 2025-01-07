@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCheckInstanceResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BasicData")
-    private java.util.List < BasicData> basicData;
+    private java.util.List<BasicData> basicData;
 
     @com.aliyun.core.annotation.NameInMap("Checks")
-    private java.util.List < java.util.Map<String, ?>> checks;
+    private java.util.List<java.util.Map<String, ?>> checks;
 
     @com.aliyun.core.annotation.NameInMap("Columns")
-    private java.util.List < Columns> columns;
+    private java.util.List<Columns> columns;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -46,21 +51,21 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     /**
      * @return basicData
      */
-    public java.util.List < BasicData> getBasicData() {
+    public java.util.List<BasicData> getBasicData() {
         return this.basicData;
     }
 
     /**
      * @return checks
      */
-    public java.util.List < java.util.Map<String, ?>> getChecks() {
+    public java.util.List<java.util.Map<String, ?>> getChecks() {
         return this.checks;
     }
 
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -79,16 +84,16 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BasicData> basicData; 
-        private java.util.List < java.util.Map<String, ?>> checks; 
-        private java.util.List < Columns> columns; 
+        private java.util.List<BasicData> basicData; 
+        private java.util.List<java.util.Map<String, ?>> checks; 
+        private java.util.List<Columns> columns; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The basic information about the affected instances.</p>
          */
-        public Builder basicData(java.util.List < BasicData> basicData) {
+        public Builder basicData(java.util.List<BasicData> basicData) {
             this.basicData = basicData;
             return this;
         }
@@ -107,7 +112,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
          *     }
          * }]</p>
          */
-        public Builder checks(java.util.List < java.util.Map<String, ?>> checks) {
+        public Builder checks(java.util.List<java.util.Map<String, ?>> checks) {
             this.checks = checks;
             return this;
         }
@@ -115,7 +120,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>The metadata information about the search conditions that can be used to filter instances.</p>
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             this.columns = columns;
             return this;
         }
@@ -249,7 +254,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
      */
     public static class InstanceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
-        private java.util.List < Config> config;
+        private java.util.List<Config> config;
 
         @com.aliyun.core.annotation.NameInMap("FirstUpdateTime")
         private Long firstUpdateTime;
@@ -274,7 +279,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.List < Config> getConfig() {
+        public java.util.List<Config> getConfig() {
             return this.config;
         }
 
@@ -293,14 +298,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Config> config; 
+            private java.util.List<Config> config; 
             private Long firstUpdateTime; 
             private Long lastUpdateTime; 
 
             /**
              * <p>The information about the configuration item whose risks are fixed for the instance.</p>
              */
-            public Builder config(java.util.List < Config> config) {
+            public Builder config(java.util.List<Config> config) {
                 this.config = config;
                 return this;
             }
@@ -634,7 +639,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
      */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Grids")
-        private java.util.List < Grids> grids;
+        private java.util.List<Grids> grids;
 
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -671,7 +676,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * @return grids
          */
-        public java.util.List < Grids> getGrids() {
+        public java.util.List<Grids> getGrids() {
             return this.grids;
         }
 
@@ -711,7 +716,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Grids> grids; 
+            private java.util.List<Grids> grids; 
             private String key; 
             private Boolean search; 
             private String searchKey; 
@@ -721,7 +726,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             /**
              * <p>The metadata information about the details of the instance.</p>
              */
-            public Builder grids(java.util.List < Grids> grids) {
+            public Builder grids(java.util.List<Grids> grids) {
                 this.grids = grids;
                 return this;
             }

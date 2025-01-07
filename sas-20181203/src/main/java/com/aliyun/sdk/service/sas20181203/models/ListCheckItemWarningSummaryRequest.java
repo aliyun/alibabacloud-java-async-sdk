@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,6 +32,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckWarningStatus")
     private Integer checkWarningStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckWarningStatusList")
+    private java.util.List<Integer> checkWarningStatusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainerFieldName")
@@ -61,8 +70,12 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     private String source;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private Long startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private ListCheckItemWarningSummaryRequest(Builder builder) {
         super(builder);
@@ -70,6 +83,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.checkLevel = builder.checkLevel;
         this.checkType = builder.checkType;
         this.checkWarningStatus = builder.checkWarningStatus;
+        this.checkWarningStatusList = builder.checkWarningStatusList;
         this.containerFieldName = builder.containerFieldName;
         this.containerFieldValue = builder.containerFieldValue;
         this.currentPage = builder.currentPage;
@@ -78,6 +92,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.pageSize = builder.pageSize;
         this.riskType = builder.riskType;
         this.source = builder.source;
+        this.startTime = builder.startTime;
         this.uuidList = builder.uuidList;
     }
 
@@ -120,6 +135,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
      */
     public Integer getCheckWarningStatus() {
         return this.checkWarningStatus;
+    }
+
+    /**
+     * @return checkWarningStatusList
+     */
+    public java.util.List<Integer> getCheckWarningStatusList() {
+        return this.checkWarningStatusList;
     }
 
     /**
@@ -179,9 +201,16 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
@@ -190,6 +219,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private String checkLevel; 
         private String checkType; 
         private Integer checkWarningStatus; 
+        private java.util.List<Integer> checkWarningStatusList; 
         private String containerFieldName; 
         private String containerFieldValue; 
         private Integer currentPage; 
@@ -198,7 +228,8 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private Integer pageSize; 
         private String riskType; 
         private String source; 
-        private java.util.List < String > uuidList; 
+        private Long startTime; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -210,6 +241,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.checkLevel = request.checkLevel;
             this.checkType = request.checkType;
             this.checkWarningStatus = request.checkWarningStatus;
+            this.checkWarningStatusList = request.checkWarningStatusList;
             this.containerFieldName = request.containerFieldName;
             this.containerFieldValue = request.containerFieldValue;
             this.currentPage = request.currentPage;
@@ -218,6 +250,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.pageSize = request.pageSize;
             this.riskType = request.riskType;
             this.source = request.source;
+            this.startTime = request.startTime;
             this.uuidList = request.uuidList;
         } 
 
@@ -276,6 +309,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         public Builder checkWarningStatus(Integer checkWarningStatus) {
             this.putQueryParameter("CheckWarningStatus", checkWarningStatus);
             this.checkWarningStatus = checkWarningStatus;
+            return this;
+        }
+
+        /**
+         * CheckWarningStatusList.
+         */
+        public Builder checkWarningStatusList(java.util.List<Integer> checkWarningStatusList) {
+            this.putQueryParameter("CheckWarningStatusList", checkWarningStatusList);
+            this.checkWarningStatusList = checkWarningStatusList;
             return this;
         }
 
@@ -390,12 +432,21 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
          * <p>The UUIDs of the servers.</p>
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of the servers.</p>
          * </blockquote>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

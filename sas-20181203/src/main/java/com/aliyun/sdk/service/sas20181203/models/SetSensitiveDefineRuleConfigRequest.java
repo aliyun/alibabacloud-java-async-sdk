@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,9 +21,19 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNewRule")
+    private Integer enableNewRule;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private SetSensitiveDefineRuleConfigRequest(Builder builder) {
         super(builder);
         this.config = builder.config;
+        this.enableNewRule = builder.enableNewRule;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -41,8 +56,24 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         return this.config;
     }
 
+    /**
+     * @return enableNewRule
+     */
+    public Integer getEnableNewRule() {
+        return this.enableNewRule;
+    }
+
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<SetSensitiveDefineRuleConfigRequest, Builder> {
         private String config; 
+        private Integer enableNewRule; 
+        private String source; 
 
         private Builder() {
             super();
@@ -51,6 +82,8 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         private Builder(SetSensitiveDefineRuleConfigRequest request) {
             super(request);
             this.config = request.config;
+            this.enableNewRule = request.enableNewRule;
+            this.source = request.source;
         } 
 
         /**
@@ -66,6 +99,24 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
             this.config = config;
+            return this;
+        }
+
+        /**
+         * EnableNewRule.
+         */
+        public Builder enableNewRule(Integer enableNewRule) {
+            this.putQueryParameter("EnableNewRule", enableNewRule);
+            this.enableNewRule = enableNewRule;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

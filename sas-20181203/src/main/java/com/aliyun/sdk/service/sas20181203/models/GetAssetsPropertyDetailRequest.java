@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchCriteriaList")
-    private java.util.List < SearchCriteriaList> searchCriteriaList;
+    private java.util.List<SearchCriteriaList> searchCriteriaList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -115,7 +120,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
     /**
      * @return searchCriteriaList
      */
-    public java.util.List < SearchCriteriaList> getSearchCriteriaList() {
+    public java.util.List<SearchCriteriaList> getSearchCriteriaList() {
         return this.searchCriteriaList;
     }
 
@@ -133,7 +138,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private String remark; 
-        private java.util.List < SearchCriteriaList> searchCriteriaList; 
+        private java.util.List<SearchCriteriaList> searchCriteriaList; 
         private String uuid; 
 
         private Builder() {
@@ -243,7 +248,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         /**
          * <p>The conditions that are used to query the details about the asset fingerprint.</p>
          */
-        public Builder searchCriteriaList(java.util.List < SearchCriteriaList> searchCriteriaList) {
+        public Builder searchCriteriaList(java.util.List<SearchCriteriaList> searchCriteriaList) {
             this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
             this.searchCriteriaList = searchCriteriaList;
             return this;

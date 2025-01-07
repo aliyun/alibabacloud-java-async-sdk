@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteContainerDefenseRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
-    private java.util.List < Long > ruleIds;
+    private java.util.List<Long> ruleIds;
 
     private DeleteContainerDefenseRuleRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class DeleteContainerDefenseRuleRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < Long > getRuleIds() {
+    public java.util.List<Long> getRuleIds() {
         return this.ruleIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteContainerDefenseRuleRequest, Builder> {
-        private java.util.List < Long > ruleIds; 
+        private java.util.List<Long> ruleIds; 
 
         private Builder() {
             super();
@@ -59,7 +64,7 @@ public class DeleteContainerDefenseRuleRequest extends Request {
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the rule IDs.</p>
          * </blockquote>
          */
-        public Builder ruleIds(java.util.List < Long > ruleIds) {
+        public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("K8sClusterNamespaces")
-    private java.util.List < K8sClusterNamespaces> k8sClusterNamespaces;
+    private java.util.List<K8sClusterNamespaces> k8sClusterNamespaces;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
     /**
      * @return k8sClusterNamespaces
      */
-    public java.util.List < K8sClusterNamespaces> getK8sClusterNamespaces() {
+    public java.util.List<K8sClusterNamespaces> getK8sClusterNamespaces() {
         return this.k8sClusterNamespaces;
     }
 
@@ -46,13 +51,13 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
     }
 
     public static final class Builder {
-        private java.util.List < K8sClusterNamespaces> k8sClusterNamespaces; 
+        private java.util.List<K8sClusterNamespaces> k8sClusterNamespaces; 
         private String requestId; 
 
         /**
          * <p>The namespaces.</p>
          */
-        public Builder k8sClusterNamespaces(java.util.List < K8sClusterNamespaces> k8sClusterNamespaces) {
+        public Builder k8sClusterNamespaces(java.util.List<K8sClusterNamespaces> k8sClusterNamespaces) {
             this.k8sClusterNamespaces = k8sClusterNamespaces;
             return this;
         }

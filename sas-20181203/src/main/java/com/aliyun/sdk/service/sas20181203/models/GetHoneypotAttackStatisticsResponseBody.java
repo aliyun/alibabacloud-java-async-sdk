@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -254,7 +259,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         private Integer count;
 
         @com.aliyun.core.annotation.NameInMap("HoneypotAttackStatistics")
-        private java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics;
+        private java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics;
 
         @com.aliyun.core.annotation.NameInMap("StatisticsType")
         private String statisticsType;
@@ -283,7 +288,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
         /**
          * @return honeypotAttackStatistics
          */
-        public java.util.List < HoneypotAttackStatistics> getHoneypotAttackStatistics() {
+        public java.util.List<HoneypotAttackStatistics> getHoneypotAttackStatistics() {
             return this.honeypotAttackStatistics;
         }
 
@@ -296,7 +301,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics; 
+            private java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics; 
             private String statisticsType; 
 
             /**
@@ -313,7 +318,7 @@ public class GetHoneypotAttackStatisticsResponseBody extends TeaModel {
             /**
              * <p>The statistics details.</p>
              */
-            public Builder honeypotAttackStatistics(java.util.List < HoneypotAttackStatistics> honeypotAttackStatistics) {
+            public Builder honeypotAttackStatistics(java.util.List<HoneypotAttackStatistics> honeypotAttackStatistics) {
                 this.honeypotAttackStatistics = honeypotAttackStatistics;
                 return this;
             }

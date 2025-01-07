@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("WarningSummarys")
-    private java.util.List < WarningSummarys> warningSummarys;
+    private java.util.List<WarningSummarys> warningSummarys;
 
     private DescribeCheckWarningSummaryResponseBody(Builder builder) {
         this.count = builder.count;
@@ -85,7 +90,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     /**
      * @return warningSummarys
      */
-    public java.util.List < WarningSummarys> getWarningSummarys() {
+    public java.util.List<WarningSummarys> getWarningSummarys() {
         return this.warningSummarys;
     }
 
@@ -95,7 +100,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < WarningSummarys> warningSummarys; 
+        private java.util.List<WarningSummarys> warningSummarys; 
 
         /**
          * <p>The number of check items returned on the current page.</p>
@@ -155,7 +160,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         /**
          * <p>The statistics of check items.</p>
          */
-        public Builder warningSummarys(java.util.List < WarningSummarys> warningSummarys) {
+        public Builder warningSummarys(java.util.List<WarningSummarys> warningSummarys) {
             this.warningSummarys = warningSummarys;
             return this;
         }

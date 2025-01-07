@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigIdList")
-    private java.util.List < Long > configIdList;
+    private java.util.List<Long> configIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -54,7 +59,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
     /**
      * @return configIdList
      */
-    public java.util.List < Long > getConfigIdList() {
+    public java.util.List<Long> getConfigIdList() {
         return this.configIdList;
     }
 
@@ -67,7 +72,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteVulAutoRepairConfigRequest, Builder> {
         private String aliasName; 
-        private java.util.List < Long > configIdList; 
+        private java.util.List<Long> configIdList; 
         private String type; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
          * <p> You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to query the IDs.</p>
          * </blockquote>
          */
-        public Builder configIdList(java.util.List < Long > configIdList) {
+        public Builder configIdList(java.util.List<Long> configIdList) {
             this.putQueryParameter("ConfigIdList", configIdList);
             this.configIdList = configIdList;
             return this;

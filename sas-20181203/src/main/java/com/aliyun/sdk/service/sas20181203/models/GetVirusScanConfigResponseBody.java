@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -94,7 +99,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         private String periodUnit;
 
         @com.aliyun.core.annotation.NameInMap("ScanPath")
-        private java.util.List < String > scanPath;
+        private java.util.List<String> scanPath;
 
         @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
@@ -163,7 +168,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
         /**
          * @return scanPath
          */
-        public java.util.List < String > getScanPath() {
+        public java.util.List<String> getScanPath() {
             return this.scanPath;
         }
 
@@ -207,7 +212,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             private Integer enable; 
             private Integer intervalPeriod; 
             private String periodUnit; 
-            private java.util.List < String > scanPath; 
+            private java.util.List<String> scanPath; 
             private String scanType; 
             private String selectionKey; 
             private Integer targetEndTime; 
@@ -271,7 +276,7 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
             /**
              * <p>The file paths.</p>
              */
-            public Builder scanPath(java.util.List < String > scanPath) {
+            public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     private String dataSource;
 
     @com.aliyun.core.annotation.NameInMap("Details")
-    private java.util.List < Details> details;
+    private java.util.List<Details> details;
 
     @com.aliyun.core.annotation.NameInMap("EventDesc")
     private String eventDesc;
@@ -112,7 +117,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     /**
      * @return details
      */
-    public java.util.List < Details> getDetails() {
+    public java.util.List<Details> getDetails() {
         return this.details;
     }
 
@@ -224,7 +229,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean canBeDealOnLine; 
         private String dataSource; 
-        private java.util.List < Details> details; 
+        private java.util.List<Details> details; 
         private String eventDesc; 
         private String eventName; 
         private String eventStatus; 
@@ -270,7 +275,7 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the details of the exception.</p>
          */
-        public Builder details(java.util.List < Details> details) {
+        public Builder details(java.util.List<Details> details) {
             this.details = details;
             return this;
         }

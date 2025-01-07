@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRiskListCheckResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -46,13 +51,13 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String requestId; 
 
         /**
          * <p>The number of risk items for each cloud service.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAllEntityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EntityList")
-    private java.util.List < EntityList> entityList;
+    private java.util.List<EntityList> entityList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
     /**
      * @return entityList
      */
-    public java.util.List < EntityList> getEntityList() {
+    public java.util.List<EntityList> getEntityList() {
         return this.entityList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeAllEntityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EntityList> entityList; 
+        private java.util.List<EntityList> entityList; 
         private String requestId; 
 
         /**
          * <p>An array that consists of servers.</p>
          */
-        public Builder entityList(java.util.List < EntityList> entityList) {
+        public Builder entityList(java.util.List<EntityList> entityList) {
             this.entityList = entityList;
             return this;
         }

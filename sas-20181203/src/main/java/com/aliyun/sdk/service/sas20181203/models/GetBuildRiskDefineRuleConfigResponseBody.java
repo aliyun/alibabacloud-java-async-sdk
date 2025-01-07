@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -86,7 +91,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,14 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +209,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * RuleKey.
+             * <p>The check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder ruleKey(String ruleKey) {
                 this.ruleKey = ruleKey;
@@ -196,7 +220,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>used ADD</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -204,7 +231,14 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the check item is selected. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -232,7 +266,7 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         private String className;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         private RuleTree(Builder builder) {
             this.classKey = builder.classKey;
@@ -265,17 +299,20 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
         public static final class Builder {
             private String classKey; 
             private String className; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
 
             /**
-             * ClassKey.
+             * <p>The check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -283,7 +320,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ClassName.
+             * <p>The name of the check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder className(String className) {
                 this.className = className;
@@ -291,9 +331,9 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleList.
+             * <p>The check items of the type.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
@@ -319,7 +359,7 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         private Integer ruleCount;
 
         @com.aliyun.core.annotation.NameInMap("RuleTree")
-        private java.util.List < RuleTree> ruleTree;
+        private java.util.List<RuleTree> ruleTree;
 
         @com.aliyun.core.annotation.NameInMap("SelectedCount")
         private Integer selectedCount;
@@ -356,7 +396,7 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         /**
          * @return ruleTree
          */
-        public java.util.List < RuleTree> getRuleTree() {
+        public java.util.List<RuleTree> getRuleTree() {
             return this.ruleTree;
         }
 
@@ -370,11 +410,14 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private Integer ruleCount; 
-            private java.util.List < RuleTree> ruleTree; 
+            private java.util.List<RuleTree> ruleTree; 
             private Integer selectedCount; 
 
             /**
-             * Id.
+             * <p>The configuration ID for scanning image build command risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>273698***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -382,7 +425,10 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The total number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -390,15 +436,18 @@ public class GetBuildRiskDefineRuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RuleTree.
+             * <p>The details of all check items.</p>
              */
-            public Builder ruleTree(java.util.List < RuleTree> ruleTree) {
+            public Builder ruleTree(java.util.List<RuleTree> ruleTree) {
                 this.ruleTree = ruleTree;
                 return this;
             }
 
             /**
-             * SelectedCount.
+             * <p>The number of selected check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder selectedCount(Integer selectedCount) {
                 this.selectedCount = selectedCount;

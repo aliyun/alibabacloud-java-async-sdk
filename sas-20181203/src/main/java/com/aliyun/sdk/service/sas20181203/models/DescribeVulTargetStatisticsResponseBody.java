@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TargetStats")
-    private java.util.List < TargetStats> targetStats;
+    private java.util.List<TargetStats> targetStats;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     /**
      * @return targetStats
      */
-    public java.util.List < TargetStats> getTargetStats() {
+    public java.util.List<TargetStats> getTargetStats() {
         return this.targetStats;
     }
 
@@ -82,7 +87,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TargetStats> targetStats; 
+        private java.util.List<TargetStats> targetStats; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the configurations of the vulnerability scan feature.</p>
          */
-        public Builder targetStats(java.util.List < TargetStats> targetStats) {
+        public Builder targetStats(java.util.List<TargetStats> targetStats) {
             this.targetStats = targetStats;
             return this;
         }
@@ -255,7 +260,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
      */
     public static class TargetStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Targets")
-        private java.util.List < Targets> targets;
+        private java.util.List<Targets> targets;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -284,7 +289,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         /**
          * @return targets
          */
-        public java.util.List < Targets> getTargets() {
+        public java.util.List<Targets> getTargets() {
             return this.targets;
         }
 
@@ -310,7 +315,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Targets> targets; 
+            private java.util.List<Targets> targets; 
             private Integer totalCount; 
             private Integer uuidCount; 
             private String vulType; 
@@ -318,7 +323,7 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
             /**
              * <p>An array that consists of available servers.</p>
              */
-            public Builder targets(java.util.List < Targets> targets) {
+            public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
                 return this;
             }

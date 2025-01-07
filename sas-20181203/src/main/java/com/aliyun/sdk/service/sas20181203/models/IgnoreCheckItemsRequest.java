@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IgnoreCheckItemsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckAndRiskTypeList")
-    private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList;
+    private java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -39,7 +44,7 @@ public class IgnoreCheckItemsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private IgnoreCheckItemsRequest(Builder builder) {
         super(builder);
@@ -68,14 +73,14 @@ public class IgnoreCheckItemsRequest extends Request {
     /**
      * @return checkAndRiskTypeList
      */
-    public java.util.List < CheckAndRiskTypeList> getCheckAndRiskTypeList() {
+    public java.util.List<CheckAndRiskTypeList> getCheckAndRiskTypeList() {
         return this.checkAndRiskTypeList;
     }
 
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
     }
 
@@ -110,18 +115,18 @@ public class IgnoreCheckItemsRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
     public static final class Builder extends Request.Builder<IgnoreCheckItemsRequest, Builder> {
-        private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList; 
-        private java.util.List < Long > checkIds; 
+        private java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList; 
+        private java.util.List<Long> checkIds; 
         private String lang; 
         private String reason; 
         private String source; 
         private Integer type; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -141,7 +146,7 @@ public class IgnoreCheckItemsRequest extends Request {
         /**
          * <p>The information about check items.</p>
          */
-        public Builder checkAndRiskTypeList(java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList) {
+        public Builder checkAndRiskTypeList(java.util.List<CheckAndRiskTypeList> checkAndRiskTypeList) {
             this.putQueryParameter("CheckAndRiskTypeList", checkAndRiskTypeList);
             this.checkAndRiskTypeList = checkAndRiskTypeList;
             return this;
@@ -150,7 +155,7 @@ public class IgnoreCheckItemsRequest extends Request {
         /**
          * <p>The IDs of check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
             return this;
@@ -223,7 +228,7 @@ public class IgnoreCheckItemsRequest extends Request {
          * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
          * </blockquote>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

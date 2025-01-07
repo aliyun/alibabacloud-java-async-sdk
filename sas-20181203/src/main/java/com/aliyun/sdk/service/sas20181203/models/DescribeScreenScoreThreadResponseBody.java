@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,10 +87,10 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SocreThread")
-        private java.util.List < String > socreThread;
+        private java.util.List<String> socreThread;
 
         @com.aliyun.core.annotation.NameInMap("SocreThreadDate")
-        private java.util.List < String > socreThreadDate;
+        private java.util.List<String> socreThreadDate;
 
         private Data(Builder builder) {
             this.socreThread = builder.socreThread;
@@ -103,25 +108,25 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
         /**
          * @return socreThread
          */
-        public java.util.List < String > getSocreThread() {
+        public java.util.List<String> getSocreThread() {
             return this.socreThread;
         }
 
         /**
          * @return socreThreadDate
          */
-        public java.util.List < String > getSocreThreadDate() {
+        public java.util.List<String> getSocreThreadDate() {
             return this.socreThreadDate;
         }
 
         public static final class Builder {
-            private java.util.List < String > socreThread; 
-            private java.util.List < String > socreThreadDate; 
+            private java.util.List<String> socreThread; 
+            private java.util.List<String> socreThreadDate; 
 
             /**
              * <p>The trends of the scores on the security dashboard.</p>
              */
-            public Builder socreThread(java.util.List < String > socreThread) {
+            public Builder socreThread(java.util.List<String> socreThread) {
                 this.socreThread = socreThread;
                 return this;
             }
@@ -129,7 +134,7 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
             /**
              * <p>The dates of the scores on the security dashboard.</p>
              */
-            public Builder socreThreadDate(java.util.List < String > socreThreadDate) {
+            public Builder socreThreadDate(java.util.List<String> socreThreadDate) {
                 this.socreThreadDate = socreThreadDate;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AffectedMaliciousFileImagesResponse")
-    private java.util.List < AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse;
+    private java.util.List<AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     /**
      * @return affectedMaliciousFileImagesResponse
      */
-    public java.util.List < AffectedMaliciousFileImagesResponse> getAffectedMaliciousFileImagesResponse() {
+    public java.util.List<AffectedMaliciousFileImagesResponse> getAffectedMaliciousFileImagesResponse() {
         return this.affectedMaliciousFileImagesResponse;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse; 
+        private java.util.List<AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array consisting of the images that have malicious image samples.</p>
          */
-        public Builder affectedMaliciousFileImagesResponse(java.util.List < AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse) {
+        public Builder affectedMaliciousFileImagesResponse(java.util.List<AffectedMaliciousFileImagesResponse> affectedMaliciousFileImagesResponse) {
             this.affectedMaliciousFileImagesResponse = affectedMaliciousFileImagesResponse;
             return this;
         }

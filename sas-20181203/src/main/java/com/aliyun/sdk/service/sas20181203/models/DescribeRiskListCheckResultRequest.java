@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -69,7 +74,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -103,7 +108,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRiskListCheckResultRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String lang; 
         private Integer pageSize; 
         private Long resourceOwnerId; 
@@ -141,7 +146,7 @@ public class DescribeRiskListCheckResultRequest extends Request {
          * <p>If you do not specify this parameter, an empty list is returned.</p>
          * </blockquote>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

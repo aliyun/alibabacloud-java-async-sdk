@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The asset details.</p>
+         * <p>The details of the server.</p>
          */
         public Builder assetDetail(AssetDetail assetDetail) {
             this.assetDetail = assetDetail;
@@ -109,7 +114,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("DiskInfoList")
-        private java.util.List < String > diskInfoList;
+        private java.util.List<String> diskInfoList;
 
         @com.aliyun.core.annotation.NameInMap("Flag")
         private Integer flag;
@@ -136,13 +141,13 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         private String ip;
 
         @com.aliyun.core.annotation.NameInMap("IpList")
-        private java.util.List < String > ipList;
+        private java.util.List<String> ipList;
 
         @com.aliyun.core.annotation.NameInMap("Kernel")
         private String kernel;
 
         @com.aliyun.core.annotation.NameInMap("MacList")
-        private java.util.List < String > macList;
+        private java.util.List<String> macList;
 
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
@@ -290,7 +295,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * @return diskInfoList
          */
-        public java.util.List < String > getDiskInfoList() {
+        public java.util.List<String> getDiskInfoList() {
             return this.diskInfoList;
         }
 
@@ -353,7 +358,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * @return ipList
          */
-        public java.util.List < String > getIpList() {
+        public java.util.List<String> getIpList() {
             return this.ipList;
         }
 
@@ -367,7 +372,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * @return macList
          */
-        public java.util.List < String > getMacList() {
+        public java.util.List<String> getMacList() {
             return this.macList;
         }
 
@@ -465,7 +470,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             private Integer cpu; 
             private String cpuInfo; 
             private Long createTime; 
-            private java.util.List < String > diskInfoList; 
+            private java.util.List<String> diskInfoList; 
             private Integer flag; 
             private String groupTrace; 
             private String hostName; 
@@ -474,9 +479,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private String ip; 
-            private java.util.List < String > ipList; 
+            private java.util.List<String> ipList; 
             private String kernel; 
-            private java.util.List < String > macList; 
+            private java.util.List<String> macList; 
             private Integer mem; 
             private Long memory; 
             private String os; 
@@ -530,7 +535,6 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
              * <li><strong>5</strong>: Advanced edition</li>
              * <li><strong>3</strong>: Enterprise edition</li>
              * <li><strong>7</strong>: Ultimate edition</li>
-             * <li><strong>10</strong>: Value-added Plan edition</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -619,7 +623,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the information about the disk.</p>
              */
-            public Builder diskInfoList(java.util.List < String > diskInfoList) {
+            public Builder diskInfoList(java.util.List<String> diskInfoList) {
                 this.diskInfoList = diskInfoList;
                 return this;
             }
@@ -719,7 +723,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             /**
              * <p>The IP addresses of the server.</p>
              */
-            public Builder ipList(java.util.List < String > ipList) {
+            public Builder ipList(java.util.List<String> ipList) {
                 this.ipList = ipList;
                 return this;
             }
@@ -736,9 +740,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Media Access Control (MAC) addresses.</p>
+             * <p>The media access control (MAC) addresses of the server.</p>
              */
-            public Builder macList(java.util.List < String > macList) {
+            public Builder macList(java.util.List<String> macList) {
                 this.macList = macList;
                 return this;
             }

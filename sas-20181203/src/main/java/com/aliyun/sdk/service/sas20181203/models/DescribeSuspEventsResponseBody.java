@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SuspEvents")
-    private java.util.List < SuspEvents> suspEvents;
+    private java.util.List<SuspEvents> suspEvents;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -78,7 +83,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     /**
      * @return suspEvents
      */
-    public java.util.List < SuspEvents> getSuspEvents() {
+    public java.util.List<SuspEvents> getSuspEvents() {
         return this.suspEvents;
     }
 
@@ -94,7 +99,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SuspEvents> suspEvents; 
+        private java.util.List<SuspEvents> suspEvents; 
         private Integer totalCount; 
 
         /**
@@ -144,7 +149,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * <p>The information about the alert events.</p>
          */
-        public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
+        public Builder suspEvents(java.util.List<SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
             return this;
         }
@@ -510,13 +515,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private Boolean displaySandboxResult;
 
         @com.aliyun.core.annotation.NameInMap("EventNotes")
-        private java.util.List < EventNotes> eventNotes;
+        private java.util.List<EventNotes> eventNotes;
 
         @com.aliyun.core.annotation.NameInMap("EventStatus")
         private Integer eventStatus;
@@ -579,7 +584,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private String maliciousRuleStatus;
 
         @com.aliyun.core.annotation.NameInMap("MarkList")
-        private java.util.List < String > markList;
+        private java.util.List<String> markList;
 
         @com.aliyun.core.annotation.NameInMap("MarkMisRules")
         private String markMisRules;
@@ -615,7 +620,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private String stages;
 
         @com.aliyun.core.annotation.NameInMap("TacticItems")
-        private java.util.List < TacticItems> tacticItems;
+        private java.util.List<TacticItems> tacticItems;
 
         @com.aliyun.core.annotation.NameInMap("UniqueInfo")
         private String uniqueInfo;
@@ -807,7 +812,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -821,7 +826,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * @return eventNotes
          */
-        public java.util.List < EventNotes> getEventNotes() {
+        public java.util.List<EventNotes> getEventNotes() {
             return this.eventNotes;
         }
 
@@ -968,7 +973,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * @return markList
          */
-        public java.util.List < String > getMarkList() {
+        public java.util.List<String> getMarkList() {
             return this.markList;
         }
 
@@ -1052,7 +1057,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         /**
          * @return tacticItems
          */
-        public java.util.List < TacticItems> getTacticItems() {
+        public java.util.List<TacticItems> getTacticItems() {
             return this.tacticItems;
         }
 
@@ -1094,9 +1099,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String containerImageName; 
             private String dataSource; 
             private String desc; 
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private Boolean displaySandboxResult; 
-            private java.util.List < EventNotes> eventNotes; 
+            private java.util.List<EventNotes> eventNotes; 
             private Integer eventStatus; 
             private String eventSubType; 
             private Boolean hasTraceInfo; 
@@ -1117,7 +1122,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private Long lastTimeStamp; 
             private String level; 
             private String maliciousRuleStatus; 
-            private java.util.List < String > markList; 
+            private java.util.List<String> markList; 
             private String markMisRules; 
             private String name; 
             private String occurrenceTime; 
@@ -1129,7 +1134,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String securityEventIds; 
             private Long sourceAliUid; 
             private String stages; 
-            private java.util.List < TacticItems> tacticItems; 
+            private java.util.List<TacticItems> tacticItems; 
             private String uniqueInfo; 
             private String uuid; 
             private String clusterId; 
@@ -1325,7 +1330,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             /**
              * <p>The details of the alert event.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
@@ -1348,7 +1353,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             /**
              * <p>The note information about the alert event.</p>
              */
-            public Builder eventNotes(java.util.List < EventNotes> eventNotes) {
+            public Builder eventNotes(java.util.List<EventNotes> eventNotes) {
                 this.eventNotes = eventNotes;
                 return this;
             }
@@ -1363,6 +1368,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              * <li><strong>16</strong>: handling</li>
              * <li><strong>32</strong>: handled</li>
              * <li><strong>64</strong>: expired</li>
+             * <li><strong>604</strong>: marked as a false positive by the system</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1600,9 +1606,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The labels of alarm event.</p>
+             * <p>The tags of the alert events.</p>
              */
-            public Builder markList(java.util.List < String > markList) {
+            public Builder markList(java.util.List<String> markList) {
                 this.markList = markList;
                 return this;
             }
@@ -1711,7 +1717,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAliUid.
+             * <p>The ID of the Alibaba Cloud account within which an alert is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196072141348****</p>
              */
             public Builder sourceAliUid(Long sourceAliUid) {
                 this.sourceAliUid = sourceAliUid;
@@ -1732,7 +1741,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             /**
              * <p>The display name of the attack stage.</p>
              */
-            public Builder tacticItems(java.util.List < TacticItems> tacticItems) {
+            public Builder tacticItems(java.util.List<TacticItems> tacticItems) {
                 this.tacticItems = tacticItems;
                 return this;
             }

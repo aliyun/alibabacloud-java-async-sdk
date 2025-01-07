@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("ModuleConfigList")
-    private java.util.List < ModuleConfigList> moduleConfigList;
+    private java.util.List<ModuleConfigList> moduleConfigList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     /**
      * @return moduleConfigList
      */
-    public java.util.List < ModuleConfigList> getModuleConfigList() {
+    public java.util.List<ModuleConfigList> getModuleConfigList() {
         return this.moduleConfigList;
     }
 
@@ -81,12 +86,15 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Integer count; 
         private Integer httpStatusCode; 
-        private java.util.List < ModuleConfigList> moduleConfigList; 
+        private java.util.List<ModuleConfigList> moduleConfigList; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Count.
+         * <p>The number of configurations for the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -94,7 +102,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,15 +113,18 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ModuleConfigList.
+         * <p>An array that consists of the configurations of the module.</p>
          */
-        public Builder moduleConfigList(java.util.List < ModuleConfigList> moduleConfigList) {
+        public Builder moduleConfigList(java.util.List<ModuleConfigList> moduleConfigList) {
             this.moduleConfigList = moduleConfigList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,14 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -224,7 +245,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * GroupId.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>173</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -232,7 +256,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6435dn4t59b9av****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -240,7 +267,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inStanceName****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -248,7 +278,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31.13.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -256,7 +289,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -264,7 +300,10 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a47e3713-ed22-4015-93a3-d88ebe6****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -289,7 +328,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         private String configName;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -318,7 +357,7 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -331,11 +370,14 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String configName; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private String moduleName; 
 
             /**
-             * ConfigName.
+             * <p>The name of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timescan</p>
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -343,15 +385,18 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>An array that consists of the configuration items.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alihids</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;

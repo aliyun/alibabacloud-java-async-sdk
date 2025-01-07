@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -167,7 +172,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         private String errorCode;
 
         @com.aliyun.core.annotation.NameInMap("ErrorList")
-        private java.util.List < ErrorList> errorList;
+        private java.util.List<ErrorList> errorList;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -244,7 +249,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         /**
          * @return errorList
          */
-        public java.util.List < ErrorList> getErrorList() {
+        public java.util.List<ErrorList> getErrorList() {
             return this.errorList;
         }
 
@@ -302,7 +307,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String clientStatus; 
             private String clientVersion; 
             private String errorCode; 
-            private java.util.List < ErrorList> errorList; 
+            private java.util.List<ErrorList> errorList; 
             private String instanceId; 
             private String regionId; 
             private Integer savedBackupCount; 
@@ -366,7 +371,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the error information reported by the backup server.</p>
              */
-            public Builder errorList(java.util.List < ErrorList> errorList) {
+            public Builder errorList(java.util.List<ErrorList> errorList) {
                 this.errorList = errorList;
                 return this;
             }

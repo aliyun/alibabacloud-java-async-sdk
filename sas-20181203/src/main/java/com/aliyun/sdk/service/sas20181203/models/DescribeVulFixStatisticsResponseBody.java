@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FixStat")
-    private java.util.List < FixStat> fixStat;
+    private java.util.List<FixStat> fixStat;
 
     @com.aliyun.core.annotation.NameInMap("FixTotal")
     private FixTotal fixTotal;
@@ -38,7 +43,7 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     /**
      * @return fixStat
      */
-    public java.util.List < FixStat> getFixStat() {
+    public java.util.List<FixStat> getFixStat() {
         return this.fixStat;
     }
 
@@ -57,14 +62,14 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FixStat> fixStat; 
+        private java.util.List<FixStat> fixStat; 
         private FixTotal fixTotal; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the statistics of vulnerability fixes by vulnerability type.</p>
          */
-        public Builder fixStat(java.util.List < FixStat> fixStat) {
+        public Builder fixStat(java.util.List<FixStat> fixStat) {
             this.fixStat = fixStat;
             return this;
         }

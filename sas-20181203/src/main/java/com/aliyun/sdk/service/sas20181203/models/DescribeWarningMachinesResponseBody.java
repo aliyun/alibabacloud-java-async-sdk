@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("WarningMachines")
-    private java.util.List < WarningMachines> warningMachines;
+    private java.util.List<WarningMachines> warningMachines;
 
     private DescribeWarningMachinesResponseBody(Builder builder) {
         this.count = builder.count;
@@ -85,7 +90,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     /**
      * @return warningMachines
      */
-    public java.util.List < WarningMachines> getWarningMachines() {
+    public java.util.List<WarningMachines> getWarningMachines() {
         return this.warningMachines;
     }
 
@@ -95,7 +100,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < WarningMachines> warningMachines; 
+        private java.util.List<WarningMachines> warningMachines; 
 
         /**
          * <p>The number of entries returned on the current page.</p>
@@ -155,7 +160,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         /**
          * <p>The information about the servers.</p>
          */
-        public Builder warningMachines(java.util.List < WarningMachines> warningMachines) {
+        public Builder warningMachines(java.util.List<WarningMachines> warningMachines) {
             this.warningMachines = warningMachines;
             return this;
         }

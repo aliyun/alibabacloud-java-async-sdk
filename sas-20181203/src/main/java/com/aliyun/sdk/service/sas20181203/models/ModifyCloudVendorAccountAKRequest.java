@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,15 +24,19 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthModules")
-    private java.util.List < String > authModules;
+    private java.util.List<String> authModules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < String > regions;
+    private java.util.List<String> regions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecretId")
@@ -43,7 +52,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubscriptionIds")
-    private java.util.List < String > subscriptionIds;
+    private java.util.List<String> subscriptionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantId")
@@ -54,6 +63,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         this.authIds = builder.authIds;
         this.authModules = builder.authModules;
         this.domain = builder.domain;
+        this.lang = builder.lang;
         this.regions = builder.regions;
         this.secretId = builder.secretId;
         this.secretKey = builder.secretKey;
@@ -85,7 +95,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
     /**
      * @return authModules
      */
-    public java.util.List < String > getAuthModules() {
+    public java.util.List<String> getAuthModules() {
         return this.authModules;
     }
 
@@ -97,9 +107,16 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return regions
      */
-    public java.util.List < String > getRegions() {
+    public java.util.List<String> getRegions() {
         return this.regions;
     }
 
@@ -127,7 +144,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
     /**
      * @return subscriptionIds
      */
-    public java.util.List < String > getSubscriptionIds() {
+    public java.util.List<String> getSubscriptionIds() {
         return this.subscriptionIds;
     }
 
@@ -140,13 +157,14 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyCloudVendorAccountAKRequest, Builder> {
         private String authIds; 
-        private java.util.List < String > authModules; 
+        private java.util.List<String> authModules; 
         private String domain; 
-        private java.util.List < String > regions; 
+        private String lang; 
+        private java.util.List<String> regions; 
         private String secretId; 
         private String secretKey; 
         private Integer status; 
-        private java.util.List < String > subscriptionIds; 
+        private java.util.List<String> subscriptionIds; 
         private String tenantId; 
 
         private Builder() {
@@ -158,6 +176,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
             this.authIds = request.authIds;
             this.authModules = request.authModules;
             this.domain = request.domain;
+            this.lang = request.lang;
             this.regions = request.regions;
             this.secretId = request.secretId;
             this.secretKey = request.secretKey;
@@ -183,20 +202,32 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The modules that are associated with the AccessKey pair.</p>
+         * <p>The modules that are associated with the AccessKey pair. Valid values:</p>
+         * <ul>
+         * <li><strong>HOST</strong>: host.</li>
+         * <li><strong>CSPM</strong>: configuration assessment.</li>
+         * <li><strong>SIEM</strong>: Cloud Threat Detection and Response (CTDR).</li>
+         * <li><strong>TRIAL</strong>: log audit.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetSupportedModules~~">GetSupportedModules</a> operation to query the supported modules.</p>
+         * </blockquote>
          */
-        public Builder authModules(java.util.List < String > authModules) {
+        public Builder authModules(java.util.List<String> authModules) {
             this.putQueryParameter("AuthModules", authModules);
             this.authModules = authModules;
             return this;
         }
 
         /**
-         * <p>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</p>
+         * <p>The Active Directory (AD) domain. Valid values:</p>
          * <ul>
          * <li><strong>china</strong></li>
          * <li><strong>global</strong></li>
          * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when Vendor is set to Azure.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -208,12 +239,28 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>The regions that are examined during AccessKey pair authentication.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
+         * <p> This parameter takes effect only when Vendor is set to AWS. You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
          * </blockquote>
          */
-        public Builder regions(java.util.List < String > regions) {
+        public Builder regions(java.util.List<String> regions) {
             this.putQueryParameter("Regions", regions);
             this.regions = regions;
             return this;
@@ -221,6 +268,9 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
 
         /**
          * <p>The AccessKey ID.</p>
+         * <blockquote>
+         * <p> If AkType is set to <strong>primary</strong>, you must set SecretId to the AccessKey ID of the third-party master account. If AkType is set to <strong>sub</strong>, you must set SecretId to the AccessKey ID of the third-party sub-account. This parameter value does not change for a <strong>Microsoft Azure account</strong>. For an Azure account, set this parameter to the <strong>app ID</strong> that is used for authentication.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>S3D6c4O***</p>
@@ -232,21 +282,10 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey secret. Valid values:</p>
-         * <p>1. If AkType is set to primary, specify this parameter based on the following description:</p>
-         * <ul>
-         * <li><strong>Tencent</strong>: Specify the AccessKey secret of a primary account on Tencent Cloud.</li>
-         * <li><strong>HUAWEICLOUD</strong>: Specify the AccessKey secret of a primary account on Huawei Cloud.</li>
-         * <li><strong>Azure</strong>: Specify the AccessKey secret of a primary account on Microsoft Azure.</li>
-         * <li><strong>AWS</strong>: Specifythe AccessKey secret of a primary account on Amazon Web Services (AWS).</li>
-         * </ul>
-         * <p>2. If AkType is set to sub, specify this parameter based on the following description:</p>
-         * <ul>
-         * <li><strong>Tencent</strong>: Specify the AccessKey secret of a sub-account on Tencent Cloud.</li>
-         * <li><strong>HUAWEICLOUD</strong>: Specify the AccessKey secret of a sub-account on Huawei Cloud.</li>
-         * <li><strong>Azure</strong>: Specify the AccessKey secret of a sub-account on Microsoft Azure.</li>
-         * <li><strong>AWS</strong>: Specify the AccessKey secret of a sub-account on AWS.</li>
-         * </ul>
+         * <p>The AccessKey secret.</p>
+         * <blockquote>
+         * <p> If AkType is set to <strong>primary</strong>, you must set SecretKey to the AccessKey secret of the third-party master account. If AkType is set to <strong>sub</strong>, you must set SecretKey to the AccessKey secret of the third-party sub-account. This parameter value does not change for a <strong>Microsoft Azure account</strong>. For an Azure account, set this parameter to the <strong>password</strong> that is used for authentication.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>AE6SLd****</p>
@@ -274,16 +313,22 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The subscription IDs. This parameter takes effect only when Vendor is set to Azure.</p>
+         * <p>The IDs of subscriptions.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when Vendor is set to Azure.</p>
+         * </blockquote>
          */
-        public Builder subscriptionIds(java.util.List < String > subscriptionIds) {
+        public Builder subscriptionIds(java.util.List<String> subscriptionIds) {
             this.putQueryParameter("SubscriptionIds", subscriptionIds);
             this.subscriptionIds = subscriptionIds;
             return this;
         }
 
         /**
-         * <p>The tenant ID. This parameter takes effect only when Vendor is set to Azure.</p>
+         * <p>The tenant ID.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when Vendor is set to Azure.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>95304a97-339b-4de5-9a7d-cdbffaf****</p>

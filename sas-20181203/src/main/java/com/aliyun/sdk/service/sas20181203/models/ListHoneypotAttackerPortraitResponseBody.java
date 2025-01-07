@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -68,7 +73,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -103,7 +108,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         /**
          * <p>The details of the attacker profile.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -198,13 +203,13 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
      */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalIp")
-        private java.util.List < String > externalIp;
+        private java.util.List<String> externalIp;
 
         @com.aliyun.core.annotation.NameInMap("InternalIp")
-        private java.util.List < String > internalIp;
+        private java.util.List<String> internalIp;
 
         @com.aliyun.core.annotation.NameInMap("RealIp")
-        private java.util.List < String > realIp;
+        private java.util.List<String> realIp;
 
         private Network(Builder builder) {
             this.externalIp = builder.externalIp;
@@ -223,33 +228,33 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         /**
          * @return externalIp
          */
-        public java.util.List < String > getExternalIp() {
+        public java.util.List<String> getExternalIp() {
             return this.externalIp;
         }
 
         /**
          * @return internalIp
          */
-        public java.util.List < String > getInternalIp() {
+        public java.util.List<String> getInternalIp() {
             return this.internalIp;
         }
 
         /**
          * @return realIp
          */
-        public java.util.List < String > getRealIp() {
+        public java.util.List<String> getRealIp() {
             return this.realIp;
         }
 
         public static final class Builder {
-            private java.util.List < String > externalIp; 
-            private java.util.List < String > internalIp; 
-            private java.util.List < String > realIp; 
+            private java.util.List<String> externalIp; 
+            private java.util.List<String> internalIp; 
+            private java.util.List<String> realIp; 
 
             /**
              * <p>The public IP addresses.</p>
              */
-            public Builder externalIp(java.util.List < String > externalIp) {
+            public Builder externalIp(java.util.List<String> externalIp) {
                 this.externalIp = externalIp;
                 return this;
             }
@@ -257,7 +262,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             /**
              * <p>The private IP addresses.</p>
              */
-            public Builder internalIp(java.util.List < String > internalIp) {
+            public Builder internalIp(java.util.List<String> internalIp) {
                 this.internalIp = internalIp;
                 return this;
             }
@@ -265,7 +270,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             /**
              * <p>The originating IP addresses.</p>
              */
-            public Builder realIp(java.util.List < String > realIp) {
+            public Builder realIp(java.util.List<String> realIp) {
                 this.realIp = realIp;
                 return this;
             }
@@ -288,10 +293,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         private Integer attackCount;
 
         @com.aliyun.core.annotation.NameInMap("Browser")
-        private java.util.List < String > browser;
+        private java.util.List<String> browser;
 
         @com.aliyun.core.annotation.NameInMap("Host")
-        private java.util.List < String > host;
+        private java.util.List<String> host;
 
         @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
@@ -303,7 +308,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         private String portraitId;
 
         @com.aliyun.core.annotation.NameInMap("Social")
-        private java.util.List < String > social;
+        private java.util.List<String> social;
 
         private List(Builder builder) {
             this.attackCount = builder.attackCount;
@@ -333,14 +338,14 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         /**
          * @return browser
          */
-        public java.util.List < String > getBrowser() {
+        public java.util.List<String> getBrowser() {
             return this.browser;
         }
 
         /**
          * @return host
          */
-        public java.util.List < String > getHost() {
+        public java.util.List<String> getHost() {
             return this.host;
         }
 
@@ -368,18 +373,18 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         /**
          * @return social
          */
-        public java.util.List < String > getSocial() {
+        public java.util.List<String> getSocial() {
             return this.social;
         }
 
         public static final class Builder {
             private Integer attackCount; 
-            private java.util.List < String > browser; 
-            private java.util.List < String > host; 
+            private java.util.List<String> browser; 
+            private java.util.List<String> host; 
             private Long lastTime; 
             private Network network; 
             private String portraitId; 
-            private java.util.List < String > social; 
+            private java.util.List<String> social; 
 
             /**
              * <p>The number of attacks.</p>
@@ -395,7 +400,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             /**
              * <p>The information about the browsers of the attack source.</p>
              */
-            public Builder browser(java.util.List < String > browser) {
+            public Builder browser(java.util.List<String> browser) {
                 this.browser = browser;
                 return this;
             }
@@ -403,7 +408,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             /**
              * <p>The information about the hosts of the attack source.</p>
              */
-            public Builder host(java.util.List < String > host) {
+            public Builder host(java.util.List<String> host) {
                 this.host = host;
                 return this;
             }
@@ -441,7 +446,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             /**
              * <p>The social information about the attack source.</p>
              */
-            public Builder social(java.util.List < String > social) {
+            public Builder social(java.util.List<String> social) {
                 this.social = social;
                 return this;
             }

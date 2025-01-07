@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNoticeConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NoticeConfigList")
-    private java.util.List < NoticeConfigList> noticeConfigList;
+    private java.util.List<NoticeConfigList> noticeConfigList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
     /**
      * @return noticeConfigList
      */
-    public java.util.List < NoticeConfigList> getNoticeConfigList() {
+    public java.util.List<NoticeConfigList> getNoticeConfigList() {
         return this.noticeConfigList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NoticeConfigList> noticeConfigList; 
+        private java.util.List<NoticeConfigList> noticeConfigList; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the notification settings.</p>
          */
-        public Builder noticeConfigList(java.util.List < NoticeConfigList> noticeConfigList) {
+        public Builder noticeConfigList(java.util.List<NoticeConfigList> noticeConfigList) {
             this.noticeConfigList = noticeConfigList;
             return this;
         }

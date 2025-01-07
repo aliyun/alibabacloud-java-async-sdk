@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MachineInfoStatistics")
-    private java.util.List < MachineInfoStatistics> machineInfoStatistics;
+    private java.util.List<MachineInfoStatistics> machineInfoStatistics;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     /**
      * @return machineInfoStatistics
      */
-    public java.util.List < MachineInfoStatistics> getMachineInfoStatistics() {
+    public java.util.List<MachineInfoStatistics> getMachineInfoStatistics() {
         return this.machineInfoStatistics;
     }
 
@@ -57,14 +62,14 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MachineInfoStatistics> machineInfoStatistics; 
+        private java.util.List<MachineInfoStatistics> machineInfoStatistics; 
         private String requestId; 
         private Integer vulCount; 
 
         /**
          * <p>The statistics about the servers.</p>
          */
-        public Builder machineInfoStatistics(java.util.List < MachineInfoStatistics> machineInfoStatistics) {
+        public Builder machineInfoStatistics(java.util.List<MachineInfoStatistics> machineInfoStatistics) {
             this.machineInfoStatistics = machineInfoStatistics;
             return this;
         }

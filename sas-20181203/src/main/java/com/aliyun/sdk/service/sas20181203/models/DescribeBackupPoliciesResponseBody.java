@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -58,7 +63,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         /**
          * <p>The details of the anti-ransomware policy.</p>
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
@@ -224,7 +229,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private Integer clientErrorCount;
 
         @com.aliyun.core.annotation.NameInMap("ClientErrorUuidList")
-        private java.util.List < String > clientErrorUuidList;
+        private java.util.List<String> clientErrorUuidList;
 
         @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
@@ -233,7 +238,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private Integer healthClientCount;
 
         @com.aliyun.core.annotation.NameInMap("HealthClientUuidList")
-        private java.util.List < String > healthClientUuidList;
+        private java.util.List<String> healthClientUuidList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -257,7 +262,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private String preStatus;
 
         @com.aliyun.core.annotation.NameInMap("RemarkedUuidList")
-        private java.util.List < String > remarkedUuidList;
+        private java.util.List<String> remarkedUuidList;
 
         @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
@@ -266,7 +271,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private Integer serviceErrorCount;
 
         @com.aliyun.core.annotation.NameInMap("ServiceErrorUuidList")
-        private java.util.List < String > serviceErrorUuidList;
+        private java.util.List<String> serviceErrorUuidList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -275,7 +280,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         private String upgradeStatus;
 
         @com.aliyun.core.annotation.NameInMap("UuidList")
-        private java.util.List < String > uuidList;
+        private java.util.List<String> uuidList;
 
         private Policies(Builder builder) {
             this.clientErrorCount = builder.clientErrorCount;
@@ -317,7 +322,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         /**
          * @return clientErrorUuidList
          */
-        public java.util.List < String > getClientErrorUuidList() {
+        public java.util.List<String> getClientErrorUuidList() {
             return this.clientErrorUuidList;
         }
 
@@ -338,7 +343,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         /**
          * @return healthClientUuidList
          */
-        public java.util.List < String > getHealthClientUuidList() {
+        public java.util.List<String> getHealthClientUuidList() {
             return this.healthClientUuidList;
         }
 
@@ -394,7 +399,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         /**
          * @return remarkedUuidList
          */
-        public java.util.List < String > getRemarkedUuidList() {
+        public java.util.List<String> getRemarkedUuidList() {
             return this.remarkedUuidList;
         }
 
@@ -415,7 +420,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         /**
          * @return serviceErrorUuidList
          */
-        public java.util.List < String > getServiceErrorUuidList() {
+        public java.util.List<String> getServiceErrorUuidList() {
             return this.serviceErrorUuidList;
         }
 
@@ -436,16 +441,16 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         /**
          * @return uuidList
          */
-        public java.util.List < String > getUuidList() {
+        public java.util.List<String> getUuidList() {
             return this.uuidList;
         }
 
         public static final class Builder {
             private Integer clientErrorCount; 
-            private java.util.List < String > clientErrorUuidList; 
+            private java.util.List<String> clientErrorUuidList; 
             private String clientStatus; 
             private Integer healthClientCount; 
-            private java.util.List < String > healthClientUuidList; 
+            private java.util.List<String> healthClientUuidList; 
             private Long id; 
             private Long lastStatusSyncTime; 
             private String name; 
@@ -453,13 +458,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private String policyRegionId; 
             private String policyVersion; 
             private String preStatus; 
-            private java.util.List < String > remarkedUuidList; 
+            private java.util.List<String> remarkedUuidList; 
             private String serverType; 
             private Integer serviceErrorCount; 
-            private java.util.List < String > serviceErrorUuidList; 
+            private java.util.List<String> serviceErrorUuidList; 
             private String status; 
             private String upgradeStatus; 
-            private java.util.List < String > uuidList; 
+            private java.util.List<String> uuidList; 
 
             /**
              * <p>The number of the servers on which the anti-ransomware agent is in an abnormal state.</p>
@@ -475,7 +480,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             /**
              * <p>The UUIDs of the servers on which the anti-ransomware agent is in an <strong>abnormal</strong> state.</p>
              */
-            public Builder clientErrorUuidList(java.util.List < String > clientErrorUuidList) {
+            public Builder clientErrorUuidList(java.util.List<String> clientErrorUuidList) {
                 this.clientErrorUuidList = clientErrorUuidList;
                 return this;
             }
@@ -509,7 +514,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             /**
              * <p>The UUIDs of the servers on which the anti-ransomware agent is in a <strong>normal</strong> state.</p>
              */
-            public Builder healthClientUuidList(java.util.List < String > healthClientUuidList) {
+            public Builder healthClientUuidList(java.util.List<String> healthClientUuidList) {
                 this.healthClientUuidList = healthClientUuidList;
                 return this;
             }
@@ -638,7 +643,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             /**
              * <p>The UUIDs that are returned based on the value of the MachineRemark request parameter.</p>
              */
-            public Builder remarkedUuidList(java.util.List < String > remarkedUuidList) {
+            public Builder remarkedUuidList(java.util.List<String> remarkedUuidList) {
                 this.remarkedUuidList = remarkedUuidList;
                 return this;
             }
@@ -673,7 +678,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             /**
              * <p>The UUIDs of the servers on which data backup is exceptional.</p>
              */
-            public Builder serviceErrorUuidList(java.util.List < String > serviceErrorUuidList) {
+            public Builder serviceErrorUuidList(java.util.List<String> serviceErrorUuidList) {
                 this.serviceErrorUuidList = serviceErrorUuidList;
                 return this;
             }
@@ -714,7 +719,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             /**
              * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
              */
-            public Builder uuidList(java.util.List < String > uuidList) {
+            public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateBackupPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Policy")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > policy;
+    private java.util.Map<String, ?> policy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyRegionId")
@@ -34,7 +39,7 @@ public class CreateBackupPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private CreateBackupPolicyRequest(Builder builder) {
         super(builder);
@@ -68,7 +73,7 @@ public class CreateBackupPolicyRequest extends Request {
     /**
      * @return policy
      */
-    public java.util.Map < String, ? > getPolicy() {
+    public java.util.Map<String, ?> getPolicy() {
         return this.policy;
     }
 
@@ -89,16 +94,16 @@ public class CreateBackupPolicyRequest extends Request {
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
     public static final class Builder extends Request.Builder<CreateBackupPolicyRequest, Builder> {
         private String name; 
-        private java.util.Map < String, ? > policy; 
+        private java.util.Map<String, ?> policy; 
         private String policyRegionId; 
         private String policyVersion; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -167,7 +172,7 @@ public class CreateBackupPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>&quot;{&quot;IsDefault&quot;:1,&quot;Include&quot;:[],&quot;Source&quot;:[],&quot;Schedule&quot;:&quot;I|1648061040|PT24H&quot;,&quot;Retention&quot;:7,&quot;SpeedLimiter&quot;:&quot;&quot;,&quot;ExcludeSystemPath&quot;:true,&quot;Exclude&quot;:[&quot;/bin/&quot;,&quot;/usr/bin/&quot;,&quot;/sbin/&quot;,&quot;/boot/&quot;,&quot;/proc/&quot;,&quot;/sys/&quot;,&quot;/srv/&quot;,&quot;/lib/&quot;,&quot;/selinux/&quot;,&quot;/usr/sbin/&quot;,&quot;/run/&quot;,&quot;/lib32/&quot;,&quot;/lib64/&quot;,&quot;/lost+found/&quot;,&quot;/var/lib/kubelet/&quot;,&quot;/var/lib/ntp/proc&quot;,&quot;/var/lib/container&quot;,&quot;Windows&quot;,&quot;Python27&quot;,&quot;Program Files (x86)&quot;,&quot;Program Files&quot;,&quot;Boot&quot;,&quot;$RECYCLE.BIN&quot;,&quot;System Volume Information&quot;,&quot;Users\Administrator\NTUSER.DAT*&quot;,&quot;ProgramData&quot;,&quot;pagefile.sys&quot;,&quot;Users\Default\NTUSER.DAT*&quot;,&quot;Users\Administrator\ntuser.*&quot;],&quot;UseVss&quot;:true}&quot;</p>
          */
-        public Builder policy(java.util.Map < String, ? > policy) {
+        public Builder policy(java.util.Map<String, ?> policy) {
             String policyShrink = shrink(policy, "Policy", "json");
             this.putQueryParameter("Policy", policyShrink);
             this.policy = policy;
@@ -209,7 +214,7 @@ public class CreateBackupPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

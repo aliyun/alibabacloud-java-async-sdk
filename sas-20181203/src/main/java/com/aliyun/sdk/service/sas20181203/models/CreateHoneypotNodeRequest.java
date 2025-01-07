@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class CreateHoneypotNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
-    private java.util.List < String > securityGroupProbeIpList;
+    private java.util.List<String> securityGroupProbeIpList;
 
     private CreateHoneypotNodeRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateHoneypotNodeRequest extends Request {
     /**
      * @return securityGroupProbeIpList
      */
-    public java.util.List < String > getSecurityGroupProbeIpList() {
+    public java.util.List<String> getSecurityGroupProbeIpList() {
         return this.securityGroupProbeIpList;
     }
 
@@ -82,7 +87,7 @@ public class CreateHoneypotNodeRequest extends Request {
         private Boolean allowHoneypotAccessInternet; 
         private Integer availableProbeNum; 
         private String nodeName; 
-        private java.util.List < String > securityGroupProbeIpList; 
+        private java.util.List<String> securityGroupProbeIpList; 
 
         private Builder() {
             super();
@@ -140,7 +145,7 @@ public class CreateHoneypotNodeRequest extends Request {
         /**
          * <p>The CIDR blocks that are allowed to access the management node.</p>
          */
-        public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+        public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);
             this.securityGroupProbeIpList = securityGroupProbeIpList;
             return this;

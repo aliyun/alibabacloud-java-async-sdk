@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
@@ -276,7 +281,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -302,7 +307,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String eventName; 
             private String fileName; 
             private String md5; 
@@ -310,7 +315,7 @@ public class GetObjectScanEventResponseBody extends TeaModel {
             /**
              * <p>The details of the alert event.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }

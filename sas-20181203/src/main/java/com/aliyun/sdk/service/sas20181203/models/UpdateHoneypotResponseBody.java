@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -196,7 +201,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         private String presetId;
 
         @com.aliyun.core.annotation.NameInMap("State")
-        private java.util.List < String > state;
+        private java.util.List<String> state;
 
         private Data(Builder builder) {
             this.honeypotId = builder.honeypotId;
@@ -261,7 +266,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
         /**
          * @return state
          */
-        public java.util.List < String > getState() {
+        public java.util.List<String> getState() {
             return this.state;
         }
 
@@ -272,7 +277,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             private String honeypotName; 
             private String nodeId; 
             private String presetId; 
-            private java.util.List < String > state; 
+            private java.util.List<String> state; 
 
             /**
              * <p>The ID of the honeypot.</p>
@@ -343,7 +348,7 @@ public class UpdateHoneypotResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the status information about the honeypot.</p>
              */
-            public Builder state(java.util.List < String > state) {
+            public Builder state(java.util.List<String> state) {
                 this.state = state;
                 return this;
             }

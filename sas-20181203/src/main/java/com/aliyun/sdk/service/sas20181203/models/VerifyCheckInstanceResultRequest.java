@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     private VerifyCheckInstanceResultRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     public static final class Builder extends Request.Builder<VerifyCheckInstanceResultRequest, Builder> {
         private Long checkId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
 
         private Builder() {
             super();
@@ -85,7 +90,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         /**
          * <p>The instance IDs of the assets on which risks are detected based on the check item.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

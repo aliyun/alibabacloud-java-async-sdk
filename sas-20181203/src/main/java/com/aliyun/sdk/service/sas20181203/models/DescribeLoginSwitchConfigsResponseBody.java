@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigList")
-    private java.util.List < ConfigList> configList;
+    private java.util.List<ConfigList> configList;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
@@ -38,7 +43,7 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     /**
      * @return configList
      */
-    public java.util.List < ConfigList> getConfigList() {
+    public java.util.List<ConfigList> getConfigList() {
         return this.configList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigList> configList; 
+        private java.util.List<ConfigList> configList; 
         private Integer count; 
         private String requestId; 
 
         /**
          * <p>The configuration item returned.</p>
          */
-        public Builder configList(java.util.List < ConfigList> configList) {
+        public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
             return this;
         }

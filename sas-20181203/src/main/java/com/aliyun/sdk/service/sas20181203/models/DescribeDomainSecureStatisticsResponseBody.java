@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,7 +103,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         private Integer vulCount; 
 
         /**
-         * AlarmCount.
+         * <p>The number of domain names that trigger security alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder alarmCount(Integer alarmCount) {
             this.alarmCount = alarmCount;
@@ -106,7 +114,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * NoSslCount.
+         * <p>The number of the websites for which no certificates are installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noSslCount(Integer noSslCount) {
             this.noSslCount = noSslCount;
@@ -114,7 +125,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +136,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RiskCount.
+         * <p>The number of the domain names that have security risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskCount(Integer riskCount) {
             this.riskCount = riskCount;
@@ -130,7 +147,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDomainCount.
+         * <p>The total number of domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72</p>
          */
         public Builder totalDomainCount(Integer totalDomainCount) {
             this.totalDomainCount = totalDomainCount;
@@ -138,7 +158,10 @@ public class DescribeDomainSecureStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * VulCount.
+         * <p>The number of the domain names that have vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder vulCount(Integer vulCount) {
             this.vulCount = vulCount;

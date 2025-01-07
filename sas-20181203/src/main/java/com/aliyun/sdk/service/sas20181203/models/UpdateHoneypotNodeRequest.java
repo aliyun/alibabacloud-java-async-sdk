@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class UpdateHoneypotNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
-    private java.util.List < String > securityGroupProbeIpList;
+    private java.util.List<String> securityGroupProbeIpList;
 
     private UpdateHoneypotNodeRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class UpdateHoneypotNodeRequest extends Request {
     /**
      * @return securityGroupProbeIpList
      */
-    public java.util.List < String > getSecurityGroupProbeIpList() {
+    public java.util.List<String> getSecurityGroupProbeIpList() {
         return this.securityGroupProbeIpList;
     }
 
@@ -84,7 +89,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         private Integer availableProbeNum; 
         private String nodeId; 
         private String nodeName; 
-        private java.util.List < String > securityGroupProbeIpList; 
+        private java.util.List<String> securityGroupProbeIpList; 
 
         private Builder() {
             super();
@@ -143,7 +148,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         /**
          * <p>The CIDR blocks that are allowed to access the management node.</p>
          */
-        public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+        public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);
             this.securityGroupProbeIpList = securityGroupProbeIpList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAttestorsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Attestors")
-    private java.util.List < Attestors> attestors;
+    private java.util.List<Attestors> attestors;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
     /**
      * @return attestors
      */
-    public java.util.List < Attestors> getAttestors() {
+    public java.util.List<Attestors> getAttestors() {
         return this.attestors;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAttestorsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Attestors> attestors; 
+        private java.util.List<Attestors> attestors; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The witnesses.</p>
          */
-        public Builder attestors(java.util.List < Attestors> attestors) {
+        public Builder attestors(java.util.List<Attestors> attestors) {
             this.attestors = attestors;
             return this;
         }

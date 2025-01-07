@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,7 +171,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         } 
 
         /**
-         * Digests.
+         * <p>The SHA-256 value of the image digest. Separate multiple SHA-256 values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a5e103187b31a94592a47a5858617f7****</p>
          */
         public Builder digests(String digests) {
             this.putQueryParameter("Digests", digests);
@@ -175,7 +183,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The ID of the Container Registry instance in which the image repository is created. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6j8vq9l4r5ntht****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -184,7 +195,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * <p>The region ID of the image. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionIds(String regionIds) {
             this.putQueryParameter("RegionIds", regionIds);
@@ -193,7 +207,15 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * RegistryTypes.
+         * <p>The type of the image repository. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>acr</strong></li>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
          */
         public Builder registryTypes(String registryTypes) {
             this.putQueryParameter("RegistryTypes", registryTypes);
@@ -202,7 +224,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * RepoIds.
+         * <p>The ID of the image repository. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-vridcl4****</p>
          */
         public Builder repoIds(String repoIds) {
             this.putQueryParameter("RepoIds", repoIds);
@@ -211,7 +236,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * RepoNames.
+         * <p>The name of the image repository. Separate multiple names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         public Builder repoNames(String repoNames) {
             this.putQueryParameter("RepoNames", repoNames);
@@ -220,7 +248,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * RepoNamespaces.
+         * <p>The namespace to which the image repository belongs. Separate multiple namespaces with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hanghai-namespace</p>
          */
         public Builder repoNamespaces(String repoNamespaces) {
             this.putQueryParameter("RepoNamespaces", repoNamespaces);
@@ -229,7 +260,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -238,7 +272,10 @@ public class PublicPreCheckImageScanTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag that is added to the image. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

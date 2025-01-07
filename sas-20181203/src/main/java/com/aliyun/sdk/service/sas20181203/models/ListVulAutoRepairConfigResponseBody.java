@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("VulAutoRepairConfigList")
-    private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList;
+    private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList;
 
     private ListVulAutoRepairConfigResponseBody(Builder builder) {
         this.code = builder.code;
@@ -96,7 +101,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
     /**
      * @return vulAutoRepairConfigList
      */
-    public java.util.List < VulAutoRepairConfigList> getVulAutoRepairConfigList() {
+    public java.util.List<VulAutoRepairConfigList> getVulAutoRepairConfigList() {
         return this.vulAutoRepairConfigList;
     }
 
@@ -107,7 +112,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList; 
+        private java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList; 
 
         /**
          * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
@@ -179,7 +184,7 @@ public class ListVulAutoRepairConfigResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the existing configurations of vulnerabilities that can be automatically fixed.</p>
          */
-        public Builder vulAutoRepairConfigList(java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList) {
+        public Builder vulAutoRepairConfigList(java.util.List<VulAutoRepairConfigList> vulAutoRepairConfigList) {
             this.vulAutoRepairConfigList = vulAutoRepairConfigList;
             return this;
         }

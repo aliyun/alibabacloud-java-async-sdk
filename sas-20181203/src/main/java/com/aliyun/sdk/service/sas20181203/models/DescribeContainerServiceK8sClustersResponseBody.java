@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("K8sClusters")
-    private java.util.List < K8sClusters> k8sClusters;
+    private java.util.List<K8sClusters> k8sClusters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
     /**
      * @return k8sClusters
      */
-    public java.util.List < K8sClusters> getK8sClusters() {
+    public java.util.List<K8sClusters> getK8sClusters() {
         return this.k8sClusters;
     }
 
@@ -46,13 +51,13 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < K8sClusters> k8sClusters; 
+        private java.util.List<K8sClusters> k8sClusters; 
         private String requestId; 
 
         /**
          * <p>The information about the clusters.</p>
          */
-        public Builder k8sClusters(java.util.List < K8sClusters> k8sClusters) {
+        public Builder k8sClusters(java.util.List<K8sClusters> k8sClusters) {
             this.k8sClusters = k8sClusters;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -103,7 +108,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("UuidList")
-        private java.util.List < String > uuidList;
+        private java.util.List<String> uuidList;
 
         private BackupPolicyDetail(Builder builder) {
             this.clientStatus = builder.clientStatus;
@@ -176,7 +181,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         /**
          * @return uuidList
          */
-        public java.util.List < String > getUuidList() {
+        public java.util.List<String> getUuidList() {
             return this.uuidList;
         }
 
@@ -188,7 +193,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String policyVersion; 
             private String regionId; 
             private String status; 
-            private java.util.List < String > uuidList; 
+            private java.util.List<String> uuidList; 
 
             /**
              * <p>The status of the anti-ransomware agent. Valid values:</p>
@@ -357,7 +362,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the UUIDs of the servers to which the anti-ransomware policy is applied.</p>
              */
-            public Builder uuidList(java.util.List < String > uuidList) {
+            public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
                 return this;
             }

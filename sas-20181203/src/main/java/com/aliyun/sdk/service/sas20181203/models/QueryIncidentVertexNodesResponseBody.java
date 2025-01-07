@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -127,7 +132,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         private String properties;
 
         @com.aliyun.core.annotation.NameInMap("Property")
-        private java.util.Map < String, ? > property;
+        private java.util.Map<String, ?> property;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
@@ -232,7 +237,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.Map < String, ? > getProperty() {
+        public java.util.Map<String, ?> getProperty() {
             return this.property;
         }
 
@@ -313,7 +318,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             private String name; 
             private String origin; 
             private String properties; 
-            private java.util.Map < String, ? > property; 
+            private java.util.Map<String, ?> property; 
             private String ruleId; 
             private String showType; 
             private String startId; 
@@ -401,7 +406,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The property of the edge.</p>
              */
-            public Builder property(java.util.Map < String, ? > property) {
+            public Builder property(java.util.Map<String, ?> property) {
                 this.property = property;
                 return this;
             }
@@ -1358,7 +1363,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         private String aliuid;
 
         @com.aliyun.core.annotation.NameInMap("DisplayInfo")
-        private java.util.List < DisplayInfo> displayInfo;
+        private java.util.List<DisplayInfo> displayInfo;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -1370,13 +1375,13 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NeighborList")
-        private java.util.List < NeighborList> neighborList;
+        private java.util.List<NeighborList> neighborList;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
         @com.aliyun.core.annotation.NameInMap("Property")
-        private java.util.Map < String, ? > property;
+        private java.util.Map<String, ?> property;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
@@ -1431,7 +1436,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return displayInfo
          */
-        public java.util.List < DisplayInfo> getDisplayInfo() {
+        public java.util.List<DisplayInfo> getDisplayInfo() {
             return this.displayInfo;
         }
 
@@ -1459,7 +1464,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return neighborList
          */
-        public java.util.List < NeighborList> getNeighborList() {
+        public java.util.List<NeighborList> getNeighborList() {
             return this.neighborList;
         }
 
@@ -1473,7 +1478,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.Map < String, ? > getProperty() {
+        public java.util.Map<String, ?> getProperty() {
             return this.property;
         }
 
@@ -1521,13 +1526,13 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliuid; 
-            private java.util.List < DisplayInfo> displayInfo; 
+            private java.util.List<DisplayInfo> displayInfo; 
             private String id; 
             private String lang; 
             private String name; 
-            private java.util.List < NeighborList> neighborList; 
+            private java.util.List<NeighborList> neighborList; 
             private String properties; 
-            private java.util.Map < String, ? > property; 
+            private java.util.Map<String, ?> property; 
             private String ruleId; 
             private String time; 
             private Long timestamp; 
@@ -1549,7 +1554,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The display information of the node.</p>
              */
-            public Builder displayInfo(java.util.List < DisplayInfo> displayInfo) {
+            public Builder displayInfo(java.util.List<DisplayInfo> displayInfo) {
                 this.displayInfo = displayInfo;
                 return this;
             }
@@ -1594,7 +1599,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The neighboring nodes of the node.</p>
              */
-            public Builder neighborList(java.util.List < NeighborList> neighborList) {
+            public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
                 return this;
             }
@@ -1613,7 +1618,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The property of the node.</p>
              */
-            public Builder property(java.util.Map < String, ? > property) {
+            public Builder property(java.util.Map<String, ?> property) {
                 this.property = property;
                 return this;
             }
@@ -1706,19 +1711,19 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
      */
     public static class VertexNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EdgeList")
-        private java.util.List < EdgeList> edgeList;
+        private java.util.List<EdgeList> edgeList;
 
         @com.aliyun.core.annotation.NameInMap("EntityTypeList")
-        private java.util.List < EntityTypeList> entityTypeList;
+        private java.util.List<EntityTypeList> entityTypeList;
 
         @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
         @com.aliyun.core.annotation.NameInMap("RelationTypeList")
-        private java.util.List < RelationTypeList> relationTypeList;
+        private java.util.List<RelationTypeList> relationTypeList;
 
         @com.aliyun.core.annotation.NameInMap("VertexList")
-        private java.util.List < VertexList> vertexList;
+        private java.util.List<VertexList> vertexList;
 
         private VertexNodes(Builder builder) {
             this.edgeList = builder.edgeList;
@@ -1739,14 +1744,14 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return edgeList
          */
-        public java.util.List < EdgeList> getEdgeList() {
+        public java.util.List<EdgeList> getEdgeList() {
             return this.edgeList;
         }
 
         /**
          * @return entityTypeList
          */
-        public java.util.List < EntityTypeList> getEntityTypeList() {
+        public java.util.List<EntityTypeList> getEntityTypeList() {
             return this.entityTypeList;
         }
 
@@ -1760,28 +1765,28 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
         /**
          * @return relationTypeList
          */
-        public java.util.List < RelationTypeList> getRelationTypeList() {
+        public java.util.List<RelationTypeList> getRelationTypeList() {
             return this.relationTypeList;
         }
 
         /**
          * @return vertexList
          */
-        public java.util.List < VertexList> getVertexList() {
+        public java.util.List<VertexList> getVertexList() {
             return this.vertexList;
         }
 
         public static final class Builder {
-            private java.util.List < EdgeList> edgeList; 
-            private java.util.List < EntityTypeList> entityTypeList; 
+            private java.util.List<EdgeList> edgeList; 
+            private java.util.List<EntityTypeList> entityTypeList; 
             private String lang; 
-            private java.util.List < RelationTypeList> relationTypeList; 
-            private java.util.List < VertexList> vertexList; 
+            private java.util.List<RelationTypeList> relationTypeList; 
+            private java.util.List<VertexList> vertexList; 
 
             /**
              * <p>The edges that are returned.</p>
              */
-            public Builder edgeList(java.util.List < EdgeList> edgeList) {
+            public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
                 return this;
             }
@@ -1789,7 +1794,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The entities that are returned.</p>
              */
-            public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
+            public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
                 return this;
             }
@@ -1812,7 +1817,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The relationships that are returned.</p>
              */
-            public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
+            public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
                 return this;
             }
@@ -1820,7 +1825,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             /**
              * <p>The information about the node.</p>
              */
-            public Builder vertexList(java.util.List < VertexList> vertexList) {
+            public Builder vertexList(java.util.List<VertexList> vertexList) {
                 this.vertexList = vertexList;
                 return this;
             }

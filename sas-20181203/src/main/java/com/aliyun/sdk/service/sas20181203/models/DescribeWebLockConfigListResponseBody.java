@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebLockConfigListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigList")
-    private java.util.List < ConfigList> configList;
+    private java.util.List<ConfigList> configList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
     /**
      * @return configList
      */
-    public java.util.List < ConfigList> getConfigList() {
+    public java.util.List<ConfigList> getConfigList() {
         return this.configList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigList> configList; 
+        private java.util.List<ConfigList> configList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * <p>An array that consists of the configurations of web tamper proofing.</p>
+         * <p>The configurations of web tamper proofing.</p>
          */
-        public Builder configList(java.util.List < ConfigList> configList) {
+        public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
             return this;
         }
@@ -318,7 +323,7 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the directory that has web tamper proofing enabled.</p>
+             * <p>The configuration ID of the protected directory.</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>

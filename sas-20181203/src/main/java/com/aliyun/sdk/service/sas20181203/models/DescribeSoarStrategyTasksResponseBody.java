@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SoarStrategyTasks")
-    private java.util.List < SoarStrategyTasks> soarStrategyTasks;
+    private java.util.List<SoarStrategyTasks> soarStrategyTasks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
     /**
      * @return soarStrategyTasks
      */
-    public java.util.List < SoarStrategyTasks> getSoarStrategyTasks() {
+    public java.util.List<SoarStrategyTasks> getSoarStrategyTasks() {
         return this.soarStrategyTasks;
     }
 
@@ -82,7 +87,7 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SoarStrategyTasks> soarStrategyTasks; 
+        private java.util.List<SoarStrategyTasks> soarStrategyTasks; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         /**
          * <p>The policy tasks.</p>
          */
-        public Builder soarStrategyTasks(java.util.List < SoarStrategyTasks> soarStrategyTasks) {
+        public Builder soarStrategyTasks(java.util.List<SoarStrategyTasks> soarStrategyTasks) {
             this.soarStrategyTasks = soarStrategyTasks;
             return this;
         }

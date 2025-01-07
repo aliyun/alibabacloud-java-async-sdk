@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListInstanceRiskLevelsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    private java.util.List<InstanceList> instanceList;
 
     private ListInstanceRiskLevelsRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class ListInstanceRiskLevelsRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
     public static final class Builder extends Request.Builder<ListInstanceRiskLevelsRequest, Builder> {
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<InstanceList> instanceList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class ListInstanceRiskLevelsRequest extends Request {
         /**
          * <p>The instances.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
             return this;

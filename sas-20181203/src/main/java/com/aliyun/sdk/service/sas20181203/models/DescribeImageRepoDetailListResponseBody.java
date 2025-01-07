@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageRepoResponses")
-    private java.util.List < ImageRepoResponses> imageRepoResponses;
+    private java.util.List<ImageRepoResponses> imageRepoResponses;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     /**
      * @return imageRepoResponses
      */
-    public java.util.List < ImageRepoResponses> getImageRepoResponses() {
+    public java.util.List<ImageRepoResponses> getImageRepoResponses() {
         return this.imageRepoResponses;
     }
 
@@ -57,14 +62,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageRepoResponses> imageRepoResponses; 
+        private java.util.List<ImageRepoResponses> imageRepoResponses; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the information about image repositories.</p>
          */
-        public Builder imageRepoResponses(java.util.List < ImageRepoResponses> imageRepoResponses) {
+        public Builder imageRepoResponses(java.util.List<ImageRepoResponses> imageRepoResponses) {
             this.imageRepoResponses = imageRepoResponses;
             return this;
         }
@@ -110,6 +115,9 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoints")
         private String endpoints;
 
+        @com.aliyun.core.annotation.NameInMap("HasRiskImageCount")
+        private Integer hasRiskImageCount;
+
         @com.aliyun.core.annotation.NameInMap("HcCount")
         private Integer hcCount;
 
@@ -150,6 +158,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             this.alarmCount = builder.alarmCount;
             this.alarmStatus = builder.alarmStatus;
             this.endpoints = builder.endpoints;
+            this.hasRiskImageCount = builder.hasRiskImageCount;
             this.hcCount = builder.hcCount;
             this.hcStatus = builder.hcStatus;
             this.imageCount = builder.imageCount;
@@ -191,6 +200,13 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
          */
         public String getEndpoints() {
             return this.endpoints;
+        }
+
+        /**
+         * @return hasRiskImageCount
+         */
+        public Integer getHasRiskImageCount() {
+            return this.hasRiskImageCount;
         }
 
         /**
@@ -281,6 +297,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private Integer alarmCount; 
             private String alarmStatus; 
             private String endpoints; 
+            private Integer hasRiskImageCount; 
             private Integer hcCount; 
             private String hcStatus; 
             private Integer imageCount; 
@@ -347,6 +364,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
+                return this;
+            }
+
+            /**
+             * HasRiskImageCount.
+             */
+            public Builder hasRiskImageCount(Integer hasRiskImageCount) {
+                this.hasRiskImageCount = hasRiskImageCount;
                 return this;
             }
 

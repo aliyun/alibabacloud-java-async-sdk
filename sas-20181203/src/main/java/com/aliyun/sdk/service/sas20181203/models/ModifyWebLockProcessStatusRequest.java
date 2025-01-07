@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcessPath")
-    private java.util.List < String > processPath;
+    private java.util.List<String> processPath;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -71,7 +76,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
     /**
      * @return processPath
      */
-    public java.util.List < String > getProcessPath() {
+    public java.util.List<String> getProcessPath() {
         return this.processPath;
     }
 
@@ -92,7 +97,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyWebLockProcessStatusRequest, Builder> {
         private Integer dealAll; 
         private String operateInfo; 
-        private java.util.List < String > processPath; 
+        private java.util.List<String> processPath; 
         private Integer status; 
         private String uuid; 
 
@@ -140,7 +145,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         /**
          * <p>The paths to the processes.</p>
          */
-        public Builder processPath(java.util.List < String > processPath) {
+        public Builder processPath(java.util.List<String> processPath) {
             this.putQueryParameter("ProcessPath", processPath);
             this.processPath = processPath;
             return this;

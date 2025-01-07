@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class UpdateHoneypotProbeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceIpList")
-    private java.util.List < String > serviceIpList;
+    private java.util.List<String> serviceIpList;
 
     private UpdateHoneypotProbeRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class UpdateHoneypotProbeRequest extends Request {
     /**
      * @return serviceIpList
      */
-    public java.util.List < String > getServiceIpList() {
+    public java.util.List<String> getServiceIpList() {
         return this.serviceIpList;
     }
 
@@ -108,7 +113,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         private String lang; 
         private Boolean ping; 
         private String probeId; 
-        private java.util.List < String > serviceIpList; 
+        private java.util.List<String> serviceIpList; 
 
         private Builder() {
             super();
@@ -195,7 +200,7 @@ public class UpdateHoneypotProbeRequest extends Request {
         /**
          * <p>The IP addresses that are monitored.</p>
          */
-        public Builder serviceIpList(java.util.List < String > serviceIpList) {
+        public Builder serviceIpList(java.util.List<String> serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
             this.serviceIpList = serviceIpList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -216,7 +221,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ExposedDdsCount.
+         * <p>The number of ApsaraDB for MongoDB instances that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder exposedDdsCount(Integer exposedDdsCount) {
             this.exposedDdsCount = exposedDdsCount;
@@ -224,7 +232,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ExposedEcsCount.
+         * <p>The number of Elastic Compute Service (ECS) instances that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder exposedEcsCount(Integer exposedEcsCount) {
             this.exposedEcsCount = exposedEcsCount;
@@ -232,7 +243,7 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of servers that are exposed on the Internet.</p>
+         * <p>The total number of assets that are exposed on the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -254,7 +265,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ExposedKvstoreCount.
+         * <p>The number of ApsaraDB for Redis instances that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder exposedKvstoreCount(Integer exposedKvstoreCount) {
             this.exposedKvstoreCount = exposedKvstoreCount;
@@ -295,7 +309,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ExposedRdsCount.
+         * <p>The number of ApsaraDB RDS instances that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder exposedRdsCount(Integer exposedRdsCount) {
             this.exposedRdsCount = exposedRdsCount;

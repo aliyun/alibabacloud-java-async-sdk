@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OverallList")
-    private java.util.List < OverallList> overallList;
+    private java.util.List<OverallList> overallList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
     /**
      * @return overallList
      */
-    public java.util.List < OverallList> getOverallList() {
+    public java.util.List<OverallList> getOverallList() {
         return this.overallList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OverallList> overallList; 
+        private java.util.List<OverallList> overallList; 
         private String requestId; 
 
         /**
          * <p>The information about the configuration items.</p>
          */
-        public Builder overallList(java.util.List < OverallList> overallList) {
+        public Builder overallList(java.util.List<OverallList> overallList) {
             this.overallList = overallList;
             return this;
         }
@@ -82,7 +87,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
      */
     public static class OverallList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthVersionList")
-        private java.util.List < String > authVersionList;
+        private java.util.List<String> authVersionList;
 
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -111,7 +116,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
         /**
          * @return authVersionList
          */
-        public java.util.List < String > getAuthVersionList() {
+        public java.util.List<String> getAuthVersionList() {
             return this.authVersionList;
         }
 
@@ -137,7 +142,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authVersionList; 
+            private java.util.List<String> authVersionList; 
             private String config; 
             private Integer totalCount; 
             private String type; 
@@ -145,7 +150,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
             /**
              * <p>The editions of Security Center.</p>
              */
-            public Builder authVersionList(java.util.List < String > authVersionList) {
+            public Builder authVersionList(java.util.List<String> authVersionList) {
                 this.authVersionList = authVersionList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class BindHybridProxyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("YundunUuids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > yundunUuids;
+    private java.util.List<String> yundunUuids;
 
     private BindHybridProxyRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class BindHybridProxyRequest extends Request {
     /**
      * @return yundunUuids
      */
-    public java.util.List < String > getYundunUuids() {
+    public java.util.List<String> getYundunUuids() {
         return this.yundunUuids;
     }
 
     public static final class Builder extends Request.Builder<BindHybridProxyRequest, Builder> {
         private String clusterName; 
-        private java.util.List < String > yundunUuids; 
+        private java.util.List<String> yundunUuids; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class BindHybridProxyRequest extends Request {
          * <p>The UUIDs of servers that you want to add to Security Center over the proxy server.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder yundunUuids(java.util.List < String > yundunUuids) {
+        public Builder yundunUuids(java.util.List<String> yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);
             this.yundunUuids = yundunUuids;
             return this;

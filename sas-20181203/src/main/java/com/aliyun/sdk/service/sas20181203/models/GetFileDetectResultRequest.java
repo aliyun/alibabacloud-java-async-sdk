@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class GetFileDetectResultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HashKeyList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > hashKeyList;
+    private java.util.List<String> hashKeyList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -49,7 +54,7 @@ public class GetFileDetectResultRequest extends Request {
     /**
      * @return hashKeyList
      */
-    public java.util.List < String > getHashKeyList() {
+    public java.util.List<String> getHashKeyList() {
         return this.hashKeyList;
     }
 
@@ -68,7 +73,7 @@ public class GetFileDetectResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetFileDetectResultRequest, Builder> {
-        private java.util.List < String > hashKeyList; 
+        private java.util.List<String> hashKeyList; 
         private String sourceIp; 
         private Integer type; 
 
@@ -87,7 +92,7 @@ public class GetFileDetectResultRequest extends Request {
          * <p>The identifiers of files. Only MD5 hash values are supported.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder hashKeyList(java.util.List < String > hashKeyList) {
+        public Builder hashKeyList(java.util.List<String> hashKeyList) {
             this.putQueryParameter("HashKeyList", hashKeyList);
             this.hashKeyList = hashKeyList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetOpaPluginStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstallStatus")
-    private java.util.List < InstallStatus> installStatus;
+    private java.util.List<InstallStatus> installStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     /**
      * @return installStatus
      */
-    public java.util.List < InstallStatus> getInstallStatus() {
+    public java.util.List<InstallStatus> getInstallStatus() {
         return this.installStatus;
     }
 
@@ -46,13 +51,13 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstallStatus> installStatus; 
+        private java.util.List<InstallStatus> installStatus; 
         private String requestId; 
 
         /**
          * <p>The installation status of the components that are required for clusters protected by proactive defense for containers.</p>
          */
-        public Builder installStatus(java.util.List < InstallStatus> installStatus) {
+        public Builder installStatus(java.util.List<InstallStatus> installStatus) {
             this.installStatus = installStatus;
             return this;
         }

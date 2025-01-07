@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExcludePaths")
-    private java.util.List < ExcludePaths> excludePaths;
+    private java.util.List<ExcludePaths> excludePaths;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     /**
      * @return excludePaths
      */
-    public java.util.List < ExcludePaths> getExcludePaths() {
+    public java.util.List<ExcludePaths> getExcludePaths() {
         return this.excludePaths;
     }
 
@@ -57,14 +62,14 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExcludePaths> excludePaths; 
+        private java.util.List<ExcludePaths> excludePaths; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array consisting of the directories that are excluded.</p>
          */
-        public Builder excludePaths(java.util.List < ExcludePaths> excludePaths) {
+        public Builder excludePaths(java.util.List<ExcludePaths> excludePaths) {
             this.excludePaths = excludePaths;
             return this;
         }

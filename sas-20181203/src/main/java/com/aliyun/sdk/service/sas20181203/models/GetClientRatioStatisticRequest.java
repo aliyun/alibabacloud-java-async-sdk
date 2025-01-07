@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class GetClientRatioStatisticRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatisticTypes")
-    private java.util.List < String > statisticTypes;
+    private java.util.List<String> statisticTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeEnd")
@@ -61,7 +66,7 @@ public class GetClientRatioStatisticRequest extends Request {
     /**
      * @return statisticTypes
      */
-    public java.util.List < String > getStatisticTypes() {
+    public java.util.List<String> getStatisticTypes() {
         return this.statisticTypes;
     }
 
@@ -81,7 +86,7 @@ public class GetClientRatioStatisticRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetClientRatioStatisticRequest, Builder> {
         private Long resourceDirectoryAccountId; 
-        private java.util.List < String > statisticTypes; 
+        private java.util.List<String> statisticTypes; 
         private Long timeEnd; 
         private Long timeStart; 
 
@@ -115,7 +120,7 @@ public class GetClientRatioStatisticRequest extends Request {
         /**
          * <p>An array that consists of the details of a statistical type.</p>
          */
-        public Builder statisticTypes(java.util.List < String > statisticTypes) {
+        public Builder statisticTypes(java.util.List<String> statisticTypes) {
             this.putQueryParameter("StatisticTypes", statisticTypes);
             this.statisticTypes = statisticTypes;
             return this;

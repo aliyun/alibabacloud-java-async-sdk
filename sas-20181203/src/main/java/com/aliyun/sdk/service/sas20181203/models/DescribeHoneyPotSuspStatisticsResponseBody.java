@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SuspHoneyPotStatisticsResponse")
-    private java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse;
+    private java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse;
 
     private DescribeHoneyPotSuspStatisticsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     /**
      * @return suspHoneyPotStatisticsResponse
      */
-    public java.util.List < SuspHoneyPotStatisticsResponse> getSuspHoneyPotStatisticsResponse() {
+    public java.util.List<SuspHoneyPotStatisticsResponse> getSuspHoneyPotStatisticsResponse() {
         return this.suspHoneyPotStatisticsResponse;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse; 
+        private java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the top 5 VPCs or assets for which alerts are most frequently generated.</p>
          */
-        public Builder suspHoneyPotStatisticsResponse(java.util.List < SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse) {
+        public Builder suspHoneyPotStatisticsResponse(java.util.List<SuspHoneyPotStatisticsResponse> suspHoneyPotStatisticsResponse) {
             this.suspHoneyPotStatisticsResponse = suspHoneyPotStatisticsResponse;
             return this;
         }

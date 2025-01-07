@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatabaseList")
-    private java.util.List < DatabaseList> databaseList;
+    private java.util.List<DatabaseList> databaseList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     /**
      * @return databaseList
      */
-    public java.util.List < DatabaseList> getDatabaseList() {
+    public java.util.List<DatabaseList> getDatabaseList() {
         return this.databaseList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DatabaseList> databaseList; 
+        private java.util.List<DatabaseList> databaseList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the information about the databases.</p>
          */
-        public Builder databaseList(java.util.List < DatabaseList> databaseList) {
+        public Builder databaseList(java.util.List<DatabaseList> databaseList) {
             this.databaseList = databaseList;
             return this;
         }

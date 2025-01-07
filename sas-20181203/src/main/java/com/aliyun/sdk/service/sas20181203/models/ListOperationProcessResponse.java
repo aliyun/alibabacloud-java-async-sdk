@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeImageScanAuthorizationResponse} extends {@link TeaModel}
+ * {@link ListOperationProcessResponse} extends {@link TeaModel}
  *
- * <p>DescribeImageScanAuthorizationResponse</p>
+ * <p>ListOperationProcessResponse</p>
  */
-public class DescribeImageScanAuthorizationResponse extends Response {
+public class ListOperationProcessResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeImageScanAuthorizationResponseBody body;
+    private ListOperationProcessResponseBody body;
 
-    private DescribeImageScanAuthorizationResponse(BuilderImpl builder) {
+    private ListOperationProcessResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeImageScanAuthorizationResponse create() {
+    public static ListOperationProcessResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -40,7 +45,7 @@ public class DescribeImageScanAuthorizationResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class DescribeImageScanAuthorizationResponse extends Response {
     /**
      * @return body
      */
-    public DescribeImageScanAuthorizationResponseBody getBody() {
+    public ListOperationProcessResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeImageScanAuthorizationResponse, Builder> {
+    public interface Builder extends Response.Builder<ListOperationProcessResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeImageScanAuthorizationResponseBody body);
+        Builder body(ListOperationProcessResponseBody body);
 
         @Override
-        DescribeImageScanAuthorizationResponse build();
+        ListOperationProcessResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeImageScanAuthorizationResponse, Builder>
+            extends Response.BuilderImpl<ListOperationProcessResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeImageScanAuthorizationResponseBody body; 
+        private ListOperationProcessResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeImageScanAuthorizationResponse response) {
+        private BuilderImpl(ListOperationProcessResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class DescribeImageScanAuthorizationResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class DescribeImageScanAuthorizationResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeImageScanAuthorizationResponseBody body) {
+        public Builder body(ListOperationProcessResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeImageScanAuthorizationResponse build() {
-            return new DescribeImageScanAuthorizationResponse(this);
+        public ListOperationProcessResponse build() {
+            return new ListOperationProcessResponse(this);
         } 
 
     } 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLogShipperRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LogShipperRegionList")
-    private java.util.List < LogShipperRegionList> logShipperRegionList;
+    private java.util.List<LogShipperRegionList> logShipperRegionList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
     /**
      * @return logShipperRegionList
      */
-    public java.util.List < LogShipperRegionList> getLogShipperRegionList() {
+    public java.util.List<LogShipperRegionList> getLogShipperRegionList() {
         return this.logShipperRegionList;
     }
 
@@ -46,13 +51,13 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogShipperRegionList> logShipperRegionList; 
+        private java.util.List<LogShipperRegionList> logShipperRegionList; 
         private String requestId; 
 
         /**
          * <p>The regions supported by the log delivery feature.</p>
          */
-        public Builder logShipperRegionList(java.util.List < LogShipperRegionList> logShipperRegionList) {
+        public Builder logShipperRegionList(java.util.List<LogShipperRegionList> logShipperRegionList) {
             this.logShipperRegionList = logShipperRegionList;
             return this;
         }

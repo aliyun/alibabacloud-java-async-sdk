@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterList")
-    private java.util.List < ClusterList> clusterList;
+    private java.util.List<ClusterList> clusterList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
     /**
      * @return clusterList
      */
-    public java.util.List < ClusterList> getClusterList() {
+    public java.util.List<ClusterList> getClusterList() {
         return this.clusterList;
     }
 
@@ -57,20 +62,20 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterList> clusterList; 
+        private java.util.List<ClusterList> clusterList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * ClusterList.
+         * <p>The proxy clusters.</p>
          */
-        public Builder clusterList(java.util.List < ClusterList> clusterList) {
+        public Builder clusterList(java.util.List<ClusterList> clusterList) {
             this.clusterList = clusterList;
             return this;
         }
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +83,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1A36413-50B2-5B2F-843F-EB14C582713F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +240,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AuthKey.
+             * <p>The ID of the credential that is used for cluster authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -240,7 +251,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * AuthKeySecret.
+             * <p>The key of the credential that is used for cluster authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder authKeySecret(String authKeySecret) {
                 this.authKeySecret = authKeySecret;
@@ -248,7 +262,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientCount.
+             * <p>The number of servers that are connected to the proxy cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder clientCount(Integer clientCount) {
                 this.clientCount = clientCount;
@@ -256,7 +273,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The name of the proxy cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idc-sas-proxy</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -264,7 +284,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * InstallCommand.
+             * <p>The installation command for the node of the proxy cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder installCommand(String installCommand) {
                 this.installCommand = installCommand;
@@ -272,7 +295,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The endpoint of the cluster. An IP address or a domain name is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.115.XXX.XXX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -280,7 +306,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * LastHeartTime.
+             * <p>The timestamp when the cluster last sent a heartbeat message. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608304654000</p>
              */
             public Builder lastHeartTime(Long lastHeartTime) {
                 this.lastHeartTime = lastHeartTime;
@@ -288,7 +317,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyCount.
+             * <p>The number of proxy nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder proxyCount(Integer proxyCount) {
                 this.proxyCount = proxyCount;
@@ -296,7 +328,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the proxy cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -304,7 +339,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>offline</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -387,7 +425,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -395,7 +436,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -403,7 +447,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -411,7 +458,10 @@ public class DescribeHybridProxyClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

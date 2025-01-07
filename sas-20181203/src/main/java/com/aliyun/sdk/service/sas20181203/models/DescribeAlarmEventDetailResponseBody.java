@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -185,7 +190,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < Value> value;
+        private java.util.List<Value> value;
 
         private CauseDetails(Builder builder) {
             this.key = builder.key;
@@ -210,13 +215,13 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public java.util.List < Value> getValue() {
+        public java.util.List<Value> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < Value> value; 
+            private java.util.List<Value> value; 
 
             /**
              * <p>The key that is used to trace the alert event.</p>
@@ -232,7 +237,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             /**
              * <p>The value that is used to trace the alert event.</p>
              */
-            public Builder value(java.util.List < Value> value) {
+            public Builder value(java.util.List<Value> value) {
                 this.value = value;
                 return this;
             }
@@ -270,7 +275,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         private Boolean canCancelFault;
 
         @com.aliyun.core.annotation.NameInMap("CauseDetails")
-        private java.util.List < CauseDetails> causeDetails;
+        private java.util.List<CauseDetails> causeDetails;
 
         @com.aliyun.core.annotation.NameInMap("ContainHwMode")
         private Boolean containHwMode;
@@ -415,7 +420,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         /**
          * @return causeDetails
          */
-        public java.util.List < CauseDetails> getCauseDetails() {
+        public java.util.List<CauseDetails> getCauseDetails() {
             return this.causeDetails;
         }
 
@@ -566,7 +571,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private String appName; 
             private Boolean canBeDealOnLine; 
             private Boolean canCancelFault; 
-            private java.util.List < CauseDetails> causeDetails; 
+            private java.util.List<CauseDetails> causeDetails; 
             private Boolean containHwMode; 
             private String containerId; 
             private String containerImageId; 
@@ -668,7 +673,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the cause of the alert event, which can be used to trace the alert event.</p>
              */
-            public Builder causeDetails(java.util.List < CauseDetails> causeDetails) {
+            public Builder causeDetails(java.util.List<CauseDetails> causeDetails) {
                 this.causeDetails = causeDetails;
                 return this;
             }

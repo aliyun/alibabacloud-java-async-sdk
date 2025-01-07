@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateOssScanConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketNameList")
-    private java.util.List < String > bucketNameList;
+    private java.util.List<String> bucketNameList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DecompressMaxFileCount")
@@ -30,7 +35,7 @@ public class CreateOssScanConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DecryptionList")
-    private java.util.List < String > decryptionList;
+    private java.util.List<String> decryptionList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
@@ -42,11 +47,11 @@ public class CreateOssScanConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPrefixList")
-    private java.util.List < String > keyPrefixList;
+    private java.util.List<String> keyPrefixList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeySuffixList")
-    private java.util.List < String > keySuffixList;
+    private java.util.List<String> keySuffixList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LastModifiedStartTime")
@@ -58,7 +63,7 @@ public class CreateOssScanConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanDayList")
-    private java.util.List < Integer > scanDayList;
+    private java.util.List<Integer> scanDayList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -104,7 +109,7 @@ public class CreateOssScanConfigRequest extends Request {
     /**
      * @return bucketNameList
      */
-    public java.util.List < String > getBucketNameList() {
+    public java.util.List<String> getBucketNameList() {
         return this.bucketNameList;
     }
 
@@ -125,7 +130,7 @@ public class CreateOssScanConfigRequest extends Request {
     /**
      * @return decryptionList
      */
-    public java.util.List < String > getDecryptionList() {
+    public java.util.List<String> getDecryptionList() {
         return this.decryptionList;
     }
 
@@ -146,14 +151,14 @@ public class CreateOssScanConfigRequest extends Request {
     /**
      * @return keyPrefixList
      */
-    public java.util.List < String > getKeyPrefixList() {
+    public java.util.List<String> getKeyPrefixList() {
         return this.keyPrefixList;
     }
 
     /**
      * @return keySuffixList
      */
-    public java.util.List < String > getKeySuffixList() {
+    public java.util.List<String> getKeySuffixList() {
         return this.keySuffixList;
     }
 
@@ -174,7 +179,7 @@ public class CreateOssScanConfigRequest extends Request {
     /**
      * @return scanDayList
      */
-    public java.util.List < Integer > getScanDayList() {
+    public java.util.List<Integer> getScanDayList() {
         return this.scanDayList;
     }
 
@@ -187,17 +192,17 @@ public class CreateOssScanConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateOssScanConfigRequest, Builder> {
         private Boolean allKeyPrefix; 
-        private java.util.List < String > bucketNameList; 
+        private java.util.List<String> bucketNameList; 
         private Integer decompressMaxFileCount; 
         private Integer decompressMaxLayer; 
-        private java.util.List < String > decryptionList; 
+        private java.util.List<String> decryptionList; 
         private Integer enable; 
         private String endTime; 
-        private java.util.List < String > keyPrefixList; 
-        private java.util.List < String > keySuffixList; 
+        private java.util.List<String> keyPrefixList; 
+        private java.util.List<String> keySuffixList; 
         private Long lastModifiedStartTime; 
         private String name; 
-        private java.util.List < Integer > scanDayList; 
+        private java.util.List<Integer> scanDayList; 
         private String startTime; 
 
         private Builder() {
@@ -222,7 +227,7 @@ public class CreateOssScanConfigRequest extends Request {
         } 
 
         /**
-         * <p>Whether to match all prefixes.</p>
+         * <p>Specifies whether to match the prefixes of all objects.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -236,14 +241,14 @@ public class CreateOssScanConfigRequest extends Request {
         /**
          * <p>The names of buckets.</p>
          */
-        public Builder bucketNameList(java.util.List < String > bucketNameList) {
+        public Builder bucketNameList(java.util.List<String> bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
             this.bucketNameList = bucketNameList;
             return this;
         }
 
         /**
-         * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * <p>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -255,7 +260,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * <p>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -267,9 +272,9 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * DecryptionList.
+         * <p>The decryption methods.</p>
          */
-        public Builder decryptionList(java.util.List < String > decryptionList) {
+        public Builder decryptionList(java.util.List<String> decryptionList) {
             this.putQueryParameter("DecryptionList", decryptionList);
             this.decryptionList = decryptionList;
             return this;
@@ -304,9 +309,9 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The prefixes of the object that you want to check.</p>
+         * <p>The prefixes of the objects.</p>
          */
-        public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
+        public Builder keyPrefixList(java.util.List<String> keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);
             this.keyPrefixList = keyPrefixList;
             return this;
@@ -315,14 +320,17 @@ public class CreateOssScanConfigRequest extends Request {
         /**
          * <p>The suffixes of the files to scan.</p>
          */
-        public Builder keySuffixList(java.util.List < String > keySuffixList) {
+        public Builder keySuffixList(java.util.List<String> keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
             this.keySuffixList = keySuffixList;
             return this;
         }
 
         /**
-         * LastModifiedStartTime.
+         * <p>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1724301769834</p>
          */
         public Builder lastModifiedStartTime(Long lastModifiedStartTime) {
             this.putQueryParameter("LastModifiedStartTime", lastModifiedStartTime);
@@ -331,7 +339,7 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>runtime</p>
@@ -345,7 +353,7 @@ public class CreateOssScanConfigRequest extends Request {
         /**
          * <p>The days on which the scan is executed in a week.</p>
          */
-        public Builder scanDayList(java.util.List < Integer > scanDayList) {
+        public Builder scanDayList(java.util.List<Integer> scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
             this.scanDayList = scanDayList;
             return this;

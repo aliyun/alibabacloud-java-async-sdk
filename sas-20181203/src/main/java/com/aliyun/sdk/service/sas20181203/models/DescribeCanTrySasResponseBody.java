@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,14 @@ public class DescribeCanTrySasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CanTry.
+         * <p>Indicates whether you have the permissions on the trial use of Security Center. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder canTry(Integer canTry) {
             this.canTry = canTry;
@@ -58,7 +70,10 @@ public class DescribeCanTrySasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E90DE229-9FC6-58F6-BF4B-03AD6179****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

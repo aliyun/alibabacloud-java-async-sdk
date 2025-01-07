@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
      */
     public static class SecurityEventStageResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityEventOnStag")
-        private java.util.Map < String, ? > securityEventOnStag;
+        private java.util.Map<String, ?> securityEventOnStag;
 
         private SecurityEventStageResponse(Builder builder) {
             this.securityEventOnStag = builder.securityEventOnStag;
@@ -99,12 +104,12 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         /**
          * @return securityEventOnStag
          */
-        public java.util.Map < String, ? > getSecurityEventOnStag() {
+        public java.util.Map<String, ?> getSecurityEventOnStag() {
             return this.securityEventOnStag;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > securityEventOnStag; 
+            private java.util.Map<String, ?> securityEventOnStag; 
 
             /**
              * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>
@@ -114,7 +119,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
              * <li><strong>windows</strong></li>
              * </ul>
              */
-            public Builder securityEventOnStag(java.util.Map < String, ? > securityEventOnStag) {
+            public Builder securityEventOnStag(java.util.Map<String, ?> securityEventOnStag) {
                 this.securityEventOnStag = securityEventOnStag;
                 return this;
             }

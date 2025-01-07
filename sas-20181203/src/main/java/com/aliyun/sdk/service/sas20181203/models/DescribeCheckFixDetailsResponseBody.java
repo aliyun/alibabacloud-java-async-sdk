@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckFixDetails")
-    private java.util.List < CheckFixDetails> checkFixDetails;
+    private java.util.List<CheckFixDetails> checkFixDetails;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
@@ -38,7 +43,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     /**
      * @return checkFixDetails
      */
-    public java.util.List < CheckFixDetails> getCheckFixDetails() {
+    public java.util.List<CheckFixDetails> getCheckFixDetails() {
         return this.checkFixDetails;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckFixDetails> checkFixDetails; 
+        private java.util.List<CheckFixDetails> checkFixDetails; 
         private Integer count; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the parameters.</p>
          */
-        public Builder checkFixDetails(java.util.List < CheckFixDetails> checkFixDetails) {
+        public Builder checkFixDetails(java.util.List<CheckFixDetails> checkFixDetails) {
             this.checkFixDetails = checkFixDetails;
             return this;
         }
@@ -352,7 +357,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         private Integer optional;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
@@ -409,7 +414,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -445,7 +450,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private Long checkId; 
             private Integer defaultValue; 
             private Integer optional; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String ruleDesc; 
             private String ruleId; 
             private Integer value; 
@@ -491,7 +496,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the rule parameters.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
@@ -564,7 +569,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         private String checkItem;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private CheckFixDetails(Builder builder) {
             this.checkDesc = builder.checkDesc;
@@ -605,7 +610,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -613,7 +618,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             private String checkDesc; 
             private Long checkId; 
             private String checkItem; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * <p>The detailed description of the risk item.</p>
@@ -651,7 +656,7 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the rules that are supported by the risk item.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

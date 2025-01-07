@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GroupedContainerInstanceList")
-    private java.util.List < GroupedContainerInstanceList> groupedContainerInstanceList;
+    private java.util.List<GroupedContainerInstanceList> groupedContainerInstanceList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     /**
      * @return groupedContainerInstanceList
      */
-    public java.util.List < GroupedContainerInstanceList> getGroupedContainerInstanceList() {
+    public java.util.List<GroupedContainerInstanceList> getGroupedContainerInstanceList() {
         return this.groupedContainerInstanceList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GroupedContainerInstanceList> groupedContainerInstanceList; 
+        private java.util.List<GroupedContainerInstanceList> groupedContainerInstanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The information about the container.</p>
          */
-        public Builder groupedContainerInstanceList(java.util.List < GroupedContainerInstanceList> groupedContainerInstanceList) {
+        public Builder groupedContainerInstanceList(java.util.List<GroupedContainerInstanceList> groupedContainerInstanceList) {
             this.groupedContainerInstanceList = groupedContainerInstanceList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    private java.util.List<String> scanRange;
 
     private DescribeImageBaselineCheckSummaryRequest(Builder builder) {
         super(builder);
@@ -121,7 +126,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -133,7 +138,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private String riskLevel; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
 
         private Builder() {
             super();
@@ -254,7 +259,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         /**
          * <p>The types of the assets that you want to scan.</p>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;

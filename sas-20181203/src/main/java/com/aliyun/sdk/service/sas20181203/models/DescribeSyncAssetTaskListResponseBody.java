@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskRecords")
-    private java.util.List < TaskRecords> taskRecords;
+    private java.util.List<TaskRecords> taskRecords;
 
     private DescribeSyncAssetTaskListResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
     /**
      * @return taskRecords
      */
-    public java.util.List < TaskRecords> getTaskRecords() {
+    public java.util.List<TaskRecords> getTaskRecords() {
         return this.taskRecords;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < TaskRecords> taskRecords; 
+        private java.util.List<TaskRecords> taskRecords; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         /**
          * <p>The IDC scan tasks.</p>
          */
-        public Builder taskRecords(java.util.List < TaskRecords> taskRecords) {
+        public Builder taskRecords(java.util.List<TaskRecords> taskRecords) {
             this.taskRecords = taskRecords;
             return this;
         }

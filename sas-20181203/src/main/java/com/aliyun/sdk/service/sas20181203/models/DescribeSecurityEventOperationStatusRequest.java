@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > securityEventIds;
+    private java.util.List<String> securityEventIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -61,7 +66,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
     /**
      * @return securityEventIds
      */
-    public java.util.List < String > getSecurityEventIds() {
+    public java.util.List<String> getSecurityEventIds() {
         return this.securityEventIds;
     }
 
@@ -81,7 +86,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSecurityEventOperationStatusRequest, Builder> {
         private Long resourceOwnerId; 
-        private java.util.List < String > securityEventIds; 
+        private java.util.List<String> securityEventIds; 
         private String sourceIp; 
         private Long taskId; 
 
@@ -116,7 +121,7 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;909361&quot;]</p>
          */
-        public Builder securityEventIds(java.util.List < String > securityEventIds) {
+        public Builder securityEventIds(java.util.List<String> securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
             this.securityEventIds = securityEventIds;
             return this;

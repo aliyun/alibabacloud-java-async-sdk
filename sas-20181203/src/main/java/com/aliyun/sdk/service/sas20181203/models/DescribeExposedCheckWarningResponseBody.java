@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("WarningList")
-    private java.util.List < WarningList> warningList;
+    private java.util.List<WarningList> warningList;
 
     private DescribeExposedCheckWarningResponseBody(Builder builder) {
         this.count = builder.count;
@@ -52,14 +57,14 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     /**
      * @return warningList
      */
-    public java.util.List < WarningList> getWarningList() {
+    public java.util.List<WarningList> getWarningList() {
         return this.warningList;
     }
 
     public static final class Builder {
         private Integer count; 
         private String requestId; 
-        private java.util.List < WarningList> warningList; 
+        private java.util.List<WarningList> warningList; 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -86,7 +91,7 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the baseline risk items of the exposed server.</p>
          */
-        public Builder warningList(java.util.List < WarningList> warningList) {
+        public Builder warningList(java.util.List<WarningList> warningList) {
             this.warningList = warningList;
             return this;
         }

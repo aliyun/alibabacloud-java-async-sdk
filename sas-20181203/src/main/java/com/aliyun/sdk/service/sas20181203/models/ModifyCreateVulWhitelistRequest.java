@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,21 +104,21 @@ public class ModifyCreateVulWhitelistRequest extends Request {
          * <ul>
          * <li><p><strong>type</strong>: the type of the applicable scope. Valid values:</p>
          * <ul>
-         * <li><strong>GroupId</strong>: the ID of a server group</li>
-         * <li><strong>Uuid</strong>: the UUID of a server</li>
+         * <li><strong>GroupId</strong>: the ID of a server group.</li>
+         * <li><strong>Uuid</strong>: the UUID of a server.</li>
          * </ul>
          * </li>
-         * <li><p><strong>uuids</strong>: the UUIDs of servers</p>
+         * <li><p><strong>uuids</strong>: the UUIDs of servers. This field is of the string type.</p>
          * </li>
-         * <li><p><strong>groupIds</strong>: the IDs of server groups</p>
+         * <li><p><strong>groupIds</strong>: the IDs of server groups. This field is of the long type.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p> If you leave this parameter empty, all servers are added to the whitelist. If you set the <strong>type</strong> field to <strong>GroupId</strong>, you must also specify the <strong>groupIds</strong> field. If you set <strong>type</strong> to <strong>Uuid</strong>, you must specify the <strong>uuids</strong> parameter.</p>
+         * <p> If you leave this parameter empty, the applicable scope is all servers. If you set the <strong>type</strong> field to <strong>GroupId</strong>, you must also specify the <strong>groupIds</strong> field. If you set the <strong>type</strong> field to <strong>Uuid</strong>, you must also specify the <strong>uuids</strong> field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;type&quot;:&quot;GroupId&quot;,&quot;uuids&quot;:[],&quot;groupIds&quot;:[10782678]}</p>
+         * <p>{&quot;type&quot;:&quot;Uuid&quot;,&quot;uuids&quot;:[&quot;b31a708f-5fea-426e-bebe-a7b0893****&quot;,&quot;1f749687-3b5d-4e11-8140-d964673****&quot;],&quot;groupIds&quot;:[]}</p>
          */
         public Builder targetInfo(String targetInfo) {
             this.putQueryParameter("TargetInfo", targetInfo);

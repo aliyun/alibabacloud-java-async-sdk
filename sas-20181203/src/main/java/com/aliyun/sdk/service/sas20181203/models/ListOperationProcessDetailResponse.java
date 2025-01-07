@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UninstallRaspAttachResponse} extends {@link TeaModel}
+ * {@link ListOperationProcessDetailResponse} extends {@link TeaModel}
  *
- * <p>UninstallRaspAttachResponse</p>
+ * <p>ListOperationProcessDetailResponse</p>
  */
-public class UninstallRaspAttachResponse extends Response {
+public class ListOperationProcessDetailResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UninstallRaspAttachResponseBody body;
+    private ListOperationProcessDetailResponseBody body;
 
-    private UninstallRaspAttachResponse(BuilderImpl builder) {
+    private ListOperationProcessDetailResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UninstallRaspAttachResponse create() {
+    public static ListOperationProcessDetailResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -40,7 +45,7 @@ public class UninstallRaspAttachResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class UninstallRaspAttachResponse extends Response {
     /**
      * @return body
      */
-    public UninstallRaspAttachResponseBody getBody() {
+    public ListOperationProcessDetailResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UninstallRaspAttachResponse, Builder> {
+    public interface Builder extends Response.Builder<ListOperationProcessDetailResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UninstallRaspAttachResponseBody body);
+        Builder body(ListOperationProcessDetailResponseBody body);
 
         @Override
-        UninstallRaspAttachResponse build();
+        ListOperationProcessDetailResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UninstallRaspAttachResponse, Builder>
+            extends Response.BuilderImpl<ListOperationProcessDetailResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UninstallRaspAttachResponseBody body; 
+        private ListOperationProcessDetailResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UninstallRaspAttachResponse response) {
+        private BuilderImpl(ListOperationProcessDetailResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class UninstallRaspAttachResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class UninstallRaspAttachResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UninstallRaspAttachResponseBody body) {
+        public Builder body(ListOperationProcessDetailResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UninstallRaspAttachResponse build() {
-            return new UninstallRaspAttachResponse(this);
+        public ListOperationProcessDetailResponse build() {
+            return new ListOperationProcessDetailResponse(this);
         } 
 
     } 

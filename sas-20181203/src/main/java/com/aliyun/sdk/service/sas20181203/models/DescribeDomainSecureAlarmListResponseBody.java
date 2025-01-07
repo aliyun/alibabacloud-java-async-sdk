@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlarmList")
-    private java.util.List < AlarmList> alarmList;
+    private java.util.List<AlarmList> alarmList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
     /**
      * @return alarmList
      */
-    public java.util.List < AlarmList> getAlarmList() {
+    public java.util.List<AlarmList> getAlarmList() {
         return this.alarmList;
     }
 
@@ -57,20 +62,23 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlarmList> alarmList; 
+        private java.util.List<AlarmList> alarmList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * AlarmList.
+         * <p>The security alerts in your website assets.</p>
          */
-        public Builder alarmList(java.util.List < AlarmList> alarmList) {
+        public Builder alarmList(java.util.List<AlarmList> alarmList) {
             this.alarmList = alarmList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +86,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -448,7 +459,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AlarmEventName.
+             * <p>The name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trojan</p>
              */
             public Builder alarmEventName(String alarmEventName) {
                 this.alarmEventName = alarmEventName;
@@ -456,7 +470,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventNameOriginal.
+             * <p>The original parent name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_location</p>
              */
             public Builder alarmEventNameOriginal(String alarmEventNameOriginal) {
                 this.alarmEventNameOriginal = alarmEventNameOriginal;
@@ -464,7 +481,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmEventType.
+             * <p>The type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Malicious Software</p>
              */
             public Builder alarmEventType(String alarmEventType) {
                 this.alarmEventType = alarmEventType;
@@ -472,7 +492,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmUniqueInfo.
+             * <p>The unique ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8df914418f4211fbf756efe7a6f4****</p>
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -480,7 +503,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * AutoBreaking.
+             * <p>Indicates whether automatic defense is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoBreaking(Boolean autoBreaking) {
                 this.autoBreaking = autoBreaking;
@@ -488,7 +514,14 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * CanBeDealOnLine.
+             * <p>Indicates whether the alert event can be handled online, such as quarantining the source file of the malicious process, adding the alert event to the whitelist, and ignoring the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
                 this.canBeDealOnLine = canBeDealOnLine;
@@ -496,7 +529,14 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * CanCancelFault.
+             * <p>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canCancelFault(Boolean canCancelFault) {
                 this.canCancelFault = canCancelFault;
@@ -504,7 +544,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * ContainHwMode.
+             * <p>Indicates whether the safeguard mode for major activities is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder containHwMode(Boolean containHwMode) {
                 this.containHwMode = containHwMode;
@@ -512,7 +555,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The data source of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis_****</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -520,7 +566,14 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Dealed.
+             * <p>Indicates whether the alert event is handled. Valid values:</p>
+             * <ul>
+             * <li><strong>N</strong>: unhandled</li>
+             * <li><strong>Y</strong>: handled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>y</p>
              */
             public Builder dealed(Boolean dealed) {
                 this.dealed = dealed;
@@ -528,7 +581,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The detection model finds that there is a Trojan horse program on your server. The Trojan horse program is a program specially used to invade the user&quot;s host. Generally, it will download and release another malicious program after being implanted into the system through disguise.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -536,7 +592,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The timestamp generated when the alert event was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1543740301000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -544,7 +603,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time of the last modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1656901794000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -552,7 +614,14 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * HasTraceInfo.
+             * <p>Indicates whether the alert event has tracing information. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasTraceInfo(Boolean hasTraceInfo) {
                 this.hasTraceInfo = hasTraceInfo;
@@ -560,7 +629,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-e****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -568,7 +640,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestInstance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -576,7 +651,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95.214.<em>.</em></p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -584,7 +662,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address of the affected instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -592,7 +673,15 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>serious</strong></li>
+             * <li><strong>suspicious</strong></li>
+             * <li><strong>remind</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -600,7 +689,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * OperateErrorCode.
+             * <p>The handling result code of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kill_and_quara.Success</p>
              */
             public Builder operateErrorCode(String operateErrorCode) {
                 this.operateErrorCode = operateErrorCode;
@@ -608,7 +700,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTime.
+             * <p>The timestamp generated when the alert event was handled. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631699497000</p>
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -616,7 +711,15 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * SaleVersion.
+             * <p>The edition of Security Center in which the alert event can be detected. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Basic edition.</li>
+             * <li><strong>1</strong>: Advanced edition.</li>
+             * <li><strong>2</strong>: Enterprise edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder saleVersion(String saleVersion) {
                 this.saleVersion = saleVersion;
@@ -624,7 +727,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityEventIds.
+             * <p>The ID of the associated alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>270789</p>
              */
             public Builder securityEventIds(String securityEventIds) {
                 this.securityEventIds = securityEventIds;
@@ -632,7 +738,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * <p>The solution to the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A malicious program implanted by hacker after intrusion will occupy your bandwidth and attack other servers, and may affect you own service. The malicious process may also have self-deleting behavior or disguise as a system service to evade detection.</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -640,7 +749,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Stages.
+             * <p>The stage at which the attack or intrusion is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;authority_maintenance&quot;]</p>
              */
             public Builder stages(String stages) {
                 this.stages = stages;
@@ -648,7 +760,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The timestamp generated when the alert event was first detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1543740301000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -656,7 +771,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * SuspiciousEventCount.
+             * <p>The total number of security alerts in your website assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder suspiciousEventCount(Integer suspiciousEventCount) {
                 this.suspiciousEventCount = suspiciousEventCount;
@@ -664,7 +782,10 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The unique ID of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47900178-885d-4fa4-9d77-****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

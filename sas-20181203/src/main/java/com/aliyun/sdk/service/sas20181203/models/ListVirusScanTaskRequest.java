@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -62,7 +67,7 @@ public class ListVirusScanTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < Integer > statusList;
+    private java.util.List<Integer> statusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -186,7 +191,7 @@ public class ListVirusScanTaskRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < Integer > getStatusList() {
+    public java.util.List<Integer> getStatusList() {
         return this.statusList;
     }
 
@@ -210,7 +215,7 @@ public class ListVirusScanTaskRequest extends Request {
         private String scanType; 
         private Long startTime; 
         private Integer status; 
-        private java.util.List < Integer > statusList; 
+        private java.util.List<Integer> statusList; 
         private String taskId; 
 
         private Builder() {
@@ -399,7 +404,7 @@ public class ListVirusScanTaskRequest extends Request {
         /**
          * <p>The statuses of virus scan tasks.</p>
          */
-        public Builder statusList(java.util.List < Integer > statusList) {
+        public Builder statusList(java.util.List<Integer> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

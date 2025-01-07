@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHoneypotEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HoneypotEvents")
-    private java.util.List < HoneypotEvents> honeypotEvents;
+    private java.util.List<HoneypotEvents> honeypotEvents;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     /**
      * @return honeypotEvents
      */
-    public java.util.List < HoneypotEvents> getHoneypotEvents() {
+    public java.util.List<HoneypotEvents> getHoneypotEvents() {
         return this.honeypotEvents;
     }
 
@@ -57,14 +62,14 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HoneypotEvents> honeypotEvents; 
+        private java.util.List<HoneypotEvents> honeypotEvents; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The intrusion events.</p>
          */
-        public Builder honeypotEvents(java.util.List < HoneypotEvents> honeypotEvents) {
+        public Builder honeypotEvents(java.util.List<HoneypotEvents> honeypotEvents) {
             this.honeypotEvents = honeypotEvents;
             return this;
         }
@@ -245,7 +250,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         private String location;
 
         @com.aliyun.core.annotation.NameInMap("MergeFieldList")
-        private java.util.List < MergeFieldList> mergeFieldList;
+        private java.util.List<MergeFieldList> mergeFieldList;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
@@ -342,7 +347,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         /**
          * @return mergeFieldList
          */
-        public java.util.List < MergeFieldList> getMergeFieldList() {
+        public java.util.List<MergeFieldList> getMergeFieldList() {
             return this.mergeFieldList;
         }
 
@@ -383,7 +388,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String honeypotName; 
             private Long lastTime; 
             private String location; 
-            private java.util.List < MergeFieldList> mergeFieldList; 
+            private java.util.List<MergeFieldList> mergeFieldList; 
             private String protocol; 
             private String riskLevel; 
             private Long securityEventId; 
@@ -480,7 +485,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             /**
              * <p>The extended values that correspond to the field key.</p>
              */
-            public Builder mergeFieldList(java.util.List < MergeFieldList> mergeFieldList) {
+            public Builder mergeFieldList(java.util.List<MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
                 return this;
             }

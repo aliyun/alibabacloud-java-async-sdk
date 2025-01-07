@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeVulListResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VulRecords")
-    private java.util.List < VulRecords> vulRecords;
+    private java.util.List<VulRecords> vulRecords;
 
     private DescribeVulListResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
@@ -85,7 +90,7 @@ public class DescribeVulListResponseBody extends TeaModel {
     /**
      * @return vulRecords
      */
-    public java.util.List < VulRecords> getVulRecords() {
+    public java.util.List<VulRecords> getVulRecords() {
         return this.vulRecords;
     }
 
@@ -95,7 +100,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VulRecords> vulRecords; 
+        private java.util.List<VulRecords> vulRecords; 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -155,7 +160,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * <p>The information about the vulnerability.</p>
          */
-        public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
+        public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
             return this;
         }
@@ -397,7 +402,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         private String matchDetail;
 
         @com.aliyun.core.annotation.NameInMap("MatchList")
-        private java.util.List < String > matchList;
+        private java.util.List<String> matchList;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -474,7 +479,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * @return matchList
          */
-        public java.util.List < String > getMatchList() {
+        public java.util.List<String> getMatchList() {
             return this.matchList;
         }
 
@@ -519,7 +524,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String fullVersion; 
             private String imageName; 
             private String matchDetail; 
-            private java.util.List < String > matchList; 
+            private java.util.List<String> matchList; 
             private String name; 
             private String path; 
             private String pid; 
@@ -584,7 +589,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             /**
              * <p>The rules that are used to detect the vulnerability.</p>
              */
-            public Builder matchList(java.util.List < String > matchList) {
+            public Builder matchList(java.util.List<String> matchList) {
                 this.matchList = matchList;
                 return this;
             }
@@ -689,7 +694,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         private Long primaryId;
 
         @com.aliyun.core.annotation.NameInMap("RpmEntityList")
-        private java.util.List < RpmEntityList> rpmEntityList;
+        private java.util.List<RpmEntityList> rpmEntityList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -701,7 +706,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         private String target;
 
         @com.aliyun.core.annotation.NameInMap("cveList")
-        private java.util.List < String > cveList;
+        private java.util.List<String> cveList;
 
         private ExtendContentJson(Builder builder) {
             this.absolutePath = builder.absolutePath;
@@ -802,7 +807,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * @return rpmEntityList
          */
-        public java.util.List < RpmEntityList> getRpmEntityList() {
+        public java.util.List<RpmEntityList> getRpmEntityList() {
             return this.rpmEntityList;
         }
 
@@ -830,7 +835,7 @@ public class DescribeVulListResponseBody extends TeaModel {
         /**
          * @return cveList
          */
-        public java.util.List < String > getCveList() {
+        public java.util.List<String> getCveList() {
             return this.cveList;
         }
 
@@ -845,11 +850,11 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String os; 
             private String osRelease; 
             private Long primaryId; 
-            private java.util.List < RpmEntityList> rpmEntityList; 
+            private java.util.List<RpmEntityList> rpmEntityList; 
             private String status; 
             private String tag; 
             private String target; 
-            private java.util.List < String > cveList; 
+            private java.util.List<String> cveList; 
 
             /**
              * <p>The path to the package of the software that has the vulnerability.</p>
@@ -961,7 +966,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             /**
              * <p>The information about RPM Package Manager (RPM) packages.</p>
              */
-            public Builder rpmEntityList(java.util.List < RpmEntityList> rpmEntityList) {
+            public Builder rpmEntityList(java.util.List<RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
                 return this;
             }
@@ -1017,7 +1022,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             /**
              * <p>The CVE list.</p>
              */
-            public Builder cveList(java.util.List < String > cveList) {
+            public Builder cveList(java.util.List<String> cveList) {
                 this.cveList = cveList;
                 return this;
             }

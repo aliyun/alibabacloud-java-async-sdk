@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,11 +35,11 @@ public class CreateOpaStrategyNewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageName")
-    private java.util.List < String > imageName;
+    private java.util.List<String> imageName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Label")
-    private java.util.List < String > label;
+    private java.util.List<String> label;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaliciousImage")
@@ -46,7 +51,7 @@ public class CreateOpaStrategyNewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scopes")
-    private java.util.List < Scopes> scopes;
+    private java.util.List<Scopes> scopes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StrategyId")
@@ -66,7 +71,7 @@ public class CreateOpaStrategyNewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteList")
-    private java.util.List < String > whiteList;
+    private java.util.List<String> whiteList;
 
     private CreateOpaStrategyNewRequest(Builder builder) {
         super(builder);
@@ -130,14 +135,14 @@ public class CreateOpaStrategyNewRequest extends Request {
     /**
      * @return imageName
      */
-    public java.util.List < String > getImageName() {
+    public java.util.List<String> getImageName() {
         return this.imageName;
     }
 
     /**
      * @return label
      */
-    public java.util.List < String > getLabel() {
+    public java.util.List<String> getLabel() {
         return this.label;
     }
 
@@ -158,7 +163,7 @@ public class CreateOpaStrategyNewRequest extends Request {
     /**
      * @return scopes
      */
-    public java.util.List < Scopes> getScopes() {
+    public java.util.List<Scopes> getScopes() {
         return this.scopes;
     }
 
@@ -193,7 +198,7 @@ public class CreateOpaStrategyNewRequest extends Request {
     /**
      * @return whiteList
      */
-    public java.util.List < String > getWhiteList() {
+    public java.util.List<String> getWhiteList() {
         return this.whiteList;
     }
 
@@ -202,16 +207,16 @@ public class CreateOpaStrategyNewRequest extends Request {
         private String clusterId; 
         private String clusterName; 
         private String description; 
-        private java.util.List < String > imageName; 
-        private java.util.List < String > label; 
+        private java.util.List<String> imageName; 
+        private java.util.List<String> label; 
         private Boolean maliciousImage; 
         private Integer ruleAction; 
-        private java.util.List < Scopes> scopes; 
+        private java.util.List<Scopes> scopes; 
         private Long strategyId; 
         private String strategyName; 
         private Long strategyTemplateId; 
         private Boolean unScanedImage; 
-        private java.util.List < String > whiteList; 
+        private java.util.List<String> whiteList; 
 
         private Builder() {
             super();
@@ -292,7 +297,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * <p>The image names.</p>
          */
-        public Builder imageName(java.util.List < String > imageName) {
+        public Builder imageName(java.util.List<String> imageName) {
             this.putQueryParameter("ImageName", imageName);
             this.imageName = imageName;
             return this;
@@ -301,7 +306,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * <p>The container tags.</p>
          */
-        public Builder label(java.util.List < String > label) {
+        public Builder label(java.util.List<String> label) {
             this.putQueryParameter("Label", label);
             this.label = label;
             return this;
@@ -343,7 +348,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * <p>The application scope of the rule.</p>
          */
-        public Builder scopes(java.util.List < Scopes> scopes) {
+        public Builder scopes(java.util.List<Scopes> scopes) {
             this.putQueryParameter("Scopes", scopes);
             this.scopes = scopes;
             return this;
@@ -413,7 +418,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * <p>The whitelist.</p>
          */
-        public Builder whiteList(java.util.List < String > whiteList) {
+        public Builder whiteList(java.util.List<String> whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
             this.whiteList = whiteList;
             return this;
@@ -513,10 +518,10 @@ public class CreateOpaStrategyNewRequest extends Request {
      */
     public static class Baseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < Item> item;
+        private java.util.List<Item> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private Baseline(Builder builder) {
             this.item = builder.item;
@@ -534,25 +539,25 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<Item> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The baseline check items.</p>
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }
@@ -560,7 +565,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -659,10 +664,10 @@ public class CreateOpaStrategyNewRequest extends Request {
      */
     public static class BuildRisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < BuildRiskItem> item;
+        private java.util.List<BuildRiskItem> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private BuildRisk(Builder builder) {
             this.item = builder.item;
@@ -680,25 +685,25 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < BuildRiskItem> getItem() {
+        public java.util.List<BuildRiskItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < BuildRiskItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<BuildRiskItem> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The configuration of image build risk.</p>
              */
-            public Builder item(java.util.List < BuildRiskItem> item) {
+            public Builder item(java.util.List<BuildRiskItem> item) {
                 this.item = item;
                 return this;
             }
@@ -706,7 +711,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -805,10 +810,10 @@ public class CreateOpaStrategyNewRequest extends Request {
      */
     public static class MaliciousFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < MaliciousFileItem> item;
+        private java.util.List<MaliciousFileItem> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private MaliciousFile(Builder builder) {
             this.item = builder.item;
@@ -826,25 +831,25 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < MaliciousFileItem> getItem() {
+        public java.util.List<MaliciousFileItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < MaliciousFileItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<MaliciousFileItem> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The malicious samples.</p>
              */
-            public Builder item(java.util.List < MaliciousFileItem> item) {
+            public Builder item(java.util.List<MaliciousFileItem> item) {
                 this.item = item;
                 return this;
             }
@@ -852,7 +857,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -951,10 +956,10 @@ public class CreateOpaStrategyNewRequest extends Request {
      */
     public static class SensitiveFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < SensitiveFileItem> item;
+        private java.util.List<SensitiveFileItem> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private SensitiveFile(Builder builder) {
             this.item = builder.item;
@@ -972,25 +977,25 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < SensitiveFileItem> getItem() {
+        public java.util.List<SensitiveFileItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < SensitiveFileItem> item; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<SensitiveFileItem> item; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The configuration of sensitive file.</p>
              */
-            public Builder item(java.util.List < SensitiveFileItem> item) {
+            public Builder item(java.util.List<SensitiveFileItem> item) {
                 this.item = item;
                 return this;
             }
@@ -998,7 +1003,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -1178,13 +1183,13 @@ public class CreateOpaStrategyNewRequest extends Request {
      */
     public static class Vul extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
-        private java.util.List < VulItem> item;
+        private java.util.List<VulItem> item;
 
         @com.aliyun.core.annotation.NameInMap("RiskClass")
-        private java.util.List < RiskClass> riskClass;
+        private java.util.List<RiskClass> riskClass;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
-        private java.util.List < String > riskLevel;
+        private java.util.List<String> riskLevel;
 
         private Vul(Builder builder) {
             this.item = builder.item;
@@ -1203,33 +1208,33 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * @return item
          */
-        public java.util.List < VulItem> getItem() {
+        public java.util.List<VulItem> getItem() {
             return this.item;
         }
 
         /**
          * @return riskClass
          */
-        public java.util.List < RiskClass> getRiskClass() {
+        public java.util.List<RiskClass> getRiskClass() {
             return this.riskClass;
         }
 
         /**
          * @return riskLevel
          */
-        public java.util.List < String > getRiskLevel() {
+        public java.util.List<String> getRiskLevel() {
             return this.riskLevel;
         }
 
         public static final class Builder {
-            private java.util.List < VulItem> item; 
-            private java.util.List < RiskClass> riskClass; 
-            private java.util.List < String > riskLevel; 
+            private java.util.List<VulItem> item; 
+            private java.util.List<RiskClass> riskClass; 
+            private java.util.List<String> riskLevel; 
 
             /**
              * <p>The vulnerabilities.</p>
              */
-            public Builder item(java.util.List < VulItem> item) {
+            public Builder item(java.util.List<VulItem> item) {
                 this.item = item;
                 return this;
             }
@@ -1237,7 +1242,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>Risk type of vulnerability.</p>
              */
-            public Builder riskClass(java.util.List < RiskClass> riskClass) {
+            public Builder riskClass(java.util.List<RiskClass> riskClass) {
                 this.riskClass = riskClass;
                 return this;
             }
@@ -1245,7 +1250,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             /**
              * <p>The risk levels.</p>
              */
-            public Builder riskLevel(java.util.List < String > riskLevel) {
+            public Builder riskLevel(java.util.List<String> riskLevel) {
                 this.riskLevel = riskLevel;
                 return this;
             }
@@ -1401,7 +1406,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("NamespaceList")
-        private java.util.List < String > namespaceList;
+        private java.util.List<String> namespaceList;
 
         private Scopes(Builder builder) {
             this.ackPolicyInstanceId = builder.ackPolicyInstanceId;
@@ -1442,7 +1447,7 @@ public class CreateOpaStrategyNewRequest extends Request {
         /**
          * @return namespaceList
          */
-        public java.util.List < String > getNamespaceList() {
+        public java.util.List<String> getNamespaceList() {
             return this.namespaceList;
         }
 
@@ -1450,7 +1455,7 @@ public class CreateOpaStrategyNewRequest extends Request {
             private String ackPolicyInstanceId; 
             private Integer allNamespace; 
             private String clusterId; 
-            private java.util.List < String > namespaceList; 
+            private java.util.List<String> namespaceList; 
 
             /**
              * <p>The ID of the cluster node to which the rule is applied.</p>
@@ -1501,7 +1506,7 @@ public class CreateOpaStrategyNewRequest extends Request {
              * <p>This parameter is valid only when the AllNamespace parameter is set to 0.</p>
              * </blockquote>
              */
-            public Builder namespaceList(java.util.List < String > namespaceList) {
+            public Builder namespaceList(java.util.List<String> namespaceList) {
                 this.namespaceList = namespaceList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -138,7 +143,10 @@ public class ModifyAttestorRequest extends Request {
         } 
 
         /**
-         * KeyId.
+         * <p>The ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-********</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -147,7 +155,10 @@ public class ModifyAttestorRequest extends Request {
         }
 
         /**
-         * KeyRegionId.
+         * <p>The region ID of the Key Management Service (KMS) key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder keyRegionId(String keyRegionId) {
             this.putQueryParameter("KeyRegionId", keyRegionId);
@@ -156,7 +167,10 @@ public class ModifyAttestorRequest extends Request {
         }
 
         /**
-         * KeyVersionId.
+         * <p>The version ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-****</p>
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
@@ -165,7 +179,10 @@ public class ModifyAttestorRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the witness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attestor-auto-ad5316</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,7 +191,10 @@ public class ModifyAttestorRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -192,7 +212,10 @@ public class ModifyAttestorRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

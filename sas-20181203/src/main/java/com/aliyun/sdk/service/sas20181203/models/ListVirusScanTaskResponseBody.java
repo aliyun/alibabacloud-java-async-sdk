@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListVirusScanTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,14 +62,14 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The returned virus scan tasks.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -117,7 +122,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         private Integer progress;
 
         @com.aliyun.core.annotation.NameInMap("ScanPath")
-        private java.util.List < String > scanPath;
+        private java.util.List<String> scanPath;
 
         @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
@@ -198,7 +203,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
         /**
          * @return scanPath
          */
-        public java.util.List < String > getScanPath() {
+        public java.util.List<String> getScanPath() {
             return this.scanPath;
         }
 
@@ -250,7 +255,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Integer progress; 
-            private java.util.List < String > scanPath; 
+            private java.util.List<String> scanPath; 
             private String scanType; 
             private Long startTime; 
             private Integer status; 
@@ -316,7 +321,7 @@ public class ListVirusScanTaskResponseBody extends TeaModel {
             /**
              * <p>The information about the file that is scanned.</p>
              */
-            public Builder scanPath(java.util.List < String > scanPath) {
+            public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
                 return this;
             }

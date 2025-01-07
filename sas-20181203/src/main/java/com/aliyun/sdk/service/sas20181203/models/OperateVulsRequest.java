@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,12 +30,12 @@ public class OperateVulsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > uuids;
+    private java.util.List<String> uuids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VulNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vulNames;
+    private java.util.List<String> vulNames;
 
     private OperateVulsRequest(Builder builder) {
         super(builder);
@@ -70,22 +75,22 @@ public class OperateVulsRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
     /**
      * @return vulNames
      */
-    public java.util.List < String > getVulNames() {
+    public java.util.List<String> getVulNames() {
         return this.vulNames;
     }
 
     public static final class Builder extends Request.Builder<OperateVulsRequest, Builder> {
         private String operateType; 
         private String type; 
-        private java.util.List < String > uuids; 
-        private java.util.List < String > vulNames; 
+        private java.util.List<String> uuids; 
+        private java.util.List<String> vulNames; 
 
         private Builder() {
             super();
@@ -129,7 +134,7 @@ public class OperateVulsRequest extends Request {
          * <p>The UUIDs of servers for which you want to fix vulnerabilities.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;
@@ -139,7 +144,7 @@ public class OperateVulsRequest extends Request {
          * <p>The names of the vulnerabilities that you want to fix.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder vulNames(java.util.List < String > vulNames) {
+        public Builder vulNames(java.util.List<String> vulNames) {
             this.putQueryParameter("VulNames", vulNames);
             this.vulNames = vulNames;
             return this;

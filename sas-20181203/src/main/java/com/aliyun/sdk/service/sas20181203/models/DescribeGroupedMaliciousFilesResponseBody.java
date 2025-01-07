@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GroupedMaliciousFileResponse")
-    private java.util.List < GroupedMaliciousFileResponse> groupedMaliciousFileResponse;
+    private java.util.List<GroupedMaliciousFileResponse> groupedMaliciousFileResponse;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     /**
      * @return groupedMaliciousFileResponse
      */
-    public java.util.List < GroupedMaliciousFileResponse> getGroupedMaliciousFileResponse() {
+    public java.util.List<GroupedMaliciousFileResponse> getGroupedMaliciousFileResponse() {
         return this.groupedMaliciousFileResponse;
     }
 
@@ -57,14 +62,14 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GroupedMaliciousFileResponse> groupedMaliciousFileResponse; 
+        private java.util.List<GroupedMaliciousFileResponse> groupedMaliciousFileResponse; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The details of the malicious image sample.</p>
          */
-        public Builder groupedMaliciousFileResponse(java.util.List < GroupedMaliciousFileResponse> groupedMaliciousFileResponse) {
+        public Builder groupedMaliciousFileResponse(java.util.List<GroupedMaliciousFileResponse> groupedMaliciousFileResponse) {
             this.groupedMaliciousFileResponse = groupedMaliciousFileResponse;
             return this;
         }

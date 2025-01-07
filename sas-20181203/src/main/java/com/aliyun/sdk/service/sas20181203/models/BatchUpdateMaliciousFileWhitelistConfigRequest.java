@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigList")
-    private java.util.List < ConfigList> configList;
+    private java.util.List<ConfigList> configList;
 
     private BatchUpdateMaliciousFileWhitelistConfigRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
     /**
      * @return configList
      */
-    public java.util.List < ConfigList> getConfigList() {
+    public java.util.List<ConfigList> getConfigList() {
         return this.configList;
     }
 
     public static final class Builder extends Request.Builder<BatchUpdateMaliciousFileWhitelistConfigRequest, Builder> {
-        private java.util.List < ConfigList> configList; 
+        private java.util.List<ConfigList> configList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
         /**
          * <p>The whitelist rules.</p>
          */
-        public Builder configList(java.util.List < ConfigList> configList) {
+        public Builder configList(java.util.List<ConfigList> configList) {
             this.putQueryParameter("ConfigList", configList);
             this.configList = configList;
             return this;

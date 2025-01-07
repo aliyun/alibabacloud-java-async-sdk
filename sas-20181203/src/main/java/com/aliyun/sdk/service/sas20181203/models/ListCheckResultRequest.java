@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListCheckResultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckKey")
@@ -30,11 +35,11 @@ public class ListCheckResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    private java.util.List<String> instanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -42,7 +47,7 @@ public class ListCheckResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationTypes")
-    private java.util.List < String > operationTypes;
+    private java.util.List<String> operationTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -55,31 +60,31 @@ public class ListCheckResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RequirementIds")
-    private java.util.List < Long > requirementIds;
+    private java.util.List<Long> requirementIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevels")
-    private java.util.List < String > riskLevels;
+    private java.util.List<String> riskLevels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortTypes")
-    private java.util.List < String > sortTypes;
+    private java.util.List<String> sortTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StandardIds")
-    private java.util.List < Long > standardIds;
+    private java.util.List<Long> standardIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Statuses")
-    private java.util.List < String > statuses;
+    private java.util.List<String> statuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
-    private java.util.List < String > vendors;
+    private java.util.List<String> vendors;
 
     private ListCheckResultRequest(Builder builder) {
         super(builder);
@@ -118,7 +123,7 @@ public class ListCheckResultRequest extends Request {
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
     }
 
@@ -146,14 +151,14 @@ public class ListCheckResultRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -167,7 +172,7 @@ public class ListCheckResultRequest extends Request {
     /**
      * @return operationTypes
      */
-    public java.util.List < String > getOperationTypes() {
+    public java.util.List<String> getOperationTypes() {
         return this.operationTypes;
     }
 
@@ -188,70 +193,70 @@ public class ListCheckResultRequest extends Request {
     /**
      * @return requirementIds
      */
-    public java.util.List < Long > getRequirementIds() {
+    public java.util.List<Long> getRequirementIds() {
         return this.requirementIds;
     }
 
     /**
      * @return riskLevels
      */
-    public java.util.List < String > getRiskLevels() {
+    public java.util.List<String> getRiskLevels() {
         return this.riskLevels;
     }
 
     /**
      * @return sortTypes
      */
-    public java.util.List < String > getSortTypes() {
+    public java.util.List<String> getSortTypes() {
         return this.sortTypes;
     }
 
     /**
      * @return standardIds
      */
-    public java.util.List < Long > getStandardIds() {
+    public java.util.List<Long> getStandardIds() {
         return this.standardIds;
     }
 
     /**
      * @return statuses
      */
-    public java.util.List < String > getStatuses() {
+    public java.util.List<String> getStatuses() {
         return this.statuses;
     }
 
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
     /**
      * @return vendors
      */
-    public java.util.List < String > getVendors() {
+    public java.util.List<String> getVendors() {
         return this.vendors;
     }
 
     public static final class Builder extends Request.Builder<ListCheckResultRequest, Builder> {
-        private java.util.List < Long > checkIds; 
+        private java.util.List<Long> checkIds; 
         private String checkKey; 
         private Integer currentPage; 
         private Boolean customParam; 
-        private java.util.List < String > instanceIds; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<String> instanceTypes; 
         private String lang; 
-        private java.util.List < String > operationTypes; 
+        private java.util.List<String> operationTypes; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < Long > requirementIds; 
-        private java.util.List < String > riskLevels; 
-        private java.util.List < String > sortTypes; 
-        private java.util.List < Long > standardIds; 
-        private java.util.List < String > statuses; 
-        private java.util.List < String > types; 
-        private java.util.List < String > vendors; 
+        private java.util.List<Long> requirementIds; 
+        private java.util.List<String> riskLevels; 
+        private java.util.List<String> sortTypes; 
+        private java.util.List<Long> standardIds; 
+        private java.util.List<String> statuses; 
+        private java.util.List<String> types; 
+        private java.util.List<String> vendors; 
 
         private Builder() {
             super();
@@ -279,9 +284,9 @@ public class ListCheckResultRequest extends Request {
         } 
 
         /**
-         * CheckIds.
+         * <p>The IDs of the check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
             return this;
@@ -330,7 +335,7 @@ public class ListCheckResultRequest extends Request {
         /**
          * <p>The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -358,12 +363,12 @@ public class ListCheckResultRequest extends Request {
          * <li><strong>POLARDB</strong>: PolarDB</li>
          * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
          * <li><strong>MSE</strong>: Microservices Engine (MSE)</li>
-         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS)</li>
+         * <li><strong>NAS</strong>: File Storage NAS (NAS)</li>
          * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP)</li>
          * <li><strong>EIP</strong>: Elastic IP Address (EIP)</li>
          * </ul>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
             return this;
@@ -386,9 +391,13 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * OperationTypes.
+         * <p>Specifies whether fixing is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>SUPPORT_REPAIR</strong></li>
+         * <li><strong>NOT_SUPPORT_REPAIR</strong></li>
+         * </ul>
          */
-        public Builder operationTypes(java.util.List < String > operationTypes) {
+        public Builder operationTypes(java.util.List<String> operationTypes) {
             this.putQueryParameter("OperationTypes", operationTypes);
             this.operationTypes = operationTypes;
             return this;
@@ -423,9 +432,9 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * <p>The IDs of requirement items.</p>
+         * <p>The IDs of the requirements.</p>
          */
-        public Builder requirementIds(java.util.List < Long > requirementIds) {
+        public Builder requirementIds(java.util.List<Long> requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
             this.requirementIds = requirementIds;
             return this;
@@ -439,7 +448,7 @@ public class ListCheckResultRequest extends Request {
          * <li><strong>LOW</strong></li>
          * </ul>
          */
-        public Builder riskLevels(java.util.List < String > riskLevels) {
+        public Builder riskLevels(java.util.List<String> riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
             this.riskLevels = riskLevels;
             return this;
@@ -452,16 +461,16 @@ public class ListCheckResultRequest extends Request {
          * <li><strong>STATUS</strong>: status</li>
          * </ul>
          */
-        public Builder sortTypes(java.util.List < String > sortTypes) {
+        public Builder sortTypes(java.util.List<String> sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
             this.sortTypes = sortTypes;
             return this;
         }
 
         /**
-         * <p>The IDs of standards.</p>
+         * <p>The standard IDs.</p>
          */
-        public Builder standardIds(java.util.List < Long > standardIds) {
+        public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
             this.standardIds = standardIds;
             return this;
@@ -477,7 +486,7 @@ public class ListCheckResultRequest extends Request {
          * <li><strong>WHITELIST</strong></li>
          * </ul>
          */
-        public Builder statuses(java.util.List < String > statuses) {
+        public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
             this.statuses = statuses;
             return this;
@@ -486,19 +495,22 @@ public class ListCheckResultRequest extends Request {
         /**
          * <p>The types of check standards.</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;
         }
 
         /**
-         * <p>The cloud service providers. Valid value:</p>
+         * <p>The cloud service providers. Valid values:</p>
          * <ul>
          * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * <li><strong>TENCENT</strong>: Tencent Cloud</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+         * <li><strong>MICROSOFT</strong>: Microsoft Azure</li>
          * </ul>
          */
-        public Builder vendors(java.util.List < String > vendors) {
+        public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);
             this.vendors = vendors;
             return this;

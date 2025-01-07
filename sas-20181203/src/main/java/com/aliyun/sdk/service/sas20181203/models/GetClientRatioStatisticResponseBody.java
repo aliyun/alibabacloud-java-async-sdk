@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     private ClientOnlineRatio clientOnlineRatio;
 
     @com.aliyun.core.annotation.NameInMap("Dates")
-    private java.util.List < Long > dates;
+    private java.util.List<Long> dates;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -56,7 +61,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     /**
      * @return dates
      */
-    public java.util.List < Long > getDates() {
+    public java.util.List<Long> getDates() {
         return this.dates;
     }
 
@@ -70,7 +75,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     public static final class Builder {
         private ClientInstallRatio clientInstallRatio; 
         private ClientOnlineRatio clientOnlineRatio; 
-        private java.util.List < Long > dates; 
+        private java.util.List<Long> dates; 
         private String requestId; 
 
         /**
@@ -92,7 +97,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * <p>The list of time when statistics were collected.</p>
          */
-        public Builder dates(java.util.List < Long > dates) {
+        public Builder dates(java.util.List<Long> dates) {
             this.dates = dates;
             return this;
         }
@@ -241,7 +246,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
      */
     public static class CurrentItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Long vendor;
@@ -262,7 +267,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -274,13 +279,13 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Long vendor; 
 
             /**
              * <p>The list of the statistics on the installation rate of the client by vendor.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -437,7 +442,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
      */
     public static class HistoryItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < HistoryItemsItems> items;
+        private java.util.List<HistoryItemsItems> items;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Long vendor;
@@ -458,7 +463,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < HistoryItemsItems> getItems() {
+        public java.util.List<HistoryItemsItems> getItems() {
             return this.items;
         }
 
@@ -470,13 +475,13 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HistoryItemsItems> items; 
+            private java.util.List<HistoryItemsItems> items; 
             private Long vendor; 
 
             /**
              * <p>The list of statistics on the client installation rate.</p>
              */
-            public Builder items(java.util.List < HistoryItemsItems> items) {
+            public Builder items(java.util.List<HistoryItemsItems> items) {
                 this.items = items;
                 return this;
             }
@@ -514,10 +519,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
      */
     public static class ClientInstallRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentItems")
-        private java.util.List < CurrentItems> currentItems;
+        private java.util.List<CurrentItems> currentItems;
 
         @com.aliyun.core.annotation.NameInMap("HistoryItems")
-        private java.util.List < HistoryItems> historyItems;
+        private java.util.List<HistoryItems> historyItems;
 
         private ClientInstallRatio(Builder builder) {
             this.currentItems = builder.currentItems;
@@ -535,25 +540,25 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * @return currentItems
          */
-        public java.util.List < CurrentItems> getCurrentItems() {
+        public java.util.List<CurrentItems> getCurrentItems() {
             return this.currentItems;
         }
 
         /**
          * @return historyItems
          */
-        public java.util.List < HistoryItems> getHistoryItems() {
+        public java.util.List<HistoryItems> getHistoryItems() {
             return this.historyItems;
         }
 
         public static final class Builder {
-            private java.util.List < CurrentItems> currentItems; 
-            private java.util.List < HistoryItems> historyItems; 
+            private java.util.List<CurrentItems> currentItems; 
+            private java.util.List<HistoryItems> historyItems; 
 
             /**
              * <p>The list of current statistics on the installation rate of the client.</p>
              */
-            public Builder currentItems(java.util.List < CurrentItems> currentItems) {
+            public Builder currentItems(java.util.List<CurrentItems> currentItems) {
                 this.currentItems = currentItems;
                 return this;
             }
@@ -561,7 +566,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             /**
              * <p>The list of historical statistics on the installation rate of the client.</p>
              */
-            public Builder historyItems(java.util.List < HistoryItems> historyItems) {
+            public Builder historyItems(java.util.List<HistoryItems> historyItems) {
                 this.historyItems = historyItems;
                 return this;
             }
@@ -700,7 +705,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
      */
     public static class ClientOnlineRatioCurrentItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < CurrentItemsItems> items;
+        private java.util.List<CurrentItemsItems> items;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Long vendor;
@@ -721,7 +726,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < CurrentItemsItems> getItems() {
+        public java.util.List<CurrentItemsItems> getItems() {
             return this.items;
         }
 
@@ -733,13 +738,13 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CurrentItemsItems> items; 
+            private java.util.List<CurrentItemsItems> items; 
             private Long vendor; 
 
             /**
              * <p>The list of current statistics on the online rate of the client by vendor.</p>
              */
-            public Builder items(java.util.List < CurrentItemsItems> items) {
+            public Builder items(java.util.List<CurrentItemsItems> items) {
                 this.items = items;
                 return this;
             }
@@ -896,7 +901,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
      */
     public static class ClientOnlineRatioHistoryItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < ClientOnlineRatioHistoryItemsItems> items;
+        private java.util.List<ClientOnlineRatioHistoryItemsItems> items;
 
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Long vendor;
@@ -917,7 +922,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < ClientOnlineRatioHistoryItemsItems> getItems() {
+        public java.util.List<ClientOnlineRatioHistoryItemsItems> getItems() {
             return this.items;
         }
 
@@ -929,13 +934,13 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ClientOnlineRatioHistoryItemsItems> items; 
+            private java.util.List<ClientOnlineRatioHistoryItemsItems> items; 
             private Long vendor; 
 
             /**
              * <p>The list of historical statistics on the online rate of the client by vendor.</p>
              */
-            public Builder items(java.util.List < ClientOnlineRatioHistoryItemsItems> items) {
+            public Builder items(java.util.List<ClientOnlineRatioHistoryItemsItems> items) {
                 this.items = items;
                 return this;
             }
@@ -973,10 +978,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
      */
     public static class ClientOnlineRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentItems")
-        private java.util.List < ClientOnlineRatioCurrentItems> currentItems;
+        private java.util.List<ClientOnlineRatioCurrentItems> currentItems;
 
         @com.aliyun.core.annotation.NameInMap("HistoryItems")
-        private java.util.List < ClientOnlineRatioHistoryItems> historyItems;
+        private java.util.List<ClientOnlineRatioHistoryItems> historyItems;
 
         private ClientOnlineRatio(Builder builder) {
             this.currentItems = builder.currentItems;
@@ -994,25 +999,25 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         /**
          * @return currentItems
          */
-        public java.util.List < ClientOnlineRatioCurrentItems> getCurrentItems() {
+        public java.util.List<ClientOnlineRatioCurrentItems> getCurrentItems() {
             return this.currentItems;
         }
 
         /**
          * @return historyItems
          */
-        public java.util.List < ClientOnlineRatioHistoryItems> getHistoryItems() {
+        public java.util.List<ClientOnlineRatioHistoryItems> getHistoryItems() {
             return this.historyItems;
         }
 
         public static final class Builder {
-            private java.util.List < ClientOnlineRatioCurrentItems> currentItems; 
-            private java.util.List < ClientOnlineRatioHistoryItems> historyItems; 
+            private java.util.List<ClientOnlineRatioCurrentItems> currentItems; 
+            private java.util.List<ClientOnlineRatioHistoryItems> historyItems; 
 
             /**
              * <p>The list of current statistics on the online rate of the client.</p>
              */
-            public Builder currentItems(java.util.List < ClientOnlineRatioCurrentItems> currentItems) {
+            public Builder currentItems(java.util.List<ClientOnlineRatioCurrentItems> currentItems) {
                 this.currentItems = currentItems;
                 return this;
             }
@@ -1020,7 +1025,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             /**
              * <p>The list of historical statistics on the online rate of the client.</p>
              */
-            public Builder historyItems(java.util.List < ClientOnlineRatioHistoryItems> historyItems) {
+            public Builder historyItems(java.util.List<ClientOnlineRatioHistoryItems> historyItems) {
                 this.historyItems = historyItems;
                 return this;
             }

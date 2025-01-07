@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class OperateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseApplicationDTOS")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS;
+    private java.util.List<ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
@@ -44,7 +49,7 @@ public class OperateApplicationRequest extends Request {
     /**
      * @return containerWebDefenseApplicationDTOS
      */
-    public java.util.List < ContainerWebDefenseApplicationDTOS> getContainerWebDefenseApplicationDTOS() {
+    public java.util.List<ContainerWebDefenseApplicationDTOS> getContainerWebDefenseApplicationDTOS() {
         return this.containerWebDefenseApplicationDTOS;
     }
 
@@ -56,7 +61,7 @@ public class OperateApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OperateApplicationRequest, Builder> {
-        private java.util.List < ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS; 
+        private java.util.List<ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS; 
         private Long ruleId; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class OperateApplicationRequest extends Request {
          * <p>The container application that is protected from being tampered with.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder containerWebDefenseApplicationDTOS(java.util.List < ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS) {
+        public Builder containerWebDefenseApplicationDTOS(java.util.List<ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS) {
             this.putQueryParameter("ContainerWebDefenseApplicationDTOS", containerWebDefenseApplicationDTOS);
             this.containerWebDefenseApplicationDTOS = containerWebDefenseApplicationDTOS;
             return this;

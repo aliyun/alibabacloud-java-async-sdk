@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,7 +75,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         /**
          * <p>The ID of the pay-as-you-go instance. This parameter is required.</p>
          * <blockquote>
-         * <p> You can call the <a href="~DescribeVersionConfig~">DescribeVersionConfig</a> operation to obtain the ID.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/421770.html">DescribeVersionConfig</a> operation to obtain the ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Strategies")
-    private java.util.List < Strategies> strategies;
+    private java.util.List<Strategies> strategies;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -78,7 +83,7 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
     /**
      * @return strategies
      */
-    public java.util.List < Strategies> getStrategies() {
+    public java.util.List<Strategies> getStrategies() {
         return this.strategies;
     }
 
@@ -94,7 +99,7 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Strategies> strategies; 
+        private java.util.List<Strategies> strategies; 
         private Integer totalCount; 
 
         /**
@@ -144,7 +149,7 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         /**
          * <p>The statistics of the policies.</p>
          */
-        public Builder strategies(java.util.List < Strategies> strategies) {
+        public Builder strategies(java.util.List<Strategies> strategies) {
             this.strategies = strategies;
             return this;
         }

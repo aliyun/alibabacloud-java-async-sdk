@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ExportSuspEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetsTypeList")
-    private java.util.List < String > assetsTypeList;
+    private java.util.List<String> assetsTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -62,7 +67,7 @@ public class ExportSuspEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperateErrorCodeList")
-    private java.util.List < String > operateErrorCodeList;
+    private java.util.List<String> operateErrorCodeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -147,7 +152,7 @@ public class ExportSuspEventsRequest extends Request {
     /**
      * @return assetsTypeList
      */
-    public java.util.List < String > getAssetsTypeList() {
+    public java.util.List<String> getAssetsTypeList() {
         return this.assetsTypeList;
     }
 
@@ -231,7 +236,7 @@ public class ExportSuspEventsRequest extends Request {
     /**
      * @return operateErrorCodeList
      */
-    public java.util.List < String > getOperateErrorCodeList() {
+    public java.util.List<String> getOperateErrorCodeList() {
         return this.operateErrorCodeList;
     }
 
@@ -306,7 +311,7 @@ public class ExportSuspEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExportSuspEventsRequest, Builder> {
-        private java.util.List < String > assetsTypeList; 
+        private java.util.List<String> assetsTypeList; 
         private String clusterId; 
         private String containerFieldName; 
         private String containerFieldValue; 
@@ -318,7 +323,7 @@ public class ExportSuspEventsRequest extends Request {
         private String lang; 
         private String levels; 
         private String name; 
-        private java.util.List < String > operateErrorCodeList; 
+        private java.util.List<String> operateErrorCodeList; 
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
@@ -364,7 +369,7 @@ public class ExportSuspEventsRequest extends Request {
         /**
          * <p>The types of assets.</p>
          */
-        public Builder assetsTypeList(java.util.List < String > assetsTypeList) {
+        public Builder assetsTypeList(java.util.List<String> assetsTypeList) {
             this.putQueryParameter("AssetsTypeList", assetsTypeList);
             this.assetsTypeList = assetsTypeList;
             return this;
@@ -535,7 +540,7 @@ public class ExportSuspEventsRequest extends Request {
         /**
          * <p>The status codes of alert events.</p>
          */
-        public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
+        public Builder operateErrorCodeList(java.util.List<String> operateErrorCodeList) {
             this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
             this.operateErrorCodeList = operateErrorCodeList;
             return this;

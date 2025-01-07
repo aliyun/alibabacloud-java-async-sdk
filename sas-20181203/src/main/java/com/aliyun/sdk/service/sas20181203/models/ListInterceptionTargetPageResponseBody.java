@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleTargetList")
-    private java.util.List < RuleTargetList> ruleTargetList;
+    private java.util.List<RuleTargetList> ruleTargetList;
 
     private ListInterceptionTargetPageResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
     /**
      * @return ruleTargetList
      */
-    public java.util.List < RuleTargetList> getRuleTargetList() {
+    public java.util.List<RuleTargetList> getRuleTargetList() {
         return this.ruleTargetList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RuleTargetList> ruleTargetList; 
+        private java.util.List<RuleTargetList> ruleTargetList; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the network objects.</p>
          */
-        public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
+        public Builder ruleTargetList(java.util.List<RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
             return this;
         }
@@ -207,7 +212,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         private String clusterName;
 
         @com.aliyun.core.annotation.NameInMap("ImageList")
-        private java.util.List < String > imageList;
+        private java.util.List<String> imageList;
 
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
@@ -216,7 +221,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         private String ruleType;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < String > tagList;
+        private java.util.List<String> tagList;
 
         @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
@@ -272,7 +277,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < String > getImageList() {
+        public java.util.List<String> getImageList() {
             return this.imageList;
         }
 
@@ -293,7 +298,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < String > getTagList() {
+        public java.util.List<String> getTagList() {
             return this.tagList;
         }
 
@@ -322,10 +327,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private String appName; 
             private String clusterId; 
             private String clusterName; 
-            private java.util.List < String > imageList; 
+            private java.util.List<String> imageList; 
             private String namespace; 
             private String ruleType; 
-            private java.util.List < String > tagList; 
+            private java.util.List<String> tagList; 
             private Long targetId; 
             private String targetName; 
             private String targetType; 
@@ -366,7 +371,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             /**
              * <p>The images of the network object.</p>
              */
-            public Builder imageList(java.util.List < String > imageList) {
+            public Builder imageList(java.util.List<String> imageList) {
                 this.imageList = imageList;
                 return this;
             }
@@ -399,7 +404,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             /**
              * <p>The tags specified for the network object.</p>
              */
-            public Builder tagList(java.util.List < String > tagList) {
+            public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
                 return this;
             }

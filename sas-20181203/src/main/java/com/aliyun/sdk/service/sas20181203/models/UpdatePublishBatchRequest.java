@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -96,7 +101,10 @@ public class UpdatePublishBatchRequest extends Request {
         } 
 
         /**
-         * BatchId.
+         * <p>The ID of the release batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52370</p>
          */
         public Builder batchId(Long batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -105,7 +113,10 @@ public class UpdatePublishBatchRequest extends Request {
         }
 
         /**
-         * BatchName.
+         * <p>The name of the release batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder batchName(String batchName) {
             this.putQueryParameter("BatchName", batchName);
@@ -114,7 +125,10 @@ public class UpdatePublishBatchRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The interval between two release batches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -123,7 +137,15 @@ public class UpdatePublishBatchRequest extends Request {
         }
 
         /**
-         * OperationBase.
+         * <p>The asset selection dimension. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: instance</li>
+         * <li><strong>1</strong>: machine group</li>
+         * <li><strong>2</strong>: VPC-based instance ID</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operationBase(Integer operationBase) {
             this.putQueryParameter("OperationBase", operationBase);

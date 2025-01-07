@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListImageRiskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageRiskList")
-    private java.util.List < ImageRiskList> imageRiskList;
+    private java.util.List<ImageRiskList> imageRiskList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListImageRiskResponseBody extends TeaModel {
     /**
      * @return imageRiskList
      */
-    public java.util.List < ImageRiskList> getImageRiskList() {
+    public java.util.List<ImageRiskList> getImageRiskList() {
         return this.imageRiskList;
     }
 
@@ -57,14 +62,14 @@ public class ListImageRiskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageRiskList> imageRiskList; 
+        private java.util.List<ImageRiskList> imageRiskList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of security information about the image.</p>
          */
-        public Builder imageRiskList(java.util.List < ImageRiskList> imageRiskList) {
+        public Builder imageRiskList(java.util.List<ImageRiskList> imageRiskList) {
             this.imageRiskList = imageRiskList;
             return this;
         }
@@ -102,7 +107,7 @@ public class ListImageRiskResponseBody extends TeaModel {
      */
     public static class EndPointList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
-        private java.util.List < String > domains;
+        private java.util.List<String> domains;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -123,7 +128,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         /**
          * @return domains
          */
-        public java.util.List < String > getDomains() {
+        public java.util.List<String> getDomains() {
             return this.domains;
         }
 
@@ -135,13 +140,13 @@ public class ListImageRiskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > domains; 
+            private java.util.List<String> domains; 
             private String type; 
 
             /**
              * <p>An array that consists the details of the domain name in the endpoint.</p>
              */
-            public Builder domains(java.util.List < String > domains) {
+            public Builder domains(java.util.List<String> domains) {
                 this.domains = domains;
                 return this;
             }
@@ -179,7 +184,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         private String digest;
 
         @com.aliyun.core.annotation.NameInMap("EndPointList")
-        private java.util.List < EndPointList> endPointList;
+        private java.util.List<EndPointList> endPointList;
 
         @com.aliyun.core.annotation.NameInMap("Endpoints")
         private String endpoints;
@@ -268,7 +273,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         /**
          * @return endPointList
          */
-        public java.util.List < EndPointList> getEndPointList() {
+        public java.util.List<EndPointList> getEndPointList() {
             return this.endPointList;
         }
 
@@ -386,7 +391,7 @@ public class ListImageRiskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String digest; 
-            private java.util.List < EndPointList> endPointList; 
+            private java.util.List<EndPointList> endPointList; 
             private String endpoints; 
             private String image; 
             private String imageAccessType; 
@@ -418,7 +423,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the details of the endpoint.</p>
              */
-            public Builder endPointList(java.util.List < EndPointList> endPointList) {
+            public Builder endPointList(java.util.List<EndPointList> endPointList) {
                 this.endPointList = endPointList;
                 return this;
             }

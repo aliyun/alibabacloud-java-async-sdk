@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -72,7 +77,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VulNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vulNames;
+    private java.util.List<String> vulNames;
 
     private DescribeUuidsByVulNamesRequest(Builder builder) {
         super(builder);
@@ -207,7 +212,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
     /**
      * @return vulNames
      */
-    public java.util.List < String > getVulNames() {
+    public java.util.List<String> getVulNames() {
         return this.vulNames;
     }
 
@@ -226,7 +231,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         private String targetType; 
         private String type; 
         private String vpcInstanceIds; 
-        private java.util.List < String > vulNames; 
+        private java.util.List<String> vulNames; 
 
         private Builder() {
             super();
@@ -457,7 +462,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder vulNames(java.util.List < String > vulNames) {
+        public Builder vulNames(java.util.List<String> vulNames) {
             this.putQueryParameter("VulNames", vulNames);
             this.vulNames = vulNames;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("ImageVulWhitelist")
-    private java.util.List < ImageVulWhitelist> imageVulWhitelist;
+    private java.util.List<ImageVulWhitelist> imageVulWhitelist;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -72,7 +77,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     /**
      * @return imageVulWhitelist
      */
-    public java.util.List < ImageVulWhitelist> getImageVulWhitelist() {
+    public java.util.List<ImageVulWhitelist> getImageVulWhitelist() {
         return this.imageVulWhitelist;
     }
 
@@ -114,7 +119,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < ImageVulWhitelist> imageVulWhitelist; 
+        private java.util.List<ImageVulWhitelist> imageVulWhitelist; 
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
@@ -146,7 +151,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         /**
          * <p>The information about the whitelist of image vulnerabilities.</p>
          */
-        public Builder imageVulWhitelist(java.util.List < ImageVulWhitelist> imageVulWhitelist) {
+        public Builder imageVulWhitelist(java.util.List<ImageVulWhitelist> imageVulWhitelist) {
             this.imageVulWhitelist = imageVulWhitelist;
             return this;
         }
@@ -339,7 +344,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason the vulnerability is added to the whitelist.</p>
+             * <p>The reason why the vulnerability is added to the whitelist.</p>
              * 
              * <strong>example:</strong>
              * <p>already config in another way</p>

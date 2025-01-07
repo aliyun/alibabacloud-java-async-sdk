@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBackupRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BackupRecordList")
-    private java.util.List < BackupRecordList> backupRecordList;
+    private java.util.List<BackupRecordList> backupRecordList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListBackupRecordResponseBody extends TeaModel {
     /**
      * @return backupRecordList
      */
-    public java.util.List < BackupRecordList> getBackupRecordList() {
+    public java.util.List<BackupRecordList> getBackupRecordList() {
         return this.backupRecordList;
     }
 
@@ -57,14 +62,14 @@ public class ListBackupRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BackupRecordList> backupRecordList; 
+        private java.util.List<BackupRecordList> backupRecordList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The details of the backup record.</p>
          */
-        public Builder backupRecordList(java.util.List < BackupRecordList> backupRecordList) {
+        public Builder backupRecordList(java.util.List<BackupRecordList> backupRecordList) {
             this.backupRecordList = backupRecordList;
             return this;
         }

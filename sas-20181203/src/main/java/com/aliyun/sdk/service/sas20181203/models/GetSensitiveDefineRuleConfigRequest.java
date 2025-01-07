@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,9 +21,14 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private GetSensitiveDefineRuleConfigRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -41,8 +51,16 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<GetSensitiveDefineRuleConfigRequest, Builder> {
         private String lang; 
+        private String source; 
 
         private Builder() {
             super();
@@ -51,6 +69,7 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
         private Builder(GetSensitiveDefineRuleConfigRequest request) {
             super(request);
             this.lang = request.lang;
+            this.source = request.source;
         } 
 
         /**
@@ -66,6 +85,15 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

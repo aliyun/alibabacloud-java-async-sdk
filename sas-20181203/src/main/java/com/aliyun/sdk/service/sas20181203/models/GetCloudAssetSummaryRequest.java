@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetCloudAssetSummaryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
-    private java.util.List < Integer > vendors;
+    private java.util.List<Integer> vendors;
 
     private GetCloudAssetSummaryRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class GetCloudAssetSummaryRequest extends Request {
     /**
      * @return vendors
      */
-    public java.util.List < Integer > getVendors() {
+    public java.util.List<Integer> getVendors() {
         return this.vendors;
     }
 
     public static final class Builder extends Request.Builder<GetCloudAssetSummaryRequest, Builder> {
-        private java.util.List < Integer > vendors; 
+        private java.util.List<Integer> vendors; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class GetCloudAssetSummaryRequest extends Request {
         /**
          * <p>The asset type by service provider.</p>
          */
-        public Builder vendors(java.util.List < Integer > vendors) {
+        public Builder vendors(java.util.List<Integer> vendors) {
             this.putQueryParameter("Vendors", vendors);
             this.vendors = vendors;
             return this;

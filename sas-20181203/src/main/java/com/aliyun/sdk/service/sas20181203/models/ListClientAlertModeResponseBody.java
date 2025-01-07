@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         private Integer count;
 
         @com.aliyun.core.annotation.NameInMap("Uuids")
-        private java.util.List < String > uuids;
+        private java.util.List<String> uuids;
 
         private Data(Builder builder) {
             this.count = builder.count;
@@ -110,13 +115,13 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         /**
          * @return uuids
          */
-        public java.util.List < String > getUuids() {
+        public java.util.List<String> getUuids() {
             return this.uuids;
         }
 
         public static final class Builder {
             private Integer count; 
-            private java.util.List < String > uuids; 
+            private java.util.List<String> uuids; 
 
             /**
              * <p>The total number of entries returned.</p>
@@ -132,7 +137,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             /**
              * <p>The UUIDs of the assets.</p>
              */
-            public Builder uuids(java.util.List < String > uuids) {
+            public Builder uuids(java.util.List<String> uuids) {
                 this.uuids = uuids;
                 return this;
             }

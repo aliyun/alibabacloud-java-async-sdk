@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StrategyTargets")
-    private java.util.List < StrategyTargets> strategyTargets;
+    private java.util.List<StrategyTargets> strategyTargets;
 
     private DescribeStrategyTargetResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     /**
      * @return strategyTargets
      */
-    public java.util.List < StrategyTargets> getStrategyTargets() {
+    public java.util.List<StrategyTargets> getStrategyTargets() {
         return this.strategyTargets;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StrategyTargets> strategyTargets; 
+        private java.util.List<StrategyTargets> strategyTargets; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         /**
          * <p>The information about the assets to which the baseline check policy is applied.</p>
          */
-        public Builder strategyTargets(java.util.List < StrategyTargets> strategyTargets) {
+        public Builder strategyTargets(java.util.List<StrategyTargets> strategyTargets) {
             this.strategyTargets = strategyTargets;
             return this;
         }

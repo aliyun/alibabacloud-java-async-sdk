@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteBaselineCheckWhiteRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckIds")
-    private java.util.List < Long > checkIds;
+    private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -22,7 +27,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordIds")
-    private java.util.List < Long > recordIds;
+    private java.util.List<Long> recordIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
@@ -52,7 +57,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
     /**
      * @return checkIds
      */
-    public java.util.List < Long > getCheckIds() {
+    public java.util.List<Long> getCheckIds() {
         return this.checkIds;
     }
 
@@ -66,7 +71,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
     /**
      * @return recordIds
      */
-    public java.util.List < Long > getRecordIds() {
+    public java.util.List<Long> getRecordIds() {
         return this.recordIds;
     }
 
@@ -78,9 +83,9 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteBaselineCheckWhiteRecordRequest, Builder> {
-        private java.util.List < Long > checkIds; 
+        private java.util.List<Long> checkIds; 
         private String lang; 
-        private java.util.List < Long > recordIds; 
+        private java.util.List<Long> recordIds; 
         private String source; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         /**
          * <p>The IDs of check items.</p>
          */
-        public Builder checkIds(java.util.List < Long > checkIds) {
+        public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
             return this;
@@ -123,7 +128,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         /**
          * <p>The IDs of the whitelist records.</p>
          */
-        public Builder recordIds(java.util.List < Long > recordIds) {
+        public Builder recordIds(java.util.List<Long> recordIds) {
             this.putQueryParameter("RecordIds", recordIds);
             this.recordIds = recordIds;
             return this;

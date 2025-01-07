@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     private String domain;
 
     @com.aliyun.core.annotation.NameInMap("DomainDetailItems")
-    private java.util.List < DomainDetailItems> domainDetailItems;
+    private java.util.List<DomainDetailItems> domainDetailItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     /**
      * @return domainDetailItems
      */
-    public java.util.List < DomainDetailItems> getDomainDetailItems() {
+    public java.util.List<DomainDetailItems> getDomainDetailItems() {
         return this.domainDetailItems;
     }
 
@@ -92,7 +97,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Integer alarmCount; 
         private String domain; 
-        private java.util.List < DomainDetailItems> domainDetailItems; 
+        private java.util.List<DomainDetailItems> domainDetailItems; 
         private String requestId; 
         private String rootDomain; 
         private Integer vulCount; 
@@ -122,7 +127,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the details about the domain asset.</p>
          */
-        public Builder domainDetailItems(java.util.List < DomainDetailItems> domainDetailItems) {
+        public Builder domainDetailItems(java.util.List<DomainDetailItems> domainDetailItems) {
             this.domainDetailItems = domainDetailItems;
             return this;
         }

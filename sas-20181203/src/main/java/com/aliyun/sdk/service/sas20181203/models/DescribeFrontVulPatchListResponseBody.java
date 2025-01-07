@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FrontPatchList")
-    private java.util.List < FrontPatchList> frontPatchList;
+    private java.util.List<FrontPatchList> frontPatchList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     /**
      * @return frontPatchList
      */
-    public java.util.List < FrontPatchList> getFrontPatchList() {
+    public java.util.List<FrontPatchList> getFrontPatchList() {
         return this.frontPatchList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FrontPatchList> frontPatchList; 
+        private java.util.List<FrontPatchList> frontPatchList; 
         private String requestId; 
 
         /**
          * <p>An array consisting of the information about the pre-patches that are required to fix the specified Windows system vulnerability.</p>
          */
-        public Builder frontPatchList(java.util.List < FrontPatchList> frontPatchList) {
+        public Builder frontPatchList(java.util.List<FrontPatchList> frontPatchList) {
             this.frontPatchList = frontPatchList;
             return this;
         }
@@ -155,7 +160,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
      */
     public static class FrontPatchList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PatchList")
-        private java.util.List < PatchList> patchList;
+        private java.util.List<PatchList> patchList;
 
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
@@ -176,7 +181,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         /**
          * @return patchList
          */
-        public java.util.List < PatchList> getPatchList() {
+        public java.util.List<PatchList> getPatchList() {
             return this.patchList;
         }
 
@@ -188,13 +193,13 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PatchList> patchList; 
+            private java.util.List<PatchList> patchList; 
             private String uuid; 
 
             /**
              * <p>An array consisting of the pre-patches that are required to fix the specified Windows system vulnerability on the server.</p>
              */
-            public Builder patchList(java.util.List < PatchList> patchList) {
+            public Builder patchList(java.util.List<PatchList> patchList) {
                 this.patchList = patchList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageInfos")
-    private java.util.List < ImageInfos> imageInfos;
+    private java.util.List<ImageInfos> imageInfos;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     /**
      * @return imageInfos
      */
-    public java.util.List < ImageInfos> getImageInfos() {
+    public java.util.List<ImageInfos> getImageInfos() {
         return this.imageInfos;
     }
 
@@ -57,14 +62,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageInfos> imageInfos; 
+        private java.util.List<ImageInfos> imageInfos; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The information about the images.</p>
          */
-        public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
+        public Builder imageInfos(java.util.List<ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,10 @@ public class DescribeVolDingdingMessageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DingdingUrl.
+         * <p>The QR code address of the DingTalk group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.wikihow.com/images_en/thumb/4/48/Get-the-URL-for-Pictures-Step-4-Version-4.jpg/v4-728px-Get-the-URL-for-Pictures-Step-4-Version-4.jpg.webp">https://www.wikihow.com/images_en/thumb/4/48/Get-the-URL-for-Pictures-Step-4-Version-4.jpg/v4-728px-Get-the-URL-for-Pictures-Step-4-Version-4.jpg.webp</a></p>
          */
         public Builder dingdingUrl(String dingdingUrl) {
             this.dingdingUrl = dingdingUrl;
@@ -58,7 +66,10 @@ public class DescribeVolDingdingMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A437E93-47EE-548F-ABCE-13F89AA85585</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

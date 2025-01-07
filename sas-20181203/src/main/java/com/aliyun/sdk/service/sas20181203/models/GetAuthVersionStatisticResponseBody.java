@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Statistics")
-    private java.util.List < Statistics> statistics;
+    private java.util.List<Statistics> statistics;
 
     private GetAuthVersionStatisticResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
     /**
      * @return statistics
      */
-    public java.util.List < Statistics> getStatistics() {
+    public java.util.List<Statistics> getStatistics() {
         return this.statistics;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Statistics> statistics; 
+        private java.util.List<Statistics> statistics; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         /**
          * <p>The statistics about the numbers of assets protected by each edition of Security Center.</p>
          */
-        public Builder statistics(java.util.List < Statistics> statistics) {
+        public Builder statistics(java.util.List<Statistics> statistics) {
             this.statistics = statistics;
             return this;
         }

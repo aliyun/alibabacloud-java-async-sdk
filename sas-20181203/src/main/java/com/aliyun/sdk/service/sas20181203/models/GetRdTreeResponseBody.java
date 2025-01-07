@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetRdTreeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The processing result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetRdTreeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -79,7 +87,7 @@ public class GetRdTreeResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
-        private java.util.List < ? > children;
+        private java.util.List<?> children;
 
         @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
@@ -104,7 +112,7 @@ public class GetRdTreeResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < ? > getChildren() {
+        public java.util.List<?> getChildren() {
             return this.children;
         }
 
@@ -123,20 +131,23 @@ public class GetRdTreeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > children; 
+            private java.util.List<?> children; 
             private String folderId; 
             private String folderName; 
 
             /**
-             * Children.
+             * <p>The subfolder.</p>
              */
-            public Builder children(java.util.List < ? > children) {
+            public Builder children(java.util.List<?> children) {
                 this.children = children;
                 return this;
             }
 
             /**
-             * FolderId.
+             * <p>The ID of the folder in the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-CGA73I****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -144,7 +155,10 @@ public class GetRdTreeResponseBody extends TeaModel {
             }
 
             /**
-             * FolderName.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Root</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;

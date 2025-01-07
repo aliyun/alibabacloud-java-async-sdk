@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPrivateRegistryListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageRegistryInfos")
-    private java.util.List < ImageRegistryInfos> imageRegistryInfos;
+    private java.util.List<ImageRegistryInfos> imageRegistryInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     /**
      * @return imageRegistryInfos
      */
-    public java.util.List < ImageRegistryInfos> getImageRegistryInfos() {
+    public java.util.List<ImageRegistryInfos> getImageRegistryInfos() {
         return this.imageRegistryInfos;
     }
 
@@ -46,13 +51,13 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageRegistryInfos> imageRegistryInfos; 
+        private java.util.List<ImageRegistryInfos> imageRegistryInfos; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the image repositories.</p>
          */
-        public Builder imageRegistryInfos(java.util.List < ImageRegistryInfos> imageRegistryInfos) {
+        public Builder imageRegistryInfos(java.util.List<ImageRegistryInfos> imageRegistryInfos) {
             this.imageRegistryInfos = imageRegistryInfos;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RestorePlans")
-    private java.util.List < RestorePlans> restorePlans;
+    private java.util.List<RestorePlans> restorePlans;
 
     private DescribeRestorePlansResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
     /**
      * @return restorePlans
      */
-    public java.util.List < RestorePlans> getRestorePlans() {
+    public java.util.List<RestorePlans> getRestorePlans() {
         return this.restorePlans;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RestorePlans> restorePlans; 
+        private java.util.List<RestorePlans> restorePlans; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the restoration tasks.</p>
          */
-        public Builder restorePlans(java.util.List < RestorePlans> restorePlans) {
+        public Builder restorePlans(java.util.List<RestorePlans> restorePlans) {
             this.restorePlans = restorePlans;
             return this;
         }

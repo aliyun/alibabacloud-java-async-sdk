@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,13 +321,13 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
      */
     public static class ClusterHostEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmEvent")
-        private java.util.List < AlarmEvent> alarmEvent;
+        private java.util.List<AlarmEvent> alarmEvent;
 
         @com.aliyun.core.annotation.NameInMap("BaselineEvent")
-        private java.util.List < BaselineEvent> baselineEvent;
+        private java.util.List<BaselineEvent> baselineEvent;
 
         @com.aliyun.core.annotation.NameInMap("VulEvent")
-        private java.util.List < VulEvent> vulEvent;
+        private java.util.List<VulEvent> vulEvent;
 
         private ClusterHostEvent(Builder builder) {
             this.alarmEvent = builder.alarmEvent;
@@ -341,33 +346,33 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         /**
          * @return alarmEvent
          */
-        public java.util.List < AlarmEvent> getAlarmEvent() {
+        public java.util.List<AlarmEvent> getAlarmEvent() {
             return this.alarmEvent;
         }
 
         /**
          * @return baselineEvent
          */
-        public java.util.List < BaselineEvent> getBaselineEvent() {
+        public java.util.List<BaselineEvent> getBaselineEvent() {
             return this.baselineEvent;
         }
 
         /**
          * @return vulEvent
          */
-        public java.util.List < VulEvent> getVulEvent() {
+        public java.util.List<VulEvent> getVulEvent() {
             return this.vulEvent;
         }
 
         public static final class Builder {
-            private java.util.List < AlarmEvent> alarmEvent; 
-            private java.util.List < BaselineEvent> baselineEvent; 
-            private java.util.List < VulEvent> vulEvent; 
+            private java.util.List<AlarmEvent> alarmEvent; 
+            private java.util.List<BaselineEvent> baselineEvent; 
+            private java.util.List<VulEvent> vulEvent; 
 
             /**
              * <p>The alert details of the host.</p>
              */
-            public Builder alarmEvent(java.util.List < AlarmEvent> alarmEvent) {
+            public Builder alarmEvent(java.util.List<AlarmEvent> alarmEvent) {
                 this.alarmEvent = alarmEvent;
                 return this;
             }
@@ -375,7 +380,7 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             /**
              * <p>The baseline details of the host.</p>
              */
-            public Builder baselineEvent(java.util.List < BaselineEvent> baselineEvent) {
+            public Builder baselineEvent(java.util.List<BaselineEvent> baselineEvent) {
                 this.baselineEvent = baselineEvent;
                 return this;
             }
@@ -383,7 +388,7 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             /**
              * <p>The vulnerability details of the host.</p>
              */
-            public Builder vulEvent(java.util.List < VulEvent> vulEvent) {
+            public Builder vulEvent(java.util.List<VulEvent> vulEvent) {
                 this.vulEvent = vulEvent;
                 return this;
             }

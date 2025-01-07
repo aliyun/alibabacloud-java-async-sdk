@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the backup snapshots.</p>
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -286,7 +291,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String path;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
@@ -451,7 +456,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -533,7 +538,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String jobId; 
             private String parentSnapshotHash; 
             private String path; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
             private String planId; 
             private String regionId; 
             private Long retention; 
@@ -710,7 +715,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             /**
              * <p>This parameter is returned only if the value of the <strong>SourceType</strong> parameter is <strong>NAS</strong>. This parameter indicates the path to the backup files.</p>
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -775,7 +780,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * <ul>
              * <li><strong>ECS_FILE</strong>: ECS files</li>
              * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-             * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+             * <li><strong>NAS</strong>: File Storage NAS file systems</li>
              * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
              * </ul>
              * 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,10 @@ public class DescribeDomainSecureScoreResponseBody extends TeaModel {
         private Integer securityScore; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11C96623-E106-59C9-866D-A6C82911****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +66,10 @@ public class DescribeDomainSecureScoreResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityScore.
+         * <p>The security score of the website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder securityScore(Integer securityScore) {
             this.securityScore = securityScore;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -72,7 +77,7 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -114,7 +119,7 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -122,7 +127,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: The request was successful.</li>
+         * <li><strong>Other codes</strong>: The request failed. For a list of error codes, see <a href="https://help.aliyun.com/document_detail/145071.html">Service error codes</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +142,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -138,15 +153,18 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -154,7 +172,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +183,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +194,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +209,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
         }
 
         /**
-         * TimeCost.
+         * <p>The consumed time of the request. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;
@@ -524,7 +558,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AliUid.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894104***</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -532,7 +569,18 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVersion.
+             * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic.</li>
+             * <li><strong>6</strong>: Anti-virus.</li>
+             * <li><strong>5</strong>: Advanced.</li>
+             * <li><strong>3</strong>: Enterprise.</li>
+             * <li><strong>7</strong>: Ultimate.</li>
+             * <li><strong>10</strong>: Value-added Plan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -540,7 +588,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p>The virtual network operator (VNO).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -548,7 +599,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Bind.
+             * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -556,7 +614,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * <p>The status of the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong></li>
+             * <li><strong>offline</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -564,7 +629,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -572,7 +640,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Eip.
+             * <p>The IP address of the elastic network interface (ENI).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.162.XX.XX</p>
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -580,7 +651,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * <p>Indicates whether the asset is provided by Alibaba Cloud. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes.</li>
+             * <li><strong>1</strong>: no.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -588,7 +666,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time at which the asset was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-16 18:17:16</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -596,7 +677,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time at which the asset was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-21 10:40:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -604,7 +688,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12208928</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -612,7 +699,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443496</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -620,7 +710,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -628,7 +721,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -636,7 +732,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * MachineInstanceId.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9</p>
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -644,7 +743,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * MachineIp.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder machineIp(String machineIp) {
                 this.machineIp = machineIp;
@@ -652,7 +754,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * MachineIpType.
+             * <p>The type of the IP address for the server. Valid values include the following values:</p>
+             * <ul>
+             * <li><strong>ecs</strong>: the IP address of the Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>slb</strong>: the IP address of the Server Load Balancer (SLB) instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SLB</p>
              */
             public Builder machineIpType(String machineIpType) {
                 this.machineIpType = machineIpType;
@@ -660,7 +769,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * MachineName.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -668,7 +780,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * MachineRegion.
+             * <p>The region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder machineRegion(String machineRegion) {
                 this.machineRegion = machineRegion;
@@ -676,7 +791,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * MachineType.
+             * <p>The instance type of the server. Valid values include the following values:</p>
+             * <ul>
+             * <li><strong>ecs</strong></li>
+             * <li><strong>slb</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -684,7 +806,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * <p>Indicates whether the Security Center agent is online. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -692,7 +821,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>The operating system of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -700,7 +832,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * OsName.
+             * <p>The name of the operating system for the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Debian  10.3 64</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -708,7 +843,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -716,7 +854,14 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the server. Valid values include the following values:</p>
+             * <ul>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -724,7 +869,10 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

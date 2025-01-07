@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,6 +103,7 @@ public class ListCompressFileDetectResultRequest extends Request {
         } 
 
         /**
+         * <p>The page number. Default value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +116,10 @@ public class ListCompressFileDetectResultRequest extends Request {
         }
 
         /**
-         * HashKey.
+         * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a212417e65c26ff133cfff28f6c****</p>
          */
         public Builder hashKey(String hashKey) {
             this.putQueryParameter("HashKey", hashKey);
@@ -119,6 +128,7 @@ public class ListCompressFileDetectResultRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Default value: 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +141,10 @@ public class ListCompressFileDetectResultRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27.9.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

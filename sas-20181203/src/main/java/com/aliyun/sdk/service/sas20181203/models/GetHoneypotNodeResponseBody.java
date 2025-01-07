@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -208,7 +213,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         private Integer probeUsedCount;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
-        private java.util.List < String > securityGroupProbeIpList;
+        private java.util.List<String> securityGroupProbeIpList;
 
         @com.aliyun.core.annotation.NameInMap("TotalStatus")
         private Integer totalStatus;
@@ -313,7 +318,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
         /**
          * @return securityGroupProbeIpList
          */
-        public java.util.List < String > getSecurityGroupProbeIpList() {
+        public java.util.List<String> getSecurityGroupProbeIpList() {
             return this.securityGroupProbeIpList;
         }
 
@@ -342,7 +347,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             private String nodeName; 
             private Integer probeTotalCount; 
             private Integer probeUsedCount; 
-            private java.util.List < String > securityGroupProbeIpList; 
+            private java.util.List<String> securityGroupProbeIpList; 
             private Integer totalStatus; 
             private Boolean upgradeAvailable; 
 
@@ -463,7 +468,7 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the CIDR blocks that are allowed to access the management node.</p>
              */
-            public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
+            public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
                 this.securityGroupProbeIpList = securityGroupProbeIpList;
                 return this;
             }

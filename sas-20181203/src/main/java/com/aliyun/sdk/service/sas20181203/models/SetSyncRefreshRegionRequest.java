@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SetSyncRefreshRegionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionIds")
-    private java.util.List < String > regionIds;
+    private java.util.List<String> regionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendor")
@@ -54,7 +59,7 @@ public class SetSyncRefreshRegionRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -67,7 +72,7 @@ public class SetSyncRefreshRegionRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetSyncRefreshRegionRequest, Builder> {
         private Integer defaultRegion; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String vendor; 
 
         private Builder() {
@@ -100,7 +105,7 @@ public class SetSyncRefreshRegionRequest extends Request {
         /**
          * <p>The regions from which you want to synchronize assets at the current site.</p>
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             this.putQueryParameter("RegionIds", regionIds);
             this.regionIds = regionIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateClientAlertModeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
-    private java.util.List < String > uuids;
+    private java.util.List<String> uuids;
 
     private UpdateClientAlertModeRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class UpdateClientAlertModeRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
     public static final class Builder extends Request.Builder<UpdateClientAlertModeRequest, Builder> {
         private String mode; 
-        private java.util.List < String > uuids; 
+        private java.util.List<String> uuids; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class UpdateClientAlertModeRequest extends Request {
         /**
          * <p>The UUIDs of servers.</p>
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;

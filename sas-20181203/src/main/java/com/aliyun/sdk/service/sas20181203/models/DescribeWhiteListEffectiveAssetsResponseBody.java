@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Assets")
-    private java.util.List < Assets> assets;
+    private java.util.List<Assets> assets;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
@@ -50,7 +55,7 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
     /**
      * @return assets
      */
-    public java.util.List < Assets> getAssets() {
+    public java.util.List<Assets> getAssets() {
         return this.assets;
     }
 
@@ -90,7 +95,7 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Assets> assets; 
+        private java.util.List<Assets> assets; 
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
@@ -100,7 +105,7 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         /**
          * <p>The servers on which the policy takes effect.</p>
          */
-        public Builder assets(java.util.List < Assets> assets) {
+        public Builder assets(java.util.List<Assets> assets) {
             this.assets = assets;
             return this;
         }

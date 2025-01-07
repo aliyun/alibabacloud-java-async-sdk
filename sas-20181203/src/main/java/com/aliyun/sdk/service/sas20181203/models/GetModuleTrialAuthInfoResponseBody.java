@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -261,7 +266,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         private String moduleCode;
 
         @com.aliyun.core.annotation.NameInMap("TrialRecordList")
-        private java.util.List < TrialRecordList> trialRecordList;
+        private java.util.List<TrialRecordList> trialRecordList;
 
         private Data(Builder builder) {
             this.canTry = builder.canTry;
@@ -294,14 +299,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         /**
          * @return trialRecordList
          */
-        public java.util.List < TrialRecordList> getTrialRecordList() {
+        public java.util.List<TrialRecordList> getTrialRecordList() {
             return this.trialRecordList;
         }
 
         public static final class Builder {
             private Boolean canTry; 
             private String moduleCode; 
-            private java.util.List < TrialRecordList> trialRecordList; 
+            private java.util.List<TrialRecordList> trialRecordList; 
 
             /**
              * <p>Indicates whether the user is qualified for the trial use. Valid values:</p>
@@ -336,7 +341,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             /**
              * <p>The trial use record.</p>
              */
-            public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
+            public Builder trialRecordList(java.util.List<TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;
                 return this;
             }

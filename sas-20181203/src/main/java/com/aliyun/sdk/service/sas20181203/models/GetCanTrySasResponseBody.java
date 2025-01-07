@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
         private Integer canTry;
 
         @com.aliyun.core.annotation.NameInMap("CanTryVersions")
-        private java.util.List < Integer > canTryVersions;
+        private java.util.List<Integer> canTryVersions;
 
         @com.aliyun.core.annotation.NameInMap("TryType")
         private Integer tryType;
@@ -114,7 +119,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
         /**
          * @return canTryVersions
          */
-        public java.util.List < Integer > getCanTryVersions() {
+        public java.util.List<Integer> getCanTryVersions() {
             return this.canTryVersions;
         }
 
@@ -127,7 +132,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer canTry; 
-            private java.util.List < Integer > canTryVersions; 
+            private java.util.List<Integer> canTryVersions; 
             private Integer tryType; 
 
             /**
@@ -148,7 +153,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
             /**
              * <p>The editions that are allowed for the trial use.</p>
              */
-            public Builder canTryVersions(java.util.List < Integer > canTryVersions) {
+            public Builder canTryVersions(java.util.List<Integer> canTryVersions) {
                 this.canTryVersions = canTryVersions;
                 return this;
             }

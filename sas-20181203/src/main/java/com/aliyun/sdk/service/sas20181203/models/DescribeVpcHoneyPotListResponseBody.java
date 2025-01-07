@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VpcHoneyPotDTOList")
-    private java.util.List < VpcHoneyPotDTOList> vpcHoneyPotDTOList;
+    private java.util.List<VpcHoneyPotDTOList> vpcHoneyPotDTOList;
 
     private DescribeVpcHoneyPotListResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     /**
      * @return vpcHoneyPotDTOList
      */
-    public java.util.List < VpcHoneyPotDTOList> getVpcHoneyPotDTOList() {
+    public java.util.List<VpcHoneyPotDTOList> getVpcHoneyPotDTOList() {
         return this.vpcHoneyPotDTOList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < VpcHoneyPotDTOList> vpcHoneyPotDTOList; 
+        private java.util.List<VpcHoneyPotDTOList> vpcHoneyPotDTOList; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the honeypots.</p>
          */
-        public Builder vpcHoneyPotDTOList(java.util.List < VpcHoneyPotDTOList> vpcHoneyPotDTOList) {
+        public Builder vpcHoneyPotDTOList(java.util.List<VpcHoneyPotDTOList> vpcHoneyPotDTOList) {
             this.vpcHoneyPotDTOList = vpcHoneyPotDTOList;
             return this;
         }
@@ -350,7 +355,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         private String vpcStatus;
 
         @com.aliyun.core.annotation.NameInMap("VpcSwitchIdList")
-        private java.util.List < VpcSwitchIdList> vpcSwitchIdList;
+        private java.util.List<VpcSwitchIdList> vpcSwitchIdList;
 
         private VpcHoneyPotDTOList(Builder builder) {
             this.cidrBlock = builder.cidrBlock;
@@ -455,7 +460,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         /**
          * @return vpcSwitchIdList
          */
-        public java.util.List < VpcSwitchIdList> getVpcSwitchIdList() {
+        public java.util.List<VpcSwitchIdList> getVpcSwitchIdList() {
             return this.vpcSwitchIdList;
         }
 
@@ -471,7 +476,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private String vpcName; 
             private String vpcRegionId; 
             private String vpcStatus; 
-            private java.util.List < VpcSwitchIdList> vpcSwitchIdList; 
+            private java.util.List<VpcSwitchIdList> vpcSwitchIdList; 
 
             /**
              * <p>The CIDR block of the VPC.</p>
@@ -622,7 +627,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the vSwitches in the VPC.</p>
              */
-            public Builder vpcSwitchIdList(java.util.List < VpcSwitchIdList> vpcSwitchIdList) {
+            public Builder vpcSwitchIdList(java.util.List<VpcSwitchIdList> vpcSwitchIdList) {
                 this.vpcSwitchIdList = vpcSwitchIdList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetOssBucketScanStatisticRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketNameList")
-    private java.util.List < String > bucketNameList;
+    private java.util.List<String> bucketNameList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
 
     private GetOssBucketScanStatisticRequest(Builder builder) {
         super(builder);
         this.bucketNameList = builder.bucketNameList;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -37,12 +47,20 @@ public class GetOssBucketScanStatisticRequest extends Request {
     /**
      * @return bucketNameList
      */
-    public java.util.List < String > getBucketNameList() {
+    public java.util.List<String> getBucketNameList() {
         return this.bucketNameList;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<GetOssBucketScanStatisticRequest, Builder> {
-        private java.util.List < String > bucketNameList; 
+        private java.util.List<String> bucketNameList; 
+        private String source; 
 
         private Builder() {
             super();
@@ -51,14 +69,24 @@ public class GetOssBucketScanStatisticRequest extends Request {
         private Builder(GetOssBucketScanStatisticRequest request) {
             super(request);
             this.bucketNameList = request.bucketNameList;
+            this.source = request.source;
         } 
 
         /**
          * <p>The names of the buckets.</p>
          */
-        public Builder bucketNameList(java.util.List < String > bucketNameList) {
+        public Builder bucketNameList(java.util.List<String> bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
             this.bucketNameList = bucketNameList;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

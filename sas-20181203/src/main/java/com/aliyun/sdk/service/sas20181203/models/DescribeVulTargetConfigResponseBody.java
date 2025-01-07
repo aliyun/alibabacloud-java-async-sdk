@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TargetConfigs")
-    private java.util.List < TargetConfigs> targetConfigs;
+    private java.util.List<TargetConfigs> targetConfigs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
     /**
      * @return targetConfigs
      */
-    public java.util.List < TargetConfigs> getTargetConfigs() {
+    public java.util.List<TargetConfigs> getTargetConfigs() {
         return this.targetConfigs;
     }
 
@@ -58,7 +63,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TargetConfigs> targetConfigs; 
+        private java.util.List<TargetConfigs> targetConfigs; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the configurations.</p>
          */
-        public Builder targetConfigs(java.util.List < TargetConfigs> targetConfigs) {
+        public Builder targetConfigs(java.util.List<TargetConfigs> targetConfigs) {
             this.targetConfigs = targetConfigs;
             return this;
         }

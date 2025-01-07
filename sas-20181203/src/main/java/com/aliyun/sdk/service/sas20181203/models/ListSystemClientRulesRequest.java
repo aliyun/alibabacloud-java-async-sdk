@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListSystemClientRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AggregationIds")
-    private java.util.List < Integer > aggregationIds;
+    private java.util.List<Integer> aggregationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -40,7 +45,7 @@ public class ListSystemClientRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleTypes")
-    private java.util.List < Integer > ruleTypes;
+    private java.util.List<Integer> ruleTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemType")
@@ -74,7 +79,7 @@ public class ListSystemClientRulesRequest extends Request {
     /**
      * @return aggregationIds
      */
-    public java.util.List < Integer > getAggregationIds() {
+    public java.util.List<Integer> getAggregationIds() {
         return this.aggregationIds;
     }
 
@@ -116,7 +121,7 @@ public class ListSystemClientRulesRequest extends Request {
     /**
      * @return ruleTypes
      */
-    public java.util.List < Integer > getRuleTypes() {
+    public java.util.List<Integer> getRuleTypes() {
         return this.ruleTypes;
     }
 
@@ -128,13 +133,13 @@ public class ListSystemClientRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSystemClientRulesRequest, Builder> {
-        private java.util.List < Integer > aggregationIds; 
+        private java.util.List<Integer> aggregationIds; 
         private Integer currentPage; 
         private Integer isContainer; 
         private String lang; 
         private Integer pageSize; 
         private String ruleName; 
-        private java.util.List < Integer > ruleTypes; 
+        private java.util.List<Integer> ruleTypes; 
         private Integer systemType; 
 
         private Builder() {
@@ -156,7 +161,7 @@ public class ListSystemClientRulesRequest extends Request {
         /**
          * <p>The IDs of the aggregation types for rules.</p>
          */
-        public Builder aggregationIds(java.util.List < Integer > aggregationIds) {
+        public Builder aggregationIds(java.util.List<Integer> aggregationIds) {
             this.putQueryParameter("AggregationIds", aggregationIds);
             this.aggregationIds = aggregationIds;
             return this;
@@ -235,7 +240,7 @@ public class ListSystemClientRulesRequest extends Request {
         /**
          * <p>The types of the system defense rules.</p>
          */
-        public Builder ruleTypes(java.util.List < Integer > ruleTypes) {
+        public Builder ruleTypes(java.util.List<Integer> ruleTypes) {
             this.putQueryParameter("RuleTypes", ruleTypes);
             this.ruleTypes = ruleTypes;
             return this;

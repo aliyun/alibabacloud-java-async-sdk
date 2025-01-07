@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class ModifyUniBackupPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FullPlan")
-    private java.util.Map < String, ? > fullPlan;
+    private java.util.Map<String, ?> fullPlan;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncPlan")
-    private java.util.Map < String, ? > incPlan;
+    private java.util.Map<String, ?> incPlan;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyId")
@@ -92,14 +97,14 @@ public class ModifyUniBackupPolicyRequest extends Request {
     /**
      * @return fullPlan
      */
-    public java.util.Map < String, ? > getFullPlan() {
+    public java.util.Map<String, ?> getFullPlan() {
         return this.fullPlan;
     }
 
     /**
      * @return incPlan
      */
-    public java.util.Map < String, ? > getIncPlan() {
+    public java.util.Map<String, ?> getIncPlan() {
         return this.incPlan;
     }
 
@@ -141,8 +146,8 @@ public class ModifyUniBackupPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyUniBackupPolicyRequest, Builder> {
         private String accountName; 
         private String accountPassword; 
-        private java.util.Map < String, ? > fullPlan; 
-        private java.util.Map < String, ? > incPlan; 
+        private java.util.Map<String, ?> fullPlan; 
+        private java.util.Map<String, ?> incPlan; 
         private Long policyId; 
         private String policyName; 
         private String policyStatus; 
@@ -202,7 +207,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;days&quot;:[4],&quot;interval&quot;:1,&quot;planType&quot;:&quot;weekly&quot;,&quot;startTime&quot;:&quot;22:00:00&quot;}</p>
          */
-        public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
+        public Builder fullPlan(java.util.Map<String, ?> fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
             this.putQueryParameter("FullPlan", fullPlanShrink);
             this.fullPlan = fullPlan;
@@ -221,7 +226,7 @@ public class ModifyUniBackupPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;interval&quot;:1,&quot;planType&quot;:&quot;daily&quot;,&quot;startTime&quot;:&quot;23:30:00&quot;}</p>
          */
-        public Builder incPlan(java.util.Map < String, ? > incPlan) {
+        public Builder incPlan(java.util.Map<String, ?> incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");
             this.putQueryParameter("IncPlan", incPlanShrink);
             this.incPlan = incPlan;

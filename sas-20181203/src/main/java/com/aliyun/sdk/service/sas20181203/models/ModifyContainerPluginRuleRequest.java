@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,11 +40,11 @@ public class ModifyContainerPluginRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SelectedPolicy")
-    private java.util.List < String > selectedPolicy;
+    private java.util.List<String> selectedPolicy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteImages")
-    private java.util.List < String > whiteImages;
+    private java.util.List<String> whiteImages;
 
     private ModifyContainerPluginRuleRequest(Builder builder) {
         super(builder);
@@ -103,14 +108,14 @@ public class ModifyContainerPluginRuleRequest extends Request {
     /**
      * @return selectedPolicy
      */
-    public java.util.List < String > getSelectedPolicy() {
+    public java.util.List<String> getSelectedPolicy() {
         return this.selectedPolicy;
     }
 
     /**
      * @return whiteImages
      */
-    public java.util.List < String > getWhiteImages() {
+    public java.util.List<String> getWhiteImages() {
         return this.whiteImages;
     }
 
@@ -120,8 +125,8 @@ public class ModifyContainerPluginRuleRequest extends Request {
         private Integer ruleId; 
         private String ruleName; 
         private Integer ruleType; 
-        private java.util.List < String > selectedPolicy; 
-        private java.util.List < String > whiteImages; 
+        private java.util.List<String> selectedPolicy; 
+        private java.util.List<String> whiteImages; 
 
         private Builder() {
             super();
@@ -214,7 +219,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         /**
          * <p>The rule items.</p>
          */
-        public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
+        public Builder selectedPolicy(java.util.List<String> selectedPolicy) {
             this.putQueryParameter("SelectedPolicy", selectedPolicy);
             this.selectedPolicy = selectedPolicy;
             return this;
@@ -223,7 +228,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         /**
          * <p>The images that are added to the whitelist.</p>
          */
-        public Builder whiteImages(java.util.List < String > whiteImages) {
+        public Builder whiteImages(java.util.List<String> whiteImages) {
             this.putQueryParameter("WhiteImages", whiteImages);
             this.whiteImages = whiteImages;
             return this;

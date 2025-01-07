@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListHoneypotEventsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AgentIdList")
-    private java.util.List < String > agentIdList;
+    private java.util.List<String> agentIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlarmEventId")
@@ -30,7 +35,7 @@ public class ListHoneypotEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HoneypotIdList")
-    private java.util.List < String > honeypotIdList;
+    private java.util.List<String> honeypotIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -50,7 +55,7 @@ public class ListHoneypotEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    private java.util.List<String> riskLevelList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcIp")
@@ -87,7 +92,7 @@ public class ListHoneypotEventsRequest extends Request {
     /**
      * @return agentIdList
      */
-    public java.util.List < String > getAgentIdList() {
+    public java.util.List<String> getAgentIdList() {
         return this.agentIdList;
     }
 
@@ -115,7 +120,7 @@ public class ListHoneypotEventsRequest extends Request {
     /**
      * @return honeypotIdList
      */
-    public java.util.List < String > getHoneypotIdList() {
+    public java.util.List<String> getHoneypotIdList() {
         return this.honeypotIdList;
     }
 
@@ -150,7 +155,7 @@ public class ListHoneypotEventsRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -162,16 +167,16 @@ public class ListHoneypotEventsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListHoneypotEventsRequest, Builder> {
-        private java.util.List < String > agentIdList; 
+        private java.util.List<String> agentIdList; 
         private Long alarmEventId; 
         private Integer currentPage; 
         private String dealed; 
-        private java.util.List < String > honeypotIdList; 
+        private java.util.List<String> honeypotIdList; 
         private String lang; 
         private Integer pageSize; 
         private String portraitId; 
         private String requestId; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
 
         private Builder() {
@@ -196,7 +201,7 @@ public class ListHoneypotEventsRequest extends Request {
         /**
          * <p>The probe IDs.</p>
          */
-        public Builder agentIdList(java.util.List < String > agentIdList) {
+        public Builder agentIdList(java.util.List<String> agentIdList) {
             this.putBodyParameter("AgentIdList", agentIdList);
             this.agentIdList = agentIdList;
             return this;
@@ -246,7 +251,7 @@ public class ListHoneypotEventsRequest extends Request {
         /**
          * <p>The honeypot IDs.</p>
          */
-        public Builder honeypotIdList(java.util.List < String > honeypotIdList) {
+        public Builder honeypotIdList(java.util.List<String> honeypotIdList) {
             this.putBodyParameter("HoneypotIdList", honeypotIdList);
             this.honeypotIdList = honeypotIdList;
             return this;
@@ -307,7 +312,7 @@ public class ListHoneypotEventsRequest extends Request {
         /**
          * <p>The risk levels.</p>
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putBodyParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;

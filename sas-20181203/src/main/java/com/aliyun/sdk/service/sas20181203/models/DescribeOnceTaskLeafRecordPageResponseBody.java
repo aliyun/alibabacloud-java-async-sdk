@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OnceTasks")
-    private java.util.List < OnceTasks> onceTasks;
+    private java.util.List<OnceTasks> onceTasks;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     /**
      * @return onceTasks
      */
-    public java.util.List < OnceTasks> getOnceTasks() {
+    public java.util.List<OnceTasks> getOnceTasks() {
         return this.onceTasks;
     }
 
@@ -57,14 +62,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OnceTasks> onceTasks; 
+        private java.util.List<OnceTasks> onceTasks; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The details of the sub-task.</p>
          */
-        public Builder onceTasks(java.util.List < OnceTasks> onceTasks) {
+        public Builder onceTasks(java.util.List<OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
             return this;
         }

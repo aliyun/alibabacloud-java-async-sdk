@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
     private Integer protectedDatabaseCount;
 
     @com.aliyun.core.annotation.NameInMap("RegionCountList")
-    private java.util.List < RegionCountList> regionCountList;
+    private java.util.List<RegionCountList> regionCountList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -61,7 +66,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
     /**
      * @return regionCountList
      */
-    public java.util.List < RegionCountList> getRegionCountList() {
+    public java.util.List<RegionCountList> getRegionCountList() {
         return this.regionCountList;
     }
 
@@ -102,7 +107,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer protectedDatabaseCount; 
-        private java.util.List < RegionCountList> regionCountList; 
+        private java.util.List<RegionCountList> regionCountList; 
         private String requestId; 
         private Integer restoringTaskCount; 
         private Integer totalRecoverableCount; 
@@ -123,7 +128,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         /**
          * <p>The regions of the database instances.</p>
          */
-        public Builder regionCountList(java.util.List < RegionCountList> regionCountList) {
+        public Builder regionCountList(java.util.List<RegionCountList> regionCountList) {
             this.regionCountList = regionCountList;
             return this;
         }

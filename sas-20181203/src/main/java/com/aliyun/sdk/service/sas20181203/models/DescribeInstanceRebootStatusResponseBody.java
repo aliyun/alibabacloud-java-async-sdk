@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RebootStatuses")
-    private java.util.List < RebootStatuses> rebootStatuses;
+    private java.util.List<RebootStatuses> rebootStatuses;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
     /**
      * @return rebootStatuses
      */
-    public java.util.List < RebootStatuses> getRebootStatuses() {
+    public java.util.List<RebootStatuses> getRebootStatuses() {
         return this.rebootStatuses;
     }
 
@@ -57,14 +62,14 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RebootStatuses> rebootStatuses; 
+        private java.util.List<RebootStatuses> rebootStatuses; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>An array that consists of the status information about the servers that you restart.</p>
          */
-        public Builder rebootStatuses(java.util.List < RebootStatuses> rebootStatuses) {
+        public Builder rebootStatuses(java.util.List<RebootStatuses> rebootStatuses) {
             this.rebootStatuses = rebootStatuses;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RecoverableInfoList")
-    private java.util.List < RecoverableInfoList> recoverableInfoList;
+    private java.util.List<RecoverableInfoList> recoverableInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -82,7 +87,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
     /**
      * @return recoverableInfoList
      */
-    public java.util.List < RecoverableInfoList> getRecoverableInfoList() {
+    public java.util.List<RecoverableInfoList> getRecoverableInfoList() {
         return this.recoverableInfoList;
     }
 
@@ -105,7 +110,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         private Integer currentPage; 
         private String database; 
         private Integer pageSize; 
-        private java.util.List < RecoverableInfoList> recoverableInfoList; 
+        private java.util.List<RecoverableInfoList> recoverableInfoList; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -156,7 +161,7 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the backup snapshots.</p>
          */
-        public Builder recoverableInfoList(java.util.List < RecoverableInfoList> recoverableInfoList) {
+        public Builder recoverableInfoList(java.util.List<RecoverableInfoList> recoverableInfoList) {
             this.recoverableInfoList = recoverableInfoList;
             return this;
         }

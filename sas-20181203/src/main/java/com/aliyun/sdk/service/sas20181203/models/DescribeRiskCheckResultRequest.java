@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class DescribeRiskCheckResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ItemIds")
-    private java.util.List < String > itemIds;
+    private java.util.List<String> itemIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -113,7 +118,7 @@ public class DescribeRiskCheckResultRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < String > getItemIds() {
+    public java.util.List<String> getItemIds() {
         return this.itemIds;
     }
 
@@ -177,7 +182,7 @@ public class DescribeRiskCheckResultRequest extends Request {
         private String assetType; 
         private Integer currentPage; 
         private Long groupId; 
-        private java.util.List < String > itemIds; 
+        private java.util.List<String> itemIds; 
         private String lang; 
         private String name; 
         private Integer pageSize; 
@@ -260,7 +265,7 @@ public class DescribeRiskCheckResultRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder itemIds(java.util.List < String > itemIds) {
+        public Builder itemIds(java.util.List<String> itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
             this.itemIds = itemIds;
             return this;

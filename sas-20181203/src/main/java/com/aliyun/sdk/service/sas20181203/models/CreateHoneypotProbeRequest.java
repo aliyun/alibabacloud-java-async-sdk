@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateHoneypotProbeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HoneypotBindList")
-    private java.util.List < HoneypotBindList> honeypotBindList;
+    private java.util.List<HoneypotBindList> honeypotBindList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ping")
@@ -118,7 +123,7 @@ public class CreateHoneypotProbeRequest extends Request {
     /**
      * @return honeypotBindList
      */
-    public java.util.List < HoneypotBindList> getHoneypotBindList() {
+    public java.util.List<HoneypotBindList> getHoneypotBindList() {
         return this.honeypotBindList;
     }
 
@@ -169,7 +174,7 @@ public class CreateHoneypotProbeRequest extends Request {
         private String businessGroupId; 
         private String controlNodeId; 
         private String displayName; 
-        private java.util.List < HoneypotBindList> honeypotBindList; 
+        private java.util.List<HoneypotBindList> honeypotBindList; 
         private Boolean ping; 
         private String probeType; 
         private String probeVersion; 
@@ -256,7 +261,7 @@ public class CreateHoneypotProbeRequest extends Request {
         /**
          * <p>The configuration of the probe.</p>
          */
-        public Builder honeypotBindList(java.util.List < HoneypotBindList> honeypotBindList) {
+        public Builder honeypotBindList(java.util.List<HoneypotBindList> honeypotBindList) {
             this.putQueryParameter("HoneypotBindList", honeypotBindList);
             this.honeypotBindList = honeypotBindList;
             return this;
@@ -517,7 +522,7 @@ public class CreateHoneypotProbeRequest extends Request {
      */
     public static class HoneypotBindList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindPortList")
-        private java.util.List < BindPortList> bindPortList;
+        private java.util.List<BindPortList> bindPortList;
 
         @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
@@ -538,7 +543,7 @@ public class CreateHoneypotProbeRequest extends Request {
         /**
          * @return bindPortList
          */
-        public java.util.List < BindPortList> getBindPortList() {
+        public java.util.List<BindPortList> getBindPortList() {
             return this.bindPortList;
         }
 
@@ -550,13 +555,13 @@ public class CreateHoneypotProbeRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < BindPortList> bindPortList; 
+            private java.util.List<BindPortList> bindPortList; 
             private String honeypotId; 
 
             /**
              * <p>The listener ports.</p>
              */
-            public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
+            public Builder bindPortList(java.util.List<BindPortList> bindPortList) {
                 this.bindPortList = bindPortList;
                 return this;
             }

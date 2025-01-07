@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ResetLogShipperRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogMetaList")
-    private java.util.List < LogMetaList> logMetaList;
+    private java.util.List<LogMetaList> logMetaList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ttl")
@@ -54,7 +59,7 @@ public class ResetLogShipperRequest extends Request {
     /**
      * @return logMetaList
      */
-    public java.util.List < LogMetaList> getLogMetaList() {
+    public java.util.List<LogMetaList> getLogMetaList() {
         return this.logMetaList;
     }
 
@@ -67,7 +72,7 @@ public class ResetLogShipperRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetLogShipperRequest, Builder> {
         private Integer hotTtl; 
-        private java.util.List < LogMetaList> logMetaList; 
+        private java.util.List<LogMetaList> logMetaList; 
         private Integer ttl; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class ResetLogShipperRequest extends Request {
         /**
          * <p>The settings of the log analysis feature.</p>
          */
-        public Builder logMetaList(java.util.List < LogMetaList> logMetaList) {
+        public Builder logMetaList(java.util.List<LogMetaList> logMetaList) {
             this.putQueryParameter("LogMetaList", logMetaList);
             this.logMetaList = logMetaList;
             return this;

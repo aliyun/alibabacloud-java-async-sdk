@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListK8sAccessInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("K8sAccessInfos")
-    private java.util.List < K8sAccessInfos> k8sAccessInfos;
+    private java.util.List<K8sAccessInfos> k8sAccessInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     /**
      * @return k8sAccessInfos
      */
-    public java.util.List < K8sAccessInfos> getK8sAccessInfos() {
+    public java.util.List<K8sAccessInfos> getK8sAccessInfos() {
         return this.k8sAccessInfos;
     }
 
@@ -46,13 +51,13 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < K8sAccessInfos> k8sAccessInfos; 
+        private java.util.List<K8sAccessInfos> k8sAccessInfos; 
         private String requestId; 
 
         /**
          * <p>The information about the Kubernetes clusters.</p>
          */
-        public Builder k8sAccessInfos(java.util.List < K8sAccessInfos> k8sAccessInfos) {
+        public Builder k8sAccessInfos(java.util.List<K8sAccessInfos> k8sAccessInfos) {
             this.k8sAccessInfos = k8sAccessInfos;
             return this;
         }

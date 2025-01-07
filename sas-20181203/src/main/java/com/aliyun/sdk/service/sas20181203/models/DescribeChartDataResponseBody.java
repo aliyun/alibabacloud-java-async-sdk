@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeChartDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AllChartSubTypeList")
-    private java.util.List < AllChartSubTypeList> allChartSubTypeList;
+    private java.util.List<AllChartSubTypeList> allChartSubTypeList;
 
     @com.aliyun.core.annotation.NameInMap("ChartDataType")
     private String chartDataType;
 
     @com.aliyun.core.annotation.NameInMap("ChartSubTypeList")
-    private java.util.List < String > chartSubTypeList;
+    private java.util.List<String> chartSubTypeList;
 
     @com.aliyun.core.annotation.NameInMap("ChartType")
     private String chartType;
@@ -28,7 +33,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
     private CoordinateData coordinateData;
 
     @com.aliyun.core.annotation.NameInMap("MultipleData")
-    private java.util.List < MultipleData> multipleData;
+    private java.util.List<MultipleData> multipleData;
 
     @com.aliyun.core.annotation.NameInMap("PropertyArrayValue")
     private String propertyArrayValue;
@@ -70,7 +75,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
     /**
      * @return allChartSubTypeList
      */
-    public java.util.List < AllChartSubTypeList> getAllChartSubTypeList() {
+    public java.util.List<AllChartSubTypeList> getAllChartSubTypeList() {
         return this.allChartSubTypeList;
     }
 
@@ -84,7 +89,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
     /**
      * @return chartSubTypeList
      */
-    public java.util.List < String > getChartSubTypeList() {
+    public java.util.List<String> getChartSubTypeList() {
         return this.chartSubTypeList;
     }
 
@@ -105,7 +110,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
     /**
      * @return multipleData
      */
-    public java.util.List < MultipleData> getMultipleData() {
+    public java.util.List<MultipleData> getMultipleData() {
         return this.multipleData;
     }
 
@@ -145,12 +150,12 @@ public class DescribeChartDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AllChartSubTypeList> allChartSubTypeList; 
+        private java.util.List<AllChartSubTypeList> allChartSubTypeList; 
         private String chartDataType; 
-        private java.util.List < String > chartSubTypeList; 
+        private java.util.List<String> chartSubTypeList; 
         private String chartType; 
         private CoordinateData coordinateData; 
-        private java.util.List < MultipleData> multipleData; 
+        private java.util.List<MultipleData> multipleData; 
         private String propertyArrayValue; 
         private String propertyValue; 
         private String properyArrayValue; 
@@ -160,7 +165,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         /**
          * <p>The valid values for all subtypes of the chart.</p>
          */
-        public Builder allChartSubTypeList(java.util.List < AllChartSubTypeList> allChartSubTypeList) {
+        public Builder allChartSubTypeList(java.util.List<AllChartSubTypeList> allChartSubTypeList) {
             this.allChartSubTypeList = allChartSubTypeList;
             return this;
         }
@@ -187,7 +192,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         /**
          * <p>The subtype values in which the chart is selected.</p>
          */
-        public Builder chartSubTypeList(java.util.List < String > chartSubTypeList) {
+        public Builder chartSubTypeList(java.util.List<String> chartSubTypeList) {
             this.chartSubTypeList = chartSubTypeList;
             return this;
         }
@@ -224,7 +229,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         /**
          * <p>The values in the multi-value charts.</p>
          */
-        public Builder multipleData(java.util.List < MultipleData> multipleData) {
+        public Builder multipleData(java.util.List<MultipleData> multipleData) {
             this.multipleData = multipleData;
             return this;
         }
@@ -377,7 +382,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private YAxisList(Builder builder) {
             this.name = builder.name;
@@ -418,7 +423,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
@@ -426,7 +431,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private String name; 
             private String subType; 
             private String type; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The name of the data type.</p>
@@ -464,7 +469,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
             /**
              * <p>The values of the y-axis that corresponds to x-axis points.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }
@@ -484,10 +489,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
      */
     public static class CoordinateData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("XAxis")
-        private java.util.List < String > xAxis;
+        private java.util.List<String> xAxis;
 
         @com.aliyun.core.annotation.NameInMap("YAxisList")
-        private java.util.List < YAxisList> yAxisList;
+        private java.util.List<YAxisList> yAxisList;
 
         private CoordinateData(Builder builder) {
             this.xAxis = builder.xAxis;
@@ -505,25 +510,25 @@ public class DescribeChartDataResponseBody extends TeaModel {
         /**
          * @return xAxis
          */
-        public java.util.List < String > getXAxis() {
+        public java.util.List<String> getXAxis() {
             return this.xAxis;
         }
 
         /**
          * @return yAxisList
          */
-        public java.util.List < YAxisList> getYAxisList() {
+        public java.util.List<YAxisList> getYAxisList() {
             return this.yAxisList;
         }
 
         public static final class Builder {
-            private java.util.List < String > xAxis; 
-            private java.util.List < YAxisList> yAxisList; 
+            private java.util.List<String> xAxis; 
+            private java.util.List<YAxisList> yAxisList; 
 
             /**
              * <p>The x-axis values.</p>
              */
-            public Builder xAxis(java.util.List < String > xAxis) {
+            public Builder xAxis(java.util.List<String> xAxis) {
                 this.xAxis = xAxis;
                 return this;
             }
@@ -531,7 +536,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
             /**
              * <p>The y-axis values.</p>
              */
-            public Builder yAxisList(java.util.List < YAxisList> yAxisList) {
+            public Builder yAxisList(java.util.List<YAxisList> yAxisList) {
                 this.yAxisList = yAxisList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class InstallHybridProxyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("YundunUuids")
-    private java.util.List < String > yundunUuids;
+    private java.util.List<String> yundunUuids;
 
     private InstallHybridProxyRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class InstallHybridProxyRequest extends Request {
     /**
      * @return yundunUuids
      */
-    public java.util.List < String > getYundunUuids() {
+    public java.util.List<String> getYundunUuids() {
         return this.yundunUuids;
     }
 
     public static final class Builder extends Request.Builder<InstallHybridProxyRequest, Builder> {
         private String clusterName; 
         private String installCode; 
-        private java.util.List < String > yundunUuids; 
+        private java.util.List<String> yundunUuids; 
 
         private Builder() {
             super();
@@ -108,7 +113,7 @@ public class InstallHybridProxyRequest extends Request {
         /**
          * <p>The UUIDs of the proxy servers.</p>
          */
-        public Builder yundunUuids(java.util.List < String > yundunUuids) {
+        public Builder yundunUuids(java.util.List<String> yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);
             this.yundunUuids = yundunUuids;
             return this;

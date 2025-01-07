@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAssetInfoPublishResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssetList")
-    private java.util.List < AssetList> assetList;
+    private java.util.List<AssetList> assetList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
     /**
      * @return assetList
      */
-    public java.util.List < AssetList> getAssetList() {
+    public java.util.List<AssetList> getAssetList() {
         return this.assetList;
     }
 
@@ -46,19 +51,22 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AssetList> assetList; 
+        private java.util.List<AssetList> assetList; 
         private String requestId; 
 
         /**
-         * AssetList.
+         * <p>The servers.</p>
          */
-        public Builder assetList(java.util.List < AssetList> assetList) {
+        public Builder assetList(java.util.List<AssetList> assetList) {
             this.assetList = assetList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3956048F-9D73-5EDB-834B-4827BB483977</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,7 +160,10 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * CurVersion.
+             * <p>The version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.8</p>
              */
             public Builder curVersion(String curVersion) {
                 this.curVersion = curVersion;
@@ -160,7 +171,10 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
             }
 
             /**
-             * LastUpgradeTime.
+             * <p>The time when the Security Center agent was last upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724522400000</p>
              */
             public Builder lastUpgradeTime(Long lastUpgradeTime) {
                 this.lastUpgradeTime = lastUpgradeTime;
@@ -168,7 +182,17 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The publish status of the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not started.</li>
+             * <li><strong>1</strong>: publishing.</li>
+             * <li><strong>2</strong>: published.</li>
+             * <li><strong>3</strong>: publish suspended.</li>
+             * <li><strong>4</strong>: forcibly upgrading.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -176,7 +200,14 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeEnable.
+             * <p>Indicates whether automatic upgrade is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder upgradeEnable(Boolean upgradeEnable) {
                 this.upgradeEnable = upgradeEnable;
@@ -184,7 +215,10 @@ public class ListAssetInfoPublishResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2a98f149-0256-414c-a29a-a69f8a75****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -94,7 +99,7 @@ public class DescribeCanFixVulListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
-    private java.util.List < String > scanRange;
+    private java.util.List<String> scanRange;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
@@ -298,7 +303,7 @@ public class DescribeCanFixVulListRequest extends Request {
     /**
      * @return scanRange
      */
-    public java.util.List < String > getScanRange() {
+    public java.util.List<String> getScanRange() {
         return this.scanRange;
     }
 
@@ -351,7 +356,7 @@ public class DescribeCanFixVulListRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
-        private java.util.List < String > scanRange; 
+        private java.util.List<String> scanRange; 
         private String statusList; 
         private String tag; 
         private String type; 
@@ -692,7 +697,7 @@ public class DescribeCanFixVulListRequest extends Request {
          * <li><strong>container</strong></li>
          * </ul>
          */
-        public Builder scanRange(java.util.List < String > scanRange) {
+        public Builder scanRange(java.util.List<String> scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
             this.scanRange = scanRange;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityScoreRuleList")
-    private java.util.List < SecurityScoreRuleList> securityScoreRuleList;
+    private java.util.List<SecurityScoreRuleList> securityScoreRuleList;
 
     private GetSecurityScoreRuleResponseBody(Builder builder) {
         this.enableStatus = builder.enableStatus;
@@ -52,14 +57,14 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     /**
      * @return securityScoreRuleList
      */
-    public java.util.List < SecurityScoreRuleList> getSecurityScoreRuleList() {
+    public java.util.List<SecurityScoreRuleList> getSecurityScoreRuleList() {
         return this.securityScoreRuleList;
     }
 
     public static final class Builder {
         private Boolean enableStatus; 
         private String requestId; 
-        private java.util.List < SecurityScoreRuleList> securityScoreRuleList; 
+        private java.util.List<SecurityScoreRuleList> securityScoreRuleList; 
 
         /**
          * <p>The status of the custom settings of the security score feature.</p>
@@ -90,7 +95,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         /**
          * <p>The list of deduction modules that are supported by the security score feature.</p>
          */
-        public Builder securityScoreRuleList(java.util.List < SecurityScoreRuleList> securityScoreRuleList) {
+        public Builder securityScoreRuleList(java.util.List<SecurityScoreRuleList> securityScoreRuleList) {
             this.securityScoreRuleList = securityScoreRuleList;
             return this;
         }
@@ -283,7 +288,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         private Integer score;
 
         @com.aliyun.core.annotation.NameInMap("SecurityScoreItemList")
-        private java.util.List < SecurityScoreItemList> securityScoreItemList;
+        private java.util.List<SecurityScoreItemList> securityScoreItemList;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -320,7 +325,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         /**
          * @return securityScoreItemList
          */
-        public java.util.List < SecurityScoreItemList> getSecurityScoreItemList() {
+        public java.util.List<SecurityScoreItemList> getSecurityScoreItemList() {
             return this.securityScoreItemList;
         }
 
@@ -334,7 +339,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String ruleType; 
             private Integer score; 
-            private java.util.List < SecurityScoreItemList> securityScoreItemList; 
+            private java.util.List<SecurityScoreItemList> securityScoreItemList; 
             private String title; 
 
             /**
@@ -373,7 +378,7 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
             /**
              * <p>The deduction items of the deduction module.</p>
              */
-            public Builder securityScoreItemList(java.util.List < SecurityScoreItemList> securityScoreItemList) {
+            public Builder securityScoreItemList(java.util.List<SecurityScoreItemList> securityScoreItemList) {
                 this.securityScoreItemList = securityScoreItemList;
                 return this;
             }

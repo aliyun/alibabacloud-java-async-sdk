@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClusterPluginInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,13 +51,13 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
          * <p>The information about the plug-in.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -409,7 +414,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         private String clusterStatus;
 
         @com.aliyun.core.annotation.NameInMap("NodePluginInfoList")
-        private java.util.List < NodePluginInfoList> nodePluginInfoList;
+        private java.util.List<NodePluginInfoList> nodePluginInfoList;
 
         private Data(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -450,7 +455,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
         /**
          * @return nodePluginInfoList
          */
-        public java.util.List < NodePluginInfoList> getNodePluginInfoList() {
+        public java.util.List<NodePluginInfoList> getNodePluginInfoList() {
             return this.nodePluginInfoList;
         }
 
@@ -458,7 +463,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String clusterStatus; 
-            private java.util.List < NodePluginInfoList> nodePluginInfoList; 
+            private java.util.List<NodePluginInfoList> nodePluginInfoList; 
 
             /**
              * <p>The ID of the cluster.</p>
@@ -501,7 +506,7 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
             /**
              * <p>The plug-ins.</p>
              */
-            public Builder nodePluginInfoList(java.util.List < NodePluginInfoList> nodePluginInfoList) {
+            public Builder nodePluginInfoList(java.util.List<NodePluginInfoList> nodePluginInfoList) {
                 this.nodePluginInfoList = nodePluginInfoList;
                 return this;
             }

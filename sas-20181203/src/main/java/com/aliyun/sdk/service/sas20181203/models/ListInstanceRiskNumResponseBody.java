@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceRiskNumResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceRiskNum")
-    private java.util.List < InstanceRiskNum> instanceRiskNum;
+    private java.util.List<InstanceRiskNum> instanceRiskNum;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     /**
      * @return instanceRiskNum
      */
-    public java.util.List < InstanceRiskNum> getInstanceRiskNum() {
+    public java.util.List<InstanceRiskNum> getInstanceRiskNum() {
         return this.instanceRiskNum;
     }
 
@@ -46,13 +51,13 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceRiskNum> instanceRiskNum; 
+        private java.util.List<InstanceRiskNum> instanceRiskNum; 
         private String requestId; 
 
         /**
          * <p>The information about the risks in the instance.</p>
          */
-        public Builder instanceRiskNum(java.util.List < InstanceRiskNum> instanceRiskNum) {
+        public Builder instanceRiskNum(java.util.List<InstanceRiskNum> instanceRiskNum) {
             this.instanceRiskNum = instanceRiskNum;
             return this;
         }

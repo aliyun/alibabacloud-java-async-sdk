@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -261,7 +266,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         private String className;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         private RuleTree(Builder builder) {
             this.classKey = builder.classKey;
@@ -294,14 +299,14 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
         public static final class Builder {
             private String classKey; 
             private String className; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
 
             /**
              * <p>The category keyword of the check rule.</p>
@@ -328,7 +333,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             /**
              * <p>The list of check rules.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
@@ -347,6 +352,9 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
      * <p>GetSensitiveDefineRuleConfigResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableNewRule")
+        private Integer enableNewRule;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -354,12 +362,13 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         private Integer ruleCount;
 
         @com.aliyun.core.annotation.NameInMap("RuleTree")
-        private java.util.List < RuleTree> ruleTree;
+        private java.util.List<RuleTree> ruleTree;
 
         @com.aliyun.core.annotation.NameInMap("SelectedCount")
         private Integer selectedCount;
 
         private Data(Builder builder) {
+            this.enableNewRule = builder.enableNewRule;
             this.id = builder.id;
             this.ruleCount = builder.ruleCount;
             this.ruleTree = builder.ruleTree;
@@ -372,6 +381,13 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableNewRule
+         */
+        public Integer getEnableNewRule() {
+            return this.enableNewRule;
         }
 
         /**
@@ -391,7 +407,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         /**
          * @return ruleTree
          */
-        public java.util.List < RuleTree> getRuleTree() {
+        public java.util.List<RuleTree> getRuleTree() {
             return this.ruleTree;
         }
 
@@ -403,10 +419,19 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer enableNewRule; 
             private Long id; 
             private Integer ruleCount; 
-            private java.util.List < RuleTree> ruleTree; 
+            private java.util.List<RuleTree> ruleTree; 
             private Integer selectedCount; 
+
+            /**
+             * EnableNewRule.
+             */
+            public Builder enableNewRule(Integer enableNewRule) {
+                this.enableNewRule = enableNewRule;
+                return this;
+            }
 
             /**
              * <p>The custom configuration ID.</p>
@@ -433,7 +458,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             /**
              * <p>The tree of the check rules.</p>
              */
-            public Builder ruleTree(java.util.List < RuleTree> ruleTree) {
+            public Builder ruleTree(java.util.List<RuleTree> ruleTree) {
                 this.ruleTree = ruleTree;
                 return this;
             }

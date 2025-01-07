@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteAntiBruteForceRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     private DeleteAntiBruteForceRuleRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeleteAntiBruteForceRuleRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
     public static final class Builder extends Request.Builder<DeleteAntiBruteForceRuleRequest, Builder> {
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
 
         private Builder() {
             super();
@@ -58,7 +63,7 @@ public class DeleteAntiBruteForceRuleRequest extends Request {
          * <p>The IDs of the defense rules against brute-force attacks to delete.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             this.putQueryParameter("Ids", ids);
             this.ids = ids;
             return this;

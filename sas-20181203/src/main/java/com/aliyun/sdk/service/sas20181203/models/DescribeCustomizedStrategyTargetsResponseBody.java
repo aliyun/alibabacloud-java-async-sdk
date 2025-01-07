@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StartegyTargets")
-    private java.util.List < StartegyTargets> startegyTargets;
+    private java.util.List<StartegyTargets> startegyTargets;
 
     private DescribeCustomizedStrategyTargetsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
     /**
      * @return startegyTargets
      */
-    public java.util.List < StartegyTargets> getStartegyTargets() {
+    public java.util.List<StartegyTargets> getStartegyTargets() {
         return this.startegyTargets;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StartegyTargets> startegyTargets; 
+        private java.util.List<StartegyTargets> startegyTargets; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
         /**
          * <p>The information about the servers to which custom policies are applied.</p>
          */
-        public Builder startegyTargets(java.util.List < StartegyTargets> startegyTargets) {
+        public Builder startegyTargets(java.util.List<StartegyTargets> startegyTargets) {
             this.startegyTargets = startegyTargets;
             return this;
         }

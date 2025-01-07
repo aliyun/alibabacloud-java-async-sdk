@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAccountLabelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccountLabelList")
-    private java.util.List < AccountLabelList> accountLabelList;
+    private java.util.List<AccountLabelList> accountLabelList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetAccountLabelResponseBody extends TeaModel {
     /**
      * @return accountLabelList
      */
-    public java.util.List < AccountLabelList> getAccountLabelList() {
+    public java.util.List<AccountLabelList> getAccountLabelList() {
         return this.accountLabelList;
     }
 
@@ -46,19 +51,22 @@ public class GetAccountLabelResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccountLabelList> accountLabelList; 
+        private java.util.List<AccountLabelList> accountLabelList; 
         private String requestId; 
 
         /**
-         * AccountLabelList.
+         * <p>The tag list.</p>
          */
-        public Builder accountLabelList(java.util.List < AccountLabelList> accountLabelList) {
+        public Builder accountLabelList(java.util.List<AccountLabelList> accountLabelList) {
             this.accountLabelList = accountLabelList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +124,10 @@ public class GetAccountLabelResponseBody extends TeaModel {
             private Boolean labelStatus; 
 
             /**
-             * LabelSeries.
+             * <p>The tag information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SasStep</p>
              */
             public Builder labelSeries(String labelSeries) {
                 this.labelSeries = labelSeries;
@@ -124,7 +135,14 @@ public class GetAccountLabelResponseBody extends TeaModel {
             }
 
             /**
-             * LabelStatus.
+             * <p>Indicates whether the tag is valid.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder labelStatus(Boolean labelStatus) {
                 this.labelStatus = labelStatus;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateAlarmEventRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlarmEventIdList")
-    private java.util.List < Long > alarmEventIdList;
+    private java.util.List<Long> alarmEventIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -47,7 +52,7 @@ public class UpdateAlarmEventRequest extends Request {
     /**
      * @return alarmEventIdList
      */
-    public java.util.List < Long > getAlarmEventIdList() {
+    public java.util.List<Long> getAlarmEventIdList() {
         return this.alarmEventIdList;
     }
 
@@ -66,7 +71,7 @@ public class UpdateAlarmEventRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateAlarmEventRequest, Builder> {
-        private java.util.List < Long > alarmEventIdList; 
+        private java.util.List<Long> alarmEventIdList; 
         private String lang; 
         private String operationCode; 
 
@@ -84,7 +89,7 @@ public class UpdateAlarmEventRequest extends Request {
         /**
          * <p>The IDs of the alert events.</p>
          */
-        public Builder alarmEventIdList(java.util.List < Long > alarmEventIdList) {
+        public Builder alarmEventIdList(java.util.List<Long> alarmEventIdList) {
             this.putBodyParameter("AlarmEventIdList", alarmEventIdList);
             this.alarmEventIdList = alarmEventIdList;
             return this;

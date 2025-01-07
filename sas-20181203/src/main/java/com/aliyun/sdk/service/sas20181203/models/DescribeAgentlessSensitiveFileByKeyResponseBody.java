@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SensitiveFileList")
-    private java.util.List < SensitiveFileList> sensitiveFileList;
+    private java.util.List<SensitiveFileList> sensitiveFileList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -56,7 +61,7 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
     /**
      * @return sensitiveFileList
      */
-    public java.util.List < SensitiveFileList> getSensitiveFileList() {
+    public java.util.List<SensitiveFileList> getSensitiveFileList() {
         return this.sensitiveFileList;
     }
 
@@ -70,7 +75,7 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < SensitiveFileList> sensitiveFileList; 
+        private java.util.List<SensitiveFileList> sensitiveFileList; 
         private Boolean success; 
 
         /**
@@ -95,7 +100,7 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         /**
          * <p>The information about the sensitive files that are detected by using the agentless detection feature.</p>
          */
-        public Builder sensitiveFileList(java.util.List < SensitiveFileList> sensitiveFileList) {
+        public Builder sensitiveFileList(java.util.List<SensitiveFileList> sensitiveFileList) {
             this.sensitiveFileList = sensitiveFileList;
             return this;
         }
@@ -247,8 +252,14 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
      * <p>DescribeAgentlessSensitiveFileByKeyResponseBody</p>
      */
     public static class SensitiveFileList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FilePath")
+        private String filePath;
+
         @com.aliyun.core.annotation.NameInMap("FirstScanTime")
         private Long firstScanTime;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
@@ -261,6 +272,12 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
+
+        @com.aliyun.core.annotation.NameInMap("Md5")
+        private String md5;
+
+        @com.aliyun.core.annotation.NameInMap("Prompt")
+        private String prompt;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -278,11 +295,15 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         private String uuid;
 
         private SensitiveFileList(Builder builder) {
+            this.filePath = builder.filePath;
             this.firstScanTime = builder.firstScanTime;
+            this.id = builder.id;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.lastScanTime = builder.lastScanTime;
+            this.md5 = builder.md5;
+            this.prompt = builder.prompt;
             this.riskLevel = builder.riskLevel;
             this.sensitiveFileKey = builder.sensitiveFileKey;
             this.status = builder.status;
@@ -299,10 +320,24 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
+         * @return filePath
+         */
+        public String getFilePath() {
+            return this.filePath;
+        }
+
+        /**
          * @return firstScanTime
          */
         public Long getFirstScanTime() {
             return this.firstScanTime;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -331,6 +366,20 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
          */
         public Long getLastScanTime() {
             return this.lastScanTime;
+        }
+
+        /**
+         * @return md5
+         */
+        public String getMd5() {
+            return this.md5;
+        }
+
+        /**
+         * @return prompt
+         */
+        public String getPrompt() {
+            return this.prompt;
         }
 
         /**
@@ -369,16 +418,28 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String filePath; 
             private Long firstScanTime; 
+            private Long id; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
             private Long lastScanTime; 
+            private String md5; 
+            private String prompt; 
             private String riskLevel; 
             private String sensitiveFileKey; 
             private Integer status; 
             private String targetName; 
             private String uuid; 
+
+            /**
+             * FilePath.
+             */
+            public Builder filePath(String filePath) {
+                this.filePath = filePath;
+                return this;
+            }
 
             /**
              * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
@@ -388,6 +449,14 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
@@ -432,6 +501,22 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
+             * Md5.
+             */
+            public Builder md5(String md5) {
+                this.md5 = md5;
+                return this;
+            }
+
+            /**
+             * Prompt.
+             */
+            public Builder prompt(String prompt) {
+                this.prompt = prompt;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1383B0DB-D5D6-4B0C-9E6B-75939C8E67FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -212,7 +220,14 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             private String upgradeVersion; 
 
             /**
-             * AutoUpgrade.
+             * <p>Indicates whether automatic upgrade is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes.</li>
+             * <li><strong>0</strong>: no.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoUpgrade(Integer autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -220,7 +235,14 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * BigCustomer.
+             * <p>Indicates whether you can enable custom upgrade for the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bigCustomer(Boolean bigCustomer) {
                 this.bigCustomer = bigCustomer;
@@ -228,7 +250,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * CurVersion.
+             * <p>The version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.8</p>
              */
             public Builder curVersion(String curVersion) {
                 this.curVersion = curVersion;
@@ -236,7 +261,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * ForceUpgradeTime.
+             * <p>The timestamp when the Security Center agent was forcibly upgraded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1732506308000</p>
              */
             public Builder forceUpgradeTime(Long forceUpgradeTime) {
                 this.forceUpgradeTime = forceUpgradeTime;
@@ -244,7 +272,14 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * GraySwitchStatus.
+             * <p>Indicates whether the canary release policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes.</li>
+             * <li>.<strong>0</strong>: no.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder graySwitchStatus(Integer graySwitchStatus) {
                 this.graySwitchStatus = graySwitchStatus;
@@ -252,7 +287,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersion.
+             * <p>The latest version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.9</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -260,7 +298,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersionCreate.
+             * <p>The timestamp when the latest version of the Security Center agent was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1662639150000</p>
              */
             public Builder latestVersionCreate(Long latestVersionCreate) {
                 this.latestVersionCreate = latestVersionCreate;
@@ -268,7 +309,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersionDesc.
+             * <p>The description of about the latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder latestVersionDesc(String latestVersionDesc) {
                 this.latestVersionDesc = latestVersionDesc;
@@ -276,7 +320,17 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>The publish status of the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not started.</li>
+             * <li><strong>1</strong>: publishing.</li>
+             * <li><strong>2</strong>: published.</li>
+             * <li><strong>3</strong>: publish suspended.</li>
+             * <li><strong>4</strong>: forcibly upgrading.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishStatus(Integer publishStatus) {
                 this.publishStatus = publishStatus;
@@ -284,7 +338,10 @@ public class GetCurrentVersionPublishResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeVersion.
+             * <p>The destination version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.9</p>
              */
             public Builder upgradeVersion(String upgradeVersion) {
                 this.upgradeVersion = upgradeVersion;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,10 +93,10 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         private Integer alertLevel;
 
         @com.aliyun.core.annotation.NameInMap("FileOps")
-        private java.util.List < String > fileOps;
+        private java.util.List<String> fileOps;
 
         @com.aliyun.core.annotation.NameInMap("FilePaths")
-        private java.util.List < String > filePaths;
+        private java.util.List<String> filePaths;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -100,7 +105,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         private String platform;
 
         @com.aliyun.core.annotation.NameInMap("ProcPaths")
-        private java.util.List < String > procPaths;
+        private java.util.List<String> procPaths;
 
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
@@ -149,14 +154,14 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         /**
          * @return fileOps
          */
-        public java.util.List < String > getFileOps() {
+        public java.util.List<String> getFileOps() {
             return this.fileOps;
         }
 
         /**
          * @return filePaths
          */
-        public java.util.List < String > getFilePaths() {
+        public java.util.List<String> getFilePaths() {
             return this.filePaths;
         }
 
@@ -177,7 +182,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         /**
          * @return procPaths
          */
-        public java.util.List < String > getProcPaths() {
+        public java.util.List<String> getProcPaths() {
             return this.procPaths;
         }
 
@@ -205,11 +210,11 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String action; 
             private Integer alertLevel; 
-            private java.util.List < String > fileOps; 
-            private java.util.List < String > filePaths; 
+            private java.util.List<String> fileOps; 
+            private java.util.List<String> filePaths; 
             private Long id; 
             private String platform; 
-            private java.util.List < String > procPaths; 
+            private java.util.List<String> procPaths; 
             private String ruleName; 
             private Integer status; 
             private String switchId; 
@@ -249,7 +254,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             /**
              * <p>The operations performed on the files.</p>
              */
-            public Builder fileOps(java.util.List < String > fileOps) {
+            public Builder fileOps(java.util.List<String> fileOps) {
                 this.fileOps = fileOps;
                 return this;
             }
@@ -257,7 +262,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             /**
              * <p>The paths to the monitored files.</p>
              */
-            public Builder filePaths(java.util.List < String > filePaths) {
+            public Builder filePaths(java.util.List<String> filePaths) {
                 this.filePaths = filePaths;
                 return this;
             }
@@ -291,7 +296,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             /**
              * <p>The paths to the monitored processes.</p>
              */
-            public Builder procPaths(java.util.List < String > procPaths) {
+            public Builder procPaths(java.util.List<String> procPaths) {
                 this.procPaths = procPaths;
                 return this;
             }

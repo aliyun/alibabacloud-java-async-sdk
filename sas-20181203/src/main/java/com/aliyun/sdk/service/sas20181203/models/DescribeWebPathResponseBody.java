@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebPathResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigList")
-    private java.util.List < ConfigList> configList;
+    private java.util.List<ConfigList> configList;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
@@ -50,7 +55,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
     /**
      * @return configList
      */
-    public java.util.List < ConfigList> getConfigList() {
+    public java.util.List<ConfigList> getConfigList() {
         return this.configList;
     }
 
@@ -90,7 +95,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigList> configList; 
+        private java.util.List<ConfigList> configList; 
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
@@ -100,7 +105,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the paths to the web directories.</p>
          */
-        public Builder configList(java.util.List < ConfigList> configList) {
+        public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
             return this;
         }
@@ -250,7 +255,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
      */
     public static class ConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetList")
-        private java.util.List < TargetList> targetList;
+        private java.util.List<TargetList> targetList;
 
         @com.aliyun.core.annotation.NameInMap("WebPath")
         private String webPath;
@@ -275,7 +280,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         /**
          * @return targetList
          */
-        public java.util.List < TargetList> getTargetList() {
+        public java.util.List<TargetList> getTargetList() {
             return this.targetList;
         }
 
@@ -294,14 +299,14 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TargetList> targetList; 
+            private java.util.List<TargetList> targetList; 
             private String webPath; 
             private String webPathType; 
 
             /**
              * <p>An array consisting of the servers on which the web directories are scanned.</p>
              */
-            public Builder targetList(java.util.List < TargetList> targetList) {
+            public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
                 return this;
             }

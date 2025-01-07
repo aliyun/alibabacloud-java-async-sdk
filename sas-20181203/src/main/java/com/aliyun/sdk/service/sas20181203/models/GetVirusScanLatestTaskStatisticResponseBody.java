@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -100,7 +105,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
         private Integer scanMachine;
 
         @com.aliyun.core.annotation.NameInMap("ScanPath")
-        private java.util.List < String > scanPath;
+        private java.util.List<String> scanPath;
 
         @com.aliyun.core.annotation.NameInMap("ScanTime")
         private Long scanTime;
@@ -193,7 +198,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
         /**
          * @return scanPath
          */
-        public java.util.List < String > getScanPath() {
+        public java.util.List<String> getScanPath() {
             return this.scanPath;
         }
 
@@ -253,7 +258,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             private String riskLevel; 
             private Integer safeMachine; 
             private Integer scanMachine; 
-            private java.util.List < String > scanPath; 
+            private java.util.List<String> scanPath; 
             private Long scanTime; 
             private String scanType; 
             private Integer status; 
@@ -336,7 +341,7 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
             /**
              * <p>The paths of files that were scanned. This value is returned only when ScanType is set to user.</p>
              */
-            public Builder scanPath(java.util.List < String > scanPath) {
+            public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
                 return this;
             }

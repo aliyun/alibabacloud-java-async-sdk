@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AegisClientInvokeStatusResponseList")
-    private java.util.List < AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList;
+    private java.util.List<AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     /**
      * @return aegisClientInvokeStatusResponseList
      */
-    public java.util.List < AegisClientInvokeStatusResponseList> getAegisClientInvokeStatusResponseList() {
+    public java.util.List<AegisClientInvokeStatusResponseList> getAegisClientInvokeStatusResponseList() {
         return this.aegisClientInvokeStatusResponseList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList; 
+        private java.util.List<AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList; 
         private String requestId; 
 
         /**
          * <p>The status of servers.</p>
          */
-        public Builder aegisClientInvokeStatusResponseList(java.util.List < AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList) {
+        public Builder aegisClientInvokeStatusResponseList(java.util.List<AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList) {
             this.aegisClientInvokeStatusResponseList = aegisClientInvokeStatusResponseList;
             return this;
         }

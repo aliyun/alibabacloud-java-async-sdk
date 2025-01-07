@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,9 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
      * <p>GetAssetSelectionConfigResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("SelectionKey")
         private String selectionKey;
 
@@ -88,6 +96,7 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         private String targetType;
 
         private Data(Builder builder) {
+            this.platform = builder.platform;
             this.selectionKey = builder.selectionKey;
             this.targetType = builder.targetType;
         }
@@ -98,6 +107,13 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
         }
 
         /**
@@ -115,8 +131,24 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String platform; 
             private String selectionKey; 
             private String targetType; 
+
+            /**
+             * <p>The operating system of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
 
             /**
              * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Summarys")
-    private java.util.List < Summarys> summarys;
+    private java.util.List<Summarys> summarys;
 
     private GetCheckSummaryResponseBody(Builder builder) {
         this.overallItemStatistic = builder.overallItemStatistic;
@@ -63,7 +68,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     /**
      * @return summarys
      */
-    public java.util.List < Summarys> getSummarys() {
+    public java.util.List<Summarys> getSummarys() {
         return this.summarys;
     }
 
@@ -71,7 +76,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private OverallItemStatistic overallItemStatistic; 
         private OverallStatistic overallStatistic; 
         private String requestId; 
-        private java.util.List < Summarys> summarys; 
+        private java.util.List<Summarys> summarys; 
 
         /**
          * <p>The statistics about the number of check items.</p>
@@ -103,7 +108,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         /**
          * <p>The summary information about the configuration checks on cloud services.</p>
          */
-        public Builder summarys(java.util.List < Summarys> summarys) {
+        public Builder summarys(java.util.List<Summarys> summarys) {
             this.summarys = summarys;
             return this;
         }
@@ -1318,7 +1323,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private Long passCount;
 
         @com.aliyun.core.annotation.NameInMap("Standards")
-        private java.util.List < Standards> standards;
+        private java.util.List<Standards> standards;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -1359,7 +1364,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         /**
          * @return standards
          */
-        public java.util.List < Standards> getStandards() {
+        public java.util.List<Standards> getStandards() {
             return this.standards;
         }
 
@@ -1380,7 +1385,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Integer failCount; 
             private Long passCount; 
-            private java.util.List < Standards> standards; 
+            private java.util.List<Standards> standards; 
             private String type; 
             private TypeStatistic typeStatistic; 
 
@@ -1409,7 +1414,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             /**
              * <p>The information about the check items.</p>
              */
-            public Builder standards(java.util.List < Standards> standards) {
+            public Builder standards(java.util.List<Standards> standards) {
                 this.standards = standards;
                 return this;
             }

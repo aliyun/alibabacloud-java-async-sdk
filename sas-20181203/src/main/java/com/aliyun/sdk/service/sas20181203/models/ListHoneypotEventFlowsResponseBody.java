@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("HoneypotEventFlows")
-    private java.util.List < HoneypotEventFlows> honeypotEventFlows;
+    private java.util.List<HoneypotEventFlows> honeypotEventFlows;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -61,7 +66,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
     /**
      * @return honeypotEventFlows
      */
-    public java.util.List < HoneypotEventFlows> getHoneypotEventFlows() {
+    public java.util.List<HoneypotEventFlows> getHoneypotEventFlows() {
         return this.honeypotEventFlows;
     }
 
@@ -102,7 +107,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < HoneypotEventFlows> honeypotEventFlows; 
+        private java.util.List<HoneypotEventFlows> honeypotEventFlows; 
         private Integer httpStatusCode; 
         private String message; 
         private PageInfo pageInfo; 
@@ -123,7 +128,7 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
         /**
          * <p>The attack timelines.</p>
          */
-        public Builder honeypotEventFlows(java.util.List < HoneypotEventFlows> honeypotEventFlows) {
+        public Builder honeypotEventFlows(java.util.List<HoneypotEventFlows> honeypotEventFlows) {
             this.honeypotEventFlows = honeypotEventFlows;
             return this;
         }

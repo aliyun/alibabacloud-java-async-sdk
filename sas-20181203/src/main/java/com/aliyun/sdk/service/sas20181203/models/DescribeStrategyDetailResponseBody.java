@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -303,7 +308,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private Integer optional;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
@@ -344,7 +349,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -365,7 +370,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer defaultValue; 
             private Integer optional; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String ruleDesc; 
             private String ruleId; 
 
@@ -398,7 +403,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             /**
              * <p>The rule parameters.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
@@ -449,7 +454,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private String checkItem;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private CheckDetails(Builder builder) {
             this.checkDesc = builder.checkDesc;
@@ -490,7 +495,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -498,7 +503,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String checkDesc; 
             private Long checkId; 
             private String checkItem; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * <p>The description of the check item.</p>
@@ -536,7 +541,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             /**
              * <p>The details of rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -559,7 +564,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("CheckDetails")
-        private java.util.List < CheckDetails> checkDetails;
+        private java.util.List<CheckDetails> checkDetails;
 
         @com.aliyun.core.annotation.NameInMap("On")
         private Boolean on;
@@ -596,7 +601,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         /**
          * @return checkDetails
          */
-        public java.util.List < CheckDetails> getCheckDetails() {
+        public java.util.List<CheckDetails> getCheckDetails() {
             return this.checkDetails;
         }
 
@@ -623,7 +628,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.List < CheckDetails> checkDetails; 
+            private java.util.List<CheckDetails> checkDetails; 
             private Boolean on; 
             private String supportedOs; 
             private String typeName; 
@@ -642,7 +647,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             /**
              * <p>The details of custom check items.</p>
              */
-            public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
+            public Builder checkDetails(java.util.List<CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
                 return this;
             }
@@ -709,7 +714,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private Boolean on;
 
         @com.aliyun.core.annotation.NameInMap("SubTypes")
-        private java.util.List < SubTypes> subTypes;
+        private java.util.List<SubTypes> subTypes;
 
         @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
@@ -746,7 +751,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         /**
          * @return subTypes
          */
-        public java.util.List < SubTypes> getSubTypes() {
+        public java.util.List<SubTypes> getSubTypes() {
             return this.subTypes;
         }
 
@@ -760,7 +765,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String alias; 
             private Boolean on; 
-            private java.util.List < SubTypes> subTypes; 
+            private java.util.List<SubTypes> subTypes; 
             private String typeName; 
 
             /**
@@ -792,7 +797,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             /**
              * <p>The information about sub-check items.</p>
              */
-            public Builder subTypes(java.util.List < SubTypes> subTypes) {
+            public Builder subTypes(java.util.List<SubTypes> subTypes) {
                 this.subTypes = subTypes;
                 return this;
             }
@@ -844,7 +849,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private String riskSubTypeName;
 
         @com.aliyun.core.annotation.NameInMap("RiskTypeWhiteListQueryResultList")
-        private java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
+        private java.util.List<RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -929,7 +934,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         /**
          * @return riskTypeWhiteListQueryResultList
          */
-        public java.util.List < RiskTypeWhiteListQueryResultList> getRiskTypeWhiteListQueryResultList() {
+        public java.util.List<RiskTypeWhiteListQueryResultList> getRiskTypeWhiteListQueryResultList() {
             return this.riskTypeWhiteListQueryResultList;
         }
 
@@ -962,7 +967,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private Integer id; 
             private String name; 
             private String riskSubTypeName; 
-            private java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList; 
+            private java.util.List<RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList; 
             private String startTime; 
             private String targetType; 
             private Integer type; 
@@ -1060,7 +1065,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the whitelist of risk items.</p>
              */
-            public Builder riskTypeWhiteListQueryResultList(java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {
+            public Builder riskTypeWhiteListQueryResultList(java.util.List<RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {
                 this.riskTypeWhiteListQueryResultList = riskTypeWhiteListQueryResultList;
                 return this;
             }

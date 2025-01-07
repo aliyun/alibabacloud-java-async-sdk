@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -217,7 +222,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         private String isNoticed;
 
         @com.aliyun.core.annotation.NameInMap("RegionStatus")
-        private java.util.List < RegionStatus> regionStatus;
+        private java.util.List<RegionStatus> regionStatus;
 
         private Data(Builder builder) {
             this.gmtIsAgreeModified = builder.gmtIsAgreeModified;
@@ -266,7 +271,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         /**
          * @return regionStatus
          */
-        public java.util.List < RegionStatus> getRegionStatus() {
+        public java.util.List<RegionStatus> getRegionStatus() {
             return this.regionStatus;
         }
 
@@ -275,7 +280,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private Long gmtNoticed; 
             private String isAgree; 
             private String isNoticed; 
-            private java.util.List < RegionStatus> regionStatus; 
+            private java.util.List<RegionStatus> regionStatus; 
 
             /**
              * <p>The time when the permissions were modified.</p>
@@ -324,7 +329,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             /**
              * <p>The status of the switching to the region.</p>
              */
-            public Builder regionStatus(java.util.List < RegionStatus> regionStatus) {
+            public Builder regionStatus(java.util.List<RegionStatus> regionStatus) {
                 this.regionStatus = regionStatus;
                 return this;
             }

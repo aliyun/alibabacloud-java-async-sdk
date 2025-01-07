@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PropertyList")
-        private java.util.List < PropertyList> propertyList;
+        private java.util.List<PropertyList> propertyList;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -187,7 +192,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         /**
          * @return propertyList
          */
-        public java.util.List < PropertyList> getPropertyList() {
+        public java.util.List<PropertyList> getPropertyList() {
             return this.propertyList;
         }
 
@@ -200,7 +205,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private java.util.List < PropertyList> propertyList; 
+            private java.util.List<PropertyList> propertyList; 
             private String type; 
 
             /**
@@ -217,7 +222,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the properties of the node.</p>
              */
-            public Builder propertyList(java.util.List < PropertyList> propertyList) {
+            public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("PropertyTypeItems")
-    private java.util.List < PropertyTypeItems> propertyTypeItems;
+    private java.util.List<PropertyTypeItems> propertyTypeItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
     /**
      * @return propertyTypeItems
      */
-    public java.util.List < PropertyTypeItems> getPropertyTypeItems() {
+    public java.util.List<PropertyTypeItems> getPropertyTypeItems() {
         return this.propertyTypeItems;
     }
 
@@ -58,7 +63,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < PropertyTypeItems> propertyTypeItems; 
+        private java.util.List<PropertyTypeItems> propertyTypeItems; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the middleware types.</p>
          */
-        public Builder propertyTypeItems(java.util.List < PropertyTypeItems> propertyTypeItems) {
+        public Builder propertyTypeItems(java.util.List<PropertyTypeItems> propertyTypeItems) {
             this.propertyTypeItems = propertyTypeItems;
             return this;
         }

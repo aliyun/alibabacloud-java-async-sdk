@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceRiskLevelsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceRiskLevels")
-    private java.util.List < InstanceRiskLevels> instanceRiskLevels;
+    private java.util.List<InstanceRiskLevels> instanceRiskLevels;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
     /**
      * @return instanceRiskLevels
      */
-    public java.util.List < InstanceRiskLevels> getInstanceRiskLevels() {
+    public java.util.List<InstanceRiskLevels> getInstanceRiskLevels() {
         return this.instanceRiskLevels;
     }
 
@@ -46,13 +51,13 @@ public class ListInstanceRiskLevelsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceRiskLevels> instanceRiskLevels; 
+        private java.util.List<InstanceRiskLevels> instanceRiskLevels; 
         private String requestId; 
 
         /**
          * <p>The risk levels of instances.</p>
          */
-        public Builder instanceRiskLevels(java.util.List < InstanceRiskLevels> instanceRiskLevels) {
+        public Builder instanceRiskLevels(java.util.List<InstanceRiskLevels> instanceRiskLevels) {
             this.instanceRiskLevels = instanceRiskLevels;
             return this;
         }

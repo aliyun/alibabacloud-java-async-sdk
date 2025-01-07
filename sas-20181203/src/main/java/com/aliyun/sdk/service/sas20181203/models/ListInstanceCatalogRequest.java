@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,15 +27,15 @@ public class ListInstanceCatalogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RequirementIds")
-    private java.util.List < Long > requirementIds;
+    private java.util.List<Long> requirementIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StandardIds")
-    private java.util.List < Long > standardIds;
+    private java.util.List<Long> standardIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     private ListInstanceCatalogRequest(Builder builder) {
         super(builder);
@@ -71,30 +76,30 @@ public class ListInstanceCatalogRequest extends Request {
     /**
      * @return requirementIds
      */
-    public java.util.List < Long > getRequirementIds() {
+    public java.util.List<Long> getRequirementIds() {
         return this.requirementIds;
     }
 
     /**
      * @return standardIds
      */
-    public java.util.List < Long > getStandardIds() {
+    public java.util.List<Long> getStandardIds() {
         return this.standardIds;
     }
 
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
     public static final class Builder extends Request.Builder<ListInstanceCatalogRequest, Builder> {
         private String lang; 
         private String regionId; 
-        private java.util.List < Long > requirementIds; 
-        private java.util.List < Long > standardIds; 
-        private java.util.List < String > types; 
+        private java.util.List<Long> requirementIds; 
+        private java.util.List<Long> standardIds; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -144,7 +149,7 @@ public class ListInstanceCatalogRequest extends Request {
         /**
          * <p>The IDs of requirement items.</p>
          */
-        public Builder requirementIds(java.util.List < Long > requirementIds) {
+        public Builder requirementIds(java.util.List<Long> requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
             this.requirementIds = requirementIds;
             return this;
@@ -153,7 +158,7 @@ public class ListInstanceCatalogRequest extends Request {
         /**
          * <p>The IDs of standards.</p>
          */
-        public Builder standardIds(java.util.List < Long > standardIds) {
+        public Builder standardIds(java.util.List<Long> standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
             this.standardIds = standardIds;
             return this;
@@ -162,7 +167,7 @@ public class ListInstanceCatalogRequest extends Request {
         /**
          * <p>The types of check standards.</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;

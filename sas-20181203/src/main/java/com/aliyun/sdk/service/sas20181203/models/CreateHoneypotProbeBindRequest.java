@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateHoneypotProbeBindRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BindPortList")
-    private java.util.List < BindPortList> bindPortList;
+    private java.util.List<BindPortList> bindPortList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HoneypotId")
@@ -30,7 +35,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceIpList")
-    private java.util.List < String > serviceIpList;
+    private java.util.List<String> serviceIpList;
 
     private CreateHoneypotProbeBindRequest(Builder builder) {
         super(builder);
@@ -57,7 +62,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
     /**
      * @return bindPortList
      */
-    public java.util.List < BindPortList> getBindPortList() {
+    public java.util.List<BindPortList> getBindPortList() {
         return this.bindPortList;
     }
 
@@ -85,16 +90,16 @@ public class CreateHoneypotProbeBindRequest extends Request {
     /**
      * @return serviceIpList
      */
-    public java.util.List < String > getServiceIpList() {
+    public java.util.List<String> getServiceIpList() {
         return this.serviceIpList;
     }
 
     public static final class Builder extends Request.Builder<CreateHoneypotProbeBindRequest, Builder> {
-        private java.util.List < BindPortList> bindPortList; 
+        private java.util.List<BindPortList> bindPortList; 
         private String honeypotId; 
         private String lang; 
         private String probeId; 
-        private java.util.List < String > serviceIpList; 
+        private java.util.List<String> serviceIpList; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         /**
          * <p>The ports that are bound to the probe.</p>
          */
-        public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
+        public Builder bindPortList(java.util.List<BindPortList> bindPortList) {
             this.putQueryParameter("BindPortList", bindPortList);
             this.bindPortList = bindPortList;
             return this;
@@ -167,7 +172,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         /**
          * <p>The IP addresses that are monitored.</p>
          */
-        public Builder serviceIpList(java.util.List < String > serviceIpList) {
+        public Builder serviceIpList(java.util.List<String> serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
             this.serviceIpList = serviceIpList;
             return this;

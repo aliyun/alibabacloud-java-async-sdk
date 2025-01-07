@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class JoinWebLockProcessWhiteListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcessPaths")
-    private java.util.List < String > processPaths;
+    private java.util.List<String> processPaths;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
@@ -42,7 +47,7 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
     /**
      * @return processPaths
      */
-    public java.util.List < String > getProcessPaths() {
+    public java.util.List<String> getProcessPaths() {
         return this.processPaths;
     }
 
@@ -54,7 +59,7 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<JoinWebLockProcessWhiteListRequest, Builder> {
-        private java.util.List < String > processPaths; 
+        private java.util.List<String> processPaths; 
         private String uuids; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
         /**
          * <p>The paths of the processes.</p>
          */
-        public Builder processPaths(java.util.List < String > processPaths) {
+        public Builder processPaths(java.util.List<String> processPaths) {
             this.putQueryParameter("ProcessPaths", processPaths);
             this.processPaths = processPaths;
             return this;

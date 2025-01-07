@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleList")
-    private java.util.List < RuleList> ruleList;
+    private java.util.List<RuleList> ruleList;
 
     private ListAegisContainerPluginRuleResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
     /**
      * @return ruleList
      */
-    public java.util.List < RuleList> getRuleList() {
+    public java.util.List<RuleList> getRuleList() {
         return this.ruleList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < RuleList> ruleList; 
+        private java.util.List<RuleList> ruleList; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         /**
          * <p>The rules.</p>
          */
-        public Builder ruleList(java.util.List < RuleList> ruleList) {
+        public Builder ruleList(java.util.List<RuleList> ruleList) {
             this.ruleList = ruleList;
             return this;
         }
@@ -280,7 +285,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         private Integer mode;
 
         @com.aliyun.core.annotation.NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        private java.util.List<Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("RuleDescription")
         private String ruleDescription;
@@ -298,13 +303,13 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         private String ruleTemplateName;
 
         @com.aliyun.core.annotation.NameInMap("SelectedPolicy")
-        private java.util.List < String > selectedPolicy;
+        private java.util.List<String> selectedPolicy;
 
         @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
         @com.aliyun.core.annotation.NameInMap("WhiteImages")
-        private java.util.List < String > whiteImages;
+        private java.util.List<String> whiteImages;
 
         private RuleList(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
@@ -353,7 +358,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
@@ -395,7 +400,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         /**
          * @return selectedPolicy
          */
-        public java.util.List < String > getSelectedPolicy() {
+        public java.util.List<String> getSelectedPolicy() {
             return this.selectedPolicy;
         }
 
@@ -409,7 +414,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         /**
          * @return whiteImages
          */
-        public java.util.List < String > getWhiteImages() {
+        public java.util.List<String> getWhiteImages() {
             return this.whiteImages;
         }
 
@@ -417,15 +422,15 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private Long gmtCreate; 
             private Long gmtModified; 
             private Integer mode; 
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
             private String ruleDescription; 
             private Long ruleId; 
             private String ruleName; 
             private String ruleTemplateId; 
             private String ruleTemplateName; 
-            private java.util.List < String > selectedPolicy; 
+            private java.util.List<String> selectedPolicy; 
             private String switchId; 
-            private java.util.List < String > whiteImages; 
+            private java.util.List<String> whiteImages; 
 
             /**
              * <p>The time when the rule was created. Unit: milliseconds.</p>
@@ -467,7 +472,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             /**
              * <p>An array that consists of policies.</p>
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }
@@ -530,7 +535,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             /**
              * <p>The fields in the value of the rule subtype.</p>
              */
-            public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
+            public Builder selectedPolicy(java.util.List<String> selectedPolicy) {
                 this.selectedPolicy = selectedPolicy;
                 return this;
             }
@@ -549,7 +554,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             /**
              * <p>The images that are added to the whitelist of the rule.</p>
              */
-            public Builder whiteImages(java.util.List < String > whiteImages) {
+            public Builder whiteImages(java.util.List<String> whiteImages) {
                 this.whiteImages = whiteImages;
                 return this;
             }

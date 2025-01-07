@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("VertexExtendInfo")
-    private java.util.List < VertexExtendInfo> vertexExtendInfo;
+    private java.util.List<VertexExtendInfo> vertexExtendInfo;
 
     private QueryIncidentVertexExtendInfoResponseBody(Builder builder) {
         this.count = builder.count;
@@ -63,7 +68,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     /**
      * @return vertexExtendInfo
      */
-    public java.util.List < VertexExtendInfo> getVertexExtendInfo() {
+    public java.util.List<VertexExtendInfo> getVertexExtendInfo() {
         return this.vertexExtendInfo;
     }
 
@@ -71,7 +76,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         private String count; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < VertexExtendInfo> vertexExtendInfo; 
+        private java.util.List<VertexExtendInfo> vertexExtendInfo; 
 
         /**
          * <p>The total number of entries returned.</p>
@@ -113,7 +118,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         /**
          * <p>The returned extended information about the node.</p>
          */
-        public Builder vertexExtendInfo(java.util.List < VertexExtendInfo> vertexExtendInfo) {
+        public Builder vertexExtendInfo(java.util.List<VertexExtendInfo> vertexExtendInfo) {
             this.vertexExtendInfo = vertexExtendInfo;
             return this;
         }
@@ -901,7 +906,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         private String aliuid;
 
         @com.aliyun.core.annotation.NameInMap("DisplayInfo")
-        private java.util.List < DisplayInfo> displayInfo;
+        private java.util.List<DisplayInfo> displayInfo;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -913,7 +918,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NeighborList")
-        private java.util.List < NeighborList> neighborList;
+        private java.util.List<NeighborList> neighborList;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
@@ -970,7 +975,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         /**
          * @return displayInfo
          */
-        public java.util.List < DisplayInfo> getDisplayInfo() {
+        public java.util.List<DisplayInfo> getDisplayInfo() {
             return this.displayInfo;
         }
 
@@ -998,7 +1003,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
         /**
          * @return neighborList
          */
-        public java.util.List < NeighborList> getNeighborList() {
+        public java.util.List<NeighborList> getNeighborList() {
             return this.neighborList;
         }
 
@@ -1053,11 +1058,11 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliuid; 
-            private java.util.List < DisplayInfo> displayInfo; 
+            private java.util.List<DisplayInfo> displayInfo; 
             private String id; 
             private String lang; 
             private String name; 
-            private java.util.List < NeighborList> neighborList; 
+            private java.util.List<NeighborList> neighborList; 
             private String properties; 
             private Property property; 
             private String ruleId; 
@@ -1080,7 +1085,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
             /**
              * <p>The display information.</p>
              */
-            public Builder displayInfo(java.util.List < DisplayInfo> displayInfo) {
+            public Builder displayInfo(java.util.List<DisplayInfo> displayInfo) {
                 this.displayInfo = displayInfo;
                 return this;
             }
@@ -1125,7 +1130,7 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
             /**
              * <p>The neighboring nodes.</p>
              */
-            public Builder neighborList(java.util.List < NeighborList> neighborList) {
+            public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
                 return this;
             }

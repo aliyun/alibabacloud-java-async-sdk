@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,6 +60,10 @@ public class DescribeScanTaskProgressRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the virus scan task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~StartVirusScanTask~~">StartVirusScanTask</a> operation to query the IDs of virus scan tasks.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

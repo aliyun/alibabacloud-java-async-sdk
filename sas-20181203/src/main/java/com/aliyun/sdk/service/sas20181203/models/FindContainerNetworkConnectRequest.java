@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("NodeIds")
-        private java.util.List < String > nodeIds;
+        private java.util.List<String> nodeIds;
 
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
@@ -296,7 +301,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         /**
          * @return nodeIds
          */
-        public java.util.List < String > getNodeIds() {
+        public java.util.List<String> getNodeIds() {
             return this.nodeIds;
         }
 
@@ -318,7 +323,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String appName; 
             private String clusterId; 
             private String namespace; 
-            private java.util.List < String > nodeIds; 
+            private java.util.List<String> nodeIds; 
             private String nodeType; 
             private String podName; 
 
@@ -361,7 +366,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             /**
              * <p>The node IDs.</p>
              */
-            public Builder nodeIds(java.util.List < String > nodeIds) {
+            public Builder nodeIds(java.util.List<String> nodeIds) {
                 this.nodeIds = nodeIds;
                 return this;
             }
@@ -415,7 +420,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("NodeIds")
-        private java.util.List < String > nodeIds;
+        private java.util.List<String> nodeIds;
 
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
@@ -464,7 +469,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         /**
          * @return nodeIds
          */
-        public java.util.List < String > getNodeIds() {
+        public java.util.List<String> getNodeIds() {
             return this.nodeIds;
         }
 
@@ -486,7 +491,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String appName; 
             private String clusterId; 
             private String namespace; 
-            private java.util.List < String > nodeIds; 
+            private java.util.List<String> nodeIds; 
             private String nodeType; 
             private String podName; 
 
@@ -529,7 +534,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             /**
              * <p>The node IDs.</p>
              */
-            public Builder nodeIds(java.util.List < String > nodeIds) {
+            public Builder nodeIds(java.util.List<String> nodeIds) {
                 this.nodeIds = nodeIds;
                 return this;
             }

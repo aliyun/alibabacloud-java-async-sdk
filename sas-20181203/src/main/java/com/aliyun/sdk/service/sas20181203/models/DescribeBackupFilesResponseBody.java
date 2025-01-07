@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackupFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BackupFiles")
-    private java.util.List < BackupFiles> backupFiles;
+    private java.util.List<BackupFiles> backupFiles;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     /**
      * @return backupFiles
      */
-    public java.util.List < BackupFiles> getBackupFiles() {
+    public java.util.List<BackupFiles> getBackupFiles() {
         return this.backupFiles;
     }
 
@@ -57,14 +62,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BackupFiles> backupFiles; 
+        private java.util.List<BackupFiles> backupFiles; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the backup files returned.</p>
          */
-        public Builder backupFiles(java.util.List < BackupFiles> backupFiles) {
+        public Builder backupFiles(java.util.List<BackupFiles> backupFiles) {
             this.backupFiles = backupFiles;
             return this;
         }

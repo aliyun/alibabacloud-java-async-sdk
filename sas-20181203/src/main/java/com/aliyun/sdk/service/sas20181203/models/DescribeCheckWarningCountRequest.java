@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -96,7 +101,10 @@ public class DescribeCheckWarningCountRequest extends Request {
         } 
 
         /**
-         * AliUid.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103784262032****</p>
          */
         public Builder aliUid(Long aliUid) {
             this.putQueryParameter("AliUid", aliUid);
@@ -105,7 +113,13 @@ public class DescribeCheckWarningCountRequest extends Request {
         }
 
         /**
-         * CheckId.
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>926</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -114,7 +128,13 @@ public class DescribeCheckWarningCountRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * <p>The ID of the risk item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -123,7 +143,16 @@ public class DescribeCheckWarningCountRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: passed</li>
+         * <li><strong>6</strong>: ignored</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

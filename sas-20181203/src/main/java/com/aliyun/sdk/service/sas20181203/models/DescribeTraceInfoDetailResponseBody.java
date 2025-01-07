@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -784,7 +789,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NeighborList")
-        private java.util.List < NeighborList> neighborList;
+        private java.util.List<NeighborList> neighborList;
 
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
@@ -833,7 +838,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         /**
          * @return neighborList
          */
-        public java.util.List < NeighborList> getNeighborList() {
+        public java.util.List<NeighborList> getNeighborList() {
             return this.neighborList;
         }
 
@@ -855,7 +860,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             private Integer count; 
             private String id; 
             private String name; 
-            private java.util.List < NeighborList> neighborList; 
+            private java.util.List<NeighborList> neighborList; 
             private String time; 
             private String type; 
 
@@ -895,7 +900,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the neighbor nodes.</p>
              */
-            public Builder neighborList(java.util.List < NeighborList> neighborList) {
+            public Builder neighborList(java.util.List<NeighborList> neighborList) {
                 this.neighborList = neighborList;
                 return this;
             }
@@ -937,16 +942,16 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
      */
     public static class TraceInfoDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EdgeList")
-        private java.util.List < EdgeList> edgeList;
+        private java.util.List<EdgeList> edgeList;
 
         @com.aliyun.core.annotation.NameInMap("EntityTypeList")
-        private java.util.List < EntityTypeList> entityTypeList;
+        private java.util.List<EntityTypeList> entityTypeList;
 
         @com.aliyun.core.annotation.NameInMap("RelationTypeList")
-        private java.util.List < RelationTypeList> relationTypeList;
+        private java.util.List<RelationTypeList> relationTypeList;
 
         @com.aliyun.core.annotation.NameInMap("VertexList")
-        private java.util.List < VertexList> vertexList;
+        private java.util.List<VertexList> vertexList;
 
         private TraceInfoDetail(Builder builder) {
             this.edgeList = builder.edgeList;
@@ -966,41 +971,41 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
         /**
          * @return edgeList
          */
-        public java.util.List < EdgeList> getEdgeList() {
+        public java.util.List<EdgeList> getEdgeList() {
             return this.edgeList;
         }
 
         /**
          * @return entityTypeList
          */
-        public java.util.List < EntityTypeList> getEntityTypeList() {
+        public java.util.List<EntityTypeList> getEntityTypeList() {
             return this.entityTypeList;
         }
 
         /**
          * @return relationTypeList
          */
-        public java.util.List < RelationTypeList> getRelationTypeList() {
+        public java.util.List<RelationTypeList> getRelationTypeList() {
             return this.relationTypeList;
         }
 
         /**
          * @return vertexList
          */
-        public java.util.List < VertexList> getVertexList() {
+        public java.util.List<VertexList> getVertexList() {
             return this.vertexList;
         }
 
         public static final class Builder {
-            private java.util.List < EdgeList> edgeList; 
-            private java.util.List < EntityTypeList> entityTypeList; 
-            private java.util.List < RelationTypeList> relationTypeList; 
-            private java.util.List < VertexList> vertexList; 
+            private java.util.List<EdgeList> edgeList; 
+            private java.util.List<EntityTypeList> entityTypeList; 
+            private java.util.List<RelationTypeList> relationTypeList; 
+            private java.util.List<VertexList> vertexList; 
 
             /**
              * <p>An array that consists of the edges of the tracing diagram.</p>
              */
-            public Builder edgeList(java.util.List < EdgeList> edgeList) {
+            public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
                 return this;
             }
@@ -1008,7 +1013,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the metadata configurations of the vertex type.</p>
              */
-            public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
+            public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
                 return this;
             }
@@ -1016,7 +1021,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the metadata configurations of the edge type.</p>
              */
-            public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
+            public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
                 return this;
             }
@@ -1024,7 +1029,7 @@ public class DescribeTraceInfoDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of all vertexes of the tracing diagram.</p>
              */
-            public Builder vertexList(java.util.List < VertexList> vertexList) {
+            public Builder vertexList(java.util.List<VertexList> vertexList) {
                 this.vertexList = vertexList;
                 return this;
             }

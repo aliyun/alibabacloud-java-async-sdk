@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -328,7 +333,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
      */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerIds")
-        private java.util.List < String > containerIds;
+        private java.util.List<String> containerIds;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -365,7 +370,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
         /**
          * @return containerIds
          */
-        public java.util.List < String > getContainerIds() {
+        public java.util.List<String> getContainerIds() {
             return this.containerIds;
         }
 
@@ -405,7 +410,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > containerIds; 
+            private java.util.List<String> containerIds; 
             private String id; 
             private String name; 
             private String namespaceId; 
@@ -415,7 +420,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             /**
              * <p>The list of the container IDs.</p>
              */
-            public Builder containerIds(java.util.List < String > containerIds) {
+            public Builder containerIds(java.util.List<String> containerIds) {
                 this.containerIds = containerIds;
                 return this;
             }
@@ -501,13 +506,13 @@ public class GetAppNetworkResponseBody extends TeaModel {
      */
     public static class AppNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edge")
-        private java.util.List < Edge> edge;
+        private java.util.List<Edge> edge;
 
         @com.aliyun.core.annotation.NameInMap("Namespace")
-        private java.util.List < Namespace> namespace;
+        private java.util.List<Namespace> namespace;
 
         @com.aliyun.core.annotation.NameInMap("Node")
-        private java.util.List < Node> node;
+        private java.util.List<Node> node;
 
         private AppNetwork(Builder builder) {
             this.edge = builder.edge;
@@ -526,33 +531,33 @@ public class GetAppNetworkResponseBody extends TeaModel {
         /**
          * @return edge
          */
-        public java.util.List < Edge> getEdge() {
+        public java.util.List<Edge> getEdge() {
             return this.edge;
         }
 
         /**
          * @return namespace
          */
-        public java.util.List < Namespace> getNamespace() {
+        public java.util.List<Namespace> getNamespace() {
             return this.namespace;
         }
 
         /**
          * @return node
          */
-        public java.util.List < Node> getNode() {
+        public java.util.List<Node> getNode() {
             return this.node;
         }
 
         public static final class Builder {
-            private java.util.List < Edge> edge; 
-            private java.util.List < Namespace> namespace; 
-            private java.util.List < Node> node; 
+            private java.util.List<Edge> edge; 
+            private java.util.List<Namespace> namespace; 
+            private java.util.List<Node> node; 
 
             /**
              * <p>The information about the topology edge.</p>
              */
-            public Builder edge(java.util.List < Edge> edge) {
+            public Builder edge(java.util.List<Edge> edge) {
                 this.edge = edge;
                 return this;
             }
@@ -560,7 +565,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             /**
              * <p>The namespace.</p>
              */
-            public Builder namespace(java.util.List < Namespace> namespace) {
+            public Builder namespace(java.util.List<Namespace> namespace) {
                 this.namespace = namespace;
                 return this;
             }
@@ -568,7 +573,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             /**
              * <p>The information about the application node.</p>
              */
-            public Builder node(java.util.List < Node> node) {
+            public Builder node(java.util.List<Node> node) {
                 this.node = node;
                 return this;
             }

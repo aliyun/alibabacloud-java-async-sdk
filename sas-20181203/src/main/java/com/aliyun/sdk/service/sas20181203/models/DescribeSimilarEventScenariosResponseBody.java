@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Scenarios")
-    private java.util.List < Scenarios> scenarios;
+    private java.util.List<Scenarios> scenarios;
 
     private DescribeSimilarEventScenariosResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
     /**
      * @return scenarios
      */
-    public java.util.List < Scenarios> getScenarios() {
+    public java.util.List<Scenarios> getScenarios() {
         return this.scenarios;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Scenarios> scenarios; 
+        private java.util.List<Scenarios> scenarios; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
         /**
          * Scenarios.
          */
-        public Builder scenarios(java.util.List < Scenarios> scenarios) {
+        public Builder scenarios(java.util.List<Scenarios> scenarios) {
             this.scenarios = scenarios;
             return this;
         }

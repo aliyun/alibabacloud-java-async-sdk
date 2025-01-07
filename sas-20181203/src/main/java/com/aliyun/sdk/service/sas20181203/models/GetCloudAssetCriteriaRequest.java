@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetCloudAssetCriteriaRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAssetTypes")
-    private java.util.List < CloudAssetTypes> cloudAssetTypes;
+    private java.util.List<CloudAssetTypes> cloudAssetTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Value")
@@ -42,7 +47,7 @@ public class GetCloudAssetCriteriaRequest extends Request {
     /**
      * @return cloudAssetTypes
      */
-    public java.util.List < CloudAssetTypes> getCloudAssetTypes() {
+    public java.util.List<CloudAssetTypes> getCloudAssetTypes() {
         return this.cloudAssetTypes;
     }
 
@@ -54,7 +59,7 @@ public class GetCloudAssetCriteriaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCloudAssetCriteriaRequest, Builder> {
-        private java.util.List < CloudAssetTypes> cloudAssetTypes; 
+        private java.util.List<CloudAssetTypes> cloudAssetTypes; 
         private String value; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class GetCloudAssetCriteriaRequest extends Request {
         /**
          * <p>The types of cloud assets.</p>
          */
-        public Builder cloudAssetTypes(java.util.List < CloudAssetTypes> cloudAssetTypes) {
+        public Builder cloudAssetTypes(java.util.List<CloudAssetTypes> cloudAssetTypes) {
             this.putQueryParameter("CloudAssetTypes", cloudAssetTypes);
             this.cloudAssetTypes = cloudAssetTypes;
             return this;
@@ -300,7 +305,7 @@ public class GetCloudAssetCriteriaRequest extends Request {
              * <li><strong>19</strong>: PolarDB</li>
              * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL</li>
              * <li><strong>21</strong>: Microservices Engine (MSE)</li>
-             * <li><strong>22</strong>: Apsara File Storage NAS (NAS)</li>
+             * <li><strong>22</strong>: File Storage NAS (NAS)</li>
              * <li><strong>23</strong>: Data Security Center (DSC)</li>
              * <li><strong>24</strong>: Elastic IP Address (EIP)</li>
              * <li><strong>25</strong>: IDaaS EIAM</li>

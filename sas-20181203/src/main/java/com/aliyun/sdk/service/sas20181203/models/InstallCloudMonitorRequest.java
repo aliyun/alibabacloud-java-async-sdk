@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,11 +32,11 @@ public class InstallCloudMonitorRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIdList")
-    private java.util.List < String > instanceIdList;
+    private java.util.List<String> instanceIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    private java.util.List < String > uuidList;
+    private java.util.List<String> uuidList;
 
     private InstallCloudMonitorRequest(Builder builder) {
         super(builder);
@@ -79,14 +84,14 @@ public class InstallCloudMonitorRequest extends Request {
     /**
      * @return instanceIdList
      */
-    public java.util.List < String > getInstanceIdList() {
+    public java.util.List<String> getInstanceIdList() {
         return this.instanceIdList;
     }
 
     /**
      * @return uuidList
      */
-    public java.util.List < String > getUuidList() {
+    public java.util.List<String> getUuidList() {
         return this.uuidList;
     }
 
@@ -94,8 +99,8 @@ public class InstallCloudMonitorRequest extends Request {
         private String agentAccessKey; 
         private String agentSecretKey; 
         private String argusVersion; 
-        private java.util.List < String > instanceIdList; 
-        private java.util.List < String > uuidList; 
+        private java.util.List<String> instanceIdList; 
+        private java.util.List<String> uuidList; 
 
         private Builder() {
             super();
@@ -156,7 +161,7 @@ public class InstallCloudMonitorRequest extends Request {
         /**
          * <p>The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</p>
          */
-        public Builder instanceIdList(java.util.List < String > instanceIdList) {
+        public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
             this.instanceIdList = instanceIdList;
             return this;
@@ -165,7 +170,7 @@ public class InstallCloudMonitorRequest extends Request {
         /**
          * <p>The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</p>
          */
-        public Builder uuidList(java.util.List < String > uuidList) {
+        public Builder uuidList(java.util.List<String> uuidList) {
             this.putQueryParameter("UuidList", uuidList);
             this.uuidList = uuidList;
             return this;

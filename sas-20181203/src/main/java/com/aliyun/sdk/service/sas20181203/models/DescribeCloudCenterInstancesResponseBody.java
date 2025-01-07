@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -42,7 +47,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -68,15 +73,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private PageInfo pageInfo; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * <p>An array that consists of the details about the asset.</p>
+         * <p>An array that consists of the details about the assets.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -157,6 +162,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ClientSubStatus")
+        private String clientSubStatus;
 
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -263,6 +271,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
+        @com.aliyun.core.annotation.NameInMap("TagResources")
+        private String tagResources;
+
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
@@ -292,6 +303,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.authVersionName = builder.authVersionName;
             this.bind = builder.bind;
             this.clientStatus = builder.clientStatus;
+            this.clientSubStatus = builder.clientSubStatus;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.cores = builder.cores;
@@ -327,6 +339,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.status = builder.status;
             this.tag = builder.tag;
             this.tagId = builder.tagId;
+            this.tagResources = builder.tagResources;
             this.uuid = builder.uuid;
             this.vendor = builder.vendor;
             this.vendorName = builder.vendorName;
@@ -411,6 +424,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          */
         public String getClientStatus() {
             return this.clientStatus;
+        }
+
+        /**
+         * @return clientSubStatus
+         */
+        public String getClientSubStatus() {
+            return this.clientSubStatus;
         }
 
         /**
@@ -659,6 +679,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagResources
+         */
+        public String getTagResources() {
+            return this.tagResources;
+        }
+
+        /**
          * @return uuid
          */
         public String getUuid() {
@@ -711,6 +738,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String authVersionName; 
             private Boolean bind; 
             private String clientStatus; 
+            private String clientSubStatus; 
             private String clusterId; 
             private String clusterName; 
             private Integer cores; 
@@ -746,6 +774,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private String status; 
             private String tag; 
             private String tagId; 
+            private String tagResources; 
             private String uuid; 
             private Integer vendor; 
             private String vendorName; 
@@ -769,7 +798,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The ID of the application.</p>
+             * <blockquote>
+             * <p> This parameter is available only when the <strong>Vendor</strong> parameter is set to 9.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -777,7 +812,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * <blockquote>
+             * <p> This parameter is available only when the <strong>Vendor</strong> parameter is set to 9.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>testAppName</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -806,7 +847,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetTypeName.
+             * <p>The name of the asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder assetTypeName(String assetTypeName) {
                 this.assetTypeName = assetTypeName;
@@ -844,14 +888,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Security Center edition that is authorized to scan the asset. Valid values:</p>
+             * <p>The name of the Security Center edition that is authorized to protect the asset. Valid values:</p>
              * <ul>
              * <li>Basic edition</li>
              * <li>Anti-virus edition</li>
              * <li>Advanced edition</li>
              * <li>Enterprise edition</li>
              * <li>Ultimate edition</li>
-             * <li>Value-added Plan edition</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -890,6 +933,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
+                return this;
+            }
+
+            /**
+             * ClientSubStatus.
+             */
+            public Builder clientSubStatus(String clientSubStatus) {
+                this.clientSubStatus = clientSubStatus;
                 return this;
             }
 
@@ -979,7 +1030,23 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FlagName.
+             * <p>The service provider of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>ALIYUN</strong></li>
+             * <li><strong>OUT</strong></li>
+             * <li><strong>IDC</strong></li>
+             * <li><strong>Tencent</strong></li>
+             * <li><strong>HUAWEICLOUD</strong></li>
+             * <li><strong>Azure</strong></li>
+             * <li><strong>AWS</strong></li>
+             * <li><strong>ASK</strong></li>
+             * <li><strong>TRIPARTITE</strong></li>
+             * <li><strong>SAE</strong></li>
+             * <li><strong>PAI</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASK</p>
              */
             public Builder flagName(String flagName) {
                 this.flagName = flagName;
@@ -1345,6 +1412,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * TagResources.
+             */
+            public Builder tagResources(String tagResources) {
+                this.tagResources = tagResources;
+                return this;
+            }
+
+            /**
              * <p>The UUID of the asset.</p>
              * 
              * <strong>example:</strong>
@@ -1356,12 +1431,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the asset by source. Valid values:</p>
+             * <p>The service provider of the asset. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: an ECS instance.</li>
-             * <li><strong>1</strong>: a third-party cloud server.</li>
-             * <li><strong>2</strong>: a server in a data center.</li>
-             * <li><strong>3</strong>: a server deployed on Tencent Cloud. This value is returned only after the asset is protected by Security Center.</li>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: an asset outside Alibaba Cloud</li>
+             * <li><strong>2</strong>: an asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: an asset from a third-party cloud service provider</li>
+             * <li><strong>8</strong>: a lightweight asset</li>
+             * <li><strong>9</strong>: a SAE instance</li>
+             * <li><strong>10</strong>: an instance in PAI</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1373,11 +1451,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service provider (SP) for the asset.</p>
+             * <p>The name of the service provider for the asset.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><strong>TENCENT</strong>: Tencent Cloud</li>
              * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+             * <li><strong>OUT</strong>: a third-party service provider</li>
+             * <li><strong>IDC</strong>: a data center</li>
+             * <li><strong>TENCENT</strong>: Tencent Cloud</li>
+             * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+             * <li><strong>Microsoft</strong>: Microsoft Azure</li>
+             * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+             * <li><strong>TRIPARTITE</strong>: a lightweight server</li>
+             * <li><strong>SAE</strong>: a SAE instance</li>
+             * <li><strong>PAI</strong>: an instance in PAI</li>
              * </ul>
              * 
              * <strong>example:</strong>

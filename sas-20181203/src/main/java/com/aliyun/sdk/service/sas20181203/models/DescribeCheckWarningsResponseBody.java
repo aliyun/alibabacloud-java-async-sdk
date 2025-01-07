@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCheckWarningsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckWarnings")
-    private java.util.List < CheckWarnings> checkWarnings;
+    private java.util.List<CheckWarnings> checkWarnings;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
@@ -50,7 +55,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     /**
      * @return checkWarnings
      */
-    public java.util.List < CheckWarnings> getCheckWarnings() {
+    public java.util.List<CheckWarnings> getCheckWarnings() {
         return this.checkWarnings;
     }
 
@@ -90,7 +95,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckWarnings> checkWarnings; 
+        private java.util.List<CheckWarnings> checkWarnings; 
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
@@ -100,7 +105,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         /**
          * <p>The information about the check item.</p>
          */
-        public Builder checkWarnings(java.util.List < CheckWarnings> checkWarnings) {
+        public Builder checkWarnings(java.util.List<CheckWarnings> checkWarnings) {
             this.checkWarnings = checkWarnings;
             return this;
         }

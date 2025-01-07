@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EventTypes")
-    private java.util.List < EventTypes> eventTypes;
+    private java.util.List<EventTypes> eventTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     /**
      * @return eventTypes
      */
-    public java.util.List < EventTypes> getEventTypes() {
+    public java.util.List<EventTypes> getEventTypes() {
         return this.eventTypes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EventTypes> eventTypes; 
+        private java.util.List<EventTypes> eventTypes; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the information about the alert type.</p>
          */
-        public Builder eventTypes(java.util.List < EventTypes> eventTypes) {
+        public Builder eventTypes(java.util.List<EventTypes> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }

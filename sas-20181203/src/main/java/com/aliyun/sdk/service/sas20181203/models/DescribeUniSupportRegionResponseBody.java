@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UniSupportRegion")
-    private java.util.List < String > uniSupportRegion;
+    private java.util.List<String> uniSupportRegion;
 
     private DescribeUniSupportRegionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
     /**
      * @return uniSupportRegion
      */
-    public java.util.List < String > getUniSupportRegion() {
+    public java.util.List<String> getUniSupportRegion() {
         return this.uniSupportRegion;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > uniSupportRegion; 
+        private java.util.List<String> uniSupportRegion; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the region that is supported by anti-ransomware for databases.</p>
          */
-        public Builder uniSupportRegion(java.util.List < String > uniSupportRegion) {
+        public Builder uniSupportRegion(java.util.List<String> uniSupportRegion) {
             this.uniSupportRegion = uniSupportRegion;
             return this;
         }

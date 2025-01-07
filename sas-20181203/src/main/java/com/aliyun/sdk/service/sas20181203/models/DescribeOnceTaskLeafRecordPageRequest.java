@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,7 +46,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    private java.util.List<String> statusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -123,7 +128,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -148,7 +153,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         private Boolean relateInfo; 
         private String source; 
         private Long startTime; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
         private String taskId; 
         private String taskType; 
 
@@ -247,7 +252,7 @@ public class DescribeOnceTaskLeafRecordPageRequest extends Request {
         /**
          * <p>The status information.</p>
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

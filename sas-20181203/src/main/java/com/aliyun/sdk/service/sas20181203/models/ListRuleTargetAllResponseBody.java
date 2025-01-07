@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleTargetList")
-    private java.util.List < RuleTargetList> ruleTargetList;
+    private java.util.List<RuleTargetList> ruleTargetList;
 
     private ListRuleTargetAllResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     /**
      * @return ruleTargetList
      */
-    public java.util.List < RuleTargetList> getRuleTargetList() {
+    public java.util.List<RuleTargetList> getRuleTargetList() {
         return this.ruleTargetList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RuleTargetList> ruleTargetList; 
+        private java.util.List<RuleTargetList> ruleTargetList; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the network objects.</p>
          */
-        public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
+        public Builder ruleTargetList(java.util.List<RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
             return this;
         }

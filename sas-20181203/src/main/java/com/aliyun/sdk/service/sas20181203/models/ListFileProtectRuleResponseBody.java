@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFileProtectRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileProtectList")
-    private java.util.List < FileProtectList> fileProtectList;
+    private java.util.List<FileProtectList> fileProtectList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     /**
      * @return fileProtectList
      */
-    public java.util.List < FileProtectList> getFileProtectList() {
+    public java.util.List<FileProtectList> getFileProtectList() {
         return this.fileProtectList;
     }
 
@@ -57,14 +62,14 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileProtectList> fileProtectList; 
+        private java.util.List<FileProtectList> fileProtectList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The details of returned data.</p>
          */
-        public Builder fileProtectList(java.util.List < FileProtectList> fileProtectList) {
+        public Builder fileProtectList(java.util.List<FileProtectList> fileProtectList) {
             this.fileProtectList = fileProtectList;
             return this;
         }
@@ -111,10 +116,10 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         private Long effectInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("FileOps")
-        private java.util.List < String > fileOps;
+        private java.util.List<String> fileOps;
 
         @com.aliyun.core.annotation.NameInMap("FilePaths")
-        private java.util.List < String > filePaths;
+        private java.util.List<String> filePaths;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -129,7 +134,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         private String platform;
 
         @com.aliyun.core.annotation.NameInMap("ProcPaths")
-        private java.util.List < String > procPaths;
+        private java.util.List<String> procPaths;
 
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
@@ -188,14 +193,14 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         /**
          * @return fileOps
          */
-        public java.util.List < String > getFileOps() {
+        public java.util.List<String> getFileOps() {
             return this.fileOps;
         }
 
         /**
          * @return filePaths
          */
-        public java.util.List < String > getFilePaths() {
+        public java.util.List<String> getFilePaths() {
             return this.filePaths;
         }
 
@@ -230,7 +235,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
         /**
          * @return procPaths
          */
-        public java.util.List < String > getProcPaths() {
+        public java.util.List<String> getProcPaths() {
             return this.procPaths;
         }
 
@@ -259,13 +264,13 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             private String action; 
             private String alertLevel; 
             private Long effectInstanceCount; 
-            private java.util.List < String > fileOps; 
-            private java.util.List < String > filePaths; 
+            private java.util.List<String> fileOps; 
+            private java.util.List<String> filePaths; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
             private String platform; 
-            private java.util.List < String > procPaths; 
+            private java.util.List<String> procPaths; 
             private String ruleName; 
             private Integer status; 
             private String switchId; 
@@ -316,7 +321,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             /**
              * <p>The operations performed on the files.</p>
              */
-            public Builder fileOps(java.util.List < String > fileOps) {
+            public Builder fileOps(java.util.List<String> fileOps) {
                 this.fileOps = fileOps;
                 return this;
             }
@@ -324,7 +329,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             /**
              * <p>The paths to the monitored files. Wildcard characters are supported.</p>
              */
-            public Builder filePaths(java.util.List < String > filePaths) {
+            public Builder filePaths(java.util.List<String> filePaths) {
                 this.filePaths = filePaths;
                 return this;
             }
@@ -380,7 +385,7 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
             /**
              * <p>The paths to the monitored processes. Wildcard characters are supported.</p>
              */
-            public Builder procPaths(java.util.List < String > procPaths) {
+            public Builder procPaths(java.util.List<String> procPaths) {
                 this.procPaths = procPaths;
                 return this;
             }

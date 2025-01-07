@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,15 +27,25 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
     private Long eventId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenario")
+    private String scenario;
 
     private ListAgentlessRelateMaliciousRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.eventId = builder.eventId;
+        this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.scenario = builder.scenario;
     }
 
     public static Builder builder() {
@@ -61,16 +76,32 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
         return this.pageSize;
     }
 
+    /**
+     * @return scenario
+     */
+    public String getScenario() {
+        return this.scenario;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentlessRelateMaliciousRequest, Builder> {
         private Integer currentPage; 
         private Long eventId; 
+        private String lang; 
         private String pageSize; 
+        private String scenario; 
 
         private Builder() {
             super();
@@ -80,7 +111,9 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.eventId = request.eventId;
+            this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.scenario = request.scenario;
         } 
 
         /**
@@ -109,6 +142,15 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
          * <p>The number of entries to return on each page.</p>
          * <p>This parameter is required.</p>
          * 
@@ -118,6 +160,15 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Scenario.
+         */
+        public Builder scenario(String scenario) {
+            this.putQueryParameter("Scenario", scenario);
+            this.scenario = scenario;
             return this;
         }
 

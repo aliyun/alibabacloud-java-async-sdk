@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BaselineResultSummary")
-    private java.util.List < BaselineResultSummary> baselineResultSummary;
+    private java.util.List<BaselineResultSummary> baselineResultSummary;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
     /**
      * @return baselineResultSummary
      */
-    public java.util.List < BaselineResultSummary> getBaselineResultSummary() {
+    public java.util.List<BaselineResultSummary> getBaselineResultSummary() {
         return this.baselineResultSummary;
     }
 
@@ -57,14 +62,14 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BaselineResultSummary> baselineResultSummary; 
+        private java.util.List<BaselineResultSummary> baselineResultSummary; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the check results of image baselines.</p>
          */
-        public Builder baselineResultSummary(java.util.List < BaselineResultSummary> baselineResultSummary) {
+        public Builder baselineResultSummary(java.util.List<BaselineResultSummary> baselineResultSummary) {
             this.baselineResultSummary = baselineResultSummary;
             return this;
         }

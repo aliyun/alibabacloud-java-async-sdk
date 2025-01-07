@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -84,6 +89,9 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("SelectionKey")
         private Long selectionKey;
 
@@ -92,6 +100,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.businessType = builder.businessType;
+            this.platform = builder.platform;
             this.selectionKey = builder.selectionKey;
             this.targetType = builder.targetType;
         }
@@ -112,6 +121,13 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return selectionKey
          */
         public Long getSelectionKey() {
@@ -127,6 +143,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String businessType; 
+            private String platform; 
             private Long selectionKey; 
             private String targetType; 
 
@@ -142,6 +159,21 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
+                return this;
+            }
+
+            /**
+             * <p>The operating system of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: the Windows operating system</li>
+             * <li><strong>linux</strong>: the Linux operating system</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

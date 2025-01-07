@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCycleTaskListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CycleScheduleResponseList")
-    private java.util.List < CycleScheduleResponseList> cycleScheduleResponseList;
+    private java.util.List<CycleScheduleResponseList> cycleScheduleResponseList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     /**
      * @return cycleScheduleResponseList
      */
-    public java.util.List < CycleScheduleResponseList> getCycleScheduleResponseList() {
+    public java.util.List<CycleScheduleResponseList> getCycleScheduleResponseList() {
         return this.cycleScheduleResponseList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CycleScheduleResponseList> cycleScheduleResponseList; 
+        private java.util.List<CycleScheduleResponseList> cycleScheduleResponseList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>An array that consists of periodic scan tasks.</p>
          */
-        public Builder cycleScheduleResponseList(java.util.List < CycleScheduleResponseList> cycleScheduleResponseList) {
+        public Builder cycleScheduleResponseList(java.util.List<CycleScheduleResponseList> cycleScheduleResponseList) {
             this.cycleScheduleResponseList = cycleScheduleResponseList;
             return this;
         }

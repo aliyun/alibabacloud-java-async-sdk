@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    private java.util.List<InstanceList> instanceList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<InstanceList> instanceList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The server ID.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
             return this;
         }

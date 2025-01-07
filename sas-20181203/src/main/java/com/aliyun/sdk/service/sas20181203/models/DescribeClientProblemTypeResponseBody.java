@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("ProblemTypes")
-    private java.util.List < ProblemTypes> problemTypes;
+    private java.util.List<ProblemTypes> problemTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
     /**
      * @return problemTypes
      */
-    public java.util.List < ProblemTypes> getProblemTypes() {
+    public java.util.List<ProblemTypes> getProblemTypes() {
         return this.problemTypes;
     }
 
@@ -93,12 +98,15 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < ProblemTypes> problemTypes; 
+        private java.util.List<ProblemTypes> problemTypes; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * Count.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -106,7 +114,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +125,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,15 +136,18 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ProblemTypes.
+         * <p>The issue types.</p>
          */
-        public Builder problemTypes(java.util.List < ProblemTypes> problemTypes) {
+        public Builder problemTypes(java.util.List<ProblemTypes> problemTypes) {
             this.problemTypes = problemTypes;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53CXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -208,7 +228,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             private String problemType; 
 
             /**
-             * problemDetail.
+             * <p>The description of the issue type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder problemDetail(String problemDetail) {
                 this.problemDetail = problemDetail;
@@ -216,7 +239,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             }
 
             /**
-             * problemId.
+             * <p>The ID of the issue type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder problemId(String problemId) {
                 this.problemId = problemId;
@@ -224,7 +250,10 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
             }
 
             /**
-             * problemType.
+             * <p>The name of the issue type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high_cpu</p>
              */
             public Builder problemType(String problemType) {
                 this.problemType = problemType;

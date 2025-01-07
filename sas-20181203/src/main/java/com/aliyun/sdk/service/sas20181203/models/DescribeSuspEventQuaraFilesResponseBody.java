@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("QuaraFiles")
-    private java.util.List < QuaraFiles> quaraFiles;
+    private java.util.List<QuaraFiles> quaraFiles;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
     /**
      * @return quaraFiles
      */
-    public java.util.List < QuaraFiles> getQuaraFiles() {
+    public java.util.List<QuaraFiles> getQuaraFiles() {
         return this.quaraFiles;
     }
 
@@ -93,7 +98,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         private Integer count; 
         private Integer currentPage; 
         private Integer pageSize; 
-        private java.util.List < QuaraFiles> quaraFiles; 
+        private java.util.List<QuaraFiles> quaraFiles; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -133,7 +138,7 @@ public class DescribeSuspEventQuaraFilesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the quarantined files.</p>
          */
-        public Builder quaraFiles(java.util.List < QuaraFiles> quaraFiles) {
+        public Builder quaraFiles(java.util.List<QuaraFiles> quaraFiles) {
             this.quaraFiles = quaraFiles;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,7 +104,10 @@ public class ListPublishBatchRequest extends Request {
         } 
 
         /**
-         * BatchName.
+         * <p>The name of the release batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder batchName(String batchName) {
             this.putQueryParameter("BatchName", batchName);
@@ -108,6 +116,7 @@ public class ListPublishBatchRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +129,7 @@ public class ListPublishBatchRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +142,7 @@ public class ListPublishBatchRequest extends Request {
         }
 
         /**
+         * <p>The destination version of the Security Center agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -238,6 +243,9 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ClientSubStatus")
+        private String clientSubStatus;
+
         @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
@@ -251,7 +259,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("DiskInfoList")
-        private java.util.List < DiskInfoList> diskInfoList;
+        private java.util.List<DiskInfoList> diskInfoList;
 
         @com.aliyun.core.annotation.NameInMap("Flag")
         private Integer flag;
@@ -278,13 +286,13 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         private String ip;
 
         @com.aliyun.core.annotation.NameInMap("IpList")
-        private java.util.List < String > ipList;
+        private java.util.List<String> ipList;
 
         @com.aliyun.core.annotation.NameInMap("Kernel")
         private String kernel;
 
         @com.aliyun.core.annotation.NameInMap("MacList")
-        private java.util.List < String > macList;
+        private java.util.List<String> macList;
 
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
@@ -328,6 +336,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             this.authVersion = builder.authVersion;
             this.bind = builder.bind;
             this.clientStatus = builder.clientStatus;
+            this.clientSubStatus = builder.clientSubStatus;
             this.clientVersion = builder.clientVersion;
             this.cpu = builder.cpu;
             this.cpuInfo = builder.cpuInfo;
@@ -402,6 +411,13 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientSubStatus
+         */
+        public String getClientSubStatus() {
+            return this.clientSubStatus;
+        }
+
+        /**
          * @return clientVersion
          */
         public String getClientVersion() {
@@ -432,7 +448,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * @return diskInfoList
          */
-        public java.util.List < DiskInfoList> getDiskInfoList() {
+        public java.util.List<DiskInfoList> getDiskInfoList() {
             return this.diskInfoList;
         }
 
@@ -495,7 +511,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * @return ipList
          */
-        public java.util.List < String > getIpList() {
+        public java.util.List<String> getIpList() {
             return this.ipList;
         }
 
@@ -509,7 +525,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         /**
          * @return macList
          */
-        public java.util.List < String > getMacList() {
+        public java.util.List<String> getMacList() {
             return this.macList;
         }
 
@@ -603,11 +619,12 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             private Integer authVersion; 
             private Boolean bind; 
             private String clientStatus; 
+            private String clientSubStatus; 
             private String clientVersion; 
             private Integer cpu; 
             private String cpuInfo; 
             private Long createTime; 
-            private java.util.List < DiskInfoList> diskInfoList; 
+            private java.util.List<DiskInfoList> diskInfoList; 
             private Integer flag; 
             private String groupTrace; 
             private String hostName; 
@@ -616,9 +633,9 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private String ip; 
-            private java.util.List < String > ipList; 
+            private java.util.List<String> ipList; 
             private String kernel; 
-            private java.util.List < String > macList; 
+            private java.util.List<String> macList; 
             private Integer mem; 
             private Long memory; 
             private String os; 
@@ -665,14 +682,13 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+             * <p>The edition of Security Center that is authorized to protect the server. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: Basic edition</li>
+             * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
              * <li><strong>6</strong>: Anti-virus edition</li>
              * <li><strong>5</strong>: Advanced edition</li>
              * <li><strong>3</strong>: Enterprise edition</li>
              * <li><strong>7</strong>: Ultimate edition</li>
-             * <li><strong>10</strong>: Value-added Plan edition</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -711,6 +727,14 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
+                return this;
+            }
+
+            /**
+             * ClientSubStatus.
+             */
+            public Builder clientSubStatus(String clientSubStatus) {
+                this.clientSubStatus = clientSubStatus;
                 return this;
             }
 
@@ -761,7 +785,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             /**
              * <p>The list of information about the disk.</p>
              */
-            public Builder diskInfoList(java.util.List < DiskInfoList> diskInfoList) {
+            public Builder diskInfoList(java.util.List<DiskInfoList> diskInfoList) {
                 this.diskInfoList = diskInfoList;
                 return this;
             }
@@ -861,7 +885,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the IP addresses of the server.</p>
              */
-            public Builder ipList(java.util.List < String > ipList) {
+            public Builder ipList(java.util.List<String> ipList) {
                 this.ipList = ipList;
                 return this;
             }
@@ -880,7 +904,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the media access control (MAC) addresses of the server.</p>
              */
-            public Builder macList(java.util.List < String > macList) {
+            public Builder macList(java.util.List<String> macList) {
                 this.macList = macList;
                 return this;
             }

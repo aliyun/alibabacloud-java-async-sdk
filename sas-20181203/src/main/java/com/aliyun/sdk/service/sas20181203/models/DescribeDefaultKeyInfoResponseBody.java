@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainList")
-    private java.util.List < String > domainList;
+    private java.util.List<String> domainList;
 
     @com.aliyun.core.annotation.NameInMap("Names")
     private String names;
@@ -38,7 +43,7 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
     /**
      * @return domainList
      */
-    public java.util.List < String > getDomainList() {
+    public java.util.List<String> getDomainList() {
         return this.domainList;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > domainList; 
+        private java.util.List<String> domainList; 
         private String names; 
         private String requestId; 
 
         /**
          * <p>The domain names.</p>
          */
-        public Builder domainList(java.util.List < String > domainList) {
+        public Builder domainList(java.util.List<String> domainList) {
             this.domainList = domainList;
             return this;
         }

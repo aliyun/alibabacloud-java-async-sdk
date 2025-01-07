@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("RecordList")
-    private java.util.List < RecordList> recordList;
+    private java.util.List<RecordList> recordList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     /**
      * @return recordList
      */
-    public java.util.List < RecordList> getRecordList() {
+    public java.util.List<RecordList> getRecordList() {
         return this.recordList;
     }
 
@@ -58,7 +63,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < RecordList> recordList; 
+        private java.util.List<RecordList> recordList; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the defense rules.</p>
          */
-        public Builder recordList(java.util.List < RecordList> recordList) {
+        public Builder recordList(java.util.List<RecordList> recordList) {
             this.recordList = recordList;
             return this;
         }
@@ -321,7 +326,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("TargetList")
-        private java.util.List < TargetList> targetList;
+        private java.util.List<TargetList> targetList;
 
         private RecordList(Builder builder) {
             this.blockExpireDate = builder.blockExpireDate;
@@ -402,7 +407,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         /**
          * @return targetList
          */
-        public java.util.List < TargetList> getTargetList() {
+        public java.util.List<TargetList> getTargetList() {
             return this.targetList;
         }
 
@@ -415,7 +420,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private Integer serverCount; 
             private String source; 
             private Integer status; 
-            private java.util.List < TargetList> targetList; 
+            private java.util.List<TargetList> targetList; 
 
             /**
              * <p>The timestamp generated when the block action on the IP address becomes invalid.</p>
@@ -517,7 +522,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             /**
              * <p>The servers for which the defense rule is enabled.</p>
              */
-            public Builder targetList(java.util.List < TargetList> targetList) {
+            public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
                 return this;
             }

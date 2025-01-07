@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -169,6 +174,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("Note")
+        private String note;
+
         @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
@@ -181,6 +189,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             this.eventName = builder.eventName;
             this.eventType = builder.eventType;
             this.id = builder.id;
+            this.note = builder.note;
             this.operationCode = builder.operationCode;
             this.scenarios = builder.scenarios;
         }
@@ -229,6 +238,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return note
+         */
+        public String getNote() {
+            return this.note;
+        }
+
+        /**
          * @return operationCode
          */
         public String getOperationCode() {
@@ -248,6 +264,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private String eventName; 
             private String eventType; 
             private Long id; 
+            private String note; 
             private String operationCode; 
             private String scenarios; 
 
@@ -311,6 +328,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * Note.
+             */
+            public Builder note(String note) {
+                this.note = note;
                 return this;
             }
 
@@ -454,7 +479,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
@@ -475,7 +500,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -487,13 +512,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private PageInfo pageInfo; 
 
             /**
              * <p>The alert handling rules.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

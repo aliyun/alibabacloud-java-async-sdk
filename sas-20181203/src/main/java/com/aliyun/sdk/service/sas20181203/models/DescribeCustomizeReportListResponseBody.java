@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCustomizeReportListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ReportList")
-    private java.util.List < ReportList> reportList;
+    private java.util.List<ReportList> reportList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
     /**
      * @return reportList
      */
-    public java.util.List < ReportList> getReportList() {
+    public java.util.List<ReportList> getReportList() {
         return this.reportList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ReportList> reportList; 
+        private java.util.List<ReportList> reportList; 
         private String requestId; 
 
         /**
          * <p>The reports.</p>
          */
-        public Builder reportList(java.util.List < ReportList> reportList) {
+        public Builder reportList(java.util.List<ReportList> reportList) {
             this.reportList = reportList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -54,7 +59,13 @@ public class CreateRdDefaultSyncListRequest extends Request {
         } 
 
         /**
-         * FolderIds.
+         * <p>The IDs of the folders in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GetRdTree~~">GetRdTree</a> operation to obtain the IDs of the folders. Separate multiple folder IDs with commas (,). If you do not specify a value for this parameter, the existing member list is cleared.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-BwoXuf****,fd-CFamY7****</p>
          */
         public Builder folderIds(String folderIds) {
             this.putQueryParameter("FolderIds", folderIds);

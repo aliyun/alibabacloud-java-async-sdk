@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -84,11 +89,15 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateCode")
         private String operateCode;
 
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private String taskId;
+
         @com.aliyun.core.annotation.NameInMap("ThrottlingTimeSecond")
         private Integer throttlingTimeSecond;
 
         private Data(Builder builder) {
             this.operateCode = builder.operateCode;
+            this.taskId = builder.taskId;
             this.throttlingTimeSecond = builder.throttlingTimeSecond;
         }
 
@@ -108,6 +117,13 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
          * @return throttlingTimeSecond
          */
         public Integer getThrottlingTimeSecond() {
@@ -116,6 +132,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String operateCode; 
+            private String taskId; 
             private Integer throttlingTimeSecond; 
 
             /**
@@ -134,7 +151,18 @@ public class VerifyCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * ThrottlingTimeSecond.
+             * TaskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * <p>The throttling duration. Unit: seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder throttlingTimeSecond(Integer throttlingTimeSecond) {
                 this.throttlingTimeSecond = throttlingTimeSecond;

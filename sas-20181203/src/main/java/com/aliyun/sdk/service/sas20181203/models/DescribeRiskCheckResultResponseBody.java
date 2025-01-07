@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
@@ -68,7 +73,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -103,7 +108,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     public static final class Builder {
         private Integer count; 
         private Integer currentPage; 
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private Integer pageCount; 
         private Integer pageSize; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         /**
          * <p>The check items.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -197,7 +202,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
      */
     public static class RiskItemResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentResource")
-        private java.util.Map < String, ? > contentResource;
+        private java.util.Map<String, ?> contentResource;
 
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
@@ -218,7 +223,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         /**
          * @return contentResource
          */
-        public java.util.Map < String, ? > getContentResource() {
+        public java.util.Map<String, ?> getContentResource() {
             return this.contentResource;
         }
 
@@ -230,13 +235,13 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > contentResource; 
+            private java.util.Map<String, ?> contentResource; 
             private String resourceName; 
 
             /**
              * <p>The details about the check results.</p>
              */
-            public Builder contentResource(java.util.Map < String, ? > contentResource) {
+            public Builder contentResource(java.util.Map<String, ?> contentResource) {
                 this.contentResource = contentResource;
                 return this;
             }
@@ -291,7 +296,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         private String riskAssertType;
 
         @com.aliyun.core.annotation.NameInMap("RiskItemResources")
-        private java.util.List < RiskItemResources> riskItemResources;
+        private java.util.List<RiskItemResources> riskItemResources;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -384,7 +389,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         /**
          * @return riskItemResources
          */
-        public java.util.List < RiskItemResources> getRiskItemResources() {
+        public java.util.List<RiskItemResources> getRiskItemResources() {
             return this.riskItemResources;
         }
 
@@ -444,7 +449,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private Integer remainingTime; 
             private String repairStatus; 
             private String riskAssertType; 
-            private java.util.List < RiskItemResources> riskItemResources; 
+            private java.util.List<RiskItemResources> riskItemResources; 
             private String riskLevel; 
             private Integer sort; 
             private String startStatus; 
@@ -526,7 +531,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the details about the check item.</p>
              */
-            public Builder riskItemResources(java.util.List < RiskItemResources> riskItemResources) {
+            public Builder riskItemResources(java.util.List<RiskItemResources> riskItemResources) {
                 this.riskItemResources = riskItemResources;
                 return this;
             }

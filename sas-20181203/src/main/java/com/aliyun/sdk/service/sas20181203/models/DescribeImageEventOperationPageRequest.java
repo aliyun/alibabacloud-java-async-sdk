@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,6 +45,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private DescribeImageEventOperationPageRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -49,6 +58,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         this.id = builder.id;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -113,6 +123,13 @@ public class DescribeImageEventOperationPageRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageEventOperationPageRequest, Builder> {
         private Integer currentPage; 
         private String eventKey; 
@@ -121,6 +138,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
         private Long id; 
         private String lang; 
         private Integer pageSize; 
+        private String source; 
 
         private Builder() {
             super();
@@ -135,6 +153,7 @@ public class DescribeImageEventOperationPageRequest extends Request {
             this.id = request.id;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.source = request.source;
         } 
 
         /**
@@ -225,6 +244,15 @@ public class DescribeImageEventOperationPageRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

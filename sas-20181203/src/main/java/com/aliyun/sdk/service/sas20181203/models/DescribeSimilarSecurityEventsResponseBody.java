@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityEventsResponse")
-    private java.util.List < SecurityEventsResponse> securityEventsResponse;
+    private java.util.List<SecurityEventsResponse> securityEventsResponse;
 
     private DescribeSimilarSecurityEventsResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     /**
      * @return securityEventsResponse
      */
-    public java.util.List < SecurityEventsResponse> getSecurityEventsResponse() {
+    public java.util.List<SecurityEventsResponse> getSecurityEventsResponse() {
         return this.securityEventsResponse;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < SecurityEventsResponse> securityEventsResponse; 
+        private java.util.List<SecurityEventsResponse> securityEventsResponse; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         /**
          * <p>The information about the alert events that are triggered by the same rule or of the same alert type.</p>
          */
-        public Builder securityEventsResponse(java.util.List < SecurityEventsResponse> securityEventsResponse) {
+        public Builder securityEventsResponse(java.util.List<SecurityEventsResponse> securityEventsResponse) {
             this.securityEventsResponse = securityEventsResponse;
             return this;
         }

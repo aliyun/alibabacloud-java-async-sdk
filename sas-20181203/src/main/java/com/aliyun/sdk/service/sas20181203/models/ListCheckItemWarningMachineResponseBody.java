@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,14 +62,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The servers on which the alerts are generated.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -260,7 +265,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private String containerName;
 
         @com.aliyun.core.annotation.NameInMap("FixList")
-        private java.util.List < FixList> fixList;
+        private java.util.List<FixList> fixList;
 
         @com.aliyun.core.annotation.NameInMap("FixStatus")
         private Integer fixStatus;
@@ -308,7 +313,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         private String uuid;
 
         @com.aliyun.core.annotation.NameInMap("WarningRiskList")
-        private java.util.List < WarningRiskList> warningRiskList;
+        private java.util.List<WarningRiskList> warningRiskList;
 
         private List(Builder builder) {
             this.authVersion = builder.authVersion;
@@ -373,7 +378,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         /**
          * @return fixList
          */
-        public java.util.List < FixList> getFixList() {
+        public java.util.List<FixList> getFixList() {
             return this.fixList;
         }
 
@@ -485,7 +490,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         /**
          * @return warningRiskList
          */
-        public java.util.List < WarningRiskList> getWarningRiskList() {
+        public java.util.List<WarningRiskList> getWarningRiskList() {
             return this.warningRiskList;
         }
 
@@ -494,7 +499,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private Boolean bind; 
             private String containerId; 
             private String containerName; 
-            private java.util.List < FixList> fixList; 
+            private java.util.List<FixList> fixList; 
             private Integer fixStatus; 
             private String instanceId; 
             private String instanceName; 
@@ -510,7 +515,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String targetName; 
             private String targetType; 
             private String uuid; 
-            private java.util.List < WarningRiskList> warningRiskList; 
+            private java.util.List<WarningRiskList> warningRiskList; 
 
             /**
              * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
@@ -571,7 +576,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             /**
              * <p>The details of the baselines for which the risk item can be fixed.</p>
              */
-            public Builder fixList(java.util.List < FixList> fixList) {
+            public Builder fixList(java.util.List<FixList> fixList) {
                 this.fixList = fixList;
                 return this;
             }
@@ -763,7 +768,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             /**
              * <p>The information about the baselines on which the risk item is detected.</p>
              */
-            public Builder warningRiskList(java.util.List < WarningRiskList> warningRiskList) {
+            public Builder warningRiskList(java.util.List<WarningRiskList> warningRiskList) {
                 this.warningRiskList = warningRiskList;
                 return this;
             }

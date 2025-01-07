@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class OperateWebLockFileEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > eventIds;
+    private java.util.List<Long> eventIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationCode")
@@ -57,7 +62,7 @@ public class OperateWebLockFileEventsRequest extends Request {
     /**
      * @return eventIds
      */
-    public java.util.List < Long > getEventIds() {
+    public java.util.List<Long> getEventIds() {
         return this.eventIds;
     }
 
@@ -70,7 +75,7 @@ public class OperateWebLockFileEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateWebLockFileEventsRequest, Builder> {
         private Integer dealAll; 
-        private java.util.List < Long > eventIds; 
+        private java.util.List<Long> eventIds; 
         private String operationCode; 
 
         private Builder() {
@@ -105,7 +110,7 @@ public class OperateWebLockFileEventsRequest extends Request {
          * <p>The IDs of alert events.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder eventIds(java.util.List < Long > eventIds) {
+        public Builder eventIds(java.util.List<Long> eventIds) {
             this.putQueryParameter("EventIds", eventIds);
             this.eventIds = eventIds;
             return this;

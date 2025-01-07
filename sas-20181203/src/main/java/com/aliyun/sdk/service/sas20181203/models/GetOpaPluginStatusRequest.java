@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class GetOpaPluginStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > clusterIds;
+    private java.util.List<String> clusterIds;
 
     private GetOpaPluginStatusRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class GetOpaPluginStatusRequest extends Request {
     /**
      * @return clusterIds
      */
-    public java.util.List < String > getClusterIds() {
+    public java.util.List<String> getClusterIds() {
         return this.clusterIds;
     }
 
     public static final class Builder extends Request.Builder<GetOpaPluginStatusRequest, Builder> {
-        private java.util.List < String > clusterIds; 
+        private java.util.List<String> clusterIds; 
 
         private Builder() {
             super();
@@ -61,7 +66,7 @@ public class GetOpaPluginStatusRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder clusterIds(java.util.List < String > clusterIds) {
+        public Builder clusterIds(java.util.List<String> clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
             this.clusterIds = clusterIds;
             return this;

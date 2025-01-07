@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryGuidTaskListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GuideTaskConfigList")
-    private java.util.List < GuideTaskConfigList> guideTaskConfigList;
+    private java.util.List<GuideTaskConfigList> guideTaskConfigList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
     /**
      * @return guideTaskConfigList
      */
-    public java.util.List < GuideTaskConfigList> getGuideTaskConfigList() {
+    public java.util.List<GuideTaskConfigList> getGuideTaskConfigList() {
         return this.guideTaskConfigList;
     }
 
@@ -46,13 +51,13 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GuideTaskConfigList> guideTaskConfigList; 
+        private java.util.List<GuideTaskConfigList> guideTaskConfigList; 
         private String requestId; 
 
         /**
          * <p>The list of beginner tasks.</p>
          */
-        public Builder guideTaskConfigList(java.util.List < GuideTaskConfigList> guideTaskConfigList) {
+        public Builder guideTaskConfigList(java.util.List<GuideTaskConfigList> guideTaskConfigList) {
             this.guideTaskConfigList = guideTaskConfigList;
             return this;
         }

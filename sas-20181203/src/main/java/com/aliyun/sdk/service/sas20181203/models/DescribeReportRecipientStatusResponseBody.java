@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeReportRecipientStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ReportRecipientList")
-    private java.util.List < ReportRecipientList> reportRecipientList;
+    private java.util.List<ReportRecipientList> reportRecipientList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
     /**
      * @return reportRecipientList
      */
-    public java.util.List < ReportRecipientList> getReportRecipientList() {
+    public java.util.List<ReportRecipientList> getReportRecipientList() {
         return this.reportRecipientList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ReportRecipientList> reportRecipientList; 
+        private java.util.List<ReportRecipientList> reportRecipientList; 
         private String requestId; 
 
         /**
          * <p>The report recipients.</p>
          */
-        public Builder reportRecipientList(java.util.List < ReportRecipientList> reportRecipientList) {
+        public Builder reportRecipientList(java.util.List<ReportRecipientList> reportRecipientList) {
             this.reportRecipientList = reportRecipientList;
             return this;
         }

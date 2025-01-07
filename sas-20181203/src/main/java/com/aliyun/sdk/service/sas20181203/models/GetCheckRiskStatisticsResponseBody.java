@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,15 +21,19 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Summary")
+    private Summary summary;
 
     private GetCheckRiskStatisticsResponseBody(Builder builder) {
         this.count = builder.count;
         this.data = builder.data;
         this.requestId = builder.requestId;
+        this.summary = builder.summary;
     }
 
     public static Builder builder() {
@@ -45,7 +54,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -56,10 +65,18 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return summary
+     */
+    public Summary getSummary() {
+        return this.summary;
+    }
+
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
+        private Summary summary; 
 
         /**
          * <p>The number of risk scenarios.</p>
@@ -75,7 +92,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the statistics on check items that are used in risk scenarios.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -88,6 +105,14 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Summary.
+         */
+        public Builder summary(Summary summary) {
+            this.summary = summary;
             return this;
         }
 
@@ -308,7 +333,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("SubStatistics")
-        private java.util.List < SubStatistics> subStatistics;
+        private java.util.List<SubStatistics> subStatistics;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -369,7 +394,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         /**
          * @return subStatistics
          */
-        public java.util.List < SubStatistics> getSubStatistics() {
+        public java.util.List<SubStatistics> getSubStatistics() {
             return this.subStatistics;
         }
 
@@ -386,7 +411,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer mediumWarningCount; 
             private Integer passCount; 
             private String sceneName; 
-            private java.util.List < SubStatistics> subStatistics; 
+            private java.util.List<SubStatistics> subStatistics; 
             private Integer totalCount; 
 
             /**
@@ -447,7 +472,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             /**
              * <p>The statistics on check items that are used in the risk scenario by baseline type.</p>
              */
-            public Builder subStatistics(java.util.List < SubStatistics> subStatistics) {
+            public Builder subStatistics(java.util.List<SubStatistics> subStatistics) {
                 this.subStatistics = subStatistics;
                 return this;
             }
@@ -465,6 +490,153 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
             public Data build() {
                 return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckRiskStatisticsResponseBody</p>
+     */
+    public static class Summary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HandledCheckToday")
+        private Integer handledCheckToday;
+
+        @com.aliyun.core.annotation.NameInMap("HandledCheckTotal")
+        private Integer handledCheckTotal;
+
+        @com.aliyun.core.annotation.NameInMap("HandledDays")
+        private Integer handledDays;
+
+        @com.aliyun.core.annotation.NameInMap("RiskCheckCnt")
+        private Integer riskCheckCnt;
+
+        @com.aliyun.core.annotation.NameInMap("RiskDays")
+        private Integer riskDays;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWarningCnt")
+        private Integer riskWarningCnt;
+
+        private Summary(Builder builder) {
+            this.handledCheckToday = builder.handledCheckToday;
+            this.handledCheckTotal = builder.handledCheckTotal;
+            this.handledDays = builder.handledDays;
+            this.riskCheckCnt = builder.riskCheckCnt;
+            this.riskDays = builder.riskDays;
+            this.riskWarningCnt = builder.riskWarningCnt;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Summary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return handledCheckToday
+         */
+        public Integer getHandledCheckToday() {
+            return this.handledCheckToday;
+        }
+
+        /**
+         * @return handledCheckTotal
+         */
+        public Integer getHandledCheckTotal() {
+            return this.handledCheckTotal;
+        }
+
+        /**
+         * @return handledDays
+         */
+        public Integer getHandledDays() {
+            return this.handledDays;
+        }
+
+        /**
+         * @return riskCheckCnt
+         */
+        public Integer getRiskCheckCnt() {
+            return this.riskCheckCnt;
+        }
+
+        /**
+         * @return riskDays
+         */
+        public Integer getRiskDays() {
+            return this.riskDays;
+        }
+
+        /**
+         * @return riskWarningCnt
+         */
+        public Integer getRiskWarningCnt() {
+            return this.riskWarningCnt;
+        }
+
+        public static final class Builder {
+            private Integer handledCheckToday; 
+            private Integer handledCheckTotal; 
+            private Integer handledDays; 
+            private Integer riskCheckCnt; 
+            private Integer riskDays; 
+            private Integer riskWarningCnt; 
+
+            /**
+             * HandledCheckToday.
+             */
+            public Builder handledCheckToday(Integer handledCheckToday) {
+                this.handledCheckToday = handledCheckToday;
+                return this;
+            }
+
+            /**
+             * HandledCheckTotal.
+             */
+            public Builder handledCheckTotal(Integer handledCheckTotal) {
+                this.handledCheckTotal = handledCheckTotal;
+                return this;
+            }
+
+            /**
+             * HandledDays.
+             */
+            public Builder handledDays(Integer handledDays) {
+                this.handledDays = handledDays;
+                return this;
+            }
+
+            /**
+             * RiskCheckCnt.
+             */
+            public Builder riskCheckCnt(Integer riskCheckCnt) {
+                this.riskCheckCnt = riskCheckCnt;
+                return this;
+            }
+
+            /**
+             * RiskDays.
+             */
+            public Builder riskDays(Integer riskDays) {
+                this.riskDays = riskDays;
+                return this;
+            }
+
+            /**
+             * RiskWarningCnt.
+             */
+            public Builder riskWarningCnt(Integer riskWarningCnt) {
+                this.riskWarningCnt = riskWarningCnt;
+                return this;
+            }
+
+            public Summary build() {
+                return new Summary(this);
             } 
 
         } 

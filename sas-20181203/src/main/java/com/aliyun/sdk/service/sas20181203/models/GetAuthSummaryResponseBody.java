@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VersionSummary")
-    private java.util.List < VersionSummary> versionSummary;
+    private java.util.List<VersionSummary> versionSummary;
 
     private GetAuthSummaryResponseBody(Builder builder) {
         this.allowPartialBuy = builder.allowPartialBuy;
@@ -140,7 +145,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     /**
      * @return versionSummary
      */
-    public java.util.List < VersionSummary> getVersionSummary() {
+    public java.util.List<VersionSummary> getVersionSummary() {
         return this.versionSummary;
     }
 
@@ -155,7 +160,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private Integer isMultiVersion; 
         private Machine machine; 
         private String requestId; 
-        private java.util.List < VersionSummary> versionSummary; 
+        private java.util.List<VersionSummary> versionSummary; 
 
         /**
          * <p>Indicates whether you can purchase protection quota on demand when you purchase Security Center. Valid values:</p>
@@ -306,7 +311,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         /**
          * <p>The quota consumption statistics.</p>
          */
-        public Builder versionSummary(java.util.List < VersionSummary> versionSummary) {
+        public Builder versionSummary(java.util.List<VersionSummary> versionSummary) {
             this.versionSummary = versionSummary;
             return this;
         }

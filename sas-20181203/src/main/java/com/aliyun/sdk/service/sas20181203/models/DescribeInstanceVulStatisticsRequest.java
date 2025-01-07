@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,7 +74,17 @@ public class DescribeInstanceVulStatisticsRequest extends Request {
         } 
 
         /**
-         * Types.
+         * <p>The vulnerability type of the serverless instance. Valid values:</p>
+         * <ul>
+         * <li><strong>sca</strong>: middleware vulnerabilities</li>
+         * <li><strong>app</strong>: application vulnerabilities detected by using a scanner</li>
+         * </ul>
+         * <blockquote>
+         * <p> Serverless instances allow you to detect only application vulnerabilities by using a scanner.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sca,app</p>
          */
         public Builder types(String types) {
             this.putQueryParameter("Types", types);
@@ -78,6 +93,10 @@ public class DescribeInstanceVulStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the instance to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID of the instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCheckResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Checks")
-    private java.util.List < Checks> checks;
+    private java.util.List<Checks> checks;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListCheckResultResponseBody extends TeaModel {
     /**
      * @return checks
      */
-    public java.util.List < Checks> getChecks() {
+    public java.util.List<Checks> getChecks() {
         return this.checks;
     }
 
@@ -57,14 +62,14 @@ public class ListCheckResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Checks> checks; 
+        private java.util.List<Checks> checks; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
-         * <p>The information about the check items.</p>
+         * <p>The check items.</p>
          */
-        public Builder checks(java.util.List < Checks> checks) {
+        public Builder checks(java.util.List<Checks> checks) {
             this.checks = checks;
             return this;
         }
@@ -279,7 +284,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         private Long checkId;
 
         @com.aliyun.core.annotation.NameInMap("CheckPolicies")
-        private java.util.List < CheckPolicies> checkPolicies;
+        private java.util.List<CheckPolicies> checkPolicies;
 
         @com.aliyun.core.annotation.NameInMap("CheckSaleType")
         private Integer checkSaleType;
@@ -380,7 +385,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * @return checkPolicies
          */
-        public java.util.List < CheckPolicies> getCheckPolicies() {
+        public java.util.List<CheckPolicies> getCheckPolicies() {
             return this.checkPolicies;
         }
 
@@ -480,7 +485,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             private Integer assetType; 
             private Integer assetVendor; 
             private Long checkId; 
-            private java.util.List < CheckPolicies> checkPolicies; 
+            private java.util.List<CheckPolicies> checkPolicies; 
             private Integer checkSaleType; 
             private String checkShowName; 
             private String instanceSubType; 
@@ -496,7 +501,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String vendorShowName; 
 
             /**
-             * AssetSubType.
+             * <p>The subtype of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -504,7 +512,20 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an ECS instance</li>
+             * <li><strong>1</strong>: a SLB instance</li>
+             * <li><strong>2</strong>: a NAT gateway</li>
+             * <li><strong>3</strong>: an ApsaraDB RDS instance</li>
+             * <li><strong>4</strong>: an ApsaraDB for MongoDB instance</li>
+             * <li><strong>5</strong>: an ApsaraDB for Redis instance</li>
+             * <li><strong>6</strong>: a container image</li>
+             * <li><strong>7</strong>: a container</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -512,7 +533,17 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * AssetVendor.
+             * <p>The service provider of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba Cloud</li>
+             * <li><strong>3</strong>: Huawei Cloud</li>
+             * <li><strong>4</strong>: Microsoft Azure</li>
+             * <li><strong>5</strong>: AWS</li>
+             * <li><strong>7</strong>: Tencent Cloud</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder assetVendor(Integer assetVendor) {
                 this.assetVendor = assetVendor;
@@ -533,7 +564,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             /**
              * <p>The check policies.</p>
              */
-            public Builder checkPolicies(java.util.List < CheckPolicies> checkPolicies) {
+            public Builder checkPolicies(java.util.List<CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
                 return this;
             }
@@ -655,7 +686,14 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * OperationType.
+             * <p>Indicates whether fixing is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>SUPPORT_REPAIR</strong></li>
+             * <li><strong>NOT_SUPPORT_REPAIR</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NOT_SUPPORT_REPAIR</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;

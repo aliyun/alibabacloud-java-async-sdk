@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPodRiskResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("PodRiskList")
-    private java.util.List < PodRiskList> podRiskList;
+    private java.util.List<PodRiskList> podRiskList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListPodRiskResponseBody extends TeaModel {
     /**
      * @return podRiskList
      */
-    public java.util.List < PodRiskList> getPodRiskList() {
+    public java.util.List<PodRiskList> getPodRiskList() {
         return this.podRiskList;
     }
 
@@ -58,7 +63,7 @@ public class ListPodRiskResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < PodRiskList> podRiskList; 
+        private java.util.List<PodRiskList> podRiskList; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class ListPodRiskResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the risks.</p>
          */
-        public Builder podRiskList(java.util.List < PodRiskList> podRiskList) {
+        public Builder podRiskList(java.util.List<PodRiskList> podRiskList) {
             this.podRiskList = podRiskList;
             return this;
         }

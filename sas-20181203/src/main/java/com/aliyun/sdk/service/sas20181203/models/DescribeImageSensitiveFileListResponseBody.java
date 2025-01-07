@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SensitiveFileList")
-    private java.util.List < SensitiveFileList> sensitiveFileList;
+    private java.util.List<SensitiveFileList> sensitiveFileList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -89,7 +94,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     /**
      * @return sensitiveFileList
      */
-    public java.util.List < SensitiveFileList> getSensitiveFileList() {
+    public java.util.List<SensitiveFileList> getSensitiveFileList() {
         return this.sensitiveFileList;
     }
 
@@ -106,7 +111,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         private String message; 
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < SensitiveFileList> sensitiveFileList; 
+        private java.util.List<SensitiveFileList> sensitiveFileList; 
         private Boolean success; 
 
         /**
@@ -164,7 +169,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the sensitive files.</p>
          */
-        public Builder sensitiveFileList(java.util.List < SensitiveFileList> sensitiveFileList) {
+        public Builder sensitiveFileList(java.util.List<SensitiveFileList> sensitiveFileList) {
             this.sensitiveFileList = sensitiveFileList;
             return this;
         }
@@ -369,6 +374,9 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveFileName")
         private String sensitiveFileName;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private Integer status;
+
         @com.aliyun.core.annotation.NameInMap("UnprocessedNum")
         private Integer unprocessedNum;
 
@@ -383,6 +391,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.sensitiveFileKey = builder.sensitiveFileKey;
             this.sensitiveFileName = builder.sensitiveFileName;
+            this.status = builder.status;
             this.unprocessedNum = builder.unprocessedNum;
         }
 
@@ -465,6 +474,13 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return unprocessedNum
          */
         public Integer getUnprocessedNum() {
@@ -482,6 +498,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             private String riskLevel; 
             private String sensitiveFileKey; 
             private String sensitiveFileName; 
+            private Integer status; 
             private Integer unprocessedNum; 
 
             /**
@@ -710,6 +727,14 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
              */
             public Builder sensitiveFileName(String sensitiveFileName) {
                 this.sensitiveFileName = sensitiveFileName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 

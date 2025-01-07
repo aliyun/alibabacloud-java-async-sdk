@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,13 +96,13 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         private String clusterName;
 
         @com.aliyun.core.annotation.NameInMap("ImageList")
-        private java.util.List < String > imageList;
+        private java.util.List<String> imageList;
 
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < String > tagList;
+        private java.util.List<String> tagList;
 
         @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
@@ -152,7 +157,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         /**
          * @return imageList
          */
-        public java.util.List < String > getImageList() {
+        public java.util.List<String> getImageList() {
             return this.imageList;
         }
 
@@ -166,7 +171,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < String > getTagList() {
+        public java.util.List<String> getTagList() {
             return this.tagList;
         }
 
@@ -195,9 +200,9 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             private String appName; 
             private String clusterId; 
             private String clusterName; 
-            private java.util.List < String > imageList; 
+            private java.util.List<String> imageList; 
             private String namespace; 
-            private java.util.List < String > tagList; 
+            private java.util.List<String> tagList; 
             private Long targetId; 
             private String targetName; 
             private String targetType; 
@@ -238,7 +243,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the images of the network object.</p>
              */
-            public Builder imageList(java.util.List < String > imageList) {
+            public Builder imageList(java.util.List<String> imageList) {
                 this.imageList = imageList;
                 return this;
             }
@@ -257,7 +262,7 @@ public class GetInterceptionTargetDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the labels specified for the network object.</p>
              */
-            public Builder tagList(java.util.List < String > tagList) {
+            public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;
                 return this;
             }

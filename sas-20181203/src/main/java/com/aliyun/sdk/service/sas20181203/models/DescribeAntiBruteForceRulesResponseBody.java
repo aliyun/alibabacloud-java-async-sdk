@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     private DescribeAntiBruteForceRulesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the details of the defense rule.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -248,7 +253,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         private Integer span;
 
         @com.aliyun.core.annotation.NameInMap("UuidList")
-        private java.util.List < String > uuidList;
+        private java.util.List<String> uuidList;
 
         private Rules(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
@@ -337,7 +342,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         /**
          * @return uuidList
          */
-        public java.util.List < String > getUuidList() {
+        public java.util.List<String> getUuidList() {
             return this.uuidList;
         }
 
@@ -351,7 +356,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer machineCount; 
             private String name; 
             private Integer span; 
-            private java.util.List < String > uuidList; 
+            private java.util.List<String> uuidList; 
 
             /**
              * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
@@ -462,7 +467,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the UUIDs of servers to which the defense rule is applied.</p>
              */
-            public Builder uuidList(java.util.List < String > uuidList) {
+            public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
                 return this;
             }

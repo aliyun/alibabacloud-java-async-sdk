@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -465,10 +470,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
      */
     public static class ClusterNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Edge")
-        private java.util.List < Edge> edge;
+        private java.util.List<Edge> edge;
 
         @com.aliyun.core.annotation.NameInMap("Node")
-        private java.util.List < Node> node;
+        private java.util.List<Node> node;
 
         private ClusterNetwork(Builder builder) {
             this.edge = builder.edge;
@@ -486,25 +491,25 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * @return edge
          */
-        public java.util.List < Edge> getEdge() {
+        public java.util.List<Edge> getEdge() {
             return this.edge;
         }
 
         /**
          * @return node
          */
-        public java.util.List < Node> getNode() {
+        public java.util.List<Node> getNode() {
             return this.node;
         }
 
         public static final class Builder {
-            private java.util.List < Edge> edge; 
-            private java.util.List < Node> node; 
+            private java.util.List<Edge> edge; 
+            private java.util.List<Node> node; 
 
             /**
              * <p>An array that consists of information about the topology edge.</p>
              */
-            public Builder edge(java.util.List < Edge> edge) {
+            public Builder edge(java.util.List<Edge> edge) {
                 this.edge = edge;
                 return this;
             }
@@ -512,7 +517,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             /**
              * <p>An array that consists of information about the node.</p>
              */
-            public Builder node(java.util.List < Node> node) {
+            public Builder node(java.util.List<Node> node) {
                 this.node = node;
                 return this;
             }

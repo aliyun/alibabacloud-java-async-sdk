@@ -717,6 +717,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to check whether the remaining quota of the vulnerability fixing feature is sufficient in free trial scenarios. This operation does not trigger vulnerability fixing.</p>
+     * 
      * @param request the request parameters of CheckTrialFixCount  CheckTrialFixCountRequest
      * @return CheckTrialFixCountResponse
      */
@@ -1302,6 +1305,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * @param request the request parameters of CreateMonitorAccount  CreateMonitorAccountRequest
      * @return CreateMonitorAccountResponse
      */
@@ -1449,6 +1455,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * @param request the request parameters of CreateRdDefaultSyncList  CreateRdDefaultSyncListRequest
      * @return CreateRdDefaultSyncListResponse
      */
@@ -2893,7 +2902,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @param request  the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
+     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @description This operation will be discontinued soon. You must call the [GetAssetDetailByUuid](~~GetAssetDetailByUuid~~) operation to query the details of the server.
+     * 
+     * @param request the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
      * @return DescribeAssetDetailByUuidResponse
      */
     @Deprecated
@@ -2978,24 +2989,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAssetsSecurityEventSummaryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DescribeAttachRecords  DescribeAttachRecordsRequest
-     * @return DescribeAttachRecordsResponse
-     */
-    @Override
-    public CompletableFuture<DescribeAttachRecordsResponse> describeAttachRecords(DescribeAttachRecordsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAttachRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAttachRecordsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeAttachRecordsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5373,24 +5366,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeImageScanAuthorization  DescribeImageScanAuthorizationRequest
-     * @return DescribeImageScanAuthorizationResponse
-     */
-    @Override
-    public CompletableFuture<DescribeImageScanAuthorizationResponse> describeImageScanAuthorization(DescribeImageScanAuthorizationRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeImageScanAuthorization").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeImageScanAuthorizationResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeImageScanAuthorizationResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of DescribeImageSensitiveFileByKey  DescribeImageSensitiveFileByKeyRequest
      * @return DescribeImageSensitiveFileByKeyResponse
      */
@@ -7374,24 +7349,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeUserLayoutAuthorization  DescribeUserLayoutAuthorizationRequest
-     * @return DescribeUserLayoutAuthorizationResponse
-     */
-    @Override
-    public CompletableFuture<DescribeUserLayoutAuthorizationResponse> describeUserLayoutAuthorization(DescribeUserLayoutAuthorizationRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeUserLayoutAuthorization").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeUserLayoutAuthorizationResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeUserLayoutAuthorizationResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of DescribeUserSetting  DescribeUserSettingRequest
      * @return DescribeUserSettingResponse
      */
@@ -8973,25 +8930,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.  * @param request  the request parameters of GetClientInstallationStatistic  GetClientInstallationStatisticRequest
-     * @return GetClientInstallationStatisticResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<GetClientInstallationStatisticResponse> getClientInstallationStatistic(GetClientInstallationStatisticRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetClientInstallationStatistic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetClientInstallationStatisticResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetClientInstallationStatisticResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of GetClientRatioStatistic  GetClientRatioStatisticRequest
      * @return GetClientRatioStatisticResponse
      */
@@ -9967,6 +9905,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
+     * 
      * @param request the request parameters of GetRdTree  GetRdTreeRequest
      * @return GetRdTreeResponse
      */
@@ -10165,6 +10106,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetTenantCheckAvailable  GetTenantCheckAvailableRequest
+     * @return GetTenantCheckAvailableResponse
+     */
+    @Override
+    public CompletableFuture<GetTenantCheckAvailableResponse> getTenantCheckAvailable(GetTenantCheckAvailableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTenantCheckAvailable").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTenantCheckAvailableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTenantCheckAvailableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUserLang  GetUserLangRequest
      * @return GetUserLangResponse
      */
@@ -10309,9 +10268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of IgnoreHcCheckWarnings  IgnoreHcCheckWarningsRequest
+     * @deprecated OpenAPI IgnoreHcCheckWarnings is deprecated, please use Sas::2018-12-03::IgnoreCheckItems instead.  * @param request  the request parameters of IgnoreHcCheckWarnings  IgnoreHcCheckWarningsRequest
      * @return IgnoreHcCheckWarningsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<IgnoreHcCheckWarningsResponse> ignoreHcCheckWarnings(IgnoreHcCheckWarningsRequest request) {
         try {
@@ -10416,24 +10376,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<InstallPmAgentResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of InstallRaspAttach  InstallRaspAttachRequest
-     * @return InstallRaspAttachResponse
-     */
-    @Override
-    public CompletableFuture<InstallRaspAttachResponse> installRaspAttach(InstallRaspAttachRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InstallRaspAttach").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InstallRaspAttachResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<InstallRaspAttachResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -11037,6 +10979,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detection results of files only if the files are pushed to the cloud for detection and in the form of packages. You can repeatedly query the detection results of files within 5 hours because the results are retained for 5 hours. For more information about how to push a file to the cloud for detection, see the CreateFileDetect operation. For more information about how to query file detection results, see the GetFileDetectResult operation.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only hexadecimal MD5 hash values of complete file content are supported. You must calculate the required MD5 hash value before you call this operation.
+     * To calculate the hexadecimal MD5 hash value for a file, you can perform the following steps:
+     * 1\. Use the MD5 algorithm to encrypt data and generate a 128-bit hash value. You can use a tool such as MessageDigest for Java and the hashlib module for Python.
+     * 2\. Convert the hash value to a hexadecimal string. You can use a tool such as Codec for Java and the hex() function for Python.</p>
+     * 
      * @param request the request parameters of ListCompressFileDetectResult  ListCompressFileDetectResultRequest
      * @return ListCompressFileDetectResultResponse
      */
@@ -11610,6 +11559,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListOpaClusterStrategyNewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOperationProcess  ListOperationProcessRequest
+     * @return ListOperationProcessResponse
+     */
+    @Override
+    public CompletableFuture<ListOperationProcessResponse> listOperationProcess(ListOperationProcessRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListOperationProcess").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationProcessResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationProcessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListOperationProcessDetail  ListOperationProcessDetailRequest
+     * @return ListOperationProcessDetailResponse
+     */
+    @Override
+    public CompletableFuture<ListOperationProcessDetailResponse> listOperationProcessDetail(ListOperationProcessDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListOperationProcessDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationProcessDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationProcessDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -12290,6 +12275,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.</p>
+     * 
      * @param request the request parameters of ModifyClearLogstoreStorage  ModifyClearLogstoreStorageRequest
      * @return ModifyClearLogstoreStorageResponse
      */
@@ -12965,7 +12953,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated  * @description This operation is phased out. You can use the ChangeCheckConfig operation.
+     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated, please use Sas::2018-12-03::ChangeCheckConfig instead.  * @description This operation is phased out. You can use the ChangeCheckConfig operation.
      * 
      * @param request the request parameters of ModifySecurityCheckScheduleConfig  ModifySecurityCheckScheduleConfigRequest
      * @return ModifySecurityCheckScheduleConfigResponse
@@ -13773,6 +13761,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the PublicPreCheckImageScanTask operation to estimate the quota for container image scan to be consumed by the task. This ensures that you know the quota to be consumed before you perform the task. If the remaining quota for container image scan is less than the quota to be consumed by the task, you must purchase a sufficient quota. This prevents the task from being stopped due to an insufficient quota.
+     * If you do not specify the optional parameters when you call this operation, the total number of protected images and the quota for container image scan to be consumed by scanning all the protected images are queried. If you specify the optional parameters, the number of images that meet the specified conditions and the quota for container image scan to be consumed by scanning the images are queried.</p>
+     * 
      * @param request the request parameters of PublicPreCheckImageScanTask  PublicPreCheckImageScanTaskRequest
      * @return PublicPreCheckImageScanTaskResponse
      */
@@ -14573,7 +14565,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated  * @param request  the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
+     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated, please use Sas::2018-12-03::SubmitCheck instead.  * @param request  the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
      * @return StartBaselineSecurityCheckResponse
      */
     @Deprecated
@@ -14736,6 +14728,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitTenantCheck  SubmitTenantCheckRequest
+     * @return SubmitTenantCheckResponse
+     */
+    @Override
+    public CompletableFuture<SubmitTenantCheckResponse> submitTenantCheck(SubmitTenantCheckRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitTenantCheck").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitTenantCheckResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitTenantCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TriggerCheck  TriggerCheckRequest
      * @return TriggerCheckResponse
      */
@@ -14831,24 +14841,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UninstallBackupClientResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of UninstallRaspAttach  UninstallRaspAttachRequest
-     * @return UninstallRaspAttachResponse
-     */
-    @Override
-    public CompletableFuture<UninstallRaspAttachResponse> uninstallRaspAttach(UninstallRaspAttachRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UninstallRaspAttach").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UninstallRaspAttachResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UninstallRaspAttachResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

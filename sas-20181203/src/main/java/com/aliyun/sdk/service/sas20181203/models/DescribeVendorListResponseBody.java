@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeVendorListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VendorNameList")
-    private java.util.List < String > vendorNameList;
+    private java.util.List<String> vendorNameList;
 
     private DescribeVendorListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeVendorListResponseBody extends TeaModel {
     /**
      * @return vendorNameList
      */
-    public java.util.List < String > getVendorNameList() {
+    public java.util.List<String> getVendorNameList() {
         return this.vendorNameList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > vendorNameList; 
+        private java.util.List<String> vendorNameList; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class DescribeVendorListResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the service providers.</p>
          */
-        public Builder vendorNameList(java.util.List < String > vendorNameList) {
+        public Builder vendorNameList(java.util.List<String> vendorNameList) {
             this.vendorNameList = vendorNameList;
             return this;
         }

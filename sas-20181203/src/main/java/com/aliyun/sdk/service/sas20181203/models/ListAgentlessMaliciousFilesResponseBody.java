@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,14 +62,14 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The malicious files.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -317,7 +322,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
@@ -359,7 +364,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         private String maliciousType;
 
         @com.aliyun.core.annotation.NameInMap("Notes")
-        private java.util.List < Notes> notes;
+        private java.util.List<Notes> notes;
 
         @com.aliyun.core.annotation.NameInMap("OperateResult")
         private String operateResult;
@@ -418,7 +423,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -516,7 +521,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         /**
          * @return notes
          */
-        public java.util.List < Notes> getNotes() {
+        public java.util.List<Notes> getNotes() {
             return this.notes;
         }
 
@@ -570,7 +575,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String downloadUrl; 
             private Long filePath; 
             private Long firstScanTimestamp; 
@@ -584,7 +589,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             private String maliciousMd5; 
             private String maliciousName; 
             private String maliciousType; 
-            private java.util.List < Notes> notes; 
+            private java.util.List<Notes> notes; 
             private String operateResult; 
             private String operateTimestamp; 
             private String partition; 
@@ -596,7 +601,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             /**
              * <p>The details of the alert event.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
@@ -752,7 +757,7 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
             /**
              * <p>The remarks.</p>
              */
-            public Builder notes(java.util.List < Notes> notes) {
+            public Builder notes(java.util.List<Notes> notes) {
                 this.notes = notes;
                 return this;
             }

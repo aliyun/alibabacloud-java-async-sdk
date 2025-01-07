@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
     private String groupName;
 
     @com.aliyun.core.annotation.NameInMap("Groups")
-    private java.util.List < String > groups;
+    private java.util.List<String> groups;
 
     @com.aliyun.core.annotation.NameInMap("MachineNum")
     private Integer machineNum;
@@ -104,7 +109,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < String > getGroups() {
+    public java.util.List<String> getGroups() {
         return this.groups;
     }
 
@@ -129,7 +134,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         private Integer groupIndex; 
         private Integer groupLevel; 
         private String groupName; 
-        private java.util.List < String > groups; 
+        private java.util.List<String> groups; 
         private Integer machineNum; 
         private String requestId; 
 
@@ -206,7 +211,7 @@ public class DescribeGroupStructResponseBody extends TeaModel {
         /**
          * <p>An array that consists of child groups.</p>
          */
-        public Builder groups(java.util.List < String > groups) {
+        public Builder groups(java.util.List<String> groups) {
             this.groups = groups;
             return this;
         }

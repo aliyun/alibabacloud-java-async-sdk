@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Machines")
-    private java.util.List < Machines> machines;
+    private java.util.List<Machines> machines;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     /**
      * @return machines
      */
-    public java.util.List < Machines> getMachines() {
+    public java.util.List<Machines> getMachines() {
         return this.machines;
     }
 
@@ -46,13 +51,13 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Machines> machines; 
+        private java.util.List<Machines> machines; 
         private String requestId; 
 
         /**
          * <p>An array consisting of the servers to which the anti-ransomware policy is applied.</p>
          */
-        public Builder machines(java.util.List < Machines> machines) {
+        public Builder machines(java.util.List<Machines> machines) {
             this.machines = machines;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("GroupedFileds")
-    private java.util.List < GroupedFileds> groupedFileds;
+    private java.util.List<GroupedFileds> groupedFileds;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -53,7 +58,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
     /**
      * @return groupedFileds
      */
-    public java.util.List < GroupedFileds> getGroupedFileds() {
+    public java.util.List<GroupedFileds> getGroupedFileds() {
         return this.groupedFileds;
     }
 
@@ -80,7 +85,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < GroupedFileds> groupedFileds; 
+        private java.util.List<GroupedFileds> groupedFileds; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the statistics of the asset tags.</p>
          */
-        public Builder groupedFileds(java.util.List < GroupedFileds> groupedFileds) {
+        public Builder groupedFileds(java.util.List<GroupedFileds> groupedFileds) {
             this.groupedFileds = groupedFileds;
             return this;
         }

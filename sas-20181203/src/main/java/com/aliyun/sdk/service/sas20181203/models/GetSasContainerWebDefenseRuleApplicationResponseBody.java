@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseAppList")
-    private java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList;
+    private java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     /**
      * @return containerWebDefenseAppList
      */
-    public java.util.List < ContainerWebDefenseAppList> getContainerWebDefenseAppList() {
+    public java.util.List<ContainerWebDefenseAppList> getContainerWebDefenseAppList() {
         return this.containerWebDefenseAppList;
     }
 
@@ -46,13 +51,13 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     }
 
     public static final class Builder {
-        private java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList; 
+        private java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList; 
         private String requestId; 
 
         /**
          * <p>The applications.</p>
          */
-        public Builder containerWebDefenseAppList(java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList) {
+        public Builder containerWebDefenseAppList(java.util.List<ContainerWebDefenseAppList> containerWebDefenseAppList) {
             this.containerWebDefenseAppList = containerWebDefenseAppList;
             return this;
         }

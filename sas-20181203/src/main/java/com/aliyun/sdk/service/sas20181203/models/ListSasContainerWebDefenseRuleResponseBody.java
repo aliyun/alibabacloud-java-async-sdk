@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseRuleList")
-    private java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList;
+    private java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     /**
      * @return containerWebDefenseRuleList
      */
-    public java.util.List < ContainerWebDefenseRuleList> getContainerWebDefenseRuleList() {
+    public java.util.List<ContainerWebDefenseRuleList> getContainerWebDefenseRuleList() {
         return this.containerWebDefenseRuleList;
     }
 
@@ -57,14 +62,14 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList; 
+        private java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The rules for container tamper-proofing.</p>
          */
-        public Builder containerWebDefenseRuleList(java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList) {
+        public Builder containerWebDefenseRuleList(java.util.List<ContainerWebDefenseRuleList> containerWebDefenseRuleList) {
             this.containerWebDefenseRuleList = containerWebDefenseRuleList;
             return this;
         }
@@ -129,7 +134,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         private String includeFileType;
 
         @com.aliyun.core.annotation.NameInMap("ProcessPathList")
-        private java.util.List < String > processPathList;
+        private java.util.List<String> processPathList;
 
         private PathConfDTOList(Builder builder) {
             this.backupPath = builder.backupPath;
@@ -218,7 +223,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         /**
          * @return processPathList
          */
-        public java.util.List < String > getProcessPathList() {
+        public java.util.List<String> getProcessPathList() {
             return this.processPathList;
         }
 
@@ -232,7 +237,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Integer guardType; 
             private String includeFile; 
             private String includeFileType; 
-            private java.util.List < String > processPathList; 
+            private java.util.List<String> processPathList; 
 
             /**
              * <p>The backup paths.</p>
@@ -344,7 +349,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             /**
              * <p>The processes that are added to the whitelist.</p>
              */
-            public Builder processPathList(java.util.List < String > processPathList) {
+            public Builder processPathList(java.util.List<String> processPathList) {
                 this.processPathList = processPathList;
                 return this;
             }
@@ -379,7 +384,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("PathConfDTOList")
-        private java.util.List < PathConfDTOList> pathConfDTOList;
+        private java.util.List<PathConfDTOList> pathConfDTOList;
 
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
@@ -444,7 +449,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
         /**
          * @return pathConfDTOList
          */
-        public java.util.List < PathConfDTOList> getPathConfDTOList() {
+        public java.util.List<PathConfDTOList> getPathConfDTOList() {
             return this.pathConfDTOList;
         }
 
@@ -468,7 +473,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
-            private java.util.List < PathConfDTOList> pathConfDTOList; 
+            private java.util.List<PathConfDTOList> pathConfDTOList; 
             private String ruleName; 
             private Integer ruleStatus; 
 
@@ -530,7 +535,7 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
             /**
              * <p>The paths that are protected.</p>
              */
-            public Builder pathConfDTOList(java.util.List < PathConfDTOList> pathConfDTOList) {
+            public Builder pathConfDTOList(java.util.List<PathConfDTOList> pathConfDTOList) {
                 this.pathConfDTOList = pathConfDTOList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("List")
-    private java.util.List < List> list;
+    private java.util.List<List> list;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     /**
      * @return list
      */
-    public java.util.List < List> getList() {
+    public java.util.List<List> getList() {
         return this.list;
     }
 
@@ -57,14 +62,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < List> list; 
+        private java.util.List<List> list; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The risk statistics of check items.</p>
          */
-        public Builder list(java.util.List < List> list) {
+        public Builder list(java.util.List<List> list) {
             this.list = list;
             return this;
         }
@@ -105,10 +110,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String advice;
 
         @com.aliyun.core.annotation.NameInMap("AffiliatedRiskTypes")
-        private java.util.List < String > affiliatedRiskTypes;
+        private java.util.List<String> affiliatedRiskTypes;
 
         @com.aliyun.core.annotation.NameInMap("AffiliatedRisks")
-        private java.util.List < String > affiliatedRisks;
+        private java.util.List<String> affiliatedRisks;
 
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -132,7 +137,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("EnableRisks")
-        private java.util.List < String > enableRisks;
+        private java.util.List<String> enableRisks;
 
         @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
@@ -178,14 +183,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         /**
          * @return affiliatedRiskTypes
          */
-        public java.util.List < String > getAffiliatedRiskTypes() {
+        public java.util.List<String> getAffiliatedRiskTypes() {
             return this.affiliatedRiskTypes;
         }
 
         /**
          * @return affiliatedRisks
          */
-        public java.util.List < String > getAffiliatedRisks() {
+        public java.util.List<String> getAffiliatedRisks() {
             return this.affiliatedRisks;
         }
 
@@ -241,7 +246,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         /**
          * @return enableRisks
          */
-        public java.util.List < String > getEnableRisks() {
+        public java.util.List<String> getEnableRisks() {
             return this.enableRisks;
         }
 
@@ -268,8 +273,8 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String advice; 
-            private java.util.List < String > affiliatedRiskTypes; 
-            private java.util.List < String > affiliatedRisks; 
+            private java.util.List<String> affiliatedRiskTypes; 
+            private java.util.List<String> affiliatedRisks; 
             private String alias; 
             private Long checkId; 
             private String checkItem; 
@@ -277,7 +282,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private String checkType; 
             private Boolean containerCheckItem; 
             private String description; 
-            private java.util.List < String > enableRisks; 
+            private java.util.List<String> enableRisks; 
             private String riskType; 
             private Integer status; 
             private Integer warningMachineCount; 
@@ -296,7 +301,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             /**
              * <p>The types of the baselines to which the check item belongs.</p>
              */
-            public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
+            public Builder affiliatedRiskTypes(java.util.List<String> affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
                 return this;
             }
@@ -304,7 +309,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             /**
              * <p>The baselines to which the check item belongs.</p>
              */
-            public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
+            public Builder affiliatedRisks(java.util.List<String> affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
                 return this;
             }
@@ -398,7 +403,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             /**
              * <p>The baselines in which the check item is enabled.</p>
              */
-            public Builder enableRisks(java.util.List < String > enableRisks) {
+            public Builder enableRisks(java.util.List<String> enableRisks) {
                 this.enableRisks = enableRisks;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -86,7 +91,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,7 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +110,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +121,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52870893-48A7-5A9E-9E05-6253E5B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,14 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +293,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * Advice.
+             * <p>The suggestion on how to handle the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>do not use root user</p>
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -280,7 +304,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the suggestion on how to handle the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the root user has excessive permissions</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,7 +315,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LayerCmd.
+             * <p>The image build command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user root</p>
              */
             public Builder layerCmd(String layerCmd) {
                 this.layerCmd = layerCmd;
@@ -296,7 +326,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LayerDigest.
+             * <p>The digest of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6ec898e6274f942e0e4a053eff1c3119026a6704e56cff206b2cec71f636****</p>
              */
             public Builder layerDigest(String layerDigest) {
                 this.layerDigest = layerDigest;
@@ -304,7 +337,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Promt.
+             * <p>The prompt message on the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the root user has excessive permissions</p>
              */
             public Builder promt(String promt) {
                 this.promt = promt;
@@ -312,7 +348,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskClass.
+             * <p>The type key of the risk rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder riskClass(String riskClass) {
                 this.riskClass = riskClass;
@@ -320,7 +359,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskClassName.
+             * <p>The type name of the risk rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder riskClassName(String riskClassName) {
                 this.riskClassName = riskClassName;
@@ -328,7 +370,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskKey.
+             * <p>The key of the risk rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no_user</p>
              */
             public Builder riskKey(String riskKey) {
                 this.riskKey = riskKey;
@@ -336,7 +381,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskKeyName.
+             * <p>The name of the risk rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no_user</p>
              */
             public Builder riskKeyName(String riskKeyName) {
                 this.riskKeyName = riskKeyName;
@@ -344,7 +392,15 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -415,7 +471,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * <p>The page number. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -423,7 +482,13 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+             * <blockquote>
+             * <p> We recommend that you do not leave this parameter empty.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -431,7 +496,10 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -453,7 +521,7 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
@@ -474,7 +542,7 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -486,19 +554,19 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private PageInfo pageInfo; 
 
             /**
-             * List.
+             * <p>The risks.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * PageInfo.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

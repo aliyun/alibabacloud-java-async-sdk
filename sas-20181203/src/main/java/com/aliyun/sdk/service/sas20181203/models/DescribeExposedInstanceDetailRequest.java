@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeExposedInstanceDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
@@ -23,6 +32,7 @@ public class DescribeExposedInstanceDetailRequest extends Request {
 
     private DescribeExposedInstanceDetailRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.uuid = builder.uuid;
     }
@@ -41,6 +51,13 @@ public class DescribeExposedInstanceDetailRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return resourceDirectoryAccountId
      */
     public Long getResourceDirectoryAccountId() {
@@ -55,6 +72,7 @@ public class DescribeExposedInstanceDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeExposedInstanceDetailRequest, Builder> {
+        private String lang; 
         private Long resourceDirectoryAccountId; 
         private String uuid; 
 
@@ -64,9 +82,26 @@ public class DescribeExposedInstanceDetailRequest extends Request {
 
         private Builder(DescribeExposedInstanceDetailRequest request) {
             super(request);
+            this.lang = request.lang;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         /**
          * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
@@ -84,9 +119,9 @@ public class DescribeExposedInstanceDetailRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server that is exposed on the Internet.</p>
+         * <p>The UUID of the server or the instance ID of the database that is exposed on the Internet.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/198153.html">DescribeExposedInstanceList</a> operation to query the UUIDs of servers.</p>
+         * <p> You can call the <a href="~~DescribeExposedInstanceList~~">DescribeExposedInstanceList</a> operation to query the UUIDs of servers or instance IDs of databases.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

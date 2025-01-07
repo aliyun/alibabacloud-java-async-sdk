@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("ProxyList")
-    private java.util.List < ProxyList> proxyList;
+    private java.util.List<ProxyList> proxyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
     /**
      * @return proxyList
      */
-    public java.util.List < ProxyList> getProxyList() {
+    public java.util.List<ProxyList> getProxyList() {
         return this.proxyList;
     }
 
@@ -58,11 +63,11 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < ProxyList> proxyList; 
+        private java.util.List<ProxyList> proxyList; 
         private String requestId; 
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,15 +75,18 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyList.
+         * <p>The information about the proxy clusters.</p>
          */
-        public Builder proxyList(java.util.List < ProxyList> proxyList) {
+        public Builder proxyList(java.util.List<ProxyList> proxyList) {
             this.proxyList = proxyList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75801E5D-E2EB-5C1D-B65D-2F7D2B00EF93</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,7 +168,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -168,7 +179,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -176,7 +190,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -184,7 +201,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -327,7 +347,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * ClientCount.
+             * <p>The number of servers that are connected to the proxy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder clientCount(Integer clientCount) {
                 this.clientCount = clientCount;
@@ -335,7 +358,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * <p>The version of the proxy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy_01_05</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -343,7 +369,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf61q03boqhhmeai1XXX</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -351,7 +380,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -359,7 +391,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.76.XXX.XXX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -367,7 +402,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.23.XXX.XXX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -375,7 +413,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyUuid.
+             * <p>The UUID of the proxy node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612a18e</p>
              */
             public Builder proxyUuid(String proxyUuid) {
                 this.proxyUuid = proxyUuid;
@@ -383,7 +424,14 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the proxy server. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong></li>
+             * <li><strong>offline</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -391,7 +439,10 @@ public class DescribeHybridProxyListResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the server that is connected to the proxy instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59a9d158-b2f0-4766-a893-ae67b943XXXX</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

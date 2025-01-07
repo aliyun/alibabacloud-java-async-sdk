@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetCloudAssetDetailRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAssetInstances")
-    private java.util.List < CloudAssetInstances> cloudAssetInstances;
+    private java.util.List<CloudAssetInstances> cloudAssetInstances;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendor")
@@ -66,7 +71,7 @@ public class GetCloudAssetDetailRequest extends Request {
     /**
      * @return cloudAssetInstances
      */
-    public java.util.List < CloudAssetInstances> getCloudAssetInstances() {
+    public java.util.List<CloudAssetInstances> getCloudAssetInstances() {
         return this.cloudAssetInstances;
     }
 
@@ -80,7 +85,7 @@ public class GetCloudAssetDetailRequest extends Request {
     public static final class Builder extends Request.Builder<GetCloudAssetDetailRequest, Builder> {
         private Integer assetSubType; 
         private Integer assetType; 
-        private java.util.List < CloudAssetInstances> cloudAssetInstances; 
+        private java.util.List<CloudAssetInstances> cloudAssetInstances; 
         private Integer vendor; 
 
         private Builder() {
@@ -129,7 +134,7 @@ public class GetCloudAssetDetailRequest extends Request {
          * <li><strong>19</strong>: PolarDB.</li>
          * <li><strong>20</strong>: ApsaraDB RDS for PostgreSQL.</li>
          * <li><strong>21</strong>: Microservices Engine (MSE).</li>
-         * <li><strong>22</strong>: Apsara File Storage NAS (NAS).</li>
+         * <li><strong>22</strong>: File Storage NAS (NAS).</li>
          * <li><strong>23</strong>: Data Security Center (DSC).</li>
          * <li><strong>24</strong>: Elastic IP Address (EIP).</li>
          * <li><strong>25</strong>: Identity as a Service (IDaaS)-Employee Identity and Access Management (EIAM).</li>
@@ -149,7 +154,7 @@ public class GetCloudAssetDetailRequest extends Request {
         /**
          * <p>The details of the assets.</p>
          */
-        public Builder cloudAssetInstances(java.util.List < CloudAssetInstances> cloudAssetInstances) {
+        public Builder cloudAssetInstances(java.util.List<CloudAssetInstances> cloudAssetInstances) {
             this.putQueryParameter("CloudAssetInstances", cloudAssetInstances);
             this.cloudAssetInstances = cloudAssetInstances;
             return this;

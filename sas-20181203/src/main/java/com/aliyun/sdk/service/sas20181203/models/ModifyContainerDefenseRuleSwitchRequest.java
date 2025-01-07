@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyContainerDefenseRuleSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
-    private java.util.List < Long > ruleIds;
+    private java.util.List<Long> ruleIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleSwitch")
@@ -42,7 +47,7 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < Long > getRuleIds() {
+    public java.util.List<Long> getRuleIds() {
         return this.ruleIds;
     }
 
@@ -54,7 +59,7 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyContainerDefenseRuleSwitchRequest, Builder> {
-        private java.util.List < Long > ruleIds; 
+        private java.util.List<Long> ruleIds; 
         private Integer ruleSwitch; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
         /**
          * <p>The IDs of the rules.</p>
          */
-        public Builder ruleIds(java.util.List < Long > ruleIds) {
+        public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;

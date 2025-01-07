@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -265,7 +270,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         private Long authId;
 
         @com.aliyun.core.annotation.NameInMap("AuthModules")
-        private java.util.List < AuthModules> authModules;
+        private java.util.List<AuthModules> authModules;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -318,7 +323,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         /**
          * @return authModules
          */
-        public java.util.List < AuthModules> getAuthModules() {
+        public java.util.List<AuthModules> getAuthModules() {
             return this.authModules;
         }
 
@@ -360,7 +365,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public static final class Builder {
             private String akType; 
             private Long authId; 
-            private java.util.List < AuthModules> authModules; 
+            private java.util.List<AuthModules> authModules; 
             private String message; 
             private String secretId; 
             private Integer serviceStatus; 
@@ -396,7 +401,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             /**
              * <p>The modules that are associated with the AccessKey pair.</p>
              */
-            public Builder authModules(java.util.List < AuthModules> authModules) {
+            public Builder authModules(java.util.List<AuthModules> authModules) {
                 this.authModules = authModules;
                 return this;
             }

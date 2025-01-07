@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListObjectScanEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
@@ -38,7 +43,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,14 +62,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private PageInfo pageInfo; 
         private String requestId; 
 
         /**
          * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -247,7 +252,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         private String bucketName;
 
         @com.aliyun.core.annotation.NameInMap("Details")
-        private java.util.List < Details> details;
+        private java.util.List<Details> details;
 
         @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private String displaySandboxResult;
@@ -324,7 +329,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         /**
          * @return details
          */
-        public java.util.List < Details> getDetails() {
+        public java.util.List<Details> getDetails() {
             return this.details;
         }
 
@@ -421,7 +426,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bucketName; 
-            private java.util.List < Details> details; 
+            private java.util.List<Details> details; 
             private String displaySandboxResult; 
             private Long eventId; 
             private String eventName; 
@@ -450,7 +455,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             /**
              * <p>The details of the file.</p>
              */
-            public Builder details(java.util.List < Details> details) {
+            public Builder details(java.util.List<Details> details) {
                 this.details = details;
                 return this;
             }
@@ -515,7 +520,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
-             * HasSubEvent.
+             * <p>Indicates whether an alert is generated for the file extracted from the package. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasSubEvent(Boolean hasSubEvent) {
                 this.hasSubEvent = hasSubEvent;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -161,7 +166,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         private String conditionName;
 
         @com.aliyun.core.annotation.NameInMap("SupportedMisType")
-        private java.util.List < String > supportedMisType;
+        private java.util.List<String> supportedMisType;
 
         private Conditions(Builder builder) {
             this.conditionKey = builder.conditionKey;
@@ -194,14 +199,14 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * @return supportedMisType
          */
-        public java.util.List < String > getSupportedMisType() {
+        public java.util.List<String> getSupportedMisType() {
             return this.supportedMisType;
         }
 
         public static final class Builder {
             private String conditionKey; 
             private String conditionName; 
-            private java.util.List < String > supportedMisType; 
+            private java.util.List<String> supportedMisType; 
 
             /**
              * <p>The keyword of the condition. Valid values:</p>
@@ -232,7 +237,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             /**
              * <p>The matching types.</p>
              */
-            public Builder supportedMisType(java.util.List < String > supportedMisType) {
+            public Builder supportedMisType(java.util.List<String> supportedMisType) {
                 this.supportedMisType = supportedMisType;
                 return this;
             }
@@ -252,7 +257,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
      */
     public static class Operations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
@@ -277,7 +282,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -296,14 +301,14 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private String operationCode; 
             private String operationName; 
 
             /**
              * <p>The rule conditions.</p>
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -351,10 +356,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         private String eventType;
 
         @com.aliyun.core.annotation.NameInMap("Operations")
-        private java.util.List < Operations> operations;
+        private java.util.List<Operations> operations;
 
         @com.aliyun.core.annotation.NameInMap("Scenarios")
-        private java.util.List < String > scenarios;
+        private java.util.List<String> scenarios;
 
         private Data(Builder builder) {
             this.eventType = builder.eventType;
@@ -380,21 +385,21 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * @return operations
          */
-        public java.util.List < Operations> getOperations() {
+        public java.util.List<Operations> getOperations() {
             return this.operations;
         }
 
         /**
          * @return scenarios
          */
-        public java.util.List < String > getScenarios() {
+        public java.util.List<String> getScenarios() {
             return this.scenarios;
         }
 
         public static final class Builder {
             private String eventType; 
-            private java.util.List < Operations> operations; 
-            private java.util.List < String > scenarios; 
+            private java.util.List<Operations> operations; 
+            private java.util.List<String> scenarios; 
 
             /**
              * <p>The alert type.</p>
@@ -413,7 +418,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             /**
              * <p>The operations.</p>
              */
-            public Builder operations(java.util.List < Operations> operations) {
+            public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;
                 return this;
             }
@@ -421,7 +426,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
             /**
              * <p>The application scopes of the rules.</p>
              */
-            public Builder scenarios(java.util.List < String > scenarios) {
+            public Builder scenarios(java.util.List<String> scenarios) {
                 this.scenarios = scenarios;
                 return this;
             }

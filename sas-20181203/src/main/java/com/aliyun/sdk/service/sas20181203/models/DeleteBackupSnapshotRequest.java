@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteBackupSnapshotRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupRegionIdList")
-    private java.util.List < String > backupRegionIdList;
+    private java.util.List<String> backupRegionIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupSnapshotList")
-    private java.util.List < BackupSnapshotList> backupSnapshotList;
+    private java.util.List<BackupSnapshotList> backupSnapshotList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RetainLatestSnapshot")
@@ -47,14 +52,14 @@ public class DeleteBackupSnapshotRequest extends Request {
     /**
      * @return backupRegionIdList
      */
-    public java.util.List < String > getBackupRegionIdList() {
+    public java.util.List<String> getBackupRegionIdList() {
         return this.backupRegionIdList;
     }
 
     /**
      * @return backupSnapshotList
      */
-    public java.util.List < BackupSnapshotList> getBackupSnapshotList() {
+    public java.util.List<BackupSnapshotList> getBackupSnapshotList() {
         return this.backupSnapshotList;
     }
 
@@ -66,8 +71,8 @@ public class DeleteBackupSnapshotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteBackupSnapshotRequest, Builder> {
-        private java.util.List < String > backupRegionIdList; 
-        private java.util.List < BackupSnapshotList> backupSnapshotList; 
+        private java.util.List<String> backupRegionIdList; 
+        private java.util.List<BackupSnapshotList> backupSnapshotList; 
         private Boolean retainLatestSnapshot; 
 
         private Builder() {
@@ -84,7 +89,7 @@ public class DeleteBackupSnapshotRequest extends Request {
         /**
          * <p>The regions for backup.</p>
          */
-        public Builder backupRegionIdList(java.util.List < String > backupRegionIdList) {
+        public Builder backupRegionIdList(java.util.List<String> backupRegionIdList) {
             this.putQueryParameter("BackupRegionIdList", backupRegionIdList);
             this.backupRegionIdList = backupRegionIdList;
             return this;
@@ -93,7 +98,7 @@ public class DeleteBackupSnapshotRequest extends Request {
         /**
          * <p>The backup snapshots.</p>
          */
-        public Builder backupSnapshotList(java.util.List < BackupSnapshotList> backupSnapshotList) {
+        public Builder backupSnapshotList(java.util.List<BackupSnapshotList> backupSnapshotList) {
             this.putQueryParameter("BackupSnapshotList", backupSnapshotList);
             this.backupSnapshotList = backupSnapshotList;
             return this;
@@ -284,7 +289,7 @@ public class DeleteBackupSnapshotRequest extends Request {
              * <ul>
              * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files.</li>
              * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets.</li>
-             * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems.</li>
+             * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems.</li>
              * <li><strong>OTS_TABLE</strong>: Tablestore instances.</li>
              * </ul>
              * <p>This parameter is required.</p>

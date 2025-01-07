@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TargetList")
-    private java.util.List < TargetList> targetList;
+    private java.util.List<TargetList> targetList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
     /**
      * @return targetList
      */
-    public java.util.List < TargetList> getTargetList() {
+    public java.util.List<TargetList> getTargetList() {
         return this.targetList;
     }
 
@@ -58,7 +63,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TargetList> targetList; 
+        private java.util.List<TargetList> targetList; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the configurations.</p>
          */
-        public Builder targetList(java.util.List < TargetList> targetList) {
+        public Builder targetList(java.util.List<TargetList> targetList) {
             this.targetList = targetList;
             return this;
         }

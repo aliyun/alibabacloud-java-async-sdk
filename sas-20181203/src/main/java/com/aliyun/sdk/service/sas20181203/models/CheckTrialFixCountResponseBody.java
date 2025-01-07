@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,7 +103,14 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         private Boolean isTrial; 
 
         /**
-         * CanFix.
+         * <p>Indicates whether the vulnerability can be fixed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canFix(Boolean canFix) {
             this.canFix = canFix;
@@ -106,7 +118,10 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         }
 
         /**
-         * ExpendCount.
+         * <p>The quota usage required for the current fix operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder expendCount(Integer expendCount) {
             this.expendCount = expendCount;
@@ -114,7 +129,10 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         }
 
         /**
-         * RemainCount.
+         * <p>The quota that remains after the current fix operation is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder remainCount(Integer remainCount) {
             this.remainCount = remainCount;
@@ -122,7 +140,10 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         }
 
         /**
-         * RepairedCount.
+         * <p>The number of the vulnerabilities that are fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder repairedCount(Integer repairedCount) {
             this.repairedCount = repairedCount;
@@ -130,7 +151,10 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +162,14 @@ public class CheckTrialFixCountResponseBody extends TeaModel {
         }
 
         /**
-         * isTrial.
+         * <p>Indicates whether Security Center is in free trial. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTrial(Boolean isTrial) {
             this.isTrial = isTrial;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class ListOpaClusterStrategyNewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageName")
-    private java.util.List < String > imageName;
+    private java.util.List<String> imageName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Label")
-    private java.util.List < String > label;
+    private java.util.List<String> label;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -30,7 +35,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StrategyName")
-    private java.util.List < String > strategyName;
+    private java.util.List<String> strategyName;
 
     private ListOpaClusterStrategyNewRequest(Builder builder) {
         super(builder);
@@ -64,14 +69,14 @@ public class ListOpaClusterStrategyNewRequest extends Request {
     /**
      * @return imageName
      */
-    public java.util.List < String > getImageName() {
+    public java.util.List<String> getImageName() {
         return this.imageName;
     }
 
     /**
      * @return label
      */
-    public java.util.List < String > getLabel() {
+    public java.util.List<String> getLabel() {
         return this.label;
     }
 
@@ -85,16 +90,16 @@ public class ListOpaClusterStrategyNewRequest extends Request {
     /**
      * @return strategyName
      */
-    public java.util.List < String > getStrategyName() {
+    public java.util.List<String> getStrategyName() {
         return this.strategyName;
     }
 
     public static final class Builder extends Request.Builder<ListOpaClusterStrategyNewRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < String > imageName; 
-        private java.util.List < String > label; 
+        private java.util.List<String> imageName; 
+        private java.util.List<String> label; 
         private Integer pageSize; 
-        private java.util.List < String > strategyName; 
+        private java.util.List<String> strategyName; 
 
         private Builder() {
             super();
@@ -124,7 +129,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         /**
          * <p>The image names.</p>
          */
-        public Builder imageName(java.util.List < String > imageName) {
+        public Builder imageName(java.util.List<String> imageName) {
             this.putQueryParameter("ImageName", imageName);
             this.imageName = imageName;
             return this;
@@ -133,7 +138,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         /**
          * <p>The tags that are added to the container.</p>
          */
-        public Builder label(java.util.List < String > label) {
+        public Builder label(java.util.List<String> label) {
             this.putQueryParameter("Label", label);
             this.label = label;
             return this;
@@ -154,7 +159,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         /**
          * <p>The rule names.</p>
          */
-        public Builder strategyName(java.util.List < String > strategyName) {
+        public Builder strategyName(java.util.List<String> strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
             this.strategyName = strategyName;
             return this;

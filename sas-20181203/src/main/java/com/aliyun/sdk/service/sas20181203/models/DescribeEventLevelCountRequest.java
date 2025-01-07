@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -215,7 +220,14 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * MultiAccountActionType.
+         * <p>The type of the accounts that you want to query. Default value: <strong>0</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the current account.</li>
+         * <li><strong>1</strong>: all accounts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder multiAccountActionType(Integer multiAccountActionType) {
             this.putQueryParameter("MultiAccountActionType", multiAccountActionType);

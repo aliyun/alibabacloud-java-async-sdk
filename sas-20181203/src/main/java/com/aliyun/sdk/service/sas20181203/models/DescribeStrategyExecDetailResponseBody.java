@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     private Integer failCount;
 
     @com.aliyun.core.annotation.NameInMap("FailedEcsList")
-    private java.util.List < FailedEcsList> failedEcsList;
+    private java.util.List<FailedEcsList> failedEcsList;
 
     @com.aliyun.core.annotation.NameInMap("InProcessCount")
     private Integer inProcessCount;
@@ -76,7 +81,7 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     /**
      * @return failedEcsList
      */
-    public java.util.List < FailedEcsList> getFailedEcsList() {
+    public java.util.List<FailedEcsList> getFailedEcsList() {
         return this.failedEcsList;
     }
 
@@ -125,7 +130,7 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String endTime; 
         private Integer failCount; 
-        private java.util.List < FailedEcsList> failedEcsList; 
+        private java.util.List<FailedEcsList> failedEcsList; 
         private Integer inProcessCount; 
         private String percent; 
         private String requestId; 
@@ -134,7 +139,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * EndTime.
+         * <p>The time when the baseline check ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-05 00:12:46</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +150,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FailCount.
+         * <p>The number of check items that failed to pass the baseline check. This type of check item is considered risk items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -150,15 +161,18 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FailedEcsList.
+         * <p>The servers on which risk items were detected.</p>
          */
-        public Builder failedEcsList(java.util.List < FailedEcsList> failedEcsList) {
+        public Builder failedEcsList(java.util.List<FailedEcsList> failedEcsList) {
             this.failedEcsList = failedEcsList;
             return this;
         }
 
         /**
-         * InProcessCount.
+         * <p>The number of tasks that are **running **based on the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder inProcessCount(Integer inProcessCount) {
             this.inProcessCount = inProcessCount;
@@ -166,7 +180,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Percent.
+         * <p>The execution progress of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         public Builder percent(String percent) {
             this.percent = percent;
@@ -174,7 +191,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01611D72-1E33-53F5-A9A5-C81B5561970F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +202,14 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The type of the baseline check. Valid values:</p>
+         * <ul>
+         * <li><strong>Schedule</strong>: automatic check that periodically runs</li>
+         * <li><strong>Manual</strong>: intermediate check that is manually performed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -190,7 +217,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the baseline check starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-05 00:12:16</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -198,7 +228,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of check items that <strong>passed</strong> the baseline check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -292,7 +325,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * IP.
+             * <p>The IP address of the server on which the baseline check was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115.28.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -300,7 +336,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker-k8s-for-cs-cf5741fb95c3a45d0864f0e4544dc****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -308,7 +347,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>115.28.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -316,7 +358,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.31.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -324,7 +369,10 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The failure cause for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Detect timeout</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;

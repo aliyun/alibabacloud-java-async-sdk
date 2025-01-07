@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevelList")
-    private java.util.List < String > riskLevelList;
+    private java.util.List<String> riskLevelList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcIp")
@@ -90,7 +95,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
     /**
      * @return riskLevelList
      */
-    public java.util.List < String > getRiskLevelList() {
+    public java.util.List<String> getRiskLevelList() {
         return this.riskLevelList;
     }
 
@@ -106,7 +111,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         private String dealed; 
         private String dstIp; 
         private Integer pageSize; 
-        private java.util.List < String > riskLevelList; 
+        private java.util.List<String> riskLevelList; 
         private String srcIp; 
 
         private Builder() {
@@ -162,7 +167,7 @@ public class ListHoneypotAlarmEventsRequest extends Request {
         /**
          * RiskLevelList.
          */
-        public Builder riskLevelList(java.util.List < String > riskLevelList) {
+        public Builder riskLevelList(java.util.List<String> riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
             this.riskLevelList = riskLevelList;
             return this;

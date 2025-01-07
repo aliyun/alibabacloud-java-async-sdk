@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -750,10 +755,10 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
      */
     public static class InfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityTypeList")
-        private java.util.List < EntityTypeList> entityTypeList;
+        private java.util.List<EntityTypeList> entityTypeList;
 
         @com.aliyun.core.annotation.NameInMap("RelationTypeList")
-        private java.util.List < RelationTypeList> relationTypeList;
+        private java.util.List<RelationTypeList> relationTypeList;
 
         private InfoList(Builder builder) {
             this.entityTypeList = builder.entityTypeList;
@@ -771,25 +776,25 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
         /**
          * @return entityTypeList
          */
-        public java.util.List < EntityTypeList> getEntityTypeList() {
+        public java.util.List<EntityTypeList> getEntityTypeList() {
             return this.entityTypeList;
         }
 
         /**
          * @return relationTypeList
          */
-        public java.util.List < RelationTypeList> getRelationTypeList() {
+        public java.util.List<RelationTypeList> getRelationTypeList() {
             return this.relationTypeList;
         }
 
         public static final class Builder {
-            private java.util.List < EntityTypeList> entityTypeList; 
-            private java.util.List < RelationTypeList> relationTypeList; 
+            private java.util.List<EntityTypeList> entityTypeList; 
+            private java.util.List<RelationTypeList> relationTypeList; 
 
             /**
              * <p>The information about the entities.</p>
              */
-            public Builder entityTypeList(java.util.List < EntityTypeList> entityTypeList) {
+            public Builder entityTypeList(java.util.List<EntityTypeList> entityTypeList) {
                 this.entityTypeList = entityTypeList;
                 return this;
             }
@@ -797,7 +802,7 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
             /**
              * <p>The information about the edges.</p>
              */
-            public Builder relationTypeList(java.util.List < RelationTypeList> relationTypeList) {
+            public Builder relationTypeList(java.util.List<RelationTypeList> relationTypeList) {
                 this.relationTypeList = relationTypeList;
                 return this;
             }

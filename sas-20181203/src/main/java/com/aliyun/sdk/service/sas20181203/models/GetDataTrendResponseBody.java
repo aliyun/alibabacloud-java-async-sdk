@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetDataTrendResponseBody extends TeaModel {
      */
     public static class ItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CountList")
-        private java.util.List < Long > countList;
+        private java.util.List<Long> countList;
 
         @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
@@ -103,7 +108,7 @@ public class GetDataTrendResponseBody extends TeaModel {
         /**
          * @return countList
          */
-        public java.util.List < Long > getCountList() {
+        public java.util.List<Long> getCountList() {
             return this.countList;
         }
 
@@ -115,13 +120,13 @@ public class GetDataTrendResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > countList; 
+            private java.util.List<Long> countList; 
             private String keyName; 
 
             /**
              * <p>The statistical values of the trend data.</p>
              */
-            public Builder countList(java.util.List < Long > countList) {
+            public Builder countList(java.util.List<Long> countList) {
                 this.countList = countList;
                 return this;
             }
@@ -160,13 +165,13 @@ public class GetDataTrendResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateList")
-        private java.util.List < Integer > dateList;
+        private java.util.List<Integer> dateList;
 
         @com.aliyun.core.annotation.NameInMap("DateStrList")
-        private java.util.List < String > dateStrList;
+        private java.util.List<String> dateStrList;
 
         @com.aliyun.core.annotation.NameInMap("ItemList")
-        private java.util.List < ItemList> itemList;
+        private java.util.List<ItemList> itemList;
 
         private Data(Builder builder) {
             this.dateList = builder.dateList;
@@ -185,33 +190,33 @@ public class GetDataTrendResponseBody extends TeaModel {
         /**
          * @return dateList
          */
-        public java.util.List < Integer > getDateList() {
+        public java.util.List<Integer> getDateList() {
             return this.dateList;
         }
 
         /**
          * @return dateStrList
          */
-        public java.util.List < String > getDateStrList() {
+        public java.util.List<String> getDateStrList() {
             return this.dateStrList;
         }
 
         /**
          * @return itemList
          */
-        public java.util.List < ItemList> getItemList() {
+        public java.util.List<ItemList> getItemList() {
             return this.itemList;
         }
 
         public static final class Builder {
-            private java.util.List < Integer > dateList; 
-            private java.util.List < String > dateStrList; 
-            private java.util.List < ItemList> itemList; 
+            private java.util.List<Integer> dateList; 
+            private java.util.List<String> dateStrList; 
+            private java.util.List<ItemList> itemList; 
 
             /**
              * <p>The statistical timestamps of the trend data.</p>
              */
-            public Builder dateList(java.util.List < Integer > dateList) {
+            public Builder dateList(java.util.List<Integer> dateList) {
                 this.dateList = dateList;
                 return this;
             }
@@ -219,7 +224,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             /**
              * <p>The statistical dates and time for the trend data.</p>
              */
-            public Builder dateStrList(java.util.List < String > dateStrList) {
+            public Builder dateStrList(java.util.List<String> dateStrList) {
                 this.dateStrList = dateStrList;
                 return this;
             }
@@ -227,7 +232,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             /**
              * <p>The returned data.</p>
              */
-            public Builder itemList(java.util.List < ItemList> itemList) {
+            public Builder itemList(java.util.List<ItemList> itemList) {
                 this.itemList = itemList;
                 return this;
             }

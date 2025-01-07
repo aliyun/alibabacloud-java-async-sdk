@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RegistryTypeInfos")
-    private java.util.List < RegistryTypeInfos> registryTypeInfos;
+    private java.util.List<RegistryTypeInfos> registryTypeInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     /**
      * @return registryTypeInfos
      */
-    public java.util.List < RegistryTypeInfos> getRegistryTypeInfos() {
+    public java.util.List<RegistryTypeInfos> getRegistryTypeInfos() {
         return this.registryTypeInfos;
     }
 
@@ -46,13 +51,13 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RegistryTypeInfos> registryTypeInfos; 
+        private java.util.List<RegistryTypeInfos> registryTypeInfos; 
         private String requestId; 
 
         /**
          * <p>An array that consists of image repository types.</p>
          */
-        public Builder registryTypeInfos(java.util.List < RegistryTypeInfos> registryTypeInfos) {
+        public Builder registryTypeInfos(java.util.List<RegistryTypeInfos> registryTypeInfos) {
             this.registryTypeInfos = registryTypeInfos;
             return this;
         }

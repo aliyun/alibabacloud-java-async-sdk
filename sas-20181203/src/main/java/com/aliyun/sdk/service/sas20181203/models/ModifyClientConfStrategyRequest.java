@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class ModifyClientConfStrategyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
-    private java.util.List < String > uuids;
+    private java.util.List<String> uuids;
 
     private ModifyClientConfStrategyRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class ModifyClientConfStrategyRequest extends Request {
     /**
      * @return uuids
      */
-    public java.util.List < String > getUuids() {
+    public java.util.List<String> getUuids() {
         return this.uuids;
     }
 
@@ -96,7 +101,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         private String tagExt; 
         private String tagValue; 
         private String uuid; 
-        private java.util.List < String > uuids; 
+        private java.util.List<String> uuids; 
 
         private Builder() {
             super();
@@ -169,7 +174,7 @@ public class ModifyClientConfStrategyRequest extends Request {
         /**
          * <p>The UUID of the asset. You can specify a maximum of 500 UUIDs at a time.</p>
          */
-        public Builder uuids(java.util.List < String > uuids) {
+        public Builder uuids(java.util.List<String> uuids) {
             this.putQueryParameter("Uuids", uuids);
             this.uuids = uuids;
             return this;

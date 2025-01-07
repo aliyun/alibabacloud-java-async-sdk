@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -204,7 +209,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("BaselineItemList")
-        private java.util.List < BaselineItemList> baselineItemList;
+        private java.util.List<BaselineItemList> baselineItemList;
 
         @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
@@ -237,7 +242,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         /**
          * @return baselineItemList
          */
-        public java.util.List < BaselineItemList> getBaselineItemList() {
+        public java.util.List<BaselineItemList> getBaselineItemList() {
             return this.baselineItemList;
         }
 
@@ -257,7 +262,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.List < BaselineItemList> baselineItemList; 
+            private java.util.List<BaselineItemList> baselineItemList; 
             private String classKey; 
             private String nameKey; 
 
@@ -275,7 +280,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             /**
              * <p>The information about the baseline check item.</p>
              */
-            public Builder baselineItemList(java.util.List < BaselineItemList> baselineItemList) {
+            public Builder baselineItemList(java.util.List<BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
                 return this;
             }
@@ -320,7 +325,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("BaselineNameList")
-        private java.util.List < BaselineNameList> baselineNameList;
+        private java.util.List<BaselineNameList> baselineNameList;
 
         @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
@@ -349,7 +354,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         /**
          * @return baselineNameList
          */
-        public java.util.List < BaselineNameList> getBaselineNameList() {
+        public java.util.List<BaselineNameList> getBaselineNameList() {
             return this.baselineNameList;
         }
 
@@ -362,7 +367,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.List < BaselineNameList> baselineNameList; 
+            private java.util.List<BaselineNameList> baselineNameList; 
             private String classKey; 
 
             /**
@@ -379,7 +384,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             /**
              * <p>The information about the baseline.</p>
              */
-            public Builder baselineNameList(java.util.List < BaselineNameList> baselineNameList) {
+            public Builder baselineNameList(java.util.List<BaselineNameList> baselineNameList) {
                 this.baselineNameList = baselineNameList;
                 return this;
             }
@@ -410,7 +415,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
      */
     public static class ImageBaselines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineClassList")
-        private java.util.List < BaselineClassList> baselineClassList;
+        private java.util.List<BaselineClassList> baselineClassList;
 
         private ImageBaselines(Builder builder) {
             this.baselineClassList = builder.baselineClassList;
@@ -427,17 +432,17 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         /**
          * @return baselineClassList
          */
-        public java.util.List < BaselineClassList> getBaselineClassList() {
+        public java.util.List<BaselineClassList> getBaselineClassList() {
             return this.baselineClassList;
         }
 
         public static final class Builder {
-            private java.util.List < BaselineClassList> baselineClassList; 
+            private java.util.List<BaselineClassList> baselineClassList; 
 
             /**
              * <p>An array that consists of baseline types.</p>
              */
-            public Builder baselineClassList(java.util.List < BaselineClassList> baselineClassList) {
+            public Builder baselineClassList(java.util.List<BaselineClassList> baselineClassList) {
                 this.baselineClassList = baselineClassList;
                 return this;
             }

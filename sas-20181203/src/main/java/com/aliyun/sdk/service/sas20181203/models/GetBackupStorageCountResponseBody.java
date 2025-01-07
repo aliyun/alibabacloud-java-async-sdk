@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupStorageCount.
+         * <p>The details about the anti-ransomware capacity.</p>
          */
         public Builder backupStorageCount(BackupStorageCount backupStorageCount) {
             this.backupStorageCount = backupStorageCount;
@@ -58,7 +63,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33C2CCFF-4BF8-5F88-9B5C-22F932F80E5A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,7 +160,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             private Long usageStorageByte; 
 
             /**
-             * BuyStorageByte.
+             * <p>The anti-ransomware capacity that you purchased. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2276332666880</p>
              */
             public Builder buyStorageByte(Long buyStorageByte) {
                 this.buyStorageByte = buyStorageByte;
@@ -160,7 +171,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * EcsUsageStorageByte.
+             * <p>The storage capacity that is occupied by the backup data of your servers. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>817262417803</p>
              */
             public Builder ecsUsageStorageByte(Long ecsUsageStorageByte) {
                 this.ecsUsageStorageByte = ecsUsageStorageByte;
@@ -168,7 +182,14 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * Overflow.
+             * <p>Indicates whether the anti-ransomware capacity that is used exceeds the anti-ransomware capacity that you purchased. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder overflow(Integer overflow) {
                 this.overflow = overflow;
@@ -176,7 +197,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * UniUsageStorageByte.
+             * <p>The storage capacity that is occupied by the backup data of your databases. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7453049350</p>
              */
             public Builder uniUsageStorageByte(Long uniUsageStorageByte) {
                 this.uniUsageStorageByte = uniUsageStorageByte;
@@ -184,7 +208,10 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
             }
 
             /**
-             * UsageStorageByte.
+             * <p>The total anti-ransomware capacity that is used. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>839621565853</p>
              */
             public Builder usageStorageByte(Long usageStorageByte) {
                 this.usageStorageByte = usageStorageByte;

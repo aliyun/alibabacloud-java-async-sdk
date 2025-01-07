@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVulDetailsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Cves")
-    private java.util.List < Cves> cves;
+    private java.util.List<Cves> cves;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     /**
      * @return cves
      */
-    public java.util.List < Cves> getCves() {
+    public java.util.List<Cves> getCves() {
         return this.cves;
     }
 
@@ -46,13 +51,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Cves> cves; 
+        private java.util.List<Cves> cves; 
         private String requestId; 
 
         /**
          * <p>The details of the vulnerability.</p>
          */
-        public Builder cves(java.util.List < Cves> cves) {
+        public Builder cves(java.util.List<Cves> cves) {
             this.cves = cves;
             return this;
         }
@@ -181,7 +186,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String classify;
 
         @com.aliyun.core.annotation.NameInMap("Classifys")
-        private java.util.List < Classifys> classifys;
+        private java.util.List<Classifys> classifys;
 
         @com.aliyun.core.annotation.NameInMap("CnvdId")
         private String cnvdId;
@@ -302,7 +307,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         /**
          * @return classifys
          */
-        public java.util.List < Classifys> getClassifys() {
+        public java.util.List<Classifys> getClassifys() {
             return this.classifys;
         }
 
@@ -476,7 +481,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String classify; 
-            private java.util.List < Classifys> classifys; 
+            private java.util.List<Classifys> classifys; 
             private String cnvdId; 
             private String complexity; 
             private String content; 
@@ -516,7 +521,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             /**
              * <p>The vulnerability types.</p>
              */
-            public Builder classifys(java.util.List < Classifys> classifys) {
+            public Builder classifys(java.util.List<Classifys> classifys) {
                 this.classifys = classifys;
                 return this;
             }

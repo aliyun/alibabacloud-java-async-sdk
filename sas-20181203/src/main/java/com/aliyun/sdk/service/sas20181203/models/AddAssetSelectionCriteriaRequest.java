@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetOperationList")
-    private java.util.List < TargetOperationList> targetOperationList;
+    private java.util.List<TargetOperationList> targetOperationList;
 
     private AddAssetSelectionCriteriaRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
     /**
      * @return targetOperationList
      */
-    public java.util.List < TargetOperationList> getTargetOperationList() {
+    public java.util.List<TargetOperationList> getTargetOperationList() {
         return this.targetOperationList;
     }
 
@@ -82,7 +87,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         private String criteria; 
         private String criteriaOperation; 
         private String selectionKey; 
-        private java.util.List < TargetOperationList> targetOperationList; 
+        private java.util.List<TargetOperationList> targetOperationList; 
 
         private Builder() {
             super();
@@ -143,7 +148,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         /**
          * <p>The list of assets.</p>
          */
-        public Builder targetOperationList(java.util.List < TargetOperationList> targetOperationList) {
+        public Builder targetOperationList(java.util.List<TargetOperationList> targetOperationList) {
             this.putQueryParameter("TargetOperationList", targetOperationList);
             this.targetOperationList = targetOperationList;
             return this;

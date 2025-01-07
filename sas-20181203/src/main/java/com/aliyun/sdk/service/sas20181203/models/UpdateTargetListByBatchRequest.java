@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class UpdateTargetListByBatchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OperationList> operationList;
+    private java.util.List<OperationList> operationList;
 
     private UpdateTargetListByBatchRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UpdateTargetListByBatchRequest extends Request {
     /**
      * @return operationList
      */
-    public java.util.List < OperationList> getOperationList() {
+    public java.util.List<OperationList> getOperationList() {
         return this.operationList;
     }
 
     public static final class Builder extends Request.Builder<UpdateTargetListByBatchRequest, Builder> {
         private Long batchId; 
-        private java.util.List < OperationList> operationList; 
+        private java.util.List<OperationList> operationList; 
 
         private Builder() {
             super();
@@ -70,6 +75,7 @@ public class UpdateTargetListByBatchRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the release batch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,9 +88,10 @@ public class UpdateTargetListByBatchRequest extends Request {
         }
 
         /**
+         * <p>The operations on assets.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder operationList(java.util.List < OperationList> operationList) {
+        public Builder operationList(java.util.List<OperationList> operationList) {
             this.putQueryParameter("OperationList", operationList);
             this.operationList = operationList;
             return this;
@@ -166,7 +173,13 @@ public class UpdateTargetListByBatchRequest extends Request {
             private String vpcInstanceId; 
 
             /**
-             * GroupId.
+             * <p>The ID of the server group.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>11883086</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -174,7 +187,14 @@ public class UpdateTargetListByBatchRequest extends Request {
             }
 
             /**
-             * Operation.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: the add operation.</li>
+             * <li><strong>del</strong>: the remove operation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -182,7 +202,13 @@ public class UpdateTargetListByBatchRequest extends Request {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the server.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>de393767-6fe1-4a8d-837d-927a2b******</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -190,7 +216,10 @@ public class UpdateTargetListByBatchRequest extends Request {
             }
 
             /**
-             * VpcInstanceId.
+             * <p>The ID of the VPC-connected instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1ow0rm9t92iza******</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

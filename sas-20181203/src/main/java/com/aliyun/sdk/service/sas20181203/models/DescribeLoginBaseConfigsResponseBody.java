@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BaseConfigs")
-    private java.util.List < BaseConfigs> baseConfigs;
+    private java.util.List<BaseConfigs> baseConfigs;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -46,7 +51,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     /**
      * @return baseConfigs
      */
-    public java.util.List < BaseConfigs> getBaseConfigs() {
+    public java.util.List<BaseConfigs> getBaseConfigs() {
         return this.baseConfigs;
     }
 
@@ -79,7 +84,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BaseConfigs> baseConfigs; 
+        private java.util.List<BaseConfigs> baseConfigs; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         /**
          * <p>The description of the configuration.</p>
          */
-        public Builder baseConfigs(java.util.List < BaseConfigs> baseConfigs) {
+        public Builder baseConfigs(java.util.List<BaseConfigs> baseConfigs) {
             this.baseConfigs = baseConfigs;
             return this;
         }
@@ -247,7 +252,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         private String startTime;
 
         @com.aliyun.core.annotation.NameInMap("TargetList")
-        private java.util.List < TargetList> targetList;
+        private java.util.List<TargetList> targetList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -320,7 +325,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         /**
          * @return targetList
          */
-        public java.util.List < TargetList> getTargetList() {
+        public java.util.List<TargetList> getTargetList() {
             return this.targetList;
         }
 
@@ -345,7 +350,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private String location; 
             private String remark; 
             private String startTime; 
-            private java.util.List < TargetList> targetList; 
+            private java.util.List<TargetList> targetList; 
             private Integer totalCount; 
             private Integer uuidCount; 
 
@@ -418,7 +423,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             /**
              * <p>The details of the servers to which the configuration is applied.</p>
              */
-            public Builder targetList(java.util.List < TargetList> targetList) {
+            public Builder targetList(java.util.List<TargetList> targetList) {
                 this.targetList = targetList;
                 return this;
             }

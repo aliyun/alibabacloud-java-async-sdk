@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UserDefineRuleList")
-    private java.util.List < UserDefineRuleList> userDefineRuleList;
+    private java.util.List<UserDefineRuleList> userDefineRuleList;
 
     private ListClientUserDefineRulesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -52,14 +57,14 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
     /**
      * @return userDefineRuleList
      */
-    public java.util.List < UserDefineRuleList> getUserDefineRuleList() {
+    public java.util.List<UserDefineRuleList> getUserDefineRuleList() {
         return this.userDefineRuleList;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
-        private java.util.List < UserDefineRuleList> userDefineRuleList; 
+        private java.util.List<UserDefineRuleList> userDefineRuleList; 
 
         /**
          * <p>The pagination information.</p>
@@ -83,7 +88,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the rules.</p>
          */
-        public Builder userDefineRuleList(java.util.List < UserDefineRuleList> userDefineRuleList) {
+        public Builder userDefineRuleList(java.util.List<UserDefineRuleList> userDefineRuleList) {
             this.userDefineRuleList = userDefineRuleList;
             return this;
         }

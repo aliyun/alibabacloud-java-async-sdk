@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("PropertyItems")
-    private java.util.List < PropertyItems> propertyItems;
+    private java.util.List<PropertyItems> propertyItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
     /**
      * @return propertyItems
      */
-    public java.util.List < PropertyItems> getPropertyItems() {
+    public java.util.List<PropertyItems> getPropertyItems() {
         return this.propertyItems;
     }
 
@@ -58,7 +63,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < PropertyItems> propertyItems; 
+        private java.util.List<PropertyItems> propertyItems; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribePropertyPortItemResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the ports returned.</p>
          */
-        public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
+        public Builder propertyItems(java.util.List<PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
             return this;
         }

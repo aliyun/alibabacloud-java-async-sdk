@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -96,7 +101,10 @@ public class DescribeDomainSecureVulListRequest extends Request {
         } 
 
         /**
-         * From.
+         * <p>The identifier of the request source. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -105,7 +113,14 @@ public class DescribeDomainSecureVulListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +129,10 @@ public class DescribeDomainSecureVulListRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111.196.<em>.</em></p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -123,7 +141,13 @@ public class DescribeDomainSecureVulListRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The vulnerability type. Valid values:</p>
+         * <ul>
+         * <li><strong>app</strong>: application vulnerability.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

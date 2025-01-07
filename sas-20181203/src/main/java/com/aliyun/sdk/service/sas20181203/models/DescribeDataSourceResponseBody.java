@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDataSourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MetaDatas")
-    private java.util.List < MetaDatas> metaDatas;
+    private java.util.List<MetaDatas> metaDatas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDataSourceResponseBody extends TeaModel {
     /**
      * @return metaDatas
      */
-    public java.util.List < MetaDatas> getMetaDatas() {
+    public java.util.List<MetaDatas> getMetaDatas() {
         return this.metaDatas;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDataSourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MetaDatas> metaDatas; 
+        private java.util.List<MetaDatas> metaDatas; 
         private String requestId; 
 
         /**
-         * MetaDatas.
+         * <p>The metadata of the data sources.</p>
          */
-        public Builder metaDatas(java.util.List < MetaDatas> metaDatas) {
+        public Builder metaDatas(java.util.List<MetaDatas> metaDatas) {
             this.metaDatas = metaDatas;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,7 +124,10 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Description.
+             * <p>The description of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk_vul</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -124,7 +135,10 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>regex</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -152,7 +166,7 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         private String filedName;
 
         @com.aliyun.core.annotation.NameInMap("OperatorList")
-        private java.util.List < OperatorList> operatorList;
+        private java.util.List<OperatorList> operatorList;
 
         @com.aliyun.core.annotation.NameInMap("Sample")
         private String sample;
@@ -193,7 +207,7 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         /**
          * @return operatorList
          */
-        public java.util.List < OperatorList> getOperatorList() {
+        public java.util.List<OperatorList> getOperatorList() {
             return this.operatorList;
         }
 
@@ -214,12 +228,15 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         public static final class Builder {
             private String filed; 
             private String filedName; 
-            private java.util.List < OperatorList> operatorList; 
+            private java.util.List<OperatorList> operatorList; 
             private String sample; 
             private String valueType; 
 
             /**
-             * Filed.
+             * <p>The key of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder filed(String filed) {
                 this.filed = filed;
@@ -227,7 +244,10 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * FiledName.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk_vul_type</p>
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -235,15 +255,18 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorList.
+             * <p>The operators.</p>
              */
-            public Builder operatorList(java.util.List < OperatorList> operatorList) {
+            public Builder operatorList(java.util.List<OperatorList> operatorList) {
                 this.operatorList = operatorList;
                 return this;
             }
 
             /**
-             * Sample.
+             * <p>The sample field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all:dingtalk_all;cms:dingtalk_vul_cms;oval:dingtalk_vul_cve;sys:dingtalk_vul_sys;emg:dingtalk_vul_emg</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -251,7 +274,10 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ValueType.
+             * <p>The value type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -282,7 +308,7 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("MetaDataFields")
-        private java.util.List < MetaDataFields> metaDataFields;
+        private java.util.List<MetaDataFields> metaDataFields;
 
         private MetaDatas(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
@@ -323,7 +349,7 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         /**
          * @return metaDataFields
          */
-        public java.util.List < MetaDataFields> getMetaDataFields() {
+        public java.util.List<MetaDataFields> getMetaDataFields() {
             return this.metaDataFields;
         }
 
@@ -331,10 +357,13 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             private Integer dataSourceId; 
             private String dataSourceName; 
             private String description; 
-            private java.util.List < MetaDataFields> metaDataFields; 
+            private java.util.List<MetaDataFields> metaDataFields; 
 
             /**
-             * DataSourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753</p>
              */
             public Builder dataSourceId(Integer dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -342,7 +371,10 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_analysis_pre-sas-operation-log-sas-event-suspicious</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -350,7 +382,10 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk_suspicious</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -358,9 +393,9 @@ public class DescribeDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * MetaDataFields.
+             * <p>The metadata files.</p>
              */
-            public Builder metaDataFields(java.util.List < MetaDataFields> metaDataFields) {
+            public Builder metaDataFields(java.util.List<MetaDataFields> metaDataFields) {
                 this.metaDataFields = metaDataFields;
                 return this;
             }

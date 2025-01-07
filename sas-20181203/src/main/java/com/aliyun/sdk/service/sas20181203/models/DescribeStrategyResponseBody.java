@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Strategies")
-    private java.util.List < Strategies> strategies;
+    private java.util.List<Strategies> strategies;
 
     private DescribeStrategyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeStrategyResponseBody extends TeaModel {
     /**
      * @return strategies
      */
-    public java.util.List < Strategies> getStrategies() {
+    public java.util.List<Strategies> getStrategies() {
         return this.strategies;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Strategies> strategies; 
+        private java.util.List<Strategies> strategies; 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         /**
          * <p>The details of the baseline check policies.</p>
          */
-        public Builder strategies(java.util.List < Strategies> strategies) {
+        public Builder strategies(java.util.List<Strategies> strategies) {
             this.strategies = strategies;
             return this;
         }
@@ -186,7 +191,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
      */
     public static class Strategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigTargets")
-        private java.util.List < ConfigTargets> configTargets;
+        private java.util.List<ConfigTargets> configTargets;
 
         @com.aliyun.core.annotation.NameInMap("CustomType")
         private String customType;
@@ -215,6 +220,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PassRate")
         private Integer passRate;
 
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private String percent;
+
         @com.aliyun.core.annotation.NameInMap("ProcessRate")
         private Integer processRate;
 
@@ -227,6 +235,9 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
+        @com.aliyun.core.annotation.NameInMap("UserModifyTime")
+        private Long userModifyTime;
+
         private Strategies(Builder builder) {
             this.configTargets = builder.configTargets;
             this.customType = builder.customType;
@@ -238,10 +249,12 @@ public class DescribeStrategyResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.passRate = builder.passRate;
+            this.percent = builder.percent;
             this.processRate = builder.processRate;
             this.riskCount = builder.riskCount;
             this.startTime = builder.startTime;
             this.type = builder.type;
+            this.userModifyTime = builder.userModifyTime;
         }
 
         public static Builder builder() {
@@ -255,7 +268,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         /**
          * @return configTargets
          */
-        public java.util.List < ConfigTargets> getConfigTargets() {
+        public java.util.List<ConfigTargets> getConfigTargets() {
             return this.configTargets;
         }
 
@@ -323,6 +336,13 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
 
         /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
          * @return processRate
          */
         public Integer getProcessRate() {
@@ -350,8 +370,15 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return userModifyTime
+         */
+        public Long getUserModifyTime() {
+            return this.userModifyTime;
+        }
+
         public static final class Builder {
-            private java.util.List < ConfigTargets> configTargets; 
+            private java.util.List<ConfigTargets> configTargets; 
             private String customType; 
             private Integer cycleDays; 
             private Integer cycleStartTime; 
@@ -361,15 +388,17 @@ public class DescribeStrategyResponseBody extends TeaModel {
             private Integer id; 
             private String name; 
             private Integer passRate; 
+            private String percent; 
             private Integer processRate; 
             private Integer riskCount; 
             private String startTime; 
             private Integer type; 
+            private Long userModifyTime; 
 
             /**
              * <p>The details of the assets to which the baseline check policy is applied.</p>
              */
-            public Builder configTargets(java.util.List < ConfigTargets> configTargets) {
+            public Builder configTargets(java.util.List<ConfigTargets> configTargets) {
                 this.configTargets = configTargets;
                 return this;
             }
@@ -494,6 +523,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
+             * Percent.
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
              * <p>The number of the assets on which the baseline check is complete.</p>
              * 
              * <strong>example:</strong>
@@ -538,6 +575,14 @@ public class DescribeStrategyResponseBody extends TeaModel {
              */
             public Builder type(Integer type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * UserModifyTime.
+             */
+            public Builder userModifyTime(Long userModifyTime) {
+                this.userModifyTime = userModifyTime;
                 return this;
             }
 

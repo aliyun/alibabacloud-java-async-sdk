@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    private java.util.List<InstanceList> instanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
@@ -76,14 +81,14 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
@@ -104,8 +109,8 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<AddCheckInstanceResultWhiteListRequest, Builder> {
         private String checkGroupId; 
         private Long checkId; 
-        private java.util.List < String > instanceIds; 
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<InstanceList> instanceList; 
         private String remark; 
         private String ruleType; 
 
@@ -137,6 +142,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
 
         /**
          * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>132</p>
@@ -148,25 +156,28 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The instance IDs of assets.</p>
+         * <p>The instance IDs of the assets.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
         }
 
         /**
-         * InstanceList.
+         * <p>The asset instances.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
             this.instanceList = instanceList;
             return this;
         }
 
         /**
-         * Remark.
+         * <p>The description. The value of this parameter can be up to 65,535 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -175,7 +186,13 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>The type of the rule. Default value: <strong>WHITE</strong>. Valid value:</p>
+         * <ul>
+         * <li>WHITE: adds check items to the whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITE</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -235,7 +252,13 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             private String regionId; 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the asset.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the instance IDs of assets.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9fdluqx20mp2x7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -243,7 +266,13 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the region ID of the asset.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongkong</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
