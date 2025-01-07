@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeQoeMetricDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AudioData")
-    private java.util.List < AudioData> audioData;
+    private java.util.List<AudioData> audioData;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VideoData")
-    private java.util.List < VideoData> videoData;
+    private java.util.List<VideoData> videoData;
 
     private DescribeQoeMetricDataResponseBody(Builder builder) {
         this.audioData = builder.audioData;
@@ -38,7 +43,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
     /**
      * @return audioData
      */
-    public java.util.List < AudioData> getAudioData() {
+    public java.util.List<AudioData> getAudioData() {
         return this.audioData;
     }
 
@@ -52,19 +57,19 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
     /**
      * @return videoData
      */
-    public java.util.List < VideoData> getVideoData() {
+    public java.util.List<VideoData> getVideoData() {
         return this.videoData;
     }
 
     public static final class Builder {
-        private java.util.List < AudioData> audioData; 
+        private java.util.List<AudioData> audioData; 
         private String requestId; 
-        private java.util.List < VideoData> videoData; 
+        private java.util.List<VideoData> videoData; 
 
         /**
          * AudioData.
          */
-        public Builder audioData(java.util.List < AudioData> audioData) {
+        public Builder audioData(java.util.List<AudioData> audioData) {
             this.audioData = audioData;
             return this;
         }
@@ -80,7 +85,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         /**
          * VideoData.
          */
-        public Builder videoData(java.util.List < VideoData> videoData) {
+        public Builder videoData(java.util.List<VideoData> videoData) {
             this.videoData = videoData;
             return this;
         }
@@ -166,7 +171,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
      */
     public static class AudioData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -191,7 +196,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -210,14 +215,14 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String type; 
             private String userId; 
 
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -320,7 +325,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
      */
     public static class VideoData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < VideoDataNodes> nodes;
+        private java.util.List<VideoDataNodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -345,7 +350,7 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < VideoDataNodes> getNodes() {
+        public java.util.List<VideoDataNodes> getNodes() {
             return this.nodes;
         }
 
@@ -364,14 +369,14 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < VideoDataNodes> nodes; 
+            private java.util.List<VideoDataNodes> nodes; 
             private String type; 
             private String userId; 
 
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < VideoDataNodes> nodes) {
+            public Builder nodes(java.util.List<VideoDataNodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,10 +147,10 @@ public class CreateAppRecordTemplateRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Formats")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > formats;
+        private java.util.List<String> formats;
 
         @com.aliyun.core.annotation.NameInMap("LayoutIds")
-        private java.util.List < String > layoutIds;
+        private java.util.List<String> layoutIds;
 
         @com.aliyun.core.annotation.NameInMap("MediaEncode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -197,14 +202,14 @@ public class CreateAppRecordTemplateRequest extends Request {
         /**
          * @return formats
          */
-        public java.util.List < String > getFormats() {
+        public java.util.List<String> getFormats() {
             return this.formats;
         }
 
         /**
          * @return layoutIds
          */
-        public java.util.List < String > getLayoutIds() {
+        public java.util.List<String> getLayoutIds() {
             return this.layoutIds;
         }
 
@@ -226,8 +231,8 @@ public class CreateAppRecordTemplateRequest extends Request {
             private Integer delayStopTime; 
             private String filePrefix; 
             private Integer fileSplitInterval; 
-            private java.util.List < String > formats; 
-            private java.util.List < String > layoutIds; 
+            private java.util.List<String> formats; 
+            private java.util.List<String> layoutIds; 
             private Integer mediaEncode; 
             private String name; 
 
@@ -264,7 +269,7 @@ public class CreateAppRecordTemplateRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder formats(java.util.List < String > formats) {
+            public Builder formats(java.util.List<String> formats) {
                 this.formats = formats;
                 return this;
             }
@@ -272,7 +277,7 @@ public class CreateAppRecordTemplateRequest extends Request {
             /**
              * LayoutIds.
              */
-            public Builder layoutIds(java.util.List < String > layoutIds) {
+            public Builder layoutIds(java.util.List<String> layoutIds) {
                 this.layoutIds = layoutIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UsageStatList")
-    private java.util.List < UsageStatList> usageStatList;
+    private java.util.List<UsageStatList> usageStatList;
 
     private DescribeUsageDistributionStatDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
     /**
      * @return usageStatList
      */
-    public java.util.List < UsageStatList> getUsageStatList() {
+    public java.util.List<UsageStatList> getUsageStatList() {
         return this.usageStatList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UsageStatList> usageStatList; 
+        private java.util.List<UsageStatList> usageStatList; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeUsageDistributionStatDataResponseBody extends TeaModel {
         /**
          * UsageStatList.
          */
-        public Builder usageStatList(java.util.List < UsageStatList> usageStatList) {
+        public Builder usageStatList(java.util.List<UsageStatList> usageStatList) {
             this.usageStatList = usageStatList;
             return this;
         }

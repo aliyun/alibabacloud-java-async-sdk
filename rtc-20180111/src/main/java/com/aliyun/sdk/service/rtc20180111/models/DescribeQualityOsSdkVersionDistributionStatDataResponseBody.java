@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QualityOsSdkVersionStatDataList")
-    private java.util.List < QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList;
+    private java.util.List<QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
     /**
      * @return qualityOsSdkVersionStatDataList
      */
-    public java.util.List < QualityOsSdkVersionStatDataList> getQualityOsSdkVersionStatDataList() {
+    public java.util.List<QualityOsSdkVersionStatDataList> getQualityOsSdkVersionStatDataList() {
         return this.qualityOsSdkVersionStatDataList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeQualityOsSdkVersionDistributionStatDataResponseBody extends
     }
 
     public static final class Builder {
-        private java.util.List < QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList; 
+        private java.util.List<QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList; 
         private String requestId; 
 
         /**
          * QualityOsSdkVersionStatDataList.
          */
-        public Builder qualityOsSdkVersionStatDataList(java.util.List < QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList) {
+        public Builder qualityOsSdkVersionStatDataList(java.util.List<QualityOsSdkVersionStatDataList> qualityOsSdkVersionStatDataList) {
             this.qualityOsSdkVersionStatDataList = qualityOsSdkVersionStatDataList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class ModifyMPULayoutRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Panes")
-    private java.util.List < Panes> panes;
+    private java.util.List<Panes> panes;
 
     private ModifyMPULayoutRequest(Builder builder) {
         super(builder);
@@ -99,7 +104,7 @@ public class ModifyMPULayoutRequest extends Request {
     /**
      * @return panes
      */
-    public java.util.List < Panes> getPanes() {
+    public java.util.List<Panes> getPanes() {
         return this.panes;
     }
 
@@ -109,7 +114,7 @@ public class ModifyMPULayoutRequest extends Request {
         private Long layoutId; 
         private String name; 
         private Long ownerId; 
-        private java.util.List < Panes> panes; 
+        private java.util.List<Panes> panes; 
 
         private Builder() {
             super();
@@ -179,7 +184,7 @@ public class ModifyMPULayoutRequest extends Request {
         /**
          * Panes.
          */
-        public Builder panes(java.util.List < Panes> panes) {
+        public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
             this.panes = panes;
             return this;

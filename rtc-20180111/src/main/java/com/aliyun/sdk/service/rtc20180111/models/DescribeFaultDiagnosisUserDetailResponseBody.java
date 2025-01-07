@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     private CallInfo callInfo;
 
     @com.aliyun.core.annotation.NameInMap("FactorList")
-    private java.util.List < FactorList> factorList;
+    private java.util.List<FactorList> factorList;
 
     @com.aliyun.core.annotation.NameInMap("FaultMetricData")
     private FaultMetricData faultMetricData;
 
     @com.aliyun.core.annotation.NameInMap("NetworkOperators")
-    private java.util.List < String > networkOperators;
+    private java.util.List<String> networkOperators;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -57,7 +62,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     /**
      * @return factorList
      */
-    public java.util.List < FactorList> getFactorList() {
+    public java.util.List<FactorList> getFactorList() {
         return this.factorList;
     }
 
@@ -71,7 +76,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     /**
      * @return networkOperators
      */
-    public java.util.List < String > getNetworkOperators() {
+    public java.util.List<String> getNetworkOperators() {
         return this.networkOperators;
     }
 
@@ -91,9 +96,9 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private CallInfo callInfo; 
-        private java.util.List < FactorList> factorList; 
+        private java.util.List<FactorList> factorList; 
         private FaultMetricData faultMetricData; 
-        private java.util.List < String > networkOperators; 
+        private java.util.List<String> networkOperators; 
         private String requestId; 
         private UserDetail userDetail; 
 
@@ -108,7 +113,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * FactorList.
          */
-        public Builder factorList(java.util.List < FactorList> factorList) {
+        public Builder factorList(java.util.List<FactorList> factorList) {
             this.factorList = factorList;
             return this;
         }
@@ -124,7 +129,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * NetworkOperators.
          */
-        public Builder networkOperators(java.util.List < String > networkOperators) {
+        public Builder networkOperators(java.util.List<String> networkOperators) {
             this.networkOperators = networkOperators;
             return this;
         }
@@ -396,7 +401,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
      */
     public static class EventDataItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventList")
-        private java.util.List < EventList> eventList;
+        private java.util.List<EventList> eventList;
 
         @com.aliyun.core.annotation.NameInMap("Ts")
         private Long ts;
@@ -417,7 +422,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return eventList
          */
-        public java.util.List < EventList> getEventList() {
+        public java.util.List<EventList> getEventList() {
             return this.eventList;
         }
 
@@ -429,13 +434,13 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventList> eventList; 
+            private java.util.List<EventList> eventList; 
             private Long ts; 
 
             /**
              * EventList.
              */
-            public Builder eventList(java.util.List < EventList> eventList) {
+            public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
                 return this;
             }
@@ -463,7 +468,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
      */
     public static class RelatedEventDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventDataItems")
-        private java.util.List < EventDataItems> eventDataItems;
+        private java.util.List<EventDataItems> eventDataItems;
 
         @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
@@ -488,7 +493,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return eventDataItems
          */
-        public java.util.List < EventDataItems> getEventDataItems() {
+        public java.util.List<EventDataItems> getEventDataItems() {
             return this.eventDataItems;
         }
 
@@ -507,14 +512,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventDataItems> eventDataItems; 
+            private java.util.List<EventDataItems> eventDataItems; 
             private String role; 
             private String userId; 
 
             /**
              * EventDataItems.
              */
-            public Builder eventDataItems(java.util.List < EventDataItems> eventDataItems) {
+            public Builder eventDataItems(java.util.List<EventDataItems> eventDataItems) {
                 this.eventDataItems = eventDataItems;
                 return this;
             }
@@ -550,7 +555,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
      */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
-        private java.util.Map < String, ? > ext;
+        private java.util.Map<String, ?> ext;
 
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -575,7 +580,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return ext
          */
-        public java.util.Map < String, ? > getExt() {
+        public java.util.Map<String, ?> getExt() {
             return this.ext;
         }
 
@@ -594,14 +599,14 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > ext; 
+            private java.util.Map<String, ?> ext; 
             private String x; 
             private String y; 
 
             /**
              * Ext.
              */
-            public Builder ext(java.util.Map < String, ? > ext) {
+            public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
                 return this;
             }
@@ -637,7 +642,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
      */
     public static class RelatedMetricDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
@@ -666,7 +671,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -692,7 +697,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String role; 
             private String type; 
             private String userId; 
@@ -700,7 +705,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -750,10 +755,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         private String faultSource;
 
         @com.aliyun.core.annotation.NameInMap("RelatedEventDatas")
-        private java.util.List < RelatedEventDatas> relatedEventDatas;
+        private java.util.List<RelatedEventDatas> relatedEventDatas;
 
         @com.aliyun.core.annotation.NameInMap("RelatedMetricDatas")
-        private java.util.List < RelatedMetricDatas> relatedMetricDatas;
+        private java.util.List<RelatedMetricDatas> relatedMetricDatas;
 
         private FactorList(Builder builder) {
             this.factorId = builder.factorId;
@@ -787,22 +792,22 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return relatedEventDatas
          */
-        public java.util.List < RelatedEventDatas> getRelatedEventDatas() {
+        public java.util.List<RelatedEventDatas> getRelatedEventDatas() {
             return this.relatedEventDatas;
         }
 
         /**
          * @return relatedMetricDatas
          */
-        public java.util.List < RelatedMetricDatas> getRelatedMetricDatas() {
+        public java.util.List<RelatedMetricDatas> getRelatedMetricDatas() {
             return this.relatedMetricDatas;
         }
 
         public static final class Builder {
             private String factorId; 
             private String faultSource; 
-            private java.util.List < RelatedEventDatas> relatedEventDatas; 
-            private java.util.List < RelatedMetricDatas> relatedMetricDatas; 
+            private java.util.List<RelatedEventDatas> relatedEventDatas; 
+            private java.util.List<RelatedMetricDatas> relatedMetricDatas; 
 
             /**
              * FactorId.
@@ -823,7 +828,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             /**
              * RelatedEventDatas.
              */
-            public Builder relatedEventDatas(java.util.List < RelatedEventDatas> relatedEventDatas) {
+            public Builder relatedEventDatas(java.util.List<RelatedEventDatas> relatedEventDatas) {
                 this.relatedEventDatas = relatedEventDatas;
                 return this;
             }
@@ -831,7 +836,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             /**
              * RelatedMetricDatas.
              */
-            public Builder relatedMetricDatas(java.util.List < RelatedMetricDatas> relatedMetricDatas) {
+            public Builder relatedMetricDatas(java.util.List<RelatedMetricDatas> relatedMetricDatas) {
                 this.relatedMetricDatas = relatedMetricDatas;
                 return this;
             }
@@ -918,7 +923,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
      */
     public static class FaultMetricData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < FaultMetricDataNodes> nodes;
+        private java.util.List<FaultMetricDataNodes> nodes;
 
         private FaultMetricData(Builder builder) {
             this.nodes = builder.nodes;
@@ -935,17 +940,17 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < FaultMetricDataNodes> getNodes() {
+        public java.util.List<FaultMetricDataNodes> getNodes() {
             return this.nodes;
         }
 
         public static final class Builder {
-            private java.util.List < FaultMetricDataNodes> nodes; 
+            private java.util.List<FaultMetricDataNodes> nodes; 
 
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < FaultMetricDataNodes> nodes) {
+            public Builder nodes(java.util.List<FaultMetricDataNodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -1050,7 +1055,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         private Long onlineDuration;
 
         @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
-        private java.util.List < OnlinePeriods> onlinePeriods;
+        private java.util.List<OnlinePeriods> onlinePeriods;
 
         @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
@@ -1127,7 +1132,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
         /**
          * @return onlinePeriods
          */
-        public java.util.List < OnlinePeriods> getOnlinePeriods() {
+        public java.util.List<OnlinePeriods> getOnlinePeriods() {
             return this.onlinePeriods;
         }
 
@@ -1159,7 +1164,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             private String location; 
             private String network; 
             private Long onlineDuration; 
-            private java.util.List < OnlinePeriods> onlinePeriods; 
+            private java.util.List<OnlinePeriods> onlinePeriods; 
             private String os; 
             private String sdkVersion; 
             private String userId; 
@@ -1215,7 +1220,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
             /**
              * OnlinePeriods.
              */
-            public Builder onlinePeriods(java.util.List < OnlinePeriods> onlinePeriods) {
+            public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
                 return this;
             }

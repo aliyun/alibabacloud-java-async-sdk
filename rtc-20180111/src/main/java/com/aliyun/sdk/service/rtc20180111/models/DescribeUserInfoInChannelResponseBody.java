@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     private Boolean isInChannel;
 
     @com.aliyun.core.annotation.NameInMap("Property")
-    private java.util.List < Property> property;
+    private java.util.List<Property> property;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     /**
      * @return property
      */
-    public java.util.List < Property> getProperty() {
+    public java.util.List<Property> getProperty() {
         return this.property;
     }
 
@@ -81,7 +86,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isChannelExist; 
         private Boolean isInChannel; 
-        private java.util.List < Property> property; 
+        private java.util.List<Property> property; 
         private String requestId; 
         private Integer timestamp; 
 
@@ -104,7 +109,7 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
         /**
          * Property.
          */
-        public Builder property(java.util.List < Property> property) {
+        public Builder property(java.util.List<Property> property) {
             this.property = property;
             return this;
         }

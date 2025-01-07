@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class StartCloudNoteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LanguageHints")
-    private java.util.List < String > languageHints;
+    private java.util.List<String> languageHints;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MeetingAssistance")
@@ -124,7 +129,7 @@ public class StartCloudNoteRequest extends Request {
     /**
      * @return languageHints
      */
-    public java.util.List < String > getLanguageHints() {
+    public java.util.List<String> getLanguageHints() {
         return this.languageHints;
     }
 
@@ -182,7 +187,7 @@ public class StartCloudNoteRequest extends Request {
         private AutoChapters autoChapters; 
         private String channelId; 
         private CustomPrompt customPrompt; 
-        private java.util.List < String > languageHints; 
+        private java.util.List<String> languageHints; 
         private MeetingAssistance meetingAssistance; 
         private ServiceInspection serviceInspection; 
         private String sourceLanguage; 
@@ -258,7 +263,7 @@ public class StartCloudNoteRequest extends Request {
         /**
          * LanguageHints.
          */
-        public Builder languageHints(java.util.List < String > languageHints) {
+        public Builder languageHints(java.util.List<String> languageHints) {
             this.putQueryParameter("LanguageHints", languageHints);
             this.languageHints = languageHints;
             return this;
@@ -512,7 +517,7 @@ public class StartCloudNoteRequest extends Request {
     public static class CustomPrompt extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomPromptContents")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < CustomPromptContents> customPromptContents;
+        private java.util.List<CustomPromptContents> customPromptContents;
 
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -533,7 +538,7 @@ public class StartCloudNoteRequest extends Request {
         /**
          * @return customPromptContents
          */
-        public java.util.List < CustomPromptContents> getCustomPromptContents() {
+        public java.util.List<CustomPromptContents> getCustomPromptContents() {
             return this.customPromptContents;
         }
 
@@ -545,13 +550,13 @@ public class StartCloudNoteRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < CustomPromptContents> customPromptContents; 
+            private java.util.List<CustomPromptContents> customPromptContents; 
             private Boolean enabled; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder customPromptContents(java.util.List < CustomPromptContents> customPromptContents) {
+            public Builder customPromptContents(java.util.List<CustomPromptContents> customPromptContents) {
                 this.customPromptContents = customPromptContents;
                 return this;
             }
@@ -583,7 +588,7 @@ public class StartCloudNoteRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("MeetingAssistanceType")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > meetingAssistanceType;
+        private java.util.List<String> meetingAssistanceType;
 
         private MeetingAssistance(Builder builder) {
             this.enabled = builder.enabled;
@@ -608,13 +613,13 @@ public class StartCloudNoteRequest extends Request {
         /**
          * @return meetingAssistanceType
          */
-        public java.util.List < String > getMeetingAssistanceType() {
+        public java.util.List<String> getMeetingAssistanceType() {
             return this.meetingAssistanceType;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < String > meetingAssistanceType; 
+            private java.util.List<String> meetingAssistanceType; 
 
             /**
              * Enabled.
@@ -627,7 +632,7 @@ public class StartCloudNoteRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder meetingAssistanceType(java.util.List < String > meetingAssistanceType) {
+            public Builder meetingAssistanceType(java.util.List<String> meetingAssistanceType) {
                 this.meetingAssistanceType = meetingAssistanceType;
                 return this;
             }
@@ -726,7 +731,7 @@ public class StartCloudNoteRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("InspectionContents")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < InspectionContents> inspectionContents;
+        private java.util.List<InspectionContents> inspectionContents;
 
         @com.aliyun.core.annotation.NameInMap("InspectionIntroduction")
         @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024)
@@ -761,7 +766,7 @@ public class StartCloudNoteRequest extends Request {
         /**
          * @return inspectionContents
          */
-        public java.util.List < InspectionContents> getInspectionContents() {
+        public java.util.List<InspectionContents> getInspectionContents() {
             return this.inspectionContents;
         }
 
@@ -781,7 +786,7 @@ public class StartCloudNoteRequest extends Request {
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < InspectionContents> inspectionContents; 
+            private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
 
@@ -796,7 +801,7 @@ public class StartCloudNoteRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+            public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
                 return this;
             }
@@ -991,7 +996,7 @@ public class StartCloudNoteRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > type;
+        private java.util.List<String> type;
 
         private Summarization(Builder builder) {
             this.enabled = builder.enabled;
@@ -1016,13 +1021,13 @@ public class StartCloudNoteRequest extends Request {
         /**
          * @return type
          */
-        public java.util.List < String > getType() {
+        public java.util.List<String> getType() {
             return this.type;
         }
 
         public static final class Builder {
             private Boolean enabled; 
-            private java.util.List < String > type; 
+            private java.util.List<String> type; 
 
             /**
              * Enabled.
@@ -1035,7 +1040,7 @@ public class StartCloudNoteRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder type(java.util.List < String > type) {
+            public Builder type(java.util.List<String> type) {
                 this.type = type;
                 return this;
             }

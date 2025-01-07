@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,7 +171,7 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
      */
     public static class PeakChannelCntDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeakChannelCntModule")
-        private java.util.List < PeakChannelCntModule> peakChannelCntModule;
+        private java.util.List<PeakChannelCntModule> peakChannelCntModule;
 
         private PeakChannelCntDataPerInterval(Builder builder) {
             this.peakChannelCntModule = builder.peakChannelCntModule;
@@ -183,17 +188,17 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
         /**
          * @return peakChannelCntModule
          */
-        public java.util.List < PeakChannelCntModule> getPeakChannelCntModule() {
+        public java.util.List<PeakChannelCntModule> getPeakChannelCntModule() {
             return this.peakChannelCntModule;
         }
 
         public static final class Builder {
-            private java.util.List < PeakChannelCntModule> peakChannelCntModule; 
+            private java.util.List<PeakChannelCntModule> peakChannelCntModule; 
 
             /**
              * PeakChannelCntModule.
              */
-            public Builder peakChannelCntModule(java.util.List < PeakChannelCntModule> peakChannelCntModule) {
+            public Builder peakChannelCntModule(java.util.List<PeakChannelCntModule> peakChannelCntModule) {
                 this.peakChannelCntModule = peakChannelCntModule;
                 return this;
             }

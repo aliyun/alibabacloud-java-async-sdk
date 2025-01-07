@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEndPointEventListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    private java.util.List<Nodes> nodes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String requestId; 
 
         /**
          * Nodes.
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
@@ -186,7 +191,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
      */
     public static class EventDataItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventList")
-        private java.util.List < EventList> eventList;
+        private java.util.List<EventList> eventList;
 
         @com.aliyun.core.annotation.NameInMap("Ts")
         private Long ts;
@@ -207,7 +212,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         /**
          * @return eventList
          */
-        public java.util.List < EventList> getEventList() {
+        public java.util.List<EventList> getEventList() {
             return this.eventList;
         }
 
@@ -219,13 +224,13 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventList> eventList; 
+            private java.util.List<EventList> eventList; 
             private Long ts; 
 
             /**
              * EventList.
              */
-            public Builder eventList(java.util.List < EventList> eventList) {
+            public Builder eventList(java.util.List<EventList> eventList) {
                 this.eventList = eventList;
                 return this;
             }
@@ -253,7 +258,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
      */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventDataItems")
-        private java.util.List < EventDataItems> eventDataItems;
+        private java.util.List<EventDataItems> eventDataItems;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -274,7 +279,7 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         /**
          * @return eventDataItems
          */
-        public java.util.List < EventDataItems> getEventDataItems() {
+        public java.util.List<EventDataItems> getEventDataItems() {
             return this.eventDataItems;
         }
 
@@ -286,13 +291,13 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventDataItems> eventDataItems; 
+            private java.util.List<EventDataItems> eventDataItems; 
             private String userId; 
 
             /**
              * EventDataItems.
              */
-            public Builder eventDataItems(java.util.List < EventDataItems> eventDataItems) {
+            public Builder eventDataItems(java.util.List<EventDataItems> eventDataItems) {
                 this.eventDataItems = eventDataItems;
                 return this;
             }

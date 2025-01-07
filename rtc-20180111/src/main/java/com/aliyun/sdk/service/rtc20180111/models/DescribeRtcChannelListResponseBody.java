@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
      */
     public static class CallArea extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallArea")
-        private java.util.List < String > callArea;
+        private java.util.List<String> callArea;
 
         private CallArea(Builder builder) {
             this.callArea = builder.callArea;
@@ -156,17 +161,17 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         /**
          * @return callArea
          */
-        public java.util.List < String > getCallArea() {
+        public java.util.List<String> getCallArea() {
             return this.callArea;
         }
 
         public static final class Builder {
-            private java.util.List < String > callArea; 
+            private java.util.List<String> callArea; 
 
             /**
              * CallArea.
              */
-            public Builder callArea(java.util.List < String > callArea) {
+            public Builder callArea(java.util.List<String> callArea) {
                 this.callArea = callArea;
                 return this;
             }
@@ -313,7 +318,7 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
      */
     public static class ChannelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelList")
-        private java.util.List < ChannelListChannelList> channelList;
+        private java.util.List<ChannelListChannelList> channelList;
 
         private ChannelList(Builder builder) {
             this.channelList = builder.channelList;
@@ -330,17 +335,17 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
         /**
          * @return channelList
          */
-        public java.util.List < ChannelListChannelList> getChannelList() {
+        public java.util.List<ChannelListChannelList> getChannelList() {
             return this.channelList;
         }
 
         public static final class Builder {
-            private java.util.List < ChannelListChannelList> channelList; 
+            private java.util.List<ChannelListChannelList> channelList; 
 
             /**
              * ChannelList.
              */
-            public Builder channelList(java.util.List < ChannelListChannelList> channelList) {
+            public Builder channelList(java.util.List<ChannelListChannelList> channelList) {
                 this.channelList = channelList;
                 return this;
             }

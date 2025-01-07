@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -287,7 +292,7 @@ public class CreateAppLayoutRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Panes")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Panes> panes;
+        private java.util.List<Panes> panes;
 
         private Layout(Builder builder) {
             this.name = builder.name;
@@ -312,13 +317,13 @@ public class CreateAppLayoutRequest extends Request {
         /**
          * @return panes
          */
-        public java.util.List < Panes> getPanes() {
+        public java.util.List<Panes> getPanes() {
             return this.panes;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Panes> panes; 
+            private java.util.List<Panes> panes; 
 
             /**
              * <p>This parameter is required.</p>
@@ -334,7 +339,7 @@ public class CreateAppLayoutRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder panes(java.util.List < Panes> panes) {
+            public Builder panes(java.util.List<Panes> panes) {
                 this.panes = panes;
                 return this;
             }

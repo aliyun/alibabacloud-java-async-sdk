@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     private String callStatus;
 
     @com.aliyun.core.annotation.NameInMap("PubUserDetailList")
-    private java.util.List < PubUserDetailList> pubUserDetailList;
+    private java.util.List<PubUserDetailList> pubUserDetailList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     /**
      * @return pubUserDetailList
      */
-    public java.util.List < PubUserDetailList> getPubUserDetailList() {
+    public java.util.List<PubUserDetailList> getPubUserDetailList() {
         return this.pubUserDetailList;
     }
 
@@ -69,7 +74,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     public static final class Builder {
         private String callStatus; 
-        private java.util.List < PubUserDetailList> pubUserDetailList; 
+        private java.util.List<PubUserDetailList> pubUserDetailList; 
         private String requestId; 
         private SubUserDetail subUserDetail; 
 
@@ -84,7 +89,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * PubUserDetailList.
          */
-        public Builder pubUserDetailList(java.util.List < PubUserDetailList> pubUserDetailList) {
+        public Builder pubUserDetailList(java.util.List<PubUserDetailList> pubUserDetailList) {
             this.pubUserDetailList = pubUserDetailList;
             return this;
         }
@@ -186,7 +191,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
      */
     public static class PubUserDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallIdList")
-        private java.util.List < String > callIdList;
+        private java.util.List<String> callIdList;
 
         @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
@@ -207,28 +212,28 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         private String network;
 
         @com.aliyun.core.annotation.NameInMap("NetworkList")
-        private java.util.List < String > networkList;
+        private java.util.List<String> networkList;
 
         @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
         @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
-        private java.util.List < OnlinePeriods> onlinePeriods;
+        private java.util.List<OnlinePeriods> onlinePeriods;
 
         @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
         @com.aliyun.core.annotation.NameInMap("OsList")
-        private java.util.List < String > osList;
+        private java.util.List<String> osList;
 
         @com.aliyun.core.annotation.NameInMap("Roles")
-        private java.util.List < String > roles;
+        private java.util.List<String> roles;
 
         @com.aliyun.core.annotation.NameInMap("SdkVersion")
         private String sdkVersion;
 
         @com.aliyun.core.annotation.NameInMap("SdkVersionList")
-        private java.util.List < String > sdkVersionList;
+        private java.util.List<String> sdkVersionList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -267,7 +272,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return callIdList
          */
-        public java.util.List < String > getCallIdList() {
+        public java.util.List<String> getCallIdList() {
             return this.callIdList;
         }
 
@@ -316,7 +321,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return networkList
          */
-        public java.util.List < String > getNetworkList() {
+        public java.util.List<String> getNetworkList() {
             return this.networkList;
         }
 
@@ -330,7 +335,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return onlinePeriods
          */
-        public java.util.List < OnlinePeriods> getOnlinePeriods() {
+        public java.util.List<OnlinePeriods> getOnlinePeriods() {
             return this.onlinePeriods;
         }
 
@@ -344,14 +349,14 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return osList
          */
-        public java.util.List < String > getOsList() {
+        public java.util.List<String> getOsList() {
             return this.osList;
         }
 
         /**
          * @return roles
          */
-        public java.util.List < String > getRoles() {
+        public java.util.List<String> getRoles() {
             return this.roles;
         }
 
@@ -365,7 +370,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return sdkVersionList
          */
-        public java.util.List < String > getSdkVersionList() {
+        public java.util.List<String> getSdkVersionList() {
             return this.sdkVersionList;
         }
 
@@ -384,28 +389,28 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > callIdList; 
+            private java.util.List<String> callIdList; 
             private String clientType; 
             private Long createdTs; 
             private Long destroyedTs; 
             private Long duration; 
             private String location; 
             private String network; 
-            private java.util.List < String > networkList; 
+            private java.util.List<String> networkList; 
             private Long onlineDuration; 
-            private java.util.List < OnlinePeriods> onlinePeriods; 
+            private java.util.List<OnlinePeriods> onlinePeriods; 
             private String os; 
-            private java.util.List < String > osList; 
-            private java.util.List < String > roles; 
+            private java.util.List<String> osList; 
+            private java.util.List<String> roles; 
             private String sdkVersion; 
-            private java.util.List < String > sdkVersionList; 
+            private java.util.List<String> sdkVersionList; 
             private String userId; 
             private String userIdAlias; 
 
             /**
              * CallIdList.
              */
-            public Builder callIdList(java.util.List < String > callIdList) {
+            public Builder callIdList(java.util.List<String> callIdList) {
                 this.callIdList = callIdList;
                 return this;
             }
@@ -461,7 +466,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * NetworkList.
              */
-            public Builder networkList(java.util.List < String > networkList) {
+            public Builder networkList(java.util.List<String> networkList) {
                 this.networkList = networkList;
                 return this;
             }
@@ -477,7 +482,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * OnlinePeriods.
              */
-            public Builder onlinePeriods(java.util.List < OnlinePeriods> onlinePeriods) {
+            public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
                 return this;
             }
@@ -493,7 +498,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * OsList.
              */
-            public Builder osList(java.util.List < String > osList) {
+            public Builder osList(java.util.List<String> osList) {
                 this.osList = osList;
                 return this;
             }
@@ -501,7 +506,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * Roles.
              */
-            public Builder roles(java.util.List < String > roles) {
+            public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
                 return this;
             }
@@ -517,7 +522,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * SdkVersionList.
              */
-            public Builder sdkVersionList(java.util.List < String > sdkVersionList) {
+            public Builder sdkVersionList(java.util.List<String> sdkVersionList) {
                 this.sdkVersionList = sdkVersionList;
                 return this;
             }
@@ -638,28 +643,28 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         private String network;
 
         @com.aliyun.core.annotation.NameInMap("NetworkList")
-        private java.util.List < String > networkList;
+        private java.util.List<String> networkList;
 
         @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
         @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
-        private java.util.List < SubUserDetailOnlinePeriods> onlinePeriods;
+        private java.util.List<SubUserDetailOnlinePeriods> onlinePeriods;
 
         @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
         @com.aliyun.core.annotation.NameInMap("OsList")
-        private java.util.List < String > osList;
+        private java.util.List<String> osList;
 
         @com.aliyun.core.annotation.NameInMap("Roles")
-        private java.util.List < String > roles;
+        private java.util.List<String> roles;
 
         @com.aliyun.core.annotation.NameInMap("SdkVersion")
         private String sdkVersion;
 
         @com.aliyun.core.annotation.NameInMap("SdkVersionList")
-        private java.util.List < String > sdkVersionList;
+        private java.util.List<String> sdkVersionList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -739,7 +744,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return networkList
          */
-        public java.util.List < String > getNetworkList() {
+        public java.util.List<String> getNetworkList() {
             return this.networkList;
         }
 
@@ -753,7 +758,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return onlinePeriods
          */
-        public java.util.List < SubUserDetailOnlinePeriods> getOnlinePeriods() {
+        public java.util.List<SubUserDetailOnlinePeriods> getOnlinePeriods() {
             return this.onlinePeriods;
         }
 
@@ -767,14 +772,14 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return osList
          */
-        public java.util.List < String > getOsList() {
+        public java.util.List<String> getOsList() {
             return this.osList;
         }
 
         /**
          * @return roles
          */
-        public java.util.List < String > getRoles() {
+        public java.util.List<String> getRoles() {
             return this.roles;
         }
 
@@ -788,7 +793,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
         /**
          * @return sdkVersionList
          */
-        public java.util.List < String > getSdkVersionList() {
+        public java.util.List<String> getSdkVersionList() {
             return this.sdkVersionList;
         }
 
@@ -813,14 +818,14 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             private Long duration; 
             private String location; 
             private String network; 
-            private java.util.List < String > networkList; 
+            private java.util.List<String> networkList; 
             private Long onlineDuration; 
-            private java.util.List < SubUserDetailOnlinePeriods> onlinePeriods; 
+            private java.util.List<SubUserDetailOnlinePeriods> onlinePeriods; 
             private String os; 
-            private java.util.List < String > osList; 
-            private java.util.List < String > roles; 
+            private java.util.List<String> osList; 
+            private java.util.List<String> roles; 
             private String sdkVersion; 
-            private java.util.List < String > sdkVersionList; 
+            private java.util.List<String> sdkVersionList; 
             private String userId; 
             private String userIdAlias; 
 
@@ -875,7 +880,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * NetworkList.
              */
-            public Builder networkList(java.util.List < String > networkList) {
+            public Builder networkList(java.util.List<String> networkList) {
                 this.networkList = networkList;
                 return this;
             }
@@ -891,7 +896,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * OnlinePeriods.
              */
-            public Builder onlinePeriods(java.util.List < SubUserDetailOnlinePeriods> onlinePeriods) {
+            public Builder onlinePeriods(java.util.List<SubUserDetailOnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
                 return this;
             }
@@ -907,7 +912,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * OsList.
              */
-            public Builder osList(java.util.List < String > osList) {
+            public Builder osList(java.util.List<String> osList) {
                 this.osList = osList;
                 return this;
             }
@@ -915,7 +920,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * Roles.
              */
-            public Builder roles(java.util.List < String > roles) {
+            public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
                 return this;
             }
@@ -931,7 +936,7 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
             /**
              * SdkVersionList.
              */
-            public Builder sdkVersionList(java.util.List < String > sdkVersionList) {
+            public Builder sdkVersionList(java.util.List<String> sdkVersionList) {
                 this.sdkVersionList = sdkVersionList;
                 return this;
             }

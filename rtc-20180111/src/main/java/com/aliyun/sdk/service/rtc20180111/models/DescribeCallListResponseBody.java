@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCallListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CallList")
-    private java.util.List < CallList> callList;
+    private java.util.List<CallList> callList;
 
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
@@ -46,7 +51,7 @@ public class DescribeCallListResponseBody extends TeaModel {
     /**
      * @return callList
      */
-    public java.util.List < CallList> getCallList() {
+    public java.util.List<CallList> getCallList() {
         return this.callList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCallListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CallList> callList; 
+        private java.util.List<CallList> callList; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCallListResponseBody extends TeaModel {
         /**
          * CallList.
          */
-        public Builder callList(java.util.List < CallList> callList) {
+        public Builder callList(java.util.List<CallList> callList) {
             this.callList = callList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -137,7 +142,7 @@ public class ModifyCallbackMetaRequest extends Request {
         private String conf;
 
         @com.aliyun.core.annotation.NameInMap("SubEvent")
-        private java.util.List < Integer > subEvent;
+        private java.util.List<Integer> subEvent;
 
         private Callback(Builder builder) {
             this.category = builder.category;
@@ -170,14 +175,14 @@ public class ModifyCallbackMetaRequest extends Request {
         /**
          * @return subEvent
          */
-        public java.util.List < Integer > getSubEvent() {
+        public java.util.List<Integer> getSubEvent() {
             return this.subEvent;
         }
 
         public static final class Builder {
             private String category; 
             private String conf; 
-            private java.util.List < Integer > subEvent; 
+            private java.util.List<Integer> subEvent; 
 
             /**
              * <p>This parameter is required.</p>
@@ -204,7 +209,7 @@ public class ModifyCallbackMetaRequest extends Request {
             /**
              * SubEvent.
              */
-            public Builder subEvent(java.util.List < Integer > subEvent) {
+            public Builder subEvent(java.util.List<Integer> subEvent) {
                 this.subEvent = subEvent;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     private DescribeAutoLiveStreamRuleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         /**
          * Rules.
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -82,10 +87,10 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         private String callBack;
 
         @com.aliyun.core.annotation.NameInMap("ChannelIdPrefixes")
-        private java.util.List < String > channelIdPrefixes;
+        private java.util.List<String> channelIdPrefixes;
 
         @com.aliyun.core.annotation.NameInMap("ChannelIds")
-        private java.util.List < String > channelIds;
+        private java.util.List<String> channelIds;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -135,14 +140,14 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
         /**
          * @return channelIdPrefixes
          */
-        public java.util.List < String > getChannelIdPrefixes() {
+        public java.util.List<String> getChannelIdPrefixes() {
             return this.channelIdPrefixes;
         }
 
         /**
          * @return channelIds
          */
-        public java.util.List < String > getChannelIds() {
+        public java.util.List<String> getChannelIds() {
             return this.channelIds;
         }
 
@@ -190,8 +195,8 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String callBack; 
-            private java.util.List < String > channelIdPrefixes; 
-            private java.util.List < String > channelIds; 
+            private java.util.List<String> channelIdPrefixes; 
+            private java.util.List<String> channelIds; 
             private String createTime; 
             private Integer mediaEncode; 
             private String playDomain; 
@@ -210,7 +215,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             /**
              * ChannelIdPrefixes.
              */
-            public Builder channelIdPrefixes(java.util.List < String > channelIdPrefixes) {
+            public Builder channelIdPrefixes(java.util.List<String> channelIdPrefixes) {
                 this.channelIdPrefixes = channelIdPrefixes;
                 return this;
             }
@@ -218,7 +223,7 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
             /**
              * ChannelIds.
              */
-            public Builder channelIds(java.util.List < String > channelIds) {
+            public Builder channelIds(java.util.List<String> channelIds) {
                 this.channelIds = channelIds;
                 return this;
             }

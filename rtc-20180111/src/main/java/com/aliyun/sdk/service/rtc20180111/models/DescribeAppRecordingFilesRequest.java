@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class DescribeAppRecordingFilesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
-    private java.util.List < String > taskIds;
+    private java.util.List<String> taskIds;
 
     private DescribeAppRecordingFilesRequest(Builder builder) {
         super(builder);
@@ -111,7 +116,7 @@ public class DescribeAppRecordingFilesRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
@@ -122,7 +127,7 @@ public class DescribeAppRecordingFilesRequest extends Request {
         private Integer pageNo; 
         private Integer pageSize; 
         private Long startTs; 
-        private java.util.List < String > taskIds; 
+        private java.util.List<String> taskIds; 
 
         private Builder() {
             super();
@@ -200,7 +205,7 @@ public class DescribeAppRecordingFilesRequest extends Request {
         /**
          * TaskIds.
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");
             this.putQueryParameter("TaskIds", taskIdsShrink);
             this.taskIds = taskIds;

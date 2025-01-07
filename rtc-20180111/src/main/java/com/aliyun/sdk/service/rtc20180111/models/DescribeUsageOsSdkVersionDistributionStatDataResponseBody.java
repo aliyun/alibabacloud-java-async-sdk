@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UsageOsSdkVersionStatList")
-    private java.util.List < UsageOsSdkVersionStatList> usageOsSdkVersionStatList;
+    private java.util.List<UsageOsSdkVersionStatList> usageOsSdkVersionStatList;
 
     private DescribeUsageOsSdkVersionDistributionStatDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
     /**
      * @return usageOsSdkVersionStatList
      */
-    public java.util.List < UsageOsSdkVersionStatList> getUsageOsSdkVersionStatList() {
+    public java.util.List<UsageOsSdkVersionStatList> getUsageOsSdkVersionStatList() {
         return this.usageOsSdkVersionStatList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UsageOsSdkVersionStatList> usageOsSdkVersionStatList; 
+        private java.util.List<UsageOsSdkVersionStatList> usageOsSdkVersionStatList; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
         /**
          * UsageOsSdkVersionStatList.
          */
-        public Builder usageOsSdkVersionStatList(java.util.List < UsageOsSdkVersionStatList> usageOsSdkVersionStatList) {
+        public Builder usageOsSdkVersionStatList(java.util.List<UsageOsSdkVersionStatList> usageOsSdkVersionStatList) {
             this.usageOsSdkVersionStatList = usageOsSdkVersionStatList;
             return this;
         }

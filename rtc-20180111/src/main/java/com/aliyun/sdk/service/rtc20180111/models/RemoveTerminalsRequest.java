@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class RemoveTerminalsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TerminalIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > terminalIds;
+    private java.util.List<String> terminalIds;
 
     private RemoveTerminalsRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class RemoveTerminalsRequest extends Request {
     /**
      * @return terminalIds
      */
-    public java.util.List < String > getTerminalIds() {
+    public java.util.List<String> getTerminalIds() {
         return this.terminalIds;
     }
 
@@ -84,7 +89,7 @@ public class RemoveTerminalsRequest extends Request {
         private String appId; 
         private String channelId; 
         private Long ownerId; 
-        private java.util.List < String > terminalIds; 
+        private java.util.List<String> terminalIds; 
 
         private Builder() {
             super();
@@ -137,7 +142,7 @@ public class RemoveTerminalsRequest extends Request {
          * <strong>example:</strong>
          * <p>1811xxxx</p>
          */
-        public Builder terminalIds(java.util.List < String > terminalIds) {
+        public Builder terminalIds(java.util.List<String> terminalIds) {
             this.putQueryParameter("TerminalIds", terminalIds);
             this.terminalIds = terminalIds;
             return this;

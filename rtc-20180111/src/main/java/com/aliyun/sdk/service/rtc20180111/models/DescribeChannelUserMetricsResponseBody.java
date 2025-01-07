@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MetricDatas")
-    private java.util.List < MetricDatas> metricDatas;
+    private java.util.List<MetricDatas> metricDatas;
 
     @com.aliyun.core.annotation.NameInMap("OverallData")
     private OverallData overallData;
@@ -38,7 +43,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     /**
      * @return metricDatas
      */
-    public java.util.List < MetricDatas> getMetricDatas() {
+    public java.util.List<MetricDatas> getMetricDatas() {
         return this.metricDatas;
     }
 
@@ -57,14 +62,14 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MetricDatas> metricDatas; 
+        private java.util.List<MetricDatas> metricDatas; 
         private OverallData overallData; 
         private String requestId; 
 
         /**
          * MetricDatas.
          */
-        public Builder metricDatas(java.util.List < MetricDatas> metricDatas) {
+        public Builder metricDatas(java.util.List<MetricDatas> metricDatas) {
             this.metricDatas = metricDatas;
             return this;
         }
@@ -99,7 +104,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
      */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
-        private java.util.Map < String, ? > ext;
+        private java.util.Map<String, ?> ext;
 
         @com.aliyun.core.annotation.NameInMap("X")
         private String x;
@@ -124,7 +129,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         /**
          * @return ext
          */
-        public java.util.Map < String, ? > getExt() {
+        public java.util.Map<String, ?> getExt() {
             return this.ext;
         }
 
@@ -143,14 +148,14 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > ext; 
+            private java.util.Map<String, ?> ext; 
             private String x; 
             private String y; 
 
             /**
              * Ext.
              */
-            public Builder ext(java.util.Map < String, ? > ext) {
+            public Builder ext(java.util.Map<String, ?> ext) {
                 this.ext = ext;
                 return this;
             }
@@ -186,7 +191,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
      */
     public static class MetricDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -207,7 +212,7 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -219,13 +224,13 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String type; 
 
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

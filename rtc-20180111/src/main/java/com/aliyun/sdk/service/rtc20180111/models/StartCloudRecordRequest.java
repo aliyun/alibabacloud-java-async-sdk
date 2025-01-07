@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class StartCloudRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Backgrounds")
-    private java.util.List < Backgrounds> backgrounds;
+    private java.util.List<Backgrounds> backgrounds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelId")
@@ -28,7 +33,7 @@ public class StartCloudRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClockWidgets")
-    private java.util.List < ClockWidgets> clockWidgets;
+    private java.util.List<ClockWidgets> clockWidgets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CropMode")
@@ -36,7 +41,7 @@ public class StartCloudRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LayoutSpecifiedUsers")
@@ -44,7 +49,7 @@ public class StartCloudRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Panes")
-    private java.util.List < Panes> panes;
+    private java.util.List<Panes> panes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionColor")
@@ -67,7 +72,7 @@ public class StartCloudRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Texts")
-    private java.util.List < Texts> texts;
+    private java.util.List<Texts> texts;
 
     private StartCloudRecordRequest(Builder builder) {
         super(builder);
@@ -109,7 +114,7 @@ public class StartCloudRecordRequest extends Request {
     /**
      * @return backgrounds
      */
-    public java.util.List < Backgrounds> getBackgrounds() {
+    public java.util.List<Backgrounds> getBackgrounds() {
         return this.backgrounds;
     }
 
@@ -123,7 +128,7 @@ public class StartCloudRecordRequest extends Request {
     /**
      * @return clockWidgets
      */
-    public java.util.List < ClockWidgets> getClockWidgets() {
+    public java.util.List<ClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
@@ -137,7 +142,7 @@ public class StartCloudRecordRequest extends Request {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -151,7 +156,7 @@ public class StartCloudRecordRequest extends Request {
     /**
      * @return panes
      */
-    public java.util.List < Panes> getPanes() {
+    public java.util.List<Panes> getPanes() {
         return this.panes;
     }
 
@@ -186,24 +191,24 @@ public class StartCloudRecordRequest extends Request {
     /**
      * @return texts
      */
-    public java.util.List < Texts> getTexts() {
+    public java.util.List<Texts> getTexts() {
         return this.texts;
     }
 
     public static final class Builder extends Request.Builder<StartCloudRecordRequest, Builder> {
         private String appId; 
-        private java.util.List < Backgrounds> backgrounds; 
+        private java.util.List<Backgrounds> backgrounds; 
         private String channelId; 
-        private java.util.List < ClockWidgets> clockWidgets; 
+        private java.util.List<ClockWidgets> clockWidgets; 
         private Integer cropMode; 
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
-        private java.util.List < Panes> panes; 
+        private java.util.List<Panes> panes; 
         private RegionColor regionColor; 
         private StorageConfig storageConfig; 
         private String taskId; 
         private String templateId; 
-        private java.util.List < Texts> texts; 
+        private java.util.List<Texts> texts; 
 
         private Builder() {
             super();
@@ -242,7 +247,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * Backgrounds.
          */
-        public Builder backgrounds(java.util.List < Backgrounds> backgrounds) {
+        public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
             this.backgrounds = backgrounds;
             return this;
@@ -264,7 +269,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * ClockWidgets.
          */
-        public Builder clockWidgets(java.util.List < ClockWidgets> clockWidgets) {
+        public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
             this.clockWidgets = clockWidgets;
             return this;
@@ -282,7 +287,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * Images.
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.putQueryParameter("Images", images);
             this.images = images;
             return this;
@@ -301,7 +306,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * <p>panes</p>
          */
-        public Builder panes(java.util.List < Panes> panes) {
+        public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
             this.panes = panes;
             return this;
@@ -354,7 +359,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * Texts.
          */
-        public Builder texts(java.util.List < Texts> texts) {
+        public Builder texts(java.util.List<Texts> texts) {
             this.putQueryParameter("Texts", texts);
             this.texts = texts;
             return this;
@@ -1256,7 +1261,7 @@ public class StartCloudRecordRequest extends Request {
     public static class LayoutSpecifiedUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ids")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > ids;
+        private java.util.List<String> ids;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1278,7 +1283,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return ids
          */
-        public java.util.List < String > getIds() {
+        public java.util.List<String> getIds() {
             return this.ids;
         }
 
@@ -1290,13 +1295,13 @@ public class StartCloudRecordRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > ids; 
+            private java.util.List<String> ids; 
             private String type; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder ids(java.util.List < String > ids) {
+            public Builder ids(java.util.List<String> ids) {
                 this.ids = ids;
                 return this;
             }
@@ -1998,7 +2003,7 @@ public class StartCloudRecordRequest extends Request {
      */
     public static class Panes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
-        private java.util.List < PanesImages> images;
+        private java.util.List<PanesImages> images;
 
         @com.aliyun.core.annotation.NameInMap("PaneCropMode")
         private Integer paneCropMode;
@@ -2014,7 +2019,7 @@ public class StartCloudRecordRequest extends Request {
         private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("Texts")
-        private java.util.List < PanesTexts> texts;
+        private java.util.List<PanesTexts> texts;
 
         private Panes(Builder builder) {
             this.images = builder.images;
@@ -2036,7 +2041,7 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return images
          */
-        public java.util.List < PanesImages> getImages() {
+        public java.util.List<PanesImages> getImages() {
             return this.images;
         }
 
@@ -2071,22 +2076,22 @@ public class StartCloudRecordRequest extends Request {
         /**
          * @return texts
          */
-        public java.util.List < PanesTexts> getTexts() {
+        public java.util.List<PanesTexts> getTexts() {
             return this.texts;
         }
 
         public static final class Builder {
-            private java.util.List < PanesImages> images; 
+            private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
             private Integer paneId; 
             private String source; 
             private String sourceType; 
-            private java.util.List < PanesTexts> texts; 
+            private java.util.List<PanesTexts> texts; 
 
             /**
              * Images.
              */
-            public Builder images(java.util.List < PanesImages> images) {
+            public Builder images(java.util.List<PanesImages> images) {
                 this.images = images;
                 return this;
             }
@@ -2133,7 +2138,7 @@ public class StartCloudRecordRequest extends Request {
             /**
              * Texts.
              */
-            public Builder texts(java.util.List < PanesTexts> texts) {
+            public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -119,7 +124,7 @@ public class DescribeAppsResponseBody extends TeaModel {
      */
     public static class ServiceAreas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceArea")
-        private java.util.List < String > serviceArea;
+        private java.util.List<String> serviceArea;
 
         private ServiceAreas(Builder builder) {
             this.serviceArea = builder.serviceArea;
@@ -136,17 +141,17 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * @return serviceArea
          */
-        public java.util.List < String > getServiceArea() {
+        public java.util.List<String> getServiceArea() {
             return this.serviceArea;
         }
 
         public static final class Builder {
-            private java.util.List < String > serviceArea; 
+            private java.util.List<String> serviceArea; 
 
             /**
              * ServiceArea.
              */
-            public Builder serviceArea(java.util.List < String > serviceArea) {
+            public Builder serviceArea(java.util.List<String> serviceArea) {
                 this.serviceArea = serviceArea;
                 return this;
             }
@@ -353,7 +358,7 @@ public class DescribeAppsResponseBody extends TeaModel {
      */
     public static class AppList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
-        private java.util.List < App> app;
+        private java.util.List<App> app;
 
         private AppList(Builder builder) {
             this.app = builder.app;
@@ -370,17 +375,17 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * @return app
          */
-        public java.util.List < App> getApp() {
+        public java.util.List<App> getApp() {
             return this.app;
         }
 
         public static final class Builder {
-            private java.util.List < App> app; 
+            private java.util.List<App> app; 
 
             /**
              * App.
              */
-            public Builder app(java.util.List < App> app) {
+            public Builder app(java.util.List<App> app) {
                 this.app = app;
                 return this;
             }

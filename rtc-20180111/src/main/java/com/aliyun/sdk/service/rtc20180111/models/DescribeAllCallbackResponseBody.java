@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAllCallbackResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Callbacks")
-    private java.util.List < Callbacks> callbacks;
+    private java.util.List<Callbacks> callbacks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
     /**
      * @return callbacks
      */
-    public java.util.List < Callbacks> getCallbacks() {
+    public java.util.List<Callbacks> getCallbacks() {
         return this.callbacks;
     }
 
@@ -46,13 +51,13 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Callbacks> callbacks; 
+        private java.util.List<Callbacks> callbacks; 
         private String requestId; 
 
         /**
          * Callbacks.
          */
-        public Builder callbacks(java.util.List < Callbacks> callbacks) {
+        public Builder callbacks(java.util.List<Callbacks> callbacks) {
             this.callbacks = callbacks;
             return this;
         }
@@ -175,7 +180,7 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SubEvent")
-        private java.util.List < SubEvent> subEvent;
+        private java.util.List<SubEvent> subEvent;
 
         private Callbacks(Builder builder) {
             this.category = builder.category;
@@ -208,14 +213,14 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
         /**
          * @return subEvent
          */
-        public java.util.List < SubEvent> getSubEvent() {
+        public java.util.List<SubEvent> getSubEvent() {
             return this.subEvent;
         }
 
         public static final class Builder {
             private String category; 
             private String name; 
-            private java.util.List < SubEvent> subEvent; 
+            private java.util.List<SubEvent> subEvent; 
 
             /**
              * Category.
@@ -236,7 +241,7 @@ public class DescribeAllCallbackResponseBody extends TeaModel {
             /**
              * SubEvent.
              */
-            public Builder subEvent(java.util.List < SubEvent> subEvent) {
+            public Builder subEvent(java.util.List<SubEvent> subEvent) {
                 this.subEvent = subEvent;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class RemoveUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Users")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Users> users;
+    private java.util.List<Users> users;
 
     private RemoveUsersRequest(Builder builder) {
         super(builder);
@@ -64,14 +69,14 @@ public class RemoveUsersRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<RemoveUsersRequest, Builder> {
         private String appId; 
         private String channelId; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
 
         private Builder() {
             super();
@@ -111,7 +116,7 @@ public class RemoveUsersRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.putQueryParameter("Users", users);
             this.users = users;
             return this;

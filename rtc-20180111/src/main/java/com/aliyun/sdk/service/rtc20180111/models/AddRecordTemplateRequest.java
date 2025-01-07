@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class AddRecordTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Backgrounds")
-    private java.util.List < Backgrounds> backgrounds;
+    private java.util.List<Backgrounds> backgrounds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClockWidgets")
-    private java.util.List < ClockWidgets> clockWidgets;
+    private java.util.List<ClockWidgets> clockWidgets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DelayStopTime")
@@ -46,7 +51,7 @@ public class AddRecordTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Formats")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > formats;
+    private java.util.List<String> formats;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HttpCallbackUrl")
@@ -55,7 +60,7 @@ public class AddRecordTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LayoutIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > layoutIds;
+    private java.util.List<Long> layoutIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaEncode")
@@ -96,7 +101,7 @@ public class AddRecordTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Watermarks")
-    private java.util.List < Watermarks> watermarks;
+    private java.util.List<Watermarks> watermarks;
 
     private AddRecordTemplateRequest(Builder builder) {
         super(builder);
@@ -151,14 +156,14 @@ public class AddRecordTemplateRequest extends Request {
     /**
      * @return backgrounds
      */
-    public java.util.List < Backgrounds> getBackgrounds() {
+    public java.util.List<Backgrounds> getBackgrounds() {
         return this.backgrounds;
     }
 
     /**
      * @return clockWidgets
      */
-    public java.util.List < ClockWidgets> getClockWidgets() {
+    public java.util.List<ClockWidgets> getClockWidgets() {
         return this.clockWidgets;
     }
 
@@ -186,7 +191,7 @@ public class AddRecordTemplateRequest extends Request {
     /**
      * @return formats
      */
-    public java.util.List < String > getFormats() {
+    public java.util.List<String> getFormats() {
         return this.formats;
     }
 
@@ -200,7 +205,7 @@ public class AddRecordTemplateRequest extends Request {
     /**
      * @return layoutIds
      */
-    public java.util.List < Long > getLayoutIds() {
+    public java.util.List<Long> getLayoutIds() {
         return this.layoutIds;
     }
 
@@ -263,21 +268,21 @@ public class AddRecordTemplateRequest extends Request {
     /**
      * @return watermarks
      */
-    public java.util.List < Watermarks> getWatermarks() {
+    public java.util.List<Watermarks> getWatermarks() {
         return this.watermarks;
     }
 
     public static final class Builder extends Request.Builder<AddRecordTemplateRequest, Builder> {
         private String appId; 
         private Integer backgroundColor; 
-        private java.util.List < Backgrounds> backgrounds; 
-        private java.util.List < ClockWidgets> clockWidgets; 
+        private java.util.List<Backgrounds> backgrounds; 
+        private java.util.List<ClockWidgets> clockWidgets; 
         private Integer delayStopTime; 
         private Boolean enableM3u8DateTime; 
         private Integer fileSplitInterval; 
-        private java.util.List < String > formats; 
+        private java.util.List<String> formats; 
         private String httpCallbackUrl; 
-        private java.util.List < Long > layoutIds; 
+        private java.util.List<Long> layoutIds; 
         private Integer mediaEncode; 
         private String mnsQueue; 
         private String name; 
@@ -286,7 +291,7 @@ public class AddRecordTemplateRequest extends Request {
         private String ossFilePrefix; 
         private Long ownerId; 
         private String taskProfile; 
-        private java.util.List < Watermarks> watermarks; 
+        private java.util.List<Watermarks> watermarks; 
 
         private Builder() {
             super();
@@ -339,7 +344,7 @@ public class AddRecordTemplateRequest extends Request {
         /**
          * Backgrounds.
          */
-        public Builder backgrounds(java.util.List < Backgrounds> backgrounds) {
+        public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
             this.backgrounds = backgrounds;
             return this;
@@ -348,7 +353,7 @@ public class AddRecordTemplateRequest extends Request {
         /**
          * ClockWidgets.
          */
-        public Builder clockWidgets(java.util.List < ClockWidgets> clockWidgets) {
+        public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
             this.clockWidgets = clockWidgets;
             return this;
@@ -390,7 +395,7 @@ public class AddRecordTemplateRequest extends Request {
          * <strong>example:</strong>
          * <p>mp4</p>
          */
-        public Builder formats(java.util.List < String > formats) {
+        public Builder formats(java.util.List<String> formats) {
             this.putQueryParameter("Formats", formats);
             this.formats = formats;
             return this;
@@ -411,7 +416,7 @@ public class AddRecordTemplateRequest extends Request {
          * <strong>example:</strong>
          * <p>2</p>
          */
-        public Builder layoutIds(java.util.List < Long > layoutIds) {
+        public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
             this.layoutIds = layoutIds;
             return this;
@@ -504,7 +509,7 @@ public class AddRecordTemplateRequest extends Request {
         /**
          * Watermarks.
          */
-        public Builder watermarks(java.util.List < Watermarks> watermarks) {
+        public Builder watermarks(java.util.List<Watermarks> watermarks) {
             this.putQueryParameter("Watermarks", watermarks);
             this.watermarks = watermarks;
             return this;

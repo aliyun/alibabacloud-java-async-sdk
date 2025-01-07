@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelIdPrefixes")
-    private java.util.List < String > channelIdPrefixes;
+    private java.util.List<String> channelIdPrefixes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelIds")
-    private java.util.List < String > channelIds;
+    private java.util.List<String> channelIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaEncode")
@@ -94,14 +99,14 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
     /**
      * @return channelIdPrefixes
      */
-    public java.util.List < String > getChannelIdPrefixes() {
+    public java.util.List<String> getChannelIdPrefixes() {
         return this.channelIdPrefixes;
     }
 
     /**
      * @return channelIds
      */
-    public java.util.List < String > getChannelIds() {
+    public java.util.List<String> getChannelIds() {
         return this.channelIds;
     }
 
@@ -143,8 +148,8 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateAutoLiveStreamRuleRequest, Builder> {
         private String appId; 
         private String callBack; 
-        private java.util.List < String > channelIdPrefixes; 
-        private java.util.List < String > channelIds; 
+        private java.util.List<String> channelIdPrefixes; 
+        private java.util.List<String> channelIds; 
         private Integer mediaEncode; 
         private Long ownerId; 
         private String playDomain; 
@@ -192,7 +197,7 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         /**
          * ChannelIdPrefixes.
          */
-        public Builder channelIdPrefixes(java.util.List < String > channelIdPrefixes) {
+        public Builder channelIdPrefixes(java.util.List<String> channelIdPrefixes) {
             this.putQueryParameter("ChannelIdPrefixes", channelIdPrefixes);
             this.channelIdPrefixes = channelIdPrefixes;
             return this;
@@ -201,7 +206,7 @@ public class UpdateAutoLiveStreamRuleRequest extends Request {
         /**
          * ChannelIds.
          */
-        public Builder channelIds(java.util.List < String > channelIds) {
+        public Builder channelIds(java.util.List<String> channelIds) {
             this.putQueryParameter("ChannelIds", channelIds);
             this.channelIds = channelIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QualityStatDataList")
-    private java.util.List < QualityStatDataList> qualityStatDataList;
+    private java.util.List<QualityStatDataList> qualityStatDataList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     /**
      * @return qualityStatDataList
      */
-    public java.util.List < QualityStatDataList> getQualityStatDataList() {
+    public java.util.List<QualityStatDataList> getQualityStatDataList() {
         return this.qualityStatDataList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeQualityDistributionStatDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < QualityStatDataList> qualityStatDataList; 
+        private java.util.List<QualityStatDataList> qualityStatDataList; 
         private String requestId; 
 
         /**
          * QualityStatDataList.
          */
-        public Builder qualityStatDataList(java.util.List < QualityStatDataList> qualityStatDataList) {
+        public Builder qualityStatDataList(java.util.List<QualityStatDataList> qualityStatDataList) {
             this.qualityStatDataList = qualityStatDataList;
             return this;
         }

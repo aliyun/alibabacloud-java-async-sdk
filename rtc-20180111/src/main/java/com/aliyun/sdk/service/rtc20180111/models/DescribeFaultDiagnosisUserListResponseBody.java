@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     private Integer totalCnt;
 
     @com.aliyun.core.annotation.NameInMap("UserList")
-    private java.util.List < UserList> userList;
+    private java.util.List<UserList> userList;
 
     private DescribeFaultDiagnosisUserListResponseBody(Builder builder) {
         this.pageNo = builder.pageNo;
@@ -74,7 +79,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     /**
      * @return userList
      */
-    public java.util.List < UserList> getUserList() {
+    public java.util.List<UserList> getUserList() {
         return this.userList;
     }
 
@@ -83,7 +88,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCnt; 
-        private java.util.List < UserList> userList; 
+        private java.util.List<UserList> userList; 
 
         /**
          * PageNo.
@@ -120,7 +125,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         /**
          * UserList.
          */
-        public Builder userList(java.util.List < UserList> userList) {
+        public Builder userList(java.util.List<UserList> userList) {
             this.userList = userList;
             return this;
         }
@@ -198,7 +203,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         private Long destroyedTs;
 
         @com.aliyun.core.annotation.NameInMap("FaultList")
-        private java.util.List < FaultList> faultList;
+        private java.util.List<FaultList> faultList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -251,7 +256,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
         /**
          * @return faultList
          */
-        public java.util.List < FaultList> getFaultList() {
+        public java.util.List<FaultList> getFaultList() {
             return this.faultList;
         }
 
@@ -267,7 +272,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             private String channelId; 
             private Long createdTs; 
             private Long destroyedTs; 
-            private java.util.List < FaultList> faultList; 
+            private java.util.List<FaultList> faultList; 
             private String userId; 
 
             /**
@@ -305,7 +310,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
             /**
              * FaultList.
              */
-            public Builder faultList(java.util.List < FaultList> faultList) {
+            public Builder faultList(java.util.List<FaultList> faultList) {
                 this.faultList = faultList;
                 return this;
             }

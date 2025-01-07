@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Templates")
-    private java.util.List < Templates> templates;
+    private java.util.List<Templates> templates;
 
     @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
@@ -49,7 +54,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
@@ -69,7 +74,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
         private Long totalNum; 
         private Long totalPage; 
 
@@ -87,7 +92,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         /**
          * Templates.
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }
@@ -125,7 +130,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("LayoutIds")
-        private java.util.List < String > layoutIds;
+        private java.util.List<String> layoutIds;
 
         @com.aliyun.core.annotation.NameInMap("MediaEncode")
         private Integer mediaEncode;
@@ -162,7 +167,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
         /**
          * @return layoutIds
          */
-        public java.util.List < String > getLayoutIds() {
+        public java.util.List<String> getLayoutIds() {
             return this.layoutIds;
         }
 
@@ -189,7 +194,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private java.util.List < String > layoutIds; 
+            private java.util.List<String> layoutIds; 
             private Integer mediaEncode; 
             private String name; 
             private String templateId; 
@@ -205,7 +210,7 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
             /**
              * LayoutIds.
              */
-            public Builder layoutIds(java.util.List < String > layoutIds) {
+            public Builder layoutIds(java.util.List<String> layoutIds) {
                 this.layoutIds = layoutIds;
                 return this;
             }

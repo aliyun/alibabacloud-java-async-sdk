@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeRecordTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateIds")
-    private java.util.List < String > templateIds;
+    private java.util.List<String> templateIds;
 
     private DescribeRecordTemplatesRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class DescribeRecordTemplatesRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < String > getTemplateIds() {
+    public java.util.List<String> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -95,7 +100,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private java.util.List < String > templateIds; 
+        private java.util.List<String> templateIds; 
 
         private Builder() {
             super();
@@ -152,7 +157,7 @@ public class DescribeRecordTemplatesRequest extends Request {
         /**
          * TemplateIds.
          */
-        public Builder templateIds(java.util.List < String > templateIds) {
+        public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
             return this;

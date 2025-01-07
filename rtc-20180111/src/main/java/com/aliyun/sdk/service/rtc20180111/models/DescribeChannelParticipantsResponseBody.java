@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
      */
     public static class UserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("User")
-        private java.util.List < String > user;
+        private java.util.List<String> user;
 
         private UserList(Builder builder) {
             this.user = builder.user;
@@ -156,17 +161,17 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
         /**
          * @return user
          */
-        public java.util.List < String > getUser() {
+        public java.util.List<String> getUser() {
             return this.user;
         }
 
         public static final class Builder {
-            private java.util.List < String > user; 
+            private java.util.List<String> user; 
 
             /**
              * User.
              */
-            public Builder user(java.util.List < String > user) {
+            public Builder user(java.util.List<String> user) {
                 this.user = user;
                 return this;
             }

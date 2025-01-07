@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeChannelsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Records")
-    private java.util.List < String > records;
+    private java.util.List<String> records;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeChannelsResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < String > getRecords() {
+    public java.util.List<String> getRecords() {
         return this.records;
     }
 
@@ -81,7 +86,7 @@ public class DescribeChannelsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNo; 
         private Integer pageSize; 
-        private java.util.List < String > records; 
+        private java.util.List<String> records; 
         private String requestId; 
         private Integer totalCnt; 
 
@@ -104,7 +109,7 @@ public class DescribeChannelsResponseBody extends TeaModel {
         /**
          * Records.
          */
-        public Builder records(java.util.List < String > records) {
+        public Builder records(java.util.List<String> records) {
             this.records = records;
             return this;
         }

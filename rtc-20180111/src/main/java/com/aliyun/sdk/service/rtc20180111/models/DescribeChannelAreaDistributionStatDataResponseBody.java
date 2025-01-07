@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AreaStatList")
-    private java.util.List < AreaStatList> areaStatList;
+    private java.util.List<AreaStatList> areaStatList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     /**
      * @return areaStatList
      */
-    public java.util.List < AreaStatList> getAreaStatList() {
+    public java.util.List<AreaStatList> getAreaStatList() {
         return this.areaStatList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     }
 
     public static final class Builder {
-        private java.util.List < AreaStatList> areaStatList; 
+        private java.util.List<AreaStatList> areaStatList; 
         private String requestId; 
 
         /**
          * AreaStatList.
          */
-        public Builder areaStatList(java.util.List < AreaStatList> areaStatList) {
+        public Builder areaStatList(java.util.List<AreaStatList> areaStatList) {
             this.areaStatList = areaStatList;
             return this;
         }

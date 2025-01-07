@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRecordFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RecordFiles")
-    private java.util.List < RecordFiles> recordFiles;
+    private java.util.List<RecordFiles> recordFiles;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
     /**
      * @return recordFiles
      */
-    public java.util.List < RecordFiles> getRecordFiles() {
+    public java.util.List<RecordFiles> getRecordFiles() {
         return this.recordFiles;
     }
 
@@ -68,7 +73,7 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RecordFiles> recordFiles; 
+        private java.util.List<RecordFiles> recordFiles; 
         private String requestId; 
         private Long totalNum; 
         private Long totalPage; 
@@ -76,7 +81,7 @@ public class DescribeRecordFilesResponseBody extends TeaModel {
         /**
          * RecordFiles.
          */
-        public Builder recordFiles(java.util.List < RecordFiles> recordFiles) {
+        public Builder recordFiles(java.util.List<RecordFiles> recordFiles) {
             this.recordFiles = recordFiles;
             return this;
         }

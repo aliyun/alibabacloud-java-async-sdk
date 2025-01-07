@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -146,7 +151,7 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
      */
     public static class UserCntDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCntModule")
-        private java.util.List < UserCntModule> userCntModule;
+        private java.util.List<UserCntModule> userCntModule;
 
         private UserCntDataPerInterval(Builder builder) {
             this.userCntModule = builder.userCntModule;
@@ -163,17 +168,17 @@ public class DescribeRtcUserCntDataResponseBody extends TeaModel {
         /**
          * @return userCntModule
          */
-        public java.util.List < UserCntModule> getUserCntModule() {
+        public java.util.List<UserCntModule> getUserCntModule() {
             return this.userCntModule;
         }
 
         public static final class Builder {
-            private java.util.List < UserCntModule> userCntModule; 
+            private java.util.List<UserCntModule> userCntModule; 
 
             /**
              * UserCntModule.
              */
-            public Builder userCntModule(java.util.List < UserCntModule> userCntModule) {
+            public Builder userCntModule(java.util.List<UserCntModule> userCntModule) {
                 this.userCntModule = userCntModule;
                 return this;
             }

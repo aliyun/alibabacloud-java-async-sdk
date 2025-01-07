@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeQualityOverallDataResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QualityOverallData")
-    private java.util.List < QualityOverallData> qualityOverallData;
+    private java.util.List<QualityOverallData> qualityOverallData;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     /**
      * @return qualityOverallData
      */
-    public java.util.List < QualityOverallData> getQualityOverallData() {
+    public java.util.List<QualityOverallData> getQualityOverallData() {
         return this.qualityOverallData;
     }
 
@@ -46,13 +51,13 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < QualityOverallData> qualityOverallData; 
+        private java.util.List<QualityOverallData> qualityOverallData; 
         private String requestId; 
 
         /**
          * QualityOverallData.
          */
-        public Builder qualityOverallData(java.util.List < QualityOverallData> qualityOverallData) {
+        public Builder qualityOverallData(java.util.List<QualityOverallData> qualityOverallData) {
             this.qualityOverallData = qualityOverallData;
             return this;
         }
@@ -149,7 +154,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         private String average;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -178,7 +183,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -191,7 +196,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private String average; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String type; 
 
             /**
@@ -205,7 +210,7 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

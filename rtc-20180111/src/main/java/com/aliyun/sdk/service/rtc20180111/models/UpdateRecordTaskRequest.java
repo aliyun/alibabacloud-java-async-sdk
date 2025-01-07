@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class UpdateRecordTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LayoutIds")
-    private java.util.List < Long > layoutIds;
+    private java.util.List<Long> layoutIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaEncode")
@@ -40,19 +45,19 @@ public class UpdateRecordTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubSpecAudioUsers")
-    private java.util.List < String > subSpecAudioUsers;
+    private java.util.List<String> subSpecAudioUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubSpecCameraUsers")
-    private java.util.List < String > subSpecCameraUsers;
+    private java.util.List<String> subSpecCameraUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubSpecShareScreenUsers")
-    private java.util.List < String > subSpecShareScreenUsers;
+    private java.util.List<String> subSpecShareScreenUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubSpecUsers")
-    private java.util.List < String > subSpecUsers;
+    private java.util.List<String> subSpecUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -70,19 +75,19 @@ public class UpdateRecordTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnsubSpecAudioUsers")
-    private java.util.List < String > unsubSpecAudioUsers;
+    private java.util.List<String> unsubSpecAudioUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnsubSpecCameraUsers")
-    private java.util.List < String > unsubSpecCameraUsers;
+    private java.util.List<String> unsubSpecCameraUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnsubSpecShareScreenUsers")
-    private java.util.List < String > unsubSpecShareScreenUsers;
+    private java.util.List<String> unsubSpecShareScreenUsers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserPanes")
-    private java.util.List < UserPanes> userPanes;
+    private java.util.List<UserPanes> userPanes;
 
     private UpdateRecordTaskRequest(Builder builder) {
         super(builder);
@@ -142,7 +147,7 @@ public class UpdateRecordTaskRequest extends Request {
     /**
      * @return layoutIds
      */
-    public java.util.List < Long > getLayoutIds() {
+    public java.util.List<Long> getLayoutIds() {
         return this.layoutIds;
     }
 
@@ -163,28 +168,28 @@ public class UpdateRecordTaskRequest extends Request {
     /**
      * @return subSpecAudioUsers
      */
-    public java.util.List < String > getSubSpecAudioUsers() {
+    public java.util.List<String> getSubSpecAudioUsers() {
         return this.subSpecAudioUsers;
     }
 
     /**
      * @return subSpecCameraUsers
      */
-    public java.util.List < String > getSubSpecCameraUsers() {
+    public java.util.List<String> getSubSpecCameraUsers() {
         return this.subSpecCameraUsers;
     }
 
     /**
      * @return subSpecShareScreenUsers
      */
-    public java.util.List < String > getSubSpecShareScreenUsers() {
+    public java.util.List<String> getSubSpecShareScreenUsers() {
         return this.subSpecShareScreenUsers;
     }
 
     /**
      * @return subSpecUsers
      */
-    public java.util.List < String > getSubSpecUsers() {
+    public java.util.List<String> getSubSpecUsers() {
         return this.subSpecUsers;
     }
 
@@ -212,28 +217,28 @@ public class UpdateRecordTaskRequest extends Request {
     /**
      * @return unsubSpecAudioUsers
      */
-    public java.util.List < String > getUnsubSpecAudioUsers() {
+    public java.util.List<String> getUnsubSpecAudioUsers() {
         return this.unsubSpecAudioUsers;
     }
 
     /**
      * @return unsubSpecCameraUsers
      */
-    public java.util.List < String > getUnsubSpecCameraUsers() {
+    public java.util.List<String> getUnsubSpecCameraUsers() {
         return this.unsubSpecCameraUsers;
     }
 
     /**
      * @return unsubSpecShareScreenUsers
      */
-    public java.util.List < String > getUnsubSpecShareScreenUsers() {
+    public java.util.List<String> getUnsubSpecShareScreenUsers() {
         return this.unsubSpecShareScreenUsers;
     }
 
     /**
      * @return userPanes
      */
-    public java.util.List < UserPanes> getUserPanes() {
+    public java.util.List<UserPanes> getUserPanes() {
         return this.userPanes;
     }
 
@@ -241,20 +246,20 @@ public class UpdateRecordTaskRequest extends Request {
         private String appId; 
         private String channelId; 
         private Long cropMode; 
-        private java.util.List < Long > layoutIds; 
+        private java.util.List<Long> layoutIds; 
         private Long mediaEncode; 
         private Long ownerId; 
-        private java.util.List < String > subSpecAudioUsers; 
-        private java.util.List < String > subSpecCameraUsers; 
-        private java.util.List < String > subSpecShareScreenUsers; 
-        private java.util.List < String > subSpecUsers; 
+        private java.util.List<String> subSpecAudioUsers; 
+        private java.util.List<String> subSpecCameraUsers; 
+        private java.util.List<String> subSpecShareScreenUsers; 
+        private java.util.List<String> subSpecUsers; 
         private String taskId; 
         private String taskProfile; 
         private String templateId; 
-        private java.util.List < String > unsubSpecAudioUsers; 
-        private java.util.List < String > unsubSpecCameraUsers; 
-        private java.util.List < String > unsubSpecShareScreenUsers; 
-        private java.util.List < UserPanes> userPanes; 
+        private java.util.List<String> unsubSpecAudioUsers; 
+        private java.util.List<String> unsubSpecCameraUsers; 
+        private java.util.List<String> unsubSpecShareScreenUsers; 
+        private java.util.List<UserPanes> userPanes; 
 
         private Builder() {
             super();
@@ -317,7 +322,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * LayoutIds.
          */
-        public Builder layoutIds(java.util.List < Long > layoutIds) {
+        public Builder layoutIds(java.util.List<Long> layoutIds) {
             this.putQueryParameter("LayoutIds", layoutIds);
             this.layoutIds = layoutIds;
             return this;
@@ -344,7 +349,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * SubSpecAudioUsers.
          */
-        public Builder subSpecAudioUsers(java.util.List < String > subSpecAudioUsers) {
+        public Builder subSpecAudioUsers(java.util.List<String> subSpecAudioUsers) {
             this.putQueryParameter("SubSpecAudioUsers", subSpecAudioUsers);
             this.subSpecAudioUsers = subSpecAudioUsers;
             return this;
@@ -353,7 +358,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * SubSpecCameraUsers.
          */
-        public Builder subSpecCameraUsers(java.util.List < String > subSpecCameraUsers) {
+        public Builder subSpecCameraUsers(java.util.List<String> subSpecCameraUsers) {
             this.putQueryParameter("SubSpecCameraUsers", subSpecCameraUsers);
             this.subSpecCameraUsers = subSpecCameraUsers;
             return this;
@@ -362,7 +367,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * SubSpecShareScreenUsers.
          */
-        public Builder subSpecShareScreenUsers(java.util.List < String > subSpecShareScreenUsers) {
+        public Builder subSpecShareScreenUsers(java.util.List<String> subSpecShareScreenUsers) {
             this.putQueryParameter("SubSpecShareScreenUsers", subSpecShareScreenUsers);
             this.subSpecShareScreenUsers = subSpecShareScreenUsers;
             return this;
@@ -371,7 +376,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * SubSpecUsers.
          */
-        public Builder subSpecUsers(java.util.List < String > subSpecUsers) {
+        public Builder subSpecUsers(java.util.List<String> subSpecUsers) {
             this.putQueryParameter("SubSpecUsers", subSpecUsers);
             this.subSpecUsers = subSpecUsers;
             return this;
@@ -413,7 +418,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * UnsubSpecAudioUsers.
          */
-        public Builder unsubSpecAudioUsers(java.util.List < String > unsubSpecAudioUsers) {
+        public Builder unsubSpecAudioUsers(java.util.List<String> unsubSpecAudioUsers) {
             this.putQueryParameter("UnsubSpecAudioUsers", unsubSpecAudioUsers);
             this.unsubSpecAudioUsers = unsubSpecAudioUsers;
             return this;
@@ -422,7 +427,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * UnsubSpecCameraUsers.
          */
-        public Builder unsubSpecCameraUsers(java.util.List < String > unsubSpecCameraUsers) {
+        public Builder unsubSpecCameraUsers(java.util.List<String> unsubSpecCameraUsers) {
             this.putQueryParameter("UnsubSpecCameraUsers", unsubSpecCameraUsers);
             this.unsubSpecCameraUsers = unsubSpecCameraUsers;
             return this;
@@ -431,7 +436,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * UnsubSpecShareScreenUsers.
          */
-        public Builder unsubSpecShareScreenUsers(java.util.List < String > unsubSpecShareScreenUsers) {
+        public Builder unsubSpecShareScreenUsers(java.util.List<String> unsubSpecShareScreenUsers) {
             this.putQueryParameter("UnsubSpecShareScreenUsers", unsubSpecShareScreenUsers);
             this.unsubSpecShareScreenUsers = unsubSpecShareScreenUsers;
             return this;
@@ -440,7 +445,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * UserPanes.
          */
-        public Builder userPanes(java.util.List < UserPanes> userPanes) {
+        public Builder userPanes(java.util.List<UserPanes> userPanes) {
             this.putQueryParameter("UserPanes", userPanes);
             this.userPanes = userPanes;
             return this;
@@ -795,7 +800,7 @@ public class UpdateRecordTaskRequest extends Request {
      */
     public static class UserPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
@@ -804,7 +809,7 @@ public class UpdateRecordTaskRequest extends Request {
         private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("Texts")
-        private java.util.List < Texts> texts;
+        private java.util.List<Texts> texts;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -828,7 +833,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
@@ -849,7 +854,7 @@ public class UpdateRecordTaskRequest extends Request {
         /**
          * @return texts
          */
-        public java.util.List < Texts> getTexts() {
+        public java.util.List<Texts> getTexts() {
             return this.texts;
         }
 
@@ -861,16 +866,16 @@ public class UpdateRecordTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Images> images; 
+            private java.util.List<Images> images; 
             private Integer paneId; 
             private String sourceType; 
-            private java.util.List < Texts> texts; 
+            private java.util.List<Texts> texts; 
             private String userId; 
 
             /**
              * Images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
@@ -894,7 +899,7 @@ public class UpdateRecordTaskRequest extends Request {
             /**
              * Texts.
              */
-            public Builder texts(java.util.List < Texts> texts) {
+            public Builder texts(java.util.List<Texts> texts) {
                 this.texts = texts;
                 return this;
             }

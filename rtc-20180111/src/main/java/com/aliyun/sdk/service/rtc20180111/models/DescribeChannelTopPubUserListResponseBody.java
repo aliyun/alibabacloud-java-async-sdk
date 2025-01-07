@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TopPubUserDetailList")
-    private java.util.List < TopPubUserDetailList> topPubUserDetailList;
+    private java.util.List<TopPubUserDetailList> topPubUserDetailList;
 
     private DescribeChannelTopPubUserListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     /**
      * @return topPubUserDetailList
      */
-    public java.util.List < TopPubUserDetailList> getTopPubUserDetailList() {
+    public java.util.List<TopPubUserDetailList> getTopPubUserDetailList() {
         return this.topPubUserDetailList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TopPubUserDetailList> topPubUserDetailList; 
+        private java.util.List<TopPubUserDetailList> topPubUserDetailList; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         /**
          * TopPubUserDetailList.
          */
-        public Builder topPubUserDetailList(java.util.List < TopPubUserDetailList> topPubUserDetailList) {
+        public Builder topPubUserDetailList(java.util.List<TopPubUserDetailList> topPubUserDetailList) {
             this.topPubUserDetailList = topPubUserDetailList;
             return this;
         }
@@ -161,7 +166,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         private Long onlineDuration;
 
         @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
-        private java.util.List < OnlinePeriods> onlinePeriods;
+        private java.util.List<OnlinePeriods> onlinePeriods;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -222,7 +227,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
         /**
          * @return onlinePeriods
          */
-        public java.util.List < OnlinePeriods> getOnlinePeriods() {
+        public java.util.List<OnlinePeriods> getOnlinePeriods() {
             return this.onlinePeriods;
         }
 
@@ -239,7 +244,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             private Long duration; 
             private String location; 
             private Long onlineDuration; 
-            private java.util.List < OnlinePeriods> onlinePeriods; 
+            private java.util.List<OnlinePeriods> onlinePeriods; 
             private String userId; 
 
             /**
@@ -285,7 +290,7 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
             /**
              * OnlinePeriods.
              */
-            public Builder onlinePeriods(java.util.List < OnlinePeriods> onlinePeriods) {
+            public Builder onlinePeriods(java.util.List<OnlinePeriods> onlinePeriods) {
                 this.onlinePeriods = onlinePeriods;
                 return this;
             }

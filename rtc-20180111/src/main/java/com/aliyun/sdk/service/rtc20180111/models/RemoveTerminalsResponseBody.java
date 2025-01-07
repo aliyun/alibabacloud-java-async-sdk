@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,7 +171,7 @@ public class RemoveTerminalsResponseBody extends TeaModel {
      */
     public static class Terminals extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Terminal")
-        private java.util.List < Terminal> terminal;
+        private java.util.List<Terminal> terminal;
 
         private Terminals(Builder builder) {
             this.terminal = builder.terminal;
@@ -183,17 +188,17 @@ public class RemoveTerminalsResponseBody extends TeaModel {
         /**
          * @return terminal
          */
-        public java.util.List < Terminal> getTerminal() {
+        public java.util.List<Terminal> getTerminal() {
             return this.terminal;
         }
 
         public static final class Builder {
-            private java.util.List < Terminal> terminal; 
+            private java.util.List<Terminal> terminal; 
 
             /**
              * Terminal.
              */
-            public Builder terminal(java.util.List < Terminal> terminal) {
+            public Builder terminal(java.util.List<Terminal> terminal) {
                 this.terminal = terminal;
                 return this;
             }

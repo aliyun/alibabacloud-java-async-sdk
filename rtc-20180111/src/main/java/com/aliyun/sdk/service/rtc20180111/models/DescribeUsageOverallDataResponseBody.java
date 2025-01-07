@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UsageOverallData")
-    private java.util.List < UsageOverallData> usageOverallData;
+    private java.util.List<UsageOverallData> usageOverallData;
 
     private DescribeUsageOverallDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     /**
      * @return usageOverallData
      */
-    public java.util.List < UsageOverallData> getUsageOverallData() {
+    public java.util.List<UsageOverallData> getUsageOverallData() {
         return this.usageOverallData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UsageOverallData> usageOverallData; 
+        private java.util.List<UsageOverallData> usageOverallData; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         /**
          * UsageOverallData.
          */
-        public Builder usageOverallData(java.util.List < UsageOverallData> usageOverallData) {
+        public Builder usageOverallData(java.util.List<UsageOverallData> usageOverallData) {
             this.usageOverallData = usageOverallData;
             return this;
         }
@@ -146,7 +151,7 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
      */
     public static class UsageOverallData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -167,7 +172,7 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -179,13 +184,13 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String type; 
 
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

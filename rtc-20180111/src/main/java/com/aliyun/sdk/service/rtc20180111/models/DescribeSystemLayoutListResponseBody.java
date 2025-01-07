@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -289,7 +294,7 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
      */
     public static class LayoutPanes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Panes")
-        private java.util.List < Panes> panes;
+        private java.util.List<Panes> panes;
 
         private LayoutPanes(Builder builder) {
             this.panes = builder.panes;
@@ -306,17 +311,17 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         /**
          * @return panes
          */
-        public java.util.List < Panes> getPanes() {
+        public java.util.List<Panes> getPanes() {
             return this.panes;
         }
 
         public static final class Builder {
-            private java.util.List < Panes> panes; 
+            private java.util.List<Panes> panes; 
 
             /**
              * Panes.
              */
-            public Builder panes(java.util.List < Panes> panes) {
+            public Builder panes(java.util.List<Panes> panes) {
                 this.panes = panes;
                 return this;
             }
@@ -446,7 +451,7 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
      */
     public static class Layouts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Layout")
-        private java.util.List < Layout> layout;
+        private java.util.List<Layout> layout;
 
         private Layouts(Builder builder) {
             this.layout = builder.layout;
@@ -463,17 +468,17 @@ public class DescribeSystemLayoutListResponseBody extends TeaModel {
         /**
          * @return layout
          */
-        public java.util.List < Layout> getLayout() {
+        public java.util.List<Layout> getLayout() {
             return this.layout;
         }
 
         public static final class Builder {
-            private java.util.List < Layout> layout; 
+            private java.util.List<Layout> layout; 
 
             /**
              * Layout.
              */
-            public Builder layout(java.util.List < Layout> layout) {
+            public Builder layout(java.util.List<Layout> layout) {
                 this.layout = layout;
                 return this;
             }

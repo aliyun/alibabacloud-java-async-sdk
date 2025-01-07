@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class CreateEventSubscribeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Events")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > events;
+    private java.util.List<String> events;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NeedCallbackAuth")
@@ -50,7 +55,7 @@ public class CreateEventSubscribeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < String > users;
+    private java.util.List<String> users;
 
     private CreateEventSubscribeRequest(Builder builder) {
         super(builder);
@@ -109,7 +114,7 @@ public class CreateEventSubscribeRequest extends Request {
     /**
      * @return events
      */
-    public java.util.List < String > getEvents() {
+    public java.util.List<String> getEvents() {
         return this.events;
     }
 
@@ -137,7 +142,7 @@ public class CreateEventSubscribeRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
@@ -146,11 +151,11 @@ public class CreateEventSubscribeRequest extends Request {
         private String callbackUrl; 
         private String channelId; 
         private String clientToken; 
-        private java.util.List < String > events; 
+        private java.util.List<String> events; 
         private Boolean needCallbackAuth; 
         private Long ownerId; 
         private Long role; 
-        private java.util.List < String > users; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -220,7 +225,7 @@ public class CreateEventSubscribeRequest extends Request {
          * <strong>example:</strong>
          * <p>ChannelEvent</p>
          */
-        public Builder events(java.util.List < String > events) {
+        public Builder events(java.util.List<String> events) {
             this.putQueryParameter("Events", events);
             this.events = events;
             return this;
@@ -256,7 +261,7 @@ public class CreateEventSubscribeRequest extends Request {
         /**
          * Users.
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putQueryParameter("Users", users);
             this.users = users;
             return this;

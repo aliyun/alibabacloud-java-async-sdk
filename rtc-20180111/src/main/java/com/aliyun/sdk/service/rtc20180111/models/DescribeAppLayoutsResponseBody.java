@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAppLayoutsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Layouts")
-    private java.util.List < Layouts> layouts;
+    private java.util.List<Layouts> layouts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
     /**
      * @return layouts
      */
-    public java.util.List < Layouts> getLayouts() {
+    public java.util.List<Layouts> getLayouts() {
         return this.layouts;
     }
 
@@ -68,7 +73,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Layouts> layouts; 
+        private java.util.List<Layouts> layouts; 
         private String requestId; 
         private Long totalNum; 
         private Long totalPage; 
@@ -76,7 +81,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         /**
          * Layouts.
          */
-        public Builder layouts(java.util.List < Layouts> layouts) {
+        public Builder layouts(java.util.List<Layouts> layouts) {
             this.layouts = layouts;
             return this;
         }
@@ -272,7 +277,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Panes")
-        private java.util.List < Panes> panes;
+        private java.util.List<Panes> panes;
 
         private Layouts(Builder builder) {
             this.layoutId = builder.layoutId;
@@ -305,14 +310,14 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
         /**
          * @return panes
          */
-        public java.util.List < Panes> getPanes() {
+        public java.util.List<Panes> getPanes() {
             return this.panes;
         }
 
         public static final class Builder {
             private String layoutId; 
             private String name; 
-            private java.util.List < Panes> panes; 
+            private java.util.List<Panes> panes; 
 
             /**
              * LayoutId.
@@ -333,7 +338,7 @@ public class DescribeAppLayoutsResponseBody extends TeaModel {
             /**
              * Panes.
              */
-            public Builder panes(java.util.List < Panes> panes) {
+            public Builder panes(java.util.List<Panes> panes) {
                 this.panes = panes;
                 return this;
             }

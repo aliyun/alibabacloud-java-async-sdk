@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StatList")
-    private java.util.List < StatList> statList;
+    private java.util.List<StatList> statList;
 
     private DescribeFaultDiagnosisFactorDistributionStatResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
     /**
      * @return statList
      */
-    public java.util.List < StatList> getStatList() {
+    public java.util.List<StatList> getStatList() {
         return this.statList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StatList> statList; 
+        private java.util.List<StatList> statList; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeFaultDiagnosisFactorDistributionStatResponseBody extends Te
         /**
          * StatList.
          */
-        public Builder statList(java.util.List < StatList> statList) {
+        public Builder statList(java.util.List<StatList> statList) {
             this.statList = statList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeChannelUserResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Sessions")
-    private java.util.List < Sessions> sessions;
+    private java.util.List<Sessions> sessions;
 
     private DescribeChannelUserResponseBody(Builder builder) {
         this.channelExist = builder.channelExist;
@@ -63,7 +68,7 @@ public class DescribeChannelUserResponseBody extends TeaModel {
     /**
      * @return sessions
      */
-    public java.util.List < Sessions> getSessions() {
+    public java.util.List<Sessions> getSessions() {
         return this.sessions;
     }
 
@@ -71,7 +76,7 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         private Boolean channelExist; 
         private Boolean inChannel; 
         private String requestId; 
-        private java.util.List < Sessions> sessions; 
+        private java.util.List<Sessions> sessions; 
 
         /**
          * ChannelExist.
@@ -100,7 +105,7 @@ public class DescribeChannelUserResponseBody extends TeaModel {
         /**
          * Sessions.
          */
-        public Builder sessions(java.util.List < Sessions> sessions) {
+        public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
             return this;
         }

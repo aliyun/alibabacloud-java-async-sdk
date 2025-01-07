@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -107,7 +112,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
     public static class StreamingOutTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LayoutIds")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > layoutIds;
+        private java.util.List<String> layoutIds;
 
         @com.aliyun.core.annotation.NameInMap("MediaEncode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -139,7 +144,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
         /**
          * @return layoutIds
          */
-        public java.util.List < String > getLayoutIds() {
+        public java.util.List<String> getLayoutIds() {
             return this.layoutIds;
         }
 
@@ -165,7 +170,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > layoutIds; 
+            private java.util.List<String> layoutIds; 
             private Integer mediaEncode; 
             private String name; 
             private String templateId; 
@@ -173,7 +178,7 @@ public class ModifyAppStreamingOutTemplateRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder layoutIds(java.util.List < String > layoutIds) {
+            public Builder layoutIds(java.util.List<String> layoutIds) {
                 this.layoutIds = layoutIds;
                 return this;
             }

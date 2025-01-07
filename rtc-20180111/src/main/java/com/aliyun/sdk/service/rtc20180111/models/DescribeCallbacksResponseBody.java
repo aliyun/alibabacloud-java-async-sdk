@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCallbacksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Callbacks")
-    private java.util.List < Callbacks> callbacks;
+    private java.util.List<Callbacks> callbacks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCallbacksResponseBody extends TeaModel {
     /**
      * @return callbacks
      */
-    public java.util.List < Callbacks> getCallbacks() {
+    public java.util.List<Callbacks> getCallbacks() {
         return this.callbacks;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCallbacksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Callbacks> callbacks; 
+        private java.util.List<Callbacks> callbacks; 
         private String requestId; 
 
         /**
          * Callbacks.
          */
-        public Builder callbacks(java.util.List < Callbacks> callbacks) {
+        public Builder callbacks(java.util.List<Callbacks> callbacks) {
             this.callbacks = callbacks;
             return this;
         }
@@ -100,7 +105,7 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("SubEvent")
-        private java.util.List < Integer > subEvent;
+        private java.util.List<Integer> subEvent;
 
         private Callbacks(Builder builder) {
             this.category = builder.category;
@@ -165,7 +170,7 @@ public class DescribeCallbacksResponseBody extends TeaModel {
         /**
          * @return subEvent
          */
-        public java.util.List < Integer > getSubEvent() {
+        public java.util.List<Integer> getSubEvent() {
             return this.subEvent;
         }
 
@@ -176,7 +181,7 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             private String conf; 
             private String msg; 
             private Integer status; 
-            private java.util.List < Integer > subEvent; 
+            private java.util.List<Integer> subEvent; 
 
             /**
              * Category.
@@ -229,7 +234,7 @@ public class DescribeCallbacksResponseBody extends TeaModel {
             /**
              * SubEvent.
              */
-            public Builder subEvent(java.util.List < Integer > subEvent) {
+            public Builder subEvent(java.util.List<Integer> subEvent) {
                 this.subEvent = subEvent;
                 return this;
             }
