@@ -309,6 +309,9 @@ public class NodeTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
@@ -318,12 +321,17 @@ public class NodeTemplate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
+        private String snapshotId;
+
         private DataDisks(Builder builder) {
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
+            this.device = builder.device;
             this.level = builder.level;
             this.mountDir = builder.mountDir;
             this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
         }
 
         public static Builder builder() {
@@ -349,6 +357,13 @@ public class NodeTemplate extends TeaModel {
         }
 
         /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
          * @return level
          */
         public String getLevel() {
@@ -369,12 +384,21 @@ public class NodeTemplate extends TeaModel {
             return this.size;
         }
 
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
         public static final class Builder {
             private String category; 
             private Boolean deleteWithInstance; 
+            private String device; 
             private String level; 
             private String mountDir; 
             private Integer size; 
+            private String snapshotId; 
 
             /**
              * Category.
@@ -389,6 +413,14 @@ public class NodeTemplate extends TeaModel {
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
+                return this;
+            }
+
+            /**
+             * Device.
+             */
+            public Builder device(String device) {
+                this.device = device;
                 return this;
             }
 
@@ -413,6 +445,14 @@ public class NodeTemplate extends TeaModel {
              */
             public Builder size(Integer size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
                 return this;
             }
 
