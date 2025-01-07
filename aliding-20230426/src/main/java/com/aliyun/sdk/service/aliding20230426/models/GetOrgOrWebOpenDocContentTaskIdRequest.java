@@ -31,6 +31,10 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
     private Boolean generateCp;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
+    private Integer scopeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TargetFormat")
     private String targetFormat;
 
@@ -43,6 +47,7 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
         this.accountContext = builder.accountContext;
         this.dentryUuid = builder.dentryUuid;
         this.generateCp = builder.generateCp;
+        this.scopeType = builder.scopeType;
         this.targetFormat = builder.targetFormat;
         this.tenantContext = builder.tenantContext;
     }
@@ -82,6 +87,13 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
     }
 
     /**
+     * @return scopeType
+     */
+    public Integer getScopeType() {
+        return this.scopeType;
+    }
+
+    /**
      * @return targetFormat
      */
     public String getTargetFormat() {
@@ -99,6 +111,7 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
         private AccountContext accountContext; 
         private String dentryUuid; 
         private Boolean generateCp; 
+        private Integer scopeType; 
         private String targetFormat; 
         private TenantContext tenantContext; 
 
@@ -111,6 +124,7 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
             this.accountContext = request.accountContext;
             this.dentryUuid = request.dentryUuid;
             this.generateCp = request.generateCp;
+            this.scopeType = request.scopeType;
             this.targetFormat = request.targetFormat;
             this.tenantContext = request.tenantContext;
         } 
@@ -143,6 +157,15 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
         public Builder generateCp(Boolean generateCp) {
             this.putBodyParameter("GenerateCp", generateCp);
             this.generateCp = generateCp;
+            return this;
+        }
+
+        /**
+         * ScopeType.
+         */
+        public Builder scopeType(Integer scopeType) {
+            this.putBodyParameter("ScopeType", scopeType);
+            this.scopeType = scopeType;
             return this;
         }
 
