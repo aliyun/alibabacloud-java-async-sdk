@@ -79,7 +79,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         private Double totalStrength; 
 
         /**
-         * <p>The scaling strengths of scaling configurations that are queried at the same time.</p>
+         * <p>The scaling strength models.</p>
          */
         public Builder elasticStrengthModels(java.util.List<ElasticStrengthModels> elasticStrengthModels) {
             this.elasticStrengthModels = elasticStrengthModels;
@@ -106,7 +106,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scaling strength of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+         * <p>The scaling strength score of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength score of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+         * <p>**</p>
+         * <p><strong>Warning</strong> This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5</p>
@@ -191,7 +193,11 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private Integer supplyScore; 
 
             /**
-             * AdequacyScore.
+             * <p>The adequacy score.</p>
+             * <p>Valid values: 0 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder adequacyScore(Integer adequacyScore) {
                 this.adequacyScore = adequacyScore;
@@ -199,7 +205,16 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * HealthScore.
+             * <p>The score of the inventory health.</p>
+             * <ul>
+             * <li>A score between 5 and 6 indicates a sufficient inventory.</li>
+             * <li>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</li>
+             * <li>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</li>
+             * </ul>
+             * <p>Calculation formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder healthScore(Integer healthScore) {
                 this.healthScore = healthScore;
@@ -207,7 +222,11 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * HotScore.
+             * <p>The popularity score.</p>
+             * <p>Valid values: 0 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hotScore(Integer hotScore) {
                 this.hotScore = hotScore;
@@ -215,7 +234,11 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * SupplyScore.
+             * <p>The score of the replenishment capability.</p>
+             * <p>Valid values: 0 to 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder supplyScore(Integer supplyScore) {
                 this.supplyScore = supplyScore;
@@ -368,7 +391,7 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * InventoryHealth.
+             * <p>The inventory health.</p>
              */
             public Builder inventoryHealth(InventoryHealth inventoryHealth) {
                 this.inventoryHealth = inventoryHealth;
@@ -387,7 +410,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the resource pool is available. Valid values:</p>
+             * <ul>
+             * <li>Available</li>
+             * <li>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -396,6 +426,8 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
             /**
              * <p>The scaling strength of the resource pool.</p>
+             * <p>**</p>
+             * <p><strong>Warning</strong> This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6</p>
@@ -500,7 +532,15 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             private Double totalStrength; 
 
             /**
-             * ElasticStrength.
+             * <p>The scaling strength level of the scaling group. Valid values:</p>
+             * <ul>
+             * <li>Strong</li>
+             * <li>Medium</li>
+             * <li>Weak</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Strong</p>
              */
             public Builder elasticStrength(String elasticStrength) {
                 this.elasticStrength = elasticStrength;
@@ -527,7 +567,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scaling strength of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+             * <p>The scaling strength score of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength score of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</p>
+             * <p>**</p>
+             * <p><strong>Warning</strong> This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>1.5</p>

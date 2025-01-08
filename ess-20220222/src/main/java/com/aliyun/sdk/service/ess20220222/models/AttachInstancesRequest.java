@@ -26,6 +26,10 @@ public class AttachInstancesRequest extends Request {
     private Boolean entrusted;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreInvalidInstance")
+    private Boolean ignoreInvalidInstance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -66,6 +70,7 @@ public class AttachInstancesRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.entrusted = builder.entrusted;
+        this.ignoreInvalidInstance = builder.ignoreInvalidInstance;
         this.instanceIds = builder.instanceIds;
         this.lifecycleHook = builder.lifecycleHook;
         this.loadBalancerWeights = builder.loadBalancerWeights;
@@ -102,6 +107,13 @@ public class AttachInstancesRequest extends Request {
      */
     public Boolean getEntrusted() {
         return this.entrusted;
+    }
+
+    /**
+     * @return ignoreInvalidInstance
+     */
+    public Boolean getIgnoreInvalidInstance() {
+        return this.ignoreInvalidInstance;
     }
 
     /**
@@ -170,6 +182,7 @@ public class AttachInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<AttachInstancesRequest, Builder> {
         private String clientToken; 
         private Boolean entrusted; 
+        private Boolean ignoreInvalidInstance; 
         private java.util.List<String> instanceIds; 
         private Boolean lifecycleHook; 
         private java.util.List<Integer> loadBalancerWeights; 
@@ -188,6 +201,7 @@ public class AttachInstancesRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.entrusted = request.entrusted;
+            this.ignoreInvalidInstance = request.ignoreInvalidInstance;
             this.instanceIds = request.instanceIds;
             this.lifecycleHook = request.lifecycleHook;
             this.loadBalancerWeights = request.loadBalancerWeights;
@@ -229,6 +243,15 @@ public class AttachInstancesRequest extends Request {
         public Builder entrusted(Boolean entrusted) {
             this.putQueryParameter("Entrusted", entrusted);
             this.entrusted = entrusted;
+            return this;
+        }
+
+        /**
+         * IgnoreInvalidInstance.
+         */
+        public Builder ignoreInvalidInstance(Boolean ignoreInvalidInstance) {
+            this.putQueryParameter("IgnoreInvalidInstance", ignoreInvalidInstance);
+            this.ignoreInvalidInstance = ignoreInvalidInstance;
             return this;
         }
 
