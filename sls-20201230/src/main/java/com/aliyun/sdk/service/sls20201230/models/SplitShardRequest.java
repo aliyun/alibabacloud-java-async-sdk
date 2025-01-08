@@ -1,38 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link SplitShardRequest} extends {@link RequestModel}
  *
  * <p>SplitShardRequest</p>
  */
 public class SplitShardRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Path
-    @NameInMap("shard")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("shard")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer shard;
 
-    @Query
-    @NameInMap("key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("key")
     private String key;
 
-    @Query
-    @NameInMap("shardCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("shardCount")
     private Integer shardCount;
 
     private SplitShardRequest(Builder builder) {
@@ -113,7 +117,11 @@ public class SplitShardRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -122,7 +130,11 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstorename</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -131,7 +143,11 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * The ID of the shard.
+         * <p>The ID of the shard.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder shard(Integer shard) {
             this.putPathParameter("shard", shard);
@@ -140,7 +156,10 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * The position where the shard is split.
+         * <p>The position where the shard is split.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ef000000000000000000000000000000</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("key", key);
@@ -149,7 +168,10 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * The number of new shards that are generated after splitting.
+         * <p>The number of new shards that are generated after splitting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("shardCount", shardCount);

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link TemplateConfiguration} extends {@link TeaModel}
  *
  * <p>TemplateConfiguration</p>
  */
 public class TemplateConfiguration extends TeaModel {
-    @NameInMap("aonotations")
-    private java.util.Map < String, ? > aonotations;
+    @com.aliyun.core.annotation.NameInMap("aonotations")
+    private java.util.Map<String, ?> aonotations;
 
-    @NameInMap("id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @NameInMap("lang")
+    @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
-    @NameInMap("tokens")
-    private java.util.Map < String, ? > tokens;
+    @com.aliyun.core.annotation.NameInMap("tokens")
+    private java.util.Map<String, ?> tokens;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private TemplateConfiguration(Builder builder) {
@@ -52,7 +57,7 @@ public class TemplateConfiguration extends TeaModel {
     /**
      * @return aonotations
      */
-    public java.util.Map < String, ? > getAonotations() {
+    public java.util.Map<String, ?> getAonotations() {
         return this.aonotations;
     }
 
@@ -73,7 +78,7 @@ public class TemplateConfiguration extends TeaModel {
     /**
      * @return tokens
      */
-    public java.util.Map < String, ? > getTokens() {
+    public java.util.Map<String, ?> getTokens() {
         return this.tokens;
     }
 
@@ -92,23 +97,26 @@ public class TemplateConfiguration extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > aonotations; 
+        private java.util.Map<String, ?> aonotations; 
         private String id; 
         private String lang; 
-        private java.util.Map < String, ? > tokens; 
+        private java.util.Map<String, ?> tokens; 
         private String type; 
         private String version; 
 
         /**
          * aonotations.
          */
-        public Builder aonotations(java.util.Map < String, ? > aonotations) {
+        public Builder aonotations(java.util.Map<String, ?> aonotations) {
             this.aonotations = aonotations;
             return this;
         }
 
         /**
-         * id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls.app.ack.ip.not_enough</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -126,13 +134,16 @@ public class TemplateConfiguration extends TeaModel {
         /**
          * tokens.
          */
-        public Builder tokens(java.util.Map < String, ? > tokens) {
+        public Builder tokens(java.util.Map<String, ?> tokens) {
             this.tokens = tokens;
             return this;
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys</p>
          */
         public Builder type(String type) {
             this.type = type;

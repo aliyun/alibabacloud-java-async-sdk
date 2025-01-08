@@ -1,45 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateSavedSearchRequest} extends {@link RequestModel}
  *
  * <p>UpdateSavedSearchRequest</p>
  */
 public class UpdateSavedSearchRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @Body
-    @NameInMap("savedsearchName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("savedsearchName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String savedsearchName;
 
-    @Body
-    @NameInMap("displayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("displayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Body
-    @NameInMap("searchQuery")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("searchQuery")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String searchQuery;
 
-    @Body
-    @NameInMap("topic")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("topic")
     private String topic;
 
     private UpdateSavedSearchRequest(Builder builder) {
@@ -130,7 +134,11 @@ public class UpdateSavedSearchRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -139,7 +147,11 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * The name of the saved search that you want to update.
+         * <p>The name of the saved search that you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>savedsearch-name</p>
          */
         public Builder savedsearchName(String savedsearchName) {
             this.putPathParameter("savedsearchName", savedsearchName);
@@ -149,7 +161,11 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * The display name.
+         * <p>The display name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>displayname</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -158,7 +174,11 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * The name of the Logstore to which the saved search belongs.
+         * <p>The name of the Logstore to which the saved search belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putBodyParameter("logstore", logstore);
@@ -167,10 +187,11 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * The search statement or the query statement of the saved search. A query statement consists of a search statement and an analytic statement in the Search statement|Analytic statement format.
-         * <p>
+         * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the Search statement|Analytic statement format. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis overview</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see Log search overview and Log analysis overview.
+         * <strong>example:</strong>
+         * <p><em>|select date_format(<strong>time</strong>-<strong>time</strong>%60, &quot;%H:%i:%s&quot;) as time, COUNT(</em>) as pv group by time</p>
          */
         public Builder searchQuery(String searchQuery) {
             this.putBodyParameter("searchQuery", searchQuery);
@@ -179,7 +200,10 @@ public class UpdateSavedSearchRequest extends Request {
         }
 
         /**
-         * The topic of the logs.
+         * <p>The topic of the logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>theme</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("topic", topic);

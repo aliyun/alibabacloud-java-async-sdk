@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Dashboard} extends {@link TeaModel}
  *
  * <p>Dashboard</p>
  */
 public class Dashboard extends TeaModel {
-    @NameInMap("attribute")
-    private java.util.Map < String, String > attribute;
+    @com.aliyun.core.annotation.NameInMap("attribute")
+    private java.util.Map<String, String> attribute;
 
-    @NameInMap("charts")
-    @Validation(required = true)
-    private java.util.List < Chart > charts;
+    @com.aliyun.core.annotation.NameInMap("charts")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Chart> charts;
 
-    @NameInMap("dashboardName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("dashboardName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dashboardName;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("displayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("displayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
     private Dashboard(Builder builder) {
@@ -49,14 +54,14 @@ public class Dashboard extends TeaModel {
     /**
      * @return attribute
      */
-    public java.util.Map < String, String > getAttribute() {
+    public java.util.Map<String, String> getAttribute() {
         return this.attribute;
     }
 
     /**
      * @return charts
      */
-    public java.util.List < Chart > getCharts() {
+    public java.util.List<Chart> getCharts() {
         return this.charts;
     }
 
@@ -82,8 +87,8 @@ public class Dashboard extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > attribute; 
-        private java.util.List < Chart > charts; 
+        private java.util.Map<String, String> attribute; 
+        private java.util.List<Chart> charts; 
         private String dashboardName; 
         private String description; 
         private String displayName; 
@@ -91,21 +96,24 @@ public class Dashboard extends TeaModel {
         /**
          * attribute.
          */
-        public Builder attribute(java.util.Map < String, String > attribute) {
+        public Builder attribute(java.util.Map<String, String> attribute) {
             this.attribute = attribute;
             return this;
         }
 
         /**
-         * charts.
+         * <p>This parameter is required.</p>
          */
-        public Builder charts(java.util.List < Chart > charts) {
+        public Builder charts(java.util.List<Chart> charts) {
             this.charts = charts;
             return this;
         }
 
         /**
-         * dashboardName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashboard-1609294922657-434834</p>
          */
         public Builder dashboardName(String dashboardName) {
             this.dashboardName = dashboardName;
@@ -121,7 +129,10 @@ public class Dashboard extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-alert</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;

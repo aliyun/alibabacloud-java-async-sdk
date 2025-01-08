@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link SavedSearch} extends {@link TeaModel}
  *
  * <p>SavedSearch</p>
  */
 public class SavedSearch extends TeaModel {
-    @NameInMap("displayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("displayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @NameInMap("savedsearchName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("savedsearchName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String savedsearchName;
 
-    @NameInMap("searchQuery")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("searchQuery")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String searchQuery;
 
-    @NameInMap("topic")
+    @com.aliyun.core.annotation.NameInMap("topic")
     private String topic;
 
     private SavedSearch(Builder builder) {
@@ -90,7 +95,7 @@ public class SavedSearch extends TeaModel {
         private String topic; 
 
         /**
-         * displayName.
+         * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -98,7 +103,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * logstore.
+         * <p>This parameter is required.</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -106,7 +111,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * savedsearchName.
+         * <p>This parameter is required.</p>
          */
         public Builder savedsearchName(String savedsearchName) {
             this.savedsearchName = savedsearchName;
@@ -114,7 +119,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * searchQuery.
+         * <p>This parameter is required.</p>
          */
         public Builder searchQuery(String searchQuery) {
             this.searchQuery = searchQuery;

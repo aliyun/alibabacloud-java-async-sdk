@@ -1,51 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Index} extends {@link TeaModel}
  *
  * <p>Index</p>
  */
 public class Index extends TeaModel {
-    @NameInMap("keys")
-    private java.util.Map < String, IndexKeysValue > keys;
+    @com.aliyun.core.annotation.NameInMap("keys")
+    private java.util.Map<String, IndexKey> keys;
 
-    @NameInMap("lastModifyTime")
-    private Long lastModifyTime;
-
-    @NameInMap("line")
+    @com.aliyun.core.annotation.NameInMap("line")
     private Line line;
 
-    @NameInMap("log_reduce")
+    @com.aliyun.core.annotation.NameInMap("log_reduce")
     private Boolean logReduce;
 
-    @NameInMap("log_reduce_black_list")
-    private java.util.List < String > logReduceBlackList;
+    @com.aliyun.core.annotation.NameInMap("log_reduce_black_list")
+    private java.util.List<String> logReduceBlackList;
 
-    @NameInMap("log_reduce_white_list")
-    private java.util.List < String > logReduceWhiteList;
+    @com.aliyun.core.annotation.NameInMap("log_reduce_white_list")
+    private java.util.List<String> logReduceWhiteList;
 
-    @NameInMap("max_text_len")
+    @com.aliyun.core.annotation.NameInMap("max_text_len")
     private Integer maxTextLen;
-
-    @NameInMap("ttl")
-    @Validation(required = true)
-    private Integer ttl;
 
     private Index(Builder builder) {
         this.keys = builder.keys;
-        this.lastModifyTime = builder.lastModifyTime;
         this.line = builder.line;
         this.logReduce = builder.logReduce;
         this.logReduceBlackList = builder.logReduceBlackList;
         this.logReduceWhiteList = builder.logReduceWhiteList;
         this.maxTextLen = builder.maxTextLen;
-        this.ttl = builder.ttl;
     }
 
     public static Builder builder() {
@@ -59,15 +55,8 @@ public class Index extends TeaModel {
     /**
      * @return keys
      */
-    public java.util.Map < String, IndexKeysValue > getKeys() {
+    public java.util.Map<String, IndexKey> getKeys() {
         return this.keys;
-    }
-
-    /**
-     * @return lastModifyTime
-     */
-    public Long getLastModifyTime() {
-        return this.lastModifyTime;
     }
 
     /**
@@ -87,14 +76,14 @@ public class Index extends TeaModel {
     /**
      * @return logReduceBlackList
      */
-    public java.util.List < String > getLogReduceBlackList() {
+    public java.util.List<String> getLogReduceBlackList() {
         return this.logReduceBlackList;
     }
 
     /**
      * @return logReduceWhiteList
      */
-    public java.util.List < String > getLogReduceWhiteList() {
+    public java.util.List<String> getLogReduceWhiteList() {
         return this.logReduceWhiteList;
     }
 
@@ -105,36 +94,19 @@ public class Index extends TeaModel {
         return this.maxTextLen;
     }
 
-    /**
-     * @return ttl
-     */
-    public Integer getTtl() {
-        return this.ttl;
-    }
-
     public static final class Builder {
-        private java.util.Map < String, IndexKeysValue > keys; 
-        private Long lastModifyTime; 
+        private java.util.Map<String, IndexKey> keys; 
         private Line line; 
         private Boolean logReduce; 
-        private java.util.List < String > logReduceBlackList; 
-        private java.util.List < String > logReduceWhiteList; 
+        private java.util.List<String> logReduceBlackList; 
+        private java.util.List<String> logReduceWhiteList; 
         private Integer maxTextLen; 
-        private Integer ttl; 
 
         /**
          * keys.
          */
-        public Builder keys(java.util.Map < String, IndexKeysValue > keys) {
+        public Builder keys(java.util.Map<String, IndexKey> keys) {
             this.keys = keys;
-            return this;
-        }
-
-        /**
-         * lastModifyTime.
-         */
-        public Builder lastModifyTime(Long lastModifyTime) {
-            this.lastModifyTime = lastModifyTime;
             return this;
         }
 
@@ -157,7 +129,7 @@ public class Index extends TeaModel {
         /**
          * log_reduce_black_list.
          */
-        public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
+        public Builder logReduceBlackList(java.util.List<String> logReduceBlackList) {
             this.logReduceBlackList = logReduceBlackList;
             return this;
         }
@@ -165,7 +137,7 @@ public class Index extends TeaModel {
         /**
          * log_reduce_white_list.
          */
-        public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
+        public Builder logReduceWhiteList(java.util.List<String> logReduceWhiteList) {
             this.logReduceWhiteList = logReduceWhiteList;
             return this;
         }
@@ -178,36 +150,34 @@ public class Index extends TeaModel {
             return this;
         }
 
-        /**
-         * ttl.
-         */
-        public Builder ttl(Integer ttl) {
-            this.ttl = ttl;
-            return this;
-        }
-
         public Index build() {
             return new Index(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link Index} extends {@link TeaModel}
+     *
+     * <p>Index</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("caseSensitive")
+        @com.aliyun.core.annotation.NameInMap("caseSensitive")
         private Boolean caseSensitive;
 
-        @NameInMap("chn")
+        @com.aliyun.core.annotation.NameInMap("chn")
         private Boolean chn;
 
-        @NameInMap("exclude_keys")
-        private java.util.List < String > excludeKeys;
+        @com.aliyun.core.annotation.NameInMap("exclude_keys")
+        private java.util.List<String> excludeKeys;
 
-        @NameInMap("include_keys")
-        private java.util.List < String > includeKeys;
+        @com.aliyun.core.annotation.NameInMap("include_keys")
+        private java.util.List<String> includeKeys;
 
-        @NameInMap("token")
-        @Validation(required = true)
-        private java.util.List < String > token;
+        @com.aliyun.core.annotation.NameInMap("token")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> token;
 
         private Line(Builder builder) {
             this.caseSensitive = builder.caseSensitive;
@@ -242,30 +212,30 @@ public class Index extends TeaModel {
         /**
          * @return excludeKeys
          */
-        public java.util.List < String > getExcludeKeys() {
+        public java.util.List<String> getExcludeKeys() {
             return this.excludeKeys;
         }
 
         /**
          * @return includeKeys
          */
-        public java.util.List < String > getIncludeKeys() {
+        public java.util.List<String> getIncludeKeys() {
             return this.includeKeys;
         }
 
         /**
          * @return token
          */
-        public java.util.List < String > getToken() {
+        public java.util.List<String> getToken() {
             return this.token;
         }
 
         public static final class Builder {
             private Boolean caseSensitive; 
             private Boolean chn; 
-            private java.util.List < String > excludeKeys; 
-            private java.util.List < String > includeKeys; 
-            private java.util.List < String > token; 
+            private java.util.List<String> excludeKeys; 
+            private java.util.List<String> includeKeys; 
+            private java.util.List<String> token; 
 
             /**
              * caseSensitive.
@@ -286,7 +256,7 @@ public class Index extends TeaModel {
             /**
              * exclude_keys.
              */
-            public Builder excludeKeys(java.util.List < String > excludeKeys) {
+            public Builder excludeKeys(java.util.List<String> excludeKeys) {
                 this.excludeKeys = excludeKeys;
                 return this;
             }
@@ -294,15 +264,15 @@ public class Index extends TeaModel {
             /**
              * include_keys.
              */
-            public Builder includeKeys(java.util.List < String > includeKeys) {
+            public Builder includeKeys(java.util.List<String> includeKeys) {
                 this.includeKeys = includeKeys;
                 return this;
             }
 
             /**
-             * token.
+             * <p>This parameter is required.</p>
              */
-            public Builder token(java.util.List < String > token) {
+            public Builder token(java.util.List<String> token) {
                 this.token = token;
                 return this;
             }

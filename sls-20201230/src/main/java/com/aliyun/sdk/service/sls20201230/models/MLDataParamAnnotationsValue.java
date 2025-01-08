@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link MLDataParamAnnotationsValue} extends {@link TeaModel}
  *
  * <p>MLDataParamAnnotationsValue</p>
  */
 public class MLDataParamAnnotationsValue extends TeaModel {
-    @NameInMap("annotatedBy")
+    @com.aliyun.core.annotation.NameInMap("annotatedBy")
     private String annotatedBy;
 
-    @NameInMap("updateTime")
+    @com.aliyun.core.annotation.NameInMap("updateTime")
     private Long updateTime;
 
-    @NameInMap("results")
-    private java.util.List < java.util.Map<String, String>> results;
+    @com.aliyun.core.annotation.NameInMap("results")
+    private java.util.List<java.util.Map<String, String>> results;
 
     private MLDataParamAnnotationsValue(Builder builder) {
         this.annotatedBy = builder.annotatedBy;
@@ -52,14 +57,14 @@ public class MLDataParamAnnotationsValue extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < java.util.Map<String, String>> getResults() {
+    public java.util.List<java.util.Map<String, String>> getResults() {
         return this.results;
     }
 
     public static final class Builder {
         private String annotatedBy; 
         private Long updateTime; 
-        private java.util.List < java.util.Map<String, String>> results; 
+        private java.util.List<java.util.Map<String, String>> results; 
 
         /**
          * annotatedBy.
@@ -80,7 +85,7 @@ public class MLDataParamAnnotationsValue extends TeaModel {
         /**
          * results.
          */
-        public Builder results(java.util.List < java.util.Map<String, String>> results) {
+        public Builder results(java.util.List<java.util.Map<String, String>> results) {
             this.results = results;
             return this;
         }

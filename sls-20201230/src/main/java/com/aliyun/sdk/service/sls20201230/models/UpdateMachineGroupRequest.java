@@ -1,45 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpdateMachineGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateMachineGroupRequest</p>
  */
 public class UpdateMachineGroupRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @Body
-    @NameInMap("groupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Body
-    @NameInMap("groupAttribute")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupAttribute")
     private GroupAttribute groupAttribute;
 
-    @Body
-    @NameInMap("groupType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
 
-    @Body
-    @NameInMap("machineIdentifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("machineIdentifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String machineIdentifyType;
 
-    @Body
-    @NameInMap("machineList")
-    @Validation(required = true)
-    private java.util.List < String > machineList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("machineList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> machineList;
 
     private UpdateMachineGroupRequest(Builder builder) {
         super(builder);
@@ -102,7 +106,7 @@ public class UpdateMachineGroupRequest extends Request {
     /**
      * @return machineList
      */
-    public java.util.List < String > getMachineList() {
+    public java.util.List<String> getMachineList() {
         return this.machineList;
     }
 
@@ -112,7 +116,7 @@ public class UpdateMachineGroupRequest extends Request {
         private GroupAttribute groupAttribute; 
         private String groupType; 
         private String machineIdentifyType; 
-        private java.util.List < String > machineList; 
+        private java.util.List<String> machineList; 
 
         private Builder() {
             super();
@@ -129,7 +133,11 @@ public class UpdateMachineGroupRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -138,7 +146,11 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * The name of the machine group.
+         * <p>The name of the machine group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-group</p>
          */
         public Builder groupName(String groupName) {
             this.putPathParameter("groupName", groupName);
@@ -148,7 +160,7 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * The attribute of the machine group. This parameter is empty by default.
+         * <p>The attribute of the machine group. This parameter is empty by default.</p>
          */
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.putBodyParameter("groupAttribute", groupAttribute);
@@ -157,7 +169,10 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * The type of the machine group. Set the value to an empty string.
+         * <p>The type of the machine group. Set the value to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder groupType(String groupType) {
             this.putBodyParameter("groupType", groupType);
@@ -166,11 +181,15 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * The identifier type of the machine group. Valid values:
-         * <p>
+         * <p>The identifier type of the machine group. Valid values:</p>
+         * <ul>
+         * <li>ip: The machine group uses IP addresses as identifiers.</li>
+         * <li>userdefined: The machine group uses custom identifiers.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ip: The machine group uses IP addresses as identifiers.
-         * *   userdefined: The machine group uses custom identifiers.
+         * <strong>example:</strong>
+         * <p>userdefined</p>
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.putBodyParameter("machineIdentifyType", machineIdentifyType);
@@ -179,13 +198,17 @@ public class UpdateMachineGroupRequest extends Request {
         }
 
         /**
-         * The identifiers of the machines in the machine group.
-         * <p>
+         * <p>The identifiers of the machines in the machine group.</p>
+         * <ul>
+         * <li>If you set machineIdentifyType to ip, enter the IP addresses of the machines.</li>
+         * <li>If you set machineIdentifyType to userdefined, enter a custom identifier.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set machineIdentifyType to ip, enter the IP addresses of the machines.
-         * *   If you set machineIdentifyType to userdefined, enter a custom identifier.
+         * <strong>example:</strong>
+         * <p>[uu_id_1，uu_id_2]</p>
          */
-        public Builder machineList(java.util.List < String > machineList) {
+        public Builder machineList(java.util.List<String> machineList) {
             this.putBodyParameter("machineList", machineList);
             this.machineList = machineList;
             return this;
@@ -198,11 +221,17 @@ public class UpdateMachineGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateMachineGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMachineGroupRequest</p>
+     */
     public static class GroupAttribute extends TeaModel {
-        @NameInMap("externalName")
+        @com.aliyun.core.annotation.NameInMap("externalName")
         private String externalName;
 
-        @NameInMap("groupTopic")
+        @com.aliyun.core.annotation.NameInMap("groupTopic")
         private String groupTopic;
 
         private GroupAttribute(Builder builder) {
@@ -237,7 +266,10 @@ public class UpdateMachineGroupRequest extends Request {
             private String groupTopic; 
 
             /**
-             * The identifier of the external management system on which the machine group depends. This parameter is empty by default.
+             * <p>The identifier of the external management system on which the machine group depends. This parameter is empty by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testgroup2</p>
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -245,7 +277,10 @@ public class UpdateMachineGroupRequest extends Request {
             }
 
             /**
-             * The topic of the machine group. This parameter is empty by default.
+             * <p>The topic of the machine group. This parameter is empty by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testtopic2</p>
              */
             public Builder groupTopic(String groupTopic) {
                 this.groupTopic = groupTopic;

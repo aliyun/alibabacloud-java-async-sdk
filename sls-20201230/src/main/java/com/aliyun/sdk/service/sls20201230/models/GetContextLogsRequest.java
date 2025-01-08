@@ -1,51 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetContextLogsRequest} extends {@link RequestModel}
  *
  * <p>GetContextLogsRequest</p>
  */
 public class GetContextLogsRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Query
-    @NameInMap("back_lines")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("back_lines")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long backLines;
 
-    @Query
-    @NameInMap("forward_lines")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("forward_lines")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long forwardLines;
 
-    @Query
-    @NameInMap("pack_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pack_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packId;
 
-    @Query
-    @NameInMap("pack_meta")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pack_meta")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packMeta;
-
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
-    private String type;
 
     private GetContextLogsRequest(Builder builder) {
         super(builder);
@@ -55,7 +54,6 @@ public class GetContextLogsRequest extends Request {
         this.forwardLines = builder.forwardLines;
         this.packId = builder.packId;
         this.packMeta = builder.packMeta;
-        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -113,13 +111,6 @@ public class GetContextLogsRequest extends Request {
         return this.packMeta;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
     public static final class Builder extends Request.Builder<GetContextLogsRequest, Builder> {
         private String project; 
         private String logstore; 
@@ -127,7 +118,6 @@ public class GetContextLogsRequest extends Request {
         private Long forwardLines; 
         private String packId; 
         private String packMeta; 
-        private String type; 
 
         private Builder() {
             super();
@@ -141,11 +131,14 @@ public class GetContextLogsRequest extends Request {
             this.forwardLines = request.forwardLines;
             this.packId = request.packId;
             this.packMeta = request.packMeta;
-            this.type = request.type;
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -154,7 +147,11 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -163,7 +160,11 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: (0,100].
+         * <p>The number of logs that you want to obtain and are generated before the generation time of the start log. Valid values: <code>(0,100]</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder backLines(Long backLines) {
             this.putQueryParameter("back_lines", backLines);
@@ -172,7 +173,11 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: (0,100].
+         * <p>The number of logs that you want to obtain and are generated after the generation time of the start log. Valid values: <code>(0,100]</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder forwardLines(Long forwardLines) {
             this.putQueryParameter("forward_lines", forwardLines);
@@ -181,7 +186,11 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the log group to which the start log belongs.
+         * <p>The unique identifier of the log group to which the start log belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85C897C740352DC6-808</p>
          */
         public Builder packId(String packId) {
             this.putQueryParameter("pack_id", packId);
@@ -190,20 +199,15 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * The unique context identifier of the start log in the log group.
+         * <p>The unique context identifier of the start log in the log group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2|MTY1NTcwNTUzODY5MTY0MDk1Mg==|3|0</p>
          */
         public Builder packMeta(String packMeta) {
             this.putQueryParameter("pack_meta", packMeta);
             this.packMeta = packMeta;
-            return this;
-        }
-
-        /**
-         * The type of the data in the Logstore. Set the value to context_log.
-         */
-        public Builder type(String type) {
-            this.putQueryParameter("type", type);
-            this.type = type;
             return this;
         }
 

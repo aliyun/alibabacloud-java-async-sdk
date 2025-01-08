@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Body
-    @NameInMap("resourceId")
-    @Validation(required = true)
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceId;
 
-    @Body
-    @NameInMap("resourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("tags")
-    @Validation(required = true)
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Tags> tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -50,7 +55,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -64,14 +69,14 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -85,16 +90,28 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The resource IDs. You can specify only one resource and add tags to the resource.
+         * <p>The resource IDs. You can specify only one resource and add tags to the resource.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("resourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The type of the resource. Set the value to project.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>project</li>
+         * <li>logstore</li>
+         * <li>dashboard</li>
+         * <li>machinegroup</li>
+         * <li>logtailconfig</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);
@@ -103,9 +120,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the resource. Up to 20 tags are supported at a time. Each tag is a key-value pair.
+         * <p>The tags that you want to add to the resource. You can specify up to 20 tags in each call. Each tag is a key-value pair.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -118,13 +136,19 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tags(Builder builder) {
@@ -159,12 +183,16 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The key must meet the following requirements:
-             * <p>
+             * <p>The key of the tag. The key must meet the following requirements:</p>
+             * <ul>
+             * <li>The key must be <code>1 to 128</code> characters in length.</li>
+             * <li>The key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>The key cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The key must be `1 to 128` characters in length.
-             * *   The key cannot contain `"http://"` or `"https://"`.
-             * *   The key cannot start with `"acs:"` or `"aliyun"`.
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -172,11 +200,15 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. The value must meet the following requirements:
-             * <p>
+             * <p>The value of the tag. The value must meet the following requirements:</p>
+             * <ul>
+             * <li>The value must be <code>1 to 128</code> characters in length.</li>
+             * <li>The value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   The value must be `1 to 128` characters in length.
-             * *   The value cannot contain `"http://"` or `"https://"`.
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

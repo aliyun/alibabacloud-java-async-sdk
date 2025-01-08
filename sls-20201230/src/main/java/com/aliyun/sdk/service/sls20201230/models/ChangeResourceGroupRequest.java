@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
-    @Host
-    @NameInMap("project")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Body
-    @NameInMap("resourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("resourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("resourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceType")
     private String resourceType;
 
     private ChangeResourceGroupRequest(Builder builder) {
@@ -98,7 +103,10 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The project to which the resource belongs.
+         * <p>The project to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -107,7 +115,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2i7nhaxifxey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -116,7 +128,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -125,7 +141,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Only PROJECT is supported. Set the value to PROJECT.
+         * <p>The type of the resource. Only PROJECT is supported. Set the value to PROJECT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

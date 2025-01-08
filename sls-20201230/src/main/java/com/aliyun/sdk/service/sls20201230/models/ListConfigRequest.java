@@ -1,39 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListConfigRequest} extends {@link RequestModel}
  *
  * <p>ListConfigRequest</p>
  */
 public class ListConfigRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Query
-    @NameInMap("configName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("configName")
     private String configName;
 
-    @Query
-    @NameInMap("logstoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("logstoreName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstoreName;
 
-    @Query
-    @NameInMap("offset")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long offset;
 
-    @Query
-    @NameInMap("size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long size;
 
     private ListConfigRequest(Builder builder) {
@@ -114,7 +118,11 @@ public class ListConfigRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -123,7 +131,10 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * The name of the Logtail configuration.
+         * <p>The name of the Logtail configuration, which is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logtail-config-sample</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
@@ -132,7 +143,11 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-logstore</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.putQueryParameter("logstoreName", logstoreName);
@@ -141,7 +156,11 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * The line from which the query starts. Default value: 0.
+         * <p>The line from which the query starts. Default value: 0.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("offset", offset);
@@ -150,7 +169,11 @@ public class ListConfigRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 500.
+         * <p>The number of entries per page. Maximum value: 500.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("size", size);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Histogram} extends {@link TeaModel}
  *
  * <p>Histogram</p>
  */
 public class Histogram extends TeaModel {
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Long count;
 
-    @NameInMap("from")
+    @com.aliyun.core.annotation.NameInMap("from")
     private Integer from;
 
-    @NameInMap("progress")
+    @com.aliyun.core.annotation.NameInMap("progress")
     private String progress;
 
-    @NameInMap("to")
+    @com.aliyun.core.annotation.NameInMap("to")
     private Integer to;
 
     private Histogram(Builder builder) {

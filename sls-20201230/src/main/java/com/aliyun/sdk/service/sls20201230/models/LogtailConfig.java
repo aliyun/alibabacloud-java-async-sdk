@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link LogtailConfig} extends {@link TeaModel}
  *
  * <p>LogtailConfig</p>
  */
 public class LogtailConfig extends TeaModel {
-    @NameInMap("configName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("configName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configName;
 
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
-    @NameInMap("inputDetail")
-    @Validation(required = true)
-    private java.util.Map < String, ? > inputDetail;
+    @com.aliyun.core.annotation.NameInMap("inputDetail")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> inputDetail;
 
-    @NameInMap("inputType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("inputType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputType;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
-    @NameInMap("logSample")
+    @com.aliyun.core.annotation.NameInMap("logSample")
     private String logSample;
 
-    @NameInMap("outputDetail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("outputDetail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private OutputDetail outputDetail;
 
-    @NameInMap("outputType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("outputType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputType;
 
     private LogtailConfig(Builder builder) {
@@ -77,7 +82,7 @@ public class LogtailConfig extends TeaModel {
     /**
      * @return inputDetail
      */
-    public java.util.Map < String, ? > getInputDetail() {
+    public java.util.Map<String, ?> getInputDetail() {
         return this.inputDetail;
     }
 
@@ -119,7 +124,7 @@ public class LogtailConfig extends TeaModel {
     public static final class Builder {
         private String configName; 
         private Long createTime; 
-        private java.util.Map < String, ? > inputDetail; 
+        private java.util.Map<String, ?> inputDetail; 
         private String inputType; 
         private Long lastModifyTime; 
         private String logSample; 
@@ -127,7 +132,10 @@ public class LogtailConfig extends TeaModel {
         private String outputType; 
 
         /**
-         * configName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-config</p>
          */
         public Builder configName(String configName) {
             this.configName = configName;
@@ -143,15 +151,18 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * inputDetail.
+         * <p>This parameter is required.</p>
          */
-        public Builder inputDetail(java.util.Map < String, ? > inputDetail) {
+        public Builder inputDetail(java.util.Map<String, ?> inputDetail) {
             this.inputDetail = inputDetail;
             return this;
         }
 
         /**
-         * inputType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder inputType(String inputType) {
             this.inputType = inputType;
@@ -175,7 +186,7 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * outputDetail.
+         * <p>This parameter is required.</p>
          */
         public Builder outputDetail(OutputDetail outputDetail) {
             this.outputDetail = outputDetail;
@@ -183,7 +194,10 @@ public class LogtailConfig extends TeaModel {
         }
 
         /**
-         * outputType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogService</p>
          */
         public Builder outputType(String outputType) {
             this.outputType = outputType;
@@ -196,22 +210,32 @@ public class LogtailConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link LogtailConfig} extends {@link TeaModel}
+     *
+     * <p>LogtailConfig</p>
+     */
     public static class OutputDetail extends TeaModel {
-        @NameInMap("endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
-        @NameInMap("logstoreName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("logstoreName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String logstoreName;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
+
+        @com.aliyun.core.annotation.NameInMap("telemetryType")
+        private String telemetryType;
 
         private OutputDetail(Builder builder) {
             this.endpoint = builder.endpoint;
             this.logstoreName = builder.logstoreName;
             this.region = builder.region;
+            this.telemetryType = builder.telemetryType;
         }
 
         public static Builder builder() {
@@ -243,13 +267,24 @@ public class LogtailConfig extends TeaModel {
             return this.region;
         }
 
+        /**
+         * @return telemetryType
+         */
+        public String getTelemetryType() {
+            return this.telemetryType;
+        }
+
         public static final class Builder {
             private String endpoint; 
             private String logstoreName; 
             private String region; 
+            private String telemetryType; 
 
             /**
-             * endpoint.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-intranet.log.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -257,7 +292,10 @@ public class LogtailConfig extends TeaModel {
             }
 
             /**
-             * logstoreName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-logstore</p>
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -269,6 +307,14 @@ public class LogtailConfig extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * telemetryType.
+             */
+            public Builder telemetryType(String telemetryType) {
+                this.telemetryType = telemetryType;
                 return this;
             }
 

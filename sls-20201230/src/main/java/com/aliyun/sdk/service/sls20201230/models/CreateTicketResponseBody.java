@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateTicketResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTicketResponseBody</p>
  */
 public class CreateTicketResponseBody extends TeaModel {
-    @NameInMap("ticket")
+    @com.aliyun.core.annotation.NameInMap("ticket")
     private String ticket;
 
     private CreateTicketResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class CreateTicketResponseBody extends TeaModel {
         private String ticket; 
 
         /**
-         * ticket.
+         * <p>The ticket that is used for logon-free access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ***************.eyJ******************.KUT****************</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

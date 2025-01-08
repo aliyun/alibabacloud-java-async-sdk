@@ -1,32 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListMachineGroupRequest} extends {@link RequestModel}
  *
  * <p>ListMachineGroupRequest</p>
  */
 public class ListMachineGroupRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Query
-    @NameInMap("groupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("groupName")
     private String groupName;
 
-    @Query
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Integer offset;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private ListMachineGroupRequest(Builder builder) {
@@ -97,7 +101,11 @@ public class ListMachineGroupRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +114,10 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * The name of the machine group. This parameter is used to filter machine groups. Partial match is supported.
+         * <p>The name of the machine group. This parameter is used to filter machine groups. Partial match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-machine-group</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("groupName", groupName);
@@ -115,7 +126,10 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * The line from which the query starts. Default value: 0.
+         * <p>The line from which the query starts. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -124,7 +138,10 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 500.
+         * <p>The number of entries per page. Maximum value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

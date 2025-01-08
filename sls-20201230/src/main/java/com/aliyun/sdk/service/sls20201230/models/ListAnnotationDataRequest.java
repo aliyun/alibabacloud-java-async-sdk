@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListAnnotationDataRequest} extends {@link RequestModel}
  *
  * <p>ListAnnotationDataRequest</p>
  */
 public class ListAnnotationDataRequest extends Request {
-    @Path
-    @NameInMap("datasetId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("datasetId")
     private String datasetId;
 
-    @Query
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Integer offset;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private ListAnnotationDataRequest(Builder builder) {
@@ -82,7 +87,10 @@ public class ListAnnotationDataRequest extends Request {
         } 
 
         /**
-         * The unique identifier of the dataset.
+         * <p>The unique identifier of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
          */
         public Builder datasetId(String datasetId) {
             this.putPathParameter("datasetId", datasetId);
@@ -91,7 +99,10 @@ public class ListAnnotationDataRequest extends Request {
         }
 
         /**
-         * The line from which the query starts.
+         * <p>The line from which the query starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -100,7 +111,10 @@ public class ListAnnotationDataRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

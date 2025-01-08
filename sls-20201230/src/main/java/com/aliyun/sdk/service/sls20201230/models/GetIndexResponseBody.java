@@ -1,45 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetIndexResponseBody} extends {@link TeaModel}
  *
  * <p>GetIndexResponseBody</p>
  */
 public class GetIndexResponseBody extends TeaModel {
-    @NameInMap("index_mode")
+    @com.aliyun.core.annotation.NameInMap("index_mode")
     private String indexMode;
 
-    @NameInMap("keys")
-    private java.util.Map < String, KeysValue > keys;
+    @com.aliyun.core.annotation.NameInMap("keys")
+    private java.util.Map<String, IndexKey> keys;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
-    @NameInMap("line")
+    @com.aliyun.core.annotation.NameInMap("line")
     private Line line;
 
-    @NameInMap("log_reduce")
+    @com.aliyun.core.annotation.NameInMap("log_reduce")
     private Boolean logReduce;
 
-    @NameInMap("log_reduce_black_list")
-    private java.util.List < String > logReduceBlackList;
+    @com.aliyun.core.annotation.NameInMap("log_reduce_black_list")
+    private java.util.List<String> logReduceBlackList;
 
-    @NameInMap("log_reduce_white_list")
-    private java.util.List < String > logReduceWhiteList;
+    @com.aliyun.core.annotation.NameInMap("log_reduce_white_list")
+    private java.util.List<String> logReduceWhiteList;
 
-    @NameInMap("max_text_len")
+    @com.aliyun.core.annotation.NameInMap("max_text_len")
     private Integer maxTextLen;
 
-    @NameInMap("storage")
+    @com.aliyun.core.annotation.NameInMap("storage")
     private String storage;
 
-    @NameInMap("ttl")
+    @com.aliyun.core.annotation.NameInMap("ttl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ttl;
 
     private GetIndexResponseBody(Builder builder) {
@@ -73,7 +79,7 @@ public class GetIndexResponseBody extends TeaModel {
     /**
      * @return keys
      */
-    public java.util.Map < String, KeysValue > getKeys() {
+    public java.util.Map<String, IndexKey> getKeys() {
         return this.keys;
     }
 
@@ -101,14 +107,14 @@ public class GetIndexResponseBody extends TeaModel {
     /**
      * @return logReduceBlackList
      */
-    public java.util.List < String > getLogReduceBlackList() {
+    public java.util.List<String> getLogReduceBlackList() {
         return this.logReduceBlackList;
     }
 
     /**
      * @return logReduceWhiteList
      */
-    public java.util.List < String > getLogReduceWhiteList() {
+    public java.util.List<String> getLogReduceWhiteList() {
         return this.logReduceWhiteList;
     }
 
@@ -135,18 +141,21 @@ public class GetIndexResponseBody extends TeaModel {
 
     public static final class Builder {
         private String indexMode; 
-        private java.util.Map < String, KeysValue > keys; 
+        private java.util.Map<String, IndexKey> keys; 
         private Long lastModifyTime; 
         private Line line; 
         private Boolean logReduce; 
-        private java.util.List < String > logReduceBlackList; 
-        private java.util.List < String > logReduceWhiteList; 
+        private java.util.List<String> logReduceBlackList; 
+        private java.util.List<String> logReduceWhiteList; 
         private Integer maxTextLen; 
         private String storage; 
         private Integer ttl; 
 
         /**
-         * The type of the index.
+         * <p>The type of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder indexMode(String indexMode) {
             this.indexMode = indexMode;
@@ -154,15 +163,18 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of field indexes. A field index is in the key-value format in which the key specifies the name of the field and the value specifies the index configuration of the field.
+         * <p>The configurations of field indexes. A field index is in the key-value format in which the key specifies the name of the field and the value specifies the index configuration of the field.</p>
          */
-        public Builder keys(java.util.Map < String, KeysValue > keys) {
+        public Builder keys(java.util.Map<String, IndexKey> keys) {
             this.keys = keys;
             return this;
         }
 
         /**
-         * The time when the index configurations were last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the index configurations were last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1524155379</p>
          */
         public Builder lastModifyTime(Long lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -170,7 +182,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of full-text indexes.
+         * <p>The configurations of full-text indexes.</p>
          */
         public Builder line(Line line) {
             this.line = line;
@@ -178,7 +190,10 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the log clustering feature is enabled.
+         * <p>Indicates whether the log clustering feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logReduce(Boolean logReduce) {
             this.logReduce = logReduce;
@@ -186,23 +201,26 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The fields in the blacklist that are used to cluster logs. This parameter is valid only if the log clustering feature is enabled.
+         * <p>The fields in the blacklist that are used to cluster logs. This parameter is valid only if the log clustering feature is enabled.</p>
          */
-        public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
+        public Builder logReduceBlackList(java.util.List<String> logReduceBlackList) {
             this.logReduceBlackList = logReduceBlackList;
             return this;
         }
 
         /**
-         * The fields in the whitelist that are used to cluster logs. This parameter is valid only if the log clustering feature is enabled.
+         * <p>The fields in the whitelist that are used to cluster logs. This parameter is valid only if the log clustering feature is enabled.</p>
          */
-        public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
+        public Builder logReduceWhiteList(java.util.List<String> logReduceWhiteList) {
             this.logReduceWhiteList = logReduceWhiteList;
             return this;
         }
 
         /**
-         * The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of the max_text_len parameter. Valid values: 64 to 16384. Unit: bytes.
+         * <p>The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of the max_text_len parameter. Valid values: 64 to 16384. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.maxTextLen = maxTextLen;
@@ -210,7 +228,10 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The storage type. The value is fixed as pg.
+         * <p>The storage type. The value is fixed as pg.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg</p>
          */
         public Builder storage(String storage) {
             this.storage = storage;
@@ -218,7 +239,11 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The lifecycle of the index file. Valid values: 7, 30, and 90. Unit: day.
+         * <p>The lifecycle of the index file. Valid values: 7, 30, and 90. Unit: day.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -231,21 +256,28 @@ public class GetIndexResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIndexResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIndexResponseBody</p>
+     */
     public static class Line extends TeaModel {
-        @NameInMap("caseSensitive")
+        @com.aliyun.core.annotation.NameInMap("caseSensitive")
         private Boolean caseSensitive;
 
-        @NameInMap("chn")
+        @com.aliyun.core.annotation.NameInMap("chn")
         private Boolean chn;
 
-        @NameInMap("exclude_keys")
-        private java.util.List < String > excludeKeys;
+        @com.aliyun.core.annotation.NameInMap("exclude_keys")
+        private java.util.List<String> excludeKeys;
 
-        @NameInMap("include_keys")
-        private java.util.List < String > includeKeys;
+        @com.aliyun.core.annotation.NameInMap("include_keys")
+        private java.util.List<String> includeKeys;
 
-        @NameInMap("token")
-        private java.util.List < String > token;
+        @com.aliyun.core.annotation.NameInMap("token")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> token;
 
         private Line(Builder builder) {
             this.caseSensitive = builder.caseSensitive;
@@ -280,37 +312,40 @@ public class GetIndexResponseBody extends TeaModel {
         /**
          * @return excludeKeys
          */
-        public java.util.List < String > getExcludeKeys() {
+        public java.util.List<String> getExcludeKeys() {
             return this.excludeKeys;
         }
 
         /**
          * @return includeKeys
          */
-        public java.util.List < String > getIncludeKeys() {
+        public java.util.List<String> getIncludeKeys() {
             return this.includeKeys;
         }
 
         /**
          * @return token
          */
-        public java.util.List < String > getToken() {
+        public java.util.List<String> getToken() {
             return this.token;
         }
 
         public static final class Builder {
             private Boolean caseSensitive; 
             private Boolean chn; 
-            private java.util.List < String > excludeKeys; 
-            private java.util.List < String > includeKeys; 
-            private java.util.List < String > token; 
+            private java.util.List<String> excludeKeys; 
+            private java.util.List<String> includeKeys; 
+            private java.util.List<String> token; 
 
             /**
-             * Indicates whether case sensitivity is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether case sensitivity is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -318,11 +353,14 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Chinese characters are included. Valid values:
-             * <p>
+             * <p>Indicates whether Chinese characters are included. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -330,25 +368,26 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The excluded fields.
+             * <p>The excluded fields.</p>
              */
-            public Builder excludeKeys(java.util.List < String > excludeKeys) {
+            public Builder excludeKeys(java.util.List<String> excludeKeys) {
                 this.excludeKeys = excludeKeys;
                 return this;
             }
 
             /**
-             * The included fields.
+             * <p>The included fields.</p>
              */
-            public Builder includeKeys(java.util.List < String > includeKeys) {
+            public Builder includeKeys(java.util.List<String> includeKeys) {
                 this.includeKeys = includeKeys;
                 return this;
             }
 
             /**
-             * The delimiters.
+             * <p>The delimiters.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder token(java.util.List < String > token) {
+            public Builder token(java.util.List<String> token) {
                 this.token = token;
                 return this;
             }

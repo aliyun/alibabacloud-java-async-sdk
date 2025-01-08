@@ -1,37 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListLogtailPipelineConfigRequest} extends {@link RequestModel}
  *
  * <p>ListLogtailPipelineConfigRequest</p>
  */
 public class ListLogtailPipelineConfigRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Query
-    @NameInMap("configName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("configName")
     private String configName;
 
-    @Query
-    @NameInMap("logstoreName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("logstoreName")
     private String logstoreName;
 
-    @Query
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Long offset;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Long size;
 
     private ListLogtailPipelineConfigRequest(Builder builder) {
@@ -112,7 +116,11 @@ public class ListLogtailPipelineConfigRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -121,7 +129,10 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * The name of the Logtail pipeline configuration.
+         * <p>The name of the Logtail pipeline configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logtail-config-sample</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
@@ -130,7 +141,10 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.putQueryParameter("logstoreName", logstoreName);
@@ -139,7 +153,10 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * The line from which the query starts.
+         * <p>The line from which the query starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Long offset) {
             this.putQueryParameter("offset", offset);
@@ -148,7 +165,10 @@ public class ListLogtailPipelineConfigRequest extends Request {
         }
 
         /**
-         * The number of Logtail pipeline configurations per page.
+         * <p>The number of Logtail pipeline configurations per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder size(Long size) {
             this.putQueryParameter("size", size);

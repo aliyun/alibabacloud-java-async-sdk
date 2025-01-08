@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link EncryptUserCmkConf} extends {@link TeaModel}
  *
  * <p>EncryptUserCmkConf</p>
  */
 public class EncryptUserCmkConf extends TeaModel {
-    @NameInMap("arn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("arn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arn;
 
-    @NameInMap("cmk_key_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("cmk_key_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cmkKeyId;
 
-    @NameInMap("region_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("region_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private EncryptUserCmkConf(Builder builder) {
@@ -65,7 +70,7 @@ public class EncryptUserCmkConf extends TeaModel {
         private String regionId; 
 
         /**
-         * arn.
+         * <p>This parameter is required.</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -73,7 +78,7 @@ public class EncryptUserCmkConf extends TeaModel {
         }
 
         /**
-         * cmk_key_id.
+         * <p>This parameter is required.</p>
          */
         public Builder cmkKeyId(String cmkKeyId) {
             this.cmkKeyId = cmkKeyId;
@@ -81,7 +86,7 @@ public class EncryptUserCmkConf extends TeaModel {
         }
 
         /**
-         * region_id.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;

@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Schedule} extends {@link TeaModel}
  *
  * <p>Schedule</p>
  */
 public class Schedule extends TeaModel {
-    @NameInMap("cronExpression")
+    @com.aliyun.core.annotation.NameInMap("cronExpression")
     private String cronExpression;
 
-    @NameInMap("delay")
+    @com.aliyun.core.annotation.NameInMap("delay")
     private Integer delay;
 
-    @NameInMap("interval")
+    @com.aliyun.core.annotation.NameInMap("interval")
     private String interval;
 
-    @NameInMap("runImmediately")
+    @com.aliyun.core.annotation.NameInMap("runImmediately")
     private Boolean runImmediately;
 
-    @NameInMap("timeZone")
+    @com.aliyun.core.annotation.NameInMap("timeZone")
     private String timeZone;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private Schedule(Builder builder) {
@@ -139,7 +144,10 @@ public class Schedule extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FixedRate</p>
          */
         public Builder type(String type) {
             this.type = type;

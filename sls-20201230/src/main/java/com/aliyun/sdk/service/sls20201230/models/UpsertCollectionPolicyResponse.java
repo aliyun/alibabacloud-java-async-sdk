@@ -1,34 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link UpsertCollectionPolicyResponse} extends {@link TeaModel}
  *
  * <p>UpsertCollectionPolicyResponse</p>
  */
 public class UpsertCollectionPolicyResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    private UpsertCollectionPolicyResponseBody body;
 
     private UpsertCollectionPolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
-        this.body = builder.body;
     }
 
     public static UpsertCollectionPolicyResponse create() {
@@ -43,7 +41,7 @@ public class UpsertCollectionPolicyResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,20 +52,11 @@ public class UpsertCollectionPolicyResponse extends Response {
         return this.statusCode;
     }
 
-    /**
-     * @return body
-     */
-    public UpsertCollectionPolicyResponseBody getBody() {
-        return this.body;
-    }
-
     public interface Builder extends Response.Builder<UpsertCollectionPolicyResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
-
-        Builder body(UpsertCollectionPolicyResponseBody body);
 
         @Override
         UpsertCollectionPolicyResponse build();
@@ -77,9 +66,8 @@ public class UpsertCollectionPolicyResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<UpsertCollectionPolicyResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpsertCollectionPolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -89,14 +77,13 @@ public class UpsertCollectionPolicyResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
-            this.body = response.body;
         } 
 
         /**
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -107,15 +94,6 @@ public class UpsertCollectionPolicyResponse extends Response {
         @Override
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
-            return this;
-        }
-
-        /**
-         * body.
-         */
-        @Override
-        public Builder body(UpsertCollectionPolicyResponseBody body) {
-            this.body = body;
             return this;
         }
 

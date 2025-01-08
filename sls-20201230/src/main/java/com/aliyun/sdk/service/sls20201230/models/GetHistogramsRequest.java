@@ -1,43 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetHistogramsRequest} extends {@link RequestModel}
  *
  * <p>GetHistogramsRequest</p>
  */
 public class GetHistogramsRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Query
-    @NameInMap("from")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long from;
 
-    @Query
-    @NameInMap("query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
-    @Query
-    @NameInMap("to")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("to")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long to;
 
-    @Query
-    @NameInMap("topic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("topic")
     private String topic;
 
     private GetHistogramsRequest(Builder builder) {
@@ -128,7 +132,11 @@ public class GetHistogramsRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +145,11 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -146,7 +158,11 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1409529600</p>
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -155,7 +171,10 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see [Log search overview](~~43772~~).
+         * <p>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>with_pack_meta</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -164,7 +183,11 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1409569200</p>
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);
@@ -173,7 +196,10 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * The topic of the logs.
+         * <p>The topic of the logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("topic", topic);

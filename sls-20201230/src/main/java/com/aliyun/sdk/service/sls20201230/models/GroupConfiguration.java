@@ -1,26 +1,31 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GroupConfiguration} extends {@link TeaModel}
  *
  * <p>GroupConfiguration</p>
  */
 public class GroupConfiguration extends TeaModel {
-    @NameInMap("fileds")
-    private java.util.List < String > fileds;
+    @com.aliyun.core.annotation.NameInMap("fields")
+    private java.util.List<String> fields;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private GroupConfiguration(Builder builder) {
-        this.fileds = builder.fileds;
+        this.fields = builder.fields;
         this.type = builder.type;
     }
 
@@ -33,10 +38,10 @@ public class GroupConfiguration extends TeaModel {
     }
 
     /**
-     * @return fileds
+     * @return fields
      */
-    public java.util.List < String > getFileds() {
-        return this.fileds;
+    public java.util.List<String> getFields() {
+        return this.fields;
     }
 
     /**
@@ -47,19 +52,22 @@ public class GroupConfiguration extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > fileds; 
+        private java.util.List<String> fields; 
         private String type; 
 
         /**
-         * fileds.
+         * fields.
          */
-        public Builder fileds(java.util.List < String > fileds) {
-            this.fileds = fileds;
+        public Builder fields(java.util.List<String> fields) {
+            this.fields = fields;
             return this;
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder type(String type) {
             this.type = type;

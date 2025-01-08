@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link MLLabelParam} extends {@link TeaModel}
  *
  * <p>MLLabelParam</p>
  */
 public class MLLabelParam extends TeaModel {
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("labelId")
+    @com.aliyun.core.annotation.NameInMap("labelId")
     private String labelId;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("settings")
-    private java.util.List < Settings> settings;
+    @com.aliyun.core.annotation.NameInMap("settings")
+    private java.util.List<Settings> settings;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private MLLabelParam(Builder builder) {
@@ -89,7 +94,7 @@ public class MLLabelParam extends TeaModel {
     /**
      * @return settings
      */
-    public java.util.List < Settings> getSettings() {
+    public java.util.List<Settings> getSettings() {
         return this.settings;
     }
 
@@ -106,7 +111,7 @@ public class MLLabelParam extends TeaModel {
         private String labelId; 
         private Long lastModifyTime; 
         private String name; 
-        private java.util.List < Settings> settings; 
+        private java.util.List<Settings> settings; 
         private String type; 
 
         /**
@@ -152,7 +157,7 @@ public class MLLabelParam extends TeaModel {
         /**
          * settings.
          */
-        public Builder settings(java.util.List < Settings> settings) {
+        public Builder settings(java.util.List<Settings> settings) {
             this.settings = settings;
             return this;
         }
@@ -171,17 +176,23 @@ public class MLLabelParam extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MLLabelParam} extends {@link TeaModel}
+     *
+     * <p>MLLabelParam</p>
+     */
     public static class Settings extends TeaModel {
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private String config;
 
-        @NameInMap("mode")
+        @com.aliyun.core.annotation.NameInMap("mode")
         private String mode;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Settings(Builder builder) {

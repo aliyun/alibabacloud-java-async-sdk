@@ -1,44 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link CreateMachineGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateMachineGroupRequest</p>
  */
 public class CreateMachineGroupRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Body
-    @NameInMap("groupAttribute")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupAttribute")
     private GroupAttribute groupAttribute;
 
-    @Body
-    @NameInMap("groupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Body
-    @NameInMap("groupType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
 
-    @Body
-    @NameInMap("machineIdentifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("machineIdentifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String machineIdentifyType;
 
-    @Body
-    @NameInMap("machineList")
-    @Validation(required = true)
-    private java.util.List < String > machineList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("machineList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> machineList;
 
     private CreateMachineGroupRequest(Builder builder) {
         super(builder);
@@ -101,7 +105,7 @@ public class CreateMachineGroupRequest extends Request {
     /**
      * @return machineList
      */
-    public java.util.List < String > getMachineList() {
+    public java.util.List<String> getMachineList() {
         return this.machineList;
     }
 
@@ -111,7 +115,7 @@ public class CreateMachineGroupRequest extends Request {
         private String groupName; 
         private String groupType; 
         private String machineIdentifyType; 
-        private java.util.List < String > machineList; 
+        private java.util.List<String> machineList; 
 
         private Builder() {
             super();
@@ -128,7 +132,11 @@ public class CreateMachineGroupRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +145,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * The attributes of the machine group.
+         * <p>The attributes of the machine group.</p>
          */
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.putBodyParameter("groupAttribute", groupAttribute);
@@ -146,13 +154,17 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * The name of the machine group. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the machine group. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name of each machine group in a project must be unique.</li>
+         * <li>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>It must start and end with a lowercase letter or a digit.</li>
+         * <li>It must be 3 to 128 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The name of each machine group in a project must be unique.
-         * *   It can contain only lowercase letters, digits, hyphens (-), and underscores (\_).
-         * *   It must start and end with a lowercase letter or a digit.
-         * *   It must be 3 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>test-machine-group</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("groupName", groupName);
@@ -161,7 +173,10 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * The type of the machine group. The parameter can be left empty.
+         * <p>The type of the machine group. The parameter can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder groupType(String groupType) {
             this.putBodyParameter("groupType", groupType);
@@ -170,11 +185,15 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * The type of the machine group identifier. Valid values:
-         * <p>
+         * <p>The type of the machine group identifier. Valid values:</p>
+         * <ul>
+         * <li>ip: The machine group uses IP addresses as identifiers.</li>
+         * <li>userdefined: The machine group uses custom identifiers.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ip: The machine group uses IP addresses as identifiers.
-         * *   userdefined: The machine group uses custom identifiers.
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.putBodyParameter("machineIdentifyType", machineIdentifyType);
@@ -183,13 +202,14 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * The identifiers of machine group.
-         * <p>
-         * 
-         * *   If you set machineIdentifyType to ip, enter the IP address of the machine.
-         * *   If you set machineIdentifyType to userdefined, enter a custom identifier.
+         * <p>The identifiers of machine group.</p>
+         * <ul>
+         * <li>If you set machineIdentifyType to ip, enter the IP address of the machine.</li>
+         * <li>If you set machineIdentifyType to userdefined, enter a custom identifier.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          */
-        public Builder machineList(java.util.List < String > machineList) {
+        public Builder machineList(java.util.List<String> machineList) {
             this.putBodyParameter("machineList", machineList);
             this.machineList = machineList;
             return this;
@@ -202,11 +222,17 @@ public class CreateMachineGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMachineGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMachineGroupRequest</p>
+     */
     public static class GroupAttribute extends TeaModel {
-        @NameInMap("externalName")
+        @com.aliyun.core.annotation.NameInMap("externalName")
         private String externalName;
 
-        @NameInMap("groupTopic")
+        @com.aliyun.core.annotation.NameInMap("groupTopic")
         private String groupTopic;
 
         private GroupAttribute(Builder builder) {
@@ -241,7 +267,10 @@ public class CreateMachineGroupRequest extends Request {
             private String groupTopic; 
 
             /**
-             * The identifier of the external management system on which the machine group depends.
+             * <p>The identifier of the external management system on which the machine group depends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testgroup</p>
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -249,7 +278,10 @@ public class CreateMachineGroupRequest extends Request {
             }
 
             /**
-             * The log topic of the machine group.
+             * <p>The log topic of the machine group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testtopic</p>
              */
             public Builder groupTopic(String groupTopic) {
                 this.groupTopic = groupTopic;

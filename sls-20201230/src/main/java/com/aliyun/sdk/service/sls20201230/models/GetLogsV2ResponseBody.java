@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetLogsV2ResponseBody} extends {@link TeaModel}
  *
  * <p>GetLogsV2ResponseBody</p>
  */
 public class GetLogsV2ResponseBody extends TeaModel {
-    @NameInMap("data")
-    private java.util.List < java.util.Map<String, String>> data;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<java.util.Map<String, String>> data;
 
-    @NameInMap("meta")
+    @com.aliyun.core.annotation.NameInMap("meta")
     private Meta meta;
 
     private GetLogsV2ResponseBody(Builder builder) {
@@ -34,7 +39,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < java.util.Map<String, String>> getData() {
+    public java.util.List<java.util.Map<String, String>> getData() {
         return this.data;
     }
 
@@ -46,19 +51,19 @@ public class GetLogsV2ResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < java.util.Map<String, String>> data; 
+        private java.util.List<java.util.Map<String, String>> data; 
         private Meta meta; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
-        public Builder data(java.util.List < java.util.Map<String, String>> data) {
+        public Builder data(java.util.List<java.util.Map<String, String>> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The metadata that is returned.
+         * <p>The metadata of the returned data.</p>
          */
         public Builder meta(Meta meta) {
             this.meta = meta;
@@ -71,53 +76,198 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLogsV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLogsV2ResponseBody</p>
+     */
+    public static class PhraseQueryInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("beginOffset")
+        private Long beginOffset;
+
+        @com.aliyun.core.annotation.NameInMap("endOffset")
+        private Long endOffset;
+
+        @com.aliyun.core.annotation.NameInMap("endTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("scanAll")
+        private Boolean scanAll;
+
+        private PhraseQueryInfo(Builder builder) {
+            this.beginOffset = builder.beginOffset;
+            this.endOffset = builder.endOffset;
+            this.endTime = builder.endTime;
+            this.scanAll = builder.scanAll;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PhraseQueryInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return beginOffset
+         */
+        public Long getBeginOffset() {
+            return this.beginOffset;
+        }
+
+        /**
+         * @return endOffset
+         */
+        public Long getEndOffset() {
+            return this.endOffset;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return scanAll
+         */
+        public Boolean getScanAll() {
+            return this.scanAll;
+        }
+
+        public static final class Builder {
+            private Long beginOffset; 
+            private Long endOffset; 
+            private Long endTime; 
+            private Boolean scanAll; 
+
+            /**
+             * beginOffset.
+             */
+            public Builder beginOffset(Long beginOffset) {
+                this.beginOffset = beginOffset;
+                return this;
+            }
+
+            /**
+             * endOffset.
+             */
+            public Builder endOffset(Long endOffset) {
+                this.endOffset = endOffset;
+                return this;
+            }
+
+            /**
+             * endTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * scanAll.
+             */
+            public Builder scanAll(Boolean scanAll) {
+                this.scanAll = scanAll;
+                return this;
+            }
+
+            public PhraseQueryInfo build() {
+                return new PhraseQueryInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetLogsV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLogsV2ResponseBody</p>
+     */
     public static class Meta extends TeaModel {
-        @NameInMap("aggQuery")
+        @com.aliyun.core.annotation.NameInMap("aggQuery")
         private String aggQuery;
 
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("columnTypes")
+        private java.util.List<String> columnTypes;
+
+        @com.aliyun.core.annotation.NameInMap("count")
         private Integer count;
 
-        @NameInMap("elapsedMillisecond")
+        @com.aliyun.core.annotation.NameInMap("cpuCores")
+        private Integer cpuCores;
+
+        @com.aliyun.core.annotation.NameInMap("cpuSec")
+        private Double cpuSec;
+
+        @com.aliyun.core.annotation.NameInMap("elapsedMillisecond")
         private Long elapsedMillisecond;
 
-        @NameInMap("hasSQL")
+        @com.aliyun.core.annotation.NameInMap("hasSQL")
         private Boolean hasSQL;
 
-        @NameInMap("isAccurate")
+        @com.aliyun.core.annotation.NameInMap("highlights")
+        private java.util.List<java.util.List<LogContent>> highlights;
+
+        @com.aliyun.core.annotation.NameInMap("isAccurate")
         private Boolean isAccurate;
 
-        @NameInMap("keys")
-        private java.util.List < String > keys;
+        @com.aliyun.core.annotation.NameInMap("keys")
+        private java.util.List<String> keys;
 
-        @NameInMap("processedBytes")
+        @com.aliyun.core.annotation.NameInMap("limited")
+        private Integer limited;
+
+        @com.aliyun.core.annotation.NameInMap("mode")
+        private Integer mode;
+
+        @com.aliyun.core.annotation.NameInMap("phraseQueryInfo")
+        private PhraseQueryInfo phraseQueryInfo;
+
+        @com.aliyun.core.annotation.NameInMap("processedBytes")
         private Long processedBytes;
 
-        @NameInMap("processedRows")
-        private Integer processedRows;
+        @com.aliyun.core.annotation.NameInMap("processedRows")
+        private Long processedRows;
 
-        @NameInMap("progress")
+        @com.aliyun.core.annotation.NameInMap("progress")
         private String progress;
 
-        @NameInMap("telementryType")
+        @com.aliyun.core.annotation.NameInMap("scanBytes")
+        private Long scanBytes;
+
+        @com.aliyun.core.annotation.NameInMap("telementryType")
         private String telementryType;
 
-        @NameInMap("terms")
-        private java.util.List < java.util.Map<String, ?>> terms;
+        @com.aliyun.core.annotation.NameInMap("terms")
+        private java.util.List<java.util.Map<String, ?>> terms;
 
-        @NameInMap("whereQuery")
+        @com.aliyun.core.annotation.NameInMap("whereQuery")
         private String whereQuery;
 
         private Meta(Builder builder) {
             this.aggQuery = builder.aggQuery;
+            this.columnTypes = builder.columnTypes;
             this.count = builder.count;
+            this.cpuCores = builder.cpuCores;
+            this.cpuSec = builder.cpuSec;
             this.elapsedMillisecond = builder.elapsedMillisecond;
             this.hasSQL = builder.hasSQL;
+            this.highlights = builder.highlights;
             this.isAccurate = builder.isAccurate;
             this.keys = builder.keys;
+            this.limited = builder.limited;
+            this.mode = builder.mode;
+            this.phraseQueryInfo = builder.phraseQueryInfo;
             this.processedBytes = builder.processedBytes;
             this.processedRows = builder.processedRows;
             this.progress = builder.progress;
+            this.scanBytes = builder.scanBytes;
             this.telementryType = builder.telementryType;
             this.terms = builder.terms;
             this.whereQuery = builder.whereQuery;
@@ -139,10 +289,31 @@ public class GetLogsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return columnTypes
+         */
+        public java.util.List<String> getColumnTypes() {
+            return this.columnTypes;
+        }
+
+        /**
          * @return count
          */
         public Integer getCount() {
             return this.count;
+        }
+
+        /**
+         * @return cpuCores
+         */
+        public Integer getCpuCores() {
+            return this.cpuCores;
+        }
+
+        /**
+         * @return cpuSec
+         */
+        public Double getCpuSec() {
+            return this.cpuSec;
         }
 
         /**
@@ -160,6 +331,13 @@ public class GetLogsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return highlights
+         */
+        public java.util.List<java.util.List<LogContent>> getHighlights() {
+            return this.highlights;
+        }
+
+        /**
          * @return isAccurate
          */
         public Boolean getIsAccurate() {
@@ -169,8 +347,29 @@ public class GetLogsV2ResponseBody extends TeaModel {
         /**
          * @return keys
          */
-        public java.util.List < String > getKeys() {
+        public java.util.List<String> getKeys() {
             return this.keys;
+        }
+
+        /**
+         * @return limited
+         */
+        public Integer getLimited() {
+            return this.limited;
+        }
+
+        /**
+         * @return mode
+         */
+        public Integer getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return phraseQueryInfo
+         */
+        public PhraseQueryInfo getPhraseQueryInfo() {
+            return this.phraseQueryInfo;
         }
 
         /**
@@ -183,7 +382,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         /**
          * @return processedRows
          */
-        public Integer getProcessedRows() {
+        public Long getProcessedRows() {
             return this.processedRows;
         }
 
@@ -192,6 +391,13 @@ public class GetLogsV2ResponseBody extends TeaModel {
          */
         public String getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return scanBytes
+         */
+        public Long getScanBytes() {
+            return this.scanBytes;
         }
 
         /**
@@ -204,7 +410,7 @@ public class GetLogsV2ResponseBody extends TeaModel {
         /**
          * @return terms
          */
-        public java.util.List < java.util.Map<String, ?>> getTerms() {
+        public java.util.List<java.util.Map<String, ?>> getTerms() {
             return this.terms;
         }
 
@@ -217,20 +423,31 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aggQuery; 
+            private java.util.List<String> columnTypes; 
             private Integer count; 
+            private Integer cpuCores; 
+            private Double cpuSec; 
             private Long elapsedMillisecond; 
             private Boolean hasSQL; 
+            private java.util.List<java.util.List<LogContent>> highlights; 
             private Boolean isAccurate; 
-            private java.util.List < String > keys; 
+            private java.util.List<String> keys; 
+            private Integer limited; 
+            private Integer mode; 
+            private PhraseQueryInfo phraseQueryInfo; 
             private Long processedBytes; 
-            private Integer processedRows; 
+            private Long processedRows; 
             private String progress; 
+            private Long scanBytes; 
             private String telementryType; 
-            private java.util.List < java.util.Map<String, ?>> terms; 
+            private java.util.List<java.util.Map<String, ?>> terms; 
             private String whereQuery; 
 
             /**
-             * The SQL statement after | in the query statement.
+             * <p>The SQL statement after | in the query statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select *</p>
              */
             public Builder aggQuery(String aggQuery) {
                 this.aggQuery = aggQuery;
@@ -238,7 +455,18 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are returned.
+             * columnTypes.
+             */
+            public Builder columnTypes(java.util.List<String> columnTypes) {
+                this.columnTypes = columnTypes;
+                return this;
+            }
+
+            /**
+             * <p>The number of rows that are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -246,7 +474,26 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of time that is consumed by the request. Unit: milliseconds.
+             * cpuCores.
+             */
+            public Builder cpuCores(Integer cpuCores) {
+                this.cpuCores = cpuCores;
+                return this;
+            }
+
+            /**
+             * cpuSec.
+             */
+            public Builder cpuSec(Double cpuSec) {
+                this.cpuSec = cpuSec;
+                return this;
+            }
+
+            /**
+             * <p>The amount of time that is consumed by the request. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder elapsedMillisecond(Long elapsedMillisecond) {
                 this.elapsedMillisecond = elapsedMillisecond;
@@ -254,7 +501,10 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the query is an SQL query.
+             * <p>Indicates whether the query is an SQL query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasSQL(Boolean hasSQL) {
                 this.hasSQL = hasSQL;
@@ -262,7 +512,18 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the returned result is accurate.
+             * highlights.
+             */
+            public Builder highlights(java.util.List<java.util.List<LogContent>> highlights) {
+                this.highlights = highlights;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the returned result is accurate to seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAccurate(Boolean isAccurate) {
                 this.isAccurate = isAccurate;
@@ -270,15 +531,42 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * All keys in the query result.
+             * <p>All keys in the query result.</p>
              */
-            public Builder keys(java.util.List < String > keys) {
+            public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
                 return this;
             }
 
             /**
-             * The number of logs that are processed in the request.
+             * limited.
+             */
+            public Builder limited(Integer limited) {
+                this.limited = limited;
+                return this;
+            }
+
+            /**
+             * mode.
+             */
+            public Builder mode(Integer mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * phraseQueryInfo.
+             */
+            public Builder phraseQueryInfo(PhraseQueryInfo phraseQueryInfo) {
+                this.phraseQueryInfo = phraseQueryInfo;
+                return this;
+            }
+
+            /**
+             * <p>The number of logs that are processed in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder processedBytes(Long processedBytes) {
                 this.processedBytes = processedBytes;
@@ -286,19 +574,25 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are processed in the request.
+             * <p>The number of rows that are processed in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
-            public Builder processedRows(Integer processedRows) {
+            public Builder processedRows(Long processedRows) {
                 this.processedRows = processedRows;
                 return this;
             }
 
             /**
-             * Indicates whether the query result is complete. Valid values:
-             * <p>
+             * <p>Indicates whether the query result is complete. Valid values:</p>
+             * <ul>
+             * <li>Complete: The query was successful, and the complete result is returned.</li>
+             * <li>Incomplete: The query was successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.</li>
+             * </ul>
              * 
-             * *   Complete: The query was successful, and the complete result is returned.
-             * *   Incomplete: The query was successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -306,7 +600,18 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * The type of observable data.
+             * scanBytes.
+             */
+            public Builder scanBytes(Long scanBytes) {
+                this.scanBytes = scanBytes;
+                return this;
+            }
+
+            /**
+             * <p>The type of observable data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder telementryType(String telementryType) {
                 this.telementryType = telementryType;
@@ -314,15 +619,20 @@ public class GetLogsV2ResponseBody extends TeaModel {
             }
 
             /**
-             * All terms in the query statement.
+             * <p>All terms in the query statement.</p>
              */
-            public Builder terms(java.util.List < java.util.Map<String, ?>> terms) {
+            public Builder terms(java.util.List<java.util.Map<String, ?>> terms) {
                 this.terms = terms;
                 return this;
             }
 
             /**
-             * The part before | in the query statement.
+             * <p>The part before | in the query statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder whereQuery(String whereQuery) {
                 this.whereQuery = whereQuery;

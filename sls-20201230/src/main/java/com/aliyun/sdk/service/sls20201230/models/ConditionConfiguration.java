@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ConditionConfiguration} extends {@link TeaModel}
  *
  * <p>ConditionConfiguration</p>
  */
 public class ConditionConfiguration extends TeaModel {
-    @NameInMap("condition")
+    @com.aliyun.core.annotation.NameInMap("condition")
     private String condition;
 
-    @NameInMap("countCondition")
+    @com.aliyun.core.annotation.NameInMap("countCondition")
     private String countCondition;
 
     private ConditionConfiguration(Builder builder) {

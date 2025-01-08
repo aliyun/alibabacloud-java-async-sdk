@@ -1,35 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link LogGroup} extends {@link TeaModel}
  *
  * <p>LogGroup</p>
  */
 public class LogGroup extends TeaModel {
-    @NameInMap("LogTags")
-    @Validation(required = true)
-    private java.util.List < LogTag > logTags;
+    @com.aliyun.core.annotation.NameInMap("LogItems")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<LogItem> logItems;
 
-    @NameInMap("Logs")
-    @Validation(required = true)
-    private java.util.List < LogItem > logs;
+    @com.aliyun.core.annotation.NameInMap("LogTags")
+    private java.util.List<LogTag> logTags;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
     private LogGroup(Builder builder) {
+        this.logItems = builder.logItems;
         this.logTags = builder.logTags;
-        this.logs = builder.logs;
         this.source = builder.source;
         this.topic = builder.topic;
     }
@@ -43,17 +46,17 @@ public class LogGroup extends TeaModel {
     }
 
     /**
-     * @return logTags
+     * @return logItems
      */
-    public java.util.List < LogTag > getLogTags() {
-        return this.logTags;
+    public java.util.List<LogItem> getLogItems() {
+        return this.logItems;
     }
 
     /**
-     * @return logs
+     * @return logTags
      */
-    public java.util.List < LogItem > getLogs() {
-        return this.logs;
+    public java.util.List<LogTag> getLogTags() {
+        return this.logTags;
     }
 
     /**
@@ -71,24 +74,24 @@ public class LogGroup extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogTag > logTags; 
-        private java.util.List < LogItem > logs; 
+        private java.util.List<LogItem> logItems; 
+        private java.util.List<LogTag> logTags; 
         private String source; 
         private String topic; 
 
         /**
-         * LogTags.
+         * <p>This parameter is required.</p>
          */
-        public Builder logTags(java.util.List < LogTag > logTags) {
-            this.logTags = logTags;
+        public Builder logItems(java.util.List<LogItem> logItems) {
+            this.logItems = logItems;
             return this;
         }
 
         /**
-         * Logs.
+         * LogTags.
          */
-        public Builder logs(java.util.List < LogItem > logs) {
-            this.logs = logs;
+        public Builder logTags(java.util.List<LogTag> logTags) {
+            this.logTags = logTags;
             return this;
         }
 

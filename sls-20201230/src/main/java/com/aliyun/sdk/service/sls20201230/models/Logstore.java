@@ -1,63 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Logstore} extends {@link TeaModel}
  *
  * <p>Logstore</p>
  */
 public class Logstore extends TeaModel {
-    @NameInMap("appendMeta")
+    @com.aliyun.core.annotation.NameInMap("appendMeta")
     private Boolean appendMeta;
 
-    @NameInMap("autoSplit")
+    @com.aliyun.core.annotation.NameInMap("autoSplit")
     private Boolean autoSplit;
 
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private Integer createTime;
 
-    @NameInMap("enable_tracking")
+    @com.aliyun.core.annotation.NameInMap("enable_tracking")
     private Boolean enableTracking;
 
-    @NameInMap("encrypt_conf")
+    @com.aliyun.core.annotation.NameInMap("encrypt_conf")
     private EncryptConf encryptConf;
 
-    @NameInMap("hot_ttl")
+    @com.aliyun.core.annotation.NameInMap("hot_ttl")
     private Integer hotTtl;
 
-    @NameInMap("infrequentAccessTTL")
+    @com.aliyun.core.annotation.NameInMap("infrequentAccessTTL")
     private Integer infrequentAccessTTL;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Integer lastModifyTime;
 
-    @NameInMap("logstoreName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("logstoreName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstoreName;
 
-    @NameInMap("maxSplitShard")
+    @com.aliyun.core.annotation.NameInMap("maxSplitShard")
     private Integer maxSplitShard;
 
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
-    @NameInMap("productType")
+    @com.aliyun.core.annotation.NameInMap("processorId")
+    private String processorId;
+
+    @com.aliyun.core.annotation.NameInMap("productType")
     private String productType;
 
-    @NameInMap("shardCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("shardCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer shardCount;
 
-    @NameInMap("telemetryType")
+    @com.aliyun.core.annotation.NameInMap("telemetryType")
     private String telemetryType;
 
-    @NameInMap("ttl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ttl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ttl;
 
     private Logstore(Builder builder) {
@@ -72,6 +80,7 @@ public class Logstore extends TeaModel {
         this.logstoreName = builder.logstoreName;
         this.maxSplitShard = builder.maxSplitShard;
         this.mode = builder.mode;
+        this.processorId = builder.processorId;
         this.productType = builder.productType;
         this.shardCount = builder.shardCount;
         this.telemetryType = builder.telemetryType;
@@ -164,6 +173,13 @@ public class Logstore extends TeaModel {
     }
 
     /**
+     * @return processorId
+     */
+    public String getProcessorId() {
+        return this.processorId;
+    }
+
+    /**
      * @return productType
      */
     public String getProductType() {
@@ -203,6 +219,7 @@ public class Logstore extends TeaModel {
         private String logstoreName; 
         private Integer maxSplitShard; 
         private String mode; 
+        private String processorId; 
         private String productType; 
         private Integer shardCount; 
         private String telemetryType; 
@@ -273,7 +290,10 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * logstoreName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
          */
         public Builder logstoreName(String logstoreName) {
             this.logstoreName = logstoreName;
@@ -297,6 +317,14 @@ public class Logstore extends TeaModel {
         }
 
         /**
+         * processorId.
+         */
+        public Builder processorId(String processorId) {
+            this.processorId = processorId;
+            return this;
+        }
+
+        /**
          * productType.
          */
         public Builder productType(String productType) {
@@ -305,7 +333,10 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * shardCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.shardCount = shardCount;
@@ -321,7 +352,10 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * ttl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;

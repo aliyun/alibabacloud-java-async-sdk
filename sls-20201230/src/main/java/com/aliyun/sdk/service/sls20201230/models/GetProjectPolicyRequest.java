@@ -1,19 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetProjectPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetProjectPolicyRequest</p>
  */
 public class GetProjectPolicyRequest extends Request {
-    @Host
-    @NameInMap("project")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
     private GetProjectPolicyRequest(Builder builder) {
@@ -54,7 +59,10 @@ public class GetProjectPolicyRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

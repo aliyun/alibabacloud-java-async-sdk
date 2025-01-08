@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link AlertQuery} extends {@link TeaModel}
  *
  * <p>AlertQuery</p>
  */
 public class AlertQuery extends TeaModel {
-    @NameInMap("chartTitle")
+    @com.aliyun.core.annotation.NameInMap("chartTitle")
     private String chartTitle;
 
-    @NameInMap("dashboardId")
+    @com.aliyun.core.annotation.NameInMap("dashboardId")
     private String dashboardId;
 
-    @NameInMap("end")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("end")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String end;
 
-    @NameInMap("powerSqlMode")
+    @com.aliyun.core.annotation.NameInMap("powerSqlMode")
     private String powerSqlMode;
 
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("project")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String project;
 
-    @NameInMap("query")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("query")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
-    @NameInMap("region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @NameInMap("roleArn")
+    @com.aliyun.core.annotation.NameInMap("roleArn")
     private String roleArn;
 
-    @NameInMap("start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String start;
 
-    @NameInMap("store")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("store")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String store;
 
-    @NameInMap("storeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("storeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storeType;
 
-    @NameInMap("timeSpanType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("timeSpanType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timeSpanType;
 
-    @NameInMap("ui")
+    @com.aliyun.core.annotation.NameInMap("ui")
     private String ui;
 
     private AlertQuery(Builder builder) {
@@ -206,7 +211,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * end.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>now</p>
          */
         public Builder end(String end) {
             this.end = end;
@@ -222,7 +230,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * project.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>projectExample</p>
          */
         public Builder project(String project) {
             this.project = project;
@@ -230,7 +241,12 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * query.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>| select *</li>
+         * </ul>
          */
         public Builder query(String query) {
             this.query = query;
@@ -238,7 +254,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -254,7 +273,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * start.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-5m</p>
          */
         public Builder start(String start) {
             this.start = start;
@@ -262,7 +284,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * store.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>store Example</p>
          */
         public Builder store(String store) {
             this.store = store;
@@ -270,7 +295,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * storeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
          */
         public Builder storeType(String storeType) {
             this.storeType = storeType;
@@ -278,7 +306,10 @@ public class AlertQuery extends TeaModel {
         }
 
         /**
-         * timeSpanType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Relative</p>
          */
         public Builder timeSpanType(String timeSpanType) {
             this.timeSpanType = timeSpanType;

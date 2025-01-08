@@ -1,34 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link GetCheckPointRequest} extends {@link RequestModel}
  *
  * <p>GetCheckPointRequest</p>
  */
 public class GetCheckPointRequest extends Request {
-    @Host
-    @NameInMap("project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
-    @Path
-    @NameInMap("logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Path
-    @NameInMap("consumerGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("consumerGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroup;
 
-    @Query
-    @NameInMap("shard")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("shard")
     private Integer shard;
 
     private GetCheckPointRequest(Builder builder) {
@@ -99,7 +103,11 @@ public class GetCheckPointRequest extends Request {
         } 
 
         /**
-         * The name of the project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -108,7 +116,11 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -117,7 +129,11 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * The name of the consumer group.
+         * <p>The name of the consumer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer-group-1</p>
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
@@ -126,11 +142,14 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * The shard ID.
-         * <p>
+         * <p>The shard ID.</p>
+         * <ul>
+         * <li>If the specified shard does not exist, an empty list is returned.</li>
+         * <li>If no shard ID is specified, the checkpoints of all shards are returned.</li>
+         * </ul>
          * 
-         * *   If the specified shard does not exist, an empty list is returned.
-         * *   If no shard ID is specified, the checkpoints of all shards are returned.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder shard(Integer shard) {
             this.putQueryParameter("shard", shard);

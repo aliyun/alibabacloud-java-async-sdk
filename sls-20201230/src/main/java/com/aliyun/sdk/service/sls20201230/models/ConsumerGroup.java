@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ConsumerGroup} extends {@link TeaModel}
  *
  * <p>ConsumerGroup</p>
  */
 public class ConsumerGroup extends TeaModel {
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("order")
+    @com.aliyun.core.annotation.NameInMap("order")
     private Boolean order;
 
-    @NameInMap("timeout")
+    @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
     private ConsumerGroup(Builder builder) {

@@ -1,49 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link Project} extends {@link TeaModel}
  *
  * <p>Project</p>
  */
 public class Project extends TeaModel {
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
-    @NameInMap("description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("dataRedundancyType")
+    private String dataRedundancyType;
+
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @NameInMap("lastModifyTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private String lastModifyTime;
 
-    @NameInMap("owner")
+    @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
 
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @NameInMap("region")
+    @com.aliyun.core.annotation.NameInMap("quota")
+    private java.util.Map<String, ?> quota;
+
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private Project(Builder builder) {
         this.createTime = builder.createTime;
+        this.dataRedundancyType = builder.dataRedundancyType;
         this.description = builder.description;
         this.lastModifyTime = builder.lastModifyTime;
         this.owner = builder.owner;
         this.projectName = builder.projectName;
+        this.quota = builder.quota;
         this.region = builder.region;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
@@ -62,6 +75,13 @@ public class Project extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return dataRedundancyType
+     */
+    public String getDataRedundancyType() {
+        return this.dataRedundancyType;
     }
 
     /**
@@ -93,6 +113,13 @@ public class Project extends TeaModel {
     }
 
     /**
+     * @return quota
+     */
+    public java.util.Map<String, ?> getQuota() {
+        return this.quota;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -115,10 +142,12 @@ public class Project extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
+        private String dataRedundancyType; 
         private String description; 
         private String lastModifyTime; 
         private String owner; 
         private String projectName; 
+        private java.util.Map<String, ?> quota; 
         private String region; 
         private String resourceGroupId; 
         private String status; 
@@ -132,7 +161,15 @@ public class Project extends TeaModel {
         }
 
         /**
-         * description.
+         * dataRedundancyType.
+         */
+        public Builder dataRedundancyType(String dataRedundancyType) {
+            this.dataRedundancyType = dataRedundancyType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -156,10 +193,18 @@ public class Project extends TeaModel {
         }
 
         /**
-         * projectName.
+         * <p>This parameter is required.</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * quota.
+         */
+        public Builder quota(java.util.Map<String, ?> quota) {
+            this.quota = quota;
             return this;
         }
 

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListAlertsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAlertsResponseBody</p>
  */
 public class ListAlertsResponseBody extends TeaModel {
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
-    @NameInMap("results")
-    private java.util.List < AlertResp > results;
+    @com.aliyun.core.annotation.NameInMap("results")
+    private java.util.List<Alert> results;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
     private ListAlertsResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListAlertsResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < AlertResp > getResults() {
+    public java.util.List<Alert> getResults() {
         return this.results;
     }
 
@@ -58,11 +63,14 @@ public class ListAlertsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < AlertResp > results; 
+        private java.util.List<Alert> results; 
         private Integer total; 
 
         /**
-         * count.
+         * <p>The number of alert rules that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,15 +78,18 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The alert rules.</p>
          */
-        public Builder results(java.util.List < AlertResp > results) {
+        public Builder results(java.util.List<Alert> results) {
             this.results = results;
             return this;
         }
 
         /**
-         * total.
+         * <p>The total number of alert rules in the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder total(Integer total) {
             this.total = total;

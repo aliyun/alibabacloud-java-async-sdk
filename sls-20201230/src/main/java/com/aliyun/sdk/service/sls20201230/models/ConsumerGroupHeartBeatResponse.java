@@ -1,28 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ConsumerGroupHeartBeatResponse} extends {@link TeaModel}
  *
  * <p>ConsumerGroupHeartBeatResponse</p>
  */
 public class ConsumerGroupHeartBeatResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private java.util.List < Integer > body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.List<Integer> body;
 
     private ConsumerGroupHeartBeatResponse(BuilderImpl builder) {
         super(builder);
@@ -43,7 +45,7 @@ public class ConsumerGroupHeartBeatResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -57,17 +59,17 @@ public class ConsumerGroupHeartBeatResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < Integer > getBody() {
+    public java.util.List<Integer> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<ConsumerGroupHeartBeatResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < Integer > body);
+        Builder body(java.util.List<Integer> body);
 
         @Override
         ConsumerGroupHeartBeatResponse build();
@@ -77,9 +79,9 @@ public class ConsumerGroupHeartBeatResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<ConsumerGroupHeartBeatResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < Integer > body; 
+        private java.util.List<Integer> body; 
 
         private BuilderImpl() {
             super();
@@ -96,7 +98,7 @@ public class ConsumerGroupHeartBeatResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -114,7 +116,7 @@ public class ConsumerGroupHeartBeatResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < Integer > body) {
+        public Builder body(java.util.List<Integer> body) {
             this.body = body;
             return this;
         }

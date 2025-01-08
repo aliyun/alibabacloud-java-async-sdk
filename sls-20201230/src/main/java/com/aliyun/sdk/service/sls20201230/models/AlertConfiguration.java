@@ -1,89 +1,94 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link AlertConfiguration} extends {@link TeaModel}
  *
  * <p>AlertConfiguration</p>
  */
 public class AlertConfiguration extends TeaModel {
-    @NameInMap("annotations")
-    private java.util.List < AlertTag > annotations;
+    @com.aliyun.core.annotation.NameInMap("annotations")
+    private java.util.List<AlertTag> annotations;
 
-    @NameInMap("autoAnnotation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("autoAnnotation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean autoAnnotation;
 
-    @NameInMap("conditionConfiguration")
+    @com.aliyun.core.annotation.NameInMap("conditionConfiguration")
     private ConditionConfiguration conditionConfiguration;
 
-    @NameInMap("dashboard")
+    @com.aliyun.core.annotation.NameInMap("dashboard")
     private String dashboard;
 
-    @NameInMap("groupConfiguration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("groupConfiguration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private GroupConfiguration groupConfiguration;
 
-    @NameInMap("joinConfigurations")
-    private java.util.List < JoinConfiguration > joinConfigurations;
+    @com.aliyun.core.annotation.NameInMap("joinConfigurations")
+    private java.util.List<JoinConfiguration> joinConfigurations;
 
-    @NameInMap("labels")
-    private java.util.List < AlertTag > labels;
+    @com.aliyun.core.annotation.NameInMap("labels")
+    private java.util.List<AlertTag> labels;
 
-    @NameInMap("muteUntil")
+    @com.aliyun.core.annotation.NameInMap("muteUntil")
     private Long muteUntil;
 
-    @NameInMap("noDataFire")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("noDataFire")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean noDataFire;
 
-    @NameInMap("noDataSeverity")
+    @com.aliyun.core.annotation.NameInMap("noDataSeverity")
     private Integer noDataSeverity;
 
-    @NameInMap("policyConfiguration")
+    @com.aliyun.core.annotation.NameInMap("policyConfiguration")
     private PolicyConfiguration policyConfiguration;
 
-    @NameInMap("queryList")
-    @Validation(required = true)
-    private java.util.List < AlertQuery > queryList;
+    @com.aliyun.core.annotation.NameInMap("queryList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<AlertQuery> queryList;
 
-    @NameInMap("sendResolved")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sendResolved")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean sendResolved;
 
-    @NameInMap("severityConfigurations")
-    @Validation(required = true)
-    private java.util.List < SeverityConfiguration > severityConfigurations;
+    @com.aliyun.core.annotation.NameInMap("severityConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<SeverityConfiguration> severityConfigurations;
 
-    @NameInMap("sinkAlerthub")
+    @com.aliyun.core.annotation.NameInMap("sinkAlerthub")
     private SinkAlerthubConfiguration sinkAlerthub;
 
-    @NameInMap("sinkCms")
+    @com.aliyun.core.annotation.NameInMap("sinkCms")
     private SinkCmsConfiguration sinkCms;
 
-    @NameInMap("sinkEventStore")
+    @com.aliyun.core.annotation.NameInMap("sinkEventStore")
     private SinkEventStoreConfiguration sinkEventStore;
 
-    @NameInMap("tags")
-    private java.util.List < String > tags;
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<String> tags;
 
-    @NameInMap("templateConfiguration")
+    @com.aliyun.core.annotation.NameInMap("templateConfiguration")
     private TemplateConfiguration templateConfiguration;
 
-    @NameInMap("threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer threshold;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("version")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("version")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String version;
 
     private AlertConfiguration(Builder builder) {
@@ -122,7 +127,7 @@ public class AlertConfiguration extends TeaModel {
     /**
      * @return annotations
      */
-    public java.util.List < AlertTag > getAnnotations() {
+    public java.util.List<AlertTag> getAnnotations() {
         return this.annotations;
     }
 
@@ -157,14 +162,14 @@ public class AlertConfiguration extends TeaModel {
     /**
      * @return joinConfigurations
      */
-    public java.util.List < JoinConfiguration > getJoinConfigurations() {
+    public java.util.List<JoinConfiguration> getJoinConfigurations() {
         return this.joinConfigurations;
     }
 
     /**
      * @return labels
      */
-    public java.util.List < AlertTag > getLabels() {
+    public java.util.List<AlertTag> getLabels() {
         return this.labels;
     }
 
@@ -199,7 +204,7 @@ public class AlertConfiguration extends TeaModel {
     /**
      * @return queryList
      */
-    public java.util.List < AlertQuery > getQueryList() {
+    public java.util.List<AlertQuery> getQueryList() {
         return this.queryList;
     }
 
@@ -213,7 +218,7 @@ public class AlertConfiguration extends TeaModel {
     /**
      * @return severityConfigurations
      */
-    public java.util.List < SeverityConfiguration > getSeverityConfigurations() {
+    public java.util.List<SeverityConfiguration> getSeverityConfigurations() {
         return this.severityConfigurations;
     }
 
@@ -241,7 +246,7 @@ public class AlertConfiguration extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -274,24 +279,24 @@ public class AlertConfiguration extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AlertTag > annotations; 
+        private java.util.List<AlertTag> annotations; 
         private Boolean autoAnnotation; 
         private ConditionConfiguration conditionConfiguration; 
         private String dashboard; 
         private GroupConfiguration groupConfiguration; 
-        private java.util.List < JoinConfiguration > joinConfigurations; 
-        private java.util.List < AlertTag > labels; 
+        private java.util.List<JoinConfiguration> joinConfigurations; 
+        private java.util.List<AlertTag> labels; 
         private Long muteUntil; 
         private Boolean noDataFire; 
         private Integer noDataSeverity; 
         private PolicyConfiguration policyConfiguration; 
-        private java.util.List < AlertQuery > queryList; 
+        private java.util.List<AlertQuery> queryList; 
         private Boolean sendResolved; 
-        private java.util.List < SeverityConfiguration > severityConfigurations; 
+        private java.util.List<SeverityConfiguration> severityConfigurations; 
         private SinkAlerthubConfiguration sinkAlerthub; 
         private SinkCmsConfiguration sinkCms; 
         private SinkEventStoreConfiguration sinkEventStore; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private TemplateConfiguration templateConfiguration; 
         private Integer threshold; 
         private String type; 
@@ -300,13 +305,16 @@ public class AlertConfiguration extends TeaModel {
         /**
          * annotations.
          */
-        public Builder annotations(java.util.List < AlertTag > annotations) {
+        public Builder annotations(java.util.List<AlertTag> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         /**
-         * autoAnnotation.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoAnnotation(Boolean autoAnnotation) {
             this.autoAnnotation = autoAnnotation;
@@ -330,7 +338,7 @@ public class AlertConfiguration extends TeaModel {
         }
 
         /**
-         * groupConfiguration.
+         * <p>This parameter is required.</p>
          */
         public Builder groupConfiguration(GroupConfiguration groupConfiguration) {
             this.groupConfiguration = groupConfiguration;
@@ -340,7 +348,7 @@ public class AlertConfiguration extends TeaModel {
         /**
          * joinConfigurations.
          */
-        public Builder joinConfigurations(java.util.List < JoinConfiguration > joinConfigurations) {
+        public Builder joinConfigurations(java.util.List<JoinConfiguration> joinConfigurations) {
             this.joinConfigurations = joinConfigurations;
             return this;
         }
@@ -348,7 +356,7 @@ public class AlertConfiguration extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.List < AlertTag > labels) {
+        public Builder labels(java.util.List<AlertTag> labels) {
             this.labels = labels;
             return this;
         }
@@ -362,7 +370,10 @@ public class AlertConfiguration extends TeaModel {
         }
 
         /**
-         * noDataFire.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder noDataFire(Boolean noDataFire) {
             this.noDataFire = noDataFire;
@@ -386,15 +397,18 @@ public class AlertConfiguration extends TeaModel {
         }
 
         /**
-         * queryList.
+         * <p>This parameter is required.</p>
          */
-        public Builder queryList(java.util.List < AlertQuery > queryList) {
+        public Builder queryList(java.util.List<AlertQuery> queryList) {
             this.queryList = queryList;
             return this;
         }
 
         /**
-         * sendResolved.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sendResolved(Boolean sendResolved) {
             this.sendResolved = sendResolved;
@@ -402,9 +416,9 @@ public class AlertConfiguration extends TeaModel {
         }
 
         /**
-         * severityConfigurations.
+         * <p>This parameter is required.</p>
          */
-        public Builder severityConfigurations(java.util.List < SeverityConfiguration > severityConfigurations) {
+        public Builder severityConfigurations(java.util.List<SeverityConfiguration> severityConfigurations) {
             this.severityConfigurations = severityConfigurations;
             return this;
         }
@@ -436,7 +450,7 @@ public class AlertConfiguration extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -450,7 +464,10 @@ public class AlertConfiguration extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder threshold(Integer threshold) {
             this.threshold = threshold;
@@ -466,7 +483,10 @@ public class AlertConfiguration extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder version(String version) {
             this.version = version;

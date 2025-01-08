@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sls20201230.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.sls.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
+ * 
  * {@link ListProjectResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectResponseBody</p>
  */
 public class ListProjectResponseBody extends TeaModel {
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Long count;
 
-    @NameInMap("projects")
-    private java.util.List < Project > projects;
+    @com.aliyun.core.annotation.NameInMap("projects")
+    private java.util.List<Project> projects;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListProjectResponseBody(Builder builder) {
@@ -45,7 +50,7 @@ public class ListProjectResponseBody extends TeaModel {
     /**
      * @return projects
      */
-    public java.util.List < Project > getProjects() {
+    public java.util.List<Project> getProjects() {
         return this.projects;
     }
 
@@ -58,11 +63,14 @@ public class ListProjectResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < Project > projects; 
+        private java.util.List<Project> projects; 
         private Long total; 
 
         /**
-         * The number of returned projects on the current page.
+         * <p>The number of returned projects on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -70,15 +78,18 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The projects that meet the query conditions.
+         * <p>The projects that meet the query conditions.</p>
          */
-        public Builder projects(java.util.List < Project > projects) {
+        public Builder projects(java.util.List<Project> projects) {
             this.projects = projects;
             return this;
         }
 
         /**
-         * The total number of projects that meet the query conditions.
+         * <p>The total number of projects that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder total(Long total) {
             this.total = total;
