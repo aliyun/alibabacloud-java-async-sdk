@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
     private Boolean completed;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    private java.util.Map<String, ?> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -64,7 +69,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -92,7 +97,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean completed; 
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private String message; 
         private String requestId; 
         private String status; 
@@ -116,7 +121,7 @@ public class GetDocumentExtractResultResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }

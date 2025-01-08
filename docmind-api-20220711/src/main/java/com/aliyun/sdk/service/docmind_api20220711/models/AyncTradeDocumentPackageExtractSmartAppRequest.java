@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AyncTradeDocumentPackageExtractSmartAppRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomExtractionRange")
-    private java.util.List < String > customExtractionRange;
+    private java.util.List<String> customExtractionRange;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileName")
@@ -58,7 +63,7 @@ public class AyncTradeDocumentPackageExtractSmartAppRequest extends Request {
     /**
      * @return customExtractionRange
      */
-    public java.util.List < String > getCustomExtractionRange() {
+    public java.util.List<String> getCustomExtractionRange() {
         return this.customExtractionRange;
     }
 
@@ -91,7 +96,7 @@ public class AyncTradeDocumentPackageExtractSmartAppRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AyncTradeDocumentPackageExtractSmartAppRequest, Builder> {
-        private java.util.List < String > customExtractionRange; 
+        private java.util.List<String> customExtractionRange; 
         private String fileName; 
         private String fileUrl; 
         private String option; 
@@ -113,7 +118,7 @@ public class AyncTradeDocumentPackageExtractSmartAppRequest extends Request {
         /**
          * CustomExtractionRange.
          */
-        public Builder customExtractionRange(java.util.List < String > customExtractionRange) {
+        public Builder customExtractionRange(java.util.List<String> customExtractionRange) {
             String customExtractionRangeShrink = shrink(customExtractionRange, "CustomExtractionRange", "json");
             this.putQueryParameter("CustomExtractionRange", customExtractionRangeShrink);
             this.customExtractionRange = customExtractionRange;
@@ -130,7 +135,7 @@ public class AyncTradeDocumentPackageExtractSmartAppRequest extends Request {
         }
 
         /**
-         * FileUrl.
+         * <p>This parameter is required.</p>
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);

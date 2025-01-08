@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageNames")
-    private java.util.List < String > imageNames;
+    private java.util.List<String> imageNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageUrls")
-    private java.util.List < String > imageUrls;
+    private java.util.List<String> imageUrls;
 
     private SubmitConvertImageToExcelJobRequest(Builder builder) {
         super(builder);
@@ -66,22 +71,22 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
     /**
      * @return imageNames
      */
-    public java.util.List < String > getImageNames() {
+    public java.util.List<String> getImageNames() {
         return this.imageNames;
     }
 
     /**
      * @return imageUrls
      */
-    public java.util.List < String > getImageUrls() {
+    public java.util.List<String> getImageUrls() {
         return this.imageUrls;
     }
 
     public static final class Builder extends Request.Builder<SubmitConvertImageToExcelJobRequest, Builder> {
         private Boolean forceMergeExcel; 
         private String imageNameExtension; 
-        private java.util.List < String > imageNames; 
-        private java.util.List < String > imageUrls; 
+        private java.util.List<String> imageNames; 
+        private java.util.List<String> imageUrls; 
 
         private Builder() {
             super();
@@ -116,7 +121,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
         /**
          * ImageNames.
          */
-        public Builder imageNames(java.util.List < String > imageNames) {
+        public Builder imageNames(java.util.List<String> imageNames) {
             String imageNamesShrink = shrink(imageNames, "ImageNames", "simple");
             this.putQueryParameter("ImageNames", imageNamesShrink);
             this.imageNames = imageNames;
@@ -126,7 +131,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
         /**
          * ImageUrls.
          */
-        public Builder imageUrls(java.util.List < String > imageUrls) {
+        public Builder imageUrls(java.util.List<String> imageUrls) {
             String imageUrlsShrink = shrink(imageUrls, "ImageUrls", "simple");
             this.putQueryParameter("ImageUrls", imageUrlsShrink);
             this.imageUrls = imageUrls;

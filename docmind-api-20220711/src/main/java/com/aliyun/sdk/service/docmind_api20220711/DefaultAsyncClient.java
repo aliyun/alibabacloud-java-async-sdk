@@ -96,6 +96,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AyncTradeDocumentPackageExtractSmartApp  AyncTradeDocumentPackageExtractSmartAppRequest
+     * @return AyncTradeDocumentPackageExtractSmartAppResponse
+     */
     @Override
     public CompletableFuture<AyncTradeDocumentPackageExtractSmartAppResponse> ayncTradeDocumentPackageExtractSmartApp(AyncTradeDocumentPackageExtractSmartAppRequest request) {
         try {
@@ -110,6 +114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocParserResult  GetDocParserResultRequest
+     * @return GetDocParserResultResponse
+     */
     @Override
     public CompletableFuture<GetDocParserResultResponse> getDocParserResult(GetDocParserResultRequest request) {
         try {
@@ -124,6 +132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocStructureResult  GetDocStructureResultRequest
+     * @return GetDocStructureResultResponse
+     */
     @Override
     public CompletableFuture<GetDocStructureResultResponse> getDocStructureResult(GetDocStructureResultRequest request) {
         try {
@@ -138,6 +150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentCompareResult  GetDocumentCompareResultRequest
+     * @return GetDocumentCompareResultResponse
+     */
     @Override
     public CompletableFuture<GetDocumentCompareResultResponse> getDocumentCompareResult(GetDocumentCompareResultRequest request) {
         try {
@@ -152,6 +168,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentConvertResult  GetDocumentConvertResultRequest
+     * @return GetDocumentConvertResultResponse
+     */
     @Override
     public CompletableFuture<GetDocumentConvertResultResponse> getDocumentConvertResult(GetDocumentConvertResultRequest request) {
         try {
@@ -166,6 +186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocumentExtractResult  GetDocumentExtractResultRequest
+     * @return GetDocumentExtractResultResponse
+     */
     @Override
     public CompletableFuture<GetDocumentExtractResultResponse> getDocumentExtractResult(GetDocumentExtractResultRequest request) {
         try {
@@ -180,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPageNum  GetPageNumRequest
+     * @return GetPageNumResponse
+     */
     @Override
     public CompletableFuture<GetPageNumResponse> getPageNum(GetPageNumRequest request) {
         try {
@@ -194,6 +222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTableUnderstandingResult  GetTableUnderstandingResultRequest
+     * @return GetTableUnderstandingResultResponse
+     */
     @Override
     public CompletableFuture<GetTableUnderstandingResultResponse> getTableUnderstandingResult(GetTableUnderstandingResultRequest request) {
         try {
@@ -208,6 +240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDocParserStatus  QueryDocParserStatusRequest
+     * @return QueryDocParserStatusResponse
+     */
     @Override
     public CompletableFuture<QueryDocParserStatusResponse> queryDocParserStatus(QueryDocParserStatusRequest request) {
         try {
@@ -222,6 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitConvertImageToExcelJob  SubmitConvertImageToExcelJobRequest
+     * @return SubmitConvertImageToExcelJobResponse
+     */
     @Override
     public CompletableFuture<SubmitConvertImageToExcelJobResponse> submitConvertImageToExcelJob(SubmitConvertImageToExcelJobRequest request) {
         try {
@@ -236,6 +276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitConvertImageToMarkdownJob  SubmitConvertImageToMarkdownJobRequest
+     * @return SubmitConvertImageToMarkdownJobResponse
+     */
     @Override
     public CompletableFuture<SubmitConvertImageToMarkdownJobResponse> submitConvertImageToMarkdownJob(SubmitConvertImageToMarkdownJobRequest request) {
         try {
@@ -250,6 +294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitConvertImageToPdfJob  SubmitConvertImageToPdfJobRequest
+     * @return SubmitConvertImageToPdfJobResponse
+     */
     @Override
     public CompletableFuture<SubmitConvertImageToPdfJobResponse> submitConvertImageToPdfJob(SubmitConvertImageToPdfJobRequest request) {
         try {
@@ -264,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitConvertImageToWordJob  SubmitConvertImageToWordJobRequest
+     * @return SubmitConvertImageToWordJobResponse
+     */
     @Override
     public CompletableFuture<SubmitConvertImageToWordJobResponse> submitConvertImageToWordJob(SubmitConvertImageToWordJobRequest request) {
         try {
