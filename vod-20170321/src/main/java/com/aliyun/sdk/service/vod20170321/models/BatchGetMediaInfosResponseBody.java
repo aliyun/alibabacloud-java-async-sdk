@@ -1670,6 +1670,573 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
      *
      * <p>BatchGetMediaInfosResponseBody</p>
      */
+    public static class PlayInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BitDepth")
+        private Integer bitDepth;
+
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
+        private String bitrate;
+
+        @com.aliyun.core.annotation.NameInMap("CodecName")
+        private String codecName;
+
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
+        @com.aliyun.core.annotation.NameInMap("Definition")
+        private String definition;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private String duration;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
+        private Long encrypt;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptMode")
+        private String encryptMode;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
+        private String encryptType;
+
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("Fps")
+        private String fps;
+
+        @com.aliyun.core.annotation.NameInMap("HDRType")
+        private String HDRType;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Long height;
+
+        @com.aliyun.core.annotation.NameInMap("JobExt")
+        private String jobExt;
+
+        @com.aliyun.core.annotation.NameInMap("JobId")
+        private String jobId;
+
+        @com.aliyun.core.annotation.NameInMap("JobType")
+        private Integer jobType;
+
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
+        private String modificationTime;
+
+        @com.aliyun.core.annotation.NameInMap("NarrowBandType")
+        private String narrowBandType;
+
+        @com.aliyun.core.annotation.NameInMap("PlayURL")
+        private String playURL;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("Specification")
+        private String specification;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StreamType")
+        private String streamType;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
+        private String templateGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
+        @com.aliyun.core.annotation.NameInMap("WatermarkId")
+        private String watermarkId;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Long width;
+
+        private PlayInfoList(Builder builder) {
+            this.bitDepth = builder.bitDepth;
+            this.bitrate = builder.bitrate;
+            this.codecName = builder.codecName;
+            this.creationTime = builder.creationTime;
+            this.definition = builder.definition;
+            this.duration = builder.duration;
+            this.encrypt = builder.encrypt;
+            this.encryptMode = builder.encryptMode;
+            this.encryptType = builder.encryptType;
+            this.format = builder.format;
+            this.fps = builder.fps;
+            this.HDRType = builder.HDRType;
+            this.height = builder.height;
+            this.jobExt = builder.jobExt;
+            this.jobId = builder.jobId;
+            this.jobType = builder.jobType;
+            this.modificationTime = builder.modificationTime;
+            this.narrowBandType = builder.narrowBandType;
+            this.playURL = builder.playURL;
+            this.size = builder.size;
+            this.specification = builder.specification;
+            this.status = builder.status;
+            this.streamType = builder.streamType;
+            this.templateGroupId = builder.templateGroupId;
+            this.templateId = builder.templateId;
+            this.watermarkId = builder.watermarkId;
+            this.width = builder.width;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PlayInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bitDepth
+         */
+        public Integer getBitDepth() {
+            return this.bitDepth;
+        }
+
+        /**
+         * @return bitrate
+         */
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        /**
+         * @return codecName
+         */
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        /**
+         * @return definition
+         */
+        public String getDefinition() {
+            return this.definition;
+        }
+
+        /**
+         * @return duration
+         */
+        public String getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return encrypt
+         */
+        public Long getEncrypt() {
+            return this.encrypt;
+        }
+
+        /**
+         * @return encryptMode
+         */
+        public String getEncryptMode() {
+            return this.encryptMode;
+        }
+
+        /**
+         * @return encryptType
+         */
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return fps
+         */
+        public String getFps() {
+            return this.fps;
+        }
+
+        /**
+         * @return HDRType
+         */
+        public String getHDRType() {
+            return this.HDRType;
+        }
+
+        /**
+         * @return height
+         */
+        public Long getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return jobExt
+         */
+        public String getJobExt() {
+            return this.jobExt;
+        }
+
+        /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return jobType
+         */
+        public Integer getJobType() {
+            return this.jobType;
+        }
+
+        /**
+         * @return modificationTime
+         */
+        public String getModificationTime() {
+            return this.modificationTime;
+        }
+
+        /**
+         * @return narrowBandType
+         */
+        public String getNarrowBandType() {
+            return this.narrowBandType;
+        }
+
+        /**
+         * @return playURL
+         */
+        public String getPlayURL() {
+            return this.playURL;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return specification
+         */
+        public String getSpecification() {
+            return this.specification;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return streamType
+         */
+        public String getStreamType() {
+            return this.streamType;
+        }
+
+        /**
+         * @return templateGroupId
+         */
+        public String getTemplateGroupId() {
+            return this.templateGroupId;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return watermarkId
+         */
+        public String getWatermarkId() {
+            return this.watermarkId;
+        }
+
+        /**
+         * @return width
+         */
+        public Long getWidth() {
+            return this.width;
+        }
+
+        public static final class Builder {
+            private Integer bitDepth; 
+            private String bitrate; 
+            private String codecName; 
+            private String creationTime; 
+            private String definition; 
+            private String duration; 
+            private Long encrypt; 
+            private String encryptMode; 
+            private String encryptType; 
+            private String format; 
+            private String fps; 
+            private String HDRType; 
+            private Long height; 
+            private String jobExt; 
+            private String jobId; 
+            private Integer jobType; 
+            private String modificationTime; 
+            private String narrowBandType; 
+            private String playURL; 
+            private Long size; 
+            private String specification; 
+            private String status; 
+            private String streamType; 
+            private String templateGroupId; 
+            private String templateId; 
+            private String watermarkId; 
+            private Long width; 
+
+            /**
+             * BitDepth.
+             */
+            public Builder bitDepth(Integer bitDepth) {
+                this.bitDepth = bitDepth;
+                return this;
+            }
+
+            /**
+             * Bitrate.
+             */
+            public Builder bitrate(String bitrate) {
+                this.bitrate = bitrate;
+                return this;
+            }
+
+            /**
+             * CodecName.
+             */
+            public Builder codecName(String codecName) {
+                this.codecName = codecName;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Definition.
+             */
+            public Builder definition(String definition) {
+                this.definition = definition;
+                return this;
+            }
+
+            /**
+             * Duration.
+             */
+            public Builder duration(String duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * Encrypt.
+             */
+            public Builder encrypt(Long encrypt) {
+                this.encrypt = encrypt;
+                return this;
+            }
+
+            /**
+             * EncryptMode.
+             */
+            public Builder encryptMode(String encryptMode) {
+                this.encryptMode = encryptMode;
+                return this;
+            }
+
+            /**
+             * EncryptType.
+             */
+            public Builder encryptType(String encryptType) {
+                this.encryptType = encryptType;
+                return this;
+            }
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * Fps.
+             */
+            public Builder fps(String fps) {
+                this.fps = fps;
+                return this;
+            }
+
+            /**
+             * HDRType.
+             */
+            public Builder HDRType(String HDRType) {
+                this.HDRType = HDRType;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Long height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * JobExt.
+             */
+            public Builder jobExt(String jobExt) {
+                this.jobExt = jobExt;
+                return this;
+            }
+
+            /**
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * JobType.
+             */
+            public Builder jobType(Integer jobType) {
+                this.jobType = jobType;
+                return this;
+            }
+
+            /**
+             * ModificationTime.
+             */
+            public Builder modificationTime(String modificationTime) {
+                this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * NarrowBandType.
+             */
+            public Builder narrowBandType(String narrowBandType) {
+                this.narrowBandType = narrowBandType;
+                return this;
+            }
+
+            /**
+             * PlayURL.
+             */
+            public Builder playURL(String playURL) {
+                this.playURL = playURL;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * Specification.
+             */
+            public Builder specification(String specification) {
+                this.specification = specification;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StreamType.
+             */
+            public Builder streamType(String streamType) {
+                this.streamType = streamType;
+                return this;
+            }
+
+            /**
+             * TemplateGroupId.
+             */
+            public Builder templateGroupId(String templateGroupId) {
+                this.templateGroupId = templateGroupId;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * WatermarkId.
+             */
+            public Builder watermarkId(String watermarkId) {
+                this.watermarkId = watermarkId;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Long width) {
+                this.width = width;
+                return this;
+            }
+
+            public PlayInfoList build() {
+                return new PlayInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BatchGetMediaInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetMediaInfosResponseBody</p>
+     */
     public static class MediaInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
@@ -1680,10 +2247,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MezzanineInfo")
         private MezzanineInfo mezzanineInfo;
 
+        @com.aliyun.core.annotation.NameInMap("PlayInfoList")
+        private java.util.List<PlayInfoList> playInfoList;
+
         private MediaInfos(Builder builder) {
             this.mediaId = builder.mediaId;
             this.mediaInfo = builder.mediaInfo;
             this.mezzanineInfo = builder.mezzanineInfo;
+            this.playInfoList = builder.playInfoList;
         }
 
         public static Builder builder() {
@@ -1715,10 +2286,18 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
             return this.mezzanineInfo;
         }
 
+        /**
+         * @return playInfoList
+         */
+        public java.util.List<PlayInfoList> getPlayInfoList() {
+            return this.playInfoList;
+        }
+
         public static final class Builder {
             private String mediaId; 
             private MediaInfo mediaInfo; 
             private MezzanineInfo mezzanineInfo; 
+            private java.util.List<PlayInfoList> playInfoList; 
 
             /**
              * MediaId.
@@ -1741,6 +2320,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
              */
             public Builder mezzanineInfo(MezzanineInfo mezzanineInfo) {
                 this.mezzanineInfo = mezzanineInfo;
+                return this;
+            }
+
+            /**
+             * PlayInfoList.
+             */
+            public Builder playInfoList(java.util.List<PlayInfoList> playInfoList) {
+                this.playInfoList = playInfoList;
                 return this;
             }
 
