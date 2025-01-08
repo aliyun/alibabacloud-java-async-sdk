@@ -353,7 +353,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * <p>The dimension from which metrics are sorted. You can set this parameter to a supported dimension.</p>
+         * <p>The dimension for arranging metrics in sequence. For more information, see the supplementary metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>pid</p>

@@ -88,6 +88,7 @@ public class ListEnvironmentMetricTargetsRequest extends Request {
         } 
 
         /**
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ListEnvironmentMetricTargetsRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>blackbox</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -109,7 +113,10 @@ public class ListEnvironmentMetricTargetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

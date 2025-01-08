@@ -91,7 +91,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -99,7 +102,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -107,7 +110,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +121,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>16AF921B-8187-489F-9913-43C808B4****</p>
@@ -126,7 +132,14 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +293,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             private String scrapeUrl; 
 
             /**
-             * DiscoveredLabels.
+             * <p>The tags used for service discovery.</p>
              */
             public Builder discoveredLabels(java.util.Map<String, String> discoveredLabels) {
                 this.discoveredLabels = discoveredLabels;
@@ -288,7 +301,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalUrl.
+             * <p>The URL of the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder globalUrl(String globalUrl) {
                 this.globalUrl = globalUrl;
@@ -296,7 +312,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Health.
+             * <p>The health status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -304,7 +323,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -312,7 +331,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastError.
+             * <p>The last error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get &quot;<a href="http://172.16.0.86:9104/metrics%5C">http://172.16.0.86:9104/metrics\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
              */
             public Builder lastError(String lastError) {
                 this.lastError = lastError;
@@ -320,7 +342,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastScrape.
+             * <p>The last collection time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-12T07:15:47.306691514Z</p>
              */
             public Builder lastScrape(String lastScrape) {
                 this.lastScrape = lastScrape;
@@ -328,7 +353,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastScrapeDuration.
+             * <p>The duration of the last collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00127593</p>
              */
             public Builder lastScrapeDuration(Double lastScrapeDuration) {
                 this.lastScrapeDuration = lastScrapeDuration;
@@ -336,7 +364,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastScrapeSeries.
+             * <p>The amount of metrics in the last collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder lastScrapeSeries(Long lastScrapeSeries) {
                 this.lastScrapeSeries = lastScrapeSeries;
@@ -344,7 +375,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ScrapePool.
+             * <p>The name of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom/mysql-exporter-mysql-1694429267986-sm/0&quot;</p>
              */
             public Builder scrapePool(String scrapePool) {
                 this.scrapePool = scrapePool;
@@ -352,7 +386,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ScrapeUrl.
+             * <p>The URL of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder scrapeUrl(String scrapeUrl) {
                 this.scrapeUrl = scrapeUrl;
@@ -507,7 +544,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             private String scrapeUrl; 
 
             /**
-             * DiscoveredLabels.
+             * <p>The tags used for service discovery.</p>
              */
             public Builder discoveredLabels(java.util.Map<String, String> discoveredLabels) {
                 this.discoveredLabels = discoveredLabels;
@@ -515,7 +552,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalUrl.
+             * <p>The URL of the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder globalUrl(String globalUrl) {
                 this.globalUrl = globalUrl;
@@ -523,7 +563,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Health.
+             * <p>The health status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>up</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -531,7 +574,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -539,7 +582,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastError.
+             * <p>The last error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get &quot;<a href="http://172.16.0.86:9104/metrics%5C">http://172.16.0.86:9104/metrics\</a>&quot;: dial tcp 172.16.0.86:9104: connect: connection refused</p>
              */
             public Builder lastError(String lastError) {
                 this.lastError = lastError;
@@ -547,7 +593,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastScrape.
+             * <p>The last collection time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-12T07:15:47.306691514Z</p>
              */
             public Builder lastScrape(String lastScrape) {
                 this.lastScrape = lastScrape;
@@ -555,7 +604,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastScrapeDuration.
+             * <p>The duration of the last collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00127593</p>
              */
             public Builder lastScrapeDuration(Double lastScrapeDuration) {
                 this.lastScrapeDuration = lastScrapeDuration;
@@ -563,7 +615,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastScrapeSeries.
+             * <p>The amount of metrics in the last collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder lastScrapeSeries(Long lastScrapeSeries) {
                 this.lastScrapeSeries = lastScrapeSeries;
@@ -571,7 +626,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ScrapePool.
+             * <p>The name of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom/mysql-exporter-mysql-1694429267986-sm/0&quot;</p>
              */
             public Builder scrapePool(String scrapePool) {
                 this.scrapePool = scrapePool;
@@ -579,7 +637,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * ScrapeUrl.
+             * <p>The URL of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx">http://xxxx</a></p>
              */
             public Builder scrapeUrl(String scrapeUrl) {
                 this.scrapeUrl = scrapeUrl;
@@ -638,7 +699,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             private java.util.List<DroppedTargets> droppedTargets; 
 
             /**
-             * ActiveTargets.
+             * <p>The active targets.</p>
              */
             public Builder activeTargets(java.util.List<ActiveTargets> activeTargets) {
                 this.activeTargets = activeTargets;
@@ -646,7 +707,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * DroppedTargets.
+             * <p>The deleted targets.</p>
              */
             public Builder droppedTargets(java.util.List<DroppedTargets> droppedTargets) {
                 this.droppedTargets = droppedTargets;

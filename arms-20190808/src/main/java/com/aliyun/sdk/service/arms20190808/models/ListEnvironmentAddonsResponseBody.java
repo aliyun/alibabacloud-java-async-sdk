@@ -289,7 +289,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             private java.util.List<String> services; 
 
             /**
-             * ClusterTypes.
+             * <p>The cluster type.</p>
              */
             public Builder clusterTypes(java.util.List<String> clusterTypes) {
                 this.clusterTypes = clusterTypes;
@@ -352,7 +352,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             private java.util.List<String> promQL; 
 
             /**
-             * PromQL.
+             * <p>The PromQL statements.</p>
              */
             public Builder promQL(java.util.List<String> promQL) {
                 this.promQL = promQL;
@@ -612,7 +612,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableServiceAccount.
+             * <p>Indicates whether a service account is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableServiceAccount(Boolean enableServiceAccount) {
                 this.enableServiceAccount = enableServiceAccount;
@@ -620,7 +623,7 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricCheckRule.
+             * <p>The metric check rule.</p>
              */
             public Builder metricCheckRule(MetricCheckRule metricCheckRule) {
                 this.metricCheckRule = metricCheckRule;
@@ -628,7 +631,10 @@ public class ListEnvironmentAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * NeedRestartAfterIntegration.
+             * <p>Indicates whether a restart is required after the installation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needRestartAfterIntegration(Boolean needRestartAfterIntegration) {
                 this.needRestartAfterIntegration = needRestartAfterIntegration;

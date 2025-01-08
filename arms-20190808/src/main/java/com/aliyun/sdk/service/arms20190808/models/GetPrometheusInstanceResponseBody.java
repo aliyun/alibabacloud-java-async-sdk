@@ -90,7 +90,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -858,7 +858,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentTypeUpdateTime.
+             * <p>The time when the billing method was modified.</p>
              */
             public Builder paymentTypeUpdateTime(String paymentTypeUpdateTime) {
                 this.paymentTypeUpdateTime = paymentTypeUpdateTime;

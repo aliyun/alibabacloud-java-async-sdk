@@ -27,10 +27,15 @@ public class DoInsightsActionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String module;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     private DoInsightsActionRequest(Builder builder) {
         super(builder);
         this.data = builder.data;
         this.module = builder.module;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DoInsightsActionRequest extends Request {
         return this.module;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DoInsightsActionRequest, Builder> {
         private String data; 
         private String module; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DoInsightsActionRequest extends Request {
             super(request);
             this.data = request.data;
             this.module = request.module;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -208,6 +222,15 @@ public class DoInsightsActionRequest extends Request {
         public Builder module(String module) {
             this.putBodyParameter("Module", module);
             this.module = module;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

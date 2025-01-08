@@ -91,7 +91,10 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -99,7 +102,7 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -107,7 +110,10 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -115,7 +121,7 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4C518054-852F-4023-ABC1-4AF95FF7****</p>
@@ -126,7 +132,14 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -184,7 +197,10 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * AlertId.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9502571</p>
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -192,7 +208,10 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql-CS-MySQLInnoDBLogWaits_lu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -263,7 +282,7 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Groups.
+             * <p>The queried alert groups.</p>
              */
             public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
@@ -271,7 +290,7 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The queried rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -279,7 +298,10 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder total(Long total) {
                 this.total = total;

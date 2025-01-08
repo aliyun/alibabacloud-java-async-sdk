@@ -117,6 +117,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values: Pod, Deployment, and Service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
         }
 
         /**
-         * LabelSelectors.
+         * <p>The tags.</p>
          */
         public Builder labelSelectors(java.util.Map<String, String> labelSelectors) {
             String labelSelectorsShrink = shrink(labelSelectors, "LabelSelectors", "json");
@@ -151,7 +153,10 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -160,7 +165,10 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

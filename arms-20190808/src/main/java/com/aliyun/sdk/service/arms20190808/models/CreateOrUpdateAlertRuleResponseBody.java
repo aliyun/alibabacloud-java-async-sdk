@@ -890,7 +890,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         private Long alertGroup;
 
         @com.aliyun.core.annotation.NameInMap("AlertId")
-        private Float alertId;
+        private Long alertId;
 
         @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
@@ -1015,7 +1015,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return alertId
          */
-        public Float getAlertId() {
+        public Long getAlertId() {
             return this.alertId;
         }
 
@@ -1183,7 +1183,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String alertCheckType; 
             private Long alertGroup; 
-            private Float alertId; 
+            private Long alertId; 
             private String alertName; 
             private AlertRuleContent alertRuleContent; 
             private String alertStatus; 
@@ -1240,12 +1240,12 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the alert rule.</p>
+             * <p>The alert rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>5510445</p>
              */
-            public Builder alertId(Float alertId) {
+            public Builder alertId(Long alertId) {
                 this.alertId = alertId;
                 return this;
             }

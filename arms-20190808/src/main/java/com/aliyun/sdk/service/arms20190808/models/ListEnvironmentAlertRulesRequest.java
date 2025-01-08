@@ -102,7 +102,10 @@ public class ListEnvironmentAlertRulesRequest extends Request {
         } 
 
         /**
-         * AddonName.
+         * <p>The name of the add-on. You must specify AddonName or Scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -111,6 +114,7 @@ public class ListEnvironmentAlertRulesRequest extends Request {
         }
 
         /**
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class ListEnvironmentAlertRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +139,10 @@ public class ListEnvironmentAlertRulesRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The scenario of the add-on. You must specify AddonName or Scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
