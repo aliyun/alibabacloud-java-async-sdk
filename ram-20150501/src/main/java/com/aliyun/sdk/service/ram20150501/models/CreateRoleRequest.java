@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRoleRequest} extends {@link RequestModel}
  *
  * <p>CreateRoleRequest</p>
@@ -95,10 +101,13 @@ public class CreateRoleRequest extends Request {
         } 
 
         /**
-         * The trust policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).
-         * <p>
+         * <p>The trust policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</p>
+         * <blockquote>
+         * <p> RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.</p>
+         * </blockquote>
          * 
-         * >  RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;:[{&quot;Action&quot;:&quot;sts:AssumeRole&quot;,&quot;Effect&quot;:&quot;Allow&quot;,&quot;Principal&quot;:{&quot;RAM&quot;:&quot;acs:ram::123456789012****:root&quot;}}],&quot;Version&quot;:&quot;1&quot;}</p>
          */
         public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
             this.putQueryParameter("AssumeRolePolicyDocument", assumeRolePolicyDocument);
@@ -107,10 +116,11 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * The description of the RAM role.
-         * <p>
+         * <p>The description of the RAM role.</p>
+         * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
-         * The description must be 1 to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>ECS administrator</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -119,12 +129,12 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * The maximum session duration of the RAM role.
-         * <p>
+         * <p>The maximum session duration of the RAM role.</p>
+         * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
+         * <p>If you do not specify this parameter, the default value is used.</p>
          * 
-         * Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.
-         * 
-         * If you do not specify this parameter, the default value is used.
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder maxSessionDuration(Long maxSessionDuration) {
             this.putQueryParameter("MaxSessionDuration", maxSessionDuration);
@@ -133,10 +143,11 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * The name of the RAM role.
-         * <p>
+         * <p>The name of the RAM role.</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
          * 
-         * The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>ECSAdmin</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

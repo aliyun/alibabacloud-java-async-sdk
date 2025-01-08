@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualMFADeviceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVirtualMFADeviceResponseBody</p>
@@ -49,7 +55,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         private VirtualMFADevice virtualMFADevice; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the MFA device.
+         * <p>The information of the MFA device.</p>
          */
         public Builder virtualMFADevice(VirtualMFADevice virtualMFADevice) {
             this.virtualMFADevice = virtualMFADevice;
@@ -70,6 +79,12 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVirtualMFADeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualMFADeviceResponseBody</p>
+     */
     public static class VirtualMFADevice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Base32StringSeed")
         private String base32StringSeed;
@@ -121,7 +136,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * The key of the MFA device.
+             * <p>The key of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DSF98HAD982KJA9SDFNAS9D8FU839B8ADHBGS****</p>
              */
             public Builder base32StringSeed(String base32StringSeed) {
                 this.base32StringSeed = base32StringSeed;
@@ -129,7 +147,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             }
 
             /**
-             * The Base64-encoded QR code, in the PNG format.
+             * <p>The Base64-encoded QR code, in the PNG format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YXNkZmFzZDlmeW5hc2Q5OGZoODd4bXJmcThhaGU5aSBmYXNkZiBzYWRmIGFGIDRxd2VjIGEgdHEz****</p>
              */
             public Builder QRCodePNG(String QRCodePNG) {
                 this.QRCodePNG = QRCodePNG;
@@ -137,7 +158,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the MFA device.
+             * <p>The serial number of the MFA device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:mfa/device001</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

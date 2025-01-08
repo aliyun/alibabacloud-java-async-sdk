@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGroupResponseBody</p>
@@ -49,7 +55,7 @@ public class CreateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the group.
+         * <p>The information about the group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -57,7 +63,10 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D3F0679E-9757-95DB-AF2D-04D5188C69C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class CreateGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGroupResponseBody</p>
+     */
     public static class Group extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -133,7 +148,10 @@ public class CreateGroupResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev-Team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -141,7 +159,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -149,7 +170,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user group.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-FpMEHiMysofp****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -157,7 +181,10 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user group.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev-Team</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

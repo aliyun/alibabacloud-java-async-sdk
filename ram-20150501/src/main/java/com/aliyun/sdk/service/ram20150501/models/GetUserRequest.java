@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserRequest} extends {@link RequestModel}
  *
  * <p>GetUserRequest</p>
@@ -53,10 +59,11 @@ public class GetUserRequest extends Request {
         } 
 
         /**
-         * The username of the RAM user.
-         * <p>
+         * <p>The username of the RAM user.</p>
+         * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
          * 
-         * The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (\_).
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

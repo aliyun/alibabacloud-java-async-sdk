@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangePasswordRequest} extends {@link RequestModel}
  *
  * <p>ChangePasswordRequest</p>
@@ -67,10 +73,11 @@ public class ChangePasswordRequest extends Request {
         } 
 
         /**
-         * The new password that is used to log on to the Alibaba Cloud Management Console.
-         * <p>
+         * <p>The new password that is used to log on to the Alibaba Cloud Management Console.</p>
+         * <p>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</p>
          * 
-         * The password must meet the complexity requirements. For more information, see [SetPasswordPolicy](~~28739~~).
+         * <strong>example:</strong>
+         * <p>aw$2****</p>
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
@@ -79,7 +86,10 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * The old password that is used to log on to the Alibaba Cloud Management Console.
+         * <p>The old password that is used to log on to the Alibaba Cloud Management Console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         public Builder oldPassword(String oldPassword) {
             this.putQueryParameter("OldPassword", oldPassword);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindMFADeviceResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindMFADeviceResponseBody</p>
@@ -49,7 +55,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the MFA device.
+         * <p>The information of the MFA device.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -57,7 +63,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The information of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnbindMFADeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnbindMFADeviceResponseBody</p>
+     */
     public static class MFADevice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
@@ -97,7 +112,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * The serial number of the MFA device.
+             * <p>The name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123456789012****:mfa/device002</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

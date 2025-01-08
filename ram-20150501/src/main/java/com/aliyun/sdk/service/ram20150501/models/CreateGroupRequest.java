@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateGroupRequest</p>
@@ -67,10 +73,11 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * The description.
-         * <p>
+         * <p>The description.</p>
+         * <p>The value can be up to 128 characters in length.</p>
          * 
-         * The value can be up to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -79,10 +86,11 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * The name of the user group.
-         * <p>
+         * <p>The name of the user group.</p>
+         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
          * 
-         * The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_).
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

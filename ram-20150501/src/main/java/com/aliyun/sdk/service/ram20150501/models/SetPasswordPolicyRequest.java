@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetPasswordPolicyRequest} extends {@link RequestModel}
  *
  * <p>SetPasswordPolicyRequest</p>
@@ -165,13 +171,15 @@ public class SetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether a password will expire.
-         * <p>
+         * <p>Specifies whether a password will expire.</p>
+         * <p>Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>. If you leave this parameter unspecified, the default value false is used.</p>
+         * <ul>
+         * <li>If you set this parameter to <code>true</code>, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.</li>
+         * <li>If you set this parameter to <code>false</code>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</li>
+         * </ul>
          * 
-         * Valid values: `true` and `false`. Default value: `false`. If you leave this parameter unspecified, the default value false is used.
-         * 
-         * *   If you set this parameter to `true`, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.
-         * *   If you set this parameter to `false`, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hardExpiry(Boolean hardExpiry) {
             this.putQueryParameter("HardExpiry", hardExpiry);
@@ -180,7 +188,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.
+         * <p>The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxLoginAttemps(Integer maxLoginAttemps) {
             this.putQueryParameter("MaxLoginAttemps", maxLoginAttemps);
@@ -189,7 +200,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.
+         * <p>The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -198,10 +212,11 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The minimum required number of characters in a password.
-         * <p>
+         * <p>The minimum required number of characters in a password.</p>
+         * <p>Valid values: 8 to 32. Default value: 8.</p>
          * 
-         * Valid values: 8 to 32. Default value: 8.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minimumPasswordLength(Integer minimumPasswordLength) {
             this.putQueryParameter("MinimumPasswordLength", minimumPasswordLength);
@@ -210,7 +225,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.
+         * <p>The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);
@@ -219,7 +237,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether a password must contain one or more lowercase letters.
+         * <p>Specifies whether a password must contain one or more lowercase letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
             this.putQueryParameter("RequireLowercaseCharacters", requireLowercaseCharacters);
@@ -228,7 +249,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether a password must contain one or more digits.
+         * <p>Specifies whether a password must contain one or more digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireNumbers(Boolean requireNumbers) {
             this.putQueryParameter("RequireNumbers", requireNumbers);
@@ -237,7 +261,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether a password must contain one or more special characters.
+         * <p>Specifies whether a password must contain one or more special characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireSymbols(Boolean requireSymbols) {
             this.putQueryParameter("RequireSymbols", requireSymbols);
@@ -246,7 +273,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether a password must contain one or more uppercase letters.
+         * <p>Specifies whether a password must contain one or more uppercase letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
             this.putQueryParameter("RequireUppercaseCharacters", requireUppercaseCharacters);

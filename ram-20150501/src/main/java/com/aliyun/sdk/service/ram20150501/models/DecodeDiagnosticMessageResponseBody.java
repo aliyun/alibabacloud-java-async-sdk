@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecodeDiagnosticMessageResponseBody} extends {@link TeaModel}
  *
  * <p>DecodeDiagnosticMessageResponseBody</p>
@@ -49,7 +55,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The decoded diagnostic information.
+         * <p>The decoded diagnostic information.</p>
          */
         public Builder decodedDiagnosticMessage(DecodedDiagnosticMessage decodedDiagnosticMessage) {
             this.decodedDiagnosticMessage = decodedDiagnosticMessage;
@@ -57,7 +63,10 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2331703-AADF-5564-BA9B-26CD51A33BA0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,12 +79,18 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DecodeDiagnosticMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DecodeDiagnosticMessageResponseBody</p>
+     */
     public static class AuthConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionKey")
         private String conditionKey;
 
         @com.aliyun.core.annotation.NameInMap("ConditionValues")
-        private java.util.List < String > conditionValues;
+        private java.util.List<String> conditionValues;
 
         private AuthConditions(Builder builder) {
             this.conditionKey = builder.conditionKey;
@@ -100,16 +115,19 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         /**
          * @return conditionValues
          */
-        public java.util.List < String > getConditionValues() {
+        public java.util.List<String> getConditionValues() {
             return this.conditionValues;
         }
 
         public static final class Builder {
             private String conditionKey; 
-            private java.util.List < String > conditionValues; 
+            private java.util.List<String> conditionValues; 
 
             /**
-             * The key of the condition.
+             * <p>The key of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:SourceIp</p>
              */
             public Builder conditionKey(String conditionKey) {
                 this.conditionKey = conditionKey;
@@ -117,9 +135,9 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The values that correspond to the key.
+             * <p>The values that correspond to the key.</p>
              */
-            public Builder conditionValues(java.util.List < String > conditionValues) {
+            public Builder conditionValues(java.util.List<String> conditionValues) {
                 this.conditionValues = conditionValues;
                 return this;
             }
@@ -131,6 +149,12 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DecodeDiagnosticMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DecodeDiagnosticMessageResponseBody</p>
+     */
     public static class AuthPrincipal extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
         private String authPrincipalDisplayName;
@@ -182,12 +206,15 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             private String authPrincipalType; 
 
             /**
-             * The identity.
-             * <p>
+             * <p>The identity.</p>
+             * <ul>
+             * <li>If the operator is a RAM user, the ID of the user is displayed.</li>
+             * <li>If the operator is a RAM role, the name and session name of the role are displayed. Example: RoleName:RoleSessionName.</li>
+             * <li>If the operator is an SSO federated identity, the type and name of the identity provider (IdP) are displayed. Example: saml-provider/AzureAD.</li>
+             * </ul>
              * 
-             * *   If the operator is a RAM user, the ID of the user is displayed.
-             * *   If the operator is a RAM role, the name and session name of the role are displayed. Example: RoleName:RoleSessionName.
-             * *   If the operator is an SSO federated identity, the type and name of the identity provider (IdP) are displayed. Example: saml-provider/AzureAD.
+             * <strong>example:</strong>
+             * <p>28877424437521****</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -195,7 +222,10 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the identity belongs.
+             * <p>The ID of the Alibaba Cloud account to which the identity belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196813200012****</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -203,14 +233,16 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The identity type that is used for authentication in the request.
-             * <p>
+             * <p>The identity type that is used for authentication in the request.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SubUser: RAM user</li>
+             * <li>AssumedRoleUser: RAM role</li>
+             * <li>Federated: SSO federated identity</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   SubUser: RAM user
-             * *   AssumedRoleUser: RAM role
-             * *   Federated: SSO federated identity
+             * <strong>example:</strong>
+             * <p>SubUser</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -224,6 +256,12 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DecodeDiagnosticMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DecodeDiagnosticMessageResponseBody</p>
+     */
     public static class MatchedPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachedEntityType")
         private String attachedEntityType;
@@ -311,15 +349,17 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             private String policyVersion; 
 
             /**
-             * The type of the entity to which the policy is attached.
-             * <p>
+             * <p>The type of the entity to which the policy is attached.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RamUser: RAM user</li>
+             * <li>RamRole: RAM role</li>
+             * <li>ResourceDirectoryTarget: entity in a resource directory</li>
+             * <li>RamGroup: RAM user group</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RamUser: RAM user
-             * *   RamRole: RAM role
-             * *   ResourceDirectoryTarget: entity in a resource directory
-             * *   RamGroup: RAM user group
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder attachedEntityType(String attachedEntityType) {
                 this.attachedEntityType = attachedEntityType;
@@ -327,14 +367,16 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The authorization scope of the policy.
-             * <p>
+             * <p>The authorization scope of the policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Account: Alibaba Cloud account</li>
+             * <li>Folder: folder in the resource directory</li>
+             * <li>ResourceGroup: resource group</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Account: Alibaba Cloud account
-             * *   Folder: folder in the resource directory
-             * *   ResourceGroup: resource group
+             * <strong>example:</strong>
+             * <p>Account</p>
              */
             public Builder attachedScope(String attachedScope) {
                 this.attachedScope = attachedScope;
@@ -342,26 +384,26 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The effect of the policy.
-             * <p>
+             * <p>The effect of the policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Deny</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Deny
+             * <!-- -->
+             * </li>
+             * <li><p>Allow</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   Allow
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Deny</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -369,11 +411,14 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the policy.
-             * <p>
+             * <p>The identifier of the policy.</p>
+             * <ul>
+             * <li>Control policy: the ID of the control policy</li>
+             * <li>RAM policy: the name of the policy</li>
+             * </ul>
              * 
-             * *   Control policy: the ID of the control policy
-             * *   RAM policy: the name of the policy
+             * <strong>example:</strong>
+             * <p>MyPolicyName</p>
              */
             public Builder policyIdentifier(String policyIdentifier) {
                 this.policyIdentifier = policyIdentifier;
@@ -381,12 +426,15 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy.
-             * <p>
+             * <p>The type of the policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Custom: custom policy</li>
+             * <li>System: system policy</li>
+             * </ul>
              * 
-             * Valid values:
-             * *   Custom: custom policy
-             * *   System: system policy
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -394,10 +442,13 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the policy.
-             * <p>
+             * <p>The version number of the policy.</p>
+             * <blockquote>
+             * <p>Only custom policies have version numbers.</p>
+             * </blockquote>
              * 
-             * > Only custom policies have version numbers.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
@@ -411,12 +462,18 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DecodeDiagnosticMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DecodeDiagnosticMessageResponseBody</p>
+     */
     public static class DecodedDiagnosticMessage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAction")
         private String authAction;
 
         @com.aliyun.core.annotation.NameInMap("AuthConditions")
-        private java.util.List < AuthConditions> authConditions;
+        private java.util.List<AuthConditions> authConditions;
 
         @com.aliyun.core.annotation.NameInMap("AuthPrincipal")
         private AuthPrincipal authPrincipal;
@@ -428,7 +485,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         private Boolean explicitDeny;
 
         @com.aliyun.core.annotation.NameInMap("MatchedPolicies")
-        private java.util.List < MatchedPolicies> matchedPolicies;
+        private java.util.List<MatchedPolicies> matchedPolicies;
 
         @com.aliyun.core.annotation.NameInMap("NoPermissionPolicyType")
         private String noPermissionPolicyType;
@@ -461,7 +518,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         /**
          * @return authConditions
          */
-        public java.util.List < AuthConditions> getAuthConditions() {
+        public java.util.List<AuthConditions> getAuthConditions() {
             return this.authConditions;
         }
 
@@ -489,7 +546,7 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         /**
          * @return matchedPolicies
          */
-        public java.util.List < MatchedPolicies> getMatchedPolicies() {
+        public java.util.List<MatchedPolicies> getMatchedPolicies() {
             return this.matchedPolicies;
         }
 
@@ -502,15 +559,18 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String authAction; 
-            private java.util.List < AuthConditions> authConditions; 
+            private java.util.List<AuthConditions> authConditions; 
             private AuthPrincipal authPrincipal; 
             private String authResource; 
             private Boolean explicitDeny; 
-            private java.util.List < MatchedPolicies> matchedPolicies; 
+            private java.util.List<MatchedPolicies> matchedPolicies; 
             private String noPermissionPolicyType; 
 
             /**
-             * The operation that is used for authentication in the request.
+             * <p>The operation that is used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ram:DecodeDiagnosticMessage</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -518,15 +578,15 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The conditions that are used for authentication in the request.
+             * <p>The conditions that are used for authentication in the request.</p>
              */
-            public Builder authConditions(java.util.List < AuthConditions> authConditions) {
+            public Builder authConditions(java.util.List<AuthConditions> authConditions) {
                 this.authConditions = authConditions;
                 return this;
             }
 
             /**
-             * The operator that is used for authentication in the request.
+             * <p>The operator that is used for authentication in the request.</p>
              */
             public Builder authPrincipal(AuthPrincipal authPrincipal) {
                 this.authPrincipal = authPrincipal;
@@ -534,7 +594,12 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The resource that is used for authentication in the request.
+             * <p>The resource that is used for authentication in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder authResource(String authResource) {
                 this.authResource = authResource;
@@ -542,26 +607,26 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the access denied error is caused by an explicit deny.
-             * <p>
+             * <p>Indicates whether the access denied error is caused by an explicit deny.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder explicitDeny(Boolean explicitDeny) {
                 this.explicitDeny = explicitDeny;
@@ -569,24 +634,26 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             }
 
             /**
-             * The policies that are matched.
+             * <p>The policies that are matched.</p>
              */
-            public Builder matchedPolicies(java.util.List < MatchedPolicies> matchedPolicies) {
+            public Builder matchedPolicies(java.util.List<MatchedPolicies> matchedPolicies) {
                 this.matchedPolicies = matchedPolicies;
                 return this;
             }
 
             /**
-             * The type of the policy that causes the access denied error.
-             * <p>
+             * <p>The type of the policy that causes the access denied error.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AssumeRolePolicy: role-specific trust policy</li>
+             * <li>ControlPolicy: control policy</li>
+             * <li>AccountLevelIdentityBasedPolicy: identity-based policy at the account level</li>
+             * <li>ResourceGroupLevelIdentityBasedPolicy: identity-based policy at the resource group level</li>
+             * <li>SessionPolicy: session policy</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   AssumeRolePolicy: role-specific trust policy
-             * *   ControlPolicy: control policy
-             * *   AccountLevelIdentityBasedPolicy: identity-based policy at the account level
-             * *   ResourceGroupLevelIdentityBasedPolicy: identity-based policy at the resource group level
-             * *   SessionPolicy: session policy
+             * <strong>example:</strong>
+             * <p>AccountLevelIdentityBasedPolicy</p>
              */
             public Builder noPermissionPolicyType(String noPermissionPolicyType) {
                 this.noPermissionPolicyType = noPermissionPolicyType;

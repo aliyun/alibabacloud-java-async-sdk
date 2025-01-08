@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyRequest</p>
@@ -81,10 +87,11 @@ public class CreatePolicyRequest extends Request {
         } 
 
         /**
-         * The description of the policy.
-         * <p>
+         * <p>The description of the policy.</p>
+         * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
-         * The description must be 1 to 1,024 characters in length.
+         * <strong>example:</strong>
+         * <p>Query ECS instances in a specific region</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -93,12 +100,12 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The document of the policy.
-         * <p>
+         * <p>The document of the policy.</p>
+         * <p>The document must be 1 to 6,144 characters in length.</p>
+         * <p>For more information about policy elements and sample policies, see <a href="https://help.aliyun.com/document_detail/93738.html">Policy elements</a> and <a href="https://help.aliyun.com/document_detail/210969.html">Overview of sample policies</a>.</p>
          * 
-         * The document must be 1 to 6,144 characters in length.
-         * 
-         * For more information about policy elements and sample policies, see [Policy elements](~~93738~~) and [Overview of sample policies](~~210969~~).
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;: [{&quot;Effect&quot;: &quot;Allow&quot;,&quot;Action&quot;: &quot;ecs:Describe*&quot;,&quot;Resource&quot;: &quot;acs:ecs:cn-qingdao:<em>:instance/</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -107,10 +114,11 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
-         * <p>
+         * <p>The name of the policy.</p>
+         * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).</p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>View-ECS-instances-in-a-specific-region</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

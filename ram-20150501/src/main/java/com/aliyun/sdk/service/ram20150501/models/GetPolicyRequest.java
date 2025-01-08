@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyRequest} extends {@link RequestModel}
  *
  * <p>GetPolicyRequest</p>
@@ -67,7 +73,10 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -76,7 +85,10 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values: `System` and `Custom`.
+         * <p>The type of the policy. Valid values: <code>System</code> and <code>Custom</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

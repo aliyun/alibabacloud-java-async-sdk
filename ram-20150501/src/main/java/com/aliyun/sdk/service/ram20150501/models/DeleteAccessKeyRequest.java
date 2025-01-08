@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccessKeyRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccessKeyRequest</p>
@@ -67,7 +73,10 @@ public class DeleteAccessKeyRequest extends Request {
         } 
 
         /**
-         * The AccessKey ID in the AccessKey pair that you want to delete.
+         * <p>The AccessKey ID in the AccessKey pair that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0wNEpMMlzy7s****</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);
@@ -76,7 +85,10 @@ public class DeleteAccessKeyRequest extends Request {
         }
 
         /**
-         * The name of the RAM user.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

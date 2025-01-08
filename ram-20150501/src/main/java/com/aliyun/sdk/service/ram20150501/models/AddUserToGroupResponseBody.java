@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserToGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AddUserToGroupResponseBody</p>
@@ -37,7 +43,10 @@ public class AddUserToGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B968853-B423-63A6-FE1F-45E81BC2AD61</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

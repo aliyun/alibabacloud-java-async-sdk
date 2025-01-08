@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersRequest} extends {@link RequestModel}
  *
  * <p>ListUsersRequest</p>
@@ -67,7 +73,10 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -76,10 +85,11 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. If a response is truncated because it reaches the value of MaxItems, the value of `IsTruncatedg` will be `true`.
-         * <p>
+         * <p>The number of entries per page. If a response is truncated because it reaches the value of MaxItems, the value of <code>IsTruncatedg</code> will be <code>true</code>.</p>
+         * <p>Valid values: 1 to 1000. Default value: 100.</p>
          * 
-         * Valid values: 1 to 1000. Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);

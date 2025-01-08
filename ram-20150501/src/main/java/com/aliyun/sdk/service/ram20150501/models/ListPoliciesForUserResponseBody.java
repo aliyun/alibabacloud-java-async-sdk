@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesForUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListPoliciesForUserResponseBody</p>
@@ -49,7 +55,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the policy.
+         * <p>The information about the policy.</p>
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -57,7 +63,10 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPoliciesForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesForUserResponseBody</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
@@ -145,7 +160,10 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * The time at which the policy is attached to the RAM user. The time is displayed in UTC.
+             * <p>The time at which the policy is attached to the RAM user. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -153,7 +171,10 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The current version.
+             * <p>The current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -161,7 +182,10 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS administrator</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -169,7 +193,10 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS-Administrator</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -177,11 +204,14 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li>System: system policy</li>
+             * <li>Custom: custom policy</li>
+             * </ul>
              * 
-             * *   System: system policy
-             * *   Custom: custom policy
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -195,9 +225,15 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPoliciesForUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesForUserResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policy")
-        private java.util.List < Policy> policy;
+        private java.util.List<Policy> policy;
 
         private Policies(Builder builder) {
             this.policy = builder.policy;
@@ -214,17 +250,17 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         /**
          * @return policy
          */
-        public java.util.List < Policy> getPolicy() {
+        public java.util.List<Policy> getPolicy() {
             return this.policy;
         }
 
         public static final class Builder {
-            private java.util.List < Policy> policy; 
+            private java.util.List<Policy> policy; 
 
             /**
              * Policy.
              */
-            public Builder policy(java.util.List < Policy> policy) {
+            public Builder policy(java.util.List<Policy> policy) {
                 this.policy = policy;
                 return this;
             }

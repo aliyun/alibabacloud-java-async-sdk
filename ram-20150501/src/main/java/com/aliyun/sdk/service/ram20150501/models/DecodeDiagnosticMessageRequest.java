@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecodeDiagnosticMessageRequest} extends {@link RequestModel}
  *
  * <p>DecodeDiagnosticMessageRequest</p>
@@ -53,7 +59,10 @@ public class DecodeDiagnosticMessageRequest extends Request {
         } 
 
         /**
-         * The encoded diagnostic information in the response that contains an access denied error. The error is caused by no RAM permissions.
+         * <p>The encoded diagnostic information in the response that contains an access denied error. The error is caused by no RAM permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AQEAAAAAZBgxr0U1MjA1NTM1LUM4BBktMzE5RS1CODgxLUU1QTI0RDNFQTM1****</p>
          */
         public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
             this.putQueryParameter("EncodedDiagnosticMessage", encodedDiagnosticMessage);

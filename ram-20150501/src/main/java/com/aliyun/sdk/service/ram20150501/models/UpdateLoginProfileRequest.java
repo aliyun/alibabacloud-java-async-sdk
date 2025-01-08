@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoginProfileRequest} extends {@link RequestModel}
  *
  * <p>UpdateLoginProfileRequest</p>
@@ -95,7 +101,10 @@ public class UpdateLoginProfileRequest extends Request {
         } 
 
         /**
-         * Specifies whether an MFA device must be attached to the RAM user upon logon.
+         * <p>Specifies whether an MFA device must be attached to the RAM user upon logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder MFABindRequired(Boolean MFABindRequired) {
             this.putQueryParameter("MFABindRequired", MFABindRequired);
@@ -104,7 +113,10 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * The logon password of the RAM user. The password must meet the password strength requirements.
+         * <p>The logon password of the RAM user. The password must meet the password strength requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mypassword</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -113,7 +125,10 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * Specifies whether the RAM user must change the password upon logon.
+         * <p>Specifies whether the RAM user must change the password upon logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder passwordResetRequired(Boolean passwordResetRequired) {
             this.putQueryParameter("PasswordResetRequired", passwordResetRequired);
@@ -122,7 +137,10 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * The name of the RAM user.
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

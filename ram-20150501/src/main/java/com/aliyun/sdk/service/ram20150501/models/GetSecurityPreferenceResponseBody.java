@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecurityPreferenceResponseBody</p>
@@ -49,7 +55,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         private SecurityPreference securityPreference; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC1213F1-A9D5-4A01-A996-44983689126C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
-         * The security preferences.
+         * <p>The security preferences.</p>
          */
         public Builder securityPreference(SecurityPreference securityPreference) {
             this.securityPreference = securityPreference;
@@ -70,6 +79,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class AccessKeyPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
         private Boolean allowUserToManageAccessKeys;
@@ -97,11 +112,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageAccessKeys; 
 
             /**
-             * Indicates whether RAM users can manage their AccessKey pairs. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
+             * <ul>
+             * <li>true: RAM users can manage their AccessKey pairs.</li>
+             * <li>false: RAM users cannot manage their AccessKey pairs.</li>
+             * </ul>
              * 
-             * *   true: RAM users can manage their AccessKey pairs.
-             * *   false: RAM users cannot manage their AccessKey pairs.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
                 this.allowUserToManageAccessKeys = allowUserToManageAccessKeys;
@@ -115,6 +133,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class LoginProfilePreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToChangePassword")
         private Boolean allowUserToChangePassword;
@@ -178,11 +202,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Integer loginSessionDuration; 
 
             /**
-             * Indicates whether RAM users can change their passwords. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
+             * <ul>
+             * <li>true: RAM users can change their passwords.</li>
+             * <li>false: RAM users cannot change their passwords.</li>
+             * </ul>
              * 
-             * *   true: RAM users can change their passwords.
-             * *   false: RAM users cannot change their passwords.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
                 this.allowUserToChangePassword = allowUserToChangePassword;
@@ -190,11 +217,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether RAM users can save security codes for multi-factor authentication (MFA) during logon. Each security code is valid for seven days. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can save security codes for multi-factor authentication (MFA) during logon. Each security code is valid for seven days. Valid values:</p>
+             * <ul>
+             * <li>true: RAM users can save MFA security codes during logon.</li>
+             * <li>false: RAM users cannot save MFA security codes during logon.</li>
+             * </ul>
              * 
-             * *   true: RAM users can save MFA security codes during logon.
-             * *   false: RAM users cannot save MFA security codes during logon.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
                 this.enableSaveMFATicket = enableSaveMFATicket;
@@ -202,13 +232,15 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.
-             * <p>
+             * <p>The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.</p>
+             * <ul>
+             * <li>If a subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console only by using the IP addresses in the subnetwork.</li>
+             * <li>If no subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console by using all IP addresses.</li>
+             * </ul>
+             * <p>If more than one subnet mask is specified, the masks are separated with semicolons (;), for example, 192.168.0.0/16;10.0.0.0/8.</p>
              * 
-             * *   If a subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console only by using the IP addresses in the subnetwork.
-             * *   If no subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console by using all IP addresses.
-             * 
-             * If more than one subnet mask is specified, the masks are separated with semicolons (;), for example, 192.168.0.0/16;10.0.0.0/8.
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder loginNetworkMasks(String loginNetworkMasks) {
                 this.loginNetworkMasks = loginNetworkMasks;
@@ -216,7 +248,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of a logon session of a RAM user. Unit: hours.
+             * <p>The validity period of a logon session of a RAM user. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder loginSessionDuration(Integer loginSessionDuration) {
                 this.loginSessionDuration = loginSessionDuration;
@@ -230,6 +265,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class MFAPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManageMFADevices")
         private Boolean allowUserToManageMFADevices;
@@ -257,11 +298,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManageMFADevices; 
 
             /**
-             * Indicates whether RAM users can manage their MFA devices. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
+             * <ul>
+             * <li>true: RAM users can manage their MFA devices.</li>
+             * <li>false: RAM users cannot manage their MFA devices.</li>
+             * </ul>
              * 
-             * *   true: RAM users can manage their MFA devices.
-             * *   false: RAM users cannot manage their MFA devices.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
                 this.allowUserToManageMFADevices = allowUserToManageMFADevices;
@@ -275,6 +319,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class PublicKeyPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManagePublicKeys")
         private Boolean allowUserToManagePublicKeys;
@@ -302,11 +352,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToManagePublicKeys; 
 
             /**
-             * Indicates whether RAM users can manage their public keys. Valid values:
-             * <p>
+             * <p>Indicates whether RAM users can manage their public keys. Valid values:</p>
+             * <ul>
+             * <li>true: RAM users can manage their public keys.</li>
+             * <li>false: RAM users cannot manage their public keys.</li>
+             * </ul>
              * 
-             * *   true: RAM users can manage their public keys.
-             * *   false: RAM users cannot manage their public keys.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToManagePublicKeys(Boolean allowUserToManagePublicKeys) {
                 this.allowUserToManagePublicKeys = allowUserToManagePublicKeys;
@@ -320,6 +373,12 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class SecurityPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyPreference")
         private AccessKeyPreference accessKeyPreference;
@@ -383,7 +442,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private PublicKeyPreference publicKeyPreference; 
 
             /**
-             * The AccessKey pair preference.
+             * <p>The AccessKey pair preference.</p>
              */
             public Builder accessKeyPreference(AccessKeyPreference accessKeyPreference) {
                 this.accessKeyPreference = accessKeyPreference;
@@ -391,7 +450,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The logon preferences.
+             * <p>The logon preferences.</p>
              */
             public Builder loginProfilePreference(LoginProfilePreference loginProfilePreference) {
                 this.loginProfilePreference = loginProfilePreference;
@@ -399,7 +458,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The MFA preference.
+             * <p>The MFA preference.</p>
              */
             public Builder MFAPreference(MFAPreference MFAPreference) {
                 this.MFAPreference = MFAPreference;
@@ -407,10 +466,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * The public key preference.
-             * <p>
-             * 
-             * >  The public key preference is valid only for the Japan site.
+             * <p>The public key preference.</p>
+             * <blockquote>
+             * <p> The public key preference is valid only for the Japan site.</p>
+             * </blockquote>
              */
             public Builder publicKeyPreference(PublicKeyPreference publicKeyPreference) {
                 this.publicKeyPreference = publicKeyPreference;

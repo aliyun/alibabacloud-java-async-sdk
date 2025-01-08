@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetPolicyVersionResponseBody</p>
@@ -49,7 +55,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the policy version.
+         * <p>The information of the policy version.</p>
          */
         public Builder policyVersion(PolicyVersion policyVersion) {
             this.policyVersion = policyVersion;
@@ -57,7 +63,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetPolicyVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPolicyVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPolicyVersionResponseBody</p>
+     */
     public static class PolicyVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -133,7 +148,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The time when the version was created.
+             * <p>The time when the version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -141,7 +159,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the version is the default version.
+             * <p>Indicates whether the version is the default version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -149,7 +170,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The script of the policy.
+             * <p>The script of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -157,7 +181,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * <p>The ID of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateUserResponseBody</p>
@@ -49,7 +55,10 @@ public class UpdateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the RAM user.
+         * <p>The information about the RAM user.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -70,6 +79,12 @@ public class UpdateUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateUserResponseBody</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -181,7 +196,10 @@ public class UpdateUserResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The description of the RAM user.
+             * <p>The description of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a cloud computing engineer.</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -189,7 +207,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the RAM user was created. The time is displayed in UTC.
+             * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -197,7 +218,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the RAM user.
+             * <p>The display name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoq****</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -205,10 +229,13 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the RAM user.
-             * <p>
+             * <p>The email address of the RAM user.</p>
+             * <blockquote>
+             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>xiaoq****@example.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -216,10 +243,13 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number of the RAM user.
-             * <p>
+             * <p>The mobile phone number of the RAM user.</p>
+             * <blockquote>
+             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>86-1860000****</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -227,7 +257,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the information about the RAM user was last modified. The time is displayed in UTC.
+             * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-02-11T03:15:21Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -235,7 +268,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * <p>The ID of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122748924538****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -243,7 +279,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the RAM user.
+             * <p>The username of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoq****</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

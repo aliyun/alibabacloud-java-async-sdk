@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAccountAliasRequest} extends {@link RequestModel}
  *
  * <p>SetAccountAliasRequest</p>
@@ -53,12 +59,14 @@ public class SetAccountAliasRequest extends Request {
         } 
 
         /**
-         * The alias of the Alibaba Cloud account.
-         * <p>
+         * <p>The alias of the Alibaba Cloud account.</p>
+         * <p>The alias must be 3 to 32 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
+         * <blockquote>
+         * <p>It cannot start or end with a hyphen (-), and cannot contain consecutive hyphens (-).</p>
+         * </blockquote>
          * 
-         * The alias must be 3 to 32 characters in length, and can contain lowercase letters, digits, and hyphens (-).
-         * 
-         * > It cannot start or end with a hyphen (-), and cannot contain consecutive hyphens (-).
+         * <strong>example:</strong>
+         * <p>myalias</p>
          */
         public Builder accountAlias(String accountAlias) {
             this.putQueryParameter("AccountAlias", accountAlias);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsResponseBody</p>
@@ -73,7 +79,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of the RAM user groups.
+         * <p>The list of the RAM user groups.</p>
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -81,7 +87,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the response is truncated.
+         * <p>Indicates whether the response is truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -89,7 +98,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If `true` is returned, you can call this operation again and set the `Marker` parameter to obtain the truncated part.
+         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If <code>true</code> is returned, you can call this operation again and set the <code>Marker</code> parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -97,7 +109,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>065527AA-2F2E-AD7C-7484-F2626CFE4934</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +125,12 @@ public class ListGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class Group extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
@@ -185,7 +206,10 @@ public class ListGroupsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The description of the RAM user group.
+             * <p>The description of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev-Team</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -193,7 +217,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the RAM user group was created.
+             * <p>The time when the RAM user group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -201,7 +228,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user group.
+             * <p>The ID of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-FpMEHiMysofp****</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -209,7 +239,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM user group.
+             * <p>The name of the RAM user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev-Team</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -217,7 +250,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information of the RAM user group was updated.
+             * <p>The time when the information of the RAM user group was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -231,9 +267,15 @@ public class ListGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Group")
-        private java.util.List < Group> group;
+        private java.util.List<Group> group;
 
         private Groups(Builder builder) {
             this.group = builder.group;
@@ -250,17 +292,17 @@ public class ListGroupsResponseBody extends TeaModel {
         /**
          * @return group
          */
-        public java.util.List < Group> getGroup() {
+        public java.util.List<Group> getGroup() {
             return this.group;
         }
 
         public static final class Builder {
-            private java.util.List < Group> group; 
+            private java.util.List<Group> group; 
 
             /**
              * Group.
              */
-            public Builder group(java.util.List < Group> group) {
+            public Builder group(java.util.List<Group> group) {
                 this.group = group;
                 return this;
             }

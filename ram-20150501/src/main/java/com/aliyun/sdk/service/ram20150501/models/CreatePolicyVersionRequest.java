@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyVersionRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyVersionRequest</p>
@@ -95,7 +101,10 @@ public class CreatePolicyVersionRequest extends Request {
         } 
 
         /**
-         * The document of the policy. The document can be up to 6,144 bytes in length.
+         * <p>The document of the policy. The document can be up to 6,144 bytes in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Statement&quot;:[{&quot;Action&quot;:[&quot;oss:<em>&quot;],&quot;Effect&quot;:&quot;Allow&quot;,&quot;Resource&quot;:[&quot;acs:oss:</em>:<em>:</em>&quot;]}],&quot;Version&quot;:&quot;1&quot;}</p>
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -104,7 +113,10 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -113,15 +125,16 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * The rotation strategy of the policy. The rotation strategy can be used to delete an early policy version.
-         * <p>
+         * <p>The rotation strategy of the policy. The rotation strategy can be used to delete an early policy version.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>None</code>: disables the rotation strategy.</li>
+         * <li><code>DeleteOldestNonDefaultVersionWhenLimitExceeded</code>: deletes the earliest non-active version if the number of versions exceeds the limit.</li>
+         * </ul>
+         * <p>Default value: <code>None</code>.</p>
          * 
-         * Valid values:
-         * 
-         * *   `None`: disables the rotation strategy.
-         * *   `DeleteOldestNonDefaultVersionWhenLimitExceeded`: deletes the earliest non-active version if the number of versions exceeds the limit.
-         * 
-         * Default value: `None`.
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder rotateStrategy(String rotateStrategy) {
             this.putQueryParameter("RotateStrategy", rotateStrategy);
@@ -130,7 +143,10 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to set this policy as the default policy. Default value: `false`.
+         * <p>Specifies whether to set this policy as the default policy. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder setAsDefault(Boolean setAsDefault) {
             this.putQueryParameter("SetAsDefault", setAsDefault);

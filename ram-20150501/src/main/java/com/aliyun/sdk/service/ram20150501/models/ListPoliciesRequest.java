@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListPoliciesRequest</p>
@@ -81,7 +87,10 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * The `Marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
+         * <p>The <code>Marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -90,10 +99,11 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
-         * <p>
+         * <p>The number of entries to return. If a response is truncated because it reaches the value of <code>MaxItems</code>, the value of <code>IsTruncated</code> will be <code>true</code>.</p>
+         * <p>Valid values: 1 to 1000. Default value: 100.</p>
          * 
-         * Valid values: 1 to 1000. Default value: 100.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -102,7 +112,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * The type of the `Policy`. Valid values: `System` and `Custom`. If you do not specify the parameter, all policies are returned.
+         * <p>The type of the <code>Policy</code>. Valid values: <code>System</code> and <code>Custom</code>. If you do not specify the parameter, all policies are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

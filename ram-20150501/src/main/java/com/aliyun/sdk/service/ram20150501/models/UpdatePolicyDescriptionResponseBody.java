@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePolicyDescriptionResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePolicyDescriptionResponseBody</p>
@@ -49,7 +55,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the policy.
+         * <p>The information about the policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -57,7 +63,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7572DEBD-0ECE-518E-8682-D8CB82F8FE8E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePolicyDescriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdatePolicyDescriptionResponseBody</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -157,7 +172,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * The time when the policy was created.
+             * <p>The time when the policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-28T07:04:15Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -165,7 +183,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the policy. Default value: v1.
+             * <p>The version of the policy. Default value: v1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -173,7 +194,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test policy.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -181,7 +205,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestPolicy</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -189,11 +216,14 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li>Custom: custom policy</li>
+             * <li>System: system policy</li>
+             * </ul>
              * 
-             * *   Custom: custom policy
-             * *   System: system policy
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -201,7 +231,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy was modified.
+             * <p>The time when the policy was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-28T07:05:37Z</p>
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

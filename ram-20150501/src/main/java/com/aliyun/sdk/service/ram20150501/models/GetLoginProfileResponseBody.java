@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLoginProfileResponseBody} extends {@link TeaModel}
  *
  * <p>GetLoginProfileResponseBody</p>
@@ -49,7 +55,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The logon configurations of the RAM user.
+         * <p>The logon configurations of the RAM user.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -57,7 +63,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLoginProfileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLoginProfileResponseBody</p>
+     */
     public static class LoginProfile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -133,7 +148,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The time when the logon configurations were created.
+             * <p>The time when the logon configurations were created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -141,7 +159,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an MFA device must be attached to the RAM user upon logon.
+             * <p>Indicates whether an MFA device must be attached to the RAM user upon logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -149,7 +170,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the RAM user must change the password upon logon.
+             * <p>Indicates whether the RAM user must change the password upon logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -157,7 +181,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM user.
+             * <p>The name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangq****</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
