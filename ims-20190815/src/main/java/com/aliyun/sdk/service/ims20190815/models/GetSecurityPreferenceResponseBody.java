@@ -143,6 +143,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToChangePassword")
         private Boolean allowUserToChangePassword;
 
+        @com.aliyun.core.annotation.NameInMap("AllowUserToLoginWithPasskey")
+        private Boolean allowUserToLoginWithPasskey;
+
         @com.aliyun.core.annotation.NameInMap("EnableSaveMFATicket")
         private Boolean enableSaveMFATicket;
 
@@ -160,6 +163,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
         private LoginProfilePreference(Builder builder) {
             this.allowUserToChangePassword = builder.allowUserToChangePassword;
+            this.allowUserToLoginWithPasskey = builder.allowUserToLoginWithPasskey;
             this.enableSaveMFATicket = builder.enableSaveMFATicket;
             this.loginNetworkMasks = builder.loginNetworkMasks;
             this.loginSessionDuration = builder.loginSessionDuration;
@@ -180,6 +184,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
          */
         public Boolean getAllowUserToChangePassword() {
             return this.allowUserToChangePassword;
+        }
+
+        /**
+         * @return allowUserToLoginWithPasskey
+         */
+        public Boolean getAllowUserToLoginWithPasskey() {
+            return this.allowUserToLoginWithPasskey;
         }
 
         /**
@@ -219,6 +230,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowUserToChangePassword; 
+            private Boolean allowUserToLoginWithPasskey; 
             private Boolean enableSaveMFATicket; 
             private String loginNetworkMasks; 
             private Integer loginSessionDuration; 
@@ -237,6 +249,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
              */
             public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
                 this.allowUserToChangePassword = allowUserToChangePassword;
+                return this;
+            }
+
+            /**
+             * AllowUserToLoginWithPasskey.
+             */
+            public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
+                this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
                 return this;
             }
 

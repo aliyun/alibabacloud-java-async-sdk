@@ -22,6 +22,10 @@ public class SetSecurityPreferenceRequest extends Request {
     private Boolean allowUserToChangePassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUserToLoginWithPasskey")
+    private Boolean allowUserToLoginWithPasskey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
     private Boolean allowUserToManageAccessKeys;
 
@@ -60,6 +64,7 @@ public class SetSecurityPreferenceRequest extends Request {
     private SetSecurityPreferenceRequest(Builder builder) {
         super(builder);
         this.allowUserToChangePassword = builder.allowUserToChangePassword;
+        this.allowUserToLoginWithPasskey = builder.allowUserToLoginWithPasskey;
         this.allowUserToManageAccessKeys = builder.allowUserToManageAccessKeys;
         this.allowUserToManageMFADevices = builder.allowUserToManageMFADevices;
         this.allowUserToManagePersonalDingTalk = builder.allowUserToManagePersonalDingTalk;
@@ -89,6 +94,13 @@ public class SetSecurityPreferenceRequest extends Request {
      */
     public Boolean getAllowUserToChangePassword() {
         return this.allowUserToChangePassword;
+    }
+
+    /**
+     * @return allowUserToLoginWithPasskey
+     */
+    public Boolean getAllowUserToLoginWithPasskey() {
+        return this.allowUserToLoginWithPasskey;
     }
 
     /**
@@ -156,6 +168,7 @@ public class SetSecurityPreferenceRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetSecurityPreferenceRequest, Builder> {
         private Boolean allowUserToChangePassword; 
+        private Boolean allowUserToLoginWithPasskey; 
         private Boolean allowUserToManageAccessKeys; 
         private Boolean allowUserToManageMFADevices; 
         private Boolean allowUserToManagePersonalDingTalk; 
@@ -173,6 +186,7 @@ public class SetSecurityPreferenceRequest extends Request {
         private Builder(SetSecurityPreferenceRequest request) {
             super(request);
             this.allowUserToChangePassword = request.allowUserToChangePassword;
+            this.allowUserToLoginWithPasskey = request.allowUserToLoginWithPasskey;
             this.allowUserToManageAccessKeys = request.allowUserToManageAccessKeys;
             this.allowUserToManageMFADevices = request.allowUserToManageMFADevices;
             this.allowUserToManagePersonalDingTalk = request.allowUserToManagePersonalDingTalk;
@@ -197,6 +211,15 @@ public class SetSecurityPreferenceRequest extends Request {
         public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
             this.putQueryParameter("AllowUserToChangePassword", allowUserToChangePassword);
             this.allowUserToChangePassword = allowUserToChangePassword;
+            return this;
+        }
+
+        /**
+         * AllowUserToLoginWithPasskey.
+         */
+        public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
+            this.putQueryParameter("AllowUserToLoginWithPasskey", allowUserToLoginWithPasskey);
+            this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
             return this;
         }
 
