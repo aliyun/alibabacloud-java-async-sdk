@@ -242,6 +242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventsResponse> describeEvents(DescribeEventsRequest request);
 
     /**
+     * @param request the request parameters of DescribeGdnInstances  DescribeGdnInstancesRequest
+     * @return DescribeGdnInstancesResponse
+     */
+    CompletableFuture<DescribeGdnInstancesResponse> describeGdnInstances(DescribeGdnInstancesRequest request);
+
+    /**
      * @param request the request parameters of DescribeOpenBackupSet  DescribeOpenBackupSetRequest
      * @return DescribeOpenBackupSetResponse
      */
@@ -414,6 +420,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SwitchDBInstanceHAResponse
      */
     CompletableFuture<SwitchDBInstanceHAResponse> switchDBInstanceHA(SwitchDBInstanceHARequest request);
+
+    /**
+     * @param request the request parameters of SwitchGdnMemberRole  SwitchGdnMemberRoleRequest
+     * @return SwitchGdnMemberRoleResponse
+     */
+    CompletableFuture<SwitchGdnMemberRoleResponse> switchGdnMemberRole(SwitchGdnMemberRoleRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest
