@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CollectFlightLowestPriceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("lowest_price_flight_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < LowestPriceFlightInfoList> lowestPriceFlightInfoList;
+    private java.util.List<LowestPriceFlightInfoList> lowestPriceFlightInfoList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
@@ -49,7 +54,7 @@ public class CollectFlightLowestPriceRequest extends Request {
     /**
      * @return lowestPriceFlightInfoList
      */
-    public java.util.List < LowestPriceFlightInfoList> getLowestPriceFlightInfoList() {
+    public java.util.List<LowestPriceFlightInfoList> getLowestPriceFlightInfoList() {
         return this.lowestPriceFlightInfoList;
     }
 
@@ -68,7 +73,7 @@ public class CollectFlightLowestPriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CollectFlightLowestPriceRequest, Builder> {
-        private java.util.List < LowestPriceFlightInfoList> lowestPriceFlightInfoList; 
+        private java.util.List<LowestPriceFlightInfoList> lowestPriceFlightInfoList; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
 
@@ -86,7 +91,7 @@ public class CollectFlightLowestPriceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder lowestPriceFlightInfoList(java.util.List < LowestPriceFlightInfoList> lowestPriceFlightInfoList) {
+        public Builder lowestPriceFlightInfoList(java.util.List<LowestPriceFlightInfoList> lowestPriceFlightInfoList) {
             String lowestPriceFlightInfoListShrink = shrink(lowestPriceFlightInfoList, "lowest_price_flight_info_list", "json");
             this.putBodyParameter("lowest_price_flight_info_list", lowestPriceFlightInfoListShrink);
             this.lowestPriceFlightInfoList = lowestPriceFlightInfoList;

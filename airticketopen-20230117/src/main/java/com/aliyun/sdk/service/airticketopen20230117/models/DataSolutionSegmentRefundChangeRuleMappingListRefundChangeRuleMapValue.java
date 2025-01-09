@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,16 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("refund_rule_all_unused_list")
-    private java.util.List < RefundRuleAllUnusedList> refundRuleAllUnusedList;
+    private java.util.List<RefundRuleAllUnusedList> refundRuleAllUnusedList;
 
     @com.aliyun.core.annotation.NameInMap("refund_rule_part_unused_list")
-    private java.util.List < RefundRulePartUnusedList> refundRulePartUnusedList;
+    private java.util.List<RefundRulePartUnusedList> refundRulePartUnusedList;
 
     @com.aliyun.core.annotation.NameInMap("change_rule_in_unused_list")
-    private java.util.List < ChangeRuleInUnusedList> changeRuleInUnusedList;
+    private java.util.List<ChangeRuleInUnusedList> changeRuleInUnusedList;
 
     @com.aliyun.core.annotation.NameInMap("change_rule_out_unused_list")
-    private java.util.List < ChangeRuleOutUnusedList> changeRuleOutUnusedList;
+    private java.util.List<ChangeRuleOutUnusedList> changeRuleOutUnusedList;
 
     private DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue(Builder builder) {
         this.refundRuleAllUnusedList = builder.refundRuleAllUnusedList;
@@ -42,41 +47,41 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
     /**
      * @return refundRuleAllUnusedList
      */
-    public java.util.List < RefundRuleAllUnusedList> getRefundRuleAllUnusedList() {
+    public java.util.List<RefundRuleAllUnusedList> getRefundRuleAllUnusedList() {
         return this.refundRuleAllUnusedList;
     }
 
     /**
      * @return refundRulePartUnusedList
      */
-    public java.util.List < RefundRulePartUnusedList> getRefundRulePartUnusedList() {
+    public java.util.List<RefundRulePartUnusedList> getRefundRulePartUnusedList() {
         return this.refundRulePartUnusedList;
     }
 
     /**
      * @return changeRuleInUnusedList
      */
-    public java.util.List < ChangeRuleInUnusedList> getChangeRuleInUnusedList() {
+    public java.util.List<ChangeRuleInUnusedList> getChangeRuleInUnusedList() {
         return this.changeRuleInUnusedList;
     }
 
     /**
      * @return changeRuleOutUnusedList
      */
-    public java.util.List < ChangeRuleOutUnusedList> getChangeRuleOutUnusedList() {
+    public java.util.List<ChangeRuleOutUnusedList> getChangeRuleOutUnusedList() {
         return this.changeRuleOutUnusedList;
     }
 
     public static final class Builder {
-        private java.util.List < RefundRuleAllUnusedList> refundRuleAllUnusedList; 
-        private java.util.List < RefundRulePartUnusedList> refundRulePartUnusedList; 
-        private java.util.List < ChangeRuleInUnusedList> changeRuleInUnusedList; 
-        private java.util.List < ChangeRuleOutUnusedList> changeRuleOutUnusedList; 
+        private java.util.List<RefundRuleAllUnusedList> refundRuleAllUnusedList; 
+        private java.util.List<RefundRulePartUnusedList> refundRulePartUnusedList; 
+        private java.util.List<ChangeRuleInUnusedList> changeRuleInUnusedList; 
+        private java.util.List<ChangeRuleOutUnusedList> changeRuleOutUnusedList; 
 
         /**
          * <p>refund rule for fully-unused tickets</p>
          */
-        public Builder refundRuleAllUnusedList(java.util.List < RefundRuleAllUnusedList> refundRuleAllUnusedList) {
+        public Builder refundRuleAllUnusedList(java.util.List<RefundRuleAllUnusedList> refundRuleAllUnusedList) {
             this.refundRuleAllUnusedList = refundRuleAllUnusedList;
             return this;
         }
@@ -84,7 +89,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         /**
          * <p>refund rule for partially-used tickets</p>
          */
-        public Builder refundRulePartUnusedList(java.util.List < RefundRulePartUnusedList> refundRulePartUnusedList) {
+        public Builder refundRulePartUnusedList(java.util.List<RefundRulePartUnusedList> refundRulePartUnusedList) {
             this.refundRulePartUnusedList = refundRulePartUnusedList;
             return this;
         }
@@ -92,7 +97,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         /**
          * <p>change rule for inbound segment unused tickets</p>
          */
-        public Builder changeRuleInUnusedList(java.util.List < ChangeRuleInUnusedList> changeRuleInUnusedList) {
+        public Builder changeRuleInUnusedList(java.util.List<ChangeRuleInUnusedList> changeRuleInUnusedList) {
             this.changeRuleInUnusedList = changeRuleInUnusedList;
             return this;
         }
@@ -100,7 +105,7 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
         /**
          * <p>change rule for outbound-flight-unused tickets</p>
          */
-        public Builder changeRuleOutUnusedList(java.util.List < ChangeRuleOutUnusedList> changeRuleOutUnusedList) {
+        public Builder changeRuleOutUnusedList(java.util.List<ChangeRuleOutUnusedList> changeRuleOutUnusedList) {
             this.changeRuleOutUnusedList = changeRuleOutUnusedList;
             return this;
         }

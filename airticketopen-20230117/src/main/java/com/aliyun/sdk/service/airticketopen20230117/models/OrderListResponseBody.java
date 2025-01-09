@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -559,7 +564,7 @@ public class OrderListResponseBody extends TeaModel {
         private String outOrderNum;
 
         @com.aliyun.core.annotation.NameInMap("passenger_list")
-        private java.util.List < PassengerList> passengerList;
+        private java.util.List<PassengerList> passengerList;
 
         @com.aliyun.core.annotation.NameInMap("pay_status")
         private String payStatus;
@@ -640,7 +645,7 @@ public class OrderListResponseBody extends TeaModel {
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerList> getPassengerList() {
+        public java.util.List<PassengerList> getPassengerList() {
             return this.passengerList;
         }
 
@@ -705,7 +710,7 @@ public class OrderListResponseBody extends TeaModel {
             private Long orderNum; 
             private String orderStatus; 
             private String outOrderNum; 
-            private java.util.List < PassengerList> passengerList; 
+            private java.util.List<PassengerList> passengerList; 
             private String payStatus; 
             private Long payTime; 
             private Double promotionPrice; 
@@ -767,7 +772,7 @@ public class OrderListResponseBody extends TeaModel {
             /**
              * <p>the information about all passenger of current order</p>
              */
-            public Builder passengerList(java.util.List < PassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }
@@ -998,7 +1003,7 @@ public class OrderListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pagination")
         private Pagination pagination;
@@ -1019,7 +1024,7 @@ public class OrderListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1031,13 +1036,13 @@ public class OrderListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Pagination pagination; 
 
             /**
              * <p>order list</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

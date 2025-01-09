@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -299,7 +304,7 @@ public class RefundApplyResponseBody extends TeaModel {
         private Long refundOrderNum;
 
         @com.aliyun.core.annotation.NameInMap("refund_passengers")
-        private java.util.List < RefundPassengers> refundPassengers;
+        private java.util.List<RefundPassengers> refundPassengers;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
@@ -336,7 +341,7 @@ public class RefundApplyResponseBody extends TeaModel {
         /**
          * @return refundPassengers
          */
-        public java.util.List < RefundPassengers> getRefundPassengers() {
+        public java.util.List<RefundPassengers> getRefundPassengers() {
             return this.refundPassengers;
         }
 
@@ -350,7 +355,7 @@ public class RefundApplyResponseBody extends TeaModel {
         public static final class Builder {
             private String failReason; 
             private Long refundOrderNum; 
-            private java.util.List < RefundPassengers> refundPassengers; 
+            private java.util.List<RefundPassengers> refundPassengers; 
             private Integer status; 
 
             /**
@@ -378,7 +383,7 @@ public class RefundApplyResponseBody extends TeaModel {
             /**
              * <p>passengers of current refund order</p>
              */
-            public Builder refundPassengers(java.util.List < RefundPassengers> refundPassengers) {
+            public Builder refundPassengers(java.util.List<RefundPassengers> refundPassengers) {
                 this.refundPassengers = refundPassengers;
                 return this;
             }
@@ -414,7 +419,7 @@ public class RefundApplyResponseBody extends TeaModel {
         private Long orderNum;
 
         @com.aliyun.core.annotation.NameInMap("refund_results")
-        private java.util.List < RefundResults> refundResults;
+        private java.util.List<RefundResults> refundResults;
 
         private Data(Builder builder) {
             this.orderNum = builder.orderNum;
@@ -439,13 +444,13 @@ public class RefundApplyResponseBody extends TeaModel {
         /**
          * @return refundResults
          */
-        public java.util.List < RefundResults> getRefundResults() {
+        public java.util.List<RefundResults> getRefundResults() {
             return this.refundResults;
         }
 
         public static final class Builder {
             private Long orderNum; 
-            private java.util.List < RefundResults> refundResults; 
+            private java.util.List<RefundResults> refundResults; 
 
             /**
              * <p>order number</p>
@@ -461,7 +466,7 @@ public class RefundApplyResponseBody extends TeaModel {
             /**
              * <p>refund results</p>
              */
-            public Builder refundResults(java.util.List < RefundResults> refundResults) {
+            public Builder refundResults(java.util.List<RefundResults> refundResults) {
                 this.refundResults = refundResults;
                 return this;
             }

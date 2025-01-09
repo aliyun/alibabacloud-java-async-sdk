@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -731,7 +736,7 @@ public class SearchResponseBody extends TeaModel {
      */
     public static class JourneyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
@@ -752,7 +757,7 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -764,13 +769,13 @@ public class SearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
             /**
              * <p>segment Info</p>
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -804,7 +809,7 @@ public class SearchResponseBody extends TeaModel {
         private Integer luggageDirectInfoType;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        private java.util.List<String> segmentIdList;
 
         private SegmentBaggageCheckInInfoList(Builder builder) {
             this.luggageDirectInfoType = builder.luggageDirectInfoType;
@@ -829,13 +834,13 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
             private Integer luggageDirectInfoType; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * <p>through check-in baggage policy type</p>
@@ -858,7 +863,7 @@ public class SearchResponseBody extends TeaModel {
              * <p>segment id list. 
              * all the listed segment ids share the same baggage through check-in  policy</p>
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }
@@ -878,10 +883,10 @@ public class SearchResponseBody extends TeaModel {
      */
     public static class SegmentBaggageMappingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger_baggage_allowance_mapping")
-        private java.util.Map < String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue > passengerBaggageAllowanceMapping;
+        private java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        private java.util.List<String> segmentIdList;
 
         private SegmentBaggageMappingList(Builder builder) {
             this.passengerBaggageAllowanceMapping = builder.passengerBaggageAllowanceMapping;
@@ -899,25 +904,25 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return passengerBaggageAllowanceMapping
          */
-        public java.util.Map < String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue > getPassengerBaggageAllowanceMapping() {
+        public java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> getPassengerBaggageAllowanceMapping() {
             return this.passengerBaggageAllowanceMapping;
         }
 
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
-            private java.util.Map < String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue > passengerBaggageAllowanceMapping; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
              */
-            public Builder passengerBaggageAllowanceMapping(java.util.Map < String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue > passengerBaggageAllowanceMapping) {
+            public Builder passengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
                 this.passengerBaggageAllowanceMapping = passengerBaggageAllowanceMapping;
                 return this;
             }
@@ -926,7 +931,7 @@ public class SearchResponseBody extends TeaModel {
              * <p>segment id list. 
              * all the listed segment id share the same baggage rule</p>
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }
@@ -946,10 +951,10 @@ public class SearchResponseBody extends TeaModel {
      */
     public static class SegmentRefundChangeRuleMappingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("refund_change_rule_map")
-        private java.util.Map < String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue > refundChangeRuleMap;
+        private java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        private java.util.List<String> segmentIdList;
 
         private SegmentRefundChangeRuleMappingList(Builder builder) {
             this.refundChangeRuleMap = builder.refundChangeRuleMap;
@@ -967,25 +972,25 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return refundChangeRuleMap
          */
-        public java.util.Map < String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue > getRefundChangeRuleMap() {
+        public java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> getRefundChangeRuleMap() {
             return this.refundChangeRuleMap;
         }
 
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
-            private java.util.Map < String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue > refundChangeRuleMap; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * <p>change and refund policy mapping, key is passenger type, value is change and refund policy details</p>
              */
-            public Builder refundChangeRuleMap(java.util.Map < String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue > refundChangeRuleMap) {
+            public Builder refundChangeRuleMap(java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
                 this.refundChangeRuleMap = refundChangeRuleMap;
                 return this;
             }
@@ -994,7 +999,7 @@ public class SearchResponseBody extends TeaModel {
              * <p>segment id list. 
              * all the listed segment ids share the same change and refund policy</p>
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }
@@ -1032,7 +1037,7 @@ public class SearchResponseBody extends TeaModel {
         private Double infantTax;
 
         @com.aliyun.core.annotation.NameInMap("journey_list")
-        private java.util.List < JourneyList> journeyList;
+        private java.util.List<JourneyList> journeyList;
 
         @com.aliyun.core.annotation.NameInMap("product_type_description")
         private String productTypeDescription;
@@ -1041,13 +1046,13 @@ public class SearchResponseBody extends TeaModel {
         private String refundTicketCouponDescription;
 
         @com.aliyun.core.annotation.NameInMap("segment_baggage_check_in_info_list")
-        private java.util.List < SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
+        private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
 
         @com.aliyun.core.annotation.NameInMap("segment_baggage_mapping_list")
-        private java.util.List < SegmentBaggageMappingList> segmentBaggageMappingList;
+        private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList;
 
         @com.aliyun.core.annotation.NameInMap("segment_refund_change_rule_mapping_list")
-        private java.util.List < SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
+        private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
         @com.aliyun.core.annotation.NameInMap("solution_id")
         private String solutionId;
@@ -1121,7 +1126,7 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return journeyList
          */
-        public java.util.List < JourneyList> getJourneyList() {
+        public java.util.List<JourneyList> getJourneyList() {
             return this.journeyList;
         }
 
@@ -1142,21 +1147,21 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return segmentBaggageCheckInInfoList
          */
-        public java.util.List < SegmentBaggageCheckInInfoList> getSegmentBaggageCheckInInfoList() {
+        public java.util.List<SegmentBaggageCheckInInfoList> getSegmentBaggageCheckInInfoList() {
             return this.segmentBaggageCheckInInfoList;
         }
 
         /**
          * @return segmentBaggageMappingList
          */
-        public java.util.List < SegmentBaggageMappingList> getSegmentBaggageMappingList() {
+        public java.util.List<SegmentBaggageMappingList> getSegmentBaggageMappingList() {
             return this.segmentBaggageMappingList;
         }
 
         /**
          * @return segmentRefundChangeRuleMappingList
          */
-        public java.util.List < SegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
+        public java.util.List<SegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
             return this.segmentRefundChangeRuleMappingList;
         }
 
@@ -1174,12 +1179,12 @@ public class SearchResponseBody extends TeaModel {
             private Double childTax; 
             private Double infantPrice; 
             private Double infantTax; 
-            private java.util.List < JourneyList> journeyList; 
+            private java.util.List<JourneyList> journeyList; 
             private String productTypeDescription; 
             private String refundTicketCouponDescription; 
-            private java.util.List < SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList; 
-            private java.util.List < SegmentBaggageMappingList> segmentBaggageMappingList; 
-            private java.util.List < SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
+            private java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList; 
+            private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList; 
+            private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
             private String solutionId; 
 
             /**
@@ -1251,7 +1256,7 @@ public class SearchResponseBody extends TeaModel {
             /**
              * <p>segment list</p>
              */
-            public Builder journeyList(java.util.List < JourneyList> journeyList) {
+            public Builder journeyList(java.util.List<JourneyList> journeyList) {
                 this.journeyList = journeyList;
                 return this;
             }
@@ -1281,7 +1286,7 @@ public class SearchResponseBody extends TeaModel {
             /**
              * <p>through check-in baggage policy</p>
              */
-            public Builder segmentBaggageCheckInInfoList(java.util.List < SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
+            public Builder segmentBaggageCheckInInfoList(java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
                 this.segmentBaggageCheckInInfoList = segmentBaggageCheckInInfoList;
                 return this;
             }
@@ -1289,7 +1294,7 @@ public class SearchResponseBody extends TeaModel {
             /**
              * <p>baggage rule</p>
              */
-            public Builder segmentBaggageMappingList(java.util.List < SegmentBaggageMappingList> segmentBaggageMappingList) {
+            public Builder segmentBaggageMappingList(java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList) {
                 this.segmentBaggageMappingList = segmentBaggageMappingList;
                 return this;
             }
@@ -1297,7 +1302,7 @@ public class SearchResponseBody extends TeaModel {
             /**
              * <p>change and refund policy</p>
              */
-            public Builder segmentRefundChangeRuleMappingList(java.util.List < SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
+            public Builder segmentRefundChangeRuleMappingList(java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
                 this.segmentRefundChangeRuleMappingList = segmentRefundChangeRuleMappingList;
                 return this;
             }
@@ -1328,7 +1333,7 @@ public class SearchResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("solution_list")
-        private java.util.List < SolutionList> solutionList;
+        private java.util.List<SolutionList> solutionList;
 
         private Data(Builder builder) {
             this.solutionList = builder.solutionList;
@@ -1345,17 +1350,17 @@ public class SearchResponseBody extends TeaModel {
         /**
          * @return solutionList
          */
-        public java.util.List < SolutionList> getSolutionList() {
+        public java.util.List<SolutionList> getSolutionList() {
             return this.solutionList;
         }
 
         public static final class Builder {
-            private java.util.List < SolutionList> solutionList; 
+            private java.util.List<SolutionList> solutionList; 
 
             /**
              * <p>solution list</p>
              */
-            public Builder solutionList(java.util.List < SolutionList> solutionList) {
+            public Builder solutionList(java.util.List<SolutionList> solutionList) {
                 this.solutionList = solutionList;
                 return this;
             }

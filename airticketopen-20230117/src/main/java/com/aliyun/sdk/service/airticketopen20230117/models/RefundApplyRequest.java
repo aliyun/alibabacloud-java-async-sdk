@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,12 +25,12 @@ public class RefundApplyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("refund_journeys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RefundJourneys> refundJourneys;
+    private java.util.List<RefundJourneys> refundJourneys;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("refund_passenger_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RefundPassengerList> refundPassengerList;
+    private java.util.List<RefundPassengerList> refundPassengerList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("refund_type")
@@ -74,14 +79,14 @@ public class RefundApplyRequest extends Request {
     /**
      * @return refundJourneys
      */
-    public java.util.List < RefundJourneys> getRefundJourneys() {
+    public java.util.List<RefundJourneys> getRefundJourneys() {
         return this.refundJourneys;
     }
 
     /**
      * @return refundPassengerList
      */
-    public java.util.List < RefundPassengerList> getRefundPassengerList() {
+    public java.util.List<RefundPassengerList> getRefundPassengerList() {
         return this.refundPassengerList;
     }
 
@@ -108,8 +113,8 @@ public class RefundApplyRequest extends Request {
 
     public static final class Builder extends Request.Builder<RefundApplyRequest, Builder> {
         private Long orderNum; 
-        private java.util.List < RefundJourneys> refundJourneys; 
-        private java.util.List < RefundPassengerList> refundPassengerList; 
+        private java.util.List<RefundJourneys> refundJourneys; 
+        private java.util.List<RefundPassengerList> refundPassengerList; 
         private RefundType refundType; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
@@ -145,7 +150,7 @@ public class RefundApplyRequest extends Request {
          * <p>journeys for which a refund is being requested</p>
          * <p>This parameter is required.</p>
          */
-        public Builder refundJourneys(java.util.List < RefundJourneys> refundJourneys) {
+        public Builder refundJourneys(java.util.List<RefundJourneys> refundJourneys) {
             String refundJourneysShrink = shrink(refundJourneys, "refund_journeys", "json");
             this.putBodyParameter("refund_journeys", refundJourneysShrink);
             this.refundJourneys = refundJourneys;
@@ -156,7 +161,7 @@ public class RefundApplyRequest extends Request {
          * <p>passengers that applying for a refund</p>
          * <p>This parameter is required.</p>
          */
-        public Builder refundPassengerList(java.util.List < RefundPassengerList> refundPassengerList) {
+        public Builder refundPassengerList(java.util.List<RefundPassengerList> refundPassengerList) {
             String refundPassengerListShrink = shrink(refundPassengerList, "refund_passenger_list", "json");
             this.putBodyParameter("refund_passenger_list", refundPassengerListShrink);
             this.refundPassengerList = refundPassengerList;
@@ -342,7 +347,7 @@ public class RefundApplyRequest extends Request {
     public static class RefundJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         private RefundJourneys(Builder builder) {
             this.segmentList = builder.segmentList;
@@ -359,18 +364,18 @@ public class RefundApplyRequest extends Request {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
         public static final class Builder {
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
 
             /**
              * <p>segment list</p>
              * <p>This parameter is required.</p>
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -490,7 +495,7 @@ public class RefundApplyRequest extends Request {
      */
     public static class RefundType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file")
-        private java.util.List < String > file;
+        private java.util.List<String> file;
 
         @com.aliyun.core.annotation.NameInMap("refund_type_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -516,7 +521,7 @@ public class RefundApplyRequest extends Request {
         /**
          * @return file
          */
-        public java.util.List < String > getFile() {
+        public java.util.List<String> getFile() {
             return this.file;
         }
 
@@ -535,7 +540,7 @@ public class RefundApplyRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > file; 
+            private java.util.List<String> file; 
             private Integer refundTypeId; 
             private String remark; 
 
@@ -546,7 +551,7 @@ public class RefundApplyRequest extends Request {
              * <strong>example:</strong>
              * <p>[xxx,yyy]</p>
              */
-            public Builder file(java.util.List < String > file) {
+            public Builder file(java.util.List<String> file) {
                 this.file = file;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,12 +20,12 @@ public class ChangeApplyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("change_passenger_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ChangePassengerList> changePassengerList;
+    private java.util.List<ChangePassengerList> changePassengerList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("changed_journeys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ChangedJourneys> changedJourneys;
+    private java.util.List<ChangedJourneys> changedJourneys;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contact")
@@ -78,14 +83,14 @@ public class ChangeApplyRequest extends Request {
     /**
      * @return changePassengerList
      */
-    public java.util.List < ChangePassengerList> getChangePassengerList() {
+    public java.util.List<ChangePassengerList> getChangePassengerList() {
         return this.changePassengerList;
     }
 
     /**
      * @return changedJourneys
      */
-    public java.util.List < ChangedJourneys> getChangedJourneys() {
+    public java.util.List<ChangedJourneys> getChangedJourneys() {
         return this.changedJourneys;
     }
 
@@ -132,8 +137,8 @@ public class ChangeApplyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeApplyRequest, Builder> {
-        private java.util.List < ChangePassengerList> changePassengerList; 
-        private java.util.List < ChangedJourneys> changedJourneys; 
+        private java.util.List<ChangePassengerList> changePassengerList; 
+        private java.util.List<ChangedJourneys> changedJourneys; 
         private Contact contact; 
         private Long orderNum; 
         private String remark; 
@@ -160,7 +165,7 @@ public class ChangeApplyRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder changePassengerList(java.util.List < ChangePassengerList> changePassengerList) {
+        public Builder changePassengerList(java.util.List<ChangePassengerList> changePassengerList) {
             String changePassengerListShrink = shrink(changePassengerList, "change_passenger_list", "json");
             this.putBodyParameter("change_passenger_list", changePassengerListShrink);
             this.changePassengerList = changePassengerList;
@@ -170,7 +175,7 @@ public class ChangeApplyRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder changedJourneys(java.util.List < ChangedJourneys> changedJourneys) {
+        public Builder changedJourneys(java.util.List<ChangedJourneys> changedJourneys) {
             String changedJourneysShrink = shrink(changedJourneys, "changed_journeys", "json");
             this.putBodyParameter("changed_journeys", changedJourneysShrink);
             this.changedJourneys = changedJourneys;
@@ -675,7 +680,7 @@ public class ChangeApplyRequest extends Request {
      */
     public static class ChangedJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         private ChangedJourneys(Builder builder) {
             this.segmentList = builder.segmentList;
@@ -692,17 +697,17 @@ public class ChangeApplyRequest extends Request {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
         public static final class Builder {
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
 
             /**
              * segment_list.
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }

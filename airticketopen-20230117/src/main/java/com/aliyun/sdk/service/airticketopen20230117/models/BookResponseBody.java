@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class BookResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_list")
-        private java.util.List < OrderList> orderList;
+        private java.util.List<OrderList> orderList;
 
         private Data(Builder builder) {
             this.orderList = builder.orderList;
@@ -264,17 +269,17 @@ public class BookResponseBody extends TeaModel {
         /**
          * @return orderList
          */
-        public java.util.List < OrderList> getOrderList() {
+        public java.util.List<OrderList> getOrderList() {
             return this.orderList;
         }
 
         public static final class Builder {
-            private java.util.List < OrderList> orderList; 
+            private java.util.List<OrderList> orderList; 
 
             /**
              * <p>order information list</p>
              */
-            public Builder orderList(java.util.List < OrderList> orderList) {
+            public Builder orderList(java.util.List<OrderList> orderList) {
                 this.orderList = orderList;
                 return this;
             }
@@ -344,7 +349,7 @@ public class BookResponseBody extends TeaModel {
      */
     public static class ErrorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_list")
-        private java.util.List < ErrorDataOrderList> orderList;
+        private java.util.List<ErrorDataOrderList> orderList;
 
         private ErrorData(Builder builder) {
             this.orderList = builder.orderList;
@@ -361,17 +366,17 @@ public class BookResponseBody extends TeaModel {
         /**
          * @return orderList
          */
-        public java.util.List < ErrorDataOrderList> getOrderList() {
+        public java.util.List<ErrorDataOrderList> getOrderList() {
             return this.orderList;
         }
 
         public static final class Builder {
-            private java.util.List < ErrorDataOrderList> orderList; 
+            private java.util.List<ErrorDataOrderList> orderList; 
 
             /**
              * <p>order information list. When the same input parameters are used to repeat a Book, if the booking has already been successful, the order number will be returned.</p>
              */
-            public Builder orderList(java.util.List < ErrorDataOrderList> orderList) {
+            public Builder orderList(java.util.List<ErrorDataOrderList> orderList) {
                 this.orderList = orderList;
                 return this;
             }

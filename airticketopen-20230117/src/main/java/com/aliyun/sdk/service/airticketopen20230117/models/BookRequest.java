@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,12 +29,12 @@ public class BookRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passenger_ancillary_purchase_map_list")
-    private java.util.List < PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList;
+    private java.util.List<PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passenger_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PassengerList> passengerList;
+    private java.util.List<PassengerList> passengerList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("solution_id")
@@ -86,14 +91,14 @@ public class BookRequest extends Request {
     /**
      * @return passengerAncillaryPurchaseMapList
      */
-    public java.util.List < PassengerAncillaryPurchaseMapList> getPassengerAncillaryPurchaseMapList() {
+    public java.util.List<PassengerAncillaryPurchaseMapList> getPassengerAncillaryPurchaseMapList() {
         return this.passengerAncillaryPurchaseMapList;
     }
 
     /**
      * @return passengerList
      */
-    public java.util.List < PassengerList> getPassengerList() {
+    public java.util.List<PassengerList> getPassengerList() {
         return this.passengerList;
     }
 
@@ -121,8 +126,8 @@ public class BookRequest extends Request {
     public static final class Builder extends Request.Builder<BookRequest, Builder> {
         private Contact contact; 
         private String outOrderNum; 
-        private java.util.List < PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList; 
-        private java.util.List < PassengerList> passengerList; 
+        private java.util.List<PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList; 
+        private java.util.List<PassengerList> passengerList; 
         private String solutionId; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
@@ -169,7 +174,7 @@ public class BookRequest extends Request {
         /**
          * <p>passenger-ancillary purchase relationship</p>
          */
-        public Builder passengerAncillaryPurchaseMapList(java.util.List < PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList) {
+        public Builder passengerAncillaryPurchaseMapList(java.util.List<PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList) {
             String passengerAncillaryPurchaseMapListShrink = shrink(passengerAncillaryPurchaseMapList, "passenger_ancillary_purchase_map_list", "json");
             this.putBodyParameter("passenger_ancillary_purchase_map_list", passengerAncillaryPurchaseMapListShrink);
             this.passengerAncillaryPurchaseMapList = passengerAncillaryPurchaseMapList;
@@ -180,7 +185,7 @@ public class BookRequest extends Request {
          * <p>passenger list</p>
          * <p>This parameter is required.</p>
          */
-        public Builder passengerList(java.util.List < PassengerList> passengerList) {
+        public Builder passengerList(java.util.List<PassengerList> passengerList) {
             String passengerListShrink = shrink(passengerList, "passenger_list", "json");
             this.putBodyParameter("passenger_list", passengerListShrink);
             this.passengerList = passengerList;
@@ -820,7 +825,7 @@ public class BookRequest extends Request {
         private BookAncillaryReqItem bookAncillaryReqItem;
 
         @com.aliyun.core.annotation.NameInMap("passenger_list")
-        private java.util.List < PassengerAncillaryPurchaseMapListPassengerList> passengerList;
+        private java.util.List<PassengerAncillaryPurchaseMapListPassengerList> passengerList;
 
         private PassengerAncillaryPurchaseMapList(Builder builder) {
             this.bookAncillaryReqItem = builder.bookAncillaryReqItem;
@@ -845,13 +850,13 @@ public class BookRequest extends Request {
         /**
          * @return passengerList
          */
-        public java.util.List < PassengerAncillaryPurchaseMapListPassengerList> getPassengerList() {
+        public java.util.List<PassengerAncillaryPurchaseMapListPassengerList> getPassengerList() {
             return this.passengerList;
         }
 
         public static final class Builder {
             private BookAncillaryReqItem bookAncillaryReqItem; 
-            private java.util.List < PassengerAncillaryPurchaseMapListPassengerList> passengerList; 
+            private java.util.List<PassengerAncillaryPurchaseMapListPassengerList> passengerList; 
 
             /**
              * <p>ancillary information</p>
@@ -864,7 +869,7 @@ public class BookRequest extends Request {
             /**
              * <p>passenger list for unified ancillary purchases</p>
              */
-            public Builder passengerList(java.util.List < PassengerAncillaryPurchaseMapListPassengerList> passengerList) {
+            public Builder passengerList(java.util.List<PassengerAncillaryPurchaseMapListPassengerList> passengerList) {
                 this.passengerList = passengerList;
                 return this;
             }

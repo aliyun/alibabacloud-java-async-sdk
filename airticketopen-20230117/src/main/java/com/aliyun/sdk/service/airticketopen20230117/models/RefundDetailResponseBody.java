@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -389,7 +394,7 @@ public class RefundDetailResponseBody extends TeaModel {
         private String multiRefundTransactionNo;
 
         @com.aliyun.core.annotation.NameInMap("passenger_multi_refund_details")
-        private java.util.List < PassengerMultiRefundDetails> passengerMultiRefundDetails;
+        private java.util.List<PassengerMultiRefundDetails> passengerMultiRefundDetails;
 
         private MultiRefundDetails(Builder builder) {
             this.multiRefundOrderNum = builder.multiRefundOrderNum;
@@ -422,14 +427,14 @@ public class RefundDetailResponseBody extends TeaModel {
         /**
          * @return passengerMultiRefundDetails
          */
-        public java.util.List < PassengerMultiRefundDetails> getPassengerMultiRefundDetails() {
+        public java.util.List<PassengerMultiRefundDetails> getPassengerMultiRefundDetails() {
             return this.passengerMultiRefundDetails;
         }
 
         public static final class Builder {
             private Long multiRefundOrderNum; 
             private String multiRefundTransactionNo; 
-            private java.util.List < PassengerMultiRefundDetails> passengerMultiRefundDetails; 
+            private java.util.List<PassengerMultiRefundDetails> passengerMultiRefundDetails; 
 
             /**
              * <p>supplementary refund order number</p>
@@ -456,7 +461,7 @@ public class RefundDetailResponseBody extends TeaModel {
             /**
              * <p>supplementary refund details in passenger dimension</p>
              */
-            public Builder passengerMultiRefundDetails(java.util.List < PassengerMultiRefundDetails> passengerMultiRefundDetails) {
+            public Builder passengerMultiRefundDetails(java.util.List<PassengerMultiRefundDetails> passengerMultiRefundDetails) {
                 this.passengerMultiRefundDetails = passengerMultiRefundDetails;
                 return this;
             }
@@ -1360,7 +1365,7 @@ public class RefundDetailResponseBody extends TeaModel {
      */
     public static class RefundJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
@@ -1381,7 +1386,7 @@ public class RefundDetailResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -1393,13 +1398,13 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
             /**
              * <p>segment list</p>
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -1433,22 +1438,22 @@ public class RefundDetailResponseBody extends TeaModel {
         private Boolean containMultiRefund;
 
         @com.aliyun.core.annotation.NameInMap("multi_refund_details")
-        private java.util.List < MultiRefundDetails> multiRefundDetails;
+        private java.util.List<MultiRefundDetails> multiRefundDetails;
 
         @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
         @com.aliyun.core.annotation.NameInMap("passenger_refund_details")
-        private java.util.List < PassengerRefundDetails> passengerRefundDetails;
+        private java.util.List<PassengerRefundDetails> passengerRefundDetails;
 
         @com.aliyun.core.annotation.NameInMap("pay_success_utc_time")
         private Long paySuccessUtcTime;
 
         @com.aliyun.core.annotation.NameInMap("refund_attachment_urls")
-        private java.util.List < String > refundAttachmentUrls;
+        private java.util.List<String> refundAttachmentUrls;
 
         @com.aliyun.core.annotation.NameInMap("refund_journeys")
-        private java.util.List < RefundJourneys> refundJourneys;
+        private java.util.List<RefundJourneys> refundJourneys;
 
         @com.aliyun.core.annotation.NameInMap("refund_order_num")
         private Long refundOrderNum;
@@ -1506,7 +1511,7 @@ public class RefundDetailResponseBody extends TeaModel {
         /**
          * @return multiRefundDetails
          */
-        public java.util.List < MultiRefundDetails> getMultiRefundDetails() {
+        public java.util.List<MultiRefundDetails> getMultiRefundDetails() {
             return this.multiRefundDetails;
         }
 
@@ -1520,7 +1525,7 @@ public class RefundDetailResponseBody extends TeaModel {
         /**
          * @return passengerRefundDetails
          */
-        public java.util.List < PassengerRefundDetails> getPassengerRefundDetails() {
+        public java.util.List<PassengerRefundDetails> getPassengerRefundDetails() {
             return this.passengerRefundDetails;
         }
 
@@ -1534,14 +1539,14 @@ public class RefundDetailResponseBody extends TeaModel {
         /**
          * @return refundAttachmentUrls
          */
-        public java.util.List < String > getRefundAttachmentUrls() {
+        public java.util.List<String> getRefundAttachmentUrls() {
             return this.refundAttachmentUrls;
         }
 
         /**
          * @return refundJourneys
          */
-        public java.util.List < RefundJourneys> getRefundJourneys() {
+        public java.util.List<RefundJourneys> getRefundJourneys() {
             return this.refundJourneys;
         }
 
@@ -1596,12 +1601,12 @@ public class RefundDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean containMultiRefund; 
-            private java.util.List < MultiRefundDetails> multiRefundDetails; 
+            private java.util.List<MultiRefundDetails> multiRefundDetails; 
             private Long orderNum; 
-            private java.util.List < PassengerRefundDetails> passengerRefundDetails; 
+            private java.util.List<PassengerRefundDetails> passengerRefundDetails; 
             private Long paySuccessUtcTime; 
-            private java.util.List < String > refundAttachmentUrls; 
-            private java.util.List < RefundJourneys> refundJourneys; 
+            private java.util.List<String> refundAttachmentUrls; 
+            private java.util.List<RefundJourneys> refundJourneys; 
             private Long refundOrderNum; 
             private String refundReason; 
             private Integer refundType; 
@@ -1624,7 +1629,7 @@ public class RefundDetailResponseBody extends TeaModel {
             /**
              * <p>supplementary refund orders</p>
              */
-            public Builder multiRefundDetails(java.util.List < MultiRefundDetails> multiRefundDetails) {
+            public Builder multiRefundDetails(java.util.List<MultiRefundDetails> multiRefundDetails) {
                 this.multiRefundDetails = multiRefundDetails;
                 return this;
             }
@@ -1643,7 +1648,7 @@ public class RefundDetailResponseBody extends TeaModel {
             /**
              * <p>refund details by passenger dimension</p>
              */
-            public Builder passengerRefundDetails(java.util.List < PassengerRefundDetails> passengerRefundDetails) {
+            public Builder passengerRefundDetails(java.util.List<PassengerRefundDetails> passengerRefundDetails) {
                 this.passengerRefundDetails = passengerRefundDetails;
                 return this;
             }
@@ -1665,7 +1670,7 @@ public class RefundDetailResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[zzz,yyy]</p>
              */
-            public Builder refundAttachmentUrls(java.util.List < String > refundAttachmentUrls) {
+            public Builder refundAttachmentUrls(java.util.List<String> refundAttachmentUrls) {
                 this.refundAttachmentUrls = refundAttachmentUrls;
                 return this;
             }
@@ -1673,7 +1678,7 @@ public class RefundDetailResponseBody extends TeaModel {
             /**
              * <p>refunded journey</p>
              */
-            public Builder refundJourneys(java.util.List < RefundJourneys> refundJourneys) {
+            public Builder refundJourneys(java.util.List<RefundJourneys> refundJourneys) {
                 this.refundJourneys = refundJourneys;
                 return this;
             }

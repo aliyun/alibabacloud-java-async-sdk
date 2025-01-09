@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class EnrichRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("journey_param_list")
-    private java.util.List < JourneyParamList> journeyParamList;
+    private java.util.List<JourneyParamList> journeyParamList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("solution_id")
@@ -101,7 +106,7 @@ public class EnrichRequest extends Request {
     /**
      * @return journeyParamList
      */
-    public java.util.List < JourneyParamList> getJourneyParamList() {
+    public java.util.List<JourneyParamList> getJourneyParamList() {
         return this.journeyParamList;
     }
 
@@ -131,7 +136,7 @@ public class EnrichRequest extends Request {
         private String cabinClass; 
         private Integer children; 
         private Integer infants; 
-        private java.util.List < JourneyParamList> journeyParamList; 
+        private java.util.List<JourneyParamList> journeyParamList; 
         private String solutionId; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
@@ -211,7 +216,7 @@ public class EnrichRequest extends Request {
         /**
          * <p>journey list</p>
          */
-        public Builder journeyParamList(java.util.List < JourneyParamList> journeyParamList) {
+        public Builder journeyParamList(java.util.List<JourneyParamList> journeyParamList) {
             String journeyParamListShrink = shrink(journeyParamList, "journey_param_list", "json");
             this.putBodyParameter("journey_param_list", journeyParamListShrink);
             this.journeyParamList = journeyParamList;
@@ -496,7 +501,7 @@ public class EnrichRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("segment_param_list")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < SegmentParamList> segmentParamList;
+        private java.util.List<SegmentParamList> segmentParamList;
 
         private JourneyParamList(Builder builder) {
             this.arrivalCity = builder.arrivalCity;
@@ -537,7 +542,7 @@ public class EnrichRequest extends Request {
         /**
          * @return segmentParamList
          */
-        public java.util.List < SegmentParamList> getSegmentParamList() {
+        public java.util.List<SegmentParamList> getSegmentParamList() {
             return this.segmentParamList;
         }
 
@@ -545,7 +550,7 @@ public class EnrichRequest extends Request {
             private String arrivalCity; 
             private String departureCity; 
             private String departureDate; 
-            private java.util.List < SegmentParamList> segmentParamList; 
+            private java.util.List<SegmentParamList> segmentParamList; 
 
             /**
              * <p>arrival city code (capitalized)</p>
@@ -587,7 +592,7 @@ public class EnrichRequest extends Request {
              * <p>segement param list</p>
              * <p>This parameter is required.</p>
              */
-            public Builder segmentParamList(java.util.List < SegmentParamList> segmentParamList) {
+            public Builder segmentParamList(java.util.List<SegmentParamList> segmentParamList) {
                 this.segmentParamList = segmentParamList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class SearchRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("air_legs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AirLegs> airLegs;
+    private java.util.List<AirLegs> airLegs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cabin_class")
@@ -81,7 +86,7 @@ public class SearchRequest extends Request {
     /**
      * @return airLegs
      */
-    public java.util.List < AirLegs> getAirLegs() {
+    public java.util.List<AirLegs> getAirLegs() {
         return this.airLegs;
     }
 
@@ -129,7 +134,7 @@ public class SearchRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchRequest, Builder> {
         private Integer adults; 
-        private java.util.List < AirLegs> airLegs; 
+        private java.util.List<AirLegs> airLegs; 
         private String cabinClass; 
         private Integer children; 
         private Integer infants; 
@@ -169,7 +174,7 @@ public class SearchRequest extends Request {
          * <p>itinerary list</p>
          * <p>This parameter is required.</p>
          */
-        public Builder airLegs(java.util.List < AirLegs> airLegs) {
+        public Builder airLegs(java.util.List<AirLegs> airLegs) {
             String airLegsShrink = shrink(airLegs, "air_legs", "json");
             this.putBodyParameter("air_legs", airLegsShrink);
             this.airLegs = airLegs;
@@ -270,14 +275,14 @@ public class SearchRequest extends Request {
      */
     public static class AirLegs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arrival_airport_list")
-        private java.util.List < String > arrivalAirportList;
+        private java.util.List<String> arrivalAirportList;
 
         @com.aliyun.core.annotation.NameInMap("arrival_city")
         @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
         @com.aliyun.core.annotation.NameInMap("departure_airport_list")
-        private java.util.List < String > departureAirportList;
+        private java.util.List<String> departureAirportList;
 
         @com.aliyun.core.annotation.NameInMap("departure_city")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -306,7 +311,7 @@ public class SearchRequest extends Request {
         /**
          * @return arrivalAirportList
          */
-        public java.util.List < String > getArrivalAirportList() {
+        public java.util.List<String> getArrivalAirportList() {
             return this.arrivalAirportList;
         }
 
@@ -320,7 +325,7 @@ public class SearchRequest extends Request {
         /**
          * @return departureAirportList
          */
-        public java.util.List < String > getDepartureAirportList() {
+        public java.util.List<String> getDepartureAirportList() {
             return this.departureAirportList;
         }
 
@@ -339,9 +344,9 @@ public class SearchRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > arrivalAirportList; 
+            private java.util.List<String> arrivalAirportList; 
             private String arrivalCity; 
-            private java.util.List < String > departureAirportList; 
+            private java.util.List<String> departureAirportList; 
             private String departureCity; 
             private String departureDate; 
 
@@ -351,7 +356,7 @@ public class SearchRequest extends Request {
              * <strong>example:</strong>
              * <p>MFM</p>
              */
-            public Builder arrivalAirportList(java.util.List < String > arrivalAirportList) {
+            public Builder arrivalAirportList(java.util.List<String> arrivalAirportList) {
                 this.arrivalAirportList = arrivalAirportList;
                 return this;
             }
@@ -374,7 +379,7 @@ public class SearchRequest extends Request {
              * <strong>example:</strong>
              * <p>PVG</p>
              */
-            public Builder departureAirportList(java.util.List < String > departureAirportList) {
+            public Builder departureAirportList(java.util.List<String> departureAirportList) {
                 this.departureAirportList = departureAirportList;
                 return this;
             }
@@ -418,14 +423,18 @@ public class SearchRequest extends Request {
      */
     public static class SearchControlOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("airline_excluded_list")
-        private java.util.List < String > airlineExcludedList;
+        private java.util.List<String> airlineExcludedList;
 
         @com.aliyun.core.annotation.NameInMap("airline_prefer_list")
-        private java.util.List < String > airlinePreferList;
+        private java.util.List<String> airlinePreferList;
+
+        @com.aliyun.core.annotation.NameInMap("service_quality")
+        private String serviceQuality;
 
         private SearchControlOptions(Builder builder) {
             this.airlineExcludedList = builder.airlineExcludedList;
             this.airlinePreferList = builder.airlinePreferList;
+            this.serviceQuality = builder.serviceQuality;
         }
 
         public static Builder builder() {
@@ -439,25 +448,33 @@ public class SearchRequest extends Request {
         /**
          * @return airlineExcludedList
          */
-        public java.util.List < String > getAirlineExcludedList() {
+        public java.util.List<String> getAirlineExcludedList() {
             return this.airlineExcludedList;
         }
 
         /**
          * @return airlinePreferList
          */
-        public java.util.List < String > getAirlinePreferList() {
+        public java.util.List<String> getAirlinePreferList() {
             return this.airlinePreferList;
         }
 
+        /**
+         * @return serviceQuality
+         */
+        public String getServiceQuality() {
+            return this.serviceQuality;
+        }
+
         public static final class Builder {
-            private java.util.List < String > airlineExcludedList; 
-            private java.util.List < String > airlinePreferList; 
+            private java.util.List<String> airlineExcludedList; 
+            private java.util.List<String> airlinePreferList; 
+            private String serviceQuality; 
 
             /**
              * <p>excluded airlines list</p>
              */
-            public Builder airlineExcludedList(java.util.List < String > airlineExcludedList) {
+            public Builder airlineExcludedList(java.util.List<String> airlineExcludedList) {
                 this.airlineExcludedList = airlineExcludedList;
                 return this;
             }
@@ -465,8 +482,16 @@ public class SearchRequest extends Request {
             /**
              * <p>preferred airlines list</p>
              */
-            public Builder airlinePreferList(java.util.List < String > airlinePreferList) {
+            public Builder airlinePreferList(java.util.List<String> airlinePreferList) {
                 this.airlinePreferList = airlinePreferList;
+                return this;
+            }
+
+            /**
+             * service_quality.
+             */
+            public Builder serviceQuality(String serviceQuality) {
+                this.serviceQuality = serviceQuality;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -974,7 +979,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
      */
     public static class ChangedJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < SegmentList> segmentList;
+        private java.util.List<SegmentList> segmentList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
@@ -995,7 +1000,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < SegmentList> getSegmentList() {
+        public java.util.List<SegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -1007,13 +1012,13 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SegmentList> segmentList; 
+            private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
             /**
              * segment_list.
              */
-            public Builder segmentList(java.util.List < SegmentList> segmentList) {
+            public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -1595,7 +1600,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
      */
     public static class LastJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < LastJourneysSegmentList> segmentList;
+        private java.util.List<LastJourneysSegmentList> segmentList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
@@ -1616,7 +1621,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < LastJourneysSegmentList> getSegmentList() {
+        public java.util.List<LastJourneysSegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -1628,13 +1633,13 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LastJourneysSegmentList> segmentList; 
+            private java.util.List<LastJourneysSegmentList> segmentList; 
             private Integer transferCount; 
 
             /**
              * segment_list.
              */
-            public Builder segmentList(java.util.List < LastJourneysSegmentList> segmentList) {
+            public Builder segmentList(java.util.List<LastJourneysSegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -2129,7 +2134,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
      */
     public static class OriginalJourneys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("segment_list")
-        private java.util.List < OriginalJourneysSegmentList> segmentList;
+        private java.util.List<OriginalJourneysSegmentList> segmentList;
 
         @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
@@ -2150,7 +2155,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return segmentList
          */
-        public java.util.List < OriginalJourneysSegmentList> getSegmentList() {
+        public java.util.List<OriginalJourneysSegmentList> getSegmentList() {
             return this.segmentList;
         }
 
@@ -2162,13 +2167,13 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < OriginalJourneysSegmentList> segmentList; 
+            private java.util.List<OriginalJourneysSegmentList> segmentList; 
             private Integer transferCount; 
 
             /**
              * segment_list.
              */
-            public Builder segmentList(java.util.List < OriginalJourneysSegmentList> segmentList) {
+            public Builder segmentList(java.util.List<OriginalJourneysSegmentList> segmentList) {
                 this.segmentList = segmentList;
                 return this;
             }
@@ -2196,19 +2201,19 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_fee_details")
-        private java.util.List < ChangeFeeDetails> changeFeeDetails;
+        private java.util.List<ChangeFeeDetails> changeFeeDetails;
 
         @com.aliyun.core.annotation.NameInMap("change_order_num")
         private Long changeOrderNum;
 
         @com.aliyun.core.annotation.NameInMap("change_passengers")
-        private java.util.List < ChangePassengers> changePassengers;
+        private java.util.List<ChangePassengers> changePassengers;
 
         @com.aliyun.core.annotation.NameInMap("change_reason_type")
         private Integer changeReasonType;
 
         @com.aliyun.core.annotation.NameInMap("changed_journeys")
-        private java.util.List < ChangedJourneys> changedJourneys;
+        private java.util.List<ChangedJourneys> changedJourneys;
 
         @com.aliyun.core.annotation.NameInMap("close_reason")
         private String closeReason;
@@ -2226,7 +2231,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         private Long lastConfirmUtcTime;
 
         @com.aliyun.core.annotation.NameInMap("last_journeys")
-        private java.util.List < LastJourneys> lastJourneys;
+        private java.util.List<LastJourneys> lastJourneys;
 
         @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
@@ -2235,7 +2240,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         private Integer orderStatus;
 
         @com.aliyun.core.annotation.NameInMap("original_journeys")
-        private java.util.List < OriginalJourneys> originalJourneys;
+        private java.util.List<OriginalJourneys> originalJourneys;
 
         @com.aliyun.core.annotation.NameInMap("pay_status")
         private Integer payStatus;
@@ -2281,7 +2286,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return changeFeeDetails
          */
-        public java.util.List < ChangeFeeDetails> getChangeFeeDetails() {
+        public java.util.List<ChangeFeeDetails> getChangeFeeDetails() {
             return this.changeFeeDetails;
         }
 
@@ -2295,7 +2300,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return changePassengers
          */
-        public java.util.List < ChangePassengers> getChangePassengers() {
+        public java.util.List<ChangePassengers> getChangePassengers() {
             return this.changePassengers;
         }
 
@@ -2309,7 +2314,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return changedJourneys
          */
-        public java.util.List < ChangedJourneys> getChangedJourneys() {
+        public java.util.List<ChangedJourneys> getChangedJourneys() {
             return this.changedJourneys;
         }
 
@@ -2351,7 +2356,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return lastJourneys
          */
-        public java.util.List < LastJourneys> getLastJourneys() {
+        public java.util.List<LastJourneys> getLastJourneys() {
             return this.lastJourneys;
         }
 
@@ -2372,7 +2377,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return originalJourneys
          */
-        public java.util.List < OriginalJourneys> getOriginalJourneys() {
+        public java.util.List<OriginalJourneys> getOriginalJourneys() {
             return this.originalJourneys;
         }
 
@@ -2405,20 +2410,20 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeFeeDetails> changeFeeDetails; 
+            private java.util.List<ChangeFeeDetails> changeFeeDetails; 
             private Long changeOrderNum; 
-            private java.util.List < ChangePassengers> changePassengers; 
+            private java.util.List<ChangePassengers> changePassengers; 
             private Integer changeReasonType; 
-            private java.util.List < ChangedJourneys> changedJourneys; 
+            private java.util.List<ChangedJourneys> changedJourneys; 
             private String closeReason; 
             private Long closeUtcTime; 
             private Contact contact; 
             private Long createUtcTime; 
             private Long lastConfirmUtcTime; 
-            private java.util.List < LastJourneys> lastJourneys; 
+            private java.util.List<LastJourneys> lastJourneys; 
             private Long orderNum; 
             private Integer orderStatus; 
-            private java.util.List < OriginalJourneys> originalJourneys; 
+            private java.util.List<OriginalJourneys> originalJourneys; 
             private Integer payStatus; 
             private Long paySuccessUtcTime; 
             private Double totalAmount; 
@@ -2427,7 +2432,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             /**
              * change_fee_details.
              */
-            public Builder changeFeeDetails(java.util.List < ChangeFeeDetails> changeFeeDetails) {
+            public Builder changeFeeDetails(java.util.List<ChangeFeeDetails> changeFeeDetails) {
                 this.changeFeeDetails = changeFeeDetails;
                 return this;
             }
@@ -2443,7 +2448,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             /**
              * change_passengers.
              */
-            public Builder changePassengers(java.util.List < ChangePassengers> changePassengers) {
+            public Builder changePassengers(java.util.List<ChangePassengers> changePassengers) {
                 this.changePassengers = changePassengers;
                 return this;
             }
@@ -2459,7 +2464,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             /**
              * changed_journeys.
              */
-            public Builder changedJourneys(java.util.List < ChangedJourneys> changedJourneys) {
+            public Builder changedJourneys(java.util.List<ChangedJourneys> changedJourneys) {
                 this.changedJourneys = changedJourneys;
                 return this;
             }
@@ -2507,7 +2512,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             /**
              * last_journeys.
              */
-            public Builder lastJourneys(java.util.List < LastJourneys> lastJourneys) {
+            public Builder lastJourneys(java.util.List<LastJourneys> lastJourneys) {
                 this.lastJourneys = lastJourneys;
                 return this;
             }
@@ -2531,7 +2536,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             /**
              * original_journeys.
              */
-            public Builder originalJourneys(java.util.List < OriginalJourneys> originalJourneys) {
+            public Builder originalJourneys(java.util.List<OriginalJourneys> originalJourneys) {
                 this.originalJourneys = originalJourneys;
                 return this;
             }
@@ -2690,7 +2695,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pagination")
         private Pagination pagination;
@@ -2711,7 +2716,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -2723,13 +2728,13 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Pagination pagination; 
 
             /**
              * list.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

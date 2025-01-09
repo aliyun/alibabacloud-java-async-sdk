@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class LuggageDirectRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("flight_segment_param_list")
-    private java.util.List < FlightSegmentParamList> flightSegmentParamList;
+    private java.util.List<FlightSegmentParamList> flightSegmentParamList;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
@@ -48,7 +53,7 @@ public class LuggageDirectRequest extends Request {
     /**
      * @return flightSegmentParamList
      */
-    public java.util.List < FlightSegmentParamList> getFlightSegmentParamList() {
+    public java.util.List<FlightSegmentParamList> getFlightSegmentParamList() {
         return this.flightSegmentParamList;
     }
 
@@ -67,7 +72,7 @@ public class LuggageDirectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LuggageDirectRequest, Builder> {
-        private java.util.List < FlightSegmentParamList> flightSegmentParamList; 
+        private java.util.List<FlightSegmentParamList> flightSegmentParamList; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
 
@@ -85,7 +90,7 @@ public class LuggageDirectRequest extends Request {
         /**
          * flight_segment_param_list.
          */
-        public Builder flightSegmentParamList(java.util.List < FlightSegmentParamList> flightSegmentParamList) {
+        public Builder flightSegmentParamList(java.util.List<FlightSegmentParamList> flightSegmentParamList) {
             String flightSegmentParamListShrink = shrink(flightSegmentParamList, "flight_segment_param_list", "json");
             this.putQueryParameter("flight_segment_param_list", flightSegmentParamListShrink);
             this.flightSegmentParamList = flightSegmentParamList;

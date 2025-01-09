@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -435,7 +440,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         private Ancillary ancillary;
 
         @com.aliyun.core.annotation.NameInMap("segment_id_list")
-        private java.util.List < String > segmentIdList;
+        private java.util.List<String> segmentIdList;
 
         private SegAncillaryMapList(Builder builder) {
             this.ancillary = builder.ancillary;
@@ -460,13 +465,13 @@ public class AncillarySuggestResponseBody extends TeaModel {
         /**
          * @return segmentIdList
          */
-        public java.util.List < String > getSegmentIdList() {
+        public java.util.List<String> getSegmentIdList() {
             return this.segmentIdList;
         }
 
         public static final class Builder {
             private Ancillary ancillary; 
-            private java.util.List < String > segmentIdList; 
+            private java.util.List<String> segmentIdList; 
 
             /**
              * <p>Ancillary product</p>
@@ -479,7 +484,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
             /**
              * <p>Segment ID list, these segments share the same ancillary</p>
              */
-            public Builder segmentIdList(java.util.List < String > segmentIdList) {
+            public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
                 return this;
             }
@@ -499,7 +504,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("seg_ancillary_map_list")
-        private java.util.List < SegAncillaryMapList> segAncillaryMapList;
+        private java.util.List<SegAncillaryMapList> segAncillaryMapList;
 
         @com.aliyun.core.annotation.NameInMap("solution_id")
         private String solutionId;
@@ -520,7 +525,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         /**
          * @return segAncillaryMapList
          */
-        public java.util.List < SegAncillaryMapList> getSegAncillaryMapList() {
+        public java.util.List<SegAncillaryMapList> getSegAncillaryMapList() {
             return this.segAncillaryMapList;
         }
 
@@ -532,13 +537,13 @@ public class AncillarySuggestResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SegAncillaryMapList> segAncillaryMapList; 
+            private java.util.List<SegAncillaryMapList> segAncillaryMapList; 
             private String solutionId; 
 
             /**
              * <p>ancillary detail list</p>
              */
-            public Builder segAncillaryMapList(java.util.List < SegAncillaryMapList> segAncillaryMapList) {
+            public Builder segAncillaryMapList(java.util.List<SegAncillaryMapList> segAncillaryMapList) {
                 this.segAncillaryMapList = segAncillaryMapList;
                 return this;
             }

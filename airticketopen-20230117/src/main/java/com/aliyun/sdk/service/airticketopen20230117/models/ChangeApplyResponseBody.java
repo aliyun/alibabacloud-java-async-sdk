@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -275,7 +280,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         private String failReason;
 
         @com.aliyun.core.annotation.NameInMap("passengers")
-        private java.util.List < Passengers> passengers;
+        private java.util.List<Passengers> passengers;
 
         private ChangeOrders(Builder builder) {
             this.changeOrderNum = builder.changeOrderNum;
@@ -316,7 +321,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         /**
          * @return passengers
          */
-        public java.util.List < Passengers> getPassengers() {
+        public java.util.List<Passengers> getPassengers() {
             return this.passengers;
         }
 
@@ -324,7 +329,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             private Long changeOrderNum; 
             private Integer changeOrderStatus; 
             private String failReason; 
-            private java.util.List < Passengers> passengers; 
+            private java.util.List<Passengers> passengers; 
 
             /**
              * change_order_num.
@@ -353,7 +358,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             /**
              * passengers.
              */
-            public Builder passengers(java.util.List < Passengers> passengers) {
+            public Builder passengers(java.util.List<Passengers> passengers) {
                 this.passengers = passengers;
                 return this;
             }
@@ -373,7 +378,7 @@ public class ChangeApplyResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("change_orders")
-        private java.util.List < ChangeOrders> changeOrders;
+        private java.util.List<ChangeOrders> changeOrders;
 
         @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
@@ -394,7 +399,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         /**
          * @return changeOrders
          */
-        public java.util.List < ChangeOrders> getChangeOrders() {
+        public java.util.List<ChangeOrders> getChangeOrders() {
             return this.changeOrders;
         }
 
@@ -406,13 +411,13 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeOrders> changeOrders; 
+            private java.util.List<ChangeOrders> changeOrders; 
             private Long orderNum; 
 
             /**
              * change_orders.
              */
-            public Builder changeOrders(java.util.List < ChangeOrders> changeOrders) {
+            public Builder changeOrders(java.util.List<ChangeOrders> changeOrders) {
                 this.changeOrders = changeOrders;
                 return this;
             }
