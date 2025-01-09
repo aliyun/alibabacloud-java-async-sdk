@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
-    private java.util.List < String > organizationalUnitIds;
+    private java.util.List<String> organizationalUnitIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -85,7 +90,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends Request {
     /**
      * @return organizationalUnitIds
      */
-    public java.util.List < String > getOrganizationalUnitIds() {
+    public java.util.List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds;
     }
 
@@ -107,7 +112,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends Request {
         private String regionId; 
         private String applicationId; 
         private String instanceId; 
-        private java.util.List < String > organizationalUnitIds; 
+        private java.util.List<String> organizationalUnitIds; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -166,7 +171,7 @@ public class ListOrganizationalUnitsForApplicationRequest extends Request {
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
-        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+        public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
             return this;

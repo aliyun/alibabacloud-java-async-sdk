@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class UpdateUserPasswordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserNotificationChannels")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
-    private java.util.List < String > userNotificationChannels;
+    private java.util.List<String> userNotificationChannels;
 
     private UpdateUserPasswordRequest(Builder builder) {
         super(builder);
@@ -102,7 +107,7 @@ public class UpdateUserPasswordRequest extends Request {
     /**
      * @return userNotificationChannels
      */
-    public java.util.List < String > getUserNotificationChannels() {
+    public java.util.List<String> getUserNotificationChannels() {
         return this.userNotificationChannels;
     }
 
@@ -112,7 +117,7 @@ public class UpdateUserPasswordRequest extends Request {
         private String password; 
         private String passwordForcedUpdateStatus; 
         private String userId; 
-        private java.util.List < String > userNotificationChannels; 
+        private java.util.List<String> userNotificationChannels; 
 
         private Builder() {
             super();
@@ -198,7 +203,7 @@ public class UpdateUserPasswordRequest extends Request {
          * <strong>example:</strong>
          * <p>sms</p>
          */
-        public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
+        public Builder userNotificationChannels(java.util.List<String> userNotificationChannels) {
             this.putQueryParameter("UserNotificationChannels", userNotificationChannels);
             this.userNotificationChannels = userNotificationChannels;
             return this;

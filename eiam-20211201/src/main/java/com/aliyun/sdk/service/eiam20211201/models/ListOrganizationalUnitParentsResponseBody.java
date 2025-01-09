@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Parents")
-    private java.util.List < Parents> parents;
+    private java.util.List<Parents> parents;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     /**
      * @return parents
      */
-    public java.util.List < Parents> getParents() {
+    public java.util.List<Parents> getParents() {
         return this.parents;
     }
 
@@ -46,13 +51,13 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Parents> parents; 
+        private java.util.List<Parents> parents; 
         private String requestId; 
 
         /**
          * Parents.
          */
-        public Builder parents(java.util.List < Parents> parents) {
+        public Builder parents(java.util.List<Parents> parents) {
             this.parents = parents;
             return this;
         }

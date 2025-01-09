@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,10 +87,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("EgressPrivateIpAddresses")
-        private java.util.List < String > egressPrivateIpAddresses;
+        private java.util.List<String> egressPrivateIpAddresses;
 
         @com.aliyun.core.annotation.NameInMap("EgressPublicIpAddresses")
-        private java.util.List < String > egressPublicIpAddresses;
+        private java.util.List<String> egressPublicIpAddresses;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -109,7 +114,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         private Long updateTime;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -151,14 +156,14 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         /**
          * @return egressPrivateIpAddresses
          */
-        public java.util.List < String > getEgressPrivateIpAddresses() {
+        public java.util.List<String> getEgressPrivateIpAddresses() {
             return this.egressPrivateIpAddresses;
         }
 
         /**
          * @return egressPublicIpAddresses
          */
-        public java.util.List < String > getEgressPublicIpAddresses() {
+        public java.util.List<String> getEgressPublicIpAddresses() {
             return this.egressPublicIpAddresses;
         }
 
@@ -214,7 +219,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -234,8 +239,8 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private java.util.List < String > egressPrivateIpAddresses; 
-            private java.util.List < String > egressPublicIpAddresses; 
+            private java.util.List<String> egressPrivateIpAddresses; 
+            private java.util.List<String> egressPublicIpAddresses; 
             private String instanceId; 
             private String networkAccessEndpointId; 
             private String networkAccessEndpointName; 
@@ -243,7 +248,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             private String securityGroupId; 
             private String status; 
             private Long updateTime; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcRegionId; 
 
@@ -264,7 +269,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>172.168.x.x</p>
              */
-            public Builder egressPrivateIpAddresses(java.util.List < String > egressPrivateIpAddresses) {
+            public Builder egressPrivateIpAddresses(java.util.List<String> egressPrivateIpAddresses) {
                 this.egressPrivateIpAddresses = egressPrivateIpAddresses;
                 return this;
             }
@@ -275,7 +280,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>8.xx.xx.xxx/27</p>
              */
-            public Builder egressPublicIpAddresses(java.util.List < String > egressPublicIpAddresses) {
+            public Builder egressPublicIpAddresses(java.util.List<String> egressPublicIpAddresses) {
                 this.egressPublicIpAddresses = egressPublicIpAddresses;
                 return this;
             }
@@ -363,7 +368,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

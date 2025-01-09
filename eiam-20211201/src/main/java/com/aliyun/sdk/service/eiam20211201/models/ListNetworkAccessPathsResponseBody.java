@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNetworkAccessPathsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkAccessPaths")
-    private java.util.List < NetworkAccessPaths> networkAccessPaths;
+    private java.util.List<NetworkAccessPaths> networkAccessPaths;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     /**
      * @return networkAccessPaths
      */
-    public java.util.List < NetworkAccessPaths> getNetworkAccessPaths() {
+    public java.util.List<NetworkAccessPaths> getNetworkAccessPaths() {
         return this.networkAccessPaths;
     }
 
@@ -46,13 +51,13 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkAccessPaths> networkAccessPaths; 
+        private java.util.List<NetworkAccessPaths> networkAccessPaths; 
         private String requestId; 
 
         /**
          * NetworkAccessPaths.
          */
-        public Builder networkAccessPaths(java.util.List < NetworkAccessPaths> networkAccessPaths) {
+        public Builder networkAccessPaths(java.util.List<NetworkAccessPaths> networkAccessPaths) {
             this.networkAccessPaths = networkAccessPaths;
             return this;
         }

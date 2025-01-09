@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -344,10 +349,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
      */
     public static class DingtalkProvisioningConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthedDepartmentIds")
-        private java.util.List < AuthedDepartmentIds> authedDepartmentIds;
+        private java.util.List<AuthedDepartmentIds> authedDepartmentIds;
 
         @com.aliyun.core.annotation.NameInMap("AuthedUsers")
-        private java.util.List < AuthedUsers> authedUsers;
+        private java.util.List<AuthedUsers> authedUsers;
 
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
@@ -373,14 +378,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * @return authedDepartmentIds
          */
-        public java.util.List < AuthedDepartmentIds> getAuthedDepartmentIds() {
+        public java.util.List<AuthedDepartmentIds> getAuthedDepartmentIds() {
             return this.authedDepartmentIds;
         }
 
         /**
          * @return authedUsers
          */
-        public java.util.List < AuthedUsers> getAuthedUsers() {
+        public java.util.List<AuthedUsers> getAuthedUsers() {
             return this.authedUsers;
         }
 
@@ -399,15 +404,15 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthedDepartmentIds> authedDepartmentIds; 
-            private java.util.List < AuthedUsers> authedUsers; 
+            private java.util.List<AuthedDepartmentIds> authedDepartmentIds; 
+            private java.util.List<AuthedUsers> authedUsers; 
             private String corpId; 
             private String corpName; 
 
             /**
              * <p>授权的钉钉部门</p>
              */
-            public Builder authedDepartmentIds(java.util.List < AuthedDepartmentIds> authedDepartmentIds) {
+            public Builder authedDepartmentIds(java.util.List<AuthedDepartmentIds> authedDepartmentIds) {
                 this.authedDepartmentIds = authedDepartmentIds;
                 return this;
             }
@@ -415,7 +420,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>授权的钉钉账户列表</p>
              */
-            public Builder authedUsers(java.util.List < AuthedUsers> authedUsers) {
+            public Builder authedUsers(java.util.List<AuthedUsers> authedUsers) {
                 this.authedUsers = authedUsers;
                 return this;
             }
@@ -562,7 +567,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         private String certificateFingerprintStatus;
 
         @com.aliyun.core.annotation.NameInMap("CertificateFingerprints")
-        private java.util.List < String > certificateFingerprints;
+        private java.util.List<String> certificateFingerprints;
 
         @com.aliyun.core.annotation.NameInMap("LdapProtocol")
         private String ldapProtocol;
@@ -619,7 +624,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * @return certificateFingerprints
          */
-        public java.util.List < String > getCertificateFingerprints() {
+        public java.util.List<String> getCertificateFingerprints() {
             return this.certificateFingerprints;
         }
 
@@ -655,7 +660,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private String administratorPassword; 
             private String administratorUsername; 
             private String certificateFingerprintStatus; 
-            private java.util.List < String > certificateFingerprints; 
+            private java.util.List<String> certificateFingerprints; 
             private String ldapProtocol; 
             private String ldapServerHost; 
             private Integer ldapServerPort; 
@@ -697,7 +702,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>证书指纹列表</p>
              */
-            public Builder certificateFingerprints(java.util.List < String > certificateFingerprints) {
+            public Builder certificateFingerprints(java.util.List<String> certificateFingerprints) {
                 this.certificateFingerprints = certificateFingerprints;
                 return this;
             }
@@ -1005,7 +1010,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         private EndpointConfig endpointConfig;
 
         @com.aliyun.core.annotation.NameInMap("GrantScopes")
-        private java.util.List < String > grantScopes;
+        private java.util.List<String> grantScopes;
 
         @com.aliyun.core.annotation.NameInMap("GrantType")
         private String grantType;
@@ -1050,7 +1055,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * @return grantScopes
          */
-        public java.util.List < String > getGrantScopes() {
+        public java.util.List<String> getGrantScopes() {
             return this.grantScopes;
         }
 
@@ -1078,7 +1083,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private AuthnParam authnParam; 
             private EndpointConfig endpointConfig; 
-            private java.util.List < String > grantScopes; 
+            private java.util.List<String> grantScopes; 
             private String grantType; 
             private String pkceChallengeMethod; 
             private Boolean pkceRequired; 
@@ -1105,7 +1110,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>openid</p>
              */
-            public Builder grantScopes(java.util.List < String > grantScopes) {
+            public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
                 return this;
             }
@@ -1158,7 +1163,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
      */
     public static class UdSyncScopeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
-        private java.util.List < String > sourceScopes;
+        private java.util.List<String> sourceScopes;
 
         @com.aliyun.core.annotation.NameInMap("TargetScope")
         private String targetScope;
@@ -1179,7 +1184,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * @return sourceScopes
          */
-        public java.util.List < String > getSourceScopes() {
+        public java.util.List<String> getSourceScopes() {
             return this.sourceScopes;
         }
 
@@ -1191,13 +1196,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceScopes; 
+            private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
             /**
              * <p>同步来源节点</p>
              */
-            public Builder sourceScopes(java.util.List < String > sourceScopes) {
+            public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
                 return this;
             }
@@ -1318,7 +1323,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
      */
     public static class UdSyncScopeConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
-        private java.util.List < String > sourceScopes;
+        private java.util.List<String> sourceScopes;
 
         @com.aliyun.core.annotation.NameInMap("TargetScope")
         private String targetScope;
@@ -1339,7 +1344,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * @return sourceScopes
          */
-        public java.util.List < String > getSourceScopes() {
+        public java.util.List<String> getSourceScopes() {
             return this.sourceScopes;
         }
 
@@ -1351,13 +1356,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceScopes; 
+            private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
             /**
              * <p>同步来源节点</p>
              */
-            public Builder sourceScopes(java.util.List < String > sourceScopes) {
+            public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
                 return this;
             }
@@ -1391,7 +1396,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         private String incrementalCallbackStatus;
 
         @com.aliyun.core.annotation.NameInMap("UdSyncScopeConfigs")
-        private java.util.List < UdSyncScopeConfigs> udSyncScopeConfigs;
+        private java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs;
 
         private UdPushConfig(Builder builder) {
             this.incrementalCallbackStatus = builder.incrementalCallbackStatus;
@@ -1416,13 +1421,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         /**
          * @return udSyncScopeConfigs
          */
-        public java.util.List < UdSyncScopeConfigs> getUdSyncScopeConfigs() {
+        public java.util.List<UdSyncScopeConfigs> getUdSyncScopeConfigs() {
             return this.udSyncScopeConfigs;
         }
 
         public static final class Builder {
             private String incrementalCallbackStatus; 
-            private java.util.List < UdSyncScopeConfigs> udSyncScopeConfigs; 
+            private java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs; 
 
             /**
              * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
@@ -1438,7 +1443,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>同步出配置信息</p>
              */
-            public Builder udSyncScopeConfigs(java.util.List < UdSyncScopeConfigs> udSyncScopeConfigs) {
+            public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;
                 return this;
             }
@@ -1650,6 +1655,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
+        @com.aliyun.core.annotation.NameInMap("LogoUrl")
+        private String logoUrl;
+
         @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
         private String networkAccessEndpointId;
 
@@ -1692,6 +1700,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             this.lastStatusCheckJobResult = builder.lastStatusCheckJobResult;
             this.ldapConfig = builder.ldapConfig;
             this.lockReason = builder.lockReason;
+            this.logoUrl = builder.logoUrl;
             this.networkAccessEndpointId = builder.networkAccessEndpointId;
             this.oidcConfig = builder.oidcConfig;
             this.udPullConfig = builder.udPullConfig;
@@ -1830,6 +1839,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return logoUrl
+         */
+        public String getLogoUrl() {
+            return this.logoUrl;
+        }
+
+        /**
          * @return networkAccessEndpointId
          */
         public String getNetworkAccessEndpointId() {
@@ -1903,6 +1919,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private String lastStatusCheckJobResult; 
             private LdapConfig ldapConfig; 
             private String lockReason; 
+            private String logoUrl; 
             private String networkAccessEndpointId; 
             private OidcConfig oidcConfig; 
             private UdPullConfig udPullConfig; 
@@ -2084,6 +2101,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
+                return this;
+            }
+
+            /**
+             * LogoUrl.
+             */
+            public Builder logoUrl(String logoUrl) {
+                this.logoUrl = logoUrl;
                 return this;
             }
 

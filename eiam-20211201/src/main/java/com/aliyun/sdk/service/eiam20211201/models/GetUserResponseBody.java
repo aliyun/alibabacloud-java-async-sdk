@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -353,7 +358,7 @@ public class GetUserResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("CustomFields")
-        private java.util.List < CustomFields> customFields;
+        private java.util.List<CustomFields> customFields;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -368,7 +373,7 @@ public class GetUserResponseBody extends TeaModel {
         private Boolean emailVerified;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < Groups> groups;
+        private java.util.List<Groups> groups;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -377,7 +382,7 @@ public class GetUserResponseBody extends TeaModel {
         private Long lockExpireTime;
 
         @com.aliyun.core.annotation.NameInMap("OrganizationalUnits")
-        private java.util.List < OrganizationalUnits> organizationalUnits;
+        private java.util.List<OrganizationalUnits> organizationalUnits;
 
         @com.aliyun.core.annotation.NameInMap("PasswordExpireTime")
         private Long passwordExpireTime;
@@ -478,7 +483,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return customFields
          */
-        public java.util.List < CustomFields> getCustomFields() {
+        public java.util.List<CustomFields> getCustomFields() {
             return this.customFields;
         }
 
@@ -513,7 +518,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < Groups> getGroups() {
+        public java.util.List<Groups> getGroups() {
             return this.groups;
         }
 
@@ -534,7 +539,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return organizationalUnits
          */
-        public java.util.List < OrganizationalUnits> getOrganizationalUnits() {
+        public java.util.List<OrganizationalUnits> getOrganizationalUnits() {
             return this.organizationalUnits;
         }
 
@@ -646,15 +651,15 @@ public class GetUserResponseBody extends TeaModel {
         public static final class Builder {
             private Long accountExpireTime; 
             private Long createTime; 
-            private java.util.List < CustomFields> customFields; 
+            private java.util.List<CustomFields> customFields; 
             private String description; 
             private String displayName; 
             private String email; 
             private Boolean emailVerified; 
-            private java.util.List < Groups> groups; 
+            private java.util.List<Groups> groups; 
             private String instanceId; 
             private Long lockExpireTime; 
-            private java.util.List < OrganizationalUnits> organizationalUnits; 
+            private java.util.List<OrganizationalUnits> organizationalUnits; 
             private Long passwordExpireTime; 
             private Boolean passwordSet; 
             private String phoneNumber; 
@@ -696,7 +701,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The list of custom fields that describe the account.</p>
              */
-            public Builder customFields(java.util.List < CustomFields> customFields) {
+            public Builder customFields(java.util.List<CustomFields> customFields) {
                 this.customFields = customFields;
                 return this;
             }
@@ -748,7 +753,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The organizational units to which the account belongs.</p>
              */
-            public Builder groups(java.util.List < Groups> groups) {
+            public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -778,7 +783,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The organizational units to which the account belongs.</p>
              */
-            public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
+            public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
                 this.organizationalUnits = organizationalUnits;
                 return this;
             }

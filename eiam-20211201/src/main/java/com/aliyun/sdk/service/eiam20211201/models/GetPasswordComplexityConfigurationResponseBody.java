@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,7 +147,7 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
      */
     public static class PasswordComplexityConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
-        private java.util.List < PasswordComplexityRules> passwordComplexityRules;
+        private java.util.List<PasswordComplexityRules> passwordComplexityRules;
 
         @com.aliyun.core.annotation.NameInMap("PasswordMinLength")
         private Integer passwordMinLength;
@@ -163,7 +168,7 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         /**
          * @return passwordComplexityRules
          */
-        public java.util.List < PasswordComplexityRules> getPasswordComplexityRules() {
+        public java.util.List<PasswordComplexityRules> getPasswordComplexityRules() {
             return this.passwordComplexityRules;
         }
 
@@ -175,13 +180,13 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PasswordComplexityRules> passwordComplexityRules; 
+            private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
             private Integer passwordMinLength; 
 
             /**
              * <p>The password complexity rules.</p>
              */
-            public Builder passwordComplexityRules(java.util.List < PasswordComplexityRules> passwordComplexityRules) {
+            public Builder passwordComplexityRules(java.util.List<PasswordComplexityRules> passwordComplexityRules) {
                 this.passwordComplexityRules = passwordComplexityRules;
                 return this;
             }

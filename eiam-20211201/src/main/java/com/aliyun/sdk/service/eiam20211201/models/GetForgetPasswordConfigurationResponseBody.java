@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
      */
     public static class OpenForgetPasswordConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthenticationChannels")
-        private java.util.List < String > authenticationChannels;
+        private java.util.List<String> authenticationChannels;
 
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -115,7 +120,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         /**
          * @return authenticationChannels
          */
-        public java.util.List < String > getAuthenticationChannels() {
+        public java.util.List<String> getAuthenticationChannels() {
             return this.authenticationChannels;
         }
 
@@ -148,7 +153,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authenticationChannels; 
+            private java.util.List<String> authenticationChannels; 
             private Boolean enable; 
             private Boolean enableEmail; 
             private Boolean enableSms; 
@@ -157,7 +162,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             /**
              * <p>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</p>
              */
-            public Builder authenticationChannels(java.util.List < String > authenticationChannels) {
+            public Builder authenticationChannels(java.util.List<String> authenticationChannels) {
                 this.authenticationChannels = authenticationChannels;
                 return this;
             }

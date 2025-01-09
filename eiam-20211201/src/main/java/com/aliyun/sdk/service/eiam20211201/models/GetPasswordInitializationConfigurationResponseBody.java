@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         private String passwordForcedUpdateStatus;
 
         @com.aliyun.core.annotation.NameInMap("PasswordInitializationNotificationChannels")
-        private java.util.List < String > passwordInitializationNotificationChannels;
+        private java.util.List<String> passwordInitializationNotificationChannels;
 
         @com.aliyun.core.annotation.NameInMap("PasswordInitializationStatus")
         private String passwordInitializationStatus;
@@ -118,7 +123,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         /**
          * @return passwordInitializationNotificationChannels
          */
-        public java.util.List < String > getPasswordInitializationNotificationChannels() {
+        public java.util.List<String> getPasswordInitializationNotificationChannels() {
             return this.passwordInitializationNotificationChannels;
         }
 
@@ -138,7 +143,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
 
         public static final class Builder {
             private String passwordForcedUpdateStatus; 
-            private java.util.List < String > passwordInitializationNotificationChannels; 
+            private java.util.List<String> passwordInitializationNotificationChannels; 
             private String passwordInitializationStatus; 
             private String passwordInitializationType; 
 
@@ -163,7 +168,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
              * <strong>example:</strong>
              * <p>email</p>
              */
-            public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
+            public Builder passwordInitializationNotificationChannels(java.util.List<String> passwordInitializationNotificationChannels) {
                 this.passwordInitializationNotificationChannels = passwordInitializationNotificationChannels;
                 return this;
             }

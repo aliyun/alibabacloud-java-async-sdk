@@ -368,6 +368,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceLicense  GetInstanceLicenseRequest
+     * @return GetInstanceLicenseResponse
+     */
+    CompletableFuture<GetInstanceLicenseResponse> getInstanceLicense(GetInstanceLicenseRequest request);
+
+    /**
      * @param request the request parameters of GetNetworkAccessEndpoint  GetNetworkAccessEndpointRequest
      * @return GetNetworkAccessEndpointResponse
      */

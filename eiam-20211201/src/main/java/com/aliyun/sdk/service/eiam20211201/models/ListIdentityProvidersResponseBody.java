@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListIdentityProvidersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IdentityProviders")
-    private java.util.List < IdentityProviders> identityProviders;
+    private java.util.List<IdentityProviders> identityProviders;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     /**
      * @return identityProviders
      */
-    public java.util.List < IdentityProviders> getIdentityProviders() {
+    public java.util.List<IdentityProviders> getIdentityProviders() {
         return this.identityProviders;
     }
 
@@ -57,14 +62,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IdentityProviders> identityProviders; 
+        private java.util.List<IdentityProviders> identityProviders; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * IdentityProviders.
          */
-        public Builder identityProviders(java.util.List < IdentityProviders> identityProviders) {
+        public Builder identityProviders(java.util.List<IdentityProviders> identityProviders) {
             this.identityProviders = identityProviders;
             return this;
         }
@@ -140,6 +145,9 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
+        @com.aliyun.core.annotation.NameInMap("LogoUrl")
+        private String logoUrl;
+
         @com.aliyun.core.annotation.NameInMap("UdPullStatus")
         private String udPullStatus;
 
@@ -167,6 +175,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.lastStatusCheckJobResult = builder.lastStatusCheckJobResult;
             this.lockReason = builder.lockReason;
+            this.logoUrl = builder.logoUrl;
             this.udPullStatus = builder.udPullStatus;
             this.udPullTargetScope = builder.udPullTargetScope;
             this.udPushStatus = builder.udPushStatus;
@@ -280,6 +289,13 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
+         * @return logoUrl
+         */
+        public String getLogoUrl() {
+            return this.logoUrl;
+        }
+
+        /**
          * @return udPullStatus
          */
         public String getUdPullStatus() {
@@ -322,6 +338,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             private String instanceId; 
             private String lastStatusCheckJobResult; 
             private String lockReason; 
+            private String logoUrl; 
             private String udPullStatus; 
             private String udPullTargetScope; 
             private String udPushStatus; 
@@ -466,6 +483,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
+                return this;
+            }
+
+            /**
+             * LogoUrl.
+             */
+            public Builder logoUrl(String logoUrl) {
+                this.logoUrl = logoUrl;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     @com.aliyun.core.annotation.Validation(maxLength = 2)
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -100,7 +105,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -123,7 +128,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         private String clientToken; 
         private String instanceId; 
         private String networkAccessEndpointName; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
         private String vpcRegionId; 
 
@@ -195,7 +200,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
             this.vSwitchIds = vSwitchIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SetApplicationGrantScopeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GrantScopes")
-    private java.util.List < String > grantScopes;
+    private java.util.List<String> grantScopes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -68,7 +73,7 @@ public class SetApplicationGrantScopeRequest extends Request {
     /**
      * @return grantScopes
      */
-    public java.util.List < String > getGrantScopes() {
+    public java.util.List<String> getGrantScopes() {
         return this.grantScopes;
     }
 
@@ -82,7 +87,7 @@ public class SetApplicationGrantScopeRequest extends Request {
     public static final class Builder extends Request.Builder<SetApplicationGrantScopeRequest, Builder> {
         private String regionId; 
         private String applicationId; 
-        private java.util.List < String > grantScopes; 
+        private java.util.List<String> grantScopes; 
         private String instanceId; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class SetApplicationGrantScopeRequest extends Request {
         /**
          * <p>The permissions of the Developer API feature.</p>
          */
-        public Builder grantScopes(java.util.List < String > grantScopes) {
+        public Builder grantScopes(java.util.List<String> grantScopes) {
             this.putQueryParameter("GrantScopes", grantScopes);
             this.grantScopes = grantScopes;
             return this;

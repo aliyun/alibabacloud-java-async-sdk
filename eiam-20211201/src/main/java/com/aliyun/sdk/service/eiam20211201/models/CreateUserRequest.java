@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomFields")
-    private java.util.List < CustomFields> customFields;
+    private java.util.List<CustomFields> customFields;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -47,7 +52,7 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
-    private java.util.List < String > organizationalUnitIds;
+    private java.util.List<String> organizationalUnitIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
@@ -131,7 +136,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return customFields
      */
-    public java.util.List < CustomFields> getCustomFields() {
+    public java.util.List<CustomFields> getCustomFields() {
         return this.customFields;
     }
 
@@ -173,7 +178,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return organizationalUnitIds
      */
-    public java.util.List < String > getOrganizationalUnitIds() {
+    public java.util.List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds;
     }
 
@@ -235,13 +240,13 @@ public class CreateUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateUserRequest, Builder> {
         private String regionId; 
-        private java.util.List < CustomFields> customFields; 
+        private java.util.List<CustomFields> customFields; 
         private String description; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
         private String instanceId; 
-        private java.util.List < String > organizationalUnitIds; 
+        private java.util.List<String> organizationalUnitIds; 
         private String password; 
         private PasswordInitializationConfig passwordInitializationConfig; 
         private String phoneNumber; 
@@ -290,7 +295,7 @@ public class CreateUserRequest extends Request {
          * <strong>example:</strong>
          * <p>description</p>
          */
-        public Builder customFields(java.util.List < CustomFields> customFields) {
+        public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
             this.customFields = customFields;
             return this;
@@ -360,7 +365,7 @@ public class CreateUserRequest extends Request {
         /**
          * <p>The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.</p>
          */
-        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+        public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
@@ -564,7 +569,7 @@ public class CreateUserRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("UserNotificationChannels")
         @com.aliyun.core.annotation.Validation(maxLength = 64)
-        private java.util.List < String > userNotificationChannels;
+        private java.util.List<String> userNotificationChannels;
 
         private PasswordInitializationConfig(Builder builder) {
             this.passwordForcedUpdateStatus = builder.passwordForcedUpdateStatus;
@@ -605,7 +610,7 @@ public class CreateUserRequest extends Request {
         /**
          * @return userNotificationChannels
          */
-        public java.util.List < String > getUserNotificationChannels() {
+        public java.util.List<String> getUserNotificationChannels() {
             return this.userNotificationChannels;
         }
 
@@ -613,7 +618,7 @@ public class CreateUserRequest extends Request {
             private String passwordForcedUpdateStatus; 
             private String passwordInitializationPolicyPriority; 
             private String passwordInitializationType; 
-            private java.util.List < String > userNotificationChannels; 
+            private java.util.List<String> userNotificationChannels; 
 
             /**
              * <p>Specifies whether to forcibly change the password status. Default value: disabled. Valid values:</p>
@@ -665,7 +670,7 @@ public class CreateUserRequest extends Request {
              * <strong>example:</strong>
              * <p>sms</p>
              */
-            public Builder userNotificationChannels(java.util.List < String > userNotificationChannels) {
+            public Builder userNotificationChannels(java.util.List<String> userNotificationChannels) {
                 this.userNotificationChannels = userNotificationChannels;
                 return this;
             }

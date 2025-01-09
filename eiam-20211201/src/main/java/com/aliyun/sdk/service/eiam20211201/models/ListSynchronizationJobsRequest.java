@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,6 +29,10 @@ public class ListSynchronizationJobsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -57,7 +66,7 @@ public class ListSynchronizationJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetIds")
-    private java.util.List < String > targetIds;
+    private java.util.List<String> targetIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
@@ -68,6 +77,7 @@ public class ListSynchronizationJobsRequest extends Request {
         this.regionId = builder.regionId;
         this.direction = builder.direction;
         this.endTime = builder.endTime;
+        this.filters = builder.filters;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -111,6 +121,13 @@ public class ListSynchronizationJobsRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return filters
+     */
+    public java.util.List<Filters> getFilters() {
+        return this.filters;
     }
 
     /**
@@ -165,7 +182,7 @@ public class ListSynchronizationJobsRequest extends Request {
     /**
      * @return targetIds
      */
-    public java.util.List < String > getTargetIds() {
+    public java.util.List<String> getTargetIds() {
         return this.targetIds;
     }
 
@@ -180,6 +197,7 @@ public class ListSynchronizationJobsRequest extends Request {
         private String regionId; 
         private String direction; 
         private Long endTime; 
+        private java.util.List<Filters> filters; 
         private String instanceId; 
         private Long maxResults; 
         private String nextToken; 
@@ -187,7 +205,7 @@ public class ListSynchronizationJobsRequest extends Request {
         private Long pageSize; 
         private Long startTime; 
         private String status; 
-        private java.util.List < String > targetIds; 
+        private java.util.List<String> targetIds; 
         private String targetType; 
 
         private Builder() {
@@ -199,6 +217,7 @@ public class ListSynchronizationJobsRequest extends Request {
             this.regionId = request.regionId;
             this.direction = request.direction;
             this.endTime = request.endTime;
+            this.filters = request.filters;
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -240,6 +259,15 @@ public class ListSynchronizationJobsRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Filters.
+         */
+        public Builder filters(java.util.List<Filters> filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
             return this;
         }
 
@@ -334,7 +362,7 @@ public class ListSynchronizationJobsRequest extends Request {
          * <strong>example:</strong>
          * <p>target_001</p>
          */
-        public Builder targetIds(java.util.List < String > targetIds) {
+        public Builder targetIds(java.util.List<String> targetIds) {
             this.putQueryParameter("TargetIds", targetIds);
             this.targetIds = targetIds;
             return this;
@@ -359,4 +387,71 @@ public class ListSynchronizationJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSynchronizationJobsRequest} extends {@link TeaModel}
+     *
+     * <p>ListSynchronizationJobsRequest</p>
+     */
+    public static class Filters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
+
+        private Filters(Builder builder) {
+            this.key = builder.key;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Filters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private java.util.List<String> values; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public Filters build() {
+                return new Filters(this);
+            } 
+
+        } 
+
+    }
 }

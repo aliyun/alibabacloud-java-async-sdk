@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupIds")
-    private java.util.List < String > groupIds;
+    private java.util.List<String> groupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
@@ -87,7 +92,7 @@ public class ListGroupsRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < String > getGroupIds() {
+    public java.util.List<String> getGroupIds() {
         return this.groupIds;
     }
 
@@ -129,7 +134,7 @@ public class ListGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<ListGroupsRequest, Builder> {
         private String regionId; 
         private String groupExternalId; 
-        private java.util.List < String > groupIds; 
+        private java.util.List<String> groupIds; 
         private String groupName; 
         private String groupNameStartsWith; 
         private String instanceId; 
@@ -176,7 +181,7 @@ public class ListGroupsRequest extends Request {
         /**
          * <p>The group IDs.</p>
          */
-        public Builder groupIds(java.util.List < String > groupIds) {
+        public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpoints")
-    private java.util.List < NetworkAccessEndpoints> networkAccessEndpoints;
+    private java.util.List<NetworkAccessEndpoints> networkAccessEndpoints;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     /**
      * @return networkAccessEndpoints
      */
-    public java.util.List < NetworkAccessEndpoints> getNetworkAccessEndpoints() {
+    public java.util.List<NetworkAccessEndpoints> getNetworkAccessEndpoints() {
         return this.networkAccessEndpoints;
     }
 
@@ -68,7 +73,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkAccessEndpoints> networkAccessEndpoints; 
+        private java.util.List<NetworkAccessEndpoints> networkAccessEndpoints; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
@@ -76,7 +81,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * NetworkAccessEndpoints.
          */
-        public Builder networkAccessEndpoints(java.util.List < NetworkAccessEndpoints> networkAccessEndpoints) {
+        public Builder networkAccessEndpoints(java.util.List<NetworkAccessEndpoints> networkAccessEndpoints) {
             this.networkAccessEndpoints = networkAccessEndpoints;
             return this;
         }
@@ -146,7 +151,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         private Long updateTime;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -235,7 +240,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -262,7 +267,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             private String securityGroupId; 
             private String status; 
             private Long updateTime; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcRegionId; 
 
@@ -360,7 +365,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupIds")
-    private java.util.List < String > groupIds;
+    private java.util.List<String> groupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -32,7 +37,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
-    private java.util.List < String > organizationalUnitIds;
+    private java.util.List<String> organizationalUnitIds;
 
     private SetApplicationProvisioningScopeRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < String > getGroupIds() {
+    public java.util.List<String> getGroupIds() {
         return this.groupIds;
     }
 
@@ -87,16 +92,16 @@ public class SetApplicationProvisioningScopeRequest extends Request {
     /**
      * @return organizationalUnitIds
      */
-    public java.util.List < String > getOrganizationalUnitIds() {
+    public java.util.List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds;
     }
 
     public static final class Builder extends Request.Builder<SetApplicationProvisioningScopeRequest, Builder> {
         private String regionId; 
         private String applicationId; 
-        private java.util.List < String > groupIds; 
+        private java.util.List<String> groupIds; 
         private String instanceId; 
-        private java.util.List < String > organizationalUnitIds; 
+        private java.util.List<String> organizationalUnitIds; 
 
         private Builder() {
             super();
@@ -136,7 +141,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         /**
          * <p>List of groups that are authorized to be synchronized from</p>
          */
-        public Builder groupIds(java.util.List < String > groupIds) {
+        public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
@@ -158,7 +163,7 @@ public class SetApplicationProvisioningScopeRequest extends Request {
         /**
          * <p>The list of organizational units that are authorized for account synchronization.</p>
          */
-        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+        public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
             return this;

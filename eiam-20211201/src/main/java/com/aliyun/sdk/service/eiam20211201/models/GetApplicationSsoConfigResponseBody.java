@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -161,13 +166,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private Long codeEffectiveTime;
 
         @com.aliyun.core.annotation.NameInMap("CustomClaims")
-        private java.util.List < CustomClaims> customClaims;
+        private java.util.List<CustomClaims> customClaims;
 
         @com.aliyun.core.annotation.NameInMap("GrantScopes")
-        private java.util.List < String > grantScopes;
+        private java.util.List<String> grantScopes;
 
         @com.aliyun.core.annotation.NameInMap("GrantTypes")
-        private java.util.List < String > grantTypes;
+        private java.util.List<String> grantTypes;
 
         @com.aliyun.core.annotation.NameInMap("IdTokenEffectiveTime")
         private Long idTokenEffectiveTime;
@@ -179,22 +184,22 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private Boolean passwordTotpMfaRequired;
 
         @com.aliyun.core.annotation.NameInMap("PkceChallengeMethods")
-        private java.util.List < String > pkceChallengeMethods;
+        private java.util.List<String> pkceChallengeMethods;
 
         @com.aliyun.core.annotation.NameInMap("PkceRequired")
         private Boolean pkceRequired;
 
         @com.aliyun.core.annotation.NameInMap("PostLogoutRedirectUris")
-        private java.util.List < String > postLogoutRedirectUris;
+        private java.util.List<String> postLogoutRedirectUris;
 
         @com.aliyun.core.annotation.NameInMap("RedirectUris")
-        private java.util.List < String > redirectUris;
+        private java.util.List<String> redirectUris;
 
         @com.aliyun.core.annotation.NameInMap("RefreshTokenEffective")
         private Long refreshTokenEffective;
 
         @com.aliyun.core.annotation.NameInMap("ResponseTypes")
-        private java.util.List < String > responseTypes;
+        private java.util.List<String> responseTypes;
 
         @com.aliyun.core.annotation.NameInMap("SubjectIdExpression")
         private String subjectIdExpression;
@@ -242,21 +247,21 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         /**
          * @return customClaims
          */
-        public java.util.List < CustomClaims> getCustomClaims() {
+        public java.util.List<CustomClaims> getCustomClaims() {
             return this.customClaims;
         }
 
         /**
          * @return grantScopes
          */
-        public java.util.List < String > getGrantScopes() {
+        public java.util.List<String> getGrantScopes() {
             return this.grantScopes;
         }
 
         /**
          * @return grantTypes
          */
-        public java.util.List < String > getGrantTypes() {
+        public java.util.List<String> getGrantTypes() {
             return this.grantTypes;
         }
 
@@ -284,7 +289,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         /**
          * @return pkceChallengeMethods
          */
-        public java.util.List < String > getPkceChallengeMethods() {
+        public java.util.List<String> getPkceChallengeMethods() {
             return this.pkceChallengeMethods;
         }
 
@@ -298,14 +303,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         /**
          * @return postLogoutRedirectUris
          */
-        public java.util.List < String > getPostLogoutRedirectUris() {
+        public java.util.List<String> getPostLogoutRedirectUris() {
             return this.postLogoutRedirectUris;
         }
 
         /**
          * @return redirectUris
          */
-        public java.util.List < String > getRedirectUris() {
+        public java.util.List<String> getRedirectUris() {
             return this.redirectUris;
         }
 
@@ -319,7 +324,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         /**
          * @return responseTypes
          */
-        public java.util.List < String > getResponseTypes() {
+        public java.util.List<String> getResponseTypes() {
             return this.responseTypes;
         }
 
@@ -333,18 +338,18 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Long accessTokenEffectiveTime; 
             private Long codeEffectiveTime; 
-            private java.util.List < CustomClaims> customClaims; 
-            private java.util.List < String > grantScopes; 
-            private java.util.List < String > grantTypes; 
+            private java.util.List<CustomClaims> customClaims; 
+            private java.util.List<String> grantScopes; 
+            private java.util.List<String> grantTypes; 
             private Long idTokenEffectiveTime; 
             private String passwordAuthenticationSourceId; 
             private Boolean passwordTotpMfaRequired; 
-            private java.util.List < String > pkceChallengeMethods; 
+            private java.util.List<String> pkceChallengeMethods; 
             private Boolean pkceRequired; 
-            private java.util.List < String > postLogoutRedirectUris; 
-            private java.util.List < String > redirectUris; 
+            private java.util.List<String> postLogoutRedirectUris; 
+            private java.util.List<String> redirectUris; 
             private Long refreshTokenEffective; 
-            private java.util.List < String > responseTypes; 
+            private java.util.List<String> responseTypes; 
             private String subjectIdExpression; 
 
             /**
@@ -372,7 +377,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             /**
              * <p>The custom claims that are returned for the ID token.</p>
              */
-            public Builder customClaims(java.util.List < CustomClaims> customClaims) {
+            public Builder customClaims(java.util.List<CustomClaims> customClaims) {
                 this.customClaims = customClaims;
                 return this;
             }
@@ -383,7 +388,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>profile，email</p>
              */
-            public Builder grantScopes(java.util.List < String > grantScopes) {
+            public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
                 return this;
             }
@@ -394,7 +399,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>authorization_code</p>
              */
-            public Builder grantTypes(java.util.List < String > grantTypes) {
+            public Builder grantTypes(java.util.List<String> grantTypes) {
                 this.grantTypes = grantTypes;
                 return this;
             }
@@ -438,7 +443,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>S256</p>
              */
-            public Builder pkceChallengeMethods(java.util.List < String > pkceChallengeMethods) {
+            public Builder pkceChallengeMethods(java.util.List<String> pkceChallengeMethods) {
                 this.pkceChallengeMethods = pkceChallengeMethods;
                 return this;
             }
@@ -457,7 +462,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             /**
              * <p>The list of logout redirect URIs that are supported by the application.</p>
              */
-            public Builder postLogoutRedirectUris(java.util.List < String > postLogoutRedirectUris) {
+            public Builder postLogoutRedirectUris(java.util.List<String> postLogoutRedirectUris) {
                 this.postLogoutRedirectUris = postLogoutRedirectUris;
                 return this;
             }
@@ -465,7 +470,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             /**
              * <p>The list of redirect URIs that are supported by the application.</p>
              */
-            public Builder redirectUris(java.util.List < String > redirectUris) {
+            public Builder redirectUris(java.util.List<String> redirectUris) {
                 this.redirectUris = redirectUris;
                 return this;
             }
@@ -487,7 +492,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>token id_token</p>
              */
-            public Builder responseTypes(java.util.List < String > responseTypes) {
+            public Builder responseTypes(java.util.List<String> responseTypes) {
                 this.responseTypes = responseTypes;
                 return this;
             }
@@ -924,7 +929,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private Boolean assertionSigned;
 
         @com.aliyun.core.annotation.NameInMap("AttributeStatements")
-        private java.util.List < AttributeStatements> attributeStatements;
+        private java.util.List<AttributeStatements> attributeStatements;
 
         @com.aliyun.core.annotation.NameInMap("DefaultRelayState")
         private String defaultRelayState;
@@ -939,7 +944,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         private String nameIdValueExpression;
 
         @com.aliyun.core.annotation.NameInMap("OptionalRelayStates")
-        private java.util.List < OptionalRelayStates> optionalRelayStates;
+        private java.util.List<OptionalRelayStates> optionalRelayStates;
 
         @com.aliyun.core.annotation.NameInMap("ResponseSigned")
         private Boolean responseSigned;
@@ -985,7 +990,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         /**
          * @return attributeStatements
          */
-        public java.util.List < AttributeStatements> getAttributeStatements() {
+        public java.util.List<AttributeStatements> getAttributeStatements() {
             return this.attributeStatements;
         }
 
@@ -1020,7 +1025,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         /**
          * @return optionalRelayStates
          */
-        public java.util.List < OptionalRelayStates> getOptionalRelayStates() {
+        public java.util.List<OptionalRelayStates> getOptionalRelayStates() {
             return this.optionalRelayStates;
         }
 
@@ -1054,12 +1059,12 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean assertionSigned; 
-            private java.util.List < AttributeStatements> attributeStatements; 
+            private java.util.List<AttributeStatements> attributeStatements; 
             private String defaultRelayState; 
             private String idPEntityId; 
             private String nameIdFormat; 
             private String nameIdValueExpression; 
-            private java.util.List < OptionalRelayStates> optionalRelayStates; 
+            private java.util.List<OptionalRelayStates> optionalRelayStates; 
             private Boolean responseSigned; 
             private String signatureAlgorithm; 
             private String spEntityId; 
@@ -1081,7 +1086,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             /**
              * <p>The additional user attributes in the SAML assertion.</p>
              */
-            public Builder attributeStatements(java.util.List < AttributeStatements> attributeStatements) {
+            public Builder attributeStatements(java.util.List<AttributeStatements> attributeStatements) {
                 this.attributeStatements = attributeStatements;
                 return this;
             }
@@ -1139,7 +1144,7 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             /**
              * <p>Optional RelayState. The user will see the display names of multiple optional redirect addresses in the application card of the application portal. After the user clicks and completes SSO, they will automatically jump to the corresponding address. This field can only be filled in after the default redirect address is filled in.</p>
              */
-            public Builder optionalRelayStates(java.util.List < OptionalRelayStates> optionalRelayStates) {
+            public Builder optionalRelayStates(java.util.List<OptionalRelayStates> optionalRelayStates) {
                 this.optionalRelayStates = optionalRelayStates;
                 return this;
             }

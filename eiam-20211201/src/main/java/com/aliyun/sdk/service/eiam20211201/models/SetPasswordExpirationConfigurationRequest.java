@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectiveAuthenticationSourceIds")
-    private java.util.List < String > effectiveAuthenticationSourceIds;
+    private java.util.List<String> effectiveAuthenticationSourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -33,7 +38,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationChannels")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
-    private java.util.List < String > passwordExpirationNotificationChannels;
+    private java.util.List<String> passwordExpirationNotificationChannels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationDuration")
@@ -97,7 +102,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     /**
      * @return effectiveAuthenticationSourceIds
      */
-    public java.util.List < String > getEffectiveAuthenticationSourceIds() {
+    public java.util.List<String> getEffectiveAuthenticationSourceIds() {
         return this.effectiveAuthenticationSourceIds;
     }
 
@@ -118,7 +123,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
     /**
      * @return passwordExpirationNotificationChannels
      */
-    public java.util.List < String > getPasswordExpirationNotificationChannels() {
+    public java.util.List<String> getPasswordExpirationNotificationChannels() {
         return this.passwordExpirationNotificationChannels;
     }
 
@@ -159,10 +164,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetPasswordExpirationConfigurationRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > effectiveAuthenticationSourceIds; 
+        private java.util.List<String> effectiveAuthenticationSourceIds; 
         private String instanceId; 
         private String passwordExpirationAction; 
-        private java.util.List < String > passwordExpirationNotificationChannels; 
+        private java.util.List<String> passwordExpirationNotificationChannels; 
         private Integer passwordExpirationNotificationDuration; 
         private String passwordExpirationNotificationStatus; 
         private String passwordExpirationStatus; 
@@ -199,7 +204,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         /**
          * EffectiveAuthenticationSourceIds.
          */
-        public Builder effectiveAuthenticationSourceIds(java.util.List < String > effectiveAuthenticationSourceIds) {
+        public Builder effectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
             this.putQueryParameter("EffectiveAuthenticationSourceIds", effectiveAuthenticationSourceIds);
             this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
             return this;
@@ -241,7 +246,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
          * <strong>example:</strong>
          * <p>login</p>
          */
-        public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
+        public Builder passwordExpirationNotificationChannels(java.util.List<String> passwordExpirationNotificationChannels) {
             this.putQueryParameter("PasswordExpirationNotificationChannels", passwordExpirationNotificationChannels);
             this.passwordExpirationNotificationChannels = passwordExpirationNotificationChannels;
             return this;

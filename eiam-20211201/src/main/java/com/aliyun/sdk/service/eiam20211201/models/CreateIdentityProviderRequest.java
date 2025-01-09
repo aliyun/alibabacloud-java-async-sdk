@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -60,6 +65,10 @@ public class CreateIdentityProviderRequest extends Request {
     private LdapConfig ldapConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogoUrl")
+    private String logoUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
     private String networkAccessEndpointId;
 
@@ -92,6 +101,7 @@ public class CreateIdentityProviderRequest extends Request {
         this.instanceId = builder.instanceId;
         this.larkConfig = builder.larkConfig;
         this.ldapConfig = builder.ldapConfig;
+        this.logoUrl = builder.logoUrl;
         this.networkAccessEndpointId = builder.networkAccessEndpointId;
         this.oidcConfig = builder.oidcConfig;
         this.udPullConfig = builder.udPullConfig;
@@ -190,6 +200,13 @@ public class CreateIdentityProviderRequest extends Request {
     }
 
     /**
+     * @return logoUrl
+     */
+    public String getLogoUrl() {
+        return this.logoUrl;
+    }
+
+    /**
      * @return networkAccessEndpointId
      */
     public String getNetworkAccessEndpointId() {
@@ -236,6 +253,7 @@ public class CreateIdentityProviderRequest extends Request {
         private String instanceId; 
         private LarkConfig larkConfig; 
         private LdapConfig ldapConfig; 
+        private String logoUrl; 
         private String networkAccessEndpointId; 
         private OidcConfig oidcConfig; 
         private UdPullConfig udPullConfig; 
@@ -259,6 +277,7 @@ public class CreateIdentityProviderRequest extends Request {
             this.instanceId = request.instanceId;
             this.larkConfig = request.larkConfig;
             this.ldapConfig = request.ldapConfig;
+            this.logoUrl = request.logoUrl;
             this.networkAccessEndpointId = request.networkAccessEndpointId;
             this.oidcConfig = request.oidcConfig;
             this.udPullConfig = request.udPullConfig;
@@ -374,6 +393,15 @@ public class CreateIdentityProviderRequest extends Request {
         public Builder ldapConfig(LdapConfig ldapConfig) {
             this.putQueryParameter("LdapConfig", ldapConfig);
             this.ldapConfig = ldapConfig;
+            return this;
+        }
+
+        /**
+         * LogoUrl.
+         */
+        public Builder logoUrl(String logoUrl) {
+            this.putQueryParameter("LogoUrl", logoUrl);
+            this.logoUrl = logoUrl;
             return this;
         }
 
@@ -518,7 +546,7 @@ public class CreateIdentityProviderRequest extends Request {
         private String autoCreateUserStatus;
 
         @com.aliyun.core.annotation.NameInMap("TargetOrganizationalUnitIds")
-        private java.util.List < String > targetOrganizationalUnitIds;
+        private java.util.List<String> targetOrganizationalUnitIds;
 
         private AutoCreateUserConfig(Builder builder) {
             this.autoCreateUserStatus = builder.autoCreateUserStatus;
@@ -543,13 +571,13 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return targetOrganizationalUnitIds
          */
-        public java.util.List < String > getTargetOrganizationalUnitIds() {
+        public java.util.List<String> getTargetOrganizationalUnitIds() {
             return this.targetOrganizationalUnitIds;
         }
 
         public static final class Builder {
             private String autoCreateUserStatus; 
-            private java.util.List < String > targetOrganizationalUnitIds; 
+            private java.util.List<String> targetOrganizationalUnitIds; 
 
             /**
              * <p>自动创建账户是否开启</p>
@@ -565,7 +593,7 @@ public class CreateIdentityProviderRequest extends Request {
             /**
              * TargetOrganizationalUnitIds.
              */
-            public Builder targetOrganizationalUnitIds(java.util.List < String > targetOrganizationalUnitIds) {
+            public Builder targetOrganizationalUnitIds(java.util.List<String> targetOrganizationalUnitIds) {
                 this.targetOrganizationalUnitIds = targetOrganizationalUnitIds;
                 return this;
             }
@@ -757,7 +785,7 @@ public class CreateIdentityProviderRequest extends Request {
      */
     public static class BindingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoMatchUserProfileExpressions")
-        private java.util.List < AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions;
+        private java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions;
 
         @com.aliyun.core.annotation.NameInMap("AutoMatchUserStatus")
         private String autoMatchUserStatus;
@@ -782,7 +810,7 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return autoMatchUserProfileExpressions
          */
-        public java.util.List < AutoMatchUserProfileExpressions> getAutoMatchUserProfileExpressions() {
+        public java.util.List<AutoMatchUserProfileExpressions> getAutoMatchUserProfileExpressions() {
             return this.autoMatchUserProfileExpressions;
         }
 
@@ -801,14 +829,14 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions; 
+            private java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions; 
             private String autoMatchUserStatus; 
             private String mappingBindingStatus; 
 
             /**
              * <p>自动匹配账户的规则</p>
              */
-            public Builder autoMatchUserProfileExpressions(java.util.List < AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions) {
+            public Builder autoMatchUserProfileExpressions(java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions) {
                 this.autoMatchUserProfileExpressions = autoMatchUserProfileExpressions;
                 return this;
             }
@@ -1070,7 +1098,7 @@ public class CreateIdentityProviderRequest extends Request {
         private String certificateFingerprintStatus;
 
         @com.aliyun.core.annotation.NameInMap("CertificateFingerprints")
-        private java.util.List < String > certificateFingerprints;
+        private java.util.List<String> certificateFingerprints;
 
         @com.aliyun.core.annotation.NameInMap("GroupMemberAttributeName")
         private String groupMemberAttributeName;
@@ -1155,7 +1183,7 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return certificateFingerprints
          */
-        public java.util.List < String > getCertificateFingerprints() {
+        public java.util.List<String> getCertificateFingerprints() {
             return this.certificateFingerprints;
         }
 
@@ -1240,7 +1268,7 @@ public class CreateIdentityProviderRequest extends Request {
             private String administratorPassword; 
             private String administratorUsername; 
             private String certificateFingerprintStatus; 
-            private java.util.List < String > certificateFingerprints; 
+            private java.util.List<String> certificateFingerprints; 
             private String groupMemberAttributeName; 
             private String groupObjectClass; 
             private String groupObjectClassCustomFilter; 
@@ -1289,7 +1317,7 @@ public class CreateIdentityProviderRequest extends Request {
             /**
              * <p>证书指纹列表</p>
              */
-            public Builder certificateFingerprints(java.util.List < String > certificateFingerprints) {
+            public Builder certificateFingerprints(java.util.List<String> certificateFingerprints) {
                 this.certificateFingerprints = certificateFingerprints;
                 return this;
             }
@@ -1674,7 +1702,7 @@ public class CreateIdentityProviderRequest extends Request {
         private EndpointConfig endpointConfig;
 
         @com.aliyun.core.annotation.NameInMap("GrantScopes")
-        private java.util.List < String > grantScopes;
+        private java.util.List<String> grantScopes;
 
         @com.aliyun.core.annotation.NameInMap("GrantType")
         private String grantType;
@@ -1719,7 +1747,7 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return grantScopes
          */
-        public java.util.List < String > getGrantScopes() {
+        public java.util.List<String> getGrantScopes() {
             return this.grantScopes;
         }
 
@@ -1747,7 +1775,7 @@ public class CreateIdentityProviderRequest extends Request {
         public static final class Builder {
             private AuthnParam authnParam; 
             private EndpointConfig endpointConfig; 
-            private java.util.List < String > grantScopes; 
+            private java.util.List<String> grantScopes; 
             private String grantType; 
             private String pkceChallengeMethod; 
             private Boolean pkceRequired; 
@@ -1774,7 +1802,7 @@ public class CreateIdentityProviderRequest extends Request {
              * <strong>example:</strong>
              * <p>openid</p>
              */
-            public Builder grantScopes(java.util.List < String > grantScopes) {
+            public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
                 return this;
             }
@@ -1827,7 +1855,7 @@ public class CreateIdentityProviderRequest extends Request {
      */
     public static class UdSyncScopeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
-        private java.util.List < String > sourceScopes;
+        private java.util.List<String> sourceScopes;
 
         @com.aliyun.core.annotation.NameInMap("TargetScope")
         private String targetScope;
@@ -1848,7 +1876,7 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return sourceScopes
          */
-        public java.util.List < String > getSourceScopes() {
+        public java.util.List<String> getSourceScopes() {
             return this.sourceScopes;
         }
 
@@ -1860,13 +1888,13 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceScopes; 
+            private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
             /**
              * <p>同步来源节点</p>
              */
-            public Builder sourceScopes(java.util.List < String > sourceScopes) {
+            public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
                 return this;
             }
@@ -2015,7 +2043,7 @@ public class CreateIdentityProviderRequest extends Request {
      */
     public static class UdSyncScopeConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
-        private java.util.List < String > sourceScopes;
+        private java.util.List<String> sourceScopes;
 
         @com.aliyun.core.annotation.NameInMap("TargetScope")
         private String targetScope;
@@ -2036,7 +2064,7 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return sourceScopes
          */
-        public java.util.List < String > getSourceScopes() {
+        public java.util.List<String> getSourceScopes() {
             return this.sourceScopes;
         }
 
@@ -2048,13 +2076,13 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceScopes; 
+            private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
             /**
              * <p>同步来源节点</p>
              */
-            public Builder sourceScopes(java.util.List < String > sourceScopes) {
+            public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
                 return this;
             }
@@ -2093,7 +2121,7 @@ public class CreateIdentityProviderRequest extends Request {
         private String periodicSyncStatus;
 
         @com.aliyun.core.annotation.NameInMap("UdSyncScopeConfigs")
-        private java.util.List < UdSyncScopeConfigs> udSyncScopeConfigs;
+        private java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs;
 
         private UdPushConfig(Builder builder) {
             this.incrementalCallbackStatus = builder.incrementalCallbackStatus;
@@ -2126,14 +2154,14 @@ public class CreateIdentityProviderRequest extends Request {
         /**
          * @return udSyncScopeConfigs
          */
-        public java.util.List < UdSyncScopeConfigs> getUdSyncScopeConfigs() {
+        public java.util.List<UdSyncScopeConfigs> getUdSyncScopeConfigs() {
             return this.udSyncScopeConfigs;
         }
 
         public static final class Builder {
             private String incrementalCallbackStatus; 
             private String periodicSyncStatus; 
-            private java.util.List < UdSyncScopeConfigs> udSyncScopeConfigs; 
+            private java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs; 
 
             /**
              * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
@@ -2157,7 +2185,7 @@ public class CreateIdentityProviderRequest extends Request {
             /**
              * <p>同步出配置信息</p>
              */
-            public Builder udSyncScopeConfigs(java.util.List < UdSyncScopeConfigs> udSyncScopeConfigs) {
+            public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;
                 return this;
             }

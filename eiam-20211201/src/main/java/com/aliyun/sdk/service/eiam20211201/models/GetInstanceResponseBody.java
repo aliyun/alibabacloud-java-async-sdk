@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -271,7 +276,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private DomainConfig domainConfig;
 
         @com.aliyun.core.annotation.NameInMap("EgressAddresses")
-        private java.util.List < String > egressAddresses;
+        private java.util.List<String> egressAddresses;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -328,7 +333,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return egressAddresses
          */
-        public java.util.List < String > getEgressAddresses() {
+        public java.util.List<String> getEgressAddresses() {
             return this.egressAddresses;
         }
 
@@ -351,7 +356,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private DefaultEndpoint defaultEndpoint; 
             private String description; 
             private DomainConfig domainConfig; 
-            private java.util.List < String > egressAddresses; 
+            private java.util.List<String> egressAddresses; 
             private String instanceId; 
             private String status; 
 
@@ -396,7 +401,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * <p>The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.</p>
              */
-            public Builder egressAddresses(java.util.List < String > egressAddresses) {
+            public Builder egressAddresses(java.util.List<String> egressAddresses) {
                 this.egressAddresses = egressAddresses;
                 return this;
             }

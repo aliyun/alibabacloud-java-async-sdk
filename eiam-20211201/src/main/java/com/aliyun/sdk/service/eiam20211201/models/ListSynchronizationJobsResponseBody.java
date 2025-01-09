@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SynchronizationJobs")
-    private java.util.List < SynchronizationJobs> synchronizationJobs;
+    private java.util.List<SynchronizationJobs> synchronizationJobs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -56,7 +61,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
     /**
      * @return synchronizationJobs
      */
-    public java.util.List < SynchronizationJobs> getSynchronizationJobs() {
+    public java.util.List<SynchronizationJobs> getSynchronizationJobs() {
         return this.synchronizationJobs;
     }
 
@@ -70,7 +75,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SynchronizationJobs> synchronizationJobs; 
+        private java.util.List<SynchronizationJobs> synchronizationJobs; 
         private Long totalCount; 
 
         /**
@@ -95,7 +100,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         /**
          * SynchronizationJobs.
          */
-        public Builder synchronizationJobs(java.util.List < SynchronizationJobs> synchronizationJobs) {
+        public Builder synchronizationJobs(java.util.List<SynchronizationJobs> synchronizationJobs) {
             this.synchronizationJobs = synchronizationJobs;
             return this;
         }
@@ -3060,6 +3065,125 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
      *
      * <p>ListSynchronizationJobsResponseBody</p>
      */
+    public static class Exported extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Failed")
+        private Long failed;
+
+        @com.aliyun.core.annotation.NameInMap("Skipped")
+        private Long skipped;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Long success;
+
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Long total;
+
+        private Exported(Builder builder) {
+            this.failed = builder.failed;
+            this.skipped = builder.skipped;
+            this.success = builder.success;
+            this.total = builder.total;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Exported create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failed
+         */
+        public Long getFailed() {
+            return this.failed;
+        }
+
+        /**
+         * @return skipped
+         */
+        public Long getSkipped() {
+            return this.skipped;
+        }
+
+        /**
+         * @return success
+         */
+        public Long getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return total
+         */
+        public Long getTotal() {
+            return this.total;
+        }
+
+        public static final class Builder {
+            private Long failed; 
+            private Long skipped; 
+            private Long success; 
+            private Long total; 
+
+            /**
+             * <p>失败数目</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder failed(Long failed) {
+                this.failed = failed;
+                return this;
+            }
+
+            /**
+             * <p>跳过数目</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder skipped(Long skipped) {
+                this.skipped = skipped;
+                return this;
+            }
+
+            /**
+             * <p>成功数目</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder success(Long success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * <p>总共数目</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
+             */
+            public Builder total(Long total) {
+                this.total = total;
+                return this;
+            }
+
+            public Exported build() {
+                return new Exported(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSynchronizationJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSynchronizationJobsResponseBody</p>
+     */
     public static class UserStatisticsPushed extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Failed")
         private Long failed;
@@ -3427,6 +3551,9 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Deleted")
         private UserStatisticsDeleted deleted;
 
+        @com.aliyun.core.annotation.NameInMap("Exported")
+        private Exported exported;
+
         @com.aliyun.core.annotation.NameInMap("Pushed")
         private UserStatisticsPushed pushed;
 
@@ -3440,6 +3567,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             this.binded = builder.binded;
             this.created = builder.created;
             this.deleted = builder.deleted;
+            this.exported = builder.exported;
             this.pushed = builder.pushed;
             this.same = builder.same;
             this.updated = builder.updated;
@@ -3475,6 +3603,13 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return exported
+         */
+        public Exported getExported() {
+            return this.exported;
+        }
+
+        /**
          * @return pushed
          */
         public UserStatisticsPushed getPushed() {
@@ -3499,6 +3634,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private UserStatisticsBinded binded; 
             private UserStatisticsCreated created; 
             private UserStatisticsDeleted deleted; 
+            private Exported exported; 
             private UserStatisticsPushed pushed; 
             private UserStatisticsSame same; 
             private UserStatisticsUpdated updated; 
@@ -3524,6 +3660,14 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
              */
             public Builder deleted(UserStatisticsDeleted deleted) {
                 this.deleted = deleted;
+                return this;
+            }
+
+            /**
+             * Exported.
+             */
+            public Builder exported(Exported exported) {
+                this.exported = exported;
                 return this;
             }
 
@@ -3715,6 +3859,10 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
      * <p>ListSynchronizationJobsResponseBody</p>
      */
     public static class SynchronizationJobs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
@@ -3743,6 +3891,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         private String triggerType;
 
         private SynchronizationJobs(Builder builder) {
+            this.description = builder.description;
             this.direction = builder.direction;
             this.endTime = builder.endTime;
             this.result = builder.result;
@@ -3760,6 +3909,13 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
 
         public static SynchronizationJobs create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -3826,6 +3982,7 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String direction; 
             private Long endTime; 
             private Result result; 
@@ -3835,6 +3992,14 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private String targetId; 
             private String targetType; 
             private String triggerType; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * <p>同步任务方向</p>

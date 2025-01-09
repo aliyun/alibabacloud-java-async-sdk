@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomFields")
-    private java.util.List < CustomFields> customFields;
+    private java.util.List<CustomFields> customFields;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayName")
@@ -103,7 +108,7 @@ public class UpdateUserRequest extends Request {
     /**
      * @return customFields
      */
-    public java.util.List < CustomFields> getCustomFields() {
+    public java.util.List<CustomFields> getCustomFields() {
         return this.customFields;
     }
 
@@ -172,7 +177,7 @@ public class UpdateUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateUserRequest, Builder> {
         private String regionId; 
-        private java.util.List < CustomFields> customFields; 
+        private java.util.List<CustomFields> customFields; 
         private String displayName; 
         private String email; 
         private Boolean emailVerified; 
@@ -214,7 +219,7 @@ public class UpdateUserRequest extends Request {
         /**
          * <p>The custom extended fields.</p>
          */
-        public Builder customFields(java.util.List < CustomFields> customFields) {
+        public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
             this.customFields = customFields;
             return this;

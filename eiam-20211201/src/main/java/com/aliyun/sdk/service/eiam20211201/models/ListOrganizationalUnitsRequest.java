@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListOrganizationalUnitsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
-    private java.util.List < String > organizationalUnitIds;
+    private java.util.List<String> organizationalUnitIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
@@ -90,7 +95,7 @@ public class ListOrganizationalUnitsRequest extends Request {
     /**
      * @return organizationalUnitIds
      */
-    public java.util.List < String > getOrganizationalUnitIds() {
+    public java.util.List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds;
     }
 
@@ -132,7 +137,7 @@ public class ListOrganizationalUnitsRequest extends Request {
     public static final class Builder extends Request.Builder<ListOrganizationalUnitsRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private java.util.List < String > organizationalUnitIds; 
+        private java.util.List<String> organizationalUnitIds; 
         private String organizationalUnitName; 
         private String organizationalUnitNameStartsWith; 
         private Long pageNumber; 
@@ -183,7 +188,7 @@ public class ListOrganizationalUnitsRequest extends Request {
          * <strong>example:</strong>
          * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
          */
-        public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+        public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
             this.organizationalUnitIds = organizationalUnitIds;
             return this;

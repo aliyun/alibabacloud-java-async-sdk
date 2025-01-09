@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -57,14 +62,14 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The information of instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -97,7 +102,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String applicationTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationVisibility")
-        private java.util.List < String > applicationVisibility;
+        private java.util.List<String> applicationVisibility;
 
         @com.aliyun.core.annotation.NameInMap("AuthorizationType")
         private String authorizationType;
@@ -202,7 +207,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return applicationVisibility
          */
-        public java.util.List < String > getApplicationVisibility() {
+        public java.util.List<String> getApplicationVisibility() {
             return this.applicationVisibility;
         }
 
@@ -296,7 +301,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String applicationName; 
             private String applicationSourceType; 
             private String applicationTemplateId; 
-            private java.util.List < String > applicationVisibility; 
+            private java.util.List<String> applicationVisibility; 
             private String authorizationType; 
             private String clientId; 
             private Long createTime; 
@@ -376,7 +381,7 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * ApplicationVisibility.
              */
-            public Builder applicationVisibility(java.util.List < String > applicationVisibility) {
+            public Builder applicationVisibility(java.util.List<String> applicationVisibility) {
                 this.applicationVisibility = applicationVisibility;
                 return this;
             }

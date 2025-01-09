@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordInitializationNotificationChannels")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
-    private java.util.List < String > passwordInitializationNotificationChannels;
+    private java.util.List<String> passwordInitializationNotificationChannels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordInitializationStatus")
@@ -88,7 +93,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
     /**
      * @return passwordInitializationNotificationChannels
      */
-    public java.util.List < String > getPasswordInitializationNotificationChannels() {
+    public java.util.List<String> getPasswordInitializationNotificationChannels() {
         return this.passwordInitializationNotificationChannels;
     }
 
@@ -110,7 +115,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String passwordForcedUpdateStatus; 
-        private java.util.List < String > passwordInitializationNotificationChannels; 
+        private java.util.List<String> passwordInitializationNotificationChannels; 
         private String passwordInitializationStatus; 
         private String passwordInitializationType; 
 
@@ -172,7 +177,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
          * <strong>example:</strong>
          * <p>email</p>
          */
-        public Builder passwordInitializationNotificationChannels(java.util.List < String > passwordInitializationNotificationChannels) {
+        public Builder passwordInitializationNotificationChannels(java.util.List<String> passwordInitializationNotificationChannels) {
             this.putQueryParameter("PasswordInitializationNotificationChannels", passwordInitializationNotificationChannels);
             this.passwordInitializationNotificationChannels = passwordInitializationNotificationChannels;
             return this;

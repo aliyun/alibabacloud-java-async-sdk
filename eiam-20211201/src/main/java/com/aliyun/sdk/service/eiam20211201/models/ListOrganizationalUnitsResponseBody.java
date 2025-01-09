@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOrganizationalUnitsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OrganizationalUnits")
-    private java.util.List < OrganizationalUnits> organizationalUnits;
+    private java.util.List<OrganizationalUnits> organizationalUnits;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     /**
      * @return organizationalUnits
      */
-    public java.util.List < OrganizationalUnits> getOrganizationalUnits() {
+    public java.util.List<OrganizationalUnits> getOrganizationalUnits() {
         return this.organizationalUnits;
     }
 
@@ -57,14 +62,14 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OrganizationalUnits> organizationalUnits; 
+        private java.util.List<OrganizationalUnits> organizationalUnits; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The list of data objects of organizational units.</p>
          */
-        public Builder organizationalUnits(java.util.List < OrganizationalUnits> organizationalUnits) {
+        public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }

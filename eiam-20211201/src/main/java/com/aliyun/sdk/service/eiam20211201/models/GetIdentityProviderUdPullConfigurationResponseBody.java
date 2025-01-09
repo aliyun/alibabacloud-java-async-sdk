@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -340,7 +345,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
      */
     public static class UdSyncScopeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceScopes")
-        private java.util.List < String > sourceScopes;
+        private java.util.List<String> sourceScopes;
 
         @com.aliyun.core.annotation.NameInMap("TargetScope")
         private String targetScope;
@@ -361,7 +366,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         /**
          * @return sourceScopes
          */
-        public java.util.List < String > getSourceScopes() {
+        public java.util.List<String> getSourceScopes() {
             return this.sourceScopes;
         }
 
@@ -373,13 +378,13 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceScopes; 
+            private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
             /**
              * <p>同步来源节点</p>
              */
-            public Builder sourceScopes(java.util.List < String > sourceScopes) {
+            public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
                 return this;
             }

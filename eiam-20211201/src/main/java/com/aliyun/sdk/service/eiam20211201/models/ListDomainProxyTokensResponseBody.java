@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDomainProxyTokensResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainProxyTokens")
-    private java.util.List < DomainProxyTokens> domainProxyTokens;
+    private java.util.List<DomainProxyTokens> domainProxyTokens;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     /**
      * @return domainProxyTokens
      */
-    public java.util.List < DomainProxyTokens> getDomainProxyTokens() {
+    public java.util.List<DomainProxyTokens> getDomainProxyTokens() {
         return this.domainProxyTokens;
     }
 
@@ -46,13 +51,13 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainProxyTokens> domainProxyTokens; 
+        private java.util.List<DomainProxyTokens> domainProxyTokens; 
         private String requestId; 
 
         /**
          * DomainProxyTokens.
          */
-        public Builder domainProxyTokens(java.util.List < DomainProxyTokens> domainProxyTokens) {
+        public Builder domainProxyTokens(java.util.List<DomainProxyTokens> domainProxyTokens) {
             this.domainProxyTokens = domainProxyTokens;
             return this;
         }

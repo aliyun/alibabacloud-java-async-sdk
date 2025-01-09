@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListEiamInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceRegionId")
@@ -55,7 +60,7 @@ public class ListEiamInstancesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -68,7 +73,7 @@ public class ListEiamInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListEiamInstancesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String instanceRegionId; 
 
         private Builder() {
@@ -94,7 +99,7 @@ public class ListEiamInstancesRequest extends Request {
         /**
          * <p>实例ID列表，支持0到100个</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
-    private java.util.List < PasswordComplexityRules> passwordComplexityRules;
+    private java.util.List<PasswordComplexityRules> passwordComplexityRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordMinLength")
@@ -68,7 +73,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     /**
      * @return passwordComplexityRules
      */
-    public java.util.List < PasswordComplexityRules> getPasswordComplexityRules() {
+    public java.util.List<PasswordComplexityRules> getPasswordComplexityRules() {
         return this.passwordComplexityRules;
     }
 
@@ -82,7 +87,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     public static final class Builder extends Request.Builder<SetPasswordComplexityConfigurationRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private java.util.List < PasswordComplexityRules> passwordComplexityRules; 
+        private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
         private Integer passwordMinLength; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         /**
          * <p>The password complexity rules.</p>
          */
-        public Builder passwordComplexityRules(java.util.List < PasswordComplexityRules> passwordComplexityRules) {
+        public Builder passwordComplexityRules(java.util.List<PasswordComplexityRules> passwordComplexityRules) {
             this.putQueryParameter("PasswordComplexityRules", passwordComplexityRules);
             this.passwordComplexityRules = passwordComplexityRules;
             return this;

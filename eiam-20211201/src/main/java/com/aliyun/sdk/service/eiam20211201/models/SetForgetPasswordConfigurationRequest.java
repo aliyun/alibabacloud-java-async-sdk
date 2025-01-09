@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthenticationChannels")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
-    private java.util.List < String > authenticationChannels;
+    private java.util.List<String> authenticationChannels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForgetPasswordStatus")
@@ -62,7 +67,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
     /**
      * @return authenticationChannels
      */
-    public java.util.List < String > getAuthenticationChannels() {
+    public java.util.List<String> getAuthenticationChannels() {
         return this.authenticationChannels;
     }
 
@@ -82,7 +87,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetForgetPasswordConfigurationRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > authenticationChannels; 
+        private java.util.List<String> authenticationChannels; 
         private String forgetPasswordStatus; 
         private String instanceId; 
 
@@ -113,7 +118,7 @@ public class SetForgetPasswordConfigurationRequest extends Request {
          * <strong>example:</strong>
          * <p>email</p>
          */
-        public Builder authenticationChannels(java.util.List < String > authenticationChannels) {
+        public Builder authenticationChannels(java.util.List<String> authenticationChannels) {
             this.putQueryParameter("AuthenticationChannels", authenticationChannels);
             this.authenticationChannels = authenticationChannels;
             return this;

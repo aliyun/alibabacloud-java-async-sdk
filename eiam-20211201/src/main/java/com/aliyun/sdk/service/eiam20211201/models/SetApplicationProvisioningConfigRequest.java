@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -250,7 +255,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         private Boolean encryptRequired;
 
         @com.aliyun.core.annotation.NameInMap("ListenEventScopes")
-        private java.util.List < String > listenEventScopes;
+        private java.util.List<String> listenEventScopes;
 
         private CallbackProvisioningConfig(Builder builder) {
             this.callbackUrl = builder.callbackUrl;
@@ -291,7 +296,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         /**
          * @return listenEventScopes
          */
-        public java.util.List < String > getListenEventScopes() {
+        public java.util.List<String> getListenEventScopes() {
             return this.listenEventScopes;
         }
 
@@ -299,7 +304,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private String callbackUrl; 
             private String encryptKey; 
             private Boolean encryptRequired; 
-            private java.util.List < String > listenEventScopes; 
+            private java.util.List<String> listenEventScopes; 
 
             /**
              * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
@@ -341,7 +346,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             /**
              * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
              */
-            public Builder listenEventScopes(java.util.List < String > listenEventScopes) {
+            public Builder listenEventScopes(java.util.List<String> listenEventScopes) {
                 this.listenEventScopes = listenEventScopes;
                 return this;
             }
@@ -614,10 +619,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         private AuthnConfiguration authnConfiguration;
 
         @com.aliyun.core.annotation.NameInMap("FullPushScopes")
-        private java.util.List < String > fullPushScopes;
+        private java.util.List<String> fullPushScopes;
 
         @com.aliyun.core.annotation.NameInMap("ProvisioningActions")
-        private java.util.List < String > provisioningActions;
+        private java.util.List<String> provisioningActions;
 
         @com.aliyun.core.annotation.NameInMap("ScimBaseUrl")
         private String scimBaseUrl;
@@ -647,14 +652,14 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         /**
          * @return fullPushScopes
          */
-        public java.util.List < String > getFullPushScopes() {
+        public java.util.List<String> getFullPushScopes() {
             return this.fullPushScopes;
         }
 
         /**
          * @return provisioningActions
          */
-        public java.util.List < String > getProvisioningActions() {
+        public java.util.List<String> getProvisioningActions() {
             return this.provisioningActions;
         }
 
@@ -667,8 +672,8 @@ public class SetApplicationProvisioningConfigRequest extends Request {
 
         public static final class Builder {
             private AuthnConfiguration authnConfiguration; 
-            private java.util.List < String > fullPushScopes; 
-            private java.util.List < String > provisioningActions; 
+            private java.util.List<String> fullPushScopes; 
+            private java.util.List<String> provisioningActions; 
             private String scimBaseUrl; 
 
             /**
@@ -685,7 +690,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
              * <li>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</li>
              * </ul>
              */
-            public Builder fullPushScopes(java.util.List < String > fullPushScopes) {
+            public Builder fullPushScopes(java.util.List<String> fullPushScopes) {
                 this.fullPushScopes = fullPushScopes;
                 return this;
             }
@@ -698,7 +703,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
              * <li>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</li>
              * </ul>
              */
-            public Builder provisioningActions(java.util.List < String > provisioningActions) {
+            public Builder provisioningActions(java.util.List<String> provisioningActions) {
                 this.provisioningActions = provisioningActions;
                 return this;
             }

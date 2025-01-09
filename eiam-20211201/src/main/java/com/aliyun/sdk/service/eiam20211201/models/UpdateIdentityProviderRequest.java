@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,6 +48,10 @@ public class UpdateIdentityProviderRequest extends Request {
     private LdapConfig ldapConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogoUrl")
+    private String logoUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
     private String networkAccessEndpointId;
 
@@ -63,6 +72,7 @@ public class UpdateIdentityProviderRequest extends Request {
         this.instanceId = builder.instanceId;
         this.larkConfig = builder.larkConfig;
         this.ldapConfig = builder.ldapConfig;
+        this.logoUrl = builder.logoUrl;
         this.networkAccessEndpointId = builder.networkAccessEndpointId;
         this.oidcConfig = builder.oidcConfig;
         this.weComConfig = builder.weComConfig;
@@ -131,6 +141,13 @@ public class UpdateIdentityProviderRequest extends Request {
     }
 
     /**
+     * @return logoUrl
+     */
+    public String getLogoUrl() {
+        return this.logoUrl;
+    }
+
+    /**
      * @return networkAccessEndpointId
      */
     public String getNetworkAccessEndpointId() {
@@ -159,6 +176,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private String instanceId; 
         private LarkConfig larkConfig; 
         private LdapConfig ldapConfig; 
+        private String logoUrl; 
         private String networkAccessEndpointId; 
         private OidcConfig oidcConfig; 
         private WeComConfig weComConfig; 
@@ -176,6 +194,7 @@ public class UpdateIdentityProviderRequest extends Request {
             this.instanceId = request.instanceId;
             this.larkConfig = request.larkConfig;
             this.ldapConfig = request.ldapConfig;
+            this.logoUrl = request.logoUrl;
             this.networkAccessEndpointId = request.networkAccessEndpointId;
             this.oidcConfig = request.oidcConfig;
             this.weComConfig = request.weComConfig;
@@ -252,6 +271,15 @@ public class UpdateIdentityProviderRequest extends Request {
         public Builder ldapConfig(LdapConfig ldapConfig) {
             this.putQueryParameter("LdapConfig", ldapConfig);
             this.ldapConfig = ldapConfig;
+            return this;
+        }
+
+        /**
+         * LogoUrl.
+         */
+        public Builder logoUrl(String logoUrl) {
+            this.putQueryParameter("LogoUrl", logoUrl);
+            this.logoUrl = logoUrl;
             return this;
         }
 
@@ -457,7 +485,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private String certificateFingerprintStatus;
 
         @com.aliyun.core.annotation.NameInMap("CertificateFingerprints")
-        private java.util.List < String > certificateFingerprints;
+        private java.util.List<String> certificateFingerprints;
 
         @com.aliyun.core.annotation.NameInMap("LdapProtocol")
         private String ldapProtocol;
@@ -514,7 +542,7 @@ public class UpdateIdentityProviderRequest extends Request {
         /**
          * @return certificateFingerprints
          */
-        public java.util.List < String > getCertificateFingerprints() {
+        public java.util.List<String> getCertificateFingerprints() {
             return this.certificateFingerprints;
         }
 
@@ -550,7 +578,7 @@ public class UpdateIdentityProviderRequest extends Request {
             private String administratorPassword; 
             private String administratorUsername; 
             private String certificateFingerprintStatus; 
-            private java.util.List < String > certificateFingerprints; 
+            private java.util.List<String> certificateFingerprints; 
             private String ldapProtocol; 
             private String ldapServerHost; 
             private Integer ldapServerPort; 
@@ -592,7 +620,7 @@ public class UpdateIdentityProviderRequest extends Request {
             /**
              * <p>证书指纹列表</p>
              */
-            public Builder certificateFingerprints(java.util.List < String > certificateFingerprints) {
+            public Builder certificateFingerprints(java.util.List<String> certificateFingerprints) {
                 this.certificateFingerprints = certificateFingerprints;
                 return this;
             }
@@ -877,7 +905,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private EndpointConfig endpointConfig;
 
         @com.aliyun.core.annotation.NameInMap("GrantScopes")
-        private java.util.List < String > grantScopes;
+        private java.util.List<String> grantScopes;
 
         @com.aliyun.core.annotation.NameInMap("GrantType")
         private String grantType;
@@ -922,7 +950,7 @@ public class UpdateIdentityProviderRequest extends Request {
         /**
          * @return grantScopes
          */
-        public java.util.List < String > getGrantScopes() {
+        public java.util.List<String> getGrantScopes() {
             return this.grantScopes;
         }
 
@@ -950,7 +978,7 @@ public class UpdateIdentityProviderRequest extends Request {
         public static final class Builder {
             private AuthnParam authnParam; 
             private EndpointConfig endpointConfig; 
-            private java.util.List < String > grantScopes; 
+            private java.util.List<String> grantScopes; 
             private String grantType; 
             private String pkceChallengeMethod; 
             private Boolean pkceRequired; 
@@ -977,7 +1005,7 @@ public class UpdateIdentityProviderRequest extends Request {
              * <strong>example:</strong>
              * <p>openid</p>
              */
-            public Builder grantScopes(java.util.List < String > grantScopes) {
+            public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
                 return this;
             }

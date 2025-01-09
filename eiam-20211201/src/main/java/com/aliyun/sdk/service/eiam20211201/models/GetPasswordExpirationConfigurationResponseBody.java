@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,13 +87,13 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
      */
     public static class PasswordExpirationConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectiveAuthenticationSourceIds")
-        private java.util.List < String > effectiveAuthenticationSourceIds;
+        private java.util.List<String> effectiveAuthenticationSourceIds;
 
         @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
         private String passwordExpirationAction;
 
         @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationChannels")
-        private java.util.List < String > passwordExpirationNotificationChannels;
+        private java.util.List<String> passwordExpirationNotificationChannels;
 
         @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationDuration")
         private Integer passwordExpirationNotificationDuration;
@@ -127,7 +132,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         /**
          * @return effectiveAuthenticationSourceIds
          */
-        public java.util.List < String > getEffectiveAuthenticationSourceIds() {
+        public java.util.List<String> getEffectiveAuthenticationSourceIds() {
             return this.effectiveAuthenticationSourceIds;
         }
 
@@ -141,7 +146,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         /**
          * @return passwordExpirationNotificationChannels
          */
-        public java.util.List < String > getPasswordExpirationNotificationChannels() {
+        public java.util.List<String> getPasswordExpirationNotificationChannels() {
             return this.passwordExpirationNotificationChannels;
         }
 
@@ -181,9 +186,9 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > effectiveAuthenticationSourceIds; 
+            private java.util.List<String> effectiveAuthenticationSourceIds; 
             private String passwordExpirationAction; 
-            private java.util.List < String > passwordExpirationNotificationChannels; 
+            private java.util.List<String> passwordExpirationNotificationChannels; 
             private Integer passwordExpirationNotificationDuration; 
             private String passwordExpirationNotificationStatus; 
             private String passwordExpirationStatus; 
@@ -198,7 +203,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
              * <p>ia_webauthn: WebAuthn authenticator login method</p>
              * <p>idp_xxx: Specific identity provider authentication method</p>
              */
-            public Builder effectiveAuthenticationSourceIds(java.util.List < String > effectiveAuthenticationSourceIds) {
+            public Builder effectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
                 this.effectiveAuthenticationSourceIds = effectiveAuthenticationSourceIds;
                 return this;
             }
@@ -225,7 +230,7 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>login</p>
              */
-            public Builder passwordExpirationNotificationChannels(java.util.List < String > passwordExpirationNotificationChannels) {
+            public Builder passwordExpirationNotificationChannels(java.util.List<String> passwordExpirationNotificationChannels) {
                 this.passwordExpirationNotificationChannels = passwordExpirationNotificationChannels;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    private java.util.List<String> applicationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -71,7 +76,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -105,7 +110,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListApplicationsForOrganizationalUnitRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String instanceId; 
         private String organizationalUnitId; 
         private Long pageNumber; 
@@ -140,7 +145,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;

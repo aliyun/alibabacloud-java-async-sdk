@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,13 +87,13 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
      */
     public static class ApplicationProvisioningScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupIds")
-        private java.util.List < String > groupIds;
+        private java.util.List<String> groupIds;
 
         @com.aliyun.core.annotation.NameInMap("MaxQuota")
         private Integer maxQuota;
 
         @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
-        private java.util.List < String > organizationalUnitIds;
+        private java.util.List<String> organizationalUnitIds;
 
         @com.aliyun.core.annotation.NameInMap("UsedQuota")
         private Integer usedQuota;
@@ -111,7 +116,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         /**
          * @return groupIds
          */
-        public java.util.List < String > getGroupIds() {
+        public java.util.List<String> getGroupIds() {
             return this.groupIds;
         }
 
@@ -125,7 +130,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         /**
          * @return organizationalUnitIds
          */
-        public java.util.List < String > getOrganizationalUnitIds() {
+        public java.util.List<String> getOrganizationalUnitIds() {
             return this.organizationalUnitIds;
         }
 
@@ -137,15 +142,15 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > groupIds; 
+            private java.util.List<String> groupIds; 
             private Integer maxQuota; 
-            private java.util.List < String > organizationalUnitIds; 
+            private java.util.List<String> organizationalUnitIds; 
             private Integer usedQuota; 
 
             /**
              * <p>Synchronize the list of authorized groups</p>
              */
-            public Builder groupIds(java.util.List < String > groupIds) {
+            public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
                 return this;
             }
@@ -164,7 +169,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             /**
              * <p>The list of organizational units that are authorized for account synchronization.</p>
              */
-            public Builder organizationalUnitIds(java.util.List < String > organizationalUnitIds) {
+            public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
                 return this;
             }

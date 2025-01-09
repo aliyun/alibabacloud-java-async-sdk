@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
      */
     public static class ApplicationGrantScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GrantScopes")
-        private java.util.List < String > grantScopes;
+        private java.util.List<String> grantScopes;
 
         private ApplicationGrantScope(Builder builder) {
             this.grantScopes = builder.grantScopes;
@@ -99,17 +104,17 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
         /**
          * @return grantScopes
          */
-        public java.util.List < String > getGrantScopes() {
+        public java.util.List<String> getGrantScopes() {
             return this.grantScopes;
         }
 
         public static final class Builder {
-            private java.util.List < String > grantScopes; 
+            private java.util.List<String> grantScopes; 
 
             /**
              * <p>The permissions of the Developer API feature.</p>
              */
-            public Builder grantScopes(java.util.List < String > grantScopes) {
+            public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class RevokeApplicationFromGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > groupIds;
+    private java.util.List<String> groupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -69,7 +74,7 @@ public class RevokeApplicationFromGroupsRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < String > getGroupIds() {
+    public java.util.List<String> getGroupIds() {
         return this.groupIds;
     }
 
@@ -83,7 +88,7 @@ public class RevokeApplicationFromGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<RevokeApplicationFromGroupsRequest, Builder> {
         private String regionId; 
         private String applicationId; 
-        private java.util.List < String > groupIds; 
+        private java.util.List<String> groupIds; 
         private String instanceId; 
 
         private Builder() {
@@ -127,7 +132,7 @@ public class RevokeApplicationFromGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
          */
-        public Builder groupIds(java.util.List < String > groupIds) {
+        public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
