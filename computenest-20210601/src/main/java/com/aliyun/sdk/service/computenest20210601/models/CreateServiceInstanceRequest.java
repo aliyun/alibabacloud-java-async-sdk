@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class CreateServiceInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -80,7 +85,7 @@ public class CreateServiceInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
@@ -185,7 +190,7 @@ public class CreateServiceInstanceRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -241,7 +246,7 @@ public class CreateServiceInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -268,7 +273,7 @@ public class CreateServiceInstanceRequest extends Request {
         private Boolean enableUserPrometheus; 
         private String name; 
         private OperationMetadata operationMetadata; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private Boolean resourceAutoPay; 
         private String resourceGroupId; 
@@ -276,7 +281,7 @@ public class CreateServiceInstanceRequest extends Request {
         private String serviceVersion; 
         private String specificationCode; 
         private String specificationName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String templateName; 
         private String trialType; 
 
@@ -332,7 +337,7 @@ public class CreateServiceInstanceRequest extends Request {
          * <p>The alert contact group.</p>
          * 
          * <strong>example:</strong>
-         * <p>云账号报警联系人</p>
+         * <p>Default Group</p>
          */
         public Builder contactGroup(String contactGroup) {
             this.putQueryParameter("ContactGroup", contactGroup);
@@ -341,10 +346,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. </li>
-         * <li><strong>false</strong> (default): sends the request.</li>
+         * <li><strong>true</strong>: performs a dry run for the request, but does not create a service instance.</li>
+         * <li><strong>false</strong>: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -357,7 +362,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the service instance supports the operation feature.</p>
+         * <p>Specifies whether the service instance supports the hosted O&amp;M feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -369,7 +378,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable Prometheus monitoring.</p>
+         * <p>Specifies whether to enable the Prometheus monitoring feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -410,7 +423,7 @@ public class CreateServiceInstanceRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -435,11 +448,14 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether the resource pays automatically.Valid values:</p>
+         * <p>Specifies whether to automatically deduct the resource fees from the account balance. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceAutoPay(Boolean resourceAutoPay) {
             this.putQueryParameter("ResourceAutoPay", resourceAutoPay);
@@ -500,7 +516,7 @@ public class CreateServiceInstanceRequest extends Request {
          * <p>The package name.</p>
          * 
          * <strong>example:</strong>
-         * <p>套餐一</p>
+         * <p>Default Ppackage</p>
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -511,7 +527,7 @@ public class CreateServiceInstanceRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -521,7 +537,7 @@ public class CreateServiceInstanceRequest extends Request {
          * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>模板1</p>
+         * <p>ECS Template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -530,13 +546,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * <p>The trial type of serviceInstance. 
-         * Valid values:</p>
+         * <p>The trial type of the service instance. Valid values:</p>
          * <ul>
-         * <li>Created: </li>
-         * <li>Deploying</li>
-         * <li>DeployedFailed</li>
-         * <li>Deployed</li>
+         * <li><strong>Trial</strong>: Trials are supported.</li>
+         * <li><strong>NotTrial</strong>: Trials are not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -651,7 +664,7 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+             * <p>Specifies whether to enable auto-renewal for the service instance. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong></li>
@@ -666,7 +679,10 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * CouponId.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>302070970220</p>
              */
             public Builder couponId(String couponId) {
                 this.couponId = couponId;
@@ -687,9 +703,9 @@ public class CreateServiceInstanceRequest extends Request {
             /**
              * <p>The unit of the subscription duration. Valid values:</p>
              * <ul>
-             * <li>Year</li>
-             * <li>Month</li>
-             * <li>Day</li>
+             * <li><strong>Year</strong></li>
+             * <li><strong>Month</strong></li>
+             * <li><strong>Day</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>

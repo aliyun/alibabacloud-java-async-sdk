@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DeleteServiceInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > serviceInstanceId;
+    private java.util.List<String> serviceInstanceId;
 
     private DeleteServiceInstancesRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class DeleteServiceInstancesRequest extends Request {
     /**
      * @return serviceInstanceId
      */
-    public java.util.List < String > getServiceInstanceId() {
+    public java.util.List<String> getServiceInstanceId() {
         return this.serviceInstanceId;
     }
 
     public static final class Builder extends Request.Builder<DeleteServiceInstancesRequest, Builder> {
         private String clientToken; 
         private String regionId; 
-        private java.util.List < String > serviceInstanceId; 
+        private java.util.List<String> serviceInstanceId; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class DeleteServiceInstancesRequest extends Request {
          * <p>The IDs of the service instances.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder serviceInstanceId(java.util.List < String > serviceInstanceId) {
+        public Builder serviceInstanceId(java.util.List<String> serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
             this.serviceInstanceId = serviceInstanceId;
             return this;

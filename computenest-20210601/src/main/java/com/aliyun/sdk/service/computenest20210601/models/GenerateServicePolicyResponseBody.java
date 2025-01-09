@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateServicePolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MissingPolicy")
-    private java.util.List < MissingPolicy> missingPolicy;
+    private java.util.List<MissingPolicy> missingPolicy;
 
     @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
@@ -38,7 +43,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
     /**
      * @return missingPolicy
      */
-    public java.util.List < MissingPolicy> getMissingPolicy() {
+    public java.util.List<MissingPolicy> getMissingPolicy() {
         return this.missingPolicy;
     }
 
@@ -57,14 +62,14 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MissingPolicy> missingPolicy; 
+        private java.util.List<MissingPolicy> missingPolicy; 
         private String policy; 
         private String requestId; 
 
         /**
          * <p>The policies that are missing.</p>
          */
-        public Builder missingPolicy(java.util.List < MissingPolicy> missingPolicy) {
+        public Builder missingPolicy(java.util.List<MissingPolicy> missingPolicy) {
             this.missingPolicy = missingPolicy;
             return this;
         }
@@ -105,7 +110,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
      */
     public static class MissingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
-        private java.util.List < String > action;
+        private java.util.List<String> action;
 
         @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
@@ -130,7 +135,7 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         /**
          * @return action
          */
-        public java.util.List < String > getAction() {
+        public java.util.List<String> getAction() {
             return this.action;
         }
 
@@ -149,14 +154,14 @@ public class GenerateServicePolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > action; 
+            private java.util.List<String> action; 
             private String resource; 
             private String serviceName; 
 
             /**
              * <p>Operations on specific resources.</p>
              */
-            public Builder action(java.util.List < String > action) {
+            public Builder action(java.util.List<String> action) {
                 this.action = action;
                 return this;
             }

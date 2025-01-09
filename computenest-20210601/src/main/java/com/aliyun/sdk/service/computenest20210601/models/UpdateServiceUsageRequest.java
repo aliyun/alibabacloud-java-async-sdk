@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateServiceUsageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserInformation")
-    private java.util.Map < String, String > userInformation;
+    private java.util.Map<String, String> userInformation;
 
     private UpdateServiceUsageRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class UpdateServiceUsageRequest extends Request {
     /**
      * @return userInformation
      */
-    public java.util.Map < String, String > getUserInformation() {
+    public java.util.Map<String, String> getUserInformation() {
         return this.userInformation;
     }
 
     public static final class Builder extends Request.Builder<UpdateServiceUsageRequest, Builder> {
         private String clientToken; 
         private String serviceId; 
-        private java.util.Map < String, String > userInformation; 
+        private java.util.Map<String, String> userInformation; 
 
         private Builder() {
             super();
@@ -83,7 +88,10 @@ public class UpdateServiceUsageRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,6 +100,7 @@ public class UpdateServiceUsageRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,9 +113,9 @@ public class UpdateServiceUsageRequest extends Request {
         }
 
         /**
-         * UserInformation.
+         * <p>The information about the applicant.</p>
          */
-        public Builder userInformation(java.util.Map < String, String > userInformation) {
+        public Builder userInformation(java.util.Map<String, String> userInformation) {
             String userInformationShrink = shrink(userInformation, "UserInformation", "json");
             this.putQueryParameter("UserInformation", userInformationShrink);
             this.userInformation = userInformation;

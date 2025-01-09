@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -130,11 +135,16 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the synchronization task was created. Valid values:</p>
+         * <p>The status of the service instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Created.</li>
-         * <li><strong>0</strong>: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the <strong>RepeatedDbs</strong> parameter.</li>
-         * <li><strong>-1</strong>: Creation failed. The cause why the creation failed is returned for the <strong>ErrorMsg</strong> parameter.</li>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deploying</strong></li>
+         * <li><strong>DeployedFailed</strong></li>
+         * <li><strong>Deployed</strong></li>
+         * <li><strong>Upgrading</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * <li><strong>DeletedFailed</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

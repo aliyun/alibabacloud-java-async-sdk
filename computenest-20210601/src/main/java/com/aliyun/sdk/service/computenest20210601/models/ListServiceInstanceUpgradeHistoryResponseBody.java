@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("UpgradeHistory")
-    private java.util.List < UpgradeHistory> upgradeHistory;
+    private java.util.List<UpgradeHistory> upgradeHistory;
 
     private ListServiceInstanceUpgradeHistoryResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
     /**
      * @return upgradeHistory
      */
-    public java.util.List < UpgradeHistory> getUpgradeHistory() {
+    public java.util.List<UpgradeHistory> getUpgradeHistory() {
         return this.upgradeHistory;
     }
 
@@ -83,10 +88,13 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < UpgradeHistory> upgradeHistory; 
+        private java.util.List<UpgradeHistory> upgradeHistory; 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +102,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAfu+XtuBE55iRLHEYYuojI41</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +113,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE3EDF4E-B3B1-19B6-BD01-30D4D00F6E5D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +124,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,9 +135,9 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeHistory.
+         * <p>The upgrade history.</p>
          */
-        public Builder upgradeHistory(java.util.List < UpgradeHistory> upgradeHistory) {
+        public Builder upgradeHistory(java.util.List<UpgradeHistory> upgradeHistory) {
             this.upgradeHistory = upgradeHistory;
             return this;
         }
@@ -248,7 +265,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             private String upgradeHistoryId; 
 
             /**
-             * EndTime.
+             * <p>The time when the update ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-26T09:09:51Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -256,7 +276,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * FromVersion.
+             * <p>The version before the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fromVersion(String fromVersion) {
                 this.fromVersion = fromVersion;
@@ -264,7 +287,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The upgrade result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;PreUpgradeExecutionId&quot;:&quot;exec-123&quot;}</p>
              */
             public Builder results(String results) {
                 this.results = results;
@@ -272,7 +298,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the update started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-26T08:09:51Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -280,7 +309,15 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the update. Valid values:</p>
+             * <ul>
+             * <li>upgrading: The service instance is being upgraded.</li>
+             * <li>UpgradeSuccessful: The service instance is upgraded.</li>
+             * <li>UpgradeFailed: The service instance failed to be upgraded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UpgradeFailed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -288,7 +325,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ToVersion.
+             * <p>The version after the upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder toVersion(String toVersion) {
                 this.toVersion = toVersion;
@@ -296,7 +336,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The update type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Upgrade</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -304,7 +347,10 @@ public class ListServiceInstanceUpgradeHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeHistoryId.
+             * <p>The ID of the upgrade record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-123</p>
              */
             public Builder upgradeHistoryId(String upgradeHistoryId) {
                 this.upgradeHistoryId = upgradeHistoryId;

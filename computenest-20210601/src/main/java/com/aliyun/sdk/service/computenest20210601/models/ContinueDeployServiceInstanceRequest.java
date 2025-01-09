@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Option")
-    private java.util.List < String > option;
+    private java.util.List<String> option;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
@@ -78,7 +83,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
     /**
      * @return option
      */
-    public java.util.List < String > getOption() {
+    public java.util.List<String> getOption() {
         return this.option;
     }
 
@@ -106,7 +111,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<ContinueDeployServiceInstanceRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > option; 
+        private java.util.List<String> option; 
         private String parameters; 
         private String regionId; 
         private String serviceInstanceId; 
@@ -156,7 +161,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         /**
          * <p>The options that the system adopts when the system continues to create the service instance.</p>
          */
-        public Builder option(java.util.List < String > option) {
+        public Builder option(java.util.List<String> option) {
             this.putQueryParameter("Option", option);
             this.option = option;
             return this;

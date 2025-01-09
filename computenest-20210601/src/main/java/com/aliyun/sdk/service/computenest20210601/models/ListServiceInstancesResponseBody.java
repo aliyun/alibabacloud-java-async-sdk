@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceInstances")
-    private java.util.List < ServiceInstances> serviceInstances;
+    private java.util.List<ServiceInstances> serviceInstances;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -67,7 +72,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     /**
      * @return serviceInstances
      */
-    public java.util.List < ServiceInstances> getServiceInstances() {
+    public java.util.List<ServiceInstances> getServiceInstances() {
         return this.serviceInstances;
     }
 
@@ -82,7 +87,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ServiceInstances> serviceInstances; 
+        private java.util.List<ServiceInstances> serviceInstances; 
         private Long totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         /**
          * <p>The information about the service instances.</p>
          */
-        public Builder serviceInstances(java.util.List < ServiceInstances> serviceInstances) {
+        public Builder serviceInstances(java.util.List<ServiceInstances> serviceInstances) {
             this.serviceInstances = serviceInstances;
             return this;
         }
@@ -360,7 +365,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private String serviceId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceInfos")
-        private java.util.List < ServiceInfos> serviceInfos;
+        private java.util.List<ServiceInfos> serviceInfos;
 
         @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
@@ -433,7 +438,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         /**
          * @return serviceInfos
          */
-        public java.util.List < ServiceInfos> getServiceInfos() {
+        public java.util.List<ServiceInfos> getServiceInfos() {
             return this.serviceInfos;
         }
 
@@ -484,7 +489,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String deployType; 
             private String publishTime; 
             private String serviceId; 
-            private java.util.List < ServiceInfos> serviceInfos; 
+            private java.util.List<ServiceInfos> serviceInfos; 
             private String serviceType; 
             private String status; 
             private String supplierName; 
@@ -543,7 +548,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             /**
              * <p>The information about the service.</p>
              */
-            public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
+            public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
                 return this;
             }
@@ -773,7 +778,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private String statusDetail;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
@@ -974,7 +979,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1015,7 +1020,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String source; 
             private String status; 
             private String statusDetail; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String templateName; 
             private String updateTime; 
 
@@ -1293,7 +1298,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             /**
              * <p>The custom tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

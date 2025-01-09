@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetServiceProvisionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -63,7 +68,7 @@ public class GetServiceProvisionsRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -103,7 +108,7 @@ public class GetServiceProvisionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetServiceProvisionsRequest, Builder> {
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String serviceId; 
         private String serviceVersion; 
@@ -130,7 +135,7 @@ public class GetServiceProvisionsRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;ZoneId&quot;:&quot;cn-hangzhou-g&quot;,&quot;EcsInstanceType&quot;:&quot;ecs.g5.large&quot;,&quot;InstancePassword&quot;:&quot;xxxxxxxx&quot;,&quot;PayType&quot;:&quot;PostPaid&quot;,&quot;PayPeriodUnit&quot;:&quot;Month&quot;,&quot;PayPeriod&quot;:1}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;

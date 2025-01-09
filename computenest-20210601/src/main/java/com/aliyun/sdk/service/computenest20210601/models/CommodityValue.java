@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CommodityValue extends TeaModel {
         private Result result; 
 
         /**
-         * Result.
+         * <p>Result模型。</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -120,7 +125,10 @@ public class CommodityValue extends TeaModel {
             private String originalAmount; 
 
             /**
-             * Currency.
+             * <p>货币代码。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -128,7 +136,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>优惠后。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9.99</p>
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -136,7 +147,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>抵扣金额。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.99</p>
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -144,7 +158,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>优惠前。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.98</p>
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -239,7 +256,16 @@ public class CommodityValue extends TeaModel {
             private String unit; 
 
             /**
-             * Type.
+             * <p>属性类型，可选值：</p>
+             * <ol>
+             * <li>1：商品属性 </li>
+             * <li>2：规格属性 </li>
+             * <li>3：模块属性 </li>
+             * <li>4：外部参数（备用）</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -247,7 +273,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20GB</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -255,7 +284,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Module attr code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_storage</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -263,7 +295,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -271,7 +306,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>Unit</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -323,7 +361,7 @@ public class CommodityValue extends TeaModel {
         private String priceType;
 
         @com.aliyun.core.annotation.NameInMap("ModuleAttrs")
-        private java.util.List < ModuleAttrs> moduleAttrs;
+        private java.util.List<ModuleAttrs> moduleAttrs;
 
         private ModuleInstance(Builder builder) {
             this.moduleId = builder.moduleId;
@@ -420,7 +458,7 @@ public class CommodityValue extends TeaModel {
         /**
          * @return moduleAttrs
          */
-        public java.util.List < ModuleAttrs> getModuleAttrs() {
+        public java.util.List<ModuleAttrs> getModuleAttrs() {
             return this.moduleAttrs;
         }
 
@@ -435,10 +473,13 @@ public class CommodityValue extends TeaModel {
             private Boolean isPricingModule; 
             private Boolean needOrderPay; 
             private String priceType; 
-            private java.util.List < ModuleAttrs> moduleAttrs; 
+            private java.util.List<ModuleAttrs> moduleAttrs; 
 
             /**
-             * ModuleId.
+             * <p>模块ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder moduleId(Long moduleId) {
                 this.moduleId = moduleId;
@@ -446,7 +487,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>模块名称。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rds</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -454,7 +498,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * <p>模块代码。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_dbtype</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -462,7 +509,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * TotalProductFee.
+             * <p>产品原价（元）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.00</p>
              */
             public Builder totalProductFee(Double totalProductFee) {
                 this.totalProductFee = totalProductFee;
@@ -470,7 +520,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * DiscountFee.
+             * <p>折扣费用（元）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.99</p>
              */
             public Builder discountFee(Double discountFee) {
                 this.discountFee = discountFee;
@@ -478,7 +531,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * PayFee.
+             * <p>实付金额（元）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.01</p>
              */
             public Builder payFee(Double payFee) {
                 this.payFee = payFee;
@@ -486,7 +542,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * PriceUnit.
+             * <p>价格单位。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>元/GB/小时</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -494,7 +553,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * IsPricingModule.
+             * <p>是否计价项。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPricingModule(Boolean isPricingModule) {
                 this.isPricingModule = isPricingModule;
@@ -502,7 +564,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * NeedOrderPay.
+             * <p>在订单中是否需要支付。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needOrderPay(Boolean needOrderPay) {
                 this.needOrderPay = needOrderPay;
@@ -510,7 +575,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * PriceType.
+             * <p>定价类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hourPrice</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -518,9 +586,9 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * ModuleAttrs.
+             * <p>模块属性。</p>
              */
-            public Builder moduleAttrs(java.util.List < ModuleAttrs> moduleAttrs) {
+            public Builder moduleAttrs(java.util.List<ModuleAttrs> moduleAttrs) {
                 this.moduleAttrs = moduleAttrs;
                 return this;
             }
@@ -540,7 +608,7 @@ public class CommodityValue extends TeaModel {
      */
     public static class SubOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleInstance")
-        private java.util.List < ModuleInstance> moduleInstance;
+        private java.util.List<ModuleInstance> moduleInstance;
 
         private SubOrder(Builder builder) {
             this.moduleInstance = builder.moduleInstance;
@@ -557,17 +625,17 @@ public class CommodityValue extends TeaModel {
         /**
          * @return moduleInstance
          */
-        public java.util.List < ModuleInstance> getModuleInstance() {
+        public java.util.List<ModuleInstance> getModuleInstance() {
             return this.moduleInstance;
         }
 
         public static final class Builder {
-            private java.util.List < ModuleInstance> moduleInstance; 
+            private java.util.List<ModuleInstance> moduleInstance; 
 
             /**
-             * ModuleInstance.
+             * <p>模块（实例）信息。</p>
              */
-            public Builder moduleInstance(java.util.List < ModuleInstance> moduleInstance) {
+            public Builder moduleInstance(java.util.List<ModuleInstance> moduleInstance) {
                 this.moduleInstance = moduleInstance;
                 return this;
             }
@@ -587,7 +655,7 @@ public class CommodityValue extends TeaModel {
      */
     public static class SubOrders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubOrder")
-        private java.util.List < SubOrder> subOrder;
+        private java.util.List<SubOrder> subOrder;
 
         private SubOrders(Builder builder) {
             this.subOrder = builder.subOrder;
@@ -604,17 +672,17 @@ public class CommodityValue extends TeaModel {
         /**
          * @return subOrder
          */
-        public java.util.List < SubOrder> getSubOrder() {
+        public java.util.List<SubOrder> getSubOrder() {
             return this.subOrder;
         }
 
         public static final class Builder {
-            private java.util.List < SubOrder> subOrder; 
+            private java.util.List<SubOrder> subOrder; 
 
             /**
-             * SubOrder.
+             * <p>订单子项。</p>
              */
-            public Builder subOrder(java.util.List < SubOrder> subOrder) {
+            public Builder subOrder(java.util.List<SubOrder> subOrder) {
                 this.subOrder = subOrder;
                 return this;
             }
@@ -707,7 +775,10 @@ public class CommodityValue extends TeaModel {
             private Boolean selected; 
 
             /**
-             * CanPromFee.
+             * <p>可支付金额。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9.99</p>
              */
             public Builder canPromFee(Double canPromFee) {
                 this.canPromFee = canPromFee;
@@ -715,7 +786,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * CouponDesc.
+             * <p>Coupon Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10元优惠券（有效期至2024年9月8日）</p>
              */
             public Builder couponDesc(String couponDesc) {
                 this.couponDesc = couponDesc;
@@ -723,7 +797,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * CouponName.
+             * <p>Coupon Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10元优惠券</p>
              */
             public Builder couponName(String couponName) {
                 this.couponName = couponName;
@@ -731,7 +808,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * CouponOptionNo.
+             * <p>Coupon OptionNo</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50008800000xxxx</p>
              */
             public Builder couponOptionNo(String couponOptionNo) {
                 this.couponOptionNo = couponOptionNo;
@@ -739,7 +819,10 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>是否选中。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -770,7 +853,7 @@ public class CommodityValue extends TeaModel {
         private SubOrders subOrders;
 
         @com.aliyun.core.annotation.NameInMap("Coupons")
-        private java.util.List < Coupons> coupons;
+        private java.util.List<Coupons> coupons;
 
         private Result(Builder builder) {
             this.order = builder.order;
@@ -811,7 +894,7 @@ public class CommodityValue extends TeaModel {
         /**
          * @return coupons
          */
-        public java.util.List < Coupons> getCoupons() {
+        public java.util.List<Coupons> getCoupons() {
             return this.coupons;
         }
 
@@ -819,10 +902,10 @@ public class CommodityValue extends TeaModel {
             private Order order; 
             private String inquiryType; 
             private SubOrders subOrders; 
-            private java.util.List < Coupons> coupons; 
+            private java.util.List<Coupons> coupons; 
 
             /**
-             * Order.
+             * <p>订单信息。</p>
              */
             public Builder order(Order order) {
                 this.order = order;
@@ -830,7 +913,14 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * InquiryType.
+             * <p>询价类型，可选值：</p>
+             * <ol>
+             * <li>Buy：新购询价。</li>
+             * <li>ModificationBuy：变配询价。</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Buy</p>
              */
             public Builder inquiryType(String inquiryType) {
                 this.inquiryType = inquiryType;
@@ -838,7 +928,7 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * SubOrders.
+             * <p>订单子项。</p>
              */
             public Builder subOrders(SubOrders subOrders) {
                 this.subOrders = subOrders;
@@ -846,9 +936,9 @@ public class CommodityValue extends TeaModel {
             }
 
             /**
-             * Coupons.
+             * <p>优惠券。</p>
              */
-            public Builder coupons(java.util.List < Coupons> coupons) {
+            public Builder coupons(java.util.List<Coupons> coupons) {
                 this.coupons = coupons;
                 return this;
             }

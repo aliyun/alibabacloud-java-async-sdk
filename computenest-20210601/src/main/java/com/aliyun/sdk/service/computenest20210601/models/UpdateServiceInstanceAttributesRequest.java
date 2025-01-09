@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -84,7 +89,10 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
         } 
 
         /**
-         * EnableOperation.
+         * <p>Specifies whether to authorize the service provider to perform O&amp;M operations on the service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableOperation(Boolean enableOperation) {
             this.putQueryParameter("EnableOperation", enableOperation);
@@ -93,6 +101,7 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +114,8 @@ public class UpdateServiceInstanceAttributesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the service instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the ID of the service instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

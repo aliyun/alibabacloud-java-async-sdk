@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class GetServiceEstimateCostRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -109,7 +114,7 @@ public class GetServiceEstimateCostRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -166,7 +171,7 @@ public class GetServiceEstimateCostRequest extends Request {
         private String clientToken; 
         private Commodity commodity; 
         private String operationName; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String serviceId; 
         private String serviceInstanceId; 
@@ -207,7 +212,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * <p>The commodity details.</p>
+         * <p>The information about the subscription duration.</p>
          */
         public Builder commodity(Commodity commodity) {
             String commodityShrink = shrink(commodity, "Commodity", "json");
@@ -217,10 +222,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration update operation.</p>
+         * <p>The name of the configuration change operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>修改游戏参数</p>
+         * <p>Parameter change</p>
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -229,15 +234,12 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * <p>The parameters that are specified for service instance deployment.</p>
-         * <blockquote>
-         * <p> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</p>
-         * </blockquote>
+         * <p>The parameters that are specified to deploy the service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;RegionId&quot;: &quot;cn-hangzhou&quot;, &quot;InstanceType&quot;: &quot;ecs.g5.large&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -294,10 +296,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * <p>The package name.</p>
+         * <p>The name of the package specification.</p>
          * 
          * <strong>example:</strong>
-         * <p>自定义套餐</p>
+         * <p>Package 1</p>
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -306,16 +308,10 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * <p>The name of the template. This parameter is returned only if you specify TemplateId.</p>
-         * <blockquote>
-         * <ul>
-         * <li>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</li>
-         * <li>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</li>
-         * </ul>
-         * </blockquote>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>模板1</p>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -403,7 +399,10 @@ public class GetServiceEstimateCostRequest extends Request {
             private String payPeriodUnit; 
 
             /**
-             * CouponId.
+             * <p>优惠券ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>302070970220</p>
              */
             public Builder couponId(String couponId) {
                 this.couponId = couponId;

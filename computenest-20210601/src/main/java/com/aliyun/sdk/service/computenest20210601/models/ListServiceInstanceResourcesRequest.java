@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -42,7 +47,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceARN")
-    private java.util.List < String > resourceARN;
+    private java.util.List<String> resourceARN;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
@@ -55,7 +60,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListServiceInstanceResourcesRequest(Builder builder) {
         super(builder);
@@ -102,7 +107,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -137,7 +142,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
     /**
      * @return resourceARN
      */
-    public java.util.List < String > getResourceARN() {
+    public java.util.List<String> getResourceARN() {
         return this.resourceARN;
     }
 
@@ -158,22 +163,22 @@ public class ListServiceInstanceResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListServiceInstanceResourcesRequest, Builder> {
         private String expireTimeEnd; 
         private String expireTimeStart; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer maxResults; 
         private String nextToken; 
         private String payType; 
         private String regionId; 
-        private java.util.List < String > resourceARN; 
+        private java.util.List<String> resourceARN; 
         private String serviceInstanceId; 
         private String serviceInstanceResourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -244,7 +249,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
          * </li>
          * </ul>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
@@ -313,7 +318,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
          */
-        public Builder resourceARN(java.util.List < String > resourceARN) {
+        public Builder resourceARN(java.util.List<String> resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
             this.resourceARN = resourceARN;
             return this;
@@ -347,7 +352,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         /**
          * <p>The tag key and value.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -371,7 +376,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filters(Builder builder) {
             this.name = builder.name;
@@ -396,13 +401,13 @@ public class ListServiceInstanceResourcesRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>Vaild values:</p>
@@ -424,7 +429,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
             /**
              * <p>The value of the filter condition.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

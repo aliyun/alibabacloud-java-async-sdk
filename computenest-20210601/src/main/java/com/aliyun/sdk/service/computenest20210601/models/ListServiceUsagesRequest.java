@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListServiceUsagesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -47,7 +52,7 @@ public class ListServiceUsagesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -66,7 +71,7 @@ public class ListServiceUsagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServiceUsagesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -82,16 +87,19 @@ public class ListServiceUsagesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>The filters.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -100,7 +108,10 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -126,7 +137,7 @@ public class ListServiceUsagesRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -151,16 +162,25 @@ public class ListServiceUsagesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
-             * Name.
+             * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
+             * <ul>
+             * <li>ServiceId: the ID of the service.</li>
+             * <li>ServiceName: the service name.</li>
+             * <li>Status: the state of the service.</li>
+             * <li>SupplierName: the name of the service provider.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -168,9 +188,9 @@ public class ListServiceUsagesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter values of the filter.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

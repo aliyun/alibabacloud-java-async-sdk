@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceCategoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < String > categories;
+    private java.util.List<String> categories;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListServiceCategoriesResponseBody extends TeaModel {
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
@@ -46,13 +51,13 @@ public class ListServiceCategoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > categories; 
+        private java.util.List<String> categories; 
         private String requestId; 
 
         /**
          * <p>The category list of the service.</p>
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             this.categories = categories;
             return this;
         }

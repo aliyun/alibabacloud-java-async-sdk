@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CheckServiceDeployable  CheckServiceDeployableRequest
+     * @return CheckServiceDeployableResponse
+     */
+    CompletableFuture<CheckServiceDeployableResponse> checkServiceDeployable(CheckServiceDeployableRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is available only for service instances that belong to private services deployed by using Resource Orchestration Service (ROS).</p>
      * 
@@ -59,10 +65,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
      * @param request the request parameters of GenerateServicePolicy  GenerateServicePolicyRequest
      * @return GenerateServicePolicyResponse
      */
     CompletableFuture<GenerateServicePolicyResponse> generateServicePolicy(GenerateServicePolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetService  GetServiceRequest
+     * @return GetServiceResponse
+     */
+    CompletableFuture<GetServiceResponse> getService(GetServiceRequest request);
 
     /**
      * @param request the request parameters of GetServiceEstimateCost  GetServiceEstimateCostRequest
@@ -87,6 +105,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetServiceTemplateParameterConstraintsResponse
      */
     CompletableFuture<GetServiceTemplateParameterConstraintsResponse> getServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request);
+
+    /**
+     * @param request the request parameters of GetUserInformation  GetUserInformationRequest
+     * @return GetUserInformationResponse
+     */
+    CompletableFuture<GetUserInformationResponse> getUserInformation(GetUserInformationRequest request);
 
     /**
      * @param request the request parameters of ListServiceCategories  ListServiceCategoriesRequest
@@ -125,10 +149,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceUsagesResponse> listServiceUsages(ListServiceUsagesRequest request);
 
     /**
+     * @param request the request parameters of ListServices  ListServicesRequest
+     * @return ListServicesResponse
+     */
+    CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
+
+    /**
      * @param request the request parameters of ListTagKeys  ListTagKeysRequest
      * @return ListTagKeysResponse
      */
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
      * @param request the request parameters of ListTagValues  ListTagValuesRequest
@@ -179,6 +215,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceInstanceAttributesResponse> updateServiceInstanceAttributes(UpdateServiceInstanceAttributesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Configuration change is enabled and the related parameters are configured for the service by the service provider.</p>
+     * 
      * @param request the request parameters of UpdateServiceInstanceSpec  UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse
      */
@@ -189,6 +229,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateServiceUsageResponse
      */
     CompletableFuture<UpdateServiceUsageResponse> updateServiceUsage(UpdateServiceUsageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUserInformation  UpdateUserInformationRequest
+     * @return UpdateUserInformationResponse
+     */
+    CompletableFuture<UpdateUserInformationResponse> updateUserInformation(UpdateUserInformationRequest request);
 
     /**
      * @param request the request parameters of UpgradeServiceInstance  UpgradeServiceInstanceRequest

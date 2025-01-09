@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceUsages")
-    private java.util.List < ServiceUsages> serviceUsages;
+    private java.util.List<ServiceUsages> serviceUsages;
 
     private ListServiceUsagesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     /**
      * @return serviceUsages
      */
-    public java.util.List < ServiceUsages> getServiceUsages() {
+    public java.util.List<ServiceUsages> getServiceUsages() {
         return this.serviceUsages;
     }
 
@@ -71,10 +76,13 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ServiceUsages> serviceUsages; 
+        private java.util.List<ServiceUsages> serviceUsages; 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +90,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYChudnQUoBH+mGWFpb6oP0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +101,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18AD0960-A9FE-1AC8-ADF8-22131Fxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,9 +112,9 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceUsages.
+         * <p>The service applications.</p>
          */
-        public Builder serviceUsages(java.util.List < ServiceUsages> serviceUsages) {
+        public Builder serviceUsages(java.util.List<ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
             return this;
         }
@@ -143,7 +157,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Long userAliUid;
 
         @com.aliyun.core.annotation.NameInMap("UserInformation")
-        private java.util.Map < String, String > userInformation;
+        private java.util.Map<String, String> userInformation;
 
         private ServiceUsages(Builder builder) {
             this.comments = builder.comments;
@@ -224,7 +238,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         /**
          * @return userInformation
          */
-        public java.util.Map < String, String > getUserInformation() {
+        public java.util.Map<String, String> getUserInformation() {
             return this.userInformation;
         }
 
@@ -237,10 +251,13 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             private String supplierName; 
             private String updateTime; 
             private Long userAliUid; 
-            private java.util.Map < String, String > userInformation; 
+            private java.util.Map<String, String> userInformation; 
 
             /**
-             * Comments.
+             * <p>The review comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approved</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -248,7 +265,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25T02:02:02Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -256,7 +276,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-c9f36ec6d19b4exxxxxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -264,7 +287,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LobeChat社区版</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -272,7 +298,16 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the service application. Valid values:</p>
+             * <ul>
+             * <li>Submitted: The application is submitted for review.</li>
+             * <li>Approved: The application is approved.</li>
+             * <li>Rejected: The application is rejected.</li>
+             * <li>Canceled: The application is canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Submitted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -280,7 +315,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestSupplier</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -288,7 +326,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-25T02:02:02Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -296,7 +337,10 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserAliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127383705958xxxx</p>
              */
             public Builder userAliUid(Long userAliUid) {
                 this.userAliUid = userAliUid;
@@ -304,9 +348,9 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserInformation.
+             * <p>The information about the applicant.</p>
              */
-            public Builder userInformation(java.util.Map < String, String > userInformation) {
+            public Builder userInformation(java.util.Map<String, String> userInformation) {
                 this.userInformation = userInformation;
                 return this;
             }
