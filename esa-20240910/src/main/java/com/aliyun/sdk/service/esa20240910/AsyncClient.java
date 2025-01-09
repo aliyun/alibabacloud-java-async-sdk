@@ -66,12 +66,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BlockObjectResponse> blockObject(BlockObjectRequest request);
 
     /**
-     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
-     * @return ChangeResourceGroupResponse
-     */
-    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
-
-    /**
      * @param request the request parameters of CheckSiteName  CheckSiteNameRequest
      * @return CheckSiteNameResponse
      */
