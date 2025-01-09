@@ -75,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FraudResultCallBackResponse> fraudResultCallBack(FraudResultCallBackRequest request);
 
     /**
+     * @param request the request parameters of Id2MetaPeriodVerifyIntl  Id2MetaPeriodVerifyIntlRequest
+     * @return Id2MetaPeriodVerifyIntlResponse
+     */
+    CompletableFuture<Id2MetaPeriodVerifyIntlResponse> id2MetaPeriodVerifyIntl(Id2MetaPeriodVerifyIntlRequest request);
+
+    /**
      * @param request the request parameters of Id2MetaVerifyIntl  Id2MetaVerifyIntlRequest
      * @return Id2MetaVerifyIntlResponse
      */
