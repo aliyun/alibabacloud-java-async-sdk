@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-pds20220301</artifactId>
-  <version>2.0.1</version>
+  <version>2.0.2</version>
   <packaging>jar</packaging>
   <name>alibabacloud-pds20220301</name>
   <description>Alibaba Cloud pds (20220301) Async SDK for Java

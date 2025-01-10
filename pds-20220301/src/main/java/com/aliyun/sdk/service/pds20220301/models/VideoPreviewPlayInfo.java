@@ -20,6 +20,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
+    @com.aliyun.core.annotation.NameInMap("live_transcoding_subtitle_task_list")
+    private java.util.List<VideoPreviewSubtitleInfo> liveTranscodingSubtitleTaskList;
+
     @com.aliyun.core.annotation.NameInMap("live_transcoding_task_list")
     private java.util.List<LiveTranscodingTaskList> liveTranscodingTaskList;
 
@@ -32,12 +35,25 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("offline_video_transcoding_list")
     private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList;
 
+    @com.aliyun.core.annotation.NameInMap("offline_video_transcoding_subtitle_list")
+    private java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList;
+
+    @com.aliyun.core.annotation.NameInMap("quick_video_list")
+    private java.util.List<QuickVideoList> quickVideoList;
+
+    @com.aliyun.core.annotation.NameInMap("quick_video_subtitle_list")
+    private java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList;
+
     private VideoPreviewPlayInfo(Builder builder) {
         this.category = builder.category;
+        this.liveTranscodingSubtitleTaskList = builder.liveTranscodingSubtitleTaskList;
         this.liveTranscodingTaskList = builder.liveTranscodingTaskList;
         this.masterUrl = builder.masterUrl;
         this.meta = builder.meta;
         this.offlineVideoTranscodingList = builder.offlineVideoTranscodingList;
+        this.offlineVideoTranscodingSubtitleList = builder.offlineVideoTranscodingSubtitleList;
+        this.quickVideoList = builder.quickVideoList;
+        this.quickVideoSubtitleList = builder.quickVideoSubtitleList;
     }
 
     public static Builder builder() {
@@ -53,6 +69,13 @@ public class VideoPreviewPlayInfo extends TeaModel {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return liveTranscodingSubtitleTaskList
+     */
+    public java.util.List<VideoPreviewSubtitleInfo> getLiveTranscodingSubtitleTaskList() {
+        return this.liveTranscodingSubtitleTaskList;
     }
 
     /**
@@ -83,18 +106,51 @@ public class VideoPreviewPlayInfo extends TeaModel {
         return this.offlineVideoTranscodingList;
     }
 
+    /**
+     * @return offlineVideoTranscodingSubtitleList
+     */
+    public java.util.List<VideoPreviewSubtitleInfo> getOfflineVideoTranscodingSubtitleList() {
+        return this.offlineVideoTranscodingSubtitleList;
+    }
+
+    /**
+     * @return quickVideoList
+     */
+    public java.util.List<QuickVideoList> getQuickVideoList() {
+        return this.quickVideoList;
+    }
+
+    /**
+     * @return quickVideoSubtitleList
+     */
+    public java.util.List<VideoPreviewSubtitleInfo> getQuickVideoSubtitleList() {
+        return this.quickVideoSubtitleList;
+    }
+
     public static final class Builder {
         private String category; 
+        private java.util.List<VideoPreviewSubtitleInfo> liveTranscodingSubtitleTaskList; 
         private java.util.List<LiveTranscodingTaskList> liveTranscodingTaskList; 
         private String masterUrl; 
         private Meta meta; 
         private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList; 
+        private java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList; 
+        private java.util.List<QuickVideoList> quickVideoList; 
+        private java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList; 
 
         /**
          * category.
          */
         public Builder category(String category) {
             this.category = category;
+            return this;
+        }
+
+        /**
+         * live_transcoding_subtitle_task_list.
+         */
+        public Builder liveTranscodingSubtitleTaskList(java.util.List<VideoPreviewSubtitleInfo> liveTranscodingSubtitleTaskList) {
+            this.liveTranscodingSubtitleTaskList = liveTranscodingSubtitleTaskList;
             return this;
         }
 
@@ -127,6 +183,30 @@ public class VideoPreviewPlayInfo extends TeaModel {
          */
         public Builder offlineVideoTranscodingList(java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList) {
             this.offlineVideoTranscodingList = offlineVideoTranscodingList;
+            return this;
+        }
+
+        /**
+         * offline_video_transcoding_subtitle_list.
+         */
+        public Builder offlineVideoTranscodingSubtitleList(java.util.List<VideoPreviewSubtitleInfo> offlineVideoTranscodingSubtitleList) {
+            this.offlineVideoTranscodingSubtitleList = offlineVideoTranscodingSubtitleList;
+            return this;
+        }
+
+        /**
+         * quick_video_list.
+         */
+        public Builder quickVideoList(java.util.List<QuickVideoList> quickVideoList) {
+            this.quickVideoList = quickVideoList;
+            return this;
+        }
+
+        /**
+         * quick_video_subtitle_list.
+         */
+        public Builder quickVideoSubtitleList(java.util.List<VideoPreviewSubtitleInfo> quickVideoSubtitleList) {
+            this.quickVideoSubtitleList = quickVideoSubtitleList;
             return this;
         }
 
@@ -432,6 +512,93 @@ public class VideoPreviewPlayInfo extends TeaModel {
 
             public OfflineVideoTranscodingList build() {
                 return new OfflineVideoTranscodingList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoPreviewPlayInfo} extends {@link TeaModel}
+     *
+     * <p>VideoPreviewPlayInfo</p>
+     */
+    public static class QuickVideoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("template_id")
+        private String templateId;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private QuickVideoList(Builder builder) {
+            this.status = builder.status;
+            this.templateId = builder.templateId;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QuickVideoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String templateId; 
+            private String url; 
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * template_id.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public QuickVideoList build() {
+                return new QuickVideoList(this);
             } 
 
         } 

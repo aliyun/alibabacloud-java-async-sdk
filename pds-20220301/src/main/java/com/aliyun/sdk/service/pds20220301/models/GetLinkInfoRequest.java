@@ -112,7 +112,10 @@ public class GetLinkInfoRequest extends Request {
         }
 
         /**
-         * extra.
+         * <p>The additional information about the unique identifier of the account. For example, if type is set to mobile, set the value of extra to a country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder extra(String extra) {
             this.putBodyParameter("extra", extra);
@@ -121,6 +124,7 @@ public class GetLinkInfoRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the account, such as a mobile number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +137,16 @@ public class GetLinkInfoRequest extends Request {
         }
 
         /**
+         * <p>The account type. Valid values:</p>
+         * <ul>
+         * <li>mobile: a mobile number.</li>
+         * <li>email: an email address.</li>
+         * <li>ding: a DingTalk account.</li>
+         * <li>ram: an Alibaba Cloud Resource Access Management (RAM) user.</li>
+         * <li>wechat: a WeCom account.</li>
+         * <li>ldap: a Lightweight Directory Access Protocol (LDAP) account.</li>
+         * <li>custom: a custom account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

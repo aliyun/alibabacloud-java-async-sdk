@@ -26,10 +26,18 @@ public class VideoPreviewPlayMeta extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("meta")
     private Meta meta;
 
+    @com.aliyun.core.annotation.NameInMap("offline_video_transcoding_list")
+    private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList;
+
+    @com.aliyun.core.annotation.NameInMap("quick_video_list")
+    private java.util.List<QuickVideoList> quickVideoList;
+
     private VideoPreviewPlayMeta(Builder builder) {
         this.category = builder.category;
         this.liveTranscodingTaskList = builder.liveTranscodingTaskList;
         this.meta = builder.meta;
+        this.offlineVideoTranscodingList = builder.offlineVideoTranscodingList;
+        this.quickVideoList = builder.quickVideoList;
     }
 
     public static Builder builder() {
@@ -61,10 +69,26 @@ public class VideoPreviewPlayMeta extends TeaModel {
         return this.meta;
     }
 
+    /**
+     * @return offlineVideoTranscodingList
+     */
+    public java.util.List<OfflineVideoTranscodingList> getOfflineVideoTranscodingList() {
+        return this.offlineVideoTranscodingList;
+    }
+
+    /**
+     * @return quickVideoList
+     */
+    public java.util.List<QuickVideoList> getQuickVideoList() {
+        return this.quickVideoList;
+    }
+
     public static final class Builder {
         private String category; 
         private java.util.List<LiveTranscodingTaskList> liveTranscodingTaskList; 
         private Meta meta; 
+        private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList; 
+        private java.util.List<QuickVideoList> quickVideoList; 
 
         /**
          * category.
@@ -87,6 +111,22 @@ public class VideoPreviewPlayMeta extends TeaModel {
          */
         public Builder meta(Meta meta) {
             this.meta = meta;
+            return this;
+        }
+
+        /**
+         * offline_video_transcoding_list.
+         */
+        public Builder offlineVideoTranscodingList(java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList) {
+            this.offlineVideoTranscodingList = offlineVideoTranscodingList;
+            return this;
+        }
+
+        /**
+         * quick_video_list.
+         */
+        public Builder quickVideoList(java.util.List<QuickVideoList> quickVideoList) {
+            this.quickVideoList = quickVideoList;
             return this;
         }
 
@@ -265,6 +305,160 @@ public class VideoPreviewPlayMeta extends TeaModel {
 
             public Meta build() {
                 return new Meta(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoPreviewPlayMeta} extends {@link TeaModel}
+     *
+     * <p>VideoPreviewPlayMeta</p>
+     */
+    public static class OfflineVideoTranscodingList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("keep_original_resolution")
+        private String keepOriginalResolution;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("template_id")
+        private String templateId;
+
+        private OfflineVideoTranscodingList(Builder builder) {
+            this.keepOriginalResolution = builder.keepOriginalResolution;
+            this.status = builder.status;
+            this.templateId = builder.templateId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OfflineVideoTranscodingList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keepOriginalResolution
+         */
+        public String getKeepOriginalResolution() {
+            return this.keepOriginalResolution;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public static final class Builder {
+            private String keepOriginalResolution; 
+            private String status; 
+            private String templateId; 
+
+            /**
+             * keep_original_resolution.
+             */
+            public Builder keepOriginalResolution(String keepOriginalResolution) {
+                this.keepOriginalResolution = keepOriginalResolution;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * template_id.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            public OfflineVideoTranscodingList build() {
+                return new OfflineVideoTranscodingList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoPreviewPlayMeta} extends {@link TeaModel}
+     *
+     * <p>VideoPreviewPlayMeta</p>
+     */
+    public static class QuickVideoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("template_id")
+        private String templateId;
+
+        private QuickVideoList(Builder builder) {
+            this.status = builder.status;
+            this.templateId = builder.templateId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QuickVideoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String templateId; 
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * template_id.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            public QuickVideoList build() {
+                return new QuickVideoList(this);
             } 
 
         } 
