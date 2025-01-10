@@ -46,6 +46,10 @@ public class NearbySearchNovaRequest extends Request {
     private Integer size;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortRule")
+    private String sortRule;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("types")
     private String types;
 
@@ -58,6 +62,7 @@ public class NearbySearchNovaRequest extends Request {
         this.page = builder.page;
         this.radius = builder.radius;
         this.size = builder.size;
+        this.sortRule = builder.sortRule;
         this.types = builder.types;
     }
 
@@ -124,6 +129,13 @@ public class NearbySearchNovaRequest extends Request {
     }
 
     /**
+     * @return sortRule
+     */
+    public String getSortRule() {
+        return this.sortRule;
+    }
+
+    /**
      * @return types
      */
     public String getTypes() {
@@ -138,6 +150,7 @@ public class NearbySearchNovaRequest extends Request {
         private Integer page; 
         private Integer radius; 
         private Integer size; 
+        private String sortRule; 
         private String types; 
 
         private Builder() {
@@ -153,6 +166,7 @@ public class NearbySearchNovaRequest extends Request {
             this.page = request.page;
             this.radius = request.radius;
             this.size = request.size;
+            this.sortRule = request.sortRule;
             this.types = request.types;
         } 
 
@@ -216,6 +230,15 @@ public class NearbySearchNovaRequest extends Request {
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * sortRule.
+         */
+        public Builder sortRule(String sortRule) {
+            this.putQueryParameter("sortRule", sortRule);
+            this.sortRule = sortRule;
             return this;
         }
 
