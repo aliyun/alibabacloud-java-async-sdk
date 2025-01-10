@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class GetServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowDetail")
-    private java.util.List < String > showDetail;
+    private java.util.List<String> showDetail;
 
     private GetServiceRequest(Builder builder) {
         super(builder);
@@ -121,7 +126,7 @@ public class GetServiceRequest extends Request {
     /**
      * @return showDetail
      */
-    public java.util.List < String > getShowDetail() {
+    public java.util.List<String> getShowDetail() {
         return this.showDetail;
     }
 
@@ -133,7 +138,7 @@ public class GetServiceRequest extends Request {
         private String serviceName; 
         private String serviceVersion; 
         private String sharedAccountType; 
-        private java.util.List < String > showDetail; 
+        private java.util.List<String> showDetail; 
 
         private Builder() {
             super();
@@ -188,7 +193,10 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * <p>The Service Instance Id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-85b1exxx</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -197,7 +205,10 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The Service Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wordpress社区版</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -236,7 +247,7 @@ public class GetServiceRequest extends Request {
         /**
          * <p>The information that you want to query.</p>
          */
-        public Builder showDetail(java.util.List < String > showDetail) {
+        public Builder showDetail(java.util.List<String> showDetail) {
             this.putQueryParameter("ShowDetail", showDetail);
             this.showDetail = showDetail;
             return this;

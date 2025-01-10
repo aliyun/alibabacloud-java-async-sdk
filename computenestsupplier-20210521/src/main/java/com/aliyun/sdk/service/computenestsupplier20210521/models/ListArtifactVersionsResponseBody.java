@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListArtifactVersionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Artifacts")
-    private java.util.List < Artifacts> artifacts;
+    private java.util.List<Artifacts> artifacts;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     /**
      * @return artifacts
      */
-    public java.util.List < Artifacts> getArtifacts() {
+    public java.util.List<Artifacts> getArtifacts() {
         return this.artifacts;
     }
 
@@ -79,7 +84,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Artifacts> artifacts; 
+        private java.util.List<Artifacts> artifacts; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         /**
          * <p>The version information about the deployment package.</p>
          */
-        public Builder artifacts(java.util.List < Artifacts> artifacts) {
+        public Builder artifacts(java.util.List<Artifacts> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
@@ -175,7 +180,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("ImageDelivery")
-        private java.util.Map < String, String > imageDelivery;
+        private java.util.Map<String, String> imageDelivery;
 
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
@@ -284,7 +289,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         /**
          * @return imageDelivery
          */
-        public java.util.Map < String, String > getImageDelivery() {
+        public java.util.Map<String, String> getImageDelivery() {
             return this.imageDelivery;
         }
 
@@ -346,7 +351,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             private String artifactVersion; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.Map < String, String > imageDelivery; 
+            private java.util.Map<String, String> imageDelivery; 
             private String progress; 
             private String resultFile; 
             private String securityAuditResult; 
@@ -367,7 +372,10 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactBuildType.
+             * <p>The type of the deployment package to be built.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dockerfile</p>
              */
             public Builder artifactBuildType(String artifactBuildType) {
                 this.artifactBuildType = artifactBuildType;
@@ -443,7 +451,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             /**
              * <p>The distribution result of the image.</p>
              */
-            public Builder imageDelivery(java.util.Map < String, String > imageDelivery) {
+            public Builder imageDelivery(java.util.Map<String, String> imageDelivery) {
                 this.imageDelivery = imageDelivery;
                 return this;
             }

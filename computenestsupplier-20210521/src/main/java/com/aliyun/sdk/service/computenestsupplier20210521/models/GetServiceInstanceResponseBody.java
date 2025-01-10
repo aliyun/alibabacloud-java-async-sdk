@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -103,7 +108,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     private Long supplierUid;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
@@ -372,7 +377,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -428,7 +433,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String status; 
         private String statusDetail; 
         private Long supplierUid; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateName; 
         private String updateTime; 
         private Long userId; 
@@ -580,7 +585,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationExtraInfo.
+         * <p>Operate extra info</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6cc5ce3590ed7f5529e85fec</p>
          */
         public Builder operationExtraInfo(String operationExtraInfo) {
             this.operationExtraInfo = operationExtraInfo;
@@ -815,7 +823,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * <p>The custom tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -873,7 +881,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String domainName;
 
         @com.aliyun.core.annotation.NameInMap("EndpointIps")
-        private java.util.List < String > endpointIps;
+        private java.util.List<String> endpointIps;
 
         @com.aliyun.core.annotation.NameInMap("IngressEndpointStatus")
         private String ingressEndpointStatus;
@@ -882,10 +890,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String networkServiceStatus;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroups")
-        private java.util.List < String > securityGroups;
+        private java.util.List<String> securityGroups;
 
         @com.aliyun.core.annotation.NameInMap("VSwitches")
-        private java.util.List < String > vSwitches;
+        private java.util.List<String> vSwitches;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -926,7 +934,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return endpointIps
          */
-        public java.util.List < String > getEndpointIps() {
+        public java.util.List<String> getEndpointIps() {
             return this.endpointIps;
         }
 
@@ -947,14 +955,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return securityGroups
          */
-        public java.util.List < String > getSecurityGroups() {
+        public java.util.List<String> getSecurityGroups() {
             return this.securityGroups;
         }
 
         /**
          * @return vSwitches
          */
-        public java.util.List < String > getVSwitches() {
+        public java.util.List<String> getVSwitches() {
             return this.vSwitches;
         }
 
@@ -968,11 +976,11 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer connectBandwidth; 
             private String domainName; 
-            private java.util.List < String > endpointIps; 
+            private java.util.List<String> endpointIps; 
             private String ingressEndpointStatus; 
             private String networkServiceStatus; 
-            private java.util.List < String > securityGroups; 
-            private java.util.List < String > vSwitches; 
+            private java.util.List<String> securityGroups; 
+            private java.util.List<String> vSwitches; 
             private String vpcId; 
 
             /**
@@ -1000,7 +1008,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The IP addresses of the endpoints for private connections.</p>
              */
-            public Builder endpointIps(java.util.List < String > endpointIps) {
+            public Builder endpointIps(java.util.List<String> endpointIps) {
                 this.endpointIps = endpointIps;
                 return this;
             }
@@ -1044,7 +1052,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The names of the security groups.</p>
              */
-            public Builder securityGroups(java.util.List < String > securityGroups) {
+            public Builder securityGroups(java.util.List<String> securityGroups) {
                 this.securityGroups = securityGroups;
                 return this;
             }
@@ -1052,7 +1060,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The names of the vSwitches.</p>
              */
-            public Builder vSwitches(java.util.List < String > vSwitches) {
+            public Builder vSwitches(java.util.List<String> vSwitches) {
                 this.vSwitches = vSwitches;
                 return this;
             }
@@ -1083,7 +1091,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public static class PrivateVpcConnections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionConfigs")
-        private java.util.List < ConnectionConfigs> connectionConfigs;
+        private java.util.List<ConnectionConfigs> connectionConfigs;
 
         @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
@@ -1112,7 +1120,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return connectionConfigs
          */
-        public java.util.List < ConnectionConfigs> getConnectionConfigs() {
+        public java.util.List<ConnectionConfigs> getConnectionConfigs() {
             return this.connectionConfigs;
         }
 
@@ -1138,7 +1146,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConnectionConfigs> connectionConfigs; 
+            private java.util.List<ConnectionConfigs> connectionConfigs; 
             private String endpointId; 
             private String endpointServiceId; 
             private String privateZoneName; 
@@ -1146,7 +1154,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The network configurations, which are mainly used for the private connection.</p>
              */
-            public Builder connectionConfigs(java.util.List < ConnectionConfigs> connectionConfigs) {
+            public Builder connectionConfigs(java.util.List<ConnectionConfigs> connectionConfigs) {
                 this.connectionConfigs = connectionConfigs;
                 return this;
             }
@@ -1278,10 +1286,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String endpointServiceId;
 
         @com.aliyun.core.annotation.NameInMap("PrivateVpcConnections")
-        private java.util.List < PrivateVpcConnections> privateVpcConnections;
+        private java.util.List<PrivateVpcConnections> privateVpcConnections;
 
         @com.aliyun.core.annotation.NameInMap("ReversePrivateVpcConnections")
-        private java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections;
+        private java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections;
 
         private NetworkConfig(Builder builder) {
             this.endpointId = builder.endpointId;
@@ -1315,22 +1323,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return privateVpcConnections
          */
-        public java.util.List < PrivateVpcConnections> getPrivateVpcConnections() {
+        public java.util.List<PrivateVpcConnections> getPrivateVpcConnections() {
             return this.privateVpcConnections;
         }
 
         /**
          * @return reversePrivateVpcConnections
          */
-        public java.util.List < ReversePrivateVpcConnections> getReversePrivateVpcConnections() {
+        public java.util.List<ReversePrivateVpcConnections> getReversePrivateVpcConnections() {
             return this.reversePrivateVpcConnections;
         }
 
         public static final class Builder {
             private String endpointId; 
             private String endpointServiceId; 
-            private java.util.List < PrivateVpcConnections> privateVpcConnections; 
-            private java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections; 
+            private java.util.List<PrivateVpcConnections> privateVpcConnections; 
+            private java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections; 
 
             /**
              * <p>The ID of the endpoint for the private connection.</p>
@@ -1363,7 +1371,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The information about private connections.</p>
              */
-            public Builder privateVpcConnections(java.util.List < PrivateVpcConnections> privateVpcConnections) {
+            public Builder privateVpcConnections(java.util.List<PrivateVpcConnections> privateVpcConnections) {
                 this.privateVpcConnections = privateVpcConnections;
                 return this;
             }
@@ -1371,7 +1379,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The information about the reverse private connection.</p>
              */
-            public Builder reversePrivateVpcConnections(java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections) {
+            public Builder reversePrivateVpcConnections(java.util.List<ReversePrivateVpcConnections> reversePrivateVpcConnections) {
                 this.reversePrivateVpcConnections = reversePrivateVpcConnections;
                 return this;
             }
@@ -1547,7 +1555,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * Version.
+             * <p>The upgradable service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1555,7 +1566,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * <p>The version name of an upgradable service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Init version</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1592,7 +1606,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String serviceId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceInfos")
-        private java.util.List < ServiceInfos> serviceInfos;
+        private java.util.List<ServiceInfos> serviceInfos;
 
         @com.aliyun.core.annotation.NameInMap("ServiceProductUrl")
         private String serviceProductUrl;
@@ -1610,10 +1624,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String supplierUrl;
 
         @com.aliyun.core.annotation.NameInMap("UpgradableServiceInfos")
-        private java.util.List < UpgradableServiceInfos> upgradableServiceInfos;
+        private java.util.List<UpgradableServiceInfos> upgradableServiceInfos;
 
         @com.aliyun.core.annotation.NameInMap("UpgradableServiceVersions")
-        private java.util.List < String > upgradableServiceVersions;
+        private java.util.List<String> upgradableServiceVersions;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
@@ -1685,7 +1699,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return serviceInfos
          */
-        public java.util.List < ServiceInfos> getServiceInfos() {
+        public java.util.List<ServiceInfos> getServiceInfos() {
             return this.serviceInfos;
         }
 
@@ -1727,14 +1741,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         /**
          * @return upgradableServiceInfos
          */
-        public java.util.List < UpgradableServiceInfos> getUpgradableServiceInfos() {
+        public java.util.List<UpgradableServiceInfos> getUpgradableServiceInfos() {
             return this.upgradableServiceInfos;
         }
 
         /**
          * @return upgradableServiceVersions
          */
-        public java.util.List < String > getUpgradableServiceVersions() {
+        public java.util.List<String> getUpgradableServiceVersions() {
             return this.upgradableServiceVersions;
         }
 
@@ -1758,14 +1772,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String publishTime; 
             private String serviceDocUrl; 
             private String serviceId; 
-            private java.util.List < ServiceInfos> serviceInfos; 
+            private java.util.List<ServiceInfos> serviceInfos; 
             private String serviceProductUrl; 
             private String serviceType; 
             private String status; 
             private String supplierName; 
             private String supplierUrl; 
-            private java.util.List < UpgradableServiceInfos> upgradableServiceInfos; 
-            private java.util.List < String > upgradableServiceVersions; 
+            private java.util.List<UpgradableServiceInfos> upgradableServiceInfos; 
+            private java.util.List<String> upgradableServiceVersions; 
             private String version; 
             private String versionName; 
 
@@ -1831,7 +1845,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The information about the service.</p>
              */
-            public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
+            public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
                 return this;
             }
@@ -1904,9 +1918,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradableServiceInfos.
+             * <p>The upgradable service Info.</p>
              */
-            public Builder upgradableServiceInfos(java.util.List < UpgradableServiceInfos> upgradableServiceInfos) {
+            public Builder upgradableServiceInfos(java.util.List<UpgradableServiceInfos> upgradableServiceInfos) {
                 this.upgradableServiceInfos = upgradableServiceInfos;
                 return this;
             }
@@ -1914,7 +1928,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             /**
              * <p>The service versions that can be updated.</p>
              */
-            public Builder upgradableServiceVersions(java.util.List < String > upgradableServiceVersions) {
+            public Builder upgradableServiceVersions(java.util.List<String> upgradableServiceVersions) {
                 this.upgradableServiceVersions = upgradableServiceVersions;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class RemoveServiceSharedAccountsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserAliUids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > userAliUids;
+    private java.util.List<Long> userAliUids;
 
     private RemoveServiceSharedAccountsRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class RemoveServiceSharedAccountsRequest extends Request {
     /**
      * @return userAliUids
      */
-    public java.util.List < Long > getUserAliUids() {
+    public java.util.List<Long> getUserAliUids() {
         return this.userAliUids;
     }
 
@@ -97,7 +102,7 @@ public class RemoveServiceSharedAccountsRequest extends Request {
         private String regionId; 
         private String serviceId; 
         private String type; 
-        private java.util.List < Long > userAliUids; 
+        private java.util.List<Long> userAliUids; 
 
         private Builder() {
             super();
@@ -168,9 +173,10 @@ public class RemoveServiceSharedAccountsRequest extends Request {
         }
 
         /**
+         * <p>Whitelist accounts for service sharing.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder userAliUids(java.util.List < Long > userAliUids) {
+        public Builder userAliUids(java.util.List<Long> userAliUids) {
             this.putQueryParameter("UserAliUids", userAliUids);
             this.userAliUids = userAliUids;
             return this;

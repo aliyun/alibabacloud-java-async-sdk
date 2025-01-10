@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,6 +47,9 @@ public class GetArtifactResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("PermissionType")
+    private String permissionType;
+
     @com.aliyun.core.annotation.NameInMap("Progress")
     private String progress;
 
@@ -61,7 +69,7 @@ public class GetArtifactResponseBody extends TeaModel {
     private String supportRegionIds;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
@@ -77,6 +85,7 @@ public class GetArtifactResponseBody extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.maxVersion = builder.maxVersion;
         this.name = builder.name;
+        this.permissionType = builder.permissionType;
         this.progress = builder.progress;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -166,6 +175,13 @@ public class GetArtifactResponseBody extends TeaModel {
     }
 
     /**
+     * @return permissionType
+     */
+    public String getPermissionType() {
+        return this.permissionType;
+    }
+
+    /**
      * @return progress
      */
     public String getProgress() {
@@ -210,7 +226,7 @@ public class GetArtifactResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -232,13 +248,14 @@ public class GetArtifactResponseBody extends TeaModel {
         private String gmtModified; 
         private Long maxVersion; 
         private String name; 
+        private String permissionType; 
         private String progress; 
         private String requestId; 
         private String resourceGroupId; 
         private String status; 
         private String statusDetail; 
         private String supportRegionIds; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String versionName; 
 
         /**
@@ -253,7 +270,10 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactBuildType.
+         * <p>The type of the deployment package to be built.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dockerfile</p>
          */
         public Builder artifactBuildType(String artifactBuildType) {
             this.artifactBuildType = artifactBuildType;
@@ -349,6 +369,21 @@ public class GetArtifactResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Permission fields are applicable to container image artifact and Helm Chart artifact They can only change from Automatic to Public. Options:</p>
+         * <ul>
+         * <li>Public</li>
+         * <li>Automatic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
+        public Builder permissionType(String permissionType) {
+            this.permissionType = permissionType;
+            return this;
+        }
+
+        /**
          * <p>The distribution progress of the deployment package.</p>
          * 
          * <strong>example:</strong>
@@ -417,7 +452,7 @@ public class GetArtifactResponseBody extends TeaModel {
         /**
          * <p>The tags of the deployment package.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class GetServiceResponseBody extends TeaModel {
     private Long duration;
 
     @com.aliyun.core.annotation.NameInMap("EntitySource")
-    private java.util.Map < String, String > entitySource;
+    private java.util.Map<String, String> entitySource;
 
     @com.aliyun.core.annotation.NameInMap("IsSupportOperated")
     private Boolean isSupportOperated;
@@ -94,13 +99,13 @@ public class GetServiceResponseBody extends TeaModel {
     private String serviceDiscoverable;
 
     @com.aliyun.core.annotation.NameInMap("ServiceDocumentInfos")
-    private java.util.List < ServiceDocumentInfos> serviceDocumentInfos;
+    private java.util.List<ServiceDocumentInfos> serviceDocumentInfos;
 
     @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceInfos")
-    private java.util.List < ServiceInfos> serviceInfos;
+    private java.util.List<ServiceInfos> serviceInfos;
 
     @com.aliyun.core.annotation.NameInMap("ServiceProductUrl")
     private String serviceProductUrl;
@@ -139,7 +144,7 @@ public class GetServiceResponseBody extends TeaModel {
     private String supplierUrl;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TenantType")
     private String tenantType;
@@ -315,7 +320,7 @@ public class GetServiceResponseBody extends TeaModel {
     /**
      * @return entitySource
      */
-    public java.util.Map < String, String > getEntitySource() {
+    public java.util.Map<String, String> getEntitySource() {
         return this.entitySource;
     }
 
@@ -427,7 +432,7 @@ public class GetServiceResponseBody extends TeaModel {
     /**
      * @return serviceDocumentInfos
      */
-    public java.util.List < ServiceDocumentInfos> getServiceDocumentInfos() {
+    public java.util.List<ServiceDocumentInfos> getServiceDocumentInfos() {
         return this.serviceDocumentInfos;
     }
 
@@ -441,7 +446,7 @@ public class GetServiceResponseBody extends TeaModel {
     /**
      * @return serviceInfos
      */
-    public java.util.List < ServiceInfos> getServiceInfos() {
+    public java.util.List<ServiceInfos> getServiceInfos() {
         return this.serviceInfos;
     }
 
@@ -532,7 +537,7 @@ public class GetServiceResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -618,7 +623,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String deployMetadata; 
         private String deployType; 
         private Long duration; 
-        private java.util.Map < String, String > entitySource; 
+        private java.util.Map<String, String> entitySource; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
         private String logMetadata; 
@@ -634,9 +639,9 @@ public class GetServiceResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String serviceAuditDocumentUrl; 
         private String serviceDiscoverable; 
-        private java.util.List < ServiceDocumentInfos> serviceDocumentInfos; 
+        private java.util.List<ServiceDocumentInfos> serviceDocumentInfos; 
         private String serviceId; 
-        private java.util.List < ServiceInfos> serviceInfos; 
+        private java.util.List<ServiceInfos> serviceInfos; 
         private String serviceProductUrl; 
         private String serviceType; 
         private String shareType; 
@@ -649,7 +654,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String statusDetail; 
         private String supplierName; 
         private String supplierUrl; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String tenantType; 
         private String testStatus; 
         private Long trialDuration; 
@@ -734,7 +739,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ComplianceMetadata.
+         * <p>Compliance check metadata.</p>
          */
         public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
             this.complianceMetadata = complianceMetadata;
@@ -810,7 +815,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * <p>The report source.</p>
          */
-        public Builder entitySource(java.util.Map < String, String > entitySource) {
+        public Builder entitySource(java.util.Map<String, String> entitySource) {
             this.entitySource = entitySource;
             return this;
         }
@@ -1005,9 +1010,9 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDocumentInfos.
+         * <p>Service document information.</p>
          */
-        public Builder serviceDocumentInfos(java.util.List < ServiceDocumentInfos> serviceDocumentInfos) {
+        public Builder serviceDocumentInfos(java.util.List<ServiceDocumentInfos> serviceDocumentInfos) {
             this.serviceDocumentInfos = serviceDocumentInfos;
             return this;
         }
@@ -1026,7 +1031,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * <p>The information about the service.</p>
          */
-        public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
+        public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
             this.serviceInfos = serviceInfos;
             return this;
         }
@@ -1186,7 +1191,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * <p>The service tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -1332,7 +1337,7 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public static class ComponentsMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mappings")
-        private java.util.Map < String, String > mappings;
+        private java.util.Map<String, String> mappings;
 
         @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
@@ -1353,7 +1358,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return mappings
          */
-        public java.util.Map < String, String > getMappings() {
+        public java.util.Map<String, String> getMappings() {
             return this.mappings;
         }
 
@@ -1365,13 +1370,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > mappings; 
+            private java.util.Map<String, String> mappings; 
             private String templateName; 
 
             /**
              * <p>The mappings.</p>
              */
-            public Builder mappings(java.util.Map < String, String > mappings) {
+            public Builder mappings(java.util.Map<String, String> mappings) {
                 this.mappings = mappings;
                 return this;
             }
@@ -1617,13 +1622,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public static class CssMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
-        private java.util.List < ComponentsMappings> componentsMappings;
+        private java.util.List<ComponentsMappings> componentsMappings;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntityExtraInfos")
-        private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos;
+        private java.util.List<MeteringEntityExtraInfos> meteringEntityExtraInfos;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntityMappings")
-        private java.util.List < MeteringEntityMappings> meteringEntityMappings;
+        private java.util.List<MeteringEntityMappings> meteringEntityMappings;
 
         private CssMetadata(Builder builder) {
             this.componentsMappings = builder.componentsMappings;
@@ -1642,33 +1647,33 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return componentsMappings
          */
-        public java.util.List < ComponentsMappings> getComponentsMappings() {
+        public java.util.List<ComponentsMappings> getComponentsMappings() {
             return this.componentsMappings;
         }
 
         /**
          * @return meteringEntityExtraInfos
          */
-        public java.util.List < MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+        public java.util.List<MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
             return this.meteringEntityExtraInfos;
         }
 
         /**
          * @return meteringEntityMappings
          */
-        public java.util.List < MeteringEntityMappings> getMeteringEntityMappings() {
+        public java.util.List<MeteringEntityMappings> getMeteringEntityMappings() {
             return this.meteringEntityMappings;
         }
 
         public static final class Builder {
-            private java.util.List < ComponentsMappings> componentsMappings; 
-            private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos; 
-            private java.util.List < MeteringEntityMappings> meteringEntityMappings; 
+            private java.util.List<ComponentsMappings> componentsMappings; 
+            private java.util.List<MeteringEntityExtraInfos> meteringEntityExtraInfos; 
+            private java.util.List<MeteringEntityMappings> meteringEntityMappings; 
 
             /**
              * <p>The mapping information about the billing items.</p>
              */
-            public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
+            public Builder componentsMappings(java.util.List<ComponentsMappings> componentsMappings) {
                 this.componentsMappings = componentsMappings;
                 return this;
             }
@@ -1676,7 +1681,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>Metering item configuration information.</p>
              */
-            public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
+            public Builder meteringEntityExtraInfos(java.util.List<MeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
                 return this;
             }
@@ -1684,7 +1689,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The binding relationship between package and measurement dimension.</p>
              */
-            public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
+            public Builder meteringEntityMappings(java.util.List<MeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
                 return this;
             }
@@ -2042,13 +2047,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public static class MarketplaceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeteringEntityExtraInfos")
-        private java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos;
+        private java.util.List<MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntityMappings")
-        private java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings;
+        private java.util.List<MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings;
 
         @com.aliyun.core.annotation.NameInMap("SpecificationMappings")
-        private java.util.List < SpecificationMappings> specificationMappings;
+        private java.util.List<SpecificationMappings> specificationMappings;
 
         private MarketplaceMetadata(Builder builder) {
             this.meteringEntityExtraInfos = builder.meteringEntityExtraInfos;
@@ -2067,33 +2072,33 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return meteringEntityExtraInfos
          */
-        public java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+        public java.util.List<MarketplaceMetadataMeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
             return this.meteringEntityExtraInfos;
         }
 
         /**
          * @return meteringEntityMappings
          */
-        public java.util.List < MarketplaceMetadataMeteringEntityMappings> getMeteringEntityMappings() {
+        public java.util.List<MarketplaceMetadataMeteringEntityMappings> getMeteringEntityMappings() {
             return this.meteringEntityMappings;
         }
 
         /**
          * @return specificationMappings
          */
-        public java.util.List < SpecificationMappings> getSpecificationMappings() {
+        public java.util.List<SpecificationMappings> getSpecificationMappings() {
             return this.specificationMappings;
         }
 
         public static final class Builder {
-            private java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos; 
-            private java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings; 
-            private java.util.List < SpecificationMappings> specificationMappings; 
+            private java.util.List<MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos; 
+            private java.util.List<MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings; 
+            private java.util.List<SpecificationMappings> specificationMappings; 
 
             /**
              * <p>The configurations of the billable items.</p>
              */
-            public Builder meteringEntityExtraInfos(java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos) {
+            public Builder meteringEntityExtraInfos(java.util.List<MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
                 return this;
             }
@@ -2101,7 +2106,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The billable items that are associated with the package.</p>
              */
-            public Builder meteringEntityMappings(java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings) {
+            public Builder meteringEntityMappings(java.util.List<MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
                 return this;
             }
@@ -2109,7 +2114,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The mappings between the service specifications and the template or package.</p>
              */
-            public Builder specificationMappings(java.util.List < SpecificationMappings> specificationMappings) {
+            public Builder specificationMappings(java.util.List<SpecificationMappings> specificationMappings) {
                 this.specificationMappings = specificationMappings;
                 return this;
             }
@@ -2208,7 +2213,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Times")
-        private java.util.List < String > times;
+        private java.util.List<String> times;
 
         private Specifications(Builder builder) {
             this.code = builder.code;
@@ -2241,14 +2246,14 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return times
          */
-        public java.util.List < String > getTimes() {
+        public java.util.List<String> getTimes() {
             return this.times;
         }
 
         public static final class Builder {
             private String code; 
             private String name; 
-            private java.util.List < String > times; 
+            private java.util.List<String> times; 
 
             /**
              * <p>The commodity code.</p>
@@ -2275,7 +2280,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The subscription duration. Unit: week or year.</p>
              */
-            public Builder times(java.util.List < String > times) {
+            public Builder times(java.util.List<String> times) {
                 this.times = times;
                 return this;
             }
@@ -2301,7 +2306,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String commodityCode;
 
         @com.aliyun.core.annotation.NameInMap("Components")
-        private java.util.List < String > components;
+        private java.util.List<String> components;
 
         @com.aliyun.core.annotation.NameInMap("CssMetadata")
         private CssMetadata cssMetadata;
@@ -2310,13 +2315,13 @@ public class GetServiceResponseBody extends TeaModel {
         private MarketplaceMetadata marketplaceMetadata;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntities")
-        private java.util.List < MeteringEntities> meteringEntities;
+        private java.util.List<MeteringEntities> meteringEntities;
 
         @com.aliyun.core.annotation.NameInMap("SaasBoostMetadata")
         private String saasBoostMetadata;
 
         @com.aliyun.core.annotation.NameInMap("Specifications")
-        private java.util.List < Specifications> specifications;
+        private java.util.List<Specifications> specifications;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -2358,7 +2363,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return components
          */
-        public java.util.List < String > getComponents() {
+        public java.util.List<String> getComponents() {
             return this.components;
         }
 
@@ -2379,7 +2384,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return meteringEntities
          */
-        public java.util.List < MeteringEntities> getMeteringEntities() {
+        public java.util.List<MeteringEntities> getMeteringEntities() {
             return this.meteringEntities;
         }
 
@@ -2393,7 +2398,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return specifications
          */
-        public java.util.List < Specifications> getSpecifications() {
+        public java.util.List<Specifications> getSpecifications() {
             return this.specifications;
         }
 
@@ -2407,12 +2412,12 @@ public class GetServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String chargeType; 
             private String commodityCode; 
-            private java.util.List < String > components; 
+            private java.util.List<String> components; 
             private CssMetadata cssMetadata; 
             private MarketplaceMetadata marketplaceMetadata; 
-            private java.util.List < MeteringEntities> meteringEntities; 
+            private java.util.List<MeteringEntities> meteringEntities; 
             private String saasBoostMetadata; 
-            private java.util.List < Specifications> specifications; 
+            private java.util.List<Specifications> specifications; 
             private String type; 
 
             /**
@@ -2444,7 +2449,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The commodity modules.</p>
              */
-            public Builder components(java.util.List < String > components) {
+            public Builder components(java.util.List<String> components) {
                 this.components = components;
                 return this;
             }
@@ -2468,7 +2473,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The information about the billable item.</p>
              */
-            public Builder meteringEntities(java.util.List < MeteringEntities> meteringEntities) {
+            public Builder meteringEntities(java.util.List<MeteringEntities> meteringEntities) {
                 this.meteringEntities = meteringEntities;
                 return this;
             }
@@ -2487,7 +2492,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * <p>The specification details of the service in Alibaba Cloud Marketplace.</p>
              */
-            public Builder specifications(java.util.List < Specifications> specifications) {
+            public Builder specifications(java.util.List<Specifications> specifications) {
                 this.specifications = specifications;
                 return this;
             }
@@ -2522,7 +2527,7 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public static class ComplianceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePacks")
-        private java.util.List < String > compliancePacks;
+        private java.util.List<String> compliancePacks;
 
         private ComplianceMetadata(Builder builder) {
             this.compliancePacks = builder.compliancePacks;
@@ -2539,17 +2544,17 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return compliancePacks
          */
-        public java.util.List < String > getCompliancePacks() {
+        public java.util.List<String> getCompliancePacks() {
             return this.compliancePacks;
         }
 
         public static final class Builder {
-            private java.util.List < String > compliancePacks; 
+            private java.util.List<String> compliancePacks; 
 
             /**
-             * CompliancePacks.
+             * <p>The compliance package is selected.</p>
              */
-            public Builder compliancePacks(java.util.List < String > compliancePacks) {
+            public Builder compliancePacks(java.util.List<String> compliancePacks) {
                 this.compliancePacks = compliancePacks;
                 return this;
             }
@@ -2618,7 +2623,10 @@ public class GetServiceResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * DocumentUrl.
+             * <p>The URL that is used to access the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://docurl">http://docurl</a></p>
              */
             public Builder documentUrl(String documentUrl) {
                 this.documentUrl = documentUrl;
@@ -2626,7 +2634,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Locale.
+             * <p>The language of the return data. Valid values: zh-CN and en-US.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-CN</p>
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -2637,7 +2648,7 @@ public class GetServiceResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Template 1</p>
+             * <p>Default Template.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -2769,10 +2780,10 @@ public class GetServiceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * <p>The agreement name.</p>
+             * <p>The name of the software</p>
              * 
              * <strong>example:</strong>
-             * <p>Name</p>
+             * <p>MySQL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2780,10 +2791,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service version.</p>
+             * <p>The version of the software.</p>
              * 
              * <strong>example:</strong>
-             * <p>1.0</p>
+             * <p>5.7</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2805,7 +2816,7 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public static class ServiceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agreements")
-        private java.util.List < Agreements> agreements;
+        private java.util.List<Agreements> agreements;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -2823,7 +2834,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String shortDescription;
 
         @com.aliyun.core.annotation.NameInMap("Softwares")
-        private java.util.List < Softwares> softwares;
+        private java.util.List<Softwares> softwares;
 
         private ServiceInfos(Builder builder) {
             this.agreements = builder.agreements;
@@ -2846,7 +2857,7 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return agreements
          */
-        public java.util.List < Agreements> getAgreements() {
+        public java.util.List<Agreements> getAgreements() {
             return this.agreements;
         }
 
@@ -2888,23 +2899,23 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return softwares
          */
-        public java.util.List < Softwares> getSoftwares() {
+        public java.util.List<Softwares> getSoftwares() {
             return this.softwares;
         }
 
         public static final class Builder {
-            private java.util.List < Agreements> agreements; 
+            private java.util.List<Agreements> agreements; 
             private String image; 
             private String locale; 
             private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
-            private java.util.List < Softwares> softwares; 
+            private java.util.List<Softwares> softwares; 
 
             /**
              * <p>The agreement information about the service.</p>
              */
-            public Builder agreements(java.util.List < Agreements> agreements) {
+            public Builder agreements(java.util.List<Agreements> agreements) {
                 this.agreements = agreements;
                 return this;
             }
@@ -2969,9 +2980,9 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Softwares.
+             * <p>The list of the information about the software in the service.</p>
              */
-            public Builder softwares(java.util.List < Softwares> softwares) {
+            public Builder softwares(java.util.List<Softwares> softwares) {
                 this.softwares = softwares;
                 return this;
             }

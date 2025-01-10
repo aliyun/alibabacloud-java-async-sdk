@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,6 +39,10 @@ public class CreateArtifactRequest extends Request {
     private String artifactType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -48,11 +57,11 @@ public class CreateArtifactRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
-    private java.util.List < String > supportRegionIds;
+    private java.util.List<String> supportRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionName")
@@ -66,6 +75,7 @@ public class CreateArtifactRequest extends Request {
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
         this.artifactType = builder.artifactType;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
@@ -123,6 +133,13 @@ public class CreateArtifactRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -146,14 +163,14 @@ public class CreateArtifactRequest extends Request {
     /**
      * @return supportRegionIds
      */
-    public java.util.List < String > getSupportRegionIds() {
+    public java.util.List<String> getSupportRegionIds() {
         return this.supportRegionIds;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -170,11 +187,12 @@ public class CreateArtifactRequest extends Request {
         private String artifactId; 
         private ArtifactProperty artifactProperty; 
         private String artifactType; 
+        private String clientToken; 
         private String description; 
         private String name; 
         private String resourceGroupId; 
-        private java.util.List < String > supportRegionIds; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> supportRegionIds; 
+        private java.util.List<Tag> tag; 
         private String versionName; 
 
         private Builder() {
@@ -188,6 +206,7 @@ public class CreateArtifactRequest extends Request {
             this.artifactId = request.artifactId;
             this.artifactProperty = request.artifactProperty;
             this.artifactType = request.artifactType;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
             this.resourceGroupId = request.resourceGroupId;
@@ -207,7 +226,20 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactBuildType.
+         * <p>The type of the artifact build task. Valid values:</p>
+         * <ul>
+         * <li><p>EcsImage: Build ECS (Elastic Container Service) image.</p>
+         * </li>
+         * <li><p>Dockerfile: Build container image based on Dockerfile.</p>
+         * </li>
+         * <li><p>Buildpacks: Build container image based on Buildpacks.</p>
+         * </li>
+         * <li><p>ContainerImage: Rebuild container image by renaming an existing container image.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Dockerfile</p>
          */
         public Builder artifactBuildType(String artifactBuildType) {
             this.putQueryParameter("ArtifactBuildType", artifactBuildType);
@@ -257,6 +289,18 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * <p>The description of the deployment package.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +340,7 @@ public class CreateArtifactRequest extends Request {
         /**
          * <p>The supported regions.</p>
          */
-        public Builder supportRegionIds(java.util.List < String > supportRegionIds) {
+        public Builder supportRegionIds(java.util.List<String> supportRegionIds) {
             this.putQueryParameter("SupportRegionIds", supportRegionIds);
             this.supportRegionIds = supportRegionIds;
             return this;
@@ -305,7 +349,7 @@ public class CreateArtifactRequest extends Request {
         /**
          * <p>The custom tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -376,7 +420,10 @@ public class CreateArtifactRequest extends Request {
             private String argumentValue; 
 
             /**
-             * ArgumentName.
+             * <p>The name of a specific build argument.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENV</p>
              */
             public Builder argumentName(String argumentName) {
                 this.argumentName = argumentName;
@@ -384,7 +431,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * ArgumentValue.
+             * <p>The value of a specific build argument.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx:latest</p>
              */
             public Builder argumentValue(String argumentValue) {
                 this.argumentValue = argumentValue;
@@ -467,7 +517,10 @@ public class CreateArtifactRequest extends Request {
             private String repoName; 
 
             /**
-             * Branch.
+             * <p>The name of the branch in the code repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -475,7 +528,13 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the code repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the git repository is private.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-computenest</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -483,7 +542,16 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * Platform.
+             * <p>The platform type. Valid values: </p>
+             * <ul>
+             * <li><p>github</p>
+             * </li>
+             * <li><p>gitee</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>github</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -491,7 +559,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * RepoName.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-computenest/quickstart-Lobexxx</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -513,7 +584,7 @@ public class CreateArtifactRequest extends Request {
      */
     public static class ArtifactBuildProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildArgs")
-        private java.util.List < BuildArgs> buildArgs;
+        private java.util.List<BuildArgs> buildArgs;
 
         @com.aliyun.core.annotation.NameInMap("CodeRepo")
         private CodeRepo codeRepo;
@@ -558,7 +629,7 @@ public class CreateArtifactRequest extends Request {
         /**
          * @return buildArgs
          */
-        public java.util.List < BuildArgs> getBuildArgs() {
+        public java.util.List<BuildArgs> getBuildArgs() {
             return this.buildArgs;
         }
 
@@ -612,7 +683,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < BuildArgs> buildArgs; 
+            private java.util.List<BuildArgs> buildArgs; 
             private CodeRepo codeRepo; 
             private String commandContent; 
             private String commandType; 
@@ -622,15 +693,21 @@ public class CreateArtifactRequest extends Request {
             private String sourceImageId; 
 
             /**
-             * BuildArgs.
+             * <p>The build arguments used during the image build process.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is Dockerfile type.</p>
+             * </blockquote>
              */
-            public Builder buildArgs(java.util.List < BuildArgs> buildArgs) {
+            public Builder buildArgs(java.util.List<BuildArgs> buildArgs) {
                 this.buildArgs = buildArgs;
                 return this;
             }
 
             /**
-             * CodeRepo.
+             * <p>The address of the code repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is Dockerfile or Buildpacks type.</p>
+             * </blockquote>
              */
             public Builder codeRepo(CodeRepo codeRepo) {
                 this.codeRepo = codeRepo;
@@ -671,7 +748,13 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * DockerfilePath.
+             * <p>The relative path to the Dockerfile within the code repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is Dockerfile type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>./file/Dockerfile</p>
              */
             public Builder dockerfilePath(String dockerfilePath) {
                 this.dockerfilePath = dockerfilePath;
@@ -693,7 +776,13 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * SourceContainerImage.
+             * <p>The pull location of the source container image. This is used for the command docker pull ${SourceContainerImage}.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is ContainerImage type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel</p>
              */
             public Builder sourceContainerImage(String sourceContainerImage) {
                 this.sourceContainerImage = sourceContainerImage;
@@ -742,9 +831,6 @@ public class CreateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CommodityVersion")
         private String commodityVersion;
 
-        @com.aliyun.core.annotation.NameInMap("FileScriptMetadata")
-        private String fileScriptMetadata;
-
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
@@ -760,9 +846,6 @@ public class CreateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
-        @com.aliyun.core.annotation.NameInMap("ScriptMetadata")
-        private String scriptMetadata;
-
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
@@ -772,13 +855,11 @@ public class CreateArtifactRequest extends Request {
         private ArtifactProperty(Builder builder) {
             this.commodityCode = builder.commodityCode;
             this.commodityVersion = builder.commodityVersion;
-            this.fileScriptMetadata = builder.fileScriptMetadata;
             this.imageId = builder.imageId;
             this.regionId = builder.regionId;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
             this.repoType = builder.repoType;
-            this.scriptMetadata = builder.scriptMetadata;
             this.tag = builder.tag;
             this.url = builder.url;
         }
@@ -803,13 +884,6 @@ public class CreateArtifactRequest extends Request {
          */
         public String getCommodityVersion() {
             return this.commodityVersion;
-        }
-
-        /**
-         * @return fileScriptMetadata
-         */
-        public String getFileScriptMetadata() {
-            return this.fileScriptMetadata;
         }
 
         /**
@@ -848,13 +922,6 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * @return scriptMetadata
-         */
-        public String getScriptMetadata() {
-            return this.scriptMetadata;
-        }
-
-        /**
          * @return tag
          */
         public String getTag() {
@@ -871,13 +938,11 @@ public class CreateArtifactRequest extends Request {
         public static final class Builder {
             private String commodityCode; 
             private String commodityVersion; 
-            private String fileScriptMetadata; 
             private String imageId; 
             private String regionId; 
             private String repoId; 
             private String repoName; 
             private String repoType; 
-            private String scriptMetadata; 
             private String tag; 
             private String url; 
 
@@ -906,17 +971,6 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder commodityVersion(String commodityVersion) {
                 this.commodityVersion = commodityVersion;
-                return this;
-            }
-
-            /**
-             * <p>The script metadata.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;WorkDir&quot;:&quot;/root&quot;,&quot;CommandType&quot;:&quot;RunShellScript&quot;,&quot;Platform&quot;:&quot;Linux&quot;,&quot;Script&quot;:&quot;echo hello&quot;}</p>
-             */
-            public Builder fileScriptMetadata(String fileScriptMetadata) {
-                this.fileScriptMetadata = fileScriptMetadata;
                 return this;
             }
 
@@ -977,24 +1031,18 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * RepoType.
+             * <p>The default repository type. Valid values:</p>
+             * <ul>
+             * <li><code>Public</code>: a public repository.</li>
+             * <li><code>Private</code>: a private repository.</li>
+             * </ul>
+             * <p>You can specify the RepoType or Summary parameter. The RepoType parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
-                return this;
-            }
-
-            /**
-             * <p>The script content.</p>
-             * <blockquote>
-             * <p> This parameter is available only if the deployment package is a script.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;ScriptMetadata&quot;:&quot;{&quot;CommandType&quot;:&quot;RunShellScript&quot;,&quot;Platform&quot;:&quot;Linux&quot;,&quot;Script&quot;:&quot;ls&quot;}&quot;}</p>
-             */
-            public Builder scriptMetadata(String scriptMetadata) {
-                this.scriptMetadata = scriptMetadata;
                 return this;
             }
 

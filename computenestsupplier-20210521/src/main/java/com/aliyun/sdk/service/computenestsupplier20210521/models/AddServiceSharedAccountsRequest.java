@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class AddServiceSharedAccountsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SharedAccounts")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SharedAccounts> sharedAccounts;
+    private java.util.List<SharedAccounts> sharedAccounts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -81,7 +86,7 @@ public class AddServiceSharedAccountsRequest extends Request {
     /**
      * @return sharedAccounts
      */
-    public java.util.List < SharedAccounts> getSharedAccounts() {
+    public java.util.List<SharedAccounts> getSharedAccounts() {
         return this.sharedAccounts;
     }
 
@@ -96,7 +101,7 @@ public class AddServiceSharedAccountsRequest extends Request {
         private String clientToken; 
         private String regionId; 
         private String serviceId; 
-        private java.util.List < SharedAccounts> sharedAccounts; 
+        private java.util.List<SharedAccounts> sharedAccounts; 
         private String type; 
 
         private Builder() {
@@ -154,7 +159,7 @@ public class AddServiceSharedAccountsRequest extends Request {
          * <p>The shared account and permissions of the service.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sharedAccounts(java.util.List < SharedAccounts> sharedAccounts) {
+        public Builder sharedAccounts(java.util.List<SharedAccounts> sharedAccounts) {
             this.putQueryParameter("SharedAccounts", sharedAccounts);
             this.sharedAccounts = sharedAccounts;
             return this;

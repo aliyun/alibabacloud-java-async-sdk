@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PredefinedParametersName")
@@ -83,7 +88,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -105,7 +110,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         private String clientToken; 
         private Boolean enableUserPrometheus; 
         private String operationName; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String predefinedParametersName; 
         private String serviceInstanceId; 
 
@@ -169,7 +174,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;EcsInstanceParameter&quot;:&quot;4vCPU 8GiB&quot;,&quot;ZoneId&quot;:&quot;cn-heyuan-a&quot;,&quot;SystemDiskSize&quot;:50,&quot;DataDiskSize&quot;:150,&quot;InternetMaxBandwidthOut&quot;:2,&quot;RegionId&quot;:&quot;cn-heyuan&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;

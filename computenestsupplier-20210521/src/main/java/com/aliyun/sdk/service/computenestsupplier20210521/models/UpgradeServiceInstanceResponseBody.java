@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("UpgradeRequiredParameters")
-    private java.util.List < String > upgradeRequiredParameters;
+    private java.util.List<String> upgradeRequiredParameters;
 
     private UpgradeServiceInstanceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -63,7 +68,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
     /**
      * @return upgradeRequiredParameters
      */
-    public java.util.List < String > getUpgradeRequiredParameters() {
+    public java.util.List<String> getUpgradeRequiredParameters() {
         return this.upgradeRequiredParameters;
     }
 
@@ -71,7 +76,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String serviceInstanceId; 
         private String status; 
-        private java.util.List < String > upgradeRequiredParameters; 
+        private java.util.List<String> upgradeRequiredParameters; 
 
         /**
          * <p>The request ID.</p>
@@ -119,7 +124,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         /**
          * <p>The parameters required for the upgrade.</p>
          */
-        public Builder upgradeRequiredParameters(java.util.List < String > upgradeRequiredParameters) {
+        public Builder upgradeRequiredParameters(java.util.List<String> upgradeRequiredParameters) {
             this.upgradeRequiredParameters = upgradeRequiredParameters;
             return this;
         }

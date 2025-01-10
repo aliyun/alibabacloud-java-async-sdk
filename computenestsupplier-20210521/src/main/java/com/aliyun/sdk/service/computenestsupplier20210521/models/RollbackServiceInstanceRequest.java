@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,10 @@ public class RollbackServiceInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>Ensures idempotence of the request. Generate a value from your client to ensure it is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -91,7 +99,10 @@ public class RollbackServiceInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +111,11 @@ public class RollbackServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * <p>Service instance ID.</p>
+         * <p>You can obtain the service instance ID by calling <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances - Query Service Instance List</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-3a8f9a75da074f52b969</p>
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

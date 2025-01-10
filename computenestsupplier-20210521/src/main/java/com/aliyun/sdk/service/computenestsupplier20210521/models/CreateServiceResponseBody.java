@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -86,7 +91,7 @@ public class CreateServiceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * DryRunResult.
+         * <p>The dry run result.</p>
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -151,7 +156,7 @@ public class CreateServiceResponseBody extends TeaModel {
      */
     public static class MissingPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
-        private java.util.List < String > action;
+        private java.util.List<String> action;
 
         @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
@@ -176,7 +181,7 @@ public class CreateServiceResponseBody extends TeaModel {
         /**
          * @return action
          */
-        public java.util.List < String > getAction() {
+        public java.util.List<String> getAction() {
             return this.action;
         }
 
@@ -195,20 +200,25 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > action; 
+            private java.util.List<String> action; 
             private String resource; 
             private String serviceName; 
 
             /**
-             * Action.
+             * <p>The Actions.</p>
              */
-            public Builder action(java.util.List < String > action) {
+            public Builder action(java.util.List<String> action) {
                 this.action = action;
                 return this;
             }
 
             /**
-             * Resource.
+             * <p>Resource in ram policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -216,7 +226,10 @@ public class CreateServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name in ram policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -238,7 +251,7 @@ public class CreateServiceResponseBody extends TeaModel {
      */
     public static class RolePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MissingPolicy")
-        private java.util.List < MissingPolicy> missingPolicy;
+        private java.util.List<MissingPolicy> missingPolicy;
 
         @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
@@ -259,7 +272,7 @@ public class CreateServiceResponseBody extends TeaModel {
         /**
          * @return missingPolicy
          */
-        public java.util.List < MissingPolicy> getMissingPolicy() {
+        public java.util.List<MissingPolicy> getMissingPolicy() {
             return this.missingPolicy;
         }
 
@@ -271,19 +284,37 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MissingPolicy> missingPolicy; 
+            private java.util.List<MissingPolicy> missingPolicy; 
             private String policy; 
 
             /**
-             * MissingPolicy.
+             * <p>The missing ram policy for deploying role.</p>
              */
-            public Builder missingPolicy(java.util.List < MissingPolicy> missingPolicy) {
+            public Builder missingPolicy(java.util.List<MissingPolicy> missingPolicy) {
                 this.missingPolicy = missingPolicy;
                 return this;
             }
 
             /**
-             * Policy.
+             * <p>The required ram policy for deploying role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;Statement&quot;: [{
+             *         &quot;Action&quot;: [&quot;oos:CancelExecutions&quot;, &quot;oos:DeleteExecutions&quot;, &quot;oos:GetTemplate&quot;, &quot;oos:ListExecutions&quot;, &quot;oos:ListTemplates&quot;, &quot;oos:NotifyExecution&quot;, &quot;oos:StartExecution&quot;],
+             *         &quot;Effect&quot;: &quot;Allow&quot;,
+             *         &quot;Resource&quot;: &quot;<em>&quot;
+             *     }, {
+             *         &quot;Action&quot;: [&quot;ram:PassRole&quot;],
+             *         &quot;Effect&quot;: &quot;Allow&quot;,
+             *         &quot;Resource&quot;: &quot;</em>&quot;
+             *     }, {
+             *         &quot;Action&quot;: [&quot;ros:CreateStack&quot;, &quot;ros:GetStack&quot;, &quot;ros:UpdateStack&quot;, &quot;ros:ListStackEvents&quot;, &quot;ros:ListStackResources&quot;, &quot;ros:ListStackResources&quot;, &quot;ros:DeleteStack&quot;, &quot;ram:GetRole&quot;],
+             *         &quot;Effect&quot;: &quot;Allow&quot;,
+             *         &quot;Resource&quot;: &quot;*&quot;
+             *     }],
+             *     &quot;Version&quot;: &quot;1&quot;
+             * }</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -330,7 +361,7 @@ public class CreateServiceResponseBody extends TeaModel {
             private RolePolicy rolePolicy; 
 
             /**
-             * RolePolicy.
+             * <p>The required ram policy for deploying role.</p>
              */
             public Builder rolePolicy(RolePolicy rolePolicy) {
                 this.rolePolicy = rolePolicy;

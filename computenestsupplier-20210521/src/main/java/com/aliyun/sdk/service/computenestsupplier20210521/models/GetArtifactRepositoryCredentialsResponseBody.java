@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableResources")
-    private java.util.List < AvailableResources> availableResources;
+    private java.util.List<AvailableResources> availableResources;
 
     @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
@@ -42,7 +47,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     /**
      * @return availableResources
      */
-    public java.util.List < AvailableResources> getAvailableResources() {
+    public java.util.List<AvailableResources> getAvailableResources() {
         return this.availableResources;
     }
 
@@ -68,7 +73,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableResources> availableResources; 
+        private java.util.List<AvailableResources> availableResources; 
         private Credentials credentials; 
         private String expireDate; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         /**
          * <p>The information about the resources that can be uploaded.</p>
          */
-        public Builder availableResources(java.util.List < AvailableResources> availableResources) {
+        public Builder availableResources(java.util.List<AvailableResources> availableResources) {
             this.availableResources = availableResources;
             return this;
         }

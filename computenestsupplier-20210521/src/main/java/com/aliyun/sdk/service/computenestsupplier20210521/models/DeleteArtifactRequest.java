@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -21,10 +26,15 @@ public class DeleteArtifactRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
     private String artifactVersion;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
     private DeleteArtifactRequest(Builder builder) {
         super(builder);
         this.artifactId = builder.artifactId;
         this.artifactVersion = builder.artifactVersion;
+        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -54,9 +64,17 @@ public class DeleteArtifactRequest extends Request {
         return this.artifactVersion;
     }
 
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static final class Builder extends Request.Builder<DeleteArtifactRequest, Builder> {
         private String artifactId; 
         private String artifactVersion; 
+        private String clientToken; 
 
         private Builder() {
             super();
@@ -66,6 +84,7 @@ public class DeleteArtifactRequest extends Request {
             super(request);
             this.artifactId = request.artifactId;
             this.artifactVersion = request.artifactVersion;
+            this.clientToken = request.clientToken;
         } 
 
         /**
@@ -90,6 +109,19 @@ public class DeleteArtifactRequest extends Request {
         public Builder artifactVersion(String artifactVersion) {
             this.putQueryParameter("ArtifactVersion", artifactVersion);
             this.artifactVersion = artifactVersion;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>788E7CP0EN9D51P</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

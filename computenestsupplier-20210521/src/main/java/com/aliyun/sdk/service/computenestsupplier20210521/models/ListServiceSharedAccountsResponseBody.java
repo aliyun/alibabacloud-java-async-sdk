@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ShareAccount")
-    private java.util.List < ShareAccount> shareAccount;
+    private java.util.List<ShareAccount> shareAccount;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
     /**
      * @return shareAccount
      */
-    public java.util.List < ShareAccount> getShareAccount() {
+    public java.util.List<ShareAccount> getShareAccount() {
         return this.shareAccount;
     }
 
@@ -82,7 +87,7 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ShareAccount> shareAccount; 
+        private java.util.List<ShareAccount> shareAccount; 
         private Integer totalCount; 
 
         /**
@@ -119,9 +124,9 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * ShareAccount.
+         * <p>Service shared account information.</p>
          */
-        public Builder shareAccount(java.util.List < ShareAccount> shareAccount) {
+        public Builder shareAccount(java.util.List<ShareAccount> shareAccount) {
             this.shareAccount = shareAccount;
             return this;
         }
@@ -322,7 +327,10 @@ public class ListServiceSharedAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * UserAliUid.
+             * <p>The user aliUid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127383705xxxxxx</p>
              */
             public Builder userAliUid(String userAliUid) {
                 this.userAliUid = userAliUid;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetServiceEstimateCostResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Commodity")
-    private java.util.Map < String, ? > commodity;
+    private java.util.Map<String, ?> commodity;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.Map < String, ? > resources;
+    private java.util.Map<String, ?> resources;
 
     private GetServiceEstimateCostResponseBody(Builder builder) {
         this.commodity = builder.commodity;
@@ -38,7 +43,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
     /**
      * @return commodity
      */
-    public java.util.Map < String, ? > getCommodity() {
+    public java.util.Map<String, ?> getCommodity() {
         return this.commodity;
     }
 
@@ -52,14 +57,14 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.Map < String, ? > getResources() {
+    public java.util.Map<String, ?> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > commodity; 
+        private java.util.Map<String, ?> commodity; 
         private String requestId; 
-        private java.util.Map < String, ? > resources; 
+        private java.util.Map<String, ?> resources; 
 
         /**
          * <p>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</p>
@@ -67,7 +72,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;PayPeriodUnit&quot;:Month,&quot;PayPeriod&quot;:1}</p>
          */
-        public Builder commodity(java.util.Map < String, ? > commodity) {
+        public Builder commodity(java.util.Map<String, ?> commodity) {
             this.commodity = commodity;
             return this;
         }
@@ -137,7 +142,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
          *               ]
          *             }</p>
          */
-        public Builder resources(java.util.Map < String, ? > resources) {
+        public Builder resources(java.util.Map<String, ?> resources) {
             this.resources = resources;
             return this;
         }

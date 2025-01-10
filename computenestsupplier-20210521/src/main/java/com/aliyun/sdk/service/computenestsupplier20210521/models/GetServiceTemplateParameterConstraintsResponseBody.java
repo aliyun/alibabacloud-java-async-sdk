@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FamilyConstraints")
-    private java.util.List < String > familyConstraints;
+    private java.util.List<String> familyConstraints;
 
     @com.aliyun.core.annotation.NameInMap("ParameterConstraints")
-    private java.util.List < ParameterConstraints> parameterConstraints;
+    private java.util.List<ParameterConstraints> parameterConstraints;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     /**
      * @return familyConstraints
      */
-    public java.util.List < String > getFamilyConstraints() {
+    public java.util.List<String> getFamilyConstraints() {
         return this.familyConstraints;
     }
 
     /**
      * @return parameterConstraints
      */
-    public java.util.List < ParameterConstraints> getParameterConstraints() {
+    public java.util.List<ParameterConstraints> getParameterConstraints() {
         return this.parameterConstraints;
     }
 
@@ -57,14 +62,14 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     }
 
     public static final class Builder {
-        private java.util.List < String > familyConstraints; 
-        private java.util.List < ParameterConstraints> parameterConstraints; 
+        private java.util.List<String> familyConstraints; 
+        private java.util.List<ParameterConstraints> parameterConstraints; 
         private String requestId; 
 
         /**
          * <p>The constraint families.</p>
          */
-        public Builder familyConstraints(java.util.List < String > familyConstraints) {
+        public Builder familyConstraints(java.util.List<String> familyConstraints) {
             this.familyConstraints = familyConstraints;
             return this;
         }
@@ -72,7 +77,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         /**
          * <p>The parameters in the template.</p>
          */
-        public Builder parameterConstraints(java.util.List < ParameterConstraints> parameterConstraints) {
+        public Builder parameterConstraints(java.util.List<ParameterConstraints> parameterConstraints) {
             this.parameterConstraints = parameterConstraints;
             return this;
         }
@@ -102,7 +107,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
      */
     public static class OriginalConstraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedValues")
-        private java.util.List < String > allowedValues;
+        private java.util.List<String> allowedValues;
 
         @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
@@ -131,7 +136,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         /**
          * @return allowedValues
          */
-        public java.util.List < String > getAllowedValues() {
+        public java.util.List<String> getAllowedValues() {
             return this.allowedValues;
         }
 
@@ -157,7 +162,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < String > allowedValues; 
+            private java.util.List<String> allowedValues; 
             private String propertyName; 
             private String resourceName; 
             private String resourceType; 
@@ -165,7 +170,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             /**
              * <p>The valid values of the parameter.</p>
              */
-            public Builder allowedValues(java.util.List < String > allowedValues) {
+            public Builder allowedValues(java.util.List<String> allowedValues) {
                 this.allowedValues = allowedValues;
                 return this;
             }
@@ -218,10 +223,10 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
      */
     public static class ParameterConstraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedValues")
-        private java.util.List < String > allowedValues;
+        private java.util.List<String> allowedValues;
 
         @com.aliyun.core.annotation.NameInMap("AssociationParameterNames")
-        private java.util.List < String > associationParameterNames;
+        private java.util.List<String> associationParameterNames;
 
         @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;
@@ -230,7 +235,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         private String behaviorReason;
 
         @com.aliyun.core.annotation.NameInMap("OriginalConstraints")
-        private java.util.List < OriginalConstraints> originalConstraints;
+        private java.util.List<OriginalConstraints> originalConstraints;
 
         @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
@@ -259,14 +264,14 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         /**
          * @return allowedValues
          */
-        public java.util.List < String > getAllowedValues() {
+        public java.util.List<String> getAllowedValues() {
             return this.allowedValues;
         }
 
         /**
          * @return associationParameterNames
          */
-        public java.util.List < String > getAssociationParameterNames() {
+        public java.util.List<String> getAssociationParameterNames() {
             return this.associationParameterNames;
         }
 
@@ -287,7 +292,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         /**
          * @return originalConstraints
          */
-        public java.util.List < OriginalConstraints> getOriginalConstraints() {
+        public java.util.List<OriginalConstraints> getOriginalConstraints() {
             return this.originalConstraints;
         }
 
@@ -306,18 +311,18 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < String > allowedValues; 
-            private java.util.List < String > associationParameterNames; 
+            private java.util.List<String> allowedValues; 
+            private java.util.List<String> associationParameterNames; 
             private String behavior; 
             private String behaviorReason; 
-            private java.util.List < OriginalConstraints> originalConstraints; 
+            private java.util.List<OriginalConstraints> originalConstraints; 
             private String parameterKey; 
             private String type; 
 
             /**
              * <p>The valid values of the parameter.</p>
              */
-            public Builder allowedValues(java.util.List < String > allowedValues) {
+            public Builder allowedValues(java.util.List<String> allowedValues) {
                 this.allowedValues = allowedValues;
                 return this;
             }
@@ -325,7 +330,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             /**
              * <p>The names of the associated parameters.</p>
              */
-            public Builder associationParameterNames(java.util.List < String > associationParameterNames) {
+            public Builder associationParameterNames(java.util.List<String> associationParameterNames) {
                 this.associationParameterNames = associationParameterNames;
                 return this;
             }
@@ -363,7 +368,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             /**
              * <p>The original constraint information.</p>
              */
-            public Builder originalConstraints(java.util.List < OriginalConstraints> originalConstraints) {
+            public Builder originalConstraints(java.util.List<OriginalConstraints> originalConstraints) {
                 this.originalConstraints = originalConstraints;
                 return this;
             }

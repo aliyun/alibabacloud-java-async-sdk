@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,7 +93,7 @@ public class CreateServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInfo")
-    private java.util.List < ServiceInfo> serviceInfo;
+    private java.util.List<ServiceInfo> serviceInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceType")
@@ -108,7 +113,7 @@ public class CreateServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantType")
@@ -300,7 +305,7 @@ public class CreateServiceRequest extends Request {
     /**
      * @return serviceInfo
      */
-    public java.util.List < ServiceInfo> getServiceInfo() {
+    public java.util.List<ServiceInfo> getServiceInfo() {
         return this.serviceInfo;
     }
 
@@ -335,7 +340,7 @@ public class CreateServiceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -386,12 +391,12 @@ public class CreateServiceRequest extends Request {
         private Boolean resellable; 
         private String resourceGroupId; 
         private String serviceId; 
-        private java.util.List < ServiceInfo> serviceInfo; 
+        private java.util.List<ServiceInfo> serviceInfo; 
         private String serviceType; 
         private String shareType; 
         private String sourceServiceId; 
         private String sourceServiceVersion; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String tenantType; 
         private Long trialDuration; 
         private String upgradeMetadata; 
@@ -502,7 +507,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ComplianceMetadata.
+         * <p>Compliance check metadata.</p>
          */
         public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
             String complianceMetadataShrink = shrink(complianceMetadata, "ComplianceMetadata", "json");
@@ -547,7 +552,14 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run for the request to check information. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run for the request, but does not create a service.</li>
+         * <li>false: performs a dry run for the request, and create a service if the request passes the dry run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -686,7 +698,7 @@ public class CreateServiceRequest extends Request {
         /**
          * <p>The service details.</p>
          */
-        public Builder serviceInfo(java.util.List < ServiceInfo> serviceInfo) {
+        public Builder serviceInfo(java.util.List<ServiceInfo> serviceInfo) {
             this.putQueryParameter("ServiceInfo", serviceInfo);
             this.serviceInfo = serviceInfo;
             return this;
@@ -756,7 +768,7 @@ public class CreateServiceRequest extends Request {
         /**
          * <p>The custom tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -829,7 +841,7 @@ public class CreateServiceRequest extends Request {
      */
     public static class ComplianceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePacks")
-        private java.util.List < String > compliancePacks;
+        private java.util.List<String> compliancePacks;
 
         private ComplianceMetadata(Builder builder) {
             this.compliancePacks = builder.compliancePacks;
@@ -846,17 +858,17 @@ public class CreateServiceRequest extends Request {
         /**
          * @return compliancePacks
          */
-        public java.util.List < String > getCompliancePacks() {
+        public java.util.List<String> getCompliancePacks() {
             return this.compliancePacks;
         }
 
         public static final class Builder {
-            private java.util.List < String > compliancePacks; 
+            private java.util.List<String> compliancePacks; 
 
             /**
-             * CompliancePacks.
+             * <p>The compliance package selected.</p>
              */
-            public Builder compliancePacks(java.util.List < String > compliancePacks) {
+            public Builder compliancePacks(java.util.List<String> compliancePacks) {
                 this.compliancePacks = compliancePacks;
                 return this;
             }
@@ -986,10 +998,10 @@ public class CreateServiceRequest extends Request {
             private String version; 
 
             /**
-             * <p>Protocol name.</p>
+             * <p>The name of the software.</p>
              * 
              * <strong>example:</strong>
-             * <p>Name</p>
+             * <p>MySQL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -997,7 +1009,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1019,7 +1034,7 @@ public class CreateServiceRequest extends Request {
      */
     public static class ServiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agreements")
-        private java.util.List < Agreements> agreements;
+        private java.util.List<Agreements> agreements;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -1039,7 +1054,7 @@ public class CreateServiceRequest extends Request {
         private String shortDescription;
 
         @com.aliyun.core.annotation.NameInMap("Softwares")
-        private java.util.List < Softwares> softwares;
+        private java.util.List<Softwares> softwares;
 
         private ServiceInfo(Builder builder) {
             this.agreements = builder.agreements;
@@ -1062,7 +1077,7 @@ public class CreateServiceRequest extends Request {
         /**
          * @return agreements
          */
-        public java.util.List < Agreements> getAgreements() {
+        public java.util.List<Agreements> getAgreements() {
             return this.agreements;
         }
 
@@ -1104,23 +1119,23 @@ public class CreateServiceRequest extends Request {
         /**
          * @return softwares
          */
-        public java.util.List < Softwares> getSoftwares() {
+        public java.util.List<Softwares> getSoftwares() {
             return this.softwares;
         }
 
         public static final class Builder {
-            private java.util.List < Agreements> agreements; 
+            private java.util.List<Agreements> agreements; 
             private String image; 
             private String locale; 
             private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
-            private java.util.List < Softwares> softwares; 
+            private java.util.List<Softwares> softwares; 
 
             /**
              * <p>Protocol document information about the service.</p>
              */
-            public Builder agreements(java.util.List < Agreements> agreements) {
+            public Builder agreements(java.util.List<Agreements> agreements) {
                 this.agreements = agreements;
                 return this;
             }
@@ -1187,9 +1202,9 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Softwares.
+             * <p>The list of the software in the service.</p>
              */
-            public Builder softwares(java.util.List < Softwares> softwares) {
+            public Builder softwares(java.util.List<Softwares> softwares) {
                 this.softwares = softwares;
                 return this;
             }

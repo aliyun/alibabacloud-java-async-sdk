@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpgradeServiceInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -76,7 +81,7 @@ public class UpgradeServiceInstanceRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -104,7 +109,7 @@ public class UpgradeServiceInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpgradeServiceInstanceRequest, Builder> {
         private String clientToken; 
         private String dryRun; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String serviceInstanceId; 
         private String serviceVersion; 
@@ -159,7 +164,7 @@ public class UpgradeServiceInstanceRequest extends Request {
          *       &quot;param&quot;: &quot;value&quot;
          * }</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;

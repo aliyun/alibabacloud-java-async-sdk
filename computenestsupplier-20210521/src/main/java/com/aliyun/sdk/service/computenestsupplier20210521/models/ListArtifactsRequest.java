@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListArtifactsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -30,7 +35,7 @@ public class ListArtifactsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListArtifactsRequest(Builder builder) {
         super(builder);
@@ -57,7 +62,7 @@ public class ListArtifactsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -85,16 +90,16 @@ public class ListArtifactsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListArtifactsRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class ListArtifactsRequest extends Request {
         /**
          * <p>The filter.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -157,7 +162,7 @@ public class ListArtifactsRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -181,7 +186,7 @@ public class ListArtifactsRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -206,13 +211,13 @@ public class ListArtifactsRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
@@ -233,7 +238,7 @@ public class ListArtifactsRequest extends Request {
             /**
              * <p>The parameter values of the filter.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

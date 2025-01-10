@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetServiceEstimateCostRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -92,7 +97,7 @@ public class GetServiceEstimateCostRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -141,7 +146,7 @@ public class GetServiceEstimateCostRequest extends Request {
     public static final class Builder extends Request.Builder<GetServiceEstimateCostRequest, Builder> {
         private String clientToken; 
         private Commodity commodity; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String serviceId; 
         private String serviceInstanceId; 
@@ -194,7 +199,7 @@ public class GetServiceEstimateCostRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;PayType&quot;:&quot;PostPaid&quot;,&quot;InstancePassword&quot;:&quot;xxxxxxxxxx&quot;,&quot;EcsInstanceType&quot;:&quot;ecs.g6.large&quot;,&quot;VSwitchId&quot;:&quot;vsw-0jlueyydpuekoxxxxxxxx&quot;,&quot;VpcId&quot;:&quot;vpc-0jlps6mjbgvpqxxxxxxxx&quot;,&quot;ZoneId&quot;:&quot;cn-wulanchabu-a&quot;,&quot;Enable&quot;:false,&quot;RegionId&quot;:&quot;cn-wulanchabu&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;

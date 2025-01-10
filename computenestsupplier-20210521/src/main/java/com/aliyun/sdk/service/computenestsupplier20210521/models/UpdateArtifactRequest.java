@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,20 +28,26 @@ public class UpdateArtifactRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ArtifactProperty")
-    @com.aliyun.core.annotation.Validation(required = true)
     private ArtifactProperty artifactProperty;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionType")
+    private String permissionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
-    private java.util.List < String > supportRegionIds;
+    private java.util.List<String> supportRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
     private UpdateArtifactRequest(Builder builder) {
@@ -44,7 +55,9 @@ public class UpdateArtifactRequest extends Request {
         this.artifactBuildProperty = builder.artifactBuildProperty;
         this.artifactId = builder.artifactId;
         this.artifactProperty = builder.artifactProperty;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.permissionType = builder.permissionType;
         this.supportRegionIds = builder.supportRegionIds;
         this.versionName = builder.versionName;
     }
@@ -84,6 +97,13 @@ public class UpdateArtifactRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -91,9 +111,16 @@ public class UpdateArtifactRequest extends Request {
     }
 
     /**
+     * @return permissionType
+     */
+    public String getPermissionType() {
+        return this.permissionType;
+    }
+
+    /**
      * @return supportRegionIds
      */
-    public java.util.List < String > getSupportRegionIds() {
+    public java.util.List<String> getSupportRegionIds() {
         return this.supportRegionIds;
     }
 
@@ -108,8 +135,10 @@ public class UpdateArtifactRequest extends Request {
         private ArtifactBuildProperty artifactBuildProperty; 
         private String artifactId; 
         private ArtifactProperty artifactProperty; 
+        private String clientToken; 
         private String description; 
-        private java.util.List < String > supportRegionIds; 
+        private String permissionType; 
+        private java.util.List<String> supportRegionIds; 
         private String versionName; 
 
         private Builder() {
@@ -121,7 +150,9 @@ public class UpdateArtifactRequest extends Request {
             this.artifactBuildProperty = request.artifactBuildProperty;
             this.artifactId = request.artifactId;
             this.artifactProperty = request.artifactProperty;
+            this.clientToken = request.clientToken;
             this.description = request.description;
+            this.permissionType = request.permissionType;
             this.supportRegionIds = request.supportRegionIds;
             this.versionName = request.versionName;
         } 
@@ -151,12 +182,23 @@ public class UpdateArtifactRequest extends Request {
 
         /**
          * <p>The properties of the deployment package.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder artifactProperty(ArtifactProperty artifactProperty) {
             String artifactPropertyShrink = shrink(artifactProperty, "ArtifactProperty", "json");
             this.putQueryParameter("ArtifactProperty", artifactPropertyShrink);
             this.artifactProperty = artifactProperty;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -173,9 +215,23 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
+         * <p>Permission fields are applicable to container image artifact and Helm Chart artifact. They can only change from Automatic to Public. Options:</p>
+         * <p>Public</p>
+         * <p>Automatic</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
+        public Builder permissionType(String permissionType) {
+            this.putQueryParameter("PermissionType", permissionType);
+            this.permissionType = permissionType;
+            return this;
+        }
+
+        /**
          * <p>The IDs of the regions that support the deployment package.</p>
          */
-        public Builder supportRegionIds(java.util.List < String > supportRegionIds) {
+        public Builder supportRegionIds(java.util.List<String> supportRegionIds) {
             this.putQueryParameter("SupportRegionIds", supportRegionIds);
             this.supportRegionIds = supportRegionIds;
             return this;
@@ -183,7 +239,6 @@ public class UpdateArtifactRequest extends Request {
 
         /**
          * <p>The version name of the deployment package.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -246,7 +301,10 @@ public class UpdateArtifactRequest extends Request {
             private String argumentValue; 
 
             /**
-             * ArgumentName.
+             * <p>The name of a specific build argument.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENV</p>
              */
             public Builder argumentName(String argumentName) {
                 this.argumentName = argumentName;
@@ -254,7 +312,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * ArgumentValue.
+             * <p>The value of a specific build argument.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx:latest</p>
              */
             public Builder argumentValue(String argumentValue) {
                 this.argumentValue = argumentValue;
@@ -337,7 +398,10 @@ public class UpdateArtifactRequest extends Request {
             private String repoName; 
 
             /**
-             * Branch.
+             * <p>The name of the branch in the code repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -345,7 +409,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the code repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the git repository is private.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-computenest</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -353,7 +423,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * Platform.
+             * <p>The platform where the code repository is hosted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>github</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -361,7 +434,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RepoName.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-computenest/quickstart-Lobexxx</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -383,7 +459,7 @@ public class UpdateArtifactRequest extends Request {
      */
     public static class ArtifactBuildProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildArgs")
-        private java.util.List < BuildArgs> buildArgs;
+        private java.util.List<BuildArgs> buildArgs;
 
         @com.aliyun.core.annotation.NameInMap("CodeRepo")
         private CodeRepo codeRepo;
@@ -428,7 +504,7 @@ public class UpdateArtifactRequest extends Request {
         /**
          * @return buildArgs
          */
-        public java.util.List < BuildArgs> getBuildArgs() {
+        public java.util.List<BuildArgs> getBuildArgs() {
             return this.buildArgs;
         }
 
@@ -482,7 +558,7 @@ public class UpdateArtifactRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < BuildArgs> buildArgs; 
+            private java.util.List<BuildArgs> buildArgs; 
             private CodeRepo codeRepo; 
             private String commandContent; 
             private String commandType; 
@@ -492,15 +568,21 @@ public class UpdateArtifactRequest extends Request {
             private String sourceImageId; 
 
             /**
-             * BuildArgs.
+             * <p>The build arguments used during the image build process.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is Dockerfile type.</p>
+             * </blockquote>
              */
-            public Builder buildArgs(java.util.List < BuildArgs> buildArgs) {
+            public Builder buildArgs(java.util.List<BuildArgs> buildArgs) {
                 this.buildArgs = buildArgs;
                 return this;
             }
 
             /**
-             * CodeRepo.
+             * <p>The address of the code repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is Dockerfile or Buildpacks type.</p>
+             * </blockquote>
              */
             public Builder codeRepo(CodeRepo codeRepo) {
                 this.codeRepo = codeRepo;
@@ -541,7 +623,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * DockerfilePath.
+             * <p>The relative path to the Dockerfile within the code repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is Dockerfile type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>./file/Dockerfile</p>
              */
             public Builder dockerfilePath(String dockerfilePath) {
                 this.dockerfilePath = dockerfilePath;
@@ -563,7 +651,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * SourceContainerImage.
+             * <p>The pull location of the source container image. This is used for the command docker pull ${SourceContainerImage}.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the ArtifactBuildType is ContainerImage type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel</p>
              */
             public Builder sourceContainerImage(String sourceContainerImage) {
                 this.sourceContainerImage = sourceContainerImage;
@@ -612,9 +706,6 @@ public class UpdateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CommodityVersion")
         private String commodityVersion;
 
-        @com.aliyun.core.annotation.NameInMap("FileScriptMetadata")
-        private String fileScriptMetadata;
-
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
@@ -630,9 +721,6 @@ public class UpdateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
-        @com.aliyun.core.annotation.NameInMap("ScriptMetadata")
-        private String scriptMetadata;
-
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
@@ -642,13 +730,11 @@ public class UpdateArtifactRequest extends Request {
         private ArtifactProperty(Builder builder) {
             this.commodityCode = builder.commodityCode;
             this.commodityVersion = builder.commodityVersion;
-            this.fileScriptMetadata = builder.fileScriptMetadata;
             this.imageId = builder.imageId;
             this.regionId = builder.regionId;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
             this.repoType = builder.repoType;
-            this.scriptMetadata = builder.scriptMetadata;
             this.tag = builder.tag;
             this.url = builder.url;
         }
@@ -673,13 +759,6 @@ public class UpdateArtifactRequest extends Request {
          */
         public String getCommodityVersion() {
             return this.commodityVersion;
-        }
-
-        /**
-         * @return fileScriptMetadata
-         */
-        public String getFileScriptMetadata() {
-            return this.fileScriptMetadata;
         }
 
         /**
@@ -718,13 +797,6 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * @return scriptMetadata
-         */
-        public String getScriptMetadata() {
-            return this.scriptMetadata;
-        }
-
-        /**
          * @return tag
          */
         public String getTag() {
@@ -741,13 +813,11 @@ public class UpdateArtifactRequest extends Request {
         public static final class Builder {
             private String commodityCode; 
             private String commodityVersion; 
-            private String fileScriptMetadata; 
             private String imageId; 
             private String regionId; 
             private String repoId; 
             private String repoName; 
             private String repoType; 
-            private String scriptMetadata; 
             private String tag; 
             private String url; 
 
@@ -780,20 +850,6 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * <p>The metadata of the Object Storage Service (OSS) object.</p>
-             * <blockquote>
-             * <p> This parameter is available only if the deployment package is an OSS object.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;WorkDir&quot;:&quot;/root&quot;,&quot;CommandType&quot;:&quot;RunShellScript&quot;,&quot;Platform&quot;:&quot;Linux&quot;,&quot;Script&quot;:&quot;echo hello&quot;}</p>
-             */
-            public Builder fileScriptMetadata(String fileScriptMetadata) {
-                this.fileScriptMetadata = fileScriptMetadata;
-                return this;
-            }
-
-            /**
              * <p>The image ID.</p>
              * <blockquote>
              * <p> This parameter is available only if the deployment package is an image.</p>
@@ -822,7 +878,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RepoId.
+             * <p>The ID of the Container Registry  repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a container image or of the Helm chart type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-yy4g68uhi39ttkm8</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -830,7 +892,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RepoName.
+             * <p>The name of the Container Registry repository.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the deployment package is a container image or of the Helm chart type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>volcanosh/vc-webhook-manager</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -838,7 +906,17 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RepoType.
+             * <p>The type of the repository.Valid values:</p>
+             * <ul>
+             * <li><code>Public</code>: a public repository.</li>
+             * <li><code>Private</code>: a private repository.<blockquote>
+             * <p> This parameter is available only if the deployment package is a container image or of the Helm chart type.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -846,21 +924,13 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * <p>The script content of the deployment package.</p>
+             * <p>The version tag of the image repository.</p>
              * <blockquote>
-             * <p> This parameter is available only if the deployment package is a script.</p>
+             * <p> This parameter is available only if the deployment package is a container image or of the Helm chart type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;ScriptMetadata&quot;:&quot;{&quot;CommandType&quot;:&quot;RunShellScript&quot;,&quot;Platform&quot;:&quot;Linux&quot;,&quot;Script&quot;:&quot;ls&quot;}&quot;}</p>
-             */
-            public Builder scriptMetadata(String scriptMetadata) {
-                this.scriptMetadata = scriptMetadata;
-                return this;
-            }
-
-            /**
-             * Tag.
+             * <p>v1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

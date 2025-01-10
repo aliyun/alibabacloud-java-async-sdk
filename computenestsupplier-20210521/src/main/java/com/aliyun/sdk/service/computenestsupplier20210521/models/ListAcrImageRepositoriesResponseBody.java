@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Repositories")
-    private java.util.List < Repositories> repositories;
+    private java.util.List<Repositories> repositories;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     /**
      * @return repositories
      */
-    public java.util.List < Repositories> getRepositories() {
+    public java.util.List<Repositories> getRepositories() {
         return this.repositories;
     }
 
@@ -81,7 +86,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Repositories> repositories; 
+        private java.util.List<Repositories> repositories; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         /**
          * <p>The images.</p>
          */
-        public Builder repositories(java.util.List < Repositories> repositories) {
+        public Builder repositories(java.util.List<Repositories> repositories) {
             this.repositories = repositories;
             return this;
         }
@@ -268,7 +273,14 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * <p>The type of the repository. Valid values:</p>
+             * <ul>
+             * <li><code>Private</code>: a private repository</li>
+             * <li><code>Public</code>: a public repository</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListArtifactVersionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -60,7 +65,7 @@ public class ListArtifactVersionsRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -80,7 +85,7 @@ public class ListArtifactVersionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListArtifactVersionsRequest, Builder> {
         private String artifactId; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -112,7 +117,7 @@ public class ListArtifactVersionsRequest extends Request {
         /**
          * <p>The filter.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             String filtersShrink = shrink(filters, "Filters", "json");
             this.putQueryParameter("Filters", filtersShrink);
             this.filters = filters;
@@ -161,7 +166,7 @@ public class ListArtifactVersionsRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filters(Builder builder) {
             this.name = builder.name;
@@ -186,13 +191,13 @@ public class ListArtifactVersionsRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
@@ -209,7 +214,7 @@ public class ListArtifactVersionsRequest extends Request {
             /**
              * <p>The parameter values of the filter.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -84,7 +89,7 @@ public class UpdateServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInfo")
-    private java.util.List < ServiceInfo> serviceInfo;
+    private java.util.List<ServiceInfo> serviceInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceType")
@@ -283,7 +288,7 @@ public class UpdateServiceRequest extends Request {
     /**
      * @return serviceInfo
      */
-    public java.util.List < ServiceInfo> getServiceInfo() {
+    public java.util.List<ServiceInfo> getServiceInfo() {
         return this.serviceInfo;
     }
 
@@ -361,7 +366,7 @@ public class UpdateServiceRequest extends Request {
         private String regionId; 
         private Boolean resellable; 
         private String serviceId; 
-        private java.util.List < ServiceInfo> serviceInfo; 
+        private java.util.List<ServiceInfo> serviceInfo; 
         private String serviceType; 
         private String serviceVersion; 
         private String shareType; 
@@ -406,7 +411,10 @@ public class UpdateServiceRequest extends Request {
         } 
 
         /**
-         * <p>Is need to update the artifacts</p>
+         * <p>The alert configurations of the service.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when you specify an alert policy for <strong>PolicyNames</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;CmsTemplateId&quot;:1162921,&quot;TemplateUrl&quot;:&quot;<a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json%5C%22%7D">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1760465342xxxxxx/template/c072ef50-6c03-4d9c-8f0e-d1c440xxxxxx.json\&quot;}</a></p>
@@ -418,12 +426,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The service type. Valid values:</p>
+         * <p>The approval type of the service usage application. Valid values:</p>
          * <ul>
-         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
-         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
-         * <li>operation: The service is a hosted O&amp;M service.</li>
-         * <li>poc: The service is a trial service.</li>
+         * <li>Manual: The application is manually approved.</li>
+         * <li>AutoPass: The application is automatically approved.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,7 +442,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The options for update the service.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>788E7CP0EN9D51P</p>
@@ -448,7 +454,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not publicly accessible.</p>
+         * <p>The commodity details.</p>
          */
         public Builder commodity(Commodity commodity) {
             String commodityShrink = shrink(commodity, "Commodity", "json");
@@ -458,7 +464,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * ComplianceMetadata.
+         * <p>Compliance check metadata.</p>
          */
         public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
             String complianceMetadataShrink = shrink(complianceMetadata, "ComplianceMetadata", "json");
@@ -468,7 +474,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O&amp;M policies are supported.</p>
+         * <p>The deployment configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;EstimateTime&quot;:null,&quot;SupplierDeployMetadata&quot;:{&quot;DeployTimeout&quot;:7200},&quot;EnableVnc&quot;:false}</p>
@@ -480,7 +486,12 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>WB01286039</p>
+         * <p>The deployment type of the service. Valid values:</p>
+         * <p>ros: The service is deployed by using Resource Orchestration Service (ROS).
+         * terraform: The service is deployed by using Terraform.
+         * ack: The service is deployed by using Container Service for Kubernetes (ACK).
+         * spi: The service is deployed by calling a service provider interface (SPI).
+         * operation: The service is deployed by using a hosted O&amp;M service.</p>
          * 
          * <strong>example:</strong>
          * <p>ros</p>
@@ -492,7 +503,14 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+         * <ul>
+         * <li>true: performs a dry run for the request, but does not update a service.</li>
+         * <li>false: performs a dry run for the request, and update a service if the request passes the dry run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -501,15 +519,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The deployment type of the service. Valid values:</p>
-         * <ul>
-         * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
-         * <li>terraform: The service is deployed by using Terraform.</li>
-         * <li>spi: The service is deployed by calling a service provider interface (SPI).</li>
-         * <li>operation: The service is deployed by using a hosted O&amp;M service.</li>
-         * <li>container: The service is deployed by using a container.</li>
-         * <li>pkg: The service is deployed by using a package.</li>
-         * </ul>
+         * <p>The duration for which hosted O&amp;M is implemented. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>259200</p>
@@ -521,7 +531,14 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The version name.</p>
+         * <p>Specifies whether to enable the hosted O&amp;M feature for the service. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if you set <strong>ServiceType</strong> to <strong>private</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -533,7 +550,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The duration for which hosted O&amp;M is implemented. Unit: seconds.</p>
+         * <p>The license metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)</p>
@@ -545,7 +562,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not publicly accessible.</p>
+         * <p>The logging configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>Specifies whether to support distribution. Valid values:</p>
@@ -561,7 +578,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>{&quot;RetentionDays&quot;:3}</p>
+         * <p>The hosted O&amp;M configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;PrometheusConfigMap&quot;:{&quot;Custom_Image_Ecs&quot;:{&quot;EnablePrometheus&quot;:false}}}</p>
@@ -573,7 +590,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The package name.</p>
+         * <p>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O&amp;M policies are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>policyName1, policyName2</p>
@@ -585,6 +602,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -597,10 +615,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The alert configurations of the service.</p>
-         * <blockquote>
-         * <p> This parameter takes effect only when you specify an alert policy for <strong>PolicyNames</strong>.</p>
-         * </blockquote>
+         * <p>Whether resell is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -612,7 +627,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>TemplaceName</p>
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -625,16 +640,21 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the entity.</p>
+         * <p>The service details.</p>
          */
-        public Builder serviceInfo(java.util.List < ServiceInfo> serviceInfo) {
+        public Builder serviceInfo(java.util.List<ServiceInfo> serviceInfo) {
             this.putQueryParameter("ServiceInfo", serviceInfo);
             this.serviceInfo = serviceInfo;
             return this;
         }
 
         /**
-         * <p>Custom prometheus query</p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+         * <li>operation: The service is a hosted O&amp;M service.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>private</p>
@@ -646,7 +666,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</p>
+         * <p>The service version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -658,18 +678,13 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>共享类型。可能的值：</p>
+         * <p>The permission type of the deployment URL. Valid values:</p>
          * <ul>
-         * <li><p>Public：公开的，正式部署和试用部署都不受限。</p>
-         * </li>
-         * <li><p>Restricted：受限的，正式部署和试用部署都受限。</p>
-         * </li>
-         * <li><p>OnlyFormalRestricted：仅正式部署受限。</p>
-         * </li>
-         * <li><p>OnlyTrailRestricted：仅试用部署受限。</p>
-         * </li>
-         * <li><p>Hidden：隐藏的，不可见且不可申请部署权限。</p>
-         * </li>
+         * <li>Public: All users can go to the URL to create a service instance or a trial service instance.</li>
+         * <li>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</li>
+         * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</li>
+         * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
+         * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -682,7 +697,11 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Pay-As-You-Go Use)</p>
+         * <p>The type of the tenant. Valid values:</p>
+         * <ul>
+         * <li>SingleTenant</li>
+         * <li>MultiTenant</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SingleTenant</p>
@@ -694,7 +713,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>This parameter is not publicly accessible.</p>
+         * <p>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -706,7 +725,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>cmgj0006xxxx-Memory-1</p>
+         * <p>The update option.</p>
          */
         public Builder updateOption(UpdateOption updateOption) {
             String updateOptionShrink = shrink(updateOption, "UpdateOption", "json");
@@ -728,7 +747,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>TemplaceName</p>
+         * <p>The version name.</p>
          * 
          * <strong>example:</strong>
          * <p>Draft</p>
@@ -754,7 +773,7 @@ public class UpdateServiceRequest extends Request {
      */
     public static class ComponentsMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mappings")
-        private java.util.Map < String, String > mappings;
+        private java.util.Map<String, String> mappings;
 
         @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
@@ -775,7 +794,7 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return mappings
          */
-        public java.util.Map < String, String > getMappings() {
+        public java.util.Map<String, String> getMappings() {
             return this.mappings;
         }
 
@@ -787,26 +806,22 @@ public class UpdateServiceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > mappings; 
+            private java.util.Map<String, String> mappings; 
             private String templateName; 
 
             /**
-             * <p>The language of the service. Valid values:</p>
-             * <ul>
-             * <li>zh-CN: Chinese</li>
-             * <li>en-US: English</li>
-             * </ul>
+             * <p>This parameter is not available to the public.</p>
              */
-            public Builder mappings(java.util.Map < String, String > mappings) {
+            public Builder mappings(java.util.Map<String, String> mappings) {
                 this.mappings = mappings;
                 return this;
             }
 
             /**
-             * <p>{ &quot;Logstores&quot;: [ { &quot;LogstoreName&quot;: &quot;access-log&quot;, &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # This parameter is not required for containers. Configure the parameter in the YAML file. &quot;FilePattern&quot;: &quot;access.log*&quot; # This parameter is not required for containers. Configure the parameter in the YAML file. } ] }</p>
+             * <p>This parameter is not available to the public.</p>
              * 
              * <strong>example:</strong>
-             * <p>此参数不对外开放</p>
+             * <p>This parameter is not available to the public.</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -889,7 +904,7 @@ public class UpdateServiceRequest extends Request {
             private String type; 
 
             /**
-             * <p>The description of the service.</p>
+             * <p>Metering entity ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cmgj0006xxxx-Memory-1</p>
@@ -900,7 +915,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)</p>
+             * <p>Metric name, required when type is ComputeNestBill or ComputeNestPrometheus.</p>
              * 
              * <strong>example:</strong>
              * <p>VirtualCpu/ecs.InstanceType</p>
@@ -911,7 +926,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The service details.</p>
+             * <p>Promql statement.</p>
              * 
              * <strong>example:</strong>
              * <p>avg_over_time(sum(rate(container_cpu_usage_seconds_total{namespace=~&quot;ALIYUN::StackName&quot;}[2m]))[1h:10s])</p>
@@ -922,7 +937,13 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Pay-As-You-Go Use)</p>
+             * <p>Type. Valid values:</p>
+             * <ul>
+             * <li>Custom</li>
+             * <li>ComputeNestBill</li>
+             * <li>ComputeNestPrometheus</li>
+             * <li>ComputeNestTime</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -947,7 +968,7 @@ public class UpdateServiceRequest extends Request {
      */
     public static class MeteringEntityMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityIds")
-        private java.util.List < String > entityIds;
+        private java.util.List<String> entityIds;
 
         @com.aliyun.core.annotation.NameInMap("SpecificationName")
         private String specificationName;
@@ -972,7 +993,7 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return entityIds
          */
-        public java.util.List < String > getEntityIds() {
+        public java.util.List<String> getEntityIds() {
             return this.entityIds;
         }
 
@@ -991,20 +1012,20 @@ public class UpdateServiceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > entityIds; 
+            private java.util.List<String> entityIds; 
             private String specificationName; 
             private String templateName; 
 
             /**
-             * <p>计量项ID</p>
+             * <p>Metering entity IDs.</p>
              */
-            public Builder entityIds(java.util.List < String > entityIds) {
+            public Builder entityIds(java.util.List<String> entityIds) {
                 this.entityIds = entityIds;
                 return this;
             }
 
             /**
-             * <p>套餐名称</p>
+             * <p>The specification name.</p>
              * 
              * <strong>example:</strong>
              * <p>This parameter is not publicly accessible.</p>
@@ -1015,7 +1036,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>模板名称</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>The service ID.</p>
@@ -1089,7 +1110,7 @@ public class UpdateServiceRequest extends Request {
             private String templateName; 
 
             /**
-             * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+             * <p>Specification code.</p>
              * 
              * <strong>example:</strong>
              * <p>yuncode5767800001</p>
@@ -1100,7 +1121,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>套餐名称</p>
+             * <p>The name of the package specification.</p>
              * 
              * <strong>example:</strong>
              * <p>Type, value：</p>
@@ -1117,7 +1138,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>模板名称</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Subscription/Permanent Use)</p>
@@ -1142,19 +1163,19 @@ public class UpdateServiceRequest extends Request {
      */
     public static class Commodity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
-        private java.util.List < ComponentsMappings> componentsMappings;
+        private java.util.List<ComponentsMappings> componentsMappings;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntityExtraInfos")
-        private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos;
+        private java.util.List<MeteringEntityExtraInfos> meteringEntityExtraInfos;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntityMappings")
-        private java.util.List < MeteringEntityMappings> meteringEntityMappings;
+        private java.util.List<MeteringEntityMappings> meteringEntityMappings;
 
         @com.aliyun.core.annotation.NameInMap("SaasBoostConfig")
         private String saasBoostConfig;
 
         @com.aliyun.core.annotation.NameInMap("SpecificationMappings")
-        private java.util.List < SpecificationMappings> specificationMappings;
+        private java.util.List<SpecificationMappings> specificationMappings;
 
         private Commodity(Builder builder) {
             this.componentsMappings = builder.componentsMappings;
@@ -1175,21 +1196,21 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return componentsMappings
          */
-        public java.util.List < ComponentsMappings> getComponentsMappings() {
+        public java.util.List<ComponentsMappings> getComponentsMappings() {
             return this.componentsMappings;
         }
 
         /**
          * @return meteringEntityExtraInfos
          */
-        public java.util.List < MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+        public java.util.List<MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
             return this.meteringEntityExtraInfos;
         }
 
         /**
          * @return meteringEntityMappings
          */
-        public java.util.List < MeteringEntityMappings> getMeteringEntityMappings() {
+        public java.util.List<MeteringEntityMappings> getMeteringEntityMappings() {
             return this.meteringEntityMappings;
         }
 
@@ -1203,43 +1224,43 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return specificationMappings
          */
-        public java.util.List < SpecificationMappings> getSpecificationMappings() {
+        public java.util.List<SpecificationMappings> getSpecificationMappings() {
             return this.specificationMappings;
         }
 
         public static final class Builder {
-            private java.util.List < ComponentsMappings> componentsMappings; 
-            private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos; 
-            private java.util.List < MeteringEntityMappings> meteringEntityMappings; 
+            private java.util.List<ComponentsMappings> componentsMappings; 
+            private java.util.List<MeteringEntityExtraInfos> meteringEntityExtraInfos; 
+            private java.util.List<MeteringEntityMappings> meteringEntityMappings; 
             private String saasBoostConfig; 
-            private java.util.List < SpecificationMappings> specificationMappings; 
+            private java.util.List<SpecificationMappings> specificationMappings; 
 
             /**
-             * <p>The ID of the entity.</p>
+             * <p>This parameter is not available to the public.</p>
              */
-            public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
+            public Builder componentsMappings(java.util.List<ComponentsMappings> componentsMappings) {
                 this.componentsMappings = componentsMappings;
                 return this;
             }
 
             /**
-             * <p>This parameter is not publicly accessible.</p>
+             * <p>Metering entity extra information.</p>
              */
-            public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
+            public Builder meteringEntityExtraInfos(java.util.List<MeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
                 return this;
             }
 
             /**
-             * <p>The template name.</p>
+             * <p>Binding relationship between templates/specifications and metering dimensions (marketplace - PayAsYouGo)</p>
              */
-            public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
+            public Builder meteringEntityMappings(java.util.List<MeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
                 return this;
             }
 
             /**
-             * <p>SaaS Boost配置信息</p>
+             * <p>SaaS Boost configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -1250,9 +1271,9 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>avg_over_time(sum(rate(container_cpu_usage_seconds_total{namespace=~&quot;ALIYUN::StackName&quot;}[2m]))[1h:10s])</p>
+             * <p>Product specifications and template/package mappings (Used in marketplace - subscription scenario)</p>
              */
-            public Builder specificationMappings(java.util.List < SpecificationMappings> specificationMappings) {
+            public Builder specificationMappings(java.util.List<SpecificationMappings> specificationMappings) {
                 this.specificationMappings = specificationMappings;
                 return this;
             }
@@ -1272,7 +1293,7 @@ public class UpdateServiceRequest extends Request {
      */
     public static class ComplianceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePacks")
-        private java.util.List < String > compliancePacks;
+        private java.util.List<String> compliancePacks;
 
         private ComplianceMetadata(Builder builder) {
             this.compliancePacks = builder.compliancePacks;
@@ -1289,17 +1310,17 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return compliancePacks
          */
-        public java.util.List < String > getCompliancePacks() {
+        public java.util.List<String> getCompliancePacks() {
             return this.compliancePacks;
         }
 
         public static final class Builder {
-            private java.util.List < String > compliancePacks; 
+            private java.util.List<String> compliancePacks; 
 
             /**
-             * CompliancePacks.
+             * <p>The compliance pack.</p>
              */
-            public Builder compliancePacks(java.util.List < String > compliancePacks) {
+            public Builder compliancePacks(java.util.List<String> compliancePacks) {
                 this.compliancePacks = compliancePacks;
                 return this;
             }
@@ -1356,7 +1377,7 @@ public class UpdateServiceRequest extends Request {
             private String url; 
 
             /**
-             * <p>Saas boost config information</p>
+             * <p>Protocol name.</p>
              * 
              * <strong>example:</strong>
              * <p>Name</p>
@@ -1367,7 +1388,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>VirtualCpu/ecs.InstanceType</p>
+             * <p>Protocol url.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://aliyun.com/xxxxxxxx.html">https://aliyun.com/xxxxxxxx.html</a></p>
@@ -1429,10 +1450,10 @@ public class UpdateServiceRequest extends Request {
             private String version; 
 
             /**
-             * <p>Saas boost config information</p>
+             * <p>The name of the software.</p>
              * 
              * <strong>example:</strong>
-             * <p>Name</p>
+             * <p>MySQL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1440,7 +1461,10 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1462,7 +1486,7 @@ public class UpdateServiceRequest extends Request {
      */
     public static class ServiceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agreements")
-        private java.util.List < Agreements> agreements;
+        private java.util.List<Agreements> agreements;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -1480,7 +1504,7 @@ public class UpdateServiceRequest extends Request {
         private String shortDescription;
 
         @com.aliyun.core.annotation.NameInMap("Softwares")
-        private java.util.List < Softwares> softwares;
+        private java.util.List<Softwares> softwares;
 
         private ServiceInfo(Builder builder) {
             this.agreements = builder.agreements;
@@ -1503,7 +1527,7 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return agreements
          */
-        public java.util.List < Agreements> getAgreements() {
+        public java.util.List<Agreements> getAgreements() {
             return this.agreements;
         }
 
@@ -1545,29 +1569,29 @@ public class UpdateServiceRequest extends Request {
         /**
          * @return softwares
          */
-        public java.util.List < Softwares> getSoftwares() {
+        public java.util.List<Softwares> getSoftwares() {
             return this.softwares;
         }
 
         public static final class Builder {
-            private java.util.List < Agreements> agreements; 
+            private java.util.List<Agreements> agreements; 
             private String image; 
             private String locale; 
             private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
-            private java.util.List < Softwares> softwares; 
+            private java.util.List<Softwares> softwares; 
 
             /**
-             * <p>The ID of the entity.</p>
+             * <p>Protocol document information about the service.</p>
              */
-            public Builder agreements(java.util.List < Agreements> agreements) {
+            public Builder agreements(java.util.List<Agreements> agreements) {
                 this.agreements = agreements;
                 return this;
             }
 
             /**
-             * <p>packageOne</p>
+             * <p>The URL of the service icon.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
@@ -1578,7 +1602,11 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>Bind Commodity Information</p>
+             * <p>The language of the service. Valid values:</p>
+             * <ul>
+             * <li>zh-CN: Chinese</li>
+             * <li>en-US: English</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>zh-CN</p>
@@ -1589,7 +1617,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>Protocol document information about the service.</p>
+             * <p>The URL of the detailed description of the service.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://description.tidb.oss.url">http://description.tidb.oss.url</a></p>
@@ -1600,7 +1628,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>packageOne</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>Metric Name, filled in when Type is ComputeNestBill or ComputeNestPrometheus</p>
@@ -1611,7 +1639,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The description of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>The URL of the detailed description of the service.</p>
@@ -1622,9 +1650,9 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * Softwares.
+             * <p>The list of the software in the service.</p>
              */
-            public Builder softwares(java.util.List < Softwares> softwares) {
+            public Builder softwares(java.util.List<Softwares> softwares) {
                 this.softwares = softwares;
                 return this;
             }
@@ -1681,7 +1709,7 @@ public class UpdateServiceRequest extends Request {
             private String updateFrom; 
 
             /**
-             * <p>The service version.</p>
+             * <p>Whether to update artifact.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1692,7 +1720,11 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * <p>Protocol url.</p>
+             * <p>Update from. Valid values:</p>
+             * <ul>
+             * <li>CODE</li>
+             * <li>PARAMETERS</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PARAMETERS</p>

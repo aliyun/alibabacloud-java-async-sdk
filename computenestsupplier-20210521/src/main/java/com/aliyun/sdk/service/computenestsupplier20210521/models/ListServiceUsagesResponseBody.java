@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceUsages")
-    private java.util.List < ServiceUsages> serviceUsages;
+    private java.util.List<ServiceUsages> serviceUsages;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     /**
      * @return serviceUsages
      */
-    public java.util.List < ServiceUsages> getServiceUsages() {
+    public java.util.List<ServiceUsages> getServiceUsages() {
         return this.serviceUsages;
     }
 
@@ -82,7 +87,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ServiceUsages> serviceUsages; 
+        private java.util.List<ServiceUsages> serviceUsages; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         /**
          * <p>The service applications.</p>
          */
-        public Builder serviceUsages(java.util.List < ServiceUsages> serviceUsages) {
+        public Builder serviceUsages(java.util.List<ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
             return this;
         }
@@ -175,7 +180,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Long userAliUid;
 
         @com.aliyun.core.annotation.NameInMap("UserInformation")
-        private java.util.Map < String, String > userInformation;
+        private java.util.Map<String, String> userInformation;
 
         private ServiceUsages(Builder builder) {
             this.comments = builder.comments;
@@ -256,7 +261,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         /**
          * @return userInformation
          */
-        public java.util.Map < String, String > getUserInformation() {
+        public java.util.Map<String, String> getUserInformation() {
             return this.userInformation;
         }
 
@@ -269,7 +274,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             private String supplierName; 
             private String updateTime; 
             private Long userAliUid; 
-            private java.util.Map < String, String > userInformation; 
+            private java.util.Map<String, String> userInformation; 
 
             /**
              * <p>The comment on the approval.</p>
@@ -368,7 +373,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             /**
              * <p>The user information.</p>
              */
-            public Builder userInformation(java.util.Map < String, String > userInformation) {
+            public Builder userInformation(java.util.Map<String, String> userInformation) {
                 this.userInformation = userInformation;
                 return this;
             }

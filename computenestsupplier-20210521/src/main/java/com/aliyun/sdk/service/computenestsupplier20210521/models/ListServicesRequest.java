@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListServicesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -39,7 +44,7 @@ public class ListServicesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListServicesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class ListServicesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -110,18 +115,18 @@ public class ListServicesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private Boolean allVersions; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -153,7 +158,7 @@ public class ListServicesRequest extends Request {
         /**
          * <p>The filters.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -211,7 +216,7 @@ public class ListServicesRequest extends Request {
         /**
          * <p>The custom tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -235,7 +240,7 @@ public class ListServicesRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -260,13 +265,13 @@ public class ListServicesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</p>
@@ -288,7 +293,7 @@ public class ListServicesRequest extends Request {
             /**
              * <p>The parameter values of the filter.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListServiceUsagesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -52,7 +57,7 @@ public class ListServiceUsagesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -78,7 +83,7 @@ public class ListServiceUsagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServiceUsagesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String supplierRole; 
@@ -98,7 +103,7 @@ public class ListServiceUsagesRequest extends Request {
         /**
          * <p>The filter.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -158,7 +163,7 @@ public class ListServiceUsagesRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -183,13 +188,13 @@ public class ListServiceUsagesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The parameter name of the filter. You can specify one or more filters. Valid values:</p>
@@ -211,7 +216,7 @@ public class ListServiceUsagesRequest extends Request {
             /**
              * <p>The parameter value N of the filter. Valid values of N: 1 to 10.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

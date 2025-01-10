@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -193,7 +198,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactBuildType.
+         * <p>The type of the deployment package to be built.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dockerfile</p>
          */
         public Builder artifactBuildType(String artifactBuildType) {
             this.artifactBuildType = artifactBuildType;
@@ -297,7 +305,10 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * StatusDetail.
+         * <p>The status of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</p>
          */
         public Builder statusDetail(String statusDetail) {
             this.statusDetail = statusDetail;

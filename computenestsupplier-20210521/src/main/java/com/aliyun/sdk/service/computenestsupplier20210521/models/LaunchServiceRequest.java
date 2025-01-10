@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class LaunchServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < String > categories;
+    private java.util.List<String> categories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -65,7 +70,7 @@ public class LaunchServiceRequest extends Request {
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
@@ -105,7 +110,7 @@ public class LaunchServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LaunchServiceRequest, Builder> {
-        private java.util.List < String > categories; 
+        private java.util.List<String> categories; 
         private String clientToken; 
         private Boolean recommend; 
         private String regionId; 
@@ -127,16 +132,19 @@ public class LaunchServiceRequest extends Request {
         } 
 
         /**
-         * Categories.
+         * <p>The categories of the service.</p>
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             this.putQueryParameter("Categories", categories);
             this.categories = categories;
             return this;
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10CM943JP0EN9D51H</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -145,7 +153,7 @@ public class LaunchServiceRequest extends Request {
         }
 
         /**
-         * Recommend.
+         * <p>Whether to set the recommended service publishing to the service directory.</p>
          */
         public Builder recommend(Boolean recommend) {
             this.putQueryParameter("Recommend", recommend);
@@ -154,6 +162,7 @@ public class LaunchServiceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +175,7 @@ public class LaunchServiceRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +188,7 @@ public class LaunchServiceRequest extends Request {
         }
 
         /**
+         * <p>The service version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

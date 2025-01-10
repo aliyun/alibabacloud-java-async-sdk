@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListArtifactsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Artifacts")
-    private java.util.List < Artifacts> artifacts;
+    private java.util.List<Artifacts> artifacts;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListArtifactsResponseBody extends TeaModel {
     /**
      * @return artifacts
      */
-    public java.util.List < Artifacts> getArtifacts() {
+    public java.util.List<Artifacts> getArtifacts() {
         return this.artifacts;
     }
 
@@ -79,7 +84,7 @@ public class ListArtifactsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Artifacts> artifacts; 
+        private java.util.List<Artifacts> artifacts; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         /**
          * <p>The information about deployment packages.</p>
          */
-        public Builder artifacts(java.util.List < Artifacts> artifacts) {
+        public Builder artifacts(java.util.List<Artifacts> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
@@ -248,7 +253,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Artifacts(Builder builder) {
             this.artifactId = builder.artifactId;
@@ -329,7 +334,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -342,7 +347,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The ID of the deployment package.</p>
@@ -443,7 +448,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

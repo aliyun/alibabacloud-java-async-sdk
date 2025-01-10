@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployServiceInstanceResponse> deployServiceInstance(DeployServiceInstanceRequest request);
 
     /**
+     * @param request the request parameters of GenerateServicePolicy  GenerateServicePolicyRequest
+     * @return GenerateServicePolicyResponse
+     */
+    CompletableFuture<GenerateServicePolicyResponse> generateServicePolicy(GenerateServicePolicyRequest request);
+
+    /**
      * @param request the request parameters of GetArtifact  GetArtifactRequest
      * @return GetArtifactResponse
      */
@@ -114,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetServiceInstanceResponse
      */
     CompletableFuture<GetServiceInstanceResponse> getServiceInstance(GetServiceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceProvisions  GetServiceProvisionsRequest
+     * @return GetServiceProvisionsResponse
+     */
+    CompletableFuture<GetServiceProvisionsResponse> getServiceProvisions(GetServiceProvisionsRequest request);
 
     /**
      * @param request the request parameters of GetServiceTemplateParameterConstraints  GetServiceTemplateParameterConstraintsRequest
@@ -182,6 +194,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
+     * @param request the request parameters of ListTagKeys  ListTagKeysRequest
+     * @return ListTagKeysResponse
+     */
+    CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListTagValues  ListTagValuesRequest
+     * @return ListTagValuesResponse
+     */
+    CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
+
+    /**
      * @param request the request parameters of ModifyServiceInstanceResources  ModifyServiceInstanceResourcesRequest
      * @return ModifyServiceInstanceResourcesResponse
      */
@@ -246,6 +270,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopServiceInstanceResponse
      */
     CompletableFuture<StopServiceInstanceResponse> stopServiceInstance(StopServiceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnTagResources  UnTagResourcesRequest
+     * @return UnTagResourcesResponse
+     */
+    CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateArtifact  UpdateArtifactRequest
