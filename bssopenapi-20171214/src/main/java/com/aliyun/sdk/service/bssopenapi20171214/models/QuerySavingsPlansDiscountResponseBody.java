@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -416,7 +421,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         private String hostId;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         private Data(Builder builder) {
             this.hostId = builder.hostId;
@@ -441,13 +446,13 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
             private String hostId; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
 
             /**
              * <p>The IP address of the request.</p>
@@ -463,7 +468,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             /**
              * <p>The information about the discounts on saving plans.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

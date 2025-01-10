@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -288,7 +293,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         private String priceUnit;
 
         @com.aliyun.core.annotation.NameInMap("RangeList")
-        private java.util.List < RangeList> rangeList;
+        private java.util.List<RangeList> rangeList;
 
         @com.aliyun.core.annotation.NameInMap("UsageUnit")
         private String usageUnit;
@@ -357,7 +362,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return rangeList
          */
-        public java.util.List < RangeList> getRangeList() {
+        public java.util.List<RangeList> getRangeList() {
             return this.rangeList;
         }
 
@@ -375,7 +380,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             private String priceMode; 
             private String priceType; 
             private String priceUnit; 
-            private java.util.List < RangeList> rangeList; 
+            private java.util.List<RangeList> rangeList; 
             private String usageUnit; 
 
             /**
@@ -447,7 +452,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             /**
              * <p>If the PriceMode parameter is set to STEP_ACCUMULATION or STEP_ARRIVE, the value of this field exists and specifies the range. If the PriceMode parameter is set to NORMAL_PRICE, the value of this field is null.</p>
              */
-            public Builder rangeList(java.util.List < RangeList> rangeList) {
+            public Builder rangeList(java.util.List<RangeList> rangeList) {
                 this.rangeList = rangeList;
                 return this;
             }
@@ -478,13 +483,13 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
      */
     public static class SkuPriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CskuPriceList")
-        private java.util.List < CskuPriceList> cskuPriceList;
+        private java.util.List<CskuPriceList> cskuPriceList;
 
         @com.aliyun.core.annotation.NameInMap("SkuCode")
         private String skuCode;
 
         @com.aliyun.core.annotation.NameInMap("SkuFactorMap")
-        private java.util.Map < String, String > skuFactorMap;
+        private java.util.Map<String, String> skuFactorMap;
 
         private SkuPriceList(Builder builder) {
             this.cskuPriceList = builder.cskuPriceList;
@@ -503,7 +508,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return cskuPriceList
          */
-        public java.util.List < CskuPriceList> getCskuPriceList() {
+        public java.util.List<CskuPriceList> getCskuPriceList() {
             return this.cskuPriceList;
         }
 
@@ -517,19 +522,19 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return skuFactorMap
          */
-        public java.util.Map < String, String > getSkuFactorMap() {
+        public java.util.Map<String, String> getSkuFactorMap() {
             return this.skuFactorMap;
         }
 
         public static final class Builder {
-            private java.util.List < CskuPriceList> cskuPriceList; 
+            private java.util.List<CskuPriceList> cskuPriceList; 
             private String skuCode; 
-            private java.util.Map < String, String > skuFactorMap; 
+            private java.util.Map<String, String> skuFactorMap; 
 
             /**
              * <p>The prices of the SKUs.</p>
              */
-            public Builder cskuPriceList(java.util.List < CskuPriceList> cskuPriceList) {
+            public Builder cskuPriceList(java.util.List<CskuPriceList> cskuPriceList) {
                 this.cskuPriceList = cskuPriceList;
                 return this;
             }
@@ -548,7 +553,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             /**
              * <p>The values of the pricing factors.</p>
              */
-            public Builder skuFactorMap(java.util.Map < String, String > skuFactorMap) {
+            public Builder skuFactorMap(java.util.Map<String, String> skuFactorMap) {
                 this.skuFactorMap = skuFactorMap;
                 return this;
             }
@@ -571,7 +576,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         private String nextPageToken;
 
         @com.aliyun.core.annotation.NameInMap("SkuPriceList")
-        private java.util.List < SkuPriceList> skuPriceList;
+        private java.util.List<SkuPriceList> skuPriceList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -600,7 +605,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
         /**
          * @return skuPriceList
          */
-        public java.util.List < SkuPriceList> getSkuPriceList() {
+        public java.util.List<SkuPriceList> getSkuPriceList() {
             return this.skuPriceList;
         }
 
@@ -613,7 +618,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nextPageToken; 
-            private java.util.List < SkuPriceList> skuPriceList; 
+            private java.util.List<SkuPriceList> skuPriceList; 
             private Integer totalCount; 
 
             /**
@@ -630,7 +635,7 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
             /**
              * <p>The SKUs.</p>
              */
-            public Builder skuPriceList(java.util.List < SkuPriceList> skuPriceList) {
+            public Builder skuPriceList(java.util.List<SkuPriceList> skuPriceList) {
                 this.skuPriceList = skuPriceList;
                 return this;
             }

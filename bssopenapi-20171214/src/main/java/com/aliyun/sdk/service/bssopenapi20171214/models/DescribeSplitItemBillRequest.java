@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -72,7 +77,7 @@ public class DescribeSplitItemBillRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagFilter")
-    private java.util.List < TagFilter> tagFilter;
+    private java.util.List<TagFilter> tagFilter;
 
     private DescribeSplitItemBillRequest(Builder builder) {
         super(builder);
@@ -207,7 +212,7 @@ public class DescribeSplitItemBillRequest extends Request {
     /**
      * @return tagFilter
      */
-    public java.util.List < TagFilter> getTagFilter() {
+    public java.util.List<TagFilter> getTagFilter() {
         return this.tagFilter;
     }
 
@@ -226,7 +231,7 @@ public class DescribeSplitItemBillRequest extends Request {
         private String productType; 
         private String splitItemID; 
         private String subscriptionType; 
-        private java.util.List < TagFilter> tagFilter; 
+        private java.util.List<TagFilter> tagFilter; 
 
         private Builder() {
             super();
@@ -429,7 +434,7 @@ public class DescribeSplitItemBillRequest extends Request {
         /**
          * <p>The tags that are used to filter split bills. You can specify multiple tag values. If you specify multiple tag values, split bills that match one of the tag values are queried.</p>
          */
-        public Builder tagFilter(java.util.List < TagFilter> tagFilter) {
+        public Builder tagFilter(java.util.List<TagFilter> tagFilter) {
             this.putQueryParameter("TagFilter", tagFilter);
             this.tagFilter = tagFilter;
             return this;
@@ -453,7 +458,7 @@ public class DescribeSplitItemBillRequest extends Request {
         private String tagKey;
 
         @com.aliyun.core.annotation.NameInMap("TagValues")
-        private java.util.List < String > tagValues;
+        private java.util.List<String> tagValues;
 
         private TagFilter(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -478,13 +483,13 @@ public class DescribeSplitItemBillRequest extends Request {
         /**
          * @return tagValues
          */
-        public java.util.List < String > getTagValues() {
+        public java.util.List<String> getTagValues() {
             return this.tagValues;
         }
 
         public static final class Builder {
             private String tagKey; 
-            private java.util.List < String > tagValues; 
+            private java.util.List<String> tagValues; 
 
             /**
              * <p>The TagFilter.N parameter is used to query bills that match a specified tag. The value of the TagFilter.N parameter must be a key-value pair. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
@@ -512,7 +517,7 @@ public class DescribeSplitItemBillRequest extends Request {
              * <strong>example:</strong>
              * <p>TestValue</p>
              */
-            public Builder tagValues(java.util.List < String > tagValues) {
+            public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
                 return this;
             }

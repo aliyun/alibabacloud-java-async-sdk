@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
      */
     public static class ModuleDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleDetail")
-        private java.util.List < ModuleDetail> moduleDetail;
+        private java.util.List<ModuleDetail> moduleDetail;
 
         private ModuleDetails(Builder builder) {
             this.moduleDetail = builder.moduleDetail;
@@ -310,17 +315,17 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         /**
          * @return moduleDetail
          */
-        public java.util.List < ModuleDetail> getModuleDetail() {
+        public java.util.List<ModuleDetail> getModuleDetail() {
             return this.moduleDetail;
         }
 
         public static final class Builder {
-            private java.util.List < ModuleDetail> moduleDetail; 
+            private java.util.List<ModuleDetail> moduleDetail; 
 
             /**
              * ModuleDetail.
              */
-            public Builder moduleDetail(java.util.List < ModuleDetail> moduleDetail) {
+            public Builder moduleDetail(java.util.List<ModuleDetail> moduleDetail) {
                 this.moduleDetail = moduleDetail;
                 return this;
             }
@@ -436,7 +441,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
      */
     public static class PromotionDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromotionDetail")
-        private java.util.List < PromotionDetail> promotionDetail;
+        private java.util.List<PromotionDetail> promotionDetail;
 
         private PromotionDetails(Builder builder) {
             this.promotionDetail = builder.promotionDetail;
@@ -453,17 +458,17 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         /**
          * @return promotionDetail
          */
-        public java.util.List < PromotionDetail> getPromotionDetail() {
+        public java.util.List<PromotionDetail> getPromotionDetail() {
             return this.promotionDetail;
         }
 
         public static final class Builder {
-            private java.util.List < PromotionDetail> promotionDetail; 
+            private java.util.List<PromotionDetail> promotionDetail; 
 
             /**
              * PromotionDetail.
              */
-            public Builder promotionDetail(java.util.List < PromotionDetail> promotionDetail) {
+            public Builder promotionDetail(java.util.List<PromotionDetail> promotionDetail) {
                 this.promotionDetail = promotionDetail;
                 return this;
             }

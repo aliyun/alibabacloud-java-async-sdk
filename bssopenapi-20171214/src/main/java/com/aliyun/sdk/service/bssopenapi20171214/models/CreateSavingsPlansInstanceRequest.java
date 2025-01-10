@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExtendMap")
-    private java.util.Map < String, String > extendMap;
+    private java.util.Map<String, String> extendMap;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayMode")
@@ -114,7 +119,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
     /**
      * @return extendMap
      */
-    public java.util.Map < String, String > getExtendMap() {
+    public java.util.Map<String, String> getExtendMap() {
         return this.extendMap;
     }
 
@@ -171,7 +176,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         private String commodityCode; 
         private String duration; 
         private String effectiveDate; 
-        private java.util.Map < String, String > extendMap; 
+        private java.util.Map<String, String> extendMap; 
         private String payMode; 
         private String poolValue; 
         private String pricingCycle; 
@@ -240,7 +245,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         /**
          * <p>The extended parameters.</p>
          */
-        public Builder extendMap(java.util.Map < String, String > extendMap) {
+        public Builder extendMap(java.util.Map<String, String> extendMap) {
             String extendMapShrink = shrink(extendMap, "ExtendMap", "json");
             this.putQueryParameter("ExtendMap", extendMapShrink);
             this.extendMap = extendMap;

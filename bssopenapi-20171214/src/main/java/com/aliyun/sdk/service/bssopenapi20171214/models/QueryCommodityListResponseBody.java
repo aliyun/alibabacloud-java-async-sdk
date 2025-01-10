@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityList")
-        private java.util.List < CommodityList> commodityList;
+        private java.util.List<CommodityList> commodityList;
 
         private Data(Builder builder) {
             this.commodityList = builder.commodityList;
@@ -264,17 +269,17 @@ public class QueryCommodityListResponseBody extends TeaModel {
         /**
          * @return commodityList
          */
-        public java.util.List < CommodityList> getCommodityList() {
+        public java.util.List<CommodityList> getCommodityList() {
             return this.commodityList;
         }
 
         public static final class Builder {
-            private java.util.List < CommodityList> commodityList; 
+            private java.util.List<CommodityList> commodityList; 
 
             /**
              * <p>The information about the service.</p>
              */
-            public Builder commodityList(java.util.List < CommodityList> commodityList) {
+            public Builder commodityList(java.util.List<CommodityList> commodityList) {
                 this.commodityList = commodityList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetSubscriptionPriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModuleList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ModuleList> moduleList;
+    private java.util.List<ModuleList> moduleList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderType")
@@ -98,7 +103,7 @@ public class GetSubscriptionPriceRequest extends Request {
     /**
      * @return moduleList
      */
-    public java.util.List < ModuleList> getModuleList() {
+    public java.util.List<ModuleList> getModuleList() {
         return this.moduleList;
     }
 
@@ -167,7 +172,7 @@ public class GetSubscriptionPriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetSubscriptionPriceRequest, Builder> {
         private String instanceId; 
-        private java.util.List < ModuleList> moduleList; 
+        private java.util.List<ModuleList> moduleList; 
         private String orderType; 
         private Long ownerId; 
         private String productCode; 
@@ -213,7 +218,7 @@ public class GetSubscriptionPriceRequest extends Request {
          * <p>The information about the pricing module.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder moduleList(java.util.List < ModuleList> moduleList) {
+        public Builder moduleList(java.util.List<ModuleList> moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
             this.moduleList = moduleList;
             return this;

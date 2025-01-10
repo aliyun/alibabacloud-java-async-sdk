@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -408,7 +413,7 @@ public class QueryRelationListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FinancialRelationInfoList")
-        private java.util.List < FinancialRelationInfoList> financialRelationInfoList;
+        private java.util.List<FinancialRelationInfoList> financialRelationInfoList;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
@@ -437,7 +442,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         /**
          * @return financialRelationInfoList
          */
-        public java.util.List < FinancialRelationInfoList> getFinancialRelationInfoList() {
+        public java.util.List<FinancialRelationInfoList> getFinancialRelationInfoList() {
             return this.financialRelationInfoList;
         }
 
@@ -463,7 +468,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FinancialRelationInfoList> financialRelationInfoList; 
+            private java.util.List<FinancialRelationInfoList> financialRelationInfoList; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -471,7 +476,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             /**
              * <p>The relationships.</p>
              */
-            public Builder financialRelationInfoList(java.util.List < FinancialRelationInfoList> financialRelationInfoList) {
+            public Builder financialRelationInfoList(java.util.List<FinancialRelationInfoList> financialRelationInfoList) {
                 this.financialRelationInfoList = financialRelationInfoList;
                 return this;
             }

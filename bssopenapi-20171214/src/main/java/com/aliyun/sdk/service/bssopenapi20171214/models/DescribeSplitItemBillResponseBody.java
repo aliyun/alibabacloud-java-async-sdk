@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -152,6 +157,9 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
+
+        @com.aliyun.core.annotation.NameInMap("AfterDiscountAmount")
+        private String afterDiscountAmount;
 
         @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private String billAccountID;
@@ -314,6 +322,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.adjustAmount = builder.adjustAmount;
+            this.afterDiscountAmount = builder.afterDiscountAmount;
             this.billAccountID = builder.billAccountID;
             this.billAccountName = builder.billAccountName;
             this.billingDate = builder.billingDate;
@@ -382,6 +391,13 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
          */
         public Float getAdjustAmount() {
             return this.adjustAmount;
+        }
+
+        /**
+         * @return afterDiscountAmount
+         */
+        public String getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
         }
 
         /**
@@ -757,6 +773,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float adjustAmount; 
+            private String afterDiscountAmount; 
             private String billAccountID; 
             private String billAccountName; 
             private String billingDate; 
@@ -819,6 +836,14 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
+                return this;
+            }
+
+            /**
+             * AfterDiscountAmount.
+             */
+            public Builder afterDiscountAmount(String afterDiscountAmount) {
+                this.afterDiscountAmount = afterDiscountAmount;
                 return this;
             }
 
@@ -1429,7 +1454,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         private String billingCycle;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -1482,7 +1507,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1511,7 +1536,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             private String accountID; 
             private String accountName; 
             private String billingCycle; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
@@ -1552,7 +1577,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             /**
              * <p>The details of the bill.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

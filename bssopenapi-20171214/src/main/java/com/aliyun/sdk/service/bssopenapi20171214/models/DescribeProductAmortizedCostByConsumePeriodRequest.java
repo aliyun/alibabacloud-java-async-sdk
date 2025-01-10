@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,15 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AmortizationPeriodFilter")
-    private java.util.List < String > amortizationPeriodFilter;
+    private java.util.List<String> amortizationPeriodFilter;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    private java.util.List<String> billOwnerIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    private java.util.List<String> billUserIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillingCycle")
@@ -88,21 +93,21 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
     /**
      * @return amortizationPeriodFilter
      */
-    public java.util.List < String > getAmortizationPeriodFilter() {
+    public java.util.List<String> getAmortizationPeriodFilter() {
         return this.amortizationPeriodFilter;
     }
 
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -156,9 +161,9 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<DescribeProductAmortizedCostByConsumePeriodRequest, Builder> {
-        private java.util.List < String > amortizationPeriodFilter; 
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> amortizationPeriodFilter; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
         private String costUnitCode; 
         private Integer maxResults; 
@@ -188,7 +193,7 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         /**
          * AmortizationPeriodFilter.
          */
-        public Builder amortizationPeriodFilter(java.util.List < String > amortizationPeriodFilter) {
+        public Builder amortizationPeriodFilter(java.util.List<String> amortizationPeriodFilter) {
             this.putBodyParameter("AmortizationPeriodFilter", amortizationPeriodFilter);
             this.amortizationPeriodFilter = amortizationPeriodFilter;
             return this;
@@ -197,7 +202,7 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         /**
          * BillOwnerIdList.
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
@@ -206,7 +211,7 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         /**
          * BillUserIdList.
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;

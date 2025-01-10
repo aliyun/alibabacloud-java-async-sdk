@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class QueryRelationListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    private java.util.List<String> statusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
@@ -67,7 +72,7 @@ public class QueryRelationListRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -81,7 +86,7 @@ public class QueryRelationListRequest extends Request {
     public static final class Builder extends Request.Builder<QueryRelationListRequest, Builder> {
         private Integer pageNum; 
         private Integer pageSize; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
         private Long userId; 
 
         private Builder() {
@@ -126,7 +131,7 @@ public class QueryRelationListRequest extends Request {
          * <strong>example:</strong>
          * <p>RELATED</p>
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

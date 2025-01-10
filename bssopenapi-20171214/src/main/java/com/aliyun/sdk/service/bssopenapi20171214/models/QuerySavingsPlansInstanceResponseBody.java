@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -281,7 +286,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TotalSave")
         private String totalSave;
@@ -474,7 +479,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -514,7 +519,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             private String startTime; 
             private Long startTimestamp; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String totalSave; 
             private String utilization; 
 
@@ -744,7 +749,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             /**
              * <p>The details about the tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -786,7 +791,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
@@ -815,7 +820,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -841,7 +846,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -849,7 +854,7 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             /**
              * <p>The details about the instances.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

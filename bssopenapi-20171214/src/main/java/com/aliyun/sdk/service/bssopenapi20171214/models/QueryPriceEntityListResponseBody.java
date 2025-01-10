@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -157,7 +162,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         private String priceFactorName;
 
         @com.aliyun.core.annotation.NameInMap("PriceFactorValueList")
-        private java.util.List < String > priceFactorValueList;
+        private java.util.List<String> priceFactorValueList;
 
         private PriceFactorList(Builder builder) {
             this.priceFactorCode = builder.priceFactorCode;
@@ -190,14 +195,14 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         /**
          * @return priceFactorValueList
          */
-        public java.util.List < String > getPriceFactorValueList() {
+        public java.util.List<String> getPriceFactorValueList() {
             return this.priceFactorValueList;
         }
 
         public static final class Builder {
             private String priceFactorCode; 
             private String priceFactorName; 
-            private java.util.List < String > priceFactorValueList; 
+            private java.util.List<String> priceFactorValueList; 
 
             /**
              * <p>The code of the factor.</p>
@@ -224,7 +229,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             /**
              * <p>The values of the factor.</p>
              */
-            public Builder priceFactorValueList(java.util.List < String > priceFactorValueList) {
+            public Builder priceFactorValueList(java.util.List<String> priceFactorValueList) {
                 this.priceFactorValueList = priceFactorValueList;
                 return this;
             }
@@ -250,7 +255,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         private String priceEntityName;
 
         @com.aliyun.core.annotation.NameInMap("PriceFactorList")
-        private java.util.List < PriceFactorList> priceFactorList;
+        private java.util.List<PriceFactorList> priceFactorList;
 
         private PriceEntityInfoList(Builder builder) {
             this.priceEntityCode = builder.priceEntityCode;
@@ -283,14 +288,14 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         /**
          * @return priceFactorList
          */
-        public java.util.List < PriceFactorList> getPriceFactorList() {
+        public java.util.List<PriceFactorList> getPriceFactorList() {
             return this.priceFactorList;
         }
 
         public static final class Builder {
             private String priceEntityCode; 
             private String priceEntityName; 
-            private java.util.List < PriceFactorList> priceFactorList; 
+            private java.util.List<PriceFactorList> priceFactorList; 
 
             /**
              * <p>The code of the billable item.</p>
@@ -317,7 +322,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             /**
              * <p>The factors of the billable item.</p>
              */
-            public Builder priceFactorList(java.util.List < PriceFactorList> priceFactorList) {
+            public Builder priceFactorList(java.util.List<PriceFactorList> priceFactorList) {
                 this.priceFactorList = priceFactorList;
                 return this;
             }
@@ -337,7 +342,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceEntityInfoList")
-        private java.util.List < PriceEntityInfoList> priceEntityInfoList;
+        private java.util.List<PriceEntityInfoList> priceEntityInfoList;
 
         private Data(Builder builder) {
             this.priceEntityInfoList = builder.priceEntityInfoList;
@@ -354,17 +359,17 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         /**
          * @return priceEntityInfoList
          */
-        public java.util.List < PriceEntityInfoList> getPriceEntityInfoList() {
+        public java.util.List<PriceEntityInfoList> getPriceEntityInfoList() {
             return this.priceEntityInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < PriceEntityInfoList> priceEntityInfoList; 
+            private java.util.List<PriceEntityInfoList> priceEntityInfoList; 
 
             /**
              * <p>The information about the billable items.</p>
              */
-            public Builder priceEntityInfoList(java.util.List < PriceEntityInfoList> priceEntityInfoList) {
+            public Builder priceEntityInfoList(java.util.List<PriceEntityInfoList> priceEntityInfoList) {
                 this.priceEntityInfoList = priceEntityInfoList;
                 return this;
             }

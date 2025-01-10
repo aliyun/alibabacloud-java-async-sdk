@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TagResource")
-    private java.util.List < TagResource> tagResource;
+    private java.util.List<TagResource> tagResource;
 
     private QueryInstanceByTagResponseBody(Builder builder) {
         this.code = builder.code;
@@ -85,7 +90,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     /**
      * @return tagResource
      */
-    public java.util.List < TagResource> getTagResource() {
+    public java.util.List<TagResource> getTagResource() {
         return this.tagResource;
     }
 
@@ -95,7 +100,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TagResource> tagResource; 
+        private java.util.List<TagResource> tagResource; 
 
         /**
          * <p>The status code returned.</p>
@@ -155,7 +160,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         /**
          * <p>The instances returned.</p>
          */
-        public Builder tagResource(java.util.List < TagResource> tagResource) {
+        public Builder tagResource(java.util.List<TagResource> tagResource) {
             this.tagResource = tagResource;
             return this;
         }
@@ -253,7 +258,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private TagResource(Builder builder) {
             this.resourceId = builder.resourceId;
@@ -286,14 +291,14 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
             private String resourceId; 
             private String resourceType; 
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * <p>The ID of the resource.</p>
@@ -320,7 +325,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

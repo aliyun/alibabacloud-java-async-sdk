@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ConfirmRelationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PermissionCodes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > permissionCodes;
+    private java.util.List<String> permissionCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelationId")
@@ -93,7 +98,7 @@ public class ConfirmRelationRequest extends Request {
     /**
      * @return permissionCodes
      */
-    public java.util.List < String > getPermissionCodes() {
+    public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
     }
 
@@ -122,7 +127,7 @@ public class ConfirmRelationRequest extends Request {
         private Long childUserId; 
         private String confirmCode; 
         private Long parentUserId; 
-        private java.util.List < String > permissionCodes; 
+        private java.util.List<String> permissionCodes; 
         private Long relationId; 
         private String relationType; 
         private String requestId; 
@@ -200,7 +205,7 @@ public class ConfirmRelationRequest extends Request {
          * <strong>example:</strong>
          * <p>SYNCHRONIZE_FINANCE_IDENTITY</p>
          */
-        public Builder permissionCodes(java.util.List < String > permissionCodes) {
+        public Builder permissionCodes(java.util.List<String> permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
             this.permissionCodes = permissionCodes;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -587,7 +592,7 @@ public class QueryOrdersResponseBody extends TeaModel {
      */
     public static class OrderList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
-        private java.util.List < Order> order;
+        private java.util.List<Order> order;
 
         private OrderList(Builder builder) {
             this.order = builder.order;
@@ -604,17 +609,17 @@ public class QueryOrdersResponseBody extends TeaModel {
         /**
          * @return order
          */
-        public java.util.List < Order> getOrder() {
+        public java.util.List<Order> getOrder() {
             return this.order;
         }
 
         public static final class Builder {
-            private java.util.List < Order> order; 
+            private java.util.List<Order> order; 
 
             /**
              * Order.
              */
-            public Builder order(java.util.List < Order> order) {
+            public Builder order(java.util.List<Order> order) {
                 this.order = order;
                 return this;
             }

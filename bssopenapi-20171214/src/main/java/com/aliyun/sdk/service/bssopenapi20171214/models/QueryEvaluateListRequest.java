@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class QueryEvaluateListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizTypeList")
-    private java.util.List < String > bizTypeList;
+    private java.util.List<String> bizTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndAmount")
@@ -109,7 +114,7 @@ public class QueryEvaluateListRequest extends Request {
     /**
      * @return bizTypeList
      */
-    public java.util.List < String > getBizTypeList() {
+    public java.util.List<String> getBizTypeList() {
         return this.bizTypeList;
     }
 
@@ -199,7 +204,7 @@ public class QueryEvaluateListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryEvaluateListRequest, Builder> {
         private String billCycle; 
-        private java.util.List < String > bizTypeList; 
+        private java.util.List<String> bizTypeList; 
         private Long endAmount; 
         private String endBizTime; 
         private String endSearchTime; 
@@ -256,7 +261,7 @@ public class QueryEvaluateListRequest extends Request {
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */
-        public Builder bizTypeList(java.util.List < String > bizTypeList) {
+        public Builder bizTypeList(java.util.List<String> bizTypeList) {
             this.putQueryParameter("BizTypeList", bizTypeList);
             this.bizTypeList = bizTypeList;
             return this;

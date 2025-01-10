@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModuleList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ModuleList> moduleList;
+    private java.util.List<ModuleList> moduleList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -65,7 +70,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
     /**
      * @return moduleList
      */
-    public java.util.List < ModuleList> getModuleList() {
+    public java.util.List<ModuleList> getModuleList() {
         return this.moduleList;
     }
 
@@ -105,7 +110,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetPayAsYouGoPriceRequest, Builder> {
-        private java.util.List < ModuleList> moduleList; 
+        private java.util.List<ModuleList> moduleList; 
         private Long ownerId; 
         private String productCode; 
         private String productType; 
@@ -130,7 +135,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
          * <p>The details of pricing modules.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder moduleList(java.util.List < ModuleList> moduleList) {
+        public Builder moduleList(java.util.List<ModuleList> moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
             this.moduleList = moduleList;
             return this;

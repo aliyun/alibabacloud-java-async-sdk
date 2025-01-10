@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
      */
     public static class BillModuleConfigBillModuleProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billModuleProperties")
-        private java.util.List < BillModuleProperties> billModuleProperties;
+        private java.util.List<BillModuleProperties> billModuleProperties;
 
         private BillModuleConfigBillModuleProperties(Builder builder) {
             this.billModuleProperties = builder.billModuleProperties;
@@ -264,17 +269,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
         /**
          * @return billModuleProperties
          */
-        public java.util.List < BillModuleProperties> getBillModuleProperties() {
+        public java.util.List<BillModuleProperties> getBillModuleProperties() {
             return this.billModuleProperties;
         }
 
         public static final class Builder {
-            private java.util.List < BillModuleProperties> billModuleProperties; 
+            private java.util.List<BillModuleProperties> billModuleProperties; 
 
             /**
              * billModuleProperties.
              */
-            public Builder billModuleProperties(java.util.List < BillModuleProperties> billModuleProperties) {
+            public Builder billModuleProperties(java.util.List<BillModuleProperties> billModuleProperties) {
                 this.billModuleProperties = billModuleProperties;
                 return this;
             }
@@ -410,7 +415,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
      */
     public static class OrderBillModuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("billModuleConfig")
-        private java.util.List < BillModuleConfig> billModuleConfig;
+        private java.util.List<BillModuleConfig> billModuleConfig;
 
         private OrderBillModuleConfig(Builder builder) {
             this.billModuleConfig = builder.billModuleConfig;
@@ -427,17 +432,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
         /**
          * @return billModuleConfig
          */
-        public java.util.List < BillModuleConfig> getBillModuleConfig() {
+        public java.util.List<BillModuleConfig> getBillModuleConfig() {
             return this.billModuleConfig;
         }
 
         public static final class Builder {
-            private java.util.List < BillModuleConfig> billModuleConfig; 
+            private java.util.List<BillModuleConfig> billModuleConfig; 
 
             /**
              * billModuleConfig.
              */
-            public Builder billModuleConfig(java.util.List < BillModuleConfig> billModuleConfig) {
+            public Builder billModuleConfig(java.util.List<BillModuleConfig> billModuleConfig) {
                 this.billModuleConfig = billModuleConfig;
                 return this;
             }
@@ -553,7 +558,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
      */
     public static class OriginalModuleConfigModuleProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("moduleProperties")
-        private java.util.List < ModuleProperties> moduleProperties;
+        private java.util.List<ModuleProperties> moduleProperties;
 
         private OriginalModuleConfigModuleProperties(Builder builder) {
             this.moduleProperties = builder.moduleProperties;
@@ -570,17 +575,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
         /**
          * @return moduleProperties
          */
-        public java.util.List < ModuleProperties> getModuleProperties() {
+        public java.util.List<ModuleProperties> getModuleProperties() {
             return this.moduleProperties;
         }
 
         public static final class Builder {
-            private java.util.List < ModuleProperties> moduleProperties; 
+            private java.util.List<ModuleProperties> moduleProperties; 
 
             /**
              * moduleProperties.
              */
-            public Builder moduleProperties(java.util.List < ModuleProperties> moduleProperties) {
+            public Builder moduleProperties(java.util.List<ModuleProperties> moduleProperties) {
                 this.moduleProperties = moduleProperties;
                 return this;
             }
@@ -693,7 +698,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
      */
     public static class OrderOriginalModuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("originalModuleConfig")
-        private java.util.List < OriginalModuleConfig> originalModuleConfig;
+        private java.util.List<OriginalModuleConfig> originalModuleConfig;
 
         private OrderOriginalModuleConfig(Builder builder) {
             this.originalModuleConfig = builder.originalModuleConfig;
@@ -710,17 +715,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
         /**
          * @return originalModuleConfig
          */
-        public java.util.List < OriginalModuleConfig> getOriginalModuleConfig() {
+        public java.util.List<OriginalModuleConfig> getOriginalModuleConfig() {
             return this.originalModuleConfig;
         }
 
         public static final class Builder {
-            private java.util.List < OriginalModuleConfig> originalModuleConfig; 
+            private java.util.List<OriginalModuleConfig> originalModuleConfig; 
 
             /**
              * originalModuleConfig.
              */
-            public Builder originalModuleConfig(java.util.List < OriginalModuleConfig> originalModuleConfig) {
+            public Builder originalModuleConfig(java.util.List<OriginalModuleConfig> originalModuleConfig) {
                 this.originalModuleConfig = originalModuleConfig;
                 return this;
             }
@@ -758,7 +763,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         private String currency;
 
         @com.aliyun.core.annotation.NameInMap("ExtendInfos")
-        private java.util.Map < String, String > extendInfos;
+        private java.util.Map<String, String> extendInfos;
 
         @com.aliyun.core.annotation.NameInMap("InstanceIDs")
         private String instanceIDs;
@@ -915,7 +920,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         /**
          * @return extendInfos
          */
-        public java.util.Map < String, String > getExtendInfos() {
+        public java.util.Map<String, String> getExtendInfos() {
             return this.extendInfos;
         }
 
@@ -1087,7 +1092,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String config; 
             private String createTime; 
             private String currency; 
-            private java.util.Map < String, String > extendInfos; 
+            private java.util.Map<String, String> extendInfos; 
             private String instanceIDs; 
             private String operator; 
             private String orderId; 
@@ -1178,7 +1183,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             /**
              * <p>The additional information about the order.</p>
              */
-            public Builder extendInfos(java.util.Map < String, String > extendInfos) {
+            public Builder extendInfos(java.util.Map<String, String> extendInfos) {
                 this.extendInfos = extendInfos;
                 return this;
             }
@@ -1448,7 +1453,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
      */
     public static class OrderList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
-        private java.util.List < Order> order;
+        private java.util.List<Order> order;
 
         private OrderList(Builder builder) {
             this.order = builder.order;
@@ -1465,17 +1470,17 @@ public class GetOrderDetailResponseBody extends TeaModel {
         /**
          * @return order
          */
-        public java.util.List < Order> getOrder() {
+        public java.util.List<Order> getOrder() {
             return this.order;
         }
 
         public static final class Builder {
-            private java.util.List < Order> order; 
+            private java.util.List<Order> order; 
 
             /**
              * Order.
              */
-            public Builder order(java.util.List < Order> order) {
+            public Builder order(java.util.List<Order> order) {
                 this.order = order;
                 return this;
             }

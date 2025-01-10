@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    private java.util.List<String> billOwnerIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    private java.util.List<String> billUserIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillingCycle")
@@ -27,7 +32,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConsumePeriodFilter")
-    private java.util.List < String > consumePeriodFilter;
+    private java.util.List<String> consumePeriodFilter;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CostUnitCode")
@@ -88,14 +93,14 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -109,7 +114,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
     /**
      * @return consumePeriodFilter
      */
-    public java.util.List < String > getConsumePeriodFilter() {
+    public java.util.List<String> getConsumePeriodFilter() {
         return this.consumePeriodFilter;
     }
 
@@ -156,10 +161,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
     }
 
     public static final class Builder extends Request.Builder<DescribeProductAmortizedCostByAmortizationPeriodRequest, Builder> {
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
-        private java.util.List < String > consumePeriodFilter; 
+        private java.util.List<String> consumePeriodFilter; 
         private String costUnitCode; 
         private Integer maxResults; 
         private String nextToken; 
@@ -188,7 +193,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         /**
          * <p>The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.</p>
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
@@ -197,7 +202,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         /**
          * <p>The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.</p>
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;
@@ -219,7 +224,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         /**
          * <p>The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.</p>
          */
-        public Builder consumePeriodFilter(java.util.List < String > consumePeriodFilter) {
+        public Builder consumePeriodFilter(java.util.List<String> consumePeriodFilter) {
             this.putBodyParameter("ConsumePeriodFilter", consumePeriodFilter);
             this.consumePeriodFilter = consumePeriodFilter;
             return this;

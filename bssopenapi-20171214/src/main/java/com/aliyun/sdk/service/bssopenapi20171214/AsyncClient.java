@@ -702,6 +702,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetResellerUserStatusResponse> setResellerUserStatus(SetResellerUserStatusRequest request);
 
     /**
+     * @param request the request parameters of SetSavingPlanUserDeductRule  SetSavingPlanUserDeductRuleRequest
+     * @return SetSavingPlanUserDeductRuleResponse
+     */
+    CompletableFuture<SetSavingPlanUserDeductRuleResponse> setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>

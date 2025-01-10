@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -341,7 +346,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodCoverage")
-        private java.util.List < PeriodCoverage> periodCoverage;
+        private java.util.List<PeriodCoverage> periodCoverage;
 
         @com.aliyun.core.annotation.NameInMap("TotalCoverage")
         private TotalCoverage totalCoverage;
@@ -362,7 +367,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         /**
          * @return periodCoverage
          */
-        public java.util.List < PeriodCoverage> getPeriodCoverage() {
+        public java.util.List<PeriodCoverage> getPeriodCoverage() {
             return this.periodCoverage;
         }
 
@@ -374,13 +379,13 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PeriodCoverage> periodCoverage; 
+            private java.util.List<PeriodCoverage> periodCoverage; 
             private TotalCoverage totalCoverage; 
 
             /**
              * <p>The information about the coverage rate of deduction plans within a period.</p>
              */
-            public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
+            public Builder periodCoverage(java.util.List<PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
                 return this;
             }

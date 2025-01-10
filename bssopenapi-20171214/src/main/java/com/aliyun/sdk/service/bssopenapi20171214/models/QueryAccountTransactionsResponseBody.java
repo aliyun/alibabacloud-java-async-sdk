@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -507,7 +512,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
      */
     public static class DataAccountTransactionsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountTransactionsList")
-        private java.util.List < AccountTransactionsList> accountTransactionsList;
+        private java.util.List<AccountTransactionsList> accountTransactionsList;
 
         private DataAccountTransactionsList(Builder builder) {
             this.accountTransactionsList = builder.accountTransactionsList;
@@ -524,17 +529,17 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         /**
          * @return accountTransactionsList
          */
-        public java.util.List < AccountTransactionsList> getAccountTransactionsList() {
+        public java.util.List<AccountTransactionsList> getAccountTransactionsList() {
             return this.accountTransactionsList;
         }
 
         public static final class Builder {
-            private java.util.List < AccountTransactionsList> accountTransactionsList; 
+            private java.util.List<AccountTransactionsList> accountTransactionsList; 
 
             /**
              * AccountTransactionsList.
              */
-            public Builder accountTransactionsList(java.util.List < AccountTransactionsList> accountTransactionsList) {
+            public Builder accountTransactionsList(java.util.List<AccountTransactionsList> accountTransactionsList) {
                 this.accountTransactionsList = accountTransactionsList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -436,7 +441,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CashCoupon")
-        private java.util.List < CashCoupon> cashCoupon;
+        private java.util.List<CashCoupon> cashCoupon;
 
         private Data(Builder builder) {
             this.cashCoupon = builder.cashCoupon;
@@ -453,17 +458,17 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         /**
          * @return cashCoupon
          */
-        public java.util.List < CashCoupon> getCashCoupon() {
+        public java.util.List<CashCoupon> getCashCoupon() {
             return this.cashCoupon;
         }
 
         public static final class Builder {
-            private java.util.List < CashCoupon> cashCoupon; 
+            private java.util.List<CashCoupon> cashCoupon; 
 
             /**
              * CashCoupon.
              */
-            public Builder cashCoupon(java.util.List < CashCoupon> cashCoupon) {
+            public Builder cashCoupon(java.util.List<CashCoupon> cashCoupon) {
                 this.cashCoupon = cashCoupon;
                 return this;
             }

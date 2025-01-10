@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -454,7 +459,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
      */
     public static class CustomerInvoiceAddressList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerInvoiceAddress")
-        private java.util.List < CustomerInvoiceAddress> customerInvoiceAddress;
+        private java.util.List<CustomerInvoiceAddress> customerInvoiceAddress;
 
         private CustomerInvoiceAddressList(Builder builder) {
             this.customerInvoiceAddress = builder.customerInvoiceAddress;
@@ -471,17 +476,17 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         /**
          * @return customerInvoiceAddress
          */
-        public java.util.List < CustomerInvoiceAddress> getCustomerInvoiceAddress() {
+        public java.util.List<CustomerInvoiceAddress> getCustomerInvoiceAddress() {
             return this.customerInvoiceAddress;
         }
 
         public static final class Builder {
-            private java.util.List < CustomerInvoiceAddress> customerInvoiceAddress; 
+            private java.util.List<CustomerInvoiceAddress> customerInvoiceAddress; 
 
             /**
              * CustomerInvoiceAddress.
              */
-            public Builder customerInvoiceAddress(java.util.List < CustomerInvoiceAddress> customerInvoiceAddress) {
+            public Builder customerInvoiceAddress(java.util.List<CustomerInvoiceAddress> customerInvoiceAddress) {
                 this.customerInvoiceAddress = customerInvoiceAddress;
                 return this;
             }

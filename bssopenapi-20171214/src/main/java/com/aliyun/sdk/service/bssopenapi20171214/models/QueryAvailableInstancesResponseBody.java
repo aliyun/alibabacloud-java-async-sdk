@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -605,7 +610,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceList")
-        private java.util.List < InstanceList> instanceList;
+        private java.util.List<InstanceList> instanceList;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
@@ -634,7 +639,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         /**
          * @return instanceList
          */
-        public java.util.List < InstanceList> getInstanceList() {
+        public java.util.List<InstanceList> getInstanceList() {
             return this.instanceList;
         }
 
@@ -660,7 +665,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < InstanceList> instanceList; 
+            private java.util.List<InstanceList> instanceList; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -668,7 +673,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             /**
              * <p>The instances returned.</p>
              */
-            public Builder instanceList(java.util.List < InstanceList> instanceList) {
+            public Builder instanceList(java.util.List<InstanceList> instanceList) {
                 this.instanceList = instanceList;
                 return this;
             }

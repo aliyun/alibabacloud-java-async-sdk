@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class QuerySkuPriceListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PriceFactorConditionMap")
-    private java.util.Map < String, java.util.List<String>> priceFactorConditionMap;
+    private java.util.Map<String, java.util.List<String>> priceFactorConditionMap;
 
     private QuerySkuPriceListRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class QuerySkuPriceListRequest extends Request {
     /**
      * @return priceFactorConditionMap
      */
-    public java.util.Map < String, java.util.List<String>> getPriceFactorConditionMap() {
+    public java.util.Map<String, java.util.List<String>> getPriceFactorConditionMap() {
         return this.priceFactorConditionMap;
     }
 
@@ -110,7 +115,7 @@ public class QuerySkuPriceListRequest extends Request {
         private String nextPageToken; 
         private Integer pageSize; 
         private String priceEntityCode; 
-        private java.util.Map < String, java.util.List<String>> priceFactorConditionMap; 
+        private java.util.Map<String, java.util.List<String>> priceFactorConditionMap; 
 
         private Builder() {
             super();
@@ -189,7 +194,7 @@ public class QuerySkuPriceListRequest extends Request {
         /**
          * <p>The conditions of the pricing factors.</p>
          */
-        public Builder priceFactorConditionMap(java.util.Map < String, java.util.List<String>> priceFactorConditionMap) {
+        public Builder priceFactorConditionMap(java.util.Map<String, java.util.List<String>> priceFactorConditionMap) {
             String priceFactorConditionMapShrink = shrink(priceFactorConditionMap, "PriceFactorConditionMap", "json");
             this.putQueryParameter("PriceFactorConditionMap", priceFactorConditionMapShrink);
             this.priceFactorConditionMap = priceFactorConditionMap;

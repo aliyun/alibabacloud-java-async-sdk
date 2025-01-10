@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -157,7 +162,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         private String marker;
 
         @com.aliyun.core.annotation.NameInMap("OmsData")
-        private java.util.List < java.util.Map<String, ?>> omsData;
+        private java.util.List<java.util.Map<String, ?>> omsData;
 
         private Data(Builder builder) {
             this.hostId = builder.hostId;
@@ -190,14 +195,14 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         /**
          * @return omsData
          */
-        public java.util.List < java.util.Map<String, ?>> getOmsData() {
+        public java.util.List<java.util.Map<String, ?>> getOmsData() {
             return this.omsData;
         }
 
         public static final class Builder {
             private String hostId; 
             private String marker; 
-            private java.util.List < java.util.Map<String, ?>> omsData; 
+            private java.util.List<java.util.Map<String, ?>> omsData; 
 
             /**
              * <p>The ID of the host.</p>
@@ -224,7 +229,7 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             /**
              * OmsData.
              */
-            public Builder omsData(java.util.List < java.util.Map<String, ?>> omsData) {
+            public Builder omsData(java.util.List<java.util.Map<String, ?>> omsData) {
                 this.omsData = omsData;
                 return this;
             }

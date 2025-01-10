@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -420,7 +425,7 @@ public class QueryRedeemResponseBody extends TeaModel {
      */
     public static class DataRedeem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Redeem")
-        private java.util.List < Redeem> redeem;
+        private java.util.List<Redeem> redeem;
 
         private DataRedeem(Builder builder) {
             this.redeem = builder.redeem;
@@ -437,17 +442,17 @@ public class QueryRedeemResponseBody extends TeaModel {
         /**
          * @return redeem
          */
-        public java.util.List < Redeem> getRedeem() {
+        public java.util.List<Redeem> getRedeem() {
             return this.redeem;
         }
 
         public static final class Builder {
-            private java.util.List < Redeem> redeem; 
+            private java.util.List<Redeem> redeem; 
 
             /**
              * Redeem.
              */
-            public Builder redeem(java.util.List < Redeem> redeem) {
+            public Builder redeem(java.util.List<Redeem> redeem) {
                 this.redeem = redeem;
                 return this;
             }

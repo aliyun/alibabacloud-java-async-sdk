@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostUnitDtoList")
-        private java.util.List < CostUnitDtoList> costUnitDtoList;
+        private java.util.List<CostUnitDtoList> costUnitDtoList;
 
         private Data(Builder builder) {
             this.costUnitDtoList = builder.costUnitDtoList;
@@ -287,17 +292,17 @@ public class CreateCostUnitResponseBody extends TeaModel {
         /**
          * @return costUnitDtoList
          */
-        public java.util.List < CostUnitDtoList> getCostUnitDtoList() {
+        public java.util.List<CostUnitDtoList> getCostUnitDtoList() {
             return this.costUnitDtoList;
         }
 
         public static final class Builder {
-            private java.util.List < CostUnitDtoList> costUnitDtoList; 
+            private java.util.List<CostUnitDtoList> costUnitDtoList; 
 
             /**
              * <p>The list of cost center entities.</p>
              */
-            public Builder costUnitDtoList(java.util.List < CostUnitDtoList> costUnitDtoList) {
+            public Builder costUnitDtoList(java.util.List<CostUnitDtoList> costUnitDtoList) {
                 this.costUnitDtoList = costUnitDtoList;
                 return this;
             }

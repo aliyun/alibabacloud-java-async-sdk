@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class AllocateCostUnitResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceInstanceList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ResourceInstanceList> resourceInstanceList;
+    private java.util.List<ResourceInstanceList> resourceInstanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ToUnitId")
@@ -76,7 +81,7 @@ public class AllocateCostUnitResourceRequest extends Request {
     /**
      * @return resourceInstanceList
      */
-    public java.util.List < ResourceInstanceList> getResourceInstanceList() {
+    public java.util.List<ResourceInstanceList> getResourceInstanceList() {
         return this.resourceInstanceList;
     }
 
@@ -97,7 +102,7 @@ public class AllocateCostUnitResourceRequest extends Request {
     public static final class Builder extends Request.Builder<AllocateCostUnitResourceRequest, Builder> {
         private Long fromUnitId; 
         private Long fromUnitUserId; 
-        private java.util.List < ResourceInstanceList> resourceInstanceList; 
+        private java.util.List<ResourceInstanceList> resourceInstanceList; 
         private Long toUnitId; 
         private Long toUnitUserId; 
 
@@ -148,7 +153,7 @@ public class AllocateCostUnitResourceRequest extends Request {
          * <p>The resource instances to be transferred.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resourceInstanceList(java.util.List < ResourceInstanceList> resourceInstanceList) {
+        public Builder resourceInstanceList(java.util.List<ResourceInstanceList> resourceInstanceList) {
             this.putQueryParameter("ResourceInstanceList", resourceInstanceList);
             this.resourceInstanceList = resourceInstanceList;
             return this;

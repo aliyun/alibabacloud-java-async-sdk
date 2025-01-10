@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class ModifyInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameter")
-    private java.util.List < Parameter> parameter;
+    private java.util.List<Parameter> parameter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductCode")
@@ -103,7 +108,7 @@ public class ModifyInstanceRequest extends Request {
     /**
      * @return parameter
      */
-    public java.util.List < Parameter> getParameter() {
+    public java.util.List<Parameter> getParameter() {
         return this.parameter;
     }
 
@@ -133,7 +138,7 @@ public class ModifyInstanceRequest extends Request {
         private String instanceId; 
         private String modifyType; 
         private Long ownerId; 
-        private java.util.List < Parameter> parameter; 
+        private java.util.List<Parameter> parameter; 
         private String productCode; 
         private String productType; 
         private String subscriptionType; 
@@ -207,7 +212,7 @@ public class ModifyInstanceRequest extends Request {
         /**
          * <p>The details about the parameters.</p>
          */
-        public Builder parameter(java.util.List < Parameter> parameter) {
+        public Builder parameter(java.util.List<Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
             this.parameter = parameter;
             return this;

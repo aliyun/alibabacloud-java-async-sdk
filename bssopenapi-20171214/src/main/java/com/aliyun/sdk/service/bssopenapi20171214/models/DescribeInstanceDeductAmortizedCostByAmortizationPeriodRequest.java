@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    private java.util.List<String> billOwnerIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    private java.util.List<String> billUserIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillingCycle")
@@ -30,7 +35,7 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceIdList")
-    private java.util.List < String > instanceIdList;
+    private java.util.List<String> instanceIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -82,14 +87,14 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -110,7 +115,7 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
     /**
      * @return instanceIdList
      */
-    public java.util.List < String > getInstanceIdList() {
+    public java.util.List<String> getInstanceIdList() {
         return this.instanceIdList;
     }
 
@@ -150,11 +155,11 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest, Builder> {
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
         private String costUnitCode; 
-        private java.util.List < String > instanceIdList; 
+        private java.util.List<String> instanceIdList; 
         private Integer maxResults; 
         private String nextToken; 
         private String productCode; 
@@ -182,7 +187,7 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
         /**
          * BillOwnerIdList.
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
@@ -191,7 +196,7 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
         /**
          * BillUserIdList.
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;
@@ -218,7 +223,7 @@ public class DescribeInstanceDeductAmortizedCostByAmortizationPeriodRequest exte
         /**
          * InstanceIdList.
          */
-        public Builder instanceIdList(java.util.List < String > instanceIdList) {
+        public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("InstanceIdList", instanceIdList);
             this.instanceIdList = instanceIdList;
             return this;

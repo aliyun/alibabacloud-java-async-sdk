@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class ApplyInvoiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SelectedIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > selectedIds;
+    private java.util.List<Long> selectedIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserRemark")
@@ -143,7 +148,7 @@ public class ApplyInvoiceRequest extends Request {
     /**
      * @return selectedIds
      */
-    public java.util.List < Long > getSelectedIds() {
+    public java.util.List<Long> getSelectedIds() {
         return this.selectedIds;
     }
 
@@ -163,7 +168,7 @@ public class ApplyInvoiceRequest extends Request {
         private Integer invoicingType; 
         private Long ownerId; 
         private Integer processWay; 
-        private java.util.List < Long > selectedIds; 
+        private java.util.List<Long> selectedIds; 
         private String userRemark; 
 
         private Builder() {
@@ -292,7 +297,7 @@ public class ApplyInvoiceRequest extends Request {
          * <strong>example:</strong>
          * <p>384752367</p>
          */
-        public Builder selectedIds(java.util.List < Long > selectedIds) {
+        public Builder selectedIds(java.util.List<Long> selectedIds) {
             this.putQueryParameter("SelectedIds", selectedIds);
             this.selectedIds = selectedIds;
             return this;

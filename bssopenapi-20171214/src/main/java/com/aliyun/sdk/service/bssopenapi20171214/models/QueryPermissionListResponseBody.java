@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -279,7 +284,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         private Long memberId;
 
         @com.aliyun.core.annotation.NameInMap("PermissionList")
-        private java.util.List < PermissionList> permissionList;
+        private java.util.List<PermissionList> permissionList;
 
         @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
@@ -336,7 +341,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         /**
          * @return permissionList
          */
-        public java.util.List < PermissionList> getPermissionList() {
+        public java.util.List<PermissionList> getPermissionList() {
             return this.permissionList;
         }
 
@@ -372,7 +377,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             private String endTime; 
             private Long masterId; 
             private Long memberId; 
-            private java.util.List < PermissionList> permissionList; 
+            private java.util.List<PermissionList> permissionList; 
             private String relationType; 
             private String setupTime; 
             private String startTime; 
@@ -414,7 +419,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             /**
              * <p>The list of permissions.</p>
              */
-            public Builder permissionList(java.util.List < PermissionList> permissionList) {
+            public Builder permissionList(java.util.List<PermissionList> permissionList) {
                 this.permissionList = permissionList;
                 return this;
             }

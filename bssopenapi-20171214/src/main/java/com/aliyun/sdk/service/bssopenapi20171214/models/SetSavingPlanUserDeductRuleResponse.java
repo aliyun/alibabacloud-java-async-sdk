@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeInstanceAmortizedCostByAmortizationPeriodResponse} extends {@link TeaModel}
+ * {@link SetSavingPlanUserDeductRuleResponse} extends {@link TeaModel}
  *
- * <p>DescribeInstanceAmortizedCostByAmortizationPeriodResponse</p>
+ * <p>SetSavingPlanUserDeductRuleResponse</p>
  */
-public class DescribeInstanceAmortizedCostByAmortizationPeriodResponse extends Response {
+public class SetSavingPlanUserDeductRuleResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponse extends R
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody body;
+    private SetSavingPlanUserDeductRuleResponseBody body;
 
-    private DescribeInstanceAmortizedCostByAmortizationPeriodResponse(BuilderImpl builder) {
+    private SetSavingPlanUserDeductRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeInstanceAmortizedCostByAmortizationPeriodResponse create() {
+    public static SetSavingPlanUserDeductRuleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponse extends R
     /**
      * @return body
      */
-    public DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody getBody() {
+    public SetSavingPlanUserDeductRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeInstanceAmortizedCostByAmortizationPeriodResponse, Builder> {
+    public interface Builder extends Response.Builder<SetSavingPlanUserDeductRuleResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody body);
+        Builder body(SetSavingPlanUserDeductRuleResponseBody body);
 
         @Override
-        DescribeInstanceAmortizedCostByAmortizationPeriodResponse build();
+        SetSavingPlanUserDeductRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeInstanceAmortizedCostByAmortizationPeriodResponse, Builder>
+            extends Response.BuilderImpl<SetSavingPlanUserDeductRuleResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody body; 
+        private SetSavingPlanUserDeductRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeInstanceAmortizedCostByAmortizationPeriodResponse response) {
+        private BuilderImpl(SetSavingPlanUserDeductRuleResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponse extends R
          * body.
          */
         @Override
-        public Builder body(DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody body) {
+        public Builder body(SetSavingPlanUserDeductRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeInstanceAmortizedCostByAmortizationPeriodResponse build() {
-            return new DescribeInstanceAmortizedCostByAmortizationPeriodResponse(this);
+        public SetSavingPlanUserDeductRuleResponse build() {
+            return new SetSavingPlanUserDeductRuleResponse(this);
         } 
 
     } 

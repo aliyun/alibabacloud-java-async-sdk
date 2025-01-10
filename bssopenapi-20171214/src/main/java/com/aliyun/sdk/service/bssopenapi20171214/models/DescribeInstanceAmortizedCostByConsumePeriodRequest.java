@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,15 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AmortizationPeriodFilter")
-    private java.util.List < String > amortizationPeriodFilter;
+    private java.util.List<String> amortizationPeriodFilter;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
-    private java.util.List < String > billOwnerIdList;
+    private java.util.List<String> billOwnerIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillUserIdList")
-    private java.util.List < String > billUserIdList;
+    private java.util.List<String> billUserIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BillingCycle")
@@ -36,7 +41,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceIdList")
-    private java.util.List < String > instanceIdList;
+    private java.util.List<String> instanceIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -93,21 +98,21 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
     /**
      * @return amortizationPeriodFilter
      */
-    public java.util.List < String > getAmortizationPeriodFilter() {
+    public java.util.List<String> getAmortizationPeriodFilter() {
         return this.amortizationPeriodFilter;
     }
 
     /**
      * @return billOwnerIdList
      */
-    public java.util.List < String > getBillOwnerIdList() {
+    public java.util.List<String> getBillOwnerIdList() {
         return this.billOwnerIdList;
     }
 
     /**
      * @return billUserIdList
      */
-    public java.util.List < String > getBillUserIdList() {
+    public java.util.List<String> getBillUserIdList() {
         return this.billUserIdList;
     }
 
@@ -128,7 +133,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
     /**
      * @return instanceIdList
      */
-    public java.util.List < String > getInstanceIdList() {
+    public java.util.List<String> getInstanceIdList() {
         return this.instanceIdList;
     }
 
@@ -168,12 +173,12 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceAmortizedCostByConsumePeriodRequest, Builder> {
-        private java.util.List < String > amortizationPeriodFilter; 
-        private java.util.List < String > billOwnerIdList; 
-        private java.util.List < String > billUserIdList; 
+        private java.util.List<String> amortizationPeriodFilter; 
+        private java.util.List<String> billOwnerIdList; 
+        private java.util.List<String> billUserIdList; 
         private String billingCycle; 
         private String costUnitCode; 
-        private java.util.List < String > instanceIdList; 
+        private java.util.List<String> instanceIdList; 
         private Integer maxResults; 
         private String nextToken; 
         private String productCode; 
@@ -202,7 +207,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         /**
          * AmortizationPeriodFilter.
          */
-        public Builder amortizationPeriodFilter(java.util.List < String > amortizationPeriodFilter) {
+        public Builder amortizationPeriodFilter(java.util.List<String> amortizationPeriodFilter) {
             this.putBodyParameter("AmortizationPeriodFilter", amortizationPeriodFilter);
             this.amortizationPeriodFilter = amortizationPeriodFilter;
             return this;
@@ -211,7 +216,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         /**
          * BillOwnerIdList.
          */
-        public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
+        public Builder billOwnerIdList(java.util.List<String> billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
             this.billOwnerIdList = billOwnerIdList;
             return this;
@@ -220,7 +225,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         /**
          * BillUserIdList.
          */
-        public Builder billUserIdList(java.util.List < String > billUserIdList) {
+        public Builder billUserIdList(java.util.List<String> billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
             this.billUserIdList = billUserIdList;
             return this;
@@ -250,7 +255,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         /**
          * InstanceIdList.
          */
-        public Builder instanceIdList(java.util.List < String > instanceIdList) {
+        public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("InstanceIdList", instanceIdList);
             this.instanceIdList = instanceIdList;
             return this;

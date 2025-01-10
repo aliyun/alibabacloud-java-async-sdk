@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateCostUnitRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnitEntityList")
-    private java.util.List < UnitEntityList> unitEntityList;
+    private java.util.List<UnitEntityList> unitEntityList;
 
     private CreateCostUnitRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class CreateCostUnitRequest extends Request {
     /**
      * @return unitEntityList
      */
-    public java.util.List < UnitEntityList> getUnitEntityList() {
+    public java.util.List<UnitEntityList> getUnitEntityList() {
         return this.unitEntityList;
     }
 
     public static final class Builder extends Request.Builder<CreateCostUnitRequest, Builder> {
-        private java.util.List < UnitEntityList> unitEntityList; 
+        private java.util.List<UnitEntityList> unitEntityList; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class CreateCostUnitRequest extends Request {
         /**
          * <p>The list of cost centers.</p>
          */
-        public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
+        public Builder unitEntityList(java.util.List<UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
             this.unitEntityList = unitEntityList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ModifyAccountRelationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PermissionCodes")
-    private java.util.List < String > permissionCodes;
+    private java.util.List<String> permissionCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelationId")
@@ -50,7 +55,7 @@ public class ModifyAccountRelationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RoleCodes")
-    private java.util.List < String > roleCodes;
+    private java.util.List<String> roleCodes;
 
     private ModifyAccountRelationRequest(Builder builder) {
         super(builder);
@@ -102,7 +107,7 @@ public class ModifyAccountRelationRequest extends Request {
     /**
      * @return permissionCodes
      */
-    public java.util.List < String > getPermissionCodes() {
+    public java.util.List<String> getPermissionCodes() {
         return this.permissionCodes;
     }
 
@@ -137,7 +142,7 @@ public class ModifyAccountRelationRequest extends Request {
     /**
      * @return roleCodes
      */
-    public java.util.List < String > getRoleCodes() {
+    public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
     }
 
@@ -145,12 +150,12 @@ public class ModifyAccountRelationRequest extends Request {
         private String childNick; 
         private Long childUserId; 
         private Long parentUserId; 
-        private java.util.List < String > permissionCodes; 
+        private java.util.List<String> permissionCodes; 
         private Long relationId; 
         private String relationOperation; 
         private String relationType; 
         private String requestId; 
-        private java.util.List < String > roleCodes; 
+        private java.util.List<String> roleCodes; 
 
         private Builder() {
             super();
@@ -220,7 +225,7 @@ public class ModifyAccountRelationRequest extends Request {
          * <strong>example:</strong>
          * <p>SYNCHRONIZE_FINANCE_IDENTITY</p>
          */
-        public Builder permissionCodes(java.util.List < String > permissionCodes) {
+        public Builder permissionCodes(java.util.List<String> permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
             this.permissionCodes = permissionCodes;
             return this;
@@ -286,7 +291,7 @@ public class ModifyAccountRelationRequest extends Request {
          * <strong>example:</strong>
          * <p>trusteeship</p>
          */
-        public Builder roleCodes(java.util.List < String > roleCodes) {
+        public Builder roleCodes(java.util.List<String> roleCodes) {
             this.putQueryParameter("RoleCodes", roleCodes);
             this.roleCodes = roleCodes;
             return this;

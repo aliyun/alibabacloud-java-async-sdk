@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -846,7 +851,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceDtoList")
-        private java.util.List < ResourceInstanceDtoList> resourceInstanceDtoList;
+        private java.util.List<ResourceInstanceDtoList> resourceInstanceDtoList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -899,7 +904,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         /**
          * @return resourceInstanceDtoList
          */
-        public java.util.List < ResourceInstanceDtoList> getResourceInstanceDtoList() {
+        public java.util.List<ResourceInstanceDtoList> getResourceInstanceDtoList() {
             return this.resourceInstanceDtoList;
         }
 
@@ -915,7 +920,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private CostUnitStatisInfo costUnitStatisInfo; 
             private Integer pageNum; 
             private Integer pageSize; 
-            private java.util.List < ResourceInstanceDtoList> resourceInstanceDtoList; 
+            private java.util.List<ResourceInstanceDtoList> resourceInstanceDtoList; 
             private Integer totalCount; 
 
             /**
@@ -959,7 +964,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             /**
              * <p>The resource instances.</p>
              */
-            public Builder resourceInstanceDtoList(java.util.List < ResourceInstanceDtoList> resourceInstanceDtoList) {
+            public Builder resourceInstanceDtoList(java.util.List<ResourceInstanceDtoList> resourceInstanceDtoList) {
                 this.resourceInstanceDtoList = resourceInstanceDtoList;
                 return this;
             }

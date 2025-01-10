@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Budget")
-        private java.util.Map < String, ? > budget;
+        private java.util.Map<String, ?> budget;
 
         @com.aliyun.core.annotation.NameInMap("BudgetName")
         private String budgetName;
@@ -163,10 +168,10 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         private String budgetType;
 
         @com.aliyun.core.annotation.NameInMap("CalculatedValues")
-        private java.util.Map < String, ? > calculatedValues;
+        private java.util.Map<String, ?> calculatedValues;
 
         @com.aliyun.core.annotation.NameInMap("ConsumePeriod")
-        private java.util.Map < String, ? > consumePeriod;
+        private java.util.Map<String, ?> consumePeriod;
 
         private Items(Builder builder) {
             this.budget = builder.budget;
@@ -188,7 +193,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         /**
          * @return budget
          */
-        public java.util.Map < String, ? > getBudget() {
+        public java.util.Map<String, ?> getBudget() {
             return this.budget;
         }
 
@@ -216,24 +221,24 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         /**
          * @return calculatedValues
          */
-        public java.util.Map < String, ? > getCalculatedValues() {
+        public java.util.Map<String, ?> getCalculatedValues() {
             return this.calculatedValues;
         }
 
         /**
          * @return consumePeriod
          */
-        public java.util.Map < String, ? > getConsumePeriod() {
+        public java.util.Map<String, ?> getConsumePeriod() {
             return this.consumePeriod;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > budget; 
+            private java.util.Map<String, ?> budget; 
             private String budgetName; 
             private String budgetStatus; 
             private String budgetType; 
-            private java.util.Map < String, ? > calculatedValues; 
-            private java.util.Map < String, ? > consumePeriod; 
+            private java.util.Map<String, ?> calculatedValues; 
+            private java.util.Map<String, ?> consumePeriod; 
 
             /**
              * <p>The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.</p>
@@ -241,7 +246,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{           &quot;budgetCycleType&quot;: &quot;monthly&quot;,           &quot;budgetMemo&quot;: &quot;&quot;,           &quot;totalBudgetAmount&quot;: 220         }</p>
              */
-            public Builder budget(java.util.Map < String, ? > budget) {
+            public Builder budget(java.util.Map<String, ?> budget) {
                 this.budget = budget;
                 return this;
             }
@@ -285,7 +290,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{           &quot;actualConsumeSum&quot;: 88.6,           &quot;actualAddForecastedAmount&quot;: 89.6,           &quot;actualAndBudgetComparison&quot;: &quot;20.73%&quot;         }</p>
              */
-            public Builder calculatedValues(java.util.Map < String, ? > calculatedValues) {
+            public Builder calculatedValues(java.util.Map<String, ?> calculatedValues) {
                 this.calculatedValues = calculatedValues;
                 return this;
             }
@@ -296,7 +301,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{           &quot;consumePeriodBegin&quot;: &quot;2022-10&quot;,           &quot;consumePeriodEnd&quot;: &quot;2022-11&quot;         }</p>
              */
-            public Builder consumePeriod(java.util.Map < String, ? > consumePeriod) {
+            public Builder consumePeriod(java.util.Map<String, ?> consumePeriod) {
                 this.consumePeriod = consumePeriod;
                 return this;
             }
@@ -319,7 +324,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         private String hostId;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -356,7 +361,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -383,7 +388,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String hostId; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
@@ -402,7 +407,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             /**
              * <p>The data that is returned.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

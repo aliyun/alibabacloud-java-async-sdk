@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
      */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Promotion")
-        private java.util.List < Promotion> promotion;
+        private java.util.List<Promotion> promotion;
 
         private Promotions(Builder builder) {
             this.promotion = builder.promotion;
@@ -241,17 +246,17 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         /**
          * @return promotion
          */
-        public java.util.List < Promotion> getPromotion() {
+        public java.util.List<Promotion> getPromotion() {
             return this.promotion;
         }
 
         public static final class Builder {
-            private java.util.List < Promotion> promotion; 
+            private java.util.List<Promotion> promotion; 
 
             /**
              * Promotion.
              */
-            public Builder promotion(java.util.List < Promotion> promotion) {
+            public Builder promotion(java.util.List<Promotion> promotion) {
                 this.promotion = promotion;
                 return this;
             }

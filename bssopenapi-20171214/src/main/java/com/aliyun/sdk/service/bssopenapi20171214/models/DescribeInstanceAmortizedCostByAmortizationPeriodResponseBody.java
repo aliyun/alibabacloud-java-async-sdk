@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1526,7 +1531,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         private String accountName;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -1571,7 +1576,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1599,7 +1604,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
         public static final class Builder {
             private String accountID; 
             private String accountName; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
@@ -1629,7 +1634,7 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
             /**
              * <p>The data entries returned.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

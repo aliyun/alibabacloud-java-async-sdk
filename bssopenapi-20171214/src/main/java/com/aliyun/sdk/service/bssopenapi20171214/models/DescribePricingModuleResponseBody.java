@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -277,7 +282,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
      */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeValue")
-        private java.util.List < AttributeValue> attributeValue;
+        private java.util.List<AttributeValue> attributeValue;
 
         private Values(Builder builder) {
             this.attributeValue = builder.attributeValue;
@@ -294,17 +299,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return attributeValue
          */
-        public java.util.List < AttributeValue> getAttributeValue() {
+        public java.util.List<AttributeValue> getAttributeValue() {
             return this.attributeValue;
         }
 
         public static final class Builder {
-            private java.util.List < AttributeValue> attributeValue; 
+            private java.util.List<AttributeValue> attributeValue; 
 
             /**
              * AttributeValue.
              */
-            public Builder attributeValue(java.util.List < AttributeValue> attributeValue) {
+            public Builder attributeValue(java.util.List<AttributeValue> attributeValue) {
                 this.attributeValue = attributeValue;
                 return this;
             }
@@ -440,7 +445,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
      */
     public static class AttributeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attribute")
-        private java.util.List < Attribute> attribute;
+        private java.util.List<Attribute> attribute;
 
         private AttributeList(Builder builder) {
             this.attribute = builder.attribute;
@@ -457,17 +462,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return attribute
          */
-        public java.util.List < Attribute> getAttribute() {
+        public java.util.List<Attribute> getAttribute() {
             return this.attribute;
         }
 
         public static final class Builder {
-            private java.util.List < Attribute> attribute; 
+            private java.util.List<Attribute> attribute; 
 
             /**
              * Attribute.
              */
-            public Builder attribute(java.util.List < Attribute> attribute) {
+            public Builder attribute(java.util.List<Attribute> attribute) {
                 this.attribute = attribute;
                 return this;
             }
@@ -487,7 +492,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
      */
     public static class ConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigList")
-        private java.util.List < String > configList;
+        private java.util.List<String> configList;
 
         private ConfigList(Builder builder) {
             this.configList = builder.configList;
@@ -504,17 +509,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return configList
          */
-        public java.util.List < String > getConfigList() {
+        public java.util.List<String> getConfigList() {
             return this.configList;
         }
 
         public static final class Builder {
-            private java.util.List < String > configList; 
+            private java.util.List<String> configList; 
 
             /**
              * ConfigList.
              */
-            public Builder configList(java.util.List < String > configList) {
+            public Builder configList(java.util.List<String> configList) {
                 this.configList = configList;
                 return this;
             }
@@ -681,7 +686,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
      */
     public static class ModuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Module")
-        private java.util.List < Module> module;
+        private java.util.List<Module> module;
 
         private ModuleList(Builder builder) {
             this.module = builder.module;
@@ -698,17 +703,17 @@ public class DescribePricingModuleResponseBody extends TeaModel {
         /**
          * @return module
          */
-        public java.util.List < Module> getModule() {
+        public java.util.List<Module> getModule() {
             return this.module;
         }
 
         public static final class Builder {
-            private java.util.List < Module> module; 
+            private java.util.List<Module> module; 
 
             /**
              * Module.
              */
-            public Builder module(java.util.List < Module> module) {
+            public Builder module(java.util.List<Module> module) {
                 this.module = module;
                 return this;
             }
