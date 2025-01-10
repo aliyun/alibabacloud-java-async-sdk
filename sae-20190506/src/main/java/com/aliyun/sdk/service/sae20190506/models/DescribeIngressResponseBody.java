@@ -595,6 +595,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertIds")
         private String certIds;
 
+        @com.aliyun.core.annotation.NameInMap("CreatedBySae")
+        private Boolean createdBySae;
+
         @com.aliyun.core.annotation.NameInMap("DefaultRule")
         private DefaultRule defaultRule;
 
@@ -655,6 +658,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.certId = builder.certId;
             this.certIds = builder.certIds;
+            this.createdBySae = builder.createdBySae;
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
             this.enableXForwardedFor = builder.enableXForwardedFor;
@@ -696,6 +700,13 @@ public class DescribeIngressResponseBody extends TeaModel {
          */
         public String getCertIds() {
             return this.certIds;
+        }
+
+        /**
+         * @return createdBySae
+         */
+        public Boolean getCreatedBySae() {
+            return this.createdBySae;
         }
 
         /**
@@ -834,6 +845,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         public static final class Builder {
             private String certId; 
             private String certIds; 
+            private Boolean createdBySae; 
             private DefaultRule defaultRule; 
             private String description; 
             private Boolean enableXForwardedFor; 
@@ -870,6 +882,14 @@ public class DescribeIngressResponseBody extends TeaModel {
              */
             public Builder certIds(String certIds) {
                 this.certIds = certIds;
+                return this;
+            }
+
+            /**
+             * CreatedBySae.
+             */
+            public Builder createdBySae(Boolean createdBySae) {
+                this.createdBySae = createdBySae;
                 return this;
             }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateIngressRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    private String addressType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertId")
     private String certId;
 
@@ -72,6 +76,10 @@ public class CreateIngressRequest extends Request {
     private String loadBalanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerEdition")
+    private String loadBalancerEdition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
@@ -91,11 +99,15 @@ public class CreateIngressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlbId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String slbId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneMappings")
+    private String zoneMappings;
 
     private CreateIngressRequest(Builder builder) {
         super(builder);
+        this.addressType = builder.addressType;
         this.certId = builder.certId;
         this.certIds = builder.certIds;
         this.defaultRule = builder.defaultRule;
@@ -109,11 +121,13 @@ public class CreateIngressRequest extends Request {
         this.listenerPort = builder.listenerPort;
         this.listenerProtocol = builder.listenerProtocol;
         this.loadBalanceType = builder.loadBalanceType;
+        this.loadBalancerEdition = builder.loadBalancerEdition;
         this.namespaceId = builder.namespaceId;
         this.requestTimeout = builder.requestTimeout;
         this.rules = builder.rules;
         this.securityPolicyId = builder.securityPolicyId;
         this.slbId = builder.slbId;
+        this.zoneMappings = builder.zoneMappings;
     }
 
     public static Builder builder() {
@@ -127,6 +141,13 @@ public class CreateIngressRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addressType
+     */
+    public String getAddressType() {
+        return this.addressType;
     }
 
     /**
@@ -221,6 +242,13 @@ public class CreateIngressRequest extends Request {
     }
 
     /**
+     * @return loadBalancerEdition
+     */
+    public String getLoadBalancerEdition() {
+        return this.loadBalancerEdition;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -255,7 +283,15 @@ public class CreateIngressRequest extends Request {
         return this.slbId;
     }
 
+    /**
+     * @return zoneMappings
+     */
+    public String getZoneMappings() {
+        return this.zoneMappings;
+    }
+
     public static final class Builder extends Request.Builder<CreateIngressRequest, Builder> {
+        private String addressType; 
         private String certId; 
         private String certIds; 
         private String defaultRule; 
@@ -269,11 +305,13 @@ public class CreateIngressRequest extends Request {
         private Integer listenerPort; 
         private String listenerProtocol; 
         private String loadBalanceType; 
+        private String loadBalancerEdition; 
         private String namespaceId; 
         private Integer requestTimeout; 
         private String rules; 
         private String securityPolicyId; 
         private String slbId; 
+        private String zoneMappings; 
 
         private Builder() {
             super();
@@ -281,6 +319,7 @@ public class CreateIngressRequest extends Request {
 
         private Builder(CreateIngressRequest request) {
             super(request);
+            this.addressType = request.addressType;
             this.certId = request.certId;
             this.certIds = request.certIds;
             this.defaultRule = request.defaultRule;
@@ -294,12 +333,23 @@ public class CreateIngressRequest extends Request {
             this.listenerPort = request.listenerPort;
             this.listenerProtocol = request.listenerProtocol;
             this.loadBalanceType = request.loadBalanceType;
+            this.loadBalancerEdition = request.loadBalancerEdition;
             this.namespaceId = request.namespaceId;
             this.requestTimeout = request.requestTimeout;
             this.rules = request.rules;
             this.securityPolicyId = request.securityPolicyId;
             this.slbId = request.slbId;
+            this.zoneMappings = request.zoneMappings;
         } 
+
+        /**
+         * AddressType.
+         */
+        public Builder addressType(String addressType) {
+            this.putQueryParameter("AddressType", addressType);
+            this.addressType = addressType;
+            return this;
+        }
 
         /**
          * <p>The ID of the certificate that is associated with the <strong>CLB</strong> instance.</p>
@@ -468,6 +518,15 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
+         * LoadBalancerEdition.
+         */
+        public Builder loadBalancerEdition(String loadBalancerEdition) {
+            this.putQueryParameter("LoadBalancerEdition", loadBalancerEdition);
+            this.loadBalancerEdition = loadBalancerEdition;
+            return this;
+        }
+
+        /**
          * <p>The ID of the namespace where the application is located. Currently, cross-namespace applications are not supported.</p>
          * <p>This parameter is required.</p>
          * 
@@ -534,7 +593,6 @@ public class CreateIngressRequest extends Request {
          * <blockquote>
          * <p> The SLB instance can be a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-uf6hucc7inlqrtcq5****</p>
@@ -542,6 +600,15 @@ public class CreateIngressRequest extends Request {
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);
             this.slbId = slbId;
+            return this;
+        }
+
+        /**
+         * ZoneMappings.
+         */
+        public Builder zoneMappings(String zoneMappings) {
+            this.putQueryParameter("ZoneMappings", zoneMappings);
+            this.zoneMappings = zoneMappings;
             return this;
         }
 
