@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSubnetResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSubnetResponseBody</p>
  */
 public class DeleteSubnetResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Object content;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSubnetResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class DeleteSubnetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,14 @@ public class DeleteSubnetResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>Response content (if the resource has dependent resources, the existing dependent resources will be returned)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;nc&quot;: [
+         *             {}
+         *       ]
+         * }</p>
          */
         public Builder content(Object content) {
             this.content = content;
@@ -90,7 +105,10 @@ public class DeleteSubnetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +116,10 @@ public class DeleteSubnetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A56F7D3C-8850-5AF4-A342-2D71C9A9D1CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

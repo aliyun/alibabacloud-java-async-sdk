@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitializeVccResponseBody} extends {@link TeaModel}
  *
  * <p>InitializeVccResponseBody</p>
  */
 public class InitializeVccResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InitializeVccResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class InitializeVccResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class InitializeVccResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The response parameters.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -90,7 +98,10 @@ public class InitializeVccResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. (If the instance is in the Exception state, the exception cause is prompted.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class InitializeVccResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E30DA7CB-03D0-51EB-8F18-856B99987E18</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +125,17 @@ public class InitializeVccResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InitializeVccResponseBody} extends {@link TeaModel}
+     *
+     * <p>InitializeVccResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Content(Builder builder) {
@@ -150,7 +170,10 @@ public class InitializeVccResponseBody extends TeaModel {
             private String roleName; 
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E30DA7CB-03D0-51EB-8F18-856B99987E18</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -158,7 +181,10 @@ public class InitializeVccResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Linked Role of Lingjun Connection Instance (AliyunServiceRoleForEfloVcc)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudConnectionOperationRole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

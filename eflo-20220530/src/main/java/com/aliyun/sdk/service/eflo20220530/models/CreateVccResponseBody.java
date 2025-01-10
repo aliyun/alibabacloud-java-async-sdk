@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVccResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVccResponseBody</p>
  */
 public class CreateVccResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateVccResponseBody(Builder builder) {
@@ -74,7 +79,10 @@ public class CreateVccResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class CreateVccResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The returned data.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -90,7 +98,10 @@ public class CreateVccResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>response message, if the success request is</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class CreateVccResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID of the current request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>039C3C3A-3C37-5672-80D5-D8CD48C676D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,8 +125,14 @@ public class CreateVccResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVccResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVccResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("VccId")
+        @com.aliyun.core.annotation.NameInMap("VccId")
         private String vccId;
 
         private Content(Builder builder) {
@@ -138,7 +158,10 @@ public class CreateVccResponseBody extends TeaModel {
             private String vccId; 
 
             /**
-             * VccId.
+             * <p>The ID of the Lingjun connection instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vcc-cn-zvp2w222001</p>
              */
             public Builder vccId(String vccId) {
                 this.vccId = vccId;

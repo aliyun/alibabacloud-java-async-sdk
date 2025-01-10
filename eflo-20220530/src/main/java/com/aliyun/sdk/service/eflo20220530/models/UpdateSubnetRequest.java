@@ -1,47 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSubnetRequest} extends {@link RequestModel}
  *
  * <p>UpdateSubnetRequest</p>
  */
 public class UpdateSubnetRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    private String description;
-
-    @Body
-    @NameInMap("Name")
-    private String name;
-
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("SubnetId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubnetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subnetId;
 
-    @Body
-    @NameInMap("VpdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubnetName")
+    private String subnetName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpdId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpdId;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private UpdateSubnetRequest(Builder builder) {
         super(builder);
-        this.description = builder.description;
-        this.name = builder.name;
         this.regionId = builder.regionId;
         this.subnetId = builder.subnetId;
+        this.subnetName = builder.subnetName;
         this.vpdId = builder.vpdId;
         this.zoneId = builder.zoneId;
     }
@@ -60,20 +64,6 @@ public class UpdateSubnetRequest extends Request {
     }
 
     /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -85,6 +75,13 @@ public class UpdateSubnetRequest extends Request {
      */
     public String getSubnetId() {
         return this.subnetId;
+    }
+
+    /**
+     * @return subnetName
+     */
+    public String getSubnetName() {
+        return this.subnetName;
     }
 
     /**
@@ -102,10 +99,9 @@ public class UpdateSubnetRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateSubnetRequest, Builder> {
-        private String description; 
-        private String name; 
         private String regionId; 
         private String subnetId; 
+        private String subnetName; 
         private String vpdId; 
         private String zoneId; 
 
@@ -115,34 +111,19 @@ public class UpdateSubnetRequest extends Request {
 
         private Builder(UpdateSubnetRequest request) {
             super(request);
-            this.description = request.description;
-            this.name = request.name;
             this.regionId = request.regionId;
             this.subnetId = request.subnetId;
+            this.subnetName = request.subnetName;
             this.vpdId = request.vpdId;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * 描述
-         */
-        public Builder description(String description) {
-            this.putBodyParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Subnet名称
-         */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * 地域
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -151,7 +132,11 @@ public class UpdateSubnetRequest extends Request {
         }
 
         /**
-         * Subnet ID
+         * <p>The subnet instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-f3zfzmnc</p>
          */
         public Builder subnetId(String subnetId) {
             this.putBodyParameter("SubnetId", subnetId);
@@ -160,7 +145,23 @@ public class UpdateSubnetRequest extends Request {
         }
 
         /**
-         * 所属Vpd ID
+         * <p>The new name for the subnet instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-1</p>
+         */
+        public Builder subnetName(String subnetName) {
+            this.putBodyParameter("SubnetName", subnetName);
+            this.subnetName = subnetName;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the VPD to which the subnet belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpd-aof7dat1</p>
          */
         public Builder vpdId(String vpdId) {
             this.putBodyParameter("VpdId", vpdId);
@@ -169,7 +170,11 @@ public class UpdateSubnetRequest extends Request {
         }
 
         /**
-         * 可用区
+         * <p>The zone ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

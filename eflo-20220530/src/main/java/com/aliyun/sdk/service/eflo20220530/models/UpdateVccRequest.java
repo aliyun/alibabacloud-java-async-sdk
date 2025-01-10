@@ -1,35 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eflo20220530.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVccRequest} extends {@link RequestModel}
  *
  * <p>UpdateVccRequest</p>
  */
 public class UpdateVccRequest extends Request {
-    @Body
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @Body
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("VccId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VccId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vccId;
 
-    @Body
-    @NameInMap("VccName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VccName")
     private String vccName;
 
     private UpdateVccRequest(Builder builder) {
@@ -110,7 +116,10 @@ public class UpdateVccRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * <p>The peak bandwidth of the Lingjun connection instance. Unit: Mbit/s. Valid values: 1000 to 400000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putBodyParameter("Bandwidth", bandwidth);
@@ -119,7 +128,10 @@ public class UpdateVccRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order placed on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20006627643</p>
          */
         public Builder orderId(String orderId) {
             this.putBodyParameter("OrderId", orderId);
@@ -128,7 +140,10 @@ public class UpdateVccRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -137,7 +152,11 @@ public class UpdateVccRequest extends Request {
         }
 
         /**
-         * VccId.
+         * <p>The ID of the Lingjun connection instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-cn-zvp2w222001</p>
          */
         public Builder vccId(String vccId) {
             this.putBodyParameter("VccId", vccId);
@@ -146,7 +165,10 @@ public class UpdateVccRequest extends Request {
         }
 
         /**
-         * VccName.
+         * <p>The name of the Lingjun connection instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcc-heyuan-backup</p>
          */
         public Builder vccName(String vccName) {
             this.putBodyParameter("VccName", vccName);
