@@ -67,7 +67,7 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * <p>Return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -78,7 +78,7 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -89,10 +89,10 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API execution status, with the following values:</p>
+         * <p>The status of the operation. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: Execution succeeded.</li>
-         * <li><strong>fail</strong>: Execution failed.</li>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -99,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     /**
+     * @param request the request parameters of CreateBackup  CreateBackupRequest
+     * @return CreateBackupResponse
+     */
+    CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
+
+    /**
      * @param request the request parameters of CreateCollection  CreateCollectionRequest
      * @return CreateCollectionResponse
      */
@@ -227,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAccountResponse
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
 
     /**
      * @param request the request parameters of DeleteCollection  DeleteCollectionRequest
@@ -374,6 +386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAvailableResourcesResponse
      */
     CompletableFuture<DescribeAvailableResourcesResponse> describeAvailableResources(DescribeAvailableResourcesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBackupJob  DescribeBackupJobRequest
+     * @return DescribeBackupJobResponse
+     */
+    CompletableFuture<DescribeBackupJobResponse> describeBackupJob(DescribeBackupJobRequest request);
 
     /**
      * <b>description</b> :
@@ -979,6 +997,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InitVectorDatabaseResponse
      */
     CompletableFuture<InitVectorDatabaseResponse> initVectorDatabase(InitVectorDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListBackupJobs  ListBackupJobsRequest
+     * @return ListBackupJobsResponse
+     */
+    CompletableFuture<ListBackupJobsResponse> listBackupJobs(ListBackupJobsRequest request);
 
     /**
      * @param request the request parameters of ListCollections  ListCollectionsRequest

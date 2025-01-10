@@ -355,7 +355,7 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>Fields used for full-text search, separated by commas (,). These fields must be keys defined in Metadata.</p>
+         * <p>The fields used for full-text search. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>title,content</p>
@@ -439,7 +439,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * MetadataIndices.
+         * <p>The scalar index fields. Separate multiple fields with commas (,). These fields must be keys defined in Metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder metadataIndices(String metadataIndices) {
             this.putQueryParameter("MetadataIndices", metadataIndices);
@@ -448,12 +451,11 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * <p>Method used when building the vector index.</p>
-         * <p>Value description:</p>
+         * <p>The method that is used to create vector indexes. Valid values:</p>
          * <ul>
-         * <li><strong>l2</strong>: Euclidean distance.</li>
-         * <li><strong>ip</strong>: Inner product (dot product) distance.</li>
-         * <li><strong>cosine</strong> (default): Cosine similarity.</li>
+         * <li>l2: Euclidean distance.</li>
+         * <li>ip: inner product distance.</li>
+         * <li>cosine: cosine similarity.</li>
          * </ul>
          * 
          * <strong>example:</strong>

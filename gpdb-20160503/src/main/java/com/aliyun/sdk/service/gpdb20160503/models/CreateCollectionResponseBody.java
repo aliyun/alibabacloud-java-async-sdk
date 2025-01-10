@@ -67,7 +67,7 @@ public class CreateCollectionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * <p>Return message.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>create successfully</p>
