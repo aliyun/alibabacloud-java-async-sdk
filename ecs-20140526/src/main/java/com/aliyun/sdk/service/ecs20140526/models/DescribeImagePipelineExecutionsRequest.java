@@ -351,9 +351,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p>This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The tags of the image creation task.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -413,9 +411,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             private String value; 
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The key of tag N of the image creation task. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -426,9 +422,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The value of tag N of the image creation task. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>

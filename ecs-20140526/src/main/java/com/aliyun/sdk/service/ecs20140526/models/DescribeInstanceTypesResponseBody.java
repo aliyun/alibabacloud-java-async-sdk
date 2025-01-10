@@ -283,6 +283,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      * <p>DescribeInstanceTypesResponseBody</p>
      */
     public static class EnhancedNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RssSupport")
+        private Boolean rssSupport;
+
         @com.aliyun.core.annotation.NameInMap("SriovSupport")
         private Boolean sriovSupport;
 
@@ -290,6 +293,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private Integer vfQueueNumberPerEni;
 
         private EnhancedNetwork(Builder builder) {
+            this.rssSupport = builder.rssSupport;
             this.sriovSupport = builder.sriovSupport;
             this.vfQueueNumberPerEni = builder.vfQueueNumberPerEni;
         }
@@ -300,6 +304,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static EnhancedNetwork create() {
             return builder().build();
+        }
+
+        /**
+         * @return rssSupport
+         */
+        public Boolean getRssSupport() {
+            return this.rssSupport;
         }
 
         /**
@@ -317,8 +328,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean rssSupport; 
             private Boolean sriovSupport; 
             private Integer vfQueueNumberPerEni; 
+
+            /**
+             * RssSupport.
+             */
+            public Builder rssSupport(Boolean rssSupport) {
+                this.rssSupport = rssSupport;
+                return this;
+            }
 
             /**
              * <blockquote>

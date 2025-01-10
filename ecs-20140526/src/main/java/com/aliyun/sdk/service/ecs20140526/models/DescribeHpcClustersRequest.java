@@ -242,7 +242,9 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -254,7 +256,9 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

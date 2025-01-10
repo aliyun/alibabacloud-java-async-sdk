@@ -634,10 +634,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
      * <p>ModifyNetworkInterfaceAttributeRequest</p>
      */
     public static class EnhancedNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableRss")
+        private Boolean enableRss;
+
         @com.aliyun.core.annotation.NameInMap("EnableSriov")
         private Boolean enableSriov;
 
         private EnhancedNetwork(Builder builder) {
+            this.enableRss = builder.enableRss;
             this.enableSriov = builder.enableSriov;
         }
 
@@ -650,6 +654,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
+         * @return enableRss
+         */
+        public Boolean getEnableRss() {
+            return this.enableRss;
+        }
+
+        /**
          * @return enableSriov
          */
         public Boolean getEnableSriov() {
@@ -657,7 +668,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableRss; 
             private Boolean enableSriov; 
+
+            /**
+             * EnableRss.
+             */
+            public Builder enableRss(Boolean enableRss) {
+                this.enableRss = enableRss;
+                return this;
+            }
 
             /**
              * <p>This parameter is not publicly available.</p>

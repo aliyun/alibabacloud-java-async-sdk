@@ -193,9 +193,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The tag key of the image creation task.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -206,9 +204,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The tag value of the image creation task.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -503,9 +499,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * <blockquote>
-             * <p>This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The tags of the image creation task.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

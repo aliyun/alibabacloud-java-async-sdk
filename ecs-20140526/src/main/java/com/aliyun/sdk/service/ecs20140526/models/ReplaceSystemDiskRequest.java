@@ -452,7 +452,10 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance whose operating system you want to replace.</p>
+         * <blockquote>
+         * <p> Make sure that the instance is in the <code>Stopped</code> (<code>Stopped</code>) state.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

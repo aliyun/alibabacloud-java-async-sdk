@@ -1827,9 +1827,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you configure auto-renewal or manual renewal for subscription instances, you can query the auto-renewal status of the instances.</p>
+     * <p>  Only subscription instances are supported. If you call this operation for a pay-as-you-go instance, an error is returned.</p>
      * <ul>
-     * <li>This operation is applicable to only subscription instances. An error is returned if you call this operation on pay-as-you-go instances.</li>
+     * <li>Before you configure auto-renewal or manual renewal for subscription instances, you can query the auto-renewal status of the instances.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceAutoRenewAttribute  DescribeInstanceAutoRenewAttributeRequest
@@ -4097,16 +4097,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25436.html">Replace the operating system (system disk) of an instance</a>.
+     * When you call this operation for an ECS instance, take note of the following items:</p>
      * <ul>
-     * <li>The category of the system disk cannot be changed.</li>
      * <li>The billing method of the system disk cannot be changed.</li>
+     * <li>The category of the system disk cannot be changed.</li>
+     * <li>Make sure that no unpaid orders are associated with the instance.</li>
      * <li>The instance must be in the <code>Stopped</code> state.
      * **
-     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and economical mode is enabled by default for the instance, you must disable economical mode and enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
-     * <li>The ECS instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>No unpaid orders are associated with the instance.</li>
+     * <strong>Note</strong> The operation is applicable only to instances of the Virtual Private Cloud (VPC) type. If the instance is a pay-as-you-go instance and default economical mode is enabled, enable standard mode when you stop the instance. This prevents the instance from being unable to restart due to insufficient ECS resources after the system disk is replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</li>
+     * <li>The instance cannot be locked for security reasons. If the value of <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
      * <li>You can configure <code>SystemDisk.Size</code> to specify the capacity of the new system disk.
      * After you call the ReplaceSystemDisk operation, you can use one of the following methods to check whether the system disk is replaced:</li>
      * <li>Call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query the status of the new system disk. If the new system disk is in the In Use state, the system disk is replaced.</li>

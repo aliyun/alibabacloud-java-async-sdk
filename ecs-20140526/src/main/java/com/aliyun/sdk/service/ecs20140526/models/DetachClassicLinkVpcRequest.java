@@ -155,7 +155,7 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the classic network-type instance.</p>
+         * <p>The ID of the instance that resides in the classic network.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,10 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * <p>RAM用户的虚拟账号ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -177,7 +180,7 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the classic network-type instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +193,10 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * <p>资源主账号的账号名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECSforCloud</p>
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -199,7 +205,10 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * <p>资源主账号的ID，亦即UID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155780923770</p>
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -208,7 +217,7 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the instance is linked.</p>
+         * <p>The ID of the VPC to which the instance is connected.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
