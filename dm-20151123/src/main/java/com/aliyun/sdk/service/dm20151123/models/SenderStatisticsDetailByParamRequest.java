@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SenderStatisticsDetailByParamRequest} extends {@link RequestModel}
  *
  * <p>SenderStatisticsDetailByParamRequest</p>
@@ -195,7 +201,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>Sending address. Not filled in represents all addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s***@example.net</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -204,7 +213,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. The difference between the start time and the end time cannot exceed 30 days. Format: yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-29 00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -213,7 +225,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * Length.
+         * <p>The number of entries to return in the request. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -222,7 +237,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * NextStart.
+         * <p>The start position of the next page. The offset for the request. If you want to obtain more records, specify the return value of the NextStart parameter for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90f0243616#203#a***@example.net-1658817837#a***@example.net.247475288187</p>
          */
         public Builder nextStart(String nextStart) {
             this.putQueryParameter("NextStart", nextStart);
@@ -258,7 +276,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. The start time can be up to 30 days earlier than the current time. Format: yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-28 00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -267,7 +288,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The delivery status. If you leave this parameter empty, all states are included. Valid values: 0: successful, 2 invalid email address, 3: spam, and 4: failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -276,7 +300,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>The email tag. If you leave this parameter empty, all email tags are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EmailQuestionnaireHelioscam</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -285,7 +312,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * ToAddress.
+         * <p>The recipient address. If you leave this parameter empty, all recipient addresses are included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b***@example.net</p>
          */
         public Builder toAddress(String toAddress) {
             this.putQueryParameter("ToAddress", toAddress);

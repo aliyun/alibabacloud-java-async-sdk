@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDomainByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDomainByParamResponseBody</p>
@@ -130,6 +136,12 @@ public class QueryDomainByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDomainByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByParamResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CnameAuthStatus")
         private String cnameAuthStatus;
@@ -371,9 +383,15 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDomainByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
-        private java.util.List < Domain> domain;
+        private java.util.List<Domain> domain;
 
         private Data(Builder builder) {
             this.domain = builder.domain;
@@ -390,17 +408,17 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
 
             /**
              * domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

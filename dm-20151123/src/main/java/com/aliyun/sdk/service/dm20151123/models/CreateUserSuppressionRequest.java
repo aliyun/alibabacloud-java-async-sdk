@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserSuppressionRequest} extends {@link RequestModel}
  *
  * <p>CreateUserSuppressionRequest</p>
@@ -95,7 +101,10 @@ public class CreateUserSuppressionRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>Email address or domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.net">test@example.net</a></p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);

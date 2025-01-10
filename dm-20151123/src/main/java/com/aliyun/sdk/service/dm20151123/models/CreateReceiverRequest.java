@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReceiverRequest} extends {@link RequestModel}
  *
  * <p>CreateReceiverRequest</p>
@@ -143,7 +149,10 @@ public class CreateReceiverRequest extends Request {
         }
 
         /**
-         * ReceiversAlias.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vme</p>
          */
         public Builder receiversAlias(String receiversAlias) {
             this.putQueryParameter("ReceiversAlias", receiversAlias);
@@ -152,7 +161,10 @@ public class CreateReceiverRequest extends Request {
         }
 
         /**
-         * ReceiversName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xme</p>
          */
         public Builder receiversName(String receiversName) {
             this.putQueryParameter("ReceiversName", receiversName);

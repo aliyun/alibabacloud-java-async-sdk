@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSendMailRequest} extends {@link RequestModel}
  *
  * <p>BatchSendMailRequest</p>
@@ -24,6 +30,10 @@ public class BatchSendMailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClickTrace")
     private String clickTrace;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Headers")
+    private String headers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -72,6 +82,7 @@ public class BatchSendMailRequest extends Request {
         this.accountName = builder.accountName;
         this.addressType = builder.addressType;
         this.clickTrace = builder.clickTrace;
+        this.headers = builder.headers;
         this.ownerId = builder.ownerId;
         this.receiversName = builder.receiversName;
         this.replyAddress = builder.replyAddress;
@@ -116,6 +127,13 @@ public class BatchSendMailRequest extends Request {
      */
     public String getClickTrace() {
         return this.clickTrace;
+    }
+
+    /**
+     * @return headers
+     */
+    public String getHeaders() {
+        return this.headers;
     }
 
     /**
@@ -192,6 +210,7 @@ public class BatchSendMailRequest extends Request {
         private String accountName; 
         private Integer addressType; 
         private String clickTrace; 
+        private String headers; 
         private Long ownerId; 
         private String receiversName; 
         private String replyAddress; 
@@ -212,6 +231,7 @@ public class BatchSendMailRequest extends Request {
             this.accountName = request.accountName;
             this.addressType = request.addressType;
             this.clickTrace = request.clickTrace;
+            this.headers = request.headers;
             this.ownerId = request.ownerId;
             this.receiversName = request.receiversName;
             this.replyAddress = request.replyAddress;
@@ -225,7 +245,10 @@ public class BatchSendMailRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -234,7 +257,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * AddressType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addressType(Integer addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -252,6 +278,15 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
+         * Headers.
+         */
+        public Builder headers(String headers) {
+            this.putQueryParameter("Headers", headers);
+            this.headers = headers;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
@@ -261,7 +296,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * ReceiversName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         public Builder receiversName(String receiversName) {
             this.putQueryParameter("ReceiversName", receiversName);
@@ -315,7 +353,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

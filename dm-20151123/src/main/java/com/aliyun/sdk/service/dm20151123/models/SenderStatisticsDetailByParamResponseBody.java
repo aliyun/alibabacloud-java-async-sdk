@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SenderStatisticsDetailByParamResponseBody} extends {@link TeaModel}
  *
  * <p>SenderStatisticsDetailByParamResponseBody</p>
@@ -61,7 +67,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         private Data data; 
 
         /**
-         * NextStart.
+         * <p>The start position of the next page. The return value of the NextStart parameter indicates the start position of the next page. If you want to obtain more records, specify the return value in the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90f0243616#203#a***@example.net-1658817689#a***@example.net.247141122178</p>
          */
         public Builder nextStart(String nextStart) {
             this.nextStart = nextStart;
@@ -69,7 +78,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B5AB8EBB-EE64-4BB2-B085-B92CC5DEDC41</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +89,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,6 +102,12 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SenderStatisticsDetailByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>SenderStatisticsDetailByParamResponseBody</p>
+     */
     public static class MailDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -201,7 +219,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             private String utcLastUpdateTime; 
 
             /**
-             * AccountName.
+             * <p>The sender address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s***@example.net</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -209,7 +230,15 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorClassification.
+             * <p>Detailed classification of error causes:</p>
+             * <ul>
+             * <li>SendOk</li>
+             * <li>SmtpNxBox</li>
+             * </ul>
+             * <p>etc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendOk</p>
              */
             public Builder errorClassification(String errorClassification) {
                 this.errorClassification = errorClassification;
@@ -217,7 +246,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * LastUpdateTime.
+             * <p>The most recent update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-28T17:11Z</p>
              */
             public Builder lastUpdateTime(String lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -225,7 +257,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The details of the email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250 Send Mail OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,7 +268,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The delivery status. Valid values: 0: successful, 2 invalid email address, 3: spam, and 4: failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -241,7 +279,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * <p>the subject of email.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test subject</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -249,7 +290,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ToAddress.
+             * <p>The recipient address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b***@example.net</p>
              */
             public Builder toAddress(String toAddress) {
                 this.toAddress = toAddress;
@@ -257,7 +301,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * UtcLastUpdateTime.
+             * <p>The most recent update time (timestamp format)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1619601108</p>
              */
             public Builder utcLastUpdateTime(String utcLastUpdateTime) {
                 this.utcLastUpdateTime = utcLastUpdateTime;
@@ -271,9 +318,15 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SenderStatisticsDetailByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>SenderStatisticsDetailByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mailDetail")
-        private java.util.List < MailDetail> mailDetail;
+        private java.util.List<MailDetail> mailDetail;
 
         private Data(Builder builder) {
             this.mailDetail = builder.mailDetail;
@@ -290,17 +343,17 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         /**
          * @return mailDetail
          */
-        public java.util.List < MailDetail> getMailDetail() {
+        public java.util.List<MailDetail> getMailDetail() {
             return this.mailDetail;
         }
 
         public static final class Builder {
-            private java.util.List < MailDetail> mailDetail; 
+            private java.util.List<MailDetail> mailDetail; 
 
             /**
              * mailDetail.
              */
-            public Builder mailDetail(java.util.List < MailDetail> mailDetail) {
+            public Builder mailDetail(java.util.List<MailDetail> mailDetail) {
                 this.mailDetail = mailDetail;
                 return this;
             }

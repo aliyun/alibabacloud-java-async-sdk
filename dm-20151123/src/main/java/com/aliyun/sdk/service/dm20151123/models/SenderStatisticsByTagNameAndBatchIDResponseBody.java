@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SenderStatisticsByTagNameAndBatchIDResponseBody} extends {@link TeaModel}
  *
  * <p>SenderStatisticsByTagNameAndBatchIDResponseBody</p>
@@ -90,6 +96,12 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SenderStatisticsByTagNameAndBatchIDResponseBody} extends {@link TeaModel}
+     *
+     * <p>SenderStatisticsByTagNameAndBatchIDResponseBody</p>
+     */
     public static class Stat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -251,9 +263,15 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SenderStatisticsByTagNameAndBatchIDResponseBody} extends {@link TeaModel}
+     *
+     * <p>SenderStatisticsByTagNameAndBatchIDResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stat")
-        private java.util.List < Stat> stat;
+        private java.util.List<Stat> stat;
 
         private Data(Builder builder) {
             this.stat = builder.stat;
@@ -270,17 +288,17 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         /**
          * @return stat
          */
-        public java.util.List < Stat> getStat() {
+        public java.util.List<Stat> getStat() {
             return this.stat;
         }
 
         public static final class Builder {
-            private java.util.List < Stat> stat; 
+            private java.util.List<Stat> stat; 
 
             /**
              * stat.
              */
-            public Builder stat(java.util.List < Stat> stat) {
+            public Builder stat(java.util.List<Stat> stat) {
                 this.stat = stat;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendTestByTemplateRequest} extends {@link RequestModel}
  *
  * <p>SendTestByTemplateRequest</p>
@@ -196,7 +202,7 @@ public class SendTestByTemplateRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -214,7 +220,7 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>This parameter is required.</p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -277,7 +283,10 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);

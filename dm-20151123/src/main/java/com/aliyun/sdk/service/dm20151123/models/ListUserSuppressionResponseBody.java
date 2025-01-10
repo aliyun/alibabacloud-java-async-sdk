@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserSuppressionResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserSuppressionResponseBody</p>
@@ -85,7 +91,7 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>Returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +99,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +110,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +121,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A846D66-5EC7-551B-9687-5BF1963DCFC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class ListUserSuppressionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserSuppressionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserSuppressionResponseBody</p>
+     */
     public static class UserSuppressions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -205,7 +229,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Address.
+             * <p>Email address or domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.net">test@example.net</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -213,7 +240,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time, timestamp, accurate to the second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715667435</p>
              */
             public Builder createTime(Integer createTime) {
                 this.createTime = createTime;
@@ -221,7 +251,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
             }
 
             /**
-             * LastBounceTime.
+             * <p>Last bounce hit time, timestamp, accurate to the second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715667451</p>
              */
             public Builder lastBounceTime(Integer lastBounceTime) {
                 this.lastBounceTime = lastBounceTime;
@@ -229,7 +262,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
             }
 
             /**
-             * SuppressionId.
+             * <p>Invalid address ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59511</p>
              */
             public Builder suppressionId(Integer suppressionId) {
                 this.suppressionId = suppressionId;
@@ -237,7 +273,14 @@ public class ListUserSuppressionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Source of entry, invalid address type</p>
+             * <ul>
+             * <li>system</li>
+             * <li>user</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -251,9 +294,15 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserSuppressionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserSuppressionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserSuppressions")
-        private java.util.List < UserSuppressions> userSuppressions;
+        private java.util.List<UserSuppressions> userSuppressions;
 
         private Data(Builder builder) {
             this.userSuppressions = builder.userSuppressions;
@@ -270,17 +319,17 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         /**
          * @return userSuppressions
          */
-        public java.util.List < UserSuppressions> getUserSuppressions() {
+        public java.util.List<UserSuppressions> getUserSuppressions() {
             return this.userSuppressions;
         }
 
         public static final class Builder {
-            private java.util.List < UserSuppressions> userSuppressions; 
+            private java.util.List<UserSuppressions> userSuppressions; 
 
             /**
              * UserSuppressions.
              */
-            public Builder userSuppressions(java.util.List < UserSuppressions> userSuppressions) {
+            public Builder userSuppressions(java.util.List<UserSuppressions> userSuppressions) {
                 this.userSuppressions = userSuppressions;
                 return this;
             }

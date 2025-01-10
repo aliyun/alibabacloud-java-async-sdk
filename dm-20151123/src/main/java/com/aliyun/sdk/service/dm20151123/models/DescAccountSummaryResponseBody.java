@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescAccountSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescAccountSummaryResponseBody</p>
@@ -13,6 +19,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescAccountSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DailyQuota")
     private Integer dailyQuota;
+
+    @com.aliyun.core.annotation.NameInMap("DailyRemainFreeQuota")
+    private Integer dailyRemainFreeQuota;
 
     @com.aliyun.core.annotation.NameInMap("DayuStatus")
     private Integer dayuStatus;
@@ -64,6 +73,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
 
     private DescAccountSummaryResponseBody(Builder builder) {
         this.dailyQuota = builder.dailyQuota;
+        this.dailyRemainFreeQuota = builder.dailyRemainFreeQuota;
         this.dayuStatus = builder.dayuStatus;
         this.domains = builder.domains;
         this.enableTimes = builder.enableTimes;
@@ -95,6 +105,13 @@ public class DescAccountSummaryResponseBody extends TeaModel {
      */
     public Integer getDailyQuota() {
         return this.dailyQuota;
+    }
+
+    /**
+     * @return dailyRemainFreeQuota
+     */
+    public Integer getDailyRemainFreeQuota() {
+        return this.dailyRemainFreeQuota;
     }
 
     /**
@@ -211,6 +228,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer dailyQuota; 
+        private Integer dailyRemainFreeQuota; 
         private Integer dayuStatus; 
         private Integer domains; 
         private Integer enableTimes; 
@@ -229,7 +247,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         private Integer userStatus; 
 
         /**
-         * DailyQuota.
+         * <p>Daily quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder dailyQuota(Integer dailyQuota) {
             this.dailyQuota = dailyQuota;
@@ -237,7 +258,21 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * DayuStatus.
+         * <p>remaining amount of daily free quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder dailyRemainFreeQuota(Integer dailyRemainFreeQuota) {
+            this.dailyRemainFreeQuota = dailyRemainFreeQuota;
+            return this;
+        }
+
+        /**
+         * <p>Dayu status (deprecated, retained for compatibility reasons.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dayuStatus(Integer dayuStatus) {
             this.dayuStatus = dayuStatus;
@@ -245,7 +280,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Domains.
+         * <p>Number of domains</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder domains(Integer domains) {
             this.domains = domains;
@@ -253,7 +291,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * EnableTimes.
+         * <p>Effective time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder enableTimes(Integer enableTimes) {
             this.enableTimes = enableTimes;
@@ -261,7 +302,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * MailAddresses.
+         * <p>Number of sending addresses</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder mailAddresses(Integer mailAddresses) {
             this.mailAddresses = mailAddresses;
@@ -269,7 +313,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * MaxQuotaLevel.
+         * <p>Maximum level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxQuotaLevel(Integer maxQuotaLevel) {
             this.maxQuotaLevel = maxQuotaLevel;
@@ -277,7 +324,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * MonthQuota.
+         * <p>Monthly quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         public Builder monthQuota(Integer monthQuota) {
             this.monthQuota = monthQuota;
@@ -285,7 +335,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaLevel.
+         * <p>Credit level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder quotaLevel(Integer quotaLevel) {
             this.quotaLevel = quotaLevel;
@@ -293,7 +346,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Receivers.
+         * <p>Number of recipients</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder receivers(Integer receivers) {
             this.receivers = receivers;
@@ -301,7 +357,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RemainFreeQuota.
+         * <p>Remaining amount of total free quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1910</p>
          */
         public Builder remainFreeQuota(Integer remainFreeQuota) {
             this.remainFreeQuota = remainFreeQuota;
@@ -309,7 +368,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82B295BB-7E69-491F-9896-ECEAFF09E1A4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -317,7 +379,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * SmsRecord.
+         * <p>Deprecated, retained for compatibility reasons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder smsRecord(Integer smsRecord) {
             this.smsRecord = smsRecord;
@@ -325,7 +390,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * SmsSign.
+         * <p>Deprecated, retained for compatibility reasons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder smsSign(Integer smsSign) {
             this.smsSign = smsSign;
@@ -333,7 +401,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * SmsTemplates.
+         * <p>Deprecated, retained for compatibility reasons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder smsTemplates(Integer smsTemplates) {
             this.smsTemplates = smsTemplates;
@@ -341,7 +412,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>Number of tags</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder tags(Integer tags) {
             this.tags = tags;
@@ -349,7 +423,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>Number of templates</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templates(Integer templates) {
             this.templates = templates;
@@ -357,7 +434,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * UserStatus.
+         * <p>User status:
+         * 1 Frozen
+         * 2 In arrears
+         * 4 Restricted from sending
+         * 8 Logically deleted</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder userStatus(Integer userStatus) {
             this.userStatus = userStatus;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMailAddressByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMailAddressByParamResponseBody</p>
@@ -130,6 +136,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMailAddressByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMailAddressByParamResponseBody</p>
+     */
     public static class MailAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -391,9 +403,15 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMailAddressByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMailAddressByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mailAddress")
-        private java.util.List < MailAddress> mailAddress;
+        private java.util.List<MailAddress> mailAddress;
 
         private Data(Builder builder) {
             this.mailAddress = builder.mailAddress;
@@ -410,17 +428,17 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         /**
          * @return mailAddress
          */
-        public java.util.List < MailAddress> getMailAddress() {
+        public java.util.List<MailAddress> getMailAddress() {
             return this.mailAddress;
         }
 
         public static final class Builder {
-            private java.util.List < MailAddress> mailAddress; 
+            private java.util.List<MailAddress> mailAddress; 
 
             /**
              * mailAddress.
              */
-            public Builder mailAddress(java.util.List < MailAddress> mailAddress) {
+            public Builder mailAddress(java.util.List<MailAddress> mailAddress) {
                 this.mailAddress = mailAddress;
                 return this;
             }

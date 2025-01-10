@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTaskByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTaskByParamResponseBody</p>
@@ -130,6 +136,12 @@ public class QueryTaskByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTaskByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskByParamResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
@@ -331,9 +343,15 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTaskByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTaskByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("task")
-        private java.util.List < Task> task;
+        private java.util.List<Task> task;
 
         private Data(Builder builder) {
             this.task = builder.task;
@@ -350,17 +368,17 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         /**
          * @return task
          */
-        public java.util.List < Task> getTask() {
+        public java.util.List<Task> getTask() {
             return this.task;
         }
 
         public static final class Builder {
-            private java.util.List < Task> task; 
+            private java.util.List<Task> task; 
 
             /**
              * task.
              */
-            public Builder task(java.util.List < Task> task) {
+            public Builder task(java.util.List<Task> task) {
                 this.task = task;
                 return this;
             }

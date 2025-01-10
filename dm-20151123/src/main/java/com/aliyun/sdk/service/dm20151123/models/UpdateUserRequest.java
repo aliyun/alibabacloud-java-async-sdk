@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -76,7 +82,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * User.
+         * <p>User Information</p>
          */
         public Builder user(User user) {
             String userShrink = shrink(user, "User", "json");
@@ -92,6 +98,12 @@ public class UpdateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateUserRequest</p>
+     */
     public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableEventbridge")
         private Boolean enableEventbridge;
@@ -119,7 +131,10 @@ public class UpdateUserRequest extends Request {
             private Boolean enableEventbridge; 
 
             /**
-             * EnableEventbridge.
+             * <p>Whether EventBridge is enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableEventbridge(Boolean enableEventbridge) {
                 this.enableEventbridge = enableEventbridge;

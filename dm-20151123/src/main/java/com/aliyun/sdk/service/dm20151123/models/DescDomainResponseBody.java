@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescDomainResponseBody} extends {@link TeaModel}
  *
  * <p>DescDomainResponseBody</p>
@@ -373,7 +379,10 @@ public class DescDomainResponseBody extends TeaModel {
         private String tracefRecord; 
 
         /**
-         * CnameAuthStatus.
+         * <p>Track verification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cnameAuthStatus(String cnameAuthStatus) {
             this.cnameAuthStatus = cnameAuthStatus;
@@ -381,7 +390,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * CnameConfirmStatus.
+         * <p>CName verification flag, success: 0, failure: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cnameConfirmStatus(String cnameConfirmStatus) {
             this.cnameConfirmStatus = cnameConfirmStatus;
@@ -389,7 +401,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * CnameRecord.
+         * <p>CNAME records</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmtrace</p>
          */
         public Builder cnameRecord(String cnameRecord) {
             this.cnameRecord = cnameRecord;
@@ -397,7 +412,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29T12:49Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -405,7 +423,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultDomain.
+         * <p>Default domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder defaultDomain(String defaultDomain) {
             this.defaultDomain = defaultDomain;
@@ -413,7 +434,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DkimAuthStatus.
+         * <p>DKIM validation flag, success: 0, failure: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dkimAuthStatus(String dkimAuthStatus) {
             this.dkimAuthStatus = dkimAuthStatus;
@@ -421,7 +445,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DkimPublicKey.
+         * <p>DKIM public key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v=DKIM1; k=rsa; p=MIGfMA0GCSqGSI...</p>
          */
         public Builder dkimPublicKey(String dkimPublicKey) {
             this.dkimPublicKey = dkimPublicKey;
@@ -429,7 +456,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DkimRR.
+         * <p>DKIM HostRecord</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-cn-hangzhou._domainkey.hangzhou26</p>
          */
         public Builder dkimRR(String dkimRR) {
             this.dkimRR = dkimRR;
@@ -437,7 +467,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DmarcAuthStatus.
+         * <p>DMARC validation flag, success: 0, failure: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dmarcAuthStatus(Integer dmarcAuthStatus) {
             this.dmarcAuthStatus = dmarcAuthStatus;
@@ -445,7 +478,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DmarcHostRecord.
+         * <p>DMARC host record</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_dmarc.xxx</p>
          */
         public Builder dmarcHostRecord(String dmarcHostRecord) {
             this.dmarcHostRecord = dmarcHostRecord;
@@ -453,7 +489,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DmarcRecord.
+         * <p>DMARC record</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v=DMARC1;p=none;rua=mailto:<a href="mailto:dmarc_report@service.aliyun.com">dmarc_report@service.aliyun.com</a></p>
          */
         public Builder dmarcRecord(String dmarcRecord) {
             this.dmarcRecord = dmarcRecord;
@@ -461,7 +500,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DnsDmarc.
+         * <p>dmarc record value resolved through public DNS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v=DMARC1;p=none;rua=mailto:<a href="mailto:dmarc_report@service.aliyun.com">dmarc_report@service.aliyun.com</a></p>
          */
         public Builder dnsDmarc(String dnsDmarc) {
             this.dnsDmarc = dnsDmarc;
@@ -469,7 +511,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DnsMx.
+         * <p>MX record value resolved through public DNS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc-com.xxxx.com</p>
          */
         public Builder dnsMx(String dnsMx) {
             this.dnsMx = dnsMx;
@@ -477,7 +522,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DnsSpf.
+         * <p>SPF record value resolved through public DNS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v=xxxx</p>
          */
         public Builder dnsSpf(String dnsSpf) {
             this.dnsSpf = dnsSpf;
@@ -485,7 +533,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DnsTxt.
+         * <p>TXT record value resolved through public DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121309ohdsa</p>
          */
         public Builder dnsTxt(String dnsTxt) {
             this.dnsTxt = dnsTxt;
@@ -493,7 +544,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainId.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158910</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -501,7 +555,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>domain</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.net</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -509,7 +566,15 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainStatus.
+         * <p>The status of the domain name. Indicates whether the domain name is verified and available. Valid values:</p>
+         * <p>0: indicates that the domain name is verified and available.</p>
+         * <p>1: indicates that the domain name fails to be verified and is unavailable.</p>
+         * <p>2: indicates that the domain name is available, but not filed or configured with a CNAME record.</p>
+         * <p>3: indicates that the domain name is available but not filed.</p>
+         * <p>4: indicates that the domain name is available but not configured with a CNAME record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.domainStatus = domainStatus;
@@ -517,7 +582,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainType.
+         * <p>TXT records provided by the Direct Mail console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c40d5f125af4e42892a</p>
          */
         public Builder domainType(String domainType) {
             this.domainType = domainType;
@@ -525,7 +593,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * HostRecord.
+         * <p>host record</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder hostRecord(String hostRecord) {
             this.hostRecord = hostRecord;
@@ -533,7 +604,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * IcpStatus.
+         * <p>Filing status. 1 indicates that it has been filed, and 0 indicates that it has not been filed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder icpStatus(String icpStatus) {
             this.icpStatus = icpStatus;
@@ -541,7 +615,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * MxAuthStatus.
+         * <p>MX validation flag, success: 0, failure: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mxAuthStatus(String mxAuthStatus) {
             this.mxAuthStatus = mxAuthStatus;
@@ -549,7 +626,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * MxRecord.
+         * <p>MX record</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mx01.dm.aliyun.com</p>
          */
         public Builder mxRecord(String mxRecord) {
             this.mxRecord = mxRecord;
@@ -557,7 +637,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51B74264-46B4-43C8-A9A0-6B8E8BC04F34</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -565,7 +648,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * SpfAuthStatus.
+         * <p>SPF validation flag, success: 0, failure: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spfAuthStatus(String spfAuthStatus) {
             this.spfAuthStatus = spfAuthStatus;
@@ -573,7 +659,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * SpfRecord.
+         * <p>Spf record</p>
+         * 
+         * <strong>example:</strong>
+         * <p>include:spf1.dm.aliyun.com</p>
          */
         public Builder spfRecord(String spfRecord) {
             this.spfRecord = spfRecord;
@@ -581,7 +670,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * SpfRecordV2.
+         * <p>SpfRecord</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v=spf1 include:spf1.dm.aliyun.com -all</p>
          */
         public Builder spfRecordV2(String spfRecordV2) {
             this.spfRecordV2 = spfRecordV2;
@@ -589,7 +681,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * TlDomainName.
+         * <p>The primary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.net</p>
          */
         public Builder tlDomainName(String tlDomainName) {
             this.tlDomainName = tlDomainName;
@@ -597,7 +692,10 @@ public class DescDomainResponseBody extends TeaModel {
         }
 
         /**
-         * TracefRecord.
+         * <p>The CNAME verification record provided by the Direct Mail console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tracedm.aliyuncs.com</p>
          */
         public Builder tracefRecord(String tracefRecord) {
             this.tracefRecord = tracefRecord;

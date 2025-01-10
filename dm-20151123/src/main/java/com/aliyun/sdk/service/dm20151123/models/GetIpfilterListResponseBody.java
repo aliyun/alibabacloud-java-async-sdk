@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIpfilterListResponseBody} extends {@link TeaModel}
  *
  * <p>GetIpfilterListResponseBody</p>
@@ -130,6 +136,12 @@ public class GetIpfilterListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetIpfilterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIpfilterListResponseBody</p>
+     */
     public static class Ipfilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -211,9 +223,15 @@ public class GetIpfilterListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetIpfilterListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetIpfilterListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ipfilters")
-        private java.util.List < Ipfilters> ipfilters;
+        private java.util.List<Ipfilters> ipfilters;
 
         private Data(Builder builder) {
             this.ipfilters = builder.ipfilters;
@@ -230,17 +248,17 @@ public class GetIpfilterListResponseBody extends TeaModel {
         /**
          * @return ipfilters
          */
-        public java.util.List < Ipfilters> getIpfilters() {
+        public java.util.List<Ipfilters> getIpfilters() {
             return this.ipfilters;
         }
 
         public static final class Builder {
-            private java.util.List < Ipfilters> ipfilters; 
+            private java.util.List<Ipfilters> ipfilters; 
 
             /**
              * ipfilters.
              */
-            public Builder ipfilters(java.util.List < Ipfilters> ipfilters) {
+            public Builder ipfilters(java.util.List<Ipfilters> ipfilters) {
                 this.ipfilters = ipfilters;
                 return this;
             }

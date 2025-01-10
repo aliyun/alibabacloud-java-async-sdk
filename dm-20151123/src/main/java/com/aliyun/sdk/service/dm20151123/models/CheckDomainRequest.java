@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDomainRequest} extends {@link RequestModel}
  *
  * <p>CheckDomainRequest</p>
@@ -96,7 +102,11 @@ public class CheckDomainRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name.
+         * <p>The ID of the domain name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153345</p>
          */
         public Builder domainId(Integer domainId) {
             this.putQueryParameter("DomainId", domainId);

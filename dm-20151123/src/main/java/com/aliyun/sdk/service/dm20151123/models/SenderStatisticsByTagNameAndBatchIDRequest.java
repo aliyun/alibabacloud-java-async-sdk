@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SenderStatisticsByTagNameAndBatchIDRequest} extends {@link RequestModel}
  *
  * <p>SenderStatisticsByTagNameAndBatchIDRequest</p>
@@ -148,7 +154,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -184,7 +193,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

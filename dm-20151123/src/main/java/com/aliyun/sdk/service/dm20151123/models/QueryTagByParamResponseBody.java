@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagByParamResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTagByParamResponseBody</p>
@@ -130,6 +136,12 @@ public class QueryTagByParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTagByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagByParamResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagDescription")
         private String tagDescription;
@@ -211,9 +223,15 @@ public class QueryTagByParamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTagByParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagByParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Data(Builder builder) {
             this.tag = builder.tag;
@@ -230,17 +248,17 @@ public class QueryTagByParamResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

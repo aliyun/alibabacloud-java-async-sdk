@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserSuppressionRequest} extends {@link RequestModel}
  *
  * <p>ListUserSuppressionRequest</p>
@@ -202,7 +208,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * Address.
+         * <p>Email address or domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.net">test@example.net</a></p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -211,7 +220,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * EndBounceTime.
+         * <p>End time of the last bounce hit, timestamp, accurate to the second. The span between start and end times cannot exceed 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715669077</p>
          */
         public Builder endBounceTime(Integer endBounceTime) {
             this.putQueryParameter("EndBounceTime", endBounceTime);
@@ -220,7 +232,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * EndCreateTime.
+         * <p>End creation time, timestamp, accurate to the second. The span between start and end times cannot exceed 7 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715669077</p>
          */
         public Builder endCreateTime(Integer endCreateTime) {
             this.putQueryParameter("EndCreateTime", endCreateTime);
@@ -238,7 +253,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -247,7 +265,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -274,7 +295,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * StartBounceTime.
+         * <p>Start time of the last bounce hit, timestamp, accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715668852</p>
          */
         public Builder startBounceTime(Integer startBounceTime) {
             this.putQueryParameter("StartBounceTime", startBounceTime);
@@ -283,7 +307,10 @@ public class ListUserSuppressionRequest extends Request {
         }
 
         /**
-         * StartCreateTime.
+         * <p>Start creation time, timestamp, accurate to the second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715668852</p>
          */
         public Builder startCreateTime(Integer startCreateTime) {
             this.putQueryParameter("StartCreateTime", startCreateTime);

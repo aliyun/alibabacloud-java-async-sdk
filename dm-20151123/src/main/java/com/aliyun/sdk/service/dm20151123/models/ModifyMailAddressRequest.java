@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMailAddressRequest} extends {@link RequestModel}
  *
  * <p>ModifyMailAddressRequest</p>
@@ -124,7 +130,10 @@ public class ModifyMailAddressRequest extends Request {
         } 
 
         /**
-         * MailAddressId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1344565</p>
          */
         public Builder mailAddressId(Integer mailAddressId) {
             this.putQueryParameter("MailAddressId", mailAddressId);

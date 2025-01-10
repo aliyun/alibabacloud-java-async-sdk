@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SingleSendMailRequest} extends {@link RequestModel}
  *
  * <p>SingleSendMailRequest</p>
@@ -28,6 +34,10 @@ public class SingleSendMailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FromAlias")
     private String fromAlias;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Headers")
+    private String headers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HtmlBody")
@@ -90,6 +100,7 @@ public class SingleSendMailRequest extends Request {
         this.addressType = builder.addressType;
         this.clickTrace = builder.clickTrace;
         this.fromAlias = builder.fromAlias;
+        this.headers = builder.headers;
         this.htmlBody = builder.htmlBody;
         this.ownerId = builder.ownerId;
         this.replyAddress = builder.replyAddress;
@@ -144,6 +155,13 @@ public class SingleSendMailRequest extends Request {
      */
     public String getFromAlias() {
         return this.fromAlias;
+    }
+
+    /**
+     * @return headers
+     */
+    public String getHeaders() {
+        return this.headers;
     }
 
     /**
@@ -242,6 +260,7 @@ public class SingleSendMailRequest extends Request {
         private Integer addressType; 
         private String clickTrace; 
         private String fromAlias; 
+        private String headers; 
         private String htmlBody; 
         private Long ownerId; 
         private String replyAddress; 
@@ -266,6 +285,7 @@ public class SingleSendMailRequest extends Request {
             this.addressType = request.addressType;
             this.clickTrace = request.clickTrace;
             this.fromAlias = request.fromAlias;
+            this.headers = request.headers;
             this.htmlBody = request.htmlBody;
             this.ownerId = request.ownerId;
             this.replyAddress = request.replyAddress;
@@ -282,7 +302,10 @@ public class SingleSendMailRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -291,7 +314,10 @@ public class SingleSendMailRequest extends Request {
         }
 
         /**
-         * AddressType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addressType(Integer addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -314,6 +340,15 @@ public class SingleSendMailRequest extends Request {
         public Builder fromAlias(String fromAlias) {
             this.putQueryParameter("FromAlias", fromAlias);
             this.fromAlias = fromAlias;
+            return this;
+        }
+
+        /**
+         * Headers.
+         */
+        public Builder headers(String headers) {
+            this.putQueryParameter("Headers", headers);
+            this.headers = headers;
             return this;
         }
 
@@ -354,7 +389,10 @@ public class SingleSendMailRequest extends Request {
         }
 
         /**
-         * ReplyToAddress.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder replyToAddress(Boolean replyToAddress) {
             this.putQueryParameter("ReplyToAddress", replyToAddress);
@@ -381,7 +419,10 @@ public class SingleSendMailRequest extends Request {
         }
 
         /**
-         * Subject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Subject</p>
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);
@@ -408,7 +449,10 @@ public class SingleSendMailRequest extends Request {
         }
 
         /**
-         * ToAddress.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
          */
         public Builder toAddress(String toAddress) {
             this.putQueryParameter("ToAddress", toAddress);

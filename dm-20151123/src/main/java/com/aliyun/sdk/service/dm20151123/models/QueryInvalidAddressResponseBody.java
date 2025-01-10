@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInvalidAddressResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInvalidAddressResponseBody</p>
@@ -110,6 +116,12 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInvalidAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInvalidAddressResponseBody</p>
+     */
     public static class MailDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private String lastUpdateTime;
@@ -191,9 +203,15 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInvalidAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInvalidAddressResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("mailDetail")
-        private java.util.List < MailDetail> mailDetail;
+        private java.util.List<MailDetail> mailDetail;
 
         private Data(Builder builder) {
             this.mailDetail = builder.mailDetail;
@@ -210,17 +228,17 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         /**
          * @return mailDetail
          */
-        public java.util.List < MailDetail> getMailDetail() {
+        public java.util.List<MailDetail> getMailDetail() {
             return this.mailDetail;
         }
 
         public static final class Builder {
-            private java.util.List < MailDetail> mailDetail; 
+            private java.util.List<MailDetail> mailDetail; 
 
             /**
              * mailDetail.
              */
-            public Builder mailDetail(java.util.List < MailDetail> mailDetail) {
+            public Builder mailDetail(java.util.List<MailDetail> mailDetail) {
                 this.mailDetail = mailDetail;
                 return this;
             }
