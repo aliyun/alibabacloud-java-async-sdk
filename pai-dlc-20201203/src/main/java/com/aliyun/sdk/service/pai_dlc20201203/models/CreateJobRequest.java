@@ -664,6 +664,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
 
+        @com.aliyun.core.annotation.NameInMap("DataSourceVersion")
+        private String dataSourceVersion;
+
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
@@ -675,6 +678,7 @@ public class CreateJobRequest extends Request {
 
         private DataSources(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
+            this.dataSourceVersion = builder.dataSourceVersion;
             this.mountPath = builder.mountPath;
             this.options = builder.options;
             this.uri = builder.uri;
@@ -693,6 +697,13 @@ public class CreateJobRequest extends Request {
          */
         public String getDataSourceId() {
             return this.dataSourceId;
+        }
+
+        /**
+         * @return dataSourceVersion
+         */
+        public String getDataSourceVersion() {
+            return this.dataSourceVersion;
         }
 
         /**
@@ -718,6 +729,7 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private String dataSourceId; 
+            private String dataSourceVersion; 
             private String mountPath; 
             private String options; 
             private String uri; 
@@ -727,6 +739,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
+                return this;
+            }
+
+            /**
+             * DataSourceVersion.
+             */
+            public Builder dataSourceVersion(String dataSourceVersion) {
+                this.dataSourceVersion = dataSourceVersion;
                 return this;
             }
 

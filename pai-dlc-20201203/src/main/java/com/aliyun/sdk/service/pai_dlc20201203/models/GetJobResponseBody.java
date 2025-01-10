@@ -131,6 +131,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
+    private UserVpc userVpc;
+
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -176,6 +179,7 @@ public class GetJobResponseBody extends TeaModel {
         this.thirdpartyLibs = builder.thirdpartyLibs;
         this.userCommand = builder.userCommand;
         this.userId = builder.userId;
+        this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
         this.workspaceName = builder.workspaceName;
     }
@@ -455,6 +459,13 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return userVpc
+     */
+    public UserVpc getUserVpc() {
+        return this.userVpc;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -507,6 +518,7 @@ public class GetJobResponseBody extends TeaModel {
         private java.util.List<String> thirdpartyLibs; 
         private String userCommand; 
         private String userId; 
+        private UserVpc userVpc; 
         private String workspaceId; 
         private String workspaceName; 
 
@@ -811,6 +823,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder userId(String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * UserVpc.
+         */
+        public Builder userVpc(UserVpc userVpc) {
+            this.userVpc = userVpc;
             return this;
         }
 
@@ -1499,6 +1519,133 @@ public class GetJobResponseBody extends TeaModel {
 
             public Pods build() {
                 return new Pods(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
+    public static class UserVpc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
+        private String defaultRoute;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendedCidrs")
+        private java.util.List<String> extendedCidrs;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
+        private String switchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private UserVpc(Builder builder) {
+            this.defaultRoute = builder.defaultRoute;
+            this.extendedCidrs = builder.extendedCidrs;
+            this.securityGroupId = builder.securityGroupId;
+            this.switchId = builder.switchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserVpc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultRoute
+         */
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        /**
+         * @return extendedCidrs
+         */
+        public java.util.List<String> getExtendedCidrs() {
+            return this.extendedCidrs;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return switchId
+         */
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String defaultRoute; 
+            private java.util.List<String> extendedCidrs; 
+            private String securityGroupId; 
+            private String switchId; 
+            private String vpcId; 
+
+            /**
+             * DefaultRoute.
+             */
+            public Builder defaultRoute(String defaultRoute) {
+                this.defaultRoute = defaultRoute;
+                return this;
+            }
+
+            /**
+             * ExtendedCidrs.
+             */
+            public Builder extendedCidrs(java.util.List<String> extendedCidrs) {
+                this.extendedCidrs = extendedCidrs;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SwitchId.
+             */
+            public Builder switchId(String switchId) {
+                this.switchId = switchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public UserVpc build() {
+                return new UserVpc(this);
             } 
 
         } 
