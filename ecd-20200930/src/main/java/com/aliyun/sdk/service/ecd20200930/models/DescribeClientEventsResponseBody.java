@@ -127,6 +127,9 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
@@ -182,6 +185,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             this.clientIp = builder.clientIp;
             this.clientOS = builder.clientOS;
             this.clientVersion = builder.clientVersion;
+            this.description = builder.description;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopGroupName = builder.desktopGroupName;
             this.desktopId = builder.desktopId;
@@ -248,6 +252,13 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          */
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -369,6 +380,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             private String clientIp; 
             private String clientOS; 
             private String clientVersion; 
+            private String description; 
             private String desktopGroupId; 
             private String desktopGroupName; 
             private String desktopId; 
@@ -449,6 +461,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
