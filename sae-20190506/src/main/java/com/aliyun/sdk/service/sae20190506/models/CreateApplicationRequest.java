@@ -245,6 +245,10 @@ public class CreateApplicationRequest extends Request {
     private Integer replicas;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaeVersion")
     private String saeVersion;
 
@@ -355,6 +359,7 @@ public class CreateApplicationRequest extends Request {
         this.pythonModules = builder.pythonModules;
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
+        this.resourceType = builder.resourceType;
         this.saeVersion = builder.saeVersion;
         this.secretMountDesc = builder.secretMountDesc;
         this.securityGroupId = builder.securityGroupId;
@@ -776,6 +781,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return saeVersion
      */
     public String getSaeVersion() {
@@ -923,6 +935,7 @@ public class CreateApplicationRequest extends Request {
         private String pythonModules; 
         private String readiness; 
         private Integer replicas; 
+        private String resourceType; 
         private String saeVersion; 
         private String secretMountDesc; 
         private String securityGroupId; 
@@ -999,6 +1012,7 @@ public class CreateApplicationRequest extends Request {
             this.pythonModules = request.pythonModules;
             this.readiness = request.readiness;
             this.replicas = request.replicas;
+            this.resourceType = request.resourceType;
             this.saeVersion = request.saeVersion;
             this.secretMountDesc = request.secretMountDesc;
             this.securityGroupId = request.securityGroupId;
@@ -1629,6 +1643,15 @@ public class CreateApplicationRequest extends Request {
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

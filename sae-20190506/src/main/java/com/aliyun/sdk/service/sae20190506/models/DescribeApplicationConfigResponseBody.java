@@ -1315,6 +1315,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
         @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
         private java.util.List<SecretMountDesc> secretMountDesc;
 
@@ -1420,6 +1423,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.readiness = builder.readiness;
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
+            this.resourceType = builder.resourceType;
             this.secretMountDesc = builder.secretMountDesc;
             this.securityGroupId = builder.securityGroupId;
             this.serviceTags = builder.serviceTags;
@@ -1879,6 +1883,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return secretMountDesc
          */
         public java.util.List<SecretMountDesc> getSecretMountDesc() {
@@ -2039,6 +2050,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
+            private String resourceType; 
             private java.util.List<SecretMountDesc> secretMountDesc; 
             private String securityGroupId; 
             private java.util.Map<String, String> serviceTags; 
@@ -2815,6 +2827,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 
