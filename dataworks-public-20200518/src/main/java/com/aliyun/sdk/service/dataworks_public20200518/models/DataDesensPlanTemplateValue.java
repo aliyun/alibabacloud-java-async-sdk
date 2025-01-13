@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
     private Boolean supportWaterMark;
 
     @com.aliyun.core.annotation.NameInMap("ExtParamTemplate")
-    private java.util.List < ? > extParamTemplate;
+    private java.util.List<?> extParamTemplate;
 
     private DataDesensPlanTemplateValue(Builder builder) {
         this.name = builder.name;
@@ -52,14 +57,14 @@ public class DataDesensPlanTemplateValue extends TeaModel {
     /**
      * @return extParamTemplate
      */
-    public java.util.List < ? > getExtParamTemplate() {
+    public java.util.List<?> getExtParamTemplate() {
         return this.extParamTemplate;
     }
 
     public static final class Builder {
         private String name; 
         private Boolean supportWaterMark; 
-        private java.util.List < ? > extParamTemplate; 
+        private java.util.List<?> extParamTemplate; 
 
         /**
          * <p>The name of the data masking method.</p>
@@ -90,7 +95,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         /**
          * <p>The data masking parameters and their descriptions.</p>
          */
-        public Builder extParamTemplate(java.util.List < ? > extParamTemplate) {
+        public Builder extParamTemplate(java.util.List<?> extParamTemplate) {
             this.extParamTemplate = extParamTemplate;
             return this;
         }

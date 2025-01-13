@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DsgScenedDeleteSceneRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Integer > ids;
+    private java.util.List<Integer> ids;
 
     private DsgScenedDeleteSceneRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DsgScenedDeleteSceneRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Integer > getIds() {
+    public java.util.List<Integer> getIds() {
         return this.ids;
     }
 
     public static final class Builder extends Request.Builder<DsgScenedDeleteSceneRequest, Builder> {
         private String regionId; 
-        private java.util.List < Integer > ids; 
+        private java.util.List<Integer> ids; 
 
         private Builder() {
             super();
@@ -81,7 +86,7 @@ public class DsgScenedDeleteSceneRequest extends Request {
          * <p>The IDs of level-2 data masking scenarios.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ids(java.util.List < Integer > ids) {
+        public Builder ids(java.util.List<Integer> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;

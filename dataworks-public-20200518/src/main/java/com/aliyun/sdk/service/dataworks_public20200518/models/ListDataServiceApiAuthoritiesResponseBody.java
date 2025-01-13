@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -305,7 +310,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         private Integer apiStatus;
 
         @com.aliyun.core.annotation.NameInMap("AuthorizationRecords")
-        private java.util.List < AuthorizationRecords> authorizationRecords;
+        private java.util.List<AuthorizationRecords> authorizationRecords;
 
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -378,7 +383,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         /**
          * @return authorizationRecords
          */
-        public java.util.List < AuthorizationRecords> getAuthorizationRecords() {
+        public java.util.List<AuthorizationRecords> getAuthorizationRecords() {
             return this.authorizationRecords;
         }
 
@@ -429,7 +434,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private String apiName; 
             private String apiPath; 
             private Integer apiStatus; 
-            private java.util.List < AuthorizationRecords> authorizationRecords; 
+            private java.util.List<AuthorizationRecords> authorizationRecords; 
             private String createdTime; 
             private String creatorId; 
             private String groupId; 
@@ -484,7 +489,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             /**
              * <p>The authorization records.</p>
              */
-            public Builder authorizationRecords(java.util.List < AuthorizationRecords> authorizationRecords) {
+            public Builder authorizationRecords(java.util.List<AuthorizationRecords> authorizationRecords) {
                 this.authorizationRecords = authorizationRecords;
                 return this;
             }
@@ -570,7 +575,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiAuthorizationList")
-        private java.util.List < ApiAuthorizationList> apiAuthorizationList;
+        private java.util.List<ApiAuthorizationList> apiAuthorizationList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -599,7 +604,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         /**
          * @return apiAuthorizationList
          */
-        public java.util.List < ApiAuthorizationList> getApiAuthorizationList() {
+        public java.util.List<ApiAuthorizationList> getApiAuthorizationList() {
             return this.apiAuthorizationList;
         }
 
@@ -625,7 +630,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApiAuthorizationList> apiAuthorizationList; 
+            private java.util.List<ApiAuthorizationList> apiAuthorizationList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -633,7 +638,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             /**
              * <p>The APIs on which other users are granted the access permissions.</p>
              */
-            public Builder apiAuthorizationList(java.util.List < ApiAuthorizationList> apiAuthorizationList) {
+            public Builder apiAuthorizationList(java.util.List<ApiAuthorizationList> apiAuthorizationList) {
                 this.apiAuthorizationList = apiAuthorizationList;
                 return this;
             }

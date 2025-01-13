@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,19 +32,19 @@ public class TestDataServiceApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BodyParams")
-    private java.util.List < BodyParams> bodyParams;
+    private java.util.List<BodyParams> bodyParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HeadParams")
-    private java.util.List < HeadParams> headParams;
+    private java.util.List<HeadParams> headParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PathParams")
-    private java.util.List < PathParams> pathParams;
+    private java.util.List<PathParams> pathParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("QueryParam")
-    private java.util.List < QueryParam> queryParam;
+    private java.util.List<QueryParam> queryParam;
 
     private TestDataServiceApiRequest(Builder builder) {
         super(builder);
@@ -89,28 +94,28 @@ public class TestDataServiceApiRequest extends Request {
     /**
      * @return bodyParams
      */
-    public java.util.List < BodyParams> getBodyParams() {
+    public java.util.List<BodyParams> getBodyParams() {
         return this.bodyParams;
     }
 
     /**
      * @return headParams
      */
-    public java.util.List < HeadParams> getHeadParams() {
+    public java.util.List<HeadParams> getHeadParams() {
         return this.headParams;
     }
 
     /**
      * @return pathParams
      */
-    public java.util.List < PathParams> getPathParams() {
+    public java.util.List<PathParams> getPathParams() {
         return this.pathParams;
     }
 
     /**
      * @return queryParam
      */
-    public java.util.List < QueryParam> getQueryParam() {
+    public java.util.List<QueryParam> getQueryParam() {
         return this.queryParam;
     }
 
@@ -118,10 +123,10 @@ public class TestDataServiceApiRequest extends Request {
         private String regionId; 
         private Long apiId; 
         private String bodyContent; 
-        private java.util.List < BodyParams> bodyParams; 
-        private java.util.List < HeadParams> headParams; 
-        private java.util.List < PathParams> pathParams; 
-        private java.util.List < QueryParam> queryParam; 
+        private java.util.List<BodyParams> bodyParams; 
+        private java.util.List<HeadParams> headParams; 
+        private java.util.List<PathParams> pathParams; 
+        private java.util.List<QueryParam> queryParam; 
 
         private Builder() {
             super();
@@ -175,7 +180,7 @@ public class TestDataServiceApiRequest extends Request {
         /**
          * <p>The request parameters that are contained in the request body.</p>
          */
-        public Builder bodyParams(java.util.List < BodyParams> bodyParams) {
+        public Builder bodyParams(java.util.List<BodyParams> bodyParams) {
             this.putBodyParameter("BodyParams", bodyParams);
             this.bodyParams = bodyParams;
             return this;
@@ -184,7 +189,7 @@ public class TestDataServiceApiRequest extends Request {
         /**
          * <p>The request parameters that are contained in the request header.</p>
          */
-        public Builder headParams(java.util.List < HeadParams> headParams) {
+        public Builder headParams(java.util.List<HeadParams> headParams) {
             this.putBodyParameter("HeadParams", headParams);
             this.headParams = headParams;
             return this;
@@ -193,7 +198,7 @@ public class TestDataServiceApiRequest extends Request {
         /**
          * <p>The request parameters that are contained in the request path.</p>
          */
-        public Builder pathParams(java.util.List < PathParams> pathParams) {
+        public Builder pathParams(java.util.List<PathParams> pathParams) {
             this.putBodyParameter("PathParams", pathParams);
             this.pathParams = pathParams;
             return this;
@@ -202,7 +207,7 @@ public class TestDataServiceApiRequest extends Request {
         /**
          * <p>The request parameters that are contained in the query.</p>
          */
-        public Builder queryParam(java.util.List < QueryParam> queryParam) {
+        public Builder queryParam(java.util.List<QueryParam> queryParam) {
             this.putBodyParameter("QueryParam", queryParam);
             this.queryParam = queryParam;
             return this;

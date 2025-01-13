@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -299,7 +304,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Deployments")
-        private java.util.List < Deployments> deployments;
+        private java.util.List<Deployments> deployments;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -328,7 +333,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         /**
          * @return deployments
          */
-        public java.util.List < Deployments> getDeployments() {
+        public java.util.List<Deployments> getDeployments() {
             return this.deployments;
         }
 
@@ -354,7 +359,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Deployments> deployments; 
+            private java.util.List<Deployments> deployments; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -362,7 +367,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             /**
              * <p>The deployment packages.</p>
              */
-            public Builder deployments(java.util.List < Deployments> deployments) {
+            public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("MeasureDatas")
-    private java.util.List < MeasureDatas> measureDatas;
+    private java.util.List<MeasureDatas> measureDatas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
     /**
      * @return measureDatas
      */
-    public java.util.List < MeasureDatas> getMeasureDatas() {
+    public java.util.List<MeasureDatas> getMeasureDatas() {
         return this.measureDatas;
     }
 
@@ -93,7 +98,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
-        private java.util.List < MeasureDatas> measureDatas; 
+        private java.util.List<MeasureDatas> measureDatas; 
         private String requestId; 
         private Boolean success; 
 
@@ -133,7 +138,7 @@ public class ListMeasureDataResponseBody extends TeaModel {
         /**
          * <p>The measurement results.</p>
          */
-        public Builder measureDatas(java.util.List < MeasureDatas> measureDatas) {
+        public Builder measureDatas(java.util.List<MeasureDatas> measureDatas) {
             this.measureDatas = measureDatas;
             return this;
         }

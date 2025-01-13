@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -299,7 +304,7 @@ public class ListTablesResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("TableEntityList")
-        private java.util.List < TableEntityList> tableEntityList;
+        private java.util.List<TableEntityList> tableEntityList;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -328,7 +333,7 @@ public class ListTablesResponseBody extends TeaModel {
         /**
          * @return tableEntityList
          */
-        public java.util.List < TableEntityList> getTableEntityList() {
+        public java.util.List<TableEntityList> getTableEntityList() {
             return this.tableEntityList;
         }
 
@@ -341,7 +346,7 @@ public class ListTablesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String nextToken; 
-            private java.util.List < TableEntityList> tableEntityList; 
+            private java.util.List<TableEntityList> tableEntityList; 
             private Long total; 
 
             /**
@@ -355,7 +360,7 @@ public class ListTablesResponseBody extends TeaModel {
             /**
              * TableEntityList.
              */
-            public Builder tableEntityList(java.util.List < TableEntityList> tableEntityList) {
+            public Builder tableEntityList(java.util.List<TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;
                 return this;
             }

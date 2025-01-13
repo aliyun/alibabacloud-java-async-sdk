@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RunCycleDagNodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Long > data;
+    private java.util.List<Long> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class RunCycleDagNodesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Long > getData() {
+    public java.util.List<Long> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class RunCycleDagNodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > data; 
+        private java.util.List<Long> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class RunCycleDagNodesResponseBody extends TeaModel {
         /**
          * <p>The IDs of the nodes in the workflow. You can query instances based on the IDs.</p>
          */
-        public Builder data(java.util.List < Long > data) {
+        public Builder data(java.util.List<Long> data) {
             this.data = data;
             return this;
         }

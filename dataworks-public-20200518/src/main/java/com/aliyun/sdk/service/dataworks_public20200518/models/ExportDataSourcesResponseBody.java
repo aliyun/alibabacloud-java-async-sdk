@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -613,7 +618,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSources")
-        private java.util.List < DataSources> dataSources;
+        private java.util.List<DataSources> dataSources;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -642,7 +647,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         /**
          * @return dataSources
          */
-        public java.util.List < DataSources> getDataSources() {
+        public java.util.List<DataSources> getDataSources() {
             return this.dataSources;
         }
 
@@ -668,7 +673,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataSources> dataSources; 
+            private java.util.List<DataSources> dataSources; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -676,7 +681,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             /**
              * <p>The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.</p>
              */
-            public Builder dataSources(java.util.List < DataSources> dataSources) {
+            public Builder dataSources(java.util.List<DataSources> dataSources) {
                 this.dataSources = dataSources;
                 return this;
             }

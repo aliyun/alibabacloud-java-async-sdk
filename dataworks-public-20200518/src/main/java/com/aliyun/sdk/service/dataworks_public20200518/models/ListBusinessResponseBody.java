@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -339,7 +344,7 @@ public class ListBusinessResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Business")
-        private java.util.List < Business> business;
+        private java.util.List<Business> business;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -368,7 +373,7 @@ public class ListBusinessResponseBody extends TeaModel {
         /**
          * @return business
          */
-        public java.util.List < Business> getBusiness() {
+        public java.util.List<Business> getBusiness() {
             return this.business;
         }
 
@@ -394,7 +399,7 @@ public class ListBusinessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Business> business; 
+            private java.util.List<Business> business; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -402,7 +407,7 @@ public class ListBusinessResponseBody extends TeaModel {
             /**
              * <p>The details of the workflow.</p>
              */
-            public Builder business(java.util.List < Business> business) {
+            public Builder business(java.util.List<Business> business) {
                 this.business = business;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Columns")
-    private java.util.List < Columns> columns;
+    private java.util.List<Columns> columns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Comment")
@@ -95,7 +100,7 @@ public class UpdateTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Themes")
-    private java.util.List < Themes> themes;
+    private java.util.List<Themes> themes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Visibility")
@@ -163,7 +168,7 @@ public class UpdateTableRequest extends Request {
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -275,7 +280,7 @@ public class UpdateTableRequest extends Request {
     /**
      * @return themes
      */
-    public java.util.List < Themes> getThemes() {
+    public java.util.List<Themes> getThemes() {
         return this.themes;
     }
 
@@ -290,7 +295,7 @@ public class UpdateTableRequest extends Request {
         private String regionId; 
         private String appGuid; 
         private Long categoryId; 
-        private java.util.List < Columns> columns; 
+        private java.util.List<Columns> columns; 
         private String comment; 
         private Boolean createIfNotExists; 
         private String endpoint; 
@@ -306,7 +311,7 @@ public class UpdateTableRequest extends Request {
         private Long projectId; 
         private String schema; 
         private String tableName; 
-        private java.util.List < Themes> themes; 
+        private java.util.List<Themes> themes; 
         private Integer visibility; 
 
         private Builder() {
@@ -374,7 +379,7 @@ public class UpdateTableRequest extends Request {
         /**
          * <p>The list of fields.</p>
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             this.putBodyParameter("Columns", columns);
             this.columns = columns;
             return this;
@@ -566,7 +571,7 @@ public class UpdateTableRequest extends Request {
         /**
          * <p>The list of fields.</p>
          */
-        public Builder themes(java.util.List < Themes> themes) {
+        public Builder themes(java.util.List<Themes> themes) {
             this.putBodyParameter("Themes", themes);
             this.themes = themes;
             return this;

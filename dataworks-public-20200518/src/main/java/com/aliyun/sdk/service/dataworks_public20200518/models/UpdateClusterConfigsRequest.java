@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class UpdateClusterConfigsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigValues")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ClusterConfig > configValues;
+    private java.util.List<ClusterConfig> configValues;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -82,7 +87,7 @@ public class UpdateClusterConfigsRequest extends Request {
     /**
      * @return configValues
      */
-    public java.util.List < ClusterConfig > getConfigValues() {
+    public java.util.List<ClusterConfig> getConfigValues() {
         return this.configValues;
     }
 
@@ -97,7 +102,7 @@ public class UpdateClusterConfigsRequest extends Request {
         private String regionId; 
         private Long clusterId; 
         private String configType; 
-        private java.util.List < ClusterConfig > configValues; 
+        private java.util.List<ClusterConfig> configValues; 
         private Long projectId; 
 
         private Builder() {
@@ -149,7 +154,7 @@ public class UpdateClusterConfigsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder configValues(java.util.List < ClusterConfig > configValues) {
+        public Builder configValues(java.util.List<ClusterConfig> configValues) {
             String configValuesShrink = shrink(configValues, "ConfigValues", "json");
             this.putBodyParameter("ConfigValues", configValuesShrink);
             this.configValues = configValues;

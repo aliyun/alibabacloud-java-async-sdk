@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesensRules")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DesensRules> desensRules;
+    private java.util.List<DesensRules> desensRules;
 
     private DsgDesensPlanAddOrUpdateRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
     /**
      * @return desensRules
      */
-    public java.util.List < DesensRules> getDesensRules() {
+    public java.util.List<DesensRules> getDesensRules() {
         return this.desensRules;
     }
 
     public static final class Builder extends Request.Builder<DsgDesensPlanAddOrUpdateRequest, Builder> {
         private String regionId; 
-        private java.util.List < DesensRules> desensRules; 
+        private java.util.List<DesensRules> desensRules; 
 
         private Builder() {
             super();
@@ -81,7 +86,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
          * <p>A collection of data masking rules that you want to add or modify.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder desensRules(java.util.List < DesensRules> desensRules) {
+        public Builder desensRules(java.util.List<DesensRules> desensRules) {
             String desensRulesShrink = shrink(desensRules, "DesensRules", "json");
             this.putQueryParameter("DesensRules", desensRulesShrink);
             this.desensRules = desensRules;
@@ -107,7 +112,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         private String desensPlanType;
 
         @com.aliyun.core.annotation.NameInMap("ExtParam")
-        private java.util.Map < String, ? > extParam;
+        private java.util.Map<String, ?> extParam;
 
         private DesensPlan(Builder builder) {
             this.desensPlanType = builder.desensPlanType;
@@ -132,13 +137,13 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         /**
          * @return extParam
          */
-        public java.util.Map < String, ? > getExtParam() {
+        public java.util.Map<String, ?> getExtParam() {
             return this.extParam;
         }
 
         public static final class Builder {
             private String desensPlanType; 
-            private java.util.Map < String, ? > extParam; 
+            private java.util.Map<String, ?> extParam; 
 
             /**
              * <p>The masking method configured in the data masking rule. Valid values:</p>
@@ -164,7 +169,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             /**
              * <p>The parameters for the data masking rule.</p>
              */
-            public Builder extParam(java.util.Map < String, ? > extParam) {
+            public Builder extParam(java.util.Map<String, ?> extParam) {
                 this.extParam = extParam;
                 return this;
             }
@@ -207,7 +212,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("SceneIds")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Integer > sceneIds;
+        private java.util.List<Integer> sceneIds;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -276,7 +281,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         /**
          * @return sceneIds
          */
-        public java.util.List < Integer > getSceneIds() {
+        public java.util.List<Integer> getSceneIds() {
             return this.sceneIds;
         }
 
@@ -294,7 +299,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             private Integer id; 
             private String owner; 
             private String ruleName; 
-            private java.util.List < Integer > sceneIds; 
+            private java.util.List<Integer> sceneIds; 
             private Integer status; 
 
             /**
@@ -372,7 +377,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
              * <p>The level-2 data masking scenario.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder sceneIds(java.util.List < Integer > sceneIds) {
+            public Builder sceneIds(java.util.List<Integer> sceneIds) {
                 this.sceneIds = sceneIds;
                 return this;
             }

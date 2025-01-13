@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -754,7 +759,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -773,7 +781,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodNumber.
+             * <p>The sequence number of the cycle. This parameter indicates the sequence number of the cycle of the instance on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodNumber(Integer periodNumber) {
                 this.periodNumber = periodNumber;

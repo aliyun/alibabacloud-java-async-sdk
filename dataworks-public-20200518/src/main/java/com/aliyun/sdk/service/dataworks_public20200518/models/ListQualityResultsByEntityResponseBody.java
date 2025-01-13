@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -493,7 +498,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private String property;
 
         @com.aliyun.core.annotation.NameInMap("ReferenceValue")
-        private java.util.List < ReferenceValue> referenceValue;
+        private java.util.List<ReferenceValue> referenceValue;
 
         @com.aliyun.core.annotation.NameInMap("ResultString")
         private String resultString;
@@ -505,7 +510,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private String ruleName;
 
         @com.aliyun.core.annotation.NameInMap("SampleValue")
-        private java.util.List < SampleValue> sampleValue;
+        private java.util.List<SampleValue> sampleValue;
 
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
@@ -778,7 +783,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         /**
          * @return referenceValue
          */
-        public java.util.List < ReferenceValue> getReferenceValue() {
+        public java.util.List<ReferenceValue> getReferenceValue() {
             return this.referenceValue;
         }
 
@@ -806,7 +811,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         /**
          * @return sampleValue
          */
-        public java.util.List < SampleValue> getSampleValue() {
+        public java.util.List<SampleValue> getSampleValue() {
             return this.sampleValue;
         }
 
@@ -901,11 +906,11 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private String op; 
             private String projectName; 
             private String property; 
-            private java.util.List < ReferenceValue> referenceValue; 
+            private java.util.List<ReferenceValue> referenceValue; 
             private String resultString; 
             private Long ruleId; 
             private String ruleName; 
-            private java.util.List < SampleValue> sampleValue; 
+            private java.util.List<SampleValue> sampleValue; 
             private String tableName; 
             private String taskId; 
             private Integer templateId; 
@@ -1245,7 +1250,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             /**
              * <p>The historical sample values.</p>
              */
-            public Builder referenceValue(java.util.List < ReferenceValue> referenceValue) {
+            public Builder referenceValue(java.util.List<ReferenceValue> referenceValue) {
                 this.referenceValue = referenceValue;
                 return this;
             }
@@ -1283,7 +1288,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             /**
              * <p>The current sample value.</p>
              */
-            public Builder sampleValue(java.util.List < SampleValue> sampleValue) {
+            public Builder sampleValue(java.util.List<SampleValue> sampleValue) {
                 this.sampleValue = sampleValue;
                 return this;
             }
@@ -1405,7 +1410,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("RuleChecks")
-        private java.util.List < RuleChecks> ruleChecks;
+        private java.util.List<RuleChecks> ruleChecks;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -1442,7 +1447,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         /**
          * @return ruleChecks
          */
-        public java.util.List < RuleChecks> getRuleChecks() {
+        public java.util.List<RuleChecks> getRuleChecks() {
             return this.ruleChecks;
         }
 
@@ -1456,7 +1461,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < RuleChecks> ruleChecks; 
+            private java.util.List<RuleChecks> ruleChecks; 
             private Long totalCount; 
 
             /**
@@ -1484,7 +1489,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             /**
              * <p>The returned check results.</p>
              */
-            public Builder ruleChecks(java.util.List < RuleChecks> ruleChecks) {
+            public Builder ruleChecks(java.util.List<RuleChecks> ruleChecks) {
                 this.ruleChecks = ruleChecks;
                 return this;
             }

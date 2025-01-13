@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class GetProjectResponseBody extends TeaModel {
         private Boolean disableDevelopment;
 
         @com.aliyun.core.annotation.NameInMap("EnvTypes")
-        private java.util.List < String > envTypes;
+        private java.util.List<String> envTypes;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -286,7 +291,7 @@ public class GetProjectResponseBody extends TeaModel {
         private Integer tablePrivacyMode;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
@@ -387,7 +392,7 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * @return envTypes
          */
-        public java.util.List < String > getEnvTypes() {
+        public java.util.List<String> getEnvTypes() {
             return this.envTypes;
         }
 
@@ -527,7 +532,7 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -553,7 +558,7 @@ public class GetProjectResponseBody extends TeaModel {
             private String devStorageQuota; 
             private Integer developmentType; 
             private Boolean disableDevelopment; 
-            private java.util.List < String > envTypes; 
+            private java.util.List<String> envTypes; 
             private String gmtCreate; 
             private String gmtModified; 
             private Integer isAllowDownload; 
@@ -573,7 +578,7 @@ public class GetProjectResponseBody extends TeaModel {
             private Integer schedulerRetryInterval; 
             private Integer status; 
             private Integer tablePrivacyMode; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long tenantId; 
             private Boolean useProxyOdpsAccount; 
 
@@ -661,7 +666,7 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>The environment information of the workspace.</p>
              */
-            public Builder envTypes(java.util.List < String > envTypes) {
+            public Builder envTypes(java.util.List<String> envTypes) {
                 this.envTypes = envTypes;
                 return this;
             }
@@ -914,7 +919,7 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>The tags added to the workspace.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateTableRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Columns")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Columns> columns;
+    private java.util.List<Columns> columns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Comment")
@@ -96,7 +101,7 @@ public class CreateTableRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Themes")
-    private java.util.List < Themes> themes;
+    private java.util.List<Themes> themes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Visibility")
@@ -171,7 +176,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -276,7 +281,7 @@ public class CreateTableRequest extends Request {
     /**
      * @return themes
      */
-    public java.util.List < Themes> getThemes() {
+    public java.util.List<Themes> getThemes() {
         return this.themes;
     }
 
@@ -292,7 +297,7 @@ public class CreateTableRequest extends Request {
         private String appGuid; 
         private Long categoryId; 
         private String clientToken; 
-        private java.util.List < Columns> columns; 
+        private java.util.List<Columns> columns; 
         private String comment; 
         private String endpoint; 
         private Integer envType; 
@@ -307,7 +312,7 @@ public class CreateTableRequest extends Request {
         private Long projectId; 
         private String schema; 
         private String tableName; 
-        private java.util.List < Themes> themes; 
+        private java.util.List<Themes> themes; 
         private Integer visibility; 
 
         private Builder() {
@@ -388,7 +393,7 @@ public class CreateTableRequest extends Request {
          * <p>The list of fields. A maximum of 1,000 fields are supported.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             this.putBodyParameter("Columns", columns);
             this.columns = columns;
             return this;
@@ -577,7 +582,7 @@ public class CreateTableRequest extends Request {
         /**
          * <p>The list of themes.</p>
          */
-        public Builder themes(java.util.List < Themes> themes) {
+        public Builder themes(java.util.List<Themes> themes) {
             this.putBodyParameter("Themes", themes);
             this.themes = themes;
             return this;

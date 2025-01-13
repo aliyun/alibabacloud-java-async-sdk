@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -519,7 +524,7 @@ public class GetDeploymentResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployedItems")
-        private java.util.List < DeployedItems> deployedItems;
+        private java.util.List<DeployedItems> deployedItems;
 
         @com.aliyun.core.annotation.NameInMap("Deployment")
         private Deployment deployment;
@@ -540,7 +545,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         /**
          * @return deployedItems
          */
-        public java.util.List < DeployedItems> getDeployedItems() {
+        public java.util.List<DeployedItems> getDeployedItems() {
             return this.deployedItems;
         }
 
@@ -552,13 +557,13 @@ public class GetDeploymentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DeployedItems> deployedItems; 
+            private java.util.List<DeployedItems> deployedItems; 
             private Deployment deployment; 
 
             /**
              * DeployedItems.
              */
-            public Builder deployedItems(java.util.List < DeployedItems> deployedItems) {
+            public Builder deployedItems(java.util.List<DeployedItems> deployedItems) {
                 this.deployedItems = deployedItems;
                 return this;
             }

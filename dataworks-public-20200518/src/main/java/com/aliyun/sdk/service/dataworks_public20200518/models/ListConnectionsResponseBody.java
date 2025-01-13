@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -793,7 +798,7 @@ public class ListConnectionsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connections")
-        private java.util.List < Connections> connections;
+        private java.util.List<Connections> connections;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -822,7 +827,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         /**
          * @return connections
          */
-        public java.util.List < Connections> getConnections() {
+        public java.util.List<Connections> getConnections() {
             return this.connections;
         }
 
@@ -848,7 +853,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Connections> connections; 
+            private java.util.List<Connections> connections; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -856,7 +861,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             /**
              * <p>The data sources.</p>
              */
-            public Builder connections(java.util.List < Connections> connections) {
+            public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -895,7 +900,7 @@ public class ListInstancesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        private java.util.List<Instances> instances;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -924,7 +929,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
@@ -950,7 +955,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Instances> instances; 
+            private java.util.List<Instances> instances; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -958,7 +963,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The name of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the name of the node.</p>
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }

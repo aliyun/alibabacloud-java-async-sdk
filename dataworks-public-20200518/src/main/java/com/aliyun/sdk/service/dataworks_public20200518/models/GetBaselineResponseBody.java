@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -238,7 +243,7 @@ public class GetBaselineResponseBody extends TeaModel {
         private Integer alertMaximum;
 
         @com.aliyun.core.annotation.NameInMap("AlertMethods")
-        private java.util.List < String > alertMethods;
+        private java.util.List<String> alertMethods;
 
         @com.aliyun.core.annotation.NameInMap("AlertRecipient")
         private String alertRecipient;
@@ -253,7 +258,7 @@ public class GetBaselineResponseBody extends TeaModel {
         private Boolean baselineAlertEnabled;
 
         @com.aliyun.core.annotation.NameInMap("DingRobots")
-        private java.util.List < DingRobots> dingRobots;
+        private java.util.List<DingRobots> dingRobots;
 
         @com.aliyun.core.annotation.NameInMap("SilenceEndTime")
         private String silenceEndTime;
@@ -262,10 +267,10 @@ public class GetBaselineResponseBody extends TeaModel {
         private String silenceStartTime;
 
         @com.aliyun.core.annotation.NameInMap("TopicTypes")
-        private java.util.List < String > topicTypes;
+        private java.util.List<String> topicTypes;
 
         @com.aliyun.core.annotation.NameInMap("Webhooks")
-        private java.util.List < String > webhooks;
+        private java.util.List<String> webhooks;
 
         private AlertSettings(Builder builder) {
             this.alertInterval = builder.alertInterval;
@@ -307,7 +312,7 @@ public class GetBaselineResponseBody extends TeaModel {
         /**
          * @return alertMethods
          */
-        public java.util.List < String > getAlertMethods() {
+        public java.util.List<String> getAlertMethods() {
             return this.alertMethods;
         }
 
@@ -342,7 +347,7 @@ public class GetBaselineResponseBody extends TeaModel {
         /**
          * @return dingRobots
          */
-        public java.util.List < DingRobots> getDingRobots() {
+        public java.util.List<DingRobots> getDingRobots() {
             return this.dingRobots;
         }
 
@@ -363,30 +368,30 @@ public class GetBaselineResponseBody extends TeaModel {
         /**
          * @return topicTypes
          */
-        public java.util.List < String > getTopicTypes() {
+        public java.util.List<String> getTopicTypes() {
             return this.topicTypes;
         }
 
         /**
          * @return webhooks
          */
-        public java.util.List < String > getWebhooks() {
+        public java.util.List<String> getWebhooks() {
             return this.webhooks;
         }
 
         public static final class Builder {
             private Integer alertInterval; 
             private Integer alertMaximum; 
-            private java.util.List < String > alertMethods; 
+            private java.util.List<String> alertMethods; 
             private String alertRecipient; 
             private String alertRecipientType; 
             private String alertType; 
             private Boolean baselineAlertEnabled; 
-            private java.util.List < DingRobots> dingRobots; 
+            private java.util.List<DingRobots> dingRobots; 
             private String silenceEndTime; 
             private String silenceStartTime; 
-            private java.util.List < String > topicTypes; 
-            private java.util.List < String > webhooks; 
+            private java.util.List<String> topicTypes; 
+            private java.util.List<String> webhooks; 
 
             /**
              * <p>The interval at which an event alert notification is sent. Unit: seconds.</p>
@@ -413,7 +418,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * <p>The alert notification methods.</p>
              */
-            public Builder alertMethods(java.util.List < String > alertMethods) {
+            public Builder alertMethods(java.util.List<String> alertMethods) {
                 this.alertMethods = alertMethods;
                 return this;
             }
@@ -483,7 +488,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * <p>The DingTalk chatbots.</p>
              */
-            public Builder dingRobots(java.util.List < DingRobots> dingRobots) {
+            public Builder dingRobots(java.util.List<DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
                 return this;
             }
@@ -513,7 +518,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * <p>The types of event alerts, which are event-specific configurations.</p>
              */
-            public Builder topicTypes(java.util.List < String > topicTypes) {
+            public Builder topicTypes(java.util.List<String> topicTypes) {
                 this.topicTypes = topicTypes;
                 return this;
             }
@@ -521,7 +526,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * <p>The webhook URLs.</p>
              */
-            public Builder webhooks(java.util.List < String > webhooks) {
+            public Builder webhooks(java.util.List<String> webhooks) {
                 this.webhooks = webhooks;
                 return this;
             }
@@ -620,7 +625,7 @@ public class GetBaselineResponseBody extends TeaModel {
         private Integer alertMarginThreshold;
 
         @com.aliyun.core.annotation.NameInMap("AlertSettings")
-        private java.util.List < AlertSettings> alertSettings;
+        private java.util.List<AlertSettings> alertSettings;
 
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
@@ -635,10 +640,10 @@ public class GetBaselineResponseBody extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("NodeIds")
-        private java.util.List < Long > nodeIds;
+        private java.util.List<Long> nodeIds;
 
         @com.aliyun.core.annotation.NameInMap("OverTimeSettings")
-        private java.util.List < OverTimeSettings> overTimeSettings;
+        private java.util.List<OverTimeSettings> overTimeSettings;
 
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
@@ -689,7 +694,7 @@ public class GetBaselineResponseBody extends TeaModel {
         /**
          * @return alertSettings
          */
-        public java.util.List < AlertSettings> getAlertSettings() {
+        public java.util.List<AlertSettings> getAlertSettings() {
             return this.alertSettings;
         }
 
@@ -724,14 +729,14 @@ public class GetBaselineResponseBody extends TeaModel {
         /**
          * @return nodeIds
          */
-        public java.util.List < Long > getNodeIds() {
+        public java.util.List<Long> getNodeIds() {
             return this.nodeIds;
         }
 
         /**
          * @return overTimeSettings
          */
-        public java.util.List < OverTimeSettings> getOverTimeSettings() {
+        public java.util.List<OverTimeSettings> getOverTimeSettings() {
             return this.overTimeSettings;
         }
 
@@ -759,13 +764,13 @@ public class GetBaselineResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean alertEnabled; 
             private Integer alertMarginThreshold; 
-            private java.util.List < AlertSettings> alertSettings; 
+            private java.util.List<AlertSettings> alertSettings; 
             private Long baselineId; 
             private String baselineName; 
             private String baselineType; 
             private Boolean enabled; 
-            private java.util.List < Long > nodeIds; 
-            private java.util.List < OverTimeSettings> overTimeSettings; 
+            private java.util.List<Long> nodeIds; 
+            private java.util.List<OverTimeSettings> overTimeSettings; 
             private String owner; 
             private Integer priority; 
             private Long projectId; 
@@ -789,7 +794,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * <p>The alert settings.</p>
              */
-            public Builder alertSettings(java.util.List < AlertSettings> alertSettings) {
+            public Builder alertSettings(java.util.List<AlertSettings> alertSettings) {
                 this.alertSettings = alertSettings;
                 return this;
             }
@@ -829,7 +834,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * NodeIds.
              */
-            public Builder nodeIds(java.util.List < Long > nodeIds) {
+            public Builder nodeIds(java.util.List<Long> nodeIds) {
                 this.nodeIds = nodeIds;
                 return this;
             }
@@ -837,7 +842,7 @@ public class GetBaselineResponseBody extends TeaModel {
             /**
              * OverTimeSettings.
              */
-            public Builder overTimeSettings(java.util.List < OverTimeSettings> overTimeSettings) {
+            public Builder overTimeSettings(java.util.List<OverTimeSettings> overTimeSettings) {
                 this.overTimeSettings = overTimeSettings;
                 return this;
             }

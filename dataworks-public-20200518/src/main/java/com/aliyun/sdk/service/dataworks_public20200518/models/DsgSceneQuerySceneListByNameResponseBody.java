@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -279,7 +284,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
-        private java.util.List < ? > children;
+        private java.util.List<?> children;
 
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
@@ -288,7 +293,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Projects")
-        private java.util.List < Projects> projects;
+        private java.util.List<Projects> projects;
 
         @com.aliyun.core.annotation.NameInMap("SceneCode")
         private String sceneCode;
@@ -324,7 +329,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < ? > getChildren() {
+        public java.util.List<?> getChildren() {
             return this.children;
         }
 
@@ -345,7 +350,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         /**
          * @return projects
          */
-        public java.util.List < Projects> getProjects() {
+        public java.util.List<Projects> getProjects() {
             return this.projects;
         }
 
@@ -378,10 +383,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > children; 
+            private java.util.List<?> children; 
             private String desc; 
             private Long id; 
-            private java.util.List < Projects> projects; 
+            private java.util.List<Projects> projects; 
             private String sceneCode; 
             private Integer sceneLevel; 
             private String sceneName; 
@@ -390,7 +395,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             /**
              * <p>The information about multiple levels of data masking scenarios.</p>
              */
-            public Builder children(java.util.List < ? > children) {
+            public Builder children(java.util.List<?> children) {
                 this.children = children;
                 return this;
             }
@@ -417,7 +422,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             /**
              * <p>The information about the compute engine for which the data masking scenario takes effect.</p>
              */
-            public Builder projects(java.util.List < Projects> projects) {
+            public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -188,7 +193,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private Integer tablePrivacyMode;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UseProxyOdpsAccount")
         private Boolean useProxyOdpsAccount;
@@ -297,7 +302,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -320,7 +325,7 @@ public class ListProjectsResponseBody extends TeaModel {
             private String projectStatusCode; 
             private String resourceManagerResourceGroupId; 
             private Integer tablePrivacyMode; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Boolean useProxyOdpsAccount; 
 
             /**
@@ -483,7 +488,7 @@ public class ListProjectsResponseBody extends TeaModel {
             /**
              * <p>The tags added to the workspace.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -524,7 +529,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ProjectList")
-        private java.util.List < ProjectList> projectList;
+        private java.util.List<ProjectList> projectList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -561,7 +566,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * @return projectList
          */
-        public java.util.List < ProjectList> getProjectList() {
+        public java.util.List<ProjectList> getProjectList() {
             return this.projectList;
         }
 
@@ -575,7 +580,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ProjectList> projectList; 
+            private java.util.List<ProjectList> projectList; 
             private Integer totalCount; 
 
             /**
@@ -603,7 +608,7 @@ public class ListProjectsResponseBody extends TeaModel {
             /**
              * <p>The DataWorks workspaces.</p>
              */
-            public Builder projectList(java.util.List < ProjectList> projectList) {
+            public Builder projectList(java.util.List<ProjectList> projectList) {
                 this.projectList = projectList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteLists")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < WhiteLists> whiteLists;
+    private java.util.List<WhiteLists> whiteLists;
 
     private DsgWhiteListAddOrUpdateRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
     /**
      * @return whiteLists
      */
-    public java.util.List < WhiteLists> getWhiteLists() {
+    public java.util.List<WhiteLists> getWhiteLists() {
         return this.whiteLists;
     }
 
     public static final class Builder extends Request.Builder<DsgWhiteListAddOrUpdateRequest, Builder> {
         private String regionId; 
-        private java.util.List < WhiteLists> whiteLists; 
+        private java.util.List<WhiteLists> whiteLists; 
 
         private Builder() {
             super();
@@ -81,7 +86,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
          * <p>A collection of whitelists.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder whiteLists(java.util.List < WhiteLists> whiteLists) {
+        public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
             String whiteListsShrink = shrink(whiteLists, "WhiteLists", "json");
             this.putQueryParameter("WhiteLists", whiteListsShrink);
             this.whiteLists = whiteLists;
@@ -118,7 +123,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("UserGroupIds")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Integer > userGroupIds;
+        private java.util.List<Integer> userGroupIds;
 
         private WhiteLists(Builder builder) {
             this.endTime = builder.endTime;
@@ -167,7 +172,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
         /**
          * @return userGroupIds
          */
-        public java.util.List < Integer > getUserGroupIds() {
+        public java.util.List<Integer> getUserGroupIds() {
             return this.userGroupIds;
         }
 
@@ -176,7 +181,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             private Integer id; 
             private Integer ruleId; 
             private String startTime; 
-            private java.util.List < Integer > userGroupIds; 
+            private java.util.List<Integer> userGroupIds; 
 
             /**
              * <p>The end of the time range to query. If you enter null, the whitelist is valid permanently.</p>
@@ -232,7 +237,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
              * <p>A collection of user group IDs.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder userGroupIds(java.util.List < Integer > userGroupIds) {
+            public Builder userGroupIds(java.util.List<Integer> userGroupIds) {
                 this.userGroupIds = userGroupIds;
                 return this;
             }

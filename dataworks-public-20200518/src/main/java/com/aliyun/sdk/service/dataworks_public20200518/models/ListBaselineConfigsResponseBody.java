@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -520,7 +525,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Baselines")
-        private java.util.List < Baselines> baselines;
+        private java.util.List<Baselines> baselines;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -549,7 +554,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         /**
          * @return baselines
          */
-        public java.util.List < Baselines> getBaselines() {
+        public java.util.List<Baselines> getBaselines() {
             return this.baselines;
         }
 
@@ -575,7 +580,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Baselines> baselines; 
+            private java.util.List<Baselines> baselines; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -583,7 +588,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             /**
              * <p>The list of baselines.</p>
              */
-            public Builder baselines(java.util.List < Baselines> baselines) {
+            public Builder baselines(java.util.List<Baselines> baselines) {
                 this.baselines = baselines;
                 return this;
             }

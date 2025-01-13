@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -500,7 +505,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiAuthorizedList")
-        private java.util.List < ApiAuthorizedList> apiAuthorizedList;
+        private java.util.List<ApiAuthorizedList> apiAuthorizedList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -529,7 +534,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         /**
          * @return apiAuthorizedList
          */
-        public java.util.List < ApiAuthorizedList> getApiAuthorizedList() {
+        public java.util.List<ApiAuthorizedList> getApiAuthorizedList() {
             return this.apiAuthorizedList;
         }
 
@@ -555,7 +560,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApiAuthorizedList> apiAuthorizedList; 
+            private java.util.List<ApiAuthorizedList> apiAuthorizedList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -563,7 +568,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             /**
              * <p>The APIs that you are authorized to access.</p>
              */
-            public Builder apiAuthorizedList(java.util.List < ApiAuthorizedList> apiAuthorizedList) {
+            public Builder apiAuthorizedList(java.util.List<ApiAuthorizedList> apiAuthorizedList) {
                 this.apiAuthorizedList = apiAuthorizedList;
                 return this;
             }

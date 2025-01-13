@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetBaselineKeyPathResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         /**
          * <p>The information about the key path.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -516,10 +521,10 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("Runs")
-        private java.util.List < Runs> runs;
+        private java.util.List<Runs> runs;
 
         @com.aliyun.core.annotation.NameInMap("Topics")
-        private java.util.List < Topics> topics;
+        private java.util.List<Topics> topics;
 
         private Data(Builder builder) {
             this.bizdate = builder.bizdate;
@@ -601,14 +606,14 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
         /**
          * @return runs
          */
-        public java.util.List < Runs> getRuns() {
+        public java.util.List<Runs> getRuns() {
             return this.runs;
         }
 
         /**
          * @return topics
          */
-        public java.util.List < Topics> getTopics() {
+        public java.util.List<Topics> getTopics() {
             return this.topics;
         }
 
@@ -621,8 +626,8 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             private String owner; 
             private Integer prgType; 
             private Long projectId; 
-            private java.util.List < Runs> runs; 
-            private java.util.List < Topics> topics; 
+            private java.util.List<Runs> runs; 
+            private java.util.List<Topics> topics; 
 
             /**
              * <p>The data timestamp of the instance.</p>
@@ -712,7 +717,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             /**
              * <p>The running records of the instance.</p>
              */
-            public Builder runs(java.util.List < Runs> runs) {
+            public Builder runs(java.util.List<Runs> runs) {
                 this.runs = runs;
                 return this;
             }
@@ -720,7 +725,7 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
             /**
              * <p>The information about the events that are associated with the instance.</p>
              */
-            public Builder topics(java.util.List < Topics> topics) {
+            public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UserGroups> userGroups;
+    private java.util.List<UserGroups> userGroups;
 
     private DsgUserGroupAddOrUpdateRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
     /**
      * @return userGroups
      */
-    public java.util.List < UserGroups> getUserGroups() {
+    public java.util.List<UserGroups> getUserGroups() {
         return this.userGroups;
     }
 
     public static final class Builder extends Request.Builder<DsgUserGroupAddOrUpdateRequest, Builder> {
         private String regionId; 
-        private java.util.List < UserGroups> userGroups; 
+        private java.util.List<UserGroups> userGroups; 
 
         private Builder() {
             super();
@@ -81,7 +86,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
          * <p>The information about the user group.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder userGroups(java.util.List < UserGroups> userGroups) {
+        public Builder userGroups(java.util.List<UserGroups> userGroups) {
             String userGroupsShrink = shrink(userGroups, "UserGroups", "json");
             this.putQueryParameter("UserGroups", userGroupsShrink);
             this.userGroups = userGroups;
@@ -104,7 +109,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > accounts;
+        private java.util.List<String> accounts;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -144,7 +149,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
         /**
          * @return accounts
          */
-        public java.util.List < String > getAccounts() {
+        public java.util.List<String> getAccounts() {
             return this.accounts;
         }
 
@@ -184,7 +189,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > accounts; 
+            private java.util.List<String> accounts; 
             private Long id; 
             private String name; 
             private String owner; 
@@ -199,7 +204,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
              * </ul>
              * <p>This parameter is required.</p>
              */
-            public Builder accounts(java.util.List < String > accounts) {
+            public Builder accounts(java.util.List<String> accounts) {
                 this.accounts = accounts;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class LineageRelationRegisterBulkVO extends TeaModel {
     private Long createTimestamp;
 
     @com.aliyun.core.annotation.NameInMap("DestEntities")
-    private java.util.List < LineageEntityVO > destEntities;
+    private java.util.List<LineageEntityVO> destEntities;
 
     @com.aliyun.core.annotation.NameInMap("Relationship")
     private RelationshipVO relationship;
 
     @com.aliyun.core.annotation.NameInMap("SrcEntities")
-    private java.util.List < LineageEntityVO > srcEntities;
+    private java.util.List<LineageEntityVO> srcEntities;
 
     private LineageRelationRegisterBulkVO(Builder builder) {
         this.createTimestamp = builder.createTimestamp;
@@ -49,7 +54,7 @@ public class LineageRelationRegisterBulkVO extends TeaModel {
     /**
      * @return destEntities
      */
-    public java.util.List < LineageEntityVO > getDestEntities() {
+    public java.util.List<LineageEntityVO> getDestEntities() {
         return this.destEntities;
     }
 
@@ -63,15 +68,15 @@ public class LineageRelationRegisterBulkVO extends TeaModel {
     /**
      * @return srcEntities
      */
-    public java.util.List < LineageEntityVO > getSrcEntities() {
+    public java.util.List<LineageEntityVO> getSrcEntities() {
         return this.srcEntities;
     }
 
     public static final class Builder {
         private Long createTimestamp; 
-        private java.util.List < LineageEntityVO > destEntities; 
+        private java.util.List<LineageEntityVO> destEntities; 
         private RelationshipVO relationship; 
-        private java.util.List < LineageEntityVO > srcEntities; 
+        private java.util.List<LineageEntityVO> srcEntities; 
 
         /**
          * CreateTimestamp.
@@ -84,7 +89,7 @@ public class LineageRelationRegisterBulkVO extends TeaModel {
         /**
          * DestEntities.
          */
-        public Builder destEntities(java.util.List < LineageEntityVO > destEntities) {
+        public Builder destEntities(java.util.List<LineageEntityVO> destEntities) {
             this.destEntities = destEntities;
             return this;
         }
@@ -100,7 +105,7 @@ public class LineageRelationRegisterBulkVO extends TeaModel {
         /**
          * SrcEntities.
          */
-        public Builder srcEntities(java.util.List < LineageEntityVO > srcEntities) {
+        public Builder srcEntities(java.util.List<LineageEntityVO> srcEntities) {
             this.srcEntities = srcEntities;
             return this;
         }

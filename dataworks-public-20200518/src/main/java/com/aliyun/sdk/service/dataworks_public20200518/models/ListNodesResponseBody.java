@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -798,7 +803,7 @@ public class ListNodesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -827,7 +832,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -853,7 +858,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -867,7 +872,7 @@ public class ListNodesResponseBody extends TeaModel {
              * <li>SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
              * </ul>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

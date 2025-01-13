@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListResourceGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -42,7 +47,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
@@ -76,7 +81,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * <p>The resource groups.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -237,13 +242,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private Integer sequence;
 
         @com.aliyun.core.annotation.NameInMap("Specs")
-        private java.util.Map < String, ? > specs;
+        private java.util.Map<String, ?> specs;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
@@ -366,7 +371,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return specs
          */
-        public java.util.Map < String, ? > getSpecs() {
+        public java.util.Map<String, ?> getSpecs() {
             return this.specs;
         }
 
@@ -380,7 +385,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -411,9 +416,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String resourceGroupType; 
             private String resourceManagerResourceGroupId; 
             private Integer sequence; 
-            private java.util.Map < String, ? > specs; 
+            private java.util.Map<String, ?> specs; 
             private Integer status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long tenantId; 
             private String updateTime; 
 
@@ -580,7 +585,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder specs(java.util.Map < String, ? > specs) {
+            public Builder specs(java.util.Map<String, ?> specs) {
                 this.specs = specs;
                 return this;
             }
@@ -611,7 +616,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

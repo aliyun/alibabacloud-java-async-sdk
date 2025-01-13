@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,19 +18,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class LineageRelationRegisterTaskVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Attributes")
-    private java.util.Map < String, String > attributes;
+    private java.util.Map<String, String> attributes;
 
     @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
     @com.aliyun.core.annotation.NameInMap("InputEntities")
-    private java.util.List < LineageEntityVO > inputEntities;
+    private java.util.List<LineageEntityVO> inputEntities;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("OutputEntities")
-    private java.util.List < LineageEntityVO > outputEntities;
+    private java.util.List<LineageEntityVO> outputEntities;
 
     @com.aliyun.core.annotation.NameInMap("QualifiedName")
     private String qualifiedName;
@@ -50,7 +55,7 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
     /**
      * @return attributes
      */
-    public java.util.Map < String, String > getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
@@ -64,7 +69,7 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
     /**
      * @return inputEntities
      */
-    public java.util.List < LineageEntityVO > getInputEntities() {
+    public java.util.List<LineageEntityVO> getInputEntities() {
         return this.inputEntities;
     }
 
@@ -78,7 +83,7 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
     /**
      * @return outputEntities
      */
-    public java.util.List < LineageEntityVO > getOutputEntities() {
+    public java.util.List<LineageEntityVO> getOutputEntities() {
         return this.outputEntities;
     }
 
@@ -90,17 +95,17 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > attributes; 
+        private java.util.Map<String, String> attributes; 
         private Long createTimestamp; 
-        private java.util.List < LineageEntityVO > inputEntities; 
+        private java.util.List<LineageEntityVO> inputEntities; 
         private String name; 
-        private java.util.List < LineageEntityVO > outputEntities; 
+        private java.util.List<LineageEntityVO> outputEntities; 
         private String qualifiedName; 
 
         /**
          * Attributes.
          */
-        public Builder attributes(java.util.Map < String, String > attributes) {
+        public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
             return this;
         }
@@ -116,7 +121,7 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
         /**
          * InputEntities.
          */
-        public Builder inputEntities(java.util.List < LineageEntityVO > inputEntities) {
+        public Builder inputEntities(java.util.List<LineageEntityVO> inputEntities) {
             this.inputEntities = inputEntities;
             return this;
         }
@@ -132,7 +137,7 @@ public class LineageRelationRegisterTaskVO extends TeaModel {
         /**
          * OutputEntities.
          */
-        public Builder outputEntities(java.util.List < LineageEntityVO > outputEntities) {
+        public Builder outputEntities(java.util.List<LineageEntityVO> outputEntities) {
             this.outputEntities = outputEntities;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchNodesByOutputResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    private java.util.Map<String, ?> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         /**
          * <p>The map returned. The key in the map indicates an output name, and the value in the map indicates the information about the node that generates the output.</p>
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }

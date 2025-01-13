@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -461,7 +466,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         private Data(Builder builder) {
             this.nodes = builder.nodes;
@@ -478,17 +483,17 @@ public class GetNodeParentsResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
 
             /**
              * <p>The ancestor nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

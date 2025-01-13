@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CollectionList")
-        private java.util.List < Collection > collectionList;
+        private java.util.List<Collection> collectionList;
 
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -199,7 +204,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         /**
          * @return collectionList
          */
-        public java.util.List < Collection > getCollectionList() {
+        public java.util.List<Collection> getCollectionList() {
             return this.collectionList;
         }
 
@@ -211,13 +216,13 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Collection > collectionList; 
+            private java.util.List<Collection> collectionList; 
             private String nextToken; 
 
             /**
              * <p>The collections.</p>
              */
-            public Builder collectionList(java.util.List < Collection > collectionList) {
+            public Builder collectionList(java.util.List<Collection> collectionList) {
                 this.collectionList = collectionList;
                 return this;
             }

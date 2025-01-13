@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -147,7 +152,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         private Integer engineId;
 
         @com.aliyun.core.annotation.NameInMap("EngineInfo")
-        private java.util.Map < String, ? > engineInfo;
+        private java.util.Map<String, ?> engineInfo;
 
         @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
@@ -232,7 +237,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         /**
          * @return engineInfo
          */
-        public java.util.Map < String, ? > getEngineInfo() {
+        public java.util.Map<String, ?> getEngineInfo() {
             return this.engineInfo;
         }
 
@@ -291,7 +296,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private String calcEngineType; 
             private String dwRegion; 
             private Integer engineId; 
-            private java.util.Map < String, ? > engineInfo; 
+            private java.util.Map<String, ?> engineInfo; 
             private String envType; 
             private String gmtCreate; 
             private Boolean isDefault; 
@@ -473,7 +478,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22resourceGroupType%22:%22ODPS%22,%22resourceGroupId%22:%22361826516****%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22projectName%22:%22onefall_test_zjk%22,%22taskSameAsOwner%22:%22true%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;resourceGroupType&quot;:&quot;ODPS&quot;,&quot;resourceGroupId&quot;:&quot;361826516****&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;projectName&quot;:&quot;onefall_test_zjk&quot;,&quot;taskSameAsOwner&quot;:&quot;true&quot;}</a></p>
              */
-            public Builder engineInfo(java.util.Map < String, ? > engineInfo) {
+            public Builder engineInfo(java.util.Map<String, ?> engineInfo) {
                 this.engineInfo = engineInfo;
                 return this;
             }
@@ -580,7 +585,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CalcEngines")
-        private java.util.List < CalcEngines> calcEngines;
+        private java.util.List<CalcEngines> calcEngines;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -609,7 +614,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         /**
          * @return calcEngines
          */
-        public java.util.List < CalcEngines> getCalcEngines() {
+        public java.util.List<CalcEngines> getCalcEngines() {
             return this.calcEngines;
         }
 
@@ -635,7 +640,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CalcEngines> calcEngines; 
+            private java.util.List<CalcEngines> calcEngines; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -643,7 +648,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             /**
              * <p>The compute engines.</p>
              */
-            public Builder calcEngines(java.util.List < CalcEngines> calcEngines) {
+            public Builder calcEngines(java.util.List<CalcEngines> calcEngines) {
                 this.calcEngines = calcEngines;
                 return this;
             }

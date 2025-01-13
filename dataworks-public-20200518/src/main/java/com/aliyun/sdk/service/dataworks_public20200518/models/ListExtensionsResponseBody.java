@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -152,7 +157,7 @@ public class ListExtensionsResponseBody extends TeaModel {
      */
     public static class Extensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindEventList")
-        private java.util.List < BindEventList> bindEventList;
+        private java.util.List<BindEventList> bindEventList;
 
         @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
@@ -189,7 +194,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         /**
          * @return bindEventList
          */
-        public java.util.List < BindEventList> getBindEventList() {
+        public java.util.List<BindEventList> getBindEventList() {
             return this.bindEventList;
         }
 
@@ -229,7 +234,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BindEventList> bindEventList; 
+            private java.util.List<BindEventList> bindEventList; 
             private String extensionCode; 
             private String extensionDesc; 
             private String extensionName; 
@@ -239,7 +244,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             /**
              * <p>The list of extension point events.</p>
              */
-            public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
+            public Builder bindEventList(java.util.List<BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
                 return this;
             }
@@ -305,7 +310,7 @@ public class ListExtensionsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extensions")
-        private java.util.List < Extensions> extensions;
+        private java.util.List<Extensions> extensions;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -334,7 +339,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         /**
          * @return extensions
          */
-        public java.util.List < Extensions> getExtensions() {
+        public java.util.List<Extensions> getExtensions() {
             return this.extensions;
         }
 
@@ -360,7 +365,7 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Extensions> extensions; 
+            private java.util.List<Extensions> extensions; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -368,7 +373,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             /**
              * <p>The list of extensions.</p>
              */
-            public Builder extensions(java.util.List < Extensions> extensions) {
+            public Builder extensions(java.util.List<Extensions> extensions) {
                 this.extensions = extensions;
                 return this;
             }

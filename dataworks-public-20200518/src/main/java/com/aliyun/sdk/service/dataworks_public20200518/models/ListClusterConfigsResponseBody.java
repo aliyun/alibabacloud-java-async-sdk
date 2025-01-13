@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClusterConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterConfigs")
-    private java.util.List < ClusterConfig > clusterConfigs;
+    private java.util.List<ClusterConfig> clusterConfigs;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class ListClusterConfigsResponseBody extends TeaModel {
     /**
      * @return clusterConfigs
      */
-    public java.util.List < ClusterConfig > getClusterConfigs() {
+    public java.util.List<ClusterConfig> getClusterConfigs() {
         return this.clusterConfigs;
     }
 
@@ -90,7 +95,7 @@ public class ListClusterConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterConfig > clusterConfigs; 
+        private java.util.List<ClusterConfig> clusterConfigs; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         /**
          * ClusterConfigs.
          */
-        public Builder clusterConfigs(java.util.List < ClusterConfig > clusterConfigs) {
+        public Builder clusterConfigs(java.util.List<ClusterConfig> clusterConfigs) {
             this.clusterConfigs = clusterConfigs;
             return this;
         }

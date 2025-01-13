@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -269,7 +274,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("OverTimeSettings")
-        private java.util.List < OverTimeSettings> overTimeSettings;
+        private java.util.List<OverTimeSettings> overTimeSettings;
 
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
@@ -346,7 +351,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         /**
          * @return overTimeSettings
          */
-        public java.util.List < OverTimeSettings> getOverTimeSettings() {
+        public java.util.List<OverTimeSettings> getOverTimeSettings() {
             return this.overTimeSettings;
         }
 
@@ -378,7 +383,7 @@ public class ListBaselinesResponseBody extends TeaModel {
             private String baselineName; 
             private String baselineType; 
             private Boolean enabled; 
-            private java.util.List < OverTimeSettings> overTimeSettings; 
+            private java.util.List<OverTimeSettings> overTimeSettings; 
             private String owner; 
             private Integer priority; 
             private Long projectId; 
@@ -452,7 +457,7 @@ public class ListBaselinesResponseBody extends TeaModel {
             /**
              * <p>The settings of the committed completion time of the baseline.</p>
              */
-            public Builder overTimeSettings(java.util.List < OverTimeSettings> overTimeSettings) {
+            public Builder overTimeSettings(java.util.List<OverTimeSettings> overTimeSettings) {
                 this.overTimeSettings = overTimeSettings;
                 return this;
             }
@@ -505,7 +510,7 @@ public class ListBaselinesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Baselines")
-        private java.util.List < Baselines> baselines;
+        private java.util.List<Baselines> baselines;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
@@ -534,7 +539,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         /**
          * @return baselines
          */
-        public java.util.List < Baselines> getBaselines() {
+        public java.util.List<Baselines> getBaselines() {
             return this.baselines;
         }
 
@@ -560,7 +565,7 @@ public class ListBaselinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Baselines> baselines; 
+            private java.util.List<Baselines> baselines; 
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
@@ -568,7 +573,7 @@ public class ListBaselinesResponseBody extends TeaModel {
             /**
              * <p>The baselines.</p>
              */
-            public Builder baselines(java.util.List < Baselines> baselines) {
+            public Builder baselines(java.util.List<Baselines> baselines) {
                 this.baselines = baselines;
                 return this;
             }

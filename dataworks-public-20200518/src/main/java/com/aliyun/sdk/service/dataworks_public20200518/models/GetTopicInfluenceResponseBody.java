@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -366,7 +371,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Influences")
-        private java.util.List < Influences> influences;
+        private java.util.List<Influences> influences;
 
         @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
@@ -387,7 +392,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         /**
          * @return influences
          */
-        public java.util.List < Influences> getInfluences() {
+        public java.util.List<Influences> getInfluences() {
             return this.influences;
         }
 
@@ -399,13 +404,13 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Influences> influences; 
+            private java.util.List<Influences> influences; 
             private Long topicId; 
 
             /**
              * Influences.
              */
-            public Builder influences(java.util.List < Influences> influences) {
+            public Builder influences(java.util.List<Influences> influences) {
                 this.influences = influences;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RelationshipVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Attributes")
-    private java.util.Map < String, String > attributes;
+    private java.util.Map<String, String> attributes;
 
     @com.aliyun.core.annotation.NameInMap("RelationshipGuid")
     private String relationshipGuid;
@@ -38,7 +43,7 @@ public class RelationshipVO extends TeaModel {
     /**
      * @return attributes
      */
-    public java.util.Map < String, String > getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
@@ -57,14 +62,14 @@ public class RelationshipVO extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > attributes; 
+        private java.util.Map<String, String> attributes; 
         private String relationshipGuid; 
         private String relationshipType; 
 
         /**
          * Attributes.
          */
-        public Builder attributes(java.util.Map < String, String > attributes) {
+        public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
             return this;
         }

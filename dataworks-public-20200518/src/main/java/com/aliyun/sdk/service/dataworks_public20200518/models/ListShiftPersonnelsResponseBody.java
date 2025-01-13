@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -204,7 +209,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ShiftPersons")
-        private java.util.List < ShiftPersons> shiftPersons;
+        private java.util.List<ShiftPersons> shiftPersons;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -241,7 +246,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         /**
          * @return shiftPersons
          */
-        public java.util.List < ShiftPersons> getShiftPersons() {
+        public java.util.List<ShiftPersons> getShiftPersons() {
             return this.shiftPersons;
         }
 
@@ -255,7 +260,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ShiftPersons> shiftPersons; 
+            private java.util.List<ShiftPersons> shiftPersons; 
             private Integer totalCount; 
 
             /**
@@ -283,7 +288,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             /**
              * <p>A list of on-duty engineers in a shift schedule.</p>
              */
-            public Builder shiftPersons(java.util.List < ShiftPersons> shiftPersons) {
+            public Builder shiftPersons(java.util.List<ShiftPersons> shiftPersons) {
                 this.shiftPersons = shiftPersons;
                 return this;
             }

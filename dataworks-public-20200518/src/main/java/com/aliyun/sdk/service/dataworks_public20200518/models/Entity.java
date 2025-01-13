@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Entity extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EntityContent")
-    private java.util.Map < String, ? > entityContent;
+    private java.util.Map<String, ?> entityContent;
 
     @com.aliyun.core.annotation.NameInMap("QualifiedName")
     private String qualifiedName;
@@ -38,7 +43,7 @@ public class Entity extends TeaModel {
     /**
      * @return entityContent
      */
-    public java.util.Map < String, ? > getEntityContent() {
+    public java.util.Map<String, ?> getEntityContent() {
         return this.entityContent;
     }
 
@@ -57,14 +62,14 @@ public class Entity extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > entityContent; 
+        private java.util.Map<String, ?> entityContent; 
         private String qualifiedName; 
         private Long tenantId; 
 
         /**
          * EntityContent.
          */
-        public Builder entityContent(java.util.Map < String, ? > entityContent) {
+        public Builder entityContent(java.util.Map<String, ?> entityContent) {
             this.entityContent = entityContent;
             return this;
         }

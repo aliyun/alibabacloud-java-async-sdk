@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class GetDIJobResponseBody extends TeaModel {
         private String dataSourceName;
 
         @com.aliyun.core.annotation.NameInMap("DataSourceProperties")
-        private java.util.Map < String, String > dataSourceProperties;
+        private java.util.Map<String, String> dataSourceProperties;
 
         private DestinationDataSourceSettings(Builder builder) {
             this.dataSourceName = builder.dataSourceName;
@@ -110,13 +115,13 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return dataSourceProperties
          */
-        public java.util.Map < String, String > getDataSourceProperties() {
+        public java.util.Map<String, String> getDataSourceProperties() {
             return this.dataSourceProperties;
         }
 
         public static final class Builder {
             private String dataSourceName; 
-            private java.util.Map < String, String > dataSourceProperties; 
+            private java.util.Map<String, String> dataSourceProperties; 
 
             /**
              * <p>The name of the data source.</p>
@@ -132,7 +137,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The properties of the data source.</p>
              */
-            public Builder dataSourceProperties(java.util.Map < String, String > dataSourceProperties) {
+            public Builder dataSourceProperties(java.util.Map<String, String> dataSourceProperties) {
                 this.dataSourceProperties = dataSourceProperties;
                 return this;
             }
@@ -465,16 +470,16 @@ public class GetDIJobResponseBody extends TeaModel {
         private String channelSettings;
 
         @com.aliyun.core.annotation.NameInMap("ColumnDataTypeSettings")
-        private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings;
+        private java.util.List<ColumnDataTypeSettings> columnDataTypeSettings;
 
         @com.aliyun.core.annotation.NameInMap("CycleScheduleSettings")
         private CycleScheduleSettings cycleScheduleSettings;
 
         @com.aliyun.core.annotation.NameInMap("DdlHandlingSettings")
-        private java.util.List < DdlHandlingSettings> ddlHandlingSettings;
+        private java.util.List<DdlHandlingSettings> ddlHandlingSettings;
 
         @com.aliyun.core.annotation.NameInMap("RuntimeSettings")
-        private java.util.List < RuntimeSettings> runtimeSettings;
+        private java.util.List<RuntimeSettings> runtimeSettings;
 
         private JobSettings(Builder builder) {
             this.channelSettings = builder.channelSettings;
@@ -502,7 +507,7 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return columnDataTypeSettings
          */
-        public java.util.List < ColumnDataTypeSettings> getColumnDataTypeSettings() {
+        public java.util.List<ColumnDataTypeSettings> getColumnDataTypeSettings() {
             return this.columnDataTypeSettings;
         }
 
@@ -516,23 +521,23 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return ddlHandlingSettings
          */
-        public java.util.List < DdlHandlingSettings> getDdlHandlingSettings() {
+        public java.util.List<DdlHandlingSettings> getDdlHandlingSettings() {
             return this.ddlHandlingSettings;
         }
 
         /**
          * @return runtimeSettings
          */
-        public java.util.List < RuntimeSettings> getRuntimeSettings() {
+        public java.util.List<RuntimeSettings> getRuntimeSettings() {
             return this.runtimeSettings;
         }
 
         public static final class Builder {
             private String channelSettings; 
-            private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings; 
+            private java.util.List<ColumnDataTypeSettings> columnDataTypeSettings; 
             private CycleScheduleSettings cycleScheduleSettings; 
-            private java.util.List < DdlHandlingSettings> ddlHandlingSettings; 
-            private java.util.List < RuntimeSettings> runtimeSettings; 
+            private java.util.List<DdlHandlingSettings> ddlHandlingSettings; 
+            private java.util.List<RuntimeSettings> runtimeSettings; 
 
             /**
              * ChannelSettings.
@@ -545,7 +550,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The settings for data type mappings between source fields and destination fields. The value of this parameter is an array.</p>
              */
-            public Builder columnDataTypeSettings(java.util.List < ColumnDataTypeSettings> columnDataTypeSettings) {
+            public Builder columnDataTypeSettings(java.util.List<ColumnDataTypeSettings> columnDataTypeSettings) {
                 this.columnDataTypeSettings = columnDataTypeSettings;
                 return this;
             }
@@ -561,7 +566,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The settings for processing DDL messages. The value of this parameter is an array.</p>
              */
-            public Builder ddlHandlingSettings(java.util.List < DdlHandlingSettings> ddlHandlingSettings) {
+            public Builder ddlHandlingSettings(java.util.List<DdlHandlingSettings> ddlHandlingSettings) {
                 this.ddlHandlingSettings = ddlHandlingSettings;
                 return this;
             }
@@ -569,7 +574,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The runtime settings. The value of this parameter is an array.</p>
              */
-            public Builder runtimeSettings(java.util.List < RuntimeSettings> runtimeSettings) {
+            public Builder runtimeSettings(java.util.List<RuntimeSettings> runtimeSettings) {
                 this.runtimeSettings = runtimeSettings;
                 return this;
             }
@@ -779,7 +784,7 @@ public class GetDIJobResponseBody extends TeaModel {
         private String dataSourceName;
 
         @com.aliyun.core.annotation.NameInMap("DataSourceProperties")
-        private java.util.Map < String, String > dataSourceProperties;
+        private java.util.Map<String, String> dataSourceProperties;
 
         private SourceDataSourceSettings(Builder builder) {
             this.dataSourceName = builder.dataSourceName;
@@ -804,13 +809,13 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return dataSourceProperties
          */
-        public java.util.Map < String, String > getDataSourceProperties() {
+        public java.util.Map<String, String> getDataSourceProperties() {
             return this.dataSourceProperties;
         }
 
         public static final class Builder {
             private String dataSourceName; 
-            private java.util.Map < String, String > dataSourceProperties; 
+            private java.util.Map<String, String> dataSourceProperties; 
 
             /**
              * <p>The name of the data source.</p>
@@ -826,7 +831,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The properties of the data source.</p>
              */
-            public Builder dataSourceProperties(java.util.Map < String, String > dataSourceProperties) {
+            public Builder dataSourceProperties(java.util.Map<String, String> dataSourceProperties) {
                 this.dataSourceProperties = dataSourceProperties;
                 return this;
             }
@@ -1029,10 +1034,10 @@ public class GetDIJobResponseBody extends TeaModel {
      */
     public static class TableMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceObjectSelectionRules")
-        private java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules;
+        private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules;
 
         @com.aliyun.core.annotation.NameInMap("TransformationRules")
-        private java.util.List < TransformationRules> transformationRules;
+        private java.util.List<TransformationRules> transformationRules;
 
         private TableMappings(Builder builder) {
             this.sourceObjectSelectionRules = builder.sourceObjectSelectionRules;
@@ -1050,25 +1055,25 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return sourceObjectSelectionRules
          */
-        public java.util.List < SourceObjectSelectionRules> getSourceObjectSelectionRules() {
+        public java.util.List<SourceObjectSelectionRules> getSourceObjectSelectionRules() {
             return this.sourceObjectSelectionRules;
         }
 
         /**
          * @return transformationRules
          */
-        public java.util.List < TransformationRules> getTransformationRules() {
+        public java.util.List<TransformationRules> getTransformationRules() {
             return this.transformationRules;
         }
 
         public static final class Builder {
-            private java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules; 
-            private java.util.List < TransformationRules> transformationRules; 
+            private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules; 
+            private java.util.List<TransformationRules> transformationRules; 
 
             /**
              * <p>The rule used to select synchronization objects in the source. Multiple rules may be returned.</p>
              */
-            public Builder sourceObjectSelectionRules(java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules) {
+            public Builder sourceObjectSelectionRules(java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules) {
                 this.sourceObjectSelectionRules = sourceObjectSelectionRules;
                 return this;
             }
@@ -1076,7 +1081,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The transformation rules that are applied to the selected synchronization objects.</p>
              */
-            public Builder transformationRules(java.util.List < TransformationRules> transformationRules) {
+            public Builder transformationRules(java.util.List<TransformationRules> transformationRules) {
                 this.transformationRules = transformationRules;
                 return this;
             }
@@ -1242,7 +1247,7 @@ public class GetDIJobResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DestinationDataSourceSettings")
-        private java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings;
+        private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings;
 
         @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
         private String destinationDataSourceType;
@@ -1269,10 +1274,10 @@ public class GetDIJobResponseBody extends TeaModel {
         private ResourceSettings resourceSettings;
 
         @com.aliyun.core.annotation.NameInMap("RunStats")
-        private java.util.Map < String, String > runStats;
+        private java.util.Map<String, String> runStats;
 
         @com.aliyun.core.annotation.NameInMap("SourceDataSourceSettings")
-        private java.util.List < SourceDataSourceSettings> sourceDataSourceSettings;
+        private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings;
 
         @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
         private String sourceDataSourceType;
@@ -1284,10 +1289,10 @@ public class GetDIJobResponseBody extends TeaModel {
         private String startedUid;
 
         @com.aliyun.core.annotation.NameInMap("TableMappings")
-        private java.util.List < TableMappings> tableMappings;
+        private java.util.List<TableMappings> tableMappings;
 
         @com.aliyun.core.annotation.NameInMap("TransformationRules")
-        private java.util.List < DataTransformationRules> transformationRules;
+        private java.util.List<DataTransformationRules> transformationRules;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
@@ -1359,7 +1364,7 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return destinationDataSourceSettings
          */
-        public java.util.List < DestinationDataSourceSettings> getDestinationDataSourceSettings() {
+        public java.util.List<DestinationDataSourceSettings> getDestinationDataSourceSettings() {
             return this.destinationDataSourceSettings;
         }
 
@@ -1422,14 +1427,14 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return runStats
          */
-        public java.util.Map < String, String > getRunStats() {
+        public java.util.Map<String, String> getRunStats() {
             return this.runStats;
         }
 
         /**
          * @return sourceDataSourceSettings
          */
-        public java.util.List < SourceDataSourceSettings> getSourceDataSourceSettings() {
+        public java.util.List<SourceDataSourceSettings> getSourceDataSourceSettings() {
             return this.sourceDataSourceSettings;
         }
 
@@ -1457,14 +1462,14 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * @return tableMappings
          */
-        public java.util.List < TableMappings> getTableMappings() {
+        public java.util.List<TableMappings> getTableMappings() {
             return this.tableMappings;
         }
 
         /**
          * @return transformationRules
          */
-        public java.util.List < DataTransformationRules> getTransformationRules() {
+        public java.util.List<DataTransformationRules> getTransformationRules() {
             return this.transformationRules;
         }
 
@@ -1487,7 +1492,7 @@ public class GetDIJobResponseBody extends TeaModel {
             private String createdUid; 
             private Long DIJobId; 
             private String description; 
-            private java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings; 
+            private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings; 
             private String destinationDataSourceType; 
             private String errorMessage; 
             private String jobName; 
@@ -1496,13 +1501,13 @@ public class GetDIJobResponseBody extends TeaModel {
             private String migrationType; 
             private Long projectId; 
             private ResourceSettings resourceSettings; 
-            private java.util.Map < String, String > runStats; 
-            private java.util.List < SourceDataSourceSettings> sourceDataSourceSettings; 
+            private java.util.Map<String, String> runStats; 
+            private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings; 
             private String sourceDataSourceType; 
             private Long startedTime; 
             private String startedUid; 
-            private java.util.List < TableMappings> tableMappings; 
-            private java.util.List < DataTransformationRules> transformationRules; 
+            private java.util.List<TableMappings> tableMappings; 
+            private java.util.List<DataTransformationRules> transformationRules; 
             private Long updatedTime; 
             private String updatedUid; 
 
@@ -1550,7 +1555,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The settings of the destination. Only a single destination is supported.</p>
              */
-            public Builder destinationDataSourceSettings(java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings) {
+            public Builder destinationDataSourceSettings(java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings) {
                 this.destinationDataSourceSettings = destinationDataSourceSettings;
                 return this;
             }
@@ -1653,7 +1658,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The information about the running of the synchronization task.</p>
              */
-            public Builder runStats(java.util.Map < String, String > runStats) {
+            public Builder runStats(java.util.Map<String, String> runStats) {
                 this.runStats = runStats;
                 return this;
             }
@@ -1661,7 +1666,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The settings of the source. Only a single source is supported.</p>
              */
-            public Builder sourceDataSourceSettings(java.util.List < SourceDataSourceSettings> sourceDataSourceSettings) {
+            public Builder sourceDataSourceSettings(java.util.List<SourceDataSourceSettings> sourceDataSourceSettings) {
                 this.sourceDataSourceSettings = sourceDataSourceSettings;
                 return this;
             }
@@ -1702,7 +1707,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
              */
-            public Builder tableMappings(java.util.List < TableMappings> tableMappings) {
+            public Builder tableMappings(java.util.List<TableMappings> tableMappings) {
                 this.tableMappings = tableMappings;
                 return this;
             }
@@ -1710,7 +1715,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
              */
-            public Builder transformationRules(java.util.List < DataTransformationRules> transformationRules) {
+            public Builder transformationRules(java.util.List<DataTransformationRules> transformationRules) {
                 this.transformationRules = transformationRules;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DsgRunSensIdentifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EsMetaParams")
-    private java.util.List < EsMetaParams> esMetaParams;
+    private java.util.List<EsMetaParams> esMetaParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
@@ -55,7 +60,7 @@ public class DsgRunSensIdentifyRequest extends Request {
     /**
      * @return esMetaParams
      */
-    public java.util.List < EsMetaParams> getEsMetaParams() {
+    public java.util.List<EsMetaParams> getEsMetaParams() {
         return this.esMetaParams;
     }
 
@@ -68,7 +73,7 @@ public class DsgRunSensIdentifyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DsgRunSensIdentifyRequest, Builder> {
         private String regionId; 
-        private java.util.List < EsMetaParams> esMetaParams; 
+        private java.util.List<EsMetaParams> esMetaParams; 
         private String tenantId; 
 
         private Builder() {
@@ -94,7 +99,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         /**
          * <p>The parameters that you need to configure to scan specified metadata.</p>
          */
-        public Builder esMetaParams(java.util.List < EsMetaParams> esMetaParams) {
+        public Builder esMetaParams(java.util.List<EsMetaParams> esMetaParams) {
             String esMetaParamsShrink = shrink(esMetaParams, "EsMetaParams", "json");
             this.putBodyParameter("EsMetaParams", esMetaParamsShrink);
             this.esMetaParams = esMetaParams;
@@ -147,7 +152,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         private String tableName;
 
         @com.aliyun.core.annotation.NameInMap("TableNameList")
-        private java.util.List < String > tableNameList;
+        private java.util.List<String> tableNameList;
 
         @com.aliyun.core.annotation.NameInMap("User")
         private String user;
@@ -216,7 +221,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         /**
          * @return tableNameList
          */
-        public java.util.List < String > getTableNameList() {
+        public java.util.List<String> getTableNameList() {
             return this.tableNameList;
         }
 
@@ -234,7 +239,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             private String projectName; 
             private String schemaName; 
             private String tableName; 
-            private java.util.List < String > tableNameList; 
+            private java.util.List<String> tableNameList; 
             private String user; 
 
             /**
@@ -311,7 +316,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             /**
              * <p>The names of the tables.</p>
              */
-            public Builder tableNameList(java.util.List < String > tableNameList) {
+            public Builder tableNameList(java.util.List<String> tableNameList) {
                 this.tableNameList = tableNameList;
                 return this;
             }

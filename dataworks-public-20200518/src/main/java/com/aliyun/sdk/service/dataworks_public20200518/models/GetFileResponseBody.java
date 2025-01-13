@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -641,7 +646,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the code for the file. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3).</p>
+             * <p>The type of the code for the file. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1134,16 +1139,16 @@ public class GetFileResponseBody extends TeaModel {
         private String ignoreParentSkipRunningProperty;
 
         @com.aliyun.core.annotation.NameInMap("InputList")
-        private java.util.List < InputList> inputList;
+        private java.util.List<InputList> inputList;
 
         @com.aliyun.core.annotation.NameInMap("InputParameters")
-        private java.util.List < InputParameters> inputParameters;
+        private java.util.List<InputParameters> inputParameters;
 
         @com.aliyun.core.annotation.NameInMap("OutputList")
-        private java.util.List < OutputList> outputList;
+        private java.util.List<OutputList> outputList;
 
         @com.aliyun.core.annotation.NameInMap("OutputParameters")
-        private java.util.List < OutputParameters> outputParameters;
+        private java.util.List<OutputParameters> outputParameters;
 
         @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
@@ -1267,28 +1272,28 @@ public class GetFileResponseBody extends TeaModel {
         /**
          * @return inputList
          */
-        public java.util.List < InputList> getInputList() {
+        public java.util.List<InputList> getInputList() {
             return this.inputList;
         }
 
         /**
          * @return inputParameters
          */
-        public java.util.List < InputParameters> getInputParameters() {
+        public java.util.List<InputParameters> getInputParameters() {
             return this.inputParameters;
         }
 
         /**
          * @return outputList
          */
-        public java.util.List < OutputList> getOutputList() {
+        public java.util.List<OutputList> getOutputList() {
             return this.outputList;
         }
 
         /**
          * @return outputParameters
          */
-        public java.util.List < OutputParameters> getOutputParameters() {
+        public java.util.List<OutputParameters> getOutputParameters() {
             return this.outputParameters;
         }
 
@@ -1358,10 +1363,10 @@ public class GetFileResponseBody extends TeaModel {
             private String dependentType; 
             private Long endEffectDate; 
             private String ignoreParentSkipRunningProperty; 
-            private java.util.List < InputList> inputList; 
-            private java.util.List < InputParameters> inputParameters; 
-            private java.util.List < OutputList> outputList; 
-            private java.util.List < OutputParameters> outputParameters; 
+            private java.util.List<InputList> inputList; 
+            private java.util.List<InputParameters> inputParameters; 
+            private java.util.List<OutputList> outputList; 
+            private java.util.List<OutputParameters> outputParameters; 
             private String paraValue; 
             private String rerunMode; 
             private Long resourceGroupId; 
@@ -1481,7 +1486,7 @@ public class GetFileResponseBody extends TeaModel {
             /**
              * <p>The output names of the parent files on which the current file depends.</p>
              */
-            public Builder inputList(java.util.List < InputList> inputList) {
+            public Builder inputList(java.util.List<InputList> inputList) {
                 this.inputList = inputList;
                 return this;
             }
@@ -1490,7 +1495,7 @@ public class GetFileResponseBody extends TeaModel {
              * <p>Input parameters of the node.</p>
              * <p>This parameter corresponds to the Input Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              */
-            public Builder inputParameters(java.util.List < InputParameters> inputParameters) {
+            public Builder inputParameters(java.util.List<InputParameters> inputParameters) {
                 this.inputParameters = inputParameters;
                 return this;
             }
@@ -1499,7 +1504,7 @@ public class GetFileResponseBody extends TeaModel {
              * <p>The output names of the current file.</p>
              * <p>This parameter corresponds to the Output Name parameter under Output after Same Cycle is selected in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              */
-            public Builder outputList(java.util.List < OutputList> outputList) {
+            public Builder outputList(java.util.List<OutputList> outputList) {
                 this.outputList = outputList;
                 return this;
             }
@@ -1508,7 +1513,7 @@ public class GetFileResponseBody extends TeaModel {
              * <p>Output parameters of the node.</p>
              * <p>This parameter corresponds to the Output Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              */
-            public Builder outputParameters(java.util.List < OutputParameters> outputParameters) {
+            public Builder outputParameters(java.util.List<OutputParameters> outputParameters) {
                 this.outputParameters = outputParameters;
                 return this;
             }

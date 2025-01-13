@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         /**
          * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -181,7 +186,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         private String dataType;
 
         @com.aliyun.core.annotation.NameInMap("DesensPlanTemplate")
-        private java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate;
+        private java.util.Map<String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate;
 
         private Data(Builder builder) {
             this.dataType = builder.dataType;
@@ -206,13 +211,13 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         /**
          * @return desensPlanTemplate
          */
-        public java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> getDesensPlanTemplate() {
+        public java.util.Map<String, java.util.List<DataDesensPlanTemplateValue>> getDesensPlanTemplate() {
             return this.desensPlanTemplate;
         }
 
         public static final class Builder {
             private String dataType; 
-            private java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate; 
+            private java.util.Map<String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate; 
 
             /**
              * <p>The sensitive field type.</p>
@@ -228,7 +233,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
             /**
              * <p>The supported data masking methods and parameter descriptions.</p>
              */
-            public Builder desensPlanTemplate(java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate) {
+            public Builder desensPlanTemplate(java.util.Map<String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate) {
                 this.desensPlanTemplate = desensPlanTemplate;
                 return this;
             }

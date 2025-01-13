@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class ListEntitiesByTagsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UserEntityTag > tags;
+    private java.util.List<UserEntityTag> tags;
 
     private ListEntitiesByTagsRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class ListEntitiesByTagsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < UserEntityTag > getTags() {
+    public java.util.List<UserEntityTag> getTags() {
         return this.tags;
     }
 
@@ -97,7 +102,7 @@ public class ListEntitiesByTagsRequest extends Request {
         private String entityType; 
         private String nextToken; 
         private Integer pageSize; 
-        private java.util.List < UserEntityTag > tags; 
+        private java.util.List<UserEntityTag> tags; 
 
         private Builder() {
             super();
@@ -162,7 +167,7 @@ public class ListEntitiesByTagsRequest extends Request {
          * <p>The tags.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < UserEntityTag > tags) {
+        public Builder tags(java.util.List<UserEntityTag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

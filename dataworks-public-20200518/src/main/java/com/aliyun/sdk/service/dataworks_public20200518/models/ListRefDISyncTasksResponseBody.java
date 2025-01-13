@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -255,7 +260,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DISyncTasks")
-        private java.util.List < DISyncTasks> DISyncTasks;
+        private java.util.List<DISyncTasks> DISyncTasks;
 
         private Data(Builder builder) {
             this.DISyncTasks = builder.DISyncTasks;
@@ -272,17 +277,17 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         /**
          * @return DISyncTasks
          */
-        public java.util.List < DISyncTasks> getDISyncTasks() {
+        public java.util.List<DISyncTasks> getDISyncTasks() {
             return this.DISyncTasks;
         }
 
         public static final class Builder {
-            private java.util.List < DISyncTasks> DISyncTasks; 
+            private java.util.List<DISyncTasks> DISyncTasks; 
 
             /**
              * <p>The details of the synchronization tasks. In most cases, a data source is used by multiple synchronization tasks. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a synchronization task.</p>
              */
-            public Builder DISyncTasks(java.util.List < DISyncTasks> DISyncTasks) {
+            public Builder DISyncTasks(java.util.List<DISyncTasks> DISyncTasks) {
                 this.DISyncTasks = DISyncTasks;
                 return this;
             }

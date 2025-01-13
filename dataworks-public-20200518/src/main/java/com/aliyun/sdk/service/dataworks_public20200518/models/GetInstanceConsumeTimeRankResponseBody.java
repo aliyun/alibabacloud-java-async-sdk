@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -267,7 +272,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
      */
     public static class InstanceConsumeTimeRank extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumeTimeRank")
-        private java.util.List < ConsumeTimeRank> consumeTimeRank;
+        private java.util.List<ConsumeTimeRank> consumeTimeRank;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
@@ -288,7 +293,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         /**
          * @return consumeTimeRank
          */
-        public java.util.List < ConsumeTimeRank> getConsumeTimeRank() {
+        public java.util.List<ConsumeTimeRank> getConsumeTimeRank() {
             return this.consumeTimeRank;
         }
 
@@ -300,13 +305,13 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConsumeTimeRank> consumeTimeRank; 
+            private java.util.List<ConsumeTimeRank> consumeTimeRank; 
             private Long updateTime; 
 
             /**
              * <p>The ranking data of the running durations of instances.</p>
              */
-            public Builder consumeTimeRank(java.util.List < ConsumeTimeRank> consumeTimeRank) {
+            public Builder consumeTimeRank(java.util.List<ConsumeTimeRank> consumeTimeRank) {
                 this.consumeTimeRank = consumeTimeRank;
                 return this;
             }

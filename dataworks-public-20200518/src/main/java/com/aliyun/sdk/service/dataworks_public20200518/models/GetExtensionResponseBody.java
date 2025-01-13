@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -222,13 +227,13 @@ public class GetExtensionResponseBody extends TeaModel {
      */
     public static class Extension extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindEventList")
-        private java.util.List < BindEventList> bindEventList;
+        private java.util.List<BindEventList> bindEventList;
 
         @com.aliyun.core.annotation.NameInMap("DetailUrl")
         private String detailUrl;
 
         @com.aliyun.core.annotation.NameInMap("EventCategoryList")
-        private java.util.List < EventCategoryList> eventCategoryList;
+        private java.util.List<EventCategoryList> eventCategoryList;
 
         @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
@@ -279,7 +284,7 @@ public class GetExtensionResponseBody extends TeaModel {
         /**
          * @return bindEventList
          */
-        public java.util.List < BindEventList> getBindEventList() {
+        public java.util.List<BindEventList> getBindEventList() {
             return this.bindEventList;
         }
 
@@ -293,7 +298,7 @@ public class GetExtensionResponseBody extends TeaModel {
         /**
          * @return eventCategoryList
          */
-        public java.util.List < EventCategoryList> getEventCategoryList() {
+        public java.util.List<EventCategoryList> getEventCategoryList() {
             return this.eventCategoryList;
         }
 
@@ -354,9 +359,9 @@ public class GetExtensionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BindEventList> bindEventList; 
+            private java.util.List<BindEventList> bindEventList; 
             private String detailUrl; 
-            private java.util.List < EventCategoryList> eventCategoryList; 
+            private java.util.List<EventCategoryList> eventCategoryList; 
             private String extensionCode; 
             private String extensionDesc; 
             private String extensionName; 
@@ -369,7 +374,7 @@ public class GetExtensionResponseBody extends TeaModel {
             /**
              * <p>The list of extension points.</p>
              */
-            public Builder bindEventList(java.util.List < BindEventList> bindEventList) {
+            public Builder bindEventList(java.util.List<BindEventList> bindEventList) {
                 this.bindEventList = bindEventList;
                 return this;
             }
@@ -388,7 +393,7 @@ public class GetExtensionResponseBody extends TeaModel {
             /**
              * <p>The list of event types.</p>
              */
-            public Builder eventCategoryList(java.util.List < EventCategoryList> eventCategoryList) {
+            public Builder eventCategoryList(java.util.List<EventCategoryList> eventCategoryList) {
                 this.eventCategoryList = eventCategoryList;
                 return this;
             }

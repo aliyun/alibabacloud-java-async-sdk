@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListProjectRolesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProjectRoleList")
-    private java.util.List < ProjectRoleList> projectRoleList;
+    private java.util.List<ProjectRoleList> projectRoleList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
     /**
      * @return projectRoleList
      */
-    public java.util.List < ProjectRoleList> getProjectRoleList() {
+    public java.util.List<ProjectRoleList> getProjectRoleList() {
         return this.projectRoleList;
     }
 
@@ -46,13 +51,13 @@ public class ListProjectRolesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProjectRoleList> projectRoleList; 
+        private java.util.List<ProjectRoleList> projectRoleList; 
         private String requestId; 
 
         /**
          * <p>The roles in the DataWorks workspace.</p>
          */
-        public Builder projectRoleList(java.util.List < ProjectRoleList> projectRoleList) {
+        public Builder projectRoleList(java.util.List<ProjectRoleList> projectRoleList) {
             this.projectRoleList = projectRoleList;
             return this;
         }

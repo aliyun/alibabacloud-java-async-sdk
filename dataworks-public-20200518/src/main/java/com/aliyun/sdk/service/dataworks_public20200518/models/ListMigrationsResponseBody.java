@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -519,7 +524,7 @@ public class ListMigrationsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Migrations")
-        private java.util.List < Migrations> migrations;
+        private java.util.List<Migrations> migrations;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -548,7 +553,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         /**
          * @return migrations
          */
-        public java.util.List < Migrations> getMigrations() {
+        public java.util.List<Migrations> getMigrations() {
             return this.migrations;
         }
 
@@ -574,7 +579,7 @@ public class ListMigrationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Migrations> migrations; 
+            private java.util.List<Migrations> migrations; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -582,7 +587,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             /**
              * <p>The list of migration tasks.</p>
              */
-            public Builder migrations(java.util.List < Migrations> migrations) {
+            public Builder migrations(java.util.List<Migrations> migrations) {
                 this.migrations = migrations;
                 return this;
             }

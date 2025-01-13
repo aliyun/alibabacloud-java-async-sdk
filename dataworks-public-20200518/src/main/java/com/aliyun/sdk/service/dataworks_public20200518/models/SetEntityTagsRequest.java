@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SetEntityTagsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < UserEntityTag > tags;
+    private java.util.List<UserEntityTag> tags;
 
     private SetEntityTagsRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class SetEntityTagsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < UserEntityTag > getTags() {
+    public java.util.List<UserEntityTag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<SetEntityTagsRequest, Builder> {
         private String regionId; 
         private String qualifiedName; 
-        private java.util.List < UserEntityTag > tags; 
+        private java.util.List<UserEntityTag> tags; 
 
         private Builder() {
             super();
@@ -107,7 +112,7 @@ public class SetEntityTagsRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < UserEntityTag > tags) {
+        public Builder tags(java.util.List<UserEntityTag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;

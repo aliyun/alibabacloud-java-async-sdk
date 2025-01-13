@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -820,10 +825,10 @@ public class GetAlertMessageResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        private java.util.List<Instances> instances;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
@@ -838,7 +843,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         private String source;
 
         @com.aliyun.core.annotation.NameInMap("Topics")
-        private java.util.List < Topics> topics;
+        private java.util.List<Topics> topics;
 
         private Data(Builder builder) {
             this.alertId = builder.alertId;
@@ -909,14 +914,14 @@ public class GetAlertMessageResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -951,7 +956,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         /**
          * @return topics
          */
-        public java.util.List < Topics> getTopics() {
+        public java.util.List<Topics> getTopics() {
             return this.topics;
         }
 
@@ -962,13 +967,13 @@ public class GetAlertMessageResponseBody extends TeaModel {
             private Long alertTime; 
             private String alertUser; 
             private String content; 
-            private java.util.List < Instances> instances; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Instances> instances; 
+            private java.util.List<Nodes> nodes; 
             private Long remindId; 
             private String remindName; 
             private SlaAlert slaAlert; 
             private String source; 
-            private java.util.List < Topics> topics; 
+            private java.util.List<Topics> topics; 
 
             /**
              * <p>The alert ID.</p>
@@ -1047,7 +1052,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             /**
              * <p>The instances that triggered the custom alert rule. This parameter is returned if the value of the Source parameter is REMIND_ALERT. This parameter is left empty if the value of the Source parameter is not REMIND_ALERT.</p>
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }
@@ -1055,7 +1060,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             /**
              * <p>The nodes returned for different alert sources. The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT. The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -1108,7 +1113,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             /**
              * <p>The events that triggered alerts. This parameter is returned if the value of the Source parameter is TOPIC_ALERT. This parameter is left empty if the value of the Source parameter is not TOPIC_ALERT.</p>
              */
-            public Builder topics(java.util.List < Topics> topics) {
+            public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
                 return this;
             }

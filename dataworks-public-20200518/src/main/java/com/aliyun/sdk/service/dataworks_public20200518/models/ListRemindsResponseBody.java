@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -174,19 +179,19 @@ public class ListRemindsResponseBody extends TeaModel {
      */
     public static class Reminds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertMethods")
-        private java.util.List < String > alertMethods;
+        private java.util.List<String> alertMethods;
 
         @com.aliyun.core.annotation.NameInMap("AlertTargets")
-        private java.util.List < String > alertTargets;
+        private java.util.List<String> alertTargets;
 
         @com.aliyun.core.annotation.NameInMap("AlertUnit")
         private String alertUnit;
 
         @com.aliyun.core.annotation.NameInMap("BaselineIds")
-        private java.util.List < Long > baselineIds;
+        private java.util.List<Long> baselineIds;
 
         @com.aliyun.core.annotation.NameInMap("BizProcessIds")
-        private java.util.List < Long > bizProcessIds;
+        private java.util.List<Long> bizProcessIds;
 
         @com.aliyun.core.annotation.NameInMap("DndEnd")
         private String dndEnd;
@@ -198,10 +203,10 @@ public class ListRemindsResponseBody extends TeaModel {
         private String founder;
 
         @com.aliyun.core.annotation.NameInMap("NodeIds")
-        private java.util.List < Long > nodeIds;
+        private java.util.List<Long> nodeIds;
 
         @com.aliyun.core.annotation.NameInMap("ProjectIds")
-        private java.util.List < Long > projectIds;
+        private java.util.List<Long> projectIds;
 
         @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
@@ -247,14 +252,14 @@ public class ListRemindsResponseBody extends TeaModel {
         /**
          * @return alertMethods
          */
-        public java.util.List < String > getAlertMethods() {
+        public java.util.List<String> getAlertMethods() {
             return this.alertMethods;
         }
 
         /**
          * @return alertTargets
          */
-        public java.util.List < String > getAlertTargets() {
+        public java.util.List<String> getAlertTargets() {
             return this.alertTargets;
         }
 
@@ -268,14 +273,14 @@ public class ListRemindsResponseBody extends TeaModel {
         /**
          * @return baselineIds
          */
-        public java.util.List < Long > getBaselineIds() {
+        public java.util.List<Long> getBaselineIds() {
             return this.baselineIds;
         }
 
         /**
          * @return bizProcessIds
          */
-        public java.util.List < Long > getBizProcessIds() {
+        public java.util.List<Long> getBizProcessIds() {
             return this.bizProcessIds;
         }
 
@@ -303,14 +308,14 @@ public class ListRemindsResponseBody extends TeaModel {
         /**
          * @return nodeIds
          */
-        public java.util.List < Long > getNodeIds() {
+        public java.util.List<Long> getNodeIds() {
             return this.nodeIds;
         }
 
         /**
          * @return projectIds
          */
-        public java.util.List < Long > getProjectIds() {
+        public java.util.List<Long> getProjectIds() {
             return this.projectIds;
         }
 
@@ -350,16 +355,16 @@ public class ListRemindsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > alertMethods; 
-            private java.util.List < String > alertTargets; 
+            private java.util.List<String> alertMethods; 
+            private java.util.List<String> alertTargets; 
             private String alertUnit; 
-            private java.util.List < Long > baselineIds; 
-            private java.util.List < Long > bizProcessIds; 
+            private java.util.List<Long> baselineIds; 
+            private java.util.List<Long> bizProcessIds; 
             private String dndEnd; 
             private String dndStart; 
             private String founder; 
-            private java.util.List < Long > nodeIds; 
-            private java.util.List < Long > projectIds; 
+            private java.util.List<Long> nodeIds; 
+            private java.util.List<Long> projectIds; 
             private Long remindId; 
             private String remindName; 
             private String remindType; 
@@ -369,7 +374,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
              */
-            public Builder alertMethods(java.util.List < String > alertMethods) {
+            public Builder alertMethods(java.util.List<String> alertMethods) {
                 this.alertMethods = alertMethods;
                 return this;
             }
@@ -377,7 +382,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the Alibaba Cloud accounts used by alert recipients.</p>
              */
-            public Builder alertTargets(java.util.List < String > alertTargets) {
+            public Builder alertTargets(java.util.List<String> alertTargets) {
                 this.alertTargets = alertTargets;
                 return this;
             }
@@ -396,7 +401,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the baselines to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BASELINE.</p>
              */
-            public Builder baselineIds(java.util.List < Long > baselineIds) {
+            public Builder baselineIds(java.util.List<Long> baselineIds) {
                 this.baselineIds = baselineIds;
                 return this;
             }
@@ -404,7 +409,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the workflows to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is BIZPROCESS.</p>
              */
-            public Builder bizProcessIds(java.util.List < Long > bizProcessIds) {
+            public Builder bizProcessIds(java.util.List<Long> bizProcessIds) {
                 this.bizProcessIds = bizProcessIds;
                 return this;
             }
@@ -445,7 +450,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the nodes to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is NODE.</p>
              */
-            public Builder nodeIds(java.util.List < Long > nodeIds) {
+            public Builder nodeIds(java.util.List<Long> nodeIds) {
                 this.nodeIds = nodeIds;
                 return this;
             }
@@ -453,7 +458,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the workspaces to which the custom alert rule is applied. This parameter is returned if the value of the RemindUnit parameter is PROJECT.</p>
              */
-            public Builder projectIds(java.util.List < Long > projectIds) {
+            public Builder projectIds(java.util.List<Long> projectIds) {
                 this.projectIds = projectIds;
                 return this;
             }
@@ -534,7 +539,7 @@ public class ListRemindsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Reminds")
-        private java.util.List < Reminds> reminds;
+        private java.util.List<Reminds> reminds;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -571,7 +576,7 @@ public class ListRemindsResponseBody extends TeaModel {
         /**
          * @return reminds
          */
-        public java.util.List < Reminds> getReminds() {
+        public java.util.List<Reminds> getReminds() {
             return this.reminds;
         }
 
@@ -585,7 +590,7 @@ public class ListRemindsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Reminds> reminds; 
+            private java.util.List<Reminds> reminds; 
             private Integer totalCount; 
 
             /**
@@ -613,7 +618,7 @@ public class ListRemindsResponseBody extends TeaModel {
             /**
              * <p>The list of custom alert rules.</p>
              */
-            public Builder reminds(java.util.List < Reminds> reminds) {
+            public Builder reminds(java.util.List<Reminds> reminds) {
                 this.reminds = reminds;
                 return this;
             }

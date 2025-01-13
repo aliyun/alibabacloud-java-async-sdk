@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -419,10 +424,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         private String dependentType;
 
         @com.aliyun.core.annotation.NameInMap("InputList")
-        private java.util.List < InputList> inputList;
+        private java.util.List<InputList> inputList;
 
         @com.aliyun.core.annotation.NameInMap("OutputList")
-        private java.util.List < OutputList> outputList;
+        private java.util.List<OutputList> outputList;
 
         @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
@@ -504,14 +509,14 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * @return inputList
          */
-        public java.util.List < InputList> getInputList() {
+        public java.util.List<InputList> getInputList() {
             return this.inputList;
         }
 
         /**
          * @return outputList
          */
-        public java.util.List < OutputList> getOutputList() {
+        public java.util.List<OutputList> getOutputList() {
             return this.outputList;
         }
 
@@ -550,8 +555,8 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             private String cycleType; 
             private String dependentNodeIdList; 
             private String dependentType; 
-            private java.util.List < InputList> inputList; 
-            private java.util.List < OutputList> outputList; 
+            private java.util.List<InputList> inputList; 
+            private java.util.List<OutputList> outputList; 
             private String paraValue; 
             private String rerunMode; 
             private Long resourceGroupId; 
@@ -634,7 +639,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             /**
              * <p>The output names of the parent files on which the current file depends.</p>
              */
-            public Builder inputList(java.util.List < InputList> inputList) {
+            public Builder inputList(java.util.List<InputList> inputList) {
                 this.inputList = inputList;
                 return this;
             }
@@ -643,7 +648,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
              * <p>The output names of the current file.</p>
              * <p>This parameter corresponds to the Output Name of Current Node parameter in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
              */
-            public Builder outputList(java.util.List < OutputList> outputList) {
+            public Builder outputList(java.util.List<OutputList> outputList) {
                 this.outputList = outputList;
                 return this;
             }
@@ -1552,7 +1557,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
      */
     public static class TableModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        private java.util.List<Columns> columns;
 
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -1593,7 +1598,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -1640,7 +1645,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private String comment; 
             private String dataSourceName; 
             private String env; 
@@ -1651,7 +1656,7 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
             /**
              * <p>The columns in the table.</p>
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }

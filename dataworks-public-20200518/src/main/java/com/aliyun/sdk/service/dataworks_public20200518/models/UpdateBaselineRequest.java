@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class UpdateBaselineRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertSettings")
-    private java.util.List < AlertSettings> alertSettings;
+    private java.util.List<AlertSettings> alertSettings;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BaselineId")
@@ -51,7 +56,7 @@ public class UpdateBaselineRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OvertimeSettings")
-    private java.util.List < OvertimeSettings> overtimeSettings;
+    private java.util.List<OvertimeSettings> overtimeSettings;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Owner")
@@ -125,7 +130,7 @@ public class UpdateBaselineRequest extends Request {
     /**
      * @return alertSettings
      */
-    public java.util.List < AlertSettings> getAlertSettings() {
+    public java.util.List<AlertSettings> getAlertSettings() {
         return this.alertSettings;
     }
 
@@ -167,7 +172,7 @@ public class UpdateBaselineRequest extends Request {
     /**
      * @return overtimeSettings
      */
-    public java.util.List < OvertimeSettings> getOvertimeSettings() {
+    public java.util.List<OvertimeSettings> getOvertimeSettings() {
         return this.overtimeSettings;
     }
 
@@ -203,13 +208,13 @@ public class UpdateBaselineRequest extends Request {
         private String regionId; 
         private Boolean alertEnabled; 
         private Integer alertMarginThreshold; 
-        private java.util.List < AlertSettings> alertSettings; 
+        private java.util.List<AlertSettings> alertSettings; 
         private Long baselineId; 
         private String baselineName; 
         private String baselineType; 
         private Boolean enabled; 
         private String nodeIds; 
-        private java.util.List < OvertimeSettings> overtimeSettings; 
+        private java.util.List<OvertimeSettings> overtimeSettings; 
         private String owner; 
         private Integer priority; 
         private Long projectId; 
@@ -273,7 +278,7 @@ public class UpdateBaselineRequest extends Request {
         /**
          * <p>The alert settings of the baseline.</p>
          */
-        public Builder alertSettings(java.util.List < AlertSettings> alertSettings) {
+        public Builder alertSettings(java.util.List<AlertSettings> alertSettings) {
             String alertSettingsShrink = shrink(alertSettings, "AlertSettings", "json");
             this.putBodyParameter("AlertSettings", alertSettingsShrink);
             this.alertSettings = alertSettings;
@@ -344,7 +349,7 @@ public class UpdateBaselineRequest extends Request {
         /**
          * <p>The settings of the committed completion time of the baseline.</p>
          */
-        public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
+        public Builder overtimeSettings(java.util.List<OvertimeSettings> overtimeSettings) {
             String overtimeSettingsShrink = shrink(overtimeSettings, "OvertimeSettings", "json");
             this.putBodyParameter("OvertimeSettings", overtimeSettingsShrink);
             this.overtimeSettings = overtimeSettings;
@@ -496,7 +501,7 @@ public class UpdateBaselineRequest extends Request {
         private Integer alertMaximum;
 
         @com.aliyun.core.annotation.NameInMap("AlertMethods")
-        private java.util.List < String > alertMethods;
+        private java.util.List<String> alertMethods;
 
         @com.aliyun.core.annotation.NameInMap("AlertRecipient")
         private String alertRecipient;
@@ -511,7 +516,7 @@ public class UpdateBaselineRequest extends Request {
         private Boolean baselineAlertEnabled;
 
         @com.aliyun.core.annotation.NameInMap("DingRobots")
-        private java.util.List < DingRobots> dingRobots;
+        private java.util.List<DingRobots> dingRobots;
 
         @com.aliyun.core.annotation.NameInMap("SilenceEndTime")
         private String silenceEndTime;
@@ -520,10 +525,10 @@ public class UpdateBaselineRequest extends Request {
         private String silenceStartTime;
 
         @com.aliyun.core.annotation.NameInMap("TopicTypes")
-        private java.util.List < String > topicTypes;
+        private java.util.List<String> topicTypes;
 
         @com.aliyun.core.annotation.NameInMap("Webhooks")
-        private java.util.List < String > webhooks;
+        private java.util.List<String> webhooks;
 
         private AlertSettings(Builder builder) {
             this.alertInterval = builder.alertInterval;
@@ -565,7 +570,7 @@ public class UpdateBaselineRequest extends Request {
         /**
          * @return alertMethods
          */
-        public java.util.List < String > getAlertMethods() {
+        public java.util.List<String> getAlertMethods() {
             return this.alertMethods;
         }
 
@@ -600,7 +605,7 @@ public class UpdateBaselineRequest extends Request {
         /**
          * @return dingRobots
          */
-        public java.util.List < DingRobots> getDingRobots() {
+        public java.util.List<DingRobots> getDingRobots() {
             return this.dingRobots;
         }
 
@@ -621,33 +626,33 @@ public class UpdateBaselineRequest extends Request {
         /**
          * @return topicTypes
          */
-        public java.util.List < String > getTopicTypes() {
+        public java.util.List<String> getTopicTypes() {
             return this.topicTypes;
         }
 
         /**
          * @return webhooks
          */
-        public java.util.List < String > getWebhooks() {
+        public java.util.List<String> getWebhooks() {
             return this.webhooks;
         }
 
         public static final class Builder {
             private Integer alertInterval; 
             private Integer alertMaximum; 
-            private java.util.List < String > alertMethods; 
+            private java.util.List<String> alertMethods; 
             private String alertRecipient; 
             private String alertRecipientType; 
             private String alertType; 
             private Boolean baselineAlertEnabled; 
-            private java.util.List < DingRobots> dingRobots; 
+            private java.util.List<DingRobots> dingRobots; 
             private String silenceEndTime; 
             private String silenceStartTime; 
-            private java.util.List < String > topicTypes; 
-            private java.util.List < String > webhooks; 
+            private java.util.List<String> topicTypes; 
+            private java.util.List<String> webhooks; 
 
             /**
-             * <p>The interval at which an event alert notification is sent. Unit: seconds. Minimum value: 900.</p>
+             * <p>The interval at which an event alert notification is sent. Unit: minutes. Minimum value: 5. Maximum value: 1,440.</p>
              * 
              * <strong>example:</strong>
              * <p>1800</p>
@@ -671,7 +676,7 @@ public class UpdateBaselineRequest extends Request {
             /**
              * <p>The alert notification methods. Valid values: MAIL, SMS, PHONE, DINGROBOTS, and Webhooks. The value MAIL indicates that alert notifications are sent by email. The value SMS indicates that alert notifications are sent by text message. The value PHONE indicates that alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or a more advanced edition. The value DINGROBOTS indicates that alert notifications are sent by using a DingTalk chatbot. You can use this notification method only if the RobotUrls parameter is configured. The value Webhooks indicates that alert notifications are sent by WeCom or Lark. You can use this notification method only if the Webhooks parameter is configured.</p>
              */
-            public Builder alertMethods(java.util.List < String > alertMethods) {
+            public Builder alertMethods(java.util.List<String> alertMethods) {
                 this.alertMethods = alertMethods;
                 return this;
             }
@@ -723,7 +728,7 @@ public class UpdateBaselineRequest extends Request {
             /**
              * <p>The DingTalk chatbots.</p>
              */
-            public Builder dingRobots(java.util.List < DingRobots> dingRobots) {
+            public Builder dingRobots(java.util.List<DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
                 return this;
             }
@@ -753,7 +758,7 @@ public class UpdateBaselineRequest extends Request {
             /**
              * <p>The types of event alerts, which are event-specific configurations.</p>
              */
-            public Builder topicTypes(java.util.List < String > topicTypes) {
+            public Builder topicTypes(java.util.List<String> topicTypes) {
                 this.topicTypes = topicTypes;
                 return this;
             }
@@ -761,7 +766,7 @@ public class UpdateBaselineRequest extends Request {
             /**
              * <p>The webhook URLs.</p>
              */
-            public Builder webhooks(java.util.List < String > webhooks) {
+            public Builder webhooks(java.util.List<String> webhooks) {
                 this.webhooks = webhooks;
                 return this;
             }

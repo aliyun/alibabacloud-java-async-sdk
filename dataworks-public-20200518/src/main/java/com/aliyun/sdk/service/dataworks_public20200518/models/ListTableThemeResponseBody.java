@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -362,7 +367,7 @@ public class ListTableThemeResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ThemeList")
-        private java.util.List < ThemeList> themeList;
+        private java.util.List<ThemeList> themeList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -383,7 +388,7 @@ public class ListTableThemeResponseBody extends TeaModel {
         /**
          * @return themeList
          */
-        public java.util.List < ThemeList> getThemeList() {
+        public java.util.List<ThemeList> getThemeList() {
             return this.themeList;
         }
 
@@ -395,13 +400,13 @@ public class ListTableThemeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ThemeList> themeList; 
+            private java.util.List<ThemeList> themeList; 
             private Long totalCount; 
 
             /**
              * <p>The list of table levels.</p>
              */
-            public Builder themeList(java.util.List < ThemeList> themeList) {
+            public Builder themeList(java.util.List<ThemeList> themeList) {
                 this.themeList = themeList;
                 return this;
             }

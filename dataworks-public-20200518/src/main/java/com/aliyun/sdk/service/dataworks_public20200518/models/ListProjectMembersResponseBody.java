@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -217,7 +222,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private String projectMemberType;
 
         @com.aliyun.core.annotation.NameInMap("ProjectRoleList")
-        private java.util.List < ProjectRoleList> projectRoleList;
+        private java.util.List<ProjectRoleList> projectRoleList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -270,7 +275,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * @return projectRoleList
          */
-        public java.util.List < ProjectRoleList> getProjectRoleList() {
+        public java.util.List<ProjectRoleList> getProjectRoleList() {
             return this.projectRoleList;
         }
 
@@ -286,7 +291,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String projectMemberId; 
             private String projectMemberName; 
             private String projectMemberType; 
-            private java.util.List < ProjectRoleList> projectRoleList; 
+            private java.util.List<ProjectRoleList> projectRoleList; 
             private String status; 
 
             /**
@@ -341,7 +346,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             /**
              * <p>The roles that are assigned to the member.</p>
              */
-            public Builder projectRoleList(java.util.List < ProjectRoleList> projectRoleList) {
+            public Builder projectRoleList(java.util.List<ProjectRoleList> projectRoleList) {
                 this.projectRoleList = projectRoleList;
                 return this;
             }
@@ -383,7 +388,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ProjectMemberList")
-        private java.util.List < ProjectMemberList> projectMemberList;
+        private java.util.List<ProjectMemberList> projectMemberList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -420,7 +425,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * @return projectMemberList
          */
-        public java.util.List < ProjectMemberList> getProjectMemberList() {
+        public java.util.List<ProjectMemberList> getProjectMemberList() {
             return this.projectMemberList;
         }
 
@@ -434,7 +439,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ProjectMemberList> projectMemberList; 
+            private java.util.List<ProjectMemberList> projectMemberList; 
             private Integer totalCount; 
 
             /**
@@ -462,7 +467,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             /**
              * <p>The information about members in the DataWorks workspace.</p>
              */
-            public Builder projectMemberList(java.util.List < ProjectMemberList> projectMemberList) {
+            public Builder projectMemberList(java.util.List<ProjectMemberList> projectMemberList) {
                 this.projectMemberList = projectMemberList;
                 return this;
             }

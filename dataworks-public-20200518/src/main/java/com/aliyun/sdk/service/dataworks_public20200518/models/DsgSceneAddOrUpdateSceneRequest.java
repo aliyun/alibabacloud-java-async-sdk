@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("scenes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Scenes> scenes;
+    private java.util.List<Scenes> scenes;
 
     private DsgSceneAddOrUpdateSceneRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
     /**
      * @return scenes
      */
-    public java.util.List < Scenes> getScenes() {
+    public java.util.List<Scenes> getScenes() {
         return this.scenes;
     }
 
     public static final class Builder extends Request.Builder<DsgSceneAddOrUpdateSceneRequest, Builder> {
         private String regionId; 
-        private java.util.List < Scenes> scenes; 
+        private java.util.List<Scenes> scenes; 
 
         private Builder() {
             super();
@@ -81,7 +86,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
          * <p>The information about the level-2 data masking scenario.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder scenes(java.util.List < Scenes> scenes) {
+        public Builder scenes(java.util.List<Scenes> scenes) {
             String scenesShrink = shrink(scenes, "scenes", "json");
             this.putQueryParameter("scenes", scenesShrink);
             this.scenes = scenes;
@@ -210,7 +215,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("projects")
-        private java.util.List < Projects> projects;
+        private java.util.List<Projects> projects;
 
         @com.aliyun.core.annotation.NameInMap("sceneCode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -221,7 +226,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
         private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("userGroupIds")
-        private java.util.List < Long > userGroupIds;
+        private java.util.List<Long> userGroupIds;
 
         private Scenes(Builder builder) {
             this.desc = builder.desc;
@@ -257,7 +262,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
         /**
          * @return projects
          */
-        public java.util.List < Projects> getProjects() {
+        public java.util.List<Projects> getProjects() {
             return this.projects;
         }
 
@@ -278,17 +283,17 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
         /**
          * @return userGroupIds
          */
-        public java.util.List < Long > getUserGroupIds() {
+        public java.util.List<Long> getUserGroupIds() {
             return this.userGroupIds;
         }
 
         public static final class Builder {
             private String desc; 
             private String id; 
-            private java.util.List < Projects> projects; 
+            private java.util.List<Projects> projects; 
             private String sceneCode; 
             private String sceneName; 
-            private java.util.List < Long > userGroupIds; 
+            private java.util.List<Long> userGroupIds; 
 
             /**
              * <p>The description.</p>
@@ -316,7 +321,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             /**
              * <p>The information about the compute engine for which the data masking scenario takes effect.</p>
              */
-            public Builder projects(java.util.List < Projects> projects) {
+            public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
                 return this;
             }
@@ -354,7 +359,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             /**
              * <p>The information about the user group for which the data masking scenario takes effect.</p>
              */
-            public Builder userGroupIds(java.util.List < Long > userGroupIds) {
+            public Builder userGroupIds(java.util.List<Long> userGroupIds) {
                 this.userGroupIds = userGroupIds;
                 return this;
             }

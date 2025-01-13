@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNodesByOutputResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         /**
          * <p>The nodes returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -642,7 +647,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeList")
-        private java.util.List < NodeList> nodeList;
+        private java.util.List<NodeList> nodeList;
 
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
@@ -663,7 +668,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         /**
          * @return nodeList
          */
-        public java.util.List < NodeList> getNodeList() {
+        public java.util.List<NodeList> getNodeList() {
             return this.nodeList;
         }
 
@@ -675,13 +680,13 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < NodeList> nodeList; 
+            private java.util.List<NodeList> nodeList; 
             private String output; 
 
             /**
              * <p>The information about the nodes returned.</p>
              */
-            public Builder nodeList(java.util.List < NodeList> nodeList) {
+            public Builder nodeList(java.util.List<NodeList> nodeList) {
                 this.nodeList = nodeList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -181,7 +186,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         private String desensPlanType;
 
         @com.aliyun.core.annotation.NameInMap("ExtParam")
-        private java.util.Map < String, ? > extParam;
+        private java.util.Map<String, ?> extParam;
 
         private DesensPlan(Builder builder) {
             this.desensPlanType = builder.desensPlanType;
@@ -206,13 +211,13 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         /**
          * @return extParam
          */
-        public java.util.Map < String, ? > getExtParam() {
+        public java.util.Map<String, ?> getExtParam() {
             return this.extParam;
         }
 
         public static final class Builder {
             private String desensPlanType; 
-            private java.util.Map < String, ? > extParam; 
+            private java.util.Map<String, ?> extParam; 
 
             /**
              * <p>The type of the data masking rule.</p>
@@ -228,7 +233,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             /**
              * <p>The parameters for the data masking rule. For more information about the parameters, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> API reference.</p>
              */
-            public Builder extParam(java.util.Map < String, ? > extParam) {
+            public Builder extParam(java.util.Map<String, ?> extParam) {
                 this.extParam = extParam;
                 return this;
             }
@@ -610,7 +615,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
      */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -639,7 +644,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -665,7 +670,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -673,7 +678,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             /**
              * <p>The information about the data masking rule.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

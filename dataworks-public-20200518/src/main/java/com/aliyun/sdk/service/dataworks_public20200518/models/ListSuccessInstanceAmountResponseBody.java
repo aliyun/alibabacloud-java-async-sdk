@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -301,13 +306,13 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
      */
     public static class InstanceStatusTrend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgTrend")
-        private java.util.List < AvgTrend> avgTrend;
+        private java.util.List<AvgTrend> avgTrend;
 
         @com.aliyun.core.annotation.NameInMap("TodayTrend")
-        private java.util.List < TodayTrend> todayTrend;
+        private java.util.List<TodayTrend> todayTrend;
 
         @com.aliyun.core.annotation.NameInMap("YesterdayTrend")
-        private java.util.List < YesterdayTrend> yesterdayTrend;
+        private java.util.List<YesterdayTrend> yesterdayTrend;
 
         private InstanceStatusTrend(Builder builder) {
             this.avgTrend = builder.avgTrend;
@@ -326,33 +331,33 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
         /**
          * @return avgTrend
          */
-        public java.util.List < AvgTrend> getAvgTrend() {
+        public java.util.List<AvgTrend> getAvgTrend() {
             return this.avgTrend;
         }
 
         /**
          * @return todayTrend
          */
-        public java.util.List < TodayTrend> getTodayTrend() {
+        public java.util.List<TodayTrend> getTodayTrend() {
             return this.todayTrend;
         }
 
         /**
          * @return yesterdayTrend
          */
-        public java.util.List < YesterdayTrend> getYesterdayTrend() {
+        public java.util.List<YesterdayTrend> getYesterdayTrend() {
             return this.yesterdayTrend;
         }
 
         public static final class Builder {
-            private java.util.List < AvgTrend> avgTrend; 
-            private java.util.List < TodayTrend> todayTrend; 
-            private java.util.List < YesterdayTrend> yesterdayTrend; 
+            private java.util.List<AvgTrend> avgTrend; 
+            private java.util.List<TodayTrend> todayTrend; 
+            private java.util.List<YesterdayTrend> yesterdayTrend; 
 
             /**
              * <p>The average trend.</p>
              */
-            public Builder avgTrend(java.util.List < AvgTrend> avgTrend) {
+            public Builder avgTrend(java.util.List<AvgTrend> avgTrend) {
                 this.avgTrend = avgTrend;
                 return this;
             }
@@ -360,7 +365,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             /**
              * <p>The trend of the number of auto triggered node instances that are successfully run on the current day.</p>
              */
-            public Builder todayTrend(java.util.List < TodayTrend> todayTrend) {
+            public Builder todayTrend(java.util.List<TodayTrend> todayTrend) {
                 this.todayTrend = todayTrend;
                 return this;
             }
@@ -368,7 +373,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             /**
              * <p>The trend of the number of auto triggered node instances that are successfully run one day earlier than the current day.</p>
              */
-            public Builder yesterdayTrend(java.util.List < YesterdayTrend> yesterdayTrend) {
+            public Builder yesterdayTrend(java.util.List<YesterdayTrend> yesterdayTrend) {
                 this.yesterdayTrend = yesterdayTrend;
                 return this;
             }

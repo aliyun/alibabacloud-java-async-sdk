@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetSensitiveDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SensitiveData")
-    private java.util.Map < String, ? > sensitiveData;
+    private java.util.Map<String, ?> sensitiveData;
 
     private GetSensitiveDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetSensitiveDataResponseBody extends TeaModel {
     /**
      * @return sensitiveData
      */
-    public java.util.Map < String, ? > getSensitiveData() {
+    public java.util.Map<String, ?> getSensitiveData() {
         return this.sensitiveData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > sensitiveData; 
+        private java.util.Map<String, ?> sensitiveData; 
 
         /**
          * <p>The request ID.</p>
@@ -68,7 +73,7 @@ public class GetSensitiveDataResponseBody extends TeaModel {
          * <li>sensLevel: the sensitivity level of the sensitive data</li>
          * </ul>
          */
-        public Builder sensitiveData(java.util.Map < String, ? > sensitiveData) {
+        public Builder sensitiveData(java.util.Map<String, ?> sensitiveData) {
             this.sensitiveData = sensitiveData;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class ListMetaDBResponseBody extends TeaModel {
      */
     public static class DatabaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbList")
-        private java.util.List < DbList> dbList;
+        private java.util.List<DbList> dbList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -291,7 +296,7 @@ public class ListMetaDBResponseBody extends TeaModel {
         /**
          * @return dbList
          */
-        public java.util.List < DbList> getDbList() {
+        public java.util.List<DbList> getDbList() {
             return this.dbList;
         }
 
@@ -303,13 +308,13 @@ public class ListMetaDBResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DbList> dbList; 
+            private java.util.List<DbList> dbList; 
             private Long totalCount; 
 
             /**
              * <p>The metadatabases.</p>
              */
-            public Builder dbList(java.util.List < DbList> dbList) {
+            public Builder dbList(java.util.List<DbList> dbList) {
                 this.dbList = dbList;
                 return this;
             }

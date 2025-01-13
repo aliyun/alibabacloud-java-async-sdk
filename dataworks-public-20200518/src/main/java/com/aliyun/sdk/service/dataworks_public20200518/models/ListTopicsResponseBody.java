@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -483,7 +488,7 @@ public class ListTopicsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Topics")
-        private java.util.List < Topics> topics;
+        private java.util.List<Topics> topics;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -520,7 +525,7 @@ public class ListTopicsResponseBody extends TeaModel {
         /**
          * @return topics
          */
-        public java.util.List < Topics> getTopics() {
+        public java.util.List<Topics> getTopics() {
             return this.topics;
         }
 
@@ -534,7 +539,7 @@ public class ListTopicsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Topics> topics; 
+            private java.util.List<Topics> topics; 
             private Integer totalCount; 
 
             /**
@@ -562,7 +567,7 @@ public class ListTopicsResponseBody extends TeaModel {
             /**
              * <p>The events returned.</p>
              */
-            public Builder topics(java.util.List < Topics> topics) {
+            public Builder topics(java.util.List<Topics> topics) {
                 this.topics = topics;
                 return this;
             }

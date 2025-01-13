@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -408,7 +413,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
-        private java.util.List < DataEntityList> dataEntityList;
+        private java.util.List<DataEntityList> dataEntityList;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
@@ -437,7 +442,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         /**
          * @return dataEntityList
          */
-        public java.util.List < DataEntityList> getDataEntityList() {
+        public java.util.List<DataEntityList> getDataEntityList() {
             return this.dataEntityList;
         }
 
@@ -463,7 +468,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataEntityList> dataEntityList; 
+            private java.util.List<DataEntityList> dataEntityList; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Long totalCount; 
@@ -471,7 +476,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             /**
              * <p>The information about the category tree.</p>
              */
-            public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
+            public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
                 return this;
             }

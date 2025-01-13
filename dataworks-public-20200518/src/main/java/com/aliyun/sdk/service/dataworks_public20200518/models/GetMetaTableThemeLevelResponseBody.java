@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -420,10 +425,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
      */
     public static class Entity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Level")
-        private java.util.List < Level> level;
+        private java.util.List<Level> level;
 
         @com.aliyun.core.annotation.NameInMap("Theme")
-        private java.util.List < Theme> theme;
+        private java.util.List<Theme> theme;
 
         private Entity(Builder builder) {
             this.level = builder.level;
@@ -441,25 +446,25 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
         /**
          * @return level
          */
-        public java.util.List < Level> getLevel() {
+        public java.util.List<Level> getLevel() {
             return this.level;
         }
 
         /**
          * @return theme
          */
-        public java.util.List < Theme> getTheme() {
+        public java.util.List<Theme> getTheme() {
             return this.theme;
         }
 
         public static final class Builder {
-            private java.util.List < Level> level; 
-            private java.util.List < Theme> theme; 
+            private java.util.List<Level> level; 
+            private java.util.List<Theme> theme; 
 
             /**
              * <p>The information about the levels of the metatable.</p>
              */
-            public Builder level(java.util.List < Level> level) {
+            public Builder level(java.util.List<Level> level) {
                 this.level = level;
                 return this;
             }
@@ -467,7 +472,7 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
             /**
              * <p>The information about the themes of the metatable.</p>
              */
-            public Builder theme(java.util.List < Theme> theme) {
+            public Builder theme(java.util.List<Theme> theme) {
                 this.theme = theme;
                 return this;
             }

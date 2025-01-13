@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class CreateBaselineRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OvertimeSettings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OvertimeSettings> overtimeSettings;
+    private java.util.List<OvertimeSettings> overtimeSettings;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Owner")
@@ -118,7 +123,7 @@ public class CreateBaselineRequest extends Request {
     /**
      * @return overtimeSettings
      */
-    public java.util.List < OvertimeSettings> getOvertimeSettings() {
+    public java.util.List<OvertimeSettings> getOvertimeSettings() {
         return this.overtimeSettings;
     }
 
@@ -149,7 +154,7 @@ public class CreateBaselineRequest extends Request {
         private String baselineName; 
         private String baselineType; 
         private String nodeIds; 
-        private java.util.List < OvertimeSettings> overtimeSettings; 
+        private java.util.List<OvertimeSettings> overtimeSettings; 
         private String owner; 
         private Integer priority; 
         private Long projectId; 
@@ -234,7 +239,7 @@ public class CreateBaselineRequest extends Request {
          * <p>The settings of the committed completion time of the baseline.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
+        public Builder overtimeSettings(java.util.List<OvertimeSettings> overtimeSettings) {
             this.putBodyParameter("OvertimeSettings", overtimeSettings);
             this.overtimeSettings = overtimeSettings;
             return this;

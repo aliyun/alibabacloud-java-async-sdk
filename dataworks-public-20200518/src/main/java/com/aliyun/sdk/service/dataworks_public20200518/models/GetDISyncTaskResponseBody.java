@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -101,6 +106,387 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class AlarmRuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Aggregator")
+        private String aggregator;
+
+        @com.aliyun.core.annotation.NameInMap("Comparator")
+        private String comparator;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Long duration;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private Long threshold;
+
+        private AlarmRuleList(Builder builder) {
+            this.aggregator = builder.aggregator;
+            this.comparator = builder.comparator;
+            this.duration = builder.duration;
+            this.level = builder.level;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmRuleList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aggregator
+         */
+        public String getAggregator() {
+            return this.aggregator;
+        }
+
+        /**
+         * @return comparator
+         */
+        public String getComparator() {
+            return this.comparator;
+        }
+
+        /**
+         * @return duration
+         */
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Long getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String aggregator; 
+            private String comparator; 
+            private Long duration; 
+            private String level; 
+            private Long threshold; 
+
+            /**
+             * Aggregator.
+             */
+            public Builder aggregator(String aggregator) {
+                this.aggregator = aggregator;
+                return this;
+            }
+
+            /**
+             * Comparator.
+             */
+            public Builder comparator(String comparator) {
+                this.comparator = comparator;
+                return this;
+            }
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Long duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(Long threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public AlarmRuleList build() {
+                return new AlarmRuleList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class NotifyRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Critical")
+        private java.util.List<String> critical;
+
+        @com.aliyun.core.annotation.NameInMap("Interval")
+        private Long interval;
+
+        @com.aliyun.core.annotation.NameInMap("Warning")
+        private java.util.List<String> warning;
+
+        private NotifyRule(Builder builder) {
+            this.critical = builder.critical;
+            this.interval = builder.interval;
+            this.warning = builder.warning;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NotifyRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return critical
+         */
+        public java.util.List<String> getCritical() {
+            return this.critical;
+        }
+
+        /**
+         * @return interval
+         */
+        public Long getInterval() {
+            return this.interval;
+        }
+
+        /**
+         * @return warning
+         */
+        public java.util.List<String> getWarning() {
+            return this.warning;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> critical; 
+            private Long interval; 
+            private java.util.List<String> warning; 
+
+            /**
+             * Critical.
+             */
+            public Builder critical(java.util.List<String> critical) {
+                this.critical = critical;
+                return this;
+            }
+
+            /**
+             * Interval.
+             */
+            public Builder interval(Long interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * Warning.
+             */
+            public Builder warning(java.util.List<String> warning) {
+                this.warning = warning;
+                return this;
+            }
+
+            public NotifyRule build() {
+                return new NotifyRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDISyncTaskResponseBody</p>
+     */
+    public static class AlarmList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlarmRuleList")
+        private java.util.List<AlarmRuleList> alarmRuleList;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Metric")
+        private String metric;
+
+        @com.aliyun.core.annotation.NameInMap("NotifyRule")
+        private NotifyRule notifyRule;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        private String ruleName;
+
+        private AlarmList(Builder builder) {
+            this.alarmRuleList = builder.alarmRuleList;
+            this.description = builder.description;
+            this.enabled = builder.enabled;
+            this.id = builder.id;
+            this.metric = builder.metric;
+            this.notifyRule = builder.notifyRule;
+            this.ruleName = builder.ruleName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alarmRuleList
+         */
+        public java.util.List<AlarmRuleList> getAlarmRuleList() {
+            return this.alarmRuleList;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return metric
+         */
+        public String getMetric() {
+            return this.metric;
+        }
+
+        /**
+         * @return notifyRule
+         */
+        public NotifyRule getNotifyRule() {
+            return this.notifyRule;
+        }
+
+        /**
+         * @return ruleName
+         */
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public static final class Builder {
+            private java.util.List<AlarmRuleList> alarmRuleList; 
+            private String description; 
+            private Boolean enabled; 
+            private Long id; 
+            private String metric; 
+            private NotifyRule notifyRule; 
+            private String ruleName; 
+
+            /**
+             * AlarmRuleList.
+             */
+            public Builder alarmRuleList(java.util.List<AlarmRuleList> alarmRuleList) {
+                this.alarmRuleList = alarmRuleList;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Metric.
+             */
+            public Builder metric(String metric) {
+                this.metric = metric;
+                return this;
+            }
+
+            /**
+             * NotifyRule.
+             */
+            public Builder notifyRule(NotifyRule notifyRule) {
+                this.notifyRule = notifyRule;
+                return this;
+            }
+
+            /**
+             * RuleName.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            public AlarmList build() {
+                return new AlarmList(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetDISyncTaskResponseBody} extends {@link TeaModel}
@@ -400,6 +786,9 @@ public class GetDISyncTaskResponseBody extends TeaModel {
      * <p>GetDISyncTaskResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlarmList")
+        private java.util.List<AlarmList> alarmList;
+
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
@@ -413,6 +802,7 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         private String status;
 
         private Data(Builder builder) {
+            this.alarmList = builder.alarmList;
             this.code = builder.code;
             this.message = builder.message;
             this.solutionDetail = builder.solutionDetail;
@@ -425,6 +815,13 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return alarmList
+         */
+        public java.util.List<AlarmList> getAlarmList() {
+            return this.alarmList;
         }
 
         /**
@@ -456,10 +853,19 @@ public class GetDISyncTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AlarmList> alarmList; 
             private String code; 
             private String message; 
             private SolutionDetail solutionDetail; 
             private String status; 
+
+            /**
+             * AlarmList.
+             */
+            public Builder alarmList(java.util.List<AlarmList> alarmList) {
+                this.alarmList = alarmList;
+                return this;
+            }
 
             /**
              * <ul>

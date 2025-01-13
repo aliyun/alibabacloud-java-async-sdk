@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ReturnValue")
-    private java.util.List < java.util.Map<String, ?>> returnValue;
+    private java.util.List<java.util.Map<String, ?>> returnValue;
 
     private QueryPublicModelEngineResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
     /**
      * @return returnValue
      */
-    public java.util.List < java.util.Map<String, ?>> getReturnValue() {
+    public java.util.List<java.util.Map<String, ?>> getReturnValue() {
         return this.returnValue;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> returnValue; 
+        private java.util.List<java.util.Map<String, ?>> returnValue; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         /**
          * <p>The returned information about objects.</p>
          */
-        public Builder returnValue(java.util.List < java.util.Map<String, ?>> returnValue) {
+        public Builder returnValue(java.util.List<java.util.Map<String, ?>> returnValue) {
             this.returnValue = returnValue;
             return this;
         }

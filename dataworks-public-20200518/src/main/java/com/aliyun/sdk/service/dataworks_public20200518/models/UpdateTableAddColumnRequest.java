@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdateTableAddColumnRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Column")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Column> column;
+    private java.util.List<Column> column;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableGuid")
@@ -56,7 +61,7 @@ public class UpdateTableAddColumnRequest extends Request {
     /**
      * @return column
      */
-    public java.util.List < Column> getColumn() {
+    public java.util.List<Column> getColumn() {
         return this.column;
     }
 
@@ -69,7 +74,7 @@ public class UpdateTableAddColumnRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTableAddColumnRequest, Builder> {
         private String regionId; 
-        private java.util.List < Column> column; 
+        private java.util.List<Column> column; 
         private String tableGuid; 
 
         private Builder() {
@@ -96,7 +101,7 @@ public class UpdateTableAddColumnRequest extends Request {
          * <p>The list of fields.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder column(java.util.List < Column> column) {
+        public Builder column(java.util.List<Column> column) {
             this.putBodyParameter("Column", column);
             this.column = column;
             return this;

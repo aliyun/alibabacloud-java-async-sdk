@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -202,7 +207,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("UserGroups")
-        private java.util.List < String > userGroups;
+        private java.util.List<String> userGroups;
 
         private Data(Builder builder) {
             this.endTime = builder.endTime;
@@ -283,7 +288,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         /**
          * @return userGroups
          */
-        public java.util.List < String > getUserGroups() {
+        public java.util.List<String> getUserGroups() {
             return this.userGroups;
         }
 
@@ -296,7 +301,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private Long sceneId; 
             private String startTime; 
             private String type; 
-            private java.util.List < String > userGroups; 
+            private java.util.List<String> userGroups; 
 
             /**
              * <p>The expiration time of the data masking whitelist cannot be earlier than the time when the data masking whitelist takes effect. Unit: days.</p>
@@ -389,7 +394,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             /**
              * <p>A collection of user group names.</p>
              */
-            public Builder userGroups(java.util.List < String > userGroups) {
+            public Builder userGroups(java.util.List<String> userGroups) {
                 this.userGroups = userGroups;
                 return this;
             }
@@ -409,7 +414,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
      */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -438,7 +443,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -464,7 +469,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -472,7 +477,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             /**
              * <p>A collection of whitelists.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

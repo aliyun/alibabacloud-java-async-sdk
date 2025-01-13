@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class ListClustersResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clusters")
-        private java.util.List < Cluster > clusters;
+        private java.util.List<Cluster> clusters;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -188,7 +193,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return clusters
          */
-        public java.util.List < Cluster > getClusters() {
+        public java.util.List<Cluster> getClusters() {
             return this.clusters;
         }
 
@@ -214,7 +219,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Cluster > clusters; 
+            private java.util.List<Cluster> clusters; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -222,7 +227,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * Clusters.
              */
-            public Builder clusters(java.util.List < Cluster > clusters) {
+            public Builder clusters(java.util.List<Cluster> clusters) {
                 this.clusters = clusters;
                 return this;
             }

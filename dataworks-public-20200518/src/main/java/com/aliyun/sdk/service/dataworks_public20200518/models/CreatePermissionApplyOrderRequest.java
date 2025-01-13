@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplyObject")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ApplyObject> applyObject;
+    private java.util.List<ApplyObject> applyObject;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplyReason")
@@ -89,7 +94,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
     /**
      * @return applyObject
      */
-    public java.util.List < ApplyObject> getApplyObject() {
+    public java.util.List<ApplyObject> getApplyObject() {
         return this.applyObject;
     }
 
@@ -144,7 +149,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePermissionApplyOrderRequest, Builder> {
         private String regionId; 
-        private java.util.List < ApplyObject> applyObject; 
+        private java.util.List<ApplyObject> applyObject; 
         private String applyReason; 
         private String applyUserIds; 
         private Long deadline; 
@@ -183,7 +188,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
          * <p>The objects on which you want to request permissions.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder applyObject(java.util.List < ApplyObject> applyObject) {
+        public Builder applyObject(java.util.List<ApplyObject> applyObject) {
             this.putQueryParameter("ApplyObject", applyObject);
             this.applyObject = applyObject;
             return this;
@@ -349,7 +354,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ColumnMetaList> columnMetaList;
+        private java.util.List<ColumnMetaList> columnMetaList;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -379,7 +384,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         /**
          * @return columnMetaList
          */
-        public java.util.List < ColumnMetaList> getColumnMetaList() {
+        public java.util.List<ColumnMetaList> getColumnMetaList() {
             return this.columnMetaList;
         }
 
@@ -392,7 +397,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
         public static final class Builder {
             private String actions; 
-            private java.util.List < ColumnMetaList> columnMetaList; 
+            private java.util.List<ColumnMetaList> columnMetaList; 
             private String name; 
 
             /**
@@ -411,7 +416,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
              * <p>The fields on which you want to request permissions.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder columnMetaList(java.util.List < ColumnMetaList> columnMetaList) {
+            public Builder columnMetaList(java.util.List<ColumnMetaList> columnMetaList) {
                 this.columnMetaList = columnMetaList;
                 return this;
             }

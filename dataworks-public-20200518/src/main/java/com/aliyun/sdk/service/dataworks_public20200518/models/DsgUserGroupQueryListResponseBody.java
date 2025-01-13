@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
-        private java.util.List < String > accounts;
+        private java.util.List<String> accounts;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -215,7 +220,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         /**
          * @return accounts
          */
-        public java.util.List < String > getAccounts() {
+        public java.util.List<String> getAccounts() {
             return this.accounts;
         }
 
@@ -255,7 +260,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > accounts; 
+            private java.util.List<String> accounts; 
             private String gmtCreate; 
             private String gmtModified; 
             private Integer id; 
@@ -265,7 +270,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             /**
              * <p>The usernames in the user group.</p>
              */
-            public Builder accounts(java.util.List < String > accounts) {
+            public Builder accounts(java.util.List<String> accounts) {
                 this.accounts = accounts;
                 return this;
             }
@@ -340,7 +345,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
      */
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -369,7 +374,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -395,7 +400,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -403,7 +408,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             /**
              * <p>The user groups.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

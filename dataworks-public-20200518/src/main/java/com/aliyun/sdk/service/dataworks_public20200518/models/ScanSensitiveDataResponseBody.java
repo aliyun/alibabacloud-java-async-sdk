@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Sensitives")
-    private java.util.Map < String, ? > sensitives;
+    private java.util.Map<String, ?> sensitives;
 
     private ScanSensitiveDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
     /**
      * @return sensitives
      */
-    public java.util.Map < String, ? > getSensitives() {
+    public java.util.Map<String, ?> getSensitives() {
         return this.sensitives;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > sensitives; 
+        private java.util.Map<String, ?> sensitives; 
 
         /**
          * <p>The request ID.</p>
@@ -67,7 +72,7 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
          * <li>ruleName: the name of the rule.</li>
          * </ul>
          */
-        public Builder sensitives(java.util.Map < String, ? > sensitives) {
+        public Builder sensitives(java.util.Map<String, ?> sensitives) {
             this.sensitives = sensitives;
             return this;
         }

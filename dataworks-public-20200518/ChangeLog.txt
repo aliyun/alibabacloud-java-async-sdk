@@ -1,3 +1,6 @@
+2025-01-13 Version: 3.0.15
+- Generated java-async 2020-05-18 for dataworks-public.
+
 2024-12-13 Version: 3.0.14
 - Generated java-async 2020-05-18 for dataworks-public.
 

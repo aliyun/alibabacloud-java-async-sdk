@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ShiftSchedules")
-        private java.util.List < ShiftSchedules> shiftSchedules;
+        private java.util.List<ShiftSchedules> shiftSchedules;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -195,7 +200,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         /**
          * @return shiftSchedules
          */
-        public java.util.List < ShiftSchedules> getShiftSchedules() {
+        public java.util.List<ShiftSchedules> getShiftSchedules() {
             return this.shiftSchedules;
         }
 
@@ -209,7 +214,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < ShiftSchedules> shiftSchedules; 
+            private java.util.List<ShiftSchedules> shiftSchedules; 
             private Integer totalCount; 
 
             /**
@@ -237,7 +242,7 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
             /**
              * <p>The shift schedules.</p>
              */
-            public Builder shiftSchedules(java.util.List < ShiftSchedules> shiftSchedules) {
+            public Builder shiftSchedules(java.util.List<ShiftSchedules> shiftSchedules) {
                 this.shiftSchedules = shiftSchedules;
                 return this;
             }

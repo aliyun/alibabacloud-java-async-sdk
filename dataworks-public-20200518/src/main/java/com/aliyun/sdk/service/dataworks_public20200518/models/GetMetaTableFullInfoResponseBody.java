@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -423,7 +428,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("ColumnList")
-        private java.util.List < ColumnList> columnList;
+        private java.util.List<ColumnList> columnList;
 
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -528,7 +533,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         /**
          * @return columnList
          */
-        public java.util.List < ColumnList> getColumnList() {
+        public java.util.List<ColumnList> getColumnList() {
             return this.columnList;
         }
 
@@ -674,7 +679,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterId; 
-            private java.util.List < ColumnList> columnList; 
+            private java.util.List<ColumnList> columnList; 
             private String comment; 
             private Long createTime; 
             private Long dataSize; 
@@ -710,7 +715,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             /**
              * <p>A list of columns.</p>
              */
-            public Builder columnList(java.util.List < ColumnList> columnList) {
+            public Builder columnList(java.util.List<ColumnList> columnList) {
                 this.columnList = columnList;
                 return this;
             }

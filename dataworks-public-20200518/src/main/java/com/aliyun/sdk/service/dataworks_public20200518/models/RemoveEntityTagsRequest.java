@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class RemoveEntityTagsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > tagKeys;
+    private java.util.List<String> tagKeys;
 
     private RemoveEntityTagsRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class RemoveEntityTagsRequest extends Request {
     /**
      * @return tagKeys
      */
-    public java.util.List < String > getTagKeys() {
+    public java.util.List<String> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder extends Request.Builder<RemoveEntityTagsRequest, Builder> {
         private String regionId; 
         private String qualifiedName; 
-        private java.util.List < String > tagKeys; 
+        private java.util.List<String> tagKeys; 
 
         private Builder() {
             super();
@@ -109,7 +114,7 @@ public class RemoveEntityTagsRequest extends Request {
          * <p>The tag keys.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
+        public Builder tagKeys(java.util.List<String> tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");
             this.putBodyParameter("TagKeys", tagKeysShrink);
             this.tagKeys = tagKeys;

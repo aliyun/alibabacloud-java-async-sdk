@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -283,7 +288,7 @@ public class ListDIJobsResponseBody extends TeaModel {
      */
     public static class DIJobPaging extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DIJobs")
-        private java.util.List < DIJobs> DIJobs;
+        private java.util.List<DIJobs> DIJobs;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -312,7 +317,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         /**
          * @return DIJobs
          */
-        public java.util.List < DIJobs> getDIJobs() {
+        public java.util.List<DIJobs> getDIJobs() {
             return this.DIJobs;
         }
 
@@ -338,7 +343,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DIJobs> DIJobs; 
+            private java.util.List<DIJobs> DIJobs; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -346,7 +351,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             /**
              * <p>The list of tasks.</p>
              */
-            public Builder DIJobs(java.util.List < DIJobs> DIJobs) {
+            public Builder DIJobs(java.util.List<DIJobs> DIJobs) {
                 this.DIJobs = DIJobs;
                 return this;
             }

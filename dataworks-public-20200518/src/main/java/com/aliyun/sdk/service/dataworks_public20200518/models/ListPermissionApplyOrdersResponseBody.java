@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
      */
     public static class ObjectMetaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
-        private java.util.List < String > actions;
+        private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
@@ -103,7 +108,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -115,13 +120,13 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String objectName; 
 
             /**
              * Actions.
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
@@ -152,7 +157,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
      */
     public static class ProjectMeta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ObjectMetaList")
-        private java.util.List < ObjectMetaList> objectMetaList;
+        private java.util.List<ObjectMetaList> objectMetaList;
 
         @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
@@ -173,7 +178,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         /**
          * @return objectMetaList
          */
-        public java.util.List < ObjectMetaList> getObjectMetaList() {
+        public java.util.List<ObjectMetaList> getObjectMetaList() {
             return this.objectMetaList;
         }
 
@@ -185,13 +190,13 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ObjectMetaList> objectMetaList; 
+            private java.util.List<ObjectMetaList> objectMetaList; 
             private String workspaceName; 
 
             /**
              * <p>The information about the object on which you requested permissions.</p>
              */
-            public Builder objectMetaList(java.util.List < ObjectMetaList> objectMetaList) {
+            public Builder objectMetaList(java.util.List<ObjectMetaList> objectMetaList) {
                 this.objectMetaList = objectMetaList;
                 return this;
             }
@@ -460,7 +465,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
      */
     public static class ApplyOrders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplyOrder")
-        private java.util.List < ApplyOrder> applyOrder;
+        private java.util.List<ApplyOrder> applyOrder;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -489,7 +494,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         /**
          * @return applyOrder
          */
-        public java.util.List < ApplyOrder> getApplyOrder() {
+        public java.util.List<ApplyOrder> getApplyOrder() {
             return this.applyOrder;
         }
 
@@ -515,7 +520,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApplyOrder> applyOrder; 
+            private java.util.List<ApplyOrder> applyOrder; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -523,7 +528,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             /**
              * <p>The list of the permission request orders.</p>
              */
-            public Builder applyOrder(java.util.List < ApplyOrder> applyOrder) {
+            public Builder applyOrder(java.util.List<ApplyOrder> applyOrder) {
                 this.applyOrder = applyOrder;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -655,7 +660,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the cross-cycle scheduling dependency of the node that corresponds to the file. Valid values:</p>
+         * <p>The type of the cross-cycle scheduling dependency of the node. Valid values:</p>
          * <ul>
          * <li>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</li>
          * <li>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</li>
@@ -879,7 +884,7 @@ public class UpdateFileRequest extends Request {
          * <li>NORMAL: The node is an auto triggered node.</li>
          * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
          * <li>PAUSE: The node is a paused node.</li>
-         * <li>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to succeeded when the scheduling system starts to run the nodes.</li>
+         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</li>
          * </ul>
          * 
          * <strong>example:</strong>

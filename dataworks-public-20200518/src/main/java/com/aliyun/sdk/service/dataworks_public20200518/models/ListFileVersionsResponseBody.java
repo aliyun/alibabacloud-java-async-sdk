@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -497,7 +502,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileVersions")
-        private java.util.List < FileVersions> fileVersions;
+        private java.util.List<FileVersions> fileVersions;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -526,7 +531,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
         /**
          * @return fileVersions
          */
-        public java.util.List < FileVersions> getFileVersions() {
+        public java.util.List<FileVersions> getFileVersions() {
             return this.fileVersions;
         }
 
@@ -552,7 +557,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FileVersions> fileVersions; 
+            private java.util.List<FileVersions> fileVersions; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -560,7 +565,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
             /**
              * <p>The details of the file version.</p>
              */
-            public Builder fileVersions(java.util.List < FileVersions> fileVersions) {
+            public Builder fileVersions(java.util.List<FileVersions> fileVersions) {
                 this.fileVersions = fileVersions;
                 return this;
             }

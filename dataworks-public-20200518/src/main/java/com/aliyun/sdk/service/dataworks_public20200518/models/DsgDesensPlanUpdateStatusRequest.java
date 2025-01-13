@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Integer > ids;
+    private java.util.List<Integer> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneCode")
@@ -62,7 +67,7 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Integer > getIds() {
+    public java.util.List<Integer> getIds() {
         return this.ids;
     }
 
@@ -82,7 +87,7 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<DsgDesensPlanUpdateStatusRequest, Builder> {
         private String regionId; 
-        private java.util.List < Integer > ids; 
+        private java.util.List<Integer> ids; 
         private String sceneCode; 
         private Integer status; 
 
@@ -111,7 +116,7 @@ public class DsgDesensPlanUpdateStatusRequest extends Request {
          * <p>A collection of IDs of the data masking rules of which the status you want to modify.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ids(java.util.List < Integer > ids) {
+        public Builder ids(java.util.List<Integer> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListProgramTypeCountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProgramTypeAndCounts")
-    private java.util.List < ProgramTypeAndCounts> programTypeAndCounts;
+    private java.util.List<ProgramTypeAndCounts> programTypeAndCounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     /**
      * @return programTypeAndCounts
      */
-    public java.util.List < ProgramTypeAndCounts> getProgramTypeAndCounts() {
+    public java.util.List<ProgramTypeAndCounts> getProgramTypeAndCounts() {
         return this.programTypeAndCounts;
     }
 
@@ -46,13 +51,13 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProgramTypeAndCounts> programTypeAndCounts; 
+        private java.util.List<ProgramTypeAndCounts> programTypeAndCounts; 
         private String requestId; 
 
         /**
          * <p>The list of node types and quantity.</p>
          */
-        public Builder programTypeAndCounts(java.util.List < ProgramTypeAndCounts> programTypeAndCounts) {
+        public Builder programTypeAndCounts(java.util.List<ProgramTypeAndCounts> programTypeAndCounts) {
             this.programTypeAndCounts = programTypeAndCounts;
             return this;
         }

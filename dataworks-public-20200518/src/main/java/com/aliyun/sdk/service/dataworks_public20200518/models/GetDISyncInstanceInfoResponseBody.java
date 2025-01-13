@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -231,7 +236,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("StepDetail")
-        private java.util.List < StepDetail> stepDetail;
+        private java.util.List<StepDetail> stepDetail;
 
         private SolutionInfo(Builder builder) {
             this.creatorName = builder.creatorName;
@@ -272,7 +277,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         /**
          * @return stepDetail
          */
-        public java.util.List < StepDetail> getStepDetail() {
+        public java.util.List<StepDetail> getStepDetail() {
             return this.stepDetail;
         }
 
@@ -280,7 +285,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String creatorName; 
             private Long id; 
             private String status; 
-            private java.util.List < StepDetail> stepDetail; 
+            private java.util.List<StepDetail> stepDetail; 
 
             /**
              * <p>The creator of the data synchronization solution.</p>
@@ -318,7 +323,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             /**
              * <p>The step details of the data synchronization solution.</p>
              */
-            public Builder stepDetail(java.util.List < StepDetail> stepDetail) {
+            public Builder stepDetail(java.util.List<StepDetail> stepDetail) {
                 this.stepDetail = stepDetail;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -303,7 +308,7 @@ public class ListLineageResponseBody extends TeaModel {
         private Entity entity;
 
         @com.aliyun.core.annotation.NameInMap("RelationList")
-        private java.util.List < RelationList> relationList;
+        private java.util.List<RelationList> relationList;
 
         private DataEntityList(Builder builder) {
             this.createTimestamp = builder.createTimestamp;
@@ -336,14 +341,14 @@ public class ListLineageResponseBody extends TeaModel {
         /**
          * @return relationList
          */
-        public java.util.List < RelationList> getRelationList() {
+        public java.util.List<RelationList> getRelationList() {
             return this.relationList;
         }
 
         public static final class Builder {
             private Long createTimestamp; 
             private Entity entity; 
-            private java.util.List < RelationList> relationList; 
+            private java.util.List<RelationList> relationList; 
 
             /**
              * <p>The time when the lineage was generated.</p>
@@ -367,7 +372,7 @@ public class ListLineageResponseBody extends TeaModel {
             /**
              * <p>The array of the relationship structure.</p>
              */
-            public Builder relationList(java.util.List < RelationList> relationList) {
+            public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;
                 return this;
             }
@@ -387,7 +392,7 @@ public class ListLineageResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataEntityList")
-        private java.util.List < DataEntityList> dataEntityList;
+        private java.util.List<DataEntityList> dataEntityList;
 
         @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
@@ -408,7 +413,7 @@ public class ListLineageResponseBody extends TeaModel {
         /**
          * @return dataEntityList
          */
-        public java.util.List < DataEntityList> getDataEntityList() {
+        public java.util.List<DataEntityList> getDataEntityList() {
             return this.dataEntityList;
         }
 
@@ -420,13 +425,13 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataEntityList> dataEntityList; 
+            private java.util.List<DataEntityList> dataEntityList; 
             private String nextToken; 
 
             /**
              * <p>The array of the entity structure.</p>
              */
-            public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
+            public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -244,7 +249,7 @@ public class ListFoldersResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Folders")
-        private java.util.List < Folders> folders;
+        private java.util.List<Folders> folders;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -273,7 +278,7 @@ public class ListFoldersResponseBody extends TeaModel {
         /**
          * @return folders
          */
-        public java.util.List < Folders> getFolders() {
+        public java.util.List<Folders> getFolders() {
             return this.folders;
         }
 
@@ -299,7 +304,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Folders> folders; 
+            private java.util.List<Folders> folders; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -307,7 +312,7 @@ public class ListFoldersResponseBody extends TeaModel {
             /**
              * <p>The list of folders.</p>
              */
-            public Builder folders(java.util.List < Folders> folders) {
+            public Builder folders(java.util.List<Folders> folders) {
                 this.folders = folders;
                 return this;
             }

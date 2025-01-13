@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListProjectIdsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProjectIds")
-    private java.util.List < Long > projectIds;
+    private java.util.List<Long> projectIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListProjectIdsResponseBody extends TeaModel {
     /**
      * @return projectIds
      */
-    public java.util.List < Long > getProjectIds() {
+    public java.util.List<Long> getProjectIds() {
         return this.projectIds;
     }
 
@@ -46,13 +51,13 @@ public class ListProjectIdsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > projectIds; 
+        private java.util.List<Long> projectIds; 
         private String requestId; 
 
         /**
          * <p>The IDs of the DataWorks workspaces. The IDs of the workspaces on which the desired Alibaba Cloud account has permissions were returned.</p>
          */
-        public Builder projectIds(java.util.List < Long > projectIds) {
+        public Builder projectIds(java.util.List<Long> projectIds) {
             this.projectIds = projectIds;
             return this;
         }

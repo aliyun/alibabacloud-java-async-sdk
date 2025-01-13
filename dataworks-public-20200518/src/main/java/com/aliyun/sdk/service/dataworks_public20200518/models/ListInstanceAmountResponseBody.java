@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceAmountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceCounts")
-    private java.util.List < InstanceCounts> instanceCounts;
+    private java.util.List<InstanceCounts> instanceCounts;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     /**
      * @return instanceCounts
      */
-    public java.util.List < InstanceCounts> getInstanceCounts() {
+    public java.util.List<InstanceCounts> getInstanceCounts() {
         return this.instanceCounts;
     }
 
@@ -46,13 +51,13 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceCounts> instanceCounts; 
+        private java.util.List<InstanceCounts> instanceCounts; 
         private String requestId; 
 
         /**
          * <p>The trend of the number of auto triggered node instances within the specified period of time.</p>
          */
-        public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
+        public Builder instanceCounts(java.util.List<InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
             return this;
         }

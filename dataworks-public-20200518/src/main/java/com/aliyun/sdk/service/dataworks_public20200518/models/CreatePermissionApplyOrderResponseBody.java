@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FlowId")
-    private java.util.List < String > flowId;
+    private java.util.List<String> flowId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     /**
      * @return flowId
      */
-    public java.util.List < String > getFlowId() {
+    public java.util.List<String> getFlowId() {
         return this.flowId;
     }
 
@@ -46,13 +51,13 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > flowId; 
+        private java.util.List<String> flowId; 
         private String requestId; 
 
         /**
          * <p>The request order ID.</p>
          */
-        public Builder flowId(java.util.List < String > flowId) {
+        public Builder flowId(java.util.List<String> flowId) {
             this.flowId = flowId;
             return this;
         }

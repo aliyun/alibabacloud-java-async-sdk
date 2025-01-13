@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
      */
     public static class NodeTypeInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeTypeInfo")
-        private java.util.List < NodeTypeInfo> nodeTypeInfo;
+        private java.util.List<NodeTypeInfo> nodeTypeInfo;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -184,7 +189,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         /**
          * @return nodeTypeInfo
          */
-        public java.util.List < NodeTypeInfo> getNodeTypeInfo() {
+        public java.util.List<NodeTypeInfo> getNodeTypeInfo() {
             return this.nodeTypeInfo;
         }
 
@@ -210,7 +215,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < NodeTypeInfo> nodeTypeInfo; 
+            private java.util.List<NodeTypeInfo> nodeTypeInfo; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -218,7 +223,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             /**
              * <p>The information about a node type.</p>
              */
-            public Builder nodeTypeInfo(java.util.List < NodeTypeInfo> nodeTypeInfo) {
+            public Builder nodeTypeInfo(java.util.List<NodeTypeInfo> nodeTypeInfo) {
                 this.nodeTypeInfo = nodeTypeInfo;
                 return this;
             }
