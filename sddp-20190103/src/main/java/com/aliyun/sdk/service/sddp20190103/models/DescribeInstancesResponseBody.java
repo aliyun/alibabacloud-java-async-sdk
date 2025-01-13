@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,7 +85,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -99,7 +104,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the data assets.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -255,7 +260,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String memberAliUid;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
-        private java.util.List < ModelTags> modelTags;
+        private java.util.List<ModelTags> modelTags;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -380,7 +385,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return modelTags
          */
-        public java.util.List < ModelTags> getModelTags() {
+        public java.util.List<ModelTags> getModelTags() {
             return this.modelTags;
         }
 
@@ -483,7 +488,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean labelsec; 
             private Long lastFinishTime; 
             private String memberAliUid; 
-            private java.util.List < ModelTags> modelTags; 
+            private java.util.List<ModelTags> modelTags; 
             private String name; 
             private String odpsRiskLevelName; 
             private String owner; 
@@ -579,7 +584,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * <p>A list of tags.</p>
              */
-            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+            public Builder modelTags(java.util.List<ModelTags> modelTags) {
                 this.modelTags = modelTags;
                 return this;
             }

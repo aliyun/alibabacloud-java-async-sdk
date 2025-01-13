@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,13 +87,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("X")
-        private java.util.List < String > x;
+        private java.util.List<String> x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        private java.util.List < String > y;
+        private java.util.List<String> y;
 
         @com.aliyun.core.annotation.NameInMap("Z")
-        private java.util.List < String > z;
+        private java.util.List<String> z;
 
         private Data(Builder builder) {
             this.x = builder.x;
@@ -107,28 +112,28 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         /**
          * @return x
          */
-        public java.util.List < String > getX() {
+        public java.util.List<String> getX() {
             return this.x;
         }
 
         /**
          * @return y
          */
-        public java.util.List < String > getY() {
+        public java.util.List<String> getY() {
             return this.y;
         }
 
         /**
          * @return z
          */
-        public java.util.List < String > getZ() {
+        public java.util.List<String> getZ() {
             return this.z;
         }
 
         public static final class Builder {
-            private java.util.List < String > x; 
-            private java.util.List < String > y; 
-            private java.util.List < String > z; 
+            private java.util.List<String> x; 
+            private java.util.List<String> y; 
+            private java.util.List<String> z; 
 
             /**
              * <p>The value of the data item on the X axis.</p>
@@ -136,7 +141,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[test1,test2,...]</p>
              */
-            public Builder x(java.util.List < String > x) {
+            public Builder x(java.util.List<String> x) {
                 this.x = x;
                 return this;
             }
@@ -147,7 +152,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[1,2,3,...]</p>
              */
-            public Builder y(java.util.List < String > y) {
+            public Builder y(java.util.List<String> y) {
                 this.y = y;
                 return this;
             }
@@ -155,7 +160,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             /**
              * <p>The value of the data item for the Z axis.</p>
              */
-            public Builder z(java.util.List < String > z) {
+            public Builder z(java.util.List<String> z) {
                 this.z = z;
                 return this;
             }
@@ -569,13 +574,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
      */
     public static class Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Chart")
-        private java.util.List < Chart> chart;
+        private java.util.List<Chart> chart;
 
         @com.aliyun.core.annotation.NameInMap("Content")
-        private java.util.List < Content> content;
+        private java.util.List<Content> content;
 
         @com.aliyun.core.annotation.NameInMap("ResourceInfo")
-        private java.util.List < ResourceInfo> resourceInfo;
+        private java.util.List<ResourceInfo> resourceInfo;
 
         private Detail(Builder builder) {
             this.chart = builder.chart;
@@ -594,33 +599,33 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         /**
          * @return chart
          */
-        public java.util.List < Chart> getChart() {
+        public java.util.List<Chart> getChart() {
             return this.chart;
         }
 
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
         /**
          * @return resourceInfo
          */
-        public java.util.List < ResourceInfo> getResourceInfo() {
+        public java.util.List<ResourceInfo> getResourceInfo() {
             return this.resourceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < Chart> chart; 
-            private java.util.List < Content> content; 
-            private java.util.List < ResourceInfo> resourceInfo; 
+            private java.util.List<Chart> chart; 
+            private java.util.List<Content> content; 
+            private java.util.List<ResourceInfo> resourceInfo; 
 
             /**
              * <p>The baseline behavior chart of the anomalous event.</p>
              */
-            public Builder chart(java.util.List < Chart> chart) {
+            public Builder chart(java.util.List<Chart> chart) {
                 this.chart = chart;
                 return this;
             }
@@ -628,7 +633,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             /**
              * <p>The content in the anomalous event.</p>
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }
@@ -636,7 +641,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the source from which the information of the anomalous event is recorded.</p>
              */
-            public Builder resourceInfo(java.util.List < ResourceInfo> resourceInfo) {
+            public Builder resourceInfo(java.util.List<ResourceInfo> resourceInfo) {
                 this.resourceInfo = resourceInfo;
                 return this;
             }
@@ -906,7 +911,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         private Long eventTime;
 
         @com.aliyun.core.annotation.NameInMap("HandleInfoList")
-        private java.util.List < HandleInfoList> handleInfoList;
+        private java.util.List<HandleInfoList> handleInfoList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -1059,7 +1064,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         /**
          * @return handleInfoList
          */
-        public java.util.List < HandleInfoList> getHandleInfoList() {
+        public java.util.List<HandleInfoList> getHandleInfoList() {
             return this.handleInfoList;
         }
 
@@ -1159,7 +1164,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private Detail detail; 
             private String displayName; 
             private Long eventTime; 
-            private java.util.List < HandleInfoList> handleInfoList; 
+            private java.util.List<HandleInfoList> handleInfoList; 
             private Long id; 
             private String logDetail; 
             private String loginName; 
@@ -1301,7 +1306,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the handling records of the anomalous event.</p>
              */
-            public Builder handleInfoList(java.util.List < HandleInfoList> handleInfoList) {
+            public Builder handleInfoList(java.util.List<HandleInfoList> handleInfoList) {
                 this.handleInfoList = handleInfoList;
                 return this;
             }

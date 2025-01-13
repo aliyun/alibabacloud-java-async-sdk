@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class ModifyDataLimitRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIdList")
-    private java.util.List < String > securityGroupIdList;
+    private java.util.List<String> securityGroupIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
@@ -76,7 +81,7 @@ public class ModifyDataLimitRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchIdList")
-    private java.util.List < String > vSwitchIdList;
+    private java.util.List<String> vSwitchIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -203,7 +208,7 @@ public class ModifyDataLimitRequest extends Request {
     /**
      * @return securityGroupIdList
      */
-    public java.util.List < String > getSecurityGroupIdList() {
+    public java.util.List<String> getSecurityGroupIdList() {
         return this.securityGroupIdList;
     }
 
@@ -224,7 +229,7 @@ public class ModifyDataLimitRequest extends Request {
     /**
      * @return vSwitchIdList
      */
-    public java.util.List < String > getVSwitchIdList() {
+    public java.util.List<String> getVSwitchIdList() {
         return this.vSwitchIdList;
     }
 
@@ -248,10 +253,10 @@ public class ModifyDataLimitRequest extends Request {
         private Integer port; 
         private Integer resourceType; 
         private Integer samplingSize; 
-        private java.util.List < String > securityGroupIdList; 
+        private java.util.List<String> securityGroupIdList; 
         private String serviceRegionId; 
         private String userName; 
-        private java.util.List < String > vSwitchIdList; 
+        private java.util.List<String> vSwitchIdList; 
         private String vpcId; 
 
         private Builder() {
@@ -472,7 +477,7 @@ public class ModifyDataLimitRequest extends Request {
         /**
          * <p>The security group that is used by PrivateLink when you install the DSC agent.</p>
          */
-        public Builder securityGroupIdList(java.util.List < String > securityGroupIdList) {
+        public Builder securityGroupIdList(java.util.List<String> securityGroupIdList) {
             this.putQueryParameter("SecurityGroupIdList", securityGroupIdList);
             this.securityGroupIdList = securityGroupIdList;
             return this;
@@ -514,7 +519,7 @@ public class ModifyDataLimitRequest extends Request {
         /**
          * <p>The vSwitch that is used by PrivateLink when you install the DSC agent.</p>
          */
-        public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
+        public Builder vSwitchIdList(java.util.List<String> vSwitchIdList) {
             this.putQueryParameter("VSwitchIdList", vSwitchIdList);
             this.vSwitchIdList = vSwitchIdList;
             return this;

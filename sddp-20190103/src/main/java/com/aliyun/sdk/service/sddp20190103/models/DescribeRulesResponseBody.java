@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRulesResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeRulesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,7 +85,7 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -99,7 +104,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the sensitive data detection rules.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -195,6 +200,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchType")
         private Integer matchType;
 
+        @com.aliyun.core.annotation.NameInMap("ModelRuleIds")
+        private String modelRuleIds;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -222,6 +230,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateRuleIds")
+        private String templateRuleIds;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
@@ -244,6 +255,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             this.loginName = builder.loginName;
             this.majorKey = builder.majorKey;
             this.matchType = builder.matchType;
+            this.modelRuleIds = builder.modelRuleIds;
             this.name = builder.name;
             this.productCode = builder.productCode;
             this.productId = builder.productId;
@@ -253,6 +265,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             this.status = builder.status;
             this.supportForm = builder.supportForm;
             this.target = builder.target;
+            this.templateRuleIds = builder.templateRuleIds;
             this.userId = builder.userId;
             this.warnLevel = builder.warnLevel;
         }
@@ -371,6 +384,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelRuleIds
+         */
+        public String getModelRuleIds() {
+            return this.modelRuleIds;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -434,6 +454,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateRuleIds
+         */
+        public String getTemplateRuleIds() {
+            return this.templateRuleIds;
+        }
+
+        /**
          * @return userId
          */
         public Long getUserId() {
@@ -463,6 +490,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             private String loginName; 
             private String majorKey; 
             private Integer matchType; 
+            private String modelRuleIds; 
             private String name; 
             private String productCode; 
             private Long productId; 
@@ -472,6 +500,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             private Integer status; 
             private Integer supportForm; 
             private String target; 
+            private String templateRuleIds; 
             private Long userId; 
             private Integer warnLevel; 
 
@@ -656,6 +685,14 @@ public class DescribeRulesResponseBody extends TeaModel {
             }
 
             /**
+             * ModelRuleIds.
+             */
+            public Builder modelRuleIds(String modelRuleIds) {
+                this.modelRuleIds = modelRuleIds;
+                return this;
+            }
+
+            /**
              * <p>The name of the sensitive data detection rule.</p>
              * 
              * <strong>example:</strong>
@@ -774,6 +811,14 @@ public class DescribeRulesResponseBody extends TeaModel {
              */
             public Builder target(String target) {
                 this.target = target;
+                return this;
+            }
+
+            /**
+             * TemplateRuleIds.
+             */
+            public Builder templateRuleIds(String templateRuleIds) {
+                this.templateRuleIds = templateRuleIds;
                 return this;
             }
 

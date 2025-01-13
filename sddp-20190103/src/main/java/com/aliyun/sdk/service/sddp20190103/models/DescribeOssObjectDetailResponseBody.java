@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -171,7 +176,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         private Long count;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
-        private java.util.List < ModelTags> modelTags;
+        private java.util.List<ModelTags> modelTags;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
@@ -216,7 +221,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         /**
          * @return modelTags
          */
-        public java.util.List < ModelTags> getModelTags() {
+        public java.util.List<ModelTags> getModelTags() {
             return this.modelTags;
         }
 
@@ -244,7 +249,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String categoryName; 
             private Long count; 
-            private java.util.List < ModelTags> modelTags; 
+            private java.util.List<ModelTags> modelTags; 
             private Long riskLevelId; 
             private String riskLevelName; 
             private String ruleName; 
@@ -274,7 +279,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             /**
              * <p>A list of tags for data that hits the recognition model.</p>
              */
-            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+            public Builder modelTags(java.util.List<ModelTags> modelTags) {
                 this.modelTags = modelTags;
                 return this;
             }
@@ -349,7 +354,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         private String riskLevelName;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         private OssObjectDetail(Builder builder) {
             this.bucketName = builder.bucketName;
@@ -406,7 +411,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -416,7 +421,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             private String name; 
             private String regionId; 
             private String riskLevelName; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
 
             /**
              * <p>The name of the OSS bucket to which the OSS object belongs.</p>
@@ -476,7 +481,7 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             /**
              * <p>A list of the sensitive data detection rules that the OSS object hits.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

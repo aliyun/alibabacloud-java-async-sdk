@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ScanOssObjectV1Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectKeyList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > objectKeyList;
+    private java.util.List<String> objectKeyList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
@@ -74,7 +79,7 @@ public class ScanOssObjectV1Request extends Request {
     /**
      * @return objectKeyList
      */
-    public java.util.List < String > getObjectKeyList() {
+    public java.util.List<String> getObjectKeyList() {
         return this.objectKeyList;
     }
 
@@ -95,7 +100,7 @@ public class ScanOssObjectV1Request extends Request {
     public static final class Builder extends Request.Builder<ScanOssObjectV1Request, Builder> {
         private String bucketName; 
         private String lang; 
-        private java.util.List < String > objectKeyList; 
+        private java.util.List<String> objectKeyList; 
         private String serviceRegionId; 
         private Long templateId; 
 
@@ -136,7 +141,7 @@ public class ScanOssObjectV1Request extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder objectKeyList(java.util.List < String > objectKeyList) {
+        public Builder objectKeyList(java.util.List<String> objectKeyList) {
             String objectKeyListShrink = shrink(objectKeyList, "ObjectKeyList", "json");
             this.putQueryParameter("ObjectKeyList", objectKeyListShrink);
             this.objectKeyList = objectKeyList;

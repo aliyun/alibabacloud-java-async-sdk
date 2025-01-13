@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDocTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DocTypeList")
-    private java.util.List < DocTypeList> docTypeList;
+    private java.util.List<DocTypeList> docTypeList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDocTypesResponseBody extends TeaModel {
     /**
      * @return docTypeList
      */
-    public java.util.List < DocTypeList> getDocTypeList() {
+    public java.util.List<DocTypeList> getDocTypeList() {
         return this.docTypeList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDocTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DocTypeList> docTypeList; 
+        private java.util.List<DocTypeList> docTypeList; 
         private String requestId; 
 
         /**
          * DocTypeList.
          */
-        public Builder docTypeList(java.util.List < DocTypeList> docTypeList) {
+        public Builder docTypeList(java.util.List<DocTypeList> docTypeList) {
             this.docTypeList = docTypeList;
             return this;
         }

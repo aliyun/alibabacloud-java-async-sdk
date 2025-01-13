@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,7 +85,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -96,7 +101,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -206,7 +211,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
@@ -221,7 +226,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
-        private java.util.List < ModelTags> modelTags;
+        private java.util.List<ModelTags> modelTags;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private Boolean primaryKey;
@@ -263,7 +268,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
@@ -298,7 +303,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         /**
          * @return modelTags
          */
-        public java.util.List < ModelTags> getModelTags() {
+        public java.util.List<ModelTags> getModelTags() {
             return this.modelTags;
         }
 
@@ -338,12 +343,12 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > categories; 
+            private java.util.List<String> categories; 
             private String columnComment; 
             private String columnName; 
             private String dataType; 
             private String id; 
-            private java.util.List < ModelTags> modelTags; 
+            private java.util.List<ModelTags> modelTags; 
             private Boolean primaryKey; 
             private Long riskLevelId; 
             private String riskLevelName; 
@@ -353,7 +358,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
             /**
              * Categories.
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -393,7 +398,7 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
             /**
              * ModelTags.
              */
-            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+            public Builder modelTags(java.util.List<ModelTags> modelTags) {
                 this.modelTags = modelTags;
                 return this;
             }

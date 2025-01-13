@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,6 +24,10 @@ public class DescribeRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContentCategory")
     private Integer contentCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CooperationChannel")
+    private String cooperationChannel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -73,6 +82,10 @@ public class DescribeRulesRequest extends Request {
     private Integer ruleType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Simplify")
+    private Boolean simplify;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
@@ -88,6 +101,7 @@ public class DescribeRulesRequest extends Request {
         super(builder);
         this.category = builder.category;
         this.contentCategory = builder.contentCategory;
+        this.cooperationChannel = builder.cooperationChannel;
         this.currentPage = builder.currentPage;
         this.customType = builder.customType;
         this.featureType = builder.featureType;
@@ -101,6 +115,7 @@ public class DescribeRulesRequest extends Request {
         this.productId = builder.productId;
         this.riskLevelId = builder.riskLevelId;
         this.ruleType = builder.ruleType;
+        this.simplify = builder.simplify;
         this.status = builder.status;
         this.supportForm = builder.supportForm;
         this.warnLevel = builder.warnLevel;
@@ -131,6 +146,13 @@ public class DescribeRulesRequest extends Request {
      */
     public Integer getContentCategory() {
         return this.contentCategory;
+    }
+
+    /**
+     * @return cooperationChannel
+     */
+    public String getCooperationChannel() {
+        return this.cooperationChannel;
     }
 
     /**
@@ -225,6 +247,13 @@ public class DescribeRulesRequest extends Request {
     }
 
     /**
+     * @return simplify
+     */
+    public Boolean getSimplify() {
+        return this.simplify;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -248,6 +277,7 @@ public class DescribeRulesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeRulesRequest, Builder> {
         private Integer category; 
         private Integer contentCategory; 
+        private String cooperationChannel; 
         private Integer currentPage; 
         private Integer customType; 
         private Integer featureType; 
@@ -261,6 +291,7 @@ public class DescribeRulesRequest extends Request {
         private Long productId; 
         private Long riskLevelId; 
         private Integer ruleType; 
+        private Boolean simplify; 
         private Integer status; 
         private Integer supportForm; 
         private Integer warnLevel; 
@@ -273,6 +304,7 @@ public class DescribeRulesRequest extends Request {
             super(request);
             this.category = request.category;
             this.contentCategory = request.contentCategory;
+            this.cooperationChannel = request.cooperationChannel;
             this.currentPage = request.currentPage;
             this.customType = request.customType;
             this.featureType = request.featureType;
@@ -286,6 +318,7 @@ public class DescribeRulesRequest extends Request {
             this.productId = request.productId;
             this.riskLevelId = request.riskLevelId;
             this.ruleType = request.ruleType;
+            this.simplify = request.simplify;
             this.status = request.status;
             this.supportForm = request.supportForm;
             this.warnLevel = request.warnLevel;
@@ -316,6 +349,15 @@ public class DescribeRulesRequest extends Request {
         public Builder contentCategory(Integer contentCategory) {
             this.putQueryParameter("ContentCategory", contentCategory);
             this.contentCategory = contentCategory;
+            return this;
+        }
+
+        /**
+         * CooperationChannel.
+         */
+        public Builder cooperationChannel(String cooperationChannel) {
+            this.putQueryParameter("CooperationChannel", cooperationChannel);
+            this.cooperationChannel = cooperationChannel;
             return this;
         }
 
@@ -504,6 +546,15 @@ public class DescribeRulesRequest extends Request {
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
             this.ruleType = ruleType;
+            return this;
+        }
+
+        /**
+         * Simplify.
+         */
+        public Builder simplify(Boolean simplify) {
+            this.putQueryParameter("Simplify", simplify);
+            this.simplify = simplify;
             return this;
         }
 

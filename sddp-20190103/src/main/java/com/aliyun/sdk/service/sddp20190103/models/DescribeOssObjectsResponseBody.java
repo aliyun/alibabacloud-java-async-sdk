@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
@@ -65,7 +70,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -113,7 +118,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String marker; 
         private String nextMarker; 
         private Integer pageSize; 
@@ -135,7 +140,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         /**
          * <p>A list of OSS objects.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -356,7 +361,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         private Integer ruleCount;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
@@ -493,7 +498,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -526,7 +531,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private Long riskLevelId; 
             private String riskLevelName; 
             private Integer ruleCount; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Integer sensitiveCount; 
             private Long size; 
 
@@ -694,7 +699,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             /**
              * <p>A list of rules.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

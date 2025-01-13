@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -527,13 +532,13 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
      */
     public static class DataLimitSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataLimitList")
-        private java.util.List < DataLimitList> dataLimitList;
+        private java.util.List<DataLimitList> dataLimitList;
 
         @com.aliyun.core.annotation.NameInMap("OssBucketList")
-        private java.util.List < OssBucketList> ossBucketList;
+        private java.util.List<OssBucketList> ossBucketList;
 
         @com.aliyun.core.annotation.NameInMap("RegionList")
-        private java.util.List < RegionList> regionList;
+        private java.util.List<RegionList> regionList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
@@ -564,21 +569,21 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         /**
          * @return dataLimitList
          */
-        public java.util.List < DataLimitList> getDataLimitList() {
+        public java.util.List<DataLimitList> getDataLimitList() {
             return this.dataLimitList;
         }
 
         /**
          * @return ossBucketList
          */
-        public java.util.List < OssBucketList> getOssBucketList() {
+        public java.util.List<OssBucketList> getOssBucketList() {
             return this.ossBucketList;
         }
 
         /**
          * @return regionList
          */
-        public java.util.List < RegionList> getRegionList() {
+        public java.util.List<RegionList> getRegionList() {
             return this.regionList;
         }
 
@@ -604,9 +609,9 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataLimitList> dataLimitList; 
-            private java.util.List < OssBucketList> ossBucketList; 
-            private java.util.List < RegionList> regionList; 
+            private java.util.List<DataLimitList> dataLimitList; 
+            private java.util.List<OssBucketList> ossBucketList; 
+            private java.util.List<RegionList> regionList; 
             private Long resourceType; 
             private String resourceTypeCode; 
             private Integer totalCount; 
@@ -614,7 +619,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             /**
              * <p>An array that consists of data assets that DSC is authorized to scan.</p>
              */
-            public Builder dataLimitList(java.util.List < DataLimitList> dataLimitList) {
+            public Builder dataLimitList(java.util.List<DataLimitList> dataLimitList) {
                 this.dataLimitList = dataLimitList;
                 return this;
             }
@@ -622,7 +627,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the OSS objects that DSC is authorized to scan.</p>
              */
-            public Builder ossBucketList(java.util.List < OssBucketList> ossBucketList) {
+            public Builder ossBucketList(java.util.List<OssBucketList> ossBucketList) {
                 this.ossBucketList = ossBucketList;
                 return this;
             }
@@ -630,7 +635,7 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             /**
              * <p>An array consisting of the regions in which the data assets can be scanned.</p>
              */
-            public Builder regionList(java.util.List < RegionList> regionList) {
+            public Builder regionList(java.util.List<RegionList> regionList) {
                 this.regionList = regionList;
                 return this;
             }

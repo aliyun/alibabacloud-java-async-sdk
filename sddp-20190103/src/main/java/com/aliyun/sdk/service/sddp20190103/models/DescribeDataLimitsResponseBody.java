@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,7 +85,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -99,7 +104,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * <p>A list of data assets.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -241,7 +246,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         private Integer samplingSize;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIdList")
-        private java.util.List < String > securityGroupIdList;
+        private java.util.List<String> securityGroupIdList;
 
         @com.aliyun.core.annotation.NameInMap("SupportAudit")
         private Boolean supportAudit;
@@ -268,7 +273,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         private String userName;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIdList")
-        private java.util.List < String > vSwitchIdList;
+        private java.util.List<String> vSwitchIdList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -538,7 +543,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * @return securityGroupIdList
          */
-        public java.util.List < String > getSecurityGroupIdList() {
+        public java.util.List<String> getSecurityGroupIdList() {
             return this.securityGroupIdList;
         }
 
@@ -601,7 +606,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         /**
          * @return vSwitchIdList
          */
-        public java.util.List < String > getVSwitchIdList() {
+        public java.util.List<String> getVSwitchIdList() {
             return this.vSwitchIdList;
         }
 
@@ -643,7 +648,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private Long resourceType; 
             private String resourceTypeCode; 
             private Integer samplingSize; 
-            private java.util.List < String > securityGroupIdList; 
+            private java.util.List<String> securityGroupIdList; 
             private Boolean supportAudit; 
             private Boolean supportDatamask; 
             private Boolean supportEvent; 
@@ -652,7 +657,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private String tenantName; 
             private Integer totalCount; 
             private String userName; 
-            private java.util.List < String > vSwitchIdList; 
+            private java.util.List<String> vSwitchIdList; 
             private String vpcId; 
 
             /**
@@ -1035,7 +1040,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             /**
              * <p>A list of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.</p>
              */
-            public Builder securityGroupIdList(java.util.List < String > securityGroupIdList) {
+            public Builder securityGroupIdList(java.util.List<String> securityGroupIdList) {
                 this.securityGroupIdList = securityGroupIdList;
                 return this;
             }
@@ -1151,7 +1156,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             /**
              * <p>A list of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.</p>
              */
-            public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
+            public Builder vSwitchIdList(java.util.List<String> vSwitchIdList) {
                 this.vSwitchIdList = vSwitchIdList;
                 return this;
             }

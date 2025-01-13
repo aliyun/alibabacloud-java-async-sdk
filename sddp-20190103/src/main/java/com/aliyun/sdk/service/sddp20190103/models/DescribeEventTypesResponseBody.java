@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEventTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EventTypeList")
-    private java.util.List < EventTypeList> eventTypeList;
+    private java.util.List<EventTypeList> eventTypeList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     /**
      * @return eventTypeList
      */
-    public java.util.List < EventTypeList> getEventTypeList() {
+    public java.util.List<EventTypeList> getEventTypeList() {
         return this.eventTypeList;
     }
 
@@ -46,7 +51,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EventTypeList> eventTypeList; 
+        private java.util.List<EventTypeList> eventTypeList; 
         private String requestId; 
 
         /**
@@ -55,7 +60,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
          * <p>If you leave the ParentTypeId parameter empty, anomalous event types are returned. If you set the ParentTypeId parameter, anomalous event subtypes under the specified anomalous event type are returned.</p>
          * </blockquote>
          */
-        public Builder eventTypeList(java.util.List < EventTypeList> eventTypeList) {
+        public Builder eventTypeList(java.util.List<EventTypeList> eventTypeList) {
             this.eventTypeList = eventTypeList;
             return this;
         }
@@ -385,7 +390,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SubTypeList")
-        private java.util.List < SubTypeList> subTypeList;
+        private java.util.List<SubTypeList> subTypeList;
 
         private EventTypeList(Builder builder) {
             this.code = builder.code;
@@ -434,7 +439,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         /**
          * @return subTypeList
          */
-        public java.util.List < SubTypeList> getSubTypeList() {
+        public java.util.List<SubTypeList> getSubTypeList() {
             return this.subTypeList;
         }
 
@@ -443,7 +448,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String name; 
-            private java.util.List < SubTypeList> subTypeList; 
+            private java.util.List<SubTypeList> subTypeList; 
 
             /**
              * <p>The code of the anomalous event type.</p>
@@ -492,7 +497,7 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             /**
              * <p>An array that consists of anomalous event subtypes.</p>
              */
-            public Builder subTypeList(java.util.List < SubTypeList> subTypeList) {
+            public Builder subTypeList(java.util.List<SubTypeList> subTypeList) {
                 this.subTypeList = subTypeList;
                 return this;
             }

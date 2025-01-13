@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeTablesResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeTablesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,7 +85,7 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -99,7 +104,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         /**
          * <p>An array that consists of tables.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -287,7 +292,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         private String riskLevelName;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("Sensitive")
         private Boolean sensitive;
@@ -412,7 +417,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -463,7 +468,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             private String productId; 
             private Long riskLevelId; 
             private String riskLevelName; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Boolean sensitive; 
             private Integer sensitiveCount; 
             private String sensitiveRatio; 
@@ -608,7 +613,7 @@ public class DescribeTablesResponseBody extends TeaModel {
             /**
              * <p>The information about the sensitive data detection rules that are hit.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RiskLevelList")
-    private java.util.List < RiskLevelList> riskLevelList;
+    private java.util.List<RiskLevelList> riskLevelList;
 
     private DescribeRiskLevelsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
     /**
      * @return riskLevelList
      */
-    public java.util.List < RiskLevelList> getRiskLevelList() {
+    public java.util.List<RiskLevelList> getRiskLevelList() {
         return this.riskLevelList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RiskLevelList> riskLevelList; 
+        private java.util.List<RiskLevelList> riskLevelList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         /**
          * <p>An array that consists of sensitivity levels.</p>
          */
-        public Builder riskLevelList(java.util.List < RiskLevelList> riskLevelList) {
+        public Builder riskLevelList(java.util.List<RiskLevelList> riskLevelList) {
             this.riskLevelList = riskLevelList;
             return this;
         }

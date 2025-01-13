@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class ModifyRuleRequest extends Request {
     private Integer matchType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelRuleIds")
+    private String modelRuleIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -60,6 +69,10 @@ public class ModifyRuleRequest extends Request {
     private Integer supportForm;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateRuleIds")
+    private String templateRuleIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WarnLevel")
     private Integer warnLevel;
 
@@ -70,12 +83,14 @@ public class ModifyRuleRequest extends Request {
         this.id = builder.id;
         this.lang = builder.lang;
         this.matchType = builder.matchType;
+        this.modelRuleIds = builder.modelRuleIds;
         this.name = builder.name;
         this.productCode = builder.productCode;
         this.productId = builder.productId;
         this.riskLevelId = builder.riskLevelId;
         this.ruleType = builder.ruleType;
         this.supportForm = builder.supportForm;
+        this.templateRuleIds = builder.templateRuleIds;
         this.warnLevel = builder.warnLevel;
     }
 
@@ -128,6 +143,13 @@ public class ModifyRuleRequest extends Request {
     }
 
     /**
+     * @return modelRuleIds
+     */
+    public String getModelRuleIds() {
+        return this.modelRuleIds;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -170,6 +192,13 @@ public class ModifyRuleRequest extends Request {
     }
 
     /**
+     * @return templateRuleIds
+     */
+    public String getTemplateRuleIds() {
+        return this.templateRuleIds;
+    }
+
+    /**
      * @return warnLevel
      */
     public Integer getWarnLevel() {
@@ -182,12 +211,14 @@ public class ModifyRuleRequest extends Request {
         private Long id; 
         private String lang; 
         private Integer matchType; 
+        private String modelRuleIds; 
         private String name; 
         private String productCode; 
         private Long productId; 
         private Long riskLevelId; 
         private Integer ruleType; 
         private Integer supportForm; 
+        private String templateRuleIds; 
         private Integer warnLevel; 
 
         private Builder() {
@@ -201,12 +232,14 @@ public class ModifyRuleRequest extends Request {
             this.id = request.id;
             this.lang = request.lang;
             this.matchType = request.matchType;
+            this.modelRuleIds = request.modelRuleIds;
             this.name = request.name;
             this.productCode = request.productCode;
             this.productId = request.productId;
             this.riskLevelId = request.riskLevelId;
             this.ruleType = request.ruleType;
             this.supportForm = request.supportForm;
+            this.templateRuleIds = request.templateRuleIds;
             this.warnLevel = request.warnLevel;
         } 
 
@@ -283,6 +316,15 @@ public class ModifyRuleRequest extends Request {
         public Builder matchType(Integer matchType) {
             this.putQueryParameter("MatchType", matchType);
             this.matchType = matchType;
+            return this;
+        }
+
+        /**
+         * ModelRuleIds.
+         */
+        public Builder modelRuleIds(String modelRuleIds) {
+            this.putQueryParameter("ModelRuleIds", modelRuleIds);
+            this.modelRuleIds = modelRuleIds;
             return this;
         }
 
@@ -374,6 +416,15 @@ public class ModifyRuleRequest extends Request {
         public Builder supportForm(Integer supportForm) {
             this.putQueryParameter("SupportForm", supportForm);
             this.supportForm = supportForm;
+            return this;
+        }
+
+        /**
+         * TemplateRuleIds.
+         */
+        public Builder templateRuleIds(String templateRuleIds) {
+            this.putQueryParameter("TemplateRuleIds", templateRuleIds);
+            this.templateRuleIds = templateRuleIds;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -152,7 +157,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         private Long count;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
-        private java.util.List < ModelTags> modelTags;
+        private java.util.List<ModelTags> modelTags;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
@@ -197,7 +202,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         /**
          * @return modelTags
          */
-        public java.util.List < ModelTags> getModelTags() {
+        public java.util.List<ModelTags> getModelTags() {
             return this.modelTags;
         }
 
@@ -225,7 +230,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         public static final class Builder {
             private String categoryName; 
             private Long count; 
-            private java.util.List < ModelTags> modelTags; 
+            private java.util.List<ModelTags> modelTags; 
             private Long riskLevelId; 
             private String riskLevelName; 
             private String ruleName; 
@@ -249,7 +254,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             /**
              * ModelTags.
              */
-            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+            public Builder modelTags(java.util.List<ModelTags> modelTags) {
                 this.modelTags = modelTags;
                 return this;
             }
@@ -323,7 +328,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         private String riskLevelName;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
@@ -424,7 +429,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -446,7 +451,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             private String regionId; 
             private Integer riskLevelId; 
             private String riskLevelName; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Long size; 
 
             /**
@@ -532,7 +537,7 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

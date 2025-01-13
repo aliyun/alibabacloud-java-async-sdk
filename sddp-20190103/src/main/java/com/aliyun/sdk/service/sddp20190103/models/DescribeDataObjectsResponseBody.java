@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -80,7 +85,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
@@ -96,7 +101,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -333,7 +338,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -354,7 +359,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         private Long memberAccount;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
-        private java.util.List < ModelTags> modelTags;
+        private java.util.List<ModelTags> modelTags;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -381,7 +386,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         private String regionName;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
@@ -422,7 +427,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
@@ -471,7 +476,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         /**
          * @return modelTags
          */
-        public java.util.List < ModelTags> getModelTags() {
+        public java.util.List<ModelTags> getModelTags() {
             return this.modelTags;
         }
 
@@ -534,7 +539,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -553,14 +558,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > categories; 
+            private java.util.List<String> categories; 
             private String id; 
             private String instanceDescription; 
             private String instanceId; 
             private Long lastModifiedTime; 
             private Long lastScanTime; 
             private Long memberAccount; 
-            private java.util.List < ModelTags> modelTags; 
+            private java.util.List<ModelTags> modelTags; 
             private String name; 
             private String objectFileCategory; 
             private String objectType; 
@@ -569,14 +574,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private Long productId; 
             private String regionId; 
             private String regionName; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private Integer sensitiveCount; 
             private Long templateId; 
 
             /**
              * Categories.
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -632,7 +637,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             /**
              * ModelTags.
              */
-            public Builder modelTags(java.util.List < ModelTags> modelTags) {
+            public Builder modelTags(java.util.List<ModelTags> modelTags) {
                 this.modelTags = modelTags;
                 return this;
             }
@@ -704,7 +709,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             /**
              * RuleList.
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
