@@ -79,7 +79,10 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessToken.
+         * <p>The service token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nzc5N2FhNTM4OTQ0YzBmYTIy<strong><strong>ZTUxN2NkYjg4MTJmMWQxZmY1</strong></strong></p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -87,7 +90,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoints.
+         * <p>The endpoints of service groups.</p>
          */
         public Builder endpoints(Endpoints endpoints) {
             this.endpoints = endpoints;
@@ -95,7 +98,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +106,10 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>890772EF-3AD6-129A-8E15-8F349C944783</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +215,16 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * BackendId.
+             * <p>The backend access ID, which varies based on the value of the EndpointType parameter.</p>
+             * <ul>
+             * <li>If you set EndpointType to DefaultGateway, the value of this parameter is default.</li>
+             * <li>If you set EndpointType to PrivateGateway, the value of this parameter is the ID of the dedicated gateway.</li>
+             * <li>If you set EndpointType to Nlb, the value of this parameter is the ID of the NLB instance.</li>
+             * <li>If you set EndpointType to Nacos, the value of this parameter is the ID of the Nacos instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-26340kjxjx8l3r****</p>
              */
             public Builder backendId(String backendId) {
                 this.backendId = backendId;
@@ -217,7 +232,16 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * <p>The service endpoint type. Valid values:</p>
+             * <ul>
+             * <li>DefaultGateway: the shared gateway.</li>
+             * <li>PrivateGateway: the dedicated gateway.</li>
+             * <li>Nlb: Associate the service with the Network Load Balancer (NLB) instance.</li>
+             * <li>Nacos: Associate the service with the Nacos instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateGateway</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -225,7 +249,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEndpoints.
+             * <p>The public endpoints.</p>
              */
             public Builder internetEndpoints(java.util.List<String> internetEndpoints) {
                 this.internetEndpoints = internetEndpoints;
@@ -233,7 +257,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetEndpoints.
+             * <p>The internal endpoints.</p>
              */
             public Builder intranetEndpoints(java.util.List<String> intranetEndpoints) {
                 this.intranetEndpoints = intranetEndpoints;
@@ -241,7 +265,14 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PathType.
+             * <p>The path type. Valid values:</p>
+             * <ul>
+             * <li>Group: the path of the service group.</li>
+             * <li>Service: the path of the service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Group</p>
              */
             public Builder pathType(String pathType) {
                 this.pathType = pathType;
@@ -249,7 +280,10 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number. This parameter takes effect only when you associate the service with an NLB or Nacos instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9090</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

@@ -74,7 +74,10 @@ public class DescribeServiceEndpointsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -83,6 +86,7 @@ public class DescribeServiceEndpointsRequest extends Request {
         }
 
         /**
+         * <p>The service name. For more information about how to obtain the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

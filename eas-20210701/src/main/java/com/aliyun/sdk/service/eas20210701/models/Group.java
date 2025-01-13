@@ -38,6 +38,9 @@ public class Group extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("QueueService")
     private String queueService;
 
+    @com.aliyun.core.annotation.NameInMap("TrafficMode")
+    private String trafficMode;
+
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
@@ -49,6 +52,7 @@ public class Group extends TeaModel {
         this.intranetEndpoint = builder.intranetEndpoint;
         this.name = builder.name;
         this.queueService = builder.queueService;
+        this.trafficMode = builder.trafficMode;
         this.updateTime = builder.updateTime;
     }
 
@@ -110,6 +114,13 @@ public class Group extends TeaModel {
     }
 
     /**
+     * @return trafficMode
+     */
+    public String getTrafficMode() {
+        return this.trafficMode;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -124,6 +135,7 @@ public class Group extends TeaModel {
         private String intranetEndpoint; 
         private String name; 
         private String queueService; 
+        private String trafficMode; 
         private String updateTime; 
 
         /**
@@ -179,6 +191,14 @@ public class Group extends TeaModel {
          */
         public Builder queueService(String queueService) {
             this.queueService = queueService;
+            return this;
+        }
+
+        /**
+         * TrafficMode.
+         */
+        public Builder trafficMode(String trafficMode) {
+            this.trafficMode = trafficMode;
             return this;
         }
 

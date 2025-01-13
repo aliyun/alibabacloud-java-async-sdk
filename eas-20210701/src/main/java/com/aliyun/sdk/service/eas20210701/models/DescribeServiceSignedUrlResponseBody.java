@@ -66,7 +66,10 @@ public class DescribeServiceSignedUrlResponseBody extends TeaModel {
         }
 
         /**
-         * SignedUrl.
+         * <p>The service URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://foo-115**.console.cn-hangzhou.eas.pai-ml.com?expire=1735202661&signature=ey">https://foo-115**.console.cn-hangzhou.eas.pai-ml.com?expire=1735202661&amp;signature=ey</a>*******</p>
          */
         public Builder signedUrl(String signedUrl) {
             this.signedUrl = signedUrl;

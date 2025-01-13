@@ -115,7 +115,10 @@ public class DescribeServiceSignedUrlRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region in which the service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -124,7 +127,10 @@ public class DescribeServiceSignedUrlRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -133,7 +139,10 @@ public class DescribeServiceSignedUrlRequest extends Request {
         }
 
         /**
-         * Expire.
+         * <p>The period of time for which the URL expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43200</p>
          */
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
@@ -142,7 +151,10 @@ public class DescribeServiceSignedUrlRequest extends Request {
         }
 
         /**
-         * Internal.
+         * <p>Specifies whether to use the VPC connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder internal(Boolean internal) {
             this.putQueryParameter("Internal", internal);
@@ -151,7 +163,15 @@ public class DescribeServiceSignedUrlRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The page type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>webview</li>
+         * <li>monitor</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>webview</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

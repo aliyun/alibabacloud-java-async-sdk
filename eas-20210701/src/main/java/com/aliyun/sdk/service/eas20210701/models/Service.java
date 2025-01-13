@@ -137,6 +137,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalInstance")
     private Integer totalInstance;
 
+    @com.aliyun.core.annotation.NameInMap("TrafficState")
+    private String trafficState;
+
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
@@ -187,6 +190,7 @@ public class Service extends TeaModel {
         this.source = builder.source;
         this.status = builder.status;
         this.totalInstance = builder.totalInstance;
+        this.trafficState = builder.trafficState;
         this.updateTime = builder.updateTime;
         this.weight = builder.weight;
         this.workspaceId = builder.workspaceId;
@@ -481,6 +485,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return trafficState
+     */
+    public String getTrafficState() {
+        return this.trafficState;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -542,6 +553,7 @@ public class Service extends TeaModel {
         private String source; 
         private String status; 
         private Integer totalInstance; 
+        private String trafficState; 
         private String updateTime; 
         private Integer weight; 
         private String workspaceId; 
@@ -863,6 +875,14 @@ public class Service extends TeaModel {
          */
         public Builder totalInstance(Integer totalInstance) {
             this.totalInstance = totalInstance;
+            return this;
+        }
+
+        /**
+         * TrafficState.
+         */
+        public Builder trafficState(String trafficState) {
+            this.trafficState = trafficState;
             return this;
         }
 
