@@ -183,6 +183,9 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("LimitApp")
+        private String limitApp;
+
         @com.aliyun.core.annotation.NameInMap("MaxQueueingTimeMs")
         private Integer maxQueueingTimeMs;
 
@@ -204,6 +207,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             this.controlBehavior = builder.controlBehavior;
             this.enable = builder.enable;
             this.id = builder.id;
+            this.limitApp = builder.limitApp;
             this.maxQueueingTimeMs = builder.maxQueueingTimeMs;
             this.namespace = builder.namespace;
             this.regionId = builder.regionId;
@@ -255,6 +259,13 @@ public class CreateFlowRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return limitApp
+         */
+        public String getLimitApp() {
+            return this.limitApp;
+        }
+
+        /**
          * @return maxQueueingTimeMs
          */
         public Integer getMaxQueueingTimeMs() {
@@ -295,6 +306,7 @@ public class CreateFlowRuleResponseBody extends TeaModel {
             private Integer controlBehavior; 
             private Boolean enable; 
             private Long id; 
+            private String limitApp; 
             private Integer maxQueueingTimeMs; 
             private String namespace; 
             private String regionId; 
@@ -389,6 +401,14 @@ public class CreateFlowRuleResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * LimitApp.
+             */
+            public Builder limitApp(String limitApp) {
+                this.limitApp = limitApp;
                 return this;
             }
 

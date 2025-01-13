@@ -43,6 +43,7 @@ public class AddGatewayRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableWaf")
+    @Deprecated
     private Boolean enableWaf;
 
     @com.aliyun.core.annotation.Query

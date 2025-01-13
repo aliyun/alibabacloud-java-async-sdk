@@ -35,6 +35,10 @@ public class UpdateIsolationRuleRequest extends Request {
     private Boolean enable;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LimitApp")
+    private String limitApp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
@@ -54,6 +58,7 @@ public class UpdateIsolationRuleRequest extends Request {
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.enable = builder.enable;
+        this.limitApp = builder.limitApp;
         this.namespace = builder.namespace;
         this.ruleId = builder.ruleId;
         this.threshold = builder.threshold;
@@ -101,6 +106,13 @@ public class UpdateIsolationRuleRequest extends Request {
     }
 
     /**
+     * @return limitApp
+     */
+    public String getLimitApp() {
+        return this.limitApp;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -126,6 +138,7 @@ public class UpdateIsolationRuleRequest extends Request {
         private String appId; 
         private String appName; 
         private Boolean enable; 
+        private String limitApp; 
         private String namespace; 
         private Long ruleId; 
         private Float threshold; 
@@ -140,6 +153,7 @@ public class UpdateIsolationRuleRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.enable = request.enable;
+            this.limitApp = request.limitApp;
             this.namespace = request.namespace;
             this.ruleId = request.ruleId;
             this.threshold = request.threshold;
@@ -181,6 +195,15 @@ public class UpdateIsolationRuleRequest extends Request {
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * LimitApp.
+         */
+        public Builder limitApp(String limitApp) {
+            this.putQueryParameter("LimitApp", limitApp);
+            this.limitApp = limitApp;
             return this;
         }
 

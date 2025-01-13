@@ -175,6 +175,9 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FallbackObject")
         private String fallbackObject;
 
+        @com.aliyun.core.annotation.NameInMap("LimitApp")
+        private String limitApp;
+
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
@@ -195,6 +198,7 @@ public class ListIsolationRulesResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.enable = builder.enable;
             this.fallbackObject = builder.fallbackObject;
+            this.limitApp = builder.limitApp;
             this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.resource = builder.resource;
@@ -239,6 +243,13 @@ public class ListIsolationRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return limitApp
+         */
+        public String getLimitApp() {
+            return this.limitApp;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -278,6 +289,7 @@ public class ListIsolationRulesResponseBody extends TeaModel {
             private String appName; 
             private Boolean enable; 
             private String fallbackObject; 
+            private String limitApp; 
             private String namespace; 
             private String regionId; 
             private String resource; 
@@ -313,6 +325,14 @@ public class ListIsolationRulesResponseBody extends TeaModel {
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
+                return this;
+            }
+
+            /**
+             * LimitApp.
+             */
+            public Builder limitApp(String limitApp) {
+                this.limitApp = limitApp;
                 return this;
             }
 

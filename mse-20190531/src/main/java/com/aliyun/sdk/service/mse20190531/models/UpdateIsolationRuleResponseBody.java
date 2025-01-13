@@ -155,6 +155,9 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("LimitApp")
+        private String limitApp;
+
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
@@ -169,6 +172,7 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.enable = builder.enable;
             this.id = builder.id;
+            this.limitApp = builder.limitApp;
             this.namespace = builder.namespace;
             this.resource = builder.resource;
             this.threshold = builder.threshold;
@@ -211,6 +215,13 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return limitApp
+         */
+        public String getLimitApp() {
+            return this.limitApp;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -236,6 +247,7 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
             private String appName; 
             private Boolean enable; 
             private Long id; 
+            private String limitApp; 
             private String namespace; 
             private String resource; 
             private Float threshold; 
@@ -269,6 +281,14 @@ public class UpdateIsolationRuleResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * LimitApp.
+             */
+            public Builder limitApp(String limitApp) {
+                this.limitApp = limitApp;
                 return this;
             }
 

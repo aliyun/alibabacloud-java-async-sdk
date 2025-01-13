@@ -210,6 +210,9 @@ public class ListFlowRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FallbackObject")
         private String fallbackObject;
 
+        @com.aliyun.core.annotation.NameInMap("LimitApp")
+        private String limitApp;
+
         @com.aliyun.core.annotation.NameInMap("MaxQueueingTimeMs")
         private Integer maxQueueingTimeMs;
 
@@ -243,6 +246,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             this.controlBehavior = builder.controlBehavior;
             this.enable = builder.enable;
             this.fallbackObject = builder.fallbackObject;
+            this.limitApp = builder.limitApp;
             this.maxQueueingTimeMs = builder.maxQueueingTimeMs;
             this.metricType = builder.metricType;
             this.namespace = builder.namespace;
@@ -295,6 +299,13 @@ public class ListFlowRulesResponseBody extends TeaModel {
          */
         public String getFallbackObject() {
             return this.fallbackObject;
+        }
+
+        /**
+         * @return limitApp
+         */
+        public String getLimitApp() {
+            return this.limitApp;
         }
 
         /**
@@ -366,6 +377,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private Integer controlBehavior; 
             private Boolean enable; 
             private String fallbackObject; 
+            private String limitApp; 
             private Integer maxQueueingTimeMs; 
             private Integer metricType; 
             private String namespace; 
@@ -464,6 +476,14 @@ public class ListFlowRulesResponseBody extends TeaModel {
              */
             public Builder fallbackObject(String fallbackObject) {
                 this.fallbackObject = fallbackObject;
+                return this;
+            }
+
+            /**
+             * LimitApp.
+             */
+            public Builder limitApp(String limitApp) {
+                this.limitApp = limitApp;
                 return this;
             }
 
