@@ -55,7 +55,7 @@ public class GenerateOpsItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OpsItemIds.
+         * <p>The O&amp;M item list.</p>
          */
         public Builder opsItemIds(java.util.List<String> opsItemIds) {
             this.opsItemIds = opsItemIds;
@@ -63,7 +63,10 @@ public class GenerateOpsItemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA4F08D4-DA54-5407-84B9-108C71D75B17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

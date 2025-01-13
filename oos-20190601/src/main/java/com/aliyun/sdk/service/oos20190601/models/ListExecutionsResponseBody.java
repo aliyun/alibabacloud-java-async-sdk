@@ -29,11 +29,15 @@ public class ListExecutionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private ListExecutionsResponseBody(Builder builder) {
         this.executions = builder.executions;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -72,11 +76,19 @@ public class ListExecutionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List<Executions> executions; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * <p>The details of the task executions.</p>
@@ -116,6 +128,14 @@ public class ListExecutionsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

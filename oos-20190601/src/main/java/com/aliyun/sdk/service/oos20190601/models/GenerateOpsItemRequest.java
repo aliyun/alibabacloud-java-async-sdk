@@ -116,7 +116,10 @@ public class GenerateOpsItemRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The token that is used to ensure the idempotency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -125,7 +128,10 @@ public class GenerateOpsItemRequest extends Request {
         }
 
         /**
-         * ConfigurationId.
+         * <p>The configuration ID of the O&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oic-ae4f******2c682e3</p>
          */
         public Builder configurationId(String configurationId) {
             this.putQueryParameter("ConfigurationId", configurationId);
@@ -134,6 +140,7 @@ public class GenerateOpsItemRequest extends Request {
         }
 
         /**
+         * <p>The source system data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +153,10 @@ public class GenerateOpsItemRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <p>The data source system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/aliyun/eventbridge/event</p>
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("DataSource", dataSource);
@@ -155,7 +165,10 @@ public class GenerateOpsItemRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

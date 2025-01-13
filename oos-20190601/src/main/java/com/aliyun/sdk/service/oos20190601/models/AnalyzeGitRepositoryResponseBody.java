@@ -176,9 +176,13 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildType")
         private String buildType;
 
+        @com.aliyun.core.annotation.NameInMap("RuntimeType")
+        private String runtimeType;
+
         private AnalysisResults(Builder builder) {
             this.buildFiles = builder.buildFiles;
             this.buildType = builder.buildType;
+            this.runtimeType = builder.runtimeType;
         }
 
         public static Builder builder() {
@@ -203,9 +207,17 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
             return this.buildType;
         }
 
+        /**
+         * @return runtimeType
+         */
+        public String getRuntimeType() {
+            return this.runtimeType;
+        }
+
         public static final class Builder {
             private java.util.List<BuildFiles> buildFiles; 
             private String buildType; 
+            private String runtimeType; 
 
             /**
              * BuildFiles.
@@ -220,6 +232,14 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
+                return this;
+            }
+
+            /**
+             * RuntimeType.
+             */
+            public Builder runtimeType(String runtimeType) {
+                this.runtimeType = runtimeType;
                 return this;
             }
 
