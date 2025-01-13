@@ -201,6 +201,441 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      *
      * <p>DescribeImagePipelinesResponseBody</p>
      */
+    public static class AdvancedOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RetainCloudAssistant")
+        private Boolean retainCloudAssistant;
+
+        private AdvancedOptions(Builder builder) {
+            this.retainCloudAssistant = builder.retainCloudAssistant;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvancedOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return retainCloudAssistant
+         */
+        public Boolean getRetainCloudAssistant() {
+            return this.retainCloudAssistant;
+        }
+
+        public static final class Builder {
+            private Boolean retainCloudAssistant; 
+
+            /**
+             * RetainCloudAssistant.
+             */
+            public Builder retainCloudAssistant(Boolean retainCloudAssistant) {
+                this.retainCloudAssistant = retainCloudAssistant;
+                return this;
+            }
+
+            public AdvancedOptions build() {
+                return new AdvancedOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class DiskDeviceMapping extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskImageSize")
+        private Integer diskImageSize;
+
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("OSSBucket")
+        private String OSSBucket;
+
+        @com.aliyun.core.annotation.NameInMap("OSSObject")
+        private String OSSObject;
+
+        private DiskDeviceMapping(Builder builder) {
+            this.diskImageSize = builder.diskImageSize;
+            this.format = builder.format;
+            this.OSSBucket = builder.OSSBucket;
+            this.OSSObject = builder.OSSObject;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMapping create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskImageSize
+         */
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
+        }
+
+        /**
+         * @return OSSBucket
+         */
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
+        /**
+         * @return OSSObject
+         */
+        public String getOSSObject() {
+            return this.OSSObject;
+        }
+
+        public static final class Builder {
+            private Integer diskImageSize; 
+            private String format; 
+            private String OSSBucket; 
+            private String OSSObject; 
+
+            /**
+             * DiskImageSize.
+             */
+            public Builder diskImageSize(Integer diskImageSize) {
+                this.diskImageSize = diskImageSize;
+                return this;
+            }
+
+            /**
+             * Format.
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * OSSBucket.
+             */
+            public Builder OSSBucket(String OSSBucket) {
+                this.OSSBucket = OSSBucket;
+                return this;
+            }
+
+            /**
+             * OSSObject.
+             */
+            public Builder OSSObject(String OSSObject) {
+                this.OSSObject = OSSObject;
+                return this;
+            }
+
+            public DiskDeviceMapping build() {
+                return new DiskDeviceMapping(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class DiskDeviceMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
+        private java.util.List<DiskDeviceMapping> diskDeviceMapping;
+
+        private DiskDeviceMappings(Builder builder) {
+            this.diskDeviceMapping = builder.diskDeviceMapping;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskDeviceMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskDeviceMapping
+         */
+        public java.util.List<DiskDeviceMapping> getDiskDeviceMapping() {
+            return this.diskDeviceMapping;
+        }
+
+        public static final class Builder {
+            private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
+
+            /**
+             * DiskDeviceMapping.
+             */
+            public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
+                this.diskDeviceMapping = diskDeviceMapping;
+                return this;
+            }
+
+            public DiskDeviceMappings build() {
+                return new DiskDeviceMappings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+        private String nvmeSupport;
+
+        private Features(Builder builder) {
+            this.nvmeSupport = builder.nvmeSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Features create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+        public static final class Builder {
+            private String nvmeSupport; 
+
+            /**
+             * NvmeSupport.
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            public Features build() {
+                return new Features(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
+    public static class ImportImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Architecture")
+        private String architecture;
+
+        @com.aliyun.core.annotation.NameInMap("BootMode")
+        private String bootMode;
+
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
+        private DiskDeviceMappings diskDeviceMappings;
+
+        @com.aliyun.core.annotation.NameInMap("Features")
+        private Features features;
+
+        @com.aliyun.core.annotation.NameInMap("LicenseType")
+        private String licenseType;
+
+        @com.aliyun.core.annotation.NameInMap("OSType")
+        private String OSType;
+
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
+        @com.aliyun.core.annotation.NameInMap("RetainImportedImage")
+        private Boolean retainImportedImage;
+
+        private ImportImageOptions(Builder builder) {
+            this.architecture = builder.architecture;
+            this.bootMode = builder.bootMode;
+            this.diskDeviceMappings = builder.diskDeviceMappings;
+            this.features = builder.features;
+            this.licenseType = builder.licenseType;
+            this.OSType = builder.OSType;
+            this.platform = builder.platform;
+            this.retainImportedImage = builder.retainImportedImage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImportImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return architecture
+         */
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        /**
+         * @return bootMode
+         */
+        public String getBootMode() {
+            return this.bootMode;
+        }
+
+        /**
+         * @return diskDeviceMappings
+         */
+        public DiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
+        }
+
+        /**
+         * @return features
+         */
+        public Features getFeatures() {
+            return this.features;
+        }
+
+        /**
+         * @return licenseType
+         */
+        public String getLicenseType() {
+            return this.licenseType;
+        }
+
+        /**
+         * @return OSType
+         */
+        public String getOSType() {
+            return this.OSType;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
+         * @return retainImportedImage
+         */
+        public Boolean getRetainImportedImage() {
+            return this.retainImportedImage;
+        }
+
+        public static final class Builder {
+            private String architecture; 
+            private String bootMode; 
+            private DiskDeviceMappings diskDeviceMappings; 
+            private Features features; 
+            private String licenseType; 
+            private String OSType; 
+            private String platform; 
+            private Boolean retainImportedImage; 
+
+            /**
+             * Architecture.
+             */
+            public Builder architecture(String architecture) {
+                this.architecture = architecture;
+                return this;
+            }
+
+            /**
+             * BootMode.
+             */
+            public Builder bootMode(String bootMode) {
+                this.bootMode = bootMode;
+                return this;
+            }
+
+            /**
+             * DiskDeviceMappings.
+             */
+            public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
+                this.diskDeviceMappings = diskDeviceMappings;
+                return this;
+            }
+
+            /**
+             * Features.
+             */
+            public Builder features(Features features) {
+                this.features = features;
+                return this;
+            }
+
+            /**
+             * LicenseType.
+             */
+            public Builder licenseType(String licenseType) {
+                this.licenseType = licenseType;
+                return this;
+            }
+
+            /**
+             * OSType.
+             */
+            public Builder OSType(String OSType) {
+                this.OSType = OSType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
+             * RetainImportedImage.
+             */
+            public Builder retainImportedImage(Boolean retainImportedImage) {
+                this.retainImportedImage = retainImportedImage;
+                return this;
+            }
+
+            public ImportImageOptions build() {
+                return new ImportImageOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -372,6 +807,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddAccounts")
         private AddAccounts addAccounts;
 
+        @com.aliyun.core.annotation.NameInMap("AdvancedOptions")
+        private AdvancedOptions advancedOptions;
+
         @com.aliyun.core.annotation.NameInMap("BaseImage")
         private String baseImage;
 
@@ -399,6 +837,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
         private String imagePipelineId;
 
+        @com.aliyun.core.annotation.NameInMap("ImportImageOptions")
+        private ImportImageOptions importImageOptions;
+
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
@@ -407,6 +848,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
+        private String nvmeSupport;
 
         @com.aliyun.core.annotation.NameInMap("RepairMode")
         private String repairMode;
@@ -431,6 +875,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         private ImagePipelineSet(Builder builder) {
             this.addAccounts = builder.addAccounts;
+            this.advancedOptions = builder.advancedOptions;
             this.baseImage = builder.baseImage;
             this.baseImageType = builder.baseImageType;
             this.buildContent = builder.buildContent;
@@ -440,9 +885,11 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             this.imageFamily = builder.imageFamily;
             this.imageName = builder.imageName;
             this.imagePipelineId = builder.imagePipelineId;
+            this.importImageOptions = builder.importImageOptions;
             this.instanceType = builder.instanceType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.name = builder.name;
+            this.nvmeSupport = builder.nvmeSupport;
             this.repairMode = builder.repairMode;
             this.resourceGroupId = builder.resourceGroupId;
             this.systemDiskSize = builder.systemDiskSize;
@@ -465,6 +912,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         public AddAccounts getAddAccounts() {
             return this.addAccounts;
+        }
+
+        /**
+         * @return advancedOptions
+         */
+        public AdvancedOptions getAdvancedOptions() {
+            return this.advancedOptions;
         }
 
         /**
@@ -531,6 +985,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return importImageOptions
+         */
+        public ImportImageOptions getImportImageOptions() {
+            return this.importImageOptions;
+        }
+
+        /**
          * @return instanceType
          */
         public String getInstanceType() {
@@ -549,6 +1010,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return nvmeSupport
+         */
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
         }
 
         /**
@@ -602,6 +1070,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         public static final class Builder {
             private AddAccounts addAccounts; 
+            private AdvancedOptions advancedOptions; 
             private String baseImage; 
             private String baseImageType; 
             private String buildContent; 
@@ -611,9 +1080,11 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String imageFamily; 
             private String imageName; 
             private String imagePipelineId; 
+            private ImportImageOptions importImageOptions; 
             private String instanceType; 
             private Integer internetMaxBandwidthOut; 
             private String name; 
+            private String nvmeSupport; 
             private String repairMode; 
             private String resourceGroupId; 
             private Integer systemDiskSize; 
@@ -627,6 +1098,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder addAccounts(AddAccounts addAccounts) {
                 this.addAccounts = addAccounts;
+                return this;
+            }
+
+            /**
+             * AdvancedOptions.
+             */
+            public Builder advancedOptions(AdvancedOptions advancedOptions) {
+                this.advancedOptions = advancedOptions;
                 return this;
             }
 
@@ -738,6 +1217,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * ImportImageOptions.
+             */
+            public Builder importImageOptions(ImportImageOptions importImageOptions) {
+                this.importImageOptions = importImageOptions;
+                return this;
+            }
+
+            /**
              * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
@@ -767,6 +1254,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * NvmeSupport.
+             */
+            public Builder nvmeSupport(String nvmeSupport) {
+                this.nvmeSupport = nvmeSupport;
                 return this;
             }
 
