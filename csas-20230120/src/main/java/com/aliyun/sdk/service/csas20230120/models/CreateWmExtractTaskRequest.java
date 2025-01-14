@@ -256,19 +256,32 @@ public class CreateWmExtractTaskRequest extends Request {
      * <p>CreateWmExtractTaskRequest</p>
      */
     public static class CsvControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EmbedBitsNumberInEachTime")
+        @com.aliyun.core.annotation.Validation(maximum = 4, minimum = 1)
+        private Long embedBitsNumberInEachTime;
+
         @com.aliyun.core.annotation.NameInMap("EmbedColumn")
         private Long embedColumn;
 
         @com.aliyun.core.annotation.NameInMap("EmbedPrecision")
         private Long embedPrecision;
 
+        @com.aliyun.core.annotation.NameInMap("EmbedTimePosition")
+        private String embedTimePosition;
+
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
+        @com.aliyun.core.annotation.NameInMap("TimeFormat")
+        private String timeFormat;
+
         private CsvControl(Builder builder) {
+            this.embedBitsNumberInEachTime = builder.embedBitsNumberInEachTime;
             this.embedColumn = builder.embedColumn;
             this.embedPrecision = builder.embedPrecision;
+            this.embedTimePosition = builder.embedTimePosition;
             this.method = builder.method;
+            this.timeFormat = builder.timeFormat;
         }
 
         public static Builder builder() {
@@ -277,6 +290,13 @@ public class CreateWmExtractTaskRequest extends Request {
 
         public static CsvControl create() {
             return builder().build();
+        }
+
+        /**
+         * @return embedBitsNumberInEachTime
+         */
+        public Long getEmbedBitsNumberInEachTime() {
+            return this.embedBitsNumberInEachTime;
         }
 
         /**
@@ -294,16 +314,41 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
+         * @return embedTimePosition
+         */
+        public String getEmbedTimePosition() {
+            return this.embedTimePosition;
+        }
+
+        /**
          * @return method
          */
         public String getMethod() {
             return this.method;
         }
 
+        /**
+         * @return timeFormat
+         */
+        public String getTimeFormat() {
+            return this.timeFormat;
+        }
+
         public static final class Builder {
+            private Long embedBitsNumberInEachTime; 
             private Long embedColumn; 
             private Long embedPrecision; 
+            private String embedTimePosition; 
             private String method; 
+            private String timeFormat; 
+
+            /**
+             * EmbedBitsNumberInEachTime.
+             */
+            public Builder embedBitsNumberInEachTime(Long embedBitsNumberInEachTime) {
+                this.embedBitsNumberInEachTime = embedBitsNumberInEachTime;
+                return this;
+            }
 
             /**
              * EmbedColumn.
@@ -322,10 +367,26 @@ public class CreateWmExtractTaskRequest extends Request {
             }
 
             /**
+             * EmbedTimePosition.
+             */
+            public Builder embedTimePosition(String embedTimePosition) {
+                this.embedTimePosition = embedTimePosition;
+                return this;
+            }
+
+            /**
              * Method.
              */
             public Builder method(String method) {
                 this.method = method;
+                return this;
+            }
+
+            /**
+             * TimeFormat.
+             */
+            public Builder timeFormat(String timeFormat) {
+                this.timeFormat = timeFormat;
                 return this;
             }
 
