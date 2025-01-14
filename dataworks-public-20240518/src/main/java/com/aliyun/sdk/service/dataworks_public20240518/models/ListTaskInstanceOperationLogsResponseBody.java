@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -221,7 +226,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationLogs")
-        private java.util.List < OperationLogs> operationLogs;
+        private java.util.List<OperationLogs> operationLogs;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -250,7 +255,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
         /**
          * @return operationLogs
          */
-        public java.util.List < OperationLogs> getOperationLogs() {
+        public java.util.List<OperationLogs> getOperationLogs() {
             return this.operationLogs;
         }
 
@@ -276,7 +281,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < OperationLogs> operationLogs; 
+            private java.util.List<OperationLogs> operationLogs; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -284,7 +289,7 @@ public class ListTaskInstanceOperationLogsResponseBody extends TeaModel {
             /**
              * <p>The operation logs.</p>
              */
-            public Builder operationLogs(java.util.List < OperationLogs> operationLogs) {
+            public Builder operationLogs(java.util.List<OperationLogs> operationLogs) {
                 this.operationLogs = operationLogs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,16 @@ public class StartDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @Deprecated
     private Long DIJobId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceToRerun")
     private Boolean forceToRerun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RealtimeStartSettings")
@@ -33,6 +43,7 @@ public class StartDIJobRequest extends Request {
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
         this.forceToRerun = builder.forceToRerun;
+        this.id = builder.id;
         this.realtimeStartSettings = builder.realtimeStartSettings;
     }
 
@@ -71,6 +82,13 @@ public class StartDIJobRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return realtimeStartSettings
      */
     public RealtimeStartSettings getRealtimeStartSettings() {
@@ -81,6 +99,7 @@ public class StartDIJobRequest extends Request {
         private String regionId; 
         private Long DIJobId; 
         private Boolean forceToRerun; 
+        private Long id; 
         private RealtimeStartSettings realtimeStartSettings; 
 
         private Builder() {
@@ -92,6 +111,7 @@ public class StartDIJobRequest extends Request {
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
             this.forceToRerun = request.forceToRerun;
+            this.id = request.id;
             this.realtimeStartSettings = request.realtimeStartSettings;
         } 
 
@@ -105,7 +125,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -122,6 +142,18 @@ public class StartDIJobRequest extends Request {
         public Builder forceToRerun(Boolean forceToRerun) {
             this.putQueryParameter("ForceToRerun", forceToRerun);
             this.forceToRerun = forceToRerun;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 
@@ -150,9 +182,11 @@ public class StartDIJobRequest extends Request {
      */
     public static class FailoverSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interval")
+        @Deprecated
         private Long interval;
 
         @com.aliyun.core.annotation.NameInMap("UpperLimit")
+        @Deprecated
         private Long upperLimit;
 
         private FailoverSettings(Builder builder) {
@@ -217,6 +251,7 @@ public class StartDIJobRequest extends Request {
      */
     public static class RealtimeStartSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailoverSettings")
+        @Deprecated
         private FailoverSettings failoverSettings;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")

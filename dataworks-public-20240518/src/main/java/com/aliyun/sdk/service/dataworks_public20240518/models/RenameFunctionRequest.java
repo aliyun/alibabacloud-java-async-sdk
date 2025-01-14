@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class RenameFunctionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String id;
+    private Long id;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -29,7 +34,7 @@ public class RenameFunctionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     private RenameFunctionRequest(Builder builder) {
         super(builder);
@@ -62,7 +67,7 @@ public class RenameFunctionRequest extends Request {
     /**
      * @return id
      */
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -76,15 +81,15 @@ public class RenameFunctionRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
     public static final class Builder extends Request.Builder<RenameFunctionRequest, Builder> {
         private String regionId; 
-        private String id; 
+        private Long id; 
         private String name; 
-        private String projectId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -114,7 +119,7 @@ public class RenameFunctionRequest extends Request {
          * <strong>example:</strong>
          * <p>543217824470354XXXX</p>
          */
-        public Builder id(String id) {
+        public Builder id(Long id) {
             this.putBodyParameter("Id", id);
             this.id = id;
             return this;
@@ -137,7 +142,7 @@ public class RenameFunctionRequest extends Request {
          * <strong>example:</strong>
          * <p>10002</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

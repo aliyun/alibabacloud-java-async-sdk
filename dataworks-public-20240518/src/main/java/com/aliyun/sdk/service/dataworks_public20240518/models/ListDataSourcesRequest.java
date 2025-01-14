@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class ListDataSourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     private ListDataSourcesRequest(Builder builder) {
         super(builder);
@@ -146,7 +151,7 @@ public class ListDataSourcesRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -160,7 +165,7 @@ public class ListDataSourcesRequest extends Request {
         private Long projectId; 
         private String sortBy; 
         private String tags; 
-        private java.util.List < String > types; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -309,7 +314,7 @@ public class ListDataSourcesRequest extends Request {
         /**
          * <p>The data source types. This parameter specifies a filter condition. You can specify multiple data source types.</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "simple");
             this.putQueryParameter("Types", typesShrink);
             this.types = types;

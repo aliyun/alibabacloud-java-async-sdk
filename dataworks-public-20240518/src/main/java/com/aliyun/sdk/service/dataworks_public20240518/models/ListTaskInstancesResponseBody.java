@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -828,7 +833,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodNumber.
+             * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodNumber(Integer periodNumber) {
                 this.periodNumber = periodNumber;
@@ -993,6 +1001,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The timeout period of task running. Unit: seconds.</p>
+             * <p>Note: The value of this parameter is rounded up by hour.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1117,7 +1126,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("TaskInstances")
-        private java.util.List < TaskInstances> taskInstances;
+        private java.util.List<TaskInstances> taskInstances;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -1154,7 +1163,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         /**
          * @return taskInstances
          */
-        public java.util.List < TaskInstances> getTaskInstances() {
+        public java.util.List<TaskInstances> getTaskInstances() {
             return this.taskInstances;
         }
 
@@ -1168,7 +1177,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < TaskInstances> taskInstances; 
+            private java.util.List<TaskInstances> taskInstances; 
             private Integer totalCount; 
 
             /**
@@ -1196,7 +1205,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             /**
              * <p>The instances.</p>
              */
-            public Builder taskInstances(java.util.List < TaskInstances> taskInstances) {
+            public Builder taskInstances(java.util.List<TaskInstances> taskInstances) {
                 this.taskInstances = taskInstances;
                 return this;
             }

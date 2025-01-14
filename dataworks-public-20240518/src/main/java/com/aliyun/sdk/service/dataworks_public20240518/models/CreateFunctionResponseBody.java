@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateFunctionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
-    private String id;
+    private Long id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class CreateFunctionResponseBody extends TeaModel {
     /**
      * @return id
      */
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -46,7 +51,7 @@ public class CreateFunctionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String id; 
+        private Long id; 
         private String requestId; 
 
         /**
@@ -55,7 +60,7 @@ public class CreateFunctionResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>580667964888595XXXX</p>
          */
-        public Builder id(String id) {
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }

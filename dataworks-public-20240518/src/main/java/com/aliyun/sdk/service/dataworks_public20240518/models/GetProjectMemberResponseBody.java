@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -194,7 +199,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
         private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("Roles")
-        private java.util.List < Roles> roles;
+        private java.util.List<Roles> roles;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -227,7 +232,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
         /**
          * @return roles
          */
-        public java.util.List < Roles> getRoles() {
+        public java.util.List<Roles> getRoles() {
             return this.roles;
         }
 
@@ -247,7 +252,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long projectId; 
-            private java.util.List < Roles> roles; 
+            private java.util.List<Roles> roles; 
             private String status; 
             private String userId; 
 
@@ -265,7 +270,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
             /**
              * <p>The roles that are assigned to the member in the workspace.</p>
              */
-            public Builder roles(java.util.List < Roles> roles) {
+            public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
                 return this;
             }

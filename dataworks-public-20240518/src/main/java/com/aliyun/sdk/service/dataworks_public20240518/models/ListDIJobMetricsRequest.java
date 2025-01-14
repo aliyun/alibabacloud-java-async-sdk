@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ListDIJobMetricsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > metricName;
+    private java.util.List<String> metricName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -81,7 +86,7 @@ public class ListDIJobMetricsRequest extends Request {
     /**
      * @return metricName
      */
-    public java.util.List < String > getMetricName() {
+    public java.util.List<String> getMetricName() {
         return this.metricName;
     }
 
@@ -96,7 +101,7 @@ public class ListDIJobMetricsRequest extends Request {
         private String regionId; 
         private Long DIJobId; 
         private Long endTime; 
-        private java.util.List < String > metricName; 
+        private java.util.List<String> metricName; 
         private Long startTime; 
 
         private Builder() {
@@ -150,7 +155,7 @@ public class ListDIJobMetricsRequest extends Request {
          * <p>The metrics that you want to query.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder metricName(java.util.List < String > metricName) {
+        public Builder metricName(java.util.List<String> metricName) {
             String metricNameShrink = shrink(metricName, "MetricName", "json");
             this.putQueryParameter("MetricName", metricNameShrink);
             this.metricName = metricName;

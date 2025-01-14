@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class GetProjectResponseBody extends TeaModel {
         private String aliyunResourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("AliyunResourceTags")
-        private java.util.List < AliyunResourceTags> aliyunResourceTags;
+        private java.util.List<AliyunResourceTags> aliyunResourceTags;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -219,7 +224,7 @@ public class GetProjectResponseBody extends TeaModel {
         /**
          * @return aliyunResourceTags
          */
-        public java.util.List < AliyunResourceTags> getAliyunResourceTags() {
+        public java.util.List<AliyunResourceTags> getAliyunResourceTags() {
             return this.aliyunResourceTags;
         }
 
@@ -288,7 +293,7 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliyunResourceGroupId; 
-            private java.util.List < AliyunResourceTags> aliyunResourceTags; 
+            private java.util.List<AliyunResourceTags> aliyunResourceTags; 
             private String description; 
             private Boolean devEnvironmentEnabled; 
             private Boolean devRoleDisabled; 
@@ -313,7 +318,7 @@ public class GetProjectResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
+            public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
                 this.aliyunResourceTags = aliyunResourceTags;
                 return this;
             }
@@ -398,7 +403,7 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether scheduling of Platform for AI (PAI) tasks is enabled. Valid values:</p>
+             * <p>Indicates whether scheduling of PAI tasks is enabled. Valid values:</p>
              * <ul>
              * <li>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</li>
              * <li>false: Scheduling of PAI tasks is disabled.</li>
@@ -424,19 +429,6 @@ public class GetProjectResponseBody extends TeaModel {
              * <li>Frozen</li>
              * <li>Updating</li>
              * <li>UpdateFailed</li>
-             * </ul>
-             * <!---->
-             * 
-             * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
              * </ul>
              * 
              * <strong>example:</strong>

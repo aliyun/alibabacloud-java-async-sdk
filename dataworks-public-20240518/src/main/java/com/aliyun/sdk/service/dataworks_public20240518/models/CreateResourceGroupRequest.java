@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,8 +22,16 @@ public class CreateResourceGroupRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("AutoRenew")
-    private Boolean autoRenew;
+    @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupId")
+    private String aliyunResourceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AliyunResourceTags")
+    private java.util.List<AliyunResourceTags> aliyunResourceTags;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewEnabled")
+    private Boolean autoRenewEnabled;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -64,7 +77,9 @@ public class CreateResourceGroupRequest extends Request {
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.autoRenew = builder.autoRenew;
+        this.aliyunResourceGroupId = builder.aliyunResourceGroupId;
+        this.aliyunResourceTags = builder.aliyunResourceTags;
+        this.autoRenewEnabled = builder.autoRenewEnabled;
         this.clientToken = builder.clientToken;
         this.name = builder.name;
         this.paymentDuration = builder.paymentDuration;
@@ -97,10 +112,24 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     /**
-     * @return autoRenew
+     * @return aliyunResourceGroupId
      */
-    public Boolean getAutoRenew() {
-        return this.autoRenew;
+    public String getAliyunResourceGroupId() {
+        return this.aliyunResourceGroupId;
+    }
+
+    /**
+     * @return aliyunResourceTags
+     */
+    public java.util.List<AliyunResourceTags> getAliyunResourceTags() {
+        return this.aliyunResourceTags;
+    }
+
+    /**
+     * @return autoRenewEnabled
+     */
+    public Boolean getAutoRenewEnabled() {
+        return this.autoRenewEnabled;
     }
 
     /**
@@ -168,7 +197,9 @@ public class CreateResourceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
         private String regionId; 
-        private Boolean autoRenew; 
+        private String aliyunResourceGroupId; 
+        private java.util.List<AliyunResourceTags> aliyunResourceTags; 
+        private Boolean autoRenewEnabled; 
         private String clientToken; 
         private String name; 
         private Integer paymentDuration; 
@@ -186,7 +217,9 @@ public class CreateResourceGroupRequest extends Request {
         private Builder(CreateResourceGroupRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.autoRenew = request.autoRenew;
+            this.aliyunResourceGroupId = request.aliyunResourceGroupId;
+            this.aliyunResourceTags = request.aliyunResourceTags;
+            this.autoRenewEnabled = request.autoRenewEnabled;
             this.clientToken = request.clientToken;
             this.name = request.name;
             this.paymentDuration = request.paymentDuration;
@@ -208,11 +241,30 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * AliyunResourceGroupId.
          */
-        public Builder autoRenew(Boolean autoRenew) {
-            this.putBodyParameter("AutoRenew", autoRenew);
-            this.autoRenew = autoRenew;
+        public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
+            this.putBodyParameter("AliyunResourceGroupId", aliyunResourceGroupId);
+            this.aliyunResourceGroupId = aliyunResourceGroupId;
+            return this;
+        }
+
+        /**
+         * AliyunResourceTags.
+         */
+        public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
+            String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
+            this.putBodyParameter("AliyunResourceTags", aliyunResourceTagsShrink);
+            this.aliyunResourceTags = aliyunResourceTags;
+            return this;
+        }
+
+        /**
+         * AutoRenewEnabled.
+         */
+        public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
+            this.putBodyParameter("AutoRenewEnabled", autoRenewEnabled);
+            this.autoRenewEnabled = autoRenewEnabled;
             return this;
         }
 
@@ -322,4 +374,71 @@ public class CreateResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceGroupRequest</p>
+     */
+    public static class AliyunResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private AliyunResourceTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AliyunResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AliyunResourceTags build() {
+                return new AliyunResourceTags(this);
+            } 
+
+        } 
+
+    }
 }

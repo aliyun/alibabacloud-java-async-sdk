@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,12 +28,12 @@ public class CreateDeploymentRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ObjectIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > objectIds;
+    private java.util.List<String> objectIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -74,14 +79,14 @@ public class CreateDeploymentRequest extends Request {
     /**
      * @return objectIds
      */
-    public java.util.List < String > getObjectIds() {
+    public java.util.List<String> getObjectIds() {
         return this.objectIds;
     }
 
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
@@ -95,8 +100,8 @@ public class CreateDeploymentRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDeploymentRequest, Builder> {
         private String regionId; 
         private String description; 
-        private java.util.List < String > objectIds; 
-        private String projectId; 
+        private java.util.List<String> objectIds; 
+        private Long projectId; 
         private String type; 
 
         private Builder() {
@@ -138,7 +143,7 @@ public class CreateDeploymentRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder objectIds(java.util.List < String > objectIds) {
+        public Builder objectIds(java.util.List<String> objectIds) {
             String objectIdsShrink = shrink(objectIds, "ObjectIds", "json");
             this.putBodyParameter("ObjectIds", objectIdsShrink);
             this.objectIds = objectIds;
@@ -153,7 +158,7 @@ public class CreateDeploymentRequest extends Request {
          * <strong>example:</strong>
          * <p>10000</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

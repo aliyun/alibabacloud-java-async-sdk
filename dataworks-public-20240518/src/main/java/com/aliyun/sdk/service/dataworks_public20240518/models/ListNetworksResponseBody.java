@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +17,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNetworksResponseBody</p>
  */
 public class ListNetworksResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("NetworkList")
-    private java.util.List < NetworkList> networkList;
+    @com.aliyun.core.annotation.NameInMap("PagingInfo")
+    private PagingInfo pagingInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -22,7 +27,7 @@ public class ListNetworksResponseBody extends TeaModel {
     private Boolean success;
 
     private ListNetworksResponseBody(Builder builder) {
-        this.networkList = builder.networkList;
+        this.pagingInfo = builder.pagingInfo;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -36,10 +41,10 @@ public class ListNetworksResponseBody extends TeaModel {
     }
 
     /**
-     * @return networkList
+     * @return pagingInfo
      */
-    public java.util.List < NetworkList> getNetworkList() {
-        return this.networkList;
+    public PagingInfo getPagingInfo() {
+        return this.pagingInfo;
     }
 
     /**
@@ -57,15 +62,15 @@ public class ListNetworksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkList> networkList; 
+        private PagingInfo pagingInfo; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * NetworkList.
+         * PagingInfo.
          */
-        public Builder networkList(java.util.List < NetworkList> networkList) {
-            this.networkList = networkList;
+        public Builder pagingInfo(PagingInfo pagingInfo) {
+            this.pagingInfo = pagingInfo;
             return this;
         }
 
@@ -273,6 +278,113 @@ public class ListNetworksResponseBody extends TeaModel {
 
             public NetworkList build() {
                 return new NetworkList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListNetworksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworksResponseBody</p>
+     */
+    public static class PagingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkList")
+        private java.util.List<NetworkList> networkList;
+
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private PagingInfo(Builder builder) {
+            this.networkList = builder.networkList;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PagingInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkList
+         */
+        public java.util.List<NetworkList> getNetworkList() {
+            return this.networkList;
+        }
+
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List<NetworkList> networkList; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private Integer totalCount; 
+
+            /**
+             * NetworkList.
+             */
+            public Builder networkList(java.util.List<NetworkList> networkList) {
+                this.networkList = networkList;
+                return this;
+            }
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public PagingInfo build() {
+                return new PagingInfo(this);
             } 
 
         } 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SeriesList")
-        private java.util.List < SeriesList> seriesList;
+        private java.util.List<SeriesList> seriesList;
 
         private JobMetrics(Builder builder) {
             this.name = builder.name;
@@ -183,13 +188,13 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         /**
          * @return seriesList
          */
-        public java.util.List < SeriesList> getSeriesList() {
+        public java.util.List<SeriesList> getSeriesList() {
             return this.seriesList;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < SeriesList> seriesList; 
+            private java.util.List<SeriesList> seriesList; 
 
             /**
              * <p>The name of the metric.</p>
@@ -205,7 +210,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
             /**
              * <p>The metric data.</p>
              */
-            public Builder seriesList(java.util.List < SeriesList> seriesList) {
+            public Builder seriesList(java.util.List<SeriesList> seriesList) {
                 this.seriesList = seriesList;
                 return this;
             }
@@ -225,7 +230,7 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobMetrics")
-        private java.util.List < JobMetrics> jobMetrics;
+        private java.util.List<JobMetrics> jobMetrics;
 
         private PagingInfo(Builder builder) {
             this.jobMetrics = builder.jobMetrics;
@@ -242,17 +247,17 @@ public class ListDIJobMetricsResponseBody extends TeaModel {
         /**
          * @return jobMetrics
          */
-        public java.util.List < JobMetrics> getJobMetrics() {
+        public java.util.List<JobMetrics> getJobMetrics() {
             return this.jobMetrics;
         }
 
         public static final class Builder {
-            private java.util.List < JobMetrics> jobMetrics; 
+            private java.util.List<JobMetrics> jobMetrics; 
 
             /**
              * <p>The metrics returned.</p>
              */
-            public Builder jobMetrics(java.util.List < JobMetrics> jobMetrics) {
+            public Builder jobMetrics(java.util.List<JobMetrics> jobMetrics) {
                 this.jobMetrics = jobMetrics;
                 return this;
             }

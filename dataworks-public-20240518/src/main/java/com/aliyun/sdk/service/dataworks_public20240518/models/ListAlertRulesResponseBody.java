@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
      */
     public static class CycleUnfinished extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CycleAndTime")
-        private java.util.List < CycleAndTime> cycleAndTime;
+        private java.util.List<CycleAndTime> cycleAndTime;
 
         private CycleUnfinished(Builder builder) {
             this.cycleAndTime = builder.cycleAndTime;
@@ -172,17 +177,17 @@ public class ListAlertRulesResponseBody extends TeaModel {
         /**
          * @return cycleAndTime
          */
-        public java.util.List < CycleAndTime> getCycleAndTime() {
+        public java.util.List<CycleAndTime> getCycleAndTime() {
             return this.cycleAndTime;
         }
 
         public static final class Builder {
-            private java.util.List < CycleAndTime> cycleAndTime; 
+            private java.util.List<CycleAndTime> cycleAndTime; 
 
             /**
              * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
              */
-            public Builder cycleAndTime(java.util.List < CycleAndTime> cycleAndTime) {
+            public Builder cycleAndTime(java.util.List<CycleAndTime> cycleAndTime) {
                 this.cycleAndTime = cycleAndTime;
                 return this;
             }
@@ -201,14 +206,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
      * <p>ListAlertRulesResponseBody</p>
      */
     public static class Error extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AutoRerunAlert")
-        private Boolean autoRerunAlert;
+        @com.aliyun.core.annotation.NameInMap("AutoRerunAlertEnabled")
+        private Boolean autoRerunAlertEnabled;
 
         @com.aliyun.core.annotation.NameInMap("StreamTaskIds")
-        private java.util.List < Long > streamTaskIds;
+        private java.util.List<Long> streamTaskIds;
 
         private Error(Builder builder) {
-            this.autoRerunAlert = builder.autoRerunAlert;
+            this.autoRerunAlertEnabled = builder.autoRerunAlertEnabled;
             this.streamTaskIds = builder.streamTaskIds;
         }
 
@@ -221,38 +226,35 @@ public class ListAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * @return autoRerunAlert
+         * @return autoRerunAlertEnabled
          */
-        public Boolean getAutoRerunAlert() {
-            return this.autoRerunAlert;
+        public Boolean getAutoRerunAlertEnabled() {
+            return this.autoRerunAlertEnabled;
         }
 
         /**
          * @return streamTaskIds
          */
-        public java.util.List < Long > getStreamTaskIds() {
+        public java.util.List<Long> getStreamTaskIds() {
             return this.streamTaskIds;
         }
 
         public static final class Builder {
-            private Boolean autoRerunAlert; 
-            private java.util.List < Long > streamTaskIds; 
+            private Boolean autoRerunAlertEnabled; 
+            private java.util.List<Long> streamTaskIds; 
 
             /**
-             * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * AutoRerunAlertEnabled.
              */
-            public Builder autoRerunAlert(Boolean autoRerunAlert) {
-                this.autoRerunAlert = autoRerunAlert;
+            public Builder autoRerunAlertEnabled(Boolean autoRerunAlertEnabled) {
+                this.autoRerunAlertEnabled = autoRerunAlertEnabled;
                 return this;
             }
 
             /**
              * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
              */
-            public Builder streamTaskIds(java.util.List < Long > streamTaskIds) {
+            public Builder streamTaskIds(java.util.List<Long> streamTaskIds) {
                 this.streamTaskIds = streamTaskIds;
                 return this;
             }
@@ -717,10 +719,10 @@ public class ListAlertRulesResponseBody extends TeaModel {
      */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowTasks")
-        private java.util.List < Long > allowTasks;
+        private java.util.List<Long> allowTasks;
 
         @com.aliyun.core.annotation.NameInMap("Ids")
-        private java.util.List < Long > ids;
+        private java.util.List<Long> ids;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -742,14 +744,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
         /**
          * @return allowTasks
          */
-        public java.util.List < Long > getAllowTasks() {
+        public java.util.List<Long> getAllowTasks() {
             return this.allowTasks;
         }
 
         /**
          * @return ids
          */
-        public java.util.List < Long > getIds() {
+        public java.util.List<Long> getIds() {
             return this.ids;
         }
 
@@ -761,14 +763,14 @@ public class ListAlertRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > allowTasks; 
-            private java.util.List < Long > ids; 
+            private java.util.List<Long> allowTasks; 
+            private java.util.List<Long> ids; 
             private String type; 
 
             /**
              * <p>The nodes that are not to be monitored.</p>
              */
-            public Builder allowTasks(java.util.List < Long > allowTasks) {
+            public Builder allowTasks(java.util.List<Long> allowTasks) {
                 this.allowTasks = allowTasks;
                 return this;
             }
@@ -776,7 +778,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             /**
              * <p>The IDs of monitored objects.</p>
              */
-            public Builder ids(java.util.List < Long > ids) {
+            public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;
                 return this;
             }
@@ -1057,7 +1059,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertRules")
-        private java.util.List < AlertRules> alertRules;
+        private java.util.List<AlertRules> alertRules;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -1086,7 +1088,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
         /**
          * @return alertRules
          */
-        public java.util.List < AlertRules> getAlertRules() {
+        public java.util.List<AlertRules> getAlertRules() {
             return this.alertRules;
         }
 
@@ -1112,7 +1114,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertRules> alertRules; 
+            private java.util.List<AlertRules> alertRules; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -1120,7 +1122,7 @@ public class ListAlertRulesResponseBody extends TeaModel {
             /**
              * <p>The rules.</p>
              */
-            public Builder alertRules(java.util.List < AlertRules> alertRules) {
+            public Builder alertRules(java.util.List<AlertRules> alertRules) {
                 this.alertRules = alertRules;
                 return this;
             }

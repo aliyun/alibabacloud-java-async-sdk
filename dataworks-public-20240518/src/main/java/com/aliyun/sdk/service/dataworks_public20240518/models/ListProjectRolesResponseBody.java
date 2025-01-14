@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -204,7 +209,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         private String pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ProjectRoles")
-        private java.util.List < ProjectRoles> projectRoles;
+        private java.util.List<ProjectRoles> projectRoles;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
@@ -241,7 +246,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         /**
          * @return projectRoles
          */
-        public java.util.List < ProjectRoles> getProjectRoles() {
+        public java.util.List<ProjectRoles> getProjectRoles() {
             return this.projectRoles;
         }
 
@@ -255,7 +260,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public static final class Builder {
             private String pageNumber; 
             private String pageSize; 
-            private java.util.List < ProjectRoles> projectRoles; 
+            private java.util.List<ProjectRoles> projectRoles; 
             private String totalCount; 
 
             /**
@@ -283,7 +288,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             /**
              * <p>The roles in the DataWorks workspace.</p>
              */
-            public Builder projectRoles(java.util.List < ProjectRoles> projectRoles) {
+            public Builder projectRoles(java.util.List<ProjectRoles> projectRoles) {
                 this.projectRoles = projectRoles;
                 return this;
             }

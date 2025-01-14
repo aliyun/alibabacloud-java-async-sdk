@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,7 +93,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.Map < String, ? > detail;
+        private java.util.Map<String, ?> detail;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -141,7 +146,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.Map < String, ? > getDetail() {
+        public java.util.Map<String, ?> getDetail() {
             return this.detail;
         }
 
@@ -183,7 +188,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String description; 
-            private java.util.Map < String, ? > detail; 
+            private java.util.Map<String, ?> detail; 
             private String message; 
             private String name; 
             private String status; 
@@ -212,7 +217,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             /**
              * <p>The additional information about the stage.</p>
              */
-            public Builder detail(java.util.Map < String, ? > detail) {
+            public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
                 return this;
             }
@@ -313,10 +318,10 @@ public class ListDeploymentsResponseBody extends TeaModel {
         private Long modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
-        private String projectId;
+        private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("Stages")
-        private java.util.List < Stages> stages;
+        private java.util.List<Stages> stages;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -378,14 +383,14 @@ public class ListDeploymentsResponseBody extends TeaModel {
         /**
          * @return projectId
          */
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
         /**
          * @return stages
          */
-        public java.util.List < Stages> getStages() {
+        public java.util.List<Stages> getStages() {
             return this.stages;
         }
 
@@ -402,8 +407,8 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String id; 
             private String message; 
             private Long modifyTime; 
-            private String projectId; 
-            private java.util.List < Stages> stages; 
+            private Long projectId; 
+            private java.util.List<Stages> stages; 
             private String status; 
 
             /**
@@ -464,7 +469,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>44683</p>
              */
-            public Builder projectId(String projectId) {
+            public Builder projectId(Long projectId) {
                 this.projectId = projectId;
                 return this;
             }
@@ -472,7 +477,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             /**
              * <p>The stages of the process.</p>
              */
-            public Builder stages(java.util.List < Stages> stages) {
+            public Builder stages(java.util.List<Stages> stages) {
                 this.stages = stages;
                 return this;
             }
@@ -512,7 +517,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Deployments")
-        private java.util.List < Deployments> deployments;
+        private java.util.List<Deployments> deployments;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
@@ -541,7 +546,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         /**
          * @return deployments
          */
-        public java.util.List < Deployments> getDeployments() {
+        public java.util.List<Deployments> getDeployments() {
             return this.deployments;
         }
 
@@ -567,7 +572,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Deployments> deployments; 
+            private java.util.List<Deployments> deployments; 
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
@@ -575,7 +580,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             /**
              * <p>The deployment processes.</p>
              */
-            public Builder deployments(java.util.List < Deployments> deployments) {
+            public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;
                 return this;
             }

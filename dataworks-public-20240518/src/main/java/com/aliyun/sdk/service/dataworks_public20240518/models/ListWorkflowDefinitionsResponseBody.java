@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -157,7 +162,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -176,7 +181,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String id; 
+            private Long id; 
             private String path; 
             private Runtime runtime; 
 
@@ -186,7 +191,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>698002781368644XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -228,7 +233,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -241,7 +246,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         @com.aliyun.core.annotation.Validation(required = true)
-        private String projectId;
+        private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("Script")
         private Script script;
@@ -286,7 +291,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -314,7 +319,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         /**
          * @return projectId
          */
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
@@ -335,11 +340,11 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String description; 
-            private String id; 
+            private Long id; 
             private Long modifyTime; 
             private String name; 
             private String owner; 
-            private String projectId; 
+            private Long projectId; 
             private Script script; 
             private String type; 
 
@@ -368,7 +373,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>463497880880954XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -410,7 +415,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>4710</p>
              */
-            public Builder projectId(String projectId) {
+            public Builder projectId(Long projectId) {
                 this.projectId = projectId;
                 return this;
             }
@@ -463,7 +468,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         private Integer totalCount;
 
         @com.aliyun.core.annotation.NameInMap("WorkflowDefinitions")
-        private java.util.List < WorkflowDefinitions> workflowDefinitions;
+        private java.util.List<WorkflowDefinitions> workflowDefinitions;
 
         private PagingInfo(Builder builder) {
             this.pageNumber = builder.pageNumber;
@@ -504,7 +509,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         /**
          * @return workflowDefinitions
          */
-        public java.util.List < WorkflowDefinitions> getWorkflowDefinitions() {
+        public java.util.List<WorkflowDefinitions> getWorkflowDefinitions() {
             return this.workflowDefinitions;
         }
 
@@ -512,7 +517,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
-            private java.util.List < WorkflowDefinitions> workflowDefinitions; 
+            private java.util.List<WorkflowDefinitions> workflowDefinitions; 
 
             /**
              * <p>The page number.</p>
@@ -550,7 +555,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             /**
              * <p>The workflows.</p>
              */
-            public Builder workflowDefinitions(java.util.List < WorkflowDefinitions> workflowDefinitions) {
+            public Builder workflowDefinitions(java.util.List<WorkflowDefinitions> workflowDefinitions) {
                 this.workflowDefinitions = workflowDefinitions;
                 return this;
             }

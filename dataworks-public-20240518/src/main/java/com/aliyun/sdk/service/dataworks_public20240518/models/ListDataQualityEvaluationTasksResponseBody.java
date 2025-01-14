@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
      */
     public static class NotificationChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
-        private java.util.List < String > channels;
+        private java.util.List<String> channels;
 
         private NotificationChannels(Builder builder) {
             this.channels = builder.channels;
@@ -175,17 +180,17 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return channels
          */
-        public java.util.List < String > getChannels() {
+        public java.util.List<String> getChannels() {
             return this.channels;
         }
 
         public static final class Builder {
-            private java.util.List < String > channels; 
+            private java.util.List<String> channels; 
 
             /**
              * <p>The alert notification methods.</p>
              */
-            public Builder channels(java.util.List < String > channels) {
+            public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
                 return this;
             }
@@ -211,7 +216,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         private String receiverType;
 
         @com.aliyun.core.annotation.NameInMap("ReceiverValues")
-        private java.util.List < String > receiverValues;
+        private java.util.List<String> receiverValues;
 
         private NotificationReceivers(Builder builder) {
             this.extension = builder.extension;
@@ -244,14 +249,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return receiverValues
          */
-        public java.util.List < String > getReceiverValues() {
+        public java.util.List<String> getReceiverValues() {
             return this.receiverValues;
         }
 
         public static final class Builder {
             private String extension; 
             private String receiverType; 
-            private java.util.List < String > receiverValues; 
+            private java.util.List<String> receiverValues; 
 
             /**
              * <p>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</p>
@@ -285,7 +290,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             /**
              * <p>The alert recipients.</p>
              */
-            public Builder receiverValues(java.util.List < String > receiverValues) {
+            public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
                 return this;
             }
@@ -305,10 +310,10 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
      */
     public static class Notifications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotificationChannels")
-        private java.util.List < NotificationChannels> notificationChannels;
+        private java.util.List<NotificationChannels> notificationChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotificationReceivers")
-        private java.util.List < NotificationReceivers> notificationReceivers;
+        private java.util.List<NotificationReceivers> notificationReceivers;
 
         private Notifications(Builder builder) {
             this.notificationChannels = builder.notificationChannels;
@@ -326,25 +331,25 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return notificationChannels
          */
-        public java.util.List < NotificationChannels> getNotificationChannels() {
+        public java.util.List<NotificationChannels> getNotificationChannels() {
             return this.notificationChannels;
         }
 
         /**
          * @return notificationReceivers
          */
-        public java.util.List < NotificationReceivers> getNotificationReceivers() {
+        public java.util.List<NotificationReceivers> getNotificationReceivers() {
             return this.notificationReceivers;
         }
 
         public static final class Builder {
-            private java.util.List < NotificationChannels> notificationChannels; 
-            private java.util.List < NotificationReceivers> notificationReceivers; 
+            private java.util.List<NotificationChannels> notificationChannels; 
+            private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
              * <p>The alert notification methods.</p>
              */
-            public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
+            public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
                 return this;
             }
@@ -352,7 +357,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             /**
              * <p>The alert recipients.</p>
              */
-            public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
+            public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
                 return this;
             }
@@ -375,7 +380,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("Notifications")
-        private java.util.List < Notifications> notifications;
+        private java.util.List<Notifications> notifications;
 
         private DataQualityEvaluationTasksNotifications(Builder builder) {
             this.condition = builder.condition;
@@ -400,13 +405,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return notifications
          */
-        public java.util.List < Notifications> getNotifications() {
+        public java.util.List<Notifications> getNotifications() {
             return this.notifications;
         }
 
         public static final class Builder {
             private String condition; 
-            private java.util.List < Notifications> notifications; 
+            private java.util.List<Notifications> notifications; 
 
             /**
              * <p>The trigger condition of the alert notification.</p>
@@ -422,7 +427,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             /**
              * <p>The configurations for the alert notification.</p>
              */
-            public Builder notifications(java.util.List < Notifications> notifications) {
+            public Builder notifications(java.util.List<Notifications> notifications) {
                 this.notifications = notifications;
                 return this;
             }
@@ -573,7 +578,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
      */
     public static class Trigger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskIds")
-        private java.util.List < Long > taskIds;
+        private java.util.List<Long> taskIds;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -594,7 +599,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return taskIds
          */
-        public java.util.List < Long > getTaskIds() {
+        public java.util.List<Long> getTaskIds() {
             return this.taskIds;
         }
 
@@ -606,13 +611,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > taskIds; 
+            private java.util.List<Long> taskIds; 
             private String type; 
 
             /**
              * <p>The IDs of the auto triggered nodes of which the instances are successfully run. This parameter takes effect only if the Type parameter is set to ByScheduledTaskInstance.</p>
              */
-            public Builder taskIds(java.util.List < Long > taskIds) {
+            public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
                 return this;
             }
@@ -649,7 +654,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Hooks")
-        private java.util.List < Hooks> hooks;
+        private java.util.List<Hooks> hooks;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -669,9 +674,6 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private Target target;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("Trigger")
         private Trigger trigger;
 
@@ -684,7 +686,6 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             this.projectId = builder.projectId;
             this.runtimeConf = builder.runtimeConf;
             this.target = builder.target;
-            this.tenantId = builder.tenantId;
             this.trigger = builder.trigger;
         }
 
@@ -706,7 +707,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return hooks
          */
-        public java.util.List < Hooks> getHooks() {
+        public java.util.List<Hooks> getHooks() {
             return this.hooks;
         }
 
@@ -753,13 +754,6 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return trigger
          */
         public Trigger getTrigger() {
@@ -768,14 +762,13 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < Hooks> hooks; 
+            private java.util.List<Hooks> hooks; 
             private Long id; 
             private String name; 
             private DataQualityEvaluationTasksNotifications notifications; 
             private Long projectId; 
             private String runtimeConf; 
             private Target target; 
-            private Long tenantId; 
             private Trigger trigger; 
 
             /**
@@ -792,7 +785,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             /**
              * <p>The callback configurations of the task during the instance lifecycle. Blocking an auto triggered node is a type of callback event. Only this type is supported.</p>
              */
-            public Builder hooks(java.util.List < Hooks> hooks) {
+            public Builder hooks(java.util.List<Hooks> hooks) {
                 this.hooks = hooks;
                 return this;
             }
@@ -855,17 +848,6 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks tenant ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
-                return this;
-            }
-
-            /**
              * <p>The trigger configuration of the task.</p>
              */
             public Builder trigger(Trigger trigger) {
@@ -888,7 +870,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataQualityEvaluationTasks")
-        private java.util.List < DataQualityEvaluationTasks> dataQualityEvaluationTasks;
+        private java.util.List<DataQualityEvaluationTasks> dataQualityEvaluationTasks;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
@@ -917,7 +899,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         /**
          * @return dataQualityEvaluationTasks
          */
-        public java.util.List < DataQualityEvaluationTasks> getDataQualityEvaluationTasks() {
+        public java.util.List<DataQualityEvaluationTasks> getDataQualityEvaluationTasks() {
             return this.dataQualityEvaluationTasks;
         }
 
@@ -943,7 +925,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataQualityEvaluationTasks> dataQualityEvaluationTasks; 
+            private java.util.List<DataQualityEvaluationTasks> dataQualityEvaluationTasks; 
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
@@ -951,7 +933,7 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
             /**
              * <p>The data quality monitoring tasks.</p>
              */
-            public Builder dataQualityEvaluationTasks(java.util.List < DataQualityEvaluationTasks> dataQualityEvaluationTasks) {
+            public Builder dataQualityEvaluationTasks(java.util.List<DataQualityEvaluationTasks> dataQualityEvaluationTasks) {
                 this.dataQualityEvaluationTasks = dataQualityEvaluationTasks;
                 return this;
             }

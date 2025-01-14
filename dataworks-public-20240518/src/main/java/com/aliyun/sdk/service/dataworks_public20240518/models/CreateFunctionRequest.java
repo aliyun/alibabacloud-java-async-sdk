@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateFunctionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Spec")
@@ -56,7 +61,7 @@ public class CreateFunctionRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
@@ -69,7 +74,7 @@ public class CreateFunctionRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateFunctionRequest, Builder> {
         private String regionId; 
-        private String projectId; 
+        private Long projectId; 
         private String spec; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class CreateFunctionRequest extends Request {
          * <strong>example:</strong>
          * <p>12345</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

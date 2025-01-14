@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -255,7 +260,7 @@ public class ListFunctionsResponseBody extends TeaModel {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -280,7 +285,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -299,7 +304,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String id; 
+            private Long id; 
             private String path; 
             private Runtime runtime; 
 
@@ -309,7 +314,7 @@ public class ListFunctionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>652567824470354XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -381,7 +386,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         private String fileResource;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -396,7 +401,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         private String parameterDescription;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
-        private String projectId;
+        private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("ReturnValueDescription")
         private String returnValueDescription;
@@ -530,7 +535,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -565,7 +570,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return projectId
          */
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
@@ -610,12 +615,12 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String embeddedResourceType; 
             private String exampleDescription; 
             private String fileResource; 
-            private String id; 
+            private Long id; 
             private Long modifyTime; 
             private String name; 
             private String owner; 
             private String parameterDescription; 
-            private String projectId; 
+            private Long projectId; 
             private String returnValueDescription; 
             private RuntimeResource runtimeResource; 
             private Script script; 
@@ -763,7 +768,7 @@ public class ListFunctionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>580667964888595XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -812,7 +817,7 @@ public class ListFunctionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>307XXX</p>
              */
-            public Builder projectId(String projectId) {
+            public Builder projectId(Long projectId) {
                 this.projectId = projectId;
                 return this;
             }
@@ -876,7 +881,7 @@ public class ListFunctionsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Functions")
-        private java.util.List < Functions> functions;
+        private java.util.List<Functions> functions;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -905,7 +910,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return functions
          */
-        public java.util.List < Functions> getFunctions() {
+        public java.util.List<Functions> getFunctions() {
             return this.functions;
         }
 
@@ -931,7 +936,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Functions> functions; 
+            private java.util.List<Functions> functions; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -939,7 +944,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             /**
              * <p>The UDFs.</p>
              */
-            public Builder functions(java.util.List < Functions> functions) {
+            public Builder functions(java.util.List<Functions> functions) {
                 this.functions = functions;
                 return this;
             }

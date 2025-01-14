@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -338,7 +343,7 @@ public class GetTaskResponseBody extends TeaModel {
      */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private Inputs(Builder builder) {
             this.variables = builder.variables;
@@ -355,17 +360,17 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
 
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -538,10 +543,10 @@ public class GetTaskResponseBody extends TeaModel {
      */
     public static class Outputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskOutputs")
-        private java.util.List < TaskOutputs> taskOutputs;
+        private java.util.List<TaskOutputs> taskOutputs;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < OutputsVariables> variables;
+        private java.util.List<OutputsVariables> variables;
 
         private Outputs(Builder builder) {
             this.taskOutputs = builder.taskOutputs;
@@ -559,25 +564,25 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * @return taskOutputs
          */
-        public java.util.List < TaskOutputs> getTaskOutputs() {
+        public java.util.List<TaskOutputs> getTaskOutputs() {
             return this.taskOutputs;
         }
 
         /**
          * @return variables
          */
-        public java.util.List < OutputsVariables> getVariables() {
+        public java.util.List<OutputsVariables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
-            private java.util.List < TaskOutputs> taskOutputs; 
-            private java.util.List < OutputsVariables> variables; 
+            private java.util.List<TaskOutputs> taskOutputs; 
+            private java.util.List<OutputsVariables> variables; 
 
             /**
              * <p>The task outputs.</p>
              */
-            public Builder taskOutputs(java.util.List < TaskOutputs> taskOutputs) {
+            public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
                 return this;
             }
@@ -585,7 +590,7 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.List < OutputsVariables> variables) {
+            public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -1087,6 +1092,9 @@ public class GetTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -1106,6 +1114,7 @@ public class GetTaskResponseBody extends TeaModel {
         private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+        @Deprecated
         private String projectEnv;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -1144,6 +1153,7 @@ public class GetTaskResponseBody extends TeaModel {
             this.createUser = builder.createUser;
             this.dataSource = builder.dataSource;
             this.description = builder.description;
+            this.envType = builder.envType;
             this.id = builder.id;
             this.modifyTime = builder.modifyTime;
             this.modifyUser = builder.modifyUser;
@@ -1204,6 +1214,13 @@ public class GetTaskResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -1331,6 +1348,7 @@ public class GetTaskResponseBody extends TeaModel {
             private String createUser; 
             private SubTasksDataSource dataSource; 
             private String description; 
+            private String envType; 
             private Long id; 
             private Long modifyTime; 
             private String modifyUser; 
@@ -1395,6 +1413,14 @@ public class GetTaskResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 
@@ -1602,7 +1628,7 @@ public class GetTaskResponseBody extends TeaModel {
      */
     public static class TaskSubTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubTasks")
-        private java.util.List < SubTasks> subTasks;
+        private java.util.List<SubTasks> subTasks;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -1623,7 +1649,7 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * @return subTasks
          */
-        public java.util.List < SubTasks> getSubTasks() {
+        public java.util.List<SubTasks> getSubTasks() {
             return this.subTasks;
         }
 
@@ -1635,13 +1661,13 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SubTasks> subTasks; 
+            private java.util.List<SubTasks> subTasks; 
             private String type; 
 
             /**
              * <p>The subtasks.</p>
              */
-            public Builder subTasks(java.util.List < SubTasks> subTasks) {
+            public Builder subTasks(java.util.List<SubTasks> subTasks) {
                 this.subTasks = subTasks;
                 return this;
             }
@@ -1916,10 +1942,13 @@ public class GetTaskResponseBody extends TeaModel {
         private DataSource dataSource;
 
         @com.aliyun.core.annotation.NameInMap("Dependencies")
-        private java.util.List < Dependencies> dependencies;
+        private java.util.List<Dependencies> dependencies;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -1949,6 +1978,7 @@ public class GetTaskResponseBody extends TeaModel {
         private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+        @Deprecated
         private String projectEnv;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -1973,7 +2003,7 @@ public class GetTaskResponseBody extends TeaModel {
         private TaskSubTasks subTasks;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
@@ -1997,6 +2027,7 @@ public class GetTaskResponseBody extends TeaModel {
             this.dataSource = builder.dataSource;
             this.dependencies = builder.dependencies;
             this.description = builder.description;
+            this.envType = builder.envType;
             this.id = builder.id;
             this.inputs = builder.inputs;
             this.instanceMode = builder.instanceMode;
@@ -2061,7 +2092,7 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * @return dependencies
          */
-        public java.util.List < Dependencies> getDependencies() {
+        public java.util.List<Dependencies> getDependencies() {
             return this.dependencies;
         }
 
@@ -2070,6 +2101,13 @@ public class GetTaskResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -2194,7 +2232,7 @@ public class GetTaskResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -2238,8 +2276,9 @@ public class GetTaskResponseBody extends TeaModel {
             private Long createTime; 
             private String createUser; 
             private DataSource dataSource; 
-            private java.util.List < Dependencies> dependencies; 
+            private java.util.List<Dependencies> dependencies; 
             private String description; 
+            private String envType; 
             private Long id; 
             private Inputs inputs; 
             private String instanceMode; 
@@ -2257,7 +2296,7 @@ public class GetTaskResponseBody extends TeaModel {
             private RuntimeResource runtimeResource; 
             private Script script; 
             private TaskSubTasks subTasks; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long tenantId; 
             private Integer timeout; 
             private TaskTrigger trigger; 
@@ -2308,7 +2347,7 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * <p>The dependency information.</p>
              */
-            public Builder dependencies(java.util.List < Dependencies> dependencies) {
+            public Builder dependencies(java.util.List<Dependencies> dependencies) {
                 this.dependencies = dependencies;
                 return this;
             }
@@ -2321,6 +2360,14 @@ public class GetTaskResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 
@@ -2509,7 +2556,7 @@ public class GetTaskResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

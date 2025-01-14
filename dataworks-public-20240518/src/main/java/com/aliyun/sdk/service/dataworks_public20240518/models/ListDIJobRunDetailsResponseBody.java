@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -500,7 +505,7 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobRunInfos")
-        private java.util.List < JobRunInfos> jobRunInfos;
+        private java.util.List<JobRunInfos> jobRunInfos;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
@@ -529,7 +534,7 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         /**
          * @return jobRunInfos
          */
-        public java.util.List < JobRunInfos> getJobRunInfos() {
+        public java.util.List<JobRunInfos> getJobRunInfos() {
             return this.jobRunInfos;
         }
 
@@ -555,7 +560,7 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < JobRunInfos> jobRunInfos; 
+            private java.util.List<JobRunInfos> jobRunInfos; 
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
@@ -563,7 +568,7 @@ public class ListDIJobRunDetailsResponseBody extends TeaModel {
             /**
              * <p>The running information about the synchronization task.</p>
              */
-            public Builder jobRunInfos(java.util.List < JobRunInfos> jobRunInfos) {
+            public Builder jobRunInfos(java.util.List<JobRunInfos> jobRunInfos) {
                 this.jobRunInfos = jobRunInfos;
                 return this;
             }

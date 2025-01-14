@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpstreamTaskInstanceIds")
-    private java.util.List < Long > upstreamTaskInstanceIds;
+    private java.util.List<Long> upstreamTaskInstanceIds;
 
     private RemoveTaskInstanceDependenciesRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
     /**
      * @return upstreamTaskInstanceIds
      */
-    public java.util.List < Long > getUpstreamTaskInstanceIds() {
+    public java.util.List<Long> getUpstreamTaskInstanceIds() {
         return this.upstreamTaskInstanceIds;
     }
 
@@ -82,7 +87,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
         private String regionId; 
         private String comment; 
         private Long id; 
-        private java.util.List < Long > upstreamTaskInstanceIds; 
+        private java.util.List<Long> upstreamTaskInstanceIds; 
 
         private Builder() {
             super();
@@ -133,7 +138,7 @@ public class RemoveTaskInstanceDependenciesRequest extends Request {
         /**
          * <p>The IDs of ancestor instances of the instance</p>
          */
-        public Builder upstreamTaskInstanceIds(java.util.List < Long > upstreamTaskInstanceIds) {
+        public Builder upstreamTaskInstanceIds(java.util.List<Long> upstreamTaskInstanceIds) {
             String upstreamTaskInstanceIdsShrink = shrink(upstreamTaskInstanceIds, "UpstreamTaskInstanceIds", "json");
             this.putBodyParameter("UpstreamTaskInstanceIds", upstreamTaskInstanceIdsShrink);
             this.upstreamTaskInstanceIds = upstreamTaskInstanceIds;

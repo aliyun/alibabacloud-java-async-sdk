@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListNodeDependenciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String id;
+    private Long id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -34,7 +39,7 @@ public class ListNodeDependenciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     private ListNodeDependenciesRequest(Builder builder) {
         super(builder);
@@ -68,7 +73,7 @@ public class ListNodeDependenciesRequest extends Request {
     /**
      * @return id
      */
-    public String getId() {
+    public Long getId() {
         return this.id;
     }
 
@@ -89,16 +94,16 @@ public class ListNodeDependenciesRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
     public static final class Builder extends Request.Builder<ListNodeDependenciesRequest, Builder> {
         private String regionId; 
-        private String id; 
+        private Long id; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String projectId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -129,7 +134,7 @@ public class ListNodeDependenciesRequest extends Request {
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
-        public Builder id(String id) {
+        public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;
@@ -167,7 +172,7 @@ public class ListNodeDependenciesRequest extends Request {
          * <strong>example:</strong>
          * <p>10001</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

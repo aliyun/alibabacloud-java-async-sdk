@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class CreateDIAlarmRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TriggerConditions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TriggerConditions> triggerConditions;
+    private java.util.List<TriggerConditions> triggerConditions;
 
     private CreateDIAlarmRuleRequest(Builder builder) {
         super(builder);
@@ -138,7 +143,7 @@ public class CreateDIAlarmRuleRequest extends Request {
     /**
      * @return triggerConditions
      */
-    public java.util.List < TriggerConditions> getTriggerConditions() {
+    public java.util.List<TriggerConditions> getTriggerConditions() {
         return this.triggerConditions;
     }
 
@@ -151,7 +156,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         private String metricType; 
         private String name; 
         private NotificationSettings notificationSettings; 
-        private java.util.List < TriggerConditions> triggerConditions; 
+        private java.util.List<TriggerConditions> triggerConditions; 
 
         private Builder() {
             super();
@@ -273,7 +278,7 @@ public class CreateDIAlarmRuleRequest extends Request {
          * <p>The conditions that can trigger the alert rule.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder triggerConditions(java.util.List < TriggerConditions> triggerConditions) {
+        public Builder triggerConditions(java.util.List<TriggerConditions> triggerConditions) {
             String triggerConditionsShrink = shrink(triggerConditions, "TriggerConditions", "json");
             this.putQueryParameter("TriggerConditions", triggerConditionsShrink);
             this.triggerConditions = triggerConditions;
@@ -295,7 +300,7 @@ public class CreateDIAlarmRuleRequest extends Request {
      */
     public static class NotificationChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
-        private java.util.List < String > channels;
+        private java.util.List<String> channels;
 
         @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
@@ -316,7 +321,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         /**
          * @return channels
          */
-        public java.util.List < String > getChannels() {
+        public java.util.List<String> getChannels() {
             return this.channels;
         }
 
@@ -328,7 +333,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > channels; 
+            private java.util.List<String> channels; 
             private String severity; 
 
             /**
@@ -340,7 +345,7 @@ public class CreateDIAlarmRuleRequest extends Request {
              * <li>Ding</li>
              * </ul>
              */
-            public Builder channels(java.util.List < String > channels) {
+            public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
                 return this;
             }
@@ -378,7 +383,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         private String receiverType;
 
         @com.aliyun.core.annotation.NameInMap("ReceiverValues")
-        private java.util.List < String > receiverValues;
+        private java.util.List<String> receiverValues;
 
         private NotificationReceivers(Builder builder) {
             this.receiverType = builder.receiverType;
@@ -403,13 +408,13 @@ public class CreateDIAlarmRuleRequest extends Request {
         /**
          * @return receiverValues
          */
-        public java.util.List < String > getReceiverValues() {
+        public java.util.List<String> getReceiverValues() {
             return this.receiverValues;
         }
 
         public static final class Builder {
             private String receiverType; 
-            private java.util.List < String > receiverValues; 
+            private java.util.List<String> receiverValues; 
 
             /**
              * <p>The recipient type. Valid values: AliyunUid, DingToken, FeishuToken, and WebHookUrl.</p>
@@ -429,7 +434,7 @@ public class CreateDIAlarmRuleRequest extends Request {
              * <li>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</li>
              * </ul>
              */
-            public Builder receiverValues(java.util.List < String > receiverValues) {
+            public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
                 return this;
             }
@@ -449,16 +454,21 @@ public class CreateDIAlarmRuleRequest extends Request {
      */
     public static class NotificationSettings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InhibitionInterval")
+        @Deprecated
         private Integer inhibitionInterval;
 
+        @com.aliyun.core.annotation.NameInMap("MuteInterval")
+        private Integer muteInterval;
+
         @com.aliyun.core.annotation.NameInMap("NotificationChannels")
-        private java.util.List < NotificationChannels> notificationChannels;
+        private java.util.List<NotificationChannels> notificationChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotificationReceivers")
-        private java.util.List < NotificationReceivers> notificationReceivers;
+        private java.util.List<NotificationReceivers> notificationReceivers;
 
         private NotificationSettings(Builder builder) {
             this.inhibitionInterval = builder.inhibitionInterval;
+            this.muteInterval = builder.muteInterval;
             this.notificationChannels = builder.notificationChannels;
             this.notificationReceivers = builder.notificationReceivers;
         }
@@ -479,23 +489,31 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
+         * @return muteInterval
+         */
+        public Integer getMuteInterval() {
+            return this.muteInterval;
+        }
+
+        /**
          * @return notificationChannels
          */
-        public java.util.List < NotificationChannels> getNotificationChannels() {
+        public java.util.List<NotificationChannels> getNotificationChannels() {
             return this.notificationChannels;
         }
 
         /**
          * @return notificationReceivers
          */
-        public java.util.List < NotificationReceivers> getNotificationReceivers() {
+        public java.util.List<NotificationReceivers> getNotificationReceivers() {
             return this.notificationReceivers;
         }
 
         public static final class Builder {
             private Integer inhibitionInterval; 
-            private java.util.List < NotificationChannels> notificationChannels; 
-            private java.util.List < NotificationReceivers> notificationReceivers; 
+            private Integer muteInterval; 
+            private java.util.List<NotificationChannels> notificationChannels; 
+            private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
              * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
@@ -509,9 +527,17 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
+             * MuteInterval.
+             */
+            public Builder muteInterval(Integer muteInterval) {
+                this.muteInterval = muteInterval;
+                return this;
+            }
+
+            /**
              * <p>The alert notification methods.</p>
              */
-            public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
+            public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
                 return this;
             }
@@ -519,7 +545,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The settings of alert notification recipients.</p>
              */
-            public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
+            public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
                 return this;
             }
@@ -539,7 +565,11 @@ public class CreateDIAlarmRuleRequest extends Request {
      */
     public static class TriggerConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DdlReportTags")
-        private java.util.List < String > ddlReportTags;
+        @Deprecated
+        private java.util.List<String> ddlReportTags;
+
+        @com.aliyun.core.annotation.NameInMap("DdlTypes")
+        private java.util.List<String> ddlTypes;
 
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -552,6 +582,7 @@ public class CreateDIAlarmRuleRequest extends Request {
 
         private TriggerConditions(Builder builder) {
             this.ddlReportTags = builder.ddlReportTags;
+            this.ddlTypes = builder.ddlTypes;
             this.duration = builder.duration;
             this.severity = builder.severity;
             this.threshold = builder.threshold;
@@ -568,8 +599,15 @@ public class CreateDIAlarmRuleRequest extends Request {
         /**
          * @return ddlReportTags
          */
-        public java.util.List < String > getDdlReportTags() {
+        public java.util.List<String> getDdlReportTags() {
             return this.ddlReportTags;
+        }
+
+        /**
+         * @return ddlTypes
+         */
+        public java.util.List<String> getDdlTypes() {
+            return this.ddlTypes;
         }
 
         /**
@@ -594,7 +632,8 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > ddlReportTags; 
+            private java.util.List<String> ddlReportTags; 
+            private java.util.List<String> ddlTypes; 
             private Long duration; 
             private String severity; 
             private Long threshold; 
@@ -602,8 +641,16 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The types of DDL operations for which the alert rule takes effect.</p>
              */
-            public Builder ddlReportTags(java.util.List < String > ddlReportTags) {
+            public Builder ddlReportTags(java.util.List<String> ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;
+                return this;
+            }
+
+            /**
+             * DdlTypes.
+             */
+            public Builder ddlTypes(java.util.List<String> ddlTypes) {
+                this.ddlTypes = ddlTypes;
                 return this;
             }
 

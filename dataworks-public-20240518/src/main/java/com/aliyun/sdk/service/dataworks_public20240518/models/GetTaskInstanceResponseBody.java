@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -234,7 +239,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
      */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private Inputs(Builder builder) {
             this.variables = builder.variables;
@@ -251,17 +256,17 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
-            private java.util.List < Variables> variables; 
+            private java.util.List<Variables> variables; 
 
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -433,10 +438,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
      */
     public static class Outputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskOutputs")
-        private java.util.List < TaskOutputs> taskOutputs;
+        private java.util.List<TaskOutputs> taskOutputs;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < OutputsVariables> variables;
+        private java.util.List<OutputsVariables> variables;
 
         private Outputs(Builder builder) {
             this.taskOutputs = builder.taskOutputs;
@@ -454,25 +459,25 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         /**
          * @return taskOutputs
          */
-        public java.util.List < TaskOutputs> getTaskOutputs() {
+        public java.util.List<TaskOutputs> getTaskOutputs() {
             return this.taskOutputs;
         }
 
         /**
          * @return variables
          */
-        public java.util.List < OutputsVariables> getVariables() {
+        public java.util.List<OutputsVariables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
-            private java.util.List < TaskOutputs> taskOutputs; 
-            private java.util.List < OutputsVariables> variables; 
+            private java.util.List<TaskOutputs> taskOutputs; 
+            private java.util.List<OutputsVariables> variables; 
 
             /**
              * <p>The task outputs.</p>
              */
-            public Builder taskOutputs(java.util.List < TaskOutputs> taskOutputs) {
+            public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
                 return this;
             }
@@ -480,7 +485,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.List < OutputsVariables> variables) {
+            public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -887,7 +892,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
@@ -1144,7 +1149,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1257,7 +1262,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private Script script; 
             private Long startedTime; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long taskId; 
             private String taskName; 
             private String taskType; 
@@ -1406,7 +1411,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodNumber.
+             * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodNumber(Integer periodNumber) {
                 this.periodNumber = periodNumber;
@@ -1536,7 +1544,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             /**
              * <p>The tags of the task.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1584,6 +1592,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The timeout period of task running. Unit: seconds.</p>
+             * <p>Note: The value of this parameter is rounded up by hour.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DataQualityResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Details")
-    private java.util.List < Details> details;
+    private java.util.List<Details> details;
 
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
@@ -50,7 +55,7 @@ public class DataQualityResult extends TeaModel {
     /**
      * @return details
      */
-    public java.util.List < Details> getDetails() {
+    public java.util.List<Details> getDetails() {
         return this.details;
     }
 
@@ -90,7 +95,7 @@ public class DataQualityResult extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Details> details; 
+        private java.util.List<Details> details; 
         private Long id; 
         private Rule rule; 
         private String sample; 
@@ -100,7 +105,7 @@ public class DataQualityResult extends TeaModel {
         /**
          * Details.
          */
-        public Builder details(java.util.List < Details> details) {
+        public Builder details(java.util.List<Details> details) {
             this.details = details;
             return this;
         }
@@ -911,7 +916,7 @@ public class DataQualityResult extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("ErrorHandlers")
-        private java.util.List < ErrorHandlers> errorHandlers;
+        private java.util.List<ErrorHandlers> errorHandlers;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -984,7 +989,7 @@ public class DataQualityResult extends TeaModel {
         /**
          * @return errorHandlers
          */
-        public java.util.List < ErrorHandlers> getErrorHandlers() {
+        public java.util.List<ErrorHandlers> getErrorHandlers() {
             return this.errorHandlers;
         }
 
@@ -1048,7 +1053,7 @@ public class DataQualityResult extends TeaModel {
             private CheckingConfig checkingConfig; 
             private String description; 
             private Boolean enabled; 
-            private java.util.List < ErrorHandlers> errorHandlers; 
+            private java.util.List<ErrorHandlers> errorHandlers; 
             private Long id; 
             private String name; 
             private Long projectId; 
@@ -1085,7 +1090,7 @@ public class DataQualityResult extends TeaModel {
             /**
              * ErrorHandlers.
              */
-            public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
+            public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
                 return this;
             }

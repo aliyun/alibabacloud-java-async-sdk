@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class GrantMemberProjectRolesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleCodes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > roleCodes;
+    private java.util.List<String> roleCodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserId")
@@ -69,7 +74,7 @@ public class GrantMemberProjectRolesRequest extends Request {
     /**
      * @return roleCodes
      */
-    public java.util.List < String > getRoleCodes() {
+    public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
     }
 
@@ -83,7 +88,7 @@ public class GrantMemberProjectRolesRequest extends Request {
     public static final class Builder extends Request.Builder<GrantMemberProjectRolesRequest, Builder> {
         private String regionId; 
         private Long projectId; 
-        private java.util.List < String > roleCodes; 
+        private java.util.List<String> roleCodes; 
         private String userId; 
 
         private Builder() {
@@ -121,11 +126,11 @@ public class GrantMemberProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listprojectroles?spm=a2c4g.11186623.0.0.43841daeywTtF3">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
+         * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
          * <p>You must configure this parameter to specify the roles that you want to assign to members in the workspace.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder roleCodes(java.util.List < String > roleCodes) {
+        public Builder roleCodes(java.util.List<String> roleCodes) {
             String roleCodesShrink = shrink(roleCodes, "RoleCodes", "json");
             this.putBodyParameter("RoleCodes", roleCodesShrink);
             this.roleCodes = roleCodes;

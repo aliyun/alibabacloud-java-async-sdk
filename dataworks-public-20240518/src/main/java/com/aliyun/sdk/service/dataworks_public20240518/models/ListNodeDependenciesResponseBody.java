@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -308,7 +313,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         private String artifactType;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -353,7 +358,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -394,7 +399,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactType; 
-            private String id; 
+            private Long id; 
             private String name; 
             private Node node; 
             private String scope; 
@@ -418,7 +423,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>543218872620113XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -505,13 +510,13 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
      */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeOutputs")
-        private java.util.List < NodeOutputs> nodeOutputs;
+        private java.util.List<NodeOutputs> nodeOutputs;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < Tables> tables;
+        private java.util.List<Tables> tables;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < Variables> variables;
+        private java.util.List<Variables> variables;
 
         private Inputs(Builder builder) {
             this.nodeOutputs = builder.nodeOutputs;
@@ -530,33 +535,33 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return nodeOutputs
          */
-        public java.util.List < NodeOutputs> getNodeOutputs() {
+        public java.util.List<NodeOutputs> getNodeOutputs() {
             return this.nodeOutputs;
         }
 
         /**
          * @return tables
          */
-        public java.util.List < Tables> getTables() {
+        public java.util.List<Tables> getTables() {
             return this.tables;
         }
 
         /**
          * @return variables
          */
-        public java.util.List < Variables> getVariables() {
+        public java.util.List<Variables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
-            private java.util.List < NodeOutputs> nodeOutputs; 
-            private java.util.List < Tables> tables; 
-            private java.util.List < Variables> variables; 
+            private java.util.List<NodeOutputs> nodeOutputs; 
+            private java.util.List<Tables> tables; 
+            private java.util.List<Variables> variables; 
 
             /**
              * <p>The node outputs.</p>
              */
-            public Builder nodeOutputs(java.util.List < NodeOutputs> nodeOutputs) {
+            public Builder nodeOutputs(java.util.List<NodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
                 return this;
             }
@@ -564,7 +569,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The tables.</p>
              */
-            public Builder tables(java.util.List < Tables> tables) {
+            public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -572,7 +577,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.List < Variables> variables) {
+            public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -745,7 +750,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         private String artifactType;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -790,7 +795,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -831,7 +836,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactType; 
-            private String id; 
+            private Long id; 
             private String name; 
             private VariablesNode node; 
             private String scope; 
@@ -855,7 +860,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>543217824470354XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -942,13 +947,13 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
      */
     public static class Outputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeOutputs")
-        private java.util.List < OutputsNodeOutputs> nodeOutputs;
+        private java.util.List<OutputsNodeOutputs> nodeOutputs;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < OutputsTables> tables;
+        private java.util.List<OutputsTables> tables;
 
         @com.aliyun.core.annotation.NameInMap("Variables")
-        private java.util.List < OutputsVariables> variables;
+        private java.util.List<OutputsVariables> variables;
 
         private Outputs(Builder builder) {
             this.nodeOutputs = builder.nodeOutputs;
@@ -967,33 +972,33 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return nodeOutputs
          */
-        public java.util.List < OutputsNodeOutputs> getNodeOutputs() {
+        public java.util.List<OutputsNodeOutputs> getNodeOutputs() {
             return this.nodeOutputs;
         }
 
         /**
          * @return tables
          */
-        public java.util.List < OutputsTables> getTables() {
+        public java.util.List<OutputsTables> getTables() {
             return this.tables;
         }
 
         /**
          * @return variables
          */
-        public java.util.List < OutputsVariables> getVariables() {
+        public java.util.List<OutputsVariables> getVariables() {
             return this.variables;
         }
 
         public static final class Builder {
-            private java.util.List < OutputsNodeOutputs> nodeOutputs; 
-            private java.util.List < OutputsTables> tables; 
-            private java.util.List < OutputsVariables> variables; 
+            private java.util.List<OutputsNodeOutputs> nodeOutputs; 
+            private java.util.List<OutputsTables> tables; 
+            private java.util.List<OutputsVariables> variables; 
 
             /**
              * <p>The node outputs.</p>
              */
-            public Builder nodeOutputs(java.util.List < OutputsNodeOutputs> nodeOutputs) {
+            public Builder nodeOutputs(java.util.List<OutputsNodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
                 return this;
             }
@@ -1001,7 +1006,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The tables.</p>
              */
-            public Builder tables(java.util.List < OutputsTables> tables) {
+            public Builder tables(java.util.List<OutputsTables> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -1009,7 +1014,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The variables.</p>
              */
-            public Builder variables(java.util.List < OutputsVariables> variables) {
+            public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
                 return this;
             }
@@ -1129,7 +1134,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -1154,7 +1159,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -1173,7 +1178,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String id; 
+            private Long id; 
             private String path; 
             private Runtime runtime; 
 
@@ -1183,7 +1188,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>853573334108680XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -1443,7 +1448,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         private String endTime;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -1488,7 +1493,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -1516,7 +1521,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         public static final class Builder {
             private String cron; 
             private String endTime; 
-            private String id; 
+            private Long id; 
             private String startTime; 
             private String timezone; 
             private String type; 
@@ -1549,7 +1554,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>543680677872062XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -1617,7 +1622,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Inputs")
         private Inputs inputs;
@@ -1635,7 +1640,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         private String owner;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
-        private String projectId;
+        private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("Recurrence")
         private String recurrence;
@@ -1650,10 +1655,10 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         private Strategy strategy;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
-        private String taskId;
+        private Long taskId;
 
         @com.aliyun.core.annotation.NameInMap("Trigger")
         private Trigger trigger;
@@ -1710,7 +1715,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -1752,7 +1757,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return projectId
          */
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
@@ -1787,14 +1792,14 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return taskId
          */
-        public String getTaskId() {
+        public Long getTaskId() {
             return this.taskId;
         }
 
@@ -1809,19 +1814,19 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             private Long createTime; 
             private DataSource dataSource; 
             private String description; 
-            private String id; 
+            private Long id; 
             private Inputs inputs; 
             private Long modifyTime; 
             private String name; 
             private Outputs outputs; 
             private String owner; 
-            private String projectId; 
+            private Long projectId; 
             private String recurrence; 
             private RuntimeResource runtimeResource; 
             private Script script; 
             private Strategy strategy; 
-            private java.util.List < Tags> tags; 
-            private String taskId; 
+            private java.util.List<Tags> tags; 
+            private Long taskId; 
             private Trigger trigger; 
 
             /**
@@ -1857,7 +1862,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>723932906364267XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -1914,7 +1919,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>65133</p>
              */
-            public Builder projectId(String projectId) {
+            public Builder projectId(Long projectId) {
                 this.projectId = projectId;
                 return this;
             }
@@ -1963,7 +1968,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The tags. This parameter is not in use.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1974,7 +1979,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>580667964888595XXXX</p>
              */
-            public Builder taskId(String taskId) {
+            public Builder taskId(Long taskId) {
                 this.taskId = taskId;
                 return this;
             }
@@ -2002,7 +2007,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
@@ -2031,7 +2036,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -2057,7 +2062,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String pageNumber; 
             private String pageSize; 
             private String totalCount; 
@@ -2065,7 +2070,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The descendant nodes.</p>
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private String aliyunResourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("AliyunResourceTags")
-        private java.util.List < AliyunResourceTags> aliyunResourceTags;
+        private java.util.List<AliyunResourceTags> aliyunResourceTags;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -219,7 +224,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * @return aliyunResourceTags
          */
-        public java.util.List < AliyunResourceTags> getAliyunResourceTags() {
+        public java.util.List<AliyunResourceTags> getAliyunResourceTags() {
             return this.aliyunResourceTags;
         }
 
@@ -288,7 +293,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliyunResourceGroupId; 
-            private java.util.List < AliyunResourceTags> aliyunResourceTags; 
+            private java.util.List<AliyunResourceTags> aliyunResourceTags; 
             private String description; 
             private Boolean devEnvironmentEnabled; 
             private Boolean devRoleDisabled; 
@@ -313,7 +318,7 @@ public class ListProjectsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
+            public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
                 this.aliyunResourceTags = aliyunResourceTags;
                 return this;
             }
@@ -455,7 +460,7 @@ public class ListProjectsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Projects")
-        private java.util.List < Projects> projects;
+        private java.util.List<Projects> projects;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -492,7 +497,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * @return projects
          */
-        public java.util.List < Projects> getProjects() {
+        public java.util.List<Projects> getProjects() {
             return this.projects;
         }
 
@@ -506,7 +511,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Projects> projects; 
+            private java.util.List<Projects> projects; 
             private Integer totalCount; 
 
             /**
@@ -534,7 +539,7 @@ public class ListProjectsResponseBody extends TeaModel {
             /**
              * <p>The workspaces.</p>
              */
-            public Builder projects(java.util.List < Projects> projects) {
+            public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
                 return this;
             }

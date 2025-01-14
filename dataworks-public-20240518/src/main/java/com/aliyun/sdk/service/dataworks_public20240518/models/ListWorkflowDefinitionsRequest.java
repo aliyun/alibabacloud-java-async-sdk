@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -93,7 +98,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
@@ -109,7 +114,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String projectId; 
+        private Long projectId; 
         private String type; 
 
         private Builder() {
@@ -179,7 +184,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
          * <strong>example:</strong>
          * <p>10000</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

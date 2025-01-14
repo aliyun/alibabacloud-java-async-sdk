@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -434,6 +439,9 @@ public class ListTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuntimeResource")
         private RuntimeResource runtimeResource;
 
+        @com.aliyun.core.annotation.NameInMap("ScriptParameters")
+        private String scriptParameters;
+
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
@@ -468,6 +476,7 @@ public class ListTasksResponseBody extends TeaModel {
             this.rerunMode = builder.rerunMode;
             this.rerunTimes = builder.rerunTimes;
             this.runtimeResource = builder.runtimeResource;
+            this.scriptParameters = builder.scriptParameters;
             this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
             this.trigger = builder.trigger;
@@ -610,6 +619,13 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return scriptParameters
+         */
+        public String getScriptParameters() {
+            return this.scriptParameters;
+        }
+
+        /**
          * @return tenantId
          */
         public Long getTenantId() {
@@ -663,6 +679,7 @@ public class ListTasksResponseBody extends TeaModel {
             private String rerunMode; 
             private Integer rerunTimes; 
             private RuntimeResource runtimeResource; 
+            private String scriptParameters; 
             private Long tenantId; 
             private Integer timeout; 
             private Trigger trigger; 
@@ -733,12 +750,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例生成模式。</p>
-             * <p>T+1（第二天生成）</p>
-             * <p>Immediately（立即生成）</p>
-             * 
-             * <strong>example:</strong>
-             * <p>T+1</p>
+             * InstanceMode.
              */
             public Builder instanceMode(String instanceMode) {
                 this.instanceMode = instanceMode;
@@ -872,6 +884,14 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
+             * ScriptParameters.
+             */
+            public Builder scriptParameters(String scriptParameters) {
+                this.scriptParameters = scriptParameters;
+                return this;
+            }
+
+            /**
              * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
@@ -944,7 +964,7 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Tasks")
-        private java.util.List < Tasks> tasks;
+        private java.util.List<Tasks> tasks;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -981,7 +1001,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * @return tasks
          */
-        public java.util.List < Tasks> getTasks() {
+        public java.util.List<Tasks> getTasks() {
             return this.tasks;
         }
 
@@ -995,7 +1015,7 @@ public class ListTasksResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Tasks> tasks; 
+            private java.util.List<Tasks> tasks; 
             private Integer totalCount; 
 
             /**
@@ -1023,7 +1043,7 @@ public class ListTasksResponseBody extends TeaModel {
             /**
              * <p>The tasks.</p>
              */
-            public Builder tasks(java.util.List < Tasks> tasks) {
+            public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
                 return this;
             }

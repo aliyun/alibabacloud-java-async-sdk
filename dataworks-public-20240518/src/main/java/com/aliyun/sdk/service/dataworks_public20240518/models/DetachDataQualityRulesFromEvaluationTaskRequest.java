@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataQualityRuleIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > dataQualityRuleIds;
+    private java.util.List<Long> dataQualityRuleIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -69,7 +74,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
     /**
      * @return dataQualityRuleIds
      */
-    public java.util.List < Long > getDataQualityRuleIds() {
+    public java.util.List<Long> getDataQualityRuleIds() {
         return this.dataQualityRuleIds;
     }
 
@@ -83,7 +88,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
     public static final class Builder extends Request.Builder<DetachDataQualityRulesFromEvaluationTaskRequest, Builder> {
         private String regionId; 
         private Long dataQualityEvaluationTaskId; 
-        private java.util.List < Long > dataQualityRuleIds; 
+        private java.util.List<Long> dataQualityRuleIds; 
         private Long projectId; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class DetachDataQualityRulesFromEvaluationTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder dataQualityRuleIds(java.util.List < Long > dataQualityRuleIds) {
+        public Builder dataQualityRuleIds(java.util.List<Long> dataQualityRuleIds) {
             String dataQualityRuleIdsShrink = shrink(dataQualityRuleIds, "DataQualityRuleIds", "json");
             this.putBodyParameter("DataQualityRuleIds", dataQualityRuleIdsShrink);
             this.dataQualityRuleIds = dataQualityRuleIds;

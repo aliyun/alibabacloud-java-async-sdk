@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListTaskInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Owner")
@@ -64,7 +69,7 @@ public class ListTaskInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskIds")
-    private java.util.List < Long > taskIds;
+    private java.util.List<Long> taskIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskName")
@@ -155,7 +160,7 @@ public class ListTaskInstancesRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
@@ -218,7 +223,7 @@ public class ListTaskInstancesRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < Long > getTaskIds() {
+    public java.util.List<Long> getTaskIds() {
         return this.taskIds;
     }
 
@@ -275,7 +280,7 @@ public class ListTaskInstancesRequest extends Request {
         private String regionId; 
         private Long bizdate; 
         private Long id; 
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -284,7 +289,7 @@ public class ListTaskInstancesRequest extends Request {
         private String runtimeResource; 
         private String sortBy; 
         private Long taskId; 
-        private java.util.List < Long > taskIds; 
+        private java.util.List<Long> taskIds; 
         private String taskName; 
         private String taskType; 
         private String triggerRecurrence; 
@@ -358,7 +363,7 @@ public class ListTaskInstancesRequest extends Request {
         /**
          * <p>The IDs of the instances. You can query multiple instances at a time by instance ID.</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putBodyParameter("Ids", idsShrink);
             this.ids = ids;
@@ -483,7 +488,7 @@ public class ListTaskInstancesRequest extends Request {
         /**
          * <p>The IDs of the tasks. You can query multiple instances at a time by task ID.</p>
          */
-        public Builder taskIds(java.util.List < Long > taskIds) {
+        public Builder taskIds(java.util.List<Long> taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");
             this.putBodyParameter("TaskIds", taskIdsShrink);
             this.taskIds = taskIds;
@@ -512,7 +517,16 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * TriggerRecurrence.
+         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Pause</li>
+         * <li>Skip</li>
+         * <li>Normal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder triggerRecurrence(String triggerRecurrence) {
             this.putBodyParameter("TriggerRecurrence", triggerRecurrence);
@@ -521,7 +535,15 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * TriggerType.
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("TriggerType", triggerType);

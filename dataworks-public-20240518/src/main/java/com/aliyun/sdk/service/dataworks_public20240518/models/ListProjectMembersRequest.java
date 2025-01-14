@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,11 +36,11 @@ public class ListProjectMembersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleCodes")
-    private java.util.List < String > roleCodes;
+    private java.util.List<String> roleCodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     private ListProjectMembersRequest(Builder builder) {
         super(builder);
@@ -91,14 +96,14 @@ public class ListProjectMembersRequest extends Request {
     /**
      * @return roleCodes
      */
-    public java.util.List < String > getRoleCodes() {
+    public java.util.List<String> getRoleCodes() {
         return this.roleCodes;
     }
 
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
@@ -107,8 +112,8 @@ public class ListProjectMembersRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
-        private java.util.List < String > roleCodes; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> roleCodes; 
+        private java.util.List<String> userIds; 
 
         private Builder() {
             super();
@@ -172,9 +177,9 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listprojectroles?spm=a2c4g.11186623.0.0.43841daeywTtF3">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
+         * <p>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</p>
          */
-        public Builder roleCodes(java.util.List < String > roleCodes) {
+        public Builder roleCodes(java.util.List<String> roleCodes) {
             String roleCodesShrink = shrink(roleCodes, "RoleCodes", "json");
             this.putBodyParameter("RoleCodes", roleCodesShrink);
             this.roleCodes = roleCodes;
@@ -184,7 +189,7 @@ public class ListProjectMembersRequest extends Request {
         /**
          * <p>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</p>
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");
             this.putBodyParameter("UserIds", userIdsShrink);
             this.userIds = userIds;

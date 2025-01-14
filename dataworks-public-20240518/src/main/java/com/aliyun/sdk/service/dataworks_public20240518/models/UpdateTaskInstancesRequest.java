@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateTaskInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskInstances")
-    private java.util.List < TaskInstances> taskInstances;
+    private java.util.List<TaskInstances> taskInstances;
 
     private UpdateTaskInstancesRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class UpdateTaskInstancesRequest extends Request {
     /**
      * @return taskInstances
      */
-    public java.util.List < TaskInstances> getTaskInstances() {
+    public java.util.List<TaskInstances> getTaskInstances() {
         return this.taskInstances;
     }
 
     public static final class Builder extends Request.Builder<UpdateTaskInstancesRequest, Builder> {
         private String regionId; 
         private String comment; 
-        private java.util.List < TaskInstances> taskInstances; 
+        private java.util.List<TaskInstances> taskInstances; 
 
         private Builder() {
             super();
@@ -105,7 +110,7 @@ public class UpdateTaskInstancesRequest extends Request {
         /**
          * <p>The instances.</p>
          */
-        public Builder taskInstances(java.util.List < TaskInstances> taskInstances) {
+        public Builder taskInstances(java.util.List<TaskInstances> taskInstances) {
             String taskInstancesShrink = shrink(taskInstances, "TaskInstances", "json");
             this.putBodyParameter("TaskInstances", taskInstancesShrink);
             this.taskInstances = taskInstances;

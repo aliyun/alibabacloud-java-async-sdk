@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,6 +21,10 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    private String envType;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -29,6 +38,7 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
     private TriggerSchedulerTaskInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.envType = builder.envType;
         this.taskId = builder.taskId;
         this.triggerTime = builder.triggerTime;
     }
@@ -54,6 +64,13 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
     }
 
     /**
+     * @return envType
+     */
+    public String getEnvType() {
+        return this.envType;
+    }
+
+    /**
      * @return taskId
      */
     public Long getTaskId() {
@@ -69,6 +86,7 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<TriggerSchedulerTaskInstanceRequest, Builder> {
         private String regionId; 
+        private String envType; 
         private Long taskId; 
         private Long triggerTime; 
 
@@ -79,6 +97,7 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
         private Builder(TriggerSchedulerTaskInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.envType = request.envType;
             this.taskId = request.taskId;
             this.triggerTime = request.triggerTime;
         } 
@@ -89,6 +108,15 @@ public class TriggerSchedulerTaskInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * EnvType.
+         */
+        public Builder envType(String envType) {
+            this.putQueryParameter("EnvType", envType);
+            this.envType = envType;
             return this;
         }
 

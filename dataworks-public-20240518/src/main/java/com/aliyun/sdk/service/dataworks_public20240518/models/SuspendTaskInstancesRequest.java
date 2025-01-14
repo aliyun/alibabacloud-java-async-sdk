@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class SuspendTaskInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     private SuspendTaskInstancesRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class SuspendTaskInstancesRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
     public static final class Builder extends Request.Builder<SuspendTaskInstancesRequest, Builder> {
         private String regionId; 
         private String comment; 
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
 
         private Builder() {
             super();
@@ -102,7 +107,7 @@ public class SuspendTaskInstancesRequest extends Request {
         /**
          * Ids.
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putBodyParameter("Ids", idsShrink);
             this.ids = ids;

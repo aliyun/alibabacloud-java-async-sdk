@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRouteResponseBody</p>
  */
 public class CreateRouteResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("RouteId")
-    private Long routeId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateRouteResponseBody(Builder builder) {
+        this.id = builder.id;
         this.requestId = builder.requestId;
-        this.routeId = builder.routeId;
         this.success = builder.success;
     }
 
@@ -36,17 +41,17 @@ public class CreateRouteResponseBody extends TeaModel {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return routeId
-     */
-    public Long getRouteId() {
-        return this.routeId;
     }
 
     /**
@@ -57,23 +62,23 @@ public class CreateRouteResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long id; 
         private String requestId; 
-        private Long routeId; 
         private Boolean success; 
+
+        /**
+         * Id.
+         */
+        public Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * RouteId.
-         */
-        public Builder routeId(Long routeId) {
-            this.routeId = routeId;
             return this;
         }
 

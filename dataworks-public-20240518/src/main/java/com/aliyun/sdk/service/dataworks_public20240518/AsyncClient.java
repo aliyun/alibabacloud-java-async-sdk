@@ -74,12 +74,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDIAlarmRuleResponse> createDIAlarmRule(CreateDIAlarmRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDIJob  CreateDIJobRequest
      * @return CreateDIJobResponse
      */
     CompletableFuture<CreateDIJobResponse> createDIJob(CreateDIJobRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAssetTag  CreateDataAssetTagRequest
+     * @return CreateDataAssetTagResponse
+     */
+    CompletableFuture<CreateDataAssetTagResponse> createDataAssetTag(CreateDataAssetTagRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is supported in all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateDataQualityEvaluationTask  CreateDataQualityEvaluationTaskRequest
      * @return CreateDataQualityEvaluationTaskResponse
      */
@@ -182,6 +194,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of CreateProjectMember  CreateProjectMemberRequest
      * @return CreateProjectMemberResponse
      */
@@ -202,7 +217,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
      * </ol>
      * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
@@ -243,10 +258,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDIAlarmRuleResponse> deleteDIAlarmRule(DeleteDIAlarmRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteDIJob  DeleteDIJobRequest
      * @return DeleteDIJobResponse
      */
     CompletableFuture<DeleteDIJobResponse> deleteDIJob(DeleteDIJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataAssetTag  DeleteDataAssetTagRequest
+     * @return DeleteDataAssetTagResponse
+     */
+    CompletableFuture<DeleteDataAssetTagResponse> deleteDataAssetTag(DeleteDataAssetTagRequest request);
 
     /**
      * @param request the request parameters of DeleteDataQualityEvaluationTask  DeleteDataQualityEvaluationTaskRequest
@@ -328,12 +352,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNodeResponse> deleteNode(DeleteNodeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteProject  DeleteProjectRequest
      * @return DeleteProjectResponse
      */
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteProjectMember  DeleteProjectMemberRequest
      * @return DeleteProjectMemberResponse
      */
@@ -354,7 +384,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <ol>
      * <li>You can use this API operation only in DataWorks Basic Edition or an advanced edition.</li>
-     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/zh/dataworks/product-overview/new-resource-group-overview?spm=a2c4g.11186623.0.i1">pricing</a> of serverless resource groups.</li>
+     * <li>**Before you call this API operation, you must make sure that you have a good command of the billing details and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of serverless resource groups.</li>
      * </ol>
      * 
      * @param request the request parameters of DeleteResourceGroup  DeleteResourceGroupRequest
@@ -431,12 +461,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDIJob  GetDIJobRequest
      * @return GetDIJobResponse
      */
     CompletableFuture<GetDIJobResponse> getDIJob(GetDIJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetDIJobLog  GetDIJobLogRequest
      * @return GetDIJobLogResponse
      */
@@ -521,6 +557,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNodeResponse> getNode(GetNodeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetProject  GetProjectRequest
      * @return GetProjectResponse
      */
@@ -575,6 +614,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetTaskInstance  GetTaskInstanceRequest
      * @return GetTaskInstanceResponse
      */
@@ -629,28 +671,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDIAlarmRulesResponse> listDIAlarmRules(ListDIAlarmRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDIJobEvents  ListDIJobEventsRequest
      * @return ListDIJobEventsResponse
      */
     CompletableFuture<ListDIJobEventsResponse> listDIJobEvents(ListDIJobEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDIJobMetrics  ListDIJobMetricsRequest
      * @return ListDIJobMetricsResponse
      */
     CompletableFuture<ListDIJobMetricsResponse> listDIJobMetrics(ListDIJobMetricsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDIJobRunDetails  ListDIJobRunDetailsRequest
      * @return ListDIJobRunDetailsResponse
      */
     CompletableFuture<ListDIJobRunDetailsResponse> listDIJobRunDetails(ListDIJobRunDetailsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDIJobs  ListDIJobsRequest
      * @return ListDIJobsResponse
      */
     CompletableFuture<ListDIJobsResponse> listDIJobs(ListDIJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAssetTags  ListDataAssetTagsRequest
+     * @return ListDataAssetTagsResponse
+     */
+    CompletableFuture<ListDataAssetTagsResponse> listDataAssetTags(ListDataAssetTagsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAssets  ListDataAssetsRequest
+     * @return ListDataAssetsResponse
+     */
+    CompletableFuture<ListDataAssetsResponse> listDataAssets(ListDataAssetsRequest request);
 
     /**
      * <b>description</b> :
@@ -680,10 +746,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataQualityResultsResponse> listDataQualityResults(ListDataQualityResultsRequest request);
 
     /**
-     * @param request the request parameters of ListDataQualityRuleTemplate  ListDataQualityRuleTemplateRequest
-     * @return ListDataQualityRuleTemplateResponse
+     * @param request the request parameters of ListDataQualityRuleTemplates  ListDataQualityRuleTemplatesRequest
+     * @return ListDataQualityRuleTemplatesResponse
      */
-    CompletableFuture<ListDataQualityRuleTemplateResponse> listDataQualityRuleTemplate(ListDataQualityRuleTemplateRequest request);
+    CompletableFuture<ListDataQualityRuleTemplatesResponse> listDataQualityRuleTemplates(ListDataQualityRuleTemplatesRequest request);
 
     /**
      * <b>description</b> :
@@ -731,6 +797,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListDownstreamTaskInstances  ListDownstreamTaskInstancesRequest
      * @return ListDownstreamTaskInstancesResponse
      */
@@ -825,6 +894,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTaskInstanceOperationLogsResponse> listTaskInstanceOperationLogs(ListTaskInstanceOperationLogsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListTaskInstances  ListTaskInstancesRequest
      * @return ListTaskInstancesResponse
      */
@@ -853,6 +925,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUpstreamTaskInstancesResponse> listUpstreamTaskInstances(ListUpstreamTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListUpstreamTasks  ListUpstreamTasksRequest
      * @return ListUpstreamTasksResponse
      */
@@ -940,6 +1015,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResumeTaskInstancesResponse> resumeTaskInstances(ResumeTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of RevokeMemberProjectRoles  RevokeMemberProjectRolesRequest
      * @return RevokeMemberProjectRolesResponse
      */
@@ -955,12 +1033,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSuccessTaskInstancesResponse> setSuccessTaskInstances(SetSuccessTaskInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of StartDIJob  StartDIJobRequest
      * @return StartDIJobResponse
      */
     CompletableFuture<StartDIJobResponse> startDIJob(StartDIJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of StopDIJob  StopDIJobRequest
      * @return StopDIJobResponse
      */
@@ -985,6 +1069,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SuspendTaskInstancesResponse> suspendTaskInstances(SuspendTaskInstancesRequest request);
 
     /**
+     * @param request the request parameters of TagDataAssets  TagDataAssetsRequest
+     * @return TagDataAssetsResponse
+     */
+    CompletableFuture<TagDataAssetsResponse> tagDataAssets(TagDataAssetsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -992,6 +1082,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TriggerSchedulerTaskInstanceResponse
      */
     CompletableFuture<TriggerSchedulerTaskInstanceResponse> triggerSchedulerTaskInstance(TriggerSchedulerTaskInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UnTagDataAssets  UnTagDataAssetsRequest
+     * @return UnTagDataAssetsResponse
+     */
+    CompletableFuture<UnTagDataAssetsResponse> unTagDataAssets(UnTagDataAssetsRequest request);
 
     /**
      * @param request the request parameters of UpdateAlertRule  UpdateAlertRuleRequest
@@ -1006,12 +1102,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDIAlarmRuleResponse> updateDIAlarmRule(UpdateDIAlarmRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDIJob  UpdateDIJobRequest
      * @return UpdateDIJobResponse
      */
     CompletableFuture<UpdateDIJobResponse> updateDIJob(UpdateDIJobRequest request);
 
     /**
+     * @param request the request parameters of UpdateDataAssetTag  UpdateDataAssetTagRequest
+     * @return UpdateDataAssetTagResponse
+     */
+    CompletableFuture<UpdateDataAssetTagResponse> updateDataAssetTag(UpdateDataAssetTagRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is supported in all DataWorks editions.</p>
+     * 
      * @param request the request parameters of UpdateDataQualityEvaluationTask  UpdateDataQualityEvaluationTaskRequest
      * @return UpdateDataQualityEvaluationTaskResponse
      */

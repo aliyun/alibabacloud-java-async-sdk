@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class ListProjectRolesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Codes")
-    private java.util.List < String > codes;
+    private java.util.List<String> codes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Names")
-    private java.util.List < String > names;
+    private java.util.List<String> names;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -75,14 +80,14 @@ public class ListProjectRolesRequest extends Request {
     /**
      * @return codes
      */
-    public java.util.List < String > getCodes() {
+    public java.util.List<String> getCodes() {
         return this.codes;
     }
 
     /**
      * @return names
      */
-    public java.util.List < String > getNames() {
+    public java.util.List<String> getNames() {
         return this.names;
     }
 
@@ -116,8 +121,8 @@ public class ListProjectRolesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListProjectRolesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > codes; 
-        private java.util.List < String > names; 
+        private java.util.List<String> codes; 
+        private java.util.List<String> names; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
@@ -150,7 +155,7 @@ public class ListProjectRolesRequest extends Request {
         /**
          * <p>The codes of roles in the DataWorks workspace.</p>
          */
-        public Builder codes(java.util.List < String > codes) {
+        public Builder codes(java.util.List<String> codes) {
             String codesShrink = shrink(codes, "Codes", "json");
             this.putBodyParameter("Codes", codesShrink);
             this.codes = codes;
@@ -160,7 +165,7 @@ public class ListProjectRolesRequest extends Request {
         /**
          * <p>The names of roles in the DataWorks workspace.</p>
          */
-        public Builder names(java.util.List < String > names) {
+        public Builder names(java.util.List<String> names) {
             String namesShrink = shrink(names, "Names", "json");
             this.putBodyParameter("Names", namesShrink);
             this.names = names;

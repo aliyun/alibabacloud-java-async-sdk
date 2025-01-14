@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class AbolishDeploymentRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     private AbolishDeploymentRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class AbolishDeploymentRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
     public static final class Builder extends Request.Builder<AbolishDeploymentRequest, Builder> {
         private String regionId; 
         private String id; 
-        private String projectId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -113,7 +118,7 @@ public class AbolishDeploymentRequest extends Request {
          * <strong>example:</strong>
          * <p>10000</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

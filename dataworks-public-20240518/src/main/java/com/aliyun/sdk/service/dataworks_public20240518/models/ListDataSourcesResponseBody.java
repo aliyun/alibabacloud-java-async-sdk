@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -208,7 +213,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
              * <li>Dev: development environment</li>
              * <li>Prod: production environment</li>
              * </ul>
-             * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/zh/dataworks/developer-reference/data-source-connection-information-connectionproperties/?spm=a2c4g.11186623.0.0.3fbb6fe7fo5AMK">Data source connection information (ConnectionProperties)</a>.</p>
+             * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -329,7 +334,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
      */
     public static class DataSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSource")
-        private java.util.List < DataSource> dataSource;
+        private java.util.List<DataSource> dataSource;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -354,7 +359,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         /**
          * @return dataSource
          */
-        public java.util.List < DataSource> getDataSource() {
+        public java.util.List<DataSource> getDataSource() {
             return this.dataSource;
         }
 
@@ -373,14 +378,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataSource> dataSource; 
+            private java.util.List<DataSource> dataSource; 
             private String name; 
             private String type; 
 
             /**
              * <p>The data sources. Each element is the information of a single data source with a unique data source ID.</p>
              */
-            public Builder dataSource(java.util.List < DataSource> dataSource) {
+            public Builder dataSource(java.util.List<DataSource> dataSource) {
                 this.dataSource = dataSource;
                 return this;
             }
@@ -422,7 +427,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSources")
-        private java.util.List < DataSources> dataSources;
+        private java.util.List<DataSources> dataSources;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -451,7 +456,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         /**
          * @return dataSources
          */
-        public java.util.List < DataSources> getDataSources() {
+        public java.util.List<DataSources> getDataSources() {
             return this.dataSources;
         }
 
@@ -477,7 +482,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataSources> dataSources; 
+            private java.util.List<DataSources> dataSources; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -485,7 +490,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             /**
              * <p>The data source groups. Each element in the array indicates a data source group. Each data source group contains data sources in the development environment (if any) and the production environment.</p>
              */
-            public Builder dataSources(java.util.List < DataSources> dataSources) {
+            public Builder dataSources(java.util.List<DataSources> dataSources) {
                 this.dataSources = dataSources;
                 return this;
             }

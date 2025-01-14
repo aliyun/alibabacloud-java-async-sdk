@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class StopTaskInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SuccessInfo")
-    private java.util.Map < String, SuccessInfoValue > successInfo;
+    private java.util.Map<String, SuccessInfoValue> successInfo;
 
     private StopTaskInstancesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class StopTaskInstancesResponseBody extends TeaModel {
     /**
      * @return successInfo
      */
-    public java.util.Map < String, SuccessInfoValue > getSuccessInfo() {
+    public java.util.Map<String, SuccessInfoValue> getSuccessInfo() {
         return this.successInfo;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, SuccessInfoValue > successInfo; 
+        private java.util.Map<String, SuccessInfoValue> successInfo; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class StopTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The result of the batch operation, which is in the MAP structure. The instance ID serves as a key, and the result serves as a value.</p>
          */
-        public Builder successInfo(java.util.Map < String, SuccessInfoValue > successInfo) {
+        public Builder successInfo(java.util.Map<String, SuccessInfoValue> successInfo) {
             this.successInfo = successInfo;
             return this;
         }

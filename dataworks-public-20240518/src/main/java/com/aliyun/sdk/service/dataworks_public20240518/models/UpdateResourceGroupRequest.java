@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,6 +20,10 @@ public class UpdateResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupId")
+    private String aliyunResourceGroupId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -32,6 +41,7 @@ public class UpdateResourceGroupRequest extends Request {
     private UpdateResourceGroupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.aliyunResourceGroupId = builder.aliyunResourceGroupId;
         this.id = builder.id;
         this.name = builder.name;
         this.remark = builder.remark;
@@ -58,6 +68,13 @@ public class UpdateResourceGroupRequest extends Request {
     }
 
     /**
+     * @return aliyunResourceGroupId
+     */
+    public String getAliyunResourceGroupId() {
+        return this.aliyunResourceGroupId;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
@@ -80,6 +97,7 @@ public class UpdateResourceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateResourceGroupRequest, Builder> {
         private String regionId; 
+        private String aliyunResourceGroupId; 
         private String id; 
         private String name; 
         private String remark; 
@@ -91,6 +109,7 @@ public class UpdateResourceGroupRequest extends Request {
         private Builder(UpdateResourceGroupRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.aliyunResourceGroupId = request.aliyunResourceGroupId;
             this.id = request.id;
             this.name = request.name;
             this.remark = request.remark;
@@ -102,6 +121,18 @@ public class UpdateResourceGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2kqofrgXXXXX</p>
+         */
+        public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
+            this.putBodyParameter("AliyunResourceGroupId", aliyunResourceGroupId);
+            this.aliyunResourceGroupId = aliyunResourceGroupId;
             return this;
         }
 

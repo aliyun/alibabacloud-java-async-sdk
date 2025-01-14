@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataQualityRules")
-    private java.util.List < DataQualityRules> dataQualityRules;
+    private java.util.List<DataQualityRules> dataQualityRules;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataSourceId")
@@ -26,11 +31,12 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 65535)
     private String description;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Hooks")
-    private java.util.List < Hooks> hooks;
+    private java.util.List<Hooks> hooks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -39,6 +45,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String name;
 
     @com.aliyun.core.annotation.Body
@@ -101,7 +108,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
     /**
      * @return dataQualityRules
      */
-    public java.util.List < DataQualityRules> getDataQualityRules() {
+    public java.util.List<DataQualityRules> getDataQualityRules() {
         return this.dataQualityRules;
     }
 
@@ -122,7 +129,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
     /**
      * @return hooks
      */
-    public java.util.List < Hooks> getHooks() {
+    public java.util.List<Hooks> getHooks() {
         return this.hooks;
     }
 
@@ -177,10 +184,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDataQualityEvaluationTaskRequest, Builder> {
         private String regionId; 
-        private java.util.List < DataQualityRules> dataQualityRules; 
+        private java.util.List<DataQualityRules> dataQualityRules; 
         private Long dataSourceId; 
         private String description; 
-        private java.util.List < Hooks> hooks; 
+        private java.util.List<Hooks> hooks; 
         private Long id; 
         private String name; 
         private Notifications notifications; 
@@ -219,9 +226,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * DataQualityRules.
+         * <p>The list of monitoring rules that are associated with the monitor.</p>
          */
-        public Builder dataQualityRules(java.util.List < DataQualityRules> dataQualityRules) {
+        public Builder dataQualityRules(java.util.List<DataQualityRules> dataQualityRules) {
             String dataQualityRulesShrink = shrink(dataQualityRules, "DataQualityRules", "json");
             this.putBodyParameter("DataQualityRules", dataQualityRulesShrink);
             this.dataQualityRules = dataQualityRules;
@@ -229,7 +236,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>358750</p>
          */
         public Builder dataSourceId(Long dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -238,7 +248,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>质量监控任务描述</p>
+         * <p>The description of the monitor.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -247,9 +257,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>数据质量校验任务实例生命周期中的回调设置，目前只支持一个阻塞调度任务的Hook</p>
+         * <p>The hook.</p>
          */
-        public Builder hooks(java.util.List < Hooks> hooks) {
+        public Builder hooks(java.util.List<Hooks> hooks) {
             String hooksShrink = shrink(hooks, "Hooks", "json");
             this.putBodyParameter("Hooks", hooksShrink);
             this.hooks = hooks;
@@ -257,6 +267,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the monitor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +280,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>质量监控任务名称</p>
+         * <p>The name of the monitor.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -278,7 +289,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>数据质量校验任务通知订阅配置</p>
+         * <p>The configurations of alert notifications.</p>
          */
         public Builder notifications(Notifications notifications) {
             String notificationsShrink = shrink(notifications, "Notifications", "json");
@@ -288,7 +299,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>项目空间Id</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +312,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>使用数据源时的一些设置，目前只支持指定EMR的yarn队列、采集EMR表时把SQL引擎指定为SPARK-SQL</p>
+         * <p>The extended configurations in JSON-formatted strings. You can use this parameter only for monitors that are used to monitor the quality of E-MapReduce (EMR) data.</p>
+         * <ul>
+         * <li><p>queue: The Yarn queue used when a monitor checks the quality of EMR data. By default, the queue configured for the current workspace is used.</p>
+         * </li>
+         * <li><p>sqlEngine: The SQL engine used when a monitor checks the quality of EMR data.</p>
+         * <ul>
+         * <li>HIVE_SQL</li>
+         * <li>SPARK_SQL</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>
@@ -313,7 +334,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>参看 DataQualityTarget示例	数据质量校验任务的监控对象，参考 DataQualityTarget</p>
+         * <p>The monitored object of the data quality monitoring task.</p>
          */
         public Builder target(Target target) {
             String targetShrink = shrink(target, "Target", "json");
@@ -323,7 +344,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * <p>数据质量校验任务的触发配置</p>
+         * <p>The trigger configuration of the monitor.</p>
          */
         public Builder trigger(Trigger trigger) {
             String triggerShrink = shrink(trigger, "Trigger", "json");
@@ -384,7 +405,28 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>&lt;=</li>
+             * <li>&lt;</li>
+             * <li>! =</li>
+             * <li>=</li>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -392,7 +434,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -451,7 +496,27 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>&lt;=</li>
+             * <li>&lt;</li>
+             * <li>! =</li>
+             * <li>=</li>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -459,7 +524,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -518,7 +586,28 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Operator.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>&lt;=</li>
+             * <li>&lt;</li>
+             * <li>! =</li>
+             * <li>=</li>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <blockquote>
+             * </blockquote>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -526,7 +615,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.001</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -597,7 +689,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private Warned warned; 
 
             /**
-             * Critical.
+             * <p>The threshold settings for critical alerts.</p>
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -605,7 +697,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Expected.
+             * <p>The expected threshold setting.</p>
              */
             public Builder expected(Expected expected) {
                 this.expected = expected;
@@ -613,7 +705,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Warned.
+             * <p>The threshold settings for normal alerts.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -684,7 +776,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String type; 
 
             /**
-             * ReferencedSamplesFilter.
+             * <p>The method that is used to query the referenced samples. To obtain specific types of thresholds, you must query reference values. In this example, an expression is used to specify the query method of referenced samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bizdate&quot;: [&quot;-1&quot;]}</p>
              */
             public Builder referencedSamplesFilter(String referencedSamplesFilter) {
                 this.referencedSamplesFilter = referencedSamplesFilter;
@@ -692,7 +787,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Thresholds.
+             * <p>The threshold settings.</p>
              */
             public Builder thresholds(Thresholds thresholds) {
                 this.thresholds = thresholds;
@@ -700,7 +795,25 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The threshold calculation method.</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Fluctuation</li>
+             * <li>Auto</li>
+             * <li>FluctationDiscreate</li>
+             * <li>Average</li>
+             * <li>Fixed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Fixed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -759,7 +872,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String type; 
 
             /**
-             * ErrorDataFilter.
+             * <p>The SQL statement that is used to filter failed tasks. If you define the rule by using custom SQL statements, you must specify an SQL statement to filter failed tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM ods_d_openapi_log WHERE status = &quot;Error&quot;</p>
              */
             public Builder errorDataFilter(String errorDataFilter) {
                 this.errorDataFilter = errorDataFilter;
@@ -767,7 +883,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the operation.</p>
+             * <ul>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SaveErrorData</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SaveErrorData</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -798,6 +924,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String samplingFilter;
 
         @com.aliyun.core.annotation.NameInMap("SettingConfig")
+        @com.aliyun.core.annotation.Validation(maxLength = 1000)
         private String settingConfig;
 
         private SamplingConfig(Builder builder) {
@@ -850,7 +977,45 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String settingConfig; 
 
             /**
-             * Metric.
+             * <p>The metrics used for sampling.</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
+             * <li>DuplicatedCount: the number of duplicated values of the field.</li>
+             * <li>TableSize: the table size.</li>
+             * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
+             * <li>Max: the maximum value of the field.</li>
+             * <li>GroupCount: the field value and the number of rows for each field value.</li>
+             * <li>Count: the number of rows in the table.</li>
+             * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
+             * <li>Min: the minimum value of the field.</li>
+             * <li>Avg: the average value of the field.</li>
+             * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
+             * <li>NullValueCount: the number of rows in which the field value is null.</li>
+             * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
+             * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
+             * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CountNotIn</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -858,7 +1023,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * MetricParameters.
+             * <p>The parameters required for sampling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
              */
             public Builder metricParameters(String metricParameters) {
                 this.metricParameters = metricParameters;
@@ -866,7 +1034,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * SamplingFilter.
+             * <p>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status != &quot;Succeeded&quot;</p>
              */
             public Builder samplingFilter(String samplingFilter) {
                 this.samplingFilter = samplingFilter;
@@ -874,7 +1045,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * SettingConfig.
+             * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.sql.type.system.odps2=True,odps.sql.hive.compatible=True</p>
              */
             public Builder settingConfig(String settingConfig) {
                 this.settingConfig = settingConfig;
@@ -899,18 +1073,20 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private CheckingConfig checkingConfig;
 
         @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(maxLength = 500)
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("ErrorHandlers")
-        private java.util.List < ErrorHandlers> errorHandlers;
+        private java.util.List<ErrorHandlers> errorHandlers;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(maxLength = 255)
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("SamplingConfig")
@@ -966,7 +1142,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         /**
          * @return errorHandlers
          */
-        public java.util.List < ErrorHandlers> getErrorHandlers() {
+        public java.util.List<ErrorHandlers> getErrorHandlers() {
             return this.errorHandlers;
         }
 
@@ -1009,7 +1185,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private CheckingConfig checkingConfig; 
             private String description; 
             private Boolean enabled; 
-            private java.util.List < ErrorHandlers> errorHandlers; 
+            private java.util.List<ErrorHandlers> errorHandlers; 
             private Long id; 
             private String name; 
             private SamplingConfig samplingConfig; 
@@ -1017,7 +1193,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String templateCode; 
 
             /**
-             * CheckingConfig.
+             * <p>The check settings for sample data.</p>
              */
             public Builder checkingConfig(CheckingConfig checkingConfig) {
                 this.checkingConfig = checkingConfig;
@@ -1025,7 +1201,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>质量监控任务描述</p>
+             * <p>The description of the rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1033,7 +1209,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1041,18 +1220,18 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * ErrorHandlers.
+             * <p>The operations that you can perform after the rule-based check fails.</p>
              */
-            public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
+            public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
                 return this;
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID of the monitoring rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>7227061794</p>
+             * <p>1022171560</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1060,7 +1239,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>质量监控任务名称</p>
+             * <p>The name of the monitoring rule.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1068,7 +1247,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * SamplingConfig.
+             * <p>The parameters required for sampling.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -1076,7 +1255,19 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * Severity.
+             * <p>The strength of the rule.</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>High</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -1084,7 +1275,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * TemplateCode.
+             * <p>The ID of the template used by the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM:field:null_value:fixed:0</p>
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -1143,7 +1337,11 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String type; 
 
             /**
-             * <p>Hook触发条件</p>
+             * <p>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</p>
+             * <ul>
+             * <li>Specify only one group of rule strength type and rule check status, such as ${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
+             * <li>Specify multiple groups of rule strength types and rule check status, such as (${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;). In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -1154,7 +1352,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>Hook类型</p>
+             * <p>The hook type. Valid values:</p>
+             * <ul>
+             * <li>BlockTaskInstance: Blocks the running of scheduling tasks.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ByScheduledTaskInstance</p>
@@ -1179,7 +1380,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
      */
     public static class NotificationChannels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
-        private java.util.List < String > channels;
+        private java.util.List<String> channels;
 
         private NotificationChannels(Builder builder) {
             this.channels = builder.channels;
@@ -1196,17 +1397,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         /**
          * @return channels
          */
-        public java.util.List < String > getChannels() {
+        public java.util.List<String> getChannels() {
             return this.channels;
         }
 
         public static final class Builder {
-            private java.util.List < String > channels; 
+            private java.util.List<String> channels; 
 
             /**
-             * <p>通知方式</p>
+             * <p>The alert notification method.</p>
              */
-            public Builder channels(java.util.List < String > channels) {
+            public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
                 return this;
             }
@@ -1232,7 +1433,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String receiverType;
 
         @com.aliyun.core.annotation.NameInMap("ReceiverValues")
-        private java.util.List < String > receiverValues;
+        private java.util.List<String> receiverValues;
 
         private NotificationReceivers(Builder builder) {
             this.extension = builder.extension;
@@ -1265,17 +1466,28 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         /**
          * @return receiverValues
          */
-        public java.util.List < String > getReceiverValues() {
+        public java.util.List<String> getReceiverValues() {
             return this.receiverValues;
         }
 
         public static final class Builder {
             private String extension; 
             private String receiverType; 
-            private java.util.List < String > receiverValues; 
+            private java.util.List<String> receiverValues; 
 
             /**
-             * <p>扩展信息，格式为 json，例如钉钉机器人支持 at 所有人</p>
+             * <p>The additional parameters that are required when alerts are sent. The parameters are JSON-formatted strings. The following keys are supported:</p>
+             * <ul>
+             * <li>atAll: specifies that all members in a group are mentioned when alerts are sent by using DingTalk. This parameter is valid only if you set ReceiverType to DingdingUrl.</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>WebhookUrl</li>
+             * <li>FeishuUrl</li>
+             * <li>DingdingUrl</li>
+             * <li>WeixinUrl</li>
+             * <li>AliUid</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>{  &quot;atAll&quot;: true }</p>
@@ -1286,7 +1498,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>告警接收人类型</p>
+             * <p>The type of the alert recipient.</p>
              * 
              * <strong>example:</strong>
              * <p>DingdingUrl</p>
@@ -1297,9 +1509,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>告警接收人</p>
+             * <p>The alert recipient.</p>
              */
-            public Builder receiverValues(java.util.List < String > receiverValues) {
+            public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
                 return this;
             }
@@ -1319,10 +1531,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
      */
     public static class NotificationsNotifications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotificationChannels")
-        private java.util.List < NotificationChannels> notificationChannels;
+        private java.util.List<NotificationChannels> notificationChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotificationReceivers")
-        private java.util.List < NotificationReceivers> notificationReceivers;
+        private java.util.List<NotificationReceivers> notificationReceivers;
 
         private NotificationsNotifications(Builder builder) {
             this.notificationChannels = builder.notificationChannels;
@@ -1340,33 +1552,33 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         /**
          * @return notificationChannels
          */
-        public java.util.List < NotificationChannels> getNotificationChannels() {
+        public java.util.List<NotificationChannels> getNotificationChannels() {
             return this.notificationChannels;
         }
 
         /**
          * @return notificationReceivers
          */
-        public java.util.List < NotificationReceivers> getNotificationReceivers() {
+        public java.util.List<NotificationReceivers> getNotificationReceivers() {
             return this.notificationReceivers;
         }
 
         public static final class Builder {
-            private java.util.List < NotificationChannels> notificationChannels; 
-            private java.util.List < NotificationReceivers> notificationReceivers; 
+            private java.util.List<NotificationChannels> notificationChannels; 
+            private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
-             * <p>通知方式</p>
+             * <p>The alert notification method.</p>
              */
-            public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
+            public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
                 return this;
             }
 
             /**
-             * <p>告警接收人设置</p>
+             * <p>The configurations of alert recipients.</p>
              */
-            public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
+            public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
                 return this;
             }
@@ -1389,7 +1601,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("Notifications")
-        private java.util.List < NotificationsNotifications> notifications;
+        private java.util.List<NotificationsNotifications> notifications;
 
         private Notifications(Builder builder) {
             this.condition = builder.condition;
@@ -1414,16 +1626,20 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         /**
          * @return notifications
          */
-        public java.util.List < NotificationsNotifications> getNotifications() {
+        public java.util.List<NotificationsNotifications> getNotifications() {
             return this.notifications;
         }
 
         public static final class Builder {
             private String condition; 
-            private java.util.List < NotificationsNotifications> notifications; 
+            private java.util.List<NotificationsNotifications> notifications; 
 
             /**
-             * <p>通知触发条件</p>
+             * <p>The notification trigger condition. When this condition is met, the alert notification is triggered. Only two conditional expressions are supported:</p>
+             * <ul>
+             * <li>Specify only one group of rule strength type and rule check status, such as ${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
+             * <li>Specify multiple groups of rule strength types and rule check status, such as (${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;). In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</p>
@@ -1434,9 +1650,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>具体的消息通知设置</p>
+             * <p>The configurations of the alert notification.</p>
              */
-            public Builder notifications(java.util.List < NotificationsNotifications> notifications) {
+            public Builder notifications(java.util.List<NotificationsNotifications> notifications) {
                 this.notifications = notifications;
                 return this;
             }
@@ -1459,6 +1675,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String databaseType;
 
         @com.aliyun.core.annotation.NameInMap("PartitionSpec")
+        @com.aliyun.core.annotation.Validation(maxLength = 255)
         private String partitionSpec;
 
         @com.aliyun.core.annotation.NameInMap("TableGuid")
@@ -1505,7 +1722,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String tableGuid; 
 
             /**
-             * <p>表所属的数据库类型</p>
+             * <p>The type of the database to which the table belongs.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>maxcompute</li>
+             * <li>hologres</li>
+             * <li>cdh</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>starrocks</li>
+             * <li>emr</li>
+             * <li>analyticdb_for_postgresql</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>maxcompute</p>
@@ -1516,7 +1743,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>分区表的分区设置</p>
+             * <p>The configuration of the partitioned table.</p>
              * 
              * <strong>example:</strong>
              * <p>dt=$[yyyymmdd-1]</p>
@@ -1527,7 +1754,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>表在数据地图中的唯一ID</p>
+             * <p>The ID of the table in Data Map.</p>
              * 
              * <strong>example:</strong>
              * <p>odsp.openapi.ods_d_openapi_log</p>
@@ -1552,7 +1779,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
      */
     public static class Trigger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskIds")
-        private java.util.List < Long > taskIds;
+        private java.util.List<Long> taskIds;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -1573,7 +1800,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         /**
          * @return taskIds
          */
-        public java.util.List < Long > getTaskIds() {
+        public java.util.List<Long> getTaskIds() {
             return this.taskIds;
         }
 
@@ -1585,19 +1812,28 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Long > taskIds; 
+            private java.util.List<Long> taskIds; 
             private String type; 
 
             /**
-             * <p>具体指明哪些调度节点的实例执行成功后可以触发</p>
+             * <p>The IDs of scheduling tasks. This parameter is valid only if you set Type to ByScheduledTaskInstance.</p>
              */
-            public Builder taskIds(java.util.List < Long > taskIds) {
+            public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
                 return this;
             }
 
             /**
-             * <p>何种事件可以触发质量校验任务执行</p>
+             * <p>The trigger type of the monitor.</p>
+             * <ul>
+             * <li></li>
+             * <li></li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>ByScheduledTaskInstance: The monitor is triggered by the associated scheduling tasks.</li>
+             * <li>ByManual: The monitor is manually triggered.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ByScheduledTaskInstance</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -414,7 +419,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DIJobEvent")
-        private java.util.List < DIJobEvent> DIJobEvent;
+        private java.util.List<DIJobEvent> DIJobEvent;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -443,7 +448,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         /**
          * @return DIJobEvent
          */
-        public java.util.List < DIJobEvent> getDIJobEvent() {
+        public java.util.List<DIJobEvent> getDIJobEvent() {
             return this.DIJobEvent;
         }
 
@@ -469,7 +474,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DIJobEvent> DIJobEvent; 
+            private java.util.List<DIJobEvent> DIJobEvent; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -477,7 +482,7 @@ public class ListDIJobEventsResponseBody extends TeaModel {
             /**
              * <p>The events returned. The value of this parameter is an array.</p>
              */
-            public Builder DIJobEvent(java.util.List < DIJobEvent> DIJobEvent) {
+            public Builder DIJobEvent(java.util.List<DIJobEvent> DIJobEvent) {
                 this.DIJobEvent = DIJobEvent;
                 return this;
             }

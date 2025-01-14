@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationDataSourceSettings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings;
+    private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
@@ -32,7 +37,7 @@ public class CreateDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String jobName;
 
     @com.aliyun.core.annotation.Query
@@ -43,6 +48,10 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MigrationType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String migrationType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -56,7 +65,7 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDataSourceSettings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SourceDataSourceSettings> sourceDataSourceSettings;
+    private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
@@ -66,11 +75,11 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TableMappings> tableMappings;
+    private java.util.List<TableMappings> tableMappings;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransformationRules")
-    private java.util.List < TransformationRules> transformationRules;
+    private java.util.List<TransformationRules> transformationRules;
 
     private CreateDIJobRequest(Builder builder) {
         super(builder);
@@ -81,6 +90,7 @@ public class CreateDIJobRequest extends Request {
         this.jobName = builder.jobName;
         this.jobSettings = builder.jobSettings;
         this.migrationType = builder.migrationType;
+        this.name = builder.name;
         this.projectId = builder.projectId;
         this.resourceSettings = builder.resourceSettings;
         this.sourceDataSourceSettings = builder.sourceDataSourceSettings;
@@ -119,7 +129,7 @@ public class CreateDIJobRequest extends Request {
     /**
      * @return destinationDataSourceSettings
      */
-    public java.util.List < DestinationDataSourceSettings> getDestinationDataSourceSettings() {
+    public java.util.List<DestinationDataSourceSettings> getDestinationDataSourceSettings() {
         return this.destinationDataSourceSettings;
     }
 
@@ -152,6 +162,13 @@ public class CreateDIJobRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -168,7 +185,7 @@ public class CreateDIJobRequest extends Request {
     /**
      * @return sourceDataSourceSettings
      */
-    public java.util.List < SourceDataSourceSettings> getSourceDataSourceSettings() {
+    public java.util.List<SourceDataSourceSettings> getSourceDataSourceSettings() {
         return this.sourceDataSourceSettings;
     }
 
@@ -182,31 +199,32 @@ public class CreateDIJobRequest extends Request {
     /**
      * @return tableMappings
      */
-    public java.util.List < TableMappings> getTableMappings() {
+    public java.util.List<TableMappings> getTableMappings() {
         return this.tableMappings;
     }
 
     /**
      * @return transformationRules
      */
-    public java.util.List < TransformationRules> getTransformationRules() {
+    public java.util.List<TransformationRules> getTransformationRules() {
         return this.transformationRules;
     }
 
     public static final class Builder extends Request.Builder<CreateDIJobRequest, Builder> {
         private String regionId; 
         private String description; 
-        private java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings; 
+        private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings; 
         private String destinationDataSourceType; 
         private String jobName; 
         private JobSettings jobSettings; 
         private String migrationType; 
+        private String name; 
         private Long projectId; 
         private ResourceSettings resourceSettings; 
-        private java.util.List < SourceDataSourceSettings> sourceDataSourceSettings; 
+        private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings; 
         private String sourceDataSourceType; 
-        private java.util.List < TableMappings> tableMappings; 
-        private java.util.List < TransformationRules> transformationRules; 
+        private java.util.List<TableMappings> tableMappings; 
+        private java.util.List<TransformationRules> transformationRules; 
 
         private Builder() {
             super();
@@ -221,6 +239,7 @@ public class CreateDIJobRequest extends Request {
             this.jobName = request.jobName;
             this.jobSettings = request.jobSettings;
             this.migrationType = request.migrationType;
+            this.name = request.name;
             this.projectId = request.projectId;
             this.resourceSettings = request.resourceSettings;
             this.sourceDataSourceSettings = request.sourceDataSourceSettings;
@@ -251,7 +270,7 @@ public class CreateDIJobRequest extends Request {
          * <p>The settings of the destination. Only a single destination is supported.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder destinationDataSourceSettings(java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings) {
+        public Builder destinationDataSourceSettings(java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings) {
             String destinationDataSourceSettingsShrink = shrink(destinationDataSourceSettings, "DestinationDataSourceSettings", "json");
             this.putQueryParameter("DestinationDataSourceSettings", destinationDataSourceSettingsShrink);
             this.destinationDataSourceSettings = destinationDataSourceSettings;
@@ -272,8 +291,7 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the synchronization task.</p>
-         * <p>This parameter is required.</p>
+         * <p>This parameter is deprecated and is replaced by the Name parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_to_holo_sync_8772</p>
@@ -315,6 +333,18 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
+         * <p>The name of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_to_holo_sync_8772</p>
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
          * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
          * 
@@ -342,7 +372,7 @@ public class CreateDIJobRequest extends Request {
          * <p>The settings of the source. Only a single source is supported.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sourceDataSourceSettings(java.util.List < SourceDataSourceSettings> sourceDataSourceSettings) {
+        public Builder sourceDataSourceSettings(java.util.List<SourceDataSourceSettings> sourceDataSourceSettings) {
             String sourceDataSourceSettingsShrink = shrink(sourceDataSourceSettings, "SourceDataSourceSettings", "json");
             this.putQueryParameter("SourceDataSourceSettings", sourceDataSourceSettingsShrink);
             this.sourceDataSourceSettings = sourceDataSourceSettings;
@@ -366,7 +396,7 @@ public class CreateDIJobRequest extends Request {
          * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tableMappings(java.util.List < TableMappings> tableMappings) {
+        public Builder tableMappings(java.util.List<TableMappings> tableMappings) {
             String tableMappingsShrink = shrink(tableMappings, "TableMappings", "json");
             this.putQueryParameter("TableMappings", tableMappingsShrink);
             this.tableMappings = tableMappings;
@@ -376,7 +406,7 @@ public class CreateDIJobRequest extends Request {
         /**
          * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
          */
-        public Builder transformationRules(java.util.List < TransformationRules> transformationRules) {
+        public Builder transformationRules(java.util.List<TransformationRules> transformationRules) {
             String transformationRulesShrink = shrink(transformationRules, "TransformationRules", "json");
             this.putQueryParameter("TransformationRules", transformationRulesShrink);
             this.transformationRules = transformationRules;
@@ -771,16 +801,16 @@ public class CreateDIJobRequest extends Request {
         private String channelSettings;
 
         @com.aliyun.core.annotation.NameInMap("ColumnDataTypeSettings")
-        private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings;
+        private java.util.List<ColumnDataTypeSettings> columnDataTypeSettings;
 
         @com.aliyun.core.annotation.NameInMap("CycleScheduleSettings")
         private CycleScheduleSettings cycleScheduleSettings;
 
         @com.aliyun.core.annotation.NameInMap("DdlHandlingSettings")
-        private java.util.List < DdlHandlingSettings> ddlHandlingSettings;
+        private java.util.List<DdlHandlingSettings> ddlHandlingSettings;
 
         @com.aliyun.core.annotation.NameInMap("RuntimeSettings")
-        private java.util.List < RuntimeSettings> runtimeSettings;
+        private java.util.List<RuntimeSettings> runtimeSettings;
 
         private JobSettings(Builder builder) {
             this.channelSettings = builder.channelSettings;
@@ -808,7 +838,7 @@ public class CreateDIJobRequest extends Request {
         /**
          * @return columnDataTypeSettings
          */
-        public java.util.List < ColumnDataTypeSettings> getColumnDataTypeSettings() {
+        public java.util.List<ColumnDataTypeSettings> getColumnDataTypeSettings() {
             return this.columnDataTypeSettings;
         }
 
@@ -822,23 +852,23 @@ public class CreateDIJobRequest extends Request {
         /**
          * @return ddlHandlingSettings
          */
-        public java.util.List < DdlHandlingSettings> getDdlHandlingSettings() {
+        public java.util.List<DdlHandlingSettings> getDdlHandlingSettings() {
             return this.ddlHandlingSettings;
         }
 
         /**
          * @return runtimeSettings
          */
-        public java.util.List < RuntimeSettings> getRuntimeSettings() {
+        public java.util.List<RuntimeSettings> getRuntimeSettings() {
             return this.runtimeSettings;
         }
 
         public static final class Builder {
             private String channelSettings; 
-            private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings; 
+            private java.util.List<ColumnDataTypeSettings> columnDataTypeSettings; 
             private CycleScheduleSettings cycleScheduleSettings; 
-            private java.util.List < DdlHandlingSettings> ddlHandlingSettings; 
-            private java.util.List < RuntimeSettings> runtimeSettings; 
+            private java.util.List<DdlHandlingSettings> ddlHandlingSettings; 
+            private java.util.List<RuntimeSettings> runtimeSettings; 
 
             /**
              * <p>The channel control settings for the synchronization task. The value of this parameter must be a JSON string.</p>
@@ -854,7 +884,7 @@ public class CreateDIJobRequest extends Request {
             /**
              * <p>The data type mappings between source fields and destination fields.</p>
              */
-            public Builder columnDataTypeSettings(java.util.List < ColumnDataTypeSettings> columnDataTypeSettings) {
+            public Builder columnDataTypeSettings(java.util.List<ColumnDataTypeSettings> columnDataTypeSettings) {
                 this.columnDataTypeSettings = columnDataTypeSettings;
                 return this;
             }
@@ -870,7 +900,7 @@ public class CreateDIJobRequest extends Request {
             /**
              * <p>The processing settings for DDL messages.</p>
              */
-            public Builder ddlHandlingSettings(java.util.List < DdlHandlingSettings> ddlHandlingSettings) {
+            public Builder ddlHandlingSettings(java.util.List<DdlHandlingSettings> ddlHandlingSettings) {
                 this.ddlHandlingSettings = ddlHandlingSettings;
                 return this;
             }
@@ -878,7 +908,7 @@ public class CreateDIJobRequest extends Request {
             /**
              * <p>The runtime settings.</p>
              */
-            public Builder runtimeSettings(java.util.List < RuntimeSettings> runtimeSettings) {
+            public Builder runtimeSettings(java.util.List<RuntimeSettings> runtimeSettings) {
                 this.runtimeSettings = runtimeSettings;
                 return this;
             }
@@ -1580,10 +1610,10 @@ public class CreateDIJobRequest extends Request {
      */
     public static class TableMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceObjectSelectionRules")
-        private java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules;
+        private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules;
 
         @com.aliyun.core.annotation.NameInMap("TransformationRules")
-        private java.util.List < TableMappingsTransformationRules> transformationRules;
+        private java.util.List<TableMappingsTransformationRules> transformationRules;
 
         private TableMappings(Builder builder) {
             this.sourceObjectSelectionRules = builder.sourceObjectSelectionRules;
@@ -1601,25 +1631,25 @@ public class CreateDIJobRequest extends Request {
         /**
          * @return sourceObjectSelectionRules
          */
-        public java.util.List < SourceObjectSelectionRules> getSourceObjectSelectionRules() {
+        public java.util.List<SourceObjectSelectionRules> getSourceObjectSelectionRules() {
             return this.sourceObjectSelectionRules;
         }
 
         /**
          * @return transformationRules
          */
-        public java.util.List < TableMappingsTransformationRules> getTransformationRules() {
+        public java.util.List<TableMappingsTransformationRules> getTransformationRules() {
             return this.transformationRules;
         }
 
         public static final class Builder {
-            private java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules; 
-            private java.util.List < TableMappingsTransformationRules> transformationRules; 
+            private java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules; 
+            private java.util.List<TableMappingsTransformationRules> transformationRules; 
 
             /**
              * <p>The list of rules used to select synchronization objects in the source. The objects can be databases or tables.</p>
              */
-            public Builder sourceObjectSelectionRules(java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules) {
+            public Builder sourceObjectSelectionRules(java.util.List<SourceObjectSelectionRules> sourceObjectSelectionRules) {
                 this.sourceObjectSelectionRules = sourceObjectSelectionRules;
                 return this;
             }
@@ -1627,7 +1657,7 @@ public class CreateDIJobRequest extends Request {
             /**
              * <p>The list of transformation rules that you want to apply to the synchronization objects selected from the source. Each entry in the list defines a transformation rule.</p>
              */
-            public Builder transformationRules(java.util.List < TableMappingsTransformationRules> transformationRules) {
+            public Builder transformationRules(java.util.List<TableMappingsTransformationRules> transformationRules) {
                 this.transformationRules = transformationRules;
                 return this;
             }

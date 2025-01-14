@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateProjectRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AliyunResourceTags")
-    private java.util.List < AliyunResourceTags> aliyunResourceTags;
+    private java.util.List<AliyunResourceTags> aliyunResourceTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -93,7 +98,7 @@ public class CreateProjectRequest extends Request {
     /**
      * @return aliyunResourceTags
      */
-    public java.util.List < AliyunResourceTags> getAliyunResourceTags() {
+    public java.util.List<AliyunResourceTags> getAliyunResourceTags() {
         return this.aliyunResourceTags;
     }
 
@@ -142,7 +147,7 @@ public class CreateProjectRequest extends Request {
     public static final class Builder extends Request.Builder<CreateProjectRequest, Builder> {
         private String regionId; 
         private String aliyunResourceGroupId; 
-        private java.util.List < AliyunResourceTags> aliyunResourceTags; 
+        private java.util.List<AliyunResourceTags> aliyunResourceTags; 
         private String description; 
         private Boolean devEnvironmentEnabled; 
         private Boolean devRoleDisabled; 
@@ -192,7 +197,7 @@ public class CreateProjectRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
+        public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
             this.putBodyParameter("AliyunResourceTags", aliyunResourceTagsShrink);
             this.aliyunResourceTags = aliyunResourceTags;

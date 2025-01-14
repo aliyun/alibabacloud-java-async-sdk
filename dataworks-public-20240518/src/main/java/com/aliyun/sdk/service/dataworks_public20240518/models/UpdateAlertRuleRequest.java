@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -235,7 +240,7 @@ public class UpdateAlertRuleRequest extends Request {
         private String receiverType;
 
         @com.aliyun.core.annotation.NameInMap("ReceiverValues")
-        private java.util.List < String > receiverValues;
+        private java.util.List<String> receiverValues;
 
         private Receivers(Builder builder) {
             this.extension = builder.extension;
@@ -268,14 +273,14 @@ public class UpdateAlertRuleRequest extends Request {
         /**
          * @return receiverValues
          */
-        public java.util.List < String > getReceiverValues() {
+        public java.util.List<String> getReceiverValues() {
             return this.receiverValues;
         }
 
         public static final class Builder {
             private String extension; 
             private String receiverType; 
-            private java.util.List < String > receiverValues; 
+            private java.util.List<String> receiverValues; 
 
             /**
              * <p>The additional configuration of the alert recipient. If the ReceiverType parameter is set to DingdingUrl, you can set this parameter to {&quot;atAll&quot;:true} to remind all members in a DingTalk group.</p>
@@ -312,7 +317,7 @@ public class UpdateAlertRuleRequest extends Request {
             /**
              * <p>The alert recipients.</p>
              */
-            public Builder receiverValues(java.util.List < String > receiverValues) {
+            public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
                 return this;
             }
@@ -332,7 +337,7 @@ public class UpdateAlertRuleRequest extends Request {
      */
     public static class Notification extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
-        private java.util.List < String > channels;
+        private java.util.List<String> channels;
 
         @com.aliyun.core.annotation.NameInMap("IntervalInMinutes")
         private Integer intervalInMinutes;
@@ -341,7 +346,7 @@ public class UpdateAlertRuleRequest extends Request {
         private Integer maximum;
 
         @com.aliyun.core.annotation.NameInMap("Receivers")
-        private java.util.List < Receivers> receivers;
+        private java.util.List<Receivers> receivers;
 
         @com.aliyun.core.annotation.NameInMap("SilenceEndTime")
         private String silenceEndTime;
@@ -369,7 +374,7 @@ public class UpdateAlertRuleRequest extends Request {
         /**
          * @return channels
          */
-        public java.util.List < String > getChannels() {
+        public java.util.List<String> getChannels() {
             return this.channels;
         }
 
@@ -390,7 +395,7 @@ public class UpdateAlertRuleRequest extends Request {
         /**
          * @return receivers
          */
-        public java.util.List < Receivers> getReceivers() {
+        public java.util.List<Receivers> getReceivers() {
             return this.receivers;
         }
 
@@ -409,17 +414,17 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > channels; 
+            private java.util.List<String> channels; 
             private Integer intervalInMinutes; 
             private Integer maximum; 
-            private java.util.List < Receivers> receivers; 
+            private java.util.List<Receivers> receivers; 
             private String silenceEndTime; 
             private String silenceStartTime; 
 
             /**
              * <p>The alert notification channels.</p>
              */
-            public Builder channels(java.util.List < String > channels) {
+            public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
                 return this;
             }
@@ -449,7 +454,7 @@ public class UpdateAlertRuleRequest extends Request {
             /**
              * <p>The alert recipients.</p>
              */
-            public Builder receivers(java.util.List < Receivers> receivers) {
+            public Builder receivers(java.util.List<Receivers> receivers) {
                 this.receivers = receivers;
                 return this;
             }
@@ -564,7 +569,7 @@ public class UpdateAlertRuleRequest extends Request {
      */
     public static class CycleUnfinished extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CycleAndTime")
-        private java.util.List < CycleAndTime> cycleAndTime;
+        private java.util.List<CycleAndTime> cycleAndTime;
 
         private CycleUnfinished(Builder builder) {
             this.cycleAndTime = builder.cycleAndTime;
@@ -581,17 +586,17 @@ public class UpdateAlertRuleRequest extends Request {
         /**
          * @return cycleAndTime
          */
-        public java.util.List < CycleAndTime> getCycleAndTime() {
+        public java.util.List<CycleAndTime> getCycleAndTime() {
             return this.cycleAndTime;
         }
 
         public static final class Builder {
-            private java.util.List < CycleAndTime> cycleAndTime; 
+            private java.util.List<CycleAndTime> cycleAndTime; 
 
             /**
              * <p>The configurations of the scheduling cycle and timeout period of the instance.</p>
              */
-            public Builder cycleAndTime(java.util.List < CycleAndTime> cycleAndTime) {
+            public Builder cycleAndTime(java.util.List<CycleAndTime> cycleAndTime) {
                 this.cycleAndTime = cycleAndTime;
                 return this;
             }
@@ -610,14 +615,14 @@ public class UpdateAlertRuleRequest extends Request {
      * <p>UpdateAlertRuleRequest</p>
      */
     public static class Error extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AutoRerunAlert")
-        private Boolean autoRerunAlert;
+        @com.aliyun.core.annotation.NameInMap("AutoRerunAlertEnabled")
+        private Boolean autoRerunAlertEnabled;
 
         @com.aliyun.core.annotation.NameInMap("StreamTaskIds")
-        private java.util.List < Long > streamTaskIds;
+        private java.util.List<Long> streamTaskIds;
 
         private Error(Builder builder) {
-            this.autoRerunAlert = builder.autoRerunAlert;
+            this.autoRerunAlertEnabled = builder.autoRerunAlertEnabled;
             this.streamTaskIds = builder.streamTaskIds;
         }
 
@@ -630,38 +635,38 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * @return autoRerunAlert
+         * @return autoRerunAlertEnabled
          */
-        public Boolean getAutoRerunAlert() {
-            return this.autoRerunAlert;
+        public Boolean getAutoRerunAlertEnabled() {
+            return this.autoRerunAlertEnabled;
         }
 
         /**
          * @return streamTaskIds
          */
-        public java.util.List < Long > getStreamTaskIds() {
+        public java.util.List<Long> getStreamTaskIds() {
             return this.streamTaskIds;
         }
 
         public static final class Builder {
-            private Boolean autoRerunAlert; 
-            private java.util.List < Long > streamTaskIds; 
+            private Boolean autoRerunAlertEnabled; 
+            private java.util.List<Long> streamTaskIds; 
 
             /**
              * <p>Specifies whether to trigger an alert if a batch synchronization task is automatically rerun upon a failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
-            public Builder autoRerunAlert(Boolean autoRerunAlert) {
-                this.autoRerunAlert = autoRerunAlert;
+            public Builder autoRerunAlertEnabled(Boolean autoRerunAlertEnabled) {
+                this.autoRerunAlertEnabled = autoRerunAlertEnabled;
                 return this;
             }
 
             /**
              * <p>The IDs of the real-time computing tasks. This parameter is required when you monitor real-time computing tasks.</p>
              */
-            public Builder streamTaskIds(java.util.List < Long > streamTaskIds) {
+            public Builder streamTaskIds(java.util.List<Long> streamTaskIds) {
                 this.streamTaskIds = streamTaskIds;
                 return this;
             }
@@ -884,7 +889,7 @@ public class UpdateAlertRuleRequest extends Request {
             private Integer timeoutInMinutes; 
 
             /**
-             * <p>The timeout period. Unit: minutes. Valid values: [1, 21600].</p>
+             * <p>The timeout period. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1126,10 +1131,10 @@ public class UpdateAlertRuleRequest extends Request {
      */
     public static class Target extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowTasks")
-        private java.util.List < Long > allowTasks;
+        private java.util.List<Long> allowTasks;
 
         @com.aliyun.core.annotation.NameInMap("Ids")
-        private java.util.List < Long > ids;
+        private java.util.List<Long> ids;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -1151,14 +1156,14 @@ public class UpdateAlertRuleRequest extends Request {
         /**
          * @return allowTasks
          */
-        public java.util.List < Long > getAllowTasks() {
+        public java.util.List<Long> getAllowTasks() {
             return this.allowTasks;
         }
 
         /**
          * @return ids
          */
-        public java.util.List < Long > getIds() {
+        public java.util.List<Long> getIds() {
             return this.ids;
         }
 
@@ -1170,14 +1175,14 @@ public class UpdateAlertRuleRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Long > allowTasks; 
-            private java.util.List < Long > ids; 
+            private java.util.List<Long> allowTasks; 
+            private java.util.List<Long> ids; 
             private String type; 
 
             /**
              * <p>The nodes that are not to be monitored.</p>
              */
-            public Builder allowTasks(java.util.List < Long > allowTasks) {
+            public Builder allowTasks(java.util.List<Long> allowTasks) {
                 this.allowTasks = allowTasks;
                 return this;
             }
@@ -1185,7 +1190,7 @@ public class UpdateAlertRuleRequest extends Request {
             /**
              * <p>The IDs of monitored objects.</p>
              */
-            public Builder ids(java.util.List < Long > ids) {
+            public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;
                 return this;
             }
@@ -1195,7 +1200,7 @@ public class UpdateAlertRuleRequest extends Request {
              * <ul>
              * <li>Task: node</li>
              * <li>Baseline: baseline</li>
-             * <li>Project: workspace</li>
+             * <li>project: workspace</li>
              * <li>BizProcess: workflow</li>
              * </ul>
              * 
@@ -1290,7 +1295,7 @@ public class UpdateAlertRuleRequest extends Request {
              * <p>The alert type. Valid values:</p>
              * <ul>
              * <li>Finished: An instance is successfully run.</li>
-             * <li>UnFinished:An instance does not finish running before a specified point in time.</li>
+             * <li>UnFinished: An instance does not finish running before a specified point in time.</li>
              * <li>Error: An error occurs on an instance.</li>
              * <li>CycleUnfinished: An instance does not finish running as expected within a specific cycle.</li>
              * <li>Timeout: An instance times out.</li>

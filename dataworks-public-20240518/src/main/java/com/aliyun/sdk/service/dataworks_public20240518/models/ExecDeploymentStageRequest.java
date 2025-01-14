@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class ExecDeploymentStageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     private ExecDeploymentStageRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class ExecDeploymentStageRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
@@ -84,7 +89,7 @@ public class ExecDeploymentStageRequest extends Request {
         private String regionId; 
         private String code; 
         private String id; 
-        private String projectId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -141,7 +146,7 @@ public class ExecDeploymentStageRequest extends Request {
          * <strong>example:</strong>
          * <p>10000</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

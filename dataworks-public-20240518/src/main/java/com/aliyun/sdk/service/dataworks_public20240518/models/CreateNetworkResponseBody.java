@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +17,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkResponseBody</p>
  */
 public class CreateNetworkResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("NetworkId")
-    private Long networkId;
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -22,7 +27,7 @@ public class CreateNetworkResponseBody extends TeaModel {
     private Boolean success;
 
     private CreateNetworkResponseBody(Builder builder) {
-        this.networkId = builder.networkId;
+        this.id = builder.id;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -36,10 +41,10 @@ public class CreateNetworkResponseBody extends TeaModel {
     }
 
     /**
-     * @return networkId
+     * @return id
      */
-    public Long getNetworkId() {
-        return this.networkId;
+    public Long getId() {
+        return this.id;
     }
 
     /**
@@ -57,15 +62,15 @@ public class CreateNetworkResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long networkId; 
+        private Long id; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * NetworkId.
+         * Id.
          */
-        public Builder networkId(Long networkId) {
-            this.networkId = networkId;
+        public Builder id(Long id) {
+            this.id = id;
             return this;
         }
 

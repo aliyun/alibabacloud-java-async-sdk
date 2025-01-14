@@ -1,17 +1,22 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListDataQualityRuleTemplateRequest} extends {@link RequestModel}
+ * {@link ListDataQualityRuleTemplatesRequest} extends {@link RequestModel}
  *
- * <p>ListDataQualityRuleTemplateRequest</p>
+ * <p>ListDataQualityRuleTemplatesRequest</p>
  */
-public class ListDataQualityRuleTemplateRequest extends Request {
+public class ListDataQualityRuleTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -34,13 +39,15 @@ public class ListDataQualityRuleTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    private ListDataQualityRuleTemplateRequest(Builder builder) {
+    private ListDataQualityRuleTemplatesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.creationSource = builder.creationSource;
@@ -55,7 +62,7 @@ public class ListDataQualityRuleTemplateRequest extends Request {
         return new Builder();
     }
 
-    public static ListDataQualityRuleTemplateRequest create() {
+    public static ListDataQualityRuleTemplatesRequest create() {
         return builder().build();
     }
 
@@ -113,7 +120,7 @@ public class ListDataQualityRuleTemplateRequest extends Request {
         return this.projectId;
     }
 
-    public static final class Builder extends Request.Builder<ListDataQualityRuleTemplateRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListDataQualityRuleTemplatesRequest, Builder> {
         private String regionId; 
         private String creationSource; 
         private String directoryPath; 
@@ -126,7 +133,7 @@ public class ListDataQualityRuleTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(ListDataQualityRuleTemplateRequest request) {
+        private Builder(ListDataQualityRuleTemplatesRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.creationSource = request.creationSource;
@@ -156,7 +163,7 @@ public class ListDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
+         * DirectoryPath.
          */
         public Builder directoryPath(String directoryPath) {
             this.putQueryParameter("DirectoryPath", directoryPath);
@@ -165,7 +172,7 @@ public class ListDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the template. If you want to query a system template, set this parameter to the name of the system template. Fuzzy match is supported.</p>
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -198,7 +205,7 @@ public class ListDataQualityRuleTemplateRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -210,8 +217,8 @@ public class ListDataQualityRuleTemplateRequest extends Request {
         }
 
         @Override
-        public ListDataQualityRuleTemplateRequest build() {
-            return new ListDataQualityRuleTemplateRequest(this);
+        public ListDataQualityRuleTemplatesRequest build() {
+            return new ListDataQualityRuleTemplatesRequest(this);
         } 
 
     } 

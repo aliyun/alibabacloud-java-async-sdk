@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,10 +23,12 @@ public class CloneDataSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloneDataSourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloneDataSourceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private CloneDataSourceRequest(Builder builder) {
@@ -92,6 +99,7 @@ public class CloneDataSourceRequest extends Request {
 
         /**
          * <p>The name of the destination data source The name can contain letters, digits, and underscores (_), and must start with a letter. It cannot exceed 60 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>demo_holo_datasource</p>
@@ -104,6 +112,7 @@ public class CloneDataSourceRequest extends Request {
 
         /**
          * <p>The data source ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>16036</p>

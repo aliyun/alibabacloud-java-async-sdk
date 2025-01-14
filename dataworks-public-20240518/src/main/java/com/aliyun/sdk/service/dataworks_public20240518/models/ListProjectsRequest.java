@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListProjectsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AliyunResourceTags")
-    private java.util.List < AliyunResourceTags> aliyunResourceTags;
+    private java.util.List<AliyunResourceTags> aliyunResourceTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DevEnvironmentEnabled")
@@ -34,11 +39,11 @@ public class ListProjectsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Names")
-    private java.util.List < String > names;
+    private java.util.List<String> names;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -101,7 +106,7 @@ public class ListProjectsRequest extends Request {
     /**
      * @return aliyunResourceTags
      */
-    public java.util.List < AliyunResourceTags> getAliyunResourceTags() {
+    public java.util.List<AliyunResourceTags> getAliyunResourceTags() {
         return this.aliyunResourceTags;
     }
 
@@ -122,14 +127,14 @@ public class ListProjectsRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
     /**
      * @return names
      */
-    public java.util.List < String > getNames() {
+    public java.util.List<String> getNames() {
         return this.names;
     }
 
@@ -164,11 +169,11 @@ public class ListProjectsRequest extends Request {
     public static final class Builder extends Request.Builder<ListProjectsRequest, Builder> {
         private String regionId; 
         private String aliyunResourceGroupId; 
-        private java.util.List < AliyunResourceTags> aliyunResourceTags; 
+        private java.util.List<AliyunResourceTags> aliyunResourceTags; 
         private Boolean devEnvironmentEnabled; 
         private Boolean devRoleDisabled; 
-        private java.util.List < Long > ids; 
-        private java.util.List < String > names; 
+        private java.util.List<Long> ids; 
+        private java.util.List<String> names; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Boolean paiTaskEnabled; 
@@ -217,7 +222,7 @@ public class ListProjectsRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder aliyunResourceTags(java.util.List < AliyunResourceTags> aliyunResourceTags) {
+        public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
             this.putBodyParameter("AliyunResourceTags", aliyunResourceTagsShrink);
             this.aliyunResourceTags = aliyunResourceTags;
@@ -259,7 +264,7 @@ public class ListProjectsRequest extends Request {
         /**
          * <p>The IDs of the DataWorks workspaces.</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putBodyParameter("Ids", idsShrink);
             this.ids = ids;
@@ -269,7 +274,7 @@ public class ListProjectsRequest extends Request {
         /**
          * <p>The names of the DataWorks workspaces.</p>
          */
-        public Builder names(java.util.List < String > names) {
+        public Builder names(java.util.List<String> names) {
             String namesShrink = shrink(names, "Names", "json");
             this.putBodyParameter("Names", namesShrink);
             this.names = names;

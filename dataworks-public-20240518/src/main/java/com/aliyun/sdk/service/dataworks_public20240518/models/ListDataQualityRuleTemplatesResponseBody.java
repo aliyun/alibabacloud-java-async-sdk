@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListDataQualityRuleTemplateResponseBody} extends {@link TeaModel}
+ * {@link ListDataQualityRuleTemplatesResponseBody} extends {@link TeaModel}
  *
- * <p>ListDataQualityRuleTemplateResponseBody</p>
+ * <p>ListDataQualityRuleTemplatesResponseBody</p>
  */
-public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
+public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PagingInfo")
     private PagingInfo pagingInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ListDataQualityRuleTemplateResponseBody(Builder builder) {
+    private ListDataQualityRuleTemplatesResponseBody(Builder builder) {
         this.pagingInfo = builder.pagingInfo;
         this.requestId = builder.requestId;
     }
@@ -27,7 +32,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListDataQualityRuleTemplateResponseBody create() {
+    public static ListDataQualityRuleTemplatesResponseBody create() {
         return builder().build();
     }
 
@@ -50,7 +55,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The pagination information.</p>
+         * PagingInfo.
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -58,27 +63,24 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>691CA452-D37A-4ED0-9441</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ListDataQualityRuleTemplateResponseBody build() {
-            return new ListDataQualityRuleTemplateResponseBody(this);
+        public ListDataQualityRuleTemplatesResponseBody build() {
+            return new ListDataQualityRuleTemplatesResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListDataQualityRuleTemplateResponseBody} extends {@link TeaModel}
+     * {@link ListDataQualityRuleTemplatesResponseBody} extends {@link TeaModel}
      *
-     * <p>ListDataQualityRuleTemplateResponseBody</p>
+     * <p>ListDataQualityRuleTemplatesResponseBody</p>
      */
     public static class CheckingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferencedSamplesFilter")
@@ -119,10 +121,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to indicate the query method of referenced samples.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
+             * ReferencedSamplesFilter.
              */
             public Builder referencedSamplesFilter(String referencedSamplesFilter) {
                 this.referencedSamplesFilter = referencedSamplesFilter;
@@ -130,18 +129,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The threshold calculation method. Valid values:</p>
-             * <ul>
-             * <li>Fixed</li>
-             * <li>Fluctation</li>
-             * <li>FluctationDiscreate</li>
-             * <li>Auto</li>
-             * <li>Average</li>
-             * <li>Variance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Fixed</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -157,9 +145,9 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListDataQualityRuleTemplateResponseBody} extends {@link TeaModel}
+     * {@link ListDataQualityRuleTemplatesResponseBody} extends {@link TeaModel}
      *
-     * <p>ListDataQualityRuleTemplateResponseBody</p>
+     * <p>ListDataQualityRuleTemplatesResponseBody</p>
      */
     public static class SamplingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metric")
@@ -212,27 +200,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             private String settingConfig; 
 
             /**
-             * <p>The metrics used for sampling. Valid values:</p>
-             * <ul>
-             * <li>Count: the number of rows in the table.</li>
-             * <li>Min: the minimum value of the field.</li>
-             * <li>Max: the maximum value of the field.</li>
-             * <li>Avg: the average value of the field.</li>
-             * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-             * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
-             * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-             * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
-             * <li>TableSize: the table size.</li>
-             * <li>NullValueCount: the number of rows in which the field value is null.</li>
-             * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
-             * <li>GroupCount: the field value and the number of rows for each field value.</li>
-             * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-             * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-             * <li>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Max</p>
+             * Metric.
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -240,10 +208,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters required for sampling.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
+             * MetricParameters.
              */
             public Builder metricParameters(String metricParameters) {
                 this.metricParameters = metricParameters;
@@ -251,11 +216,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SET odps.sql.udf.timeout=600s; 
-             * SET odps.sql.python.version=cp27;</p>
+             * SettingConfig.
              */
             public Builder settingConfig(String settingConfig) {
                 this.settingConfig = settingConfig;
@@ -271,9 +232,9 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListDataQualityRuleTemplateResponseBody} extends {@link TeaModel}
+     * {@link ListDataQualityRuleTemplatesResponseBody} extends {@link TeaModel}
      *
-     * <p>ListDataQualityRuleTemplateResponseBody</p>
+     * <p>ListDataQualityRuleTemplatesResponseBody</p>
      */
     public static class DataQualityRuleTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckingConfig")
@@ -294,9 +255,6 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SamplingConfig")
         private SamplingConfig samplingConfig;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("VisibleScope")
         private String visibleScope;
 
@@ -307,7 +265,6 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             this.name = builder.name;
             this.projectId = builder.projectId;
             this.samplingConfig = builder.samplingConfig;
-            this.tenantId = builder.tenantId;
             this.visibleScope = builder.visibleScope;
         }
 
@@ -362,13 +319,6 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return visibleScope
          */
         public String getVisibleScope() {
@@ -382,11 +332,10 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             private String name; 
             private Long projectId; 
             private SamplingConfig samplingConfig; 
-            private Long tenantId; 
             private String visibleScope; 
 
             /**
-             * <p>The check settings for sample data.</p>
+             * CheckingConfig.
              */
             public Builder checkingConfig(CheckingConfig checkingConfig) {
                 this.checkingConfig = checkingConfig;
@@ -394,10 +343,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code for the template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>USER_DEFINED:123</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -405,7 +351,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the template. The backslash is used as the separator character in the path name. Each directory name can be up to 1024 characters in length. It cannot contain whitespace characters or slashes.</p>
+             * DirectoryPath.
              */
             public Builder directoryPath(String directoryPath) {
                 this.directoryPath = directoryPath;
@@ -413,7 +359,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -421,10 +367,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2043</p>
+             * ProjectId.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -432,7 +375,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sampling settings.</p>
+             * SamplingConfig.
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -440,25 +383,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the DataWorks tenant.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>195820716552192</p>
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
-                return this;
-            }
-
-            /**
-             * <p>The applicable scope of the template. Valid values:</p>
-             * <ul>
-             * <li>Tenant: The template is available in all workspaces in the current tenant.</li>
-             * <li>Project: The template is available only in the current workspace.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Project</p>
+             * VisibleScope.
              */
             public Builder visibleScope(String visibleScope) {
                 this.visibleScope = visibleScope;
@@ -474,13 +399,13 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListDataQualityRuleTemplateResponseBody} extends {@link TeaModel}
+     * {@link ListDataQualityRuleTemplatesResponseBody} extends {@link TeaModel}
      *
-     * <p>ListDataQualityRuleTemplateResponseBody</p>
+     * <p>ListDataQualityRuleTemplatesResponseBody</p>
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataQualityRuleTemplates")
-        private java.util.List < DataQualityRuleTemplates> dataQualityRuleTemplates;
+        private java.util.List<DataQualityRuleTemplates> dataQualityRuleTemplates;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -509,7 +434,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         /**
          * @return dataQualityRuleTemplates
          */
-        public java.util.List < DataQualityRuleTemplates> getDataQualityRuleTemplates() {
+        public java.util.List<DataQualityRuleTemplates> getDataQualityRuleTemplates() {
             return this.dataQualityRuleTemplates;
         }
 
@@ -535,24 +460,21 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataQualityRuleTemplates> dataQualityRuleTemplates; 
+            private java.util.List<DataQualityRuleTemplates> dataQualityRuleTemplates; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
             /**
-             * <p>The templates.</p>
+             * DataQualityRuleTemplates.
              */
-            public Builder dataQualityRuleTemplates(java.util.List < DataQualityRuleTemplates> dataQualityRuleTemplates) {
+            public Builder dataQualityRuleTemplates(java.util.List<DataQualityRuleTemplates> dataQualityRuleTemplates) {
                 this.dataQualityRuleTemplates = dataQualityRuleTemplates;
                 return this;
             }
 
             /**
-             * <p>The page number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PageNumber.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -560,10 +482,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -571,10 +490,7 @@ public class ListDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>42</p>
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

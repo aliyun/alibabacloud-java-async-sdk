@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -813,7 +818,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("ErrorHandlers")
-        private java.util.List < ErrorHandlers> errorHandlers;
+        private java.util.List<ErrorHandlers> errorHandlers;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -836,9 +841,6 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         private DataQualityRule(Builder builder) {
             this.checkingConfig = builder.checkingConfig;
             this.description = builder.description;
@@ -851,7 +853,6 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             this.severity = builder.severity;
             this.target = builder.target;
             this.templateCode = builder.templateCode;
-            this.tenantId = builder.tenantId;
         }
 
         public static Builder builder() {
@@ -886,7 +887,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
         /**
          * @return errorHandlers
          */
-        public java.util.List < ErrorHandlers> getErrorHandlers() {
+        public java.util.List<ErrorHandlers> getErrorHandlers() {
             return this.errorHandlers;
         }
 
@@ -939,18 +940,11 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             return this.templateCode;
         }
 
-        /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
         public static final class Builder {
             private CheckingConfig checkingConfig; 
             private String description; 
             private Boolean enabled; 
-            private java.util.List < ErrorHandlers> errorHandlers; 
+            private java.util.List<ErrorHandlers> errorHandlers; 
             private Long id; 
             private String name; 
             private Long projectId; 
@@ -958,7 +952,6 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             private String severity; 
             private Target target; 
             private String templateCode; 
-            private Long tenantId; 
 
             /**
              * <p>The check settings for sample data.</p>
@@ -987,7 +980,7 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
             /**
              * ErrorHandlers.
              */
-            public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
+            public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
                 return this;
             }
@@ -1045,14 +1038,6 @@ public class GetDataQualityRuleResponseBody extends TeaModel {
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
-                return this;
-            }
-
-            /**
-             * TenantId.
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,8 +23,12 @@ public class DeleteDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private Long DIJobId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -29,6 +38,7 @@ public class DeleteDIJobRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
+        this.id = builder.id;
         this.projectId = builder.projectId;
     }
 
@@ -60,6 +70,13 @@ public class DeleteDIJobRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -69,6 +86,7 @@ public class DeleteDIJobRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteDIJobRequest, Builder> {
         private String regionId; 
         private Long DIJobId; 
+        private Long id; 
         private Long projectId; 
 
         private Builder() {
@@ -79,6 +97,7 @@ public class DeleteDIJobRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
+            this.id = request.id;
             this.projectId = request.projectId;
         } 
 
@@ -92,7 +111,7 @@ public class DeleteDIJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>11126</p>
@@ -104,7 +123,22 @@ public class DeleteDIJobRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11126</p>
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
+            return this;
+        }
+
+        /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>108864</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

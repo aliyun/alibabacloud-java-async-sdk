@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRoutesResponseBody</p>
  */
 public class ListRoutesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("PagingInfo")
+    private PagingInfo pagingInfo;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("RouteList")
-    private java.util.List < RouteList> routeList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRoutesResponseBody(Builder builder) {
+        this.pagingInfo = builder.pagingInfo;
         this.requestId = builder.requestId;
-        this.routeList = builder.routeList;
         this.success = builder.success;
     }
 
@@ -36,17 +41,17 @@ public class ListRoutesResponseBody extends TeaModel {
     }
 
     /**
+     * @return pagingInfo
+     */
+    public PagingInfo getPagingInfo() {
+        return this.pagingInfo;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return routeList
-     */
-    public java.util.List < RouteList> getRouteList() {
-        return this.routeList;
     }
 
     /**
@@ -57,23 +62,23 @@ public class ListRoutesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private PagingInfo pagingInfo; 
         private String requestId; 
-        private java.util.List < RouteList> routeList; 
         private Boolean success; 
+
+        /**
+         * PagingInfo.
+         */
+        public Builder pagingInfo(PagingInfo pagingInfo) {
+            this.pagingInfo = pagingInfo;
+            return this;
+        }
 
         /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * <p>The routes.</p>
-         */
-        public Builder routeList(java.util.List < RouteList> routeList) {
-            this.routeList = routeList;
             return this;
         }
 
@@ -211,10 +216,7 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * NetworkId.
              */
             public Builder networkId(Long networkId) {
                 this.networkId = networkId;
@@ -239,6 +241,113 @@ public class ListRoutesResponseBody extends TeaModel {
 
             public RouteList build() {
                 return new RouteList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListRoutesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRoutesResponseBody</p>
+     */
+    public static class PagingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Integer pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("RouteList")
+        private java.util.List<RouteList> routeList;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private PagingInfo(Builder builder) {
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.routeList = builder.routeList;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PagingInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pageNumber
+         */
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return routeList
+         */
+        public java.util.List<RouteList> getRouteList() {
+            return this.routeList;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private java.util.List<RouteList> routeList; 
+            private Integer totalCount; 
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * RouteList.
+             */
+            public Builder routeList(java.util.List<RouteList> routeList) {
+                this.routeList = routeList;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public PagingInfo build() {
+                return new PagingInfo(this);
             } 
 
         } 

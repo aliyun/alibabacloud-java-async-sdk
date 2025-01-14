@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataQualityRuleTemplate.
+         * <p>The information about the template.</p>
          */
         public Builder dataQualityRuleTemplate(DataQualityRuleTemplate dataQualityRuleTemplate) {
             this.dataQualityRuleTemplate = dataQualityRuleTemplate;
@@ -250,9 +255,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SamplingConfig")
         private SamplingConfig samplingConfig;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("VisibleScope")
         private String visibleScope;
 
@@ -263,7 +265,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             this.name = builder.name;
             this.projectId = builder.projectId;
             this.samplingConfig = builder.samplingConfig;
-            this.tenantId = builder.tenantId;
             this.visibleScope = builder.visibleScope;
         }
 
@@ -318,13 +319,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return visibleScope
          */
         public String getVisibleScope() {
@@ -338,7 +332,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             private String name; 
             private Long projectId; 
             private SamplingConfig samplingConfig; 
-            private Long tenantId; 
             private String visibleScope; 
 
             /**
@@ -386,14 +379,6 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
-                return this;
-            }
-
-            /**
-             * TenantId.
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
                 return this;
             }
 

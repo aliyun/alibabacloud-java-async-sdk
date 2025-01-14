@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DataQualityRule extends TeaModel {
     private Boolean enabled;
 
     @com.aliyun.core.annotation.NameInMap("ErrorHandlers")
-    private java.util.List < ErrorHandlers> errorHandlers;
+    private java.util.List<ErrorHandlers> errorHandlers;
 
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
@@ -95,7 +100,7 @@ public class DataQualityRule extends TeaModel {
     /**
      * @return errorHandlers
      */
-    public java.util.List < ErrorHandlers> getErrorHandlers() {
+    public java.util.List<ErrorHandlers> getErrorHandlers() {
         return this.errorHandlers;
     }
 
@@ -159,7 +164,7 @@ public class DataQualityRule extends TeaModel {
         private CheckingConfig checkingConfig; 
         private String description; 
         private Boolean enabled; 
-        private java.util.List < ErrorHandlers> errorHandlers; 
+        private java.util.List<ErrorHandlers> errorHandlers; 
         private Long id; 
         private String name; 
         private Long projectId; 
@@ -196,7 +201,7 @@ public class DataQualityRule extends TeaModel {
         /**
          * ErrorHandlers.
          */
-        public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
+        public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
             this.errorHandlers = errorHandlers;
             return this;
         }

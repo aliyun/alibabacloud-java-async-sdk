@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -929,7 +934,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         private Boolean enabled;
 
         @com.aliyun.core.annotation.NameInMap("ErrorHandlers")
-        private java.util.List < ErrorHandlers> errorHandlers;
+        private java.util.List<ErrorHandlers> errorHandlers;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -952,9 +957,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         private DataQualityRules(Builder builder) {
             this.checkingConfig = builder.checkingConfig;
             this.description = builder.description;
@@ -967,7 +969,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             this.severity = builder.severity;
             this.target = builder.target;
             this.templateCode = builder.templateCode;
-            this.tenantId = builder.tenantId;
         }
 
         public static Builder builder() {
@@ -1002,7 +1003,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         /**
          * @return errorHandlers
          */
-        public java.util.List < ErrorHandlers> getErrorHandlers() {
+        public java.util.List<ErrorHandlers> getErrorHandlers() {
             return this.errorHandlers;
         }
 
@@ -1055,18 +1056,11 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             return this.templateCode;
         }
 
-        /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
         public static final class Builder {
             private CheckingConfig checkingConfig; 
             private String description; 
             private Boolean enabled; 
-            private java.util.List < ErrorHandlers> errorHandlers; 
+            private java.util.List<ErrorHandlers> errorHandlers; 
             private Long id; 
             private String name; 
             private Long projectId; 
@@ -1074,7 +1068,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             private String severity; 
             private Target target; 
             private String templateCode; 
-            private Long tenantId; 
 
             /**
              * <p>The check settings for sample data.</p>
@@ -1109,7 +1102,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             /**
              * <p>The operations that you can perform after the rule-based check fails.</p>
              */
-            public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
+            public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
                 return this;
             }
@@ -1186,17 +1179,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
                 return this;
             }
 
-            /**
-             * <p>The ID of the DataWorks tenant.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100001</p>
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
-                return this;
-            }
-
             public DataQualityRules build() {
                 return new DataQualityRules(this);
             } 
@@ -1212,7 +1194,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
      */
     public static class PagingInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataQualityRules")
-        private java.util.List < DataQualityRules> dataQualityRules;
+        private java.util.List<DataQualityRules> dataQualityRules;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -1241,7 +1223,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         /**
          * @return dataQualityRules
          */
-        public java.util.List < DataQualityRules> getDataQualityRules() {
+        public java.util.List<DataQualityRules> getDataQualityRules() {
             return this.dataQualityRules;
         }
 
@@ -1267,7 +1249,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataQualityRules> dataQualityRules; 
+            private java.util.List<DataQualityRules> dataQualityRules; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -1275,7 +1257,7 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
             /**
              * <p>The rules.</p>
              */
-            public Builder dataQualityRules(java.util.List < DataQualityRules> dataQualityRules) {
+            public Builder dataQualityRules(java.util.List<DataQualityRules> dataQualityRules) {
                 this.dataQualityRules = dataQualityRules;
                 return this;
             }

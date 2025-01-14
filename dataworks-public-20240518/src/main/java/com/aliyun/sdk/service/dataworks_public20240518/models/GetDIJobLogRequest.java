@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,12 +23,16 @@ public class GetDIJobLogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private Long DIJobId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FailoverId")
     private Long failoverId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -34,6 +43,7 @@ public class GetDIJobLogRequest extends Request {
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
         this.failoverId = builder.failoverId;
+        this.id = builder.id;
         this.instanceId = builder.instanceId;
     }
 
@@ -72,6 +82,13 @@ public class GetDIJobLogRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return instanceId
      */
     public Long getInstanceId() {
@@ -82,6 +99,7 @@ public class GetDIJobLogRequest extends Request {
         private String regionId; 
         private Long DIJobId; 
         private Long failoverId; 
+        private Long id; 
         private Long instanceId; 
 
         private Builder() {
@@ -93,6 +111,7 @@ public class GetDIJobLogRequest extends Request {
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
             this.failoverId = request.failoverId;
+            this.id = request.id;
             this.instanceId = request.instanceId;
         } 
 
@@ -106,8 +125,7 @@ public class GetDIJobLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
-         * <p>This parameter is required.</p>
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -127,6 +145,18 @@ public class GetDIJobLogRequest extends Request {
         public Builder failoverId(Long failoverId) {
             this.putQueryParameter("FailoverId", failoverId);
             this.failoverId = failoverId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 

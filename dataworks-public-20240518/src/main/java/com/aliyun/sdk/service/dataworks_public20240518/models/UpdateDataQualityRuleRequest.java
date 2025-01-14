@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,6 +27,7 @@ public class UpdateDataQualityRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 500)
     private String description;
 
     @com.aliyun.core.annotation.Body
@@ -30,7 +36,7 @@ public class UpdateDataQualityRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ErrorHandlers")
-    private java.util.List < ErrorHandlers> errorHandlers;
+    private java.util.List<ErrorHandlers> errorHandlers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -39,6 +45,7 @@ public class UpdateDataQualityRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String name;
 
     @com.aliyun.core.annotation.Query
@@ -122,7 +129,7 @@ public class UpdateDataQualityRuleRequest extends Request {
     /**
      * @return errorHandlers
      */
-    public java.util.List < ErrorHandlers> getErrorHandlers() {
+    public java.util.List<ErrorHandlers> getErrorHandlers() {
         return this.errorHandlers;
     }
 
@@ -180,7 +187,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         private CheckingConfig checkingConfig; 
         private String description; 
         private Boolean enabled; 
-        private java.util.List < ErrorHandlers> errorHandlers; 
+        private java.util.List<ErrorHandlers> errorHandlers; 
         private Long id; 
         private String name; 
         private Long projectId; 
@@ -255,7 +262,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         /**
          * <p>The operations that you can perform after the rule-based check fails.</p>
          */
-        public Builder errorHandlers(java.util.List < ErrorHandlers> errorHandlers) {
+        public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
             String errorHandlersShrink = shrink(errorHandlers, "ErrorHandlers", "json");
             this.putBodyParameter("ErrorHandlers", errorHandlersShrink);
             this.errorHandlers = errorHandlers;
@@ -965,6 +972,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         private String samplingFilter;
 
         @com.aliyun.core.annotation.NameInMap("SettingConfig")
+        @com.aliyun.core.annotation.Validation(maxLength = 1000)
         private String settingConfig;
 
         private SamplingConfig(Builder builder) {

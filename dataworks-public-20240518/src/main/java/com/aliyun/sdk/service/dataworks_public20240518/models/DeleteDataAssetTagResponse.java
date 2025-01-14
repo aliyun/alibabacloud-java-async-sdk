@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListDataQualityRuleTemplateResponse} extends {@link TeaModel}
+ * {@link DeleteDataAssetTagResponse} extends {@link TeaModel}
  *
- * <p>ListDataQualityRuleTemplateResponse</p>
+ * <p>DeleteDataAssetTagResponse</p>
  */
-public class ListDataQualityRuleTemplateResponse extends Response {
+public class DeleteDataAssetTagResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListDataQualityRuleTemplateResponseBody body;
+    private DeleteDataAssetTagResponseBody body;
 
-    private ListDataQualityRuleTemplateResponse(BuilderImpl builder) {
+    private DeleteDataAssetTagResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListDataQualityRuleTemplateResponse create() {
+    public static DeleteDataAssetTagResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -40,7 +45,7 @@ public class ListDataQualityRuleTemplateResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class ListDataQualityRuleTemplateResponse extends Response {
     /**
      * @return body
      */
-    public ListDataQualityRuleTemplateResponseBody getBody() {
+    public DeleteDataAssetTagResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListDataQualityRuleTemplateResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteDataAssetTagResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListDataQualityRuleTemplateResponseBody body);
+        Builder body(DeleteDataAssetTagResponseBody body);
 
         @Override
-        ListDataQualityRuleTemplateResponse build();
+        DeleteDataAssetTagResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListDataQualityRuleTemplateResponse, Builder>
+            extends Response.BuilderImpl<DeleteDataAssetTagResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListDataQualityRuleTemplateResponseBody body; 
+        private DeleteDataAssetTagResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListDataQualityRuleTemplateResponse response) {
+        private BuilderImpl(DeleteDataAssetTagResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class ListDataQualityRuleTemplateResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class ListDataQualityRuleTemplateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListDataQualityRuleTemplateResponseBody body) {
+        public Builder body(DeleteDataAssetTagResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListDataQualityRuleTemplateResponse build() {
-            return new ListDataQualityRuleTemplateResponse(this);
+        public DeleteDataAssetTagResponse build() {
+            return new DeleteDataAssetTagResponse(this);
         } 
 
     } 

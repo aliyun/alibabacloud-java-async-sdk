@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,12 @@ public class StopDIJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @Deprecated
     private Long DIJobId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -28,6 +38,7 @@ public class StopDIJobRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DIJobId = builder.DIJobId;
+        this.id = builder.id;
         this.instanceId = builder.instanceId;
     }
 
@@ -59,6 +70,13 @@ public class StopDIJobRequest extends Request {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return instanceId
      */
     public Long getInstanceId() {
@@ -68,6 +86,7 @@ public class StopDIJobRequest extends Request {
     public static final class Builder extends Request.Builder<StopDIJobRequest, Builder> {
         private String regionId; 
         private Long DIJobId; 
+        private Long id; 
         private Long instanceId; 
 
         private Builder() {
@@ -78,6 +97,7 @@ public class StopDIJobRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DIJobId = request.DIJobId;
+            this.id = request.id;
             this.instanceId = request.instanceId;
         } 
 
@@ -91,7 +111,7 @@ public class StopDIJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization task.</p>
+         * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>11668</p>
@@ -99,6 +119,18 @@ public class StopDIJobRequest extends Request {
         public Builder DIJobId(Long DIJobId) {
             this.putQueryParameter("DIJobId", DIJobId);
             this.DIJobId = DIJobId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11668</p>
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 

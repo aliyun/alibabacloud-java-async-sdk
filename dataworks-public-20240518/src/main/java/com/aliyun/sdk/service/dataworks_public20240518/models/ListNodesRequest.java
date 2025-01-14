@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainerId")
-    private String containerId;
+    private Long containerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -33,7 +38,7 @@ public class ListNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private Long projectId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Recurrence")
@@ -82,7 +87,7 @@ public class ListNodesRequest extends Request {
     /**
      * @return containerId
      */
-    public String getContainerId() {
+    public Long getContainerId() {
         return this.containerId;
     }
 
@@ -103,7 +108,7 @@ public class ListNodesRequest extends Request {
     /**
      * @return projectId
      */
-    public String getProjectId() {
+    public Long getProjectId() {
         return this.projectId;
     }
 
@@ -130,10 +135,10 @@ public class ListNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String regionId; 
-        private String containerId; 
+        private Long containerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String projectId; 
+        private Long projectId; 
         private String recurrence; 
         private String rerunMode; 
         private String scene; 
@@ -169,7 +174,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
-        public Builder containerId(String containerId) {
+        public Builder containerId(Long containerId) {
             this.putQueryParameter("ContainerId", containerId);
             this.containerId = containerId;
             return this;
@@ -206,7 +211,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>12345</p>
          */
-        public Builder projectId(String projectId) {
+        public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDIAlarmRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DIAlarmRuleId")
+    @Deprecated
     private String DIAlarmRuleId;
+
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDIAlarmRuleResponseBody(Builder builder) {
         this.DIAlarmRuleId = builder.DIAlarmRuleId;
+        this.id = builder.id;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +49,13 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,7 +64,19 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DIAlarmRuleId; 
+        private Long id; 
         private String requestId; 
+
+        /**
+         * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder DIAlarmRuleId(String DIAlarmRuleId) {
+            this.DIAlarmRuleId = DIAlarmRuleId;
+            return this;
+        }
 
         /**
          * <p>The ID of the alert rule.</p>
@@ -55,8 +84,8 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder DIAlarmRuleId(String DIAlarmRuleId) {
-            this.DIAlarmRuleId = DIAlarmRuleId;
+        public Builder id(Long id) {
+            this.id = id;
             return this;
         }
 

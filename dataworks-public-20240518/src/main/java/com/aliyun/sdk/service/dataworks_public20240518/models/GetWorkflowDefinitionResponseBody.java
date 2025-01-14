@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -97,7 +102,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         private String owner;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
-        private String projectId;
+        private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
@@ -130,7 +135,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -158,7 +163,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         /**
          * @return projectId
          */
-        public String getProjectId() {
+        public Long getProjectId() {
             return this.projectId;
         }
 
@@ -171,11 +176,11 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private String id; 
+            private Long id; 
             private Long modifyTime; 
             private String name; 
             private String owner; 
-            private String projectId; 
+            private Long projectId; 
             private String spec; 
 
             /**
@@ -195,7 +200,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>463497880880954XXXX</p>
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }
@@ -236,7 +241,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>307XXX</p>
              */
-            public Builder projectId(String projectId) {
+            public Builder projectId(Long projectId) {
                 this.projectId = projectId;
                 return this;
             }

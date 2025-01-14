@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20240518.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDIJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @Deprecated
     private Long DIJobId;
+
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDIJobResponseBody(Builder builder) {
         this.DIJobId = builder.DIJobId;
+        this.id = builder.id;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +49,13 @@ public class CreateDIJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,7 +64,19 @@ public class CreateDIJobResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long DIJobId; 
+        private Long id; 
         private String requestId; 
+
+        /**
+         * <p>This parameter is deprecated and is replaced by the Id parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11792</p>
+         */
+        public Builder DIJobId(Long DIJobId) {
+            this.DIJobId = DIJobId;
+            return this;
+        }
 
         /**
          * <p>The ID of the synchronization task.</p>
@@ -55,8 +84,8 @@ public class CreateDIJobResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>11792</p>
          */
-        public Builder DIJobId(Long DIJobId) {
-            this.DIJobId = DIJobId;
+        public Builder id(Long id) {
+            this.id = id;
             return this;
         }
 
