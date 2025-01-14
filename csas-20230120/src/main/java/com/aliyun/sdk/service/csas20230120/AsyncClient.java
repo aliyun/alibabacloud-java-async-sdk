@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachApplication2ConnectorResponse> attachApplication2Connector(AttachApplication2ConnectorRequest request);
 
     /**
+     * @param request the request parameters of AttachPolicy2ApprovalProcess  AttachPolicy2ApprovalProcessRequest
+     * @return AttachPolicy2ApprovalProcessResponse
+     */
+    CompletableFuture<AttachPolicy2ApprovalProcessResponse> attachPolicy2ApprovalProcess(AttachPolicy2ApprovalProcessRequest request);
+
+    /**
+     * @param request the request parameters of CreateApprovalProcess  CreateApprovalProcessRequest
+     * @return CreateApprovalProcessResponse
+     */
+    CompletableFuture<CreateApprovalProcessResponse> createApprovalProcess(CreateApprovalProcessRequest request);
+
+    /**
      * @param request the request parameters of CreateClientUser  CreateClientUserRequest
      * @return CreateClientUserResponse
      */
@@ -98,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWmInfoMappingResponse> createWmInfoMapping(CreateWmInfoMappingRequest request);
 
     /**
+     * @param request the request parameters of DeleteApprovalProcesses  DeleteApprovalProcessesRequest
+     * @return DeleteApprovalProcessesResponse
+     */
+    CompletableFuture<DeleteApprovalProcessesResponse> deleteApprovalProcesses(DeleteApprovalProcessesRequest request);
+
+    /**
      * @param request the request parameters of DeleteClientUser  DeleteClientUserRequest
      * @return DeleteClientUserResponse
      */
@@ -158,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachApplication2ConnectorResponse> detachApplication2Connector(DetachApplication2ConnectorRequest request);
 
     /**
+     * @param request the request parameters of DetachPolicy2ApprovalProcess  DetachPolicy2ApprovalProcessRequest
+     * @return DetachPolicy2ApprovalProcessResponse
+     */
+    CompletableFuture<DetachPolicy2ApprovalProcessResponse> detachPolicy2ApprovalProcess(DetachPolicy2ApprovalProcessRequest request);
+
+    /**
      * @param request the request parameters of ExportUserDevices  ExportUserDevicesRequest
      * @return ExportUserDevicesResponse
      */
@@ -168,6 +192,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetActiveIdpConfigResponse
      */
     CompletableFuture<GetActiveIdpConfigResponse> getActiveIdpConfig(GetActiveIdpConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetApproval  GetApprovalRequest
+     * @return GetApprovalResponse
+     */
+    CompletableFuture<GetApprovalResponse> getApproval(GetApprovalRequest request);
+
+    /**
+     * @param request the request parameters of GetApprovalProcess  GetApprovalProcessRequest
+     * @return GetApprovalProcessResponse
+     */
+    CompletableFuture<GetApprovalProcessResponse> getApprovalProcess(GetApprovalProcessRequest request);
+
+    /**
+     * @param request the request parameters of GetApprovalSchema  GetApprovalSchemaRequest
+     * @return GetApprovalSchemaResponse
+     */
+    CompletableFuture<GetApprovalSchemaResponse> getApprovalSchema(GetApprovalSchemaRequest request);
+
+    /**
+     * @param request the request parameters of GetBootAndAntiUninstallPolicy  GetBootAndAntiUninstallPolicyRequest
+     * @return GetBootAndAntiUninstallPolicyResponse
+     */
+    CompletableFuture<GetBootAndAntiUninstallPolicyResponse> getBootAndAntiUninstallPolicy(GetBootAndAntiUninstallPolicyRequest request);
 
     /**
      * @param request the request parameters of GetClientUser  GetClientUserRequest
@@ -240,6 +288,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApplicationsForPrivateAccessTagResponse
      */
     CompletableFuture<ListApplicationsForPrivateAccessTagResponse> listApplicationsForPrivateAccessTag(ListApplicationsForPrivateAccessTagRequest request);
+
+    /**
+     * @param request the request parameters of ListApprovalProcesses  ListApprovalProcessesRequest
+     * @return ListApprovalProcessesResponse
+     */
+    CompletableFuture<ListApprovalProcessesResponse> listApprovalProcesses(ListApprovalProcessesRequest request);
+
+    /**
+     * @param request the request parameters of ListApprovalProcessesForApprovalSchemas  ListApprovalProcessesForApprovalSchemasRequest
+     * @return ListApprovalProcessesForApprovalSchemasResponse
+     */
+    CompletableFuture<ListApprovalProcessesForApprovalSchemasResponse> listApprovalProcessesForApprovalSchemas(ListApprovalProcessesForApprovalSchemasRequest request);
+
+    /**
+     * @param request the request parameters of ListApprovalSchemas  ListApprovalSchemasRequest
+     * @return ListApprovalSchemasResponse
+     */
+    CompletableFuture<ListApprovalSchemasResponse> listApprovalSchemas(ListApprovalSchemasRequest request);
+
+    /**
+     * @param request the request parameters of ListApprovalSchemasForApprovalProcesses  ListApprovalSchemasForApprovalProcessesRequest
+     * @return ListApprovalSchemasForApprovalProcessesResponse
+     */
+    CompletableFuture<ListApprovalSchemasForApprovalProcessesResponse> listApprovalSchemasForApprovalProcesses(ListApprovalSchemasForApprovalProcessesRequest request);
+
+    /**
+     * @param request the request parameters of ListApprovals  ListApprovalsRequest
+     * @return ListApprovalsResponse
+     */
+    CompletableFuture<ListApprovalsResponse> listApprovals(ListApprovalsRequest request);
 
     /**
      * @param request the request parameters of ListClientUsers  ListClientUsersRequest
@@ -374,6 +452,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagsForPrivateAccessPolicyResponse> listTagsForPrivateAccessPolicy(ListTagsForPrivateAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of ListUninstallApplications  ListUninstallApplicationsRequest
+     * @return ListUninstallApplicationsResponse
+     */
+    CompletableFuture<ListUninstallApplicationsResponse> listUninstallApplications(ListUninstallApplicationsRequest request);
+
+    /**
      * @param request the request parameters of ListUserApplications  ListUserApplicationsRequest
      * @return ListUserApplicationsResponse
      */
@@ -426,6 +510,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeUserSessionResponse
      */
     CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApprovalProcess  UpdateApprovalProcessRequest
+     * @return UpdateApprovalProcessResponse
+     */
+    CompletableFuture<UpdateApprovalProcessResponse> updateApprovalProcess(UpdateApprovalProcessRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApprovalStatus  UpdateApprovalStatusRequest
+     * @return UpdateApprovalStatusResponse
+     */
+    CompletableFuture<UpdateApprovalStatusResponse> updateApprovalStatus(UpdateApprovalStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBootAndAntiUninstallPolicy  UpdateBootAndAntiUninstallPolicyRequest
+     * @return UpdateBootAndAntiUninstallPolicyResponse
+     */
+    CompletableFuture<UpdateBootAndAntiUninstallPolicyResponse> updateBootAndAntiUninstallPolicy(UpdateBootAndAntiUninstallPolicyRequest request);
 
     /**
      * @param request the request parameters of UpdateClientUser  UpdateClientUserRequest
@@ -486,6 +588,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRegistrationPolicyResponse
      */
     CompletableFuture<UpdateRegistrationPolicyResponse> updateRegistrationPolicy(UpdateRegistrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUninstallApplicationsStatus  UpdateUninstallApplicationsStatusRequest
+     * @return UpdateUninstallApplicationsStatusResponse
+     */
+    CompletableFuture<UpdateUninstallApplicationsStatusResponse> updateUninstallApplicationsStatus(UpdateUninstallApplicationsStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateUserDevicesSharingStatus  UpdateUserDevicesSharingStatusRequest
