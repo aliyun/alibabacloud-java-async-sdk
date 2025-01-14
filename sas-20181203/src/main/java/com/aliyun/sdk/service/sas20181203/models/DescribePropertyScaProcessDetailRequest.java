@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePropertyScaProcessDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cmdline")
+    private String cmdline;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -39,6 +47,8 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
 
     private DescribePropertyScaProcessDetailRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
+        this.cmdline = builder.cmdline;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.pid = builder.pid;
@@ -57,6 +67,20 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    /**
+     * @return cmdline
+     */
+    public String getCmdline() {
+        return this.cmdline;
     }
 
     /**
@@ -95,6 +119,8 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePropertyScaProcessDetailRequest, Builder> {
+        private String bizType; 
+        private String cmdline; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String pid; 
@@ -107,12 +133,32 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
 
         private Builder(DescribePropertyScaProcessDetailRequest request) {
             super(request);
+            this.bizType = request.bizType;
+            this.cmdline = request.cmdline;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
             this.pid = request.pid;
             this.remark = request.remark;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * Cmdline.
+         */
+        public Builder cmdline(String cmdline) {
+            this.putQueryParameter("Cmdline", cmdline);
+            this.cmdline = cmdline;
+            return this;
+        }
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>

@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAssetsScaProcessNumRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> uuidList;
 
     private DescribeAssetsScaProcessNumRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.uuidList = builder.uuidList;
     }
 
@@ -41,6 +46,13 @@ public class DescribeAssetsScaProcessNumRequest extends Request {
     }
 
     /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    /**
      * @return uuidList
      */
     public java.util.List<String> getUuidList() {
@@ -48,6 +60,7 @@ public class DescribeAssetsScaProcessNumRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAssetsScaProcessNumRequest, Builder> {
+        private String bizType; 
         private java.util.List<String> uuidList; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class DescribeAssetsScaProcessNumRequest extends Request {
 
         private Builder(DescribeAssetsScaProcessNumRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.uuidList = request.uuidList;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * <p>The UUIDs of the servers.</p>

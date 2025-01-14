@@ -184,7 +184,10 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * RetentionDays.
+         * <p>The retention period of the snapshot that is created when you fix the baseline risk. Valid values: 1 to 365. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -193,9 +196,9 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the baseline risk item.</p>
+         * <p>The ID of the risk item.</p>
          * <blockquote>
-         * <p> To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs.</p>
+         * <p> To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -208,7 +211,10 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * SnapshotName.
+         * <p>The name of the snapshot that is created when you fix the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_fix_2024-12-04</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);

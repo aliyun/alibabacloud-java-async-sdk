@@ -1110,6 +1110,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrimaryId")
         private Long primaryId;
 
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private Integer progress;
+
         @com.aliyun.core.annotation.NameInMap("RaspDefend")
         private Integer raspDefend;
 
@@ -1170,6 +1173,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.osName = builder.osName;
             this.osVersion = builder.osVersion;
             this.primaryId = builder.primaryId;
+            this.progress = builder.progress;
             this.raspDefend = builder.raspDefend;
             this.raspStatus = builder.raspStatus;
             this.realRisk = builder.realRisk;
@@ -1354,6 +1358,13 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return progress
+         */
+        public Integer getProgress() {
+            return this.progress;
+        }
+
+        /**
          * @return raspDefend
          */
         public Integer getRaspDefend() {
@@ -1461,6 +1472,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private String osName; 
             private String osVersion; 
             private Long primaryId; 
+            private Integer progress; 
             private Integer raspDefend; 
             private Integer raspStatus; 
             private Boolean realRisk; 
@@ -1745,6 +1757,14 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(Integer progress) {
+                this.progress = progress;
                 return this;
             }
 

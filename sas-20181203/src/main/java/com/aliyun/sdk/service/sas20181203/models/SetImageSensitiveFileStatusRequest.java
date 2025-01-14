@@ -115,7 +115,7 @@ public class SetImageSensitiveFileStatusRequest extends Request {
         } 
 
         /**
-         * IdList.
+         * <p>The IDs of the sensitive files.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
@@ -136,7 +136,7 @@ public class SetImageSensitiveFileStatusRequest extends Request {
         }
 
         /**
-         * ScanRange.
+         * <p>The types of the assets that are scanned.</p>
          */
         public Builder scanRange(java.util.List<String> scanRange) {
             String scanRangeShrink = shrink(scanRange, "ScanRange", "json");
