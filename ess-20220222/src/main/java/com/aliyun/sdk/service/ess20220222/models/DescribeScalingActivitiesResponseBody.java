@@ -154,6 +154,113 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
      *
      * <p>DescribeScalingActivitiesResponseBody</p>
      */
+    public static class ErrorMessages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("FailedInstanceIds")
+        private java.util.List<String> failedInstanceIds;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        private ErrorMessages(Builder builder) {
+            this.code = builder.code;
+            this.description = builder.description;
+            this.failedInstanceIds = builder.failedInstanceIds;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ErrorMessages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return failedInstanceIds
+         */
+        public java.util.List<String> getFailedInstanceIds() {
+            return this.failedInstanceIds;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String description; 
+            private java.util.List<String> failedInstanceIds; 
+            private String message; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * FailedInstanceIds.
+             */
+            public Builder failedInstanceIds(java.util.List<String> failedInstanceIds) {
+                this.failedInstanceIds = failedInstanceIds;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public ErrorMessages build() {
+                return new ErrorMessages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeScalingActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingActivitiesResponseBody</p>
+     */
     public static class LifecycleHookContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisableLifecycleHook")
         private Boolean disableLifecycleHook;
@@ -268,6 +375,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorMessages")
+        private java.util.List<ErrorMessages> errorMessages;
+
         @com.aliyun.core.annotation.NameInMap("InstanceRefreshTaskId")
         private String instanceRefreshTaskId;
 
@@ -330,6 +440,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.errorMessages = builder.errorMessages;
             this.instanceRefreshTaskId = builder.instanceRefreshTaskId;
             this.lifecycleHookContext = builder.lifecycleHookContext;
             this.progress = builder.progress;
@@ -445,6 +556,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
          */
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        /**
+         * @return errorMessages
+         */
+        public java.util.List<ErrorMessages> getErrorMessages() {
+            return this.errorMessages;
         }
 
         /**
@@ -573,6 +691,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String endTime; 
             private String errorCode; 
             private String errorMessage; 
+            private java.util.List<ErrorMessages> errorMessages; 
             private String instanceRefreshTaskId; 
             private LifecycleHookContext lifecycleHookContext; 
             private Integer progress; 
@@ -724,6 +843,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * ErrorMessages.
+             */
+            public Builder errorMessages(java.util.List<ErrorMessages> errorMessages) {
+                this.errorMessages = errorMessages;
                 return this;
             }
 
