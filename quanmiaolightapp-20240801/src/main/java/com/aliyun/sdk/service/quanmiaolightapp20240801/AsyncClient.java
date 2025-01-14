@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateOutputFormatResponse> generateOutputFormat(GenerateOutputFormatRequest request);
 
     /**
+     * @param request the request parameters of GetVideoAnalysisConfig  GetVideoAnalysisConfigRequest
+     * @return GetVideoAnalysisConfigResponse
+     */
+    CompletableFuture<GetVideoAnalysisConfigResponse> getVideoAnalysisConfig(GetVideoAnalysisConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetVideoAnalysisTask  GetVideoAnalysisTaskRequest
+     * @return GetVideoAnalysisTaskResponse
+     */
+    CompletableFuture<GetVideoAnalysisTaskResponse> getVideoAnalysisTask(GetVideoAnalysisTaskRequest request);
+
+    /**
      * @param request the request parameters of ListHotTopicSummaries  ListHotTopicSummariesRequest
      * @return ListHotTopicSummariesResponse
      */
@@ -126,5 +138,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runVideoAnalysisWithAsyncResponseHandler(RunVideoAnalysisRequest request, AsyncResponseHandler<RunVideoAnalysisResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunVideoAnalysisResponseBody> runVideoAnalysisWithResponseIterable(RunVideoAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of SubmitVideoAnalysisTask  SubmitVideoAnalysisTaskRequest
+     * @return SubmitVideoAnalysisTaskResponse
+     */
+    CompletableFuture<SubmitVideoAnalysisTaskResponse> submitVideoAnalysisTask(SubmitVideoAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVideoAnalysisConfig  UpdateVideoAnalysisConfigRequest
+     * @return UpdateVideoAnalysisConfigResponse
+     */
+    CompletableFuture<UpdateVideoAnalysisConfigResponse> updateVideoAnalysisConfig(UpdateVideoAnalysisConfigRequest request);
 
 }

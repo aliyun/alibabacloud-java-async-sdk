@@ -12,46 +12,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+ * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
  *
- * <p>RunVideoAnalysisResponseBody</p>
+ * <p>GetVideoAnalysisTaskResponseBody</p>
  */
-public class RunVideoAnalysisResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("header")
-    private RunVideoAnalysisResponseBodyHeader header;
+public class GetVideoAnalysisTaskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
 
-    @com.aliyun.core.annotation.NameInMap("payload")
-    private Payload payload;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private Data data;
+
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
+    private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private RunVideoAnalysisResponseBody(Builder builder) {
-        this.header = builder.header;
-        this.payload = builder.payload;
+    @com.aliyun.core.annotation.NameInMap("success")
+    private Boolean success;
+
+    private GetVideoAnalysisTaskResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RunVideoAnalysisResponseBody create() {
+    public static GetVideoAnalysisTaskResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return header
+     * @return code
      */
-    public RunVideoAnalysisResponseBodyHeader getHeader() {
-        return this.header;
+    public String getCode() {
+        return this.code;
     }
 
     /**
-     * @return payload
+     * @return data
      */
-    public Payload getPayload() {
-        return this.payload;
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -61,48 +87,85 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
-        private RunVideoAnalysisResponseBodyHeader header; 
-        private Payload payload; 
+        private String code; 
+        private Data data; 
+        private Integer httpStatusCode; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
-         * header.
+         * code.
          */
-        public Builder header(RunVideoAnalysisResponseBodyHeader header) {
-            this.header = header;
+        public Builder code(String code) {
+            this.code = code;
             return this;
         }
 
         /**
-         * payload.
+         * data.
          */
-        public Builder payload(Payload payload) {
-            this.payload = payload;
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
         /**
-         * requestId.
+         * httpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D0E915E-655D-59A8-894F-93873F73AAE5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RunVideoAnalysisResponseBody build() {
-            return new RunVideoAnalysisResponseBody(this);
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public GetVideoAnalysisTaskResponseBody build() {
+            return new GetVideoAnalysisTaskResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
-    public static class RunVideoAnalysisResponseBodyHeader extends TeaModel {
+    public static class DataHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
 
@@ -124,7 +187,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traceId")
         private String traceId;
 
-        private RunVideoAnalysisResponseBodyHeader(Builder builder) {
+        private DataHeader(Builder builder) {
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
@@ -138,7 +201,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static RunVideoAnalysisResponseBodyHeader create() {
+        public static DataHeader create() {
             return builder().build();
         }
 
@@ -256,8 +319,8 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
                 return this;
             }
 
-            public RunVideoAnalysisResponseBodyHeader build() {
-                return new RunVideoAnalysisResponseBodyHeader(this);
+            public DataHeader build() {
+                return new DataHeader(this);
             } 
 
         } 
@@ -265,9 +328,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -352,9 +415,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoShotAnalysisResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
@@ -439,16 +502,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoAnalysisResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
-
-        @com.aliyun.core.annotation.NameInMap("modelId")
-        private String modelId;
 
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -461,7 +521,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         private VideoAnalysisResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
-            this.modelId = builder.modelId;
             this.text = builder.text;
             this.usage = builder.usage;
             this.videoShotAnalysisResults = builder.videoShotAnalysisResults;
@@ -480,13 +539,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
          */
         public Boolean getGenerateFinished() {
             return this.generateFinished;
-        }
-
-        /**
-         * @return modelId
-         */
-        public String getModelId() {
-            return this.modelId;
         }
 
         /**
@@ -512,7 +564,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean generateFinished; 
-            private String modelId; 
             private String text; 
             private Usage usage; 
             private java.util.List<VideoShotAnalysisResults> videoShotAnalysisResults; 
@@ -522,14 +573,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
              */
             public Builder generateFinished(Boolean generateFinished) {
                 this.generateFinished = generateFinished;
-                return this;
-            }
-
-            /**
-             * modelId.
-             */
-            public Builder modelId(String modelId) {
-                this.modelId = modelId;
                 return this;
             }
 
@@ -566,9 +609,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoCaptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
@@ -693,9 +736,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoCaptionResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
@@ -760,9 +803,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -847,19 +890,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoGenerateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
-
-        @com.aliyun.core.annotation.NameInMap("modelId")
-        private String modelId;
-
-        @com.aliyun.core.annotation.NameInMap("modelReduce")
-        private Boolean modelReduce;
 
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -869,8 +906,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         private VideoGenerateResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
-            this.modelId = builder.modelId;
-            this.modelReduce = builder.modelReduce;
             this.text = builder.text;
             this.usage = builder.usage;
         }
@@ -891,20 +926,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * @return modelId
-         */
-        public String getModelId() {
-            return this.modelId;
-        }
-
-        /**
-         * @return modelReduce
-         */
-        public Boolean getModelReduce() {
-            return this.modelReduce;
-        }
-
-        /**
          * @return text
          */
         public String getText() {
@@ -920,8 +941,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean generateFinished; 
-            private String modelId; 
-            private Boolean modelReduce; 
             private String text; 
             private VideoGenerateResultUsage usage; 
 
@@ -930,22 +949,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
              */
             public Builder generateFinished(Boolean generateFinished) {
                 this.generateFinished = generateFinished;
-                return this;
-            }
-
-            /**
-             * modelId.
-             */
-            public Builder modelId(String modelId) {
-                this.modelId = modelId;
-                return this;
-            }
-
-            /**
-             * modelReduce.
-             */
-            public Builder modelReduce(Boolean modelReduce) {
-                this.modelReduce = modelReduce;
                 return this;
             }
 
@@ -974,9 +977,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoMindMappingGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -1061,9 +1064,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class ChildNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
@@ -1108,9 +1111,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoMindMappingsChildNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childNodes")
@@ -1175,9 +1178,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoMindMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childNodes")
@@ -1242,19 +1245,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoMindMappingGenerateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
-
-        @com.aliyun.core.annotation.NameInMap("modelId")
-        private String modelId;
-
-        @com.aliyun.core.annotation.NameInMap("modelReduce")
-        private Boolean modelReduce;
 
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -1267,8 +1264,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         private VideoMindMappingGenerateResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
-            this.modelId = builder.modelId;
-            this.modelReduce = builder.modelReduce;
             this.text = builder.text;
             this.usage = builder.usage;
             this.videoMindMappings = builder.videoMindMappings;
@@ -1287,20 +1282,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
          */
         public Boolean getGenerateFinished() {
             return this.generateFinished;
-        }
-
-        /**
-         * @return modelId
-         */
-        public String getModelId() {
-            return this.modelId;
-        }
-
-        /**
-         * @return modelReduce
-         */
-        public Boolean getModelReduce() {
-            return this.modelReduce;
         }
 
         /**
@@ -1326,8 +1307,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean generateFinished; 
-            private String modelId; 
-            private Boolean modelReduce; 
             private String text; 
             private VideoMindMappingGenerateResultUsage usage; 
             private java.util.List<VideoMindMappings> videoMindMappings; 
@@ -1337,22 +1316,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
              */
             public Builder generateFinished(Boolean generateFinished) {
                 this.generateFinished = generateFinished;
-                return this;
-            }
-
-            /**
-             * modelId.
-             */
-            public Builder modelId(String modelId) {
-                this.modelId = modelId;
-                return this;
-            }
-
-            /**
-             * modelReduce.
-             */
-            public Builder modelReduce(Boolean modelReduce) {
-                this.modelReduce = modelReduce;
                 return this;
             }
 
@@ -1389,230 +1352,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
-     */
-    public static class VideoSnapshots extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("url")
-        private String url;
-
-        private VideoSnapshots(Builder builder) {
-            this.url = builder.url;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VideoSnapshots create() {
-            return builder().build();
-        }
-
-        /**
-         * @return url
-         */
-        public String getUrl() {
-            return this.url;
-        }
-
-        public static final class Builder {
-            private String url; 
-
-            /**
-             * url.
-             */
-            public Builder url(String url) {
-                this.url = url;
-                return this;
-            }
-
-            public VideoSnapshots build() {
-                return new VideoSnapshots(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
-     *
-     * <p>RunVideoAnalysisResponseBody</p>
-     */
-    public static class VideoShots extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("endTime")
-        private Long endTime;
-
-        @com.aliyun.core.annotation.NameInMap("endTimeFormat")
-        private String endTimeFormat;
-
-        @com.aliyun.core.annotation.NameInMap("startTime")
-        private Long startTime;
-
-        @com.aliyun.core.annotation.NameInMap("startTimeFormat")
-        private String startTimeFormat;
-
-        @com.aliyun.core.annotation.NameInMap("videoSnapshots")
-        private java.util.List<VideoSnapshots> videoSnapshots;
-
-        private VideoShots(Builder builder) {
-            this.endTime = builder.endTime;
-            this.endTimeFormat = builder.endTimeFormat;
-            this.startTime = builder.startTime;
-            this.startTimeFormat = builder.startTimeFormat;
-            this.videoSnapshots = builder.videoSnapshots;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VideoShots create() {
-            return builder().build();
-        }
-
-        /**
-         * @return endTime
-         */
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        /**
-         * @return endTimeFormat
-         */
-        public String getEndTimeFormat() {
-            return this.endTimeFormat;
-        }
-
-        /**
-         * @return startTime
-         */
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        /**
-         * @return startTimeFormat
-         */
-        public String getStartTimeFormat() {
-            return this.startTimeFormat;
-        }
-
-        /**
-         * @return videoSnapshots
-         */
-        public java.util.List<VideoSnapshots> getVideoSnapshots() {
-            return this.videoSnapshots;
-        }
-
-        public static final class Builder {
-            private Long endTime; 
-            private String endTimeFormat; 
-            private Long startTime; 
-            private String startTimeFormat; 
-            private java.util.List<VideoSnapshots> videoSnapshots; 
-
-            /**
-             * endTime.
-             */
-            public Builder endTime(Long endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * endTimeFormat.
-             */
-            public Builder endTimeFormat(String endTimeFormat) {
-                this.endTimeFormat = endTimeFormat;
-                return this;
-            }
-
-            /**
-             * startTime.
-             */
-            public Builder startTime(Long startTime) {
-                this.startTime = startTime;
-                return this;
-            }
-
-            /**
-             * startTimeFormat.
-             */
-            public Builder startTimeFormat(String startTimeFormat) {
-                this.startTimeFormat = startTimeFormat;
-                return this;
-            }
-
-            /**
-             * videoSnapshots.
-             */
-            public Builder videoSnapshots(java.util.List<VideoSnapshots> videoSnapshots) {
-                this.videoSnapshots = videoSnapshots;
-                return this;
-            }
-
-            public VideoShots build() {
-                return new VideoShots(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
-     *
-     * <p>RunVideoAnalysisResponseBody</p>
-     */
-    public static class VideoShotSnapshotResult extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("videoShots")
-        private java.util.List<VideoShots> videoShots;
-
-        private VideoShotSnapshotResult(Builder builder) {
-            this.videoShots = builder.videoShots;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VideoShotSnapshotResult create() {
-            return builder().build();
-        }
-
-        /**
-         * @return videoShots
-         */
-        public java.util.List<VideoShots> getVideoShots() {
-            return this.videoShots;
-        }
-
-        public static final class Builder {
-            private java.util.List<VideoShots> videoShots; 
-
-            /**
-             * videoShots.
-             */
-            public Builder videoShots(java.util.List<VideoShots> videoShots) {
-                this.videoShots = videoShots;
-                return this;
-            }
-
-            public VideoShotSnapshotResult build() {
-                return new VideoShotSnapshotResult(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
-     *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoTitleGenerateResultUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -1697,19 +1439,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class VideoTitleGenerateResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("generateFinished")
         private Boolean generateFinished;
-
-        @com.aliyun.core.annotation.NameInMap("modelId")
-        private String modelId;
-
-        @com.aliyun.core.annotation.NameInMap("modelReduce")
-        private Boolean modelReduce;
 
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
@@ -1719,8 +1455,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         private VideoTitleGenerateResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
-            this.modelId = builder.modelId;
-            this.modelReduce = builder.modelReduce;
             this.text = builder.text;
             this.usage = builder.usage;
         }
@@ -1741,20 +1475,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * @return modelId
-         */
-        public String getModelId() {
-            return this.modelId;
-        }
-
-        /**
-         * @return modelReduce
-         */
-        public Boolean getModelReduce() {
-            return this.modelReduce;
-        }
-
-        /**
          * @return text
          */
         public String getText() {
@@ -1770,8 +1490,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean generateFinished; 
-            private String modelId; 
-            private Boolean modelReduce; 
             private String text; 
             private VideoTitleGenerateResultUsage usage; 
 
@@ -1780,22 +1498,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
              */
             public Builder generateFinished(Boolean generateFinished) {
                 this.generateFinished = generateFinished;
-                return this;
-            }
-
-            /**
-             * modelId.
-             */
-            public Builder modelId(String modelId) {
-                this.modelId = modelId;
-                return this;
-            }
-
-            /**
-             * modelReduce.
-             */
-            public Builder modelReduce(Boolean modelReduce) {
-                this.modelReduce = modelReduce;
                 return this;
             }
 
@@ -1824,9 +1526,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("videoAnalysisResult")
@@ -1841,9 +1543,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("videoMindMappingGenerateResult")
         private VideoMindMappingGenerateResult videoMindMappingGenerateResult;
 
-        @com.aliyun.core.annotation.NameInMap("videoShotSnapshotResult")
-        private VideoShotSnapshotResult videoShotSnapshotResult;
-
         @com.aliyun.core.annotation.NameInMap("videoTitleGenerateResult")
         private VideoTitleGenerateResult videoTitleGenerateResult;
 
@@ -1852,7 +1551,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             this.videoCaptionResult = builder.videoCaptionResult;
             this.videoGenerateResult = builder.videoGenerateResult;
             this.videoMindMappingGenerateResult = builder.videoMindMappingGenerateResult;
-            this.videoShotSnapshotResult = builder.videoShotSnapshotResult;
             this.videoTitleGenerateResult = builder.videoTitleGenerateResult;
         }
 
@@ -1893,13 +1591,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * @return videoShotSnapshotResult
-         */
-        public VideoShotSnapshotResult getVideoShotSnapshotResult() {
-            return this.videoShotSnapshotResult;
-        }
-
-        /**
          * @return videoTitleGenerateResult
          */
         public VideoTitleGenerateResult getVideoTitleGenerateResult() {
@@ -1911,7 +1602,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private VideoCaptionResult videoCaptionResult; 
             private VideoGenerateResult videoGenerateResult; 
             private VideoMindMappingGenerateResult videoMindMappingGenerateResult; 
-            private VideoShotSnapshotResult videoShotSnapshotResult; 
             private VideoTitleGenerateResult videoTitleGenerateResult; 
 
             /**
@@ -1947,14 +1637,6 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * videoShotSnapshotResult.
-             */
-            public Builder videoShotSnapshotResult(VideoShotSnapshotResult videoShotSnapshotResult) {
-                this.videoShotSnapshotResult = videoShotSnapshotResult;
-                return this;
-            }
-
-            /**
              * videoTitleGenerateResult.
              */
             public Builder videoTitleGenerateResult(VideoTitleGenerateResult videoTitleGenerateResult) {
@@ -1971,9 +1653,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class PayloadUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -2058,9 +1740,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunVideoAnalysisResponseBody} extends {@link TeaModel}
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisResponseBody</p>
+     * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
@@ -2118,6 +1800,220 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
             public Payload build() {
                 return new Payload(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
+    public static class TaskRunInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("concurrentChargeEnable")
+        private Boolean concurrentChargeEnable;
+
+        @com.aliyun.core.annotation.NameInMap("responseTime")
+        private Long responseTime;
+
+        private TaskRunInfo(Builder builder) {
+            this.concurrentChargeEnable = builder.concurrentChargeEnable;
+            this.responseTime = builder.responseTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskRunInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return concurrentChargeEnable
+         */
+        public Boolean getConcurrentChargeEnable() {
+            return this.concurrentChargeEnable;
+        }
+
+        /**
+         * @return responseTime
+         */
+        public Long getResponseTime() {
+            return this.responseTime;
+        }
+
+        public static final class Builder {
+            private Boolean concurrentChargeEnable; 
+            private Long responseTime; 
+
+            /**
+             * concurrentChargeEnable.
+             */
+            public Builder concurrentChargeEnable(Boolean concurrentChargeEnable) {
+                this.concurrentChargeEnable = concurrentChargeEnable;
+                return this;
+            }
+
+            /**
+             * responseTime.
+             */
+            public Builder responseTime(Long responseTime) {
+                this.responseTime = responseTime;
+                return this;
+            }
+
+            public TaskRunInfo build() {
+                return new TaskRunInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("header")
+        private DataHeader header;
+
+        @com.aliyun.core.annotation.NameInMap("payload")
+        private Payload payload;
+
+        @com.aliyun.core.annotation.NameInMap("taskId")
+        private String taskId;
+
+        @com.aliyun.core.annotation.NameInMap("taskRunInfo")
+        private TaskRunInfo taskRunInfo;
+
+        @com.aliyun.core.annotation.NameInMap("taskStatus")
+        private String taskStatus;
+
+        private Data(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.header = builder.header;
+            this.payload = builder.payload;
+            this.taskId = builder.taskId;
+            this.taskRunInfo = builder.taskRunInfo;
+            this.taskStatus = builder.taskStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return header
+         */
+        public DataHeader getHeader() {
+            return this.header;
+        }
+
+        /**
+         * @return payload
+         */
+        public Payload getPayload() {
+            return this.payload;
+        }
+
+        /**
+         * @return taskId
+         */
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        /**
+         * @return taskRunInfo
+         */
+        public TaskRunInfo getTaskRunInfo() {
+            return this.taskRunInfo;
+        }
+
+        /**
+         * @return taskStatus
+         */
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private DataHeader header; 
+            private Payload payload; 
+            private String taskId; 
+            private TaskRunInfo taskRunInfo; 
+            private String taskStatus; 
+
+            /**
+             * errorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * header.
+             */
+            public Builder header(DataHeader header) {
+                this.header = header;
+                return this;
+            }
+
+            /**
+             * payload.
+             */
+            public Builder payload(Payload payload) {
+                this.payload = payload;
+                return this;
+            }
+
+            /**
+             * taskId.
+             */
+            public Builder taskId(String taskId) {
+                this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * taskRunInfo.
+             */
+            public Builder taskRunInfo(TaskRunInfo taskRunInfo) {
+                this.taskRunInfo = taskRunInfo;
+                return this;
+            }
+
+            /**
+             * taskStatus.
+             */
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
             } 
 
         } 

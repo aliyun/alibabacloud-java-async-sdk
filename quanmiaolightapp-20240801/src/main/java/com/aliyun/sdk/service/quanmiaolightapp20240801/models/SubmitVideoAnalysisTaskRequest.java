@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunVideoAnalysisRequest} extends {@link RequestModel}
+ * {@link SubmitVideoAnalysisTaskRequest} extends {@link RequestModel}
  *
- * <p>RunVideoAnalysisRequest</p>
+ * <p>SubmitVideoAnalysisTaskRequest</p>
  */
-public class RunVideoAnalysisRequest extends Request {
+public class SubmitVideoAnalysisTaskRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
@@ -51,16 +51,8 @@ public class RunVideoAnalysisRequest extends Request {
     private String modelId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("originalSessionId")
-    private String originalSessionId;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("snapshotInterval")
     private Double snapshotInterval;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("taskId")
-    private String taskId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoExtraInfo")
@@ -80,9 +72,10 @@ public class RunVideoAnalysisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoUrl;
 
-    private RunVideoAnalysisRequest(Builder builder) {
+    private SubmitVideoAnalysisTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
@@ -92,9 +85,7 @@ public class RunVideoAnalysisRequest extends Request {
         this.modelCustomPromptTemplate = builder.modelCustomPromptTemplate;
         this.modelCustomPromptTemplateId = builder.modelCustomPromptTemplateId;
         this.modelId = builder.modelId;
-        this.originalSessionId = builder.originalSessionId;
         this.snapshotInterval = builder.snapshotInterval;
-        this.taskId = builder.taskId;
         this.videoExtraInfo = builder.videoExtraInfo;
         this.videoModelCustomPromptTemplate = builder.videoModelCustomPromptTemplate;
         this.videoModelId = builder.videoModelId;
@@ -106,7 +97,7 @@ public class RunVideoAnalysisRequest extends Request {
         return new Builder();
     }
 
-    public static RunVideoAnalysisRequest create() {
+    public static SubmitVideoAnalysisTaskRequest create() {
         return builder().build();
     }
 
@@ -172,24 +163,10 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
-     * @return originalSessionId
-     */
-    public String getOriginalSessionId() {
-        return this.originalSessionId;
-    }
-
-    /**
      * @return snapshotInterval
      */
     public Double getSnapshotInterval() {
         return this.snapshotInterval;
-    }
-
-    /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
     }
 
     /**
@@ -227,7 +204,7 @@ public class RunVideoAnalysisRequest extends Request {
         return this.videoUrl;
     }
 
-    public static final class Builder extends Request.Builder<RunVideoAnalysisRequest, Builder> {
+    public static final class Builder extends Request.Builder<SubmitVideoAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
         private FrameSampleMethod frameSampleMethod; 
@@ -236,9 +213,7 @@ public class RunVideoAnalysisRequest extends Request {
         private String modelCustomPromptTemplate; 
         private String modelCustomPromptTemplateId; 
         private String modelId; 
-        private String originalSessionId; 
         private Double snapshotInterval; 
-        private String taskId; 
         private String videoExtraInfo; 
         private String videoModelCustomPromptTemplate; 
         private String videoModelId; 
@@ -249,7 +224,7 @@ public class RunVideoAnalysisRequest extends Request {
             super();
         } 
 
-        private Builder(RunVideoAnalysisRequest request) {
+        private Builder(SubmitVideoAnalysisTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
@@ -259,9 +234,7 @@ public class RunVideoAnalysisRequest extends Request {
             this.modelCustomPromptTemplate = request.modelCustomPromptTemplate;
             this.modelCustomPromptTemplateId = request.modelCustomPromptTemplateId;
             this.modelId = request.modelId;
-            this.originalSessionId = request.originalSessionId;
             this.snapshotInterval = request.snapshotInterval;
-            this.taskId = request.taskId;
             this.videoExtraInfo = request.videoExtraInfo;
             this.videoModelCustomPromptTemplate = request.videoModelCustomPromptTemplate;
             this.videoModelId = request.videoModelId;
@@ -347,29 +320,11 @@ public class RunVideoAnalysisRequest extends Request {
         }
 
         /**
-         * originalSessionId.
-         */
-        public Builder originalSessionId(String originalSessionId) {
-            this.putBodyParameter("originalSessionId", originalSessionId);
-            this.originalSessionId = originalSessionId;
-            return this;
-        }
-
-        /**
          * snapshotInterval.
          */
         public Builder snapshotInterval(Double snapshotInterval) {
             this.putBodyParameter("snapshotInterval", snapshotInterval);
             this.snapshotInterval = snapshotInterval;
-            return this;
-        }
-
-        /**
-         * taskId.
-         */
-        public Builder taskId(String taskId) {
-            this.putBodyParameter("taskId", taskId);
-            this.taskId = taskId;
             return this;
         }
 
@@ -411,7 +366,10 @@ public class RunVideoAnalysisRequest extends Request {
         }
 
         /**
-         * videoUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
          */
         public Builder videoUrl(String videoUrl) {
             this.putBodyParameter("videoUrl", videoUrl);
@@ -420,17 +378,17 @@ public class RunVideoAnalysisRequest extends Request {
         }
 
         @Override
-        public RunVideoAnalysisRequest build() {
-            return new RunVideoAnalysisRequest(this);
+        public SubmitVideoAnalysisTaskRequest build() {
+            return new SubmitVideoAnalysisTaskRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     * {@link SubmitVideoAnalysisTaskRequest} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisRequest</p>
+     * <p>SubmitVideoAnalysisTaskRequest</p>
      */
     public static class FrameSampleMethod extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("interval")
@@ -515,9 +473,9 @@ public class RunVideoAnalysisRequest extends Request {
     }
     /**
      * 
-     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     * {@link SubmitVideoAnalysisTaskRequest} extends {@link TeaModel}
      *
-     * <p>RunVideoAnalysisRequest</p>
+     * <p>SubmitVideoAnalysisTaskRequest</p>
      */
     public static class VideoRoles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("roleInfo")
