@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CloudDisks")
-    private java.util.List < CloudDisks> cloudDisks;
+    private java.util.List<CloudDisks> cloudDisks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CredentialConfig")
@@ -35,7 +40,7 @@ public class UpdateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Datasets")
-    private java.util.List < Datasets> datasets;
+    private java.util.List<Datasets> datasets;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateCredential")
@@ -164,7 +169,7 @@ public class UpdateInstanceRequest extends Request {
     /**
      * @return cloudDisks
      */
-    public java.util.List < CloudDisks> getCloudDisks() {
+    public java.util.List<CloudDisks> getCloudDisks() {
         return this.cloudDisks;
     }
 
@@ -178,7 +183,7 @@ public class UpdateInstanceRequest extends Request {
     /**
      * @return datasets
      */
-    public java.util.List < Datasets> getDatasets() {
+    public java.util.List<Datasets> getDatasets() {
         return this.datasets;
     }
 
@@ -298,9 +303,9 @@ public class UpdateInstanceRequest extends Request {
         private String instanceId; 
         private String accessibility; 
         private Affinity affinity; 
-        private java.util.List < CloudDisks> cloudDisks; 
+        private java.util.List<CloudDisks> cloudDisks; 
         private CredentialConfig credentialConfig; 
-        private java.util.List < Datasets> datasets; 
+        private java.util.List<Datasets> datasets; 
         private Boolean disassociateCredential; 
         private Boolean disassociateDatasets; 
         private Boolean disassociateDriver; 
@@ -381,7 +386,7 @@ public class UpdateInstanceRequest extends Request {
         /**
          * CloudDisks.
          */
-        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+        public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
             this.putBodyParameter("CloudDisks", cloudDisks);
             this.cloudDisks = cloudDisks;
             return this;
@@ -399,7 +404,7 @@ public class UpdateInstanceRequest extends Request {
         /**
          * Datasets.
          */
-        public Builder datasets(java.util.List < Datasets> datasets) {
+        public Builder datasets(java.util.List<Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
             this.datasets = datasets;
             return this;
@@ -983,10 +988,10 @@ public class UpdateInstanceRequest extends Request {
         private String defaultRoute;
 
         @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        private java.util.List<String> extendedCIDRs;
 
         @com.aliyun.core.annotation.NameInMap("ForwardInfos")
-        private java.util.List < ForwardInfo > forwardInfos;
+        private java.util.List<ForwardInfo> forwardInfos;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -1024,14 +1029,14 @@ public class UpdateInstanceRequest extends Request {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
         }
 
         /**
          * @return forwardInfos
          */
-        public java.util.List < ForwardInfo > getForwardInfos() {
+        public java.util.List<ForwardInfo> getForwardInfos() {
             return this.forwardInfos;
         }
 
@@ -1058,8 +1063,8 @@ public class UpdateInstanceRequest extends Request {
 
         public static final class Builder {
             private String defaultRoute; 
-            private java.util.List < String > extendedCIDRs; 
-            private java.util.List < ForwardInfo > forwardInfos; 
+            private java.util.List<String> extendedCIDRs; 
+            private java.util.List<ForwardInfo> forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -1075,7 +1080,7 @@ public class UpdateInstanceRequest extends Request {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
                 return this;
             }
@@ -1083,7 +1088,7 @@ public class UpdateInstanceRequest extends Request {
             /**
              * ForwardInfos.
              */
-            public Builder forwardInfos(java.util.List < ForwardInfo > forwardInfos) {
+            public Builder forwardInfos(java.util.List<ForwardInfo> forwardInfos) {
                 this.forwardInfos = forwardInfos;
                 return this;
             }

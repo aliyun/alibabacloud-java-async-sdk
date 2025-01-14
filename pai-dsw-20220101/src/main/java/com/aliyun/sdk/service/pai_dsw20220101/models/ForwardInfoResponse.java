@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ForwardInfoResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("AccessType")
-    private java.util.List < String > accessType;
+    private java.util.List<String> accessType;
 
     @com.aliyun.core.annotation.NameInMap("ConnectInfo")
     private ConnectInfo connectInfo;
@@ -68,7 +73,7 @@ public class ForwardInfoResponse extends Response {
     /**
      * @return accessType
      */
-    public java.util.List < String > getAccessType() {
+    public java.util.List<String> getAccessType() {
         return this.accessType;
     }
 
@@ -137,7 +142,7 @@ public class ForwardInfoResponse extends Response {
 
     public interface Builder extends Response.Builder<ForwardInfoResponse, Builder> {
 
-        Builder accessType(java.util.List < String > accessType);
+        Builder accessType(java.util.List<String> accessType);
 
         Builder connectInfo(ConnectInfo connectInfo);
 
@@ -165,7 +170,7 @@ public class ForwardInfoResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<ForwardInfoResponse, Builder>
             implements Builder {
-        private java.util.List < String > accessType; 
+        private java.util.List<String> accessType; 
         private ConnectInfo connectInfo; 
         private String containerName; 
         private String eipAllocationId; 
@@ -198,7 +203,7 @@ public class ForwardInfoResponse extends Response {
          * AccessType.
          */
         @Override
-        public Builder accessType(java.util.List < String > accessType) {
+        public Builder accessType(java.util.List<String> accessType) {
             this.accessType = accessType;
             return this;
         }

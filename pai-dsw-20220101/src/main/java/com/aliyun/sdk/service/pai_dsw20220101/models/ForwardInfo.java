@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ForwardInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessType")
-    private java.util.List < String > accessType;
+    private java.util.List<String> accessType;
 
     @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
@@ -62,7 +67,7 @@ public class ForwardInfo extends TeaModel {
     /**
      * @return accessType
      */
-    public java.util.List < String > getAccessType() {
+    public java.util.List<String> getAccessType() {
         return this.accessType;
     }
 
@@ -123,7 +128,7 @@ public class ForwardInfo extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > accessType; 
+        private java.util.List<String> accessType; 
         private String containerName; 
         private String eipAllocationId; 
         private Boolean enable; 
@@ -136,7 +141,7 @@ public class ForwardInfo extends TeaModel {
         /**
          * AccessType.
          */
-        public Builder accessType(java.util.List < String > accessType) {
+        public Builder accessType(java.util.List<String> accessType) {
             this.accessType = accessType;
             return this;
         }

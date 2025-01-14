@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("ExcludePaths")
-    private java.util.List < String > excludePaths;
+    private java.util.List<String> excludePaths;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -37,7 +42,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     private String instanceId;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -101,7 +106,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     /**
      * @return excludePaths
      */
-    public java.util.List < String > getExcludePaths() {
+    public java.util.List<String> getExcludePaths() {
         return this.excludePaths;
     }
 
@@ -150,7 +155,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -212,14 +217,14 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > excludePaths; 
+        private java.util.List<String> excludePaths; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private Integer httpStatusCode; 
         private String imageId; 
         private String imageUrl; 
         private String instanceId; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private String message; 
         private String reasonCode; 
         private String reasonMessage; 
@@ -240,7 +245,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         /**
          * ExcludePaths.
          */
-        public Builder excludePaths(java.util.List < String > excludePaths) {
+        public Builder excludePaths(java.util.List<String> excludePaths) {
             this.excludePaths = excludePaths;
             return this;
         }
@@ -296,7 +301,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }

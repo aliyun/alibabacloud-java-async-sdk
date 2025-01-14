@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetLifecycleResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Lifecycle")
-    private java.util.List < java.util.List < Lifecycle> > lifecycle;
+    private java.util.List<java.util.List<Lifecycle>> lifecycle;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -57,7 +62,7 @@ public class GetLifecycleResponseBody extends TeaModel {
     /**
      * @return lifecycle
      */
-    public java.util.List < java.util.List < Lifecycle> > getLifecycle() {
+    public java.util.List<java.util.List<Lifecycle>> getLifecycle() {
         return this.lifecycle;
     }
 
@@ -91,7 +96,7 @@ public class GetLifecycleResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < java.util.List < Lifecycle> > lifecycle; 
+        private java.util.List<java.util.List<Lifecycle>> lifecycle; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -108,7 +113,7 @@ public class GetLifecycleResponseBody extends TeaModel {
         /**
          * Lifecycle.
          */
-        public Builder lifecycle(java.util.List < java.util.List < Lifecycle> > lifecycle) {
+        public Builder lifecycle(java.util.List<java.util.List<Lifecycle>> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }

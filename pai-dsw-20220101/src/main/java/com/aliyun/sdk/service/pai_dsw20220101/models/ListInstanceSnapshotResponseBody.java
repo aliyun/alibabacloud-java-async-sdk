@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -82,7 +87,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
@@ -105,7 +110,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
         private Boolean success; 
         private Long totalCount; 
 
@@ -144,7 +149,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         /**
          * Snapshots.
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -246,7 +251,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
      */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExcludePaths")
-        private java.util.List < String > excludePaths;
+        private java.util.List<String> excludePaths;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -264,7 +269,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
@@ -307,7 +312,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         /**
          * @return excludePaths
          */
-        public java.util.List < String > getExcludePaths() {
+        public java.util.List<String> getExcludePaths() {
             return this.excludePaths;
         }
 
@@ -349,7 +354,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -389,13 +394,13 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > excludePaths; 
+            private java.util.List<String> excludePaths; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String imageId; 
             private String imageUrl; 
             private String instanceId; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String reasonCode; 
             private String reasonMessage; 
             private String snapshotId; 
@@ -405,7 +410,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             /**
              * ExcludePaths.
              */
-            public Builder excludePaths(java.util.List < String > excludePaths) {
+            public Builder excludePaths(java.util.List<String> excludePaths) {
                 this.excludePaths = excludePaths;
                 return this;
             }
@@ -453,7 +458,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

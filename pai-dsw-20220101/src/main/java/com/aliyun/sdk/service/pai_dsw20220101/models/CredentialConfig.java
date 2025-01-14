@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CredentialConfig extends TeaModel {
     private String aliyunEnvRoleKey;
 
     @com.aliyun.core.annotation.NameInMap("Configs")
-    private java.util.List < Configs> configs;
+    private java.util.List<Configs> configs;
 
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
@@ -45,7 +50,7 @@ public class CredentialConfig extends TeaModel {
     /**
      * @return configs
      */
-    public java.util.List < Configs> getConfigs() {
+    public java.util.List<Configs> getConfigs() {
         return this.configs;
     }
 
@@ -58,7 +63,7 @@ public class CredentialConfig extends TeaModel {
 
     public static final class Builder {
         private String aliyunEnvRoleKey; 
-        private java.util.List < Configs> configs; 
+        private java.util.List<Configs> configs; 
         private Boolean enable; 
 
         /**
@@ -72,7 +77,7 @@ public class CredentialConfig extends TeaModel {
         /**
          * Configs.
          */
-        public Builder configs(java.util.List < Configs> configs) {
+        public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
             return this;
         }
@@ -345,7 +350,7 @@ public class CredentialConfig extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Roles")
-        private java.util.List < Roles> roles;
+        private java.util.List<Roles> roles;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -375,7 +380,7 @@ public class CredentialConfig extends TeaModel {
         /**
          * @return roles
          */
-        public java.util.List < Roles> getRoles() {
+        public java.util.List<Roles> getRoles() {
             return this.roles;
         }
 
@@ -388,7 +393,7 @@ public class CredentialConfig extends TeaModel {
 
         public static final class Builder {
             private String key; 
-            private java.util.List < Roles> roles; 
+            private java.util.List<Roles> roles; 
             private String type; 
 
             /**
@@ -405,7 +410,7 @@ public class CredentialConfig extends TeaModel {
             /**
              * Roles.
              */
-            public Builder roles(java.util.List < Roles> roles) {
+            public Builder roles(java.util.List<Roles> roles) {
                 this.roles = roles;
                 return this;
             }

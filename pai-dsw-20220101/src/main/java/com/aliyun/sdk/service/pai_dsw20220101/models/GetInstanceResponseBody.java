@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private Affinity affinity;
 
     @com.aliyun.core.annotation.NameInMap("CloudDisks")
-    private java.util.List < CloudDisks> cloudDisks;
+    private java.util.List<CloudDisks> cloudDisks;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -34,7 +39,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private CredentialConfig credentialConfig;
 
     @com.aliyun.core.annotation.NameInMap("Datasets")
-    private java.util.List < Datasets> datasets;
+    private java.util.List<Datasets> datasets;
 
     @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
@@ -43,7 +48,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private String ecsSpec;
 
     @com.aliyun.core.annotation.NameInMap("EnvironmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    private java.util.Map<String, String> environmentVariables;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -79,7 +84,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private InstanceShutdownTimer instanceShutdownTimer;
 
     @com.aliyun.core.annotation.NameInMap("InstanceSnapshotList")
-    private java.util.List < InstanceSnapshotList> instanceSnapshotList;
+    private java.util.List<InstanceSnapshotList> instanceSnapshotList;
 
     @com.aliyun.core.annotation.NameInMap("InstanceUrl")
     private String instanceUrl;
@@ -88,7 +93,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private String jupyterlabUrl;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestSnapshot")
     private LatestSnapshot latestSnapshot;
@@ -133,7 +138,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TerminalUrl")
     private String terminalUrl;
@@ -250,7 +255,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return cloudDisks
      */
-    public java.util.List < CloudDisks> getCloudDisks() {
+    public java.util.List<CloudDisks> getCloudDisks() {
         return this.cloudDisks;
     }
 
@@ -271,7 +276,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return datasets
      */
-    public java.util.List < Datasets> getDatasets() {
+    public java.util.List<Datasets> getDatasets() {
         return this.datasets;
     }
 
@@ -292,7 +297,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -376,7 +381,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return instanceSnapshotList
      */
-    public java.util.List < InstanceSnapshotList> getInstanceSnapshotList() {
+    public java.util.List<InstanceSnapshotList> getInstanceSnapshotList() {
         return this.instanceSnapshotList;
     }
 
@@ -397,7 +402,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -502,7 +507,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -567,13 +572,13 @@ public class GetInstanceResponseBody extends TeaModel {
         private String accessibility; 
         private Long accumulatedRunningTimeInMs; 
         private Affinity affinity; 
-        private java.util.List < CloudDisks> cloudDisks; 
+        private java.util.List<CloudDisks> cloudDisks; 
         private String code; 
         private CredentialConfig credentialConfig; 
-        private java.util.List < Datasets> datasets; 
+        private java.util.List<Datasets> datasets; 
         private String driver; 
         private String ecsSpec; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private Integer httpStatusCode; 
@@ -585,10 +590,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private String instanceName; 
         private InstanceShutdownTimer instanceShutdownTimer; 
-        private java.util.List < InstanceSnapshotList> instanceSnapshotList; 
+        private java.util.List<InstanceSnapshotList> instanceSnapshotList; 
         private String instanceUrl; 
         private String jupyterlabUrl; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private LatestSnapshot latestSnapshot; 
         private String message; 
         private NodeErrorRecovery nodeErrorRecovery; 
@@ -603,7 +608,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String resourceName; 
         private String status; 
         private Boolean success; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String terminalUrl; 
         private String userId; 
         private String userName; 
@@ -648,7 +653,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * CloudDisks.
          */
-        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+        public Builder cloudDisks(java.util.List<CloudDisks> cloudDisks) {
             this.cloudDisks = cloudDisks;
             return this;
         }
@@ -672,7 +677,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * Datasets.
          */
-        public Builder datasets(java.util.List < Datasets> datasets) {
+        public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
             return this;
         }
@@ -696,7 +701,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * EnvironmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -792,7 +797,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * InstanceSnapshotList.
          */
-        public Builder instanceSnapshotList(java.util.List < InstanceSnapshotList> instanceSnapshotList) {
+        public Builder instanceSnapshotList(java.util.List<InstanceSnapshotList> instanceSnapshotList) {
             this.instanceSnapshotList = instanceSnapshotList;
             return this;
         }
@@ -819,7 +824,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
@@ -939,7 +944,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -1228,6 +1233,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
+        @com.aliyun.core.annotation.NameInMap("MountAccess")
+        private String mountAccess;
+
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
@@ -1242,6 +1250,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
+            this.mountAccess = builder.mountAccess;
             this.mountPath = builder.mountPath;
             this.optionType = builder.optionType;
             this.options = builder.options;
@@ -1261,6 +1270,13 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public String getDatasetId() {
             return this.datasetId;
+        }
+
+        /**
+         * @return mountAccess
+         */
+        public String getMountAccess() {
+            return this.mountAccess;
         }
 
         /**
@@ -1293,6 +1309,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String datasetId; 
+            private String mountAccess; 
             private String mountPath; 
             private String optionType; 
             private String options; 
@@ -1303,6 +1320,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * MountAccess.
+             */
+            public Builder mountAccess(String mountAccess) {
+                this.mountAccess = mountAccess;
                 return this;
             }
 
@@ -2426,10 +2451,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private String defaultRoute;
 
         @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        private java.util.List<String> extendedCIDRs;
 
         @com.aliyun.core.annotation.NameInMap("ForwardInfos")
-        private java.util.List < ForwardInfoResponse > forwardInfos;
+        private java.util.List<ForwardInfoResponse> forwardInfos;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -2467,14 +2492,14 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
         }
 
         /**
          * @return forwardInfos
          */
-        public java.util.List < ForwardInfoResponse > getForwardInfos() {
+        public java.util.List<ForwardInfoResponse> getForwardInfos() {
             return this.forwardInfos;
         }
 
@@ -2501,8 +2526,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String defaultRoute; 
-            private java.util.List < String > extendedCIDRs; 
-            private java.util.List < ForwardInfoResponse > forwardInfos; 
+            private java.util.List<String> extendedCIDRs; 
+            private java.util.List<ForwardInfoResponse> forwardInfos; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -2518,7 +2543,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
                 return this;
             }
@@ -2526,7 +2551,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * ForwardInfos.
              */
-            public Builder forwardInfos(java.util.List < ForwardInfoResponse > forwardInfos) {
+            public Builder forwardInfos(java.util.List<ForwardInfoResponse> forwardInfos) {
                 this.forwardInfos = forwardInfos;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetResourceGroupStatisticsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Statistics")
-    private java.util.Map < String, java.util.Map<String, ?>> statistics;
+    private java.util.Map<String, java.util.Map<String, ?>> statistics;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -78,7 +83,7 @@ public class GetResourceGroupStatisticsResponseBody extends TeaModel {
     /**
      * @return statistics
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getStatistics() {
+    public java.util.Map<String, java.util.Map<String, ?>> getStatistics() {
         return this.statistics;
     }
 
@@ -94,7 +99,7 @@ public class GetResourceGroupStatisticsResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.Map < String, java.util.Map<String, ?>> statistics; 
+        private java.util.Map<String, java.util.Map<String, ?>> statistics; 
         private Boolean success; 
 
         /**
@@ -132,7 +137,7 @@ public class GetResourceGroupStatisticsResponseBody extends TeaModel {
         /**
          * Statistics.
          */
-        public Builder statistics(java.util.Map < String, java.util.Map<String, ?>> statistics) {
+        public Builder statistics(java.util.Map<String, java.util.Map<String, ?>> statistics) {
             this.statistics = statistics;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludePaths")
-    private java.util.List < String > excludePaths;
+    private java.util.List<String> excludePaths;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
@@ -28,7 +33,7 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Overwrite")
@@ -77,7 +82,7 @@ public class CreateInstanceSnapshotRequest extends Request {
     /**
      * @return excludePaths
      */
-    public java.util.List < String > getExcludePaths() {
+    public java.util.List<String> getExcludePaths() {
         return this.excludePaths;
     }
 
@@ -91,7 +96,7 @@ public class CreateInstanceSnapshotRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -118,9 +123,9 @@ public class CreateInstanceSnapshotRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceSnapshotRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > excludePaths; 
+        private java.util.List<String> excludePaths; 
         private String imageUrl; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private Boolean overwrite; 
         private String snapshotDescription; 
         private String snapshotName; 
@@ -155,7 +160,7 @@ public class CreateInstanceSnapshotRequest extends Request {
         /**
          * ExcludePaths.
          */
-        public Builder excludePaths(java.util.List < String > excludePaths) {
+        public Builder excludePaths(java.util.List<String> excludePaths) {
             this.putBodyParameter("ExcludePaths", excludePaths);
             this.excludePaths = excludePaths;
             return this;
@@ -176,7 +181,7 @@ public class CreateInstanceSnapshotRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

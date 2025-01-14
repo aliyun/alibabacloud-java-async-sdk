@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class ListInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.Map < String, ? > labels;
+    private java.util.Map<String, ?> labels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxCpu")
@@ -106,7 +111,7 @@ public class ListInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -206,7 +211,7 @@ public class ListInstancesRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.Map < String, ? > getLabels() {
+    public java.util.Map<String, ?> getLabels() {
         return this.labels;
     }
 
@@ -318,7 +323,7 @@ public class ListInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -337,7 +342,7 @@ public class ListInstancesRequest extends Request {
         private String imageName; 
         private String instanceId; 
         private String instanceName; 
-        private java.util.Map < String, ? > labels; 
+        private java.util.Map<String, ?> labels; 
         private String maxCpu; 
         private String maxGpu; 
         private String maxGpuMemory; 
@@ -353,7 +358,7 @@ public class ListInstancesRequest extends Request {
         private String resourceId; 
         private String sortBy; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String workspaceId; 
 
         private Builder() {
@@ -455,7 +460,7 @@ public class ListInstancesRequest extends Request {
         /**
          * Labels.
          */
-        public Builder labels(java.util.Map < String, ? > labels) {
+        public Builder labels(java.util.Map<String, ?> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
             this.putQueryParameter("Labels", labelsShrink);
             this.labels = labels;
@@ -600,7 +605,7 @@ public class ListInstancesRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putQueryParameter("Tag", tagShrink);
             this.tag = tag;
