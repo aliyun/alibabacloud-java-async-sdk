@@ -29,11 +29,16 @@ public class ListPoliciesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private ListPoliciesRequest(Builder builder) {
         super(builder);
         this.marker = builder.marker;
         this.maxItems = builder.maxItems;
         this.policyType = builder.policyType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListPoliciesRequest extends Request {
         return this.policyType;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListPoliciesRequest, Builder> {
         private String marker; 
         private Integer maxItems; 
         private String policyType; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListPoliciesRequest extends Request {
             this.marker = request.marker;
             this.maxItems = request.maxItems;
             this.policyType = request.policyType;
+            this.tag = request.tag;
         } 
 
         /**
@@ -123,6 +137,16 @@ public class ListPoliciesRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public ListPoliciesRequest build() {
             return new ListPoliciesRequest(this);
@@ -130,4 +154,71 @@ public class ListPoliciesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPoliciesRequest} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -29,11 +29,16 @@ public class CreatePolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private CreatePolicyRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.policyDocument = builder.policyDocument;
         this.policyName = builder.policyName;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class CreatePolicyRequest extends Request {
         return this.policyName;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreatePolicyRequest, Builder> {
         private String description; 
         private String policyDocument; 
         private String policyName; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class CreatePolicyRequest extends Request {
             this.description = request.description;
             this.policyDocument = request.policyDocument;
             this.policyName = request.policyName;
+            this.tag = request.tag;
         } 
 
         /**
@@ -126,6 +140,16 @@ public class CreatePolicyRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreatePolicyRequest build() {
             return new CreatePolicyRequest(this);
@@ -133,4 +157,71 @@ public class CreatePolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
