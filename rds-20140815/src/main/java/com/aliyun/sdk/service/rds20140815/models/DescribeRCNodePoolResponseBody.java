@@ -213,11 +213,15 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private SystemDisk(Builder builder) {
             this.category = builder.category;
+            this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
         }
 
@@ -237,6 +241,13 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         }
 
         /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -245,6 +256,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private String performanceLevel; 
             private Integer size; 
 
             /**
@@ -252,6 +264,14 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
                 return this;
             }
 

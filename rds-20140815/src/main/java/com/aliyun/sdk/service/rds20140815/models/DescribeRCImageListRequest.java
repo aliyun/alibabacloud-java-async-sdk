@@ -30,6 +30,10 @@ public class DescribeRCImageListRequest extends Request {
     private String imageName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -51,6 +55,7 @@ public class DescribeRCImageListRequest extends Request {
         this.architecture = builder.architecture;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
+        this.instanceType = builder.instanceType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -92,6 +97,13 @@ public class DescribeRCImageListRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -123,6 +135,7 @@ public class DescribeRCImageListRequest extends Request {
         private String architecture; 
         private String imageId; 
         private String imageName; 
+        private String instanceType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -137,6 +150,7 @@ public class DescribeRCImageListRequest extends Request {
             this.architecture = request.architecture;
             this.imageId = request.imageId;
             this.imageName = request.imageName;
+            this.instanceType = request.instanceType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -174,6 +188,15 @@ public class DescribeRCImageListRequest extends Request {
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
             this.imageName = imageName;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 

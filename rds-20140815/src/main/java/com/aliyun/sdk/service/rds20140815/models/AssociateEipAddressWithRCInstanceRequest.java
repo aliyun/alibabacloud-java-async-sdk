@@ -87,7 +87,13 @@ public class AssociateEipAddressWithRCInstanceRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * <p>The EIP ID.</p>
+         * <blockquote>
+         * <p> If no EIP is available, create an EIP. For more information, see <a href="https://help.aliyun.com/document_detail/292841.html">Create an EIP</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp166out2x4bpcf******</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -96,7 +102,10 @@ public class AssociateEipAddressWithRCInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rc-i322y2t562oh7o******</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +114,10 @@ public class AssociateEipAddressWithRCInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

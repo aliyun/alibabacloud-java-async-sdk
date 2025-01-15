@@ -114,6 +114,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateReadWriteSplittingConnectionResponse> allocateReadWriteSplittingConnection(AllocateReadWriteSplittingConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>If the RDS Custom instance uses a public IP address, the public IP address is automatically released after you associate an EIP with the instance.</p>
+     * 
      * @param request the request parameters of AssociateEipAddressWithRCInstance  AssociateEipAddressWithRCInstanceRequest
      * @return AssociateEipAddressWithRCInstanceResponse
      */
@@ -3833,6 +3841,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstancePayTypeResponse> modifyDBInstancePayType(ModifyDBInstancePayTypeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>If you want to enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</p>
+     * <ul>
+     * <li>The RDS instance runs MySQL 5.7.</li>
+     * <li>The RDS instance runs RDS Basic Edition.</li>
+     * <li>The RDS instance uses the pay-as-you-go or subscription billing method.</li>
+     * <li>The RDS instance runs a minor engine version of 20240930 or later.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/2856530.html">Enable the native replication feature</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyDBInstanceReplicationSwitch  ModifyDBInstanceReplicationSwitchRequest
      * @return ModifyDBInstanceReplicationSwitchResponse
      */

@@ -23,6 +23,9 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BackupDataSize")
     private Long backupDataSize;
 
+    @com.aliyun.core.annotation.NameInMap("BackupEcsSnapshotSize")
+    private String backupEcsSnapshotSize;
+
     @com.aliyun.core.annotation.NameInMap("BackupLogSize")
     private Long backupLogSize;
 
@@ -65,6 +68,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     private DescribeResourceUsageResponseBody(Builder builder) {
         this.archiveBackupSize = builder.archiveBackupSize;
         this.backupDataSize = builder.backupDataSize;
+        this.backupEcsSnapshotSize = builder.backupEcsSnapshotSize;
         this.backupLogSize = builder.backupLogSize;
         this.backupOssDataSize = builder.backupOssDataSize;
         this.backupOssLogSize = builder.backupOssLogSize;
@@ -100,6 +104,13 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
      */
     public Long getBackupDataSize() {
         return this.backupDataSize;
+    }
+
+    /**
+     * @return backupEcsSnapshotSize
+     */
+    public String getBackupEcsSnapshotSize() {
+        return this.backupEcsSnapshotSize;
     }
 
     /**
@@ -196,6 +207,7 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     public static final class Builder {
         private Long archiveBackupSize; 
         private Long backupDataSize; 
+        private String backupEcsSnapshotSize; 
         private Long backupLogSize; 
         private Long backupOssDataSize; 
         private Long backupOssLogSize; 
@@ -229,6 +241,14 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
          */
         public Builder backupDataSize(Long backupDataSize) {
             this.backupDataSize = backupDataSize;
+            return this;
+        }
+
+        /**
+         * BackupEcsSnapshotSize.
+         */
+        public Builder backupEcsSnapshotSize(String backupEcsSnapshotSize) {
+            this.backupEcsSnapshotSize = backupEcsSnapshotSize;
             return this;
         }
 

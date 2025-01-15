@@ -134,6 +134,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StoppedMode")
     private String stoppedMode;
 
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
+    private SystemDisk systemDisk;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
@@ -186,6 +189,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.spotStrategy = builder.spotStrategy;
         this.status = builder.status;
         this.stoppedMode = builder.stoppedMode;
+        this.systemDisk = builder.systemDisk;
         this.tags = builder.tags;
         this.vlanId = builder.vlanId;
         this.vpcAttributes = builder.vpcAttributes;
@@ -474,6 +478,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return systemDisk
+     */
+    public SystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    /**
      * @return tags
      */
     public Tags getTags() {
@@ -541,6 +552,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String spotStrategy; 
         private String status; 
         private String stoppedMode; 
+        private SystemDisk systemDisk; 
         private Tags tags; 
         private String vlanId; 
         private VpcAttributes vpcAttributes; 
@@ -977,6 +989,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder stoppedMode(String stoppedMode) {
             this.stoppedMode = stoppedMode;
+            return this;
+        }
+
+        /**
+         * SystemDisk.
+         */
+        public Builder systemDisk(SystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
             return this;
         }
 
@@ -1679,6 +1699,147 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
             public SecurityGroupIds build() {
                 return new SecurityGroupIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCInstanceAttributeResponseBody</p>
+     */
+    public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
+        private Boolean deleteWithInstance;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private String encrypted;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
+        private String systemDiskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPerformanceLevel")
+        private String systemDiskPerformanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+        private Long systemDiskSize;
+
+        private SystemDisk(Builder builder) {
+            this.deleteWithInstance = builder.deleteWithInstance;
+            this.encrypted = builder.encrypted;
+            this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskSize = builder.systemDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deleteWithInstance
+         */
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
+         * @return systemDiskPerformanceLevel
+         */
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskSize
+         */
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        public static final class Builder {
+            private Boolean deleteWithInstance; 
+            private String encrypted; 
+            private String systemDiskCategory; 
+            private String systemDiskPerformanceLevel; 
+            private Long systemDiskSize; 
+
+            /**
+             * <p>Indicates whether the data disk is released when the instance is released. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The data disk is released when the instance is released.</li>
+             * <li><strong>false</strong>: The data disk is reserved when the instance is released.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder deleteWithInstance(Boolean deleteWithInstance) {
+                this.deleteWithInstance = deleteWithInstance;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the data disk is encrypted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder encrypted(String encrypted) {
+                this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * SystemDiskCategory.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
+                return this;
+            }
+
+            /**
+             * SystemDiskPerformanceLevel.
+             */
+            public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+                this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Long systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
             } 
 
         } 

@@ -211,6 +211,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
@@ -232,6 +235,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             this.OSName = builder.OSName;
             this.OSNameEn = builder.OSNameEn;
             this.OSType = builder.OSType;
+            this.platform = builder.platform;
             this.size = builder.size;
             this.status = builder.status;
             this.usage = builder.usage;
@@ -323,6 +327,13 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return size
          */
         public Long getSize() {
@@ -355,6 +366,7 @@ public class DescribeRCImageListResponseBody extends TeaModel {
             private String OSName; 
             private String OSNameEn; 
             private String OSType; 
+            private String platform; 
             private Long size; 
             private String status; 
             private String usage; 
@@ -483,6 +495,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

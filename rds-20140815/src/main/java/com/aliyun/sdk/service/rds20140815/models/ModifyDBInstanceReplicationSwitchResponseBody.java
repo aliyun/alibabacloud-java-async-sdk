@@ -43,7 +43,7 @@ public class ModifyDBInstanceReplicationSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>

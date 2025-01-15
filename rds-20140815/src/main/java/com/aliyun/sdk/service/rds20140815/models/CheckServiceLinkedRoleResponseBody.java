@@ -23,9 +23,13 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RequireServiceLinkedRole")
+    private String requireServiceLinkedRole;
+
     private CheckServiceLinkedRoleResponseBody(Builder builder) {
         this.hasServiceLinkedRole = builder.hasServiceLinkedRole;
         this.requestId = builder.requestId;
+        this.requireServiceLinkedRole = builder.requireServiceLinkedRole;
     }
 
     public static Builder builder() {
@@ -50,9 +54,17 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return requireServiceLinkedRole
+     */
+    public String getRequireServiceLinkedRole() {
+        return this.requireServiceLinkedRole;
+    }
+
     public static final class Builder {
         private String hasServiceLinkedRole; 
         private String requestId; 
+        private String requireServiceLinkedRole; 
 
         /**
          * <p>Indicates whether an SLR is created.</p>
@@ -73,6 +85,14 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RequireServiceLinkedRole.
+         */
+        public Builder requireServiceLinkedRole(String requireServiceLinkedRole) {
+            this.requireServiceLinkedRole = requireServiceLinkedRole;
             return this;
         }
 
