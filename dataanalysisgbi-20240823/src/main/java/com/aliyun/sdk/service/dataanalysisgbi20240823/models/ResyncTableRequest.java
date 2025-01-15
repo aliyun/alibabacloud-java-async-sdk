@@ -22,6 +22,10 @@ public class ResyncTableRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep")
+    private Boolean keep;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tableIdKey")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableIdKey;
@@ -34,6 +38,7 @@ public class ResyncTableRequest extends Request {
     private ResyncTableRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.keep = builder.keep;
         this.tableIdKey = builder.tableIdKey;
         this.workspaceId = builder.workspaceId;
     }
@@ -59,6 +64,13 @@ public class ResyncTableRequest extends Request {
     }
 
     /**
+     * @return keep
+     */
+    public Boolean getKeep() {
+        return this.keep;
+    }
+
+    /**
      * @return tableIdKey
      */
     public String getTableIdKey() {
@@ -74,6 +86,7 @@ public class ResyncTableRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResyncTableRequest, Builder> {
         private String regionId; 
+        private Boolean keep; 
         private String tableIdKey; 
         private String workspaceId; 
 
@@ -84,6 +97,7 @@ public class ResyncTableRequest extends Request {
         private Builder(ResyncTableRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.keep = request.keep;
             this.tableIdKey = request.tableIdKey;
             this.workspaceId = request.workspaceId;
         } 
@@ -94,6 +108,15 @@ public class ResyncTableRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * keep.
+         */
+        public Builder keep(Boolean keep) {
+            this.putBodyParameter("keep", keep);
+            this.keep = keep;
             return this;
         }
 

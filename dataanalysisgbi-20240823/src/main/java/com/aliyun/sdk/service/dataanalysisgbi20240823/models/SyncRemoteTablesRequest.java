@@ -26,6 +26,10 @@ public class SyncRemoteTablesRequest extends Request {
     private java.util.List<String> keepTableNames;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("noModifiedTableNames")
+    private java.util.List<String> noModifiedTableNames;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pullSamples")
     private Boolean pullSamples;
 
@@ -43,6 +47,7 @@ public class SyncRemoteTablesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.keepTableNames = builder.keepTableNames;
+        this.noModifiedTableNames = builder.noModifiedTableNames;
         this.pullSamples = builder.pullSamples;
         this.tableNames = builder.tableNames;
         this.workspaceId = builder.workspaceId;
@@ -76,6 +81,13 @@ public class SyncRemoteTablesRequest extends Request {
     }
 
     /**
+     * @return noModifiedTableNames
+     */
+    public java.util.List<String> getNoModifiedTableNames() {
+        return this.noModifiedTableNames;
+    }
+
+    /**
      * @return pullSamples
      */
     public Boolean getPullSamples() {
@@ -99,6 +111,7 @@ public class SyncRemoteTablesRequest extends Request {
     public static final class Builder extends Request.Builder<SyncRemoteTablesRequest, Builder> {
         private String regionId; 
         private java.util.List<String> keepTableNames; 
+        private java.util.List<String> noModifiedTableNames; 
         private Boolean pullSamples; 
         private java.util.List<String> tableNames; 
         private String workspaceId; 
@@ -111,6 +124,7 @@ public class SyncRemoteTablesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.keepTableNames = request.keepTableNames;
+            this.noModifiedTableNames = request.noModifiedTableNames;
             this.pullSamples = request.pullSamples;
             this.tableNames = request.tableNames;
             this.workspaceId = request.workspaceId;
@@ -131,6 +145,15 @@ public class SyncRemoteTablesRequest extends Request {
         public Builder keepTableNames(java.util.List<String> keepTableNames) {
             this.putBodyParameter("keepTableNames", keepTableNames);
             this.keepTableNames = keepTableNames;
+            return this;
+        }
+
+        /**
+         * noModifiedTableNames.
+         */
+        public Builder noModifiedTableNames(java.util.List<String> noModifiedTableNames) {
+            this.putBodyParameter("noModifiedTableNames", noModifiedTableNames);
+            this.noModifiedTableNames = noModifiedTableNames;
             return this;
         }
 
