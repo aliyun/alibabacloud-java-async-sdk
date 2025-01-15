@@ -2412,7 +2412,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</p>
      * 
      * @param request the request parameters of UpdateClusterAuditLogConfig  UpdateClusterAuditLogConfigRequest
      * @return UpdateClusterAuditLogConfigResponse

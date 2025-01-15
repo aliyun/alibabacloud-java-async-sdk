@@ -47,6 +47,10 @@ public class CreateAutoscalingConfigRequest extends Request {
     private Integer minReplicaCount;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("priorities")
+    private java.util.Map<String, java.util.List<String>> priorities;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("recycle_node_deletion_enabled")
     private Boolean recycleNodeDeletionEnabled;
 
@@ -91,6 +95,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         this.gpuUtilizationThreshold = builder.gpuUtilizationThreshold;
         this.maxGracefulTerminationSec = builder.maxGracefulTerminationSec;
         this.minReplicaCount = builder.minReplicaCount;
+        this.priorities = builder.priorities;
         this.recycleNodeDeletionEnabled = builder.recycleNodeDeletionEnabled;
         this.scaleDownEnabled = builder.scaleDownEnabled;
         this.scaleUpFromZero = builder.scaleUpFromZero;
@@ -165,6 +170,13 @@ public class CreateAutoscalingConfigRequest extends Request {
     }
 
     /**
+     * @return priorities
+     */
+    public java.util.Map<String, java.util.List<String>> getPriorities() {
+        return this.priorities;
+    }
+
+    /**
      * @return recycleNodeDeletionEnabled
      */
     public Boolean getRecycleNodeDeletionEnabled() {
@@ -235,6 +247,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         private String gpuUtilizationThreshold; 
         private Integer maxGracefulTerminationSec; 
         private Integer minReplicaCount; 
+        private java.util.Map<String, java.util.List<String>> priorities; 
         private Boolean recycleNodeDeletionEnabled; 
         private Boolean scaleDownEnabled; 
         private Boolean scaleUpFromZero; 
@@ -258,6 +271,7 @@ public class CreateAutoscalingConfigRequest extends Request {
             this.gpuUtilizationThreshold = request.gpuUtilizationThreshold;
             this.maxGracefulTerminationSec = request.maxGracefulTerminationSec;
             this.minReplicaCount = request.minReplicaCount;
+            this.priorities = request.priorities;
             this.recycleNodeDeletionEnabled = request.recycleNodeDeletionEnabled;
             this.scaleDownEnabled = request.scaleDownEnabled;
             this.scaleUpFromZero = request.scaleUpFromZero;
@@ -361,6 +375,15 @@ public class CreateAutoscalingConfigRequest extends Request {
         public Builder minReplicaCount(Integer minReplicaCount) {
             this.putBodyParameter("min_replica_count", minReplicaCount);
             this.minReplicaCount = minReplicaCount;
+            return this;
+        }
+
+        /**
+         * priorities.
+         */
+        public Builder priorities(java.util.Map<String, java.util.List<String>> priorities) {
+            this.putBodyParameter("priorities", priorities);
+            this.priorities = priorities;
             return this;
         }
 

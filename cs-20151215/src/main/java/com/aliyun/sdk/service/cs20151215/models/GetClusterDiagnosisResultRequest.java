@@ -111,7 +111,7 @@ public class GetClusterDiagnosisResultRequest extends Request {
         }
 
         /**
-         * <p>查询语言。</p>
+         * <p>The query language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh_CN</p>

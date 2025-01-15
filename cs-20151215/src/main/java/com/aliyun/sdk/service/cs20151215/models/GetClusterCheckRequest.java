@@ -88,7 +88,7 @@ public class GetClusterCheckRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster check task.</p>
+         * <p>The ID of the cluster check task. You can call the <a href="https://help.aliyun.com/document_detail/2667902.html">RunClusterCheck</a> operation to obtain the check_id.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

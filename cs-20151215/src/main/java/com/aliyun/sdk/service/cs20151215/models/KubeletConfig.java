@@ -29,6 +29,12 @@ public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("containerLogMaxSize")
     private String containerLogMaxSize;
 
+    @com.aliyun.core.annotation.NameInMap("containerLogMaxWorkers")
+    private Integer containerLogMaxWorkers;
+
+    @com.aliyun.core.annotation.NameInMap("containerLogMonitorInterval")
+    private String containerLogMonitorInterval;
+
     @com.aliyun.core.annotation.NameInMap("cpuCFSQuota")
     private Boolean cpuCFSQuota;
 
@@ -109,6 +115,8 @@ public class KubeletConfig extends TeaModel {
         this.clusterDNS = builder.clusterDNS;
         this.containerLogMaxFiles = builder.containerLogMaxFiles;
         this.containerLogMaxSize = builder.containerLogMaxSize;
+        this.containerLogMaxWorkers = builder.containerLogMaxWorkers;
+        this.containerLogMonitorInterval = builder.containerLogMonitorInterval;
         this.cpuCFSQuota = builder.cpuCFSQuota;
         this.cpuCFSQuotaPeriod = builder.cpuCFSQuotaPeriod;
         this.cpuManagerPolicy = builder.cpuManagerPolicy;
@@ -170,6 +178,20 @@ public class KubeletConfig extends TeaModel {
      */
     public String getContainerLogMaxSize() {
         return this.containerLogMaxSize;
+    }
+
+    /**
+     * @return containerLogMaxWorkers
+     */
+    public Integer getContainerLogMaxWorkers() {
+        return this.containerLogMaxWorkers;
+    }
+
+    /**
+     * @return containerLogMonitorInterval
+     */
+    public String getContainerLogMonitorInterval() {
+        return this.containerLogMonitorInterval;
     }
 
     /**
@@ -352,6 +374,8 @@ public class KubeletConfig extends TeaModel {
         private java.util.List<String> clusterDNS; 
         private Long containerLogMaxFiles; 
         private String containerLogMaxSize; 
+        private Integer containerLogMaxWorkers; 
+        private String containerLogMonitorInterval; 
         private Boolean cpuCFSQuota; 
         private String cpuCFSQuotaPeriod; 
         private String cpuManagerPolicy; 
@@ -407,6 +431,22 @@ public class KubeletConfig extends TeaModel {
          */
         public Builder containerLogMaxSize(String containerLogMaxSize) {
             this.containerLogMaxSize = containerLogMaxSize;
+            return this;
+        }
+
+        /**
+         * containerLogMaxWorkers.
+         */
+        public Builder containerLogMaxWorkers(Integer containerLogMaxWorkers) {
+            this.containerLogMaxWorkers = containerLogMaxWorkers;
+            return this;
+        }
+
+        /**
+         * containerLogMonitorInterval.
+         */
+        public Builder containerLogMonitorInterval(String containerLogMonitorInterval) {
+            this.containerLogMonitorInterval = containerLogMonitorInterval;
             return this;
         }
 

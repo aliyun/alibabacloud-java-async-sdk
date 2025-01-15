@@ -78,7 +78,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>48BD70F6-A7E6-543D-9F23-08DEB764C92E</p>
@@ -89,7 +89,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>T-5a54309c80282e39ea00002f</p>
