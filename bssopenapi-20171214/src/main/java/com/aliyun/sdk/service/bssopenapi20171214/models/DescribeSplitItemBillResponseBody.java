@@ -159,7 +159,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         private Float adjustAmount;
 
         @com.aliyun.core.annotation.NameInMap("AfterDiscountAmount")
-        private String afterDiscountAmount;
+        private Float afterDiscountAmount;
 
         @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private String billAccountID;
@@ -396,7 +396,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         /**
          * @return afterDiscountAmount
          */
-        public String getAfterDiscountAmount() {
+        public Float getAfterDiscountAmount() {
             return this.afterDiscountAmount;
         }
 
@@ -773,7 +773,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float adjustAmount; 
-            private String afterDiscountAmount; 
+            private Float afterDiscountAmount; 
             private String billAccountID; 
             private String billAccountName; 
             private String billingDate; 
@@ -842,7 +842,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             /**
              * AfterDiscountAmount.
              */
-            public Builder afterDiscountAmount(String afterDiscountAmount) {
+            public Builder afterDiscountAmount(Float afterDiscountAmount) {
                 this.afterDiscountAmount = afterDiscountAmount;
                 return this;
             }

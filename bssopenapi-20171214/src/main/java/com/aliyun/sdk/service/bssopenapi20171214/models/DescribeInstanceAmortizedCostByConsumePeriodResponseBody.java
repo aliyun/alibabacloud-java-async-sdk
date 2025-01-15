@@ -143,6 +143,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
      * <p>DescribeInstanceAmortizedCostByConsumePeriodResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AfterDiscountAmount")
+        private Double afterDiscountAmount;
+
         @com.aliyun.core.annotation.NameInMap("AmortizationPeriod")
         private String amortizationPeriod;
 
@@ -172,6 +175,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
 
         @com.aliyun.core.annotation.NameInMap("CostUnitCode")
         private String costUnitCode;
+
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationAfterDiscountAmount")
+        private Double currentAmortizationAfterDiscountAmount;
 
         @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCashCoupons")
         private Double currentAmortizationDeductedByCashCoupons;
@@ -227,6 +233,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Double pretaxGrossAmount;
 
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedAfterDiscountAmount")
+        private Double previouslyAmortizedAfterDiscountAmount;
+
         @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         private Double previouslyAmortizedDeductedByCashCoupons;
 
@@ -265,6 +274,9 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
 
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
+
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationAfterDiscountAmount")
+        private Double remainingAmortizationAfterDiscountAmount;
 
         @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCashCoupons")
         private Double remainingAmortizationDeductedByCashCoupons;
@@ -318,6 +330,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         private String zone;
 
         private Items(Builder builder) {
+            this.afterDiscountAmount = builder.afterDiscountAmount;
             this.amortizationPeriod = builder.amortizationPeriod;
             this.amortizationStatus = builder.amortizationStatus;
             this.billAccountID = builder.billAccountID;
@@ -328,6 +341,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             this.consumePeriod = builder.consumePeriod;
             this.costUnit = builder.costUnit;
             this.costUnitCode = builder.costUnitCode;
+            this.currentAmortizationAfterDiscountAmount = builder.currentAmortizationAfterDiscountAmount;
             this.currentAmortizationDeductedByCashCoupons = builder.currentAmortizationDeductedByCashCoupons;
             this.currentAmortizationDeductedByCoupons = builder.currentAmortizationDeductedByCoupons;
             this.currentAmortizationDeductedByPrepaidCard = builder.currentAmortizationDeductedByPrepaidCard;
@@ -346,6 +360,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             this.invoiceDiscount = builder.invoiceDiscount;
             this.pretaxAmount = builder.pretaxAmount;
             this.pretaxGrossAmount = builder.pretaxGrossAmount;
+            this.previouslyAmortizedAfterDiscountAmount = builder.previouslyAmortizedAfterDiscountAmount;
             this.previouslyAmortizedDeductedByCashCoupons = builder.previouslyAmortizedDeductedByCashCoupons;
             this.previouslyAmortizedDeductedByCoupons = builder.previouslyAmortizedDeductedByCoupons;
             this.previouslyAmortizedDeductedByPrepaidCard = builder.previouslyAmortizedDeductedByPrepaidCard;
@@ -359,6 +374,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             this.productDetailCode = builder.productDetailCode;
             this.productName = builder.productName;
             this.region = builder.region;
+            this.remainingAmortizationAfterDiscountAmount = builder.remainingAmortizationAfterDiscountAmount;
             this.remainingAmortizationDeductedByCashCoupons = builder.remainingAmortizationDeductedByCashCoupons;
             this.remainingAmortizationDeductedByCoupons = builder.remainingAmortizationDeductedByCoupons;
             this.remainingAmortizationDeductedByPrepaidCard = builder.remainingAmortizationDeductedByPrepaidCard;
@@ -384,6 +400,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return afterDiscountAmount
+         */
+        public Double getAfterDiscountAmount() {
+            return this.afterDiscountAmount;
         }
 
         /**
@@ -454,6 +477,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
          */
         public String getCostUnitCode() {
             return this.costUnitCode;
+        }
+
+        /**
+         * @return currentAmortizationAfterDiscountAmount
+         */
+        public Double getCurrentAmortizationAfterDiscountAmount() {
+            return this.currentAmortizationAfterDiscountAmount;
         }
 
         /**
@@ -583,6 +613,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         /**
+         * @return previouslyAmortizedAfterDiscountAmount
+         */
+        public Double getPreviouslyAmortizedAfterDiscountAmount() {
+            return this.previouslyAmortizedAfterDiscountAmount;
+        }
+
+        /**
          * @return previouslyAmortizedDeductedByCashCoupons
          */
         public Double getPreviouslyAmortizedDeductedByCashCoupons() {
@@ -671,6 +708,13 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
          */
         public String getRegion() {
             return this.region;
+        }
+
+        /**
+         * @return remainingAmortizationAfterDiscountAmount
+         */
+        public Double getRemainingAmortizationAfterDiscountAmount() {
+            return this.remainingAmortizationAfterDiscountAmount;
         }
 
         /**
@@ -793,6 +837,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         }
 
         public static final class Builder {
+            private Double afterDiscountAmount; 
             private String amortizationPeriod; 
             private String amortizationStatus; 
             private Long billAccountID; 
@@ -803,6 +848,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String consumePeriod; 
             private String costUnit; 
             private String costUnitCode; 
+            private Double currentAmortizationAfterDiscountAmount; 
             private Double currentAmortizationDeductedByCashCoupons; 
             private Double currentAmortizationDeductedByCoupons; 
             private Double currentAmortizationDeductedByPrepaidCard; 
@@ -821,6 +867,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private Double invoiceDiscount; 
             private Double pretaxAmount; 
             private Double pretaxGrossAmount; 
+            private Double previouslyAmortizedAfterDiscountAmount; 
             private Double previouslyAmortizedDeductedByCashCoupons; 
             private Double previouslyAmortizedDeductedByCoupons; 
             private Double previouslyAmortizedDeductedByPrepaidCard; 
@@ -834,6 +881,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String productDetailCode; 
             private String productName; 
             private String region; 
+            private Double remainingAmortizationAfterDiscountAmount; 
             private Double remainingAmortizationDeductedByCashCoupons; 
             private Double remainingAmortizationDeductedByCoupons; 
             private Double remainingAmortizationDeductedByPrepaidCard; 
@@ -851,6 +899,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String subscriptionType; 
             private String tag; 
             private String zone; 
+
+            /**
+             * AfterDiscountAmount.
+             */
+            public Builder afterDiscountAmount(Double afterDiscountAmount) {
+                this.afterDiscountAmount = afterDiscountAmount;
+                return this;
+            }
 
             /**
              * AmortizationPeriod.
@@ -929,6 +985,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              */
             public Builder costUnitCode(String costUnitCode) {
                 this.costUnitCode = costUnitCode;
+                return this;
+            }
+
+            /**
+             * CurrentAmortizationAfterDiscountAmount.
+             */
+            public Builder currentAmortizationAfterDiscountAmount(Double currentAmortizationAfterDiscountAmount) {
+                this.currentAmortizationAfterDiscountAmount = currentAmortizationAfterDiscountAmount;
                 return this;
             }
 
@@ -1077,6 +1141,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
+             * PreviouslyAmortizedAfterDiscountAmount.
+             */
+            public Builder previouslyAmortizedAfterDiscountAmount(Double previouslyAmortizedAfterDiscountAmount) {
+                this.previouslyAmortizedAfterDiscountAmount = previouslyAmortizedAfterDiscountAmount;
+                return this;
+            }
+
+            /**
              * PreviouslyAmortizedDeductedByCashCoupons.
              */
             public Builder previouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
@@ -1177,6 +1249,14 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * RemainingAmortizationAfterDiscountAmount.
+             */
+            public Builder remainingAmortizationAfterDiscountAmount(Double remainingAmortizationAfterDiscountAmount) {
+                this.remainingAmortizationAfterDiscountAmount = remainingAmortizationAfterDiscountAmount;
                 return this;
             }
 
