@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -21,7 +27,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -30,7 +36,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
@@ -71,7 +77,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -85,16 +91,16 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -110,10 +116,11 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -122,7 +129,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -131,22 +141,26 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account IDs of the members. This parameter specifies a filter condition for the query.
-         * <p>
-         * 
-         * > If you want to query the tags that are added to the members in a resource directory, you must configure both the `ResourceId` and `ResourceType` parameters and set the `ResourceType` parameter to `Account` in your request.
+         * <p>The Alibaba Cloud account IDs of the members. This parameter specifies a filter condition for the query.</p>
+         * <blockquote>
+         * <p>If you want to query the tags that are added to the members in a resource directory, you must configure both the <code>ResourceId</code> and <code>ResourceType</code> parameters and set the <code>ResourceType</code> parameter to <code>Account</code> in your request.</p>
+         * </blockquote>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:
-         * <p>
+         * <p>The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:</p>
+         * <ul>
+         * <li>Account: member</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Account: member
+         * <strong>example:</strong>
+         * <p>Account</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -155,12 +169,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags. This parameter specifies a filter condition for the query.
-         * <p>
-         * 
-         * You can specify a maximum of 20 tags.
+         * <p>The tags. This parameter specifies a filter condition for the query.</p>
+         * <p>You can specify a maximum of 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -173,6 +185,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -212,7 +230,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -220,7 +241,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

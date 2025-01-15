@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableResourceDirectoryRequest} extends {@link RequestModel}
  *
  * <p>EnableResourceDirectoryRequest</p>
@@ -110,11 +116,14 @@ public class EnableResourceDirectoryRequest extends Request {
         } 
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run.
-         * *   **false** (default): performs a dry run and performs the actual request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -123,11 +132,15 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The mode in which you enable a resource directory. Valid values:
-         * <p>
+         * <p>The mode in which you enable a resource directory. Valid values:</p>
+         * <ul>
+         * <li>CurrentAccount: The current account is used to enable a resource directory.</li>
+         * <li>NewManagementAccount: A newly created account is used to enable a resource directory. If you select this mode, you must configure the <code>MAName</code>, <code>MASecureMobilePhone</code>, and <code>VerificationCode</code> parameters.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CurrentAccount: The current account is used to enable a resource directory.
-         * *   NewManagementAccount: A newly created account is used to enable a resource directory. If you select this mode, you must configure the `MAName`, `MASecureMobilePhone`, and `VerificationCode` parameters.
+         * <strong>example:</strong>
+         * <p>CurrentAccount</p>
          */
         public Builder enableMode(String enableMode) {
             this.putQueryParameter("EnableMode", enableMode);
@@ -136,10 +149,11 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The name of the newly created account.
-         * <p>
+         * <p>The name of the newly created account.</p>
+         * <p>Specify the name in the <code>&lt;Prefix&gt;@rdadmin.aliyunid.com</code> format. The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start and end with a letter or digit. Valid special characters include underscores (<code>_</code>), periods (.), and hyphens (-). The prefix must be 2 to 50 characters in length.</p>
          * 
-         * Specify the name in the `<Prefix>@rdadmin.aliyunid.com` format. The prefix can contain letters, digits, and special characters but cannot contain consecutive special characters. The prefix must start and end with a letter or digit. Valid special characters include underscores (`_`), periods (.), and hyphens (-). The prefix must be 2 to 50 characters in length.
+         * <strong>example:</strong>
+         * <p><a href="mailto:user01@rdadmin.aliyunid.com">user01@rdadmin.aliyunid.com</a></p>
          */
         public Builder MAName(String MAName) {
             this.putQueryParameter("MAName", MAName);
@@ -148,14 +162,15 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The mobile phone number that is bound to the newly created account.
-         * <p>
+         * <p>The mobile phone number that is bound to the newly created account.</p>
+         * <p>If you leave this parameter empty, the mobile phone number that is bound to the current account is used. The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the <a href="~~SendVerificationCodeForEnableRD~~">SendVerificationCodeForEnableRD</a> operation to obtain a verification code.</p>
+         * <p>Specify the mobile phone number in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
+         * <blockquote>
+         * <p>Mobile phone numbers in the <code>86-&lt;Mobile phone number&gt;</code> format in the Chinese mainland are not supported.</p>
+         * </blockquote>
          * 
-         * If you leave this parameter empty, the mobile phone number that is bound to the current account is used. The mobile phone number you specify must be the same as the mobile phone number that you specify when you call the [SendVerificationCodeForEnableRD](~~SendVerificationCodeForEnableRD~~) operation to obtain a verification code.
-         * 
-         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
-         * 
-         * > Mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are not supported.
+         * <strong>example:</strong>
+         * <p>xx-13900001234</p>
          */
         public Builder MASecureMobilePhone(String MASecureMobilePhone) {
             this.putQueryParameter("MASecureMobilePhone", MASecureMobilePhone);
@@ -164,10 +179,11 @@ public class EnableResourceDirectoryRequest extends Request {
         }
 
         /**
-         * The verification code.
-         * <p>
+         * <p>The verification code.</p>
+         * <p>You can call the <a href="~~SendVerificationCodeForEnableRD~~">SendVerificationCodeForEnableRD</a> operation to obtain the verification code.</p>
          * 
-         * You can call the [SendVerificationCodeForEnableRD](~~SendVerificationCodeForEnableRD~~) operation to obtain the verification code.
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder verificationCode(String verificationCode) {
             this.putQueryParameter("VerificationCode", verificationCode);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountsForParentResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountsForParentResponseBody</p>
@@ -85,7 +91,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the members.
+         * <p>The information about the members.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -93,7 +99,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +110,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +121,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class ListAccountsForParentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountsForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsForParentResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +193,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +204,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,9 +221,15 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountsForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsForParentResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -210,17 +246,17 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -232,6 +268,12 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountsForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsForParentResponseBody</p>
+     */
     public static class Account extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -391,7 +433,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>184311716100****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -399,7 +444,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the member.
+             * <p>The Alibaba Cloud account name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:hdd01429358@alibaba-inc.com">hdd01429358@alibaba-inc.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -407,15 +455,19 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The deletion status of the member. Valid values:
-             * <p>
+             * <p>The deletion status of the member. Valid values:</p>
+             * <ul>
+             * <li>Checking: A deletion check is being performed for the member.</li>
+             * <li>Deleting: The member is being deleted.</li>
+             * <li>CheckFailed: The deletion check for the member fails.</li>
+             * <li>DeleteFailed: The member fails to be deleted.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If deletion is not performed for the member, the value of this parameter is empty.</p>
+             * </blockquote>
              * 
-             * *   Checking: A deletion check is being performed for the member.
-             * *   Deleting: The member is being deleted.
-             * *   CheckFailed: The deletion check for the member fails.
-             * *   DeleteFailed: The member fails to be deleted.
-             * 
-             * >  If deletion is not performed for the member, the value of this parameter is empty.
+             * <strong>example:</strong>
+             * <p>Checking</p>
              */
             public Builder deletionStatus(String deletionStatus) {
                 this.deletionStatus = deletionStatus;
@@ -423,7 +475,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -431,7 +486,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-bVaRIG****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -439,11 +497,14 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory.
-             * <p>
+             * <p>The way in which the member joins the resource directory.</p>
+             * <ul>
+             * <li>invited: The member is invited to join the resource directory.</li>
+             * <li>created: The member is directly created in the resource directory.</li>
+             * </ul>
              * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -451,7 +512,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member joined the resource directory. The time is displayed in UTC.
+             * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -459,7 +523,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was modified. The time is displayed in UTC.
+             * <p>The time when the member was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -467,7 +534,10 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-k4****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -475,16 +545,19 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
+             * <p>The status of the member. Valid values:</p>
+             * <ul>
+             * <li>CreateSuccess: The member is created.</li>
+             * <li>PromoteVerifying: The upgrade of the member is under confirmation.</li>
+             * <li>PromoteFailed: The upgrade of the member fails.</li>
+             * <li>PromoteExpired: The upgrade of the member expires.</li>
+             * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
+             * <li>PromoteSuccess: The member is upgraded.</li>
+             * <li>InviteSuccess: The member accepts the invitation.</li>
+             * </ul>
              * 
-             * *   CreateSuccess: The member is created.
-             * *   PromoteVerifying: The upgrade of the member is under confirmation.
-             * *   PromoteFailed: The upgrade of the member fails.
-             * *   PromoteExpired: The upgrade of the member expires.
-             * *   PromoteCancelled: The upgrade of the member is canceled.
-             * *   PromoteSuccess: The member is upgraded.
-             * *   InviteSuccess: The member accepts the invitation.
+             * <strong>example:</strong>
+             * <p>CreateSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -492,7 +565,7 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the member.
+             * <p>The tags that are added to the member.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -500,11 +573,14 @@ public class ListAccountsForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member. Valid values:
-             * <p>
+             * <p>The type of the member. Valid values:</p>
+             * <ul>
+             * <li>CloudAccount: cloud account</li>
+             * <li>ResourceAccount: resource account</li>
+             * </ul>
              * 
-             * *   CloudAccount: cloud account
-             * *   ResourceAccount: resource account
+             * <strong>example:</strong>
+             * <p>ResourceAccount</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -518,9 +594,15 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountsForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsForParentResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
-        private java.util.List < Account> account;
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -537,17 +619,17 @@ public class ListAccountsForParentResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }

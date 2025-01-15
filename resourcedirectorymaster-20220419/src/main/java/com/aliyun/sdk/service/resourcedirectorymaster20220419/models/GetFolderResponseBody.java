@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFolderResponseBody} extends {@link TeaModel}
  *
  * <p>GetFolderResponseBody</p>
@@ -49,7 +55,7 @@ public class GetFolderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the folder.
+         * <p>The information about the folder.</p>
          */
         public Builder folder(Folder folder) {
             this.folder = folder;
@@ -57,7 +63,10 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2CBCA30-C8DD-423E-B4AD-4FB694C9180C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetFolderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFolderResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFolderResponseBody</p>
+     */
     public static class Folder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -145,7 +160,10 @@ public class GetFolderResponseBody extends TeaModel {
             private String resourceDirectoryPath; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-15T06:39:08.521Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -153,7 +171,10 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-Jyl5U7****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -161,7 +182,10 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Applications</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -169,7 +193,10 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder.
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-Wm****</p>
              */
             public Builder parentFolderId(String parentFolderId) {
                 this.parentFolderId = parentFolderId;
@@ -177,7 +204,7 @@ public class GetFolderResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the folder in the resource directory.
+             * <p>The path of the folder in the resource directory.</p>
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddMessageContactResponseBody} extends {@link TeaModel}
  *
  * <p>AddMessageContactResponseBody</p>
@@ -49,7 +55,7 @@ public class AddMessageContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the contact.
+         * <p>The information about the contact.</p>
          */
         public Builder contact(Contact contact) {
             this.contact = contact;
@@ -57,7 +63,10 @@ public class AddMessageContactResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DFCE4C9-04A9-4C83-BB14-FE791275EC53</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class AddMessageContactResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddMessageContactResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddMessageContactResponseBody</p>
+     */
     public static class Contact extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
@@ -109,7 +124,10 @@ public class AddMessageContactResponseBody extends TeaModel {
             private String createDate; 
 
             /**
-             * The ID of the contact.
+             * <p>The ID of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-qL4HqKONzOM7****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -117,7 +135,10 @@ public class AddMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the contact was created.
+             * <p>The time when the contact was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-27 17:19:21</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;

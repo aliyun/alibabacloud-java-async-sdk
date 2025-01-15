@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDelegatedAdministratorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDelegatedAdministratorsResponseBody</p>
@@ -85,7 +91,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information about the delegated administrator accounts.
+         * <p>The information about the delegated administrator accounts.</p>
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -93,7 +99,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +110,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +121,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>009C3A02-7D4B-416C-9CE7-548C91508F1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDelegatedAdministratorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDelegatedAdministratorsResponseBody</p>
+     */
     public static class Account extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -205,7 +229,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             private String servicePrincipal; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138660628348****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -213,7 +240,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was specified as a delegated administrator account.
+             * <p>The time when the member was specified as a delegated administrator account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616652684164</p>
              */
             public Builder delegationEnabledTime(String delegationEnabledTime) {
                 this.delegationEnabledTime = delegationEnabledTime;
@@ -221,7 +251,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -229,11 +262,14 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory. Valid values:
-             * <p>
+             * <p>The way in which the member joins the resource directory. Valid values:</p>
+             * <ul>
+             * <li>invited: The member is invited to join the resource directory.</li>
+             * <li>created: The member is directly created in the resource directory.</li>
+             * </ul>
              * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -241,7 +277,10 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the trusted service.
+             * <p>The identifier of the trusted service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudfw.aliyuncs.com</p>
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;
@@ -255,9 +294,15 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDelegatedAdministratorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDelegatedAdministratorsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
-        private java.util.List < Account> account;
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -274,17 +319,17 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }

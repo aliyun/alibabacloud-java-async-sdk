@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociateMembersRequest} extends {@link RequestModel}
  *
  * <p>DisassociateMembersRequest</p>
@@ -19,7 +25,7 @@ public class DisassociateMembersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Members")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > members;
+    private java.util.List<String> members;
 
     private DisassociateMembersRequest(Builder builder) {
         super(builder);
@@ -50,13 +56,13 @@ public class DisassociateMembersRequest extends Request {
     /**
      * @return members
      */
-    public java.util.List < String > getMembers() {
+    public java.util.List<String> getMembers() {
         return this.members;
     }
 
     public static final class Builder extends Request.Builder<DisassociateMembersRequest, Builder> {
         private String contactId; 
-        private java.util.List < String > members; 
+        private java.util.List<String> members; 
 
         private Builder() {
             super();
@@ -69,7 +75,11 @@ public class DisassociateMembersRequest extends Request {
         } 
 
         /**
-         * The ID of the contact.
+         * <p>The ID of the contact.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -78,9 +88,10 @@ public class DisassociateMembersRequest extends Request {
         }
 
         /**
-         * The IDs of objects from which you want to unbind the contact.
+         * <p>The IDs of objects from which you want to unbind the contact.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder members(java.util.List < String > members) {
+        public Builder members(java.util.List<String> members) {
             this.putQueryParameter("Members", members);
             this.members = members;
             return this;

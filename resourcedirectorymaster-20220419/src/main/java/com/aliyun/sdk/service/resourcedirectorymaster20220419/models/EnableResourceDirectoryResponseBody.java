@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>EnableResourceDirectoryResponseBody</p>
@@ -49,7 +55,10 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory resourceDirectory; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC2FE94D-A4A2-51A1-A493-5C273A36C46A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resource directory.
+         * <p>The information about the resource directory.</p>
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.resourceDirectory = resourceDirectory;
@@ -70,6 +79,12 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EnableResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>EnableResourceDirectoryResponseBody</p>
+     */
     public static class ResourceDirectory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -145,7 +160,10 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             private String rootFolderId; 
 
             /**
-             * The time when the resource directory was enabled.
+             * <p>The time when the resource directory was enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-08T02:15:31.744Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -153,7 +171,10 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account.
+             * <p>The ID of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>507408460615****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -161,7 +182,10 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account.
+             * <p>The name of the management account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -169,7 +193,10 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-54****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -177,7 +204,10 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Root folder.
+             * <p>The ID of the Root folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-G9****</p>
              */
             public Builder rootFolderId(String rootFolderId) {
                 this.rootFolderId = rootFolderId;

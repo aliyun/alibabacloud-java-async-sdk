@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAccountRequest} extends {@link RequestModel}
  *
  * <p>DeleteAccountRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteAccountRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AbandonableCheckId")
-    private java.util.List < String > abandonableCheckId;
+    private java.util.List<String> abandonableCheckId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountId")
@@ -42,7 +48,7 @@ public class DeleteAccountRequest extends Request {
     /**
      * @return abandonableCheckId
      */
-    public java.util.List < String > getAbandonableCheckId() {
+    public java.util.List<String> getAbandonableCheckId() {
         return this.abandonableCheckId;
     }
 
@@ -54,7 +60,7 @@ public class DeleteAccountRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAccountRequest, Builder> {
-        private java.util.List < String > abandonableCheckId; 
+        private java.util.List<String> abandonableCheckId; 
         private String accountId; 
 
         private Builder() {
@@ -68,12 +74,10 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * The IDs of the check items that you can choose to ignore for the member deletion.
-         * <p>
-         * 
-         * You can obtain the IDs from the response of the [GetAccountDeletionCheckResult](~~GetAccountDeletionCheckResult~~) operation.
+         * <p>The IDs of the check items that you can choose to ignore for the member deletion.</p>
+         * <p>You can obtain the IDs from the response of the <a href="~~GetAccountDeletionCheckResult~~">GetAccountDeletionCheckResult</a> operation.</p>
          */
-        public Builder abandonableCheckId(java.util.List < String > abandonableCheckId) {
+        public Builder abandonableCheckId(java.util.List<String> abandonableCheckId) {
             String abandonableCheckIdShrink = shrink(abandonableCheckId, "AbandonableCheckId", "json");
             this.putQueryParameter("AbandonableCheckId", abandonableCheckIdShrink);
             this.abandonableCheckId = abandonableCheckId;
@@ -81,7 +85,11 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member that you want to delete.
+         * <p>The Alibaba Cloud account ID of the member that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169946124551****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

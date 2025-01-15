@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountRequest} extends {@link RequestModel}
  *
  * <p>GetAccountRequest</p>
@@ -68,7 +74,11 @@ public class GetAccountRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member.
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181761095690****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -77,11 +87,14 @@ public class GetAccountRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information of tags. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information of tags. Valid values:</p>
+         * <ul>
+         * <li>false (default value)</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false (default value)
-         * *   true
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeTags(Boolean includeTags) {
             this.putQueryParameter("IncludeTags", includeTags);

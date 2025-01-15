@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagResources")
-    private java.util.List < TagResources> tagResources;
+    private java.util.List<TagResources> tagResources;
 
     private ListTagResourcesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -51,21 +57,24 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResources> getTagResources() {
+    public java.util.List<TagResources> getTagResources() {
         return this.tagResources;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TagResources> tagResources; 
+        private java.util.List<TagResources> tagResources; 
 
         /**
-         * Indicates whether the next query is required.```` Valid values:
-         * <p>
+         * <p>Indicates whether the next query is required.```` Valid values:</p>
+         * <ul>
+         * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the <code>next query</code> is not required.</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.````</li>
+         * </ul>
          * 
-         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the `next query` is not required.
-         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.````
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -73,7 +82,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8054B059-6B36-53BF-AA45-B8C9A0ED05AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,9 +93,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tagResources(java.util.List < TagResources> tagResources) {
+        public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
             return this;
         }
@@ -94,6 +106,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -157,7 +175,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1098***</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -165,10 +186,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object whose tags are queried. Valid values:
-             * <p>
+             * <p>The type of the object whose tags are queried. Valid values:</p>
+             * <ul>
+             * <li>Account: member</li>
+             * </ul>
              * 
-             * *   Account: member
+             * <strong>example:</strong>
+             * <p>Account</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -176,7 +200,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -184,7 +211,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

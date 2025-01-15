@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDelegatedServicesForAccountResponseBody} extends {@link TeaModel}
  *
  * <p>ListDelegatedServicesForAccountResponseBody</p>
@@ -49,10 +55,10 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the trusted services.
-         * <p>
-         * 
-         * > If the value of this parameter is empty, the member is not specified as a delegated administrator account.
+         * <p>The information about the trusted services.</p>
+         * <blockquote>
+         * <p>If the value of this parameter is empty, the member is not specified as a delegated administrator account.</p>
+         * </blockquote>
          */
         public Builder delegatedServices(DelegatedServices delegatedServices) {
             this.delegatedServices = delegatedServices;
@@ -60,7 +66,10 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9C03B94-9396-4794-A74B-13DC437556A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,6 +82,12 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDelegatedServicesForAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDelegatedServicesForAccountResponseBody</p>
+     */
     public static class DelegatedService extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DelegationEnabledTime")
         private String delegationEnabledTime;
@@ -124,7 +139,10 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the member was specified as a delegated administrator account.
+             * <p>The time when the member was specified as a delegated administrator account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616652684164</p>
              */
             public Builder delegationEnabledTime(String delegationEnabledTime) {
                 this.delegationEnabledTime = delegationEnabledTime;
@@ -132,7 +150,10 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the trusted service.
+             * <p>The identifier of the trusted service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudfw.aliyuncs.com</p>
              */
             public Builder servicePrincipal(String servicePrincipal) {
                 this.servicePrincipal = servicePrincipal;
@@ -140,11 +161,14 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the trusted service. Valid values:
-             * <p>
+             * <p>The status of the trusted service. Valid values:</p>
+             * <ul>
+             * <li>ENABLED: enabled</li>
+             * <li>DISABLED: disabled</li>
+             * </ul>
              * 
-             * *   ENABLED: enabled
-             * *   DISABLED: disabled
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -158,9 +182,15 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDelegatedServicesForAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDelegatedServicesForAccountResponseBody</p>
+     */
     public static class DelegatedServices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DelegatedService")
-        private java.util.List < DelegatedService> delegatedService;
+        private java.util.List<DelegatedService> delegatedService;
 
         private DelegatedServices(Builder builder) {
             this.delegatedService = builder.delegatedService;
@@ -177,17 +207,17 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
         /**
          * @return delegatedService
          */
-        public java.util.List < DelegatedService> getDelegatedService() {
+        public java.util.List<DelegatedService> getDelegatedService() {
             return this.delegatedService;
         }
 
         public static final class Builder {
-            private java.util.List < DelegatedService> delegatedService; 
+            private java.util.List<DelegatedService> delegatedService; 
 
             /**
              * DelegatedService.
              */
-            public Builder delegatedService(java.util.List < DelegatedService> delegatedService) {
+            public Builder delegatedService(java.util.List<DelegatedService> delegatedService) {
                 this.delegatedService = delegatedService;
                 return this;
             }

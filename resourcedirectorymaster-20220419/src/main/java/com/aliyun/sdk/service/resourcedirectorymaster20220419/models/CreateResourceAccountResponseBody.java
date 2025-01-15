@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceAccountResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceAccountResponseBody</p>
@@ -49,7 +55,7 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the member.
+         * <p>The information of the member.</p>
          */
         public Builder account(Account account) {
             this.account = account;
@@ -57,7 +63,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B356A415-D860-43E5-865A-E2193D62BBD6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class CreateResourceAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateResourceAccountResponseBody</p>
+     */
     public static class Account extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -205,7 +220,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112730938585****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -213,7 +231,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the member.
+             * <p>The Alibaba Cloud account name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice@rd-3g****.aliyunid.com</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -221,7 +242,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -229,7 +253,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-r23M55****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -237,11 +264,14 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory. Valid values:
-             * <p>
+             * <p>The way in which the member joins the resource directory. Valid values:</p>
+             * <ul>
+             * <li>invited: The member is invited to join the resource directory.</li>
+             * <li>created: The member is directly created in the resource directory.</li>
+             * </ul>
              * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -249,7 +279,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member joined the resource directory. The time is displayed in UTC.
+             * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-31T03:37:39.456Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -257,7 +290,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was modified. The time is displayed in UTC.
+             * <p>The time when the member was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-31T03:37:39.456Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -265,7 +301,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-3G****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -273,7 +312,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. The value CreateSuccess indicates that the member is created.
+             * <p>The status of the member. The value CreateSuccess indicates that the member is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -281,7 +323,10 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member. The value ResourceAccount indicates that the member is a resource account.
+             * <p>The type of the member. The value ResourceAccount indicates that the member is a resource account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceAccount</p>
              */
             public Builder type(String type) {
                 this.type = type;

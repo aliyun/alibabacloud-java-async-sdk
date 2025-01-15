@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAccountRequest} extends {@link RequestModel}
  *
  * <p>UpdateAccountRequest</p>
@@ -96,7 +102,11 @@ public class UpdateAccountRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member.
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -105,11 +115,14 @@ public class UpdateAccountRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks items such as whether the member status can be modified and whether security information is configured for the member. If the request does not pass the dry run, an error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks items such as whether the member status can be modified and whether security information is configured for the member. If the request does not pass the dry run, an error code is returned.
-         * *   false (default): performs a dry run and performs the actual request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -118,13 +131,17 @@ public class UpdateAccountRequest extends Request {
         }
 
         /**
-         * The new type of the member. Valid values:
-         * <p>
+         * <p>The new type of the member. Valid values:</p>
+         * <ul>
+         * <li>ResourceAccount: resource account</li>
+         * <li>CloudAccount: cloud account</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can specify either <code>NewDisplayName</code> or <code>NewAccountType</code>.</p>
+         * </blockquote>
          * 
-         * *   ResourceAccount: resource account
-         * *   CloudAccount: cloud account
-         * 
-         * > You can specify either `NewDisplayName` or `NewAccountType`.
+         * <strong>example:</strong>
+         * <p>ResourceAccount</p>
          */
         public Builder newAccountType(String newAccountType) {
             this.putQueryParameter("NewAccountType", newAccountType);
@@ -133,10 +150,13 @@ public class UpdateAccountRequest extends Request {
         }
 
         /**
-         * The new display name of the member.
-         * <p>
+         * <p>The new display name of the member.</p>
+         * <blockquote>
+         * <p>You can specify either <code>NewDisplayName</code> or <code>NewAccountType</code>.</p>
+         * </blockquote>
          * 
-         * > You can specify either `NewDisplayName` or `NewAccountType`.
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);

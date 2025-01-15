@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterDelegatedAdministratorRequest} extends {@link RequestModel}
  *
  * <p>RegisterDelegatedAdministratorRequest</p>
@@ -69,7 +75,11 @@ public class RegisterDelegatedAdministratorRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181761095690****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -78,10 +88,12 @@ public class RegisterDelegatedAdministratorRequest extends Request {
         }
 
         /**
-         * The identifier of the trusted service.
-         * <p>
+         * <p>The identifier of the trusted service.</p>
+         * <p>For more information, see the <code>Trusted service identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see the `Trusted service identifier` column in [Supported trusted services](~~208133~~).
+         * <strong>example:</strong>
+         * <p>cloudfw.aliyuncs.com</p>
          */
         public Builder servicePrincipal(String servicePrincipal) {
             this.putQueryParameter("ServicePrincipal", servicePrincipal);

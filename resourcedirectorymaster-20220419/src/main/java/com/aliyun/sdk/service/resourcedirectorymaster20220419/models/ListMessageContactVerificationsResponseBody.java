@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessageContactVerificationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMessageContactVerificationsResponseBody</p>
  */
 public class ListMessageContactVerificationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContactVerifications")
-    private java.util.List < ContactVerifications> contactVerifications;
+    private java.util.List<ContactVerifications> contactVerifications;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -45,7 +51,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
     /**
      * @return contactVerifications
      */
-    public java.util.List < ContactVerifications> getContactVerifications() {
+    public java.util.List<ContactVerifications> getContactVerifications() {
         return this.contactVerifications;
     }
 
@@ -78,22 +84,25 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContactVerifications> contactVerifications; 
+        private java.util.List<ContactVerifications> contactVerifications; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The record for the contact to be verified.
+         * <p>The record for the contact to be verified.</p>
          */
-        public Builder contactVerifications(java.util.List < ContactVerifications> contactVerifications) {
+        public Builder contactVerifications(java.util.List<ContactVerifications> contactVerifications) {
             this.contactVerifications = contactVerifications;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +110,10 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +121,10 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMessageContactVerificationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessageContactVerificationsResponseBody</p>
+     */
     public static class ContactVerifications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
@@ -169,7 +193,10 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
             private String target; 
 
             /**
-             * The ID of the contact.
+             * <p>The ID of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-qL4HqKONzOM7****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -177,11 +204,14 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
             }
 
             /**
-             * The object that is used for verification. Valid values:
-             * <p>
+             * <p>The object that is used for verification. Valid values:</p>
+             * <ul>
+             * <li>Mobile phone number</li>
+             * <li>Email address</li>
+             * </ul>
              * 
-             * - Mobile phone number
-             * - Email address
+             * <strong>example:</strong>
+             * <p>someone***@example.com</p>
              */
             public Builder target(String target) {
                 this.target = target;

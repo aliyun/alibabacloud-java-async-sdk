@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAncestorsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAncestorsResponseBody</p>
@@ -49,7 +55,7 @@ public class ListAncestorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the folders.
+         * <p>The information of the folders.</p>
          */
         public Builder folders(Folders folders) {
             this.folders = folders;
@@ -57,7 +63,10 @@ public class ListAncestorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83AFBEB6-DC03-406E-9686-867461FF6698</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListAncestorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAncestorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAncestorsResponseBody</p>
+     */
     public static class Folder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -121,7 +136,10 @@ public class ListAncestorsResponseBody extends TeaModel {
             private String folderName; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-18T10:03:35.217Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -129,7 +147,10 @@ public class ListAncestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-b1****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -137,7 +158,10 @@ public class ListAncestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
@@ -151,9 +175,15 @@ public class ListAncestorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAncestorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAncestorsResponseBody</p>
+     */
     public static class Folders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Folder")
-        private java.util.List < Folder> folder;
+        private java.util.List<Folder> folder;
 
         private Folders(Builder builder) {
             this.folder = builder.folder;
@@ -170,17 +200,17 @@ public class ListAncestorsResponseBody extends TeaModel {
         /**
          * @return folder
          */
-        public java.util.List < Folder> getFolder() {
+        public java.util.List<Folder> getFolder() {
             return this.folder;
         }
 
         public static final class Builder {
-            private java.util.List < Folder> folder; 
+            private java.util.List<Folder> folder; 
 
             /**
              * Folder.
              */
-            public Builder folder(java.util.List < Folder> folder) {
+            public Builder folder(java.util.List<Folder> folder) {
                 this.folder = folder;
                 return this;
             }

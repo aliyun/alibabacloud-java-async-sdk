@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAccountResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAccountResponseBody</p>
@@ -49,7 +55,7 @@ public class UpdateAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the member.
+         * <p>The information of the member.</p>
          */
         public Builder account(Account account) {
             this.account = account;
@@ -57,7 +63,10 @@ public class UpdateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class UpdateAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateAccountResponseBody</p>
+     */
     public static class Account extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -205,7 +220,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12323344****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -213,7 +231,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account name of the member.
+             * <p>The Alibaba Cloud account name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:ecs-manager@aliyun.com">ecs-manager@aliyun.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -221,7 +242,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the member.
+             * <p>The display name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -229,7 +253,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-bVaRIG****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -237,11 +264,14 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the member joins the resource directory. Valid values:
-             * <p>
+             * <p>The way in which the member joins the resource directory. Valid values:</p>
+             * <ul>
+             * <li>invited: The member is invited to join the resource directory.</li>
+             * <li>created: The member is directly created in the resource directory.</li>
+             * </ul>
              * 
-             * *   invited: The member is invited to join the resource directory.
-             * *   created: The member is directly created in the resource directory.
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder joinMethod(String joinMethod) {
                 this.joinMethod = joinMethod;
@@ -249,7 +279,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member joined the resource directory. The time is displayed in UTC.
+             * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -257,7 +290,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the member was modified. The time is displayed in UTC.
+             * <p>The time when the member was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -265,7 +301,10 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-k3****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -273,13 +312,16 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
+             * <p>The status of the member. Valid values:</p>
+             * <ul>
+             * <li>CreateSuccess: The member is created.</li>
+             * <li>InviteSuccess: The member accepts the invitation.</li>
+             * <li>Removed: The member is removed.</li>
+             * <li>SwitchSuccess: The type of the member is switched.</li>
+             * </ul>
              * 
-             * *   CreateSuccess: The member is created.
-             * *   InviteSuccess: The member accepts the invitation.
-             * *   Removed: The member is removed.
-             * *   SwitchSuccess: The type of the member is switched.
+             * <strong>example:</strong>
+             * <p>CreateSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -287,11 +329,14 @@ public class UpdateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member. Valid values:
-             * <p>
+             * <p>The type of the member. Valid values:</p>
+             * <ul>
+             * <li>CloudAccount: cloud account</li>
+             * <li>ResourceAccount: resource account</li>
+             * </ul>
              * 
-             * *   CloudAccount: cloud account
-             * *   ResourceAccount: resource account
+             * <strong>example:</strong>
+             * <p>ResourceAccount</p>
              */
             public Builder type(String type) {
                 this.type = type;

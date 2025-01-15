@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListControlPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListControlPoliciesRequest</p>
@@ -97,14 +103,18 @@ public class ListControlPoliciesRequest extends Request {
         } 
 
         /**
-         * The language in which you want to return the descriptions of the access control policies. Valid values:
-         * <p>
+         * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
+         * <ul>
+         * <li>zh-CN (default value): Chinese</li>
+         * <li>en: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only for system access control policies.</p>
+         * </blockquote>
          * 
-         * *   zh-CN (default value): Chinese
-         * *   en: English
-         * *   ja: Japanese
-         * 
-         * > This parameter is available only for system access control policies.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -113,10 +123,11 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,10 +136,11 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,11 +149,14 @@ public class ListControlPoliciesRequest extends Request {
         }
 
         /**
-         * The type of the access control policies. Valid values:
-         * <p>
+         * <p>The type of the access control policies. Valid values:</p>
+         * <ul>
+         * <li>System: system access control policy</li>
+         * <li>Custom: custom access control policy</li>
+         * </ul>
          * 
-         * *   System: system access control policy
-         * *   Custom: custom access control policy
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>DetachControlPolicyRequest</p>
@@ -69,7 +75,11 @@ public class DetachControlPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * <p>The ID of the access control policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-jExXAqIYkwHN****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -78,12 +88,16 @@ public class DetachControlPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the object from which you want to detach the access control policy. Access control policies can be attached to the following objects:
-         * <p>
+         * <p>The ID of the object from which you want to detach the access control policy. Access control policies can be attached to the following objects:</p>
+         * <ul>
+         * <li>Root folder</li>
+         * <li>Subfolders of the Root folder</li>
+         * <li>Members</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Root folder
-         * *   Subfolders of the Root folder
-         * *   Members
+         * <strong>example:</strong>
+         * <p>fd-ZDNPiT****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

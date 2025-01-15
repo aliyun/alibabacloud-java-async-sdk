@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateControlPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateControlPolicyRequest</p>
@@ -32,7 +38,7 @@ public class CreateControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateControlPolicyRequest(Builder builder) {
         super(builder);
@@ -87,7 +93,7 @@ public class CreateControlPolicyRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -96,7 +102,7 @@ public class CreateControlPolicyRequest extends Request {
         private String effectScope; 
         private String policyDocument; 
         private String policyName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -112,10 +118,11 @@ public class CreateControlPolicyRequest extends Request {
         } 
 
         /**
-         * The description of the access control policy.
-         * <p>
+         * <p>The description of the access control policy.</p>
+         * <p>The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</p>
          * 
-         * The description must be 1 to 1,024 characters in length. The description can contain letters, digits, underscores (\_), and hyphens (-) and must start with a letter.
+         * <strong>example:</strong>
+         * <p>ExampleControlPolicy</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -124,10 +131,12 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * The effective scope of the access control policy.
-         * <p>
+         * <p>The effective scope of the access control policy.</p>
+         * <p>The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value RAM indicates that the access control policy takes effect only for RAM users and RAM roles.
+         * <strong>example:</strong>
+         * <p>RAM</p>
          */
         public Builder effectScope(String effectScope) {
             this.putQueryParameter("EffectScope", effectScope);
@@ -136,14 +145,14 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * The document of the access control policy.
-         * <p>
+         * <p>The document of the access control policy.</p>
+         * <p>The document can be a maximum of 4,096 characters in length.</p>
+         * <p>For more information about the languages of access control policies, see <a href="https://help.aliyun.com/document_detail/179096.html">Languages of access control policies</a>.</p>
+         * <p>For more information about the examples of access control policies, see <a href="https://help.aliyun.com/document_detail/181474.html">Examples of custom access control policies</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The document can be a maximum of 4,096 characters in length.
-         * 
-         * For more information about the languages of access control policies, see [Languages of access control policies](~~179096~~).
-         * 
-         * For more information about the examples of access control policies, see [Examples of custom access control policies](~~181474~~).
+         * <strong>example:</strong>
+         * <p>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:[&quot;ram:UpdateRole&quot;,&quot;ram:DeleteRole&quot;,&quot;ram:AttachPolicyToRole&quot;,&quot;ram:DetachPolicyFromRole&quot;],&quot;Resource&quot;:&quot;acs:ram:<em>:</em>:role/ResourceDirectoryAccountAccessRole&quot;}]}</p>
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -152,10 +161,12 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * The name of the access control policy.
-         * <p>
+         * <p>The name of the access control policy.</p>
+         * <p>The name must be 1 to 128 characters in length. The name can contain letters, digits, and hyphens (-) and must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 128 characters in length. The name can contain letters, digits, and hyphens (-) and must start with a letter.
+         * <strong>example:</strong>
+         * <p>ExampleControlPolicy</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -164,9 +175,9 @@ public class CreateControlPolicyRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag to add to the access control policy.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -179,6 +190,12 @@ public class CreateControlPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateControlPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateControlPolicyRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -218,7 +235,10 @@ public class CreateControlPolicyRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -226,7 +246,10 @@ public class CreateControlPolicyRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeregisterDelegatedAdministratorResponseBody} extends {@link TeaModel}
  *
  * <p>DeregisterDelegatedAdministratorResponseBody</p>
@@ -37,7 +43,10 @@ public class DeregisterDelegatedAdministratorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF5D5C52-7BD0-40E7-94C6-23A1505038A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

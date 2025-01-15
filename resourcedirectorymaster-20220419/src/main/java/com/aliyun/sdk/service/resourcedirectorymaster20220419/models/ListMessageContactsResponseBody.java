@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessageContactsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMessageContactsResponseBody</p>
  */
 public class ListMessageContactsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Contacts")
-    private java.util.List < Contacts> contacts;
+    private java.util.List<Contacts> contacts;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -45,7 +51,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
     /**
      * @return contacts
      */
-    public java.util.List < Contacts> getContacts() {
+    public java.util.List<Contacts> getContacts() {
         return this.contacts;
     }
 
@@ -78,22 +84,25 @@ public class ListMessageContactsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Contacts> contacts; 
+        private java.util.List<Contacts> contacts; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The time when the contact was bound to the objects.
+         * <p>The time when the contact was bound to the objects.</p>
          */
-        public Builder contacts(java.util.List < Contacts> contacts) {
+        public Builder contacts(java.util.List<Contacts> contacts) {
             this.contacts = contacts;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +110,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +121,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95060F1D-6990-4645-8920-A81D1BBFE992</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class ListMessageContactsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMessageContactsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessageContactsResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedDate")
         private String associatedDate;
@@ -144,10 +168,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
         private String emailAddress;
 
         @com.aliyun.core.annotation.NameInMap("Members")
-        private java.util.List < String > members;
+        private java.util.List<String> members;
 
         @com.aliyun.core.annotation.NameInMap("MessageTypes")
-        private java.util.List < String > messageTypes;
+        private java.util.List<String> messageTypes;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -213,14 +237,14 @@ public class ListMessageContactsResponseBody extends TeaModel {
         /**
          * @return members
          */
-        public java.util.List < String > getMembers() {
+        public java.util.List<String> getMembers() {
             return this.members;
         }
 
         /**
          * @return messageTypes
          */
-        public java.util.List < String > getMessageTypes() {
+        public java.util.List<String> getMessageTypes() {
             return this.messageTypes;
         }
 
@@ -257,15 +281,18 @@ public class ListMessageContactsResponseBody extends TeaModel {
             private String contactId; 
             private String createDate; 
             private String emailAddress; 
-            private java.util.List < String > members; 
-            private java.util.List < String > messageTypes; 
+            private java.util.List<String> members; 
+            private java.util.List<String> messageTypes; 
             private String name; 
             private String phoneNumber; 
             private String status; 
             private String title; 
 
             /**
-             * The time when the contact was bound to the objects.
+             * <p>The time when the contact was bound to the objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-27 17:19:21</p>
              */
             public Builder associatedDate(String associatedDate) {
                 this.associatedDate = associatedDate;
@@ -273,7 +300,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the contact.
+             * <p>The ID of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-qL4HqKONzOM7****</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -281,7 +311,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the contact was added.
+             * <p>The time when the contact was added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-27 17:19:21</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -289,7 +322,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the contact.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>someone***@example.com</p>
              */
             public Builder emailAddress(String emailAddress) {
                 this.emailAddress = emailAddress;
@@ -297,23 +333,26 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of objects to which the contact is bound.
+             * <p>The IDs of objects to which the contact is bound.</p>
              */
-            public Builder members(java.util.List < String > members) {
+            public Builder members(java.util.List<String> members) {
                 this.members = members;
                 return this;
             }
 
             /**
-             * The types of messages received by the contact.
+             * <p>The types of messages received by the contact.</p>
              */
-            public Builder messageTypes(java.util.List < String > messageTypes) {
+            public Builder messageTypes(java.util.List<String> messageTypes) {
                 this.messageTypes = messageTypes;
                 return this;
             }
 
             /**
-             * The name of the contact.
+             * <p>The name of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tom</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +360,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile phone number of the contact.
+             * <p>The mobile phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86-139****1234</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -329,12 +371,15 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the contact. Valid values:
-             * <p>
+             * <p>The status of the contact. Valid values:</p>
+             * <ul>
+             * <li>Verifying</li>
+             * <li>Active</li>
+             * <li>Deleting</li>
+             * </ul>
              * 
-             * - Verifying
-             * - Active
-             * - Deleting
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -342,7 +387,10 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * The job title of the contact.
+             * <p>The job title of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TechnicalDirector</p>
              */
             public Builder title(String title) {
                 this.title = title;

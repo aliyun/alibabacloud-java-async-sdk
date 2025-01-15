@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AcceptHandshakeResponseBody} extends {@link TeaModel}
  *
  * <p>AcceptHandshakeResponseBody</p>
@@ -49,7 +55,7 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the invitation.
+         * <p>The information of the invitation.</p>
          */
         public Builder handshake(Handshake handshake) {
             this.handshake = handshake;
@@ -57,7 +63,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5828C836-3286-49A6-9006-15231BB19342</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class AcceptHandshakeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AcceptHandshakeResponseBody} extends {@link TeaModel}
+     *
+     * <p>AcceptHandshakeResponseBody</p>
+     */
     public static class Handshake extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -217,7 +232,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The time when the invitation was created. The time is displayed in UTC.
+             * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06T02:15:40Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -225,7 +243,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation expires. The time is displayed in UTC.
+             * <p>The time when the invitation expires. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T02:15:40Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -233,7 +254,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * <p>The ID of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h-Ih8IuPfvV0t0****</p>
              */
             public Builder handshakeId(String handshakeId) {
                 this.handshakeId = handshakeId;
@@ -241,7 +265,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account of the resource directory.
+             * <p>The ID of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -249,7 +276,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account of the resource directory.
+             * <p>The name of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CompanyA</p>
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -257,7 +287,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation was modified. The time is displayed in UTC.
+             * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06T02:16:40Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -265,7 +298,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the invitation.
+             * <p>The description of the invitation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Welcome</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -273,7 +309,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource directory.
+             * <p>The ID of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-3G****</p>
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -281,14 +320,17 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the invitation. Valid values:
-             * <p>
+             * <p>The status of the invitation. Valid values:</p>
+             * <ul>
+             * <li>Pending: The invitation is waiting for confirmation.</li>
+             * <li>Accepted: The invitation is accepted.</li>
+             * <li>Cancelled: The invitation is canceled.</li>
+             * <li>Declined: The invitation is rejected.</li>
+             * <li>Expired: The invitation expires.</li>
+             * </ul>
              * 
-             * *   Pending: The invitation is waiting for confirmation.
-             * *   Accepted: The invitation is accepted.
-             * *   Cancelled: The invitation is canceled.
-             * *   Declined: The invitation is rejected.
-             * *   Expired: The invitation expires.
+             * <strong>example:</strong>
+             * <p>Accepted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -296,7 +338,10 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID or logon email address of the invited Alibaba Cloud account.
+             * <p>The ID or logon email address of the invited Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177242285274****</p>
              */
             public Builder targetEntity(String targetEntity) {
                 this.targetEntity = targetEntity;
@@ -304,11 +349,14 @@ public class AcceptHandshakeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the invited Alibaba Cloud account. Valid values:
-             * <p>
+             * <p>The type of the invited Alibaba Cloud account. Valid values:</p>
+             * <ul>
+             * <li>Account: indicates the ID of the Alibaba Cloud account.</li>
+             * <li>Email: indicates the logon email address of the Alibaba Cloud account.</li>
+             * </ul>
              * 
-             * *   Account: indicates the ID of the Alibaba Cloud account.
-             * *   Email: indicates the logon email address of the Alibaba Cloud account.
+             * <strong>example:</strong>
+             * <p>Account</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

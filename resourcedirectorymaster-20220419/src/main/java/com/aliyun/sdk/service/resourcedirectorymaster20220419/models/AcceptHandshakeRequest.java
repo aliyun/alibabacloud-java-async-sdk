@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AcceptHandshakeRequest} extends {@link RequestModel}
  *
  * <p>AcceptHandshakeRequest</p>
@@ -54,10 +60,12 @@ public class AcceptHandshakeRequest extends Request {
         } 
 
         /**
-         * The ID of the invitation.
-         * <p>
+         * <p>The ID of the invitation.</p>
+         * <p>You can call the <a href="~~ListHandshakesForAccount~~">ListHandshakesForAccount</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListHandshakesForAccount](~~ListHandshakesForAccount~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>h-Ih8IuPfvV0t0****</p>
          */
         public Builder handshakeId(String handshakeId) {
             this.putQueryParameter("HandshakeId", handshakeId);

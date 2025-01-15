@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendPhoneVerificationForMessageContactRequest} extends {@link RequestModel}
  *
  * <p>SendPhoneVerificationForMessageContactRequest</p>
@@ -67,7 +73,10 @@ public class SendPhoneVerificationForMessageContactRequest extends Request {
         } 
 
         /**
-         * The ID of the contact.
+         * <p>The ID of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-qL4HqKONzOM7****</p>
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -76,12 +85,12 @@ public class SendPhoneVerificationForMessageContactRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the contact.
-         * <p>
+         * <p>The mobile phone number of the contact.</p>
+         * <p>The value must be in the <code>&lt;Country code&gt;-&lt;Mobile phone number&gt;</code> format.</p>
+         * <p>The specified mobile phone number must be the one you specify when you call the <a href="~~AddMessageContact~~">AddMessageContact</a> operation.</p>
          * 
-         * The value must be in the `<Country code>-<Mobile phone number>` format.
-         * 
-         * The specified mobile phone number must be the one you specify when you call the [AddMessageContact](~~AddMessageContact~~) operation.
+         * <strong>example:</strong>
+         * <p>86-139****1234</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

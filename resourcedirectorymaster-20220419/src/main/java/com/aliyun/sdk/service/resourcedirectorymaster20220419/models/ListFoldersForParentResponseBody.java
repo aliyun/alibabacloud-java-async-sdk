@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
  *
  * <p>ListFoldersForParentResponseBody</p>
@@ -85,7 +91,7 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the folders.
+         * <p>The folders.</p>
          */
         public Builder folders(Folders folders) {
             this.folders = folders;
@@ -93,7 +99,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +110,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +121,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,132 @@ public class ListFoldersForParentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersForParentResponseBody</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersForParentResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersForParentResponseBody</p>
+     */
     public static class Folder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -140,10 +284,14 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderName")
         private String folderName;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         private Folder(Builder builder) {
             this.createTime = builder.createTime;
             this.folderId = builder.folderId;
             this.folderName = builder.folderName;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -175,13 +323,24 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             return this.folderName;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String folderId; 
             private String folderName; 
+            private Tags tags; 
 
             /**
-             * The time when the folder was created.
+             * <p>The time when the folder was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-01-23T12:33:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -189,7 +348,10 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * <p>The ID of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd-evic31****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -197,10 +359,21 @@ public class ListFoldersForParentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the folder.
+             * <p>The name of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project-1</p>
              */
             public Builder folderName(String folderName) {
                 this.folderName = folderName;
+                return this;
+            }
+
+            /**
+             * <p>The tags added to the folder.</p>
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -211,9 +384,15 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFoldersForParentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoldersForParentResponseBody</p>
+     */
     public static class Folders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Folder")
-        private java.util.List < Folder> folder;
+        private java.util.List<Folder> folder;
 
         private Folders(Builder builder) {
             this.folder = builder.folder;
@@ -230,17 +409,17 @@ public class ListFoldersForParentResponseBody extends TeaModel {
         /**
          * @return folder
          */
-        public java.util.List < Folder> getFolder() {
+        public java.util.List<Folder> getFolder() {
             return this.folder;
         }
 
         public static final class Builder {
-            private java.util.List < Folder> folder; 
+            private java.util.List<Folder> folder; 
 
             /**
              * Folder.
              */
-            public Builder folder(java.util.List < Folder> folder) {
+            public Builder folder(java.util.List<Folder> folder) {
                 this.folder = folder;
                 return this;
             }

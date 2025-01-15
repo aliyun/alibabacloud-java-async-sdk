@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTrustedServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>ListTrustedServiceStatusRequest</p>
@@ -81,13 +87,15 @@ public class ListTrustedServiceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the management account or delegated administrator account.
-         * <p>
+         * <p>The ID of the management account or delegated administrator account.</p>
+         * <ul>
+         * <li>If you set this parameter to the ID of a management account, the trusted services that are enabled within the management account are queried. The default value of this parameter is the ID of an management account.</li>
+         * <li>If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.</li>
+         * </ul>
+         * <p>For more information about trusted services and delegated administrator accounts, see <a href="https://help.aliyun.com/document_detail/208133.html">Overview of trusted services</a> and <a href="https://help.aliyun.com/document_detail/208117.html">Delegated administrator accounts</a>.</p>
          * 
-         * *   If you set this parameter to the ID of a management account, the trusted services that are enabled within the management account are queried. The default value of this parameter is the ID of an management account.
-         * *   If you set this parameter to the ID of a delegated administrator account, the trusted services that are enabled within the delegated administrator account are queried.
-         * 
-         * For more information about trusted services and delegated administrator accounts, see [Overview of trusted services](~~208133~~) and [Delegated administrator accounts](~~208117~~).
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
          */
         public Builder adminAccountId(String adminAccountId) {
             this.putQueryParameter("AdminAccountId", adminAccountId);
@@ -96,10 +104,11 @@ public class ListTrustedServiceStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -108,10 +117,11 @@ public class ListTrustedServiceStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

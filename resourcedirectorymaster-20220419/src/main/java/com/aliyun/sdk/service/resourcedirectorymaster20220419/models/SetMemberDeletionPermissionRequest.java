@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetMemberDeletionPermissionRequest} extends {@link RequestModel}
  *
  * <p>SetMemberDeletionPermissionRequest</p>
@@ -54,11 +60,15 @@ public class SetMemberDeletionPermissionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the member deletion feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the member deletion feature. Valid values:</p>
+         * <ul>
+         * <li>Enabled: enables the member deletion feature.</li>
+         * <li>Disabled: disables the member deletion feature.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Enabled: enables the member deletion feature.
-         * *   Disabled: disables the member deletion feature.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
