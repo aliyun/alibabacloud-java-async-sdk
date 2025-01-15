@@ -1829,6 +1829,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
      * <p>RunVideoAnalysisResponseBody</p>
      */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("resultJsonFileUrl")
+        private String resultJsonFileUrl;
+
         @com.aliyun.core.annotation.NameInMap("videoAnalysisResult")
         private VideoAnalysisResult videoAnalysisResult;
 
@@ -1848,6 +1851,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         private VideoTitleGenerateResult videoTitleGenerateResult;
 
         private Output(Builder builder) {
+            this.resultJsonFileUrl = builder.resultJsonFileUrl;
             this.videoAnalysisResult = builder.videoAnalysisResult;
             this.videoCaptionResult = builder.videoCaptionResult;
             this.videoGenerateResult = builder.videoGenerateResult;
@@ -1862,6 +1866,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         public static Output create() {
             return builder().build();
+        }
+
+        /**
+         * @return resultJsonFileUrl
+         */
+        public String getResultJsonFileUrl() {
+            return this.resultJsonFileUrl;
         }
 
         /**
@@ -1907,12 +1918,21 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String resultJsonFileUrl; 
             private VideoAnalysisResult videoAnalysisResult; 
             private VideoCaptionResult videoCaptionResult; 
             private VideoGenerateResult videoGenerateResult; 
             private VideoMindMappingGenerateResult videoMindMappingGenerateResult; 
             private VideoShotSnapshotResult videoShotSnapshotResult; 
             private VideoTitleGenerateResult videoTitleGenerateResult; 
+
+            /**
+             * resultJsonFileUrl.
+             */
+            public Builder resultJsonFileUrl(String resultJsonFileUrl) {
+                this.resultJsonFileUrl = resultJsonFileUrl;
+                return this;
+            }
 
             /**
              * videoAnalysisResult.

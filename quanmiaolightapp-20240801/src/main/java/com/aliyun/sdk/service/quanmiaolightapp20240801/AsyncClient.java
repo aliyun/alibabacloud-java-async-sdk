@@ -90,6 +90,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunMarketingInformationWritingResponseBody> runMarketingInformationWritingWithResponseIterable(RunMarketingInformationWritingRequest request);
 
     /**
+     * @param request the request parameters of RunScriptChat  RunScriptChatRequest
+     * @return RunScriptChatResponse
+     */
+    CompletableFuture<RunScriptChatResponse> runScriptChat(RunScriptChatRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runScriptChatWithAsyncResponseHandler(RunScriptChatRequest request, AsyncResponseHandler<RunScriptChatResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunScriptChatResponseBody> runScriptChatWithResponseIterable(RunScriptChatRequest request);
+
+    /**
      * @param request the request parameters of RunScriptContinue  RunScriptContinueRequest
      * @return RunScriptContinueResponse
      */
@@ -108,6 +118,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runScriptPlanningWithAsyncResponseHandler(RunScriptPlanningRequest request, AsyncResponseHandler<RunScriptPlanningResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunScriptPlanningResponseBody> runScriptPlanningWithResponseIterable(RunScriptPlanningRequest request);
+
+    /**
+     * @param request the request parameters of RunScriptRefine  RunScriptRefineRequest
+     * @return RunScriptRefineResponse
+     */
+    CompletableFuture<RunScriptRefineResponse> runScriptRefine(RunScriptRefineRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runScriptRefineWithAsyncResponseHandler(RunScriptRefineRequest request, AsyncResponseHandler<RunScriptRefineResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunScriptRefineResponseBody> runScriptRefineWithResponseIterable(RunScriptRefineRequest request);
 
     /**
      * @param request the request parameters of RunStyleWriting  RunStyleWritingRequest
