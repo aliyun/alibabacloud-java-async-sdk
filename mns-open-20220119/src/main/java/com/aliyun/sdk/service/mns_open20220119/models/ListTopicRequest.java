@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTopicRequest} extends {@link RequestModel}
  *
  * <p>ListTopicRequest</p>
@@ -25,7 +31,7 @@ public class ListTopicRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopicName")
@@ -77,7 +83,7 @@ public class ListTopicRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -92,7 +98,7 @@ public class ListTopicRequest extends Request {
         private String regionId; 
         private Long pageNum; 
         private Long pageSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String topicName; 
 
         private Builder() {
@@ -118,7 +124,10 @@ public class ListTopicRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.
+         * <p>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -127,7 +136,10 @@ public class ListTopicRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.
+         * <p>The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,14 +150,17 @@ public class ListTopicRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The name of the topic.
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);
@@ -160,6 +175,12 @@ public class ListTopicRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTopicRequest} extends {@link TeaModel}
+     *
+     * <p>ListTopicRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

@@ -12,31 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteTopicRequest} extends {@link RequestModel}
+ * {@link DisableEndpointRequest} extends {@link RequestModel}
  *
- * <p>DeleteTopicRequest</p>
+ * <p>DisableEndpointRequest</p>
  */
-public class DeleteTopicRequest extends Request {
+public class DisableEndpointRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TopicName")
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String topicName;
+    private String endpointType;
 
-    private DeleteTopicRequest(Builder builder) {
+    private DisableEndpointRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.topicName = builder.topicName;
+        this.endpointType = builder.endpointType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteTopicRequest create() {
+    public static DisableEndpointRequest create() {
         return builder().build();
     }
 
@@ -53,24 +53,24 @@ public class DeleteTopicRequest extends Request {
     }
 
     /**
-     * @return topicName
+     * @return endpointType
      */
-    public String getTopicName() {
-        return this.topicName;
+    public String getEndpointType() {
+        return this.endpointType;
     }
 
-    public static final class Builder extends Request.Builder<DeleteTopicRequest, Builder> {
+    public static final class Builder extends Request.Builder<DisableEndpointRequest, Builder> {
         private String regionId; 
-        private String topicName; 
+        private String endpointType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteTopicRequest request) {
+        private Builder(DisableEndpointRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.topicName = request.topicName;
+            this.endpointType = request.endpointType;
         } 
 
         /**
@@ -83,21 +83,24 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * <p>The name of the topic that you want to delete.</p>
+         * <p>The type of the endpoint. Valid value:</p>
+         * <ul>
+         * <li><strong>public</strong>: indicates a public endpoint. (Only public endpoint is supported.)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>tf-testAccMNSTopic-112965059402264645</p>
+         * <p>public</p>
          */
-        public Builder topicName(String topicName) {
-            this.putQueryParameter("TopicName", topicName);
-            this.topicName = topicName;
+        public Builder endpointType(String endpointType) {
+            this.putQueryParameter("EndpointType", endpointType);
+            this.endpointType = endpointType;
             return this;
         }
 
         @Override
-        public DeleteTopicRequest build() {
-            return new DeleteTopicRequest(this);
+        public DisableEndpointRequest build() {
+            return new DisableEndpointRequest(this);
         } 
 
     } 

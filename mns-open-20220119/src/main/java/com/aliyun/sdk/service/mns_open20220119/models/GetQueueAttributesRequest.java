@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueueAttributesRequest} extends {@link RequestModel}
  *
  * <p>GetQueueAttributesRequest</p>
@@ -22,7 +28,7 @@ public class GetQueueAttributesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private GetQueueAttributesRequest(Builder builder) {
         super(builder);
@@ -61,14 +67,14 @@ public class GetQueueAttributesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<GetQueueAttributesRequest, Builder> {
         private String regionId; 
         private String queueName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -91,7 +97,11 @@ public class GetQueueAttributesRequest extends Request {
         }
 
         /**
-         * The name of the queue.
+         * <p>The name of the queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-queue</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -102,7 +112,7 @@ public class GetQueueAttributesRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -115,6 +125,12 @@ public class GetQueueAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueueAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>GetQueueAttributesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

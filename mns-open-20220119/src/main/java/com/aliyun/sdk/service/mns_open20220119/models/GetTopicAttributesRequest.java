@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTopicAttributesRequest} extends {@link RequestModel}
  *
  * <p>GetTopicAttributesRequest</p>
@@ -17,7 +23,7 @@ public class GetTopicAttributesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopicName")
@@ -54,7 +60,7 @@ public class GetTopicAttributesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -67,7 +73,7 @@ public class GetTopicAttributesRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTopicAttributesRequest, Builder> {
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String topicName; 
 
         private Builder() {
@@ -93,14 +99,18 @@ public class GetTopicAttributesRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The name of the topic.
+         * <p>The name of the topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-topic</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);
@@ -115,6 +125,12 @@ public class GetTopicAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetTopicAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>GetTopicAttributesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

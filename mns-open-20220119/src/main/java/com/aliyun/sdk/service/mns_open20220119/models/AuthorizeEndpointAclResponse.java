@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListTopicResponse} extends {@link TeaModel}
+ * {@link AuthorizeEndpointAclResponse} extends {@link TeaModel}
  *
- * <p>ListTopicResponse</p>
+ * <p>AuthorizeEndpointAclResponse</p>
  */
-public class ListTopicResponse extends Response {
+public class AuthorizeEndpointAclResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListTopicResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListTopicResponseBody body;
+    private AuthorizeEndpointAclResponseBody body;
 
-    private ListTopicResponse(BuilderImpl builder) {
+    private AuthorizeEndpointAclResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListTopicResponse create() {
+    public static AuthorizeEndpointAclResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListTopicResponse extends Response {
     /**
      * @return body
      */
-    public ListTopicResponseBody getBody() {
+    public AuthorizeEndpointAclResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTopicResponse, Builder> {
+    public interface Builder extends Response.Builder<AuthorizeEndpointAclResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListTopicResponseBody body);
+        Builder body(AuthorizeEndpointAclResponseBody body);
 
         @Override
-        ListTopicResponse build();
+        AuthorizeEndpointAclResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTopicResponse, Builder>
+            extends Response.BuilderImpl<AuthorizeEndpointAclResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListTopicResponseBody body; 
+        private AuthorizeEndpointAclResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTopicResponse response) {
+        private BuilderImpl(AuthorizeEndpointAclResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListTopicResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTopicResponseBody body) {
+        public Builder body(AuthorizeEndpointAclResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTopicResponse build() {
-            return new ListTopicResponse(this);
+        public AuthorizeEndpointAclResponse build() {
+            return new AuthorizeEndpointAclResponse(this);
         } 
 
     } 

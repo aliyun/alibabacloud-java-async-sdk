@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSubscriptionAttributesRequest} extends {@link RequestModel}
  *
  * <p>GetSubscriptionAttributesRequest</p>
@@ -92,7 +98,11 @@ public class GetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * The name of the subscription.
+         * <p>The name of the subscription.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySubscription</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -101,7 +111,11 @@ public class GetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * The name of the topic.
+         * <p>The name of the topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTopic</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

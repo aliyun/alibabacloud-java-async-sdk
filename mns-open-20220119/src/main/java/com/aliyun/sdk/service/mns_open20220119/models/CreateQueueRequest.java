@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQueueRequest} extends {@link RequestModel}
  *
  * <p>CreateQueueRequest</p>
@@ -42,7 +48,7 @@ public class CreateQueueRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VisibilityTimeout")
@@ -126,7 +132,7 @@ public class CreateQueueRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -145,7 +151,7 @@ public class CreateQueueRequest extends Request {
         private Long messageRetentionPeriod; 
         private Long pollingWaitSeconds; 
         private String queueName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Long visibilityTimeout; 
 
         private Builder() {
@@ -175,7 +181,10 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0
+         * <p>The period after which all messages sent to the queue are consumed. Valid values: 0 to 604800. Unit: seconds. Default value: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder delaySeconds(Long delaySeconds) {
             this.putQueryParameter("DelaySeconds", delaySeconds);
@@ -184,11 +193,15 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the logging feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the log management feature. Valid values:</p>
+         * <ul>
+         * <li>true: enabled.</li>
+         * <li>false: disabled.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   True
-         * *   False (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putQueryParameter("EnableLogging", enableLogging);
@@ -197,7 +210,10 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
+         * <p>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
          */
         public Builder maximumMessageSize(Long maximumMessageSize) {
             this.putQueryParameter("MaximumMessageSize", maximumMessageSize);
@@ -206,7 +222,10 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.
+         * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345600</p>
          */
         public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
             this.putQueryParameter("MessageRetentionPeriod", messageRetentionPeriod);
@@ -215,7 +234,10 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Valid values: 0 to 30. Unit: seconds. Default value: 0
+         * <p>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Valid values: 0 to 30. Unit: seconds. Default value: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pollingWaitSeconds(Long pollingWaitSeconds) {
             this.putQueryParameter("PollingWaitSeconds", pollingWaitSeconds);
@@ -224,7 +246,11 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * The name of the queue.
+         * <p>The name of the queue.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249F-5863-121D-74D51123****</p>
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -235,14 +261,17 @@ public class CreateQueueRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.
+         * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder visibilityTimeout(Long visibilityTimeout) {
             this.putQueryParameter("VisibilityTimeout", visibilityTimeout);
@@ -257,6 +286,12 @@ public class CreateQueueRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateQueueRequest} extends {@link TeaModel}
+     *
+     * <p>CreateQueueRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQueueAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>GetQueueAttributesResponseBody</p>
@@ -97,7 +103,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +114,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +122,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +133,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06273500-249F-5863-121D-74D51123****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +144,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The response status.
+         * <p>The response status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +155,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -150,6 +171,12 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQueueAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueueAttributesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -211,6 +238,12 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQueueAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueueAttributesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveMessages")
         private Long activeMessages;
@@ -246,7 +279,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         private String queueName;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VisibilityTimeout")
         private Long visibilityTimeout;
@@ -355,7 +388,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -378,11 +411,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             private Long messageRetentionPeriod; 
             private Long pollingWaitSeconds; 
             private String queueName; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long visibilityTimeout; 
 
             /**
-             * The total number of messages that are in the Active state in the queue. The value is an approximate number.
+             * <p>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder activeMessages(Long activeMessages) {
                 this.activeMessages = activeMessages;
@@ -390,7 +426,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the queue was created.
+             * <p>The time when the queue was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250700999</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,7 +437,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the messages that are in the Delayed state in the queue. The value is an approximate number.
+             * <p>The total number of messages that are in the Delayed state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delayMessages(Long delayMessages) {
                 this.delayMessages = delayMessages;
@@ -406,7 +448,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The period after which all messages sent to the queue are consumed. Unit: seconds.
+             * <p>The period after which all messages sent to the queue are consumed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder delaySeconds(Long delaySeconds) {
                 this.delaySeconds = delaySeconds;
@@ -414,7 +459,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the messages that are in the Inactive state in the queue. The value is an approximate number.
+             * <p>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inactiveMessages(Long inactiveMessages) {
                 this.inactiveMessages = inactiveMessages;
@@ -422,7 +470,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the queue was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the queue was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250700999</p>
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -430,11 +481,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the logging feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the logging feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>True</li>
+             * <li>False</li>
+             * </ul>
              * 
-             * *   True
-             * *   False
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder loggingEnabled(Boolean loggingEnabled) {
                 this.loggingEnabled = loggingEnabled;
@@ -442,7 +496,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum length of the message that is sent to the queue. Unit: bytes.
+             * <p>The maximum length of the message that is sent to the queue. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder maximumMessageSize(Long maximumMessageSize) {
                 this.maximumMessageSize = maximumMessageSize;
@@ -450,7 +507,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.
+             * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
@@ -458,7 +518,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Unit: seconds.
+             * <p>The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pollingWaitSeconds(Long pollingWaitSeconds) {
                 this.pollingWaitSeconds = pollingWaitSeconds;
@@ -466,7 +529,10 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue.
+             * <p>The name of the queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -476,13 +542,16 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.
+             * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder visibilityTimeout(Long visibilityTimeout) {
                 this.visibilityTimeout = visibilityTimeout;

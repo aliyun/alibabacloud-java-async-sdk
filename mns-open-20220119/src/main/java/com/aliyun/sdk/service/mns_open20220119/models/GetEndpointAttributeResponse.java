@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListTopicResponse} extends {@link TeaModel}
+ * {@link GetEndpointAttributeResponse} extends {@link TeaModel}
  *
- * <p>ListTopicResponse</p>
+ * <p>GetEndpointAttributeResponse</p>
  */
-public class ListTopicResponse extends Response {
+public class GetEndpointAttributeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListTopicResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListTopicResponseBody body;
+    private GetEndpointAttributeResponseBody body;
 
-    private ListTopicResponse(BuilderImpl builder) {
+    private GetEndpointAttributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListTopicResponse create() {
+    public static GetEndpointAttributeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListTopicResponse extends Response {
     /**
      * @return body
      */
-    public ListTopicResponseBody getBody() {
+    public GetEndpointAttributeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTopicResponse, Builder> {
+    public interface Builder extends Response.Builder<GetEndpointAttributeResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListTopicResponseBody body);
+        Builder body(GetEndpointAttributeResponseBody body);
 
         @Override
-        ListTopicResponse build();
+        GetEndpointAttributeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTopicResponse, Builder>
+            extends Response.BuilderImpl<GetEndpointAttributeResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListTopicResponseBody body; 
+        private GetEndpointAttributeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTopicResponse response) {
+        private BuilderImpl(GetEndpointAttributeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListTopicResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTopicResponseBody body) {
+        public Builder body(GetEndpointAttributeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTopicResponse build() {
-            return new ListTopicResponse(this);
+        public GetEndpointAttributeResponse build() {
+            return new GetEndpointAttributeResponse(this);
         } 
 
     } 

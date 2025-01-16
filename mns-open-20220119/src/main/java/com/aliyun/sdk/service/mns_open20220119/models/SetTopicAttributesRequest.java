@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetTopicAttributesRequest} extends {@link RequestModel}
  *
  * <p>SetTopicAttributesRequest</p>
@@ -105,11 +111,14 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the logging feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the log management feature. Valid values:</p>
+         * <ul>
+         * <li>true: enabled.</li>
+         * <li>false: disabled. Default value: false.</li>
+         * </ul>
          * 
-         * *   True
-         * *   False (default)
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putQueryParameter("EnableLogging", enableLogging);
@@ -118,7 +127,10 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
+         * <p>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
          */
         public Builder maxMessageSize(Long maxMessageSize) {
             this.putQueryParameter("MaxMessageSize", maxMessageSize);
@@ -127,7 +139,11 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * The name of the topic.
+         * <p>The name of the topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

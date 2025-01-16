@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetQueueAttributesResponseBody} extends {@link TeaModel}
+ * {@link GetEndpointAttributeResponseBody} extends {@link TeaModel}
  *
- * <p>SetQueueAttributesResponseBody</p>
+ * <p>GetEndpointAttributeResponseBody</p>
  */
-public class SetQueueAttributesResponseBody extends TeaModel {
+public class GetEndpointAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
@@ -35,7 +35,7 @@ public class SetQueueAttributesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private SetQueueAttributesResponseBody(Builder builder) {
+    private GetEndpointAttributeResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -48,7 +48,7 @@ public class SetQueueAttributesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetQueueAttributesResponseBody create() {
+    public static GetEndpointAttributeResponseBody create() {
         return builder().build();
     }
 
@@ -114,7 +114,7 @@ public class SetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class SetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -165,32 +165,127 @@ public class SetQueueAttributesResponseBody extends TeaModel {
             return this;
         }
 
-        public SetQueueAttributesResponseBody build() {
-            return new SetQueueAttributesResponseBody(this);
+        public GetEndpointAttributeResponseBody build() {
+            return new GetEndpointAttributeResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SetQueueAttributesResponseBody} extends {@link TeaModel}
+     * {@link GetEndpointAttributeResponseBody} extends {@link TeaModel}
      *
-     * <p>SetQueueAttributesResponseBody</p>
+     * <p>GetEndpointAttributeResponseBody</p>
+     */
+    public static class CidrList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AclStrategy")
+        private String aclStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("Cidr")
+        private String cidr;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
+        private CidrList(Builder builder) {
+            this.aclStrategy = builder.aclStrategy;
+            this.cidr = builder.cidr;
+            this.createTime = builder.createTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CidrList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aclStrategy
+         */
+        public String getAclStrategy() {
+            return this.aclStrategy;
+        }
+
+        /**
+         * @return cidr
+         */
+        public String getCidr() {
+            return this.cidr;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public static final class Builder {
+            private String aclStrategy; 
+            private String cidr; 
+            private Long createTime; 
+
+            /**
+             * <p>The ACL policy. Valid value:</p>
+             * <ul>
+             * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>allow</p>
+             */
+            public Builder aclStrategy(String aclStrategy) {
+                this.aclStrategy = aclStrategy;
+                return this;
+            }
+
+            /**
+             * <p>The CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.18.0.0/24</p>
+             */
+            public Builder cidr(String cidr) {
+                this.cidr = cidr;
+                return this;
+            }
+
+            /**
+             * <p>The time when the list was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1701951224000</p>
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            public CidrList build() {
+                return new CidrList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetEndpointAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEndpointAttributeResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private Long code;
+        @com.aliyun.core.annotation.NameInMap("CidrList")
+        private java.util.List<CidrList> cidrList;
 
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
-
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
+        @com.aliyun.core.annotation.NameInMap("EndpointEnabled")
+        private Boolean endpointEnabled;
 
         private Data(Builder builder) {
-            this.code = builder.code;
-            this.message = builder.message;
-            this.success = builder.success;
+            this.cidrList = builder.cidrList;
+            this.endpointEnabled = builder.endpointEnabled;
         }
 
         public static Builder builder() {
@@ -202,58 +297,39 @@ public class SetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * @return code
+         * @return cidrList
          */
-        public Long getCode() {
-            return this.code;
+        public java.util.List<CidrList> getCidrList() {
+            return this.cidrList;
         }
 
         /**
-         * @return message
+         * @return endpointEnabled
          */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return success
-         */
-        public Boolean getSuccess() {
-            return this.success;
+        public Boolean getEndpointEnabled() {
+            return this.endpointEnabled;
         }
 
         public static final class Builder {
-            private Long code; 
-            private String message; 
-            private Boolean success; 
+            private java.util.List<CidrList> cidrList; 
+            private Boolean endpointEnabled; 
 
             /**
-             * <p>The response code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * <p>The CIDR blocks.</p>
              */
-            public Builder code(Long code) {
-                this.code = code;
+            public Builder cidrList(java.util.List<CidrList> cidrList) {
+                this.cidrList = cidrList;
                 return this;
             }
 
             /**
-             * <p>The returned message.</p>
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * <p>Indicates whether the request was successful.</p>
+             * <p>Specifies whether the endpoint is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
              */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder endpointEnabled(Boolean endpointEnabled) {
+                this.endpointEnabled = endpointEnabled;
                 return this;
             }
 

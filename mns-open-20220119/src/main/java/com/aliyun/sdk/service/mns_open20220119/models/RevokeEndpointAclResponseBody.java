@@ -12,16 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetQueueAttributesResponseBody} extends {@link TeaModel}
+ * {@link RevokeEndpointAclResponseBody} extends {@link TeaModel}
  *
- * <p>SetQueueAttributesResponseBody</p>
+ * <p>RevokeEndpointAclResponseBody</p>
  */
-public class SetQueueAttributesResponseBody extends TeaModel {
+public class RevokeEndpointAclResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
-
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -35,9 +32,8 @@ public class SetQueueAttributesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private SetQueueAttributesResponseBody(Builder builder) {
+    private RevokeEndpointAclResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -48,7 +44,7 @@ public class SetQueueAttributesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetQueueAttributesResponseBody create() {
+    public static RevokeEndpointAclResponseBody create() {
         return builder().build();
     }
 
@@ -57,13 +53,6 @@ public class SetQueueAttributesResponseBody extends TeaModel {
      */
     public Long getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
     }
 
     /**
@@ -96,7 +85,6 @@ public class SetQueueAttributesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private Data data; 
         private String message; 
         private String requestId; 
         private String status; 
@@ -114,15 +102,7 @@ public class SetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
-         */
-        public Builder data(Data data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * <p>The returned message.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>operation success</p>
@@ -165,103 +145,10 @@ public class SetQueueAttributesResponseBody extends TeaModel {
             return this;
         }
 
-        public SetQueueAttributesResponseBody build() {
-            return new SetQueueAttributesResponseBody(this);
+        public RevokeEndpointAclResponseBody build() {
+            return new RevokeEndpointAclResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link SetQueueAttributesResponseBody} extends {@link TeaModel}
-     *
-     * <p>SetQueueAttributesResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private Long code;
-
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
-
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
-
-        private Data(Builder builder) {
-            this.code = builder.code;
-            this.message = builder.message;
-            this.success = builder.success;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return code
-         */
-        public Long getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return success
-         */
-        public Boolean getSuccess() {
-            return this.success;
-        }
-
-        public static final class Builder {
-            private Long code; 
-            private String message; 
-            private Boolean success; 
-
-            /**
-             * <p>The response code.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
-             */
-            public Builder code(Long code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * <p>The returned message.</p>
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * <p>Indicates whether the request was successful.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
-             */
-            public Builder success(Boolean success) {
-                this.success = success;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

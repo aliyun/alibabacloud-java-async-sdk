@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTopicRequest} extends {@link RequestModel}
  *
  * <p>CreateTopicRequest</p>
@@ -25,7 +31,7 @@ public class CreateTopicRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TopicName")
@@ -78,7 +84,7 @@ public class CreateTopicRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -93,7 +99,7 @@ public class CreateTopicRequest extends Request {
         private String regionId; 
         private Boolean enableLogging; 
         private Long maxMessageSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String topicName; 
 
         private Builder() {
@@ -119,11 +125,14 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the logging feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the log management feature. Valid values:</p>
+         * <ul>
+         * <li>true: enabled.</li>
+         * <li>false: disabled. Default value: false.</li>
+         * </ul>
          * 
-         * *   True
-         * *   False (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putBodyParameter("EnableLogging", enableLogging);
@@ -132,7 +141,10 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
+         * <p>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder maxMessageSize(Long maxMessageSize) {
             this.putBodyParameter("MaxMessageSize", maxMessageSize);
@@ -141,16 +153,20 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The name of the topic that you want to create.
+         * <p>The name of the topic that you want to create.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topicName(String topicName) {
             this.putBodyParameter("TopicName", topicName);
@@ -165,6 +181,12 @@ public class CreateTopicRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTopicRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTopicRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -204,7 +226,10 @@ public class CreateTopicRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +237,10 @@ public class CreateTopicRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>joyce.wang</p>
              */
             public Builder value(String value) {
                 this.value = value;

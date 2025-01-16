@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubscribeRequest} extends {@link RequestModel}
  *
  * <p>SubscribeRequest</p>
@@ -164,14 +170,18 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The receiver endpoint. The format of the endpoint varies based on the terminal type.
-         * <p>
+         * <p>The receiver endpoint. The format of the endpoint varies based on the terminal type.</p>
+         * <ul>
+         * <li>If you set PushType to http, set Endpoint to an <code>HTTP URL that starts with http:// or https://</code>.</li>
+         * <li>If you set PushType to queue, set Endpoint to a <code>queue name</code>.</li>
+         * <li>If you set PushType to mpush, set Endpoint to an <code>AppKey</code>.</li>
+         * <li>If you set PushType to alisms, set Endpoint to a <code>mobile number</code>.</li>
+         * <li>If you set PushType to email, set Endpoint to an <code>email address</code>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set PushType to http, set Endpoint to an `HTTP URL that starts with http:// or https://`.
-         * *   If you set PushType to queue, set Endpoint to a `queue name`.
-         * *   If you set PushType to mpush, set Endpoint to an `AppKey`.
-         * *   If you set PushType to alisms, set Endpoint to a `mobile number`.
-         * *   If you set PushType to email, set Endpoint to an `email address`.
+         * <strong>example:</strong>
+         * <p><a href="http://example.com">http://example.com</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -180,10 +190,11 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The tag that is used to filter messages. Only messages that have the same tag can be pushed. Set the value to a string of no more than 16 characters.
-         * <p>
+         * <p>The tag that is used to filter messages. Only messages that have the same tag can be pushed. Set the value to a string of no more than 16 characters.</p>
+         * <p>By default, no tag is specified to filter messages.</p>
          * 
-         * By default, no tag is specified to filter messages.
+         * <strong>example:</strong>
+         * <p>important</p>
          */
         public Builder messageTag(String messageTag) {
             this.putQueryParameter("MessageTag", messageTag);
@@ -192,12 +203,15 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The content format of the messages that are pushed to the endpoint. Valid values:
-         * <p>
+         * <p>The content format of the messages that are pushed to the endpoint. Valid values:</p>
+         * <ul>
+         * <li>XML</li>
+         * <li>JSON</li>
+         * <li>SIMPLIFIED</li>
+         * </ul>
          * 
-         * *   XML
-         * *   JSON
-         * *   SIMPLIFIED
+         * <strong>example:</strong>
+         * <p>XML</p>
          */
         public Builder notifyContentFormat(String notifyContentFormat) {
             this.putQueryParameter("NotifyContentFormat", notifyContentFormat);
@@ -206,11 +220,14 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:
-         * <p>
+         * <p>The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:</p>
+         * <ul>
+         * <li>BACKOFF_RETRY</li>
+         * <li>EXPONENTIAL_DECAY_RETRY</li>
+         * </ul>
          * 
-         * *   BACKOFF_RETRY
-         * *   EXPONENTIAL_DECAY_RETRY
+         * <strong>example:</strong>
+         * <p>BACKOFF_RETRY</p>
          */
         public Builder notifyStrategy(String notifyStrategy) {
             this.putQueryParameter("NotifyStrategy", notifyStrategy);
@@ -219,14 +236,18 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The terminal type. Valid values:
-         * <p>
+         * <p>The terminal type. Valid values:</p>
+         * <ul>
+         * <li>http: HTTP services</li>
+         * <li>queue: queues</li>
+         * <li>mpush: mobile devices</li>
+         * <li>alisms: Alibaba Cloud Short Message Service (SMS)</li>
+         * <li>email: emails</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   http: HTTP services
-         * *   queue: queues
-         * *   mpush: mobile devices
-         * *   alisms: Alibaba Cloud Short Message Service (SMS)
-         * *   email: emails
+         * <strong>example:</strong>
+         * <p>queue</p>
          */
         public Builder pushType(String pushType) {
             this.putQueryParameter("PushType", pushType);
@@ -235,7 +256,11 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The name of the subscription.
+         * <p>The name of the subscription.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSubscription</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -244,7 +269,11 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * The name of the topic.
+         * <p>The name of the topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

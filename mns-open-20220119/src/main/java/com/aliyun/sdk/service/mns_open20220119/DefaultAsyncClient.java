@@ -39,6 +39,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AuthorizeEndpointAcl  AuthorizeEndpointAclRequest
+     * @return AuthorizeEndpointAclResponse
+     */
+    @Override
+    public CompletableFuture<AuthorizeEndpointAclResponse> authorizeEndpointAcl(AuthorizeEndpointAclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AuthorizeEndpointAcl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AuthorizeEndpointAclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AuthorizeEndpointAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateQueue  CreateQueueRequest
+     * @return CreateQueueResponse
+     */
     @Override
     public CompletableFuture<CreateQueueResponse> createQueue(CreateQueueRequest request) {
         try {
@@ -53,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTopic  CreateTopicRequest
+     * @return CreateTopicResponse
+     */
     @Override
     public CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request) {
         try {
@@ -67,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteQueue  DeleteQueueRequest
+     * @return DeleteQueueResponse
+     */
     @Override
     public CompletableFuture<DeleteQueueResponse> deleteQueue(DeleteQueueRequest request) {
         try {
@@ -81,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTopic  DeleteTopicRequest
+     * @return DeleteTopicResponse
+     */
     @Override
     public CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request) {
         try {
@@ -95,6 +129,64 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableEndpoint  DisableEndpointRequest
+     * @return DisableEndpointResponse
+     */
+    @Override
+    public CompletableFuture<DisableEndpointResponse> disableEndpoint(DisableEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableEndpoint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableEndpoint  EnableEndpointRequest
+     * @return EnableEndpointResponse
+     */
+    @Override
+    public CompletableFuture<EnableEndpointResponse> enableEndpoint(EnableEndpointRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableEndpoint").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableEndpointResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEndpointAttribute  GetEndpointAttributeRequest
+     * @return GetEndpointAttributeResponse
+     */
+    @Override
+    public CompletableFuture<GetEndpointAttributeResponse> getEndpointAttribute(GetEndpointAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetEndpointAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEndpointAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEndpointAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetQueueAttributes  GetQueueAttributesRequest
+     * @return GetQueueAttributesResponse
+     */
     @Override
     public CompletableFuture<GetQueueAttributesResponse> getQueueAttributes(GetQueueAttributesRequest request) {
         try {
@@ -109,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSubscriptionAttributes  GetSubscriptionAttributesRequest
+     * @return GetSubscriptionAttributesResponse
+     */
     @Override
     public CompletableFuture<GetSubscriptionAttributesResponse> getSubscriptionAttributes(GetSubscriptionAttributesRequest request) {
         try {
@@ -123,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTopicAttributes  GetTopicAttributesRequest
+     * @return GetTopicAttributesResponse
+     */
     @Override
     public CompletableFuture<GetTopicAttributesResponse> getTopicAttributes(GetTopicAttributesRequest request) {
         try {
@@ -137,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListQueue  ListQueueRequest
+     * @return ListQueueResponse
+     */
     @Override
     public CompletableFuture<ListQueueResponse> listQueue(ListQueueRequest request) {
         try {
@@ -151,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSubscriptionByTopic  ListSubscriptionByTopicRequest
+     * @return ListSubscriptionByTopicResponse
+     */
     @Override
     public CompletableFuture<ListSubscriptionByTopicResponse> listSubscriptionByTopic(ListSubscriptionByTopicRequest request) {
         try {
@@ -165,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTopic  ListTopicRequest
+     * @return ListTopicResponse
+     */
     @Override
     public CompletableFuture<ListTopicResponse> listTopic(ListTopicRequest request) {
         try {
@@ -179,6 +291,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RevokeEndpointAcl  RevokeEndpointAclRequest
+     * @return RevokeEndpointAclResponse
+     */
+    @Override
+    public CompletableFuture<RevokeEndpointAclResponse> revokeEndpointAcl(RevokeEndpointAclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeEndpointAcl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeEndpointAclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeEndpointAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetQueueAttributes  SetQueueAttributesRequest
+     * @return SetQueueAttributesResponse
+     */
     @Override
     public CompletableFuture<SetQueueAttributesResponse> setQueueAttributes(SetQueueAttributesRequest request) {
         try {
@@ -193,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetSubscriptionAttributes  SetSubscriptionAttributesRequest
+     * @return SetSubscriptionAttributesResponse
+     */
     @Override
     public CompletableFuture<SetSubscriptionAttributesResponse> setSubscriptionAttributes(SetSubscriptionAttributesRequest request) {
         try {
@@ -207,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetTopicAttributes  SetTopicAttributesRequest
+     * @return SetTopicAttributesResponse
+     */
     @Override
     public CompletableFuture<SetTopicAttributesResponse> setTopicAttributes(SetTopicAttributesRequest request) {
         try {
@@ -221,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Subscribe  SubscribeRequest
+     * @return SubscribeResponse
+     */
     @Override
     public CompletableFuture<SubscribeResponse> subscribe(SubscribeRequest request) {
         try {
@@ -235,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Unsubscribe  UnsubscribeRequest
+     * @return UnsubscribeResponse
+     */
     @Override
     public CompletableFuture<UnsubscribeResponse> unsubscribe(UnsubscribeRequest request) {
         try {
