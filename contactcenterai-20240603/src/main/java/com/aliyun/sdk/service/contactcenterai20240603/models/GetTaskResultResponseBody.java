@@ -253,6 +253,9 @@ public class GetTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("asrResult")
         private java.util.List<AsrResult> asrResult;
 
+        @com.aliyun.core.annotation.NameInMap("extra")
+        private String extra;
+
         @com.aliyun.core.annotation.NameInMap("taskErrorMessage")
         private String taskErrorMessage;
 
@@ -267,6 +270,7 @@ public class GetTaskResultResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.asrResult = builder.asrResult;
+            this.extra = builder.extra;
             this.taskErrorMessage = builder.taskErrorMessage;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
@@ -286,6 +290,13 @@ public class GetTaskResultResponseBody extends TeaModel {
          */
         public java.util.List<AsrResult> getAsrResult() {
             return this.asrResult;
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -318,6 +329,7 @@ public class GetTaskResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AsrResult> asrResult; 
+            private String extra; 
             private String taskErrorMessage; 
             private String taskId; 
             private String taskStatus; 
@@ -328,6 +340,14 @@ public class GetTaskResultResponseBody extends TeaModel {
              */
             public Builder asrResult(java.util.List<AsrResult> asrResult) {
                 this.asrResult = asrResult;
+                return this;
+            }
+
+            /**
+             * extra.
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
                 return this;
             }
 

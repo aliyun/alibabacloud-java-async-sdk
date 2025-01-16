@@ -960,6 +960,9 @@ public class CreateTaskRequest extends Request {
      * <p>CreateTaskRequest</p>
      */
     public static class Transcription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("asrModelCode")
+        private String asrModelCode;
+
         @com.aliyun.core.annotation.NameInMap("autoSplit")
         private Integer autoSplit;
 
@@ -969,6 +972,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("fileName")
         @com.aliyun.core.annotation.Validation(required = true)
         private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
 
         @com.aliyun.core.annotation.NameInMap("serviceChannel")
         private Integer serviceChannel;
@@ -981,9 +987,11 @@ public class CreateTaskRequest extends Request {
         private String voiceFileUrl;
 
         private Transcription(Builder builder) {
+            this.asrModelCode = builder.asrModelCode;
             this.autoSplit = builder.autoSplit;
             this.clientChannel = builder.clientChannel;
             this.fileName = builder.fileName;
+            this.level = builder.level;
             this.serviceChannel = builder.serviceChannel;
             this.serviceChannelKeywords = builder.serviceChannelKeywords;
             this.voiceFileUrl = builder.voiceFileUrl;
@@ -995,6 +1003,13 @@ public class CreateTaskRequest extends Request {
 
         public static Transcription create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrModelCode
+         */
+        public String getAsrModelCode() {
+            return this.asrModelCode;
         }
 
         /**
@@ -1019,6 +1034,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
          * @return serviceChannel
          */
         public Integer getServiceChannel() {
@@ -1040,12 +1062,22 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String asrModelCode; 
             private Integer autoSplit; 
             private Integer clientChannel; 
             private String fileName; 
+            private String level; 
             private Integer serviceChannel; 
             private java.util.List<String> serviceChannelKeywords; 
             private String voiceFileUrl; 
+
+            /**
+             * asrModelCode.
+             */
+            public Builder asrModelCode(String asrModelCode) {
+                this.asrModelCode = asrModelCode;
+                return this;
+            }
 
             /**
              * autoSplit.
@@ -1071,6 +1103,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
                 return this;
             }
 
