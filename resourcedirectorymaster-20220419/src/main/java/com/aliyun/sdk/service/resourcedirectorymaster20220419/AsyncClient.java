@@ -534,4 +534,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateMessageContactResponse> updateMessageContact(UpdateMessageContactRequest request);
 
+    /**
+     * @param request the request parameters of UpdatePayerForAccount  UpdatePayerForAccountRequest
+     * @return UpdatePayerForAccountResponse
+     */
+    CompletableFuture<UpdatePayerForAccountResponse> updatePayerForAccount(UpdatePayerForAccountRequest request);
+
 }
