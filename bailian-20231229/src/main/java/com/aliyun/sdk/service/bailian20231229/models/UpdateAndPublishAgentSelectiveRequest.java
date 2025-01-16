@@ -492,7 +492,7 @@ public class UpdateAndPublishAgentSelectiveRequest extends Request {
         private Boolean enableSearch;
 
         @com.aliyun.core.annotation.NameInMap("enableWebSearch")
-        private String enableWebSearch;
+        private Boolean enableWebSearch;
 
         @com.aliyun.core.annotation.NameInMap("fixedReplyDetail")
         private String fixedReplyDetail;
@@ -565,7 +565,7 @@ public class UpdateAndPublishAgentSelectiveRequest extends Request {
         /**
          * @return enableWebSearch
          */
-        public String getEnableWebSearch() {
+        public Boolean getEnableWebSearch() {
             return this.enableWebSearch;
         }
 
@@ -629,7 +629,7 @@ public class UpdateAndPublishAgentSelectiveRequest extends Request {
             private String answerScope; 
             private Boolean enableCitation; 
             private Boolean enableSearch; 
-            private String enableWebSearch; 
+            private Boolean enableWebSearch; 
             private String fixedReplyDetail; 
             private java.util.List<String> knowledgeBaseCodeList; 
             private String promptStrategy; 
@@ -666,7 +666,7 @@ public class UpdateAndPublishAgentSelectiveRequest extends Request {
             /**
              * enableWebSearch.
              */
-            public Builder enableWebSearch(String enableWebSearch) {
+            public Builder enableWebSearch(Boolean enableWebSearch) {
                 this.enableWebSearch = enableWebSearch;
                 return this;
             }
