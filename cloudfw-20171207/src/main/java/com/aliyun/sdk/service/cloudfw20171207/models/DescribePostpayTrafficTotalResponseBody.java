@@ -38,6 +38,12 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalNatTraffic")
     private Long totalNatTraffic;
 
+    @com.aliyun.core.annotation.NameInMap("TotalSdlBillTraffic")
+    private Long totalSdlBillTraffic;
+
+    @com.aliyun.core.annotation.NameInMap("TotalSdlFreeTraffic")
+    private Long totalSdlFreeTraffic;
+
     @com.aliyun.core.annotation.NameInMap("TotalTraffic")
     private Long totalTraffic;
 
@@ -55,6 +61,8 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         this.totalInternetTraffic = builder.totalInternetTraffic;
         this.totalNatAssets = builder.totalNatAssets;
         this.totalNatTraffic = builder.totalNatTraffic;
+        this.totalSdlBillTraffic = builder.totalSdlBillTraffic;
+        this.totalSdlFreeTraffic = builder.totalSdlFreeTraffic;
         this.totalTraffic = builder.totalTraffic;
         this.totalVpcAssets = builder.totalVpcAssets;
         this.totalVpcTraffic = builder.totalVpcTraffic;
@@ -118,6 +126,20 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalSdlBillTraffic
+     */
+    public Long getTotalSdlBillTraffic() {
+        return this.totalSdlBillTraffic;
+    }
+
+    /**
+     * @return totalSdlFreeTraffic
+     */
+    public Long getTotalSdlFreeTraffic() {
+        return this.totalSdlFreeTraffic;
+    }
+
+    /**
      * @return totalTraffic
      */
     public Long getTotalTraffic() {
@@ -146,6 +168,8 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
         private Long totalInternetTraffic; 
         private Long totalNatAssets; 
         private Long totalNatTraffic; 
+        private Long totalSdlBillTraffic; 
+        private Long totalSdlFreeTraffic; 
         private Long totalTraffic; 
         private Long totalVpcAssets; 
         private Long totalVpcTraffic; 
@@ -224,6 +248,22 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
          */
         public Builder totalNatTraffic(Long totalNatTraffic) {
             this.totalNatTraffic = totalNatTraffic;
+            return this;
+        }
+
+        /**
+         * TotalSdlBillTraffic.
+         */
+        public Builder totalSdlBillTraffic(Long totalSdlBillTraffic) {
+            this.totalSdlBillTraffic = totalSdlBillTraffic;
+            return this;
+        }
+
+        /**
+         * TotalSdlFreeTraffic.
+         */
+        public Builder totalSdlFreeTraffic(Long totalSdlFreeTraffic) {
+            this.totalSdlFreeTraffic = totalSdlFreeTraffic;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class ModifyDefaultIPSConfigRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSdl")
+    private Long maxSdl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PatchRules")
     private String patchRules;
 
@@ -49,6 +53,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         this.basicRules = builder.basicRules;
         this.ctiRules = builder.ctiRules;
         this.lang = builder.lang;
+        this.maxSdl = builder.maxSdl;
         this.patchRules = builder.patchRules;
         this.ruleClass = builder.ruleClass;
         this.runMode = builder.runMode;
@@ -89,6 +94,13 @@ public class ModifyDefaultIPSConfigRequest extends Request {
     }
 
     /**
+     * @return maxSdl
+     */
+    public Long getMaxSdl() {
+        return this.maxSdl;
+    }
+
+    /**
      * @return patchRules
      */
     public String getPatchRules() {
@@ -113,6 +125,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         private String basicRules; 
         private String ctiRules; 
         private String lang; 
+        private Long maxSdl; 
         private String patchRules; 
         private String ruleClass; 
         private String runMode; 
@@ -126,6 +139,7 @@ public class ModifyDefaultIPSConfigRequest extends Request {
             this.basicRules = request.basicRules;
             this.ctiRules = request.ctiRules;
             this.lang = request.lang;
+            this.maxSdl = request.maxSdl;
             this.patchRules = request.patchRules;
             this.ruleClass = request.ruleClass;
             this.runMode = request.runMode;
@@ -178,6 +192,15 @@ public class ModifyDefaultIPSConfigRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * MaxSdl.
+         */
+        public Builder maxSdl(Long maxSdl) {
+            this.putQueryParameter("MaxSdl", maxSdl);
+            this.maxSdl = maxSdl;
             return this;
         }
 

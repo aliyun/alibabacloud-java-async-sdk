@@ -29,6 +29,9 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
+    @com.aliyun.core.annotation.NameInMap("InternetBandwidth")
+    private Long internetBandwidth;
+
     @com.aliyun.core.annotation.NameInMap("IpNumber")
     private Long ipNumber;
 
@@ -40,6 +43,9 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("MaxOverflow")
     private Long maxOverflow;
+
+    @com.aliyun.core.annotation.NameInMap("NatBandwidth")
+    private Long natBandwidth;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,6 +59,9 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Version")
     private Integer version;
 
+    @com.aliyun.core.annotation.NameInMap("VpcBandwidth")
+    private Long vpcBandwidth;
+
     @com.aliyun.core.annotation.NameInMap("VpcNumber")
     private Long vpcNumber;
 
@@ -61,14 +70,17 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         this.expire = builder.expire;
         this.instanceId = builder.instanceId;
         this.instanceStatus = builder.instanceStatus;
+        this.internetBandwidth = builder.internetBandwidth;
         this.ipNumber = builder.ipNumber;
         this.logStatus = builder.logStatus;
         this.logStorage = builder.logStorage;
         this.maxOverflow = builder.maxOverflow;
+        this.natBandwidth = builder.natBandwidth;
         this.requestId = builder.requestId;
         this.startTime = builder.startTime;
         this.userStatus = builder.userStatus;
         this.version = builder.version;
+        this.vpcBandwidth = builder.vpcBandwidth;
         this.vpcNumber = builder.vpcNumber;
     }
 
@@ -109,6 +121,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return internetBandwidth
+     */
+    public Long getInternetBandwidth() {
+        return this.internetBandwidth;
+    }
+
+    /**
      * @return ipNumber
      */
     public Long getIpNumber() {
@@ -134,6 +153,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
      */
     public Long getMaxOverflow() {
         return this.maxOverflow;
+    }
+
+    /**
+     * @return natBandwidth
+     */
+    public Long getNatBandwidth() {
+        return this.natBandwidth;
     }
 
     /**
@@ -165,6 +191,13 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return vpcBandwidth
+     */
+    public Long getVpcBandwidth() {
+        return this.vpcBandwidth;
+    }
+
+    /**
      * @return vpcNumber
      */
     public Long getVpcNumber() {
@@ -176,14 +209,17 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         private Long expire; 
         private String instanceId; 
         private String instanceStatus; 
+        private Long internetBandwidth; 
         private Long ipNumber; 
         private Boolean logStatus; 
         private Long logStorage; 
         private Long maxOverflow; 
+        private Long natBandwidth; 
         private String requestId; 
         private Long startTime; 
         private Boolean userStatus; 
         private Integer version; 
+        private Long vpcBandwidth; 
         private Long vpcNumber; 
 
         /**
@@ -243,6 +279,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
+            return this;
+        }
+
+        /**
+         * InternetBandwidth.
+         */
+        public Builder internetBandwidth(Long internetBandwidth) {
+            this.internetBandwidth = internetBandwidth;
             return this;
         }
 
@@ -308,6 +352,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
         }
 
         /**
+         * NatBandwidth.
+         */
+        public Builder natBandwidth(Long natBandwidth) {
+            this.natBandwidth = natBandwidth;
+            return this;
+        }
+
+        /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
@@ -361,6 +413,14 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
          */
         public Builder version(Integer version) {
             this.version = version;
+            return this;
+        }
+
+        /**
+         * VpcBandwidth.
+         */
+        public Builder vpcBandwidth(Long vpcBandwidth) {
+            this.vpcBandwidth = vpcBandwidth;
             return this;
         }
 

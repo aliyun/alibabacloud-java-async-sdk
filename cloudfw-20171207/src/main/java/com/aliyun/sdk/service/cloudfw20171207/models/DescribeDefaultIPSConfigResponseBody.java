@@ -23,6 +23,12 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CtiRules")
     private Integer ctiRules;
 
+    @com.aliyun.core.annotation.NameInMap("FreeTrailStatus")
+    private String freeTrailStatus;
+
+    @com.aliyun.core.annotation.NameInMap("MaxSdl")
+    private Long maxSdl;
+
     @com.aliyun.core.annotation.NameInMap("PatchRules")
     private Integer patchRules;
 
@@ -38,6 +44,8 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     private DescribeDefaultIPSConfigResponseBody(Builder builder) {
         this.basicRules = builder.basicRules;
         this.ctiRules = builder.ctiRules;
+        this.freeTrailStatus = builder.freeTrailStatus;
+        this.maxSdl = builder.maxSdl;
         this.patchRules = builder.patchRules;
         this.requestId = builder.requestId;
         this.ruleClass = builder.ruleClass;
@@ -64,6 +72,20 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
      */
     public Integer getCtiRules() {
         return this.ctiRules;
+    }
+
+    /**
+     * @return freeTrailStatus
+     */
+    public String getFreeTrailStatus() {
+        return this.freeTrailStatus;
+    }
+
+    /**
+     * @return maxSdl
+     */
+    public Long getMaxSdl() {
+        return this.maxSdl;
     }
 
     /**
@@ -97,6 +119,8 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public static final class Builder {
         private Integer basicRules; 
         private Integer ctiRules; 
+        private String freeTrailStatus; 
+        private Long maxSdl; 
         private Integer patchRules; 
         private String requestId; 
         private Integer ruleClass; 
@@ -129,6 +153,22 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
          */
         public Builder ctiRules(Integer ctiRules) {
             this.ctiRules = ctiRules;
+            return this;
+        }
+
+        /**
+         * FreeTrailStatus.
+         */
+        public Builder freeTrailStatus(String freeTrailStatus) {
+            this.freeTrailStatus = freeTrailStatus;
+            return this;
+        }
+
+        /**
+         * MaxSdl.
+         */
+        public Builder maxSdl(Long maxSdl) {
+            this.maxSdl = maxSdl;
             return this;
         }
 
