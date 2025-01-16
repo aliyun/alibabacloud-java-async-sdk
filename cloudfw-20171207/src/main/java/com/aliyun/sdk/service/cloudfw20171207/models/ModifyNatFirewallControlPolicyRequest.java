@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyNatFirewallControlPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclAction")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String aclAction;
 
     @com.aliyun.core.annotation.Query
@@ -33,7 +32,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Query
@@ -50,12 +48,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Destination")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String destination;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationType;
 
     @com.aliyun.core.annotation.Query
@@ -81,7 +77,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Proto")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String proto;
 
     @com.aliyun.core.annotation.Query
@@ -106,12 +101,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
     @com.aliyun.core.annotation.Query
@@ -382,7 +375,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <li><strong>drop</strong>: denies the traffic.</li>
          * <li><strong>log</strong>: monitors the traffic.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>log</p>
@@ -421,7 +413,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <blockquote>
          * <p>If you do not specify this parameter, the descriptions of all policies are queried.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -483,7 +474,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <li>If <strong>DestinationType</strong> is set to domain, the value of <strong>Destination</strong> is a domain name. Example: *.aliyuncs.com</li>
          * <li>If <strong>DestinationType</strong> is set to location, the value of <strong>Destination</strong> is a location. For more information about the location codes, see the &quot;AddControlPolicy&quot; topic. Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>x.x.x.x/32</p>
@@ -502,7 +492,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <li><strong>domain</strong>: domain name</li>
          * <li><strong>location</strong>: destination location</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>net</p>
@@ -603,7 +592,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <blockquote>
          * <p> If the destination address type is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP. If you set Proto to TCP, you can set application types to HTTP, HTTPS, SMTP, SMTPS, and SSL.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -707,7 +695,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value of this parameter is a CIDR block. Example: 10.2.XX.XX/24.</li>
          * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value of this parameter is an address book name. Example: db_group.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.25/32</p>
@@ -724,7 +711,6 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * <li><strong>net</strong>: CIDR block</li>
          * <li><strong>group</strong>: address book</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>net</p>

@@ -24,6 +24,7 @@ public class AddControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @Deprecated
     private String applicationName;
 
     @com.aliyun.core.annotation.Query

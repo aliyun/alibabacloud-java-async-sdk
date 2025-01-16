@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyVpcFirewallControlPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclAction")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String aclAction;
 
     @com.aliyun.core.annotation.Query
@@ -29,6 +28,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @Deprecated
     private String applicationName;
 
     @com.aliyun.core.annotation.Query
@@ -37,7 +37,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Query
@@ -54,12 +53,10 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Destination")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String destination;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationType;
 
     @com.aliyun.core.annotation.Query
@@ -76,7 +73,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Proto")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String proto;
 
     @com.aliyun.core.annotation.Query
@@ -101,12 +97,10 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
     @com.aliyun.core.annotation.Query
@@ -383,7 +377,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * <li><strong>drop</strong>: blocks the traffic.</li>
          * <li><strong>log</strong>: monitors the traffic.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -449,7 +442,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
 
         /**
          * <p>The description of the access control policy.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -513,7 +505,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * <p>Example: *.aliyuncs.com</p>
          * </li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10.2.X.X/XX</p>
@@ -532,7 +523,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * <li><strong>group</strong>: address book</li>
          * <li><strong>domain</strong>: domain name</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>net</p>
@@ -601,7 +591,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * <li>UDP</li>
          * <li>ICMP</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -710,7 +699,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * <p>Example: db_group</p>
          * </li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10.2.X.X/XX</p>
@@ -728,7 +716,6 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
          * <li><strong>net</strong>: CIDR block</li>
          * <li><strong>group</strong>: address book</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>net</p>
