@@ -49,6 +49,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("mainText")
     private String mainText;
 
+    @com.aliyun.core.annotation.NameInMap("markdownText")
+    private String markdownText;
+
     @com.aliyun.core.annotation.NameInMap("mime")
     private String mime;
 
@@ -79,6 +82,7 @@ public class ScorePageItem extends TeaModel {
         this.images = builder.images;
         this.link = builder.link;
         this.mainText = builder.mainText;
+        this.markdownText = builder.markdownText;
         this.mime = builder.mime;
         this.pageMap = builder.pageMap;
         this.publishTime = builder.publishTime;
@@ -159,6 +163,13 @@ public class ScorePageItem extends TeaModel {
     }
 
     /**
+     * @return markdownText
+     */
+    public String getMarkdownText() {
+        return this.markdownText;
+    }
+
+    /**
      * @return mime
      */
     public String getMime() {
@@ -210,6 +221,7 @@ public class ScorePageItem extends TeaModel {
         private java.util.List<IncludeImage> images; 
         private String link; 
         private String mainText; 
+        private String markdownText; 
         private String mime; 
         private java.util.Map<String, String> pageMap; 
         private Long publishTime; 
@@ -301,6 +313,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder mainText(String mainText) {
             this.mainText = mainText;
+            return this;
+        }
+
+        /**
+         * markdownText.
+         */
+        public Builder markdownText(String markdownText) {
+            this.markdownText = markdownText;
             return this;
         }
 
