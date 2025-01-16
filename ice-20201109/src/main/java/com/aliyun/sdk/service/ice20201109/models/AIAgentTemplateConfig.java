@@ -215,6 +215,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceIdList")
+        private java.util.List<String> voiceIdList;
+
         @com.aliyun.core.annotation.NameInMap("VoiceprintId")
         private String voiceprintId;
 
@@ -243,6 +246,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
+            this.voiceIdList = builder.voiceIdList;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
             this.wakeUpQuery = builder.wakeUpQuery;
@@ -363,6 +367,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return voiceIdList
+         */
+        public java.util.List<String> getVoiceIdList() {
+            return this.voiceIdList;
+        }
+
+        /**
          * @return voiceprintId
          */
         public String getVoiceprintId() {
@@ -406,6 +417,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
             private String voiceId; 
+            private java.util.List<String> voiceIdList; 
             private String voiceprintId; 
             private Long volume; 
             private String wakeUpQuery; 
@@ -528,6 +540,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
+                return this;
+            }
+
+            /**
+             * VoiceIdList.
+             */
+            public Builder voiceIdList(java.util.List<String> voiceIdList) {
+                this.voiceIdList = voiceIdList;
                 return this;
             }
 
@@ -686,6 +706,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceIdList")
+        private java.util.List<String> voiceIdList;
+
         @com.aliyun.core.annotation.NameInMap("VoiceprintId")
         private String voiceprintId;
 
@@ -713,6 +736,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
+            this.voiceIdList = builder.voiceIdList;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
             this.wakeUpQuery = builder.wakeUpQuery;
@@ -826,6 +850,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return voiceIdList
+         */
+        public java.util.List<String> getVoiceIdList() {
+            return this.voiceIdList;
+        }
+
+        /**
          * @return voiceprintId
          */
         public String getVoiceprintId() {
@@ -868,6 +899,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
             private String voiceId; 
+            private java.util.List<String> voiceIdList; 
             private String voiceprintId; 
             private Long volume; 
             private String wakeUpQuery; 
@@ -982,6 +1014,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
+                return this;
+            }
+
+            /**
+             * VoiceIdList.
+             */
+            public Builder voiceIdList(java.util.List<String> voiceIdList) {
+                this.voiceIdList = voiceIdList;
                 return this;
             }
 
@@ -1146,6 +1186,9 @@ public class AIAgentTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceIdList")
+        private java.util.List<String> voiceIdList;
+
         @com.aliyun.core.annotation.NameInMap("VoiceprintId")
         private String voiceprintId;
 
@@ -1175,6 +1218,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             this.userOfflineTimeout = builder.userOfflineTimeout;
             this.userOnlineTimeout = builder.userOnlineTimeout;
             this.voiceId = builder.voiceId;
+            this.voiceIdList = builder.voiceIdList;
             this.voiceprintId = builder.voiceprintId;
             this.volume = builder.volume;
             this.wakeUpQuery = builder.wakeUpQuery;
@@ -1302,6 +1346,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return voiceIdList
+         */
+        public java.util.List<String> getVoiceIdList() {
+            return this.voiceIdList;
+        }
+
+        /**
          * @return voiceprintId
          */
         public String getVoiceprintId() {
@@ -1346,6 +1397,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Integer userOfflineTimeout; 
             private Integer userOnlineTimeout; 
             private String voiceId; 
+            private java.util.List<String> voiceIdList; 
             private String voiceprintId; 
             private Long volume; 
             private String wakeUpQuery; 
@@ -1476,6 +1528,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder voiceId(String voiceId) {
                 this.voiceId = voiceId;
+                return this;
+            }
+
+            /**
+             * VoiceIdList.
+             */
+            public Builder voiceIdList(java.util.List<String> voiceIdList) {
+                this.voiceIdList = voiceIdList;
                 return this;
             }
 

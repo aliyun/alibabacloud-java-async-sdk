@@ -645,6 +645,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPlayInfoResponse> getPlayInfo(GetPlayInfoRequest request);
 
     /**
+     * @param request the request parameters of GetProjectExportJob  GetProjectExportJobRequest
+     * @return GetProjectExportJobResponse
+     */
+    CompletableFuture<GetProjectExportJobResponse> getProjectExportJob(GetProjectExportJobRequest request);
+
+    /**
      * @param request the request parameters of GetPublicMediaInfo  GetPublicMediaInfoRequest
      * @return GetPublicMediaInfoResponse
      */
@@ -1440,6 +1446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitPackageJobResponse
      */
     CompletableFuture<SubmitPackageJobResponse> submitPackageJob(SubmitPackageJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitProjectExportJob  SubmitProjectExportJobRequest
+     * @return SubmitProjectExportJobResponse
+     */
+    CompletableFuture<SubmitProjectExportJobResponse> submitProjectExportJob(SubmitProjectExportJobRequest request);
 
     /**
      * @param request the request parameters of SubmitScreenMediaHighlightsJob  SubmitScreenMediaHighlightsJobRequest
