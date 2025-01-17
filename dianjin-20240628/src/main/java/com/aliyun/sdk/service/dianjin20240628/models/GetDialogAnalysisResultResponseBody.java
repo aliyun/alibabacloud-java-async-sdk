@@ -276,12 +276,16 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dialogLabels")
         private java.util.List<DialogLabels> dialogLabels;
 
+        @com.aliyun.core.annotation.NameInMap("dialogSop")
+        private String dialogSop;
+
         @com.aliyun.core.annotation.NameInMap("dialogSummary")
         private String dialogSummary;
 
         private AnalysisResp(Builder builder) {
             this.dialogExecPlan = builder.dialogExecPlan;
             this.dialogLabels = builder.dialogLabels;
+            this.dialogSop = builder.dialogSop;
             this.dialogSummary = builder.dialogSummary;
         }
 
@@ -308,6 +312,13 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return dialogSop
+         */
+        public String getDialogSop() {
+            return this.dialogSop;
+        }
+
+        /**
          * @return dialogSummary
          */
         public String getDialogSummary() {
@@ -317,6 +328,7 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         public static final class Builder {
             private String dialogExecPlan; 
             private java.util.List<DialogLabels> dialogLabels; 
+            private String dialogSop; 
             private String dialogSummary; 
 
             /**
@@ -332,6 +344,14 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
              */
             public Builder dialogLabels(java.util.List<DialogLabels> dialogLabels) {
                 this.dialogLabels = dialogLabels;
+                return this;
+            }
+
+            /**
+             * dialogSop.
+             */
+            public Builder dialogSop(String dialogSop) {
+                this.dialogSop = dialogSop;
                 return this;
             }
 
