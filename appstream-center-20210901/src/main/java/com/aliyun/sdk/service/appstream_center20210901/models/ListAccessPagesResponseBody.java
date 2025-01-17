@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessPagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccessPagesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListAccessPagesResponseBody extends TeaModel {
     private String count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -71,7 +77,7 @@ public class ListAccessPagesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -113,7 +119,7 @@ public class ListAccessPagesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String pageNumber; 
         private String pageSize; 
@@ -139,7 +145,7 @@ public class ListAccessPagesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -190,6 +196,12 @@ public class ListAccessPagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccessPagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessPagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessMode")
         private String accessMode;

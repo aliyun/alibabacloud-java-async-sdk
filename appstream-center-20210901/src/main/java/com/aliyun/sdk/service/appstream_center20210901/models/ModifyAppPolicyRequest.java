@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppPolicyRequest</p>
@@ -83,7 +89,10 @@ public class ModifyAppPolicyRequest extends Request {
         } 
 
         /**
-         * AppPolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-ee2znjktwgxu2****</p>
          */
         public Builder appPolicyId(String appPolicyId) {
             this.putQueryParameter("AppPolicyId", appPolicyId);
@@ -92,7 +101,10 @@ public class ModifyAppPolicyRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -117,6 +129,12 @@ public class ModifyAppPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppPolicyRequest</p>
+     */
     public static class VideoPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrameRate")
         private Integer frameRate;

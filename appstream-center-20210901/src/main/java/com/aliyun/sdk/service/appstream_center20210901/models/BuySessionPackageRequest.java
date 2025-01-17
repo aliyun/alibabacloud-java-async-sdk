@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuySessionPackageRequest} extends {@link RequestModel}
  *
  * <p>BuySessionPackageRequest</p>
@@ -250,7 +256,10 @@ public class BuySessionPackageRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -277,7 +286,10 @@ public class BuySessionPackageRequest extends Request {
         }
 
         /**
-         * SessionSpec.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.general.entry</p>
          */
         public Builder sessionSpec(String sessionSpec) {
             this.putQueryParameter("SessionSpec", sessionSpec);
@@ -286,7 +298,10 @@ public class BuySessionPackageRequest extends Request {
         }
 
         /**
-         * SessionType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder sessionType(String sessionType) {
             this.putQueryParameter("SessionType", sessionType);

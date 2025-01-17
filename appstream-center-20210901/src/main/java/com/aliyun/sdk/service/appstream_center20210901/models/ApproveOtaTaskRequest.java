@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveOtaTaskRequest} extends {@link RequestModel}
  *
  * <p>ApproveOtaTaskRequest</p>
@@ -114,7 +120,10 @@ public class ApproveOtaTaskRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -123,7 +132,10 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -132,7 +144,10 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * OtaType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fota</p>
          */
         public Builder otaType(String otaType) {
             this.putBodyParameter("OtaType", otaType);
@@ -141,7 +156,11 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-04T14:36:00+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -150,7 +169,10 @@ public class ApproveOtaTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ota-be7jzm29wrrz5****</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

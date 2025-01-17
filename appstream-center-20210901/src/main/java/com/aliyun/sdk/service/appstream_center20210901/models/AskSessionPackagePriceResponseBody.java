@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AskSessionPackagePriceResponseBody} extends {@link TeaModel}
  *
  * <p>AskSessionPackagePriceResponseBody</p>
  */
 public class AskSessionPackagePriceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,13 +51,13 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -70,6 +76,12 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AskSessionPackagePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>AskSessionPackagePriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -171,6 +183,12 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AskSessionPackagePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>AskSessionPackagePriceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;

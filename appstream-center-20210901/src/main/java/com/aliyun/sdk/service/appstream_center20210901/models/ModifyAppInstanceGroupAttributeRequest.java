@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppInstanceGroupAttributeRequest</p>
@@ -27,6 +33,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodePool")
     private NodePool nodePool;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PerSessionPerApp")
+    private Boolean perSessionPerApp;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PreOpenAppId")
@@ -60,6 +70,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.network = builder.network;
         this.nodePool = builder.nodePool;
+        this.perSessionPerApp = builder.perSessionPerApp;
         this.preOpenAppId = builder.preOpenAppId;
         this.preOpenMode = builder.preOpenMode;
         this.productType = builder.productType;
@@ -110,6 +121,13 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return perSessionPerApp
+     */
+    public Boolean getPerSessionPerApp() {
+        return this.perSessionPerApp;
+    }
+
+    /**
      * @return preOpenAppId
      */
     public String getPreOpenAppId() {
@@ -156,6 +174,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         private String appInstanceGroupName; 
         private Network network; 
         private NodePool nodePool; 
+        private Boolean perSessionPerApp; 
         private String preOpenAppId; 
         private String preOpenMode; 
         private String productType; 
@@ -173,6 +192,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.network = request.network;
             this.nodePool = request.nodePool;
+            this.perSessionPerApp = request.perSessionPerApp;
             this.preOpenAppId = request.preOpenAppId;
             this.preOpenMode = request.preOpenMode;
             this.productType = request.productType;
@@ -182,7 +202,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -220,6 +243,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
+         * PerSessionPerApp.
+         */
+        public Builder perSessionPerApp(Boolean perSessionPerApp) {
+            this.putBodyParameter("PerSessionPerApp", perSessionPerApp);
+            this.perSessionPerApp = perSessionPerApp;
+            return this;
+        }
+
+        /**
          * PreOpenAppId.
          */
         public Builder preOpenAppId(String preOpenAppId) {
@@ -238,7 +270,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -282,6 +317,12 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class DomainRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -343,9 +384,15 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainRules")
-        private java.util.List < DomainRules> domainRules;
+        private java.util.List<DomainRules> domainRules;
 
         private Network(Builder builder) {
             this.domainRules = builder.domainRules;
@@ -362,17 +409,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         /**
          * @return domainRules
          */
-        public java.util.List < DomainRules> getDomainRules() {
+        public java.util.List<DomainRules> getDomainRules() {
             return this.domainRules;
         }
 
         public static final class Builder {
-            private java.util.List < DomainRules> domainRules; 
+            private java.util.List<DomainRules> domainRules; 
 
             /**
              * DomainRules.
              */
-            public Builder domainRules(java.util.List < DomainRules> domainRules) {
+            public Builder domainRules(java.util.List<DomainRules> domainRules) {
                 this.domainRules = domainRules;
                 return this;
             }
@@ -384,6 +431,12 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class NodePool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeCapacity")
         private Integer nodeCapacity;
@@ -445,6 +498,12 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class SecurityPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResetAfterUnbind")
         private Boolean resetAfterUnbind;
@@ -506,12 +565,89 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
+    public static class UserProfileFollow extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
+        private String fileSystemId;
+
+        @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
+        private Boolean profileFollowSwitch;
+
+        private UserProfileFollow(Builder builder) {
+            this.fileSystemId = builder.fileSystemId;
+            this.profileFollowSwitch = builder.profileFollowSwitch;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserProfileFollow create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileSystemId
+         */
+        public String getFileSystemId() {
+            return this.fileSystemId;
+        }
+
+        /**
+         * @return profileFollowSwitch
+         */
+        public Boolean getProfileFollowSwitch() {
+            return this.profileFollowSwitch;
+        }
+
+        public static final class Builder {
+            private String fileSystemId; 
+            private Boolean profileFollowSwitch; 
+
+            /**
+             * FileSystemId.
+             */
+            public Builder fileSystemId(String fileSystemId) {
+                this.fileSystemId = fileSystemId;
+                return this;
+            }
+
+            /**
+             * ProfileFollowSwitch.
+             */
+            public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
+                this.profileFollowSwitch = profileFollowSwitch;
+                return this;
+            }
+
+            public UserProfileFollow build() {
+                return new UserProfileFollow(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyAppInstanceGroupAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAppInstanceGroupAttributeRequest</p>
+     */
     public static class StoragePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageTypeList")
-        private java.util.List < String > storageTypeList;
+        private java.util.List<String> storageTypeList;
+
+        @com.aliyun.core.annotation.NameInMap("UserProfileFollow")
+        private UserProfileFollow userProfileFollow;
 
         private StoragePolicy(Builder builder) {
             this.storageTypeList = builder.storageTypeList;
+            this.userProfileFollow = builder.userProfileFollow;
         }
 
         public static Builder builder() {
@@ -525,18 +661,34 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         /**
          * @return storageTypeList
          */
-        public java.util.List < String > getStorageTypeList() {
+        public java.util.List<String> getStorageTypeList() {
             return this.storageTypeList;
         }
 
+        /**
+         * @return userProfileFollow
+         */
+        public UserProfileFollow getUserProfileFollow() {
+            return this.userProfileFollow;
+        }
+
         public static final class Builder {
-            private java.util.List < String > storageTypeList; 
+            private java.util.List<String> storageTypeList; 
+            private UserProfileFollow userProfileFollow; 
 
             /**
              * StorageTypeList.
              */
-            public Builder storageTypeList(java.util.List < String > storageTypeList) {
+            public Builder storageTypeList(java.util.List<String> storageTypeList) {
                 this.storageTypeList = storageTypeList;
+                return this;
+            }
+
+            /**
+             * UserProfileFollow.
+             */
+            public Builder userProfileFollow(UserProfileFollow userProfileFollow) {
+                this.userProfileFollow = userProfileFollow;
                 return this;
             }
 

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppInstancesResponseBody</p>
  */
 public class ListAppInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppInstanceModels")
-    private java.util.List < AppInstanceModels> appInstanceModels;
+    private java.util.List<AppInstanceModels> appInstanceModels;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -45,7 +51,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     /**
      * @return appInstanceModels
      */
-    public java.util.List < AppInstanceModels> getAppInstanceModels() {
+    public java.util.List<AppInstanceModels> getAppInstanceModels() {
         return this.appInstanceModels;
     }
 
@@ -78,7 +84,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppInstanceModels> appInstanceModels; 
+        private java.util.List<AppInstanceModels> appInstanceModels; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         /**
          * AppInstanceModels.
          */
-        public Builder appInstanceModels(java.util.List < AppInstanceModels> appInstanceModels) {
+        public Builder appInstanceModels(java.util.List<AppInstanceModels> appInstanceModels) {
             this.appInstanceModels = appInstanceModels;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstancesResponseBody</p>
+     */
     public static class BindInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
@@ -191,6 +203,12 @@ public class ListAppInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstancesResponseBody</p>
+     */
     public static class AppInstanceModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;

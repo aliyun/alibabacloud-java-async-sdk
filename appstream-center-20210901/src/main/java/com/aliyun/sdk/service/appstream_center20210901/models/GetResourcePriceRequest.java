@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourcePriceRequest} extends {@link RequestModel}
  *
  * <p>GetResourcePriceRequest</p>
@@ -157,7 +163,10 @@ public class GetResourcePriceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
@@ -175,7 +184,10 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -184,7 +196,10 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -202,7 +217,10 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -211,7 +229,7 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>This parameter is required.</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -220,7 +238,10 @@ public class GetResourcePriceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

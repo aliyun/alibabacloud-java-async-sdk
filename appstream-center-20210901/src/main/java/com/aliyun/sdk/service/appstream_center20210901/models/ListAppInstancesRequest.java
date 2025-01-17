@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListAppInstancesRequest</p>
@@ -22,7 +28,7 @@ public class ListAppInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceIdList")
-    private java.util.List < String > appInstanceIdList;
+    private java.util.List<String> appInstanceIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeDeleted")
@@ -39,7 +45,7 @@ public class ListAppInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     private ListAppInstancesRequest(Builder builder) {
         super(builder);
@@ -82,7 +88,7 @@ public class ListAppInstancesRequest extends Request {
     /**
      * @return appInstanceIdList
      */
-    public java.util.List < String > getAppInstanceIdList() {
+    public java.util.List<String> getAppInstanceIdList() {
         return this.appInstanceIdList;
     }
 
@@ -110,18 +116,18 @@ public class ListAppInstancesRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     public static final class Builder extends Request.Builder<ListAppInstancesRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstanceId; 
-        private java.util.List < String > appInstanceIdList; 
+        private java.util.List<String> appInstanceIdList; 
         private Boolean includeDeleted; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > status; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -139,7 +145,10 @@ public class ListAppInstancesRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-4p5f8tj16yb8b****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -159,7 +168,7 @@ public class ListAppInstancesRequest extends Request {
         /**
          * AppInstanceIdList.
          */
-        public Builder appInstanceIdList(java.util.List < String > appInstanceIdList) {
+        public Builder appInstanceIdList(java.util.List<String> appInstanceIdList) {
             this.putBodyParameter("AppInstanceIdList", appInstanceIdList);
             this.appInstanceIdList = appInstanceIdList;
             return this;
@@ -195,7 +204,7 @@ public class ListAppInstancesRequest extends Request {
         /**
          * Status.
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
             this.status = status;
             return this;

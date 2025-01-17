@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppInstanceGroupRequest} extends {@link RequestModel}
  *
  * <p>ListAppInstanceGroupRequest</p>
@@ -32,6 +38,10 @@ public class ListAppInstanceGroupRequest extends Request {
     private String nodeInstanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -52,7 +62,7 @@ public class ListAppInstanceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     private ListAppInstanceGroupRequest(Builder builder) {
         super(builder);
@@ -61,6 +71,7 @@ public class ListAppInstanceGroupRequest extends Request {
         this.appInstanceGroupName = builder.appInstanceGroupName;
         this.bizRegionId = builder.bizRegionId;
         this.nodeInstanceType = builder.nodeInstanceType;
+        this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.productType = builder.productType;
@@ -117,6 +128,13 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -147,7 +165,7 @@ public class ListAppInstanceGroupRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
@@ -157,11 +175,12 @@ public class ListAppInstanceGroupRequest extends Request {
         private String appInstanceGroupName; 
         private String bizRegionId; 
         private String nodeInstanceType; 
+        private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String productType; 
         private String regionId; 
-        private java.util.List < String > status; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -174,6 +193,7 @@ public class ListAppInstanceGroupRequest extends Request {
             this.appInstanceGroupName = request.appInstanceGroupName;
             this.bizRegionId = request.bizRegionId;
             this.nodeInstanceType = request.nodeInstanceType;
+            this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.productType = request.productType;
@@ -227,6 +247,15 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -245,7 +274,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -265,7 +297,7 @@ public class ListAppInstanceGroupRequest extends Request {
         /**
          * Status.
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
             this.status = status;
             return this;

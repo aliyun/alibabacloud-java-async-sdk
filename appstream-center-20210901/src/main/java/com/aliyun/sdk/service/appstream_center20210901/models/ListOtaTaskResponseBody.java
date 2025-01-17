@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOtaTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListOtaTaskResponseBody</p>
@@ -21,7 +27,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskList")
-    private java.util.List < TaskList> taskList;
+    private java.util.List<TaskList> taskList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -66,7 +72,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
     /**
      * @return taskList
      */
-    public java.util.List < TaskList> getTaskList() {
+    public java.util.List<TaskList> getTaskList() {
         return this.taskList;
     }
 
@@ -81,7 +87,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TaskList> taskList; 
+        private java.util.List<TaskList> taskList; 
         private Integer totalCount; 
 
         /**
@@ -111,7 +117,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         /**
          * TaskList.
          */
-        public Builder taskList(java.util.List < TaskList> taskList) {
+        public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListOtaTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOtaTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOtaTaskResponseBody</p>
+     */
     public static class TaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OtaVersion")
         private String otaVersion;
@@ -217,7 +229,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStartTime.
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-04T14:36:00+08:00</p>
              */
             public Builder taskStartTime(String taskStartTime) {
                 this.taskStartTime = taskStartTime;

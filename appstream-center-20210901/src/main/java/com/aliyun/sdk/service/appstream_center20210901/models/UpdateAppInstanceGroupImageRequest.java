@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppInstanceGroupImageRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppInstanceGroupImageRequest</p>
@@ -99,7 +105,10 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         } 
 
         /**
-         * AppCenterImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-8z4nztpaqvay4****</p>
          */
         public Builder appCenterImageId(String appCenterImageId) {
             this.putQueryParameter("AppCenterImageId", appCenterImageId);
@@ -108,7 +117,10 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putQueryParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -117,7 +129,10 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -126,7 +141,10 @@ public class UpdateAppInstanceGroupImageRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

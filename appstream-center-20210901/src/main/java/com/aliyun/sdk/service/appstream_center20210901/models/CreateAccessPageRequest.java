@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessPageRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessPageRequest</p>
@@ -125,7 +131,7 @@ public class CreateAccessPageRequest extends Request {
         } 
 
         /**
-         * AccessPageName.
+         * <p>This parameter is required.</p>
          */
         public Builder accessPageName(String accessPageName) {
             this.putQueryParameter("AccessPageName", accessPageName);
@@ -152,7 +158,10 @@ public class CreateAccessPageRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-065zdecaer07h****</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

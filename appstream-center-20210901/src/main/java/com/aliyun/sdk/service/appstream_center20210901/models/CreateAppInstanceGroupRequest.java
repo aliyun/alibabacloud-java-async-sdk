@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppInstanceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAppInstanceGroupRequest</p>
@@ -18,8 +24,11 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppPolicyId")
+    private String appPolicyId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AutoPay")
@@ -102,7 +111,7 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < String > users;
+    private java.util.List<String> users;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VideoPolicy")
@@ -112,6 +121,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         super(builder);
         this.appCenterImageId = builder.appCenterImageId;
         this.appInstanceGroupName = builder.appInstanceGroupName;
+        this.appPolicyId = builder.appPolicyId;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bizRegionId = builder.bizRegionId;
@@ -159,6 +169,13 @@ public class CreateAppInstanceGroupRequest extends Request {
      */
     public String getAppInstanceGroupName() {
         return this.appInstanceGroupName;
+    }
+
+    /**
+     * @return appPolicyId
+     */
+    public String getAppPolicyId() {
+        return this.appPolicyId;
     }
 
     /**
@@ -290,7 +307,7 @@ public class CreateAppInstanceGroupRequest extends Request {
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
@@ -304,6 +321,7 @@ public class CreateAppInstanceGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAppInstanceGroupRequest, Builder> {
         private String appCenterImageId; 
         private String appInstanceGroupName; 
+        private String appPolicyId; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bizRegionId; 
@@ -322,7 +340,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private StoragePolicy storagePolicy; 
         private UserDefinePolicy userDefinePolicy; 
         private UserInfo userInfo; 
-        private java.util.List < String > users; 
+        private java.util.List<String> users; 
         private VideoPolicy videoPolicy; 
 
         private Builder() {
@@ -333,6 +351,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             super(request);
             this.appCenterImageId = request.appCenterImageId;
             this.appInstanceGroupName = request.appInstanceGroupName;
+            this.appPolicyId = request.appPolicyId;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bizRegionId = request.bizRegionId;
@@ -356,7 +375,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * AppCenterImageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>img-8z4nztpaqvay4****</p>
          */
         public Builder appCenterImageId(String appCenterImageId) {
             this.putBodyParameter("AppCenterImageId", appCenterImageId);
@@ -370,6 +392,15 @@ public class CreateAppInstanceGroupRequest extends Request {
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putBodyParameter("AppInstanceGroupName", appInstanceGroupName);
             this.appInstanceGroupName = appInstanceGroupName;
+            return this;
+        }
+
+        /**
+         * AppPolicyId.
+         */
+        public Builder appPolicyId(String appPolicyId) {
+            this.putBodyParameter("AppPolicyId", appPolicyId);
+            this.appPolicyId = appPolicyId;
             return this;
         }
 
@@ -392,7 +423,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
@@ -401,7 +435,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ChargeResourceMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node</p>
          */
         public Builder chargeResourceMode(String chargeResourceMode) {
             this.putBodyParameter("ChargeResourceMode", chargeResourceMode);
@@ -410,7 +447,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -439,7 +479,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -448,7 +491,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>This parameter is required.</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("PeriodUnit", periodUnit);
@@ -466,7 +509,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -504,7 +550,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * SessionTimeout.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder sessionTimeout(Integer sessionTimeout) {
             this.putBodyParameter("SessionTimeout", sessionTimeout);
@@ -545,7 +594,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         /**
          * Users.
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
             this.users = users;
             return this;
@@ -568,6 +617,12 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class DomainRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -629,6 +684,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class Routes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
@@ -690,24 +751,38 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainRules")
-        private java.util.List < DomainRules> domainRules;
+        private java.util.List<DomainRules> domainRules;
 
         @com.aliyun.core.annotation.NameInMap("IpExpireMinutes")
         private Integer ipExpireMinutes;
 
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+        private String officeSiteId;
+
         @com.aliyun.core.annotation.NameInMap("Routes")
-        private java.util.List < Routes> routes;
+        private java.util.List<Routes> routes;
 
         @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
         private Network(Builder builder) {
             this.domainRules = builder.domainRules;
             this.ipExpireMinutes = builder.ipExpireMinutes;
+            this.officeSiteId = builder.officeSiteId;
             this.routes = builder.routes;
             this.strategyType = builder.strategyType;
+            this.vSwitchIds = builder.vSwitchIds;
         }
 
         public static Builder builder() {
@@ -721,7 +796,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         /**
          * @return domainRules
          */
-        public java.util.List < DomainRules> getDomainRules() {
+        public java.util.List<DomainRules> getDomainRules() {
             return this.domainRules;
         }
 
@@ -733,9 +808,16 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return officeSiteId
+         */
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
+        /**
          * @return routes
          */
-        public java.util.List < Routes> getRoutes() {
+        public java.util.List<Routes> getRoutes() {
             return this.routes;
         }
 
@@ -746,16 +828,25 @@ public class CreateAppInstanceGroupRequest extends Request {
             return this.strategyType;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
         public static final class Builder {
-            private java.util.List < DomainRules> domainRules; 
+            private java.util.List<DomainRules> domainRules; 
             private Integer ipExpireMinutes; 
-            private java.util.List < Routes> routes; 
+            private String officeSiteId; 
+            private java.util.List<Routes> routes; 
             private String strategyType; 
+            private java.util.List<String> vSwitchIds; 
 
             /**
              * DomainRules.
              */
-            public Builder domainRules(java.util.List < DomainRules> domainRules) {
+            public Builder domainRules(java.util.List<DomainRules> domainRules) {
                 this.domainRules = domainRules;
                 return this;
             }
@@ -769,9 +860,17 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
+             * OfficeSiteId.
+             */
+            public Builder officeSiteId(String officeSiteId) {
+                this.officeSiteId = officeSiteId;
+                return this;
+            }
+
+            /**
              * Routes.
              */
-            public Builder routes(java.util.List < Routes> routes) {
+            public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
                 return this;
             }
@@ -784,6 +883,14 @@ public class CreateAppInstanceGroupRequest extends Request {
                 return this;
             }
 
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
             public Network build() {
                 return new Network(this);
             } 
@@ -791,6 +898,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class TimerPeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
@@ -872,15 +985,21 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class RecurrenceSchedules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
         @com.aliyun.core.annotation.NameInMap("RecurrenceValues")
-        private java.util.List < Integer > recurrenceValues;
+        private java.util.List<Integer> recurrenceValues;
 
         @com.aliyun.core.annotation.NameInMap("TimerPeriods")
-        private java.util.List < TimerPeriods> timerPeriods;
+        private java.util.List<TimerPeriods> timerPeriods;
 
         private RecurrenceSchedules(Builder builder) {
             this.recurrenceType = builder.recurrenceType;
@@ -906,21 +1025,21 @@ public class CreateAppInstanceGroupRequest extends Request {
         /**
          * @return recurrenceValues
          */
-        public java.util.List < Integer > getRecurrenceValues() {
+        public java.util.List<Integer> getRecurrenceValues() {
             return this.recurrenceValues;
         }
 
         /**
          * @return timerPeriods
          */
-        public java.util.List < TimerPeriods> getTimerPeriods() {
+        public java.util.List<TimerPeriods> getTimerPeriods() {
             return this.timerPeriods;
         }
 
         public static final class Builder {
             private String recurrenceType; 
-            private java.util.List < Integer > recurrenceValues; 
-            private java.util.List < TimerPeriods> timerPeriods; 
+            private java.util.List<Integer> recurrenceValues; 
+            private java.util.List<TimerPeriods> timerPeriods; 
 
             /**
              * RecurrenceType.
@@ -933,7 +1052,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             /**
              * RecurrenceValues.
              */
-            public Builder recurrenceValues(java.util.List < Integer > recurrenceValues) {
+            public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
                 return this;
             }
@@ -941,7 +1060,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             /**
              * TimerPeriods.
              */
-            public Builder timerPeriods(java.util.List < TimerPeriods> timerPeriods) {
+            public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
                 this.timerPeriods = timerPeriods;
                 return this;
             }
@@ -953,6 +1072,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class NodePool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxIdleAppInstanceAmount")
         private Integer maxIdleAppInstanceAmount;
@@ -970,7 +1095,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private String nodeInstanceType;
 
         @com.aliyun.core.annotation.NameInMap("RecurrenceSchedules")
-        private java.util.List < RecurrenceSchedules> recurrenceSchedules;
+        private java.util.List<RecurrenceSchedules> recurrenceSchedules;
 
         @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
@@ -1055,7 +1180,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         /**
          * @return recurrenceSchedules
          */
-        public java.util.List < RecurrenceSchedules> getRecurrenceSchedules() {
+        public java.util.List<RecurrenceSchedules> getRecurrenceSchedules() {
             return this.recurrenceSchedules;
         }
 
@@ -1114,7 +1239,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             private Integer nodeAmount; 
             private Integer nodeCapacity; 
             private String nodeInstanceType; 
-            private java.util.List < RecurrenceSchedules> recurrenceSchedules; 
+            private java.util.List<RecurrenceSchedules> recurrenceSchedules; 
             private Integer scalingDownAfterIdleMinutes; 
             private Integer scalingStep; 
             private String scalingUsageThreshold; 
@@ -1166,7 +1291,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             /**
              * RecurrenceSchedules.
              */
-            public Builder recurrenceSchedules(java.util.List < RecurrenceSchedules> recurrenceSchedules) {
+            public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
                 return this;
             }
@@ -1234,6 +1359,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class RuntimePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DebugMode")
         private String debugMode;
@@ -1281,7 +1412,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * 会话类型。
+             * <p>会话类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1295,6 +1429,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class SecurityPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResetAfterUnbind")
         private Boolean resetAfterUnbind;
@@ -1356,9 +1496,15 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class StoragePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageTypeList")
-        private java.util.List < String > storageTypeList;
+        private java.util.List<String> storageTypeList;
 
         private StoragePolicy(Builder builder) {
             this.storageTypeList = builder.storageTypeList;
@@ -1375,17 +1521,17 @@ public class CreateAppInstanceGroupRequest extends Request {
         /**
          * @return storageTypeList
          */
-        public java.util.List < String > getStorageTypeList() {
+        public java.util.List<String> getStorageTypeList() {
             return this.storageTypeList;
         }
 
         public static final class Builder {
-            private java.util.List < String > storageTypeList; 
+            private java.util.List<String> storageTypeList; 
 
             /**
              * StorageTypeList.
              */
-            public Builder storageTypeList(java.util.List < String > storageTypeList) {
+            public Builder storageTypeList(java.util.List<String> storageTypeList) {
                 this.storageTypeList = storageTypeList;
                 return this;
             }
@@ -1397,6 +1543,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class UserDefinePolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomConfig")
         private String customConfig;
@@ -1438,6 +1590,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -1479,6 +1637,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceGroupRequest</p>
+     */
     public static class VideoPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrameRate")
         private Integer frameRate;

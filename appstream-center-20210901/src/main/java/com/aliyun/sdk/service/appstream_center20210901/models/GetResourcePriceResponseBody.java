@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourcePriceResponseBody</p>
@@ -18,7 +24,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("PriceList")
-    private java.util.List < PriceList> priceList;
+    private java.util.List<PriceList> priceList;
 
     @com.aliyun.core.annotation.NameInMap("PriceModel")
     private PriceModel priceModel;
@@ -59,7 +65,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
     /**
      * @return priceList
      */
-    public java.util.List < PriceList> getPriceList() {
+    public java.util.List<PriceList> getPriceList() {
         return this.priceList;
     }
 
@@ -80,7 +86,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < PriceList> priceList; 
+        private java.util.List<PriceList> priceList; 
         private PriceModel priceModel; 
         private String requestId; 
 
@@ -103,7 +109,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         /**
          * PriceList.
          */
-        public Builder priceList(java.util.List < PriceList> priceList) {
+        public Builder priceList(java.util.List<PriceList> priceList) {
             this.priceList = priceList;
             return this;
         }
@@ -130,6 +136,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
@@ -251,6 +263,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -262,7 +280,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         private String originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("Promotions")
-        private java.util.List < Promotions> promotions;
+        private java.util.List<Promotions> promotions;
 
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private String tradePrice;
@@ -307,7 +325,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         /**
          * @return promotions
          */
-        public java.util.List < Promotions> getPromotions() {
+        public java.util.List<Promotions> getPromotions() {
             return this.promotions;
         }
 
@@ -322,7 +340,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String currency; 
             private String discountPrice; 
             private String originalPrice; 
-            private java.util.List < Promotions> promotions; 
+            private java.util.List<Promotions> promotions; 
             private String tradePrice; 
 
             /**
@@ -352,7 +370,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             /**
              * Promotions.
              */
-            public Builder promotions(java.util.List < Promotions> promotions) {
+            public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
                 return this;
             }
@@ -372,6 +390,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -433,6 +457,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class PriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
@@ -441,7 +471,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         private String priceType;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private PriceList(Builder builder) {
             this.price = builder.price;
@@ -474,14 +504,14 @@ public class GetResourcePriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Price price; 
             private String priceType; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Price.
@@ -502,7 +532,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -514,6 +544,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class PricePromotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
@@ -635,6 +671,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class PriceModelPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -646,7 +688,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         private String originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("Promotions")
-        private java.util.List < PricePromotions> promotions;
+        private java.util.List<PricePromotions> promotions;
 
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private String tradePrice;
@@ -691,7 +733,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
         /**
          * @return promotions
          */
-        public java.util.List < PricePromotions> getPromotions() {
+        public java.util.List<PricePromotions> getPromotions() {
             return this.promotions;
         }
 
@@ -706,7 +748,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String currency; 
             private String discountPrice; 
             private String originalPrice; 
-            private java.util.List < PricePromotions> promotions; 
+            private java.util.List<PricePromotions> promotions; 
             private String tradePrice; 
 
             /**
@@ -736,7 +778,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             /**
              * Promotions.
              */
-            public Builder promotions(java.util.List < PricePromotions> promotions) {
+            public Builder promotions(java.util.List<PricePromotions> promotions) {
                 this.promotions = promotions;
                 return this;
             }
@@ -756,6 +798,12 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class PriceModelRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -817,12 +865,18 @@ public class GetResourcePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcePriceResponseBody</p>
+     */
     public static class PriceModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private PriceModelPrice price;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < PriceModelRules> rules;
+        private java.util.List<PriceModelRules> rules;
 
         private PriceModel(Builder builder) {
             this.price = builder.price;
@@ -847,13 +901,13 @@ public class GetResourcePriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < PriceModelRules> getRules() {
+        public java.util.List<PriceModelRules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private PriceModelPrice price; 
-            private java.util.List < PriceModelRules> rules; 
+            private java.util.List<PriceModelRules> rules; 
 
             /**
              * Price.
@@ -866,7 +920,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < PriceModelRules> rules) {
+            public Builder rules(java.util.List<PriceModelRules> rules) {
                 this.rules = rules;
                 return this;
             }

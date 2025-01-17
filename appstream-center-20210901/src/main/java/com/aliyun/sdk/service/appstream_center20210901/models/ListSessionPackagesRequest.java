@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionPackagesRequest} extends {@link RequestModel}
  *
  * <p>ListSessionPackagesRequest</p>
@@ -37,7 +43,7 @@ public class ListSessionPackagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StateList")
-    private java.util.List < Integer > stateList;
+    private java.util.List<Integer> stateList;
 
     private ListSessionPackagesRequest(Builder builder) {
         super(builder);
@@ -108,7 +114,7 @@ public class ListSessionPackagesRequest extends Request {
     /**
      * @return stateList
      */
-    public java.util.List < Integer > getStateList() {
+    public java.util.List<Integer> getStateList() {
         return this.stateList;
     }
 
@@ -119,7 +125,7 @@ public class ListSessionPackagesRequest extends Request {
         private String sessionPackageId; 
         private String sessionPackageName; 
         private String sortType; 
-        private java.util.List < Integer > stateList; 
+        private java.util.List<Integer> stateList; 
 
         private Builder() {
             super();
@@ -193,7 +199,7 @@ public class ListSessionPackagesRequest extends Request {
         /**
          * StateList.
          */
-        public Builder stateList(java.util.List < Integer > stateList) {
+        public Builder stateList(java.util.List<Integer> stateList) {
             this.putQueryParameter("StateList", stateList);
             this.stateList = stateList;
             return this;

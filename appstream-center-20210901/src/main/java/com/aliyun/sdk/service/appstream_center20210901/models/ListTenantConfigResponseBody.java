@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTenantConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListTenantConfigResponseBody</p>
@@ -70,6 +76,12 @@ public class ListTenantConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTenantConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTenantConfigResponseBody</p>
+     */
     public static class TenantConfigModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceGroupExpireRemind")
         private Boolean appInstanceGroupExpireRemind;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccessPageSetAclRequest} extends {@link RequestModel}
  *
  * <p>AccessPageSetAclRequest</p>
@@ -112,7 +118,10 @@ public class AccessPageSetAclRequest extends Request {
         } 
 
         /**
-         * AccessMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREE_ACCESS</p>
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -121,7 +130,10 @@ public class AccessPageSetAclRequest extends Request {
         }
 
         /**
-         * AccessPageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a-062wec3cwmayw****</p>
          */
         public Builder accessPageId(String accessPageId) {
             this.putQueryParameter("AccessPageId", accessPageId);
@@ -139,7 +151,10 @@ public class AccessPageSetAclRequest extends Request {
         }
 
         /**
-         * EffectTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder effectTime(Integer effectTime) {
             this.putQueryParameter("EffectTime", effectTime);

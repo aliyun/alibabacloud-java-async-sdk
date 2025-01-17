@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRegionsResponseBody</p>
  */
 public class ListRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RegionModels")
-    private java.util.List < RegionModels> regionModels;
+    private java.util.List<RegionModels> regionModels;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class ListRegionsResponseBody extends TeaModel {
     /**
      * @return regionModels
      */
-    public java.util.List < RegionModels> getRegionModels() {
+    public java.util.List<RegionModels> getRegionModels() {
         return this.regionModels;
     }
 
@@ -45,13 +51,13 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RegionModels> regionModels; 
+        private java.util.List<RegionModels> regionModels; 
         private String requestId; 
 
         /**
          * RegionModels.
          */
-        public Builder regionModels(java.util.List < RegionModels> regionModels) {
+        public Builder regionModels(java.util.List<RegionModels> regionModels) {
             this.regionModels = regionModels;
             return this;
         }
@@ -70,6 +76,12 @@ public class ListRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegionsResponseBody</p>
+     */
     public static class RegionModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;

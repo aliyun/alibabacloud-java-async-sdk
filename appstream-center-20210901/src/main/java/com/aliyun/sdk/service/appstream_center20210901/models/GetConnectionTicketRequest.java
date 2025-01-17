@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConnectionTicketRequest} extends {@link RequestModel}
  *
  * <p>GetConnectionTicketRequest</p>
@@ -17,7 +23,7 @@ public class GetConnectionTicketRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceGroupIdList")
-    private java.util.List < String > appInstanceGroupIdList;
+    private java.util.List<String> appInstanceGroupIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceId")
@@ -90,7 +96,7 @@ public class GetConnectionTicketRequest extends Request {
     /**
      * @return appInstanceGroupIdList
      */
-    public java.util.List < String > getAppInstanceGroupIdList() {
+    public java.util.List<String> getAppInstanceGroupIdList() {
         return this.appInstanceGroupIdList;
     }
 
@@ -152,7 +158,7 @@ public class GetConnectionTicketRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetConnectionTicketRequest, Builder> {
         private String appId; 
-        private java.util.List < String > appInstanceGroupIdList; 
+        private java.util.List<String> appInstanceGroupIdList; 
         private String appInstanceId; 
         private String appInstancePersistentId; 
         private String appStartParam; 
@@ -192,7 +198,7 @@ public class GetConnectionTicketRequest extends Request {
         /**
          * AppInstanceGroupIdList.
          */
-        public Builder appInstanceGroupIdList(java.util.List < String > appInstanceGroupIdList) {
+        public Builder appInstanceGroupIdList(java.util.List<String> appInstanceGroupIdList) {
             this.putBodyParameter("AppInstanceGroupIdList", appInstanceGroupIdList);
             this.appInstanceGroupIdList = appInstanceGroupIdList;
             return this;
@@ -244,7 +250,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -253,7 +262,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);

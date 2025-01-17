@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAppInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAppInstancesResponseBody</p>
  */
 public class DeleteAppInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeleteAppInstanceModels")
-    private java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels;
+    private java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     /**
      * @return deleteAppInstanceModels
      */
-    public java.util.List < DeleteAppInstanceModels> getDeleteAppInstanceModels() {
+    public java.util.List<DeleteAppInstanceModels> getDeleteAppInstanceModels() {
         return this.deleteAppInstanceModels;
     }
 
@@ -45,13 +51,13 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels; 
+        private java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels; 
         private String requestId; 
 
         /**
          * DeleteAppInstanceModels.
          */
-        public Builder deleteAppInstanceModels(java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels) {
+        public Builder deleteAppInstanceModels(java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels) {
             this.deleteAppInstanceModels = deleteAppInstanceModels;
             return this;
         }
@@ -70,6 +76,12 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAppInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAppInstancesResponseBody</p>
+     */
     public static class DeleteAppInstanceModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceId")
         private String appInstanceId;

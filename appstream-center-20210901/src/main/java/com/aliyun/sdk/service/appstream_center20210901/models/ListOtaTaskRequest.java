@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOtaTaskRequest} extends {@link RequestModel}
  *
  * <p>ListOtaTaskRequest</p>
@@ -99,7 +105,10 @@ public class ListOtaTaskRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-53fvrq1oanz6c****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.putBodyParameter("AppInstanceGroupId", appInstanceGroupId);
@@ -108,7 +117,10 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * OtaType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fota</p>
          */
         public Builder otaType(String otaType) {
             this.putBodyParameter("OtaType", otaType);
@@ -117,7 +129,10 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -126,7 +141,10 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNodePoolAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyNodePoolAttributeRequest</p>
@@ -146,7 +152,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
         }
 
         /**
-         * 产品类型。
+         * <p>产品类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -161,6 +170,12 @@ public class ModifyNodePoolAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyNodePoolAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNodePoolAttributeRequest</p>
+     */
     public static class TimerPeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
@@ -212,7 +227,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private String startTime; 
 
             /**
-             * 资源数量。
+             * <p>资源数量。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -220,7 +238,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 结束时间。格式为HH:mm。
+             * <p>结束时间。格式为HH:mm。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -228,7 +249,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 开始时间。格式为HH:mm。
+             * <p>开始时间。格式为HH:mm。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -242,15 +266,21 @@ public class ModifyNodePoolAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyNodePoolAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNodePoolAttributeRequest</p>
+     */
     public static class RecurrenceSchedules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
         @com.aliyun.core.annotation.NameInMap("RecurrenceValues")
-        private java.util.List < Integer > recurrenceValues;
+        private java.util.List<Integer> recurrenceValues;
 
         @com.aliyun.core.annotation.NameInMap("TimerPeriods")
-        private java.util.List < TimerPeriods> timerPeriods;
+        private java.util.List<TimerPeriods> timerPeriods;
 
         private RecurrenceSchedules(Builder builder) {
             this.recurrenceType = builder.recurrenceType;
@@ -276,24 +306,27 @@ public class ModifyNodePoolAttributeRequest extends Request {
         /**
          * @return recurrenceValues
          */
-        public java.util.List < Integer > getRecurrenceValues() {
+        public java.util.List<Integer> getRecurrenceValues() {
             return this.recurrenceValues;
         }
 
         /**
          * @return timerPeriods
          */
-        public java.util.List < TimerPeriods> getTimerPeriods() {
+        public java.util.List<TimerPeriods> getTimerPeriods() {
             return this.timerPeriods;
         }
 
         public static final class Builder {
             private String recurrenceType; 
-            private java.util.List < Integer > recurrenceValues; 
-            private java.util.List < TimerPeriods> timerPeriods; 
+            private java.util.List<Integer> recurrenceValues; 
+            private java.util.List<TimerPeriods> timerPeriods; 
 
             /**
-             * 策略执行周期的类型。必须同时指定`RecurrenceType`和`RecurrenceValues`。
+             * <p>策略执行周期的类型。必须同时指定<code>RecurrenceType</code>和<code>RecurrenceValues</code>。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weekly</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -301,24 +334,24 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 策略执行周期的数值列表。
+             * <p>策略执行周期的数值列表。</p>
              */
-            public Builder recurrenceValues(java.util.List < Integer > recurrenceValues) {
+            public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
                 return this;
             }
 
             /**
-             * 策略执行周期的时间段列表。时间段设置要求：
-             * <p>
-             * 
-             * - 最多可添加3个时间段。
-             * - 时间段之间不重叠。
-             * - 时间段之间的间隔大于或等于5分钟。
-             * - 单个时间段的时长大于或等于15分钟。
-             * - 所有时间段累计不跨天。
+             * <p>策略执行周期的时间段列表。时间段设置要求：</p>
+             * <ul>
+             * <li>最多可添加3个时间段。</li>
+             * <li>时间段之间不重叠。</li>
+             * <li>时间段之间的间隔大于或等于5分钟。</li>
+             * <li>单个时间段的时长大于或等于15分钟。</li>
+             * <li>所有时间段累计不跨天。</li>
+             * </ul>
              */
-            public Builder timerPeriods(java.util.List < TimerPeriods> timerPeriods) {
+            public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
                 this.timerPeriods = timerPeriods;
                 return this;
             }
@@ -330,6 +363,12 @@ public class ModifyNodePoolAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyNodePoolAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNodePoolAttributeRequest</p>
+     */
     public static class NodePoolStrategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxIdleAppInstanceAmount")
         private Integer maxIdleAppInstanceAmount;
@@ -341,7 +380,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         private Integer nodeAmount;
 
         @com.aliyun.core.annotation.NameInMap("RecurrenceSchedules")
-        private java.util.List < RecurrenceSchedules> recurrenceSchedules;
+        private java.util.List<RecurrenceSchedules> recurrenceSchedules;
 
         @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
@@ -410,7 +449,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         /**
          * @return recurrenceSchedules
          */
-        public java.util.List < RecurrenceSchedules> getRecurrenceSchedules() {
+        public java.util.List<RecurrenceSchedules> getRecurrenceSchedules() {
             return this.recurrenceSchedules;
         }
 
@@ -467,7 +506,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private Integer maxIdleAppInstanceAmount; 
             private Integer maxScalingAmount; 
             private Integer nodeAmount; 
-            private java.util.List < RecurrenceSchedules> recurrenceSchedules; 
+            private java.util.List<RecurrenceSchedules> recurrenceSchedules; 
             private Integer scalingDownAfterIdleMinutes; 
             private Integer scalingStep; 
             private String scalingUsageThreshold; 
@@ -493,12 +532,16 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 购买资源的数量。取值范围：1~100。
-             * <p>
+             * <p>购买资源的数量。取值范围：1~100。</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>若为包年包月资源，则该参数不可修改。</li>
+             * <li>若为按量付费资源，则当弹性模式（<code>StrategyType</code>）为固定数量（<code>NODE_FIXED</code>）或自动扩缩容（<code>NODE_SCALING_BY_USAGE</code>）时该参数可修改。</li>
+             * </ul>
              * 
-             * > 
-             * - 若为包年包月资源，则该参数不可修改。
-             * - 若为按量付费资源，则当弹性模式（`StrategyType`）为固定数量（`NODE_FIXED`）或自动扩缩容（`NODE_SCALING_BY_USAGE`）时该参数可修改。
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -506,9 +549,9 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 策略执行周期列表。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。
+             * <p>策略执行周期列表。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
              */
-            public Builder recurrenceSchedules(java.util.List < RecurrenceSchedules> recurrenceSchedules) {
+            public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
                 return this;
             }
@@ -538,7 +581,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 策略失效日期。格式为：yyyy-MM-dd。失效日期与生效日期的间隔必须介于7天到1年之间（含7天和1年）。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。
+             * <p>策略失效日期。格式为：yyyy-MM-dd。失效日期与生效日期的间隔必须介于7天到1年之间（含7天和1年）。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-19</p>
              */
             public Builder strategyDisableDate(String strategyDisableDate) {
                 this.strategyDisableDate = strategyDisableDate;
@@ -546,7 +592,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 策略生效日期。格式为：yyyy-MM-dd。该日期必须大于或等于当前日期。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。
+             * <p>策略生效日期。格式为：yyyy-MM-dd。该日期必须大于或等于当前日期。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-05</p>
              */
             public Builder strategyEnableDate(String strategyEnableDate) {
                 this.strategyEnableDate = strategyEnableDate;
@@ -562,7 +611,10 @@ public class ModifyNodePoolAttributeRequest extends Request {
             }
 
             /**
-             * 是否开启资源预热策略。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。
+             * <p>是否开启资源预热策略。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder warmUp(Boolean warmUp) {
                 this.warmUp = warmUp;

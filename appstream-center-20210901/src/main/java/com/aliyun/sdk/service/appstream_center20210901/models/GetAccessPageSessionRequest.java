@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccessPageSessionRequest} extends {@link RequestModel}
  *
  * <p>GetAccessPageSessionRequest</p>
@@ -83,7 +89,10 @@ public class GetAccessPageSessionRequest extends Request {
         } 
 
         /**
-         * AccessPageId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a-062wec3cwmayw****</p>
          */
         public Builder accessPageId(String accessPageId) {
             this.putQueryParameter("AccessPageId", accessPageId);
@@ -92,7 +101,10 @@ public class GetAccessPageSessionRequest extends Request {
         }
 
         /**
-         * AccessPageToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8141B1A674D48ACB8E5D2D6CE53FDB2F3CF8710A5F8F78578D5254BC6F******</p>
          */
         public Builder accessPageToken(String accessPageToken) {
             this.putQueryParameter("AccessPageToken", accessPageToken);

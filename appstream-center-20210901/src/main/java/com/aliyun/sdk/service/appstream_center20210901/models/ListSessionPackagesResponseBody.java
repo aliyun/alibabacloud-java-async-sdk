@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionPackagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSessionPackagesResponseBody</p>
  */
 public class ListSessionPackagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -45,7 +51,7 @@ public class ListSessionPackagesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -78,7 +84,7 @@ public class ListSessionPackagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListSessionPackagesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListSessionPackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSessionPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionPackagesResponseBody</p>
+     */
     public static class InstanceObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -311,6 +323,12 @@ public class ListSessionPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSessionPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSessionPackagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableHours")
         private Long availableHours;

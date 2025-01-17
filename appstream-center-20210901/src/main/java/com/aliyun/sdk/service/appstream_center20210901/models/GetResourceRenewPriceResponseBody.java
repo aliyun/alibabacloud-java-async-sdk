@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceRenewPriceResponseBody</p>
@@ -70,6 +76,12 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
@@ -191,6 +203,12 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -202,7 +220,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         private String originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("Promotions")
-        private java.util.List < Promotions> promotions;
+        private java.util.List<Promotions> promotions;
 
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private String tradePrice;
@@ -247,7 +265,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         /**
          * @return promotions
          */
-        public java.util.List < Promotions> getPromotions() {
+        public java.util.List<Promotions> getPromotions() {
             return this.promotions;
         }
 
@@ -262,7 +280,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             private String currency; 
             private String discountPrice; 
             private String originalPrice; 
-            private java.util.List < Promotions> promotions; 
+            private java.util.List<Promotions> promotions; 
             private String tradePrice; 
 
             /**
@@ -292,7 +310,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             /**
              * Promotions.
              */
-            public Builder promotions(java.util.List < Promotions> promotions) {
+            public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
                 return this;
             }
@@ -312,6 +330,12 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -373,12 +397,18 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceRenewPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceRenewPriceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private Data(Builder builder) {
             this.price = builder.price;
@@ -403,13 +433,13 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Price price; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Price.
@@ -422,7 +452,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOtaTaskByTaskIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetOtaTaskByTaskIdResponseBody</p>
@@ -137,7 +143,10 @@ public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStartTime.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-04T14:36:00+08:00</p>
          */
         public Builder taskStartTime(String taskStartTime) {
             this.taskStartTime = taskStartTime;
