@@ -38,12 +38,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DrivingDirectionNovaResponse> drivingDirectionNova(DrivingDirectionNovaRequest request);
 
     /**
-     * @param request the request parameters of ElectrobikeDirection  ElectrobikeDirectionRequest
-     * @return ElectrobikeDirectionResponse
-     */
-    CompletableFuture<ElectrobikeDirectionResponse> electrobikeDirection(ElectrobikeDirectionRequest request);
-
-    /**
      * @param request the request parameters of ElectrobikeDirectionNova  ElectrobikeDirectionNovaRequest
      * @return ElectrobikeDirectionNovaResponse
      */

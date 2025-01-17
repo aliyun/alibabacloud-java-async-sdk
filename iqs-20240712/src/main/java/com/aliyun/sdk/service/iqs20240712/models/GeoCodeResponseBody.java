@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GeoCodeResponseBody</p>
  */
 public class GeoCodeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
     @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List<Data> data;
 
@@ -26,6 +29,9 @@ public class GeoCodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -33,9 +39,11 @@ public class GeoCodeResponseBody extends TeaModel {
     private Boolean success;
 
     private GeoCodeResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -46,6 +54,13 @@ public class GeoCodeResponseBody extends TeaModel {
 
     public static GeoCodeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
     }
 
     /**
@@ -70,6 +85,13 @@ public class GeoCodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -84,11 +106,21 @@ public class GeoCodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
         private java.util.List<Data> data; 
         private Integer errorCode; 
         private String errorMessage; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * data.
@@ -111,6 +143,14 @@ public class GeoCodeResponseBody extends TeaModel {
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 

@@ -94,24 +94,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ElectrobikeDirection  ElectrobikeDirectionRequest
-     * @return ElectrobikeDirectionResponse
-     */
-    @Override
-    public CompletableFuture<ElectrobikeDirectionResponse> electrobikeDirection(ElectrobikeDirectionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ElectrobikeDirection").setMethod(HttpMethod.GET).setPathRegex("/ipaas/v1/direction/electrobike").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ElectrobikeDirectionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ElectrobikeDirectionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of ElectrobikeDirectionNova  ElectrobikeDirectionNovaRequest
      * @return ElectrobikeDirectionNovaResponse
      */
