@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PhoneNumberConvertServiceResponseBody} extends {@link TeaModel}
  *
  * <p>PhoneNumberConvertServiceResponseBody</p>
@@ -15,7 +21,7 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -48,7 +54,7 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +74,7 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
@@ -83,7 +89,7 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -110,6 +116,12 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PhoneNumberConvertServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>PhoneNumberConvertServiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConverResult")
         private Boolean converResult;

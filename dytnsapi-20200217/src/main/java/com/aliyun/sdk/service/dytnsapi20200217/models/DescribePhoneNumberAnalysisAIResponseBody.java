@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberAnalysisAIResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhoneNumberAnalysisAIResponseBody</p>
@@ -93,10 +99,13 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
         }
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>OK: The request is successful.</li>
+         * </ul>
          * 
-         * *   OK: The request is successful.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -104,7 +113,7 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +121,10 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -120,7 +132,10 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68A40250-50CD-034C-B728-0BD******177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,6 +148,12 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhoneNumberAnalysisAIResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhoneNumberAnalysisAIResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -172,12 +193,15 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
             private String number; 
 
             /**
-             * The returned code.
-             * <p>
+             * <p>The returned code.</p>
+             * <ul>
+             * <li>YES: The specified phone number is valid.</li>
+             * <li>NO: The specified phone number is invalid.</li>
+             * <li>UNKNOWN: The specified phone number is unknown</li>
+             * </ul>
              * 
-             * *   YES: The specified phone number is valid.
-             * *   NO: The specified phone number is invalid.
-             * *   UNKNOWN: The specified phone number is unknown
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -185,7 +209,10 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
             }
 
             /**
-             * The specified phone number.
+             * <p>The specified phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>187****5620</p>
              */
             public Builder number(String number) {
                 this.number = number;

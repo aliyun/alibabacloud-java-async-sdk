@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUsageStatisticsByTagIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUsageStatisticsByTagIdResponseBody</p>
@@ -15,7 +21,7 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -52,7 +58,7 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +85,16 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The response code. **OK** indicates that the request is successful.
+         * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,15 +102,18 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D45CC751-34DF-5797-81FB-9A2ED6DC024B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +132,14 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
-         * <p>
+         * <p>Indicates whether the call is successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +152,12 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUsageStatisticsByTagIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUsageStatisticsByTagIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationCode")
         private String authorizationCode;
@@ -281,7 +305,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The authorization code.
+             * <p>The authorization code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g61I8UV5zd</p>
              */
             public Builder authorizationCode(String authorizationCode) {
                 this.authorizationCode = authorizationCode;
@@ -289,7 +316,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers for which the query failed.
+             * <p>The numbers for which the query failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71</p>
              */
             public Builder failTotal(Long failTotal) {
                 this.failTotal = failTotal;
@@ -297,7 +327,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230312</p>
              */
             public Builder gmtDateStr(String gmtDateStr) {
                 this.gmtDateStr = gmtDateStr;
@@ -305,7 +338,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the authorization code usage record.
+             * <p>The ID of the authorization code usage record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -313,7 +349,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The industry name.
+             * <p>The industry name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Home security</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -321,7 +360,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The customer product ID (PID).
+             * <p>The customer product ID (PID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder partnerId(Long partnerId) {
                 this.partnerId = partnerId;
@@ -329,7 +371,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The scene name.
+             * <p>The scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Return visit</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -337,7 +382,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers for which the query succeeded.
+             * <p>The numbers for which the query succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93</p>
              */
             public Builder successTotal(Long successTotal) {
                 this.successTotal = successTotal;
@@ -345,7 +393,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The tag name.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder tagId(Long tagId) {
                 this.tagId = tagId;
@@ -353,7 +404,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The tag name.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Query</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -361,7 +415,10 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
             }
 
             /**
-             * The total quantity of numbers that are involved in the query.
+             * <p>The total quantity of numbers that are involved in the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41</p>
              */
             public Builder total(Long total) {
                 this.total = total;

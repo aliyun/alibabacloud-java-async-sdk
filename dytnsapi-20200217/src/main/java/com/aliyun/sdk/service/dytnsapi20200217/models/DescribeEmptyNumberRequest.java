@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEmptyNumberRequest} extends {@link RequestModel}
  *
  * <p>DescribeEmptyNumberRequest</p>
@@ -126,10 +132,14 @@ public class DescribeEmptyNumberRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+         * <strong>example:</strong>
+         * <p>Dd1r***4id</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -138,10 +148,14 @@ public class DescribeEmptyNumberRequest extends Request {
         }
 
         /**
-         * The phone number to be queried.
-         * <p>
+         * <p>The phone number to be queried.</p>
+         * <blockquote>
+         * <p> You can query only one phone number a time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can query only one phone number a time.
+         * <strong>example:</strong>
+         * <p>189****1234</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -150,12 +164,16 @@ public class DescribeEmptyNumberRequest extends Request {
         }
 
         /**
-         * The encryption method of the phone number. Valid values:
-         * <p>
+         * <p>The encryption method of the phone number. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+         * <li><strong>MD5</strong></li>
+         * <li><strong>SHA256</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NORMAL**: The phone number is not encrypted.
-         * *   **MD5**
-         * *   **SHA256**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);

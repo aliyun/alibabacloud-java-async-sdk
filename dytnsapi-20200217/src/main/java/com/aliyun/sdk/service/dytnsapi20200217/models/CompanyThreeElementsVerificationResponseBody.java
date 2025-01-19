@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompanyThreeElementsVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>CompanyThreeElementsVerificationResponseBody</p>
@@ -85,7 +91,12 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the access denial.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -93,7 +104,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +115,7 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +123,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +134,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * The unique request ID. It is a common parameter and can be used to troubleshoot issues.
+         * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68A40250-50CD-034C-B728-0BD135850177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +150,12 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CompanyThreeElementsVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CompanyThreeElementsVerificationResponseBody</p>
+     */
     public static class DetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnterpriseStatus")
         private String enterpriseStatus;
@@ -169,7 +195,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             private String openTime; 
 
             /**
-             * The business status of the enterprise.
+             * <p>The business status of the enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder enterpriseStatus(String enterpriseStatus) {
                 this.enterpriseStatus = enterpriseStatus;
@@ -177,7 +206,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * The business term of the enterprise.
+             * <p>The business term of the enterprise.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-25/2053-05-24</p>
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
@@ -191,12 +223,18 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CompanyThreeElementsVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CompanyThreeElementsVerificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetailInfo")
         private DetailInfo detailInfo;
 
         @com.aliyun.core.annotation.NameInMap("InconsistentData")
-        private java.util.List < String > inconsistentData;
+        private java.util.List<String> inconsistentData;
 
         @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private Long reasonCode;
@@ -229,7 +267,7 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         /**
          * @return inconsistentData
          */
-        public java.util.List < String > getInconsistentData() {
+        public java.util.List<String> getInconsistentData() {
             return this.inconsistentData;
         }
 
@@ -249,12 +287,12 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
 
         public static final class Builder {
             private DetailInfo detailInfo; 
-            private java.util.List < String > inconsistentData; 
+            private java.util.List<String> inconsistentData; 
             private Long reasonCode; 
             private String verifyResult; 
 
             /**
-             * The information about the enterprise.
+             * <p>The information about the enterprise.</p>
              */
             public Builder detailInfo(DetailInfo detailInfo) {
                 this.detailInfo = detailInfo;
@@ -262,23 +300,26 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * The fields to be verified.
+             * <p>The fields to be verified.</p>
              */
-            public Builder inconsistentData(java.util.List < String > inconsistentData) {
+            public Builder inconsistentData(java.util.List<String> inconsistentData) {
                 this.inconsistentData = inconsistentData;
                 return this;
             }
 
             /**
-             * The code of the verification result. Valid values:
-             * <p>
+             * <p>The code of the verification result. Valid values:</p>
+             * <ul>
+             * <li>0: The three elements belong to the same enterprise.</li>
+             * <li>1: The three elements belong to the same enterprise, and the business status of the enterprise is abnormal.</li>
+             * <li>2: The legal representative information cannot match the enterprise information.</li>
+             * <li>3: The three elements do not belong to the same enterprise.</li>
+             * <li>4: No information about the enterprise is found.</li>
+             * <li>5: No information about the legal representative is found.</li>
+             * </ul>
              * 
-             * *   0: The three elements belong to the same enterprise.
-             * *   1: The three elements belong to the same enterprise, and the business status of the enterprise is abnormal.
-             * *   2: The legal representative information cannot match the enterprise information.
-             * *   3: The three elements do not belong to the same enterprise.
-             * *   4: No information about the enterprise is found.
-             * *   5: No information about the legal representative is found.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reasonCode(Long reasonCode) {
                 this.reasonCode = reasonCode;
@@ -286,11 +327,14 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * The verification result. Valid values:
-             * <p>
+             * <p>The verification result. Valid values:</p>
+             * <ul>
+             * <li>true: The three elements belong to the same enterprise and the business status of the enterprise is Active.</li>
+             * <li>false: The three elements do not belong to the same enterprise.</li>
+             * </ul>
              * 
-             * *   true: The three elements belong to the same enterprise and the business status of the enterprise is Active.
-             * *   false: The three elements do not belong to the same enterprise.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;

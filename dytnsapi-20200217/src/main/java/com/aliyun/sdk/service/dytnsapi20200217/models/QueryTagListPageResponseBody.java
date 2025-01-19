@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagListPageResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTagListPageResponseBody</p>
@@ -85,7 +91,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. **OK** indicates that the request is successful.
+         * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4475657-BB7E-585D-9E09-37934F096103</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +132,14 @@ public class QueryTagListPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +152,12 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTagListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagListPageResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
@@ -293,7 +317,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             private String sceneName; 
 
             /**
-             * The API operation that is called by the frontend.
+             * <p>The API operation that is called by the frontend.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TwoElementsVerification</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -301,7 +328,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Code
+             * <p>Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -309,7 +339,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for the API documentation.
+             * <p>The URL for the API documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP</a></p>
              */
             public Builder docAddress(String docAddress) {
                 this.docAddress = docAddress;
@@ -317,7 +350,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag ID.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -325,7 +361,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The industry ID.
+             * <p>The industry ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder industryId(Long industryId) {
                 this.industryId = industryId;
@@ -333,7 +372,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The industry name.
+             * <p>The industry name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -341,7 +383,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag description.
+             * <p>The tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for autotest new</p>
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -349,7 +394,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the number is activated.
+             * <p>Indicates whether the number is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder isOpen(Long isOpen) {
                 this.isOpen = isOpen;
@@ -357,7 +405,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag name.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -365,9 +416,13 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * *   0: The number is hidden.
-             * <p>
-             * *   1: The number is public.
+             * <ul>
+             * <li>0: The number is hidden.</li>
+             * <li>1: The number is public.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder saleStatusStr(String saleStatusStr) {
                 this.saleStatusStr = saleStatusStr;
@@ -375,7 +430,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The scene ID.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -383,7 +441,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The scene name.
+             * <p>The scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>check</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -397,6 +458,12 @@ public class QueryTagListPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTagListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagListPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -405,7 +472,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -446,7 +513,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -467,12 +534,15 @@ public class QueryTagListPageResponseBody extends TeaModel {
         public static final class Builder {
             private Long pageNo; 
             private Long pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Long totalCount; 
             private Long totalPage; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder pageNo(Long pageNo) {
                 this.pageNo = pageNo;
@@ -480,7 +550,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -488,15 +561,18 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The retruned data.
+             * <p>The retruned data.</p>
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -504,7 +580,10 @@ public class QueryTagListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned pages.
+             * <p>The total number of returned pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91</p>
              */
             public Builder totalPage(Long totalPage) {
                 this.totalPage = totalPage;

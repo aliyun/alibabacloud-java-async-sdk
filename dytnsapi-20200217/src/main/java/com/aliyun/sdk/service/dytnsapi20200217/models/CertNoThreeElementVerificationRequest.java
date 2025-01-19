@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertNoThreeElementVerificationRequest} extends {@link RequestModel}
  *
  * <p>CertNoThreeElementVerificationRequest</p>
@@ -155,7 +161,10 @@ public class CertNoThreeElementVerificationRequest extends Request {
         } 
 
         /**
-         * AuthCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QASDW@#**</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -164,7 +173,10 @@ public class CertNoThreeElementVerificationRequest extends Request {
         }
 
         /**
-         * CertName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -173,7 +185,10 @@ public class CertNoThreeElementVerificationRequest extends Request {
         }
 
         /**
-         * CertNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***************0</p>
          */
         public Builder certNo(String certNo) {
             this.putQueryParameter("CertNo", certNo);
@@ -182,7 +197,10 @@ public class CertNoThreeElementVerificationRequest extends Request {
         }
 
         /**
-         * CertPicture.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iVBOFMKODOFNDFP123DFSMOO...</p>
          */
         public Builder certPicture(String certPicture) {
             this.putQueryParameter("CertPicture", certPicture);

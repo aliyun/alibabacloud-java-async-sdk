@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberAnalysisAIRequest} extends {@link RequestModel}
  *
  * <p>DescribePhoneNumberAnalysisAIRequest</p>
@@ -139,10 +145,14 @@ public class DescribePhoneNumberAnalysisAIRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the ****<a href="https://dytns.console.aliyun.com/analysis/square"><strong>Labels</strong></a> page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the ****[**Labels**](https://dytns.console.aliyun.com/analysis/square) page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.
+         * <strong>example:</strong>
+         * <p>HwD***nG</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -151,7 +161,11 @@ public class DescribePhoneNumberAnalysisAIRequest extends Request {
         }
 
         /**
-         * The phone number to be queried.
+         * <p>The phone number to be queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187****5620</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -160,7 +174,10 @@ public class DescribePhoneNumberAnalysisAIRequest extends Request {
         }
 
         /**
-         * The model parameter configuration. This field is required by some labels.
+         * <p>The model parameter configuration. This field is required by some labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;trainingJobId&quot;: &quot;17**********48&quot;}</p>
          */
         public Builder modelConfig(String modelConfig) {
             this.putQueryParameter("ModelConfig", modelConfig);
@@ -178,10 +195,13 @@ public class DescribePhoneNumberAnalysisAIRequest extends Request {
         }
 
         /**
-         * The score threshold for the phone number. Valid values: **0 to 100**.
-         * <p>
+         * <p>The score threshold for the phone number. Valid values: <strong>0 to 100</strong>.</p>
+         * <blockquote>
+         * <p> The system provided by Alibaba Cloud determines whether to accept the specified score threshold. When the system does not accept the specified score threshold, the value of this field is invalid.</p>
+         * </blockquote>
          * 
-         * >  The system provided by Alibaba Cloud determines whether to accept the specified score threshold. When the system does not accept the specified score threshold, the value of this field is invalid.
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder rate(Long rate) {
             this.putQueryParameter("Rate", rate);

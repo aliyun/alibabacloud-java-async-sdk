@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompanyThreeElementsVerificationRequest} extends {@link RequestModel}
  *
  * <p>CompanyThreeElementsVerificationRequest</p>
@@ -141,10 +147,14 @@ public class CompanyThreeElementsVerificationRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page in the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the [My Applications](https://dytns.console.aliyun.com/analysis/apply) page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC), you can obtain the authorization code (also known as authorization ID).
+         * <strong>example:</strong>
+         * <p>Dd1r***4id</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -153,7 +163,11 @@ public class CompanyThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The enterprise name.
+         * <p>The enterprise name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder epCertName(String epCertName) {
             this.putQueryParameter("EpCertName", epCertName);
@@ -162,7 +176,11 @@ public class CompanyThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The business license number.
+         * <p>The business license number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9242032*******J627</p>
          */
         public Builder epCertNo(String epCertNo) {
             this.putQueryParameter("EpCertNo", epCertNo);
@@ -171,10 +189,14 @@ public class CompanyThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The name of the legal representative.
-         * <p>
+         * <p>The name of the legal representative.</p>
+         * <blockquote>
+         * <p> If an enterprise has multiple legal representatives, separate them with commas (,).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If an enterprise has multiple legal representatives, separate them with commas (,).
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder legalPersonCertName(String legalPersonCertName) {
             this.putQueryParameter("LegalPersonCertName", legalPersonCertName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PhoneNumberStatusForAccountResponseBody} extends {@link TeaModel}
  *
  * <p>PhoneNumberStatusForAccountResponseBody</p>
@@ -73,12 +79,15 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The request is successful.</li>
+         * <li><strong>OperatorLimit</strong>: The carrier prohibits the query of the phone number.</li>
+         * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+         * </ul>
          * 
-         * *   **OK**: The request is successful.
-         * *   **OperatorLimit**: The carrier prohibits the query of the phone number.
-         * *   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -86,7 +95,7 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +103,10 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +114,10 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The unique request ID. It is a common parameter and can be used to troubleshoot issues.
+         * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,6 +130,12 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PhoneNumberStatusForAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>PhoneNumberStatusForAccountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Carrier")
         private String carrier;
@@ -154,14 +175,18 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The basic carrier who assings the phone number. If the queried phone number involves mobile number portability, the carrier after mobile number portability is returned. Valid values:
-             * <p>
+             * <p>The basic carrier who assings the phone number. If the queried phone number involves mobile number portability, the carrier after mobile number portability is returned. Valid values:</p>
+             * <ul>
+             * <li><strong>CMCC</strong>: China Mobile</li>
+             * <li><strong>CUCC</strong>: China Unicom</li>
+             * <li><strong>CTCC</strong>: China Telecom</li>
+             * </ul>
+             * <blockquote>
+             * <p> You are not allowed to query the phone numbers assigned by China Broadnet.</p>
+             * </blockquote>
              * 
-             * *   **CMCC**: China Mobile
-             * *   **CUCC**: China Unicom
-             * *   **CTCC**: China Telecom
-             * 
-             * >  You are not allowed to query the phone numbers assigned by China Broadnet.
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder carrier(String carrier) {
                 this.carrier = carrier;
@@ -169,17 +194,21 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The returned status for the queried phone number. Valid values:
-             * <p>
+             * <p>The returned status for the queried phone number. Valid values:</p>
+             * <ul>
+             * <li><strong>NORMAL</strong>: The queried phone number is valid.</li>
+             * <li><strong>SHUTDOWN</strong>: The queried phone number is suspended.</li>
+             * <li><strong>POWER_OFF</strong>: The queried phone number cannot be connected.</li>
+             * <li><strong>NOT_EXIST</strong>: The queried phone number is a nonexistent number.</li>
+             * <li><strong>DEFECT</strong>: The queried phone number is invalid.</li>
+             * <li><strong>UNKNOWN</strong>: The queried phone number is unknown.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Due to system adjustment of the carrier, the BUSY and POWER_OFF states cannot be returned for the numbers assigned by China Telecom. <a href="https://help.aliyun.com/document_detail/2489709.html">For more information, see the official announcements</a>.</p>
+             * </blockquote>
              * 
-             * *   **NORMAL**: The queried phone number is valid.
-             * *   **SHUTDOWN**: The queried phone number is suspended.
-             * *   **POWER_OFF**: The queried phone number cannot be connected.
-             * *   **NOT_EXIST**: The queried phone number is a nonexistent number.
-             * *   **DEFECT**: The queried phone number is invalid.
-             * *   **UNKNOWN**: The queried phone number is unknown.
-             * 
-             * >  Due to system adjustment of the carrier, the BUSY and POWER_OFF states cannot be returned for the numbers assigned by China Telecom. [For more information, see the official announcements](https://help.aliyun.com/document_detail/2489709.html).
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PhoneNumberEncryptResponseBody} extends {@link TeaModel}
  *
  * <p>PhoneNumberEncryptResponseBody</p>
@@ -15,7 +21,7 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -48,7 +54,7 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,16 +74,19 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li>The value OK indicates that the request was successful.</li>
+         * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+         * </ul>
          * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,15 +94,18 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the returned entries.
+         * <p>Details about the returned entries.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +113,10 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +129,12 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PhoneNumberEncryptResponseBody} extends {@link TeaModel}
+     *
+     * <p>PhoneNumberEncryptResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EncryptedNumber")
         private String encryptedNumber;
@@ -165,7 +186,10 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
             private String originalNumber; 
 
             /**
-             * The encrypted phone number.
+             * <p>The encrypted phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1400513****</p>
              */
             public Builder encryptedNumber(String encryptedNumber) {
                 this.encryptedNumber = encryptedNumber;
@@ -173,7 +197,10 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the phone number expires.
+             * <p>The time when the phone number expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-27 16:05:23</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -181,7 +208,10 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
             }
 
             /**
-             * The original phone number.
+             * <p>The original phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1390000****</p>
              */
             public Builder originalNumber(String originalNumber) {
                 this.originalNumber = originalNumber;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvalidPhoneNumberFilterRequest} extends {@link RequestModel}
  *
  * <p>InvalidPhoneNumberFilterRequest</p>
@@ -126,10 +132,14 @@ public class InvalidPhoneNumberFilterRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+         * <strong>example:</strong>
+         * <p>QASDW@#**</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -138,7 +148,11 @@ public class InvalidPhoneNumberFilterRequest extends Request {
         }
 
         /**
-         * The phone number to be queried.
+         * <p>The phone number to be queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -147,10 +161,14 @@ public class InvalidPhoneNumberFilterRequest extends Request {
         }
 
         /**
-         * The encryption method of the phone number.
-         * <p>
+         * <p>The encryption method of the phone number.</p>
+         * <blockquote>
+         * <p> Only the NORMAL encryption method is supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Only the NORMAL encryption method is supported.
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PhoneNumberConvertServiceRequest} extends {@link RequestModel}
  *
  * <p>PhoneNumberConvertServiceRequest</p>
@@ -126,7 +132,7 @@ public class PhoneNumberConvertServiceRequest extends Request {
         } 
 
         /**
-         * AuthCode.
+         * <p>This parameter is required.</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -135,7 +141,7 @@ public class PhoneNumberConvertServiceRequest extends Request {
         }
 
         /**
-         * InputNumber.
+         * <p>This parameter is required.</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -144,7 +150,7 @@ public class PhoneNumberConvertServiceRequest extends Request {
         }
 
         /**
-         * Mask.
+         * <p>This parameter is required.</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberOnlineTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhoneNumberOnlineTimeResponseBody</p>
@@ -73,14 +79,18 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The request is successful.</li>
+         * <li><strong>PortabilityNumberNotSupported</strong>: The phone number that is involved in mobile number portability is not supported.</li>
+         * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Pricing</a>.</p>
+         * </blockquote>
          * 
-         * *   **OK**: The request is successful.
-         * *   **PortabilityNumberNotSupported**: The phone number that is involved in mobile number portability is not supported.
-         * *   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.
-         * 
-         * >  You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see [Pricing](~~154751~~).
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +98,7 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -96,7 +106,10 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -104,7 +117,10 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,6 +133,12 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhoneNumberOnlineTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhoneNumberOnlineTimeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CarrierCode")
         private String carrierCode;
@@ -156,13 +178,16 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
             private String verifyResult; 
 
             /**
-             * The carrier code. Valid values:
-             * <p>
+             * <p>The carrier code. Valid values:</p>
+             * <ul>
+             * <li><strong>CMCC</strong>: China Mobile</li>
+             * <li><strong>CUCC</strong>: China Unicom</li>
+             * <li><strong>CTCC</strong>: China Telecom</li>
+             * <li><strong>CBN</strong>: China Broadnet</li>
+             * </ul>
              * 
-             * *   **CMCC**: China Mobile
-             * *   **CUCC**: China Unicom
-             * *   **CTCC**: China Telecom
-             * *   **CBN**: China Broadnet
+             * <strong>example:</strong>
+             * <p>CMCC</p>
              */
             public Builder carrierCode(String carrierCode) {
                 this.carrierCode = carrierCode;
@@ -170,16 +195,19 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The enumerated value of the usage period of a phone number. Valid values:
-             * <p>
+             * <p>The enumerated value of the usage period of a phone number. Valid values:</p>
+             * <ul>
+             * <li><strong>-1</strong>: No usage period information is available for the phone number.</li>
+             * <li><strong>0</strong>: The phone number status is abnormal. For example, the phone number is a nonexistent number.</li>
+             * <li><strong>1</strong> :[0-3) months.</li>
+             * <li><strong>2</strong> :[3-6] months.</li>
+             * <li><strong>3</strong> :(6-12] months.</li>
+             * <li><strong>4</strong> :(12-24] months.</li>
+             * <li><strong>5</strong> :(24,+) months.</li>
+             * </ul>
              * 
-             * *   **-1**: No usage period information is available for the phone number.
-             * *   **0**: The phone number status is abnormal. For example, the phone number is a nonexistent number.
-             * *   **1** :\[0-3) months.
-             * *   **2** :\[3-6] months.
-             * *   **3** :(6-12] months.
-             * *   **4** :(12-24] months.
-             * *   **5** :(24,+) months.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;

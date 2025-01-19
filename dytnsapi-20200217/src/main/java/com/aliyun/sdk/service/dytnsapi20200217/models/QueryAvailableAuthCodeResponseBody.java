@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAvailableAuthCodeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAvailableAuthCodeResponseBody</p>
@@ -15,7 +21,7 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -52,7 +58,7 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -79,13 +85,16 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The response code. **OK** indicates that the request is successful.
+         * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,15 +102,18 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6ADDCD31-6BC7-5913-A47F-E29A07E37FEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +132,14 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

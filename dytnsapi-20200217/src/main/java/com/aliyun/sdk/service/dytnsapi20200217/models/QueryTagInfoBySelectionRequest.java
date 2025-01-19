@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagInfoBySelectionRequest} extends {@link RequestModel}
  *
  * <p>QueryTagInfoBySelectionRequest</p>
@@ -123,7 +129,10 @@ public class QueryTagInfoBySelectionRequest extends Request {
         } 
 
         /**
-         * The industry ID.
+         * <p>The industry ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder industryId(Long industryId) {
             this.putQueryParameter("IndustryId", industryId);
@@ -159,7 +168,10 @@ public class QueryTagInfoBySelectionRequest extends Request {
         }
 
         /**
-         * The scene ID.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -168,7 +180,10 @@ public class QueryTagInfoBySelectionRequest extends Request {
         }
 
         /**
-         * The tag ID.
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71</p>
          */
         public Builder tagId(Long tagId) {
             this.putQueryParameter("TagId", tagId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberOnlineTimeRequest} extends {@link RequestModel}
  *
  * <p>DescribePhoneNumberOnlineTimeRequest</p>
@@ -140,10 +146,14 @@ public class DescribePhoneNumberOnlineTimeRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+         * <strong>example:</strong>
+         * <p>QASDW@#**</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -152,14 +162,18 @@ public class DescribePhoneNumberOnlineTimeRequest extends Request {
         }
 
         /**
-         * The carrier. Valid values:
-         * <p>
+         * <p>The carrier. Valid values:</p>
+         * <ul>
+         * <li><strong>MOBILE</strong>: China Mobile</li>
+         * <li><strong>UNICOM</strong>: China Unicom</li>
+         * <li><strong>TELECOM</strong>: China Telecom</li>
+         * </ul>
+         * <blockquote>
+         * <p> Alibaba Cloud automatically determines the carrier based on the carrier who assigns the phone number. Therefore, the value of this field does not affect the query result.</p>
+         * </blockquote>
          * 
-         * *   **MOBILE**: China Mobile
-         * *   **UNICOM**: China Unicom
-         * *   **TELECOM**: China Telecom
-         * 
-         * >  Alibaba Cloud automatically determines the carrier based on the carrier who assigns the phone number. Therefore, the value of this field does not affect the query result.
+         * <strong>example:</strong>
+         * <p>UNICOM</p>
          */
         public Builder carrier(String carrier) {
             this.putQueryParameter("Carrier", carrier);
@@ -168,14 +182,19 @@ public class DescribePhoneNumberOnlineTimeRequest extends Request {
         }
 
         /**
-         * The phone number to be queried.
-         * <p>
+         * <p>The phone number to be queried.</p>
+         * <ul>
+         * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
+         * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
+         * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Letters in the encrypted strings are not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.
-         * *   If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.
-         * *   If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.
-         * 
-         * >  Letters in the encrypted strings are not case-sensitive.
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -184,12 +203,16 @@ public class DescribePhoneNumberOnlineTimeRequest extends Request {
         }
 
         /**
-         * The encryption method of the phone number. Valid values:
-         * <p>
+         * <p>The encryption method of the phone number. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+         * <li><strong>MD5</strong></li>
+         * <li><strong>SHA256</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NORMAL**: The phone number is not encrypted.
-         * *   **MD5**
-         * *   **SHA256**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);

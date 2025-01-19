@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberOperatorAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhoneNumberOperatorAttributeResponseBody</p>
@@ -93,14 +99,17 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The request is successful.</li>
+         * <li><strong>InvalidParameter</strong>: The specified phone number is invalid or the parameter format is invalid.</li>
+         * <li><strong>PhoneNumberNotfound</strong>: No attribute information can be found for the specified phone number.</li>
+         * <li><strong>isp.UNKNOWN</strong>: An unknown exception occurred.</li>
+         * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+         * </ul>
          * 
-         * *   **OK**: The request is successful.
-         * *   **InvalidParameter**: The specified phone number is invalid or the parameter format is invalid.
-         * *   **PhoneNumberNotfound**: No attribute information can be found for the specified phone number.
-         * *   **isp.UNKNOWN**: An unknown exception occurred.
-         * *   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,7 +117,7 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -116,7 +125,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -124,7 +136,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68A40250-50CD-034C-B728-0BD135850177</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,6 +152,12 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhoneNumberOperatorAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhoneNumberOperatorAttributeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BasicCarrier")
         private String basicCarrier;
@@ -224,13 +245,16 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * The basic carrier. Valid values:
-             * <p>
+             * <p>The basic carrier. Valid values:</p>
+             * <ul>
+             * <li><strong>China Mobile</strong></li>
+             * <li><strong>China Unicom</strong></li>
+             * <li><strong>China Telecom</strong></li>
+             * <li><strong>China Broadnet</strong></li>
+             * </ul>
              * 
-             * *   **China Mobile**
-             * *   **China Unicom**
-             * *   **China Telecom**
-             * *   **China Broadnet**
+             * <strong>example:</strong>
+             * <p>China Mobile</p>
              */
             public Builder basicCarrier(String basicCarrier) {
                 this.basicCarrier = basicCarrier;
@@ -238,7 +262,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The actual carrier, including the virtual network operator (VNO). If the phone number involves mobile number portability, the value of this parameter is the carrier after mobile number portability.
+             * <p>The actual carrier, including the virtual network operator (VNO). If the phone number involves mobile number portability, the value of this parameter is the carrier after mobile number portability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Mobile</p>
              */
             public Builder carrier(String carrier) {
                 this.carrier = carrier;
@@ -246,7 +273,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The city where the phone number is registered.
+             * <p>The city where the phone number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -254,11 +284,14 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the phone number involves mobile number portability. Valid values:
-             * <p>
+             * <p>Indicates whether the phone number involves mobile number portability. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isNumberPortability(Boolean isNumberPortability) {
                 this.isNumberPortability = isNumberPortability;
@@ -266,7 +299,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The number segment to which the phone number belongs.
+             * <p>The number segment to which the phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139</p>
              */
             public Builder numberSegment(Long numberSegment) {
                 this.numberSegment = numberSegment;
@@ -274,7 +310,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The province where the phone number is registered.
+             * <p>The province where the phone number is registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhejiang</p>
              */
             public Builder province(String province) {
                 this.province = province;

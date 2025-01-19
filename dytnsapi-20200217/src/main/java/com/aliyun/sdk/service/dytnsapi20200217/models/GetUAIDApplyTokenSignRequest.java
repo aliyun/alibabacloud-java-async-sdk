@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUAIDApplyTokenSignRequest} extends {@link RequestModel}
  *
  * <p>GetUAIDApplyTokenSignRequest</p>
@@ -198,7 +204,10 @@ public class GetUAIDApplyTokenSignRequest extends Request {
         } 
 
         /**
-         * AuthCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HwD97InG</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -207,7 +216,10 @@ public class GetUAIDApplyTokenSignRequest extends Request {
         }
 
         /**
-         * Carrier.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CM</p>
          */
         public Builder carrier(String carrier) {
             this.putQueryParameter("Carrier", carrier);
@@ -216,7 +228,10 @@ public class GetUAIDApplyTokenSignRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30300</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -234,7 +249,10 @@ public class GetUAIDApplyTokenSignRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b8b5b3a*******0b9893484fdf412c99</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -288,7 +306,10 @@ public class GetUAIDApplyTokenSignRequest extends Request {
         }
 
         /**
-         * Time.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20121227180001165</p>
          */
         public Builder time(String time) {
             this.putQueryParameter("Time", time);

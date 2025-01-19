@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneTwiceTelVerifyRequest} extends {@link RequestModel}
  *
  * <p>DescribePhoneTwiceTelVerifyRequest</p>
@@ -141,10 +147,14 @@ public class DescribePhoneTwiceTelVerifyRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+         * <strong>example:</strong>
+         * <p>Dd1r***4id</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -153,14 +163,19 @@ public class DescribePhoneTwiceTelVerifyRequest extends Request {
         }
 
         /**
-         * The phone number to be queried.
-         * <p>
+         * <p>The phone number to be queried.</p>
+         * <ul>
+         * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
+         * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
+         * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Letters in the encrypted strings are not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.
-         * *   If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.
-         * *   If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.
-         * 
-         * >  Letters in the encrypted strings are not case-sensitive.
+         * <strong>example:</strong>
+         * <p>139*******</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -169,12 +184,16 @@ public class DescribePhoneTwiceTelVerifyRequest extends Request {
         }
 
         /**
-         * The encryption method of the phone number. Valid values:
-         * <p>
+         * <p>The encryption method of the phone number. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+         * <li><strong>MD5</strong></li>
+         * <li><strong>SHA256</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NORMAL**: The phone number is not encrypted.
-         * *   **MD5**
-         * *   **SHA256**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);
@@ -210,14 +229,19 @@ public class DescribePhoneTwiceTelVerifyRequest extends Request {
         }
 
         /**
-         * The registration time. Specify the time in the yyyy-MM-dd HH:mm:ss format. This time is the service registration time of the mobile phone user. If the service registration time is later than the time when the phone number is assigned by a carrier, it indicates that the phone number is not a reassigned number. Otherwise, the phone number is a reassigned number.
-         * <p>
+         * <p>The registration time. Specify the time in the yyyy-MM-dd HH:mm:ss format. This time is the service registration time of the mobile phone user. If the service registration time is later than the time when the phone number is assigned by a carrier, it indicates that the phone number is not a reassigned number. Otherwise, the phone number is a reassigned number.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If a carrier allocates a single number multiple times, the system will determine whether the phone number is a reassigned number based on the time when the carrier last allocated the phone number.</p>
+         * </li>
+         * <li><p>The service registration time must be later than 00:00:00 on January 1, 1970.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * 
-         * *   If a carrier allocates a single number multiple times, the system will determine whether the phone number is a reassigned number based on the time when the carrier last allocated the phone number.
-         * 
-         * *   The service registration time must be later than 00:00:00 on January 1, 1970.
+         * <strong>example:</strong>
+         * <p>2018-01-01 00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

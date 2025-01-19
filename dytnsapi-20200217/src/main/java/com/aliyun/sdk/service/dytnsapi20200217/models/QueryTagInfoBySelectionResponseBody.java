@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagInfoBySelectionResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTagInfoBySelectionResponseBody</p>
@@ -15,7 +21,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -52,7 +58,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +85,16 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The response code. **OK** indicates that the request is successful.
+         * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,15 +102,18 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C3B8084-3A7D-570B-BC84-BF945A9CF65E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +132,14 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +152,12 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTagInfoBySelectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagInfoBySelectionResponseBody</p>
+     */
     public static class ValueDict extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -173,7 +197,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             private String desc; 
 
             /**
-             * The English name.
+             * <p>The English name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -181,7 +208,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name.
+             * <p>The Chinese name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -195,6 +225,12 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTagInfoBySelectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagInfoBySelectionResponseBody</p>
+     */
     public static class ParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -212,7 +248,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("ValueDict")
-        private java.util.List < ValueDict> valueDict;
+        private java.util.List<ValueDict> valueDict;
 
         private ParamList(Builder builder) {
             this.code = builder.code;
@@ -269,7 +305,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         /**
          * @return valueDict
          */
-        public java.util.List < ValueDict> getValueDict() {
+        public java.util.List<ValueDict> getValueDict() {
             return this.valueDict;
         }
 
@@ -279,10 +315,13 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             private Boolean must; 
             private String name; 
             private String type; 
-            private java.util.List < ValueDict> valueDict; 
+            private java.util.List<ValueDict> valueDict; 
 
             /**
-             * The English name of the parameter.
+             * <p>The English name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preame</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -290,7 +329,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The input hint.
+             * <p>The input hint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder hint(String hint) {
                 this.hint = hint;
@@ -298,7 +340,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder must(Boolean must) {
                 this.must = must;
@@ -306,7 +351,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the parameter.
+             * <p>The Chinese name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +362,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The type. The code that corresponds to EnumUIWidgetTypes.
+             * <p>The type. The code that corresponds to EnumUIWidgetTypes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aqzx</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -322,9 +373,9 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The definitions of the enumerated values such as Code or Desc.
+             * <p>The definitions of the enumerated values such as Code or Desc.</p>
              */
-            public Builder valueDict(java.util.List < ValueDict> valueDict) {
+            public Builder valueDict(java.util.List<ValueDict> valueDict) {
                 this.valueDict = valueDict;
                 return this;
             }
@@ -336,9 +387,15 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTagInfoBySelectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagInfoBySelectionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthCodeList")
-        private java.util.List < String > authCodeList;
+        private java.util.List<String> authCodeList;
 
         @com.aliyun.core.annotation.NameInMap("ComplexityType")
         private String complexityType;
@@ -362,7 +419,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         private String industryName;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("RichTextDescription")
         private String richTextDescription;
@@ -407,7 +464,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         /**
          * @return authCodeList
          */
-        public java.util.List < String > getAuthCodeList() {
+        public java.util.List<String> getAuthCodeList() {
             return this.authCodeList;
         }
 
@@ -463,7 +520,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -503,7 +560,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authCodeList; 
+            private java.util.List<String> authCodeList; 
             private String complexityType; 
             private String demoAddress; 
             private String docAddress; 
@@ -511,7 +568,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             private String flowName; 
             private Long industryId; 
             private String industryName; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private String richTextDescription; 
             private Long sceneId; 
             private String sceneName; 
@@ -519,9 +576,9 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             private String tagName; 
 
             /**
-             * The list of available authorization codes.
+             * <p>The list of available authorization codes.</p>
              */
-            public Builder authCodeList(java.util.List < String > authCodeList) {
+            public Builder authCodeList(java.util.List<String> authCodeList) {
                 this.authCodeList = authCodeList;
                 return this;
             }
@@ -535,7 +592,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for the API demo.
+             * <p>The URL for the API demo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></p>
              */
             public Builder demoAddress(String demoAddress) {
                 this.demoAddress = demoAddress;
@@ -543,7 +603,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for the API documentation.
+             * <p>The URL for the API documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></p>
              */
             public Builder docAddress(String docAddress) {
                 this.docAddress = docAddress;
@@ -551,7 +614,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for the definitions of the enumerated values.
+             * <p>The URL for the definitions of the enumerated values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder enumDefinitionAddress(String enumDefinitionAddress) {
                 this.enumDefinitionAddress = enumDefinitionAddress;
@@ -559,7 +625,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The flow name.
+             * <p>The flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>process name</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -567,7 +636,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The industry ID.
+             * <p>The industry ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder industryId(Long industryId) {
                 this.industryId = industryId;
@@ -575,7 +647,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The industry name.
+             * <p>The industry name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logistics</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -583,9 +658,9 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tag parameters.
+             * <p>The list of tag parameters.</p>
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
@@ -599,7 +674,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The scene ID.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41</p>
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -607,7 +685,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The scene name.
+             * <p>The scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General scenario</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -615,7 +696,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The tag ID.
+             * <p>The tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder tagId(Long tagId) {
                 this.tagId = tagId;
@@ -623,7 +707,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
             }
 
             /**
-             * The tag name.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number ownership</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

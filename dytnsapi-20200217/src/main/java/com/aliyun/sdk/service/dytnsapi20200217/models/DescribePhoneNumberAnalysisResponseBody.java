@@ -1,16 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhoneNumberAnalysisResponseBody</p>
  */
 public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -24,6 +33,7 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
     private String requestId;
 
     private DescribePhoneNumberAnalysisResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -36,6 +46,13 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
 
     public static DescribePhoneNumberAnalysisResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -67,10 +84,19 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
@@ -110,6 +136,12 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhoneNumberAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhoneNumberAnalysisResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -171,9 +203,15 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhoneNumberAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhoneNumberAnalysisResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         private Data(Builder builder) {
             this.list = builder.list;
@@ -190,17 +228,17 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
 
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

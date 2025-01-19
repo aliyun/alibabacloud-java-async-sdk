@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhoneNumberAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhoneNumberAttributeResponseBody</p>
@@ -73,13 +79,16 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. Valid values:
-         * <p>
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The request is successful.</li>
+         * <li><strong>InvalidParameter</strong>: The specified phone number is invalid or the parameter format is invalid.</li>
+         * <li><strong>PhoneNumberNotfound</strong>: No attribute information can be found for the specified phone number.</li>
+         * <li><strong>isp.UNKNOWN</strong>: An unknown exception occurred.</li>
+         * </ul>
          * 
-         * *   **OK**: The request is successful.
-         * *   **InvalidParameter**: The specified phone number is invalid or the parameter format is invalid.
-         * *   **PhoneNumberNotfound**: No attribute information can be found for the specified phone number.
-         * *   **isp.UNKNOWN**: An unknown exception occurred.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +96,10 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -95,7 +107,7 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The attribute information about the phone number.
+         * <p>The attribute information about the phone number.</p>
          */
         public Builder phoneNumberAttribute(PhoneNumberAttribute phoneNumberAttribute) {
             this.phoneNumberAttribute = phoneNumberAttribute;
@@ -103,7 +115,10 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,6 +131,12 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhoneNumberAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhoneNumberAttributeResponseBody</p>
+     */
     public static class PhoneNumberAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BasicCarrier")
         private String basicCarrier;
@@ -203,12 +224,12 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             private String province; 
 
             /**
-             * The basic carrier. Valid values:
-             * <p>
-             * 
-             * *   **China Mobile**
-             * *   **China Unicom**
-             * *   **China Telecom**
+             * <p>The basic carrier. Valid values:</p>
+             * <ul>
+             * <li><strong>China Mobile</strong></li>
+             * <li><strong>China Unicom</strong></li>
+             * <li><strong>China Telecom</strong></li>
+             * </ul>
              */
             public Builder basicCarrier(String basicCarrier) {
                 this.basicCarrier = basicCarrier;
@@ -216,7 +237,7 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The actual carrier, including the virtual network operator (VNO). If the phone number involves mobile number portability, the value of this parameter is the carrier after mobile number portability.
+             * <p>The actual carrier, including the virtual network operator (VNO). If the phone number involves mobile number portability, the value of this parameter is the carrier after mobile number portability.</p>
              */
             public Builder carrier(String carrier) {
                 this.carrier = carrier;
@@ -224,7 +245,7 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The city where the phone number is registered.
+             * <p>The city where the phone number is registered.</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -232,11 +253,14 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the phone number involves mobile number portability. Valid values:
-             * <p>
+             * <p>Indicates whether the phone number involves mobile number portability. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isNumberPortability(Boolean isNumberPortability) {
                 this.isNumberPortability = isNumberPortability;
@@ -244,7 +268,10 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The number segment to which the phone number belongs.
+             * <p>The number segment to which the phone number belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139</p>
              */
             public Builder numberSegment(Long numberSegment) {
                 this.numberSegment = numberSegment;
@@ -252,7 +279,7 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The province where the phone number is registered.
+             * <p>The province where the phone number is registered.</p>
              */
             public Builder province(String province) {
                 this.province = province;

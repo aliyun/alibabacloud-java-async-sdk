@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UAIDConversionResponseBody} extends {@link TeaModel}
  *
  * <p>UAIDConversionResponseBody</p>
@@ -130,6 +136,12 @@ public class UAIDConversionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UAIDConversionResponseBody} extends {@link TeaModel}
+     *
+     * <p>UAIDConversionResponseBody</p>
+     */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PhoneList")
         private String phoneList;

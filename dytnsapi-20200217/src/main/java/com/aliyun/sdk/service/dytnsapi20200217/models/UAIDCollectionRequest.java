@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UAIDCollectionRequest} extends {@link RequestModel}
  *
  * <p>UAIDCollectionRequest</p>
@@ -182,7 +188,10 @@ public class UAIDCollectionRequest extends Request {
         } 
 
         /**
-         * AuthCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -209,7 +218,10 @@ public class UAIDCollectionRequest extends Request {
         }
 
         /**
-         * OutId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -254,7 +266,10 @@ public class UAIDCollectionRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

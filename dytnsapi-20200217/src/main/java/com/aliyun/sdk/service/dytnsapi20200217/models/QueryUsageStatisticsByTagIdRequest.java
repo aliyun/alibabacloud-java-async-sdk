@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUsageStatisticsByTagIdRequest} extends {@link RequestModel}
  *
  * <p>QueryUsageStatisticsByTagIdRequest</p>
@@ -151,7 +157,10 @@ public class QueryUsageStatisticsByTagIdRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230308</p>
          */
         public Builder beginTime(String beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -160,7 +169,10 @@ public class QueryUsageStatisticsByTagIdRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230406</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -178,7 +190,10 @@ public class QueryUsageStatisticsByTagIdRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -187,7 +202,10 @@ public class QueryUsageStatisticsByTagIdRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +232,10 @@ public class QueryUsageStatisticsByTagIdRequest extends Request {
         }
 
         /**
-         * The tag ID.
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder tagId(Long tagId) {
             this.putQueryParameter("TagId", tagId);

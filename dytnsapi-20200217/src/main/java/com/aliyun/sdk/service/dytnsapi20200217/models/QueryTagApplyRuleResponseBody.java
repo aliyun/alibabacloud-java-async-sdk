@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTagApplyRuleResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTagApplyRuleResponseBody</p>
@@ -85,7 +91,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. **OK** indicates that the request is successful.
+         * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +102,7 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +110,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-<strong><strong>-</strong></strong>-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +132,14 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +152,12 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTagApplyRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTagApplyRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplyMaterialDesc")
         private String applyMaterialDesc;
@@ -221,7 +245,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
             private String slaLink; 
 
             /**
-             * The requirements for application materials.
+             * <p>The requirements for application materials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Requirements for application materials</p>
              */
             public Builder applyMaterialDesc(String applyMaterialDesc) {
                 this.applyMaterialDesc = applyMaterialDesc;
@@ -229,7 +256,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is automatically approved.
+             * <p>Indicates whether the application is automatically approved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder autoAudit(Long autoAudit) {
                 this.autoAudit = autoAudit;
@@ -237,7 +267,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for the billing documentation.
+             * <p>The URL for the billing documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyundoc.com</p>
              */
             public Builder chargingStandardLink(String chargingStandardLink) {
                 this.chargingStandardLink = chargingStandardLink;
@@ -245,7 +278,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
             }
 
             /**
-             * indicates whether encrypted queries are supported.
+             * <p>indicates whether encrypted queries are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder encryptedQuery(Long encryptedQuery) {
                 this.encryptedQuery = encryptedQuery;
@@ -253,7 +289,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether application materials are required.
+             * <p>Indicates whether application materials are required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46</p>
              */
             public Builder needApplyMaterial(Long needApplyMaterial) {
                 this.needApplyMaterial = needApplyMaterial;
@@ -261,7 +300,10 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The URL for the service agreement.
+             * <p>The URL for the service agreement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder slaLink(String slaLink) {
                 this.slaLink = slaLink;

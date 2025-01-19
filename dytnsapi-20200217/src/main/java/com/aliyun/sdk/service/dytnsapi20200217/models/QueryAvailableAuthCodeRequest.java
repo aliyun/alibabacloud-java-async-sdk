@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAvailableAuthCodeRequest} extends {@link RequestModel}
  *
  * <p>QueryAvailableAuthCodeRequest</p>
@@ -122,7 +128,10 @@ public class QueryAvailableAuthCodeRequest extends Request {
         }
 
         /**
-         * The tag ID.
+         * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder tagId(Long tagId) {
             this.putQueryParameter("TagId", tagId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertNoTwoElementVerificationResponseBody} extends {@link TeaModel}
  *
  * <p>CertNoTwoElementVerificationResponseBody</p>
@@ -130,6 +136,12 @@ public class CertNoTwoElementVerificationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CertNoTwoElementVerificationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CertNoTwoElementVerificationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsConsistent")
         private String isConsistent;

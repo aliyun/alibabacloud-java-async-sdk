@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ThreeElementsVerificationRequest} extends {@link RequestModel}
  *
  * <p>ThreeElementsVerificationRequest</p>
@@ -156,10 +162,14 @@ public class ThreeElementsVerificationRequest extends Request {
         } 
 
         /**
-         * The authorization code.
-         * <p>
+         * <p>The authorization code.</p>
+         * <blockquote>
+         * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).
+         * <strong>example:</strong>
+         * <p>QASDW@#**</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -168,14 +178,19 @@ public class ThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The ID card number to be verified.
-         * <p>
+         * <p>The ID card number to be verified.</p>
+         * <ul>
+         * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
+         * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
+         * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Letters in the encrypted strings are not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
-         * *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
-         * *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
-         * 
-         * >  Letters in the encrypted strings are not case-sensitive.
+         * <strong>example:</strong>
+         * <p>83d8040d3cb2181e04****dc6ff5566d4493876a4a5da782887446356b0a787e</p>
          */
         public Builder certCode(String certCode) {
             this.putQueryParameter("CertCode", certCode);
@@ -184,14 +199,19 @@ public class ThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The phone number to be verified.
-         * <p>
+         * <p>The phone number to be verified.</p>
+         * <ul>
+         * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
+         * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
+         * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Letters in the encrypted strings are not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
-         * *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
-         * *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
-         * 
-         * >  Letters in the encrypted strings are not case-sensitive.
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder inputNumber(String inputNumber) {
             this.putQueryParameter("InputNumber", inputNumber);
@@ -200,12 +220,16 @@ public class ThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The encryption method. Valid values:
-         * <p>
+         * <p>The encryption method. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+         * <li><strong>MD5</strong></li>
+         * <li><strong>SHA256</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NORMAL**: The phone number is not encrypted.
-         * *   **MD5**
-         * *   **SHA256**
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         public Builder mask(String mask) {
             this.putQueryParameter("Mask", mask);
@@ -214,14 +238,19 @@ public class ThreeElementsVerificationRequest extends Request {
         }
 
         /**
-         * The name to be verified.
-         * <p>
+         * <p>The name to be verified.</p>
+         * <ul>
+         * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
+         * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
+         * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Letters in the encrypted strings are not case-sensitive.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   If the value of Mask is NORMAL, specify a value in plaintext for this field.
-         * *   If the value of Mask is MD5, specify a MD5-encrypted value for this field.
-         * *   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.
-         * 
-         * >  Letters in the encrypted strings are not case-sensitive.
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

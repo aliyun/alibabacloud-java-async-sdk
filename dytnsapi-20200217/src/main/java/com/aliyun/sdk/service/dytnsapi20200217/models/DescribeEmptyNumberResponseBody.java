@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEmptyNumberResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEmptyNumberResponseBody</p>
@@ -73,11 +79,14 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The request is successful.</li>
+         * <li><strong>InvalidPhoneNumber.Check</strong>: The phone number is invalid.</li>
+         * </ul>
          * 
-         * *   **OK**: The request is successful.
-         * *   **InvalidPhoneNumber.Check**: The phone number is invalid.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +94,7 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +102,10 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +113,10 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         }
 
         /**
-         * The unique request ID. It is a common parameter and can be used to troubleshoot issues.
+         * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +129,12 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEmptyNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEmptyNumberResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
@@ -153,7 +174,10 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The specified phone number.
+             * <p>The specified phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>189****1234</p>
              */
             public Builder number(String number) {
                 this.number = number;
@@ -161,13 +185,16 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
             }
 
             /**
-             * The returned status for the queried phone number. Valid values:
-             * <p>
+             * <p>The returned status for the queried phone number. Valid values:</p>
+             * <ul>
+             * <li><strong>EMPTY</strong>: The queried phone number is a nonexistent number.</li>
+             * <li><strong>NORMAL</strong>: The queried phone number is valid.</li>
+             * <li><strong>SUSPECT_EMPTY</strong>: The queried phone number is suspected to be a nonexistent number.</li>
+             * <li><strong>UNKNOWN</strong>: The queried phone number is unknown.</li>
+             * </ul>
              * 
-             * *   **EMPTY**: The queried phone number is a nonexistent number.
-             * *   **NORMAL**: The queried phone number is valid.
-             * *   **SUSPECT_EMPTY**: The queried phone number is suspected to be a nonexistent number.
-             * *   **UNKNOWN**: The queried phone number is unknown.
+             * <strong>example:</strong>
+             * <p>EMPTY</p>
              */
             public Builder status(String status) {
                 this.status = status;
