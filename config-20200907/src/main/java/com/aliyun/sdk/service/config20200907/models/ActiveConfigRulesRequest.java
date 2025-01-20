@@ -73,7 +73,10 @@ public class ActiveConfigRulesRequest extends Request {
         } 
 
         /**
-         * CompliancePackId.
+         * <p>The ID of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fe416457e0d90022****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);

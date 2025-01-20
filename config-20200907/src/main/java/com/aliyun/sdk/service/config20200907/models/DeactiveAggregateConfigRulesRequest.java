@@ -102,7 +102,11 @@ public class DeactiveAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * CompliancePackId.
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fe416457e0d90022****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);

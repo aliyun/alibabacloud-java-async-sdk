@@ -79,7 +79,13 @@ public class GetIntegratedServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AggregatorDeliveryDataType.
+         * <p>The type of the event that is integrated across accounts. Valid values:</p>
+         * <ul>
+         * <li>NonCompliantNotification: non-compliance event</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NonCompliantNotification</p>
          */
         public Builder aggregatorDeliveryDataType(String aggregatorDeliveryDataType) {
             this.aggregatorDeliveryDataType = aggregatorDeliveryDataType;

@@ -95,6 +95,10 @@ public class CreateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceOwner;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
     private String tagKeyLogicScope;
@@ -131,6 +135,7 @@ public class CreateConfigRuleRequest extends Request {
         this.riskLevel = builder.riskLevel;
         this.sourceIdentifier = builder.sourceIdentifier;
         this.sourceOwner = builder.sourceOwner;
+        this.tag = builder.tag;
         this.tagKeyLogicScope = builder.tagKeyLogicScope;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
@@ -277,6 +282,13 @@ public class CreateConfigRuleRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return tagKeyLogicScope
      */
     public String getTagKeyLogicScope() {
@@ -323,6 +335,7 @@ public class CreateConfigRuleRequest extends Request {
         private Integer riskLevel; 
         private String sourceIdentifier; 
         private String sourceOwner; 
+        private java.util.List<Tag> tag; 
         private String tagKeyLogicScope; 
         private String tagKeyScope; 
         private String tagValueScope; 
@@ -352,6 +365,7 @@ public class CreateConfigRuleRequest extends Request {
             this.riskLevel = request.riskLevel;
             this.sourceIdentifier = request.sourceIdentifier;
             this.sourceOwner = request.sourceOwner;
+            this.tag = request.tag;
             this.tagKeyLogicScope = request.tagKeyLogicScope;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
@@ -620,6 +634,16 @@ public class CreateConfigRuleRequest extends Request {
         }
 
         /**
+         * <p>rule attached tags</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The logical relationship among the tag keys if you specify multiple tag keys for <code>TagKeyScope</code>. For example, if you set <code>TagKeyScope</code> to <code>ECS,OSS</code> and set TagKeyLogicScope to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
          * <ul>
          * <li>AND</li>
@@ -749,6 +773,82 @@ public class CreateConfigRuleRequest extends Request {
 
             public ExcludeTagsScope build() {
                 return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateConfigRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateConfigRuleRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag keys.</p>
+             * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length. The tag keys cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys in each call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

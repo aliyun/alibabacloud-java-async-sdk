@@ -55,7 +55,7 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The results of the operations.</p>
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -147,11 +147,7 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code returned.</p>
-             * <ul>
-             * <li>If the rule is enabled, no error code is returned.</li>
-             * <li>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
-             * </ul>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>ConfigRuleNotExists</p>
@@ -164,8 +160,8 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the request was successful. Valid values:</p>
              * <ul>
-             * <li>true: The request was successful.</li>
-             * <li>false: The request failed.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -216,7 +212,7 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             private java.util.List<OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * <p>The returned result.</p>
+             * <p>The result information about the operation.</p>
              */
             public Builder operateRuleItemList(java.util.List<OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;

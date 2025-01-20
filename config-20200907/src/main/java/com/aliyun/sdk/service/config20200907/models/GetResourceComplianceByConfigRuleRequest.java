@@ -74,10 +74,10 @@ public class GetResourceComplianceByConfigRuleRequest extends Request {
         } 
 
         /**
-         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <p>The compliance evaluation result. Valid values:</p>
          * <ul>
-         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
-         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
          * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
          * <li>INSUFFICIENT_DATA: No data is available.</li>
          * </ul>
@@ -92,8 +92,7 @@ public class GetResourceComplianceByConfigRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule.</p>
-         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

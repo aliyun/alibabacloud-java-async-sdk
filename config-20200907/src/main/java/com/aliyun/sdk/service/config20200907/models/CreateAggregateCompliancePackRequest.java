@@ -409,7 +409,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeRegionIdsScope.
+         * <p>The IDs of the regions excluded from the compliance evaluations performed by the compliance package. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
             this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
@@ -418,7 +421,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeResourceGroupIdsScope.
+         * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bnczc6r7rml****</p>
          */
         public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
             this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
@@ -439,7 +445,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeTagsScope.
+         * <p>The tags that are excluded.</p>
          */
         public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
@@ -472,7 +478,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * ResourceIdsScope.
+         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5cmbowstbkss9ta03****</p>
          */
         public Builder resourceIdsScope(String resourceIdsScope) {
             this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
@@ -481,7 +490,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * <p>The risk level of the compliance package. Valid values:</p>
+         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
          * <ul>
          * <li>1: high</li>
          * <li>2 (default): medium</li>
@@ -525,7 +534,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * TagsScope.
+         * <p>The tag scope.</p>
          */
         public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
@@ -845,7 +854,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -853,7 +865,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -912,7 +927,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -920,7 +938,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagValue1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

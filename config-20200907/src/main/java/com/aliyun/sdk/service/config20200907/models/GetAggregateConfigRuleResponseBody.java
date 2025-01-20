@@ -55,7 +55,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The details of the rule.</p>
+         * <p>The rules.</p>
          */
         public Builder configRule(ConfigRule configRule) {
             this.configRule = configRule;
@@ -512,6 +512,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
             /**
              * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the compliance package.</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -603,7 +606,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -611,7 +617,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -852,6 +861,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
             /**
              * <p>The description of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the managed rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -879,6 +891,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
             /**
              * <p>The name of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ram-user-mfa-check</p>
              */
             public Builder managedRuleName(String managedRuleName) {
                 this.managedRuleName = managedRuleName;
@@ -1128,6 +1143,79 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
      *
      * <p>GetAggregateConfigRuleResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAggregateConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateConfigRuleResponseBody</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1167,7 +1255,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1175,7 +1266,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1295,6 +1389,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TagsScope")
         private java.util.List<TagsScope> tagsScope;
 
@@ -1332,6 +1429,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             this.tagKeyLogicScope = builder.tagKeyLogicScope;
             this.tagKeyScope = builder.tagKeyScope;
             this.tagValueScope = builder.tagValueScope;
+            this.tags = builder.tags;
             this.tagsScope = builder.tagsScope;
         }
 
@@ -1575,6 +1673,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return tagsScope
          */
         public java.util.List<TagsScope> getTagsScope() {
@@ -1615,6 +1720,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             private String tagKeyLogicScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
+            private java.util.List<Tags> tags; 
             private java.util.List<TagsScope> tagsScope; 
 
             /**
@@ -1629,7 +1735,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AccountIdsScope.
+             * <p>The IDs of the members to which the rule applies. Separate multiple member IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120886317861****</p>
              */
             public Builder accountIdsScope(String accountIdsScope) {
                 this.accountIdsScope = accountIdsScope;
@@ -1676,6 +1785,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
             /**
              * <p>The name of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the rule.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -1735,6 +1847,9 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
             /**
              * <p>The description of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the managed rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1773,7 +1888,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeRegionIdsScope.
+             * <p>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
                 this.excludeRegionIdsScope = excludeRegionIdsScope;
@@ -1781,7 +1899,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeResourceGroupIdsScope.
+             * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzdibsjjc****</p>
              */
             public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
                 this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
@@ -1800,7 +1921,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeTagsScope.
+             * <p>The scope of the tag that is excluded.</p>
              */
             public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
                 this.excludeTagsScope = excludeTagsScope;
@@ -1808,7 +1929,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendContent.
+             * <p>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
              */
             public Builder extendContent(String extendContent) {
                 this.extendContent = extendContent;
@@ -1903,7 +2027,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceIdsScope.
+             * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
              */
             public Builder resourceIdsScope(String resourceIdsScope) {
                 this.resourceIdsScope = resourceIdsScope;
@@ -1983,7 +2110,15 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagsScope.
+             * <p>The list of tags.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The tag scope.</p>
              */
             public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
                 this.tagsScope = tagsScope;

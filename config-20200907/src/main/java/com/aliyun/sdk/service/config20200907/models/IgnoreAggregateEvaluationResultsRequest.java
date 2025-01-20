@@ -162,6 +162,9 @@ public class IgnoreAggregateEvaluationResultsRequest extends Request {
 
         /**
          * <p>The reason why you ignore the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The reason why you ignore the resource.</p>
          */
         public Builder reason(String reason) {
             this.putBodyParameter("Reason", reason);

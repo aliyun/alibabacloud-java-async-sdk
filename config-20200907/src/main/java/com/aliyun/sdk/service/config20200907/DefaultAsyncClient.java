@@ -44,10 +44,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The rule is in the <code>INACTIVE</code> state.</p>
-     * <h3><a href="#"></a>Description</h3>
-     * <p>This topic provides an example on how to enable the <code>cr-5772ba41209e007b****</code> rule in the <code>ca-a4e5626622af0079****</code> account group.</p>
+     * <p>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</p>
      * 
      * @param request the request parameters of ActiveAggregateConfigRules  ActiveAggregateConfigRulesRequest
      * @return ActiveAggregateConfigRulesResponse
@@ -2302,8 +2299,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Background information</h3>
-     * <p>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
      * <p>This topic provides an example on how to query all managed rules whose keyword is <code>CDN</code>. The response shows that 21 managed rules exist.</p>
      * 
      * @param request the request parameters of ListManagedRules  ListManagedRulesRequest
@@ -2431,7 +2428,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance within the current Alibaba Cloud account.</p>
+     * <p>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+     * This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <code>i-j6cajg9yrfoh4sas****</code> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</p>
      * 
      * @param request the request parameters of ListResourceRelations  ListResourceRelationsRequest
      * @return ListResourceRelationsResponse

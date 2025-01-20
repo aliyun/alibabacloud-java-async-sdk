@@ -55,7 +55,7 @@ public class UpdateAggregateCompliancePackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the compliance package.</p>
+         * <p>The compliance package ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-f632626622af0079****</p>
@@ -66,7 +66,7 @@ public class UpdateAggregateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>

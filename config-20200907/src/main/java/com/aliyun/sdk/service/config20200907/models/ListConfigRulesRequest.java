@@ -35,7 +35,7 @@ public class ListConfigRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keyword")
-    @com.aliyun.core.annotation.Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Validation(maxLength = 1000)
     private String keyword;
 
     @com.aliyun.core.annotation.Query
@@ -55,6 +55,10 @@ public class ListConfigRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private Integer riskLevel;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private ListConfigRulesRequest(Builder builder) {
         super(builder);
         this.compliancePackId = builder.compliancePackId;
@@ -66,6 +70,7 @@ public class ListConfigRulesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceTypes = builder.resourceTypes;
         this.riskLevel = builder.riskLevel;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class ListConfigRulesRequest extends Request {
         return this.riskLevel;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListConfigRulesRequest, Builder> {
         private String compliancePackId; 
         private String complianceType; 
@@ -154,6 +166,7 @@ public class ListConfigRulesRequest extends Request {
         private Integer pageSize; 
         private String resourceTypes; 
         private Integer riskLevel; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -170,10 +183,18 @@ public class ListConfigRulesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceTypes = request.resourceTypes;
             this.riskLevel = request.riskLevel;
+            this.tag = request.tag;
         } 
 
         /**
-         * CompliancePackId.
+         * <p>The compliance package ID.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</p>
+         * <blockquote>
+         * <p> You must configure either the <code>CompliancePackId</code> or <code>ConfigRuleId</code> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-fe416457e0d90022****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);
@@ -297,6 +318,17 @@ public class ListConfigRulesRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The tags of the resource.</p>
+         * <p>You can add up to 20 tags to a resource.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public ListConfigRulesRequest build() {
             return new ListConfigRulesRequest(this);
@@ -304,4 +336,80 @@ public class ListConfigRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListConfigRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListConfigRulesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The tag key.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag value must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

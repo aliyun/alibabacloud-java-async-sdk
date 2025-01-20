@@ -129,8 +129,8 @@ public class ListManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Page start from page 1. Default value: 1.</p>
+         * <p>The page number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

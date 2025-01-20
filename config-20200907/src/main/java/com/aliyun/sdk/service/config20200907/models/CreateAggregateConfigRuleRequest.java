@@ -430,7 +430,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         } 
 
         /**
-         * AccountIdsScope.
+         * <p>The IDs of the member accounts to which the rule applies, which means that the resources within the member accounts are evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115748125982****</p>
          */
         public Builder accountIdsScope(String accountIdsScope) {
             this.putBodyParameter("AccountIdsScope", accountIdsScope);
@@ -467,6 +470,9 @@ public class CreateAggregateConfigRuleRequest extends Request {
         /**
          * <p>The rule name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-default-encryption-kms</p>
          */
         public Builder configRuleName(String configRuleName) {
             this.putBodyParameter("ConfigRuleName", configRuleName);
@@ -493,6 +499,9 @@ public class CreateAggregateConfigRuleRequest extends Request {
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description of rule</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -536,7 +545,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExcludeRegionIdsScope.
+         * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
             this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
@@ -545,7 +557,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExcludeResourceGroupIdsScope.
+         * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bnczc6r7rml****</p>
          */
         public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
             this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
@@ -569,7 +584,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExcludeTagsScope.
+         * <p>The scope of the tag that is excluded.</p>
          */
         public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
@@ -578,7 +593,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExtendContent.
+         * <p>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
          */
         public Builder extendContent(String extendContent) {
             this.putBodyParameter("ExtendContent", extendContent);
@@ -622,14 +640,14 @@ public class CreateAggregateConfigRuleRequest extends Request {
         /**
          * <p>The interval at which the rule is triggered. Valid values:</p>
          * <ul>
-         * <li>One_Hour: 1 hour.</li>
-         * <li>Three_Hours: 3 hours.</li>
-         * <li>Six_Hours: 6 hours.</li>
-         * <li>Twelve_Hours: 12 hours.</li>
-         * <li>TwentyFour_Hours (default): 24 hours.</li>
+         * <li>One_Hour</li>
+         * <li>Three_Hours</li>
+         * <li>Six_Hours</li>
+         * <li>Twelve_Hours</li>
+         * <li>TwentyFour_Hours (default)</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
+         * <p> This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -672,7 +690,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * ResourceIdsScope.
+         * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5cmbowstbkss9ta03****</p>
          */
         public Builder resourceIdsScope(String resourceIdsScope) {
             this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
@@ -695,11 +716,11 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <ul>
-         * <li>1: high risk level</li>
-         * <li>2: medium risk level</li>
-         * <li>3: low risk level</li>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -733,8 +754,8 @@ public class CreateAggregateConfigRuleRequest extends Request {
         /**
          * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li>ALIYUN: managed rule</li>
-         * <li>CUSTOM_FC: custom rule</li>
+         * <li>ALIYUN: a managed rule.</li>
+         * <li>CUSTOM_FC: a custom rule.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -794,7 +815,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * TagsScope.
+         * <p>The tag scope.</p>
          */
         public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
@@ -854,7 +875,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key of the resource that you want to exclude.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -862,7 +886,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value of the resource that you want to exclude.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -921,7 +948,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -929,7 +959,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

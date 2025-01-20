@@ -26,10 +26,15 @@ public class EvaluatePreConfigRulesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<ResourceEvaluateItems> resourceEvaluateItems;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeFormat")
+    private String resourceTypeFormat;
+
     private EvaluatePreConfigRulesRequest(Builder builder) {
         super(builder);
         this.enableManagedRules = builder.enableManagedRules;
         this.resourceEvaluateItems = builder.resourceEvaluateItems;
+        this.resourceTypeFormat = builder.resourceTypeFormat;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class EvaluatePreConfigRulesRequest extends Request {
         return this.resourceEvaluateItems;
     }
 
+    /**
+     * @return resourceTypeFormat
+     */
+    public String getResourceTypeFormat() {
+        return this.resourceTypeFormat;
+    }
+
     public static final class Builder extends Request.Builder<EvaluatePreConfigRulesRequest, Builder> {
         private Boolean enableManagedRules; 
         private java.util.List<ResourceEvaluateItems> resourceEvaluateItems; 
+        private String resourceTypeFormat; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class EvaluatePreConfigRulesRequest extends Request {
             super(request);
             this.enableManagedRules = request.enableManagedRules;
             this.resourceEvaluateItems = request.resourceEvaluateItems;
+            this.resourceTypeFormat = request.resourceTypeFormat;
         } 
 
         /**
@@ -100,6 +114,15 @@ public class EvaluatePreConfigRulesRequest extends Request {
             String resourceEvaluateItemsShrink = shrink(resourceEvaluateItems, "ResourceEvaluateItems", "json");
             this.putBodyParameter("ResourceEvaluateItems", resourceEvaluateItemsShrink);
             this.resourceEvaluateItems = resourceEvaluateItems;
+            return this;
+        }
+
+        /**
+         * ResourceTypeFormat.
+         */
+        public Builder resourceTypeFormat(String resourceTypeFormat) {
+            this.putBodyParameter("ResourceTypeFormat", resourceTypeFormat);
+            this.resourceTypeFormat = resourceTypeFormat;
             return this;
         }
 

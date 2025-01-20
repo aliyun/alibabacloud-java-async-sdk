@@ -1127,6 +1127,79 @@ public class GetConfigRuleResponseBody extends TeaModel {
      *
      * <p>GetConfigRuleResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1291,6 +1364,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TagsScope")
         private java.util.List<TagsScope> tagsScope;
 
@@ -1325,6 +1401,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             this.tagKeyLogicScope = builder.tagKeyLogicScope;
             this.tagKeyScope = builder.tagKeyScope;
             this.tagValueScope = builder.tagValueScope;
+            this.tags = builder.tags;
             this.tagsScope = builder.tagsScope;
         }
 
@@ -1547,6 +1624,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return tagsScope
          */
         public java.util.List<TagsScope> getTagsScope() {
@@ -1584,6 +1668,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagKeyLogicScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
+            private java.util.List<Tags> tags; 
             private java.util.List<TagsScope> tagsScope; 
 
             /**
@@ -1926,6 +2011,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
              */
             public Builder tagValueScope(String tagValueScope) {
                 this.tagValueScope = tagValueScope;
+                return this;
+            }
+
+            /**
+             * <p>The tag list.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

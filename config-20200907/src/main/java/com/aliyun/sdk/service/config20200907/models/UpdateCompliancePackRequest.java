@@ -300,6 +300,9 @@ public class UpdateCompliancePackRequest extends Request {
         /**
          * <p>The name of the compliance package.</p>
          * <p>For more information about how to obtain the name of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the compliance package.</p>
          */
         public Builder compliancePackName(String compliancePackName) {
             this.putBodyParameter("CompliancePackName", compliancePackName);
@@ -320,6 +323,9 @@ public class UpdateCompliancePackRequest extends Request {
 
         /**
          * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the compliance package.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -328,7 +334,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeRegionIdsScope.
+         * <p>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
             this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
@@ -337,7 +346,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeResourceGroupIdsScope.
+         * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bnczc6r7rml****</p>
          */
         public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
             this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
@@ -358,7 +370,7 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeTagsScope.
+         * <p>ExcludeTagsScope</p>
          */
         public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
@@ -391,7 +403,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * ResourceIdsScope.
+         * <p>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5cmbowstbkss9ta03****</p>
          */
         public Builder resourceIdsScope(String resourceIdsScope) {
             this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
@@ -402,9 +417,9 @@ public class UpdateCompliancePackRequest extends Request {
         /**
          * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
          * <ul>
-         * <li>1: high</li>
-         * <li>2: medium</li>
-         * <li>3: low</li>
+         * <li>1: high risk level</li>
+         * <li>2: medium risk level</li>
+         * <li>3: low risk level</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,7 +459,7 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * TagsScope.
+         * <p>TagsScope</p>
          */
         public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
@@ -504,8 +519,8 @@ public class UpdateCompliancePackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * <p>The name of the input parameter.</p>
-             * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
+             * <p>The name of the managed rule parameter.</p>
+             * <p>You must specify both <code>ParameterName</code> and <code>ParameterValue</code> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>bandwidth</p>
@@ -516,7 +531,7 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * <p>The value of the input parameter.</p>
+             * <p>The value of the managed rule parameter.</p>
              * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
              * 
              * <strong>example:</strong>
@@ -628,7 +643,7 @@ public class UpdateCompliancePackRequest extends Request {
 
             /**
              * <p>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
-             * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
+             * <p>You need to only specify one of the <code>ManagedRuleIdentifier</code> and <code>ConfigRuleId</code> properties. If you specify both the properties, the value of the <code>ConfigRuleId</code> property takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cr-e918626622af000f****</p>
@@ -640,6 +655,9 @@ public class UpdateCompliancePackRequest extends Request {
 
             /**
              * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The rule name.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -647,7 +665,7 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * <p>The input parameters of the rule.</p>
+             * <p>The details of the input parameter of the rule.</p>
              */
             public Builder configRuleParameters(java.util.List<ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
@@ -655,7 +673,10 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * <p>The description of the event rule.</p>
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The rule description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -677,9 +698,9 @@ public class UpdateCompliancePackRequest extends Request {
             /**
              * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
              * <ul>
-             * <li>1: high</li>
-             * <li>2: medium</li>
-             * <li>3: low</li>
+             * <li>1: high risk level</li>
+             * <li>2: medium risk level</li>
+             * <li>3: low risk level</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -742,7 +763,10 @@ public class UpdateCompliancePackRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -750,7 +774,10 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -809,7 +836,10 @@ public class UpdateCompliancePackRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -817,7 +847,10 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

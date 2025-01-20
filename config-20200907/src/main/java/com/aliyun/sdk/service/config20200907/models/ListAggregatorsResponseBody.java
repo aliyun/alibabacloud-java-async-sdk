@@ -305,7 +305,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the member accounts in the account group.</p>
+             * <p>The ID of the folder.</p>
              * 
              * <strong>example:</strong>
              * <p>r-BU****</p>
@@ -367,7 +367,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * <p>The information about the account groups.</p>
+             * <p>The list of the account groups.</p>
              */
             public Builder aggregators(java.util.List<Aggregators> aggregators) {
                 this.aggregators = aggregators;

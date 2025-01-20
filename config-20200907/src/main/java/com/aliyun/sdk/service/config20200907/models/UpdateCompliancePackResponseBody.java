@@ -66,7 +66,7 @@ public class UpdateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>

@@ -296,6 +296,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
             /**
              * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the rule.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -311,6 +314,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
              * <p>The description of the rule.</p>
              */
             public Builder description(String description) {
@@ -408,7 +414,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -416,7 +425,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -475,7 +487,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -483,7 +498,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -638,7 +656,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             private java.util.List<TagsScope> tagsScope; 
 
             /**
-             * ExcludeRegionIdsScope.
+             * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
                 this.excludeRegionIdsScope = excludeRegionIdsScope;
@@ -646,7 +667,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeResourceGroupIdsScope.
+             * <p>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzc7r7rhx****</p>
              */
             public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
                 this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
@@ -665,7 +689,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeTagsScope.
+             * <p>The scope of the tag that is excluded.</p>
              */
             public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
                 this.excludeTagsScope = excludeTagsScope;
@@ -695,7 +719,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceIdsScope.
+             * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
              */
             public Builder resourceIdsScope(String resourceIdsScope) {
                 this.resourceIdsScope = resourceIdsScope;
@@ -725,7 +752,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TagsScope.
+             * <p>The tag scope.</p>
              */
             public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
                 this.tagsScope = tagsScope;
@@ -938,6 +965,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
             /**
              * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the compliance package.</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -975,6 +1005,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The description of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
              * <p>The description of the compliance package.</p>
              */
             public Builder description(String description) {
@@ -1023,6 +1056,34 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
             /**
              * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;configRuleTemplates&quot;: [
+             *     {
+             *       &quot;configRuleName&quot;: &quot;OSS-test-name&quot;,
+             *       &quot;scope&quot;: {
+             *         &quot;complianceResourceTypes&quot;: [
+             *           &quot;ACS::OSS::Bucket&quot;
+             *         ]
+             *       },
+             *       &quot;description&quot;: &quot;test-description&quot;,
+             *       &quot;source&quot;: {
+             *         &quot;owner&quot;: &quot;ALIYUN&quot;,
+             *         &quot;identifier&quot;: &quot;oss-bucket-referer-xxx&quot;,
+             *         &quot;sourceDetails&quot;: [
+             *           {
+             *             &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+             *           }
+             *         ]
+             *       },
+             *       &quot;inputParameters&quot;: {
+             *         &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+             *         &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+             *       }
+             *     }
+             *   ]
+             * }</p>
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;

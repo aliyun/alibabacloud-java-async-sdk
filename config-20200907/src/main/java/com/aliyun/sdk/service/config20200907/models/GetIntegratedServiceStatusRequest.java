@@ -64,7 +64,7 @@ public class GetIntegratedServiceStatusRequest extends Request {
          * <ul>
          * <li>eventbridge: EventBridge</li>
          * <li>cms: CloudMonitor</li>
-         * <li>bpstudio: Cloud Architect Design Tools</li>
+         * <li>bpstudio: Cloud Architect Design Tools (CADT)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

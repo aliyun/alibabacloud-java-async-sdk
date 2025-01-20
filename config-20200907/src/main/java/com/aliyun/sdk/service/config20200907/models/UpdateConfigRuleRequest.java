@@ -87,6 +87,10 @@ public class UpdateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer riskLevel;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
     private String tagKeyLogicScope;
@@ -122,6 +126,7 @@ public class UpdateConfigRuleRequest extends Request {
         this.resourceIdsScope = builder.resourceIdsScope;
         this.resourceTypesScope = builder.resourceTypesScope;
         this.riskLevel = builder.riskLevel;
+        this.tag = builder.tag;
         this.tagKeyLogicScope = builder.tagKeyLogicScope;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
@@ -261,6 +266,13 @@ public class UpdateConfigRuleRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return tagKeyLogicScope
      */
     public String getTagKeyLogicScope() {
@@ -306,6 +318,7 @@ public class UpdateConfigRuleRequest extends Request {
         private String resourceIdsScope; 
         private java.util.List<String> resourceTypesScope; 
         private Integer riskLevel; 
+        private java.util.List<Tag> tag; 
         private String tagKeyLogicScope; 
         private String tagKeyScope; 
         private String tagValueScope; 
@@ -334,6 +347,7 @@ public class UpdateConfigRuleRequest extends Request {
             this.resourceIdsScope = request.resourceIdsScope;
             this.resourceTypesScope = request.resourceTypesScope;
             this.riskLevel = request.riskLevel;
+            this.tag = request.tag;
             this.tagKeyLogicScope = request.tagKeyLogicScope;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
@@ -369,6 +383,9 @@ public class UpdateConfigRuleRequest extends Request {
         /**
          * <p>The name of the rule.</p>
          * <p>For more information about how to query the name of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the rule.</p>
          */
         public Builder configRuleName(String configRuleName) {
             this.putBodyParameter("ConfigRuleName", configRuleName);
@@ -397,6 +414,9 @@ public class UpdateConfigRuleRequest extends Request {
 
         /**
          * <p>The description of the rule. You can enter up to 500 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the rule.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -405,7 +425,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExcludeRegionIdsScope.
+         * <p>The IDs of the regions excluded from the compliance evaluations performed by the rule. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
             this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
@@ -414,7 +437,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExcludeResourceGroupIdsScope.
+         * <p>The IDs of the resource groups excluded from the compliance evaluations performed by the rule. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bnczc6r7rml****</p>
          */
         public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
             this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
@@ -438,7 +464,7 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExcludeTagsScope.
+         * <p>The scope of the tag that is excluded.</p>
          */
         public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
@@ -447,7 +473,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * ExtendContent.
+         * <p>Optional. The extended content of the resource. This parameter can be used together with the MaximumExecutionFrequency parameter when the MaximumExecutionFrequency parameter is set to TwentyFour_Hours to specify the trigger time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
          */
         public Builder extendContent(String extendContent) {
             this.putBodyParameter("ExtendContent", extendContent);
@@ -469,16 +498,16 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * <p>The intervals at which the rule is triggered. Valid values:</p>
+         * <p>The interval at which the rule is triggered. Valid values:</p>
          * <ul>
-         * <li>One_Hour: 1 hour.</li>
-         * <li>Three_Hours: 3 hours.</li>
-         * <li>Six_Hours: 6 hours.</li>
-         * <li>Twelve_Hours: 12 hours.</li>
-         * <li>TwentyFour_Hours (default): 24 hours.</li>
+         * <li>One_Hour</li>
+         * <li>Three_Hours</li>
+         * <li>Six_Hours</li>
+         * <li>Twelve_Hours</li>
+         * <li>TwentyFour_Hours (default)</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required if you set the <code>ConfigRuleTriggerTypes</code> parameter to <code>ScheduledNotification</code>.</p>
+         * <p> This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -521,7 +550,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * ResourceIdsScope.
+         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5cmbowstbkss9ta03****</p>
          */
         public Builder resourceIdsScope(String resourceIdsScope) {
             this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
@@ -543,11 +575,11 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
          * <ul>
-         * <li>1: high risk level</li>
-         * <li>2: medium risk level</li>
-         * <li>3: low risk level</li>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,6 +588,17 @@ public class UpdateConfigRuleRequest extends Request {
         public Builder riskLevel(Integer riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
+            return this;
+        }
+
+        /**
+         * <p>The tags of the resource.</p>
+         * <p>You can add up to 20 tags to a resource.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
             return this;
         }
 
@@ -606,7 +649,7 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * TagsScope.
+         * <p>The tag scope.</p>
          */
         public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
@@ -666,7 +709,10 @@ public class UpdateConfigRuleRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -674,7 +720,10 @@ public class UpdateConfigRuleRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -683,6 +732,79 @@ public class UpdateConfigRuleRequest extends Request {
 
             public ExcludeTagsScope build() {
                 return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateConfigRuleRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateConfigRuleRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * <p>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> and <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 
@@ -733,7 +855,10 @@ public class UpdateConfigRuleRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -741,7 +866,10 @@ public class UpdateConfigRuleRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
