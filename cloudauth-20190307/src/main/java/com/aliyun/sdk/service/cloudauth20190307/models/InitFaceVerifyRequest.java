@@ -42,6 +42,10 @@ public class InitFaceVerifyRequest extends Request {
     private String callbackUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CameraSelection")
+    private String cameraSelection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
@@ -174,6 +178,7 @@ public class InitFaceVerifyRequest extends Request {
         this.birthday = builder.birthday;
         this.callbackToken = builder.callbackToken;
         this.callbackUrl = builder.callbackUrl;
+        this.cameraSelection = builder.cameraSelection;
         this.certName = builder.certName;
         this.certNo = builder.certNo;
         this.certType = builder.certType;
@@ -260,6 +265,13 @@ public class InitFaceVerifyRequest extends Request {
      */
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    /**
+     * @return cameraSelection
+     */
+    public String getCameraSelection() {
+        return this.cameraSelection;
     }
 
     /**
@@ -486,6 +498,7 @@ public class InitFaceVerifyRequest extends Request {
         private String birthday; 
         private String callbackToken; 
         private String callbackUrl; 
+        private String cameraSelection; 
         private String certName; 
         private String certNo; 
         private String certType; 
@@ -530,6 +543,7 @@ public class InitFaceVerifyRequest extends Request {
             this.birthday = request.birthday;
             this.callbackToken = request.callbackToken;
             this.callbackUrl = request.callbackUrl;
+            this.cameraSelection = request.cameraSelection;
             this.certName = request.certName;
             this.certNo = request.certNo;
             this.certType = request.certType;
@@ -614,6 +628,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
             this.callbackUrl = callbackUrl;
+            return this;
+        }
+
+        /**
+         * CameraSelection.
+         */
+        public Builder cameraSelection(String cameraSelection) {
+            this.putQueryParameter("CameraSelection", cameraSelection);
+            this.cameraSelection = cameraSelection;
             return this;
         }
 
