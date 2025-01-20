@@ -62,6 +62,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PlaceSearchNovaResponse> placeSearchNova(PlaceSearchNovaRequest request);
 
     /**
+     * @param request the request parameters of QueryAttractions  QueryAttractionsRequest
+     * @return QueryAttractionsResponse
+     */
+    CompletableFuture<QueryAttractionsResponse> queryAttractions(QueryAttractionsRequest request);
+
+    /**
+     * @param request the request parameters of QueryAttractionsNl  QueryAttractionsNlRequest
+     * @return QueryAttractionsNlResponse
+     */
+    CompletableFuture<QueryAttractionsNlResponse> queryAttractionsNl(QueryAttractionsNlRequest request);
+
+    /**
+     * @param request the request parameters of QueryHotels  QueryHotelsRequest
+     * @return QueryHotelsResponse
+     */
+    CompletableFuture<QueryHotelsResponse> queryHotels(QueryHotelsRequest request);
+
+    /**
+     * @param request the request parameters of QueryHotelsNl  QueryHotelsNlRequest
+     * @return QueryHotelsNlResponse
+     */
+    CompletableFuture<QueryHotelsNlResponse> queryHotelsNl(QueryHotelsNlRequest request);
+
+    /**
+     * @param request the request parameters of QueryRestaurants  QueryRestaurantsRequest
+     * @return QueryRestaurantsResponse
+     */
+    CompletableFuture<QueryRestaurantsResponse> queryRestaurants(QueryRestaurantsRequest request);
+
+    /**
+     * @param request the request parameters of QueryRestaurantsNl  QueryRestaurantsNlRequest
+     * @return QueryRestaurantsNlResponse
+     */
+    CompletableFuture<QueryRestaurantsNlResponse> queryRestaurantsNl(QueryRestaurantsNlRequest request);
+
+    /**
      * @param request the request parameters of RgeoCode  RgeoCodeRequest
      * @return RgeoCodeResponse
      */

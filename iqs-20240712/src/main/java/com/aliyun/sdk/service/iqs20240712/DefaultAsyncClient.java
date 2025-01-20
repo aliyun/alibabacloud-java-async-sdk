@@ -166,6 +166,114 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryAttractions  QueryAttractionsRequest
+     * @return QueryAttractionsResponse
+     */
+    @Override
+    public CompletableFuture<QueryAttractionsResponse> queryAttractions(QueryAttractionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryAttractions").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v1/nl/attractions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAttractionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAttractionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAttractionsNl  QueryAttractionsNlRequest
+     * @return QueryAttractionsNlResponse
+     */
+    @Override
+    public CompletableFuture<QueryAttractionsNlResponse> queryAttractionsNl(QueryAttractionsNlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryAttractionsNl").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v2/nl/attractions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAttractionsNlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAttractionsNlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryHotels  QueryHotelsRequest
+     * @return QueryHotelsResponse
+     */
+    @Override
+    public CompletableFuture<QueryHotelsResponse> queryHotels(QueryHotelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryHotels").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v1/nl/hotels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHotelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryHotelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryHotelsNl  QueryHotelsNlRequest
+     * @return QueryHotelsNlResponse
+     */
+    @Override
+    public CompletableFuture<QueryHotelsNlResponse> queryHotelsNl(QueryHotelsNlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryHotelsNl").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v2/nl/hotels").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryHotelsNlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryHotelsNlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRestaurants  QueryRestaurantsRequest
+     * @return QueryRestaurantsResponse
+     */
+    @Override
+    public CompletableFuture<QueryRestaurantsResponse> queryRestaurants(QueryRestaurantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRestaurants").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v1/nl/restaurants").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRestaurantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRestaurantsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRestaurantsNl  QueryRestaurantsNlRequest
+     * @return QueryRestaurantsNlResponse
+     */
+    @Override
+    public CompletableFuture<QueryRestaurantsNlResponse> queryRestaurantsNl(QueryRestaurantsNlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRestaurantsNl").setMethod(HttpMethod.POST).setPathRegex("/amap-function-call-agent/iqs-agent-service/v2/nl/restaurants").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRestaurantsNlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRestaurantsNlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RgeoCode  RgeoCodeRequest
      * @return RgeoCodeResponse
      */

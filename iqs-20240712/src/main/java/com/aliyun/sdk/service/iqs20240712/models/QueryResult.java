@@ -20,8 +20,12 @@ public class QueryResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List<Data> data;
 
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
     private QueryResult(Builder builder) {
         this.data = builder.data;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
@@ -39,14 +43,30 @@ public class QueryResult extends TeaModel {
         return this.data;
     }
 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static final class Builder {
         private java.util.List<Data> data; 
+        private String requestId; 
 
         /**
          * data.
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -130,6 +150,9 @@ public class QueryResult extends TeaModel {
      * <p>QueryResult</p>
      */
     public static class Metadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("averageSpend")
+        private String averageSpend;
+
         @com.aliyun.core.annotation.NameInMap("businessArea")
         private String businessArea;
 
@@ -149,6 +172,7 @@ public class QueryResult extends TeaModel {
         private String weeklyOpeningDays;
 
         private Metadata(Builder builder) {
+            this.averageSpend = builder.averageSpend;
             this.businessArea = builder.businessArea;
             this.dailyOpeningHours = builder.dailyOpeningHours;
             this.mainTag = builder.mainTag;
@@ -163,6 +187,13 @@ public class QueryResult extends TeaModel {
 
         public static Metadata create() {
             return builder().build();
+        }
+
+        /**
+         * @return averageSpend
+         */
+        public String getAverageSpend() {
+            return this.averageSpend;
         }
 
         /**
@@ -208,12 +239,21 @@ public class QueryResult extends TeaModel {
         }
 
         public static final class Builder {
+            private String averageSpend; 
             private String businessArea; 
             private String dailyOpeningHours; 
             private String mainTag; 
             private String phone; 
             private String score; 
             private String weeklyOpeningDays; 
+
+            /**
+             * averageSpend.
+             */
+            public Builder averageSpend(String averageSpend) {
+                this.averageSpend = averageSpend;
+                return this;
+            }
 
             /**
              * businessArea.
@@ -286,6 +326,9 @@ public class QueryResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cityName")
         private String cityName;
 
+        @com.aliyun.core.annotation.NameInMap("distanceMeter")
+        private String distanceMeter;
+
         @com.aliyun.core.annotation.NameInMap("districtCode")
         private String districtCode;
 
@@ -326,6 +369,7 @@ public class QueryResult extends TeaModel {
             this.address = builder.address;
             this.cityCode = builder.cityCode;
             this.cityName = builder.cityName;
+            this.distanceMeter = builder.distanceMeter;
             this.districtCode = builder.districtCode;
             this.districtName = builder.districtName;
             this.id = builder.id;
@@ -367,6 +411,13 @@ public class QueryResult extends TeaModel {
          */
         public String getCityName() {
             return this.cityName;
+        }
+
+        /**
+         * @return distanceMeter
+         */
+        public String getDistanceMeter() {
+            return this.distanceMeter;
         }
 
         /**
@@ -457,6 +508,7 @@ public class QueryResult extends TeaModel {
             private String address; 
             private String cityCode; 
             private String cityName; 
+            private String distanceMeter; 
             private String districtCode; 
             private String districtName; 
             private String id; 
@@ -491,6 +543,14 @@ public class QueryResult extends TeaModel {
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * distanceMeter.
+             */
+            public Builder distanceMeter(String distanceMeter) {
+                this.distanceMeter = distanceMeter;
                 return this;
             }
 
