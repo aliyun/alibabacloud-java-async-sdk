@@ -236,15 +236,17 @@ public class CreateDataCorrectOrderRequest extends Request {
      */
     public static class DbItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private Long instanceId;
+
         @com.aliyun.core.annotation.NameInMap("Logic")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logic;
 
         private DbItemList(Builder builder) {
             this.dbId = builder.dbId;
+            this.instanceId = builder.instanceId;
             this.logic = builder.logic;
         }
 
@@ -264,6 +266,13 @@ public class CreateDataCorrectOrderRequest extends Request {
         }
 
         /**
+         * @return instanceId
+         */
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
          * @return logic
          */
         public Boolean getLogic() {
@@ -272,6 +281,7 @@ public class CreateDataCorrectOrderRequest extends Request {
 
         public static final class Builder {
             private Long dbId; 
+            private Long instanceId; 
             private Boolean logic; 
 
             /**
@@ -280,7 +290,6 @@ public class CreateDataCorrectOrderRequest extends Request {
              * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
              * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1860****</p>
@@ -291,12 +300,19 @@ public class CreateDataCorrectOrderRequest extends Request {
             }
 
             /**
+             * InstanceId.
+             */
+            public Builder instanceId(Long instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether the database is a logical database. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: The database is a logical database.</li>
              * <li><strong>false</strong>: The database is a physical database.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

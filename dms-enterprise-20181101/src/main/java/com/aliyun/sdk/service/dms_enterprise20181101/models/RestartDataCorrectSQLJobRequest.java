@@ -31,6 +31,10 @@ public class RestartDataCorrectSQLJobRequest extends Request {
     private Long orderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
@@ -45,6 +49,7 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         this.regionId = builder.regionId;
         this.jobId = builder.jobId;
         this.orderId = builder.orderId;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tid = builder.tid;
         this.type = builder.type;
     }
@@ -84,6 +89,13 @@ public class RestartDataCorrectSQLJobRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -101,6 +113,7 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         private String regionId; 
         private Long jobId; 
         private Long orderId; 
+        private String realLoginUserUid; 
         private Long tid; 
         private String type; 
 
@@ -113,6 +126,7 @@ public class RestartDataCorrectSQLJobRequest extends Request {
             this.regionId = request.regionId;
             this.jobId = request.jobId;
             this.orderId = request.orderId;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tid = request.tid;
             this.type = request.type;
         } 
@@ -149,6 +163,15 @@ public class RestartDataCorrectSQLJobRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

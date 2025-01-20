@@ -27,6 +27,10 @@ public class SkipDataCorrectRowCheckRequest extends Request {
     private Long orderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Reason")
     @com.aliyun.core.annotation.Validation(required = true)
     private String reason;
@@ -40,6 +44,7 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.orderId = builder.orderId;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.reason = builder.reason;
         this.tid = builder.tid;
     }
@@ -72,6 +77,13 @@ public class SkipDataCorrectRowCheckRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return reason
      */
     public String getReason() {
@@ -88,6 +100,7 @@ public class SkipDataCorrectRowCheckRequest extends Request {
     public static final class Builder extends Request.Builder<SkipDataCorrectRowCheckRequest, Builder> {
         private String regionId; 
         private Long orderId; 
+        private String realLoginUserUid; 
         private String reason; 
         private Long tid; 
 
@@ -99,6 +112,7 @@ public class SkipDataCorrectRowCheckRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.orderId = request.orderId;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.reason = request.reason;
             this.tid = request.tid;
         } 
@@ -122,6 +136,15 @@ public class SkipDataCorrectRowCheckRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 
