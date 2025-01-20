@@ -45,8 +45,8 @@ public class TextTask extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("referenceTag")
     private ReferenceTag referenceTag;
 
-    @com.aliyun.core.annotation.NameInMap("relatedRagId")
-    private Integer relatedRagId;
+    @com.aliyun.core.annotation.NameInMap("relatedRagIds")
+    private java.util.List<Long> relatedRagIds;
 
     @com.aliyun.core.annotation.NameInMap("style")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -87,7 +87,7 @@ public class TextTask extends TeaModel {
         this.nums = builder.nums;
         this.point = builder.point;
         this.referenceTag = builder.referenceTag;
-        this.relatedRagId = builder.relatedRagId;
+        this.relatedRagIds = builder.relatedRagIds;
         this.style = builder.style;
         this.target = builder.target;
         this.textIds = builder.textIds;
@@ -171,10 +171,10 @@ public class TextTask extends TeaModel {
     }
 
     /**
-     * @return relatedRagId
+     * @return relatedRagIds
      */
-    public Integer getRelatedRagId() {
-        return this.relatedRagId;
+    public java.util.List<Long> getRelatedRagIds() {
+        return this.relatedRagIds;
     }
 
     /**
@@ -250,7 +250,7 @@ public class TextTask extends TeaModel {
         private Integer nums; 
         private String point; 
         private ReferenceTag referenceTag; 
-        private Integer relatedRagId; 
+        private java.util.List<Long> relatedRagIds; 
         private String style; 
         private String target; 
         private java.util.List<Long> textIds; 
@@ -337,10 +337,10 @@ public class TextTask extends TeaModel {
         }
 
         /**
-         * relatedRagId.
+         * relatedRagIds.
          */
-        public Builder relatedRagId(Integer relatedRagId) {
-            this.relatedRagId = relatedRagId;
+        public Builder relatedRagIds(java.util.List<Long> relatedRagIds) {
+            this.relatedRagIds = relatedRagIds;
             return this;
         }
 

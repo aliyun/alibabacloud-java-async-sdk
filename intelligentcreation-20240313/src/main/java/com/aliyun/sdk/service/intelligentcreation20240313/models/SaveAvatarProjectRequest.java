@@ -42,6 +42,10 @@ public class SaveAvatarProjectRequest extends Request {
     private String resSpecType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resolution")
+    private String resolution;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scaleType")
     private String scaleType;
 
@@ -53,6 +57,7 @@ public class SaveAvatarProjectRequest extends Request {
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
         this.resSpecType = builder.resSpecType;
+        this.resolution = builder.resolution;
         this.scaleType = builder.scaleType;
     }
 
@@ -112,6 +117,13 @@ public class SaveAvatarProjectRequest extends Request {
     }
 
     /**
+     * @return resolution
+     */
+    public String getResolution() {
+        return this.resolution;
+    }
+
+    /**
      * @return scaleType
      */
     public String getScaleType() {
@@ -125,6 +137,7 @@ public class SaveAvatarProjectRequest extends Request {
         private String projectId; 
         private String projectName; 
         private String resSpecType; 
+        private String resolution; 
         private String scaleType; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class SaveAvatarProjectRequest extends Request {
             this.projectId = request.projectId;
             this.projectName = request.projectName;
             this.resSpecType = request.resSpecType;
+            this.resolution = request.resolution;
             this.scaleType = request.scaleType;
         } 
 
@@ -193,6 +207,15 @@ public class SaveAvatarProjectRequest extends Request {
         public Builder resSpecType(String resSpecType) {
             this.putBodyParameter("resSpecType", resSpecType);
             this.resSpecType = resSpecType;
+            return this;
+        }
+
+        /**
+         * resolution.
+         */
+        public Builder resolution(String resolution) {
+            this.putBodyParameter("resolution", resolution);
+            this.resolution = resolution;
             return this;
         }
 

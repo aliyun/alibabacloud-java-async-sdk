@@ -29,6 +29,9 @@ public class IllustrationTaskCreateCmd extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("idempotentId")
     private String idempotentId;
 
+    @com.aliyun.core.annotation.NameInMap("imageUrls")
+    private java.util.List<String> imageUrls;
+
     @com.aliyun.core.annotation.NameInMap("nums")
     private Integer nums;
 
@@ -43,6 +46,7 @@ public class IllustrationTaskCreateCmd extends TeaModel {
         this.dstHeight = builder.dstHeight;
         this.dstWidth = builder.dstWidth;
         this.idempotentId = builder.idempotentId;
+        this.imageUrls = builder.imageUrls;
         this.nums = builder.nums;
         this.ossPaths = builder.ossPaths;
         this.stickerText = builder.stickerText;
@@ -85,6 +89,13 @@ public class IllustrationTaskCreateCmd extends TeaModel {
     }
 
     /**
+     * @return imageUrls
+     */
+    public java.util.List<String> getImageUrls() {
+        return this.imageUrls;
+    }
+
+    /**
      * @return nums
      */
     public Integer getNums() {
@@ -110,6 +121,7 @@ public class IllustrationTaskCreateCmd extends TeaModel {
         private Integer dstHeight; 
         private Integer dstWidth; 
         private String idempotentId; 
+        private java.util.List<String> imageUrls; 
         private Integer nums; 
         private java.util.List<String> ossPaths; 
         private String stickerText; 
@@ -143,6 +155,14 @@ public class IllustrationTaskCreateCmd extends TeaModel {
          */
         public Builder idempotentId(String idempotentId) {
             this.idempotentId = idempotentId;
+            return this;
+        }
+
+        /**
+         * imageUrls.
+         */
+        public Builder imageUrls(java.util.List<String> imageUrls) {
+            this.imageUrls = imageUrls;
             return this;
         }
 

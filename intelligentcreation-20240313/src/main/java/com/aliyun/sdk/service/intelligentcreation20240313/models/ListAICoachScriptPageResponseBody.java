@@ -326,6 +326,15 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expressiveness")
         private Integer expressiveness;
 
+        @com.aliyun.core.annotation.NameInMap("expressivenessEnabled")
+        private Boolean expressivenessEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("pointDeductionRule")
+        private Integer pointDeductionRule;
+
+        @com.aliyun.core.annotation.NameInMap("pointDeductionRuleEnabled")
+        private Boolean pointDeductionRuleEnabled;
+
         @com.aliyun.core.annotation.NameInMap("standard")
         private Integer standard;
 
@@ -335,6 +344,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         private Weights(Builder builder) {
             this.assessmentPoint = builder.assessmentPoint;
             this.expressiveness = builder.expressiveness;
+            this.expressivenessEnabled = builder.expressivenessEnabled;
+            this.pointDeductionRule = builder.pointDeductionRule;
+            this.pointDeductionRuleEnabled = builder.pointDeductionRuleEnabled;
             this.standard = builder.standard;
             this.standardEnabled = builder.standardEnabled;
         }
@@ -362,6 +374,27 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return expressivenessEnabled
+         */
+        public Boolean getExpressivenessEnabled() {
+            return this.expressivenessEnabled;
+        }
+
+        /**
+         * @return pointDeductionRule
+         */
+        public Integer getPointDeductionRule() {
+            return this.pointDeductionRule;
+        }
+
+        /**
+         * @return pointDeductionRuleEnabled
+         */
+        public Boolean getPointDeductionRuleEnabled() {
+            return this.pointDeductionRuleEnabled;
+        }
+
+        /**
          * @return standard
          */
         public Integer getStandard() {
@@ -378,6 +411,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         public static final class Builder {
             private Integer assessmentPoint; 
             private Integer expressiveness; 
+            private Boolean expressivenessEnabled; 
+            private Integer pointDeductionRule; 
+            private Boolean pointDeductionRuleEnabled; 
             private Integer standard; 
             private Boolean standardEnabled; 
 
@@ -394,6 +430,30 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder expressiveness(Integer expressiveness) {
                 this.expressiveness = expressiveness;
+                return this;
+            }
+
+            /**
+             * expressivenessEnabled.
+             */
+            public Builder expressivenessEnabled(Boolean expressivenessEnabled) {
+                this.expressivenessEnabled = expressivenessEnabled;
+                return this;
+            }
+
+            /**
+             * pointDeductionRule.
+             */
+            public Builder pointDeductionRule(Integer pointDeductionRule) {
+                this.pointDeductionRule = pointDeductionRule;
+                return this;
+            }
+
+            /**
+             * pointDeductionRuleEnabled.
+             */
+            public Builder pointDeductionRuleEnabled(Boolean pointDeductionRuleEnabled) {
+                this.pointDeductionRuleEnabled = pointDeductionRuleEnabled;
                 return this;
             }
 
@@ -427,11 +487,23 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
      * <p>ListAICoachScriptPageResponseBody</p>
      */
     public static class List extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("appendQuestionFlag")
+        private String appendQuestionFlag;
+
+        @com.aliyun.core.annotation.NameInMap("assessmentScope")
+        private String assessmentScope;
+
         @com.aliyun.core.annotation.NameInMap("completeStrategy")
         private CompleteStrategy completeStrategy;
 
         @com.aliyun.core.annotation.NameInMap("coverUrl")
         private String coverUrl;
+
+        @com.aliyun.core.annotation.NameInMap("dialogueTipFlag")
+        private Boolean dialogueTipFlag;
+
+        @com.aliyun.core.annotation.NameInMap("evaluateReportFlag")
+        private Boolean evaluateReportFlag;
 
         @com.aliyun.core.annotation.NameInMap("expressiveness")
         private java.util.Map<String, String> expressiveness;
@@ -454,21 +526,40 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("orderAckFlag")
+        private Boolean orderAckFlag;
+
         @com.aliyun.core.annotation.NameInMap("sampleDialogueList")
         private java.util.List<SampleDialogueList> sampleDialogueList;
 
         @com.aliyun.core.annotation.NameInMap("scriptRecordId")
         private String scriptRecordId;
 
+        @com.aliyun.core.annotation.NameInMap("sparringTipContent")
+        private String sparringTipContent;
+
+        @com.aliyun.core.annotation.NameInMap("sparringTipTitle")
+        private String sparringTipTitle;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
+
+        @com.aliyun.core.annotation.NameInMap("studentThinkTimeFlag")
+        private Boolean studentThinkTimeFlag;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private Integer type;
 
         @com.aliyun.core.annotation.NameInMap("weights")
         private Weights weights;
 
         private List(Builder builder) {
+            this.appendQuestionFlag = builder.appendQuestionFlag;
+            this.assessmentScope = builder.assessmentScope;
             this.completeStrategy = builder.completeStrategy;
             this.coverUrl = builder.coverUrl;
+            this.dialogueTipFlag = builder.dialogueTipFlag;
+            this.evaluateReportFlag = builder.evaluateReportFlag;
             this.expressiveness = builder.expressiveness;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -476,9 +567,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             this.interactionType = builder.interactionType;
             this.introduce = builder.introduce;
             this.name = builder.name;
+            this.orderAckFlag = builder.orderAckFlag;
             this.sampleDialogueList = builder.sampleDialogueList;
             this.scriptRecordId = builder.scriptRecordId;
+            this.sparringTipContent = builder.sparringTipContent;
+            this.sparringTipTitle = builder.sparringTipTitle;
             this.status = builder.status;
+            this.studentThinkTimeFlag = builder.studentThinkTimeFlag;
+            this.type = builder.type;
             this.weights = builder.weights;
         }
 
@@ -488,6 +584,20 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         public static List create() {
             return builder().build();
+        }
+
+        /**
+         * @return appendQuestionFlag
+         */
+        public String getAppendQuestionFlag() {
+            return this.appendQuestionFlag;
+        }
+
+        /**
+         * @return assessmentScope
+         */
+        public String getAssessmentScope() {
+            return this.assessmentScope;
         }
 
         /**
@@ -502,6 +612,20 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         public String getCoverUrl() {
             return this.coverUrl;
+        }
+
+        /**
+         * @return dialogueTipFlag
+         */
+        public Boolean getDialogueTipFlag() {
+            return this.dialogueTipFlag;
+        }
+
+        /**
+         * @return evaluateReportFlag
+         */
+        public Boolean getEvaluateReportFlag() {
+            return this.evaluateReportFlag;
         }
 
         /**
@@ -554,6 +678,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderAckFlag
+         */
+        public Boolean getOrderAckFlag() {
+            return this.orderAckFlag;
+        }
+
+        /**
          * @return sampleDialogueList
          */
         public java.util.List<SampleDialogueList> getSampleDialogueList() {
@@ -568,10 +699,38 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return sparringTipContent
+         */
+        public String getSparringTipContent() {
+            return this.sparringTipContent;
+        }
+
+        /**
+         * @return sparringTipTitle
+         */
+        public String getSparringTipTitle() {
+            return this.sparringTipTitle;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return studentThinkTimeFlag
+         */
+        public Boolean getStudentThinkTimeFlag() {
+            return this.studentThinkTimeFlag;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
         }
 
         /**
@@ -582,8 +741,12 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appendQuestionFlag; 
+            private String assessmentScope; 
             private CompleteStrategy completeStrategy; 
             private String coverUrl; 
+            private Boolean dialogueTipFlag; 
+            private Boolean evaluateReportFlag; 
             private java.util.Map<String, String> expressiveness; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -591,10 +754,31 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private String interactionType; 
             private String introduce; 
             private String name; 
+            private Boolean orderAckFlag; 
             private java.util.List<SampleDialogueList> sampleDialogueList; 
             private String scriptRecordId; 
+            private String sparringTipContent; 
+            private String sparringTipTitle; 
             private Integer status; 
+            private Boolean studentThinkTimeFlag; 
+            private Integer type; 
             private Weights weights; 
+
+            /**
+             * appendQuestionFlag.
+             */
+            public Builder appendQuestionFlag(String appendQuestionFlag) {
+                this.appendQuestionFlag = appendQuestionFlag;
+                return this;
+            }
+
+            /**
+             * assessmentScope.
+             */
+            public Builder assessmentScope(String assessmentScope) {
+                this.assessmentScope = assessmentScope;
+                return this;
+            }
 
             /**
              * completeStrategy.
@@ -609,6 +793,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
+                return this;
+            }
+
+            /**
+             * dialogueTipFlag.
+             */
+            public Builder dialogueTipFlag(Boolean dialogueTipFlag) {
+                this.dialogueTipFlag = dialogueTipFlag;
+                return this;
+            }
+
+            /**
+             * evaluateReportFlag.
+             */
+            public Builder evaluateReportFlag(Boolean evaluateReportFlag) {
+                this.evaluateReportFlag = evaluateReportFlag;
                 return this;
             }
 
@@ -669,6 +869,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             }
 
             /**
+             * orderAckFlag.
+             */
+            public Builder orderAckFlag(Boolean orderAckFlag) {
+                this.orderAckFlag = orderAckFlag;
+                return this;
+            }
+
+            /**
              * sampleDialogueList.
              */
             public Builder sampleDialogueList(java.util.List<SampleDialogueList> sampleDialogueList) {
@@ -685,10 +893,42 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             }
 
             /**
+             * sparringTipContent.
+             */
+            public Builder sparringTipContent(String sparringTipContent) {
+                this.sparringTipContent = sparringTipContent;
+                return this;
+            }
+
+            /**
+             * sparringTipTitle.
+             */
+            public Builder sparringTipTitle(String sparringTipTitle) {
+                this.sparringTipTitle = sparringTipTitle;
+                return this;
+            }
+
+            /**
              * status.
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * studentThinkTimeFlag.
+             */
+            public Builder studentThinkTimeFlag(Boolean studentThinkTimeFlag) {
+                this.studentThinkTimeFlag = studentThinkTimeFlag;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
                 return this;
             }
 

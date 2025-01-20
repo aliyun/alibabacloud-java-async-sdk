@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTextFeedbackResponse> addTextFeedback(AddTextFeedbackRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateAICoachTask  BatchCreateAICoachTaskRequest
+     * @return BatchCreateAICoachTaskResponse
+     */
+    CompletableFuture<BatchCreateAICoachTaskResponse> batchCreateAICoachTask(BatchCreateAICoachTaskRequest request);
+
+    /**
      * @param request the request parameters of BatchGetProjectTask  BatchGetProjectTaskRequest
      * @return BatchGetProjectTaskResponse
      */
