@@ -1,3 +1,6 @@
+2025-01-20 Version: 1.0.13
+- Generated java-async 2017-06-26 for NAS.
+
 2024-12-19 Version: 1.0.12
 - Generated java-async 2017-06-26 for NAS.
 

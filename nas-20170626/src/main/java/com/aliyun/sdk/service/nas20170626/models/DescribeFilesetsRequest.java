@@ -35,12 +35,22 @@ public class DescribeFilesetsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByField")
+    private String orderByField;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
+    private String sortOrder;
+
     private DescribeFilesetsRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
         this.filters = builder.filters;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.orderByField = builder.orderByField;
+        this.sortOrder = builder.sortOrder;
     }
 
     public static Builder builder() {
@@ -84,11 +94,27 @@ public class DescribeFilesetsRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return orderByField
+     */
+    public String getOrderByField() {
+        return this.orderByField;
+    }
+
+    /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFilesetsRequest, Builder> {
         private String fileSystemId; 
         private java.util.List<Filters> filters; 
         private Long maxResults; 
         private String nextToken; 
+        private String orderByField; 
+        private String sortOrder; 
 
         private Builder() {
             super();
@@ -100,6 +126,8 @@ public class DescribeFilesetsRequest extends Request {
             this.filters = request.filters;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.orderByField = request.orderByField;
+            this.sortOrder = request.sortOrder;
         } 
 
         /**
@@ -153,6 +181,24 @@ public class DescribeFilesetsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OrderByField.
+         */
+        public Builder orderByField(String orderByField) {
+            this.putQueryParameter("OrderByField", orderByField);
+            this.orderByField = orderByField;
+            return this;
+        }
+
+        /**
+         * SortOrder.
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("SortOrder", sortOrder);
+            this.sortOrder = sortOrder;
             return this;
         }
 

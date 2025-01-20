@@ -349,7 +349,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CompletedTime.
+             * <p>The time when snapshot creation was complete.</p>
+             * <p>The time follows the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard in UTC. The time is displayed in the <code>yyyy-MM-ddThh:mmZ</code> format.</p>
+             * <blockquote>
+             * <p> This parameter is valid only when the snapshot is created. During snapshot creation, the value of this parameter is the same as that of CreateTime.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-07-24T13:10:52Z</p>
              */
             public Builder completedTime(String completedTime) {
                 this.completedTime = completedTime;
