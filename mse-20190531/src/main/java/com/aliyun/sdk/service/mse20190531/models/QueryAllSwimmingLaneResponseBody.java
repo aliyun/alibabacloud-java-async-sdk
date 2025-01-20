@@ -693,6 +693,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
 
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private String condition;
+
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List<Conditions> conditions;
 
@@ -716,6 +719,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         private GatewaySwimmingLaneRoute(Builder builder) {
             this.canaryModel = builder.canaryModel;
+            this.condition = builder.condition;
             this.conditions = builder.conditions;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -738,6 +742,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
          */
         public Integer getCanaryModel() {
             return this.canaryModel;
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
         }
 
         /**
@@ -791,6 +802,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer canaryModel; 
+            private String condition; 
             private java.util.List<Conditions> conditions; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
@@ -804,6 +816,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder canaryModel(Integer canaryModel) {
                 this.canaryModel = canaryModel;
+                return this;
+            }
+
+            /**
+             * Condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
                 return this;
             }
 
@@ -886,6 +906,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRoute")
         private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute;
 
+        @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRouteJson")
+        private String gatewaySwimmingLaneRouteJson;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
@@ -932,6 +955,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             this.enable = builder.enable;
             this.entryRules = builder.entryRules;
             this.gatewaySwimmingLaneRoute = builder.gatewaySwimmingLaneRoute;
+            this.gatewaySwimmingLaneRouteJson = builder.gatewaySwimmingLaneRouteJson;
             this.groupId = builder.groupId;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
@@ -975,6 +999,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
          */
         public GatewaySwimmingLaneRoute getGatewaySwimmingLaneRoute() {
             return this.gatewaySwimmingLaneRoute;
+        }
+
+        /**
+         * @return gatewaySwimmingLaneRouteJson
+         */
+        public String getGatewaySwimmingLaneRouteJson() {
+            return this.gatewaySwimmingLaneRouteJson;
         }
 
         /**
@@ -1079,6 +1110,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String enable; 
             private java.util.List<EntryRules> entryRules; 
             private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute; 
+            private String gatewaySwimmingLaneRouteJson; 
             private String groupId; 
             private Long id; 
             private String messageQueueFilterSide; 
@@ -1115,6 +1147,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder gatewaySwimmingLaneRoute(GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute) {
                 this.gatewaySwimmingLaneRoute = gatewaySwimmingLaneRoute;
+                return this;
+            }
+
+            /**
+             * GatewaySwimmingLaneRouteJson.
+             */
+            public Builder gatewaySwimmingLaneRouteJson(String gatewaySwimmingLaneRouteJson) {
+                this.gatewaySwimmingLaneRouteJson = gatewaySwimmingLaneRouteJson;
                 return this;
             }
 

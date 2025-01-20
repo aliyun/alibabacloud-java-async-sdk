@@ -35,6 +35,10 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
     private Boolean isAHASPublicRegion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MseAppName")
+    private String mseAppName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
@@ -45,6 +49,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         this.ahasNamespace = builder.ahasNamespace;
         this.appName = builder.appName;
         this.isAHASPublicRegion = builder.isAHASPublicRegion;
+        this.mseAppName = builder.mseAppName;
         this.namespace = builder.namespace;
     }
 
@@ -90,6 +95,13 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
     }
 
     /**
+     * @return mseAppName
+     */
+    public String getMseAppName() {
+        return this.mseAppName;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -101,6 +113,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         private String ahasNamespace; 
         private String appName; 
         private Boolean isAHASPublicRegion; 
+        private String mseAppName; 
         private String namespace; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
             this.ahasNamespace = request.ahasNamespace;
             this.appName = request.appName;
             this.isAHASPublicRegion = request.isAHASPublicRegion;
+            this.mseAppName = request.mseAppName;
             this.namespace = request.namespace;
         } 
 
@@ -162,6 +176,15 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         public Builder isAHASPublicRegion(Boolean isAHASPublicRegion) {
             this.putQueryParameter("IsAHASPublicRegion", isAHASPublicRegion);
             this.isAHASPublicRegion = isAHASPublicRegion;
+            return this;
+        }
+
+        /**
+         * MseAppName.
+         */
+        public Builder mseAppName(String mseAppName) {
+            this.putQueryParameter("MseAppName", mseAppName);
+            this.mseAppName = mseAppName;
             return this;
         }
 
