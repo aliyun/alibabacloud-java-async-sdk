@@ -47,6 +47,10 @@ public class ModifyDBClusterRequest extends Request {
     private String imciAutoIndex;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyRowCompression")
+    private String modifyRowCompression;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -75,6 +79,10 @@ public class ModifyDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 64000, minimum = 20)
     private Long storageUpperBound;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableMeta")
+    private String tableMeta;
+
     private ModifyDBClusterRequest(Builder builder) {
         super(builder);
         this.compressStorage = builder.compressStorage;
@@ -84,6 +92,7 @@ public class ModifyDBClusterRequest extends Request {
         this.faultInjectionType = builder.faultInjectionType;
         this.faultSimulateMode = builder.faultSimulateMode;
         this.imciAutoIndex = builder.imciAutoIndex;
+        this.modifyRowCompression = builder.modifyRowCompression;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -91,6 +100,7 @@ public class ModifyDBClusterRequest extends Request {
         this.standbyHAMode = builder.standbyHAMode;
         this.storageAutoScale = builder.storageAutoScale;
         this.storageUpperBound = builder.storageUpperBound;
+        this.tableMeta = builder.tableMeta;
     }
 
     public static Builder builder() {
@@ -156,6 +166,13 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return modifyRowCompression
+     */
+    public String getModifyRowCompression() {
+        return this.modifyRowCompression;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -204,6 +221,13 @@ public class ModifyDBClusterRequest extends Request {
         return this.storageUpperBound;
     }
 
+    /**
+     * @return tableMeta
+     */
+    public String getTableMeta() {
+        return this.tableMeta;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterRequest, Builder> {
         private String compressStorage; 
         private String DBClusterId; 
@@ -212,6 +236,7 @@ public class ModifyDBClusterRequest extends Request {
         private String faultInjectionType; 
         private String faultSimulateMode; 
         private String imciAutoIndex; 
+        private String modifyRowCompression; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -219,6 +244,7 @@ public class ModifyDBClusterRequest extends Request {
         private String standbyHAMode; 
         private String storageAutoScale; 
         private Long storageUpperBound; 
+        private String tableMeta; 
 
         private Builder() {
             super();
@@ -233,6 +259,7 @@ public class ModifyDBClusterRequest extends Request {
             this.faultInjectionType = request.faultInjectionType;
             this.faultSimulateMode = request.faultSimulateMode;
             this.imciAutoIndex = request.imciAutoIndex;
+            this.modifyRowCompression = request.modifyRowCompression;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -240,6 +267,7 @@ public class ModifyDBClusterRequest extends Request {
             this.standbyHAMode = request.standbyHAMode;
             this.storageAutoScale = request.storageAutoScale;
             this.storageUpperBound = request.storageUpperBound;
+            this.tableMeta = request.tableMeta;
         } 
 
         /**
@@ -365,6 +393,15 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
+         * ModifyRowCompression.
+         */
+        public Builder modifyRowCompression(String modifyRowCompression) {
+            this.putQueryParameter("ModifyRowCompression", modifyRowCompression);
+            this.modifyRowCompression = modifyRowCompression;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -444,6 +481,15 @@ public class ModifyDBClusterRequest extends Request {
         public Builder storageUpperBound(Long storageUpperBound) {
             this.putQueryParameter("StorageUpperBound", storageUpperBound);
             this.storageUpperBound = storageUpperBound;
+            return this;
+        }
+
+        /**
+         * TableMeta.
+         */
+        public Builder tableMeta(String tableMeta) {
+            this.putQueryParameter("TableMeta", tableMeta);
+            this.tableMeta = tableMeta;
             return this;
         }
 

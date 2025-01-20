@@ -990,6 +990,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterServerlessConfResponse> modifyDBClusterServerlessConf(ModifyDBClusterServerlessConfRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBClusterStoragePerformance  ModifyDBClusterStoragePerformanceRequest
+     * @return ModifyDBClusterStoragePerformanceResponse
+     */
+    CompletableFuture<ModifyDBClusterStoragePerformanceResponse> modifyDBClusterStoragePerformance(ModifyDBClusterStoragePerformanceRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBClusterStorageSpace  ModifyDBClusterStorageSpaceRequest
      * @return ModifyDBClusterStorageSpaceResponse
      */

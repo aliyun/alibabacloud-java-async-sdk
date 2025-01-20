@@ -98,6 +98,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImciAutoIndex")
     private String imciAutoIndex;
 
+    @com.aliyun.core.annotation.NameInMap("ImperceptibleSwitch")
+    private String imperceptibleSwitch;
+
     @com.aliyun.core.annotation.NameInMap("InodeTotal")
     private Long inodeTotal;
 
@@ -154,6 +157,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("RestoreType")
     private String restoreType;
+
+    @com.aliyun.core.annotation.NameInMap("RowCompression")
+    private String rowCompression;
 
     @com.aliyun.core.annotation.NameInMap("SQLSize")
     private Long SQLSize;
@@ -234,6 +240,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.hasCompleteStandbyRes = builder.hasCompleteStandbyRes;
         this.hotStandbyCluster = builder.hotStandbyCluster;
         this.imciAutoIndex = builder.imciAutoIndex;
+        this.imperceptibleSwitch = builder.imperceptibleSwitch;
         this.inodeTotal = builder.inodeTotal;
         this.inodeUsed = builder.inodeUsed;
         this.isLatestVersion = builder.isLatestVersion;
@@ -253,6 +260,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.restoreDataPoint = builder.restoreDataPoint;
         this.restoreType = builder.restoreType;
+        this.rowCompression = builder.rowCompression;
         this.SQLSize = builder.SQLSize;
         this.serverlessType = builder.serverlessType;
         this.sourceDBCluster = builder.sourceDBCluster;
@@ -470,6 +478,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return imperceptibleSwitch
+     */
+    public String getImperceptibleSwitch() {
+        return this.imperceptibleSwitch;
+    }
+
+    /**
      * @return inodeTotal
      */
     public Long getInodeTotal() {
@@ -600,6 +615,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getRestoreType() {
         return this.restoreType;
+    }
+
+    /**
+     * @return rowCompression
+     */
+    public String getRowCompression() {
+        return this.rowCompression;
     }
 
     /**
@@ -749,6 +771,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Boolean hasCompleteStandbyRes; 
         private String hotStandbyCluster; 
         private String imciAutoIndex; 
+        private String imperceptibleSwitch; 
         private Long inodeTotal; 
         private Long inodeUsed; 
         private Boolean isLatestVersion; 
@@ -768,6 +791,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String restoreDataPoint; 
         private String restoreType; 
+        private String rowCompression; 
         private Long SQLSize; 
         private String serverlessType; 
         private String sourceDBCluster; 
@@ -1142,6 +1166,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * ImperceptibleSwitch.
+         */
+        public Builder imperceptibleSwitch(String imperceptibleSwitch) {
+            this.imperceptibleSwitch = imperceptibleSwitch;
+            return this;
+        }
+
+        /**
          * <p>Maximum number of inodes in the file system.</p>
          * 
          * <strong>example:</strong>
@@ -1394,6 +1426,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder restoreType(String restoreType) {
             this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
+         * RowCompression.
+         */
+        public Builder rowCompression(String rowCompression) {
+            this.rowCompression = rowCompression;
             return this;
         }
 
