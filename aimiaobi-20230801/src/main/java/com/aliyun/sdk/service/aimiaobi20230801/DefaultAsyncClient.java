@@ -1919,6 +1919,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunSearchSimilarArticles  RunSearchSimilarArticlesRequest
+     * @return RunSearchSimilarArticlesResponse
+     */
+    @Override
+    public CompletableFuture<RunSearchSimilarArticlesResponse> runSearchSimilarArticles(RunSearchSimilarArticlesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunSearchSimilarArticles").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaosou/runSearchSimilarArticles").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunSearchSimilarArticlesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunSearchSimilarArticlesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunSearchSimilarArticlesResponseBody> runSearchSimilarArticlesWithResponseIterable(RunSearchSimilarArticlesRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunSearchSimilarArticles").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaosou/runSearchSimilarArticles").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunSearchSimilarArticlesResponseBodyIterator iterator = RunSearchSimilarArticlesResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunStepByStepWriting  RunStepByStepWritingRequest
      * @return RunStepByStepWritingResponse
      */

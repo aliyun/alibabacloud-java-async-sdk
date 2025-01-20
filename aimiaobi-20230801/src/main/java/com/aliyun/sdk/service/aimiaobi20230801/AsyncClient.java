@@ -626,6 +626,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunSearchGenerationResponseBody> runSearchGenerationWithResponseIterable(RunSearchGenerationRequest request);
 
     /**
+     * @param request the request parameters of RunSearchSimilarArticles  RunSearchSimilarArticlesRequest
+     * @return RunSearchSimilarArticlesResponse
+     */
+    CompletableFuture<RunSearchSimilarArticlesResponse> runSearchSimilarArticles(RunSearchSimilarArticlesRequest request);
+
+    ResponseIterable<RunSearchSimilarArticlesResponseBody> runSearchSimilarArticlesWithResponseIterable(RunSearchSimilarArticlesRequest request);
+
+    /**
      * @param request the request parameters of RunStepByStepWriting  RunStepByStepWritingRequest
      * @return RunStepByStepWritingResponse
      */
