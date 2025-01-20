@@ -189,6 +189,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAudioFileResponse> createAudioFile(CreateAudioFileRequest request);
 
     /**
+     * @param request the request parameters of CreateCallSummary  CreateCallSummaryRequest
+     * @return CreateCallSummaryResponse
+     */
+    CompletableFuture<CreateCallSummaryResponse> createCallSummary(CreateCallSummaryRequest request);
+
+    /**
      * @param request the request parameters of CreateCallTags  CreateCallTagsRequest
      * @return CreateCallTagsResponse
      */
@@ -549,6 +555,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSkillGroupResponse
      */
     CompletableFuture<GetSkillGroupResponse> getSkillGroup(GetSkillGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetSummaryTemplate  GetSummaryTemplateRequest
+     * @return GetSummaryTemplateResponse
+     */
+    CompletableFuture<GetSummaryTemplateResponse> getSummaryTemplate(GetSummaryTemplateRequest request);
 
     /**
      * @param request the request parameters of GetTicket  GetTicketRequest
@@ -1427,6 +1439,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnregisterDeviceResponse
      */
     CompletableFuture<UnregisterDeviceResponse> unregisterDevice(UnregisterDeviceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCallSummary  UpdateCallSummaryRequest
+     * @return UpdateCallSummaryResponse
+     */
+    CompletableFuture<UpdateCallSummaryResponse> updateCallSummary(UpdateCallSummaryRequest request);
 
     /**
      * @param request the request parameters of UpdateCampaign  UpdateCampaignRequest
