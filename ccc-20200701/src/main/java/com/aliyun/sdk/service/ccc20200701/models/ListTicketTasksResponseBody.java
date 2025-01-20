@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -25,7 +30,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -57,7 +62,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -78,7 +83,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -91,10 +96,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -108,7 +113,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -132,7 +137,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -174,10 +179,10 @@ public class ListTicketTasksResponseBody extends TeaModel {
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("FileKeys")
-        private java.util.List < String > fileKeys;
+        private java.util.List<String> fileKeys;
 
         @com.aliyun.core.annotation.NameInMap("FileUrls")
-        private java.util.List < String > fileUrls;
+        private java.util.List<String> fileUrls;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -263,14 +268,14 @@ public class ListTicketTasksResponseBody extends TeaModel {
         /**
          * @return fileKeys
          */
-        public java.util.List < String > getFileKeys() {
+        public java.util.List<String> getFileKeys() {
             return this.fileKeys;
         }
 
         /**
          * @return fileUrls
          */
-        public java.util.List < String > getFileUrls() {
+        public java.util.List<String> getFileUrls() {
             return this.fileUrls;
         }
 
@@ -329,8 +334,8 @@ public class ListTicketTasksResponseBody extends TeaModel {
             private String assigneeName; 
             private String comment; 
             private Long endTime; 
-            private java.util.List < String > fileKeys; 
-            private java.util.List < String > fileUrls; 
+            private java.util.List<String> fileKeys; 
+            private java.util.List<String> fileUrls; 
             private String instanceId; 
             private Long startTime; 
             private String taskDefinitionNodeId; 
@@ -382,7 +387,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
             /**
              * FileKeys.
              */
-            public Builder fileKeys(java.util.List < String > fileKeys) {
+            public Builder fileKeys(java.util.List<String> fileKeys) {
                 this.fileKeys = fileKeys;
                 return this;
             }
@@ -390,7 +395,7 @@ public class ListTicketTasksResponseBody extends TeaModel {
             /**
              * FileUrls.
              */
-            public Builder fileUrls(java.util.List < String > fileUrls) {
+            public Builder fileUrls(java.util.List<String> fileUrls) {
                 this.fileUrls = fileUrls;
                 return this;
             }

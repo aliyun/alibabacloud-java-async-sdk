@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ClaimChatResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -78,7 +83,7 @@ public class ClaimChatResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class ClaimChatResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class ClaimChatResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -376,7 +381,7 @@ public class ClaimChatResponseBody extends TeaModel {
         private Long reserved;
 
         @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
-        private java.util.List < String > signedSkillGroupIdList;
+        private java.util.List<String> signedSkillGroupIdList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -485,7 +490,7 @@ public class ClaimChatResponseBody extends TeaModel {
         /**
          * @return signedSkillGroupIdList
          */
-        public java.util.List < String > getSignedSkillGroupIdList() {
+        public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
         }
 
@@ -521,7 +526,7 @@ public class ClaimChatResponseBody extends TeaModel {
             private String mobile; 
             private Boolean outboundScenario; 
             private Long reserved; 
-            private java.util.List < String > signedSkillGroupIdList; 
+            private java.util.List<String> signedSkillGroupIdList; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -609,7 +614,7 @@ public class ClaimChatResponseBody extends TeaModel {
             /**
              * SignedSkillGroupIdList.
              */
-            public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
+            public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
                 return this;
             }
@@ -653,7 +658,7 @@ public class ClaimChatResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChatContexts")
-        private java.util.List < ChatContexts> chatContexts;
+        private java.util.List<ChatContexts> chatContexts;
 
         @com.aliyun.core.annotation.NameInMap("ContextId")
         private Long contextId;
@@ -678,7 +683,7 @@ public class ClaimChatResponseBody extends TeaModel {
         /**
          * @return chatContexts
          */
-        public java.util.List < ChatContexts> getChatContexts() {
+        public java.util.List<ChatContexts> getChatContexts() {
             return this.chatContexts;
         }
 
@@ -697,14 +702,14 @@ public class ClaimChatResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChatContexts> chatContexts; 
+            private java.util.List<ChatContexts> chatContexts; 
             private Long contextId; 
             private UserContext userContext; 
 
             /**
              * ChatContexts.
              */
-            public Builder chatContexts(java.util.List < ChatContexts> chatContexts) {
+            public Builder chatContexts(java.util.List<ChatContexts> chatContexts) {
                 this.chatContexts = chatContexts;
                 return this;
             }

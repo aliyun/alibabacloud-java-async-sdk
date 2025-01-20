@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class AppendCasesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < AppendCasesRequestBody> body;
+    private java.util.List<AppendCasesRequestBody> body;
 
     private AppendCasesRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class AppendCasesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < AppendCasesRequestBody> getBody() {
+    public java.util.List<AppendCasesRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<AppendCasesRequest, Builder> {
         private String campaignId; 
         private String instanceId; 
-        private java.util.List < AppendCasesRequestBody> body; 
+        private java.util.List<AppendCasesRequestBody> body; 
 
         private Builder() {
             super();
@@ -110,7 +115,7 @@ public class AppendCasesRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.List < AppendCasesRequestBody> body) {
+        public Builder body(java.util.List<AppendCasesRequestBody> body) {
             String bodyShrink = shrink(body, "body", "json");
             this.putBodyParameter("body", bodyShrink);
             this.body = body;

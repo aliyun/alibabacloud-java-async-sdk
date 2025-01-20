@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,13 +183,13 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         private String nodeName;
 
         @com.aliyun.core.annotation.NameInMap("NodeProperties")
-        private java.util.Map < String, ? > nodeProperties;
+        private java.util.Map<String, ?> nodeProperties;
 
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         @com.aliyun.core.annotation.NameInMap("NodeVariables")
-        private java.util.Map < String, ? > nodeVariables;
+        private java.util.Map<String, ?> nodeVariables;
 
         private List(Builder builder) {
             this.callee = builder.callee;
@@ -307,7 +312,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         /**
          * @return nodeProperties
          */
-        public java.util.Map < String, ? > getNodeProperties() {
+        public java.util.Map<String, ?> getNodeProperties() {
             return this.nodeProperties;
         }
 
@@ -321,7 +326,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         /**
          * @return nodeVariables
          */
-        public java.util.Map < String, ? > getNodeVariables() {
+        public java.util.Map<String, ?> getNodeVariables() {
             return this.nodeVariables;
         }
 
@@ -339,9 +344,9 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             private String nodeExitCode; 
             private String nodeId; 
             private String nodeName; 
-            private java.util.Map < String, ? > nodeProperties; 
+            private java.util.Map<String, ?> nodeProperties; 
             private String nodeType; 
-            private java.util.Map < String, ? > nodeVariables; 
+            private java.util.Map<String, ?> nodeVariables; 
 
             /**
              * Callee.
@@ -450,7 +455,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             /**
              * NodeProperties.
              */
-            public Builder nodeProperties(java.util.Map < String, ? > nodeProperties) {
+            public Builder nodeProperties(java.util.Map<String, ?> nodeProperties) {
                 this.nodeProperties = nodeProperties;
                 return this;
             }
@@ -466,7 +471,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             /**
              * NodeVariables.
              */
-            public Builder nodeVariables(java.util.Map < String, ? > nodeVariables) {
+            public Builder nodeVariables(java.util.Map<String, ?> nodeVariables) {
                 this.nodeVariables = nodeVariables;
                 return this;
             }
@@ -486,7 +491,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -515,7 +520,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -541,7 +546,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -549,7 +554,7 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

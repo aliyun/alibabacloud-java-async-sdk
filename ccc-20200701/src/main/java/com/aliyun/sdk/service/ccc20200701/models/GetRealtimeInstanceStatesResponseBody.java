@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
-        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+        private java.util.List<BreakCodeDetailList> breakCodeDetailList;
 
         @com.aliyun.core.annotation.NameInMap("BreakingAgents")
         private Long breakingAgents;
@@ -263,7 +268,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         /**
          * @return breakCodeDetailList
          */
-        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+        public java.util.List<BreakCodeDetailList> getBreakCodeDetailList() {
             return this.breakCodeDetailList;
         }
 
@@ -338,7 +343,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
+            private java.util.List<BreakCodeDetailList> breakCodeDetailList; 
             private Long breakingAgents; 
             private String instanceId; 
             private Long interactiveCalls; 
@@ -353,7 +358,7 @@ public class GetRealtimeInstanceStatesResponseBody extends TeaModel {
             /**
              * BreakCodeDetailList.
              */
-            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+            public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
                 return this;
             }

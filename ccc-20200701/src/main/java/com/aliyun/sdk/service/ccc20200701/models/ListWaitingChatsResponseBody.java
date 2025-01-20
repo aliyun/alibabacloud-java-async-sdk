@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -53,7 +58,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -96,7 +101,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -351,13 +356,13 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         private String jobId;
 
         @com.aliyun.core.annotation.NameInMap("Messages")
-        private java.util.List < Messages> messages;
+        private java.util.List<Messages> messages;
 
         @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
         @com.aliyun.core.annotation.NameInMap("UserList")
-        private java.util.List < UserList> userList;
+        private java.util.List<UserList> userList;
 
         private Data(Builder builder) {
             this.accessChannelId = builder.accessChannelId;
@@ -424,7 +429,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         /**
          * @return messages
          */
-        public java.util.List < Messages> getMessages() {
+        public java.util.List<Messages> getMessages() {
             return this.messages;
         }
 
@@ -438,7 +443,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
         /**
          * @return userList
          */
-        public java.util.List < UserList> getUserList() {
+        public java.util.List<UserList> getUserList() {
             return this.userList;
         }
 
@@ -449,9 +454,9 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             private String chatConversationId; 
             private Long enqueueTime; 
             private String jobId; 
-            private java.util.List < Messages> messages; 
+            private java.util.List<Messages> messages; 
             private String skillGroupId; 
-            private java.util.List < UserList> userList; 
+            private java.util.List<UserList> userList; 
 
             /**
              * AccessChannelId.
@@ -504,7 +509,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             /**
              * Messages.
              */
-            public Builder messages(java.util.List < Messages> messages) {
+            public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
                 return this;
             }
@@ -520,7 +525,7 @@ public class ListWaitingChatsResponseBody extends TeaModel {
             /**
              * UserList.
              */
-            public Builder userList(java.util.List < UserList> userList) {
+            public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AddCasesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaseList")
-    private java.util.List < CaseList> caseList;
+    private java.util.List<CaseList> caseList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -56,7 +61,7 @@ public class AddCasesRequest extends Request {
     /**
      * @return caseList
      */
-    public java.util.List < CaseList> getCaseList() {
+    public java.util.List<CaseList> getCaseList() {
         return this.caseList;
     }
 
@@ -69,7 +74,7 @@ public class AddCasesRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddCasesRequest, Builder> {
         private String campaignId; 
-        private java.util.List < CaseList> caseList; 
+        private java.util.List<CaseList> caseList; 
         private String instanceId; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class AddCasesRequest extends Request {
         /**
          * CaseList.
          */
-        public Builder caseList(java.util.List < CaseList> caseList) {
+        public Builder caseList(java.util.List<CaseList> caseList) {
             String caseListShrink = shrink(caseList, "CaseList", "json");
             this.putQueryParameter("CaseList", caseListShrink);
             this.caseList = caseList;

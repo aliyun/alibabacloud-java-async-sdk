@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -551,7 +556,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         private String province;
 
         @com.aliyun.core.annotation.NameInMap("SkillGroups")
-        private java.util.List < SkillGroups> skillGroups;
+        private java.util.List<SkillGroups> skillGroups;
 
         @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
@@ -624,7 +629,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return skillGroups
          */
-        public java.util.List < SkillGroups> getSkillGroups() {
+        public java.util.List<SkillGroups> getSkillGroups() {
             return this.skillGroups;
         }
 
@@ -649,7 +654,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             private String instanceId; 
             private String number; 
             private String province; 
-            private java.util.List < SkillGroups> skillGroups; 
+            private java.util.List<SkillGroups> skillGroups; 
             private String usage; 
             private String userId; 
 
@@ -704,7 +709,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             /**
              * SkillGroups.
              */
-            public Builder skillGroups(java.util.List < SkillGroups> skillGroups) {
+            public Builder skillGroups(java.util.List<SkillGroups> skillGroups) {
                 this.skillGroups = skillGroups;
                 return this;
             }
@@ -740,7 +745,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminList")
-        private java.util.List < AdminList> adminList;
+        private java.util.List<AdminList> adminList;
 
         @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
@@ -761,7 +766,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NumberList")
-        private java.util.List < NumberList> numberList;
+        private java.util.List<NumberList> numberList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -789,7 +794,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return adminList
          */
-        public java.util.List < AdminList> getAdminList() {
+        public java.util.List<AdminList> getAdminList() {
             return this.adminList;
         }
 
@@ -838,7 +843,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return numberList
          */
-        public java.util.List < NumberList> getNumberList() {
+        public java.util.List<NumberList> getNumberList() {
             return this.numberList;
         }
 
@@ -850,20 +855,20 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AdminList> adminList; 
+            private java.util.List<AdminList> adminList; 
             private String aliyunUid; 
             private String consoleUrl; 
             private String description; 
             private String domainName; 
             private String id; 
             private String name; 
-            private java.util.List < NumberList> numberList; 
+            private java.util.List<NumberList> numberList; 
             private String status; 
 
             /**
              * AdminList.
              */
-            public Builder adminList(java.util.List < AdminList> adminList) {
+            public Builder adminList(java.util.List<AdminList> adminList) {
                 this.adminList = adminList;
                 return this;
             }
@@ -919,7 +924,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             /**
              * NumberList.
              */
-            public Builder numberList(java.util.List < NumberList> numberList) {
+            public Builder numberList(java.util.List<NumberList> numberList) {
                 this.numberList = numberList;
                 return this;
             }
@@ -947,7 +952,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -976,7 +981,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1002,7 +1007,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -1010,7 +1015,7 @@ public class ListInstancesOfUserResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -78,7 +83,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -633,7 +638,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         private String templateId;
 
         @com.aliyun.core.annotation.NameInMap("TicketFields")
-        private java.util.List < TicketFields> ticketFields;
+        private java.util.List<TicketFields> ticketFields;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
@@ -726,7 +731,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         /**
          * @return ticketFields
          */
-        public java.util.List < TicketFields> getTicketFields() {
+        public java.util.List<TicketFields> getTicketFields() {
             return this.ticketFields;
         }
 
@@ -747,7 +752,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
             private String processDefinition; 
             private String state; 
             private String templateId; 
-            private java.util.List < TicketFields> ticketFields; 
+            private java.util.List<TicketFields> ticketFields; 
             private Long updatedTime; 
 
             /**
@@ -825,7 +830,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
             /**
              * TicketFields.
              */
-            public Builder ticketFields(java.util.List < TicketFields> ticketFields) {
+            public Builder ticketFields(java.util.List<TicketFields> ticketFields) {
                 this.ticketFields = ticketFields;
                 return this;
             }
@@ -853,7 +858,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -882,7 +887,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -908,7 +913,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -916,7 +921,7 @@ public class ListTicketTemplatesResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

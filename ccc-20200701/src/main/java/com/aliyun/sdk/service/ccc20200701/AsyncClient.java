@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCasesResponse> addCases(AddCasesRequest request);
 
     /**
+     * @param request the request parameters of AddFeedback  AddFeedbackRequest
+     * @return AddFeedbackResponse
+     */
+    CompletableFuture<AddFeedbackResponse> addFeedback(AddFeedbackRequest request);
+
+    /**
      * @param request the request parameters of AddNumbersToSkillGroup  AddNumbersToSkillGroupRequest
      * @return AddNumbersToSkillGroupResponse
      */
@@ -272,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDocumentsResponse
      */
     CompletableFuture<DeleteDocumentsResponse> deleteDocuments(DeleteDocumentsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
+    CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
     /**
      * @param request the request parameters of DeleteSchema  DeleteSchemaRequest
@@ -1001,6 +1013,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSkillLevelsOfUserResponse
      */
     CompletableFuture<ListSkillLevelsOfUserResponse> listSkillLevelsOfUser(ListSkillLevelsOfUserRequest request);
+
+    /**
+     * @param request the request parameters of ListSmsMetadata  ListSmsMetadataRequest
+     * @return ListSmsMetadataResponse
+     */
+    CompletableFuture<ListSmsMetadataResponse> listSmsMetadata(ListSmsMetadataRequest request);
 
     /**
      * @param request the request parameters of ListTicketTasks  ListTicketTasksRequest

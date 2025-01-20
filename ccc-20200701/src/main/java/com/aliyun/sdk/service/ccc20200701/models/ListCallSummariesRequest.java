@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListCallSummariesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactIdList")
-    private java.util.List < String > contactIdList;
+    private java.util.List<String> contactIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -43,7 +48,7 @@ public class ListCallSummariesRequest extends Request {
     /**
      * @return contactIdList
      */
-    public java.util.List < String > getContactIdList() {
+    public java.util.List<String> getContactIdList() {
         return this.contactIdList;
     }
 
@@ -55,7 +60,7 @@ public class ListCallSummariesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCallSummariesRequest, Builder> {
-        private java.util.List < String > contactIdList; 
+        private java.util.List<String> contactIdList; 
         private String instanceId; 
 
         private Builder() {
@@ -71,7 +76,7 @@ public class ListCallSummariesRequest extends Request {
         /**
          * ContactIdList.
          */
-        public Builder contactIdList(java.util.List < String > contactIdList) {
+        public Builder contactIdList(java.util.List<String> contactIdList) {
             String contactIdListShrink = shrink(contactIdList, "ContactIdList", "json");
             this.putQueryParameter("ContactIdList", contactIdListShrink);
             this.contactIdList = contactIdList;

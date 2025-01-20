@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -326,7 +331,7 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Messages")
-        private java.util.List < Messages> messages;
+        private java.util.List<Messages> messages;
 
         @com.aliyun.core.annotation.NameInMap("NextPageToken")
         private String nextPageToken;
@@ -347,7 +352,7 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         /**
          * @return messages
          */
-        public java.util.List < Messages> getMessages() {
+        public java.util.List<Messages> getMessages() {
             return this.messages;
         }
 
@@ -359,13 +364,13 @@ public class ListGroupChatMessagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Messages> messages; 
+            private java.util.List<Messages> messages; 
             private String nextPageToken; 
 
             /**
              * Messages.
              */
-            public Builder messages(java.util.List < Messages> messages) {
+            public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
                 return this;
             }

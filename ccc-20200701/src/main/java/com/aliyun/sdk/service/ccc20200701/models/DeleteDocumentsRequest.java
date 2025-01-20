@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteDocumentsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DocumentIds")
-    private java.util.List < String > documentIds;
+    private java.util.List<String> documentIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -54,7 +59,7 @@ public class DeleteDocumentsRequest extends Request {
     /**
      * @return documentIds
      */
-    public java.util.List < String > getDocumentIds() {
+    public java.util.List<String> getDocumentIds() {
         return this.documentIds;
     }
 
@@ -80,7 +85,7 @@ public class DeleteDocumentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDocumentsRequest, Builder> {
-        private java.util.List < String > documentIds; 
+        private java.util.List<String> documentIds; 
         private String instanceId; 
         private String requestId; 
         private String schemaId; 
@@ -100,7 +105,7 @@ public class DeleteDocumentsRequest extends Request {
         /**
          * DocumentIds.
          */
-        public Builder documentIds(java.util.List < String > documentIds) {
+        public Builder documentIds(java.util.List<String> documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
             this.putBodyParameter("DocumentIds", documentIdsShrink);
             this.documentIds = documentIds;

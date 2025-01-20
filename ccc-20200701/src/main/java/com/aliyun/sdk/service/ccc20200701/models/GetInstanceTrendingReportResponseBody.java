@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -460,13 +465,13 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inbound")
-        private java.util.List < Inbound> inbound;
+        private java.util.List<Inbound> inbound;
 
         @com.aliyun.core.annotation.NameInMap("Outbound")
-        private java.util.List < Outbound> outbound;
+        private java.util.List<Outbound> outbound;
 
         @com.aliyun.core.annotation.NameInMap("Overall")
-        private java.util.List < Overall> overall;
+        private java.util.List<Overall> overall;
 
         private Data(Builder builder) {
             this.inbound = builder.inbound;
@@ -485,33 +490,33 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         /**
          * @return inbound
          */
-        public java.util.List < Inbound> getInbound() {
+        public java.util.List<Inbound> getInbound() {
             return this.inbound;
         }
 
         /**
          * @return outbound
          */
-        public java.util.List < Outbound> getOutbound() {
+        public java.util.List<Outbound> getOutbound() {
             return this.outbound;
         }
 
         /**
          * @return overall
          */
-        public java.util.List < Overall> getOverall() {
+        public java.util.List<Overall> getOverall() {
             return this.overall;
         }
 
         public static final class Builder {
-            private java.util.List < Inbound> inbound; 
-            private java.util.List < Outbound> outbound; 
-            private java.util.List < Overall> overall; 
+            private java.util.List<Inbound> inbound; 
+            private java.util.List<Outbound> outbound; 
+            private java.util.List<Overall> overall; 
 
             /**
              * Inbound.
              */
-            public Builder inbound(java.util.List < Inbound> inbound) {
+            public Builder inbound(java.util.List<Inbound> inbound) {
                 this.inbound = inbound;
                 return this;
             }
@@ -519,7 +524,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             /**
              * Outbound.
              */
-            public Builder outbound(java.util.List < Outbound> outbound) {
+            public Builder outbound(java.util.List<Outbound> outbound) {
                 this.outbound = outbound;
                 return this;
             }
@@ -527,7 +532,7 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
             /**
              * Overall.
              */
-            public Builder overall(java.util.List < Overall> overall) {
+            public Builder overall(java.util.List<Overall> overall) {
                 this.overall = overall;
                 return this;
             }

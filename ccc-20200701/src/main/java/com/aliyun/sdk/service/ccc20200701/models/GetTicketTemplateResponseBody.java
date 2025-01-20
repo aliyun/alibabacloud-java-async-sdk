@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -78,7 +83,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -627,7 +632,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
         private String templateId;
 
         @com.aliyun.core.annotation.NameInMap("TicketFields")
-        private java.util.List < TicketFields> ticketFields;
+        private java.util.List<TicketFields> ticketFields;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
@@ -704,7 +709,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
         /**
          * @return ticketFields
          */
-        public java.util.List < TicketFields> getTicketFields() {
+        public java.util.List<TicketFields> getTicketFields() {
             return this.ticketFields;
         }
 
@@ -723,7 +728,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
             private String processDefinition; 
             private String state; 
             private String templateId; 
-            private java.util.List < TicketFields> ticketFields; 
+            private java.util.List<TicketFields> ticketFields; 
             private Long updatedTime; 
 
             /**
@@ -785,7 +790,7 @@ public class GetTicketTemplateResponseBody extends TeaModel {
             /**
              * TicketFields.
              */
-            public Builder ticketFields(java.util.List < TicketFields> ticketFields) {
+            public Builder ticketFields(java.util.List<TicketFields> ticketFields) {
                 this.ticketFields = ticketFields;
                 return this;
             }

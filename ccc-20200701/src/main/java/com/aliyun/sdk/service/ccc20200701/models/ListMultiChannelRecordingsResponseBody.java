@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -53,7 +58,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -96,7 +101,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -227,7 +232,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         private String fileUrl;
 
         @com.aliyun.core.annotation.NameInMap("HoldTimeSegments")
-        private java.util.List < HoldTimeSegments> holdTimeSegments;
+        private java.util.List<HoldTimeSegments> holdTimeSegments;
 
         @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
@@ -312,7 +317,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
         /**
          * @return holdTimeSegments
          */
-        public java.util.List < HoldTimeSegments> getHoldTimeSegments() {
+        public java.util.List<HoldTimeSegments> getHoldTimeSegments() {
             return this.holdTimeSegments;
         }
 
@@ -345,7 +350,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             private String duration; 
             private String fileName; 
             private String fileUrl; 
-            private java.util.List < HoldTimeSegments> holdTimeSegments; 
+            private java.util.List<HoldTimeSegments> holdTimeSegments; 
             private String ramId; 
             private String skillGroupId; 
             private Long startTime; 
@@ -409,7 +414,7 @@ public class ListMultiChannelRecordingsResponseBody extends TeaModel {
             /**
              * HoldTimeSegments.
              */
-            public Builder holdTimeSegments(java.util.List < HoldTimeSegments> holdTimeSegments) {
+            public Builder holdTimeSegments(java.util.List<HoldTimeSegments> holdTimeSegments) {
                 this.holdTimeSegments = holdTimeSegments;
                 return this;
             }

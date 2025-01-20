@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class EndConferenceResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -78,7 +83,7 @@ public class EndConferenceResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class EndConferenceResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class EndConferenceResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -406,7 +411,7 @@ public class EndConferenceResponseBody extends TeaModel {
      */
     public static class CallContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelContexts")
-        private java.util.List < ChannelContexts> channelContexts;
+        private java.util.List<ChannelContexts> channelContexts;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -431,7 +436,7 @@ public class EndConferenceResponseBody extends TeaModel {
         /**
          * @return channelContexts
          */
-        public java.util.List < ChannelContexts> getChannelContexts() {
+        public java.util.List<ChannelContexts> getChannelContexts() {
             return this.channelContexts;
         }
 
@@ -450,14 +455,14 @@ public class EndConferenceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChannelContexts> channelContexts; 
+            private java.util.List<ChannelContexts> channelContexts; 
             private String instanceId; 
             private String jobId; 
 
             /**
              * ChannelContexts.
              */
-            public Builder channelContexts(java.util.List < ChannelContexts> channelContexts) {
+            public Builder channelContexts(java.util.List<ChannelContexts> channelContexts) {
                 this.channelContexts = channelContexts;
                 return this;
             }
@@ -514,7 +519,7 @@ public class EndConferenceResponseBody extends TeaModel {
         private Boolean outboundScenario;
 
         @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
-        private java.util.List < String > signedSkillGroupIdList;
+        private java.util.List<String> signedSkillGroupIdList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -599,7 +604,7 @@ public class EndConferenceResponseBody extends TeaModel {
         /**
          * @return signedSkillGroupIdList
          */
-        public java.util.List < String > getSignedSkillGroupIdList() {
+        public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
         }
 
@@ -632,7 +637,7 @@ public class EndConferenceResponseBody extends TeaModel {
             private String instanceId; 
             private String jobId; 
             private Boolean outboundScenario; 
-            private java.util.List < String > signedSkillGroupIdList; 
+            private java.util.List<String> signedSkillGroupIdList; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -696,7 +701,7 @@ public class EndConferenceResponseBody extends TeaModel {
             /**
              * SignedSkillGroupIdList.
              */
-            public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
+            public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
                 return this;
             }

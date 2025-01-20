@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ListDocumentsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Sorts")
-    private java.util.List < Sorts> sorts;
+    private java.util.List<Sorts> sorts;
 
     private ListDocumentsRequest(Builder builder) {
         super(builder);
@@ -111,7 +116,7 @@ public class ListDocumentsRequest extends Request {
     /**
      * @return sorts
      */
-    public java.util.List < Sorts> getSorts() {
+    public java.util.List<Sorts> getSorts() {
         return this.sorts;
     }
 
@@ -122,7 +127,7 @@ public class ListDocumentsRequest extends Request {
         private String requestId; 
         private String schemaId; 
         private String searchPattern; 
-        private java.util.List < Sorts> sorts; 
+        private java.util.List<Sorts> sorts; 
 
         private Builder() {
             super();
@@ -203,7 +208,7 @@ public class ListDocumentsRequest extends Request {
         /**
          * Sorts.
          */
-        public Builder sorts(java.util.List < Sorts> sorts) {
+        public Builder sorts(java.util.List<Sorts> sorts) {
             String sortsShrink = shrink(sorts, "Sorts", "json");
             this.putBodyParameter("Sorts", sortsShrink);
             this.sorts = sorts;

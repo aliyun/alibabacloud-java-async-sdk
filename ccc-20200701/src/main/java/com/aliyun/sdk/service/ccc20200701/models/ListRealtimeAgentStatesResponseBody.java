@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,10 +171,10 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         private Boolean outboundScenario;
 
         @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
-        private java.util.List < String > skillGroupIdList;
+        private java.util.List<String> skillGroupIdList;
 
         @com.aliyun.core.annotation.NameInMap("SkillGroupNameList")
-        private java.util.List < String > skillGroupNameList;
+        private java.util.List<String> skillGroupNameList;
 
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
@@ -275,14 +280,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         /**
          * @return skillGroupIdList
          */
-        public java.util.List < String > getSkillGroupIdList() {
+        public java.util.List<String> getSkillGroupIdList() {
             return this.skillGroupIdList;
         }
 
         /**
          * @return skillGroupNameList
          */
-        public java.util.List < String > getSkillGroupNameList() {
+        public java.util.List<String> getSkillGroupNameList() {
             return this.skillGroupNameList;
         }
 
@@ -324,8 +329,8 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             private String instanceId; 
             private String mobile; 
             private Boolean outboundScenario; 
-            private java.util.List < String > skillGroupIdList; 
-            private java.util.List < String > skillGroupNameList; 
+            private java.util.List<String> skillGroupIdList; 
+            private java.util.List<String> skillGroupNameList; 
             private String state; 
             private String stateCode; 
             private Long stateTime; 
@@ -406,7 +411,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             /**
              * SkillGroupIdList.
              */
-            public Builder skillGroupIdList(java.util.List < String > skillGroupIdList) {
+            public Builder skillGroupIdList(java.util.List<String> skillGroupIdList) {
                 this.skillGroupIdList = skillGroupIdList;
                 return this;
             }
@@ -414,7 +419,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             /**
              * SkillGroupNameList.
              */
-            public Builder skillGroupNameList(java.util.List < String > skillGroupNameList) {
+            public Builder skillGroupNameList(java.util.List<String> skillGroupNameList) {
                 this.skillGroupNameList = skillGroupNameList;
                 return this;
             }
@@ -466,7 +471,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -495,7 +500,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -521,7 +526,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -529,7 +534,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

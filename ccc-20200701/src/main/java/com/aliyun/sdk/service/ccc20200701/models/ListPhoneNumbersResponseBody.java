@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -273,7 +278,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         private String province;
 
         @com.aliyun.core.annotation.NameInMap("SkillGroups")
-        private java.util.List < SkillGroups> skillGroups;
+        private java.util.List<SkillGroups> skillGroups;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
@@ -374,7 +379,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return skillGroups
          */
-        public java.util.List < SkillGroups> getSkillGroups() {
+        public java.util.List<SkillGroups> getSkillGroups() {
             return this.skillGroups;
         }
 
@@ -409,7 +414,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             private String number; 
             private String provider; 
             private String province; 
-            private java.util.List < SkillGroups> skillGroups; 
+            private java.util.List<SkillGroups> skillGroups; 
             private String tags; 
             private String usage; 
             private String userId; 
@@ -489,7 +494,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             /**
              * SkillGroups.
              */
-            public Builder skillGroups(java.util.List < SkillGroups> skillGroups) {
+            public Builder skillGroups(java.util.List<SkillGroups> skillGroups) {
                 this.skillGroups = skillGroups;
                 return this;
             }
@@ -533,7 +538,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -562,7 +567,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -588,7 +593,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -596,7 +601,7 @@ public class ListPhoneNumbersResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

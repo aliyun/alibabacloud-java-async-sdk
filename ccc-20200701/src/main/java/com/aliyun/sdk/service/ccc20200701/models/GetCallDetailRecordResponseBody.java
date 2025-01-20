@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -232,7 +237,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         private String agentName;
 
         @com.aliyun.core.annotation.NameInMap("EventSequence")
-        private java.util.List < EventSequence> eventSequence;
+        private java.util.List<EventSequence> eventSequence;
 
         @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
@@ -269,7 +274,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return eventSequence
          */
-        public java.util.List < EventSequence> getEventSequence() {
+        public java.util.List<EventSequence> getEventSequence() {
             return this.eventSequence;
         }
 
@@ -283,7 +288,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String agentName; 
-            private java.util.List < EventSequence> eventSequence; 
+            private java.util.List<EventSequence> eventSequence; 
             private String skillGroupId; 
 
             /**
@@ -305,7 +310,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * EventSequence.
              */
-            public Builder eventSequence(java.util.List < EventSequence> eventSequence) {
+            public Builder eventSequence(java.util.List<EventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
                 return this;
             }
@@ -700,7 +705,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("Tasks")
-        private java.util.List < String > tasks;
+        private java.util.List<String> tasks;
 
         private TodoList(Builder builder) {
             this.success = builder.success;
@@ -733,14 +738,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return tasks
          */
-        public java.util.List < String > getTasks() {
+        public java.util.List<String> getTasks() {
             return this.tasks;
         }
 
         public static final class Builder {
             private Boolean success; 
             private String taskId; 
-            private java.util.List < String > tasks; 
+            private java.util.List<String> tasks; 
 
             /**
              * Success.
@@ -761,7 +766,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * Tasks.
              */
-            public Builder tasks(java.util.List < String > tasks) {
+            public Builder tasks(java.util.List<String> tasks) {
                 this.tasks = tasks;
                 return this;
             }
@@ -958,7 +963,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         private String customerId;
 
         @com.aliyun.core.annotation.NameInMap("EventSequence")
-        private java.util.List < CustomerEventsEventSequence> eventSequence;
+        private java.util.List<CustomerEventsEventSequence> eventSequence;
 
         private CustomerEvents(Builder builder) {
             this.customerId = builder.customerId;
@@ -983,13 +988,13 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return eventSequence
          */
-        public java.util.List < CustomerEventsEventSequence> getEventSequence() {
+        public java.util.List<CustomerEventsEventSequence> getEventSequence() {
             return this.eventSequence;
         }
 
         public static final class Builder {
             private String customerId; 
-            private java.util.List < CustomerEventsEventSequence> eventSequence; 
+            private java.util.List<CustomerEventsEventSequence> eventSequence; 
 
             /**
              * CustomerId.
@@ -1002,7 +1007,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * EventSequence.
              */
-            public Builder eventSequence(java.util.List < CustomerEventsEventSequence> eventSequence) {
+            public Builder eventSequence(java.util.List<CustomerEventsEventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
                 return this;
             }
@@ -1089,7 +1094,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
      */
     public static class IvrEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSequence")
-        private java.util.List < IvrEventsEventSequence> eventSequence;
+        private java.util.List<IvrEventsEventSequence> eventSequence;
 
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
@@ -1114,7 +1119,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return eventSequence
          */
-        public java.util.List < IvrEventsEventSequence> getEventSequence() {
+        public java.util.List<IvrEventsEventSequence> getEventSequence() {
             return this.eventSequence;
         }
 
@@ -1133,14 +1138,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < IvrEventsEventSequence> eventSequence; 
+            private java.util.List<IvrEventsEventSequence> eventSequence; 
             private String flowId; 
             private String flowType; 
 
             /**
              * EventSequence.
              */
-            public Builder eventSequence(java.util.List < IvrEventsEventSequence> eventSequence) {
+            public Builder eventSequence(java.util.List<IvrEventsEventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
                 return this;
             }
@@ -1243,7 +1248,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
      */
     public static class QueueEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSequence")
-        private java.util.List < QueueEventsEventSequence> eventSequence;
+        private java.util.List<QueueEventsEventSequence> eventSequence;
 
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
@@ -1276,7 +1281,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return eventSequence
          */
-        public java.util.List < QueueEventsEventSequence> getEventSequence() {
+        public java.util.List<QueueEventsEventSequence> getEventSequence() {
             return this.eventSequence;
         }
 
@@ -1309,7 +1314,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < QueueEventsEventSequence> eventSequence; 
+            private java.util.List<QueueEventsEventSequence> eventSequence; 
             private String flowId; 
             private String queueId; 
             private String queueName; 
@@ -1318,7 +1323,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * EventSequence.
              */
-            public Builder eventSequence(java.util.List < QueueEventsEventSequence> eventSequence) {
+            public Builder eventSequence(java.util.List<QueueEventsEventSequence> eventSequence) {
                 this.eventSequence = eventSequence;
                 return this;
             }
@@ -1370,7 +1375,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentEvents")
-        private java.util.List < AgentEvents> agentEvents;
+        private java.util.List<AgentEvents> agentEvents;
 
         @com.aliyun.core.annotation.NameInMap("AgentIds")
         private String agentIds;
@@ -1409,7 +1414,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         private String contactType;
 
         @com.aliyun.core.annotation.NameInMap("CustomerEvents")
-        private java.util.List < CustomerEvents> customerEvents;
+        private java.util.List<CustomerEvents> customerEvents;
 
         @com.aliyun.core.annotation.NameInMap("EarlyMediaState")
         private String earlyMediaState;
@@ -1421,10 +1426,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("IvrEvents")
-        private java.util.List < IvrEvents> ivrEvents;
+        private java.util.List<IvrEvents> ivrEvents;
 
         @com.aliyun.core.annotation.NameInMap("QueueEvents")
-        private java.util.List < QueueEvents> queueEvents;
+        private java.util.List<QueueEvents> queueEvents;
 
         @com.aliyun.core.annotation.NameInMap("RecordingReady")
         private Boolean recordingReady;
@@ -1499,7 +1504,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return agentEvents
          */
-        public java.util.List < AgentEvents> getAgentEvents() {
+        public java.util.List<AgentEvents> getAgentEvents() {
             return this.agentEvents;
         }
 
@@ -1590,7 +1595,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return customerEvents
          */
-        public java.util.List < CustomerEvents> getCustomerEvents() {
+        public java.util.List<CustomerEvents> getCustomerEvents() {
             return this.customerEvents;
         }
 
@@ -1618,14 +1623,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         /**
          * @return ivrEvents
          */
-        public java.util.List < IvrEvents> getIvrEvents() {
+        public java.util.List<IvrEvents> getIvrEvents() {
             return this.ivrEvents;
         }
 
         /**
          * @return queueEvents
          */
-        public java.util.List < QueueEvents> getQueueEvents() {
+        public java.util.List<QueueEvents> getQueueEvents() {
             return this.queueEvents;
         }
 
@@ -1700,7 +1705,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AgentEvents> agentEvents; 
+            private java.util.List<AgentEvents> agentEvents; 
             private String agentIds; 
             private String agentNames; 
             private AnalyticsReport analyticsReport; 
@@ -1713,12 +1718,12 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private String contactDisposition; 
             private String contactId; 
             private String contactType; 
-            private java.util.List < CustomerEvents> customerEvents; 
+            private java.util.List<CustomerEvents> customerEvents; 
             private String earlyMediaState; 
             private Long establishedTime; 
             private String instanceId; 
-            private java.util.List < IvrEvents> ivrEvents; 
-            private java.util.List < QueueEvents> queueEvents; 
+            private java.util.List<IvrEvents> ivrEvents; 
+            private java.util.List<QueueEvents> queueEvents; 
             private Boolean recordingReady; 
             private String releaseInitiator; 
             private String releaseReason; 
@@ -1733,7 +1738,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * AgentEvents.
              */
-            public Builder agentEvents(java.util.List < AgentEvents> agentEvents) {
+            public Builder agentEvents(java.util.List<AgentEvents> agentEvents) {
                 this.agentEvents = agentEvents;
                 return this;
             }
@@ -1837,7 +1842,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * CustomerEvents.
              */
-            public Builder customerEvents(java.util.List < CustomerEvents> customerEvents) {
+            public Builder customerEvents(java.util.List<CustomerEvents> customerEvents) {
                 this.customerEvents = customerEvents;
                 return this;
             }
@@ -1869,7 +1874,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * IvrEvents.
              */
-            public Builder ivrEvents(java.util.List < IvrEvents> ivrEvents) {
+            public Builder ivrEvents(java.util.List<IvrEvents> ivrEvents) {
                 this.ivrEvents = ivrEvents;
                 return this;
             }
@@ -1877,7 +1882,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             /**
              * QueueEvents.
              */
-            public Builder queueEvents(java.util.List < QueueEvents> queueEvents) {
+            public Builder queueEvents(java.util.List<QueueEvents> queueEvents) {
                 this.queueEvents = queueEvents;
                 return this;
             }

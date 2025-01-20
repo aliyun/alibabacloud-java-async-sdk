@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -209,7 +214,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         private Float abandonRate;
 
         @com.aliyun.core.annotation.NameInMap("AccessChannelTypeDetailList")
-        private java.util.List < AccessChannelTypeDetailList> accessChannelTypeDetailList;
+        private java.util.List<AccessChannelTypeDetailList> accessChannelTypeDetailList;
 
         @com.aliyun.core.annotation.NameInMap("AverageAbandonTime")
         private Float averageAbandonTime;
@@ -474,7 +479,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
         /**
          * @return accessChannelTypeDetailList
          */
-        public java.util.List < AccessChannelTypeDetailList> getAccessChannelTypeDetailList() {
+        public java.util.List<AccessChannelTypeDetailList> getAccessChannelTypeDetailList() {
             return this.accessChannelTypeDetailList;
         }
 
@@ -900,7 +905,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float abandonRate; 
-            private java.util.List < AccessChannelTypeDetailList> accessChannelTypeDetailList; 
+            private java.util.List<AccessChannelTypeDetailList> accessChannelTypeDetailList; 
             private Float averageAbandonTime; 
             private Float averageAbandonedInIVRTime; 
             private Float averageAbandonedInQueueTime; 
@@ -973,7 +978,7 @@ public class GetHistoricalInstanceReportResponseBody extends TeaModel {
             /**
              * AccessChannelTypeDetailList.
              */
-            public Builder accessChannelTypeDetailList(java.util.List < AccessChannelTypeDetailList> accessChannelTypeDetailList) {
+            public Builder accessChannelTypeDetailList(java.util.List<AccessChannelTypeDetailList> accessChannelTypeDetailList) {
                 this.accessChannelTypeDetailList = accessChannelTypeDetailList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -413,7 +418,7 @@ public class ListInstancesResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdminList")
-        private java.util.List < AdminList> adminList;
+        private java.util.List<AdminList> adminList;
 
         @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
@@ -437,7 +442,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NumberList")
-        private java.util.List < NumberList> numberList;
+        private java.util.List<NumberList> numberList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -466,7 +471,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return adminList
          */
-        public java.util.List < AdminList> getAdminList() {
+        public java.util.List<AdminList> getAdminList() {
             return this.adminList;
         }
 
@@ -522,7 +527,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return numberList
          */
-        public java.util.List < NumberList> getNumberList() {
+        public java.util.List<NumberList> getNumberList() {
             return this.numberList;
         }
 
@@ -534,7 +539,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AdminList> adminList; 
+            private java.util.List<AdminList> adminList; 
             private String aliyunUid; 
             private String consoleUrl; 
             private Long createTime; 
@@ -542,13 +547,13 @@ public class ListInstancesResponseBody extends TeaModel {
             private String domainName; 
             private String id; 
             private String name; 
-            private java.util.List < NumberList> numberList; 
+            private java.util.List<NumberList> numberList; 
             private String status; 
 
             /**
              * AdminList.
              */
-            public Builder adminList(java.util.List < AdminList> adminList) {
+            public Builder adminList(java.util.List<AdminList> adminList) {
                 this.adminList = adminList;
                 return this;
             }
@@ -612,7 +617,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * NumberList.
              */
-            public Builder numberList(java.util.List < NumberList> numberList) {
+            public Builder numberList(java.util.List<NumberList> numberList) {
                 this.numberList = numberList;
                 return this;
             }
@@ -640,7 +645,7 @@ public class ListInstancesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -669,7 +674,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -695,7 +700,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -703,7 +708,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

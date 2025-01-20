@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class StartChatRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UserList> userList;
+    private java.util.List<UserList> userList;
 
     private StartChatRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class StartChatRequest extends Request {
     /**
      * @return userList
      */
-    public java.util.List < UserList> getUserList() {
+    public java.util.List<UserList> getUserList() {
         return this.userList;
     }
 
@@ -82,7 +87,7 @@ public class StartChatRequest extends Request {
         private String accessChannelId; 
         private String instanceId; 
         private String token; 
-        private java.util.List < UserList> userList; 
+        private java.util.List<UserList> userList; 
 
         private Builder() {
             super();
@@ -126,7 +131,7 @@ public class StartChatRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder userList(java.util.List < UserList> userList) {
+        public Builder userList(java.util.List<UserList> userList) {
             String userListShrink = shrink(userList, "UserList", "json");
             this.putQueryParameter("UserList", userListShrink);
             this.userList = userList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -506,7 +511,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("Tasks")
-        private java.util.List < String > tasks;
+        private java.util.List<String> tasks;
 
         private TodoList(Builder builder) {
             this.success = builder.success;
@@ -539,14 +544,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         /**
          * @return tasks
          */
-        public java.util.List < String > getTasks() {
+        public java.util.List<String> getTasks() {
             return this.tasks;
         }
 
         public static final class Builder {
             private Boolean success; 
             private String taskId; 
-            private java.util.List < String > tasks; 
+            private java.util.List<String> tasks; 
 
             /**
              * Success.
@@ -567,7 +572,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             /**
              * Tasks.
              */
-            public Builder tasks(java.util.List < String > tasks) {
+            public Builder tasks(java.util.List<String> tasks) {
                 this.tasks = tasks;
                 return this;
             }
@@ -1821,7 +1826,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -1850,7 +1855,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1876,7 +1881,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -1884,7 +1889,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

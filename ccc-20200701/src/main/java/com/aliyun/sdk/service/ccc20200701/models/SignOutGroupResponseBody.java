@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class SignOutGroupResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -78,7 +83,7 @@ public class SignOutGroupResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class SignOutGroupResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class SignOutGroupResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -186,7 +191,7 @@ public class SignOutGroupResponseBody extends TeaModel {
         private Long reserved;
 
         @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
-        private java.util.List < String > signedSkillGroupIdList;
+        private java.util.List<String> signedSkillGroupIdList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -287,7 +292,7 @@ public class SignOutGroupResponseBody extends TeaModel {
         /**
          * @return signedSkillGroupIdList
          */
-        public java.util.List < String > getSignedSkillGroupIdList() {
+        public java.util.List<String> getSignedSkillGroupIdList() {
             return this.signedSkillGroupIdList;
         }
 
@@ -322,7 +327,7 @@ public class SignOutGroupResponseBody extends TeaModel {
             private String mobile; 
             private Boolean outboundScenario; 
             private Long reserved; 
-            private java.util.List < String > signedSkillGroupIdList; 
+            private java.util.List<String> signedSkillGroupIdList; 
             private String userId; 
             private String userState; 
             private String workMode; 
@@ -402,7 +407,7 @@ public class SignOutGroupResponseBody extends TeaModel {
             /**
              * SignedSkillGroupIdList.
              */
-            public Builder signedSkillGroupIdList(java.util.List < String > signedSkillGroupIdList) {
+            public Builder signedSkillGroupIdList(java.util.List<String> signedSkillGroupIdList) {
                 this.signedSkillGroupIdList = signedSkillGroupIdList;
                 return this;
             }

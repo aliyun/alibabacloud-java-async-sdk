@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetSchemaResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.List < String > params;
+    private java.util.List<String> params;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -78,7 +83,7 @@ public class GetSchemaResponseBody extends TeaModel {
     /**
      * @return params
      */
-    public java.util.List < String > getParams() {
+    public java.util.List<String> getParams() {
         return this.params;
     }
 
@@ -94,7 +99,7 @@ public class GetSchemaResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < String > params; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         /**
@@ -132,7 +137,7 @@ public class GetSchemaResponseBody extends TeaModel {
         /**
          * Params.
          */
-        public Builder params(java.util.List < String > params) {
+        public Builder params(java.util.List<String> params) {
             this.params = params;
             return this;
         }
@@ -174,7 +179,7 @@ public class GetSchemaResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
-        private java.util.Map < String, DataPropertiesValue > properties;
+        private java.util.Map<String, DataPropertiesValue> properties;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private String updatedTime;
@@ -235,7 +240,7 @@ public class GetSchemaResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.Map < String, DataPropertiesValue > getProperties() {
+        public java.util.Map<String, DataPropertiesValue> getProperties() {
             return this.properties;
         }
 
@@ -252,7 +257,7 @@ public class GetSchemaResponseBody extends TeaModel {
             private String description; 
             private String id; 
             private String instanceId; 
-            private java.util.Map < String, DataPropertiesValue > properties; 
+            private java.util.Map<String, DataPropertiesValue> properties; 
             private String updatedTime; 
 
             /**
@@ -301,7 +306,7 @@ public class GetSchemaResponseBody extends TeaModel {
             /**
              * Properties.
              */
-            public Builder properties(java.util.Map < String, DataPropertiesValue > properties) {
+            public Builder properties(java.util.Map<String, DataPropertiesValue> properties) {
                 this.properties = properties;
                 return this;
             }

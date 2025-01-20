@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -553,7 +558,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
      */
     public static class Inbound extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessChannelTypeDetails")
-        private java.util.List < AccessChannelTypeDetails> accessChannelTypeDetails;
+        private java.util.List<AccessChannelTypeDetails> accessChannelTypeDetails;
 
         @com.aliyun.core.annotation.NameInMap("AverageFirstResponseTime")
         private Float averageFirstResponseTime;
@@ -694,7 +699,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         /**
          * @return accessChannelTypeDetails
          */
-        public java.util.List < AccessChannelTypeDetails> getAccessChannelTypeDetails() {
+        public java.util.List<AccessChannelTypeDetails> getAccessChannelTypeDetails() {
             return this.accessChannelTypeDetails;
         }
 
@@ -916,7 +921,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AccessChannelTypeDetails> accessChannelTypeDetails; 
+            private java.util.List<AccessChannelTypeDetails> accessChannelTypeDetails; 
             private Float averageFirstResponseTime; 
             private Float averageHoldTime; 
             private Float averageResponseTime; 
@@ -952,7 +957,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             /**
              * AccessChannelTypeDetails.
              */
-            public Builder accessChannelTypeDetails(java.util.List < AccessChannelTypeDetails> accessChannelTypeDetails) {
+            public Builder accessChannelTypeDetails(java.util.List<AccessChannelTypeDetails> accessChannelTypeDetails) {
                 this.accessChannelTypeDetails = accessChannelTypeDetails;
                 return this;
             }
@@ -2096,7 +2101,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         private Float averageWorkTime;
 
         @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
-        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+        private java.util.List<BreakCodeDetailList> breakCodeDetailList;
 
         @com.aliyun.core.annotation.NameInMap("FirstCheckInTime")
         private Long firstCheckInTime;
@@ -2265,7 +2270,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         /**
          * @return breakCodeDetailList
          */
-        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+        public java.util.List<BreakCodeDetailList> getBreakCodeDetailList() {
             return this.breakCodeDetailList;
         }
 
@@ -2471,7 +2476,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             private Float averageReadyTime; 
             private Float averageTalkTime; 
             private Float averageWorkTime; 
-            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
+            private java.util.List<BreakCodeDetailList> breakCodeDetailList; 
             private Long firstCheckInTime; 
             private Long lastCheckOutTime; 
             private Long maxBreakTime; 
@@ -2544,7 +2549,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             /**
              * BreakCodeDetailList.
              */
-            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+            public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
                 return this;
             }
@@ -3015,7 +3020,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -3044,7 +3049,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -3070,7 +3075,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -3078,7 +3083,7 @@ public class ListHistoricalAgentReportResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

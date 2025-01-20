@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -53,7 +58,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -96,7 +101,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -2242,7 +2247,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         private Float averageWorkTime;
 
         @com.aliyun.core.annotation.NameInMap("BreakCodeDetailList")
-        private java.util.List < BreakCodeDetailList> breakCodeDetailList;
+        private java.util.List<BreakCodeDetailList> breakCodeDetailList;
 
         @com.aliyun.core.annotation.NameInMap("MaxBreakTime")
         private Long maxBreakTime;
@@ -2367,7 +2372,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
         /**
          * @return breakCodeDetailList
          */
-        public java.util.List < BreakCodeDetailList> getBreakCodeDetailList() {
+        public java.util.List<BreakCodeDetailList> getBreakCodeDetailList() {
             return this.breakCodeDetailList;
         }
 
@@ -2496,7 +2501,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             private Float averageReadyTime; 
             private Float averageTalkTime; 
             private Float averageWorkTime; 
-            private java.util.List < BreakCodeDetailList> breakCodeDetailList; 
+            private java.util.List<BreakCodeDetailList> breakCodeDetailList; 
             private Long maxBreakTime; 
             private Long maxHoldTime; 
             private Long maxReadyTime; 
@@ -2558,7 +2563,7 @@ public class ListIntervalSkillGroupReportResponseBody extends TeaModel {
             /**
              * BreakCodeDetailList.
              */
-            public Builder breakCodeDetailList(java.util.List < BreakCodeDetailList> breakCodeDetailList) {
+            public Builder breakCodeDetailList(java.util.List<BreakCodeDetailList> breakCodeDetailList) {
                 this.breakCodeDetailList = breakCodeDetailList;
                 return this;
             }

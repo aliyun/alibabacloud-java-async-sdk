@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -163,7 +168,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NumberList")
-        private java.util.List < String > numberList;
+        private java.util.List<String> numberList;
 
         @com.aliyun.core.annotation.NameInMap("Published")
         private Boolean published;
@@ -256,7 +261,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         /**
          * @return numberList
          */
-        public java.util.List < String > getNumberList() {
+        public java.util.List<String> getNumberList() {
             return this.numberList;
         }
 
@@ -290,7 +295,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
             private String editor; 
             private String instanceId; 
             private String name; 
-            private java.util.List < String > numberList; 
+            private java.util.List<String> numberList; 
             private Boolean published; 
             private String type; 
             private String updatedTime; 
@@ -362,7 +367,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
             /**
              * NumberList.
              */
-            public Builder numberList(java.util.List < String > numberList) {
+            public Builder numberList(java.util.List<String> numberList) {
                 this.numberList = numberList;
                 return this;
             }
@@ -406,7 +411,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -435,7 +440,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -461,7 +466,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -469,7 +474,7 @@ public class ListContactFlowsResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
