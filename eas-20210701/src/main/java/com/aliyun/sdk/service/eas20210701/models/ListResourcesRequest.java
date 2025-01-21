@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -34,16 +38,27 @@ public class ListResourcesRequest extends Request {
     private String resourceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceStatus")
+    private String resourceStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
     private ListResourcesRequest(Builder builder) {
         super(builder);
+        this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
+        this.resourceStatus = builder.resourceStatus;
         this.resourceType = builder.resourceType;
+        this.sort = builder.sort;
     }
 
     public static Builder builder() {
@@ -57,6 +72,13 @@ public class ListResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
     }
 
     /**
@@ -88,18 +110,35 @@ public class ListResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceStatus
+     */
+    public String getResourceStatus() {
+        return this.resourceStatus;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
         return this.resourceType;
     }
 
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
     public static final class Builder extends Request.Builder<ListResourcesRequest, Builder> {
+        private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceId; 
         private String resourceName; 
+        private String resourceStatus; 
         private String resourceType; 
+        private String sort; 
 
         private Builder() {
             super();
@@ -107,12 +146,24 @@ public class ListResourcesRequest extends Request {
 
         private Builder(ListResourcesRequest request) {
             super(request);
+            this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceId = request.resourceId;
             this.resourceName = request.resourceName;
+            this.resourceStatus = request.resourceStatus;
             this.resourceType = request.resourceType;
+            this.sort = request.sort;
         } 
+
+        /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
 
         /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
@@ -163,6 +214,15 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
+         * ResourceStatus.
+         */
+        public Builder resourceStatus(String resourceStatus) {
+            this.putQueryParameter("ResourceStatus", resourceStatus);
+            this.resourceStatus = resourceStatus;
+            return this;
+        }
+
+        /**
          * <p>The type of the resource group. Valid values:</p>
          * <ul>
          * <li>Dedicated: the dedicated resource group.</li>
@@ -175,6 +235,15 @@ public class ListResourcesRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * Sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
             return this;
         }
 

@@ -20,11 +20,17 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("DisableSpotProtectionPeriod")
+    private Boolean disableSpotProtectionPeriod;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List<Resources> resources;
+
+    @com.aliyun.core.annotation.NameInMap("ServiceCount")
+    private Integer serviceCount;
 
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
@@ -37,8 +43,10 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
 
     private DescribeVirtualResourceResponseBody(Builder builder) {
         this.createTime = builder.createTime;
+        this.disableSpotProtectionPeriod = builder.disableSpotProtectionPeriod;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
+        this.serviceCount = builder.serviceCount;
         this.updateTime = builder.updateTime;
         this.virtualResourceId = builder.virtualResourceId;
         this.virtualResourceName = builder.virtualResourceName;
@@ -60,6 +68,13 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return disableSpotProtectionPeriod
+     */
+    public Boolean getDisableSpotProtectionPeriod() {
+        return this.disableSpotProtectionPeriod;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -71,6 +86,13 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
      */
     public java.util.List<Resources> getResources() {
         return this.resources;
+    }
+
+    /**
+     * @return serviceCount
+     */
+    public Integer getServiceCount() {
+        return this.serviceCount;
     }
 
     /**
@@ -96,8 +118,10 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
+        private Boolean disableSpotProtectionPeriod; 
         private String requestId; 
         private java.util.List<Resources> resources; 
+        private Integer serviceCount; 
         private String updateTime; 
         private String virtualResourceId; 
         private String virtualResourceName; 
@@ -110,6 +134,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * DisableSpotProtectionPeriod.
+         */
+        public Builder disableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
+            this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
             return this;
         }
 
@@ -129,6 +161,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * ServiceCount.
+         */
+        public Builder serviceCount(Integer serviceCount) {
+            this.serviceCount = serviceCount;
             return this;
         }
 

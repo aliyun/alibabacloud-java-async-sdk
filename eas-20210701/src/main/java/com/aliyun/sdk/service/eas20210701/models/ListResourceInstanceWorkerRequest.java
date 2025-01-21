@@ -40,6 +40,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkerName")
+    private String workerName;
+
     private ListResourceInstanceWorkerRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -47,6 +51,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.workerName = builder.workerName;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class ListResourceInstanceWorkerRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return workerName
+     */
+    public String getWorkerName() {
+        return this.workerName;
+    }
+
     public static final class Builder extends Request.Builder<ListResourceInstanceWorkerRequest, Builder> {
         private String clusterId; 
         private String resourceId; 
         private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String workerName; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
             this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.workerName = request.workerName;
         } 
 
         /**
@@ -177,6 +191,15 @@ public class ListResourceInstanceWorkerRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * WorkerName.
+         */
+        public Builder workerName(String workerName) {
+            this.putQueryParameter("WorkerName", workerName);
+            this.workerName = workerName;
             return this;
         }
 

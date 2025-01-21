@@ -28,6 +28,10 @@ public class UpdateVirtualResourceRequest extends Request {
     private String virtualResourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisableSpotProtectionPeriod")
+    private Boolean disableSpotProtectionPeriod;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List<Resources> resources;
 
@@ -39,6 +43,7 @@ public class UpdateVirtualResourceRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.virtualResourceId = builder.virtualResourceId;
+        this.disableSpotProtectionPeriod = builder.disableSpotProtectionPeriod;
         this.resources = builder.resources;
         this.virtualResourceName = builder.virtualResourceName;
     }
@@ -71,6 +76,13 @@ public class UpdateVirtualResourceRequest extends Request {
     }
 
     /**
+     * @return disableSpotProtectionPeriod
+     */
+    public Boolean getDisableSpotProtectionPeriod() {
+        return this.disableSpotProtectionPeriod;
+    }
+
+    /**
      * @return resources
      */
     public java.util.List<Resources> getResources() {
@@ -87,6 +99,7 @@ public class UpdateVirtualResourceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateVirtualResourceRequest, Builder> {
         private String clusterId; 
         private String virtualResourceId; 
+        private Boolean disableSpotProtectionPeriod; 
         private java.util.List<Resources> resources; 
         private String virtualResourceName; 
 
@@ -98,6 +111,7 @@ public class UpdateVirtualResourceRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.virtualResourceId = request.virtualResourceId;
+            this.disableSpotProtectionPeriod = request.disableSpotProtectionPeriod;
             this.resources = request.resources;
             this.virtualResourceName = request.virtualResourceName;
         } 
@@ -125,6 +139,15 @@ public class UpdateVirtualResourceRequest extends Request {
         public Builder virtualResourceId(String virtualResourceId) {
             this.putPathParameter("VirtualResourceId", virtualResourceId);
             this.virtualResourceId = virtualResourceId;
+            return this;
+        }
+
+        /**
+         * DisableSpotProtectionPeriod.
+         */
+        public Builder disableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
+            this.putBodyParameter("DisableSpotProtectionPeriod", disableSpotProtectionPeriod);
+            this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
             return this;
         }
 

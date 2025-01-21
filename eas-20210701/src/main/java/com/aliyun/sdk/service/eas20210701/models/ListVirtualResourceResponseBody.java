@@ -158,6 +158,9 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceCount")
+        private Integer serviceCount;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -169,6 +172,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
 
         private VirtualResources(Builder builder) {
             this.createTime = builder.createTime;
+            this.serviceCount = builder.serviceCount;
             this.updateTime = builder.updateTime;
             this.virtualResourceId = builder.virtualResourceId;
             this.virtualResourceName = builder.virtualResourceName;
@@ -187,6 +191,13 @@ public class ListVirtualResourceResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return serviceCount
+         */
+        public Integer getServiceCount() {
+            return this.serviceCount;
         }
 
         /**
@@ -212,6 +223,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private Integer serviceCount; 
             private String updateTime; 
             private String virtualResourceId; 
             private String virtualResourceName; 
@@ -224,6 +236,14 @@ public class ListVirtualResourceResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * ServiceCount.
+             */
+            public Builder serviceCount(Integer serviceCount) {
+                this.serviceCount = serviceCount;
                 return this;
             }
 

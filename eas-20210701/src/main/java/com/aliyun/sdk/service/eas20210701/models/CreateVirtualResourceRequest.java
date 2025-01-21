@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateVirtualResourceRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisableSpotProtectionPeriod")
+    private Boolean disableSpotProtectionPeriod;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List<Resources> resources;
 
@@ -27,6 +31,7 @@ public class CreateVirtualResourceRequest extends Request {
 
     private CreateVirtualResourceRequest(Builder builder) {
         super(builder);
+        this.disableSpotProtectionPeriod = builder.disableSpotProtectionPeriod;
         this.resources = builder.resources;
         this.virtualResourceName = builder.virtualResourceName;
     }
@@ -45,6 +50,13 @@ public class CreateVirtualResourceRequest extends Request {
     }
 
     /**
+     * @return disableSpotProtectionPeriod
+     */
+    public Boolean getDisableSpotProtectionPeriod() {
+        return this.disableSpotProtectionPeriod;
+    }
+
+    /**
      * @return resources
      */
     public java.util.List<Resources> getResources() {
@@ -59,6 +71,7 @@ public class CreateVirtualResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirtualResourceRequest, Builder> {
+        private Boolean disableSpotProtectionPeriod; 
         private java.util.List<Resources> resources; 
         private String virtualResourceName; 
 
@@ -68,9 +81,19 @@ public class CreateVirtualResourceRequest extends Request {
 
         private Builder(CreateVirtualResourceRequest request) {
             super(request);
+            this.disableSpotProtectionPeriod = request.disableSpotProtectionPeriod;
             this.resources = request.resources;
             this.virtualResourceName = request.virtualResourceName;
         } 
+
+        /**
+         * DisableSpotProtectionPeriod.
+         */
+        public Builder disableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
+            this.putBodyParameter("DisableSpotProtectionPeriod", disableSpotProtectionPeriod);
+            this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
+            return this;
+        }
 
         /**
          * <p>The list of resources in the virtual resource group.</p>
