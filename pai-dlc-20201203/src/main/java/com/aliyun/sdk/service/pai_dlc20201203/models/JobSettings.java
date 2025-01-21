@@ -32,6 +32,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
 
+    @com.aliyun.core.annotation.NameInMap("EnableCPUAffinity")
+    private Boolean enableCPUAffinity;
+
     @com.aliyun.core.annotation.NameInMap("EnableErrorMonitoringInAIMaster")
     private Boolean enableErrorMonitoringInAIMaster;
 
@@ -74,6 +77,7 @@ public class JobSettings extends TeaModel {
         this.caller = builder.caller;
         this.disableEcsStockCheck = builder.disableEcsStockCheck;
         this.driver = builder.driver;
+        this.enableCPUAffinity = builder.enableCPUAffinity;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
         this.enableOssAppend = builder.enableOssAppend;
         this.enableRDMA = builder.enableRDMA;
@@ -129,6 +133,13 @@ public class JobSettings extends TeaModel {
      */
     public String getDriver() {
         return this.driver;
+    }
+
+    /**
+     * @return enableCPUAffinity
+     */
+    public Boolean getEnableCPUAffinity() {
+        return this.enableCPUAffinity;
     }
 
     /**
@@ -221,6 +232,7 @@ public class JobSettings extends TeaModel {
         private String caller; 
         private Boolean disableEcsStockCheck; 
         private String driver; 
+        private Boolean enableCPUAffinity; 
         private Boolean enableErrorMonitoringInAIMaster; 
         private Boolean enableOssAppend; 
         private Boolean enableRDMA; 
@@ -271,6 +283,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder driver(String driver) {
             this.driver = driver;
+            return this;
+        }
+
+        /**
+         * EnableCPUAffinity.
+         */
+        public Builder enableCPUAffinity(Boolean enableCPUAffinity) {
+            this.enableCPUAffinity = enableCPUAffinity;
             return this;
         }
 
