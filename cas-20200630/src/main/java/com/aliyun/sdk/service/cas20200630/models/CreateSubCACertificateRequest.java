@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubCACertificateRequest} extends {@link RequestModel}
  *
  * <p>CreateSubCACertificateRequest</p>
@@ -35,7 +41,7 @@ public class CreateSubCACertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExtendedKeyUsages")
-    private java.util.List < String > extendedKeyUsages;
+    private java.util.List<String> extendedKeyUsages;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Locality")
@@ -139,7 +145,7 @@ public class CreateSubCACertificateRequest extends Request {
     /**
      * @return extendedKeyUsages
      */
-    public java.util.List < String > getExtendedKeyUsages() {
+    public java.util.List<String> getExtendedKeyUsages() {
         return this.extendedKeyUsages;
     }
 
@@ -198,7 +204,7 @@ public class CreateSubCACertificateRequest extends Request {
         private String countryCode; 
         private Integer crlDay; 
         private Boolean enableCrl; 
-        private java.util.List < String > extendedKeyUsages; 
+        private java.util.List<String> extendedKeyUsages; 
         private String locality; 
         private String organization; 
         private String organizationUnit; 
@@ -229,18 +235,22 @@ public class CreateSubCACertificateRequest extends Request {
         } 
 
         /**
-         * The type of the key algorithm of the intermediate CA. The key algorithm is in the `<Encryption algorithm>_<Key length>` format. Valid values:
-         * <p>
+         * <p>The type of the key algorithm of the intermediate CA. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
+         * </ul>
+         * <p>The encryption algorithm of an intermediate CA certificate must be consistent with the encryption algorithm of a root CA certificate. The length of the keys can be different. For example, if the key algorithm of the root CA certificate is <strong>RSA_2048</strong>, the key algorithm of the intermediate CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to query the key algorithm of a root CA certificate.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RSA\_1024**: The signature algorithm is Sha256WithRSA.
-         * *   **RSA\_2048**: The signature algorithm is Sha256WithRSA.
-         * *   **RSA\_4096**: The signature algorithm is Sha256WithRSA.
-         * *   **ECC\_256**: The signature algorithm is Sha256WithECDSA.
-         * *   **SM2\_256**: The signature algorithm is SM3WithSM2.
-         * 
-         * The encryption algorithm of an intermediate CA certificate must be consistent with the encryption algorithm of a root CA certificate. The length of the keys can be different. For example, if the key algorithm of the root CA certificate is **RSA\_2048**, the key algorithm of the intermediate CA certificate must be **RSA\_1024**, **RSA\_2048**, or **RSA\_4096**.
-         * 
-         * > You can call the [DescribeCACertificate](~~465954~~) operation to query the key algorithm of a root CA certificate.
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -249,7 +259,11 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The common name or abbreviation of the organization. The value can contain letters.
+         * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -258,10 +272,11 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The code of the country or region in which the organization is located. You can enter an alpha-2 or alpha-3 code. For example, you can use **CN** to indicate China and use **US** to indicate the United States.
-         * <p>
+         * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 or alpha-3 code. For example, you can use <strong>CN</strong> to indicate China and use <strong>US</strong> to indicate the United States.</p>
+         * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a>.</p>
          * 
-         * For more information about country codes, see the **"Country codes"** section in [Manage company profiles](~~198289~~).
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -270,7 +285,10 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * CRL validity period: 1-365 days
+         * <p>CRL validity period: 1-365 days</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder crlDay(Integer crlDay) {
             this.putQueryParameter("CrlDay", crlDay);
@@ -279,11 +297,14 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * Enable Crl Service.
-         * <p>
+         * <p>Enable Crl Service.</p>
+         * <ul>
+         * <li>0- No</li>
+         * <li>1- Yes</li>
+         * </ul>
          * 
-         * - 0- No
-         * - 1- Yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableCrl(Boolean enableCrl) {
             this.putQueryParameter("EnableCrl", enableCrl);
@@ -292,16 +313,20 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The extended key usages of the certificate.
+         * <p>The extended key usages of the certificate.</p>
          */
-        public Builder extendedKeyUsages(java.util.List < String > extendedKeyUsages) {
+        public Builder extendedKeyUsages(java.util.List<String> extendedKeyUsages) {
             this.putQueryParameter("ExtendedKeyUsages", extendedKeyUsages);
             this.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
 
         /**
-         * The name of the city in which the organization is located. The value can contain letters.
+         * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -310,7 +335,11 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the organization that is associated with the intermediate CA certificate. You can enter the name of your enterprise or company. The value can contain letters.
+         * <p>The name of the organization that is associated with the intermediate CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Maizi Technology</p>
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -319,7 +348,11 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the department or branch in the organization. The value can contain letters.
+         * <p>The name of the department or branch in the organization. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Security</p>
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -328,10 +361,14 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The unique identifier of the root CA certificate.
-         * <p>
+         * <p>The unique identifier of the root CA certificate.</p>
+         * <blockquote>
+         * <p>You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.
+         * <strong>example:</strong>
+         * <p>1a83bcbb89e562885e40aa0108f5****</p>
          */
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
@@ -340,7 +377,10 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The path length constraint of the certificate. Default value: 0.
+         * <p>The path length constraint of the certificate. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pathLenConstraint(Integer pathLenConstraint) {
             this.putQueryParameter("PathLenConstraint", pathLenConstraint);
@@ -349,7 +389,11 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the province or state in which the organization is located. The value can contain letters.
+         * <p>The name of the province or state in which the organization is located. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -358,12 +402,15 @@ public class CreateSubCACertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the intermediate CA certificate. Unit: years.
-         * <p>
+         * <p>The validity period of the intermediate CA certificate. Unit: years.</p>
+         * <p>We recommend that you set this parameter to 5 to 10.</p>
+         * <blockquote>
+         * <p>The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate]operation to query the validity period of a root CA certificate.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * We recommend that you set this parameter to 5 to 10.
-         * 
-         * > The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate]operation to query the validity period of a root CA certificate.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder years(Integer years) {
             this.putQueryParameter("Years", years);

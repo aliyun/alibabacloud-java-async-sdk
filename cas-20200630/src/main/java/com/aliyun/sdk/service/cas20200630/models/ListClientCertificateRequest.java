@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientCertificateRequest} extends {@link RequestModel}
  *
  * <p>ListClientCertificateRequest</p>
@@ -81,7 +87,10 @@ public class ListClientCertificateRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,10 +99,13 @@ public class ListClientCertificateRequest extends Request {
         }
 
         /**
-         * The unique identifier of the client certificate or the server certificate that you want to query.
-         * <p>
+         * <p>The unique identifier of the client certificate or the server certificate that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.
+         * <strong>example:</strong>
+         * <p>190ae6bb538d538c70c01f81dcf2****</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -102,7 +114,10 @@ public class ListClientCertificateRequest extends Request {
         }
 
         /**
-         * The number of certificates to return on each page. Default value: **20**.
+         * <p>The number of certificates to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

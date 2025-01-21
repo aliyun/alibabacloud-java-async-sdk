@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRootCACertificateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRootCACertificateResponseBody</p>
@@ -73,7 +79,10 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The root CA certificate in the PEM format.
+         * <p>The root CA certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -81,7 +90,10 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The certificate chain of the root CA certificate.
+         * <p>The certificate chain of the root CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -89,7 +101,10 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the root CA certificate.
+         * <p>The unique identifier of the root CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a83bcbb89e562885e40aa0108f5****</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -97,7 +112,10 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D9B4C5F-7140-5B41-924C-329181DC00C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

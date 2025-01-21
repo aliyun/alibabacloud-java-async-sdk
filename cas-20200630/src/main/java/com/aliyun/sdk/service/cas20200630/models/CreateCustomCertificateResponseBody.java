@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCustomCertificateResponseBody</p>
@@ -85,7 +91,16 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         private String serialNumber; 
 
         /**
-         * The content of the certificate. This parameter is returned only if Immediately is set to 1 or 2.
+         * <p>The content of the certificate. This parameter is returned only if Immediately is set to 1 or 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/
+         * ...
+         * ...
+         * ...
+         * KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
+         * -----END CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -93,7 +108,23 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The certificate chain of the certificate. This parameter is returned only if Immediately is set to 2.
+         * <p>The certificate chain of the certificate. This parameter is returned only if Immediately is set to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIBfzCCATGgAwIBAgIUfI5kSdcO2S0+LkpdL3b2VUJG10YwBQYDK2VwMDUxCzAJ
+         * ...
+         * ...
+         * ...
+         * ZYYG
+         * -----END CERTIFICATE-----
+         * -----BEGIN CERTIFICATE-----
+         * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
+         * ...
+         * ...
+         * ...
+         * KL5cUmF
+         * -----END CERTIFICATE-----</p>
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -101,7 +132,10 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the certificate.
+         * <p>The unique identifier of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160ae6bb538d538c70c01f81dcf2****</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -109,7 +143,10 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-123456789ABC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +154,10 @@ public class CreateCustomCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The serial number of the certificate. This parameter is returned only if Immediately is set to 1 or 2.
+         * <p>The serial number of the certificate. This parameter is returned only if Immediately is set to 1 or 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;

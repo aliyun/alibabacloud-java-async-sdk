@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServerCertificateRequest} extends {@link RequestModel}
  *
  * <p>CreateServerCertificateRequest</p>
@@ -266,10 +272,13 @@ public class CreateServerCertificateRequest extends Request {
         } 
 
         /**
-         * The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.
-         * <p>
+         * <p>The expiration time of the server certificate. This value is a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <p> The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified.</p>
+         * </blockquote>
          * 
-         * >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
+         * <strong>example:</strong>
+         * <p>1665819958</p>
          */
         public Builder afterTime(Long afterTime) {
             this.putQueryParameter("AfterTime", afterTime);
@@ -278,20 +287,24 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The key algorithm of the server certificate. The key algorithm is in the `<Encryption algorithm>_<Key length>` format. Valid values:
-         * <p>
+         * <p>The key algorithm of the server certificate. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>ECC_384</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
+         * </ul>
+         * <p>The encryption algorithm of the server certificate must be the same as the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA_2048, the key algorithm of the server certificate must be RSA_1024, RSA_2048, or RSA_4096.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the key algorithm of an intermediate CA certificate.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RSA\_1024**: The signature algorithm is Sha256WithRSA.
-         * *   **RSA\_2048**: The signature algorithm is Sha256WithRSA.
-         * *   **RSA\_4096**: The signature algorithm is Sha256WithRSA.
-         * *   **ECC\_256**: The signature algorithm is Sha256WithECDSA.
-         * *   **ECC\_384**: The signature algorithm is Sha256WithECDSA.
-         * *   **ECC\_512**: The signature algorithm is Sha256WithECDSA.
-         * *   **SM2\_256**: The signature algorithm is SM3WithSM2.
-         * 
-         * The encryption algorithm of the server certificate must be the same as the encryption algorithm of the intermediate CA certificate. The key length can be different. For example, if the key algorithm of the intermediate CA certificate is RSA\_2048, the key algorithm of the server certificate must be RSA\_1024, RSA\_2048, or RSA\_4096.
-         * 
-         * >  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of an intermediate CA certificate.
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -300,10 +313,13 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.
-         * <p>
+         * <p>The issuance time of the server certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</p>
+         * <blockquote>
+         * <p> The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified.</p>
+         * </blockquote>
          * 
-         * >  The **BeforeTime** and **AfterTime** parameters must be both empty or both specified.
+         * <strong>example:</strong>
+         * <p>1634283958</p>
          */
         public Builder beforeTime(Long beforeTime) {
             this.putQueryParameter("BeforeTime", beforeTime);
@@ -312,7 +328,11 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.
+         * <p>The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -321,7 +341,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The code of the country in which the organization is located, such as CN or US.
+         * <p>The code of the country in which the organization is located, such as CN or US.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -330,17 +353,22 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the server certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
-         * <p>
+         * <p>The validity period of the server certificate. Unit: days. You must specify at least one of the <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters. The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
+         * <ul>
+         * <li>If you specify the <strong>Days</strong> parameter, you can specify both the <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters or leave them both empty.</li>
+         * <li>If you do not specify the <strong>Days</strong> parameter, you must specify both the <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you specify the <strong>Days</strong>, <strong>BeforeTime</strong>, and <strong>AfterTime</strong> parameters together, the validity period of the server certificate is determined by the value of the <strong>Days</strong> parameter.</p>
+         * </li>
+         * <li><p>The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the validity period of an intermediate CA certificate.</p>
+         * </li>
+         * </ul>
          * 
-         * *   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.
-         * *   If you do not specify the **Days** parameter, you must specify both the **BeforeTime** and **AfterTime** parameters.
-         * 
-         * > 
-         * 
-         * *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the server certificate is determined by the value of the **Days** parameter.
-         * 
-         * *   The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);
@@ -349,10 +377,11 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The additional domain names and additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.
-         * <p>
+         * <p>The additional domain names and additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.</p>
+         * <p>Separate multiple domain names and multiple IP addresses with commas (,).</p>
          * 
-         * Separate multiple domain names and multiple IP addresses with commas (,).
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -361,11 +390,14 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * include the CRL address.
-         * <p>
+         * <p>include the CRL address.</p>
+         * <ul>
+         * <li>0- No</li>
+         * <li>1- Yes</li>
+         * </ul>
          * 
-         * - 0- No
-         * - 1- Yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableCrl(Long enableCrl) {
             this.putQueryParameter("EnableCrl", enableCrl);
@@ -374,12 +406,15 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the certificate. Valid values:
-         * <p>
+         * <p>Specifies whether to return the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: does not return the certificate. This is the default value.</li>
+         * <li><strong>1</strong>: returns the certificate.</li>
+         * <li><strong>2</strong>: returns the certificate and the certificate chain of the certificate.</li>
+         * </ul>
          * 
-         * *   **0**: does not return the certificate. This is the default value.
-         * *   **1**: returns the certificate.
-         * *   **2**: returns the certificate and the certificate chain of the certificate.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder immediately(Integer immediately) {
             this.putQueryParameter("Immediately", immediately);
@@ -388,7 +423,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
+         * <p>The name of the city in which the organization is located. The value can contain letters. The default value is the name of the city in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -397,7 +435,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the server certificate. Unit: months.
+         * <p>The validity period of the server certificate. Unit: months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder months(Integer months) {
             this.putQueryParameter("Months", months);
@@ -406,7 +447,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The name of the organization. Default value: Alibaba Inc.
+         * <p>The name of the organization. Default value: Alibaba Inc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud</p>
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -415,7 +459,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The name of the department. Default value: Aliyun CDN.
+         * <p>The name of the department. Default value: Aliyun CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT</p>
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -424,10 +471,14 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The unique identifier of the intermediate CA certificate from which the server certificate is issued.
-         * <p>
+         * <p>The unique identifier of the intermediate CA certificate from which the server certificate is issued.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifier of an intermediate CA certificate.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifier of an intermediate CA certificate.
+         * <strong>example:</strong>
+         * <p>271ae6bb538d538c70c01f81dg3****</p>
          */
         public Builder parentIdentifier(String parentIdentifier) {
             this.putQueryParameter("ParentIdentifier", parentIdentifier);
@@ -436,7 +487,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.
+         * <p>The province, municipality, or autonomous region in which the organization is located. The value can contain letters. The default value is the name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -445,7 +499,10 @@ public class CreateServerCertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the server certificate. Unit: years.
+         * <p>The validity period of the server certificate. Unit: years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder years(Integer years) {
             this.putQueryParameter("Years", years);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRevokeCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>ListRevokeCertificateResponseBody</p>
  */
 public class ListRevokeCertificateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CertificateList")
-    private java.util.List < CertificateList> certificateList;
+    private java.util.List<CertificateList> certificateList;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -49,7 +55,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
     /**
      * @return certificateList
      */
-    public java.util.List < CertificateList> getCertificateList() {
+    public java.util.List<CertificateList> getCertificateList() {
         return this.certificateList;
     }
 
@@ -89,7 +95,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CertificateList> certificateList; 
+        private java.util.List<CertificateList> certificateList; 
         private Integer currentPage; 
         private Integer pageCount; 
         private String requestId; 
@@ -97,15 +103,18 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the details about the revoked client certificates or server certificates.
+         * <p>An array that consists of the details about the revoked client certificates or server certificates.</p>
          */
-        public Builder certificateList(java.util.List < CertificateList> certificateList) {
+        public Builder certificateList(java.util.List<CertificateList> certificateList) {
             this.certificateList = certificateList;
             return this;
         }
 
         /**
-         * The page number of the current page.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +122,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -121,7 +133,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +144,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The number of revoked certificates that are returned per page.
+         * <p>The number of revoked certificates that are returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -137,7 +155,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of revoked client certificates and server certificates that are returned.
+         * <p>The total number of revoked client certificates and server certificates that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +171,12 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRevokeCertificateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRevokeCertificateResponseBody</p>
+     */
     public static class CertificateList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterDate")
         private String afterDate;
@@ -417,7 +444,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             private String subjectDN; 
 
             /**
-             * The expiration date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-12-31T00:00Z` indicates December 31, 2021.
+             * <p>The expiration date of the certificate. The date is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-12-31T00:00Z</code> indicates December 31, 2021.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-31T00:00Z</p>
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
@@ -425,12 +455,15 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the encryption algorithm of the certificate. Valid values:
-             * <p>
+             * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>RSA</strong>: the Rivest-Shamir-Adleman (RSA) algorithm.</li>
+             * <li><strong>ECC</strong>: the elliptic curve cryptography (ECC) algorithm.</li>
+             * <li><strong>SM2</strong>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</li>
+             * </ul>
              * 
-             * *   **RSA**: the Rivest-Shamir-Adleman (RSA) algorithm.
-             * *   **ECC**: the elliptic curve cryptography (ECC) algorithm.
-             * *   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.
+             * <strong>example:</strong>
+             * <p>RSA</p>
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -438,7 +471,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The issuance date of the certificate. The date is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-01-01T00:00Z` indicates January 1, 2021.
+             * <p>The issuance date of the certificate. The date is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-01-01T00:00Z</code> indicates January 1, 2021.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-01T00:00Z</p>
              */
             public Builder beforeDate(String beforeDate) {
                 this.beforeDate = beforeDate;
@@ -446,7 +482,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the certificate.
+             * <p>The type of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SERVER</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -454,7 +493,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The common name of the certificate.
+             * <p>The common name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyundoc.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -462,10 +504,11 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
-             * <p>
+             * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
              * 
-             * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -473,7 +516,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the certificate.
+             * <p>The unique identifier of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05e148d8d3ecc9976d9ecd2b2f25****</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -481,7 +527,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The key length of the certificate.
+             * <p>The key length of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -489,7 +538,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -497,7 +549,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 fingerprint of the certificate.
+             * <p>The MD5 fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>05e148d8d3ecc9976d9ecd2b2f25****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -505,7 +560,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
+             * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Computing Co., Ltd.</p>
              */
             public Builder organization(String organization) {
                 this.organization = organization;
@@ -513,7 +571,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.
+             * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security</p>
              */
             public Builder organizationUnit(String organizationUnit) {
                 this.organizationUnit = organizationUnit;
@@ -521,7 +582,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the root certificate.
+             * <p>The identifier of the root certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160ae6bb538d538c70c01f81dcf2****</p>
              */
             public Builder parentIdentifier(String parentIdentifier) {
                 this.parentIdentifier = parentIdentifier;
@@ -529,7 +593,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the certificate was revoked. The value is in the `yyyy-MM-ddT00:00Z` format. For example, the value `2021-09-01T00:00Z` indicates September 1, 2021.
+             * <p>The date on which the certificate was revoked. The value is in the <code>yyyy-MM-ddT00:00Z</code> format. For example, the value <code>2021-09-01T00:00Z</code> indicates September 1, 2021.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-01T00:00Z</p>
              */
             public Builder revokeDate(String revokeDate) {
                 this.revokeDate = revokeDate;
@@ -537,19 +604,23 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The subject alternative name (SAN) extension of the certificate.
-             * <p>
+             * <p>The subject alternative name (SAN) extension of the certificate.</p>
+             * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
+             * <ul>
+             * <li><p><strong>Type</strong>: the type of the extension. Data type: integer. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: an email address</li>
+             * <li><strong>2</strong>: a domain name</li>
+             * <li><strong>6</strong>: a Uniform Resource Identifier (URI)</li>
+             * <li><strong>7</strong>: an IP address</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>Value</strong>: the value of the extension. Data type: string.</p>
+             * </li>
+             * </ul>
              * 
-             * The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:
-             * 
-             * *   **Type**: the type of the extension. Data type: integer. Valid values:
-             * 
-             *     *   **1**: an email address
-             *     *   **2**: a domain name
-             *     *   **6**: a Uniform Resource Identifier (URI)
-             *     *   **7**: an IP address
-             * 
-             * *   **Value**: the value of the extension. Data type: string.
+             * <strong>example:</strong>
+             * <p>[ {&quot;Type&quot;: 7, &quot;Value&quot;: &quot;192.0.XX.XX&quot;}, {&quot;Type&quot;: 2, &quot;Value&quot;: &quot;<a href="http://www.aliyundoc.com%22%7D">www.aliyundoc.com&quot;}</a>, ]</p>
              */
             public Builder sans(String sans) {
                 this.sans = sans;
@@ -557,7 +628,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The serial number of the certificate.
+             * <p>The serial number of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168b12c42e62339f8d2340ff530f9365****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -565,7 +639,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 fingerprint of the certificate.
+             * <p>The SHA-256 fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b60eff7e04323ff662f9ab5e6986f849f626a9c7bf2c59dcc752fa23779a****</p>
              */
             public Builder sha2(String sha2) {
                 this.sha2 = sha2;
@@ -573,7 +650,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The signature algorithm of the certificate.
+             * <p>The signature algorithm of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA256WITHRSA</p>
              */
             public Builder signAlgorithm(String signAlgorithm) {
                 this.signAlgorithm = signAlgorithm;
@@ -581,7 +661,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.
+             * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -589,7 +672,10 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ISSUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -597,15 +683,18 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:
-             * <p>
+             * <p>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</p>
+             * <ul>
+             * <li><strong>C</strong>: the country</li>
+             * <li><strong>O</strong>: the organization</li>
+             * <li><strong>OU</strong>: the department</li>
+             * <li><strong>L</strong>: the city</li>
+             * <li><strong>ST</strong>: the province, municipality, or autonomous region</li>
+             * <li><strong>CN</strong>: the common name</li>
+             * </ul>
              * 
-             * *   **C**: the country
-             * *   **O**: the organization
-             * *   **OU**: the department
-             * *   **L**: the city
-             * *   **ST**: the province, municipality, or autonomous region
-             * *   **CN**: the common name
+             * <strong>example:</strong>
+             * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=ZheJiang,ST=HangZhou,CN=aliyundoc.com</p>
              */
             public Builder subjectDN(String subjectDN) {
                 this.subjectDN = subjectDN;

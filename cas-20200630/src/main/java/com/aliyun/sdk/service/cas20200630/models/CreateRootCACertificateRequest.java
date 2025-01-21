@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRootCACertificateRequest} extends {@link RequestModel}
  *
  * <p>CreateRootCACertificateRequest</p>
@@ -158,18 +164,21 @@ public class CreateRootCACertificateRequest extends Request {
         } 
 
         /**
-         * The key algorithm of the root CA certificate. The key algorithm is in the `<Encryption algorithm>_<Key length>` format. Valid values:
-         * <p>
+         * <p>The key algorithm of the root CA certificate. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
+         * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>ECC_384</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
+         * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
+         * </ul>
+         * <p>The encryption algorithm of the root CA certificate must be consistent with the <strong>encryption algorithm</strong> of the private root CA instance that you purchase. For example, if the <strong>encryption algorithm</strong> of the private root CA instance that you purchase is <strong>RSA</strong>, the key algorithm of the root CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RSA\_1024**: The signature algorithm is Sha256WithRSA.
-         * *   **RSA\_2048**: The signature algorithm is Sha256WithRSA.
-         * *   **RSA\_4096**: The signature algorithm is Sha256WithRSA.
-         * *   **ECC\_256**: The signature algorithm is Sha256WithECDSA.
-         * *   **ECC\_384**: The signature algorithm is Sha256WithECDSA.
-         * *   **ECC\_512**: The signature algorithm is Sha256WithECDSA.
-         * *   **SM2\_256**: The signature algorithm is SM3WithSM2.
-         * 
-         * The encryption algorithm of the root CA certificate must be consistent with the **encryption algorithm** of the private root CA instance that you purchase. For example, if the **encryption algorithm** of the private root CA instance that you purchase is **RSA**, the key algorithm of the root CA certificate must be **RSA\_1024**, **RSA\_2048**, or **RSA\_4096**.
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -178,7 +187,11 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The common name or abbreviation of the organization. The value can contain letters.
+         * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -187,10 +200,11 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The code of the country or region in which the organization is located. You can enter an alpha-2 code. For example, you can use **CN** to indicate China and use **US** to indicate the United States.
-         * <p>
+         * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 code. For example, you can use <strong>CN</strong> to indicate China and use <strong>US</strong> to indicate the United States.</p>
+         * <p>For more information about country codes, see the <strong>&quot;Country codes&quot;</strong> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</p>
          * 
-         * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -199,7 +213,11 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the city in which the organization is located. The value can contain letters.
+         * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -208,7 +226,11 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the organization that is associated with the root CA certificate. You can enter the name of your enterprise or company. The value can contain letters.
+         * <p>The name of the organization that is associated with the root CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -217,7 +239,11 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the department or branch in the organization. The value can contain letters.
+         * <p>The name of the department or branch in the organization. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Security</p>
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -226,7 +252,11 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.
+         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -235,10 +265,14 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the root CA certificate. Unit: years.
-         * <p>
+         * <p>The validity period of the root CA certificate. Unit: years.</p>
+         * <blockquote>
+         * <p> We recommend that you set this parameter to a value from 5 to 10.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  We recommend that you set this parameter to a value from 5 to 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder years(Integer years) {
             this.putQueryParameter("Years", years);

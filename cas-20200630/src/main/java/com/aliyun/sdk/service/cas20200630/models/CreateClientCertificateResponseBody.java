@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClientCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateClientCertificateResponseBody</p>
@@ -85,7 +91,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         private String x509Certificate; 
 
         /**
-         * The certificate chain of the client certificate.
+         * <p>The certificate chain of the client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -93,7 +102,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the client certificate.
+         * <p>The unique identifier of the client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>190ae6bb538d538c70c01f81dcf2****</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -101,7 +113,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +124,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The serial number of the certificate.
+         * <p>The serial number of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0f29522da2dae7a1c4b6ab7132ad3c06</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
@@ -117,7 +135,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the client certificate.
+         * <p>The content of the client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
          */
         public Builder x509Certificate(String x509Certificate) {
             this.x509Certificate = x509Certificate;
