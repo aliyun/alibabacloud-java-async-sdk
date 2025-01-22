@@ -226,6 +226,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecognizeIntentionResponse> recognizeIntention(RecognizeIntentionRequest request);
 
     /**
+     * @param request the request parameters of RunAgent  RunAgentRequest
+     * @return RunAgentResponse
+     */
+    CompletableFuture<RunAgentResponse> runAgent(RunAgentRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runAgentWithAsyncResponseHandler(RunAgentRequest request, AsyncResponseHandler<RunAgentResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunAgentResponseBody> runAgentWithResponseIterable(RunAgentRequest request);
+
+    /**
      * @param request the request parameters of RunChatResultGeneration  RunChatResultGenerationRequest
      * @return RunChatResultGenerationResponse
      */
