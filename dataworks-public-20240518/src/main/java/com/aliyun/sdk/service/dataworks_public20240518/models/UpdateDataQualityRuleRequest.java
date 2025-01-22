@@ -62,10 +62,6 @@ public class UpdateDataQualityRuleRequest extends Request {
     private String severity;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Target")
-    private Target target;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
@@ -81,7 +77,6 @@ public class UpdateDataQualityRuleRequest extends Request {
         this.projectId = builder.projectId;
         this.samplingConfig = builder.samplingConfig;
         this.severity = builder.severity;
-        this.target = builder.target;
         this.templateCode = builder.templateCode;
     }
 
@@ -169,13 +164,6 @@ public class UpdateDataQualityRuleRequest extends Request {
     }
 
     /**
-     * @return target
-     */
-    public Target getTarget() {
-        return this.target;
-    }
-
-    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -193,7 +181,6 @@ public class UpdateDataQualityRuleRequest extends Request {
         private Long projectId; 
         private SamplingConfig samplingConfig; 
         private String severity; 
-        private Target target; 
         private String templateCode; 
 
         private Builder() {
@@ -212,7 +199,6 @@ public class UpdateDataQualityRuleRequest extends Request {
             this.projectId = request.projectId;
             this.samplingConfig = request.samplingConfig;
             this.severity = request.severity;
-            this.target = request.target;
             this.templateCode = request.templateCode;
         } 
 
@@ -311,7 +297,7 @@ public class UpdateDataQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The strength of the rule. Valid values:</p>
+         * <p>The strength of the rule.</p>
          * <ul>
          * <li>Normal</li>
          * <li>High</li>
@@ -323,16 +309,6 @@ public class UpdateDataQualityRuleRequest extends Request {
         public Builder severity(String severity) {
             this.putBodyParameter("Severity", severity);
             this.severity = severity;
-            return this;
-        }
-
-        /**
-         * <p>The monitored object of the rule.</p>
-         */
-        public Builder target(Target target) {
-            String targetShrink = shrink(target, "Target", "json");
-            this.putBodyParameter("Target", targetShrink);
-            this.target = target;
             return this;
         }
 
@@ -412,17 +388,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String value; 
 
             /**
-             * <p>阈值表达式。</p>
-             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-             * <ul>
-             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-             * </ul>
-             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-             * 
-             * <strong>example:</strong>
-             * <p>$checkValue &gt; 0.05</p>
+             * Expression.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -524,17 +490,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String value; 
 
             /**
-             * <p>阈值表达式。</p>
-             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-             * <ul>
-             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-             * </ul>
-             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-             * 
-             * <strong>example:</strong>
-             * <p>$checkValue &lt;= 0.01</p>
+             * Expression.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -636,17 +592,7 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String value; 
 
             /**
-             * <p>阈值表达式。</p>
-             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
-             * <ul>
-             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
-             * </ul>
-             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
-             * 
-             * <strong>example:</strong>
-             * <p>$checkValue &gt; 0.01</p>
+             * Expression.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -1088,137 +1034,6 @@ public class UpdateDataQualityRuleRequest extends Request {
 
             public SamplingConfig build() {
                 return new SamplingConfig(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link UpdateDataQualityRuleRequest} extends {@link TeaModel}
-     *
-     * <p>UpdateDataQualityRuleRequest</p>
-     */
-    public static class Target extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("DatabaseType")
-        private String databaseType;
-
-        @com.aliyun.core.annotation.NameInMap("PartitionSpec")
-        private String partitionSpec;
-
-        @com.aliyun.core.annotation.NameInMap("TableGuid")
-        private String tableGuid;
-
-        @com.aliyun.core.annotation.NameInMap("Type")
-        private String type;
-
-        private Target(Builder builder) {
-            this.databaseType = builder.databaseType;
-            this.partitionSpec = builder.partitionSpec;
-            this.tableGuid = builder.tableGuid;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Target create() {
-            return builder().build();
-        }
-
-        /**
-         * @return databaseType
-         */
-        public String getDatabaseType() {
-            return this.databaseType;
-        }
-
-        /**
-         * @return partitionSpec
-         */
-        public String getPartitionSpec() {
-            return this.partitionSpec;
-        }
-
-        /**
-         * @return tableGuid
-         */
-        public String getTableGuid() {
-            return this.tableGuid;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private String databaseType; 
-            private String partitionSpec; 
-            private String tableGuid; 
-            private String type; 
-
-            /**
-             * <p>The type of the database to which the table belongs. Valid values:</p>
-             * <ul>
-             * <li>maxcompute</li>
-             * <li>emr</li>
-             * <li>cdh</li>
-             * <li>hologres</li>
-             * <li>analyticdb_for_postgresql</li>
-             * <li>analyticdb_for_mysql</li>
-             * <li>starrocks</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>maxcompute</p>
-             */
-            public Builder databaseType(String databaseType) {
-                this.databaseType = databaseType;
-                return this;
-            }
-
-            /**
-             * <p>The configuration of the partitioned table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds=$[yyyymmdd-1]</p>
-             */
-            public Builder partitionSpec(String partitionSpec) {
-                this.partitionSpec = partitionSpec;
-                return this;
-            }
-
-            /**
-             * <p>The ID of the table that is limited by the rule in Data Map.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>odps.unit_test.tb_unit_test</p>
-             */
-            public Builder tableGuid(String tableGuid) {
-                this.tableGuid = tableGuid;
-                return this;
-            }
-
-            /**
-             * <p>The type of the monitored object. Valid values:</p>
-             * <ul>
-             * <li>Table</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Table</p>
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public Target build() {
-                return new Target(this);
             } 
 
         } 

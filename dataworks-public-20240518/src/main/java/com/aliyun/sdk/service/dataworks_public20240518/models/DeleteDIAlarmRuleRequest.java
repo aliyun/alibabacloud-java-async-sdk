@@ -135,7 +135,10 @@ public class DeleteDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

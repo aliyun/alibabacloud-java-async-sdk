@@ -660,6 +660,9 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
      * <p>GetDataQualityEvaluationTaskResponseBody</p>
      */
     public static class DataQualityEvaluationTask extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
+        private Long dataSourceId;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -689,6 +692,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         private Trigger trigger;
 
         private DataQualityEvaluationTask(Builder builder) {
+            this.dataSourceId = builder.dataSourceId;
             this.description = builder.description;
             this.hooks = builder.hooks;
             this.id = builder.id;
@@ -706,6 +710,13 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
 
         public static DataQualityEvaluationTask create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataSourceId
+         */
+        public Long getDataSourceId() {
+            return this.dataSourceId;
         }
 
         /**
@@ -772,6 +783,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long dataSourceId; 
             private String description; 
             private java.util.List<Hooks> hooks; 
             private Long id; 
@@ -781,6 +793,14 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String runtimeConf; 
             private Target target; 
             private Trigger trigger; 
+
+            /**
+             * DataSourceId.
+             */
+            public Builder dataSourceId(Long dataSourceId) {
+                this.dataSourceId = dataSourceId;
+                return this;
+            }
 
             /**
              * <p>质量监控任务描述</p>

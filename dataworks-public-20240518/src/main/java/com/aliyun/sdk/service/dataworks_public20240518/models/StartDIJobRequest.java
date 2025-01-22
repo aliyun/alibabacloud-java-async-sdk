@@ -137,7 +137,10 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * ForceToRerun.
+         * <p>Deprecated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceToRerun(Boolean forceToRerun) {
             this.putQueryParameter("ForceToRerun", forceToRerun);
@@ -158,7 +161,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * RealtimeStartSettings.
+         * <p>The settings for starting real-time synchronization.</p>
          */
         public Builder realtimeStartSettings(RealtimeStartSettings realtimeStartSettings) {
             String realtimeStartSettingsShrink = shrink(realtimeStartSettings, "RealtimeStartSettings", "json");
@@ -221,7 +224,10 @@ public class StartDIJobRequest extends Request {
             private Long upperLimit; 
 
             /**
-             * Interval.
+             * <p>The failover interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -229,7 +235,10 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * UpperLimit.
+             * <p>The maximum number of failovers allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder upperLimit(Long upperLimit) {
                 this.upperLimit = upperLimit;
@@ -289,7 +298,7 @@ public class StartDIJobRequest extends Request {
             private Long startTime; 
 
             /**
-             * FailoverSettings.
+             * <p>The failover settings.</p>
              */
             public Builder failoverSettings(FailoverSettings failoverSettings) {
                 this.failoverSettings = failoverSettings;
@@ -297,7 +306,10 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671516776</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

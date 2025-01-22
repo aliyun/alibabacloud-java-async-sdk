@@ -55,7 +55,10 @@ public class DeleteDIJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D33D4A51-5845-579A-B4BA-FAADD0F83D53</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,10 @@ public class DeleteDIJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -194,6 +194,9 @@ public class UpdateDIJobRequest extends Request {
 
         /**
          * <p>The description of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the synchronization task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -224,7 +227,11 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

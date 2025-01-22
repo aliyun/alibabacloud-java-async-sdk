@@ -22,6 +22,10 @@ public class ListTasksRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    private java.util.List<Long> ids;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -73,6 +77,7 @@ public class ListTasksRequest extends Request {
     private ListTasksRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.ids = builder.ids;
         this.name = builder.name;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
@@ -105,6 +110,13 @@ public class ListTasksRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return ids
+     */
+    public java.util.List<Long> getIds() {
+        return this.ids;
     }
 
     /**
@@ -193,6 +205,7 @@ public class ListTasksRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListTasksRequest, Builder> {
         private String regionId; 
+        private java.util.List<Long> ids; 
         private String name; 
         private String owner; 
         private Integer pageNumber; 
@@ -213,6 +226,7 @@ public class ListTasksRequest extends Request {
         private Builder(ListTasksRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.ids = request.ids;
             this.name = request.name;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
@@ -233,6 +247,16 @@ public class ListTasksRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Ids.
+         */
+        public Builder ids(java.util.List<Long> ids) {
+            String idsShrink = shrink(ids, "Ids", "json");
+            this.putBodyParameter("Ids", idsShrink);
+            this.ids = ids;
             return this;
         }
 

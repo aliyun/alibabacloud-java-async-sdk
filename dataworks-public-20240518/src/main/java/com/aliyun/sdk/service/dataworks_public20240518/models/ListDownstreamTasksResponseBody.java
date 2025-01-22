@@ -421,9 +421,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuntimeResource")
         private RuntimeResource runtimeResource;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
@@ -455,7 +452,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             this.rerunMode = builder.rerunMode;
             this.rerunTimes = builder.rerunTimes;
             this.runtimeResource = builder.runtimeResource;
-            this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
             this.trigger = builder.trigger;
             this.type = builder.type;
@@ -597,13 +593,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -650,7 +639,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private String rerunMode; 
             private Integer rerunTimes; 
             private RuntimeResource runtimeResource; 
-            private Long tenantId; 
             private Integer timeout; 
             private Trigger trigger; 
             private String type; 
@@ -797,14 +785,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
-                return this;
-            }
-
-            /**
-             * TenantId.
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
                 return this;
             }
 
@@ -1304,9 +1284,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StepType")
         private String stepType;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
@@ -1340,7 +1317,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             this.rerunTimes = builder.rerunTimes;
             this.runtimeResource = builder.runtimeResource;
             this.stepType = builder.stepType;
-            this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
             this.trigger = builder.trigger;
             this.type = builder.type;
@@ -1496,13 +1472,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -1551,7 +1520,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private Integer rerunTimes; 
             private TasksRuntimeResource runtimeResource; 
             private String stepType; 
-            private Long tenantId; 
             private Integer timeout; 
             private TasksTrigger trigger; 
             private String type; 
@@ -1767,17 +1735,6 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
-                return this;
-            }
-
-            /**
-             * <p>The tenant ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
                 return this;
             }
 

@@ -211,6 +211,9 @@ public class CreateDIAlarmRuleRequest extends Request {
 
         /**
          * <p>The description of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the alert rule.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -527,7 +530,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * MuteInterval.
+             * <p>告警抑制间隔时长，单位分钟，默认5分钟。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder muteInterval(Integer muteInterval) {
                 this.muteInterval = muteInterval;
@@ -647,7 +653,7 @@ public class CreateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * DdlTypes.
+             * <p>在DDL通知的时候才生效，需要生效的DDL列表。</p>
              */
             public Builder ddlTypes(java.util.List<String> ddlTypes) {
                 this.ddlTypes = ddlTypes;

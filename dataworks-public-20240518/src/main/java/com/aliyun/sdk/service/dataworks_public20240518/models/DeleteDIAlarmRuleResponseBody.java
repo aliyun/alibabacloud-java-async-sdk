@@ -55,7 +55,7 @@ public class DeleteDIAlarmRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</p>

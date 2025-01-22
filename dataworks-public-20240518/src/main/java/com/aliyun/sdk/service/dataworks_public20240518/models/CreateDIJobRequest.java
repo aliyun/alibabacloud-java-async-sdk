@@ -259,6 +259,9 @@ public class CreateDIJobRequest extends Request {
 
         /**
          * <p>The description of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the synchronization task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

@@ -796,9 +796,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @com.aliyun.core.annotation.NameInMap("PartitionSpec")
-        private String partitionSpec;
-
         @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
@@ -807,7 +804,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
         private Target(Builder builder) {
             this.databaseType = builder.databaseType;
-            this.partitionSpec = builder.partitionSpec;
             this.tableGuid = builder.tableGuid;
             this.type = builder.type;
         }
@@ -828,13 +824,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
         }
 
         /**
-         * @return partitionSpec
-         */
-        public String getPartitionSpec() {
-            return this.partitionSpec;
-        }
-
-        /**
          * @return tableGuid
          */
         public String getTableGuid() {
@@ -850,7 +839,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String databaseType; 
-            private String partitionSpec; 
             private String tableGuid; 
             private String type; 
 
@@ -871,17 +859,6 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
-                return this;
-            }
-
-            /**
-             * <p>The configuration of the partitioned table.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds=$[yyyymmdd-1]</p>
-             */
-            public Builder partitionSpec(String partitionSpec) {
-                this.partitionSpec = partitionSpec;
                 return this;
             }
 

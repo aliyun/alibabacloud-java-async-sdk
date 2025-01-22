@@ -308,7 +308,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MuteInterval.
+             * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder muteInterval(Long muteInterval) {
                 this.muteInterval = muteInterval;
@@ -428,7 +431,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DdlTypes.
+             * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
              */
             public Builder ddlTypes(java.util.List<String> ddlTypes) {
                 this.ddlTypes = ddlTypes;
@@ -789,7 +792,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * <p>The alert rules returned.</p>
+             * <p>The alert rules.</p>
              */
             public Builder DIJobAlarmRules(java.util.List<DIJobAlarmRules> DIJobAlarmRules) {
                 this.DIJobAlarmRules = DIJobAlarmRules;

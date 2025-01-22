@@ -442,9 +442,6 @@ public class ListTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScriptParameters")
         private String scriptParameters;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
@@ -477,7 +474,6 @@ public class ListTasksResponseBody extends TeaModel {
             this.rerunTimes = builder.rerunTimes;
             this.runtimeResource = builder.runtimeResource;
             this.scriptParameters = builder.scriptParameters;
-            this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
             this.trigger = builder.trigger;
             this.type = builder.type;
@@ -626,13 +622,6 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -680,7 +669,6 @@ public class ListTasksResponseBody extends TeaModel {
             private Integer rerunTimes; 
             private RuntimeResource runtimeResource; 
             private String scriptParameters; 
-            private Long tenantId; 
             private Integer timeout; 
             private Trigger trigger; 
             private String type; 
@@ -888,17 +876,6 @@ public class ListTasksResponseBody extends TeaModel {
              */
             public Builder scriptParameters(String scriptParameters) {
                 this.scriptParameters = scriptParameters;
-                return this;
-            }
-
-            /**
-             * <p>The tenant ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
                 return this;
             }
 

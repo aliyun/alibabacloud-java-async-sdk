@@ -903,9 +903,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @com.aliyun.core.annotation.NameInMap("TenantId")
-        private Long tenantId;
-
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
@@ -959,7 +956,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             this.taskId = builder.taskId;
             this.taskName = builder.taskName;
             this.taskType = builder.taskType;
-            this.tenantId = builder.tenantId;
             this.timeout = builder.timeout;
             this.triggerRecurrence = builder.triggerRecurrence;
             this.triggerTime = builder.triggerTime;
@@ -1175,13 +1171,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return tenantId
-         */
-        public Long getTenantId() {
-            return this.tenantId;
-        }
-
-        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -1266,7 +1255,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private Long taskId; 
             private String taskName; 
             private String taskType; 
-            private Long tenantId; 
             private Integer timeout; 
             private String triggerRecurrence; 
             private Long triggerTime; 
@@ -1576,17 +1564,6 @@ public class GetTaskInstanceResponseBody extends TeaModel {
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
-                return this;
-            }
-
-            /**
-             * <p>The tenant ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder tenantId(Long tenantId) {
-                this.tenantId = tenantId;
                 return this;
             }
 

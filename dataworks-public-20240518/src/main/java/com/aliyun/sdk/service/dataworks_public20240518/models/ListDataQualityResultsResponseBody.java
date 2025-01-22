@@ -182,6 +182,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
      * <p>ListDataQualityResultsResponseBody</p>
      */
     public static class Critical extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
@@ -189,6 +192,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         private String value;
 
         private Critical(Builder builder) {
+            this.expression = builder.expression;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -199,6 +203,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
         public static Critical create() {
             return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
         }
 
         /**
@@ -216,8 +227,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String expression; 
             private String operator; 
             private String value; 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
 
             /**
              * <ul>
@@ -260,6 +280,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
      * <p>ListDataQualityResultsResponseBody</p>
      */
     public static class Expected extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
@@ -267,6 +290,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         private String value;
 
         private Expected(Builder builder) {
+            this.expression = builder.expression;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -277,6 +301,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
         public static Expected create() {
             return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
         }
 
         /**
@@ -294,8 +325,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String expression; 
             private String operator; 
             private String value; 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
 
             /**
              * <ul>
@@ -338,6 +378,9 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
      * <p>ListDataQualityResultsResponseBody</p>
      */
     public static class Warned extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
@@ -345,6 +388,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         private String value;
 
         private Warned(Builder builder) {
+            this.expression = builder.expression;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -355,6 +399,13 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
         public static Warned create() {
             return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
         }
 
         /**
@@ -372,8 +423,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String expression; 
             private String operator; 
             private String value; 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
 
             /**
              * <ul>
@@ -466,7 +526,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private Warned warned; 
 
             /**
-             * Critical.
+             * <p>The threshold settings for critical alerts.</p>
              */
             public Builder critical(Critical critical) {
                 this.critical = critical;
@@ -474,7 +534,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Expected.
+             * <p>The expected threshold setting.</p>
              */
             public Builder expected(Expected expected) {
                 this.expected = expected;
@@ -482,7 +542,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Warned.
+             * <p>The threshold settings for normal alerts.</p>
              */
             public Builder warned(Warned warned) {
                 this.warned = warned;
@@ -561,7 +621,7 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Thresholds.
+             * <p>The threshold settings.</p>
              */
             public Builder thresholds(Thresholds thresholds) {
                 this.thresholds = thresholds;
@@ -804,9 +864,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @com.aliyun.core.annotation.NameInMap("PartitionSpec")
-        private String partitionSpec;
-
         @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
@@ -815,7 +872,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
         private Target(Builder builder) {
             this.databaseType = builder.databaseType;
-            this.partitionSpec = builder.partitionSpec;
             this.tableGuid = builder.tableGuid;
             this.type = builder.type;
         }
@@ -836,13 +892,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
         }
 
         /**
-         * @return partitionSpec
-         */
-        public String getPartitionSpec() {
-            return this.partitionSpec;
-        }
-
-        /**
          * @return tableGuid
          */
         public String getTableGuid() {
@@ -858,7 +907,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String databaseType; 
-            private String partitionSpec; 
             private String tableGuid; 
             private String type; 
 
@@ -879,14 +927,6 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
-                return this;
-            }
-
-            /**
-             * PartitionSpec.
-             */
-            public Builder partitionSpec(String partitionSpec) {
-                this.partitionSpec = partitionSpec;
                 return this;
             }
 

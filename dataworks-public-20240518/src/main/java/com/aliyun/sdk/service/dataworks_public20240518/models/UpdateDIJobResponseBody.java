@@ -55,7 +55,7 @@ public class UpdateDIJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AAC30B35-820D-5F3E-A42C-E96BB6379325</p>

@@ -1742,7 +1742,10 @@ public class GetDIJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;

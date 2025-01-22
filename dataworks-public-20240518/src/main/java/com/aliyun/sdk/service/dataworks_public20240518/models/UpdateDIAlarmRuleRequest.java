@@ -220,6 +220,9 @@ public class UpdateDIAlarmRuleRequest extends Request {
 
         /**
          * <p>The description of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the alert rule.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -240,7 +243,10 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The alert rule Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34982</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -541,7 +547,10 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * MuteInterval.
+             * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder muteInterval(Long muteInterval) {
                 this.muteInterval = muteInterval;
@@ -661,7 +670,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * DdlTypes.
+             * <p>The types of DDL operations for which the alert rule takes effect.</p>
              */
             public Builder ddlTypes(java.util.List<String> ddlTypes) {
                 this.ddlTypes = ddlTypes;

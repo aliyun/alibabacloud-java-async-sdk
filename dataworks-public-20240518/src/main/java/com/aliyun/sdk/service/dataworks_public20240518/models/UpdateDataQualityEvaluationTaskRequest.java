@@ -367,6 +367,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
      * <p>UpdateDataQualityEvaluationTaskRequest</p>
      */
     public static class Critical extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
@@ -374,6 +377,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String value;
 
         private Critical(Builder builder) {
+            this.expression = builder.expression;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -384,6 +388,13 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
         public static Critical create() {
             return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
         }
 
         /**
@@ -401,8 +412,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String expression; 
             private String operator; 
             private String value; 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
 
             /**
              * <p>The comparison operator. Valid values:</p>
@@ -458,6 +478,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
      * <p>UpdateDataQualityEvaluationTaskRequest</p>
      */
     public static class Expected extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
@@ -465,6 +488,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String value;
 
         private Expected(Builder builder) {
+            this.expression = builder.expression;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -475,6 +499,13 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
         public static Expected create() {
             return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
         }
 
         /**
@@ -492,8 +523,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String expression; 
             private String operator; 
             private String value; 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
 
             /**
              * <p>The comparison operator. Valid values:</p>
@@ -548,6 +588,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
      * <p>UpdateDataQualityEvaluationTaskRequest</p>
      */
     public static class Warned extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
@@ -555,6 +598,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         private String value;
 
         private Warned(Builder builder) {
+            this.expression = builder.expression;
             this.operator = builder.operator;
             this.value = builder.value;
         }
@@ -565,6 +609,13 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
         public static Warned create() {
             return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
         }
 
         /**
@@ -582,8 +633,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String expression; 
             private String operator; 
             private String value; 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
 
             /**
              * <p>The comparison operator. Valid values:</p>

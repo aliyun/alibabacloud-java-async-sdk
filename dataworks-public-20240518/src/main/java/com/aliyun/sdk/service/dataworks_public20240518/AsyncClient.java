@@ -47,6 +47,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachDataQualityRulesToEvaluationTaskResponse> attachDataQualityRulesToEvaluationTask(AttachDataQualityRulesToEvaluationTaskRequest request);
 
     /**
+     * @param request the request parameters of BatchUpdateTasks  BatchUpdateTasksRequest
+     * @return BatchUpdateTasksResponse
+     */
+    CompletableFuture<BatchUpdateTasksResponse> batchUpdateTasks(BatchUpdateTasksRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>This API operation is available for all DataWorks editions.</li>
@@ -246,6 +252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkflowDefinitionResponse> createWorkflowDefinition(CreateWorkflowDefinitionRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkflowInstances  CreateWorkflowInstancesRequest
+     * @return CreateWorkflowInstancesResponse
+     */
+    CompletableFuture<CreateWorkflowInstancesResponse> createWorkflowInstances(CreateWorkflowInstancesRequest request);
+
+    /**
      * @param request the request parameters of DeleteAlertRule  DeleteAlertRuleRequest
      * @return DeleteAlertRuleResponse
      */
@@ -411,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTaskResponse> deleteTask(DeleteTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
+     * @return DeleteWorkflowResponse
+     */
+    CompletableFuture<DeleteWorkflowResponse> deleteWorkflow(DeleteWorkflowRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> A workflow that is deployed cannot be deleted. If you want to delete such a workflow, you must first undeploy the workflow.</p>
@@ -455,10 +473,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecDeploymentStageResponse> execDeploymentStage(ExecDeploymentStageRequest request);
 
     /**
+     * @param request the request parameters of ExecuteAdhocWorkflowInstance  ExecuteAdhocWorkflowInstanceRequest
+     * @return ExecuteAdhocWorkflowInstanceResponse
+     */
+    CompletableFuture<ExecuteAdhocWorkflowInstanceResponse> executeAdhocWorkflowInstance(ExecuteAdhocWorkflowInstanceRequest request);
+
+    /**
      * @param request the request parameters of GetAlertRule  GetAlertRuleRequest
      * @return GetAlertRuleResponse
      */
     CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetCreateWorkflowInstancesResult  GetCreateWorkflowInstancesResultRequest
+     * @return GetCreateWorkflowInstancesResultResponse
+     */
+    CompletableFuture<GetCreateWorkflowInstancesResultResponse> getCreateWorkflowInstancesResult(GetCreateWorkflowInstancesResultRequest request);
 
     /**
      * <b>description</b> :
@@ -632,10 +662,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskInstanceLogResponse> getTaskInstanceLog(GetTaskInstanceLogRequest request);
 
     /**
+     * @param request the request parameters of GetWorkflow  GetWorkflowRequest
+     * @return GetWorkflowResponse
+     */
+    CompletableFuture<GetWorkflowResponse> getWorkflow(GetWorkflowRequest request);
+
+    /**
      * @param request the request parameters of GetWorkflowDefinition  GetWorkflowDefinitionRequest
      * @return GetWorkflowDefinitionResponse
      */
     CompletableFuture<GetWorkflowDefinitionResponse> getWorkflowDefinition(GetWorkflowDefinitionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
+     * @param request the request parameters of GetWorkflowInstance  GetWorkflowInstanceRequest
+     * @return GetWorkflowInstanceResponse
+     */
+    CompletableFuture<GetWorkflowInstanceResponse> getWorkflowInstance(GetWorkflowInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -940,6 +985,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkflowDefinitionsResponse> listWorkflowDefinitions(ListWorkflowDefinitionsRequest request);
 
     /**
+     * @param request the request parameters of ListWorkflowInstances  ListWorkflowInstancesRequest
+     * @return ListWorkflowInstancesResponse
+     */
+    CompletableFuture<ListWorkflowInstancesResponse> listWorkflowInstances(ListWorkflowInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListWorkflows  ListWorkflowsRequest
+     * @return ListWorkflowsResponse
+     */
+    CompletableFuture<ListWorkflowsResponse> listWorkflows(ListWorkflowsRequest request);
+
+    /**
      * @param request the request parameters of MoveFunction  MoveFunctionRequest
      * @return MoveFunctionResponse
      */
@@ -1045,6 +1102,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
+     * @param request the request parameters of StartWorkflowInstances  StartWorkflowInstancesRequest
+     * @return StartWorkflowInstancesResponse
+     */
+    CompletableFuture<StartWorkflowInstancesResponse> startWorkflowInstances(StartWorkflowInstancesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of StopDIJob  StopDIJobRequest
      * @return StopDIJobResponse
      */
@@ -1058,6 +1124,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopTaskInstancesResponse
      */
     CompletableFuture<StopTaskInstancesResponse> stopTaskInstances(StopTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of StopWorkflowInstances  StopWorkflowInstancesRequest
+     * @return StopWorkflowInstancesResponse
+     */
+    CompletableFuture<StopWorkflowInstancesResponse> stopWorkflowInstances(StopWorkflowInstancesRequest request);
 
     /**
      * <b>description</b> :
@@ -1195,6 +1267,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRouteResponse> updateRoute(UpdateRouteRequest request);
 
     /**
+     * @param request the request parameters of UpdateTask  UpdateTaskRequest
+     * @return UpdateTaskResponse
+     */
+    CompletableFuture<UpdateTaskResponse> updateTask(UpdateTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1202,6 +1280,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTaskInstancesResponse
      */
     CompletableFuture<UpdateTaskInstancesResponse> updateTaskInstances(UpdateTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
+     * @return UpdateWorkflowResponse
+     */
+    CompletableFuture<UpdateWorkflowResponse> updateWorkflow(UpdateWorkflowRequest request);
 
     /**
      * @param request the request parameters of UpdateWorkflowDefinition  UpdateWorkflowDefinitionRequest

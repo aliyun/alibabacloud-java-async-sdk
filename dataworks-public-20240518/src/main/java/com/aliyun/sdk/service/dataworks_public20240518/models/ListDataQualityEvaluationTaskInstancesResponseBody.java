@@ -669,9 +669,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @com.aliyun.core.annotation.NameInMap("RegionId")
-        private String regionId;
-
         @com.aliyun.core.annotation.NameInMap("RuntimeConf")
         private String runtimeConf;
 
@@ -688,7 +685,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
             this.name = builder.name;
             this.notifications = builder.notifications;
             this.projectId = builder.projectId;
-            this.regionId = builder.regionId;
             this.runtimeConf = builder.runtimeConf;
             this.target = builder.target;
             this.trigger = builder.trigger;
@@ -745,13 +741,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
         }
 
         /**
-         * @return regionId
-         */
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        /**
          * @return runtimeConf
          */
         public String getRuntimeConf() {
@@ -779,7 +768,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
             private String name; 
             private TaskNotifications notifications; 
             private Long projectId; 
-            private String regionId; 
             private String runtimeConf; 
             private Target target; 
             private Trigger trigger; 
@@ -839,17 +827,6 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
-                return this;
-            }
-
-            /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
                 return this;
             }
 

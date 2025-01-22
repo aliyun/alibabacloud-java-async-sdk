@@ -407,8 +407,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace.</p>
-         * <p>Valid values:</p>
+         * <p>The environment of the workspace. Valid values:</p>
          * <ul>
          * <li>Prod: production environment</li>
          * <li>Dev: development environment</li>
@@ -517,8 +516,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
-         * <p>Valid values:</p>
+         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
          * <ul>
          * <li>Pause</li>
          * <li>Skip</li>
@@ -535,8 +533,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The trigger type.</p>
-         * <p>Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
          * <li>Scheduler: scheduling cycle-based trigger</li>
          * <li>Manual: manual trigger</li>
@@ -576,8 +573,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the workflow instance.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
          * <li>SmokeTest</li>
          * <li>Manual</li>
