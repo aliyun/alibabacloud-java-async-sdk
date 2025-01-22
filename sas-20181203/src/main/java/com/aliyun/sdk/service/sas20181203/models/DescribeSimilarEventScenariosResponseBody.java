@@ -55,7 +55,10 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
         private java.util.List<Scenarios> scenarios; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDF7B8D9-8493-4B90-8D13-E0C1FFCE5F97</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
         }
 
         /**
-         * Scenarios.
+         * <p>The scenarios in which alerts triggered by the same rule or rules of the same type are handled.</p>
          */
         public Builder scenarios(java.util.List<Scenarios> scenarios) {
             this.scenarios = scenarios;
@@ -109,7 +112,16 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
             private String code; 
 
             /**
-             * Code.
+             * <p>The code of the scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: the same alert type</li>
+             * <li><strong>same_file_content</strong>: the same file content rule.</li>
+             * <li><strong>same_ip</strong>: the same IP address rule.</li>
+             * <li><strong>same_url</strong>: the same URL rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>same_url</p>
              */
             public Builder code(String code) {
                 this.code = code;

@@ -61,6 +61,10 @@ public class AddCloudVendorAccountAKRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String vendor;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
+    private String vendorAuthAlias;
+
     private AddCloudVendorAccountAKRequest(Builder builder) {
         super(builder);
         this.akType = builder.akType;
@@ -73,6 +77,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         this.subscriptionIds = builder.subscriptionIds;
         this.tenantId = builder.tenantId;
         this.vendor = builder.vendor;
+        this.vendorAuthAlias = builder.vendorAuthAlias;
     }
 
     public static Builder builder() {
@@ -158,6 +163,13 @@ public class AddCloudVendorAccountAKRequest extends Request {
         return this.vendor;
     }
 
+    /**
+     * @return vendorAuthAlias
+     */
+    public String getVendorAuthAlias() {
+        return this.vendorAuthAlias;
+    }
+
     public static final class Builder extends Request.Builder<AddCloudVendorAccountAKRequest, Builder> {
         private String akType; 
         private java.util.List<String> authModules; 
@@ -169,6 +181,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         private java.util.List<String> subscriptionIds; 
         private String tenantId; 
         private String vendor; 
+        private String vendorAuthAlias; 
 
         private Builder() {
             super();
@@ -186,6 +199,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
             this.subscriptionIds = request.subscriptionIds;
             this.tenantId = request.tenantId;
             this.vendor = request.vendor;
+            this.vendorAuthAlias = request.vendorAuthAlias;
         } 
 
         /**
@@ -346,6 +360,15 @@ public class AddCloudVendorAccountAKRequest extends Request {
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);
             this.vendor = vendor;
+            return this;
+        }
+
+        /**
+         * VendorAuthAlias.
+         */
+        public Builder vendorAuthAlias(String vendorAuthAlias) {
+            this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);
+            this.vendorAuthAlias = vendorAuthAlias;
             return this;
         }
 

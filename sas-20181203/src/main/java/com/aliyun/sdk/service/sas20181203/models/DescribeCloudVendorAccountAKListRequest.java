@@ -41,6 +41,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SubAccountName")
     private String subAccountName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
+    private String vendorAuthAlias;
+
     private DescribeCloudVendorAccountAKListRequest(Builder builder) {
         super(builder);
         this.authIds = builder.authIds;
@@ -49,6 +53,7 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.status = builder.status;
         this.subAccountName = builder.subAccountName;
+        this.vendorAuthAlias = builder.vendorAuthAlias;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         return this.subAccountName;
     }
 
+    /**
+     * @return vendorAuthAlias
+     */
+    public String getVendorAuthAlias() {
+        return this.vendorAuthAlias;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCloudVendorAccountAKListRequest, Builder> {
         private String authIds; 
         private Integer currentPage; 
@@ -113,6 +125,7 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         private Integer pageSize; 
         private Integer status; 
         private String subAccountName; 
+        private String vendorAuthAlias; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
             this.pageSize = request.pageSize;
             this.status = request.status;
             this.subAccountName = request.subAccountName;
+            this.vendorAuthAlias = request.vendorAuthAlias;
         } 
 
         /**
@@ -205,6 +219,15 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         public Builder subAccountName(String subAccountName) {
             this.putQueryParameter("SubAccountName", subAccountName);
             this.subAccountName = subAccountName;
+            return this;
+        }
+
+        /**
+         * VendorAuthAlias.
+         */
+        public Builder vendorAuthAlias(String vendorAuthAlias) {
+            this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);
+            this.vendorAuthAlias = vendorAuthAlias;
             return this;
         }
 

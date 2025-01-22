@@ -167,6 +167,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HandledCount")
         private Integer handledCount;
 
+        @com.aliyun.core.annotation.NameInMap("LanguageType")
+        private String languageType;
+
         @com.aliyun.core.annotation.NameInMap("LaterCount")
         private Integer laterCount;
 
@@ -196,6 +199,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             this.asapCount = builder.asapCount;
             this.gmtLast = builder.gmtLast;
             this.handledCount = builder.handledCount;
+            this.languageType = builder.languageType;
             this.laterCount = builder.laterCount;
             this.name = builder.name;
             this.nntfCount = builder.nntfCount;
@@ -240,6 +244,13 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
          */
         public Integer getHandledCount() {
             return this.handledCount;
+        }
+
+        /**
+         * @return languageType
+         */
+        public String getLanguageType() {
+            return this.languageType;
         }
 
         /**
@@ -303,6 +314,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private Integer asapCount; 
             private Long gmtLast; 
             private Integer handledCount; 
+            private String languageType; 
             private Integer laterCount; 
             private String name; 
             private Integer nntfCount; 
@@ -353,6 +365,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
              */
             public Builder handledCount(Integer handledCount) {
                 this.handledCount = handledCount;
+                return this;
+            }
+
+            /**
+             * LanguageType.
+             */
+            public Builder languageType(String languageType) {
+                this.languageType = languageType;
                 return this;
             }
 

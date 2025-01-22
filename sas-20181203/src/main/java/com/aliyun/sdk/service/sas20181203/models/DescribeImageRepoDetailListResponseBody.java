@@ -67,7 +67,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>An array that consists of the information about image repositories.</p>
+         * <p>The information about image repositories.</p>
          */
         public Builder imageRepoResponses(java.util.List<ImageRepoResponses> imageRepoResponses) {
             this.imageRepoResponses = imageRepoResponses;
@@ -368,7 +368,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * HasRiskImageCount.
+             * <p>The number of the images on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasRiskImageCount(Integer hasRiskImageCount) {
                 this.hasRiskImageCount = hasRiskImageCount;

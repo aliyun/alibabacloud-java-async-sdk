@@ -74,7 +74,14 @@ public class DescribeAssetsScaProcessNumRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>The type of the application process. Default value: java. Valid values:</p>
+         * <ul>
+         * <li><strong>java</strong></li>
+         * <li><strong>php</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);

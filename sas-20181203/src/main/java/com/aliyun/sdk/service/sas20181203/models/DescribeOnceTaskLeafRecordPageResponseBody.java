@@ -139,6 +139,9 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
+        private String registryType;
+
         @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
@@ -166,6 +169,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             this.nodeName = builder.nodeName;
             this.pod = builder.pod;
             this.regionId = builder.regionId;
+            this.registryType = builder.registryType;
             this.repoId = builder.repoId;
             this.repoName = builder.repoName;
             this.repoNamespace = builder.repoNamespace;
@@ -259,6 +263,13 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return registryType
+         */
+        public String getRegistryType() {
+            return this.registryType;
+        }
+
+        /**
          * @return repoId
          */
         public String getRepoId() {
@@ -305,6 +316,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             private String nodeName; 
             private String pod; 
             private String regionId; 
+            private String registryType; 
             private String repoId; 
             private String repoName; 
             private String repoNamespace; 
@@ -441,6 +453,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RegistryType.
+             */
+            public Builder registryType(String registryType) {
+                this.registryType = registryType;
                 return this;
             }
 

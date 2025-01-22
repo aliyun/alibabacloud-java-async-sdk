@@ -58,6 +58,10 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
+    private String vendorAuthAlias;
+
     private ModifyCloudVendorAccountAKRequest(Builder builder) {
         super(builder);
         this.authIds = builder.authIds;
@@ -70,6 +74,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         this.status = builder.status;
         this.subscriptionIds = builder.subscriptionIds;
         this.tenantId = builder.tenantId;
+        this.vendorAuthAlias = builder.vendorAuthAlias;
     }
 
     public static Builder builder() {
@@ -155,6 +160,13 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return vendorAuthAlias
+     */
+    public String getVendorAuthAlias() {
+        return this.vendorAuthAlias;
+    }
+
     public static final class Builder extends Request.Builder<ModifyCloudVendorAccountAKRequest, Builder> {
         private String authIds; 
         private java.util.List<String> authModules; 
@@ -166,6 +178,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         private Integer status; 
         private java.util.List<String> subscriptionIds; 
         private String tenantId; 
+        private String vendorAuthAlias; 
 
         private Builder() {
             super();
@@ -183,6 +196,7 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
             this.status = request.status;
             this.subscriptionIds = request.subscriptionIds;
             this.tenantId = request.tenantId;
+            this.vendorAuthAlias = request.vendorAuthAlias;
         } 
 
         /**
@@ -336,6 +350,15 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * VendorAuthAlias.
+         */
+        public Builder vendorAuthAlias(String vendorAuthAlias) {
+            this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);
+            this.vendorAuthAlias = vendorAuthAlias;
             return this;
         }
 

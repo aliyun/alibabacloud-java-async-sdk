@@ -523,7 +523,10 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * <p>The progress of the baseline check by using the baseline. This parameter is returned only if the value of the ExecStatus parameter is 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50%</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -579,7 +582,10 @@ public class DescribeStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * UserModifyTime.
+             * <p>The time when the baseline check policy was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-07 10:46:43</p>
              */
             public Builder userModifyTime(Long userModifyTime) {
                 this.userModifyTime = userModifyTime;

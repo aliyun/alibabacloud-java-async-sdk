@@ -287,6 +287,9 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
+        @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
+        private String vendorAuthAlias;
+
         private Data(Builder builder) {
             this.akType = builder.akType;
             this.authId = builder.authId;
@@ -296,6 +299,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             this.serviceStatus = builder.serviceStatus;
             this.status = builder.status;
             this.vendor = builder.vendor;
+            this.vendorAuthAlias = builder.vendorAuthAlias;
         }
 
         public static Builder builder() {
@@ -362,6 +366,13 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             return this.vendor;
         }
 
+        /**
+         * @return vendorAuthAlias
+         */
+        public String getVendorAuthAlias() {
+            return this.vendorAuthAlias;
+        }
+
         public static final class Builder {
             private String akType; 
             private Long authId; 
@@ -371,6 +382,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private Integer serviceStatus; 
             private Integer status; 
             private String vendor; 
+            private String vendorAuthAlias; 
 
             /**
              * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
@@ -474,6 +486,14 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
+                return this;
+            }
+
+            /**
+             * VendorAuthAlias.
+             */
+            public Builder vendorAuthAlias(String vendorAuthAlias) {
+                this.vendorAuthAlias = vendorAuthAlias;
                 return this;
             }
 
