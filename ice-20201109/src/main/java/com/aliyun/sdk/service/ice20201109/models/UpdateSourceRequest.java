@@ -1,0 +1,166 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ice20201109.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link UpdateSourceRequest} extends {@link RequestModel}
+ *
+ * <p>UpdateSourceRequest</p>
+ */
+public class UpdateSourceRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPackageConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String httpPackageConfigurations;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceLocationName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sourceLocationName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sourceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sourceType;
+
+    private UpdateSourceRequest(Builder builder) {
+        super(builder);
+        this.httpPackageConfigurations = builder.httpPackageConfigurations;
+        this.sourceLocationName = builder.sourceLocationName;
+        this.sourceName = builder.sourceName;
+        this.sourceType = builder.sourceType;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static UpdateSourceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return httpPackageConfigurations
+     */
+    public String getHttpPackageConfigurations() {
+        return this.httpPackageConfigurations;
+    }
+
+    /**
+     * @return sourceLocationName
+     */
+    public String getSourceLocationName() {
+        return this.sourceLocationName;
+    }
+
+    /**
+     * @return sourceName
+     */
+    public String getSourceName() {
+        return this.sourceName;
+    }
+
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateSourceRequest, Builder> {
+        private String httpPackageConfigurations; 
+        private String sourceLocationName; 
+        private String sourceName; 
+        private String sourceType; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(UpdateSourceRequest request) {
+            super(request);
+            this.httpPackageConfigurations = request.httpPackageConfigurations;
+            this.sourceLocationName = request.sourceLocationName;
+            this.sourceName = request.sourceName;
+            this.sourceType = request.sourceType;
+        } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{
+         *     &quot;sourceGroupName&quot;: &quot;mySourceGroup-1&quot;,
+         *     &quot;relativePath&quot;: &quot;group1/hls.m3u8&quot;,
+         *     &quot;packageType&quot;: &quot;hls&quot;
+         * }]</p>
+         */
+        public Builder httpPackageConfigurations(String httpPackageConfigurations) {
+            this.putQueryParameter("HttpPackageConfigurations", httpPackageConfigurations);
+            this.httpPackageConfigurations = httpPackageConfigurations;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySourcelocation</p>
+         */
+        public Builder sourceLocationName(String sourceLocationName) {
+            this.putQueryParameter("SourceLocationName", sourceLocationName);
+            this.sourceLocationName = sourceLocationName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySource</p>
+         */
+        public Builder sourceName(String sourceName) {
+            this.putQueryParameter("SourceName", sourceName);
+            this.sourceName = sourceName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodSource</p>
+         */
+        public Builder sourceType(String sourceType) {
+            this.putQueryParameter("SourceType", sourceType);
+            this.sourceType = sourceType;
+            return this;
+        }
+
+        @Override
+        public UpdateSourceRequest build() {
+            return new UpdateSourceRequest(this);
+        } 
+
+    } 
+
+}

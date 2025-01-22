@@ -253,7 +253,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * AxisParams.
+         * <p>The axis configurations. If XAxisFontInterval is set to 0 or left empty, the system automatically determines an optimal interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</p>
          */
         public Builder axisParams(String axisParams) {
             this.putQueryParameter("AxisParams", axisParams);
@@ -262,7 +265,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Background.
+         * <p>The chart background.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Color&quot;:&quot;#000000&quot;,&quot;ImageUrl&quot;:&quot;<a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg%22%7D">http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg&quot;}</a></p>
          */
         public Builder background(String background) {
             this.putQueryParameter("Background", background);
@@ -271,7 +277,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * ChartConfig.
+         * <p>The chart configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</p>
          */
         public Builder chartConfig(String chartConfig) {
             this.putQueryParameter("ChartConfig", chartConfig);
@@ -280,7 +289,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * ChartTitle.
+         * <p>The chart title.</p>
          */
         public Builder chartTitle(String chartTitle) {
             this.putQueryParameter("ChartTitle", chartTitle);
@@ -289,6 +298,13 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
+         * <p>The chart type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Line: line chart</li>
+         * <li>Histogram: bar chart</li>
+         * <li>Pie: pie chart</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +317,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <p>The data source.</p>
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("DataSource", dataSource);
@@ -310,7 +326,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The job description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -319,6 +335,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
+         * <p>The input data for the chart.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,6 +348,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
+         * <p>The output configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +361,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Subtitle.
+         * <p>The subtitle.</p>
          */
         public Builder subtitle(String subtitle) {
             this.putQueryParameter("Subtitle", subtitle);
@@ -352,7 +370,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The job title.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -361,7 +379,7 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * Unit.
+         * <p>Unit</p>
          */
         public Builder unit(String unit) {
             this.putQueryParameter("Unit", unit);
@@ -370,7 +388,10 @@ public class SubmitDynamicChartJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;user&quot;:&quot;data&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

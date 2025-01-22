@@ -41,6 +41,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFavoritePublicMediaResponse> addFavoritePublicMedia(AddFavoritePublicMediaRequest request);
 
     /**
+     * @param request the request parameters of AddMediaConnectFlowInput  AddMediaConnectFlowInputRequest
+     * @return AddMediaConnectFlowInputResponse
+     */
+    CompletableFuture<AddMediaConnectFlowInputResponse> addMediaConnectFlowInput(AddMediaConnectFlowInputRequest request);
+
+    /**
+     * @param request the request parameters of AddMediaConnectFlowOutput  AddMediaConnectFlowOutputRequest
+     * @return AddMediaConnectFlowOutputResponse
+     */
+    CompletableFuture<AddMediaConnectFlowOutputResponse> addMediaConnectFlowOutput(AddMediaConnectFlowOutputRequest request);
+
+    /**
      * @param request the request parameters of AddMediaMarks  AddMediaMarksRequest
      * @return AddMediaMarksResponse
      */
@@ -102,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAvatarTrainingJobResponse> createAvatarTrainingJob(CreateAvatarTrainingJobRequest request);
 
     /**
+     * @param request the request parameters of CreateChannel  CreateChannelRequest
+     * @return CreateChannelResponse
+     */
+    CompletableFuture<CreateChannelResponse> createChannel(CreateChannelRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomTemplate  CreateCustomTemplateRequest
      * @return CreateCustomTemplateResponse
      */
@@ -129,6 +147,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEditingProjectResponse> createEditingProject(CreateEditingProjectRequest request);
 
     /**
+     * @param request the request parameters of CreateLivePackageChannel  CreateLivePackageChannelRequest
+     * @return CreateLivePackageChannelResponse
+     */
+    CompletableFuture<CreateLivePackageChannelResponse> createLivePackageChannel(CreateLivePackageChannelRequest request);
+
+    /**
+     * @param request the request parameters of CreateLivePackageChannelGroup  CreateLivePackageChannelGroupRequest
+     * @return CreateLivePackageChannelGroupResponse
+     */
+    CompletableFuture<CreateLivePackageChannelGroupResponse> createLivePackageChannelGroup(CreateLivePackageChannelGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateLivePackageOriginEndpoint  CreateLivePackageOriginEndpointRequest
+     * @return CreateLivePackageOriginEndpointResponse
+     */
+    CompletableFuture<CreateLivePackageOriginEndpointResponse> createLivePackageOriginEndpoint(CreateLivePackageOriginEndpointRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You must specify a recording template for live stream recording. You can configure information such as the format and duration of a recording in a recording template. The recording format can be M3U8, MP4, or FLV.</p>
      * 
@@ -150,10 +186,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLiveTranscodeTemplateResponse> createLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateMediaConnectFlow  CreateMediaConnectFlowRequest
+     * @return CreateMediaConnectFlowResponse
+     */
+    CompletableFuture<CreateMediaConnectFlowResponse> createMediaConnectFlow(CreateMediaConnectFlowRequest request);
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
     CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
+    /**
+     * @param request the request parameters of CreateProgram  CreateProgramRequest
+     * @return CreateProgramResponse
+     */
+    CompletableFuture<CreateProgramResponse> createProgram(CreateProgramRequest request);
 
     /**
      * <b>description</b> :
@@ -169,6 +217,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSearchLibResponse
      */
     CompletableFuture<CreateSearchLibResponse> createSearchLib(CreateSearchLibRequest request);
+
+    /**
+     * @param request the request parameters of CreateSource  CreateSourceRequest
+     * @return CreateSourceResponse
+     */
+    CompletableFuture<CreateSourceResponse> createSource(CreateSourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateSourceLocation  CreateSourceLocationRequest
+     * @return CreateSourceLocationResponse
+     */
+    CompletableFuture<CreateSourceLocationResponse> createSourceLocation(CreateSourceLocationRequest request);
 
     /**
      * <b>description</b> :
@@ -222,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteChannel  DeleteChannelRequest
+     * @return DeleteChannelResponse
+     */
+    CompletableFuture<DeleteChannelResponse> deleteChannel(DeleteChannelRequest request);
+
+    /**
      * @param request the request parameters of DeleteCustomTemplate  DeleteCustomTemplateRequest
      * @return DeleteCustomTemplateResponse
      */
@@ -256,6 +322,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEditingProjectsResponse
      */
     CompletableFuture<DeleteEditingProjectsResponse> deleteEditingProjects(DeleteEditingProjectsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLivePackageChannel  DeleteLivePackageChannelRequest
+     * @return DeleteLivePackageChannelResponse
+     */
+    CompletableFuture<DeleteLivePackageChannelResponse> deleteLivePackageChannel(DeleteLivePackageChannelRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLivePackageChannelGroup  DeleteLivePackageChannelGroupRequest
+     * @return DeleteLivePackageChannelGroupResponse
+     */
+    CompletableFuture<DeleteLivePackageChannelGroupResponse> deleteLivePackageChannelGroup(DeleteLivePackageChannelGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLivePackageOriginEndpoint  DeleteLivePackageOriginEndpointRequest
+     * @return DeleteLivePackageOriginEndpointResponse
+     */
+    CompletableFuture<DeleteLivePackageOriginEndpointResponse> deleteLivePackageOriginEndpoint(DeleteLivePackageOriginEndpointRequest request);
 
     /**
      * @param request the request parameters of DeleteLiveRecordFiles  DeleteLiveRecordFilesRequest
@@ -294,6 +378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLiveTranscodeTemplateResponse> deleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest request);
 
     /**
+     * @param request the request parameters of DeleteMediaConnectFlow  DeleteMediaConnectFlowRequest
+     * @return DeleteMediaConnectFlowResponse
+     */
+    CompletableFuture<DeleteMediaConnectFlowResponse> deleteMediaConnectFlow(DeleteMediaConnectFlowRequest request);
+
+    /**
      * @param request the request parameters of DeleteMediaFromSearchLib  DeleteMediaFromSearchLibRequest
      * @return DeleteMediaFromSearchLibResponse
      */
@@ -327,10 +417,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePlayInfoResponse> deletePlayInfo(DeletePlayInfoRequest request);
 
     /**
+     * @param request the request parameters of DeleteProgram  DeleteProgramRequest
+     * @return DeleteProgramResponse
+     */
+    CompletableFuture<DeleteProgramResponse> deleteProgram(DeleteProgramRequest request);
+
+    /**
      * @param request the request parameters of DeleteSmartJob  DeleteSmartJobRequest
      * @return DeleteSmartJobResponse
      */
     CompletableFuture<DeleteSmartJobResponse> deleteSmartJob(DeleteSmartJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSource  DeleteSourceRequest
+     * @return DeleteSourceResponse
+     */
+    CompletableFuture<DeleteSourceResponse> deleteSource(DeleteSourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSourceLocation  DeleteSourceLocationRequest
+     * @return DeleteSourceLocationResponse
+     */
+    CompletableFuture<DeleteSourceLocationResponse> deleteSourceLocation(DeleteSourceLocationRequest request);
 
     /**
      * <b>description</b> :
@@ -457,6 +565,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCategoriesResponse> getCategories(GetCategoriesRequest request);
 
     /**
+     * @param request the request parameters of GetChannel  GetChannelRequest
+     * @return GetChannelResponse
+     */
+    CompletableFuture<GetChannelResponse> getChannel(GetChannelRequest request);
+
+    /**
      * @param request the request parameters of GetContentAnalyzeConfig  GetContentAnalyzeConfigRequest
      * @return GetContentAnalyzeConfigResponse
      */
@@ -561,6 +675,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLiveEditingJobResponse> getLiveEditingJob(GetLiveEditingJobRequest request);
 
     /**
+     * @param request the request parameters of GetLivePackageChannel  GetLivePackageChannelRequest
+     * @return GetLivePackageChannelResponse
+     */
+    CompletableFuture<GetLivePackageChannelResponse> getLivePackageChannel(GetLivePackageChannelRequest request);
+
+    /**
+     * @param request the request parameters of GetLivePackageChannelGroup  GetLivePackageChannelGroupRequest
+     * @return GetLivePackageChannelGroupResponse
+     */
+    CompletableFuture<GetLivePackageChannelGroupResponse> getLivePackageChannelGroup(GetLivePackageChannelGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetLivePackageOriginEndpoint  GetLivePackageOriginEndpointRequest
+     * @return GetLivePackageOriginEndpointResponse
+     */
+    CompletableFuture<GetLivePackageOriginEndpointResponse> getLivePackageOriginEndpoint(GetLivePackageOriginEndpointRequest request);
+
+    /**
      * @param request the request parameters of GetLiveRecordJob  GetLiveRecordJobRequest
      * @return GetLiveRecordJobResponse
      */
@@ -595,6 +727,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLiveTranscodeTemplateResponse
      */
     CompletableFuture<GetLiveTranscodeTemplateResponse> getLiveTranscodeTemplate(GetLiveTranscodeTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetMediaConnectFlow  GetMediaConnectFlowRequest
+     * @return GetMediaConnectFlowResponse
+     */
+    CompletableFuture<GetMediaConnectFlowResponse> getMediaConnectFlow(GetMediaConnectFlowRequest request);
+
+    /**
+     * @param request the request parameters of GetMediaConvertJob  GetMediaConvertJobRequest
+     * @return GetMediaConvertJobResponse
+     */
+    CompletableFuture<GetMediaConvertJobResponse> getMediaConvertJob(GetMediaConvertJobRequest request);
 
     /**
      * <b>description</b> :
@@ -645,6 +789,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPlayInfoResponse> getPlayInfo(GetPlayInfoRequest request);
 
     /**
+     * @param request the request parameters of GetProgram  GetProgramRequest
+     * @return GetProgramResponse
+     */
+    CompletableFuture<GetProgramResponse> getProgram(GetProgramRequest request);
+
+    /**
      * @param request the request parameters of GetProjectExportJob  GetProjectExportJobRequest
      * @return GetProjectExportJobResponse
      */
@@ -673,6 +823,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSnapshotUrlsResponse
      */
     CompletableFuture<GetSnapshotUrlsResponse> getSnapshotUrls(GetSnapshotUrlsRequest request);
+
+    /**
+     * @param request the request parameters of GetSource  GetSourceRequest
+     * @return GetSourceResponse
+     */
+    CompletableFuture<GetSourceResponse> getSource(GetSourceRequest request);
+
+    /**
+     * @param request the request parameters of GetSourceLocation  GetSourceLocationRequest
+     * @return GetSourceLocationResponse
+     */
+    CompletableFuture<GetSourceLocationResponse> getSourceLocation(GetSourceLocationRequest request);
 
     /**
      * @param request the request parameters of GetStorageList  GetStorageListRequest
@@ -755,6 +917,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request);
 
     /**
+     * @param request the request parameters of ListAlerts  ListAlertsRequest
+     * @return ListAlertsResponse
+     */
+    CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request);
+
+    /**
      * @param request the request parameters of ListAllPublicMediaTags  ListAllPublicMediaTagsRequest
      * @return ListAllPublicMediaTagsResponse
      */
@@ -777,6 +945,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBatchMediaProducingJobsResponse
      */
     CompletableFuture<ListBatchMediaProducingJobsResponse> listBatchMediaProducingJobs(ListBatchMediaProducingJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListChannelAlerts  ListChannelAlertsRequest
+     * @return ListChannelAlertsResponse
+     */
+    CompletableFuture<ListChannelAlertsResponse> listChannelAlerts(ListChannelAlertsRequest request);
+
+    /**
+     * @param request the request parameters of ListChannels  ListChannelsRequest
+     * @return ListChannelsResponse
+     */
+    CompletableFuture<ListChannelsResponse> listChannels(ListChannelsRequest request);
 
     /**
      * @param request the request parameters of ListCustomTemplates  ListCustomTemplatesRequest
@@ -822,6 +1002,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEditingProjectsResponse
      */
     CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListLivePackageChannelGroups  ListLivePackageChannelGroupsRequest
+     * @return ListLivePackageChannelGroupsResponse
+     */
+    CompletableFuture<ListLivePackageChannelGroupsResponse> listLivePackageChannelGroups(ListLivePackageChannelGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListLivePackageChannels  ListLivePackageChannelsRequest
+     * @return ListLivePackageChannelsResponse
+     */
+    CompletableFuture<ListLivePackageChannelsResponse> listLivePackageChannels(ListLivePackageChannelsRequest request);
+
+    /**
+     * @param request the request parameters of ListLivePackageOriginEndpoints  ListLivePackageOriginEndpointsRequest
+     * @return ListLivePackageOriginEndpointsResponse
+     */
+    CompletableFuture<ListLivePackageOriginEndpointsResponse> listLivePackageOriginEndpoints(ListLivePackageOriginEndpointsRequest request);
 
     /**
      * @param request the request parameters of ListLiveRecordFiles  ListLiveRecordFilesRequest
@@ -911,10 +1109,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
 
     /**
+     * @param request the request parameters of ListPrograms  ListProgramsRequest
+     * @return ListProgramsResponse
+     */
+    CompletableFuture<ListProgramsResponse> listPrograms(ListProgramsRequest request);
+
+    /**
      * @param request the request parameters of ListPublicMediaBasicInfos  ListPublicMediaBasicInfosRequest
      * @return ListPublicMediaBasicInfosResponse
      */
     CompletableFuture<ListPublicMediaBasicInfosResponse> listPublicMediaBasicInfos(ListPublicMediaBasicInfosRequest request);
+
+    /**
+     * @param request the request parameters of ListSchedules  ListSchedulesRequest
+     * @return ListSchedulesResponse
+     */
+    CompletableFuture<ListSchedulesResponse> listSchedules(ListSchedulesRequest request);
 
     /**
      * @param request the request parameters of ListSearchLib  ListSearchLibRequest
@@ -945,6 +1155,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSnapshotJobsResponse
      */
     CompletableFuture<ListSnapshotJobsResponse> listSnapshotJobs(ListSnapshotJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListSourceLocations  ListSourceLocationsRequest
+     * @return ListSourceLocationsResponse
+     */
+    CompletableFuture<ListSourceLocationsResponse> listSourceLocations(ListSourceLocationsRequest request);
+
+    /**
+     * @param request the request parameters of ListSources  ListSourcesRequest
+     * @return ListSourcesResponse
+     */
+    CompletableFuture<ListSourcesResponse> listSources(ListSourcesRequest request);
 
     /**
      * <b>description</b> :
@@ -1243,6 +1465,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartAIAgentInstanceResponse> startAIAgentInstance(StartAIAgentInstanceRequest request);
 
     /**
+     * @param request the request parameters of StartChannel  StartChannelRequest
+     * @return StartChannelResponse
+     */
+    CompletableFuture<StartChannelResponse> startChannel(StartChannelRequest request);
+
+    /**
      * @param request the request parameters of StartRtcRobotInstance  StartRtcRobotInstanceRequest
      * @return StartRtcRobotInstanceResponse
      */
@@ -1265,6 +1493,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopAIAgentInstanceResponse
      */
     CompletableFuture<StopAIAgentInstanceResponse> stopAIAgentInstance(StopAIAgentInstanceRequest request);
+
+    /**
+     * @param request the request parameters of StopChannel  StopChannelRequest
+     * @return StopChannelResponse
+     */
+    CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request);
 
     /**
      * @param request the request parameters of StopRtcRobotInstance  StopRtcRobotInstanceRequest
@@ -1334,6 +1568,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitDNAJobResponse> submitDNAJob(SubmitDNAJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This feature is available only in the China (Shanghai) region.</p>
+     * <ul>
+     * <li>You can add a title, subtitle, data source, and unit to a chart and specify the font and font size. For supported fonts, see <a href="https://help.aliyun.com/document_detail/449567.html">Fonts</a>.</li>
+     * <li>This feature provides five styles of animated charts: normal, mystery, lively, business, and green.</li>
+     * <li>You can set the background color or image.</li>
+     * <li>You can set the animation duration, size, and bitrate.
+     * Examples</li>
+     * <li>Line chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/line.xlsx">Sample datasheet</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/line.mp4">Effect</a></li>
+     * <li>Bar chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/histgram.xlsx">Sample datasheet</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/histgram.mp4">Effect</a></li>
+     * <li>Pie chart: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/pie.xlsx">Sample datasheet</a>, <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/pie.mp4">Effect</a></li>
+     * <li>Normal: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Normal.mp4">Effect</a></li>
+     * <li>Mystery: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Mystery.mp4">Effect</a></li>
+     * <li>Lively: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Lively.mp4">Effect</a></li>
+     * <li>Business: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Business.mp4">Effect</a></li>
+     * <li>Green: <a href="https://ice-public-media.oss-cn-shanghai.aliyuncs.com/smart/dynamicChart/Green.mp4">Effect</a></li>
+     * </ul>
+     * 
      * @param request the request parameters of SubmitDynamicChartJob  SubmitDynamicChartJobRequest
      * @return SubmitDynamicChartJobResponse
      */
@@ -1403,6 +1655,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitMediaCensorJobResponse
      */
     CompletableFuture<SubmitMediaCensorJobResponse> submitMediaCensorJob(SubmitMediaCensorJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitMediaConvertJob  SubmitMediaConvertJobRequest
+     * @return SubmitMediaConvertJobResponse
+     */
+    CompletableFuture<SubmitMediaConvertJobResponse> submitMediaConvertJob(SubmitMediaConvertJobRequest request);
 
     /**
      * <b>description</b> :
@@ -1562,6 +1820,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
 
     /**
+     * @param request the request parameters of UpdateChannel  UpdateChannelRequest
+     * @return UpdateChannelResponse
+     */
+    CompletableFuture<UpdateChannelResponse> updateChannel(UpdateChannelRequest request);
+
+    /**
      * @param request the request parameters of UpdateCustomTemplate  UpdateCustomTemplateRequest
      * @return UpdateCustomTemplateResponse
      */
@@ -1578,6 +1842,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEditingProjectResponse
      */
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLivePackageChannel  UpdateLivePackageChannelRequest
+     * @return UpdateLivePackageChannelResponse
+     */
+    CompletableFuture<UpdateLivePackageChannelResponse> updateLivePackageChannel(UpdateLivePackageChannelRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLivePackageChannelCredentials  UpdateLivePackageChannelCredentialsRequest
+     * @return UpdateLivePackageChannelCredentialsResponse
+     */
+    CompletableFuture<UpdateLivePackageChannelCredentialsResponse> updateLivePackageChannelCredentials(UpdateLivePackageChannelCredentialsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLivePackageChannelGroup  UpdateLivePackageChannelGroupRequest
+     * @return UpdateLivePackageChannelGroupResponse
+     */
+    CompletableFuture<UpdateLivePackageChannelGroupResponse> updateLivePackageChannelGroup(UpdateLivePackageChannelGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLivePackageOriginEndpoint  UpdateLivePackageOriginEndpointRequest
+     * @return UpdateLivePackageOriginEndpointResponse
+     */
+    CompletableFuture<UpdateLivePackageOriginEndpointResponse> updateLivePackageOriginEndpoint(UpdateLivePackageOriginEndpointRequest request);
 
     /**
      * <b>description</b> :
@@ -1613,6 +1901,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLiveTranscodeTemplateResponse> updateLiveTranscodeTemplate(UpdateLiveTranscodeTemplateRequest request);
 
     /**
+     * @param request the request parameters of UpdateMediaConnectFlowStatus  UpdateMediaConnectFlowStatusRequest
+     * @return UpdateMediaConnectFlowStatusResponse
+     */
+    CompletableFuture<UpdateMediaConnectFlowStatusResponse> updateMediaConnectFlowStatus(UpdateMediaConnectFlowStatusRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If the MediaId parameter is specified, the MediaId parameter is preferentially used for the query. If the MediaId parameter is left empty, the InputURL parameter must be specified. The request ID and media asset ID are returned. You cannot modify the input URL of a media asset by specifying the ID of the media asset.</p>
      * 
@@ -1640,10 +1934,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
     /**
+     * @param request the request parameters of UpdateProgram  UpdateProgramRequest
+     * @return UpdateProgramResponse
+     */
+    CompletableFuture<UpdateProgramResponse> updateProgram(UpdateProgramRequest request);
+
+    /**
      * @param request the request parameters of UpdateRtcRobotInstance  UpdateRtcRobotInstanceRequest
      * @return UpdateRtcRobotInstanceResponse
      */
     CompletableFuture<UpdateRtcRobotInstanceResponse> updateRtcRobotInstance(UpdateRtcRobotInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSource  UpdateSourceRequest
+     * @return UpdateSourceResponse
+     */
+    CompletableFuture<UpdateSourceResponse> updateSource(UpdateSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSourceLocation  UpdateSourceLocationRequest
+     * @return UpdateSourceLocationResponse
+     */
+    CompletableFuture<UpdateSourceLocationResponse> updateSourceLocation(UpdateSourceLocationRequest request);
 
     /**
      * <b>description</b> :
