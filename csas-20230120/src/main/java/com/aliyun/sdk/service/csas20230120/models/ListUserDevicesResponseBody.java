@@ -209,6 +209,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DlpStatus")
         private String dlpStatus;
 
+        @com.aliyun.core.annotation.NameInMap("EdrStatus")
+        private String edrStatus;
+
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
@@ -262,6 +265,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.deviceVersion = builder.deviceVersion;
             this.disk = builder.disk;
             this.dlpStatus = builder.dlpStatus;
+            this.edrStatus = builder.edrStatus;
             this.hostname = builder.hostname;
             this.iaStatus = builder.iaStatus;
             this.innerIP = builder.innerIP;
@@ -377,6 +381,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return edrStatus
+         */
+        public String getEdrStatus() {
+            return this.edrStatus;
+        }
+
+        /**
          * @return hostname
          */
         public String getHostname() {
@@ -481,6 +492,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String deviceVersion; 
             private String disk; 
             private String dlpStatus; 
+            private String edrStatus; 
             private String hostname; 
             private String iaStatus; 
             private String innerIP; 
@@ -596,6 +608,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder dlpStatus(String dlpStatus) {
                 this.dlpStatus = dlpStatus;
+                return this;
+            }
+
+            /**
+             * EdrStatus.
+             */
+            public Builder edrStatus(String edrStatus) {
+                this.edrStatus = edrStatus;
                 return this;
             }
 

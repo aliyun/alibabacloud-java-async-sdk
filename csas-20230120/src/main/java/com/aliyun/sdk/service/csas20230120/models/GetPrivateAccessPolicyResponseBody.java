@@ -229,6 +229,9 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagIds")
         private java.util.List<String> tagIds;
 
+        @com.aliyun.core.annotation.NameInMap("TriggerTemplateId")
+        private String triggerTemplateId;
+
         @com.aliyun.core.annotation.NameInMap("UserGroupIds")
         private java.util.List<String> userGroupIds;
 
@@ -249,6 +252,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.status = builder.status;
             this.tagIds = builder.tagIds;
+            this.triggerTemplateId = builder.triggerTemplateId;
             this.userGroupIds = builder.userGroupIds;
             this.userGroupMode = builder.userGroupMode;
         }
@@ -353,6 +357,13 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return triggerTemplateId
+         */
+        public String getTriggerTemplateId() {
+            return this.triggerTemplateId;
+        }
+
+        /**
          * @return userGroupIds
          */
         public java.util.List<String> getUserGroupIds() {
@@ -380,6 +391,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             private Integer priority; 
             private String status; 
             private java.util.List<String> tagIds; 
+            private String triggerTemplateId; 
             private java.util.List<String> userGroupIds; 
             private String userGroupMode; 
 
@@ -484,6 +496,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
+                return this;
+            }
+
+            /**
+             * TriggerTemplateId.
+             */
+            public Builder triggerTemplateId(String triggerTemplateId) {
+                this.triggerTemplateId = triggerTemplateId;
                 return this;
             }
 

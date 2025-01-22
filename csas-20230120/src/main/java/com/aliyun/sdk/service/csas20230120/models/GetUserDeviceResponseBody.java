@@ -256,6 +256,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DlpStatus")
         private String dlpStatus;
 
+        @com.aliyun.core.annotation.NameInMap("EdrStatus")
+        private String edrStatus;
+
         @com.aliyun.core.annotation.NameInMap("HistoryUsers")
         private java.util.List<HistoryUsers> historyUsers;
 
@@ -312,6 +315,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             this.deviceVersion = builder.deviceVersion;
             this.disk = builder.disk;
             this.dlpStatus = builder.dlpStatus;
+            this.edrStatus = builder.edrStatus;
             this.historyUsers = builder.historyUsers;
             this.hostname = builder.hostname;
             this.iaStatus = builder.iaStatus;
@@ -428,6 +432,13 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
 
         /**
+         * @return edrStatus
+         */
+        public String getEdrStatus() {
+            return this.edrStatus;
+        }
+
+        /**
          * @return historyUsers
          */
         public java.util.List<HistoryUsers> getHistoryUsers() {
@@ -539,6 +550,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private String deviceVersion; 
             private String disk; 
             private String dlpStatus; 
+            private String edrStatus; 
             private java.util.List<HistoryUsers> historyUsers; 
             private String hostname; 
             private String iaStatus; 
@@ -655,6 +667,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
              */
             public Builder dlpStatus(String dlpStatus) {
                 this.dlpStatus = dlpStatus;
+                return this;
+            }
+
+            /**
+             * EdrStatus.
+             */
+            public Builder edrStatus(String edrStatus) {
+                this.edrStatus = edrStatus;
                 return this;
             }
 

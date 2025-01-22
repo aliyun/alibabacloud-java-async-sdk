@@ -67,6 +67,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
     private java.util.List<String> tagIds;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TriggerTemplateId")
+    private String triggerTemplateId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private java.util.List<String> userGroupIds;
 
@@ -88,6 +92,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         this.priority = builder.priority;
         this.status = builder.status;
         this.tagIds = builder.tagIds;
+        this.triggerTemplateId = builder.triggerTemplateId;
         this.userGroupIds = builder.userGroupIds;
         this.userGroupMode = builder.userGroupMode;
     }
@@ -190,6 +195,13 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
     }
 
     /**
+     * @return triggerTemplateId
+     */
+    public String getTriggerTemplateId() {
+        return this.triggerTemplateId;
+    }
+
+    /**
      * @return userGroupIds
      */
     public java.util.List<String> getUserGroupIds() {
@@ -216,6 +228,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         private Integer priority; 
         private String status; 
         private java.util.List<String> tagIds; 
+        private String triggerTemplateId; 
         private java.util.List<String> userGroupIds; 
         private String userGroupMode; 
 
@@ -237,6 +250,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
             this.priority = request.priority;
             this.status = request.status;
             this.tagIds = request.tagIds;
+            this.triggerTemplateId = request.triggerTemplateId;
             this.userGroupIds = request.userGroupIds;
             this.userGroupMode = request.userGroupMode;
         } 
@@ -349,6 +363,15 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
+            return this;
+        }
+
+        /**
+         * TriggerTemplateId.
+         */
+        public Builder triggerTemplateId(String triggerTemplateId) {
+            this.putBodyParameter("TriggerTemplateId", triggerTemplateId);
+            this.triggerTemplateId = triggerTemplateId;
             return this;
         }
 

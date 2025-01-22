@@ -22,6 +22,10 @@ public class ListUserDevicesRequest extends Request {
     private java.util.List<String> appStatuses;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersions")
+    private java.util.List<String> appVersions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long currentPage;
@@ -98,6 +102,7 @@ public class ListUserDevicesRequest extends Request {
     private ListUserDevicesRequest(Builder builder) {
         super(builder);
         this.appStatuses = builder.appStatuses;
+        this.appVersions = builder.appVersions;
         this.currentPage = builder.currentPage;
         this.department = builder.department;
         this.deviceBelong = builder.deviceBelong;
@@ -136,6 +141,13 @@ public class ListUserDevicesRequest extends Request {
      */
     public java.util.List<String> getAppStatuses() {
         return this.appStatuses;
+    }
+
+    /**
+     * @return appVersions
+     */
+    public java.util.List<String> getAppVersions() {
+        return this.appVersions;
     }
 
     /**
@@ -266,6 +278,7 @@ public class ListUserDevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListUserDevicesRequest, Builder> {
         private java.util.List<String> appStatuses; 
+        private java.util.List<String> appVersions; 
         private Long currentPage; 
         private String department; 
         private String deviceBelong; 
@@ -292,6 +305,7 @@ public class ListUserDevicesRequest extends Request {
         private Builder(ListUserDevicesRequest request) {
             super(request);
             this.appStatuses = request.appStatuses;
+            this.appVersions = request.appVersions;
             this.currentPage = request.currentPage;
             this.department = request.department;
             this.deviceBelong = request.deviceBelong;
@@ -318,6 +332,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder appStatuses(java.util.List<String> appStatuses) {
             this.putQueryParameter("AppStatuses", appStatuses);
             this.appStatuses = appStatuses;
+            return this;
+        }
+
+        /**
+         * AppVersions.
+         */
+        public Builder appVersions(java.util.List<String> appVersions) {
+            this.putQueryParameter("AppVersions", appVersions);
+            this.appVersions = appVersions;
             return this;
         }
 
