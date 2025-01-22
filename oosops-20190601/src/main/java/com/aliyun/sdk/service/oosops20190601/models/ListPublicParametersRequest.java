@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicParametersRequest</p>
  */
 public class ListPublicParametersRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateAfter")
+    private String createdDateAfter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateBefore")
+    private String createdDateBefore;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -50,6 +63,8 @@ public class ListPublicParametersRequest extends Request {
 
     private ListPublicParametersRequest(Builder builder) {
         super(builder);
+        this.createdDateAfter = builder.createdDateAfter;
+        this.createdDateBefore = builder.createdDateBefore;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
@@ -72,6 +87,20 @@ public class ListPublicParametersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return createdDateAfter
+     */
+    public String getCreatedDateAfter() {
+        return this.createdDateAfter;
+    }
+
+    /**
+     * @return createdDateBefore
+     */
+    public String getCreatedDateBefore() {
+        return this.createdDateBefore;
     }
 
     /**
@@ -138,6 +167,8 @@ public class ListPublicParametersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPublicParametersRequest, Builder> {
+        private String createdDateAfter; 
+        private String createdDateBefore; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -154,6 +185,8 @@ public class ListPublicParametersRequest extends Request {
 
         private Builder(ListPublicParametersRequest request) {
             super(request);
+            this.createdDateAfter = request.createdDateAfter;
+            this.createdDateBefore = request.createdDateBefore;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
@@ -164,6 +197,24 @@ public class ListPublicParametersRequest extends Request {
             this.sortField = request.sortField;
             this.sortOrder = request.sortOrder;
         } 
+
+        /**
+         * CreatedDateAfter.
+         */
+        public Builder createdDateAfter(String createdDateAfter) {
+            this.putQueryParameter("CreatedDateAfter", createdDateAfter);
+            this.createdDateAfter = createdDateAfter;
+            return this;
+        }
+
+        /**
+         * CreatedDateBefore.
+         */
+        public Builder createdDateBefore(String createdDateBefore) {
+            this.putQueryParameter("CreatedDateBefore", createdDateBefore);
+            this.createdDateBefore = createdDateBefore;
+            return this;
+        }
 
         /**
          * MaxResults.

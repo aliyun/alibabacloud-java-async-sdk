@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListPublicTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Templates")
-    private java.util.List < Templates> templates;
+    private java.util.List<Templates> templates;
 
     private ListPublicTemplatesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListPublicTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
@@ -71,7 +76,7 @@ public class ListPublicTemplatesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
 
         /**
          * MaxResults.
@@ -100,7 +105,7 @@ public class ListPublicTemplatesResponseBody extends TeaModel {
         /**
          * Templates.
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserExecutionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Executions")
-    private java.util.List < Executions> executions;
+    private java.util.List<Executions> executions;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
     /**
      * @return executions
      */
-    public java.util.List < Executions> getExecutions() {
+    public java.util.List<Executions> getExecutions() {
         return this.executions;
     }
 
@@ -68,7 +73,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Executions> executions; 
+        private java.util.List<Executions> executions; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
         /**
          * Executions.
          */
-        public Builder executions(java.util.List < Executions> executions) {
+        public Builder executions(java.util.List<Executions> executions) {
             this.executions = executions;
             return this;
         }
@@ -212,7 +217,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
         private String createDate;
 
         @com.aliyun.core.annotation.NameInMap("CurrentTasks")
-        private java.util.List < CurrentTasks> currentTasks;
+        private java.util.List<CurrentTasks> currentTasks;
 
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
@@ -317,7 +322,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
         /**
          * @return currentTasks
          */
-        public java.util.List < CurrentTasks> getCurrentTasks() {
+        public java.util.List<CurrentTasks> getCurrentTasks() {
             return this.currentTasks;
         }
 
@@ -450,7 +455,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
         public static final class Builder {
             private String counters; 
             private String createDate; 
-            private java.util.List < CurrentTasks> currentTasks; 
+            private java.util.List<CurrentTasks> currentTasks; 
             private String endDate; 
             private String executedBy; 
             private String executionId; 
@@ -489,7 +494,7 @@ public class ListUserExecutionsResponseBody extends TeaModel {
             /**
              * CurrentTasks.
              */
-            public Builder currentTasks(java.util.List < CurrentTasks> currentTasks) {
+            public Builder currentTasks(java.util.List<CurrentTasks> currentTasks) {
                 this.currentTasks = currentTasks;
                 return this;
             }

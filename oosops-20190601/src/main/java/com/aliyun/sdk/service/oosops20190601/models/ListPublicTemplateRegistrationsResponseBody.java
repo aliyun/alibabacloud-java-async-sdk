@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Registrations")
-    private java.util.List < Registrations> registrations;
+    private java.util.List<Registrations> registrations;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -56,7 +61,7 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
     /**
      * @return registrations
      */
-    public java.util.List < Registrations> getRegistrations() {
+    public java.util.List<Registrations> getRegistrations() {
         return this.registrations;
     }
 
@@ -70,7 +75,7 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Registrations> registrations; 
+        private java.util.List<Registrations> registrations; 
         private String requestId; 
 
         /**
@@ -92,7 +97,7 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         /**
          * Registrations.
          */
-        public Builder registrations(java.util.List < Registrations> registrations) {
+        public Builder registrations(java.util.List<Registrations> registrations) {
             this.registrations = registrations;
             return this;
         }

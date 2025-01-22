@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListUserInventoryEntriesResponseBody extends TeaModel {
     private String captureTime;
 
     @com.aliyun.core.annotation.NameInMap("Entries")
-    private java.util.List < java.util.Map<String, ?>> entries;
+    private java.util.List<java.util.Map<String, ?>> entries;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -65,7 +70,7 @@ public class ListUserInventoryEntriesResponseBody extends TeaModel {
     /**
      * @return entries
      */
-    public java.util.List < java.util.Map<String, ?>> getEntries() {
+    public java.util.List<java.util.Map<String, ?>> getEntries() {
         return this.entries;
     }
 
@@ -113,7 +118,7 @@ public class ListUserInventoryEntriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String captureTime; 
-        private java.util.List < java.util.Map<String, ?>> entries; 
+        private java.util.List<java.util.Map<String, ?>> entries; 
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -132,7 +137,7 @@ public class ListUserInventoryEntriesResponseBody extends TeaModel {
         /**
          * Entries.
          */
-        public Builder entries(java.util.List < java.util.Map<String, ?>> entries) {
+        public Builder entries(java.util.List<java.util.Map<String, ?>> entries) {
             this.entries = entries;
             return this;
         }

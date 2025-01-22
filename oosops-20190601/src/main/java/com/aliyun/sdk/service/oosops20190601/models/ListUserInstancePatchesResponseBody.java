@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListUserInstancePatchesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Patches")
-    private java.util.List < Patches> patches;
+    private java.util.List<Patches> patches;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -56,7 +61,7 @@ public class ListUserInstancePatchesResponseBody extends TeaModel {
     /**
      * @return patches
      */
-    public java.util.List < Patches> getPatches() {
+    public java.util.List<Patches> getPatches() {
         return this.patches;
     }
 
@@ -70,7 +75,7 @@ public class ListUserInstancePatchesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Patches> patches; 
+        private java.util.List<Patches> patches; 
         private String requestId; 
 
         /**
@@ -92,7 +97,7 @@ public class ListUserInstancePatchesResponseBody extends TeaModel {
         /**
          * Patches.
          */
-        public Builder patches(java.util.List < Patches> patches) {
+        public Builder patches(java.util.List<Patches> patches) {
             this.patches = patches;
             return this;
         }

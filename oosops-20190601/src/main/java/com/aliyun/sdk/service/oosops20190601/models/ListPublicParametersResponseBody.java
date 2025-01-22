@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPublicParametersResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListPublicParametersResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -81,7 +86,7 @@ public class ListPublicParametersResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -104,7 +109,7 @@ public class ListPublicParametersResponseBody extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }

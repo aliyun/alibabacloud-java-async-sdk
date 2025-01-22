@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDefaultQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Quotas")
-    private java.util.List < Quotas> quotas;
+    private java.util.List<Quotas> quotas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListDefaultQuotaResponseBody extends TeaModel {
     /**
      * @return quotas
      */
-    public java.util.List < Quotas> getQuotas() {
+    public java.util.List<Quotas> getQuotas() {
         return this.quotas;
     }
 
@@ -46,13 +51,13 @@ public class ListDefaultQuotaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Quotas> quotas; 
+        private java.util.List<Quotas> quotas; 
         private String requestId; 
 
         /**
          * Quotas.
          */
-        public Builder quotas(java.util.List < Quotas> quotas) {
+        public Builder quotas(java.util.List<Quotas> quotas) {
             this.quotas = quotas;
             return this;
         }

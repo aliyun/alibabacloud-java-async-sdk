@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFailureMsgsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailureMsgs")
-    private java.util.List < FailureMsgs> failureMsgs;
+    private java.util.List<FailureMsgs> failureMsgs;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListFailureMsgsResponseBody extends TeaModel {
     /**
      * @return failureMsgs
      */
-    public java.util.List < FailureMsgs> getFailureMsgs() {
+    public java.util.List<FailureMsgs> getFailureMsgs() {
         return this.failureMsgs;
     }
 
@@ -68,7 +73,7 @@ public class ListFailureMsgsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FailureMsgs> failureMsgs; 
+        private java.util.List<FailureMsgs> failureMsgs; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListFailureMsgsResponseBody extends TeaModel {
         /**
          * FailureMsgs.
          */
-        public Builder failureMsgs(java.util.List < FailureMsgs> failureMsgs) {
+        public Builder failureMsgs(java.util.List<FailureMsgs> failureMsgs) {
             this.failureMsgs = failureMsgs;
             return this;
         }

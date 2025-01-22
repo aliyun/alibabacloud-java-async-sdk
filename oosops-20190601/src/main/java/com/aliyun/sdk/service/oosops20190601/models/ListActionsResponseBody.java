@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListActionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Actions")
-    private java.util.List < Actions> actions;
+    private java.util.List<Actions> actions;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListActionsResponseBody extends TeaModel {
     /**
      * @return actions
      */
-    public java.util.List < Actions> getActions() {
+    public java.util.List<Actions> getActions() {
         return this.actions;
     }
 
@@ -68,7 +73,7 @@ public class ListActionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Actions> actions; 
+        private java.util.List<Actions> actions; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListActionsResponseBody extends TeaModel {
         /**
          * Actions.
          */
-        public Builder actions(java.util.List < Actions> actions) {
+        public Builder actions(java.util.List<Actions> actions) {
             this.actions = actions;
             return this;
         }

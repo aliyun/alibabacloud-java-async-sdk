@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListUserTaskExecutionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskExecutions")
-    private java.util.List < TaskExecutions> taskExecutions;
+    private java.util.List<TaskExecutions> taskExecutions;
 
     private ListUserTaskExecutionsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListUserTaskExecutionsResponseBody extends TeaModel {
     /**
      * @return taskExecutions
      */
-    public java.util.List < TaskExecutions> getTaskExecutions() {
+    public java.util.List<TaskExecutions> getTaskExecutions() {
         return this.taskExecutions;
     }
 
@@ -71,7 +76,7 @@ public class ListUserTaskExecutionsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TaskExecutions> taskExecutions; 
+        private java.util.List<TaskExecutions> taskExecutions; 
 
         /**
          * MaxResults.
@@ -100,7 +105,7 @@ public class ListUserTaskExecutionsResponseBody extends TeaModel {
         /**
          * TaskExecutions.
          */
-        public Builder taskExecutions(java.util.List < TaskExecutions> taskExecutions) {
+        public Builder taskExecutions(java.util.List<TaskExecutions> taskExecutions) {
             this.taskExecutions = taskExecutions;
             return this;
         }
