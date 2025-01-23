@@ -28,12 +28,14 @@ public class RunStyleWritingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("learningSamples")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> learningSamples;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("processStage")
+    private String processStage;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("referenceMaterials")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> referenceMaterials;
 
     @com.aliyun.core.annotation.Body
@@ -42,8 +44,12 @@ public class RunStyleWritingRequest extends Request {
     private String styleFeature;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("useSearch")
+    private Boolean useSearch;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("writingTheme")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1000)
+    @com.aliyun.core.annotation.Validation(maxLength = 2000)
     private String writingTheme;
 
     private RunStyleWritingRequest(Builder builder) {
@@ -51,8 +57,10 @@ public class RunStyleWritingRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
         this.learningSamples = builder.learningSamples;
+        this.processStage = builder.processStage;
         this.referenceMaterials = builder.referenceMaterials;
         this.styleFeature = builder.styleFeature;
+        this.useSearch = builder.useSearch;
         this.writingTheme = builder.writingTheme;
     }
 
@@ -91,6 +99,13 @@ public class RunStyleWritingRequest extends Request {
     }
 
     /**
+     * @return processStage
+     */
+    public String getProcessStage() {
+        return this.processStage;
+    }
+
+    /**
      * @return referenceMaterials
      */
     public java.util.List<String> getReferenceMaterials() {
@@ -105,6 +120,13 @@ public class RunStyleWritingRequest extends Request {
     }
 
     /**
+     * @return useSearch
+     */
+    public Boolean getUseSearch() {
+        return this.useSearch;
+    }
+
+    /**
      * @return writingTheme
      */
     public String getWritingTheme() {
@@ -115,8 +137,10 @@ public class RunStyleWritingRequest extends Request {
         private String workspaceId; 
         private String regionId; 
         private java.util.List<String> learningSamples; 
+        private String processStage; 
         private java.util.List<String> referenceMaterials; 
         private String styleFeature; 
+        private Boolean useSearch; 
         private String writingTheme; 
 
         private Builder() {
@@ -128,8 +152,10 @@ public class RunStyleWritingRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
             this.learningSamples = request.learningSamples;
+            this.processStage = request.processStage;
             this.referenceMaterials = request.referenceMaterials;
             this.styleFeature = request.styleFeature;
+            this.useSearch = request.useSearch;
             this.writingTheme = request.writingTheme;
         } 
 
@@ -155,7 +181,7 @@ public class RunStyleWritingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * learningSamples.
          */
         public Builder learningSamples(java.util.List<String> learningSamples) {
             String learningSamplesShrink = shrink(learningSamples, "learningSamples", "json");
@@ -165,7 +191,16 @@ public class RunStyleWritingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * processStage.
+         */
+        public Builder processStage(String processStage) {
+            this.putBodyParameter("processStage", processStage);
+            this.processStage = processStage;
+            return this;
+        }
+
+        /**
+         * referenceMaterials.
          */
         public Builder referenceMaterials(java.util.List<String> referenceMaterials) {
             String referenceMaterialsShrink = shrink(referenceMaterials, "referenceMaterials", "json");
@@ -184,7 +219,16 @@ public class RunStyleWritingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * useSearch.
+         */
+        public Builder useSearch(Boolean useSearch) {
+            this.putBodyParameter("useSearch", useSearch);
+            this.useSearch = useSearch;
+            return this;
+        }
+
+        /**
+         * writingTheme.
          */
         public Builder writingTheme(String writingTheme) {
             this.putBodyParameter("writingTheme", writingTheme);

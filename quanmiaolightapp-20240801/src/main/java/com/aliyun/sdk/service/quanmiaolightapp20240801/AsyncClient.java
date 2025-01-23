@@ -90,6 +90,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunMarketingInformationWritingResponseBody> runMarketingInformationWritingWithResponseIterable(RunMarketingInformationWritingRequest request);
 
     /**
+     * @param request the request parameters of RunNetworkContentAudit  RunNetworkContentAuditRequest
+     * @return RunNetworkContentAuditResponse
+     */
+    CompletableFuture<RunNetworkContentAuditResponse> runNetworkContentAudit(RunNetworkContentAuditRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runNetworkContentAuditWithAsyncResponseHandler(RunNetworkContentAuditRequest request, AsyncResponseHandler<RunNetworkContentAuditResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunNetworkContentAuditResponseBody> runNetworkContentAuditWithResponseIterable(RunNetworkContentAuditRequest request);
+
+    /**
      * @param request the request parameters of RunScriptChat  RunScriptChatRequest
      * @return RunScriptChatResponse
      */

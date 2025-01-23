@@ -303,6 +303,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunNetworkContentAudit  RunNetworkContentAuditRequest
+     * @return RunNetworkContentAuditResponse
+     */
+    @Override
+    public CompletableFuture<RunNetworkContentAuditResponse> runNetworkContentAudit(RunNetworkContentAuditRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunNetworkContentAudit").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runNetworkContentAudit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunNetworkContentAuditResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunNetworkContentAuditResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runNetworkContentAuditWithAsyncResponseHandler(RunNetworkContentAuditRequest request, AsyncResponseHandler<RunNetworkContentAuditResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunNetworkContentAudit").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runNetworkContentAudit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunNetworkContentAuditResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunNetworkContentAuditResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunNetworkContentAuditResponseBody> runNetworkContentAuditWithResponseIterable(RunNetworkContentAuditRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunNetworkContentAudit").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runNetworkContentAudit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunNetworkContentAuditResponseBodyIterator iterator = RunNetworkContentAuditResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunScriptChat  RunScriptChatRequest
      * @return RunScriptChatResponse
      */
