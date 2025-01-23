@@ -23,6 +23,9 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
+    @com.aliyun.core.annotation.NameInMap("evaluationRating")
+    private String evaluationRating;
+
     @com.aliyun.core.annotation.NameInMap("evaluationResult")
     private String evaluationResult;
 
@@ -47,6 +50,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     private GetAICoachTaskSessionReportResponseBody(Builder builder) {
         this.duration = builder.duration;
         this.endTime = builder.endTime;
+        this.evaluationRating = builder.evaluationRating;
         this.evaluationResult = builder.evaluationResult;
         this.feedback = builder.feedback;
         this.requestId = builder.requestId;
@@ -76,6 +80,13 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return evaluationRating
+     */
+    public String getEvaluationRating() {
+        return this.evaluationRating;
     }
 
     /**
@@ -130,6 +141,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     public static final class Builder {
         private Long duration; 
         private String endTime; 
+        private String evaluationRating; 
         private String evaluationResult; 
         private Boolean feedback; 
         private String requestId; 
@@ -151,6 +163,14 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * evaluationRating.
+         */
+        public Builder evaluationRating(String evaluationRating) {
+            this.evaluationRating = evaluationRating;
             return this;
         }
 

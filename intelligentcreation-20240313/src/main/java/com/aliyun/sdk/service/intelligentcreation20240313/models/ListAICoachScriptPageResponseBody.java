@@ -319,6 +319,73 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
      *
      * <p>ListAICoachScriptPageResponseBody</p>
      */
+    public static class ScoreConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("passScore")
+        private Integer passScore;
+
+        private ScoreConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.passScore = builder.passScore;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScoreConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return passScore
+         */
+        public Integer getPassScore() {
+            return this.passScore;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Integer passScore; 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * passScore.
+             */
+            public Builder passScore(Integer passScore) {
+                this.passScore = passScore;
+                return this;
+            }
+
+            public ScoreConfig build() {
+                return new ScoreConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAICoachScriptPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAICoachScriptPageResponseBody</p>
+     */
     public static class Weights extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assessmentPoint")
         private Integer assessmentPoint;
@@ -499,6 +566,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("coverUrl")
         private String coverUrl;
 
+        @com.aliyun.core.annotation.NameInMap("dialogueTextFlag")
+        private Boolean dialogueTextFlag;
+
         @com.aliyun.core.annotation.NameInMap("dialogueTipFlag")
         private Boolean dialogueTipFlag;
 
@@ -532,6 +602,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sampleDialogueList")
         private java.util.List<SampleDialogueList> sampleDialogueList;
 
+        @com.aliyun.core.annotation.NameInMap("scoreConfig")
+        private ScoreConfig scoreConfig;
+
         @com.aliyun.core.annotation.NameInMap("scriptRecordId")
         private String scriptRecordId;
 
@@ -558,6 +631,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             this.assessmentScope = builder.assessmentScope;
             this.completeStrategy = builder.completeStrategy;
             this.coverUrl = builder.coverUrl;
+            this.dialogueTextFlag = builder.dialogueTextFlag;
             this.dialogueTipFlag = builder.dialogueTipFlag;
             this.evaluateReportFlag = builder.evaluateReportFlag;
             this.expressiveness = builder.expressiveness;
@@ -569,6 +643,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             this.name = builder.name;
             this.orderAckFlag = builder.orderAckFlag;
             this.sampleDialogueList = builder.sampleDialogueList;
+            this.scoreConfig = builder.scoreConfig;
             this.scriptRecordId = builder.scriptRecordId;
             this.sparringTipContent = builder.sparringTipContent;
             this.sparringTipTitle = builder.sparringTipTitle;
@@ -612,6 +687,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         public String getCoverUrl() {
             return this.coverUrl;
+        }
+
+        /**
+         * @return dialogueTextFlag
+         */
+        public Boolean getDialogueTextFlag() {
+            return this.dialogueTextFlag;
         }
 
         /**
@@ -692,6 +774,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return scoreConfig
+         */
+        public ScoreConfig getScoreConfig() {
+            return this.scoreConfig;
+        }
+
+        /**
          * @return scriptRecordId
          */
         public String getScriptRecordId() {
@@ -745,6 +834,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private String assessmentScope; 
             private CompleteStrategy completeStrategy; 
             private String coverUrl; 
+            private Boolean dialogueTextFlag; 
             private Boolean dialogueTipFlag; 
             private Boolean evaluateReportFlag; 
             private java.util.Map<String, String> expressiveness; 
@@ -756,6 +846,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             private String name; 
             private Boolean orderAckFlag; 
             private java.util.List<SampleDialogueList> sampleDialogueList; 
+            private ScoreConfig scoreConfig; 
             private String scriptRecordId; 
             private String sparringTipContent; 
             private String sparringTipTitle; 
@@ -793,6 +884,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
+                return this;
+            }
+
+            /**
+             * dialogueTextFlag.
+             */
+            public Builder dialogueTextFlag(Boolean dialogueTextFlag) {
+                this.dialogueTextFlag = dialogueTextFlag;
                 return this;
             }
 
@@ -881,6 +980,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
              */
             public Builder sampleDialogueList(java.util.List<SampleDialogueList> sampleDialogueList) {
                 this.sampleDialogueList = sampleDialogueList;
+                return this;
+            }
+
+            /**
+             * scoreConfig.
+             */
+            public Builder scoreConfig(ScoreConfig scoreConfig) {
+                this.scoreConfig = scoreConfig;
                 return this;
             }
 
