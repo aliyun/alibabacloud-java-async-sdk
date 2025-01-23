@@ -425,6 +425,9 @@ public class EditRecognizeRuleRequest extends Request {
 
         /**
          * <p>The name of the sensitivity level. You can call the <a href="https://help.aliyun.com/document_detail/2743948.html">QueryDefaultTemplate</a> operation to obtain the name of the sensitivity level in the related template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Confidential</p>
          */
         public Builder levelName(String levelName) {
             this.putBodyParameter("LevelName", levelName);
@@ -448,6 +451,9 @@ public class EditRecognizeRuleRequest extends Request {
         /**
          * <p>The information about the parent data category of the current data category. You can call the <a href="https://help.aliyun.com/document_detail/2746850.html">QuerySensClassification</a> operation to obtain the ID of a data category.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Customer/personal/personal_Natural_Information/personal_basic_profile_information</p>
          */
         public Builder nodeParent(String nodeParent) {
             this.putBodyParameter("NodeParent", nodeParent);
@@ -504,6 +510,9 @@ public class EditRecognizeRuleRequest extends Request {
 
         /**
          * <p>The description of the sensitive field. Enter a string that is less than 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a sensitive field that identifies the name.</p>
          */
         public Builder sensitiveDescription(String sensitiveDescription) {
             this.putBodyParameter("SensitiveDescription", sensitiveDescription);
@@ -527,6 +536,9 @@ public class EditRecognizeRuleRequest extends Request {
         /**
          * <p>The name of the custom sensitive field. Enter a string that is less than 128 characters in length.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);

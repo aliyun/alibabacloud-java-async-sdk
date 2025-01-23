@@ -198,10 +198,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private java.util.List<String> receiverValues; 
 
             /**
-             * <p>The recipient type.</p>
+             * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
              * <ul>
-             * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
-             * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+             * <li>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <strong>AliyunUid</strong>, which indicates the Alibaba Cloud account ID.</li>
+             * <li>If the alert notification method is Ding, the value of this parameter is <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -303,7 +303,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert notification recipients.</p>
+             * <p>The settings of alert notification recipients.</p>
              */
             public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -592,7 +592,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions that can trigger the alert rule.</p>
+             * <p>The conditions that are used to trigger the alert rule.</p>
              */
             public Builder triggerConditions(java.util.List<TriggerConditions> triggerConditions) {
                 this.triggerConditions = triggerConditions;
@@ -675,7 +675,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * <p>The list of alert rules.</p>
+             * <p>The alert rules.</p>
              */
             public Builder DIJobAlarmRules(java.util.List<DIJobAlarmRules> DIJobAlarmRules) {
                 this.DIJobAlarmRules = DIJobAlarmRules;

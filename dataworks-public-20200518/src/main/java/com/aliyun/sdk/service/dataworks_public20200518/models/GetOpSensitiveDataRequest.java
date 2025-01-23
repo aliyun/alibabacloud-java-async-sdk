@@ -193,7 +193,7 @@ public class GetOpSensitiveDataRequest extends Request {
         }
 
         /**
-         * <p>The page number. Minimum value: 1. Maximum value: 1000.</p>
+         * <p>The page number. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

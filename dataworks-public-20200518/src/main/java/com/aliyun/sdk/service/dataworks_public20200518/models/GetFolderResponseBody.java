@@ -111,7 +111,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -122,7 +122,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The connection does not exist.</p>
@@ -133,7 +133,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -144,7 +144,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -155,7 +155,7 @@ public class GetFolderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -216,7 +216,7 @@ public class GetFolderResponseBody extends TeaModel {
             private String folderPath; 
 
             /**
-             * <p>The ID of the folder.</p>
+             * <p>The folder ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2735****</p>
@@ -228,6 +228,9 @@ public class GetFolderResponseBody extends TeaModel {
 
             /**
              * <p>The path of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
              */
             public Builder folderPath(String folderPath) {
                 this.folderPath = folderPath;

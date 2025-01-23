@@ -111,6 +111,11 @@ public class ListClustersRequest extends Request {
         }
 
         /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>CDH: CDH cluster</li>
+         * <li>EMR: EMR cluster</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +128,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -132,7 +140,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

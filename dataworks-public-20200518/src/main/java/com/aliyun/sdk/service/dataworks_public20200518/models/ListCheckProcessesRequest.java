@@ -27,6 +27,10 @@ public class ListCheckProcessesRequest extends Request {
     private String eventCode;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    private String messageId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
 
@@ -51,6 +55,7 @@ public class ListCheckProcessesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.eventCode = builder.eventCode;
+        this.messageId = builder.messageId;
         this.operator = builder.operator;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -83,6 +88,13 @@ public class ListCheckProcessesRequest extends Request {
      */
     public String getEventCode() {
         return this.eventCode;
+    }
+
+    /**
+     * @return messageId
+     */
+    public String getMessageId() {
+        return this.messageId;
     }
 
     /**
@@ -123,6 +135,7 @@ public class ListCheckProcessesRequest extends Request {
     public static final class Builder extends Request.Builder<ListCheckProcessesRequest, Builder> {
         private String regionId; 
         private String eventCode; 
+        private String messageId; 
         private String operator; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -137,6 +150,7 @@ public class ListCheckProcessesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.eventCode = request.eventCode;
+            this.messageId = request.messageId;
             this.operator = request.operator;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -166,7 +180,19 @@ public class ListCheckProcessesRequest extends Request {
         }
 
         /**
-         * Operator.
+         * MessageId.
+         */
+        public Builder messageId(String messageId) {
+            this.putBodyParameter("MessageId", messageId);
+            this.messageId = messageId;
+            return this;
+        }
+
+        /**
+         * <p>The operator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123333232</p>
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);

@@ -128,6 +128,9 @@ public class CallbackExtensionRequest extends Request {
 
         /**
          * <p>The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The xxx rule is hit. Modify it and try again.</p>
          */
         public Builder checkMessage(String checkMessage) {
             this.putBodyParameter("CheckMessage", checkMessage);

@@ -348,6 +348,9 @@ public class CreateDataServiceApiRequest extends Request {
         /**
          * <p>The description of the API.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test API description</p>
          */
         public Builder apiDescription(String apiDescription) {
             this.putBodyParameter("ApiDescription", apiDescription);
@@ -371,6 +374,9 @@ public class CreateDataServiceApiRequest extends Request {
         /**
          * <p>The name of the API. The name must be 4 to 50 characters in length. The name can contain letters, digits, and underscores (_) and must start with a letter.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test API name</p>
          */
         public Builder apiName(String apiName) {
             this.putBodyParameter("ApiName", apiName);
@@ -406,6 +412,9 @@ public class CreateDataServiceApiRequest extends Request {
         /**
          * <p>The business process ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business process ID</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);

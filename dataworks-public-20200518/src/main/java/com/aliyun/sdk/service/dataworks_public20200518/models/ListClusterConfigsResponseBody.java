@@ -103,7 +103,7 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ClusterConfigs.
+         * <p>A list of configurations of cluster modules.</p>
          */
         public Builder clusterConfigs(java.util.List<ClusterConfig> clusterConfigs) {
             this.clusterConfigs = clusterConfigs;
@@ -111,7 +111,10 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101011005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -119,7 +122,10 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Cluster.ClusterNotFound</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -127,7 +133,10 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +144,10 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +155,14 @@ public class ListClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

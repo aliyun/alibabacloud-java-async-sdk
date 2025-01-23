@@ -276,6 +276,9 @@ public class GetBusinessResponseBody extends TeaModel {
 
             /**
              * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The first business process</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -284,6 +287,9 @@ public class GetBusinessResponseBody extends TeaModel {
 
             /**
              * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is my first business process.</p>
              */
             public Builder description(String description) {
                 this.description = description;

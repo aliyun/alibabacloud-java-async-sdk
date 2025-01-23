@@ -103,7 +103,10 @@ public class CreateBusinessResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * BusinessId.
+         * <p>The ID of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder businessId(Long businessId) {
             this.businessId = businessId;
@@ -111,7 +114,10 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -119,7 +125,10 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -127,7 +136,10 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +147,10 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +158,10 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

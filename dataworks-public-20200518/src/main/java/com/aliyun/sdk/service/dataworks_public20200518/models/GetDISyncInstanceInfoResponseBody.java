@@ -176,6 +176,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
             /**
              * <p>The information of the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fusionProps&quot;:{&quot;dataSource&quot;:[{&quot;fileName&quot;:&quot;holo_20221020161613&quot;,&quot;status&quot;:&quot;SUCCESS&quot;}]},&quot;customProps&quot;:{&quot;showSN&quot;:true,&quot;columns&quot;:[{&quot;dataIndex&quot;:&quot;fileName&quot;,&quot;width&quot;:0.8,&quot;title&quot;:&quot;Real-time synchronization name&quot;},{&quot;dataIndex&quot;:&quot;status&quot;,&quot;width&quot;:0.2,&quot;title&quot;:&quot;Status&quot;}]},&quot;componentName&quot;:&quot;Table&quot;}</p>
              */
             public Builder info(String info) {
                 this.info = info;
@@ -206,6 +209,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
             /**
              * <p>The name of the step in the data synchronization solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create a base table</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;

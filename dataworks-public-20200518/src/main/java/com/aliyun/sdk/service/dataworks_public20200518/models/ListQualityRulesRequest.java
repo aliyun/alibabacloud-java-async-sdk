@@ -142,7 +142,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to query the ID of the partition filter expression.</p>
+         * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

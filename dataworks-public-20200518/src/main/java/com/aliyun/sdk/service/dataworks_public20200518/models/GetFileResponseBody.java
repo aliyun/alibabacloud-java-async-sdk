@@ -609,6 +609,9 @@ public class GetFileResponseBody extends TeaModel {
 
             /**
              * <p>The description of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My first DataWorks file</p>
              */
             public Builder fileDescription(String fileDescription) {
                 this.fileDescription = fileDescription;
@@ -627,7 +630,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000001</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -1476,7 +1482,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoreParentSkipRunningProperty.
+             * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreParentSkipRunningProperty(String ignoreParentSkipRunningProperty) {
                 this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
@@ -1616,7 +1625,10 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>Scheduling configuration timeout definition</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1663,7 +1675,10 @@ public class GetFileResponseBody extends TeaModel {
             private String downloadLink; 
 
             /**
-             * downloadLink.
+             * <p>Resource download address link</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xx">http://xx</a></p>
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -1750,7 +1765,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDownloadLink.
+             * <p>Resource download address</p>
              */
             public Builder resourceDownloadLink(ResourceDownloadLink resourceDownloadLink) {
                 this.resourceDownloadLink = resourceDownloadLink;

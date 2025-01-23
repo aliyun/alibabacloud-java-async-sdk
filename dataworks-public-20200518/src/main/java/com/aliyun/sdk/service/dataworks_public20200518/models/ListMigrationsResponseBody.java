@@ -393,7 +393,7 @@ public class ListMigrationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the migration task.</p>
+             * <p>The type of the migration task. Valid values:</p>
              * <ul>
              * <li>IMPORT</li>
              * <li>EXPORT</li>

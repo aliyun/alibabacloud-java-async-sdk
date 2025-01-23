@@ -103,7 +103,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data entries returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -402,6 +402,9 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
 
             /**
              * <p>The description of the data masking scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test scenarios</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;

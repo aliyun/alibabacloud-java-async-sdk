@@ -103,7 +103,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The details of the returned data.</p>
+         * <p>The information about returned alerts.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -279,6 +279,9 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -405,6 +408,9 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -557,6 +563,9 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -758,6 +767,9 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -1043,6 +1055,9 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
             /**
              * <p>The content of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node error</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1078,6 +1093,9 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom monitoring rule name</p>
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;

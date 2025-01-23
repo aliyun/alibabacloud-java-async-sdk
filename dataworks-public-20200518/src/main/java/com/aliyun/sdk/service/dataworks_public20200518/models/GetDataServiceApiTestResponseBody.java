@@ -55,7 +55,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Return object</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adssdsewe</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApiId.
+             * <p>Test API Id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12343</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -201,7 +207,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * CostTime.
+             * <p>Time consuming</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder costTime(String costTime) {
                 this.costTime = costTime;
@@ -209,7 +218,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * DebugInfo.
+             * <p>Debug information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>]</p>
              */
             public Builder debugInfo(String debugInfo) {
                 this.debugInfo = debugInfo;
@@ -217,7 +229,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * NodesDebugInfo.
+             * <p>Node Debug information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>]</p>
              */
             public Builder nodesDebugInfo(String nodesDebugInfo) {
                 this.nodesDebugInfo = nodesDebugInfo;
@@ -225,7 +240,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * ParamMap.
+             * <p>Test API request parameters</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;test&quot;}</p>
              */
             public Builder paramMap(String paramMap) {
                 this.paramMap = paramMap;
@@ -233,7 +251,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetCode.
+             * <p>The test API returns the code. If it is not completed, the data is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder retCode(Long retCode) {
                 this.retCode = retCode;
@@ -241,7 +262,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * RetResult.
+             * <p>Return data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;id&quot;:2}</p>
              */
             public Builder retResult(String retResult) {
                 this.retResult = retResult;
@@ -249,7 +273,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Whether the task has been completed, including: RUNNING,FINISHED</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;

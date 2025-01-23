@@ -126,7 +126,7 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+         * <p>The Alibaba Cloud account ID. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1933790683****</p>

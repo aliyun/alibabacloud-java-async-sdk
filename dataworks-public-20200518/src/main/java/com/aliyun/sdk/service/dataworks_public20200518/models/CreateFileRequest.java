@@ -626,7 +626,14 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * CreateFolderIfNotExists.
+         * <p>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</p>
+         * <ul>
+         * <li>true: If the directory does not exist, the directory is automatically created.</li>
+         * <li>false: If the directory does not exist, the call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder createFolderIfNotExists(Boolean createFolderIfNotExists) {
             this.putBodyParameter("CreateFolderIfNotExists", createFolderIfNotExists);
@@ -721,6 +728,9 @@ public class CreateFileRequest extends Request {
 
         /**
          * <p>The description of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Here is the file description</p>
          */
         public Builder fileDescription(String fileDescription) {
             this.putBodyParameter("FileDescription", fileDescription);
@@ -730,6 +740,9 @@ public class CreateFileRequest extends Request {
 
         /**
          * <p>The path of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/First_Business_Process/MaxCompute/Folder_1/Folder_2</p>
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -740,6 +753,9 @@ public class CreateFileRequest extends Request {
         /**
          * <p>The name of the file.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>File name</p>
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("FileName", fileName);
@@ -762,7 +778,14 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * IgnoreParentSkipRunningProperty.
+         * <p>Whether to use the last cycle empty run attribute. The values are as follows:</p>
+         * <ul>
+         * <li>true: The empty run attribute of the previous cycle is used.</li>
+         * <li>false: The empty run attribute of the previous cycle is not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
             this.putBodyParameter("IgnoreParentSkipRunningProperty", ignoreParentSkipRunningProperty);

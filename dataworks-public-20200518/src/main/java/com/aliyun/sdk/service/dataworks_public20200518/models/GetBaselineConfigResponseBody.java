@@ -372,6 +372,9 @@ public class GetBaselineConfigResponseBody extends TeaModel {
 
             /**
              * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -467,7 +470,7 @@ public class GetBaselineConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workspace ID.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>

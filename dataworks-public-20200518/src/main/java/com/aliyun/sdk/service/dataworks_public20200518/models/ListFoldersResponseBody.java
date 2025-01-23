@@ -144,7 +144,7 @@ public class ListFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>

@@ -444,7 +444,14 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             }
 
             /**
-             * StepType.
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: same-cycle scheduling dependency</li>
+             * <li><strong>3</strong>: cross-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
@@ -491,7 +498,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             private java.util.List<Nodes> nodes; 
 
             /**
-             * <p>The list of descendant nodes.</p>
+             * <p>The descendant nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

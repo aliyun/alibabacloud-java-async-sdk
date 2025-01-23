@@ -198,10 +198,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             private java.util.List<String> receiverValues; 
 
             /**
-             * <p>The recipient type.</p>
+             * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
              * <ul>
-             * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
-             * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+             * <li>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <strong>AliyunUid</strong>, which indicates the Alibaba Cloud account ID.</li>
+             * <li>If the alert notification method is Ding, the value of this parameter is <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -620,6 +620,9 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
 
             /**
              * <p>The description of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql synchronizes to hologres heartbeat alert</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -662,7 +665,7 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions that can trigger the alert rule.</p>
+             * <p>The conditions that are used to trigger the alert rule.</p>
              */
             public Builder triggerConditions(java.util.List<TriggerConditions> triggerConditions) {
                 this.triggerConditions = triggerConditions;

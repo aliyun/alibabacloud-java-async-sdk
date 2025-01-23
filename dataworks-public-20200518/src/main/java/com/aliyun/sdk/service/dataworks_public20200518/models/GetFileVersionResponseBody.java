@@ -360,6 +360,9 @@ public class GetFileVersionResponseBody extends TeaModel {
 
             /**
              * <p>The description of the file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Second version submission</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

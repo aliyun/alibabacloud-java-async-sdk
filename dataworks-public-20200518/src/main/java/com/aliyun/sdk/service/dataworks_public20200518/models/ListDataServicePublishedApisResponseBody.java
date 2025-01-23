@@ -1499,7 +1499,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The ID of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

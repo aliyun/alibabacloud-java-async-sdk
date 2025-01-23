@@ -103,7 +103,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The returns data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -111,7 +111,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101011005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -119,7 +122,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Cluster.ClusterNotFound</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -127,7 +133,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +144,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +155,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +244,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Clusters.
+             * <p>List of cluster information.</p>
              */
             public Builder clusters(java.util.List<Cluster> clusters) {
                 this.clusters = clusters;
@@ -233,7 +252,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -241,7 +263,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -249,7 +274,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

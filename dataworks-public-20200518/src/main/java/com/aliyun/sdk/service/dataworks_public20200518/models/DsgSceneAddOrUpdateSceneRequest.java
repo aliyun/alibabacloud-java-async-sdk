@@ -297,6 +297,9 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
 
             /**
              * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test scenarios</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;

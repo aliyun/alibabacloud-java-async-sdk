@@ -98,7 +98,7 @@ public class UpdateTableAddColumnRequest extends Request {
         }
 
         /**
-         * <p>The list of fields.</p>
+         * <p>The fields.</p>
          * <p>This parameter is required.</p>
          */
         public Builder column(java.util.List<Column> column) {
@@ -211,6 +211,9 @@ public class UpdateTableAddColumnRequest extends Request {
 
             /**
              * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chinese</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -231,6 +234,9 @@ public class UpdateTableAddColumnRequest extends Request {
 
             /**
              * <p>The comment of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remarks</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

@@ -144,7 +144,7 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>

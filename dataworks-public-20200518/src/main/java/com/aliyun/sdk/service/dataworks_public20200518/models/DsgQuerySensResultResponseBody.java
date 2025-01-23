@@ -150,6 +150,9 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
 
         /**
          * <p>The error message. The value is the same as that of ErrorMessage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Missing parameter</p>
          */
         public Builder dynamicErrorMessage(String dynamicErrorMessage) {
             this.dynamicErrorMessage = dynamicErrorMessage;
@@ -169,6 +172,9 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Missing parameter</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

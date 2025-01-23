@@ -111,7 +111,7 @@ public class DeleteFileRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

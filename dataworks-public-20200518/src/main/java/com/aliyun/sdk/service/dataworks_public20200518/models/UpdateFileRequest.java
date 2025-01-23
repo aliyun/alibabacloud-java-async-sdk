@@ -824,7 +824,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -856,6 +856,13 @@ public class UpdateFileRequest extends Request {
          * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
          * </ul>
          * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ALL_ALLOWD</li>
+         * <li>FAILURE_ALLOWED</li>
+         * <li>ALL_DENIED</li>
+         * <li>ALL_ALLOWED</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ALL_ALLOWED</p>
@@ -944,7 +951,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("Timeout", timeout);

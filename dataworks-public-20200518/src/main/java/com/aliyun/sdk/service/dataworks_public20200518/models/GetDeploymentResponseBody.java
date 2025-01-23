@@ -103,7 +103,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The data about the deployment task.</p>
+         * <p>The details of the deployment package.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -228,7 +228,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>507642378</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -236,7 +239,10 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder fileVersion(Long fileVersion) {
                 this.fileVersion = fileVersion;
@@ -244,7 +250,18 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <ul>
+             * <li>UNPUBLISHED(0): not published</li>
+             * <li>SUCCESS(1): Published</li>
+             * <li>ERROR(2): Publishing failed</li>
+             * <li>CLONED(3): successfully CLONED</li>
+             * <li>DEPLOY_ERROR(4): Publishing failed</li>
+             * <li>CLONING(5): CLONING</li>
+             * <li>REJECT(6): release rejected</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -437,6 +454,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
             /**
              * <p>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -561,7 +581,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             private Deployment deployment; 
 
             /**
-             * DeployedItems.
+             * <p>The deployed items.</p>
              */
             public Builder deployedItems(java.util.List<DeployedItems> deployedItems) {
                 this.deployedItems = deployedItems;

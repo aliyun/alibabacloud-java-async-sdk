@@ -98,7 +98,7 @@ public class DeleteRecognizeRuleRequest extends Request {
         }
 
         /**
-         * <p>The sensitive field ID. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to obtain the ID of the sensitive field.</p>
+         * <p>The ID of the sensitive field. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

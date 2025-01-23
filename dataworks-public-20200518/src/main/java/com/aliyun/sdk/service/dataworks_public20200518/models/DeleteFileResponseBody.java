@@ -114,7 +114,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The ID of the file. You can use the ListFiles interface to query the ID of the corresponding file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

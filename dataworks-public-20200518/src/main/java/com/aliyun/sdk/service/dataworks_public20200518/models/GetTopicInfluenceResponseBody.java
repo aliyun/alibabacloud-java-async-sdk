@@ -103,7 +103,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -285,7 +285,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -408,7 +411,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
             private Long topicId; 
 
             /**
-             * Influences.
+             * <p>The affected baseline instances.</p>
              */
             public Builder influences(java.util.List<Influences> influences) {
                 this.influences = influences;

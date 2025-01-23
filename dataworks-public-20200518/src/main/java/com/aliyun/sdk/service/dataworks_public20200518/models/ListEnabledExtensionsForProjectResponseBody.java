@@ -55,7 +55,7 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The details of the extension.</p>
+         * <p>The extensions.</p>
          */
         public Builder extensions(java.util.List<Extensions> extensions) {
             this.extensions = extensions;

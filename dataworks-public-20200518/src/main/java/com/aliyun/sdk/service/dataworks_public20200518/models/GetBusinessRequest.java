@@ -111,7 +111,7 @@ public class GetBusinessRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID.</p>
+         * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

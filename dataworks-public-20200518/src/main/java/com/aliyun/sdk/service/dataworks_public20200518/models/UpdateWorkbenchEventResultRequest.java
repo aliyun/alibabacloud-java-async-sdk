@@ -146,7 +146,7 @@ public class UpdateWorkbenchEventResultRequest extends Request {
          * <p>The cause of the check failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>注意节点有效期</p>
+         * <p>SQL is too long</p>
          */
         public Builder checkResultTip(String checkResultTip) {
             this.putQueryParameter("CheckResultTip", checkResultTip);

@@ -103,7 +103,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -586,7 +586,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * <p>The list of baselines.</p>
+             * <p>The baselines.</p>
              */
             public Builder baselines(java.util.List<Baselines> baselines) {
                 this.baselines = baselines;
