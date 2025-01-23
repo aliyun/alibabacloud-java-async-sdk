@@ -209,6 +209,9 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
+        @com.aliyun.core.annotation.NameInMap("oriContent")
+        private String oriContent;
+
         @com.aliyun.core.annotation.NameInMap("reply")
         private String reply;
 
@@ -227,6 +230,7 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         private QuestionList(Builder builder) {
             this.content = builder.content;
             this.gmtCreate = builder.gmtCreate;
+            this.oriContent = builder.oriContent;
             this.reply = builder.reply;
             this.sessionId = builder.sessionId;
             this.type = builder.type;
@@ -254,6 +258,13 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
          */
         public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        /**
+         * @return oriContent
+         */
+        public String getOriContent() {
+            return this.oriContent;
         }
 
         /**
@@ -294,6 +305,7 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String gmtCreate; 
+            private String oriContent; 
             private String reply; 
             private String sessionId; 
             private String type; 
@@ -313,6 +325,14 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * oriContent.
+             */
+            public Builder oriContent(String oriContent) {
+                this.oriContent = oriContent;
                 return this;
             }
 
