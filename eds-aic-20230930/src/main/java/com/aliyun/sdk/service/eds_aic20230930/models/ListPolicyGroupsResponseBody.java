@@ -122,6 +122,73 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
      *
      * <p>ListPolicyGroupsResponseBody</p>
      */
+    public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("Target")
+        private String target;
+
+        private Rules(Builder builder) {
+            this.ruleType = builder.ruleType;
+            this.target = builder.target;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        public static final class Builder {
+            private String ruleType; 
+            private String target; 
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * Target.
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyGroupsResponseBody</p>
+     */
     public static class NetRedirectPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomProxy")
         private String customProxy;
@@ -144,6 +211,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyUserName")
         private String proxyUserName;
 
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
+
         private NetRedirectPolicy(Builder builder) {
             this.customProxy = builder.customProxy;
             this.hostAddr = builder.hostAddr;
@@ -152,6 +222,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             this.proxyPassword = builder.proxyPassword;
             this.proxyType = builder.proxyType;
             this.proxyUserName = builder.proxyUserName;
+            this.rules = builder.rules;
         }
 
         public static Builder builder() {
@@ -211,6 +282,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             return this.proxyUserName;
         }
 
+        /**
+         * @return rules
+         */
+        public java.util.List<Rules> getRules() {
+            return this.rules;
+        }
+
         public static final class Builder {
             private String customProxy; 
             private String hostAddr; 
@@ -219,6 +297,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private String proxyPassword; 
             private String proxyType; 
             private String proxyUserName; 
+            private java.util.List<Rules> rules; 
 
             /**
              * CustomProxy.
@@ -276,6 +355,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List<Rules> rules) {
+                this.rules = rules;
+                return this;
+            }
+
             public NetRedirectPolicy build() {
                 return new NetRedirectPolicy(this);
             } 
@@ -318,10 +405,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         private String policyGroupName;
 
         @com.aliyun.core.annotation.NameInMap("SessionResolutionHeight")
-        private String sessionResolutionHeight;
+        private Integer sessionResolutionHeight;
 
         @com.aliyun.core.annotation.NameInMap("SessionResolutionWidth")
-        private String sessionResolutionWidth;
+        private Integer sessionResolutionWidth;
 
         private PolicyGroupModel(Builder builder) {
             this.cameraRedirect = builder.cameraRedirect;
@@ -411,14 +498,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         /**
          * @return sessionResolutionHeight
          */
-        public String getSessionResolutionHeight() {
+        public Integer getSessionResolutionHeight() {
             return this.sessionResolutionHeight;
         }
 
         /**
          * @return sessionResolutionWidth
          */
-        public String getSessionResolutionWidth() {
+        public Integer getSessionResolutionWidth() {
             return this.sessionResolutionWidth;
         }
 
@@ -432,8 +519,8 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private NetRedirectPolicy netRedirectPolicy; 
             private String policyGroupId; 
             private String policyGroupName; 
-            private String sessionResolutionHeight; 
-            private String sessionResolutionWidth; 
+            private Integer sessionResolutionHeight; 
+            private Integer sessionResolutionWidth; 
 
             /**
              * CameraRedirect.
@@ -510,7 +597,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             /**
              * SessionResolutionHeight.
              */
-            public Builder sessionResolutionHeight(String sessionResolutionHeight) {
+            public Builder sessionResolutionHeight(Integer sessionResolutionHeight) {
                 this.sessionResolutionHeight = sessionResolutionHeight;
                 return this;
             }
@@ -518,7 +605,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             /**
              * SessionResolutionWidth.
              */
-            public Builder sessionResolutionWidth(String sessionResolutionWidth) {
+            public Builder sessionResolutionWidth(Integer sessionResolutionWidth) {
                 this.sessionResolutionWidth = sessionResolutionWidth;
                 return this;
             }

@@ -22,6 +22,10 @@ public class DescribeSpecRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatrixSpec")
+    private String matrixSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer maxResults;
@@ -29,6 +33,10 @@ public class DescribeSpecRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleMode")
+    private String saleMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecIds")
@@ -45,8 +53,10 @@ public class DescribeSpecRequest extends Request {
     private DescribeSpecRequest(Builder builder) {
         super(builder);
         this.bizRegionId = builder.bizRegionId;
+        this.matrixSpec = builder.matrixSpec;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.saleMode = builder.saleMode;
         this.specIds = builder.specIds;
         this.specStatus = builder.specStatus;
         this.specType = builder.specType;
@@ -73,6 +83,13 @@ public class DescribeSpecRequest extends Request {
     }
 
     /**
+     * @return matrixSpec
+     */
+    public String getMatrixSpec() {
+        return this.matrixSpec;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -84,6 +101,13 @@ public class DescribeSpecRequest extends Request {
      */
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    /**
+     * @return saleMode
+     */
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
     /**
@@ -109,8 +133,10 @@ public class DescribeSpecRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSpecRequest, Builder> {
         private String bizRegionId; 
+        private String matrixSpec; 
         private Integer maxResults; 
         private String nextToken; 
+        private String saleMode; 
         private java.util.List<String> specIds; 
         private String specStatus; 
         private String specType; 
@@ -122,8 +148,10 @@ public class DescribeSpecRequest extends Request {
         private Builder(DescribeSpecRequest request) {
             super(request);
             this.bizRegionId = request.bizRegionId;
+            this.matrixSpec = request.matrixSpec;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.saleMode = request.saleMode;
             this.specIds = request.specIds;
             this.specStatus = request.specStatus;
             this.specType = request.specType;
@@ -135,6 +163,15 @@ public class DescribeSpecRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * MatrixSpec.
+         */
+        public Builder matrixSpec(String matrixSpec) {
+            this.putQueryParameter("MatrixSpec", matrixSpec);
+            this.matrixSpec = matrixSpec;
             return this;
         }
 
@@ -153,6 +190,15 @@ public class DescribeSpecRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * SaleMode.
+         */
+        public Builder saleMode(String saleMode) {
+            this.putQueryParameter("SaleMode", saleMode);
+            this.saleMode = saleMode;
             return this;
         }
 

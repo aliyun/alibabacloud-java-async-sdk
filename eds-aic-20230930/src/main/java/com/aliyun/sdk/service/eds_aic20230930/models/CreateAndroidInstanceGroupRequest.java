@@ -84,7 +84,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String policyGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -433,10 +432,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pg-b7bxrrwxkijjh****</p>
+         * PolicyGroupId.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);

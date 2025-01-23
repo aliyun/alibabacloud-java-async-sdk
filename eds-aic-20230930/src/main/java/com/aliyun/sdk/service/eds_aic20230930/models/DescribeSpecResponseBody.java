@@ -129,6 +129,12 @@ public class DescribeSpecResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
+        @com.aliyun.core.annotation.NameInMap("PhoneCount")
+        private String phoneCount;
+
+        @com.aliyun.core.annotation.NameInMap("Resolution")
+        private String resolution;
+
         @com.aliyun.core.annotation.NameInMap("SpecId")
         private String specId;
 
@@ -144,6 +150,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         private SpecInfoModel(Builder builder) {
             this.core = builder.core;
             this.memory = builder.memory;
+            this.phoneCount = builder.phoneCount;
+            this.resolution = builder.resolution;
             this.specId = builder.specId;
             this.specStatus = builder.specStatus;
             this.specType = builder.specType;
@@ -170,6 +178,20 @@ public class DescribeSpecResponseBody extends TeaModel {
          */
         public Integer getMemory() {
             return this.memory;
+        }
+
+        /**
+         * @return phoneCount
+         */
+        public String getPhoneCount() {
+            return this.phoneCount;
+        }
+
+        /**
+         * @return resolution
+         */
+        public String getResolution() {
+            return this.resolution;
         }
 
         /**
@@ -203,6 +225,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public static final class Builder {
             private Integer core; 
             private Integer memory; 
+            private String phoneCount; 
+            private String resolution; 
             private String specId; 
             private String specStatus; 
             private String specType; 
@@ -221,6 +245,22 @@ public class DescribeSpecResponseBody extends TeaModel {
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
+                return this;
+            }
+
+            /**
+             * PhoneCount.
+             */
+            public Builder phoneCount(String phoneCount) {
+                this.phoneCount = phoneCount;
+                return this;
+            }
+
+            /**
+             * Resolution.
+             */
+            public Builder resolution(String resolution) {
+                this.resolution = resolution;
                 return this;
             }
 

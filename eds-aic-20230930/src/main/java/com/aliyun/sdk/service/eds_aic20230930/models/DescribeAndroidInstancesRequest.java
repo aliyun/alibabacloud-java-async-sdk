@@ -58,6 +58,14 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    private String nodeId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeName")
+    private String nodeName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleMode")
     private String saleMode;
 
@@ -81,6 +89,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.keyPairId = builder.keyPairId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.nodeId = builder.nodeId;
+        this.nodeName = builder.nodeName;
         this.saleMode = builder.saleMode;
         this.status = builder.status;
         this.tag = builder.tag;
@@ -170,6 +180,20 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    /**
+     * @return nodeName
+     */
+    public String getNodeName() {
+        return this.nodeName;
+    }
+
+    /**
      * @return saleMode
      */
     public String getSaleMode() {
@@ -201,6 +225,8 @@ public class DescribeAndroidInstancesRequest extends Request {
         private String keyPairId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String nodeId; 
+        private String nodeName; 
         private String saleMode; 
         private String status; 
         private java.util.List<Tag> tag; 
@@ -221,6 +247,8 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.keyPairId = request.keyPairId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.nodeId = request.nodeId;
+            this.nodeName = request.nodeName;
             this.saleMode = request.saleMode;
             this.status = request.status;
             this.tag = request.tag;
@@ -313,6 +341,24 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * NodeId.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
+            return this;
+        }
+
+        /**
+         * NodeName.
+         */
+        public Builder nodeName(String nodeName) {
+            this.putQueryParameter("NodeName", nodeName);
+            this.nodeName = nodeName;
             return this;
         }
 

@@ -265,6 +265,73 @@ public class CreatePolicyGroupRequest extends Request {
      *
      * <p>CreatePolicyGroupRequest</p>
      */
+    public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("Target")
+        private String target;
+
+        private Rules(Builder builder) {
+            this.ruleType = builder.ruleType;
+            this.target = builder.target;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        public static final class Builder {
+            private String ruleType; 
+            private String target; 
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * Target.
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            public Rules build() {
+                return new Rules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreatePolicyGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyGroupRequest</p>
+     */
     public static class NetRedirectPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomProxy")
         private String customProxy;
@@ -287,6 +354,9 @@ public class CreatePolicyGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ProxyUserName")
         private String proxyUserName;
 
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
+
         private NetRedirectPolicy(Builder builder) {
             this.customProxy = builder.customProxy;
             this.hostAddr = builder.hostAddr;
@@ -295,6 +365,7 @@ public class CreatePolicyGroupRequest extends Request {
             this.proxyPassword = builder.proxyPassword;
             this.proxyType = builder.proxyType;
             this.proxyUserName = builder.proxyUserName;
+            this.rules = builder.rules;
         }
 
         public static Builder builder() {
@@ -354,6 +425,13 @@ public class CreatePolicyGroupRequest extends Request {
             return this.proxyUserName;
         }
 
+        /**
+         * @return rules
+         */
+        public java.util.List<Rules> getRules() {
+            return this.rules;
+        }
+
         public static final class Builder {
             private String customProxy; 
             private String hostAddr; 
@@ -362,6 +440,7 @@ public class CreatePolicyGroupRequest extends Request {
             private String proxyPassword; 
             private String proxyType; 
             private String proxyUserName; 
+            private java.util.List<Rules> rules; 
 
             /**
              * CustomProxy.
@@ -416,6 +495,14 @@ public class CreatePolicyGroupRequest extends Request {
              */
             public Builder proxyUserName(String proxyUserName) {
                 this.proxyUserName = proxyUserName;
+                return this;
+            }
+
+            /**
+             * Rules.
+             */
+            public Builder rules(java.util.List<Rules> rules) {
+                this.rules = rules;
                 return this;
             }
 

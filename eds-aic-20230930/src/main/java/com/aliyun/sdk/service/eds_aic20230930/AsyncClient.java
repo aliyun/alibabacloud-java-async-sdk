@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateScreenshot  CreateScreenshotRequest
+     * @return CreateScreenshotResponse
+     */
+    CompletableFuture<CreateScreenshotResponse> createScreenshot(CreateScreenshotRequest request);
+
+    /**
      * @param request the request parameters of DeleteAndroidInstanceGroup  DeleteAndroidInstanceGroupRequest
      * @return DeleteAndroidInstanceGroupResponse
      */

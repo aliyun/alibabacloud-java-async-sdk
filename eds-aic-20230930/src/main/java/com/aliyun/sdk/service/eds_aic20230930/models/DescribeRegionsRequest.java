@@ -21,9 +21,14 @@ public class DescribeRegionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleMode")
+    private String saleMode;
+
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.saleMode = builder.saleMode;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class DescribeRegionsRequest extends Request {
         return this.acceptLanguage;
     }
 
+    /**
+     * @return saleMode
+     */
+    public String getSaleMode() {
+        return this.saleMode;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
         private String acceptLanguage; 
+        private String saleMode; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class DescribeRegionsRequest extends Request {
         private Builder(DescribeRegionsRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.saleMode = request.saleMode;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class DescribeRegionsRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * SaleMode.
+         */
+        public Builder saleMode(String saleMode) {
+            this.putQueryParameter("SaleMode", saleMode);
+            this.saleMode = saleMode;
             return this;
         }
 

@@ -25,6 +25,10 @@ public class DescribeImageListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePackageType")
+    private String imagePackageType;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -47,6 +51,7 @@ public class DescribeImageListRequest extends Request {
         super(builder);
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
+        this.imagePackageType = builder.imagePackageType;
         this.imageType = builder.imageType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -81,6 +86,13 @@ public class DescribeImageListRequest extends Request {
     }
 
     /**
+     * @return imagePackageType
+     */
+    public String getImagePackageType() {
+        return this.imagePackageType;
+    }
+
+    /**
      * @return imageType
      */
     public String getImageType() {
@@ -111,6 +123,7 @@ public class DescribeImageListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeImageListRequest, Builder> {
         private String imageId; 
         private String imageName; 
+        private String imagePackageType; 
         private String imageType; 
         private Integer maxResults; 
         private String nextToken; 
@@ -124,6 +137,7 @@ public class DescribeImageListRequest extends Request {
             super(request);
             this.imageId = request.imageId;
             this.imageName = request.imageName;
+            this.imagePackageType = request.imagePackageType;
             this.imageType = request.imageType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -145,6 +159,15 @@ public class DescribeImageListRequest extends Request {
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
             this.imageName = imageName;
+            return this;
+        }
+
+        /**
+         * ImagePackageType.
+         */
+        public Builder imagePackageType(String imagePackageType) {
+            this.putQueryParameter("ImagePackageType", imagePackageType);
+            this.imagePackageType = imagePackageType;
             return this;
         }
 

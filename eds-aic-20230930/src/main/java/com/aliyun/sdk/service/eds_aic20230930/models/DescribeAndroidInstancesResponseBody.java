@@ -341,6 +341,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RenderingType")
         private String renderingType;
 
+        @com.aliyun.core.annotation.NameInMap("SessionStatus")
+        private String sessionStatus;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -373,6 +376,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.rate = builder.rate;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
+            this.sessionStatus = builder.sessionStatus;
             this.tags = builder.tags;
         }
 
@@ -581,6 +585,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionStatus
+         */
+        public String getSessionStatus() {
+            return this.sessionStatus;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -616,6 +627,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private Integer rate; 
             private String regionId; 
             private String renderingType; 
+            private String sessionStatus; 
             private java.util.List<Tags> tags; 
 
             /**
@@ -839,6 +851,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder renderingType(String renderingType) {
                 this.renderingType = renderingType;
+                return this;
+            }
+
+            /**
+             * SessionStatus.
+             */
+            public Builder sessionStatus(String sessionStatus) {
+                this.sessionStatus = sessionStatus;
                 return this;
             }
 
