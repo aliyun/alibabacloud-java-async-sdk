@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FingerPrintTemplates")
-    private java.util.List < FingerPrintTemplates> fingerPrintTemplates;
+    private java.util.List<FingerPrintTemplates> fingerPrintTemplates;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     /**
      * @return fingerPrintTemplates
      */
-    public java.util.List < FingerPrintTemplates> getFingerPrintTemplates() {
+    public java.util.List<FingerPrintTemplates> getFingerPrintTemplates() {
         return this.fingerPrintTemplates;
     }
 
@@ -46,13 +51,13 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FingerPrintTemplates> fingerPrintTemplates; 
+        private java.util.List<FingerPrintTemplates> fingerPrintTemplates; 
         private String requestId; 
 
         /**
          * FingerPrintTemplates.
          */
-        public Builder fingerPrintTemplates(java.util.List < FingerPrintTemplates> fingerPrintTemplates) {
+        public Builder fingerPrintTemplates(java.util.List<FingerPrintTemplates> fingerPrintTemplates) {
             this.fingerPrintTemplates = fingerPrintTemplates;
             return this;
         }

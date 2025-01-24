@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Desktops")
-    private java.util.List < Desktops> desktops;
+    private java.util.List<Desktops> desktops;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     /**
      * @return desktops
      */
-    public java.util.List < Desktops> getDesktops() {
+    public java.util.List<Desktops> getDesktops() {
         return this.desktops;
     }
 
@@ -57,14 +62,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Desktops> desktops; 
+        private java.util.List<Desktops> desktops; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * Desktops.
          */
-        public Builder desktops(java.util.List < Desktops> desktops) {
+        public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
             return this;
         }
@@ -755,7 +760,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private String chargeType;
 
         @com.aliyun.core.annotation.NameInMap("Clients")
-        private java.util.List < Clients> clients;
+        private java.util.List<Clients> clients;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
@@ -779,7 +784,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private String desktopStatus;
 
         @com.aliyun.core.annotation.NameInMap("DesktopTimers")
-        private java.util.List < DesktopTimers> desktopTimers;
+        private java.util.List<DesktopTimers> desktopTimers;
 
         @com.aliyun.core.annotation.NameInMap("DesktopType")
         private String desktopType;
@@ -788,13 +793,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private String directoryId;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
-        private java.util.List < String > endUserIds;
+        private java.util.List<String> endUserIds;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -821,7 +826,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private String localName;
 
         @com.aliyun.core.annotation.NameInMap("ManagementFlags")
-        private java.util.List < String > managementFlags;
+        private java.util.List<String> managementFlags;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
@@ -863,7 +868,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         private String sessionType;
 
         @com.aliyun.core.annotation.NameInMap("Sessions")
-        private java.util.List < Sessions> sessions;
+        private java.util.List<Sessions> sessions;
 
         @com.aliyun.core.annotation.NameInMap("SupportHibernation")
         private Boolean supportHibernation;
@@ -932,7 +937,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         /**
          * @return clients
          */
-        public java.util.List < Clients> getClients() {
+        public java.util.List<Clients> getClients() {
             return this.clients;
         }
 
@@ -988,7 +993,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         /**
          * @return desktopTimers
          */
-        public java.util.List < DesktopTimers> getDesktopTimers() {
+        public java.util.List<DesktopTimers> getDesktopTimers() {
             return this.desktopTimers;
         }
 
@@ -1009,7 +1014,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -1023,7 +1028,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         /**
          * @return endUserIds
          */
-        public java.util.List < String > getEndUserIds() {
+        public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
         }
 
@@ -1086,7 +1091,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         /**
          * @return managementFlags
          */
-        public java.util.List < String > getManagementFlags() {
+        public java.util.List<String> getManagementFlags() {
             return this.managementFlags;
         }
 
@@ -1184,7 +1189,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         /**
          * @return sessions
          */
-        public java.util.List < Sessions> getSessions() {
+        public java.util.List<Sessions> getSessions() {
             return this.sessions;
         }
 
@@ -1204,7 +1209,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chargeType; 
-            private java.util.List < Clients> clients; 
+            private java.util.List<Clients> clients; 
             private String connectionStatus; 
             private Integer cpu; 
             private String creationTime; 
@@ -1212,12 +1217,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String desktopStatus; 
-            private java.util.List < DesktopTimers> desktopTimers; 
+            private java.util.List<DesktopTimers> desktopTimers; 
             private String desktopType; 
             private String directoryId; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private String endUserId; 
-            private java.util.List < String > endUserIds; 
+            private java.util.List<String> endUserIds; 
             private String expiredTime; 
             private FotaUpdate fotaUpdate; 
             private Integer gpuMemory; 
@@ -1226,7 +1231,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String imageId; 
             private String lastStartTime; 
             private String localName; 
-            private java.util.List < String > managementFlags; 
+            private java.util.List<String> managementFlags; 
             private Long memory; 
             private String networkInterfaceIp; 
             private String officeSiteId; 
@@ -1240,7 +1245,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String regionId; 
             private String regionLocation; 
             private String sessionType; 
-            private java.util.List < Sessions> sessions; 
+            private java.util.List<Sessions> sessions; 
             private Boolean supportHibernation; 
             private String userCustomName; 
 
@@ -1255,7 +1260,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             /**
              * <p>支持的客户端信息</p>
              */
-            public Builder clients(java.util.List < Clients> clients) {
+            public Builder clients(java.util.List<Clients> clients) {
                 this.clients = clients;
                 return this;
             }
@@ -1319,7 +1324,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             /**
              * DesktopTimers.
              */
-            public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
+            public Builder desktopTimers(java.util.List<DesktopTimers> desktopTimers) {
                 this.desktopTimers = desktopTimers;
                 return this;
             }
@@ -1343,7 +1348,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             /**
              * Disks.
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -1359,7 +1364,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             /**
              * EndUserIds.
              */
-            public Builder endUserIds(java.util.List < String > endUserIds) {
+            public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
                 return this;
             }
@@ -1431,7 +1436,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             /**
              * ManagementFlags.
              */
-            public Builder managementFlags(java.util.List < String > managementFlags) {
+            public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
                 return this;
             }
@@ -1543,7 +1548,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             /**
              * Sessions.
              */
-            public Builder sessions(java.util.List < Sessions> sessions) {
+            public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
                 return this;
             }

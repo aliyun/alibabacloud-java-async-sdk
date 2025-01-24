@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     private String phone;
 
     @com.aliyun.core.annotation.NameInMap("Props")
-    private java.util.Map < String, String > props;
+    private java.util.Map<String, String> props;
 
     @com.aliyun.core.annotation.NameInMap("QrCodePng")
     private String qrCodePng;
@@ -161,7 +166,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
     /**
      * @return props
      */
-    public java.util.Map < String, String > getProps() {
+    public java.util.Map<String, String> getProps() {
         return this.props;
     }
 
@@ -231,7 +236,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String nextStage; 
         private PasswordStrategy passwordStrategy; 
         private String phone; 
-        private java.util.Map < String, String > props; 
+        private java.util.Map<String, String> props; 
         private String qrCodePng; 
         private String reason; 
         private String requestId; 
@@ -353,7 +358,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
          * <p>This is a parameter only for internal use.</p>
          * </blockquote>
          */
-        public Builder props(java.util.Map < String, String > props) {
+        public Builder props(java.util.Map<String, String> props) {
             this.props = props;
             return this;
         }
@@ -470,7 +475,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public static class PasswordStrategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantAlternativeChars")
-        private java.util.List < String > tenantAlternativeChars;
+        private java.util.List<String> tenantAlternativeChars;
 
         @com.aliyun.core.annotation.NameInMap("TenantPasswordLength")
         private String tenantPasswordLength;
@@ -491,7 +496,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         /**
          * @return tenantAlternativeChars
          */
-        public java.util.List < String > getTenantAlternativeChars() {
+        public java.util.List<String> getTenantAlternativeChars() {
             return this.tenantAlternativeChars;
         }
 
@@ -503,7 +508,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > tenantAlternativeChars; 
+            private java.util.List<String> tenantAlternativeChars; 
             private String tenantPasswordLength; 
 
             /**
@@ -511,7 +516,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
              * <p>This is a parameter only for internal use.</p>
              * </blockquote>
              */
-            public Builder tenantAlternativeChars(java.util.List < String > tenantAlternativeChars) {
+            public Builder tenantAlternativeChars(java.util.List<String> tenantAlternativeChars) {
                 this.tenantAlternativeChars = tenantAlternativeChars;
                 return this;
             }

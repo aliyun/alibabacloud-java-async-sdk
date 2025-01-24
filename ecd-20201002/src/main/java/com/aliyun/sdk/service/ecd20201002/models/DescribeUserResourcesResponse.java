@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetFingerPrintTemplateDescriptionResponse} extends {@link TeaModel}
+ * {@link DescribeUserResourcesResponse} extends {@link TeaModel}
  *
- * <p>SetFingerPrintTemplateDescriptionResponse</p>
+ * <p>DescribeUserResourcesResponse</p>
  */
-public class SetFingerPrintTemplateDescriptionResponse extends Response {
+public class DescribeUserResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class SetFingerPrintTemplateDescriptionResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SetFingerPrintTemplateDescriptionResponseBody body;
+    private DescribeUserResourcesResponseBody body;
 
-    private SetFingerPrintTemplateDescriptionResponse(BuilderImpl builder) {
+    private DescribeUserResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SetFingerPrintTemplateDescriptionResponse create() {
+    public static DescribeUserResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class SetFingerPrintTemplateDescriptionResponse extends Response {
     /**
      * @return body
      */
-    public SetFingerPrintTemplateDescriptionResponseBody getBody() {
+    public DescribeUserResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SetFingerPrintTemplateDescriptionResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeUserResourcesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SetFingerPrintTemplateDescriptionResponseBody body);
+        Builder body(DescribeUserResourcesResponseBody body);
 
         @Override
-        SetFingerPrintTemplateDescriptionResponse build();
+        DescribeUserResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SetFingerPrintTemplateDescriptionResponse, Builder>
+            extends Response.BuilderImpl<DescribeUserResourcesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private SetFingerPrintTemplateDescriptionResponseBody body; 
+        private DescribeUserResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SetFingerPrintTemplateDescriptionResponse response) {
+        private BuilderImpl(DescribeUserResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class SetFingerPrintTemplateDescriptionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SetFingerPrintTemplateDescriptionResponseBody body) {
+        public Builder body(DescribeUserResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SetFingerPrintTemplateDescriptionResponse build() {
-            return new SetFingerPrintTemplateDescriptionResponse(this);
+        public DescribeUserResourcesResponse build() {
+            return new DescribeUserResourcesResponse(this);
         } 
 
     } 

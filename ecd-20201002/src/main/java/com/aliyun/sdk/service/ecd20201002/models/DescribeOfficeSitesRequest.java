@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeOfficeSitesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
-    private java.util.List < String > officeSiteId;
+    private java.util.List<String> officeSiteId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class DescribeOfficeSitesRequest extends Request {
     /**
      * @return officeSiteId
      */
-    public java.util.List < String > getOfficeSiteId() {
+    public java.util.List<String> getOfficeSiteId() {
         return this.officeSiteId;
     }
 
@@ -69,7 +74,7 @@ public class DescribeOfficeSitesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeOfficeSitesRequest, Builder> {
         private String clientId; 
-        private java.util.List < String > officeSiteId; 
+        private java.util.List<String> officeSiteId; 
         private String regionId; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class DescribeOfficeSitesRequest extends Request {
         /**
          * OfficeSiteId.
          */
-        public Builder officeSiteId(java.util.List < String > officeSiteId) {
+        public Builder officeSiteId(java.util.List<String> officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
             return this;

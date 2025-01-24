@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopName")
@@ -148,7 +153,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -274,7 +279,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeGlobalDesktopsRequest, Builder> {
         private String clientId; 
         private String desktopAccessType; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String desktopName; 
         private String desktopStatus; 
         private String directoryId; 
@@ -345,7 +350,7 @@ public class DescribeGlobalDesktopsRequest extends Request {
         /**
          * DesktopId.
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;

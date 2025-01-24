@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserResources  DescribeUserResourcesRequest
+     * @return DescribeUserResourcesResponse
+     */
+    CompletableFuture<DescribeUserResourcesResponse> describeUserResources(DescribeUserResourcesRequest request);
+
+    /**
      * @param request the request parameters of EncryptPassword  EncryptPasswordRequest
      * @return EncryptPasswordResponse
      */
