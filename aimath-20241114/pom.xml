@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-aimath20241114</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>alibabacloud-aimath20241114</name>
   <description>Alibaba Cloud AIMath (20241114) Async SDK for Java
