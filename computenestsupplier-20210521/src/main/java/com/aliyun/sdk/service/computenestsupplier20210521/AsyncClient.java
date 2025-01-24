@@ -32,6 +32,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApproveServiceUsageResponse> approveServiceUsage(ApproveServiceUsageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only service registration in the Submitted status can be canceled.</p>
+     * 
+     * @param request the request parameters of CancelServiceRegistration  CancelServiceRegistrationRequest
+     * @return CancelServiceRegistrationResponse
+     */
+    CompletableFuture<CancelServiceRegistrationResponse> cancelServiceRegistration(CancelServiceRegistrationRequest request);
+
+    /**
      * @param request the request parameters of ContinueDeployServiceInstance  ContinueDeployServiceInstanceRequest
      * @return ContinueDeployServiceInstanceResponse
      */
@@ -170,10 +179,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListArtifactsResponse> listArtifacts(ListArtifactsRequest request);
 
     /**
+     * @param request the request parameters of ListServiceInstanceDeployDetails  ListServiceInstanceDeployDetailsRequest
+     * @return ListServiceInstanceDeployDetailsResponse
+     */
+    CompletableFuture<ListServiceInstanceDeployDetailsResponse> listServiceInstanceDeployDetails(ListServiceInstanceDeployDetailsRequest request);
+
+    /**
      * @param request the request parameters of ListServiceInstances  ListServiceInstancesRequest
      * @return ListServiceInstancesResponse
      */
     CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceRegistrations  ListServiceRegistrationsRequest
+     * @return ListServiceRegistrationsResponse
+     */
+    CompletableFuture<ListServiceRegistrationsResponse> listServiceRegistrations(ListServiceRegistrationsRequest request);
 
     /**
      * @param request the request parameters of ListServiceSharedAccounts  ListServiceSharedAccountsRequest
@@ -308,9 +329,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceInstanceSpecResponse> updateServiceInstanceSpec(UpdateServiceInstanceSpecRequest request);
 
     /**
+     * @param request the request parameters of UpdateSharedAccountPermission  UpdateSharedAccountPermissionRequest
+     * @return UpdateSharedAccountPermissionResponse
+     */
+    CompletableFuture<UpdateSharedAccountPermissionResponse> updateSharedAccountPermission(UpdateSharedAccountPermissionRequest request);
+
+    /**
      * @param request the request parameters of UpgradeServiceInstance  UpgradeServiceInstanceRequest
      * @return UpgradeServiceInstanceResponse
      */
     CompletableFuture<UpgradeServiceInstanceResponse> upgradeServiceInstance(UpgradeServiceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of WithdrawService  WithdrawServiceRequest
+     * @return WithdrawServiceResponse
+     */
+    CompletableFuture<WithdrawServiceResponse> withdrawService(WithdrawServiceRequest request);
 
 }

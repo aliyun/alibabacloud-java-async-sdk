@@ -228,6 +228,9 @@ public class ListArtifactsResponseBody extends TeaModel {
      * <p>ListArtifactsResponseBody</p>
      */
     public static class Artifacts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtifactBuildProperty")
+        private String artifactBuildProperty;
+
         @com.aliyun.core.annotation.NameInMap("ArtifactId")
         private String artifactId;
 
@@ -256,6 +259,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         private java.util.List<Tags> tags;
 
         private Artifacts(Builder builder) {
+            this.artifactBuildProperty = builder.artifactBuildProperty;
             this.artifactId = builder.artifactId;
             this.artifactType = builder.artifactType;
             this.description = builder.description;
@@ -273,6 +277,13 @@ public class ListArtifactsResponseBody extends TeaModel {
 
         public static Artifacts create() {
             return builder().build();
+        }
+
+        /**
+         * @return artifactBuildProperty
+         */
+        public String getArtifactBuildProperty() {
+            return this.artifactBuildProperty;
         }
 
         /**
@@ -339,6 +350,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String artifactBuildProperty; 
             private String artifactId; 
             private String artifactType; 
             private String description; 
@@ -348,6 +360,17 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            /**
+             * <p>The build properties of the artifact, utilized for hosting and building the deployment package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;CodeRepo&quot;:{&quot;Owner&quot;:&quot;wenle&quot;,&quot;Platform&quot;:&quot;github&quot;,&quot;Branch&quot;:&quot;main&quot;,&quot;RepoName&quot;:&quot;aliyun-computenest/java-springboot-demo&quot;}}</p>
+             */
+            public Builder artifactBuildProperty(String artifactBuildProperty) {
+                this.artifactBuildProperty = artifactBuildProperty;
+                return this;
+            }
 
             /**
              * <p>The ID of the deployment package.</p>
