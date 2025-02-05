@@ -77,6 +77,9 @@ public class ResourceInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceUsedMemory")
     private String instanceUsedMemory;
 
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.List<Labels> labels;
+
     @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
@@ -107,6 +110,7 @@ public class ResourceInstance extends TeaModel {
         this.instanceUsedGpu = builder.instanceUsedGpu;
         this.instanceUsedGpuMemory = builder.instanceUsedGpuMemory;
         this.instanceUsedMemory = builder.instanceUsedMemory;
+        this.labels = builder.labels;
         this.region = builder.region;
         this.resourceId = builder.resourceId;
         this.zone = builder.zone;
@@ -261,6 +265,13 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.List<Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -302,6 +313,7 @@ public class ResourceInstance extends TeaModel {
         private Float instanceUsedGpu; 
         private String instanceUsedGpuMemory; 
         private String instanceUsedMemory; 
+        private java.util.List<Labels> labels; 
         private String region; 
         private String resourceId; 
         private String zone; 
@@ -467,6 +479,14 @@ public class ResourceInstance extends TeaModel {
         }
 
         /**
+         * Labels.
+         */
+        public Builder labels(java.util.List<Labels> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
          * Region.
          */
         public Builder region(String region) {
@@ -496,4 +516,71 @@ public class ResourceInstance extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ResourceInstance} extends {@link TeaModel}
+     *
+     * <p>ResourceInstance</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LabelKey")
+        private String labelKey;
+
+        @com.aliyun.core.annotation.NameInMap("LabelValue")
+        private String labelValue;
+
+        private Labels(Builder builder) {
+            this.labelKey = builder.labelKey;
+            this.labelValue = builder.labelValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelKey
+         */
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        /**
+         * @return labelValue
+         */
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+        public static final class Builder {
+            private String labelKey; 
+            private String labelValue; 
+
+            /**
+             * LabelKey.
+             */
+            public Builder labelKey(String labelKey) {
+                this.labelKey = labelKey;
+                return this;
+            }
+
+            /**
+             * LabelValue.
+             */
+            public Builder labelValue(String labelValue) {
+                this.labelValue = labelValue;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
 }

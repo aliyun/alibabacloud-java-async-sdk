@@ -494,6 +494,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteResourceInstanceLabel  DeleteResourceInstanceLabelRequest
+     * @return DeleteResourceInstanceLabelResponse
+     */
+    @Override
+    public CompletableFuture<DeleteResourceInstanceLabelResponse> deleteResourceInstanceLabel(DeleteResourceInstanceLabelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteResourceInstanceLabel").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/resources/{ClusterId}/{ResourceId}/label").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteResourceInstanceLabelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteResourceInstanceLabelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteResourceInstances  DeleteResourceInstancesRequest
      * @return DeleteResourceInstancesResponse
      */
@@ -1605,6 +1623,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateResourceInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateResourceInstanceLabel  UpdateResourceInstanceLabelRequest
+     * @return UpdateResourceInstanceLabelResponse
+     */
+    @Override
+    public CompletableFuture<UpdateResourceInstanceLabelResponse> updateResourceInstanceLabel(UpdateResourceInstanceLabelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateResourceInstanceLabel").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/resources/{ClusterId}/{ResourceId}/label").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateResourceInstanceLabelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateResourceInstanceLabelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

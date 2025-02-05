@@ -1,3 +1,6 @@
+2025-02-05 Version: 6.0.8
+- Generated java-async 2021-07-01 for eas.
+
 2025-01-21 Version: 6.0.7
 - Generated java-async 2021-07-01 for eas.
 

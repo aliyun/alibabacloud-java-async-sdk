@@ -34,6 +34,10 @@ public class CreateResourceRequest extends Request {
     private String ecsInstanceType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
@@ -56,6 +60,7 @@ public class CreateResourceRequest extends Request {
         this.chargeType = builder.chargeType;
         this.ecsInstanceCount = builder.ecsInstanceCount;
         this.ecsInstanceType = builder.ecsInstanceType;
+        this.labels = builder.labels;
         this.resourceType = builder.resourceType;
         this.selfManagedResourceOptions = builder.selfManagedResourceOptions;
         this.systemDiskSize = builder.systemDiskSize;
@@ -104,6 +109,13 @@ public class CreateResourceRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -136,6 +148,7 @@ public class CreateResourceRequest extends Request {
         private String chargeType; 
         private Integer ecsInstanceCount; 
         private String ecsInstanceType; 
+        private java.util.Map<String, String> labels; 
         private String resourceType; 
         private SelfManagedResourceOptions selfManagedResourceOptions; 
         private Integer systemDiskSize; 
@@ -151,6 +164,7 @@ public class CreateResourceRequest extends Request {
             this.chargeType = request.chargeType;
             this.ecsInstanceCount = request.ecsInstanceCount;
             this.ecsInstanceType = request.ecsInstanceType;
+            this.labels = request.labels;
             this.resourceType = request.resourceType;
             this.selfManagedResourceOptions = request.selfManagedResourceOptions;
             this.systemDiskSize = request.systemDiskSize;
@@ -219,6 +233,15 @@ public class CreateResourceRequest extends Request {
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
             this.ecsInstanceType = ecsInstanceType;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, String> labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
             return this;
         }
 

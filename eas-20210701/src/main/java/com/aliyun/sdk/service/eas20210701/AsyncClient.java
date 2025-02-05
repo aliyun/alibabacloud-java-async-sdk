@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteResourceDLinkResponse> deleteResourceDLink(DeleteResourceDLinkRequest request);
 
     /**
+     * @param request the request parameters of DeleteResourceInstanceLabel  DeleteResourceInstanceLabelRequest
+     * @return DeleteResourceInstanceLabelResponse
+     */
+    CompletableFuture<DeleteResourceInstanceLabelResponse> deleteResourceInstanceLabel(DeleteResourceInstanceLabelRequest request);
+
+    /**
      * @param request the request parameters of DeleteResourceInstances  DeleteResourceInstancesRequest
      * @return DeleteResourceInstancesResponse
      */
@@ -541,6 +547,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateResourceInstanceResponse
      */
     CompletableFuture<UpdateResourceInstanceResponse> updateResourceInstance(UpdateResourceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateResourceInstanceLabel  UpdateResourceInstanceLabelRequest
+     * @return UpdateResourceInstanceLabelResponse
+     */
+    CompletableFuture<UpdateResourceInstanceLabelResponse> updateResourceInstanceLabel(UpdateResourceInstanceLabelRequest request);
 
     /**
      * @param request the request parameters of UpdateService  UpdateServiceRequest

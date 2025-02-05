@@ -47,6 +47,10 @@ public class CreateResourceInstancesRequest extends Request {
     private String ecsInstanceType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
     @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 200)
     private Integer systemDiskSize;
@@ -67,6 +71,7 @@ public class CreateResourceInstancesRequest extends Request {
         this.chargeType = builder.chargeType;
         this.ecsInstanceCount = builder.ecsInstanceCount;
         this.ecsInstanceType = builder.ecsInstanceType;
+        this.labels = builder.labels;
         this.systemDiskSize = builder.systemDiskSize;
         this.userData = builder.userData;
         this.zone = builder.zone;
@@ -128,6 +133,13 @@ public class CreateResourceInstancesRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return systemDiskSize
      */
     public Integer getSystemDiskSize() {
@@ -155,6 +167,7 @@ public class CreateResourceInstancesRequest extends Request {
         private String chargeType; 
         private Integer ecsInstanceCount; 
         private String ecsInstanceType; 
+        private java.util.Map<String, String> labels; 
         private Integer systemDiskSize; 
         private String userData; 
         private String zone; 
@@ -171,6 +184,7 @@ public class CreateResourceInstancesRequest extends Request {
             this.chargeType = request.chargeType;
             this.ecsInstanceCount = request.ecsInstanceCount;
             this.ecsInstanceType = request.ecsInstanceType;
+            this.labels = request.labels;
             this.systemDiskSize = request.systemDiskSize;
             this.userData = request.userData;
             this.zone = request.zone;
@@ -258,6 +272,15 @@ public class CreateResourceInstancesRequest extends Request {
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
             this.ecsInstanceType = ecsInstanceType;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, String> labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
             return this;
         }
 
