@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -215,7 +220,7 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         private String errorMessage;
 
         @com.aliyun.core.annotation.NameInMap("Phrases")
-        private java.util.List < Phrases> phrases;
+        private java.util.List<Phrases> phrases;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -252,7 +257,7 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         /**
          * @return phrases
          */
-        public java.util.List < Phrases> getPhrases() {
+        public java.util.List<Phrases> getPhrases() {
             return this.phrases;
         }
 
@@ -266,7 +271,7 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         public static final class Builder {
             private String errorCode; 
             private String errorMessage; 
-            private java.util.List < Phrases> phrases; 
+            private java.util.List<Phrases> phrases; 
             private String status; 
 
             /**
@@ -288,7 +293,7 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             /**
              * Phrases.
              */
-            public Builder phrases(java.util.List < Phrases> phrases) {
+            public Builder phrases(java.util.List<Phrases> phrases) {
                 this.phrases = phrases;
                 return this;
             }

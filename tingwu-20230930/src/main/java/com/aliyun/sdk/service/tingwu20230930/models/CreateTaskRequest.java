@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,7 @@ public class CreateTaskRequest extends Request {
         private String format;
 
         @com.aliyun.core.annotation.NameInMap("LanguageHints")
-        private java.util.List < String > languageHints;
+        private java.util.List<String> languageHints;
 
         @com.aliyun.core.annotation.NameInMap("MultipleStreamsEnabled")
         private Boolean multipleStreamsEnabled;
@@ -252,7 +257,7 @@ public class CreateTaskRequest extends Request {
         /**
          * @return languageHints
          */
-        public java.util.List < String > getLanguageHints() {
+        public java.util.List<String> getLanguageHints() {
             return this.languageHints;
         }
 
@@ -309,7 +314,7 @@ public class CreateTaskRequest extends Request {
             private String audioChannelMode; 
             private String fileUrl; 
             private String format; 
-            private java.util.List < String > languageHints; 
+            private java.util.List<String> languageHints; 
             private Boolean multipleStreamsEnabled; 
             private String outputPath; 
             private Boolean progressiveCallbacksEnabled; 
@@ -345,7 +350,7 @@ public class CreateTaskRequest extends Request {
             /**
              * LanguageHints.
              */
-            public Builder languageHints(java.util.List < String > languageHints) {
+            public Builder languageHints(java.util.List<String> languageHints) {
                 this.languageHints = languageHints;
                 return this;
             }
@@ -411,6 +416,160 @@ public class CreateTaskRequest extends Request {
 
             public Input build() {
                 return new Input(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class ExtractionContents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private ExtractionContents(Builder builder) {
+            this.content = builder.content;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtractionContents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String title; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public ExtractionContents build() {
+                return new ExtractionContents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTaskRequest</p>
+     */
+    public static class ContentExtraction extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExtractionContents")
+        private java.util.List<ExtractionContents> extractionContents;
+
+        @com.aliyun.core.annotation.NameInMap("SceneIntroduction")
+        private String sceneIntroduction;
+
+        @com.aliyun.core.annotation.NameInMap("SpeakerMap")
+        private java.util.Map<String, ?> speakerMap;
+
+        private ContentExtraction(Builder builder) {
+            this.extractionContents = builder.extractionContents;
+            this.sceneIntroduction = builder.sceneIntroduction;
+            this.speakerMap = builder.speakerMap;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContentExtraction create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extractionContents
+         */
+        public java.util.List<ExtractionContents> getExtractionContents() {
+            return this.extractionContents;
+        }
+
+        /**
+         * @return sceneIntroduction
+         */
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
+        }
+
+        /**
+         * @return speakerMap
+         */
+        public java.util.Map<String, ?> getSpeakerMap() {
+            return this.speakerMap;
+        }
+
+        public static final class Builder {
+            private java.util.List<ExtractionContents> extractionContents; 
+            private String sceneIntroduction; 
+            private java.util.Map<String, ?> speakerMap; 
+
+            /**
+             * ExtractionContents.
+             */
+            public Builder extractionContents(java.util.List<ExtractionContents> extractionContents) {
+                this.extractionContents = extractionContents;
+                return this;
+            }
+
+            /**
+             * SceneIntroduction.
+             */
+            public Builder sceneIntroduction(String sceneIntroduction) {
+                this.sceneIntroduction = sceneIntroduction;
+                return this;
+            }
+
+            /**
+             * SpeakerMap.
+             */
+            public Builder speakerMap(java.util.Map<String, ?> speakerMap) {
+                this.speakerMap = speakerMap;
+                return this;
+            }
+
+            public ContentExtraction build() {
+                return new ContentExtraction(this);
             } 
 
         } 
@@ -533,7 +692,7 @@ public class CreateTaskRequest extends Request {
      */
     public static class CustomPrompt extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
-        private java.util.List < Contents> contents;
+        private java.util.List<Contents> contents;
 
         private CustomPrompt(Builder builder) {
             this.contents = builder.contents;
@@ -550,17 +709,17 @@ public class CreateTaskRequest extends Request {
         /**
          * @return contents
          */
-        public java.util.List < Contents> getContents() {
+        public java.util.List<Contents> getContents() {
             return this.contents;
         }
 
         public static final class Builder {
-            private java.util.List < Contents> contents; 
+            private java.util.List<Contents> contents; 
 
             /**
              * Contents.
              */
-            public Builder contents(java.util.List < Contents> contents) {
+            public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
                 return this;
             }
@@ -707,7 +866,7 @@ public class CreateTaskRequest extends Request {
      */
     public static class MeetingAssistance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Types")
-        private java.util.List < String > types;
+        private java.util.List<String> types;
 
         private MeetingAssistance(Builder builder) {
             this.types = builder.types;
@@ -724,17 +883,17 @@ public class CreateTaskRequest extends Request {
         /**
          * @return types
          */
-        public java.util.List < String > getTypes() {
+        public java.util.List<String> getTypes() {
             return this.types;
         }
 
         public static final class Builder {
-            private java.util.List < String > types; 
+            private java.util.List<String> types; 
 
             /**
              * Types.
              */
-            public Builder types(java.util.List < String > types) {
+            public Builder types(java.util.List<String> types) {
                 this.types = types;
                 return this;
             }
@@ -821,7 +980,7 @@ public class CreateTaskRequest extends Request {
      */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InspectionContents")
-        private java.util.List < InspectionContents> inspectionContents;
+        private java.util.List<InspectionContents> inspectionContents;
 
         @com.aliyun.core.annotation.NameInMap("InspectionIntroduction")
         private String inspectionIntroduction;
@@ -830,7 +989,7 @@ public class CreateTaskRequest extends Request {
         private String sceneIntroduction;
 
         @com.aliyun.core.annotation.NameInMap("SpeakerMap")
-        private java.util.Map < String, ? > speakerMap;
+        private java.util.Map<String, ?> speakerMap;
 
         private ServiceInspection(Builder builder) {
             this.inspectionContents = builder.inspectionContents;
@@ -850,7 +1009,7 @@ public class CreateTaskRequest extends Request {
         /**
          * @return inspectionContents
          */
-        public java.util.List < InspectionContents> getInspectionContents() {
+        public java.util.List<InspectionContents> getInspectionContents() {
             return this.inspectionContents;
         }
 
@@ -871,20 +1030,20 @@ public class CreateTaskRequest extends Request {
         /**
          * @return speakerMap
          */
-        public java.util.Map < String, ? > getSpeakerMap() {
+        public java.util.Map<String, ?> getSpeakerMap() {
             return this.speakerMap;
         }
 
         public static final class Builder {
-            private java.util.List < InspectionContents> inspectionContents; 
+            private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
-            private java.util.Map < String, ? > speakerMap; 
+            private java.util.Map<String, ?> speakerMap; 
 
             /**
              * InspectionContents.
              */
-            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+            public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
                 return this;
             }
@@ -908,7 +1067,7 @@ public class CreateTaskRequest extends Request {
             /**
              * SpeakerMap.
              */
-            public Builder speakerMap(java.util.Map < String, ? > speakerMap) {
+            public Builder speakerMap(java.util.Map<String, ?> speakerMap) {
                 this.speakerMap = speakerMap;
                 return this;
             }
@@ -928,7 +1087,7 @@ public class CreateTaskRequest extends Request {
      */
     public static class Summarization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Types")
-        private java.util.List < String > types;
+        private java.util.List<String> types;
 
         private Summarization(Builder builder) {
             this.types = builder.types;
@@ -945,17 +1104,17 @@ public class CreateTaskRequest extends Request {
         /**
          * @return types
          */
-        public java.util.List < String > getTypes() {
+        public java.util.List<String> getTypes() {
             return this.types;
         }
 
         public static final class Builder {
-            private java.util.List < String > types; 
+            private java.util.List<String> types; 
 
             /**
              * Types.
              */
-            public Builder types(java.util.List < String > types) {
+            public Builder types(java.util.List<String> types) {
                 this.types = types;
                 return this;
             }
@@ -1302,7 +1461,7 @@ public class CreateTaskRequest extends Request {
         private Integer outputLevel;
 
         @com.aliyun.core.annotation.NameInMap("TargetLanguages")
-        private java.util.List < String > targetLanguages;
+        private java.util.List<String> targetLanguages;
 
         private Translation(Builder builder) {
             this.additionalStreamOutputLevel = builder.additionalStreamOutputLevel;
@@ -1335,14 +1494,14 @@ public class CreateTaskRequest extends Request {
         /**
          * @return targetLanguages
          */
-        public java.util.List < String > getTargetLanguages() {
+        public java.util.List<String> getTargetLanguages() {
             return this.targetLanguages;
         }
 
         public static final class Builder {
             private Integer additionalStreamOutputLevel; 
             private Integer outputLevel; 
-            private java.util.List < String > targetLanguages; 
+            private java.util.List<String> targetLanguages; 
 
             /**
              * AdditionalStreamOutputLevel.
@@ -1363,7 +1522,7 @@ public class CreateTaskRequest extends Request {
             /**
              * TargetLanguages.
              */
-            public Builder targetLanguages(java.util.List < String > targetLanguages) {
+            public Builder targetLanguages(java.util.List<String> targetLanguages) {
                 this.targetLanguages = targetLanguages;
                 return this;
             }
@@ -1384,6 +1543,12 @@ public class CreateTaskRequest extends Request {
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoChaptersEnabled")
         private Boolean autoChaptersEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("ContentExtraction")
+        private ContentExtraction contentExtraction;
+
+        @com.aliyun.core.annotation.NameInMap("ContentExtractionEnabled")
+        private Boolean contentExtractionEnabled;
 
         @com.aliyun.core.annotation.NameInMap("CustomPrompt")
         private CustomPrompt customPrompt;
@@ -1432,6 +1597,8 @@ public class CreateTaskRequest extends Request {
 
         private Parameters(Builder builder) {
             this.autoChaptersEnabled = builder.autoChaptersEnabled;
+            this.contentExtraction = builder.contentExtraction;
+            this.contentExtractionEnabled = builder.contentExtractionEnabled;
             this.customPrompt = builder.customPrompt;
             this.customPromptEnabled = builder.customPromptEnabled;
             this.extraParams = builder.extraParams;
@@ -1462,6 +1629,20 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        /**
+         * @return contentExtraction
+         */
+        public ContentExtraction getContentExtraction() {
+            return this.contentExtraction;
+        }
+
+        /**
+         * @return contentExtractionEnabled
+         */
+        public Boolean getContentExtractionEnabled() {
+            return this.contentExtractionEnabled;
         }
 
         /**
@@ -1571,6 +1752,8 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private Boolean autoChaptersEnabled; 
+            private ContentExtraction contentExtraction; 
+            private Boolean contentExtractionEnabled; 
             private CustomPrompt customPrompt; 
             private Boolean customPromptEnabled; 
             private ExtraParams extraParams; 
@@ -1592,6 +1775,22 @@ public class CreateTaskRequest extends Request {
              */
             public Builder autoChaptersEnabled(Boolean autoChaptersEnabled) {
                 this.autoChaptersEnabled = autoChaptersEnabled;
+                return this;
+            }
+
+            /**
+             * ContentExtraction.
+             */
+            public Builder contentExtraction(ContentExtraction contentExtraction) {
+                this.contentExtraction = contentExtraction;
+                return this;
+            }
+
+            /**
+             * ContentExtractionEnabled.
+             */
+            public Builder contentExtractionEnabled(Boolean contentExtractionEnabled) {
+                this.contentExtractionEnabled = contentExtractionEnabled;
                 return this;
             }
 
