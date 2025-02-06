@@ -580,8 +580,7 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
          * <p>Elastic sensitivity. Values: - normal: standard - flexible: sensitive</p>
          * 
          * <strong>example:</strong>
-         * <p>normal
-         * flexible</p>
+         * <p>normal</p>
          */
         public Builder serverlessRuleMode(String serverlessRuleMode) {
             this.putQueryParameter("ServerlessRuleMode", serverlessRuleMode);

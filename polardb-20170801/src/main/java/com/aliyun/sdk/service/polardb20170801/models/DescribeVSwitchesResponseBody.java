@@ -135,7 +135,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the vSwitch.</p>
+         * <p>The vSwitches.</p>
          */
         public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
             this.vSwitchs = vSwitchs;
@@ -287,7 +287,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The descriptions of the vSwitch.</p>
+             * <p>The description of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vSwitchDescription</p>

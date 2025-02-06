@@ -311,7 +311,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1. The value must be an integer that is greater than 0.</p>
+         * <p>The number of the page to return. Default value: 1. The value must be an integer that is greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -323,7 +323,7 @@ public class DescribeGlobalDatabaseNetworksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Default value: 30. Valid values:</p>
          * <ul>
          * <li>30</li>
          * <li>50</li>

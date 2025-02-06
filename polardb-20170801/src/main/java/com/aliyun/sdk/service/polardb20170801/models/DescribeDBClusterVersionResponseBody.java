@@ -609,7 +609,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Stable</p>
+             * <p>LTS</p>
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;

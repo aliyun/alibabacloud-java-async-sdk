@@ -23,6 +23,10 @@ public class DescribeActivationCodesRequest extends Request {
     private String aliyunOrderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MacAddress")
+    private String macAddress;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -47,15 +51,21 @@ public class DescribeActivationCodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemIdentifier")
+    private String systemIdentifier;
+
     private DescribeActivationCodesRequest(Builder builder) {
         super(builder);
         this.aliyunOrderId = builder.aliyunOrderId;
+        this.macAddress = builder.macAddress;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.systemIdentifier = builder.systemIdentifier;
     }
 
     public static Builder builder() {
@@ -76,6 +86,13 @@ public class DescribeActivationCodesRequest extends Request {
      */
     public String getAliyunOrderId() {
         return this.aliyunOrderId;
+    }
+
+    /**
+     * @return macAddress
+     */
+    public String getMacAddress() {
+        return this.macAddress;
     }
 
     /**
@@ -120,14 +137,23 @@ public class DescribeActivationCodesRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return systemIdentifier
+     */
+    public String getSystemIdentifier() {
+        return this.systemIdentifier;
+    }
+
     public static final class Builder extends Request.Builder<DescribeActivationCodesRequest, Builder> {
         private String aliyunOrderId; 
+        private String macAddress; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String systemIdentifier; 
 
         private Builder() {
             super();
@@ -136,12 +162,14 @@ public class DescribeActivationCodesRequest extends Request {
         private Builder(DescribeActivationCodesRequest request) {
             super(request);
             this.aliyunOrderId = request.aliyunOrderId;
+            this.macAddress = request.macAddress;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.systemIdentifier = request.systemIdentifier;
         } 
 
         /**
@@ -154,6 +182,15 @@ public class DescribeActivationCodesRequest extends Request {
         public Builder aliyunOrderId(String aliyunOrderId) {
             this.putQueryParameter("AliyunOrderId", aliyunOrderId);
             this.aliyunOrderId = aliyunOrderId;
+            return this;
+        }
+
+        /**
+         * MacAddress.
+         */
+        public Builder macAddress(String macAddress) {
+            this.putQueryParameter("MacAddress", macAddress);
+            this.macAddress = macAddress;
             return this;
         }
 
@@ -214,6 +251,15 @@ public class DescribeActivationCodesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SystemIdentifier.
+         */
+        public Builder systemIdentifier(String systemIdentifier) {
+            this.putQueryParameter("SystemIdentifier", systemIdentifier);
+            this.systemIdentifier = systemIdentifier;
             return this;
         }
 

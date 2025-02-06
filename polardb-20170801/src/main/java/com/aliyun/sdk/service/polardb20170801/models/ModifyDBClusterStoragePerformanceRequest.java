@@ -144,7 +144,17 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         } 
 
         /**
-         * BurstingEnabled.
+         * <p>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available only when the StorageType parameter is set to ESSDAUTOPL.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder burstingEnabled(String burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);

@@ -395,7 +395,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The type of the zone. Valid values:</p>
+         * <p>The zone type. Valid values:</p>
          * <ul>
          * <li><strong>Primary</strong>: primary zone</li>
          * <li><strong>Standby</strong>: secondary zone</li>

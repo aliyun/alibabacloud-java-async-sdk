@@ -67,7 +67,7 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         private Long storageUpperBound; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>593AE1C5-B70C-463F-9207-074639******</p>
@@ -78,7 +78,11 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the automatic storage expansion feature is enabled for the standard cluster.</p>
+         * <p>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</p>
+         * <ul>
+         * <li>Enable</li>
+         * <li>Disable</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -89,9 +93,9 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum storage capacity of the standard cluster that is scaled up. Unit: GB.</p>
+         * <p>The maximum storage capacity that is allowed for storage automatic scaling of the Standard Edition cluster. Unit: GB.</p>
          * <blockquote>
-         * <p> This parameter is returned when the StorageAutoScale parameter is set to Enable.</p>
+         * <p> This parameter is valid only when the StorageAutoScale parameter is set to Enable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

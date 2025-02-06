@@ -475,9 +475,10 @@ public class CreateDBClusterEndpointRequest extends Request {
         }
 
         /**
-         * <p>Whether the node has enabled the global consistency (high-performance mode) feature. The value range is as follows:</p>
+         * <p>Specifies whether to enable the global consistency (high-performance mode) feature for the nodes. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong>: Enabled - <strong>OFF</strong>: Disabled</li>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
