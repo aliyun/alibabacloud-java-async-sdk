@@ -257,6 +257,12 @@ public class GetAsrVocabResponseBody extends TeaModel {
      * <p>GetAsrVocabResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ModelCustomizationId")
+        private String modelCustomizationId;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -264,6 +270,8 @@ public class GetAsrVocabResponseBody extends TeaModel {
         private Words words;
 
         private Data(Builder builder) {
+            this.asrVersion = builder.asrVersion;
+            this.modelCustomizationId = builder.modelCustomizationId;
             this.name = builder.name;
             this.words = builder.words;
         }
@@ -274,6 +282,20 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
+        }
+
+        /**
+         * @return modelCustomizationId
+         */
+        public String getModelCustomizationId() {
+            return this.modelCustomizationId;
         }
 
         /**
@@ -291,8 +313,26 @@ public class GetAsrVocabResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer asrVersion; 
+            private String modelCustomizationId; 
             private String name; 
             private Words words; 
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
+                return this;
+            }
+
+            /**
+             * ModelCustomizationId.
+             */
+            public Builder modelCustomizationId(String modelCustomizationId) {
+                this.modelCustomizationId = modelCustomizationId;
+                return this;
+            }
 
             /**
              * Name.

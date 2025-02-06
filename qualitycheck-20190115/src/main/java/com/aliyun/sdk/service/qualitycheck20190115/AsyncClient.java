@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddRuleV4Response> addRuleV4(AddRuleV4Request request);
 
     /**
+     * @param request the request parameters of ApplyWsToken  ApplyWsTokenRequest
+     * @return ApplyWsTokenResponse
+     */
+    CompletableFuture<ApplyWsTokenResponse> applyWsToken(ApplyWsTokenRequest request);
+
+    /**
      * @param request the request parameters of AssignReviewer  AssignReviewerRequest
      * @return AssignReviewerResponse
      */

@@ -889,6 +889,9 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrTaskPriority")
         private Integer asrTaskPriority;
 
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
         @com.aliyun.core.annotation.NameInMap("AssignType")
         private Integer assignType;
 
@@ -966,6 +969,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
         private DataData(Builder builder) {
             this.asrTaskPriority = builder.asrTaskPriority;
+            this.asrVersion = builder.asrVersion;
             this.assignType = builder.assignType;
             this.createTime = builder.createTime;
             this.createUser = builder.createUser;
@@ -1006,6 +1010,13 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
          */
         public Integer getAsrTaskPriority() {
             return this.asrTaskPriority;
+        }
+
+        /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
         }
 
         /**
@@ -1185,6 +1196,7 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer asrTaskPriority; 
+            private Integer asrVersion; 
             private Integer assignType; 
             private String createTime; 
             private Long createUser; 
@@ -1216,6 +1228,14 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
              */
             public Builder asrTaskPriority(Integer asrTaskPriority) {
                 this.asrTaskPriority = asrTaskPriority;
+                return this;
+            }
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
                 return this;
             }
 

@@ -143,11 +143,17 @@ public class ListAsrVocabResponseBody extends TeaModel {
      * <p>ListAsrVocabResponseBody</p>
      */
     public static class AsrVocab extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("ModelCustomizationId")
+        private String modelCustomizationId;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -159,8 +165,10 @@ public class ListAsrVocabResponseBody extends TeaModel {
         private String vocabularyId;
 
         private AsrVocab(Builder builder) {
+            this.asrVersion = builder.asrVersion;
             this.createTime = builder.createTime;
             this.id = builder.id;
+            this.modelCustomizationId = builder.modelCustomizationId;
             this.name = builder.name;
             this.updateTime = builder.updateTime;
             this.vocabularyId = builder.vocabularyId;
@@ -175,6 +183,13 @@ public class ListAsrVocabResponseBody extends TeaModel {
         }
 
         /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
@@ -186,6 +201,13 @@ public class ListAsrVocabResponseBody extends TeaModel {
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return modelCustomizationId
+         */
+        public String getModelCustomizationId() {
+            return this.modelCustomizationId;
         }
 
         /**
@@ -210,11 +232,21 @@ public class ListAsrVocabResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer asrVersion; 
             private String createTime; 
             private String id; 
+            private String modelCustomizationId; 
             private String name; 
             private String updateTime; 
             private String vocabularyId; 
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
+                return this;
+            }
 
             /**
              * CreateTime.
@@ -229,6 +261,14 @@ public class ListAsrVocabResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ModelCustomizationId.
+             */
+            public Builder modelCustomizationId(String modelCustomizationId) {
+                this.modelCustomizationId = modelCustomizationId;
                 return this;
             }
 

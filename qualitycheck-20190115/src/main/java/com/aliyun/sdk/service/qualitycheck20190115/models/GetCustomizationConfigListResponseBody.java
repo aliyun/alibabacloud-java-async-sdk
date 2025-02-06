@@ -143,6 +143,9 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
      * <p>GetCustomizationConfigListResponseBody</p>
      */
     public static class ModelCustomizationDataSetPo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrVersion")
+        private Integer asrVersion;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -162,6 +165,7 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         private Integer taskType;
 
         private ModelCustomizationDataSetPo(Builder builder) {
+            this.asrVersion = builder.asrVersion;
             this.createTime = builder.createTime;
             this.modeCustomizationId = builder.modeCustomizationId;
             this.modelId = builder.modelId;
@@ -176,6 +180,13 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
 
         public static ModelCustomizationDataSetPo create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrVersion
+         */
+        public Integer getAsrVersion() {
+            return this.asrVersion;
         }
 
         /**
@@ -221,12 +232,21 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer asrVersion; 
             private String createTime; 
             private String modeCustomizationId; 
             private Long modelId; 
             private String modelName; 
             private Integer modelStatus; 
             private Integer taskType; 
+
+            /**
+             * AsrVersion.
+             */
+            public Builder asrVersion(Integer asrVersion) {
+                this.asrVersion = asrVersion;
+                return this;
+            }
 
             /**
              * CreateTime.
