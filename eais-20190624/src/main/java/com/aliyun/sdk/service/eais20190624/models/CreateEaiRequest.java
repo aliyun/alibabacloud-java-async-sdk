@@ -48,6 +48,10 @@ public class CreateEaiRequest extends Request {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -60,6 +64,7 @@ public class CreateEaiRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -126,6 +131,13 @@ public class CreateEaiRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -140,6 +152,7 @@ public class CreateEaiRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
 
         private Builder() {
@@ -155,6 +168,7 @@ public class CreateEaiRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
 
@@ -228,6 +242,15 @@ public class CreateEaiRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * VSwitchId.
          */
         public Builder vSwitchId(String vSwitchId) {
@@ -243,4 +266,71 @@ public class CreateEaiRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEaiRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEaiRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
