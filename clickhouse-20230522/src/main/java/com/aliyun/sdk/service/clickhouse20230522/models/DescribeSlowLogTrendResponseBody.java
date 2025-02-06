@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -212,7 +217,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         private String DBInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ResultSet")
-        private java.util.List < ResultSet> resultSet;
+        private java.util.List<ResultSet> resultSet;
 
         private Data(Builder builder) {
             this.DBInstanceID = builder.DBInstanceID;
@@ -245,14 +250,14 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         /**
          * @return resultSet
          */
-        public java.util.List < ResultSet> getResultSet() {
+        public java.util.List<ResultSet> getResultSet() {
             return this.resultSet;
         }
 
         public static final class Builder {
             private Integer DBInstanceID; 
             private String DBInstanceName; 
-            private java.util.List < ResultSet> resultSet; 
+            private java.util.List<ResultSet> resultSet; 
 
             /**
              * DBInstanceID.
@@ -273,7 +278,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             /**
              * ResultSet.
              */
-            public Builder resultSet(java.util.List < ResultSet> resultSet) {
+            public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;
                 return this;
             }

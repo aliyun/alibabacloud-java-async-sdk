@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -141,7 +146,15 @@ public class UpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * <p>Specifies whether to update the minor engine version of the cluster immediately. Valid values:</p>
+         * <ul>
+         * <li><strong>Immediate</strong>: The system immediately performs the update.</li>
+         * <li><strong>MaintainTime</strong>: The system performs the update during the specified maintenance window.</li>
+         * <li><strong>SpecifyTime</strong>: The system performs the update at a specified time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

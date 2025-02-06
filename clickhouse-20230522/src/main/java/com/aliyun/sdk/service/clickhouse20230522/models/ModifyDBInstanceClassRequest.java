@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -127,7 +132,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum capacity for auto scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleMin(Long scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);

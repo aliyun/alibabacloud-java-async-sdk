@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The result returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -233,6 +238,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DisabledPorts")
+        private String disabledPorts;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -261,7 +269,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String maintainStartTime;
 
         @com.aliyun.core.annotation.NameInMap("Nodes")
-        private java.util.List < Nodes> nodes;
+        private java.util.List<Nodes> nodes;
 
         @com.aliyun.core.annotation.NameInMap("ObjectStoreSize")
         private String objectStoreSize;
@@ -288,7 +296,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String storageType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -307,6 +315,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceId = builder.DBInstanceId;
             this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
+            this.disabledPorts = builder.disabledPorts;
             this.engine = builder.engine;
             this.engineMinorVersion = builder.engineMinorVersion;
             this.engineVersion = builder.engineVersion;
@@ -389,6 +398,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return disabledPorts
+         */
+        public String getDisabledPorts() {
+            return this.disabledPorts;
+        }
+
+        /**
          * @return engine
          */
         public String getEngine() {
@@ -454,7 +470,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
@@ -517,7 +533,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -550,6 +566,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBInstanceId; 
             private Boolean deletionProtection; 
             private String description; 
+            private String disabledPorts; 
             private String engine; 
             private String engineMinorVersion; 
             private String engineVersion; 
@@ -559,7 +576,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String lockReason; 
             private String maintainEndTime; 
             private String maintainStartTime; 
-            private java.util.List < Nodes> nodes; 
+            private java.util.List<Nodes> nodes; 
             private String objectStoreSize; 
             private String regionId; 
             private String resourceGroupId; 
@@ -568,7 +585,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String status; 
             private Integer storageSize; 
             private String storageType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
@@ -626,6 +643,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DisabledPorts.
+             */
+            public Builder disabledPorts(String disabledPorts) {
+                this.disabledPorts = disabledPorts;
                 return this;
             }
 
@@ -704,7 +729,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * Nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -776,7 +801,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

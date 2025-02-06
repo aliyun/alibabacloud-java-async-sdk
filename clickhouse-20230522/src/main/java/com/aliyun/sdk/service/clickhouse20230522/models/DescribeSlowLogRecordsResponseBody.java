@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DF203CC8-5F68-5E3F-8050-3C77DD65731A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -224,7 +232,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * InitialAddress.
+             * <p>The address to which the query statement is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:0:0:0:0:ffff:1edd65ea</p>
              */
             public Builder initialAddress(String initialAddress) {
                 this.initialAddress = initialAddress;
@@ -232,7 +243,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialQueryId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;ae915a3ad30e77e67a7215d05b658cc6&quot;</p>
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -240,7 +254,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InitialUser.
+             * <p>The user who executes the query statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bany</p>
              */
             public Builder initialUser(String initialUser) {
                 this.initialUser = initialUser;
@@ -248,7 +265,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryUsage.
+             * <p>The peak memory usage for the query. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4941696</p>
              */
             public Builder memoryUsage(Long memoryUsage) {
                 this.memoryUsage = memoryUsage;
@@ -256,7 +276,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * <p>The query statement that is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -264,7 +287,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryDurationMs.
+             * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder queryDurationMs(Long queryDurationMs) {
                 this.queryDurationMs = queryDurationMs;
@@ -272,7 +298,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-11 16:00:00</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -280,7 +309,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadBytes.
+             * <p>The size of the data that is scanned. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4507128020832</p>
              */
             public Builder readBytes(Long readBytes) {
                 this.readBytes = readBytes;
@@ -288,7 +320,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadRows.
+             * <p>The number of read rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder readRows(Long readRows) {
                 this.readRows = readRows;
@@ -296,7 +331,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultBytes.
+             * <p>The size of the result data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder resultBytes(Long resultBytes) {
                 this.resultBytes = resultBytes;
@@ -304,7 +342,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the slow query logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExceptionWhileProcessing</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -332,7 +373,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         private String DBInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ResultSet")
-        private java.util.List < ResultSet> resultSet;
+        private java.util.List<ResultSet> resultSet;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -369,7 +410,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return resultSet
          */
-        public java.util.List < ResultSet> getResultSet() {
+        public java.util.List<ResultSet> getResultSet() {
             return this.resultSet;
         }
 
@@ -383,11 +424,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer DBInstanceID; 
             private String DBInstanceName; 
-            private java.util.List < ResultSet> resultSet; 
+            private java.util.List<ResultSet> resultSet; 
             private Integer totalCount; 
 
             /**
-             * DBInstanceID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-bp100p4q1g9z32****</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -395,7 +439,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The cluster name.</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -403,15 +447,18 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultSet.
+             * <p>The result sets.</p>
              */
-            public Builder resultSet(java.util.List < ResultSet> resultSet) {
+            public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;
                 return this;
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

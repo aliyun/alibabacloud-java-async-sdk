@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accounts")
-        private java.util.List < Accounts> accounts;
+        private java.util.List<Accounts> accounts;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -215,7 +220,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return accounts
          */
-        public java.util.List < Accounts> getAccounts() {
+        public java.util.List<Accounts> getAccounts() {
             return this.accounts;
         }
 
@@ -241,7 +246,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Accounts> accounts; 
+            private java.util.List<Accounts> accounts; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -249,7 +254,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * Accounts.
              */
-            public Builder accounts(java.util.List < Accounts> accounts) {
+            public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,10 +87,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         private String account;
 
         @com.aliyun.core.annotation.NameInMap("AllowDatabases")
-        private java.util.List < String > allowDatabases;
+        private java.util.List<String> allowDatabases;
 
         @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
-        private java.util.List < String > allowDictionaries;
+        private java.util.List<String> allowDictionaries;
 
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -97,10 +102,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         private Integer dmlAuthority;
 
         @com.aliyun.core.annotation.NameInMap("TotalDatabases")
-        private java.util.List < String > totalDatabases;
+        private java.util.List<String> totalDatabases;
 
         @com.aliyun.core.annotation.NameInMap("TotalDictionaries")
-        private java.util.List < String > totalDictionaries;
+        private java.util.List<String> totalDictionaries;
 
         private Data(Builder builder) {
             this.account = builder.account;
@@ -131,14 +136,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         /**
          * @return allowDatabases
          */
-        public java.util.List < String > getAllowDatabases() {
+        public java.util.List<String> getAllowDatabases() {
             return this.allowDatabases;
         }
 
         /**
          * @return allowDictionaries
          */
-        public java.util.List < String > getAllowDictionaries() {
+        public java.util.List<String> getAllowDictionaries() {
             return this.allowDictionaries;
         }
 
@@ -166,26 +171,26 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         /**
          * @return totalDatabases
          */
-        public java.util.List < String > getTotalDatabases() {
+        public java.util.List<String> getTotalDatabases() {
             return this.totalDatabases;
         }
 
         /**
          * @return totalDictionaries
          */
-        public java.util.List < String > getTotalDictionaries() {
+        public java.util.List<String> getTotalDictionaries() {
             return this.totalDictionaries;
         }
 
         public static final class Builder {
             private String account; 
-            private java.util.List < String > allowDatabases; 
-            private java.util.List < String > allowDictionaries; 
+            private java.util.List<String> allowDatabases; 
+            private java.util.List<String> allowDictionaries; 
             private String DBInstanceId; 
             private Boolean ddlAuthority; 
             private Integer dmlAuthority; 
-            private java.util.List < String > totalDatabases; 
-            private java.util.List < String > totalDictionaries; 
+            private java.util.List<String> totalDatabases; 
+            private java.util.List<String> totalDictionaries; 
 
             /**
              * Account.
@@ -198,7 +203,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             /**
              * AllowDatabases.
              */
-            public Builder allowDatabases(java.util.List < String > allowDatabases) {
+            public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
                 return this;
             }
@@ -206,7 +211,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             /**
              * AllowDictionaries.
              */
-            public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
+            public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
                 return this;
             }
@@ -238,7 +243,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             /**
              * TotalDatabases.
              */
-            public Builder totalDatabases(java.util.List < String > totalDatabases) {
+            public Builder totalDatabases(java.util.List<String> totalDatabases) {
                 this.totalDatabases = totalDatabases;
                 return this;
             }
@@ -246,7 +251,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
             /**
              * TotalDictionaries.
              */
-            public Builder totalDictionaries(java.util.List < String > totalDictionaries) {
+            public Builder totalDictionaries(java.util.List<String> totalDictionaries) {
                 this.totalDictionaries = totalDictionaries;
                 return this;
             }

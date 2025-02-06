@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         private String netType;
 
         @com.aliyun.core.annotation.NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -212,7 +217,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -248,7 +253,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             private String connectionString; 
             private String IPAddress; 
             private String netType; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
@@ -281,7 +286,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             /**
              * Ports.
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -336,7 +341,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        private java.util.List<Endpoints> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
@@ -357,7 +362,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -369,13 +374,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private String instanceNetworkType; 
 
             /**
              * Endpoints.
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }

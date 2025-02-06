@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -167,6 +172,7 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +185,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * InitialQueryId.
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder initialQueryId(String initialQueryId) {
             this.putQueryParameter("InitialQueryId", initialQueryId);
@@ -188,7 +197,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * InitialUser.
+         * <p>The user who executes the query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder initialUser(String initialUser) {
             this.putQueryParameter("InitialUser", initialUser);
@@ -197,7 +209,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword of the query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -206,7 +221,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +233,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +245,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * QueryDurationMs.
+         * <p>The execution duration of slow SQL queries. Minimum value: 1000. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder queryDurationMs(String queryDurationMs) {
             this.putQueryParameter("QueryDurationMs", queryDurationMs);
@@ -233,7 +257,15 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * QueryOrder.
+         * <p>Specifies the columns by which the query results are sorted in descending order.</p>
+         * <ul>
+         * <li>0: The query results are sorted by the query_duration_ms column.</li>
+         * <li>1: The query results are sorted by the query_duration_ms and query_start_time columns.</li>
+         * <li>2: The query results are sorted by the query_duration_ms, query_start_time, and user columns.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder queryOrder(Long queryOrder) {
             this.putQueryParameter("QueryOrder", queryOrder);
@@ -242,7 +274,10 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

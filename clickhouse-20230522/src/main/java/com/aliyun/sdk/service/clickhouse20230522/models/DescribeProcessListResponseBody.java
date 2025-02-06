@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +63,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +172,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String queryStartTime; 
 
             /**
-             * InitialAddress.
+             * <p>The address to which the query statement is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:0:0:0:0:ffff:1edd65ea</p>
              */
             public Builder initialAddress(String initialAddress) {
                 this.initialAddress = initialAddress;
@@ -172,7 +183,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * InitialQueryId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;79f7e40b-87e2-4ef4-b6df-21889a3a030e&quot;</p>
              */
             public Builder initialQueryId(String initialQueryId) {
                 this.initialQueryId = initialQueryId;
@@ -180,7 +194,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * InitialUser.
+             * <p>The user who executes the query statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bany</p>
              */
             public Builder initialUser(String initialUser) {
                 this.initialUser = initialUser;
@@ -188,7 +205,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * <p>The query statement that is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -196,7 +216,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * QueryDurationMs.
+             * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder queryDurationMs(Long queryDurationMs) {
                 this.queryDurationMs = queryDurationMs;
@@ -204,7 +227,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-23T10:13:23Z</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -232,7 +258,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String DBInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ResultSet")
-        private java.util.List < ResultSet> resultSet;
+        private java.util.List<ResultSet> resultSet;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -269,7 +295,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         /**
          * @return resultSet
          */
-        public java.util.List < ResultSet> getResultSet() {
+        public java.util.List<ResultSet> getResultSet() {
             return this.resultSet;
         }
 
@@ -283,11 +309,14 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer DBInstanceID; 
             private String DBInstanceName; 
-            private java.util.List < ResultSet> resultSet; 
+            private java.util.List<ResultSet> resultSet; 
             private Integer totalCount; 
 
             /**
-             * DBInstanceID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc-xxxx</p>
              */
             public Builder DBInstanceID(Integer DBInstanceID) {
                 this.DBInstanceID = DBInstanceID;
@@ -295,7 +324,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The cluster name.</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -303,15 +332,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * ResultSet.
+             * <p>The result sets.</p>
              */
-            public Builder resultSet(java.util.List < ResultSet> resultSet) {
+            public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;
                 return this;
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

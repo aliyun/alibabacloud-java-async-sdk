@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -100,6 +105,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         } 
 
         /**
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +130,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
+         * <p>The information about permissions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dmlAuthSetting(DmlAuthSetting dmlAuthSetting) {
@@ -134,6 +141,7 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,10 +168,10 @@ public class ModifyAccountAuthorityRequest extends Request {
      */
     public static class DmlAuthSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowDatabases")
-        private java.util.List < String > allowDatabases;
+        private java.util.List<String> allowDatabases;
 
         @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
-        private java.util.List < String > allowDictionaries;
+        private java.util.List<String> allowDictionaries;
 
         @com.aliyun.core.annotation.NameInMap("DdlAuthority")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -191,14 +199,14 @@ public class ModifyAccountAuthorityRequest extends Request {
         /**
          * @return allowDatabases
          */
-        public java.util.List < String > getAllowDatabases() {
+        public java.util.List<String> getAllowDatabases() {
             return this.allowDatabases;
         }
 
         /**
          * @return allowDictionaries
          */
-        public java.util.List < String > getAllowDictionaries() {
+        public java.util.List<String> getAllowDictionaries() {
             return this.allowDictionaries;
         }
 
@@ -217,28 +225,33 @@ public class ModifyAccountAuthorityRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowDatabases; 
-            private java.util.List < String > allowDictionaries; 
+            private java.util.List<String> allowDatabases; 
+            private java.util.List<String> allowDictionaries; 
             private Boolean ddlAuthority; 
             private Integer dmlAuthority; 
 
             /**
-             * AllowDatabases.
+             * <p>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</p>
              */
-            public Builder allowDatabases(java.util.List < String > allowDatabases) {
+            public Builder allowDatabases(java.util.List<String> allowDatabases) {
                 this.allowDatabases = allowDatabases;
                 return this;
             }
 
             /**
-             * AllowDictionaries.
+             * <p>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</p>
              */
-            public Builder allowDictionaries(java.util.List < String > allowDictionaries) {
+            public Builder allowDictionaries(java.util.List<String> allowDictionaries) {
                 this.allowDictionaries = allowDictionaries;
                 return this;
             }
 
             /**
+             * <p>Specifies whether to grant the DDL permissions to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
+             * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -250,6 +263,12 @@ public class ModifyAccountAuthorityRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to grant the DML permissions to the database account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
+             * <li><strong>1</strong>: The account only has the permissions to read data from the database.</li>
+             * <li><strong>2</strong>: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -203,7 +208,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -384,7 +389,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -429,7 +434,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Integer scaleMax; 
             private Integer scaleMin; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
@@ -589,7 +594,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -636,7 +641,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstances")
-        private java.util.List < DBInstances> DBInstances;
+        private java.util.List<DBInstances> DBInstances;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -665,7 +670,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return DBInstances
          */
-        public java.util.List < DBInstances> getDBInstances() {
+        public java.util.List<DBInstances> getDBInstances() {
             return this.DBInstances;
         }
 
@@ -691,7 +696,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DBInstances> DBInstances; 
+            private java.util.List<DBInstances> DBInstances; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private String totalCount; 
@@ -699,7 +704,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             /**
              * DBInstances.
              */
-            public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+            public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
                 this.DBInstances = DBInstances;
                 return this;
             }
