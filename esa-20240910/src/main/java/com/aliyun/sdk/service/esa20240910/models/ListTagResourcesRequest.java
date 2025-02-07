@@ -208,7 +208,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The website information. Valid values of he number of website IDs: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The website ID.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

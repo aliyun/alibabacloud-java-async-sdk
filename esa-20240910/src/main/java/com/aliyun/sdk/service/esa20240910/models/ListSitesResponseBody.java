@@ -541,7 +541,10 @@ public class ListSitesResponseBody extends TeaModel {
             }
 
             /**
-             * VisitTime.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-24T02:01:11Z</p>
              */
             public Builder visitTime(String visitTime) {
                 this.visitTime = visitTime;

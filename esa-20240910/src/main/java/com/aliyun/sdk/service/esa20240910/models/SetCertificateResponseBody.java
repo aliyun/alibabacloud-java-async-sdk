@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetCertificateResponseBody</p>
  */
 public class SetCertificateResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private String id;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetCertificateResponseBody(Builder builder) {
+        this.id = builder.id;
         this.requestId = builder.requestId;
     }
 
@@ -33,6 +37,13 @@ public class SetCertificateResponseBody extends TeaModel {
     }
 
     /**
+     * @return id
+     */
+    public String getId() {
+        return this.id;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -40,7 +51,16 @@ public class SetCertificateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String id; 
         private String requestId; 
+
+        /**
+         * Id.
+         */
+        public Builder id(String id) {
+            this.id = id;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

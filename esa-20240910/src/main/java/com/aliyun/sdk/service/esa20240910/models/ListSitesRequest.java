@@ -231,9 +231,9 @@ public class ListSitesRequest extends Request {
         /**
          * <p>The service location. Valid values:</p>
          * <ul>
-         * <li><strong>domestic</strong>: the Chinese mainland</li>
-         * <li><strong>global</strong>: global</li>
-         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * <li><strong>domestic</strong>: the Chinese Mainland</li>
+         * <li><strong>global</strong>: global (including the Chinese Mainland)</li>
+         * <li><strong>overseas</strong>: outside the Chinese Mainland</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,14 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>null</p>
+         * <ul>
+         * <li>null</li>
+         * <li>null</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>visitTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -279,7 +286,7 @@ public class ListSitesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+         * <p>The number of entries per page. Default value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -293,7 +300,7 @@ public class ListSitesRequest extends Request {
         /**
          * <p>The plan type. Valid values:</p>
          * <ul>
-         * <li><strong>basicplan</strong>: Entrance (coming soon)</li>
+         * <li><strong>basicplan</strong>: Entrance</li>
          * <li><strong>standardplan</strong>: Pro</li>
          * <li><strong>advancedplan</strong>: Premium</li>
          * <li><strong>enterpriseplan</strong>: Enterprise</li>
@@ -337,7 +344,7 @@ public class ListSitesRequest extends Request {
          * <ul>
          * <li><strong>prefix</strong>: match by prefix.</li>
          * <li><strong>suffix</strong>: match by suffix.</li>
-         * <li><strong>exact</strong>: exact match.</li>
+         * <li><strong>null</strong></li>
          * <li><strong>fuzzy</strong>: fuzzy match.</li>
          * </ul>
          * 

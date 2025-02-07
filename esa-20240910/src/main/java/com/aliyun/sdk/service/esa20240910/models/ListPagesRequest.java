@@ -25,10 +25,15 @@ public class ListPagesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryArgs")
+    private QueryArgs queryArgs;
+
     private ListPagesRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.queryArgs = builder.queryArgs;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ListPagesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return queryArgs
+     */
+    public QueryArgs getQueryArgs() {
+        return this.queryArgs;
+    }
+
     public static final class Builder extends Request.Builder<ListPagesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private QueryArgs queryArgs; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ListPagesRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.queryArgs = request.queryArgs;
         } 
 
         /**
@@ -96,6 +110,16 @@ public class ListPagesRequest extends Request {
             return this;
         }
 
+        /**
+         * QueryArgs.
+         */
+        public Builder queryArgs(QueryArgs queryArgs) {
+            String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
+            this.putQueryParameter("QueryArgs", queryArgsShrink);
+            this.queryArgs = queryArgs;
+            return this;
+        }
+
         @Override
         public ListPagesRequest build() {
             return new ListPagesRequest(this);
@@ -103,4 +127,51 @@ public class ListPagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPagesRequest} extends {@link TeaModel}
+     *
+     * <p>ListPagesRequest</p>
+     */
+    public static class QueryArgs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NameDescriptionLike")
+        private String nameDescriptionLike;
+
+        private QueryArgs(Builder builder) {
+            this.nameDescriptionLike = builder.nameDescriptionLike;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryArgs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nameDescriptionLike
+         */
+        public String getNameDescriptionLike() {
+            return this.nameDescriptionLike;
+        }
+
+        public static final class Builder {
+            private String nameDescriptionLike; 
+
+            /**
+             * NameDescriptionLike.
+             */
+            public Builder nameDescriptionLike(String nameDescriptionLike) {
+                this.nameDescriptionLike = nameDescriptionLike;
+                return this;
+            }
+
+            public QueryArgs build() {
+                return new QueryArgs(this);
+            } 
+
+        } 
+
+    }
 }

@@ -286,6 +286,9 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BotInstanceLevel")
         private String botInstanceLevel;
 
+        @com.aliyun.core.annotation.NameInMap("BotRequest")
+        private String botRequest;
+
         @com.aliyun.core.annotation.NameInMap("Coverages")
         private String coverages;
 
@@ -352,6 +355,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         private InstanceInfo(Builder builder) {
             this.billingMode = builder.billingMode;
             this.botInstanceLevel = builder.botInstanceLevel;
+            this.botRequest = builder.botRequest;
             this.coverages = builder.coverages;
             this.createTime = builder.createTime;
             this.crossborderTraffic = builder.crossborderTraffic;
@@ -395,6 +399,13 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
          */
         public String getBotInstanceLevel() {
             return this.botInstanceLevel;
+        }
+
+        /**
+         * @return botRequest
+         */
+        public String getBotRequest() {
+            return this.botRequest;
         }
 
         /**
@@ -547,6 +558,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String billingMode; 
             private String botInstanceLevel; 
+            private String botRequest; 
             private String coverages; 
             private String createTime; 
             private String crossborderTraffic; 
@@ -589,6 +601,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder botInstanceLevel(String botInstanceLevel) {
                 this.botInstanceLevel = botInstanceLevel;
+                return this;
+            }
+
+            /**
+             * BotRequest.
+             */
+            public Builder botRequest(String botRequest) {
+                this.botRequest = botRequest;
                 return this;
             }
 
