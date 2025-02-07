@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opt20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrderUsageRequest} extends {@link RequestModel}
  *
  * <p>GetOrderUsageRequest</p>
@@ -121,7 +127,7 @@ public class GetOrderUsageRequest extends Request {
         }
 
         /**
-         * LicenseKey.
+         * <p>This parameter is required.</p>
          */
         public Builder licenseKey(String licenseKey) {
             this.putQueryParameter("LicenseKey", licenseKey);
@@ -130,7 +136,10 @@ public class GetOrderUsageRequest extends Request {
         }
 
         /**
-         * RelService.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MP</p>
          */
         public Builder relService(String relService) {
             this.putQueryParameter("RelService", relService);
@@ -139,7 +148,10 @@ public class GetOrderUsageRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

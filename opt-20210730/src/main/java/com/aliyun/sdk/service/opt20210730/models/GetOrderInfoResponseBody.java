@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opt20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrderInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrderInfoResponseBody</p>
@@ -15,7 +21,7 @@ public class GetOrderInfoResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -52,7 +58,7 @@ public class GetOrderInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +85,7 @@ public class GetOrderInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -95,7 +101,7 @@ public class GetOrderInfoResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -130,6 +136,12 @@ public class GetOrderInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOrderInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrderInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bizType")
         private String bizType;
@@ -142,6 +154,9 @@ public class GetOrderInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("isReleased")
+        private Boolean isReleased;
 
         @com.aliyun.core.annotation.NameInMap("licenseKey")
         private String licenseKey;
@@ -157,6 +172,7 @@ public class GetOrderInfoResponseBody extends TeaModel {
             this.currentConcurrency = builder.currentConcurrency;
             this.currentDays = builder.currentDays;
             this.instanceId = builder.instanceId;
+            this.isReleased = builder.isReleased;
             this.licenseKey = builder.licenseKey;
             this.remark = builder.remark;
             this.totalDays = builder.totalDays;
@@ -199,6 +215,13 @@ public class GetOrderInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return isReleased
+         */
+        public Boolean getIsReleased() {
+            return this.isReleased;
+        }
+
+        /**
          * @return licenseKey
          */
         public String getLicenseKey() {
@@ -224,6 +247,7 @@ public class GetOrderInfoResponseBody extends TeaModel {
             private Integer currentConcurrency; 
             private Integer currentDays; 
             private String instanceId; 
+            private Boolean isReleased; 
             private String licenseKey; 
             private String remark; 
             private Integer totalDays; 
@@ -257,6 +281,14 @@ public class GetOrderInfoResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * isReleased.
+             */
+            public Builder isReleased(Boolean isReleased) {
+                this.isReleased = isReleased;
                 return this;
             }
 

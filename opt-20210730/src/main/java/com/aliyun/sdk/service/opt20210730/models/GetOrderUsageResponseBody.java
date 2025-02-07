@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opt20210730.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrderUsageResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrderUsageResponseBody</p>
  */
 public class GetOrderUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < java.util.Map<String, ?>> data;
+    private java.util.List<java.util.Map<String, ?>> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -41,7 +47,7 @@ public class GetOrderUsageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < java.util.Map<String, ?>> getData() {
+    public java.util.List<java.util.Map<String, ?>> getData() {
         return this.data;
     }
 
@@ -67,7 +73,7 @@ public class GetOrderUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < java.util.Map<String, ?>> data; 
+        private java.util.List<java.util.Map<String, ?>> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -75,7 +81,7 @@ public class GetOrderUsageResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < java.util.Map<String, ?>> data) {
+        public Builder data(java.util.List<java.util.Map<String, ?>> data) {
             this.data = data;
             return this;
         }

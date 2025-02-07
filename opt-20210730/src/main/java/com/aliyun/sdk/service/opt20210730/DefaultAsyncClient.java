@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of GetOpenStatus  GetOpenStatusRequest
+     * @return GetOpenStatusResponse
+     */
     @Override
     public CompletableFuture<GetOpenStatusResponse> getOpenStatus(GetOpenStatusRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrderInfo  GetOrderInfoRequest
+     * @return GetOrderInfoResponse
+     */
     @Override
     public CompletableFuture<GetOrderInfoResponse> getOrderInfo(GetOrderInfoRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrderUsage  GetOrderUsageRequest
+     * @return GetOrderUsageResponse
+     */
     @Override
     public CompletableFuture<GetOrderUsageResponse> getOrderUsage(GetOrderUsageRequest request) {
         try {

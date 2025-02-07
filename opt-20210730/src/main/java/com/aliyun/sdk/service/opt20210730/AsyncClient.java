@@ -19,10 +19,22 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of GetOpenStatus  GetOpenStatusRequest
+     * @return GetOpenStatusResponse
+     */
     CompletableFuture<GetOpenStatusResponse> getOpenStatus(GetOpenStatusRequest request);
 
+    /**
+     * @param request the request parameters of GetOrderInfo  GetOrderInfoRequest
+     * @return GetOrderInfoResponse
+     */
     CompletableFuture<GetOrderInfoResponse> getOrderInfo(GetOrderInfoRequest request);
 
+    /**
+     * @param request the request parameters of GetOrderUsage  GetOrderUsageRequest
+     * @return GetOrderUsageResponse
+     */
     CompletableFuture<GetOrderUsageResponse> getOrderUsage(GetOrderUsageRequest request);
 
 }
