@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -39,6 +43,7 @@ public class ListInstancesRequest extends Request {
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
         this.current = builder.current;
         this.instance = builder.instance;
         this.pageSize = builder.pageSize;
@@ -57,6 +62,13 @@ public class ListInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -95,6 +107,7 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String clusterId; 
         private Long current; 
         private String instance; 
         private Long pageSize; 
@@ -107,12 +120,22 @@ public class ListInstancesRequest extends Request {
 
         private Builder(ListInstancesRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
             this.current = request.current;
             this.instance = request.instance;
             this.pageSize = request.pageSize;
             this.region = request.region;
             this.status = request.status;
         } 
+
+        /**
+         * cluster_id.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("cluster_id", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
 
         /**
          * current.
