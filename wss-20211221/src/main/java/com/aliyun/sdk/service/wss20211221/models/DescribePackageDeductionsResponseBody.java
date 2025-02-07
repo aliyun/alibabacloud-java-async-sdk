@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wss20211221.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePackageDeductionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Deductions")
-    private java.util.List < Deductions> deductions;
+    private java.util.List<Deductions> deductions;
 
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
@@ -27,12 +32,20 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
+    @com.aliyun.core.annotation.NameInMap("TotalUsedCoreTime")
+    private Float totalUsedCoreTime;
+
+    @com.aliyun.core.annotation.NameInMap("TotalUsedTime")
+    private Long totalUsedTime;
+
     private DescribePackageDeductionsResponseBody(Builder builder) {
         this.deductions = builder.deductions;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
+        this.totalUsedCoreTime = builder.totalUsedCoreTime;
+        this.totalUsedTime = builder.totalUsedTime;
     }
 
     public static Builder builder() {
@@ -46,7 +59,7 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
     /**
      * @return deductions
      */
-    public java.util.List < Deductions> getDeductions() {
+    public java.util.List<Deductions> getDeductions() {
         return this.deductions;
     }
 
@@ -78,17 +91,33 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    /**
+     * @return totalUsedCoreTime
+     */
+    public Float getTotalUsedCoreTime() {
+        return this.totalUsedCoreTime;
+    }
+
+    /**
+     * @return totalUsedTime
+     */
+    public Long getTotalUsedTime() {
+        return this.totalUsedTime;
+    }
+
     public static final class Builder {
-        private java.util.List < Deductions> deductions; 
+        private java.util.List<Deductions> deductions; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
+        private Float totalUsedCoreTime; 
+        private Long totalUsedTime; 
 
         /**
          * Deductions.
          */
-        public Builder deductions(java.util.List < Deductions> deductions) {
+        public Builder deductions(java.util.List<Deductions> deductions) {
             this.deductions = deductions;
             return this;
         }
@@ -122,6 +151,22 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * TotalUsedCoreTime.
+         */
+        public Builder totalUsedCoreTime(Float totalUsedCoreTime) {
+            this.totalUsedCoreTime = totalUsedCoreTime;
+            return this;
+        }
+
+        /**
+         * TotalUsedTime.
+         */
+        public Builder totalUsedTime(Long totalUsedTime) {
+            this.totalUsedTime = totalUsedTime;
             return this;
         }
 

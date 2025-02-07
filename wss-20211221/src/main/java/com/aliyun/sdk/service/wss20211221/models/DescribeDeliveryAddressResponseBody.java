@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.wss20211221.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDeliveryAddressResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Addresses> addresses;
+    private java.util.List<Addresses> addresses;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < Addresses> getAddresses() {
+    public java.util.List<Addresses> getAddresses() {
         return this.addresses;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Addresses> addresses; 
+        private java.util.List<Addresses> addresses; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * Addresses.
          */
-        public Builder addresses(java.util.List < Addresses> addresses) {
+        public Builder addresses(java.util.List<Addresses> addresses) {
             this.addresses = addresses;
             return this;
         }

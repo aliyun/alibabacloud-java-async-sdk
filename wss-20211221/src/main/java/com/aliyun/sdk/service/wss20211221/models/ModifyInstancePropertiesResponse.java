@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribePackageDeductionsResponse} extends {@link TeaModel}
+ * {@link ModifyInstancePropertiesResponse} extends {@link TeaModel}
  *
- * <p>DescribePackageDeductionsResponse</p>
+ * <p>ModifyInstancePropertiesResponse</p>
  */
-public class DescribePackageDeductionsResponse extends Response {
+public class ModifyInstancePropertiesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribePackageDeductionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribePackageDeductionsResponseBody body;
+    private ModifyInstancePropertiesResponseBody body;
 
-    private DescribePackageDeductionsResponse(BuilderImpl builder) {
+    private ModifyInstancePropertiesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribePackageDeductionsResponse create() {
+    public static ModifyInstancePropertiesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribePackageDeductionsResponse extends Response {
     /**
      * @return body
      */
-    public DescribePackageDeductionsResponseBody getBody() {
+    public ModifyInstancePropertiesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribePackageDeductionsResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyInstancePropertiesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribePackageDeductionsResponseBody body);
+        Builder body(ModifyInstancePropertiesResponseBody body);
 
         @Override
-        DescribePackageDeductionsResponse build();
+        ModifyInstancePropertiesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribePackageDeductionsResponse, Builder>
+            extends Response.BuilderImpl<ModifyInstancePropertiesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribePackageDeductionsResponseBody body; 
+        private ModifyInstancePropertiesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribePackageDeductionsResponse response) {
+        private BuilderImpl(ModifyInstancePropertiesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribePackageDeductionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribePackageDeductionsResponseBody body) {
+        public Builder body(ModifyInstancePropertiesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribePackageDeductionsResponse build() {
-            return new DescribePackageDeductionsResponse(this);
+        public ModifyInstancePropertiesResponse build() {
+            return new ModifyInstancePropertiesResponse(this);
         } 
 
     } 

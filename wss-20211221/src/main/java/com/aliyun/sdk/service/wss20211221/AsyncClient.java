@@ -19,8 +19,22 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of DescribeDeliveryAddress  DescribeDeliveryAddressRequest
+     * @return DescribeDeliveryAddressResponse
+     */
     CompletableFuture<DescribeDeliveryAddressResponse> describeDeliveryAddress(DescribeDeliveryAddressRequest request);
 
+    /**
+     * @param request the request parameters of DescribePackageDeductions  DescribePackageDeductionsRequest
+     * @return DescribePackageDeductionsResponse
+     */
     CompletableFuture<DescribePackageDeductionsResponse> describePackageDeductions(DescribePackageDeductionsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceProperties  ModifyInstancePropertiesRequest
+     * @return ModifyInstancePropertiesResponse
+     */
+    CompletableFuture<ModifyInstancePropertiesResponse> modifyInstanceProperties(ModifyInstancePropertiesRequest request);
 
 }
