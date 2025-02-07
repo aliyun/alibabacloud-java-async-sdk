@@ -330,8 +330,12 @@ public class BaiLianSseChatRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Incremental_output")
         private Boolean incrementalOutput;
 
+        @com.aliyun.core.annotation.NameInMap("vendorId")
+        private String vendorId;
+
         private Parameters(Builder builder) {
             this.incrementalOutput = builder.incrementalOutput;
+            this.vendorId = builder.vendorId;
         }
 
         public static Builder builder() {
@@ -349,14 +353,30 @@ public class BaiLianSseChatRequest extends Request {
             return this.incrementalOutput;
         }
 
+        /**
+         * @return vendorId
+         */
+        public String getVendorId() {
+            return this.vendorId;
+        }
+
         public static final class Builder {
             private Boolean incrementalOutput; 
+            private String vendorId; 
 
             /**
              * Incremental_output.
              */
             public Builder incrementalOutput(Boolean incrementalOutput) {
                 this.incrementalOutput = incrementalOutput;
+                return this;
+            }
+
+            /**
+             * vendorId.
+             */
+            public Builder vendorId(String vendorId) {
+                this.vendorId = vendorId;
                 return this;
             }
 
