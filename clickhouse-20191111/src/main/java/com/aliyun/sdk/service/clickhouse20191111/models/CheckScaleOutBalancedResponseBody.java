@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -329,7 +334,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
      */
     public static class TableDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableDetail")
-        private java.util.List < TableDetail> tableDetail;
+        private java.util.List<TableDetail> tableDetail;
 
         private TableDetails(Builder builder) {
             this.tableDetail = builder.tableDetail;
@@ -346,17 +351,17 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         /**
          * @return tableDetail
          */
-        public java.util.List < TableDetail> getTableDetail() {
+        public java.util.List<TableDetail> getTableDetail() {
             return this.tableDetail;
         }
 
         public static final class Builder {
-            private java.util.List < TableDetail> tableDetail; 
+            private java.util.List<TableDetail> tableDetail; 
 
             /**
              * TableDetail.
              */
-            public Builder tableDetail(java.util.List < TableDetail> tableDetail) {
+            public Builder tableDetail(java.util.List<TableDetail> tableDetail) {
                 this.tableDetail = tableDetail;
                 return this;
             }

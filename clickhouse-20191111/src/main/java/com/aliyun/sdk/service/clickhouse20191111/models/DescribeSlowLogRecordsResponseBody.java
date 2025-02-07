@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -366,7 +371,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultSet")
-        private java.util.List < ResultSet> resultSet;
+        private java.util.List<ResultSet> resultSet;
 
         private Data(Builder builder) {
             this.resultSet = builder.resultSet;
@@ -383,17 +388,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return resultSet
          */
-        public java.util.List < ResultSet> getResultSet() {
+        public java.util.List<ResultSet> getResultSet() {
             return this.resultSet;
         }
 
         public static final class Builder {
-            private java.util.List < ResultSet> resultSet; 
+            private java.util.List<ResultSet> resultSet; 
 
             /**
              * ResultSet.
              */
-            public Builder resultSet(java.util.List < ResultSet> resultSet) {
+            public Builder resultSet(java.util.List<ResultSet> resultSet) {
                 this.resultSet = resultSet;
                 return this;
             }
@@ -582,7 +587,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      */
     public static class TableSchema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultSet")
-        private java.util.List < TableSchemaResultSet> resultSet;
+        private java.util.List<TableSchemaResultSet> resultSet;
 
         private TableSchema(Builder builder) {
             this.resultSet = builder.resultSet;
@@ -599,17 +604,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return resultSet
          */
-        public java.util.List < TableSchemaResultSet> getResultSet() {
+        public java.util.List<TableSchemaResultSet> getResultSet() {
             return this.resultSet;
         }
 
         public static final class Builder {
-            private java.util.List < TableSchemaResultSet> resultSet; 
+            private java.util.List<TableSchemaResultSet> resultSet; 
 
             /**
              * ResultSet.
              */
-            public Builder resultSet(java.util.List < TableSchemaResultSet> resultSet) {
+            public Builder resultSet(java.util.List<TableSchemaResultSet> resultSet) {
                 this.resultSet = resultSet;
                 return this;
             }

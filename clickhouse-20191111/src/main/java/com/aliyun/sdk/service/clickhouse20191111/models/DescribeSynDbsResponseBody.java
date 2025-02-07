@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SynDbs")
-    private java.util.List < SynDbs> synDbs;
+    private java.util.List<SynDbs> synDbs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     /**
      * @return synDbs
      */
-    public java.util.List < SynDbs> getSynDbs() {
+    public java.util.List<SynDbs> getSynDbs() {
         return this.synDbs;
     }
 
@@ -82,7 +87,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SynDbs> synDbs; 
+        private java.util.List<SynDbs> synDbs; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         /**
          * <p>The information about data synchronization between the ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</p>
          */
-        public Builder synDbs(java.util.List < SynDbs> synDbs) {
+        public Builder synDbs(java.util.List<SynDbs> synDbs) {
             this.synDbs = synDbs;
             return this;
         }

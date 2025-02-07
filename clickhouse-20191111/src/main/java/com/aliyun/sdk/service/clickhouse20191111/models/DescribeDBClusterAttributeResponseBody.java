@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -234,7 +239,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -251,17 +256,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -287,7 +292,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String appointmentRestartTime;
 
         @com.aliyun.core.annotation.NameInMap("AvailableUpgradeMajorVersion")
-        private java.util.Map < String, ? > availableUpgradeMajorVersion;
+        private java.util.Map<String, ?> availableUpgradeMajorVersion;
 
         @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
@@ -431,7 +436,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneIdVswitchMap")
-        private java.util.Map < String, ? > zoneIdVswitchMap;
+        private java.util.Map<String, ?> zoneIdVswitchMap;
 
         @com.aliyun.core.annotation.NameInMap("ZookeeperClass")
         private String zookeeperClass;
@@ -516,7 +521,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * @return availableUpgradeMajorVersion
          */
-        public java.util.Map < String, ? > getAvailableUpgradeMajorVersion() {
+        public java.util.Map<String, ?> getAvailableUpgradeMajorVersion() {
             return this.availableUpgradeMajorVersion;
         }
 
@@ -852,7 +857,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * @return zoneIdVswitchMap
          */
-        public java.util.Map < String, ? > getZoneIdVswitchMap() {
+        public java.util.Map<String, ?> getZoneIdVswitchMap() {
             return this.zoneIdVswitchMap;
         }
 
@@ -866,7 +871,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String aliUid; 
             private String appointmentRestartTime; 
-            private java.util.Map < String, ? > availableUpgradeMajorVersion; 
+            private java.util.Map<String, ?> availableUpgradeMajorVersion; 
             private String bid; 
             private String category; 
             private String commodityCode; 
@@ -914,7 +919,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcIpAddr; 
             private String zoneId; 
-            private java.util.Map < String, ? > zoneIdVswitchMap; 
+            private java.util.Map<String, ?> zoneIdVswitchMap; 
             private String zookeeperClass; 
 
             /**
@@ -942,7 +947,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             /**
              * AvailableUpgradeMajorVersion.
              */
-            public Builder availableUpgradeMajorVersion(java.util.Map < String, ? > availableUpgradeMajorVersion) {
+            public Builder availableUpgradeMajorVersion(java.util.Map<String, ?> availableUpgradeMajorVersion) {
                 this.availableUpgradeMajorVersion = availableUpgradeMajorVersion;
                 return this;
             }
@@ -1575,7 +1580,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>cn-shanghai-f: vsw-zm0n42d5vvuo****</p>
              */
-            public Builder zoneIdVswitchMap(java.util.Map < String, ? > zoneIdVswitchMap) {
+            public Builder zoneIdVswitchMap(java.util.Map<String, ?> zoneIdVswitchMap) {
                 this.zoneIdVswitchMap = zoneIdVswitchMap;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,8 +86,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
      * <p>DescribeTransferHistoryResponseBody</p>
      */
     public static class HistoryDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BytesPerMinute")
+        private Long bytesPerMinute;
+
         @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
         private String disableWriteWindows;
+
+        @com.aliyun.core.annotation.NameInMap("PartsPerMinute")
+        private Double partsPerMinute;
 
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
@@ -96,20 +107,38 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SubJob")
+        private String subJob;
+
+        @com.aliyun.core.annotation.NameInMap("SubJobStatus")
+        private String subJobStatus;
+
         @com.aliyun.core.annotation.NameInMap("TargetControlVersion")
         private String targetControlVersion;
 
         @com.aliyun.core.annotation.NameInMap("TargetDBCluster")
         private String targetDBCluster;
 
+        @com.aliyun.core.annotation.NameInMap("UnsyncedBytes")
+        private Long unsyncedBytes;
+
+        @com.aliyun.core.annotation.NameInMap("UnsyncedParts")
+        private Long unsyncedParts;
+
         private HistoryDetail(Builder builder) {
+            this.bytesPerMinute = builder.bytesPerMinute;
             this.disableWriteWindows = builder.disableWriteWindows;
+            this.partsPerMinute = builder.partsPerMinute;
             this.progress = builder.progress;
             this.sourceControlVersion = builder.sourceControlVersion;
             this.sourceDBCluster = builder.sourceDBCluster;
             this.status = builder.status;
+            this.subJob = builder.subJob;
+            this.subJobStatus = builder.subJobStatus;
             this.targetControlVersion = builder.targetControlVersion;
             this.targetDBCluster = builder.targetDBCluster;
+            this.unsyncedBytes = builder.unsyncedBytes;
+            this.unsyncedParts = builder.unsyncedParts;
         }
 
         public static Builder builder() {
@@ -121,10 +150,24 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return bytesPerMinute
+         */
+        public Long getBytesPerMinute() {
+            return this.bytesPerMinute;
+        }
+
+        /**
          * @return disableWriteWindows
          */
         public String getDisableWriteWindows() {
             return this.disableWriteWindows;
+        }
+
+        /**
+         * @return partsPerMinute
+         */
+        public Double getPartsPerMinute() {
+            return this.partsPerMinute;
         }
 
         /**
@@ -156,6 +199,20 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return subJob
+         */
+        public String getSubJob() {
+            return this.subJob;
+        }
+
+        /**
+         * @return subJobStatus
+         */
+        public String getSubJobStatus() {
+            return this.subJobStatus;
+        }
+
+        /**
          * @return targetControlVersion
          */
         public String getTargetControlVersion() {
@@ -169,20 +226,56 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             return this.targetDBCluster;
         }
 
+        /**
+         * @return unsyncedBytes
+         */
+        public Long getUnsyncedBytes() {
+            return this.unsyncedBytes;
+        }
+
+        /**
+         * @return unsyncedParts
+         */
+        public Long getUnsyncedParts() {
+            return this.unsyncedParts;
+        }
+
         public static final class Builder {
+            private Long bytesPerMinute; 
             private String disableWriteWindows; 
+            private Double partsPerMinute; 
             private String progress; 
             private String sourceControlVersion; 
             private String sourceDBCluster; 
             private String status; 
+            private String subJob; 
+            private String subJobStatus; 
             private String targetControlVersion; 
             private String targetDBCluster; 
+            private Long unsyncedBytes; 
+            private Long unsyncedParts; 
+
+            /**
+             * BytesPerMinute.
+             */
+            public Builder bytesPerMinute(Long bytesPerMinute) {
+                this.bytesPerMinute = bytesPerMinute;
+                return this;
+            }
 
             /**
              * DisableWriteWindows.
              */
             public Builder disableWriteWindows(String disableWriteWindows) {
                 this.disableWriteWindows = disableWriteWindows;
+                return this;
+            }
+
+            /**
+             * PartsPerMinute.
+             */
+            public Builder partsPerMinute(Double partsPerMinute) {
+                this.partsPerMinute = partsPerMinute;
                 return this;
             }
 
@@ -232,6 +325,22 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
+             * SubJob.
+             */
+            public Builder subJob(String subJob) {
+                this.subJob = subJob;
+                return this;
+            }
+
+            /**
+             * SubJobStatus.
+             */
+            public Builder subJobStatus(String subJobStatus) {
+                this.subJobStatus = subJobStatus;
+                return this;
+            }
+
+            /**
              * TargetControlVersion.
              */
             public Builder targetControlVersion(String targetControlVersion) {
@@ -250,6 +359,22 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * UnsyncedBytes.
+             */
+            public Builder unsyncedBytes(Long unsyncedBytes) {
+                this.unsyncedBytes = unsyncedBytes;
+                return this;
+            }
+
+            /**
+             * UnsyncedParts.
+             */
+            public Builder unsyncedParts(Long unsyncedParts) {
+                this.unsyncedParts = unsyncedParts;
+                return this;
+            }
+
             public HistoryDetail build() {
                 return new HistoryDetail(this);
             } 
@@ -265,7 +390,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
      */
     public static class HistoryDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HistoryDetail")
-        private java.util.List < HistoryDetail> historyDetail;
+        private java.util.List<HistoryDetail> historyDetail;
 
         private HistoryDetails(Builder builder) {
             this.historyDetail = builder.historyDetail;
@@ -282,17 +407,17 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         /**
          * @return historyDetail
          */
-        public java.util.List < HistoryDetail> getHistoryDetail() {
+        public java.util.List<HistoryDetail> getHistoryDetail() {
             return this.historyDetail;
         }
 
         public static final class Builder {
-            private java.util.List < HistoryDetail> historyDetail; 
+            private java.util.List<HistoryDetail> historyDetail; 
 
             /**
              * HistoryDetail.
              */
-            public Builder historyDetail(java.util.List < HistoryDetail> historyDetail) {
+            public Builder historyDetail(java.util.List<HistoryDetail> historyDetail) {
                 this.historyDetail = historyDetail;
                 return this;
             }

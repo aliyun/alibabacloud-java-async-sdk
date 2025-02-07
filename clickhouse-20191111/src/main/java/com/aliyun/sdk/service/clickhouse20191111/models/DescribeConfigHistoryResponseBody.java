@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeConfigHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigHistoryItems")
-    private java.util.List < ConfigHistoryItems> configHistoryItems;
+    private java.util.List<ConfigHistoryItems> configHistoryItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     /**
      * @return configHistoryItems
      */
-    public java.util.List < ConfigHistoryItems> getConfigHistoryItems() {
+    public java.util.List<ConfigHistoryItems> getConfigHistoryItems() {
         return this.configHistoryItems;
     }
 
@@ -46,13 +51,13 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConfigHistoryItems> configHistoryItems; 
+        private java.util.List<ConfigHistoryItems> configHistoryItems; 
         private String requestId; 
 
         /**
          * <p>The change records of the configuration parameters.</p>
          */
-        public Builder configHistoryItems(java.util.List < ConfigHistoryItems> configHistoryItems) {
+        public Builder configHistoryItems(java.util.List<ConfigHistoryItems> configHistoryItems) {
             this.configHistoryItems = configHistoryItems;
             return this;
         }

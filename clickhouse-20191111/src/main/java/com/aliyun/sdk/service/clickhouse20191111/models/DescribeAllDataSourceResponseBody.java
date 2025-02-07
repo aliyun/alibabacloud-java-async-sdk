@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -318,7 +323,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
      */
     public static class Columns extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Column")
-        private java.util.List < Column> column;
+        private java.util.List<Column> column;
 
         private Columns(Builder builder) {
             this.column = builder.column;
@@ -335,17 +340,17 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         /**
          * @return column
          */
-        public java.util.List < Column> getColumn() {
+        public java.util.List<Column> getColumn() {
             return this.column;
         }
 
         public static final class Builder {
-            private java.util.List < Column> column; 
+            private java.util.List<Column> column; 
 
             /**
              * Column.
              */
-            public Builder column(java.util.List < Column> column) {
+            public Builder column(java.util.List<Column> column) {
                 this.column = column;
                 return this;
             }
@@ -438,7 +443,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
      */
     public static class Schemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schema")
-        private java.util.List < Schema> schema;
+        private java.util.List<Schema> schema;
 
         private Schemas(Builder builder) {
             this.schema = builder.schema;
@@ -455,17 +460,17 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         /**
          * @return schema
          */
-        public java.util.List < Schema> getSchema() {
+        public java.util.List<Schema> getSchema() {
             return this.schema;
         }
 
         public static final class Builder {
-            private java.util.List < Schema> schema; 
+            private java.util.List<Schema> schema; 
 
             /**
              * Schema.
              */
-            public Builder schema(java.util.List < Schema> schema) {
+            public Builder schema(java.util.List<Schema> schema) {
                 this.schema = schema;
                 return this;
             }
@@ -581,7 +586,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
      */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Table")
-        private java.util.List < Table> table;
+        private java.util.List<Table> table;
 
         private Tables(Builder builder) {
             this.table = builder.table;
@@ -598,17 +603,17 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         /**
          * @return table
          */
-        public java.util.List < Table> getTable() {
+        public java.util.List<Table> getTable() {
             return this.table;
         }
 
         public static final class Builder {
-            private java.util.List < Table> table; 
+            private java.util.List<Table> table; 
 
             /**
              * Table.
              */
-            public Builder table(java.util.List < Table> table) {
+            public Builder table(java.util.List<Table> table) {
                 this.table = table;
                 return this;
             }

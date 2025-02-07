@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -185,7 +190,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +202,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>

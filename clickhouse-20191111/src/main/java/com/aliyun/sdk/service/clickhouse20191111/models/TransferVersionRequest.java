@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,9 +61,17 @@ public class TransferVersionRequest extends Request {
     private String sourceAccount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceClusterName")
+    private String sourceClusterName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourcePassword")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourcePassword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceShards")
+    private String sourceShards;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetAccount")
@@ -87,7 +100,9 @@ public class TransferVersionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceAccount = builder.sourceAccount;
+        this.sourceClusterName = builder.sourceClusterName;
         this.sourcePassword = builder.sourcePassword;
+        this.sourceShards = builder.sourceShards;
         this.targetAccount = builder.targetAccount;
         this.targetDbClusterId = builder.targetDbClusterId;
         this.targetPassword = builder.targetPassword;
@@ -177,10 +192,24 @@ public class TransferVersionRequest extends Request {
     }
 
     /**
+     * @return sourceClusterName
+     */
+    public String getSourceClusterName() {
+        return this.sourceClusterName;
+    }
+
+    /**
      * @return sourcePassword
      */
     public String getSourcePassword() {
         return this.sourcePassword;
+    }
+
+    /**
+     * @return sourceShards
+     */
+    public String getSourceShards() {
+        return this.sourceShards;
     }
 
     /**
@@ -215,7 +244,9 @@ public class TransferVersionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sourceAccount; 
+        private String sourceClusterName; 
         private String sourcePassword; 
+        private String sourceShards; 
         private String targetAccount; 
         private String targetDbClusterId; 
         private String targetPassword; 
@@ -236,7 +267,9 @@ public class TransferVersionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceAccount = request.sourceAccount;
+            this.sourceClusterName = request.sourceClusterName;
             this.sourcePassword = request.sourcePassword;
+            this.sourceShards = request.sourceShards;
             this.targetAccount = request.targetAccount;
             this.targetDbClusterId = request.targetDbClusterId;
             this.targetPassword = request.targetPassword;
@@ -356,6 +389,15 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
+         * SourceClusterName.
+         */
+        public Builder sourceClusterName(String sourceClusterName) {
+            this.putQueryParameter("SourceClusterName", sourceClusterName);
+            this.sourceClusterName = sourceClusterName;
+            return this;
+        }
+
+        /**
          * <p>The password that corresponds to the database account for logging on to the database in the source ApsaraDB for ClickHouse cluster.</p>
          * <p>This parameter is required.</p>
          * 
@@ -365,6 +407,15 @@ public class TransferVersionRequest extends Request {
         public Builder sourcePassword(String sourcePassword) {
             this.putQueryParameter("SourcePassword", sourcePassword);
             this.sourcePassword = sourcePassword;
+            return this;
+        }
+
+        /**
+         * SourceShards.
+         */
+        public Builder sourceShards(String sourceShards) {
+            this.putQueryParameter("SourceShards", sourceShards);
+            this.sourceShards = sourceShards;
             return this;
         }
 

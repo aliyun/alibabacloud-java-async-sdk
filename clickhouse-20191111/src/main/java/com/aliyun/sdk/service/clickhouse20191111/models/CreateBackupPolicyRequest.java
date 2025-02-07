@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -169,7 +174,7 @@ public class CreateBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>
+         * <p>The backup retention period. The default retention period is seven days. Valid values: 7 to 730. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

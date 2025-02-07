@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -378,7 +383,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
      */
     public static class NetInfoItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetInfoItem")
-        private java.util.List < NetInfoItem> netInfoItem;
+        private java.util.List<NetInfoItem> netInfoItem;
 
         private NetInfoItems(Builder builder) {
             this.netInfoItem = builder.netInfoItem;
@@ -395,17 +400,17 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         /**
          * @return netInfoItem
          */
-        public java.util.List < NetInfoItem> getNetInfoItem() {
+        public java.util.List<NetInfoItem> getNetInfoItem() {
             return this.netInfoItem;
         }
 
         public static final class Builder {
-            private java.util.List < NetInfoItem> netInfoItem; 
+            private java.util.List<NetInfoItem> netInfoItem; 
 
             /**
              * NetInfoItem.
              */
-            public Builder netInfoItem(java.util.List < NetInfoItem> netInfoItem) {
+            public Builder netInfoItem(java.util.List<NetInfoItem> netInfoItem) {
                 this.netInfoItem = netInfoItem;
                 return this;
             }

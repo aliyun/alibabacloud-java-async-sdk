@@ -84,6 +84,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * 
      * @param request the request parameters of CreateDBInstance  CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */

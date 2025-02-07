@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -276,7 +281,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The minimum query duration. The minimum value is <strong>1000</strong>, and the default value is <strong>1000</strong>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</p>
+         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Default value: <strong>1000</strong>. Unit: milliseconds. Queries that last longer than the specified duration are returned in response parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
