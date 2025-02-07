@@ -503,8 +503,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</p>
      * <ul>
      * <li>The operation may have unexpected risks. Back up the data before you perform this operation.</li>
-     * <li>When the system removes a node, it sets the status of the node to Unschedulable.</li>
-     * <li>The system removes only worker nodes. It does not remove master nodes.</li>
+     * <li>When you remove a node, the system sets the status of the node to Unschedulable.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteClusterNodes  DeleteClusterNodesRequest

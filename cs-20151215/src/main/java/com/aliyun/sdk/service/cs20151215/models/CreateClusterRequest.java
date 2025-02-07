@@ -1523,6 +1523,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * <p><strong>This parameter is deprecated.</strong></p>
          * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables auto-renewal.</li>
@@ -1541,8 +1542,9 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * <p><strong>This parameter is deprecated.</strong></p>
          * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
          * 
          * <strong>example:</strong>
@@ -1555,13 +1557,20 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the resource. The following resources are billed on a subscription basis:</p>
-         * <p>The internal-facing SLB instance used by the API server.</p>
-         * <p>Valid values:</p>
-         * <p>PrePaid: subscription</p>
-         * <p>PostPaid: pay-as-you-go</p>
-         * <p>Default value: PostPaid.</p>
-         * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * <p>The billing method of the Classic Load Balancer (CLB) instance that is used by the API server. Default value: PostPaid. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription. The newly created billing method for the CLB instance is not supported.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+         * </li>
+         * <li><p>Starting from December 1, 2024, new CLB instances no longer support the subscription billing method and will be charged for the instances.</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2839797.html">CLB billing adjustments</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1664,7 +1673,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * control_plane_config.
+         * <p>The control plane configurations of an ACK dedicated cluster.</p>
          */
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             this.putBodyParameter("control_plane_config", controlPlaneConfig);
@@ -2044,7 +2053,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
          * <p>Valid values: 1, 2, 3, 6, and 12.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2071,8 +2080,8 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The billing method of master nodes. Valid values:</p>
          * <ul>
-         * <li><code>PrePaid</code>: subscription.</li>
-         * <li><code>PostPaid</code>: the pay-as-you-go.</li>
+         * <li><code>PrePaid</code>: subscription</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go</li>
          * </ul>
          * <p>Default value: <code>PostPaid</code></p>
          * 
@@ -2097,7 +2106,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The subscription duration of master nodes. This parameter takes effect and is required only when <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2125,8 +2134,8 @@ public class CreateClusterRequest extends Request {
          * <p>The system disk type of master nodes. Valid values:</p>
          * <ul>
          * <li><code>cloud_efficiency</code>: ultra disk</li>
-         * <li><code>cloud_ssd</code>: standard SSD.</li>
-         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+         * <li><code>cloud_ssd</code>: standard SSD</li>
+         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD)</li>
          * </ul>
          * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
          * 
@@ -2304,9 +2313,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * <p><strong>This parameter is deprecated.</strong></p>
          * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
          * 
          * <strong>example:</strong>
@@ -2319,6 +2329,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * <p><strong>This parameter is deprecated.</strong></p>
          * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
          * <p>Valid value: Month, which indicates that resources are billed only on a monthly basis.</p>
          * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
@@ -2583,7 +2594,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
+         * <p>The taint. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         public Builder taints(java.util.List<Taint> taints) {
             this.putBodyParameter("taints", taints);
@@ -2703,8 +2714,8 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The billing method of worker nodes. Valid values:</p>
          * <ul>
-         * <li><code>PrePaid</code>: subscription.</li>
-         * <li><code>PostPaid</code>: the pay-as-you-go.</li>
+         * <li><code>PrePaid</code>: subscription</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go</li>
          * </ul>
          * <p>Default value: PostPaid.</p>
          * 
@@ -2729,7 +2740,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The subscription duration of worker nodes. This parameter takes effect and is required only when <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2757,10 +2768,10 @@ public class CreateClusterRequest extends Request {
          * <p>The system disk category of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><code>cloud_efficiency</code>: ultra disk.</li>
-         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud_efficiency</code>: ultra disk</li>
+         * <li><code>cloud_ssd</code>: standard SSD</li>
          * </ul>
-         * <p>Default value: <code>cloud_ssd</code>.</p>
+         * <p>Default value: <code>cloud_ssd</code></p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -3167,13 +3178,7 @@ public class CreateClusterRequest extends Request {
             private String systemDiskSnapshotPolicyId; 
 
             /**
-             * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
-             * <ul>
-             * <li><code>true</code>: enables auto-renewal.</li>
-             * <li><code>false</code>: disables auto-renewal</li>
-             * </ul>
-             * <p>Default value: <code>false</code></p>
-             * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+             * <p>Indicates whether auto-renewal is enabled for the control plane node.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3184,9 +3189,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <code>period_unit</code> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</p>
-             * <p>Default value: 1</p>
-             * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+             * <p>The auto-renewal duration for the control plane node.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -3197,16 +3200,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The billing method of the resource. The following resources are billed on a subscription basis:</p>
-             * <p>The internal-facing SLB instance used by the API server.</p>
-             * <p>Valid values:</p>
-             * <p>PrePaid: subscription</p>
-             * <p>PostPaid: pay-as-you-go</p>
-             * <p>Default value: PostPaid.</p>
-             * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+             * <p>The billing method of the control plane node.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -3214,12 +3211,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
-             * <ul>
-             * <li><code>true</code>: installs the CloudMonitor agent.</li>
-             * <li><code>false</code>: does not install the CloudMonitor agent.</li>
-             * </ul>
-             * <p>Default value: <code>false</code></p>
+             * <p>Indicates whether to install CloudMonitor for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -3230,12 +3222,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
-             * <ul>
-             * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity</li>
-             * <li><code>none</code>: specifies that the default CPU affinity is used</li>
-             * </ul>
-             * <p>Default value: <code>none</code>.</p>
+             * <p>The CPU management policy of nodes in the node pool.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -3246,7 +3233,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * deploymentset_id.
+             * <p>The ID of the deployment set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp10b35imuam5amw****</p>
              */
             public Builder deploymentsetId(String deploymentsetId) {
                 this.deploymentsetId = deploymentsetId;
@@ -3254,10 +3244,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The custom image. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</p>
+             * <p>The ID of the image.</p>
              * 
              * <strong>example:</strong>
-             * <p>m-bp16z7xko3vvv8gt****</p>
+             * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -3265,22 +3255,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
-             * <ul>
-             * <li>CentOS</li>
-             * <li>AliyunLinux</li>
-             * <li>AliyunLinux Qboot</li>
-             * <li>AliyunLinuxUEFI</li>
-             * <li>AliyunLinux3</li>
-             * <li>Windows</li>
-             * <li>WindowsCore</li>
-             * <li>AliyunLinux3Arm64</li>
-             * <li>ContainerOS</li>
-             * </ul>
-             * <p>Default value: <code>CentOS</code>.</p>
+             * <p>The type of the OS image.</p>
              * 
              * <strong>example:</strong>
-             * <p>AliyunLinux</p>
+             * <p>AliyunLinux3</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -3288,7 +3266,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * instance_types.
+             * <p>The instance type of the node.</p>
              */
             public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -3296,10 +3274,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
+             * <p>The name of the key pair. You must set key_pair or login_password.</p>
              * 
              * <strong>example:</strong>
-             * <p>secrity-key</p>
+             * <p>ack</p>
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
@@ -3307,10 +3285,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The password for SSH logon. You must set this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+             * <p>The SSH logon password. The password must be 8 to 30 characters in length and contain a minimum of three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set login_password or key_pair.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hello@1234</p>
+             * <p>ack@Test</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -3318,11 +3296,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node port range. Valid values: 30000 to 65535.</p>
-             * <p>Default value: <code>30000-32767</code>.</p>
+             * <p>The node port range.</p>
              * 
              * <strong>example:</strong>
-             * <p>30000~32767</p>
+             * <p>30000-32767</p>
              */
             public Builder nodePortRange(String nodePortRange) {
                 this.nodePortRange = nodePortRange;
@@ -3330,13 +3307,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The subscription duration of the instance. This parameter takes effect and is required only when you set charge_type to PrePaid.</p>
-             * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-             * <p>Default value: 1</p>
-             * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+             * <p>The subscription duration of the control plane node.</p>
              * 
              * <strong>example:</strong>
-             * <p>FY2023</p>
+             * <p>1</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -3344,9 +3318,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
-             * <p>Valid value: Month, which indicates that resources are billed only on a monthly basis.</p>
-             * <p>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</p>
+             * <p>The unit of the subscription duration of the control plane node.</p>
              * 
              * <strong>example:</strong>
              * <p>Month</p>
@@ -3357,8 +3329,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
-             * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
+             * <p>The runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -3366,15 +3340,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</p>
-             * <ul>
-             * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
-             * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
-             * </ul>
-             * <p>Default value: <code>false</code></p>
+             * <p>Indicates whether to enable Alibaba Cloud Linux Security Hardening.</p>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>true</p>
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -3382,7 +3351,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>The number of control plane nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -3390,16 +3362,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><code>true</code>: enables MLPS security hardening.</li>
-             * <li><code>false</code>: disables MLPS security hardening.</li>
-             * </ul>
-             * <p>Default value: <code>false</code></p>
+             * <p>Indicates whether to enable MLPS security hardening.</p>
              * 
              * <strong>example:</strong>
-             * <p>false</p>
+             * <p>true</p>
              */
             public Builder socEnabled(Boolean socEnabled) {
                 this.socEnabled = socEnabled;
@@ -3407,7 +3373,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * system_disk_bursting_enabled.
+             * <p>Indicates whether to enable the burst feature for the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -3415,7 +3384,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * system_disk_category.
+             * <p>The category of the system disk for nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -3423,7 +3395,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * system_disk_performance_level.
+             * <p>The performance level (PL) of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -3431,7 +3406,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * system_disk_provisioned_iops.
+             * <p>The preset read/write IOPS of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
@@ -3439,7 +3417,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * system_disk_size.
+             * <p>The system disk size of the node. The value must be at least 40 GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -3447,7 +3428,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * system_disk_snapshot_policy_id.
+             * <p>The automatic snapshot policy of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-2zej1nogjvovnz4z****</p>
              */
             public Builder systemDiskSnapshotPolicyId(String systemDiskSnapshotPolicyId) {
                 this.systemDiskSnapshotPolicyId = systemDiskSnapshotPolicyId;

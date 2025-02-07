@@ -164,7 +164,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * operations.
+         * <p>The repair operation to be performed. If not specified, all repair operations will be executed by default. Generally, there is no need to specify this in most scenarios.</p>
          */
         public Builder operations(java.util.List<Operations> operations) {
             this.putBodyParameter("operations", operations);
@@ -224,7 +224,7 @@ public class RepairClusterNodePoolRequest extends Request {
             private String operationId; 
 
             /**
-             * args.
+             * <p>List of repair operation parameters.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -232,7 +232,10 @@ public class RepairClusterNodePoolRequest extends Request {
             }
 
             /**
-             * operation_id.
+             * <p>Repair operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remove.containerdContainer</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;

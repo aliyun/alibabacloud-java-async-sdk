@@ -496,6 +496,12 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
 
             /**
              * <p>Features of the queried Kubernetes version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;AnyAZ&quot;: true,
+             *       &quot;ChargeType&quot;: &quot;PostPaid&quot;
+             * }</p>
              */
             public Builder capabilities(java.util.Map<String, ?> capabilities) {
                 this.capabilities = capabilities;
@@ -512,6 +518,13 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
 
             /**
              * <p>The metadata of the Kubernetes version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;KubernetesVersion&quot;: &quot;1.31.1-aliyun.1&quot;,
+             *       &quot;SubClass&quot;: &quot;default&quot;,
+             *       &quot;ServiceCIDR&quot;: &quot;&quot;
+             * }</p>
              */
             public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
@@ -519,7 +532,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * <p>Details of the supported container runtimes.</p>
+             * <p>The container runtime configurations.</p>
              */
             public Builder runtimes(java.util.List<Runtime> runtimes) {
                 this.runtimes = runtimes;

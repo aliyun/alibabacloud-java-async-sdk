@@ -115,7 +115,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the cluster check task.</p>
          * 
          * <strong>example:</strong>
          * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
