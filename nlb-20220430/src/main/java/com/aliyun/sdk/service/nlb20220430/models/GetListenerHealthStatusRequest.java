@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetListenerHealthStatusRequest} extends {@link RequestModel}
  *
  * <p>GetListenerHealthStatusRequest</p>
@@ -68,7 +74,11 @@ public class GetListenerHealthStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the listener of the NLB instance.
+         * <p>The ID of the listener of the NLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-bp1bpn0kn908w4nbw****@80</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -77,10 +87,11 @@ public class GetListenerHealthStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

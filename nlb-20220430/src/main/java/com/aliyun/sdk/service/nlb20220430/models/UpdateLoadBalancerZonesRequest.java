@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLoadBalancerZonesRequest} extends {@link RequestModel}
  *
  * <p>UpdateLoadBalancerZonesRequest</p>
@@ -31,7 +37,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private UpdateLoadBalancerZonesRequest(Builder builder) {
         super(builder);
@@ -86,7 +92,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -95,7 +101,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         private Boolean dryRun; 
         private String loadBalancerId; 
         private String regionId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -111,12 +117,14 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -125,11 +133,14 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -138,7 +149,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The NLB instance ID.
+         * <p>The NLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-83ckzc8d4xlp8o****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putBodyParameter("LoadBalancerId", loadBalancerId);
@@ -147,10 +162,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -159,9 +175,10 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The mappings between zones and vSwitches. You can specify at most 10 zones.
+         * <p>The mappings between zones and vSwitches. You can specify at most 10 zones.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putBodyParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;
@@ -174,6 +191,12 @@ public class UpdateLoadBalancerZonesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLoadBalancerZonesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLoadBalancerZonesRequest</p>
+     */
     public static class ZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
@@ -251,7 +274,10 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the elastic IP address (EIP) or Anycast EIP.
+             * <p>The ID of the elastic IP address (EIP) or Anycast EIP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp1aedxso6u80u0qf****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -259,13 +285,17 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The type of the EIP. Valid values:
-             * <p>
+             * <p>The type of the EIP. Valid values:</p>
+             * <ul>
+             * <li><strong>Common</strong></li>
+             * <li><strong>Anycast</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>Anycast EIPs are supported only by NLB instances in the China (Hong Kong) region. This parameter is required when <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Common**
-             * *   **Anycast**
-             * 
-             * > Anycast EIPs are supported only by NLB instances in the China (Hong Kong) region. This parameter is required when **AddressType** is set to **Internet**.
+             * <strong>example:</strong>
+             * <p>Common</p>
              */
             public Builder eipType(String eipType) {
                 this.eipType = eipType;
@@ -273,7 +303,10 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The private IP addresses.
+             * <p>The private IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.36.16</p>
              */
             public Builder privateIPv4Address(String privateIPv4Address) {
                 this.privateIPv4Address = privateIPv4Address;
@@ -281,7 +314,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.
+             * <p>The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1rmcrwg3erh1fh8****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -289,7 +326,11 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The zone ID. You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+             * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

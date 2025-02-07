@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>GetListenerAttributeResponseBody</p>
@@ -18,13 +24,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     private String alpnPolicy;
 
     @com.aliyun.core.annotation.NameInMap("CaCertificateIds")
-    private java.util.List < String > caCertificateIds;
+    private java.util.List<String> caCertificateIds;
 
     @com.aliyun.core.annotation.NameInMap("CaEnabled")
     private Boolean caEnabled;
 
     @com.aliyun.core.annotation.NameInMap("CertificateIds")
-    private java.util.List < String > certificateIds;
+    private java.util.List<String> certificateIds;
 
     @com.aliyun.core.annotation.NameInMap("Cps")
     private Integer cps;
@@ -81,7 +87,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     private String startPort;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private GetListenerAttributeResponseBody(Builder builder) {
         this.alpnEnabled = builder.alpnEnabled;
@@ -135,7 +141,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return caCertificateIds
      */
-    public java.util.List < String > getCaCertificateIds() {
+    public java.util.List<String> getCaCertificateIds() {
         return this.caCertificateIds;
     }
 
@@ -149,7 +155,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return certificateIds
      */
-    public java.util.List < String > getCertificateIds() {
+    public java.util.List<String> getCertificateIds() {
         return this.certificateIds;
     }
 
@@ -282,16 +288,16 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private Boolean alpnEnabled; 
         private String alpnPolicy; 
-        private java.util.List < String > caCertificateIds; 
+        private java.util.List<String> caCertificateIds; 
         private Boolean caEnabled; 
-        private java.util.List < String > certificateIds; 
+        private java.util.List<String> certificateIds; 
         private Integer cps; 
         private String endPort; 
         private Integer idleTimeout; 
@@ -310,14 +316,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         private String securityPolicyId; 
         private String serverGroupId; 
         private String startPort; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
-         * Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder alpnEnabled(Boolean alpnEnabled) {
             this.alpnEnabled = alpnEnabled;
@@ -325,13 +334,16 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ALPN policy. Valid values:
-         * <p>
+         * <p>The ALPN policy. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP1Only</strong></li>
+         * <li><strong>HTTP2Only</strong></li>
+         * <li><strong>HTTP2Preferred</strong></li>
+         * <li><strong>HTTP2Optional</strong></li>
+         * </ul>
          * 
-         * *   **HTTP1Only**
-         * *   **HTTP2Only**
-         * *   **HTTP2Preferred**
-         * *   **HTTP2Optional**
+         * <strong>example:</strong>
+         * <p>HTTP1Only</p>
          */
         public Builder alpnPolicy(String alpnPolicy) {
             this.alpnPolicy = alpnPolicy;
@@ -339,22 +351,25 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The CA certificates. Only one CA certificate is supported.
-         * <p>
-         * 
-         * >  This parameter takes effect only for listeners that use SSL over TCP.
+         * <p>The CA certificates. Only one CA certificate is supported.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * </blockquote>
          */
-        public Builder caCertificateIds(java.util.List < String > caCertificateIds) {
+        public Builder caCertificateIds(java.util.List<String> caCertificateIds) {
             this.caCertificateIds = caCertificateIds;
             return this;
         }
 
         /**
-         * Indicates whether mutual authentication is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder caEnabled(Boolean caEnabled) {
             this.caEnabled = caEnabled;
@@ -362,18 +377,21 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The server certificates. Only one server certificate is supported.
-         * <p>
-         * 
-         * >  This parameter takes effect only for listeners that use SSL over TCP.
+         * <p>The server certificates. Only one server certificate is supported.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * </blockquote>
          */
-        public Builder certificateIds(java.util.List < String > certificateIds) {
+        public Builder certificateIds(java.util.List<String> certificateIds) {
             this.certificateIds = certificateIds;
             return this;
         }
 
         /**
-         * The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.
+         * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cps(Integer cps) {
             this.cps = cps;
@@ -381,7 +399,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The last port in the listening port range. Valid values: **0** to **65535**. The number of the last port must be smaller than that of the first port.
+         * <p>The last port in the listening port range. Valid values: <strong>0</strong> to <strong>65535</strong>. The number of the last port must be smaller than that of the first port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>455</p>
          */
         public Builder endPort(String endPort) {
             this.endPort = endPort;
@@ -389,7 +410,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**.
+         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
@@ -397,10 +421,11 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the listener.
-         * <p>
+         * <p>The name of the listener.</p>
+         * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>tcpssl_443</p>
          */
         public Builder listenerDescription(String listenerDescription) {
             this.listenerDescription = listenerDescription;
@@ -408,7 +433,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-bp1bpn0kn908w4nbw****@233</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -416,7 +444,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The listening port. Valid values: **0** to **65535**. A value of **0** specifies all ports. If you set the value to **0**, you must also set the **StartPort** and **EndPort** parameters.
+         * <p>The listening port. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of <strong>0</strong> specifies all ports. If you set the value to <strong>0</strong>, you must also set the <strong>StartPort</strong> and <strong>EndPort</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -424,7 +455,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.
+         * <p>The listening protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCPSSL</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.listenerProtocol = listenerProtocol;
@@ -432,17 +466,20 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the listener. Valid values:
-         * <p>
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>Provisioning</strong>: The listener is being created.</li>
+         * <li><strong>Running</strong>: The listener is running.</li>
+         * <li><strong>Configuring</strong>: The listener is being configured.</li>
+         * <li><strong>Stopping</strong>: The listener is being stopped.</li>
+         * <li><strong>Stopped</strong>: The listener is stopped.</li>
+         * <li><strong>Starting</strong>: The listener is being started.</li>
+         * <li><strong>Deleting</strong>: The listener is being deleted.</li>
+         * <li><strong>Deleted</strong>: The listener is deleted.</li>
+         * </ul>
          * 
-         * *   **Provisioning**: The listener is being created.
-         * *   **Running**: The listener is running.
-         * *   **Configuring**: The listener is being configured.
-         * *   **Stopping**: The listener is being stopped.
-         * *   **Stopped**: The listener is stopped.
-         * *   **Starting**: The listener is being started.
-         * *   **Deleting**: The listener is being deleted.
-         * *   **Deleted**: The listener is deleted.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder listenerStatus(String listenerStatus) {
             this.listenerStatus = listenerStatus;
@@ -450,7 +487,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the NLB instance.
+         * <p>The ID of the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-83ckzc8d4xlp8o****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -458,10 +498,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the largest TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged.
-         * <p>
+         * <p>The size of the largest TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged.</p>
+         * <blockquote>
+         * <p> This parameter is supported only by listeners that use SSL over TCP.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only by listeners that use SSL over TCP.
+         * <strong>example:</strong>
+         * <p>166</p>
          */
         public Builder mss(Integer mss) {
             this.mss = mss;
@@ -469,11 +512,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
-         * <p>
+         * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder proxyProtocolEnabled(Boolean proxyProtocolEnabled) {
             this.proxyProtocolEnabled = proxyProtocolEnabled;
@@ -481,7 +527,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+         * <p>Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
          */
         public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
             this.proxyProtocolV2Config = proxyProtocolV2Config;
@@ -489,7 +535,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -497,7 +546,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -505,11 +557,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether fine-grained monitoring is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether fine-grained monitoring is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder secSensorEnabled(Boolean secSensorEnabled) {
             this.secSensorEnabled = secSensorEnabled;
@@ -517,12 +572,25 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security policy. System security policies and custom security policies are supported.
-         * <p>
+         * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
+         * <ul>
+         * <li><p>Valid values: <strong>tls_cipher_policy_1_0</strong>, <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+         * </li>
+         * <li><p>Custom security policy: the ID of the custom security policy.</p>
+         * <ul>
+         * <li><p>For more information about how to create a custom security policy, see <a href="https://help.aliyun.com/document_detail/2399231.html">CreateSecurityPolicy</a> .</p>
+         * </li>
+         * <li><p>For more information about how to query security policies, see <a href="https://help.aliyun.com/document_detail/2399234.html">ListSecurityPolicy</a> .</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * </blockquote>
          * 
-         * Valid values: **tls_cipher_policy\_1\_0**, **tls_cipher_policy\_1\_1**, **tls_cipher_policy\_1\_2**, **tls_cipher_policy\_1\_2\_strict**, and **tls_cipher_policy\_1\_2\_strict_with\_1\_3**.
-         * 
-         * >  This parameter takes effect only for listeners that use SSL over TCP.
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_0</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.securityPolicyId = securityPolicyId;
@@ -530,7 +598,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the server group.
+         * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-ppdpc14gdm3x4o****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.serverGroupId = serverGroupId;
@@ -538,7 +609,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The first port in the listening port range. Valid values: **0** to **65535**.
+         * <p>The first port in the listening port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
          */
         public Builder startPort(String startPort) {
             this.startPort = startPort;
@@ -546,9 +620,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -559,6 +633,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class ProxyProtocolV2Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpIdEnabled")
         private Boolean ppv2PrivateLinkEpIdEnabled;
@@ -610,11 +690,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean ppv2VpcIdEnabled; 
 
             /**
-             * Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:
-             * <p>
+             * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
                 this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
@@ -622,11 +705,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:
-             * <p>
+             * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
                 this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
@@ -634,11 +720,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:
-             * <p>
+             * <p>Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
                 this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
@@ -652,6 +741,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetListenerAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -691,7 +786,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ac-cus-tag-4</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -699,7 +797,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

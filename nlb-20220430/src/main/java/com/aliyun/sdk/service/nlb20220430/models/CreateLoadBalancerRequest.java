@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLoadBalancerRequest} extends {@link RequestModel}
  *
  * <p>CreateLoadBalancerRequest</p>
@@ -62,7 +68,7 @@ public class CreateLoadBalancerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -72,7 +78,7 @@ public class CreateLoadBalancerRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CreateLoadBalancerRequest(Builder builder) {
         super(builder);
@@ -193,7 +199,7 @@ public class CreateLoadBalancerRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -207,7 +213,7 @@ public class CreateLoadBalancerRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -224,9 +230,9 @@ public class CreateLoadBalancerRequest extends Request {
         private ModificationProtectionConfig modificationProtectionConfig; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -252,11 +258,14 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * The protocol version. Valid values:
-         * <p>
+         * <p>The version of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>ipv4</strong> (default)</li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
          * 
-         * *   **ipv4:** IPv4. This is the default value.
-         * *   **DualStack:** dual stack.
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putBodyParameter("AddressIpVersion", addressIpVersion);
@@ -265,13 +274,18 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The type of IPv4 address used by the NLB instance. Valid values:
-         * <p>
+         * <p>The network type of the IPv4 address used by the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong>: The NLB instance is assigned a public IP address. The domain name is resolved to the public IP address. The NLB instance is accessible over the Internet.</li>
+         * <li><strong>Intranet</strong>: The NLB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The NLB instance is accessible only within the VPC of the NLB instance.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To enable a public IPv6 address for a dual-stack NLB instance, call the <a href="https://help.aliyun.com/document_detail/445878.html">EnableLoadBalancerIpv6Internet</a> operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.
-         * *   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the virtual private cloud (VPC) where the NLB instance is deployed.
-         * 
-         * >  To enable a public IPv6 address for an NLB instance, call the [EnableLoadBalancerIpv6Internet](~~445878~~) operation.
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder addressType(String addressType) {
             this.putBodyParameter("AddressType", addressType);
@@ -280,7 +294,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The ID of the EIP bandwidth plan that is associated with the Internet-facing NLB instance.
+         * <p>The ID of the EIP bandwidth plan that is associated with the Internet-facing NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp1vevu8h3ieh****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putBodyParameter("BandwidthPackageId", bandwidthPackageId);
@@ -289,12 +306,14 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -303,7 +322,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The configuration of the deletion protection feature.
+         * <p>The configuration of the deletion protection feature.</p>
          */
         public Builder deletionProtectionConfig(DeletionProtectionConfig deletionProtectionConfig) {
             this.putBodyParameter("DeletionProtectionConfig", deletionProtectionConfig);
@@ -312,11 +331,14 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: performs a dry run and sends the request. This is the default value. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -325,7 +347,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The billing settings of the NLB instance.
+         * <p>The billing settings of the NLB instance.</p>
          */
         public Builder loadBalancerBillingConfig(LoadBalancerBillingConfig loadBalancerBillingConfig) {
             this.putBodyParameter("LoadBalancerBillingConfig", loadBalancerBillingConfig);
@@ -334,10 +356,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The name of the NLB instance.
-         * <p>
+         * <p>The name of the NLB instance.</p>
+         * <p>The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</p>
          * 
-         * The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+         * <strong>example:</strong>
+         * <p>NLB1</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putBodyParameter("LoadBalancerName", loadBalancerName);
@@ -346,7 +369,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The type of the instance. Set the value to **network**, which specifies an NLB instance.
+         * <p>The type of the instance. Set the value to <strong>network</strong>, which specifies an NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network</p>
          */
         public Builder loadBalancerType(String loadBalancerType) {
             this.putBodyParameter("LoadBalancerType", loadBalancerType);
@@ -355,7 +381,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The configuration of the configuration read-only mode.
+         * <p>The configuration of the configuration read-only mode.</p>
          */
         public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
             this.putBodyParameter("ModificationProtectionConfig", modificationProtectionConfig);
@@ -364,10 +390,11 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -376,7 +403,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -385,16 +415,20 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the VPC where the NLB instance is deployed.
+         * <p>The ID of the VPC where the NLB instance is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1b49rqrybk45nio****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -403,9 +437,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The mappings between zones and vSwitches. You must add at least two zones. You can add a maximum of 10 zones.
+         * <p>The mappings between zones and vSwitches. You must add at least two zones. You can add a maximum of 10 zones.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putBodyParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;
@@ -418,6 +453,12 @@ public class CreateLoadBalancerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLoadBalancerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoadBalancerRequest</p>
+     */
     public static class DeletionProtectionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -457,11 +498,14 @@ public class CreateLoadBalancerRequest extends Request {
             private String reason; 
 
             /**
-             * Specifies whether to enable deletion protection. Valid values:
-             * <p>
+             * <p>Specifies whether to enable deletion protection. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -469,7 +513,10 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
+             * <p>The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The instance is running</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -483,6 +530,12 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLoadBalancerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoadBalancerRequest</p>
+     */
     public static class LoadBalancerBillingConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
@@ -510,10 +563,11 @@ public class CreateLoadBalancerRequest extends Request {
             private String payType; 
 
             /**
-             * The billing method of the NLB instance.
-             * <p>
+             * <p>The billing method of the NLB instance.</p>
+             * <p>Set the value to <strong>PostPay</strong>, which specifies the pay-as-you-go billing method.</p>
              * 
-             * Set the value to **PostPay**, which specifies the pay-as-you-go billing method.
+             * <strong>example:</strong>
+             * <p>PostPay</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -527,6 +581,12 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLoadBalancerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoadBalancerRequest</p>
+     */
     public static class ModificationProtectionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
@@ -566,10 +626,13 @@ public class CreateLoadBalancerRequest extends Request {
             private String status; 
 
             /**
-             * The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.
-             * <p>
+             * <p>The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if the <strong>Status</strong> parameter is set to <strong>ConsoleProtection</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if the **Status** parameter is set to **ConsoleProtection**.
+             * <strong>example:</strong>
+             * <p>Service guarantee period</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -577,13 +640,17 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the configuration read-only mode. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
+             * <ul>
+             * <li><strong>NonProtection</strong>: does not enable the configuration read-only mode. You cannot set the <strong>Reason</strong> parameter. If the <strong>Reason</strong> parameter is set, the value is cleared.</li>
+             * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. You can set the <strong>Reason</strong> parameter.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+             * </blockquote>
              * 
-             * *   **NonProtection**: does not enable the configuration read-only mode. You cannot set the **Reason** parameter. If the **Reason** parameter is set, the value is cleared.
-             * *   **ConsoleProtection**: enables the configuration read-only mode. You can set the **Reason** parameter.
-             * 
-             * >  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+             * <strong>example:</strong>
+             * <p>ConsoleProtection</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -597,6 +664,12 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLoadBalancerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoadBalancerRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -636,10 +709,11 @@ public class CreateLoadBalancerRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -647,10 +721,11 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>product</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -664,18 +739,24 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLoadBalancerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLoadBalancerRequest</p>
+     */
     public static class ZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
         @com.aliyun.core.annotation.NameInMap("Ipv4LocalAddresses")
-        private java.util.List < String > ipv4LocalAddresses;
+        private java.util.List<String> ipv4LocalAddresses;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6LocalAddresses")
-        private java.util.List < String > ipv6LocalAddresses;
+        private java.util.List<String> ipv6LocalAddresses;
 
         @com.aliyun.core.annotation.NameInMap("PrivateIPv4Address")
         private String privateIPv4Address;
@@ -716,7 +797,7 @@ public class CreateLoadBalancerRequest extends Request {
         /**
          * @return ipv4LocalAddresses
          */
-        public java.util.List < String > getIpv4LocalAddresses() {
+        public java.util.List<String> getIpv4LocalAddresses() {
             return this.ipv4LocalAddresses;
         }
 
@@ -730,7 +811,7 @@ public class CreateLoadBalancerRequest extends Request {
         /**
          * @return ipv6LocalAddresses
          */
-        public java.util.List < String > getIpv6LocalAddresses() {
+        public java.util.List<String> getIpv6LocalAddresses() {
             return this.ipv6LocalAddresses;
         }
 
@@ -757,15 +838,18 @@ public class CreateLoadBalancerRequest extends Request {
 
         public static final class Builder {
             private String allocationId; 
-            private java.util.List < String > ipv4LocalAddresses; 
+            private java.util.List<String> ipv4LocalAddresses; 
             private String ipv6Address; 
-            private java.util.List < String > ipv6LocalAddresses; 
+            private java.util.List<String> ipv6LocalAddresses; 
             private String privateIPv4Address; 
             private String vSwitchId; 
             private String zoneId; 
 
             /**
-             * The ID of the elastic IP address (EIP) that is associated with the Internet-facing NLB instance. You can specify one EIP for each zone. You must add at least two zones. You can add a maximum of 10 zones.
+             * <p>The ID of the elastic IP address (EIP) that is associated with the Internet-facing NLB instance. You can specify one EIP for each zone. You must add at least two zones. You can add a maximum of 10 zones.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bp1aedxso6u80u0qf****</p>
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -773,15 +857,18 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Ipv4LocalAddresses.
+             * <p>The IPv4 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</p>
              */
-            public Builder ipv4LocalAddresses(java.util.List < String > ipv4LocalAddresses) {
+            public Builder ipv4LocalAddresses(java.util.List<String> ipv4LocalAddresses) {
                 this.ipv4LocalAddresses = ipv4LocalAddresses;
                 return this;
             }
 
             /**
-             * Ipv6Address.
+             * <p>The IPv6 address. The IPv6 address that the NLB instance uses to provide external services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2408:400a:d5:3080:b409:840a:ca:e8e5</p>
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -789,15 +876,18 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * Ipv6LocalAddresses.
+             * <p>The IPv6 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers. The number of IP addresses must be an even number, which must be at least 2 and at most 8.</p>
              */
-            public Builder ipv6LocalAddresses(java.util.List < String > ipv6LocalAddresses) {
+            public Builder ipv6LocalAddresses(java.util.List<String> ipv6LocalAddresses) {
                 this.ipv6LocalAddresses = ipv6LocalAddresses;
                 return this;
             }
 
             /**
-             * The private IP address. You must add at least two zones. You can add a maximum of 10 zones.
+             * <p>The private IP address. You must add at least two zones. You can add a maximum of 10 zones.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.1</p>
              */
             public Builder privateIPv4Address(String privateIPv4Address) {
                 this.privateIPv4Address = privateIPv4Address;
@@ -805,7 +895,11 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an NLB instance. You must add at least two zones. You can add a maximum of 10 zones.
+             * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an NLB instance. You must add at least two zones. You can add a maximum of 10 zones.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-sersdf****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -813,10 +907,12 @@ public class CreateLoadBalancerRequest extends Request {
             }
 
             /**
-             * The ID of the zone of the NLB instance. You must add at least two zones. You can add a maximum of 10 zones.
-             * <p>
+             * <p>The ID of the zone of the NLB instance. You must add at least two zones. You can add a maximum of 10 zones.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

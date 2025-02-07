@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServerGroupResponseBody</p>
@@ -61,7 +67,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         private String serverGroupId; 
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -69,7 +78,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +89,10 @@ public class CreateServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The server group ID.
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.serverGroupId = serverGroupId;

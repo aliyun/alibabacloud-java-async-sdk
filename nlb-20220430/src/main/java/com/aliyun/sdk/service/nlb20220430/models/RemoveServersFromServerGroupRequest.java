@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveServersFromServerGroupRequest} extends {@link RequestModel}
  *
  * <p>RemoveServersFromServerGroupRequest</p>
@@ -31,7 +37,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Servers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Servers> servers;
+    private java.util.List<Servers> servers;
 
     private RemoveServersFromServerGroupRequest(Builder builder) {
         super(builder);
@@ -86,7 +92,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
     /**
      * @return servers
      */
-    public java.util.List < Servers> getServers() {
+    public java.util.List<Servers> getServers() {
         return this.servers;
     }
 
@@ -95,7 +101,7 @@ public class RemoveServersFromServerGroupRequest extends Request {
         private Boolean dryRun; 
         private String regionId; 
         private String serverGroupId; 
-        private java.util.List < Servers> servers; 
+        private java.util.List<Servers> servers; 
 
         private Builder() {
             super();
@@ -111,12 +117,14 @@ public class RemoveServersFromServerGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -125,11 +133,14 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -138,10 +149,11 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -150,7 +162,11 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * The server group ID.
+         * <p>The server group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
@@ -159,9 +175,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
         }
 
         /**
-         * The backend servers that you want to add to the server group. You can specify up to 40 servers in each call.
+         * <p>The server groups. You can specify at most 200 server groups in each call.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder servers(java.util.List < Servers> servers) {
+        public Builder servers(java.util.List<Servers> servers) {
             this.putBodyParameter("Servers", servers);
             this.servers = servers;
             return this;
@@ -174,6 +191,12 @@ public class RemoveServersFromServerGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveServersFromServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>RemoveServersFromServerGroupRequest</p>
+     */
     public static class Servers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -239,7 +262,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
             private String serverType; 
 
             /**
-             * The port that is used by the backend server. Valid values: **1** to **65535**.
+             * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -247,11 +273,15 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * The backend server ID.
-             * <p>
+             * <p>The ID of the server group.</p>
+             * <ul>
+             * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
+             * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   If the server group type is **Instance**, set this parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. The backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-             * *   If the server group type is **Ip**, set this parameter to an IP address.
+             * <strong>example:</strong>
+             * <p>ecs-bp67acfmxazb4p****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -259,7 +289,10 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the backend server. If the server group type is **Ip**, you must specify an IP address.
+             * <p>The IP addresses of servers. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.6.6</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -267,13 +300,17 @@ public class RemoveServersFromServerGroupRequest extends Request {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>Ecs</strong>: ECS instance</li>
+             * <li><strong>Eni</strong>: ENI</li>
+             * <li><strong>Eci</strong>: elastic container instance</li>
+             * <li><strong>Ip</strong>: IP address</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Ecs**: ECS instance
-             * *   **Eni**: ENI
-             * *   **Eci**: elastic container instance
-             * *   **Ip**: IP address
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;

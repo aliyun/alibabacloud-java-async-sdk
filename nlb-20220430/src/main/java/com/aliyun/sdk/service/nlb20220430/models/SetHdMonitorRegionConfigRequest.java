@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetHdMonitorRegionConfigRequest} extends {@link RequestModel}
  *
  * <p>SetHdMonitorRegionConfigRequest</p>
@@ -83,7 +89,10 @@ public class SetHdMonitorRegionConfigRequest extends Request {
         } 
 
         /**
-         * LogProject.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor-cn-hangzhou-223794579283657556</p>
          */
         public Builder logProject(String logProject) {
             this.putQueryParameter("LogProject", logProject);
@@ -92,7 +101,10 @@ public class SetHdMonitorRegionConfigRequest extends Request {
         }
 
         /**
-         * MetricStore.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdmonitor-cn-hangzhou-metricStore-1</p>
          */
         public Builder metricStore(String metricStore) {
             this.putQueryParameter("MetricStore", metricStore);

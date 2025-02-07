@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>MoveResourceGroupRequest</p>
@@ -99,10 +105,11 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new resource group.
-         * <p>
+         * <p>The ID of the new resource group.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups) to view resource group IDs.
+         * <strong>example:</strong>
+         * <p>rg-aekzjcnrv3vvqhq</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putBodyParameter("NewResourceGroupId", newResourceGroupId);
@@ -111,10 +118,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to obtain the region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -123,10 +131,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the bastion host for which you want to change the resource group.
-         * <p>
+         * <p>The ID of the resource group.</p>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.
+         * <strong>example:</strong>
+         * <p>nlb-nrnrxwd15en27r****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -135,12 +144,16 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>loadbalancer</strong>: a Network Load Balancer (NLB) instance</li>
+         * <li><strong>securitypolicy</strong>: a security policy</li>
+         * <li><strong>servergroup</strong>: a server group</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **loadbalancer**: a Network Load Balancer (NLB) instance
-         * *   **securitypolicy**: a security policy
-         * *   **servergroup**: a server group
+         * <strong>example:</strong>
+         * <p>loadbalancer</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);

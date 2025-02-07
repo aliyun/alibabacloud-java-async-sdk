@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddServersToServerGroupRequest} extends {@link RequestModel}
  *
  * <p>AddServersToServerGroupRequest</p>
@@ -31,7 +37,7 @@ public class AddServersToServerGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Servers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Servers> servers;
+    private java.util.List<Servers> servers;
 
     private AddServersToServerGroupRequest(Builder builder) {
         super(builder);
@@ -86,7 +92,7 @@ public class AddServersToServerGroupRequest extends Request {
     /**
      * @return servers
      */
-    public java.util.List < Servers> getServers() {
+    public java.util.List<Servers> getServers() {
         return this.servers;
     }
 
@@ -95,7 +101,7 @@ public class AddServersToServerGroupRequest extends Request {
         private Boolean dryRun; 
         private String regionId; 
         private String serverGroupId; 
-        private java.util.List < Servers> servers; 
+        private java.util.List<Servers> servers; 
 
         private Builder() {
             super();
@@ -111,12 +117,14 @@ public class AddServersToServerGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** of each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -125,11 +133,14 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether only to precheck the request. Valid values:
-         * <p>
+         * <p>Specifies whether only to precheck the request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: prechecks the request but does not add the servers to the server group. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: prechecks the request but does not add the servers to the server group. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -138,10 +149,11 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -150,7 +162,11 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the server group.
+         * <p>The ID of the server group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
@@ -159,9 +175,13 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * A list of backend servers.
+         * <p>The backend servers.</p>
+         * <blockquote>
+         * <p> You can add at most 200 backend servers in each call.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
-        public Builder servers(java.util.List < Servers> servers) {
+        public Builder servers(java.util.List<Servers> servers) {
             this.putBodyParameter("Servers", servers);
             this.servers = servers;
             return this;
@@ -174,6 +194,12 @@ public class AddServersToServerGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddServersToServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>AddServersToServerGroupRequest</p>
+     */
     public static class Servers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -263,12 +289,11 @@ public class AddServersToServerGroupRequest extends Request {
             private Integer weight; 
 
             /**
-             * The description of the servers.
-             * <p>
+             * <p>The description of the backend server.</p>
+             * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at sings (@), underscores (_), and hyphens (-).</p>
              * 
-             * The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
-             * 
-             * >  You can specify at most 40 servers in each call.
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -276,10 +301,11 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * The port used by the backend server. Valid values: **1** to **65535**.
-             * <p>
+             * <p>The port that is used by the backend server. Valid values: <strong>0 to 65535</strong>. If you do not specify a port, the default value <strong>0</strong> is used.</p>
+             * <p>If you enable all-port forwarding, you do not need to specify a port when you add a backend server. The default port is port 0. NLB forwards requests to the requested ports. To determine whether all-port forwarding is enabled, call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> API operation and check the value of the <strong>AnyPortEnabled</strong> parameter.</p>
              * 
-             * >  You can specify at most 40 servers in each call.
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -287,11 +313,15 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * The ID of the server. You can specify at most 40 server IDs in each call.
-             * <p>
+             * <p>The ID of the server group.</p>
+             * <ul>
+             * <li>If the server group is of the <strong>Instance</strong> type, set this parameter to the IDs of <strong>Elastic Compute Service (ECS) instances</strong>, <strong>elastic network interfaces (ENIs)</strong>, or <strong>elastic container instances</strong>.</li>
+             * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   If the server group type is **Instance**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance. These backend servers are specified by **Ecs**, **Eni**, or **Eci**.
-             * *   If the server group type is **Ip**, set the ServerId parameter to an IP address.
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -299,10 +329,10 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the server. If the server group type is **Ip**, set the ServerId parameter to an IP address.
-             * <p>
+             * <p>The IP addresses of servers. If the server group type is <strong>Ip</strong>, set the ServerId parameter to IP addresses.</p>
              * 
-             * >  You can specify at most 40 server IP addresses in each call.
+             * <strong>example:</strong>
+             * <p>192.168.6.6</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -310,15 +340,17 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of the backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>Ecs</strong>: ECS instance</li>
+             * <li><strong>Eni</strong>: ENI</li>
+             * <li><strong>Eci</strong>: elastic container instance</li>
+             * <li><strong>Ip</strong>: IP address</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Ecs**: an ECS instance
-             * *   **Eni**: an ENI
-             * *   **Eci**: an elastic container instance
-             * *   **Ip**: an IP address
-             * 
-             * >  You can specify at most 40 servers in each call.
+             * <strong>example:</strong>
+             * <p>Ecs</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -326,10 +358,10 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server.
-             * <p>
+             * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server.</p>
              * 
-             * >  You can specify at most 40 servers in each call.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

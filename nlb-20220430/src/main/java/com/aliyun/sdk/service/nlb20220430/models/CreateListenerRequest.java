@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateListenerRequest} extends {@link RequestModel}
  *
  * <p>CreateListenerRequest</p>
@@ -21,7 +27,7 @@ public class CreateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CaCertificateIds")
-    private java.util.List < String > caCertificateIds;
+    private java.util.List<String> caCertificateIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CaEnabled")
@@ -29,7 +35,7 @@ public class CreateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CertificateIds")
-    private java.util.List < String > certificateIds;
+    private java.util.List<String> certificateIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -49,7 +55,7 @@ public class CreateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IdleTimeout")
-    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
     private Integer idleTimeout;
 
     @com.aliyun.core.annotation.Body
@@ -106,7 +112,7 @@ public class CreateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateListenerRequest(Builder builder) {
         super(builder);
@@ -165,7 +171,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return caCertificateIds
      */
-    public java.util.List < String > getCaCertificateIds() {
+    public java.util.List<String> getCaCertificateIds() {
         return this.caCertificateIds;
     }
 
@@ -179,7 +185,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return certificateIds
      */
-    public java.util.List < String > getCertificateIds() {
+    public java.util.List<String> getCertificateIds() {
         return this.certificateIds;
     }
 
@@ -305,16 +311,16 @@ public class CreateListenerRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateListenerRequest, Builder> {
         private Boolean alpnEnabled; 
         private String alpnPolicy; 
-        private java.util.List < String > caCertificateIds; 
+        private java.util.List<String> caCertificateIds; 
         private Boolean caEnabled; 
-        private java.util.List < String > certificateIds; 
+        private java.util.List<String> certificateIds; 
         private String clientToken; 
         private Integer cps; 
         private Boolean dryRun; 
@@ -332,7 +338,7 @@ public class CreateListenerRequest extends Request {
         private String securityPolicyId; 
         private String serverGroupId; 
         private Integer startPort; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -366,11 +372,14 @@ public class CreateListenerRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:
-         * <p>
+         * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder alpnEnabled(Boolean alpnEnabled) {
             this.putBodyParameter("AlpnEnabled", alpnEnabled);
@@ -379,15 +388,20 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The ALPN policy.
-         * <p>
+         * <p>The ALPN policy. Valid values:</p>
+         * <ul>
+         * <li>HTTP1Only: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+         * <li>HTTP2Only: uses only HTTP 2.0.</li>
+         * <li>HTTP2Preferred: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
+         * Note</li>
+         * <li>HTTP2Optional: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required if AlpnEnabled is set to true.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   HTTP1Only
-         * *   HTTP2Only
-         * *   HTTP2Preferred
-         * *   HTTP2Optional
+         * <strong>example:</strong>
+         * <p>HTTP1Only</p>
          */
         public Builder alpnPolicy(String alpnPolicy) {
             this.putBodyParameter("AlpnPolicy", alpnPolicy);
@@ -396,23 +410,26 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The certificate authority (CA) certificates. This parameter takes effect only for listeners that use SSL over TCP.
-         * <p>
-         * 
-         * > You can specify only one CA certificate.
+         * <p>The certificate authority (CA) certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * <blockquote>
+         * <p>You can specify only one CA certificate.</p>
+         * </blockquote>
          */
-        public Builder caCertificateIds(java.util.List < String > caCertificateIds) {
+        public Builder caCertificateIds(java.util.List<String> caCertificateIds) {
             this.putBodyParameter("CaCertificateIds", caCertificateIds);
             this.caCertificateIds = caCertificateIds;
             return this;
         }
 
         /**
-         * Specifies whether to enable mutual authentication. Valid values:
-         * <p>
+         * <p>Specifies whether to enable mutual authentication. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder caEnabled(Boolean caEnabled) {
             this.putBodyParameter("CaEnabled", caEnabled);
@@ -421,24 +438,26 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The server certificates. This parameter takes effect only for listeners that use SSL over TCP.
-         * <p>
-         * 
-         * > You can specify only one server certificate.
+         * <p>The server certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * <blockquote>
+         * <p>You can specify only one server certificate.</p>
+         * </blockquote>
          */
-        public Builder certificateIds(java.util.List < String > certificateIds) {
+        public Builder certificateIds(java.util.List<String> certificateIds) {
             this.putBodyParameter("CertificateIds", certificateIds);
             this.certificateIds = certificateIds;
             return this;
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -447,7 +466,10 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.
+         * <p>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> indicates that the number of connections is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder cps(Integer cps) {
             this.putBodyParameter("Cps", cps);
@@ -456,11 +478,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -469,10 +494,13 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The last port in the listener port range. Valid values: **0** to **65535**. The number of the last port must be greater than the number of the first port.
-         * <p>
+         * <p>The last port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>. The number of the last port must be greater than the number of the first port.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when **ListenerPort** is set to **0**.
+         * <strong>example:</strong>
+         * <p>566</p>
          */
         public Builder endPort(Integer endPort) {
             this.putBodyParameter("EndPort", endPort);
@@ -481,7 +509,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The timeout period of idle connections. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.
+         * <p>The timeout period of idle connections. Unit: seconds</p>
+         * <ul>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong> or <strong>TCPSSL</strong>, the timeout period of idle connections can be set to <strong>10</strong> to <strong>900</strong> seconds. Default value: <strong>900</strong>.</li>
+         * <li>If <strong>ListenerProtocol</strong> is set to <strong>UDP</strong>, the timeout period of idle connections can be set to <strong>10</strong> to <strong>20</strong> seconds. Default value: <strong>20</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putBodyParameter("IdleTimeout", idleTimeout);
@@ -490,10 +525,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The name of the listener.
-         * <p>
+         * <p>The name of the listener.</p>
+         * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>tcp_80</p>
          */
         public Builder listenerDescription(String listenerDescription) {
             this.putBodyParameter("ListenerDescription", listenerDescription);
@@ -502,10 +538,12 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The listener port. Valid values: **0** to **65535**.
-         * <p>
+         * <p>The listener port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>If you set the value to <strong>0</strong>, the listener listens by port range. If you set the value to <strong>0</strong>, you must specify <strong>StartPort</strong> and <strong>EndPort</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you set the value to **0**, the listener listens by port range. If you set the value to **0**, you must specify **StartPort** and **EndPort**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putBodyParameter("ListenerPort", listenerPort);
@@ -514,7 +552,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The listener protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.
+         * <p>The listener protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putBodyParameter("ListenerProtocol", listenerProtocol);
@@ -523,7 +565,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The ID of the Network Load Balancer (NLB) instance.
+         * <p>The ID of the Network Load Balancer (NLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-83ckzc8d4xlp8o****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putBodyParameter("LoadBalancerId", loadBalancerId);
@@ -532,10 +578,13 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged.
-         * <p>
+         * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged.</p>
+         * <blockquote>
+         * <p>This parameter is supported only by TCP listeners and listeners that use SSL over TCP.</p>
+         * </blockquote>
          * 
-         * > This parameter is supported only by TCP listeners and listeners that use SSL over TCP.
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder mss(Integer mss) {
             this.putBodyParameter("Mss", mss);
@@ -544,11 +593,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:
-         * <p>
+         * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder proxyProtocolEnabled(Boolean proxyProtocolEnabled) {
             this.putBodyParameter("ProxyProtocolEnabled", proxyProtocolEnabled);
@@ -557,7 +609,7 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.
+         * <p>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
          */
         public Builder proxyProtocolV2Config(ProxyProtocolV2Config proxyProtocolV2Config) {
             String proxyProtocolV2ConfigShrink = shrink(proxyProtocolV2Config, "ProxyProtocolV2Config", "json");
@@ -567,10 +619,11 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -579,11 +632,14 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable fine-grained monitoring. Valid values:
-         * <p>
+         * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder secSensorEnabled(Boolean secSensorEnabled) {
             this.putBodyParameter("SecSensorEnabled", secSensorEnabled);
@@ -592,12 +648,25 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The security policy ID. System security policies and custom security policies are supported.
-         * <p>
+         * <p>The security policy ID. System security policies and custom security policies are supported.</p>
+         * <ul>
+         * <li><p>Valid values: <strong>tls_cipher_policy_1_0</strong> (default), <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+         * </li>
+         * <li><p>Custom security policy: the ID of the custom security policy.</p>
+         * <ul>
+         * <li><p>For more information about how to create a custom security policy, see <a href="https://help.aliyun.com/document_detail/2399231.html">CreateSecurityPolicy</a> .</p>
+         * </li>
+         * <li><p>For more information about how to query security policies, see <a href="https://help.aliyun.com/document_detail/2399234.html">ListSecurityPolicy</a> .</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only for listeners that use SSL over TCP.</p>
+         * </blockquote>
          * 
-         * Valid values: **tls_cipher_policy\_1\_0** (default), **tls_cipher_policy\_1\_1**, **tls_cipher_policy\_1\_2**, **tls_cipher_policy\_1\_2\_strict**, and **tls_cipher_policy\_1\_2\_strict_with\_1\_3**.
-         * 
-         * > This parameter takes effect only for listeners that use SSL over TCP.
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_0</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putBodyParameter("SecurityPolicyId", securityPolicyId);
@@ -606,7 +675,18 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The server group ID.
+         * <p>The server group ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>UDP</strong>.</li>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>UDP</strong>, you can associate the listener with server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong>.</li>
+         * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCPSSL</strong>, you can associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation disabled</strong>. You cannot associate the listener with server groups whose backend protocol is <strong>TCP</strong> and have <strong>client IP preservation enabled</strong> or server groups whose backend protocol is <strong>UDP</strong> or <strong>TCP_UDP</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-ppdpc14gdm3x4o****</p>
          */
         public Builder serverGroupId(String serverGroupId) {
             this.putBodyParameter("ServerGroupId", serverGroupId);
@@ -615,10 +695,13 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The first port in the listener port range. Valid values: **0** to **65535**.
-         * <p>
+         * <p>The first port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when **ListenerPort** is set to **0**.
+         * <strong>example:</strong>
+         * <p>244</p>
          */
         public Builder startPort(Integer startPort) {
             this.putBodyParameter("StartPort", startPort);
@@ -627,9 +710,9 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -642,6 +725,12 @@ public class CreateListenerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class ProxyProtocolV2Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpIdEnabled")
         private Boolean ppv2PrivateLinkEpIdEnabled;
@@ -693,11 +782,14 @@ public class CreateListenerRequest extends Request {
             private Boolean ppv2VpcIdEnabled; 
 
             /**
-             * Specifies whether to use the Proxy protocol to pass the Ppv2PrivateLinkEpId parameter to backend servers. Valid values:
-             * <p>
+             * <p>Specifies whether to use the Proxy protocol to pass the Ppv2PrivateLinkEpId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2PrivateLinkEpIdEnabled(Boolean ppv2PrivateLinkEpIdEnabled) {
                 this.ppv2PrivateLinkEpIdEnabled = ppv2PrivateLinkEpIdEnabled;
@@ -705,11 +797,14 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:
-             * <p>
+             * <p>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2PrivateLinkEpsIdEnabled(Boolean ppv2PrivateLinkEpsIdEnabled) {
                 this.ppv2PrivateLinkEpsIdEnabled = ppv2PrivateLinkEpsIdEnabled;
@@ -717,11 +812,14 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:
-             * <p>
+             * <p>Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false** (default)
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ppv2VpcIdEnabled(Boolean ppv2VpcIdEnabled) {
                 this.ppv2VpcIdEnabled = ppv2VpcIdEnabled;
@@ -735,6 +833,12 @@ public class CreateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateListenerRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -774,10 +878,11 @@ public class CreateListenerRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -785,10 +890,11 @@ public class CreateListenerRequest extends Request {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * <p>
+             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can add up to 20 tags in each call.</p>
              * 
-             * You can add up to 20 tags in each call.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;

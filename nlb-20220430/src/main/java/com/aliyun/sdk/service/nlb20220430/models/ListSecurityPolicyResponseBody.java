@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecurityPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecurityPolicyResponseBody</p>
@@ -21,7 +27,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
-    private java.util.List < SecurityPolicies> securityPolicies;
+    private java.util.List<SecurityPolicies> securityPolicies;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -66,7 +72,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     /**
      * @return securityPolicies
      */
-    public java.util.List < SecurityPolicies> getSecurityPolicies() {
+    public java.util.List<SecurityPolicies> getSecurityPolicies() {
         return this.securityPolicies;
     }
 
@@ -81,11 +87,14 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SecurityPolicies> securityPolicies; 
+        private java.util.List<SecurityPolicies> securityPolicies; 
         private Integer totalCount; 
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +102,14 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If NextToken is empty, no next page exists.</li>
+         * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If NextToken is empty, no next page exists.
-         * *   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +117,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7A8875F-373A-5F48-8484-25B07A61F2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,15 +128,18 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A list of TLS security policies.
+         * <p>The TLS security policies.</p>
          */
-        public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
+        public Builder securityPolicies(java.util.List<SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +152,12 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecurityPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPolicyResponseBody</p>
+     */
     public static class RelatedListeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
@@ -197,7 +221,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             private String loadBalancerId; 
 
             /**
-             * The listener ID.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsn-bp1bpn0kn908w4nbw****@443</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -205,7 +232,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder listenerPort(Long listenerPort) {
                 this.listenerPort = listenerPort;
@@ -213,7 +243,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol. Valid value: **TCPSSL**.
+             * <p>The listener protocol. Valid value: <strong>TCPSSL</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCPSSL</p>
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -221,7 +254,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The NLB instance ID.
+             * <p>The NLB instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nlb-83ckzc8d4xlp8o****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -235,6 +271,12 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecurityPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPolicyResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -274,10 +316,11 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key. You can specify up to 10 tag keys.
-             * <p>
+             * <p>The tag key. You can specify up to 10 tag keys.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -285,10 +328,11 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value. You can specify up to 10 tag values.
-             * <p>
+             * <p>The tag value. You can specify up to 10 tag values.</p>
+             * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -302,6 +346,12 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecurityPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecurityPolicyResponseBody</p>
+     */
     public static class SecurityPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ciphers")
         private String ciphers;
@@ -310,7 +360,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("RelatedListeners")
-        private java.util.List < RelatedListeners> relatedListeners;
+        private java.util.List<RelatedListeners> relatedListeners;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -325,7 +375,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         private String securityPolicyStatus;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TlsVersion")
         private String tlsVersion;
@@ -367,7 +417,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         /**
          * @return relatedListeners
          */
-        public java.util.List < RelatedListeners> getRelatedListeners() {
+        public java.util.List<RelatedListeners> getRelatedListeners() {
             return this.relatedListeners;
         }
 
@@ -402,7 +452,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -416,57 +466,59 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String ciphers; 
             private String regionId; 
-            private java.util.List < RelatedListeners> relatedListeners; 
+            private java.util.List<RelatedListeners> relatedListeners; 
             private String resourceGroupId; 
             private String securityPolicyId; 
             private String securityPolicyName; 
             private String securityPolicyStatus; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String tlsVersion; 
 
             /**
-             * The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.
-             * <p>
+             * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>
+             * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+             * <ul>
+             * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
+             * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
+             * <li><strong>ECDHE-RSA-AES128-SHA</strong></li>
+             * <li><strong>ECDHE-RSA-AES256-SHA</strong></li>
+             * <li><strong>AES128-SHA</strong></li>
+             * <li><strong>AES256-SHA</strong></li>
+             * <li><strong>DES-CBC3-SHA</strong></li>
+             * </ul>
+             * <p>TLS 1.2 supports the following cipher suites:</p>
+             * <ul>
+             * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
+             * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
+             * <li><strong>ECDHE-RSA-AES128-SHA</strong></li>
+             * <li><strong>ECDHE-RSA-AES256-SHA</strong></li>
+             * <li><strong>AES128-SHA</strong></li>
+             * <li><strong>AES256-SHA</strong></li>
+             * <li><strong>DES-CBC3-SHA</strong></li>
+             * <li><strong>ECDHE-ECDSA-AES128-GCM-SHA256</strong></li>
+             * <li><strong>ECDHE-ECDSA-AES256-GCM-SHA384</strong></li>
+             * <li><strong>ECDHE-ECDSA-AES128-SHA256</strong></li>
+             * <li><strong>ECDHE-ECDSA-AES256-SHA384</strong></li>
+             * <li><strong>ECDHE-RSA-AES128-GCM-SHA256</strong></li>
+             * <li><strong>ECDHE-RSA-AES256-GCM-SHA384</strong></li>
+             * <li><strong>ECDHE-RSA-AES128-SHA256</strong></li>
+             * <li><strong>ECDHE-RSA-AES256-SHA384</strong></li>
+             * <li><strong>AES128-GCM-SHA256</strong></li>
+             * <li><strong>AES256-GCM-SHA384</strong></li>
+             * <li><strong>AES128-SHA256</strong></li>
+             * <li><strong>AES256-SHA256</strong></li>
+             * </ul>
+             * <p>TLS 1.3 supports the following cipher suites:</p>
+             * <ul>
+             * <li><strong>TLS_AES_128_GCM_SHA256</strong></li>
+             * <li><strong>TLS_AES_256_GCM_SHA384</strong></li>
+             * <li><strong>TLS_CHACHA20_POLY1305_SHA256</strong></li>
+             * <li><strong>TLS_AES_128_CCM_SHA256</strong></li>
+             * <li><strong>TLS_AES_128_CCM_8_SHA256</strong></li>
+             * </ul>
              * 
-             * TLS 1.0 and TLS 1.1 support the following cipher suites:
-             * 
-             * *   **ECDHE-ECDSA-AES128-SHA**
-             * *   **ECDHE-ECDSA-AES256-SHA**
-             * *   **ECDHE-RSA-AES128-SHA**
-             * *   **ECDHE-RSA-AES256-SHA**
-             * *   **AES128-SHA**
-             * *   **AES256-SHA**
-             * *   **DES-CBC3-SHA**
-             * 
-             * TLS 1.2 supports the following cipher suites:
-             * 
-             * *   **ECDHE-ECDSA-AES128-SHA**
-             * *   **ECDHE-ECDSA-AES256-SHA**
-             * *   **ECDHE-RSA-AES128-SHA**
-             * *   **ECDHE-RSA-AES256-SHA**
-             * *   **AES128-SHA**
-             * *   **AES256-SHA**
-             * *   **DES-CBC3-SHA**
-             * *   **ECDHE-ECDSA-AES128-GCM-SHA256**
-             * *   **ECDHE-ECDSA-AES256-GCM-SHA384**
-             * *   **ECDHE-ECDSA-AES128-SHA256**
-             * *   **ECDHE-ECDSA-AES256-SHA384**
-             * *   **ECDHE-RSA-AES128-GCM-SHA256**
-             * *   **ECDHE-RSA-AES256-GCM-SHA384**
-             * *   **ECDHE-RSA-AES128-SHA256**
-             * *   **ECDHE-RSA-AES256-SHA384**
-             * *   **AES128-GCM-SHA256**
-             * *   **AES256-GCM-SHA384**
-             * *   **AES128-SHA256**
-             * *   **AES256-SHA256**
-             * 
-             * TLS 1.3 supports the following cipher suites:
-             * 
-             * *   **TLS_AES\_128\_GCM_SHA256**
-             * *   **TLS_AES\_256\_GCM_SHA384**
-             * *   **TLS_CHACHA20\_POLY1305\_SHA256**
-             * *   **TLS_AES\_128\_CCM_SHA256**
-             * *   **TLS_AES\_128\_CCM\_8\_SHA256**
+             * <strong>example:</strong>
+             * <p>ECDHE-ECDSA-AES128-SHA</p>
              */
             public Builder ciphers(String ciphers) {
                 this.ciphers = ciphers;
@@ -474,7 +526,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the NLB instance.
+             * <p>The region ID of the NLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -482,15 +537,18 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The listeners that are associated with the NLB instance.
+             * <p>The listeners that are associated with the NLB instance.</p>
              */
-            public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
+            public Builder relatedListeners(java.util.List<RelatedListeners> relatedListeners) {
                 this.relatedListeners = relatedListeners;
                 return this;
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -498,7 +556,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the TLS security policy.
+             * <p>The ID of the TLS security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tls-bp14bb1e7dll4f****</p>
              */
             public Builder securityPolicyId(String securityPolicyId) {
                 this.securityPolicyId = securityPolicyId;
@@ -506,7 +567,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the TLS security policy.
+             * <p>The name of the TLS security policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLSCipherPolicy</p>
              */
             public Builder securityPolicyName(String securityPolicyName) {
                 this.securityPolicyName = securityPolicyName;
@@ -514,11 +578,14 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the TLS security policy. Valid values:
-             * <p>
+             * <p>The status of the TLS security policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Configuring</strong></li>
+             * <li><strong>Available</strong></li>
+             * </ul>
              * 
-             * *   **Configuring**
-             * *   **Available**
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder securityPolicyStatus(String securityPolicyStatus) {
                 this.securityPolicyStatus = securityPolicyStatus;
@@ -526,15 +593,18 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The supported versions of the TLS protocol. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.
+             * <p>The supported versions of the TLS protocol. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLSv1.0</p>
              */
             public Builder tlsVersion(String tlsVersion) {
                 this.tlsVersion = tlsVersion;

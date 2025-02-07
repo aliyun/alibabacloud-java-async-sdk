@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJobStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetJobStatusResponseBody</p>
@@ -49,7 +55,10 @@ public class GetJobStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +66,14 @@ public class GetJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the task. Valid values:
-         * <p>
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>Succeeded</strong>: The task is successful.</li>
+         * <li><strong>processing</strong>: The ticket is being executed.</li>
+         * </ul>
          * 
-         * *   **Succeeded**: The task is successful.
-         * *   **processing**: The ticket is being executed.
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;

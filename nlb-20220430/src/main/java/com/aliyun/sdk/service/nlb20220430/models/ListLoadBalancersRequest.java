@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLoadBalancersRequest} extends {@link RequestModel}
  *
  * <p>ListLoadBalancersRequest</p>
@@ -33,11 +39,11 @@ public class ListLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
-    private java.util.List < String > loadBalancerIds;
+    private java.util.List<String> loadBalancerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerNames")
-    private java.util.List < String > loadBalancerNames;
+    private java.util.List<String> loadBalancerNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
@@ -65,11 +71,11 @@ public class ListLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcIds")
-    private java.util.List < String > vpcIds;
+    private java.util.List<String> vpcIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -146,14 +152,14 @@ public class ListLoadBalancersRequest extends Request {
     /**
      * @return loadBalancerIds
      */
-    public java.util.List < String > getLoadBalancerIds() {
+    public java.util.List<String> getLoadBalancerIds() {
         return this.loadBalancerIds;
     }
 
     /**
      * @return loadBalancerNames
      */
-    public java.util.List < String > getLoadBalancerNames() {
+    public java.util.List<String> getLoadBalancerNames() {
         return this.loadBalancerNames;
     }
 
@@ -202,14 +208,14 @@ public class ListLoadBalancersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return vpcIds
      */
-    public java.util.List < String > getVpcIds() {
+    public java.util.List<String> getVpcIds() {
         return this.vpcIds;
     }
 
@@ -226,16 +232,16 @@ public class ListLoadBalancersRequest extends Request {
         private String DNSName; 
         private String ipv6AddressType; 
         private String loadBalancerBusinessStatus; 
-        private java.util.List < String > loadBalancerIds; 
-        private java.util.List < String > loadBalancerNames; 
+        private java.util.List<String> loadBalancerIds; 
+        private java.util.List<String> loadBalancerNames; 
         private String loadBalancerStatus; 
         private String loadBalancerType; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > vpcIds; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> vpcIds; 
         private String zoneId; 
 
         private Builder() {
@@ -263,11 +269,14 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * The protocol version. Valid values:
-         * <p>
+         * <p>The protocol version. Valid values:</p>
+         * <ul>
+         * <li><strong>ipv4</strong>: IPv4</li>
+         * <li><strong>DualStack</strong>: dual stack</li>
+         * </ul>
          * 
-         * *   **ipv4**: IPv4
-         * *   **DualStack**: dual stack
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putQueryParameter("AddressIpVersion", addressIpVersion);
@@ -276,11 +285,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The type of IPv4 address used by the NLB instance. Valid values:
-         * <p>
+         * <p>The type of IPv4 address used by the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
+         * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+         * </ul>
          * 
-         * *   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.
-         * *   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -289,7 +301,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The domain name of the NLB instance.
+         * <p>The domain name of the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-wb7r6dlwetvt5j****.cn-hangzhou.nlb.aliyuncs.com</p>
          */
         public Builder DNSName(String DNSName) {
             this.putQueryParameter("DNSName", DNSName);
@@ -298,11 +313,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The type of IPv6 address used by the NLB instance. Valid values:
-         * <p>
+         * <p>The type of IPv6 address used by the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Internet</strong>: a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
+         * <li><strong>Intranet</strong>: a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+         * </ul>
          * 
-         * *   **Internet**: a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.
-         * *   **Intranet**: a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.
+         * <strong>example:</strong>
+         * <p>Internet</p>
          */
         public Builder ipv6AddressType(String ipv6AddressType) {
             this.putQueryParameter("Ipv6AddressType", ipv6AddressType);
@@ -311,11 +329,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The business status of the NLB instance. Valid values:
-         * <p>
+         * <p>The business status of the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Abnormal</strong>: The NLB instance is not working as expected.</li>
+         * <li><strong>Normal</strong>: The NLB instance is working as expected.</li>
+         * </ul>
          * 
-         * *   **Abnormal**: The NLB instance is not working as expected.
-         * *   **Normal**: The NLB instance is working as expected.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder loadBalancerBusinessStatus(String loadBalancerBusinessStatus) {
             this.putQueryParameter("LoadBalancerBusinessStatus", loadBalancerBusinessStatus);
@@ -324,33 +345,36 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the NLB instance. You can query up to 20 NLB instances at a time.
+         * <p>The ID of the NLB instance. You can query up to 20 NLB instances at a time.</p>
          */
-        public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+        public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
             this.loadBalancerIds = loadBalancerIds;
             return this;
         }
 
         /**
-         * The name of the NLB instance. You can specify up to 20 names at a time.
+         * <p>The name of the NLB instance. You can specify up to 20 names at a time.</p>
          */
-        public Builder loadBalancerNames(java.util.List < String > loadBalancerNames) {
+        public Builder loadBalancerNames(java.util.List<String> loadBalancerNames) {
             this.putQueryParameter("LoadBalancerNames", loadBalancerNames);
             this.loadBalancerNames = loadBalancerNames;
             return this;
         }
 
         /**
-         * The status of the NLB instance. Valid values:
-         * <p>
+         * <p>The status of the NLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Inactive</strong>: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.</li>
+         * <li><strong>Active</strong>: The NLB instance is running.</li>
+         * <li><strong>Provisioning</strong>: The NLB instance is being created.</li>
+         * <li><strong>Configuring</strong>: The NLB instance is being modified.</li>
+         * <li><strong>Deleting</strong>: The NLB instance is being deleted.</li>
+         * <li><strong>Deleted</strong>: The NLB instance is deleted.</li>
+         * </ul>
          * 
-         * *   **Inactive**: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.
-         * *   **Active**: The NLB instance is running.
-         * *   **Provisioning**: The NLB instance is being created.
-         * *   **Configuring**: The NLB instance is being modified.
-         * *   **Deleting**: The NLB instance is being deleted.
-         * *   **Deleted**: The NLB instance is deleted.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -359,7 +383,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The type of the Server Load Balancer (SLB) instance. Set the value to **network**, which specifies NLB.
+         * <p>The type of the Server Load Balancer (SLB) instance. Set the value to <strong>network</strong>, which specifies NLB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network</p>
          */
         public Builder loadBalancerType(String loadBalancerType) {
             this.putQueryParameter("LoadBalancerType", loadBalancerType);
@@ -368,7 +395,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -377,11 +407,14 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no subsequent queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -390,10 +423,11 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the NLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -402,7 +436,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -411,25 +448,28 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * The tags of the NLB instance.
+         * <p>The tags of the NLB instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) where the NLB instance is deployed. You can specify up to 10 VPC IDs at a time.
+         * <p>The ID of the virtual private cloud (VPC) where the NLB instance is deployed. You can specify up to 10 VPC IDs at a time.</p>
          */
-        public Builder vpcIds(java.util.List < String > vpcIds) {
+        public Builder vpcIds(java.util.List<String> vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);
             this.vpcIds = vpcIds;
             return this;
         }
 
         /**
-         * The name of the zone. You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+         * <p>The name of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -444,6 +484,12 @@ public class ListLoadBalancersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListLoadBalancersRequest} extends {@link TeaModel}
+     *
+     * <p>ListLoadBalancersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -483,10 +529,11 @@ public class ListLoadBalancersRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -494,10 +541,11 @@ public class ListLoadBalancersRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>ValueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;

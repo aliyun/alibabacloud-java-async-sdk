@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelShiftLoadBalancerZonesRequest} extends {@link RequestModel}
  *
  * <p>CancelShiftLoadBalancerZonesRequest</p>
@@ -31,7 +37,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CancelShiftLoadBalancerZonesRequest(Builder builder) {
         super(builder);
@@ -86,7 +92,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -95,7 +101,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         private Boolean dryRun; 
         private String loadBalancerId; 
         private String regionId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -111,12 +117,14 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -125,11 +133,14 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -138,7 +149,11 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The NLB instance ID.
+         * <p>The NLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-83ckzc8d4xlp8o****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putBodyParameter("LoadBalancerId", loadBalancerId);
@@ -147,10 +162,11 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
+         * <p>The region ID of the NLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -159,12 +175,13 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The mappings between zones and vSwitches.
-         * <p>
-         * 
-         * > You can add at most one zone in each call.
+         * <p>The mappings between zones and vSwitches.</p>
+         * <blockquote>
+         * <p>You can add at most one zone in each call.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putBodyParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;
@@ -177,6 +194,12 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CancelShiftLoadBalancerZonesRequest} extends {@link TeaModel}
+     *
+     * <p>CancelShiftLoadBalancerZonesRequest</p>
+     */
     public static class ZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -218,7 +241,11 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.
+             * <p>The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-sersdf****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -226,12 +253,15 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The zone ID of the NLB instance.
-             * <p>
+             * <p>The zone ID of the NLB instance.</p>
+             * <blockquote>
+             * <p>You can add at most one zone in each call.</p>
+             * </blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
+             * <p>This parameter is required.</p>
              * 
-             * > You can add at most one zone in each call.
-             * 
-             * You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
