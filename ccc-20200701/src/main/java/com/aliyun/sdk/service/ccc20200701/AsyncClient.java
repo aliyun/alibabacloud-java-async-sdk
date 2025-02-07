@@ -207,6 +207,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCampaignResponse> createCampaign(CreateCampaignRequest request);
 
     /**
+     * @param request the request parameters of CreateChatMediaUrl  CreateChatMediaUrlRequest
+     * @return CreateChatMediaUrlResponse
+     */
+    CompletableFuture<CreateChatMediaUrlResponse> createChatMediaUrl(CreateChatMediaUrlRequest request);
+
+    /**
      * @param request the request parameters of CreateContactFlow  CreateContactFlowRequest
      * @return CreateContactFlowResponse
      */
@@ -1169,6 +1175,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ProcessAliMeCallbackOfStagingResponse
      */
     CompletableFuture<ProcessAliMeCallbackOfStagingResponse> processAliMeCallbackOfStaging(ProcessAliMeCallbackOfStagingRequest request);
+
+    /**
+     * @param request the request parameters of ProcessCustomIMCallback  ProcessCustomIMCallbackRequest
+     * @return ProcessCustomIMCallbackResponse
+     */
+    CompletableFuture<ProcessCustomIMCallbackResponse> processCustomIMCallback(ProcessCustomIMCallbackRequest request);
 
     /**
      * @param request the request parameters of PublishContactFlow  PublishContactFlowRequest
