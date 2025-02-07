@@ -55,7 +55,7 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Indicates whether MFA is enabled. Valid values:</p>
+         * <p>Indicates whether MFA devices are enabled. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -70,7 +70,7 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4BE83135-0B08-467C-B3A2-27B312FD0F57</p>

@@ -55,7 +55,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The logon information.</p>
+         * <p>The console logon configurations.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -63,7 +63,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BCDB6A7F-2199-41D9-B577-4FA536A5ADE1</p>
@@ -191,7 +191,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+             * <p>Indicates whether the RAM user is required to reset the password upon the next logon.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -202,7 +202,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of password-based logon.</p>
+             * <p>Indicates whether to enable password-based logons to the console.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -213,7 +213,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-14T07:48:41Z</p>

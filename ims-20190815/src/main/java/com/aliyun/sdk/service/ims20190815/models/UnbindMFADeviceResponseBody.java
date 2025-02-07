@@ -55,7 +55,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The information of the MFA device.</p>
+         * <p>The information about the MFA device.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -63,7 +63,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A26CB3E9-1021-452A-AC57-3134B3BA0E4C</p>

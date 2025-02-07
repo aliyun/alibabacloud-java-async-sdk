@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetVerificationInfoRequest} extends {@link RequestModel}
+ * {@link ListPasskeysRequest} extends {@link RequestModel}
  *
- * <p>GetVerificationInfoRequest</p>
+ * <p>ListPasskeysRequest</p>
  */
-public class GetVerificationInfoRequest extends Request {
+public class ListPasskeysRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
     private String userPrincipalName;
 
-    private GetVerificationInfoRequest(Builder builder) {
+    private ListPasskeysRequest(Builder builder) {
         super(builder);
         this.userPrincipalName = builder.userPrincipalName;
     }
@@ -30,7 +30,7 @@ public class GetVerificationInfoRequest extends Request {
         return new Builder();
     }
 
-    public static GetVerificationInfoRequest create() {
+    public static ListPasskeysRequest create() {
         return builder().build();
     }
 
@@ -46,23 +46,20 @@ public class GetVerificationInfoRequest extends Request {
         return this.userPrincipalName;
     }
 
-    public static final class Builder extends Request.Builder<GetVerificationInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListPasskeysRequest, Builder> {
         private String userPrincipalName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetVerificationInfoRequest request) {
+        private Builder(ListPasskeysRequest request) {
             super(request);
             this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+         * UserPrincipalName.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);
@@ -71,8 +68,8 @@ public class GetVerificationInfoRequest extends Request {
         }
 
         @Override
-        public GetVerificationInfoRequest build() {
-            return new GetVerificationInfoRequest(this);
+        public ListPasskeysRequest build() {
+            return new ListPasskeysRequest(this);
         } 
 
     } 

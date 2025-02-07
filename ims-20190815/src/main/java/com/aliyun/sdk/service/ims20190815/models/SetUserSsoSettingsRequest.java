@@ -114,7 +114,7 @@ public class SetUserSsoSettingsRequest extends Request {
 
         /**
          * <p>The metadata file, which is Base64-encoded.</p>
-         * <p>The file is provided by an IdP that supports SAML 2.0.</p>
+         * <p>The file is provided by an identity provider (IdP) that supports Security Assertion Markup Language (SAML) 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>PD94bWwgdmVy****</p>
@@ -126,10 +126,10 @@ public class SetUserSsoSettingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable SSO for the RAM user. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable SSO for the RAM user. Valid values:</p>
          * <ul>
          * <li>true</li>
-         * <li>false</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,15 @@ public class SetUserSsoSettingsRequest extends Request {
         }
 
         /**
-         * SsoLoginWithDomain.
+         * <p>Specifies whether the SAML SSO requires a domain name in the <code>&lt;saml:NameID&gt;</code> element of the SAML response. If yes, the username specified by the IdP for SSO must have a domain name as the suffix.</p>
+         * <ul>
+         * <li>If the value of the parameter is <code>true</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username@domain</code> format. You can set <code>domain</code> to the default domain name or the configured domain alias.</li>
+         * <li>If the value of the parameter is <code>false</code>, the <code>&lt;saml:NameID&gt;</code> element <strong>must</strong> be in the <code>username</code> format and <strong>cannot</strong> contain the <code>domain</code> suffix.</li>
+         * </ul>
+         * <p>Set the value to the default <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ssoLoginWithDomain(Boolean ssoLoginWithDomain) {
             this.putQueryParameter("SsoLoginWithDomain", ssoLoginWithDomain);

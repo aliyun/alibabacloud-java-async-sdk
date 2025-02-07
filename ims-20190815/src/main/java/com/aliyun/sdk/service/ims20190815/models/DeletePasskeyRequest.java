@@ -12,17 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetVerificationInfoRequest} extends {@link RequestModel}
+ * {@link DeletePasskeyRequest} extends {@link RequestModel}
  *
- * <p>GetVerificationInfoRequest</p>
+ * <p>DeletePasskeyRequest</p>
  */
-public class GetVerificationInfoRequest extends Request {
+public class DeletePasskeyRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasskeyId")
+    private String passkeyId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
     private String userPrincipalName;
 
-    private GetVerificationInfoRequest(Builder builder) {
+    private DeletePasskeyRequest(Builder builder) {
         super(builder);
+        this.passkeyId = builder.passkeyId;
         this.userPrincipalName = builder.userPrincipalName;
     }
 
@@ -30,7 +35,7 @@ public class GetVerificationInfoRequest extends Request {
         return new Builder();
     }
 
-    public static GetVerificationInfoRequest create() {
+    public static DeletePasskeyRequest create() {
         return builder().build();
     }
 
@@ -40,29 +45,44 @@ public class GetVerificationInfoRequest extends Request {
     }
 
     /**
+     * @return passkeyId
+     */
+    public String getPasskeyId() {
+        return this.passkeyId;
+    }
+
+    /**
      * @return userPrincipalName
      */
     public String getUserPrincipalName() {
         return this.userPrincipalName;
     }
 
-    public static final class Builder extends Request.Builder<GetVerificationInfoRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeletePasskeyRequest, Builder> {
+        private String passkeyId; 
         private String userPrincipalName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetVerificationInfoRequest request) {
+        private Builder(DeletePasskeyRequest request) {
             super(request);
+            this.passkeyId = request.passkeyId;
             this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**
-         * <p>The logon name of the RAM user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+         * PasskeyId.
+         */
+        public Builder passkeyId(String passkeyId) {
+            this.putQueryParameter("PasskeyId", passkeyId);
+            this.passkeyId = passkeyId;
+            return this;
+        }
+
+        /**
+         * UserPrincipalName.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);
@@ -71,8 +91,8 @@ public class GetVerificationInfoRequest extends Request {
         }
 
         @Override
-        public GetVerificationInfoRequest build() {
-            return new GetVerificationInfoRequest(this);
+        public DeletePasskeyRequest build() {
+            return new DeletePasskeyRequest(this);
         } 
 
     } 

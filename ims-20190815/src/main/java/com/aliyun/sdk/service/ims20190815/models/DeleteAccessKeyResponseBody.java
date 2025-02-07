@@ -43,7 +43,7 @@ public class DeleteAccessKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B9AF80E4-1565-42D9-9256-0B8B0D9FD3EC</p>

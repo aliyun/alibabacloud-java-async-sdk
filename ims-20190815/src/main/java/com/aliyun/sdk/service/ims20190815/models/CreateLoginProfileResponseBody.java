@@ -63,7 +63,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>29CB303C-1F05-43A6-A6BC-EBC5A797F8DB</p>
@@ -160,7 +160,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * <p>Indicates whether MFA must be enabled.</p>
+             * <p>Indicates whether to forcefully enable MFA for the RAM user.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -171,7 +171,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM user must reset the password at the next logon.</p>
+             * <p>Indicates whether the RAM user is required to reset the password upon the next logon.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -182,7 +182,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of password-based logon.</p>
+             * <p>Indicates whether to enable password-based logons to the console.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>

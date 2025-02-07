@@ -55,7 +55,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         private SummaryMap summaryMap; 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>81313F5E-3C85-478F-BCC9-E1B70E4556DB</p>
@@ -376,7 +376,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             private Integer virtualMFADevicesQuota; 
 
             /**
-             * <p>The maximum number of AccessKey pairs that a RAM user can have.</p>
+             * <p>The maximum number of AccessKey pairs that a Resource Access Management (RAM) user can have.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

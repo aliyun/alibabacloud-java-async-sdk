@@ -55,7 +55,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The information of the RAM user group.</p>
+         * <p>The information about the RAM user group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -63,7 +63,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CDA656E3-3CE9-4A03-A8A3-B42A0C3C3287</p>

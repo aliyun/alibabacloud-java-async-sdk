@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DisableVirtualMFAResponseBody} extends {@link TeaModel}
+ * {@link DeletePasskeyResponseBody} extends {@link TeaModel}
  *
- * <p>DisableVirtualMFAResponseBody</p>
+ * <p>DeletePasskeyResponseBody</p>
  */
-public class DisableVirtualMFAResponseBody extends TeaModel {
+public class DeletePasskeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DisableVirtualMFAResponseBody(Builder builder) {
+    private DeletePasskeyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class DisableVirtualMFAResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DisableVirtualMFAResponseBody create() {
+    public static DeletePasskeyResponseBody create() {
         return builder().build();
     }
 
@@ -43,18 +43,15 @@ public class DisableVirtualMFAResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>B9AF80E4-1565-42D9-9256-0B8B0D9FD3EC</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DisableVirtualMFAResponseBody build() {
-            return new DisableVirtualMFAResponseBody(this);
+        public DeletePasskeyResponseBody build() {
+            return new DeletePasskeyResponseBody(this);
         } 
 
     } 

@@ -67,7 +67,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         private SecurityPhoneDevice securityPhoneDevice; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B182C041-8C64-5F2F-A07B-FC67FAF89CF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityEmailDevice.
+         * <p>The information about the email.</p>
          */
         public Builder securityEmailDevice(SecurityEmailDevice securityEmailDevice) {
             this.securityEmailDevice = securityEmailDevice;
@@ -83,7 +86,7 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityPhoneDevice.
+         * <p>The information about the mobile phone.</p>
          */
         public Builder securityPhoneDevice(SecurityPhoneDevice securityPhoneDevice) {
             this.securityPhoneDevice = securityPhoneDevice;
@@ -141,7 +144,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -149,7 +155,14 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the email. Valid values:</p>
+             * <ul>
+             * <li>active: The email is activated.</li>
+             * <li>pending: The email is pending for activation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -220,7 +233,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AreaCode.
+             * <p>The international dialing code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder areaCode(String areaCode) {
                 this.areaCode = areaCode;
@@ -228,7 +244,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13900001234</p>
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -236,7 +255,14 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the mobile phone. Valid values:</p>
+             * <ul>
+             * <li>active: The mobile phone is activated.</li>
+             * <li>pending: The mobile phone is pending for activation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

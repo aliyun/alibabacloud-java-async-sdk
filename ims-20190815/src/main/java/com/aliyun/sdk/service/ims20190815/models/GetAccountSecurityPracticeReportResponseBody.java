@@ -55,7 +55,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The information of the security report for the Alibaba Cloud account.</p>
+         * <p>The information about the security report for the Alibaba Cloud account.</p>
          */
         public Builder accountSecurityPracticeInfo(AccountSecurityPracticeInfo accountSecurityPracticeInfo) {
             this.accountSecurityPracticeInfo = accountSecurityPracticeInfo;
@@ -63,7 +63,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABA822EE-85C2-4418-9577-A1831FC8466D</p>
@@ -208,7 +208,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer unusedAkNum; 
 
             /**
-             * <p>Indicates whether MFA is enabled. Valid values:</p>
+             * <p>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -294,7 +294,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of RAM users that have no AccessKey pairs.</p>
+             * <p>The number of Resource Access Management (RAM) users that have unused AccessKey pairs.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -367,7 +367,7 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer score; 
 
             /**
-             * <p>The information of the security report for the Alibaba Cloud account.</p>
+             * <p>The information about the security report for the Alibaba Cloud account.</p>
              */
             public Builder accountSecurityPracticeUserInfo(AccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo) {
                 this.accountSecurityPracticeUserInfo = accountSecurityPracticeUserInfo;

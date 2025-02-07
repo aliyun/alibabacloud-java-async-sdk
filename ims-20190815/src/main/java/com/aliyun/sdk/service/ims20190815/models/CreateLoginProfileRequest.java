@@ -116,10 +116,10 @@ public class CreateLoginProfileRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether multi-factor authentication (MFA) must be enabled. Valid values:</p>
+         * <p>Specifies whether to forcefully enable multi-factor authentication (MFA) for the RAM user. Valid values:</p>
          * <ul>
-         * <li>true: MFA must be enabled. The RAM user must bind an MFA device at the next logon.</li>
-         * <li>false: MFA is not enabled. This is the default value.</li>
+         * <li>true: forcefully enables MFA for the RAM user. The RAM user must bind an MFA device upon the next logon.</li>
+         * <li>false (default): does not forcefully enable MFA for the RAM user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>The password that is used to log on to the console.</p>
+         * <p>The password that the RAM user uses to log on to the console.</p>
          * <p>The password must meet the complexity requirements.</p>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,10 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the RAM user must reset the password at the next logon. Default value: false. Valid values:</p>
+         * <p>Specifies whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
          * <ul>
          * <li>true</li>
-         * <li>false</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class CreateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>The status of password-based logon. Valid values:</p>
+         * <p>Specifies whether to enable password-based logons to the console. Valid values:</p>
          * <ul>
          * <li>Active: Password-based logon is enabled. This is the default value.</li>
          * <li>Inactive: Password-based logon is disabled.</li>

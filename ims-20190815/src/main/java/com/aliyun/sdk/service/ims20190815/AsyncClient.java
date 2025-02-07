@@ -50,7 +50,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can change their passwords.</p>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ChangePassword  ChangePasswordRequest
@@ -169,6 +169,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteOIDCProviderResponse
      */
     CompletableFuture<DeleteOIDCProviderResponse> deleteOIDCProvider(DeleteOIDCProviderRequest request);
+
+    /**
+     * @param request the request parameters of DeletePasskey  DeletePasskeyRequest
+     * @return DeletePasskeyResponse
+     */
+    CompletableFuture<DeletePasskeyResponse> deletePasskey(DeletePasskeyRequest request);
 
     /**
      * @param request the request parameters of DeleteSAMLProvider  DeleteSAMLProviderRequest
@@ -362,6 +368,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOIDCProvidersResponse> listOIDCProviders(ListOIDCProvidersRequest request);
 
     /**
+     * @param request the request parameters of ListPasskeys  ListPasskeysRequest
+     * @return ListPasskeysResponse
+     */
+    CompletableFuture<ListPasskeysResponse> listPasskeys(ListPasskeysRequest request);
+
+    /**
      * @param request the request parameters of ListPredefinedScopes  ListPredefinedScopesRequest
      * @return ListPredefinedScopesResponse
      */
@@ -532,6 +544,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateOIDCProviderResponse
      */
     CompletableFuture<UpdateOIDCProviderResponse> updateOIDCProvider(UpdateOIDCProviderRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePasskey  UpdatePasskeyRequest
+     * @return UpdatePasskeyResponse
+     */
+    CompletableFuture<UpdatePasskeyResponse> updatePasskey(UpdatePasskeyRequest request);
 
     /**
      * <b>description</b> :

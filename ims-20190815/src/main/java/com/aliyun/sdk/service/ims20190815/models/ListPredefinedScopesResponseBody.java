@@ -55,7 +55,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The information of application permissions.</p>
+         * <p>The information about application permissions.</p>
          */
         public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
             this.predefinedScopes = predefinedScopes;
@@ -63,7 +63,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>955C096D-EC99-480B-AF37-3921109107D0</p>
@@ -135,7 +135,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the scope.</p>
+             * <p>The name of the permission scope.</p>
              * 
              * <strong>example:</strong>
              * <p>openid</p>
