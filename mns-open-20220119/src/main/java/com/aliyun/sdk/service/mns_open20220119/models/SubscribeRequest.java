@@ -22,6 +22,10 @@ public class SubscribeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DlqPolicy")
+    private DlqPolicy dlqPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Endpoint")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endpoint;
@@ -56,6 +60,7 @@ public class SubscribeRequest extends Request {
     private SubscribeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.dlqPolicy = builder.dlqPolicy;
         this.endpoint = builder.endpoint;
         this.messageTag = builder.messageTag;
         this.notifyContentFormat = builder.notifyContentFormat;
@@ -83,6 +88,13 @@ public class SubscribeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return dlqPolicy
+     */
+    public DlqPolicy getDlqPolicy() {
+        return this.dlqPolicy;
     }
 
     /**
@@ -136,6 +148,7 @@ public class SubscribeRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubscribeRequest, Builder> {
         private String regionId; 
+        private DlqPolicy dlqPolicy; 
         private String endpoint; 
         private String messageTag; 
         private String notifyContentFormat; 
@@ -151,6 +164,7 @@ public class SubscribeRequest extends Request {
         private Builder(SubscribeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.dlqPolicy = request.dlqPolicy;
             this.endpoint = request.endpoint;
             this.messageTag = request.messageTag;
             this.notifyContentFormat = request.notifyContentFormat;
@@ -166,6 +180,16 @@ public class SubscribeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DlqPolicy.
+         */
+        public Builder dlqPolicy(DlqPolicy dlqPolicy) {
+            String dlqPolicyShrink = shrink(dlqPolicy, "DlqPolicy", "json");
+            this.putQueryParameter("DlqPolicy", dlqPolicyShrink);
+            this.dlqPolicy = dlqPolicy;
             return this;
         }
 
@@ -288,4 +312,71 @@ public class SubscribeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubscribeRequest} extends {@link TeaModel}
+     *
+     * <p>SubscribeRequest</p>
+     */
+    public static class DlqPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeadLetterTargetQueue")
+        private String deadLetterTargetQueue;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private DlqPolicy(Builder builder) {
+            this.deadLetterTargetQueue = builder.deadLetterTargetQueue;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DlqPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deadLetterTargetQueue
+         */
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String deadLetterTargetQueue; 
+            private Boolean enabled; 
+
+            /**
+             * DeadLetterTargetQueue.
+             */
+            public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
+                this.deadLetterTargetQueue = deadLetterTargetQueue;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public DlqPolicy build() {
+                return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
 }

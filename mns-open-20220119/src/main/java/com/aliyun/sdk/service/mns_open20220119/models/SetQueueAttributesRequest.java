@@ -26,6 +26,10 @@ public class SetQueueAttributesRequest extends Request {
     private Long delaySeconds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DlqPolicy")
+    private DlqPolicy dlqPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableLogging")
     private Boolean enableLogging;
 
@@ -54,6 +58,7 @@ public class SetQueueAttributesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.delaySeconds = builder.delaySeconds;
+        this.dlqPolicy = builder.dlqPolicy;
         this.enableLogging = builder.enableLogging;
         this.maximumMessageSize = builder.maximumMessageSize;
         this.messageRetentionPeriod = builder.messageRetentionPeriod;
@@ -87,6 +92,13 @@ public class SetQueueAttributesRequest extends Request {
      */
     public Long getDelaySeconds() {
         return this.delaySeconds;
+    }
+
+    /**
+     * @return dlqPolicy
+     */
+    public DlqPolicy getDlqPolicy() {
+        return this.dlqPolicy;
     }
 
     /**
@@ -134,6 +146,7 @@ public class SetQueueAttributesRequest extends Request {
     public static final class Builder extends Request.Builder<SetQueueAttributesRequest, Builder> {
         private String regionId; 
         private Long delaySeconds; 
+        private DlqPolicy dlqPolicy; 
         private Boolean enableLogging; 
         private Long maximumMessageSize; 
         private Long messageRetentionPeriod; 
@@ -149,6 +162,7 @@ public class SetQueueAttributesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.delaySeconds = request.delaySeconds;
+            this.dlqPolicy = request.dlqPolicy;
             this.enableLogging = request.enableLogging;
             this.maximumMessageSize = request.maximumMessageSize;
             this.messageRetentionPeriod = request.messageRetentionPeriod;
@@ -175,6 +189,16 @@ public class SetQueueAttributesRequest extends Request {
         public Builder delaySeconds(Long delaySeconds) {
             this.putQueryParameter("DelaySeconds", delaySeconds);
             this.delaySeconds = delaySeconds;
+            return this;
+        }
+
+        /**
+         * DlqPolicy.
+         */
+        public Builder dlqPolicy(DlqPolicy dlqPolicy) {
+            String dlqPolicyShrink = shrink(dlqPolicy, "DlqPolicy", "json");
+            this.putQueryParameter("DlqPolicy", dlqPolicyShrink);
+            this.dlqPolicy = dlqPolicy;
             return this;
         }
 
@@ -262,4 +286,91 @@ public class SetQueueAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SetQueueAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>SetQueueAttributesRequest</p>
+     */
+    public static class DlqPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeadLetterTargetQueue")
+        private String deadLetterTargetQueue;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReceiveCount")
+        private Integer maxReceiveCount;
+
+        private DlqPolicy(Builder builder) {
+            this.deadLetterTargetQueue = builder.deadLetterTargetQueue;
+            this.enabled = builder.enabled;
+            this.maxReceiveCount = builder.maxReceiveCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DlqPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deadLetterTargetQueue
+         */
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxReceiveCount
+         */
+        public Integer getMaxReceiveCount() {
+            return this.maxReceiveCount;
+        }
+
+        public static final class Builder {
+            private String deadLetterTargetQueue; 
+            private Boolean enabled; 
+            private Integer maxReceiveCount; 
+
+            /**
+             * DeadLetterTargetQueue.
+             */
+            public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
+                this.deadLetterTargetQueue = deadLetterTargetQueue;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * MaxReceiveCount.
+             */
+            public Builder maxReceiveCount(Integer maxReceiveCount) {
+                this.maxReceiveCount = maxReceiveCount;
+                return this;
+            }
+
+            public DlqPolicy build() {
+                return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
 }

@@ -177,6 +177,93 @@ public class GetQueueAttributesResponseBody extends TeaModel {
      *
      * <p>GetQueueAttributesResponseBody</p>
      */
+    public static class DlqPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeadLetterTargetQueue")
+        private String deadLetterTargetQueue;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReceiveCount")
+        private String maxReceiveCount;
+
+        private DlqPolicy(Builder builder) {
+            this.deadLetterTargetQueue = builder.deadLetterTargetQueue;
+            this.enabled = builder.enabled;
+            this.maxReceiveCount = builder.maxReceiveCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DlqPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deadLetterTargetQueue
+         */
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return maxReceiveCount
+         */
+        public String getMaxReceiveCount() {
+            return this.maxReceiveCount;
+        }
+
+        public static final class Builder {
+            private String deadLetterTargetQueue; 
+            private Boolean enabled; 
+            private String maxReceiveCount; 
+
+            /**
+             * DeadLetterTargetQueue.
+             */
+            public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
+                this.deadLetterTargetQueue = deadLetterTargetQueue;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * MaxReceiveCount.
+             */
+            public Builder maxReceiveCount(String maxReceiveCount) {
+                this.maxReceiveCount = maxReceiveCount;
+                return this;
+            }
+
+            public DlqPolicy build() {
+                return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetQueueAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQueueAttributesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -257,6 +344,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Long delaySeconds;
 
+        @com.aliyun.core.annotation.NameInMap("DlqPolicy")
+        private DlqPolicy dlqPolicy;
+
         @com.aliyun.core.annotation.NameInMap("InactiveMessages")
         private Long inactiveMessages;
 
@@ -289,6 +379,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.delayMessages = builder.delayMessages;
             this.delaySeconds = builder.delaySeconds;
+            this.dlqPolicy = builder.dlqPolicy;
             this.inactiveMessages = builder.inactiveMessages;
             this.lastModifyTime = builder.lastModifyTime;
             this.loggingEnabled = builder.loggingEnabled;
@@ -334,6 +425,13 @@ public class GetQueueAttributesResponseBody extends TeaModel {
          */
         public Long getDelaySeconds() {
             return this.delaySeconds;
+        }
+
+        /**
+         * @return dlqPolicy
+         */
+        public DlqPolicy getDlqPolicy() {
+            return this.dlqPolicy;
         }
 
         /**
@@ -404,6 +502,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             private Long createTime; 
             private Long delayMessages; 
             private Long delaySeconds; 
+            private DlqPolicy dlqPolicy; 
             private Long inactiveMessages; 
             private Long lastModifyTime; 
             private Boolean loggingEnabled; 
@@ -455,6 +554,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
              */
             public Builder delaySeconds(Long delaySeconds) {
                 this.delaySeconds = delaySeconds;
+                return this;
+            }
+
+            /**
+             * DlqPolicy.
+             */
+            public Builder dlqPolicy(DlqPolicy dlqPolicy) {
+                this.dlqPolicy = dlqPolicy;
                 return this;
             }
 

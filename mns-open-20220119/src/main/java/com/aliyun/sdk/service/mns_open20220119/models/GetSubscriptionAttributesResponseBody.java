@@ -177,9 +177,79 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
      *
      * <p>GetSubscriptionAttributesResponseBody</p>
      */
+    public static class DlqPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeadLetterTargetQueue")
+        private String deadLetterTargetQueue;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        private DlqPolicy(Builder builder) {
+            this.deadLetterTargetQueue = builder.deadLetterTargetQueue;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DlqPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deadLetterTargetQueue
+         */
+        public String getDeadLetterTargetQueue() {
+            return this.deadLetterTargetQueue;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private String deadLetterTargetQueue; 
+            private Boolean enabled; 
+
+            /**
+             * DeadLetterTargetQueue.
+             */
+            public Builder deadLetterTargetQueue(String deadLetterTargetQueue) {
+                this.deadLetterTargetQueue = deadLetterTargetQueue;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public DlqPolicy build() {
+                return new DlqPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSubscriptionAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSubscriptionAttributesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("DlqPolicy")
+        private DlqPolicy dlqPolicy;
 
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
@@ -207,6 +277,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.createTime = builder.createTime;
+            this.dlqPolicy = builder.dlqPolicy;
             this.endpoint = builder.endpoint;
             this.filterTag = builder.filterTag;
             this.lastModifyTime = builder.lastModifyTime;
@@ -230,6 +301,13 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dlqPolicy
+         */
+        public DlqPolicy getDlqPolicy() {
+            return this.dlqPolicy;
         }
 
         /**
@@ -290,6 +368,7 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private DlqPolicy dlqPolicy; 
             private String endpoint; 
             private String filterTag; 
             private Long lastModifyTime; 
@@ -307,6 +386,14 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DlqPolicy.
+             */
+            public Builder dlqPolicy(DlqPolicy dlqPolicy) {
+                this.dlqPolicy = dlqPolicy;
                 return this;
             }
 
