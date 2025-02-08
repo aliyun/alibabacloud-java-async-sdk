@@ -162,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHttpsBasicConfigurationResponse> createHttpsBasicConfiguration(CreateHttpsBasicConfigurationRequest request);
 
     /**
+     * @param request the request parameters of CreateImageTransform  CreateImageTransformRequest
+     * @return CreateImageTransformResponse
+     */
+    CompletableFuture<CreateImageTransformResponse> createImageTransform(CreateImageTransformRequest request);
+
+    /**
      * @param request the request parameters of CreateKvNamespace  CreateKvNamespaceRequest
      * @return CreateKvNamespaceResponse
      */
@@ -178,6 +184,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateLoadBalancerResponse
      */
     CompletableFuture<CreateLoadBalancerResponse> createLoadBalancer(CreateLoadBalancerRequest request);
+
+    /**
+     * @param request the request parameters of CreateNetworkOptimization  CreateNetworkOptimizationRequest
+     * @return CreateNetworkOptimizationResponse
+     */
+    CompletableFuture<CreateNetworkOptimizationResponse> createNetworkOptimization(CreateNetworkOptimizationRequest request);
 
     /**
      * @param request the request parameters of CreateOriginPool  CreateOriginPoolRequest
@@ -406,6 +418,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHttpsBasicConfigurationResponse> deleteHttpsBasicConfiguration(DeleteHttpsBasicConfigurationRequest request);
 
     /**
+     * @param request the request parameters of DeleteImageTransform  DeleteImageTransformRequest
+     * @return DeleteImageTransformResponse
+     */
+    CompletableFuture<DeleteImageTransformResponse> deleteImageTransform(DeleteImageTransformRequest request);
+
+    /**
      * @param request the request parameters of DeleteKv  DeleteKvRequest
      * @return DeleteKvResponse
      */
@@ -428,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteLoadBalancerResponse
      */
     CompletableFuture<DeleteLoadBalancerResponse> deleteLoadBalancer(DeleteLoadBalancerRequest request);
+
+    /**
+     * @param request the request parameters of DeleteNetworkOptimization  DeleteNetworkOptimizationRequest
+     * @return DeleteNetworkOptimizationResponse
+     */
+    CompletableFuture<DeleteNetworkOptimizationResponse> deleteNetworkOptimization(DeleteNetworkOptimizationRequest request);
 
     /**
      * @param request the request parameters of DeleteOriginPool  DeleteOriginPoolRequest
@@ -768,6 +792,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIPv6Response> getIPv6(GetIPv6Request request);
 
     /**
+     * @param request the request parameters of GetImageTransform  GetImageTransformRequest
+     * @return GetImageTransformResponse
+     */
+    CompletableFuture<GetImageTransformResponse> getImageTransform(GetImageTransformRequest request);
+
+    /**
      * @param request the request parameters of GetKv  GetKvRequest
      * @return GetKvResponse
      */
@@ -802,6 +832,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetManagedTransformResponse
      */
     CompletableFuture<GetManagedTransformResponse> getManagedTransform(GetManagedTransformRequest request);
+
+    /**
+     * @param request the request parameters of GetNetworkOptimization  GetNetworkOptimizationRequest
+     * @return GetNetworkOptimizationResponse
+     */
+    CompletableFuture<GetNetworkOptimizationResponse> getNetworkOptimization(GetNetworkOptimizationRequest request);
 
     /**
      * @param request the request parameters of GetOriginPool  GetOriginPoolRequest
@@ -952,6 +988,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSiteNameExclusiveResponse
      */
     CompletableFuture<GetSiteNameExclusiveResponse> getSiteNameExclusive(GetSiteNameExclusiveRequest request);
+
+    /**
+     * @param request the request parameters of GetSitePause  GetSitePauseRequest
+     * @return GetSitePauseResponse
+     */
+    CompletableFuture<GetSitePauseResponse> getSitePause(GetSitePauseRequest request);
 
     /**
      * @param request the request parameters of GetSiteWafSettings  GetSiteWafSettingsRequest
@@ -1119,6 +1161,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpsBasicConfigurationsResponse> listHttpsBasicConfigurations(ListHttpsBasicConfigurationsRequest request);
 
     /**
+     * @param request the request parameters of ListImageTransforms  ListImageTransformsRequest
+     * @return ListImageTransformsResponse
+     */
+    CompletableFuture<ListImageTransformsResponse> listImageTransforms(ListImageTransformsRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceQuotas  ListInstanceQuotasRequest
      * @return ListInstanceQuotasResponse
      */
@@ -1168,6 +1216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListManagedRulesGroupsResponse
      */
     CompletableFuture<ListManagedRulesGroupsResponse> listManagedRulesGroups(ListManagedRulesGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListNetworkOptimizations  ListNetworkOptimizationsRequest
+     * @return ListNetworkOptimizationsResponse
+     */
+    CompletableFuture<ListNetworkOptimizationsResponse> listNetworkOptimizations(ListNetworkOptimizationsRequest request);
 
     /**
      * @param request the request parameters of ListOriginPools  ListOriginPoolsRequest
@@ -1485,6 +1539,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateIPv6Response> updateIPv6(UpdateIPv6Request request);
 
     /**
+     * @param request the request parameters of UpdateImageTransform  UpdateImageTransformRequest
+     * @return UpdateImageTransformResponse
+     */
+    CompletableFuture<UpdateImageTransformResponse> updateImageTransform(UpdateImageTransformRequest request);
+
+    /**
      * @param request the request parameters of UpdateKvNamespace  UpdateKvNamespaceRequest
      * @return UpdateKvNamespaceResponse
      */
@@ -1507,6 +1567,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateManagedTransformResponse
      */
     CompletableFuture<UpdateManagedTransformResponse> updateManagedTransform(UpdateManagedTransformRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNetworkOptimization  UpdateNetworkOptimizationRequest
+     * @return UpdateNetworkOptimizationResponse
+     */
+    CompletableFuture<UpdateNetworkOptimizationResponse> updateNetworkOptimization(UpdateNetworkOptimizationRequest request);
 
     /**
      * @param request the request parameters of UpdateOriginPool  UpdateOriginPoolRequest
@@ -1621,6 +1687,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSiteNameExclusiveResponse
      */
     CompletableFuture<UpdateSiteNameExclusiveResponse> updateSiteNameExclusive(UpdateSiteNameExclusiveRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSitePause  UpdateSitePauseRequest
+     * @return UpdateSitePauseResponse
+     */
+    CompletableFuture<UpdateSitePauseResponse> updateSitePause(UpdateSitePauseRequest request);
 
     /**
      * @param request the request parameters of UpdateSiteVanityNS  UpdateSiteVanityNSRequest
