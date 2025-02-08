@@ -249,6 +249,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableMessage")
         private Boolean enableMessage;
 
+        @com.aliyun.core.annotation.NameInMap("EnableRow")
+        private Boolean enableRow;
+
         @com.aliyun.core.annotation.NameInMap("EnableStream")
         private Boolean enableStream;
 
@@ -308,6 +311,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             this.enableCompute = builder.enableCompute;
             this.enableLts = builder.enableLts;
             this.enableMessage = builder.enableMessage;
+            this.enableRow = builder.enableRow;
             this.enableStream = builder.enableStream;
             this.enableVector = builder.enableVector;
             this.engineType = builder.engineType;
@@ -382,6 +386,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
          */
         public Boolean getEnableMessage() {
             return this.enableMessage;
+        }
+
+        /**
+         * @return enableRow
+         */
+        public Boolean getEnableRow() {
+            return this.enableRow;
         }
 
         /**
@@ -511,6 +522,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private Boolean enableCompute; 
             private Boolean enableLts; 
             private Boolean enableMessage; 
+            private Boolean enableRow; 
             private Boolean enableStream; 
             private Boolean enableVector; 
             private String engineType; 
@@ -616,6 +628,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
              */
             public Builder enableMessage(Boolean enableMessage) {
                 this.enableMessage = enableMessage;
+                return this;
+            }
+
+            /**
+             * EnableRow.
+             */
+            public Builder enableRow(Boolean enableRow) {
+                this.enableRow = enableRow;
                 return this;
             }
 
