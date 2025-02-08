@@ -91,6 +91,10 @@ public class UpdateFileRequest extends Request {
     private Boolean ignoreParentSkipRunningProperty;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InputList")
     private String inputList;
 
@@ -170,6 +174,7 @@ public class UpdateFileRequest extends Request {
         this.fileId = builder.fileId;
         this.fileName = builder.fileName;
         this.ignoreParentSkipRunningProperty = builder.ignoreParentSkipRunningProperty;
+        this.imageId = builder.imageId;
         this.inputList = builder.inputList;
         this.inputParameters = builder.inputParameters;
         this.outputList = builder.outputList;
@@ -327,6 +332,13 @@ public class UpdateFileRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return inputList
      */
     public String getInputList() {
@@ -450,6 +462,7 @@ public class UpdateFileRequest extends Request {
         private Long fileId; 
         private String fileName; 
         private Boolean ignoreParentSkipRunningProperty; 
+        private String imageId; 
         private String inputList; 
         private String inputParameters; 
         private String outputList; 
@@ -490,6 +503,7 @@ public class UpdateFileRequest extends Request {
             this.fileId = request.fileId;
             this.fileName = request.fileName;
             this.ignoreParentSkipRunningProperty = request.ignoreParentSkipRunningProperty;
+            this.imageId = request.imageId;
             this.inputList = request.inputList;
             this.inputParameters = request.inputParameters;
             this.outputList = request.outputList;
@@ -531,7 +545,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * ApplyScheduleImmediately.
+         * <p>Whether the scheduling configuration takes effect immediately after the release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder applyScheduleImmediately(Boolean applyScheduleImmediately) {
             this.putBodyParameter("ApplyScheduleImmediately", applyScheduleImmediately);
@@ -692,6 +709,9 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The description of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Here is the file description</p>
          */
         public Builder fileDescription(String fileDescription) {
             this.putBodyParameter("FileDescription", fileDescription);
@@ -701,6 +721,9 @@ public class UpdateFileRequest extends Request {
 
         /**
          * <p>The path of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/First_Business_Process/data_integration/Folder_1/Folder_2</p>
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
@@ -735,11 +758,23 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * IgnoreParentSkipRunningProperty.
+         * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
             this.putBodyParameter("IgnoreParentSkipRunningProperty", ignoreParentSkipRunningProperty);
             this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putBodyParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 

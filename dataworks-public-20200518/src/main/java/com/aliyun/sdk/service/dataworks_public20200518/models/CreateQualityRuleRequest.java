@@ -385,7 +385,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of the monitoring rule.</p>
+         * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Verification</p>

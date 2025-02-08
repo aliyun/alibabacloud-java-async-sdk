@@ -144,7 +144,7 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
@@ -228,6 +228,9 @@ public class GetRemindResponseBody extends TeaModel {
 
             /**
              * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -298,6 +301,9 @@ public class GetRemindResponseBody extends TeaModel {
 
             /**
              * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business process name</p>
              */
             public Builder bizProcessName(String bizProcessName) {
                 this.bizProcessName = bizProcessName;
@@ -392,6 +398,9 @@ public class GetRemindResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -522,7 +531,7 @@ public class GetRemindResponseBody extends TeaModel {
             private String alertUnit; 
 
             /**
-             * AlertTargets.
+             * <p>The alert recipient.</p>
              */
             public Builder alertTargets(java.util.List<String> alertTargets) {
                 this.alertTargets = alertTargets;
@@ -530,7 +539,15 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUnit.
+             * <p>The type of the alert recipient. For more information about alert recipients, see the Receivers parameter. Valid values:</p>
+             * <ul>
+             * <li>OWNER: indicate the task owner.</li>
+             * <li>OTHER: indicates specified personnel.</li>
+             * <li>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER</p>
              */
             public Builder alertUnit(String alertUnit) {
                 this.alertUnit = alertUnit;
@@ -913,7 +930,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The notification method.</p>
              */
             public Builder alertMethods(java.util.List<String> alertMethods) {
                 this.alertMethods = alertMethods;
@@ -921,7 +938,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the alert recipient.</p>
+             * <p>The description of the alert recipient. For more information about alert recipients, see the Receivers parameter.</p>
              */
             public Builder alertTargets(java.util.List<String> alertTargets) {
                 this.alertTargets = alertTargets;
@@ -929,7 +946,12 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recipient of the alert. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</p>
+             * <p>The type of the alert recipient. For more information about alert recipient types, see the Receivers parameter. Valid values:</p>
+             * <ul>
+             * <li>OWNER: the task owner</li>
+             * <li>OTHER: specified personnel</li>
+             * <li>SHIFT_SCHEDULE: personnel in a shift schedule</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OWNER</p>
@@ -940,7 +962,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * AllowNodes.
+             * <p>The IDs of the nodes that are added to a whitelist.</p>
              */
             public Builder allowNodes(java.util.List<Long> allowNodes) {
                 this.allowNodes = allowNodes;
@@ -1041,7 +1063,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * Receivers.
+             * <p>The information about the alert recipients.</p>
              */
             public Builder receivers(java.util.List<Receivers> receivers) {
                 this.receivers = receivers;
@@ -1061,6 +1083,9 @@ public class GetRemindResponseBody extends TeaModel {
 
             /**
              * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule name</p>
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;
@@ -1109,7 +1134,7 @@ public class GetRemindResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the webhook URL.</p>
+             * <p>WebHook URL</p>
              */
             public Builder webhooks(java.util.List<String> webhooks) {
                 this.webhooks = webhooks;

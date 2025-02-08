@@ -163,6 +163,9 @@ public class ListShiftSchedulesRequest extends Request {
 
         /**
          * <p>The keyword used to perform a fuzzy search on shift schedules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Duty table name keyword</p>
          */
         public Builder shiftScheduleName(String shiftScheduleName) {
             this.putBodyParameter("ShiftScheduleName", shiftScheduleName);

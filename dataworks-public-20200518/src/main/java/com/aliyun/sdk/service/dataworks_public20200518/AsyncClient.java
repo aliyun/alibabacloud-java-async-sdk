@@ -925,6 +925,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.</p>
+     * 
      * @param request the request parameters of GetMetaTableFullInfo  GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
      */
@@ -1113,6 +1116,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTopicResponse> getTopic(GetTopicRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * 
      * @param request the request parameters of GetTopicInfluence  GetTopicInfluenceRequest
      * @return GetTopicInfluenceResponse
      */

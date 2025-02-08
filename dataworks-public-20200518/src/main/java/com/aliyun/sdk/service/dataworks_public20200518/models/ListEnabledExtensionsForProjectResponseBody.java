@@ -219,6 +219,9 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
 
             /**
              * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS SQL compatible Spark engine detection</p>
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -227,6 +230,9 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
 
             /**
              * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>max_pt function is not allowed.</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;

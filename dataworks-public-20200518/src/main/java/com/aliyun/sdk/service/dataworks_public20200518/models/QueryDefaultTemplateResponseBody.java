@@ -111,6 +111,9 @@ public class QueryDefaultTemplateResponseBody extends TeaModel {
         /**
          * <p>The returned data about the default data category and data sensitivity level template. The data is in the JSON array format.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;gmtModified&quot;:1709022365000,&quot;fileName&quot;:&quot;default file&quot;,&quot;isDelete&quot;:false,&quot;isDefaultTemplate&quot;:true}]</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -132,6 +135,9 @@ public class QueryDefaultTemplateResponseBody extends TeaModel {
         /**
          * <p>The error message.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

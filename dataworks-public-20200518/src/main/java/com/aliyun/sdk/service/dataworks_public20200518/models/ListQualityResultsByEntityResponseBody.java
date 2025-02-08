@@ -1041,6 +1041,9 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
             /**
              * <p>The description of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the rule.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1279,6 +1282,9 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
             /**
              * <p>The name of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the rule.</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1328,6 +1334,9 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
             /**
              * <p>The name of the monitoring template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Expected value verification</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

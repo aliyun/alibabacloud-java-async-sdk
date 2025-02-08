@@ -111,7 +111,7 @@ public class CreateFolderRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The path of the folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

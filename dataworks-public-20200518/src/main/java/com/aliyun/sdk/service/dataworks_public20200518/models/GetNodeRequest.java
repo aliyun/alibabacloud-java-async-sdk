@@ -111,7 +111,7 @@ public class GetNodeRequest extends Request {
         }
 
         /**
-         * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

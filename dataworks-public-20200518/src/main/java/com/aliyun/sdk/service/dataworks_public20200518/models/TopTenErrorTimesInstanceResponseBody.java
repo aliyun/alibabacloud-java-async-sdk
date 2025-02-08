@@ -195,6 +195,9 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

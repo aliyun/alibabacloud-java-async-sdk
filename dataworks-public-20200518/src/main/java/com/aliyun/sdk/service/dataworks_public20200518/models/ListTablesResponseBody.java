@@ -172,7 +172,10 @@ public class ListTablesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DataSourceQualifiedName.
+             * <p>The unique identifier of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountId:cn-shanghai:odps:project</p>
              */
             public Builder dataSourceQualifiedName(String dataSourceQualifiedName) {
                 this.dataSourceQualifiedName = dataSourceQualifiedName;
@@ -180,7 +183,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceUniqueId.
+             * <p>The unique ID of the data source identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e70f92239d491057f6a2563b545bdaf8cc6b537d9dc55ec84c55f7cfefg</p>
              */
             public Builder dataSourceUniqueId(String dataSourceUniqueId) {
                 this.dataSourceUniqueId = dataSourceUniqueId;
@@ -188,7 +194,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -196,7 +205,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the data source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6rn0123</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -204,7 +216,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the ODPS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -212,7 +227,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -271,7 +289,7 @@ public class ListTablesResponseBody extends TeaModel {
             private String entityQualifiedName; 
 
             /**
-             * EntityContent.
+             * <p>Table entity information.</p>
              */
             public Builder entityContent(EntityContent entityContent) {
                 this.entityContent = entityContent;
@@ -279,7 +297,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * EntityQualifiedName.
+             * <p>The unique identifier of the table entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>maxcompute-table.project.table</p>
              */
             public Builder entityQualifiedName(String entityQualifiedName) {
                 this.entityQualifiedName = entityQualifiedName;
@@ -350,7 +371,10 @@ public class ListTablesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * NextToken.
+             * <p>Pagination information, which specifies the starting point of the next read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAVY3rYiv9VoUJQSiCitgjgSwg+byk0FIjirFkm4zfM4G0xYwM/FQvOhgrTHsCPIZ5yqXYu2NG6qRCRC52HvwbOA=</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -358,7 +382,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableEntityList.
+             * <p>Entity array.</p>
              */
             public Builder tableEntityList(java.util.List<TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;
@@ -366,7 +390,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Long total) {
                 this.total = total;

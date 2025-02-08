@@ -187,6 +187,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
             /**
              * <p>The description of the column on which you request permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Field description</p>
              */
             public Builder columnComment(String columnComment) {
                 this.columnComment = columnComment;

@@ -535,6 +535,9 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
             /**
              * <p>The description of the system defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Verify table rules</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -768,6 +771,9 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the monitoring template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of SQL task table rows, 1, 7, and 30 days wave detection</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

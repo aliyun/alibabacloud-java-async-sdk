@@ -103,7 +103,7 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * <p>The information about the subscription relationship.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -111,7 +111,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -119,7 +122,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You have no permission.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -127,7 +133,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +144,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38cbdef0-f6cf-49</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +155,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,7 +300,16 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * AlarmMode.
+             * <p>The alert mode. The value is as follows:</p>
+             * <ul>
+             * <li>1 (Mail)</li>
+             * <li>2 (email and SMS)</li>
+             * <li>4 (DingTalk groups of robots or hook)</li>
+             * <li>5 (DingTalk groups of robots @ ALL)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alarmMode(Integer alarmMode) {
                 this.alarmMode = alarmMode;
@@ -293,7 +317,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the data quality rule subscription configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -301,7 +328,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The ID of the partition expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -309,7 +339,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * Follower.
+             * <p>The subscriber to receive alert information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder follower(String follower) {
                 this.follower = follower;
@@ -317,7 +350,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * FollowerAccountName.
+             * <p>The Alibaba Cloud account name of the subscriber.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder followerAccountName(String followerAccountName) {
                 this.followerAccountName = followerAccountName;
@@ -325,7 +361,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the subscription relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -333,7 +372,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The update time of the data quality rule subscription configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1541576644000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -341,7 +383,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the engine or data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -349,7 +394,10 @@ public class GetQualityFollowerResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the partitioned table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dual</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

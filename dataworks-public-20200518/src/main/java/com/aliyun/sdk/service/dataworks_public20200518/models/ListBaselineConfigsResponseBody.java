@@ -372,6 +372,9 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;

@@ -2453,6 +2453,9 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
             /**
              * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My API name</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -2494,6 +2497,9 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
 
             /**
              * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test API description</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -136,6 +136,9 @@ public class ListExtensionsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File submission pre-event</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -251,6 +254,9 @@ public class ListExtensionsResponseBody extends TeaModel {
 
             /**
              * <p>The unique code of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Extension Code</p>
              */
             public Builder extensionCode(String extensionCode) {
                 this.extensionCode = extensionCode;
@@ -259,6 +265,9 @@ public class ListExtensionsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a description</p>
              */
             public Builder extensionDesc(String extensionDesc) {
                 this.extensionDesc = extensionDesc;
@@ -267,6 +276,9 @@ public class ListExtensionsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Extension name</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;

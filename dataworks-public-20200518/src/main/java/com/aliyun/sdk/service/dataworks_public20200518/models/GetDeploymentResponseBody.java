@@ -453,7 +453,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that was returned when the deployment task failed. In this case, the value of the Status parameter is 2.</p>
+             * <p>The error message that was returned when the deployment package failed. In this case, the value of the Status parameter is 2.</p>
              * 
              * <strong>example:</strong>
              * <p>Success</p>
@@ -589,7 +589,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the deployment task.</p>
+             * <p>The details of the deployment package.</p>
              */
             public Builder deployment(Deployment deployment) {
                 this.deployment = deployment;

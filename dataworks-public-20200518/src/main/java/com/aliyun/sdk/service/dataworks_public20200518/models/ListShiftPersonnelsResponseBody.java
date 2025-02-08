@@ -171,6 +171,9 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the on-duty engineer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San</p>
              */
             public Builder shiftPersonName(String shiftPersonName) {
                 this.shiftPersonName = shiftPersonName;

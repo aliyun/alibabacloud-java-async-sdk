@@ -535,6 +535,9 @@ public class GetTopicResponseBody extends TeaModel {
 
             /**
              * <p>The name of the baseline to which the worst baseline instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Baseline name</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -642,6 +645,9 @@ public class GetTopicResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node that triggered the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -683,6 +689,9 @@ public class GetTopicResponseBody extends TeaModel {
 
             /**
              * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234 error</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

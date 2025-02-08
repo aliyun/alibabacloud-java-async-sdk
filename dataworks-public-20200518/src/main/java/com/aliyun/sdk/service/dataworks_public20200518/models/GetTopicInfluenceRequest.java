@@ -83,6 +83,7 @@ public class GetTopicInfluenceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

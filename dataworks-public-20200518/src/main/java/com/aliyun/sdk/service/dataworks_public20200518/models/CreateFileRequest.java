@@ -96,6 +96,10 @@ public class CreateFileRequest extends Request {
     private Boolean ignoreParentSkipRunningProperty;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InputList")
     private String inputList;
 
@@ -176,6 +180,7 @@ public class CreateFileRequest extends Request {
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
         this.ignoreParentSkipRunningProperty = builder.ignoreParentSkipRunningProperty;
+        this.imageId = builder.imageId;
         this.inputList = builder.inputList;
         this.inputParameters = builder.inputParameters;
         this.outputParameters = builder.outputParameters;
@@ -340,6 +345,13 @@ public class CreateFileRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return inputList
      */
     public String getInputList() {
@@ -464,6 +476,7 @@ public class CreateFileRequest extends Request {
         private String fileName; 
         private Integer fileType; 
         private Boolean ignoreParentSkipRunningProperty; 
+        private String imageId; 
         private String inputList; 
         private String inputParameters; 
         private String outputParameters; 
@@ -505,6 +518,7 @@ public class CreateFileRequest extends Request {
             this.fileName = request.fileName;
             this.fileType = request.fileType;
             this.ignoreParentSkipRunningProperty = request.ignoreParentSkipRunningProperty;
+            this.imageId = request.imageId;
             this.inputList = request.inputList;
             this.inputParameters = request.inputParameters;
             this.outputParameters = request.outputParameters;
@@ -626,10 +640,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>If the directory specified in the parameter (FileFolderPath) does not exist in the system, whether the directory is automatically created. The values are as follows:</p>
+         * <p>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</p>
          * <ul>
-         * <li>true: If the directory does not exist, the directory is automatically created.</li>
-         * <li>false: If the directory does not exist, the call fails.</li>
+         * <li>true: The system automatically creates the directory if the directory does not exist.</li>
+         * <li>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -790,6 +804,15 @@ public class CreateFileRequest extends Request {
         public Builder ignoreParentSkipRunningProperty(Boolean ignoreParentSkipRunningProperty) {
             this.putBodyParameter("IgnoreParentSkipRunningProperty", ignoreParentSkipRunningProperty);
             this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putBodyParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 

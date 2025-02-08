@@ -166,6 +166,9 @@ public class SaveDataServiceApiTestResultRequest extends Request {
 
         /**
          * <p>The sample failure response of the API. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;apiLog&quot;: null, &quot;data&quot;: null, &quot;errCode&quot;: 1108110622, &quot;errMsg&quot;: &quot;data Source query failed&quot;, &quot;requestId&quot;: &quot;0 bc14a **** 5902762031 ****&quot;}</p>
          */
         public Builder failResultSample(String failResultSample) {
             this.putBodyParameter("FailResultSample", failResultSample);

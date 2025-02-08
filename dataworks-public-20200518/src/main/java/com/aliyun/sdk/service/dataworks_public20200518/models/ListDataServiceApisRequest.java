@@ -169,6 +169,9 @@ public class ListDataServiceApisRequest extends Request {
 
         /**
          * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My API name</p>
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);

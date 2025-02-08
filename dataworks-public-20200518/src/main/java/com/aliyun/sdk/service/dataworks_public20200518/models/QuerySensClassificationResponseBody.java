@@ -126,6 +126,9 @@ public class QuerySensClassificationResponseBody extends TeaModel {
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Missing parameter</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

@@ -118,7 +118,10 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101011005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -126,7 +129,10 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Cluster.ClusterNotFound</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -134,7 +140,10 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +151,10 @@ public class UpdateClusterConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -549,7 +549,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727280000000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -568,7 +571,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DeployDate.
+             * <p>The deployment date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727280000000</p>
              */
             public Builder deployDate(Long deployDate) {
                 this.deployDate = deployDate;
@@ -609,7 +615,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -617,7 +626,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -625,7 +637,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The version of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fileVersion(Integer fileVersion) {
                 this.fileVersion = fileVersion;
@@ -633,7 +648,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727280000000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -746,7 +764,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatMode.
+             * <p>Rerun mode. 0 indicates that you can rerun only if you fail, 1 indicates that you can rerun in all cases, and 2 indicates that you cannot rerun in all cases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatMode(Integer repeatMode) {
                 this.repeatMode = repeatMode;
@@ -765,7 +786,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ResGroupIdentifier.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_123</p>
              */
             public Builder resGroupIdentifier(String resGroupIdentifier) {
                 this.resGroupIdentifier = resGroupIdentifier;

@@ -1144,6 +1144,9 @@ public class GetFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IgnoreParentSkipRunningProperty")
         private String ignoreParentSkipRunningProperty;
 
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
         @com.aliyun.core.annotation.NameInMap("InputList")
         private java.util.List<InputList> inputList;
 
@@ -1190,6 +1193,7 @@ public class GetFileResponseBody extends TeaModel {
             this.dependentType = builder.dependentType;
             this.endEffectDate = builder.endEffectDate;
             this.ignoreParentSkipRunningProperty = builder.ignoreParentSkipRunningProperty;
+            this.imageId = builder.imageId;
             this.inputList = builder.inputList;
             this.inputParameters = builder.inputParameters;
             this.outputList = builder.outputList;
@@ -1273,6 +1277,13 @@ public class GetFileResponseBody extends TeaModel {
          */
         public String getIgnoreParentSkipRunningProperty() {
             return this.ignoreParentSkipRunningProperty;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
         }
 
         /**
@@ -1369,6 +1380,7 @@ public class GetFileResponseBody extends TeaModel {
             private String dependentType; 
             private Long endEffectDate; 
             private String ignoreParentSkipRunningProperty; 
+            private String imageId; 
             private java.util.List<InputList> inputList; 
             private java.util.List<InputParameters> inputParameters; 
             private java.util.List<OutputList> outputList; 
@@ -1482,13 +1494,21 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute</p>
+             * <p>Indicates whether to skip the dry-run property of the ancestor nodes of the node that corresponds to the file. This parameter corresponds to the Skip the dry-run property of the ancestor node parameter that is displayed after you configure the Depend On parameter in the Dependencies section of the Properties tab in the DataWorks console.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
              */
             public Builder ignoreParentSkipRunningProperty(String ignoreParentSkipRunningProperty) {
                 this.ignoreParentSkipRunningProperty = ignoreParentSkipRunningProperty;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
                 return this;
             }
 
@@ -1625,7 +1645,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scheduling configuration timeout definition</p>
+             * <p>The timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1675,7 +1695,7 @@ public class GetFileResponseBody extends TeaModel {
             private String downloadLink; 
 
             /**
-             * <p>Resource download address link</p>
+             * <p>The download URL of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xx">http://xx</a></p>
@@ -1765,7 +1785,7 @@ public class GetFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource download address</p>
+             * <p>The download URL of the resource.</p>
              */
             public Builder resourceDownloadLink(ResourceDownloadLink resourceDownloadLink) {
                 this.resourceDownloadLink = resourceDownloadLink;

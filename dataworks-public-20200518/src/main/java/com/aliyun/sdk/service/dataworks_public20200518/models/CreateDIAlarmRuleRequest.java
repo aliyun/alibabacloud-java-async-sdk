@@ -169,7 +169,7 @@ public class CreateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of the alert rule.</p>
+         * <p>The description of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql synchronizes to hologres heartbeat alert</p>

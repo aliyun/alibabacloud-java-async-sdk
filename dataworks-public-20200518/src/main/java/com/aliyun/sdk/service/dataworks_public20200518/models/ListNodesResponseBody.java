@@ -103,7 +103,7 @@ public class ListNodesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The ID of the associated workflow.</p>
+         * <p>The nodes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -549,7 +549,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the node was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593879116000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -568,7 +571,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DeployDate.
+             * <p>The timestamp when the node was deployed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1734537600000</p>
              */
             public Builder deployDate(Long deployDate) {
                 this.deployDate = deployDate;
@@ -609,7 +615,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID. You can call the ListFiles operation to query the ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -617,7 +626,11 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks node collection</a>.
+             * You can also call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> interface to query the code type of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -625,7 +638,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The latest version number of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder fileVersion(Integer fileVersion) {
                 this.fileVersion = fileVersion;
@@ -633,7 +649,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The timestamp when the node was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593879116000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -740,7 +759,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatMode.
+             * <p>The rerun mode. The value 0 indicates that rerun can be performed only if a failure occurs. The value 1 indicates that rerun can be performed in all cases. The value 2 indicates that rerun cannot be performed in all cases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatMode(Integer repeatMode) {
                 this.repeatMode = repeatMode;
@@ -759,7 +781,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ResGroupIdentifier.
+             * <p>The identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group_123</p>
              */
             public Builder resGroupIdentifier(String resGroupIdentifier) {
                 this.resGroupIdentifier = resGroupIdentifier;
@@ -864,13 +889,7 @@ public class ListNodesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * <p>The scheduling type of the node. Valid values:</p>
-             * <ul>
-             * <li>NORMAL: indicates that the node is a normal auto triggered node.</li>
-             * <li>MANUAL: indicates that the node is a manually triggered node.</li>
-             * <li>PAUSE: indicates that the node is a paused node.</li>
-             * <li>SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
-             * </ul>
+             * <p>The information about the nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

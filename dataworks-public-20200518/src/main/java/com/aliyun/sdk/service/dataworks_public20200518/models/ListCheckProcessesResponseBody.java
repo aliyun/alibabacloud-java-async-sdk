@@ -55,7 +55,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -63,7 +63,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -205,7 +208,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * EventCode.
+             * <p>Extension point event encoding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>commit-file</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -213,7 +219,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The name of the extension point event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DnsEvent</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -221,7 +230,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * EventNameEn.
+             * <p>The English name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pre-event for Node Commit</p>
              */
             public Builder eventNameEn(String eventNameEn) {
                 this.eventNameEn = eventNameEn;
@@ -229,7 +241,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>DataWorks the message ID of the open message. After an extended point event is triggered, you can obtain the message ID from the received event message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b824a5de-4223-4315-af3e-c4449d236db4</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -237,7 +252,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>297635</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -245,7 +263,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The ID of the process instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rdk_generate_d395da25-b0d3-4114-b2a5-d0247444a661_none_3496903_365203</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -253,7 +274,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The name of the check object, such as the file name or node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_sql_test</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -261,7 +285,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32563</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -269,7 +296,15 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the extender check.</p>
+             * <ul>
+             * <li>CHECKING CHECKING</li>
+             * <li>PASSED the pass check</li>
+             * <li>BLOCKED check failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECKING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -352,7 +387,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CheckProcesses.
+             * <p>The check details of the extension.</p>
              */
             public Builder checkProcesses(java.util.List<CheckProcesses> checkProcesses) {
                 this.checkProcesses = checkProcesses;
@@ -360,7 +395,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -368,7 +406,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries displayed on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -376,7 +417,10 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

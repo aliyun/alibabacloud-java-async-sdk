@@ -140,6 +140,9 @@ public class SubmitFileRequest extends Request {
 
         /**
          * <p>The description of the commit operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Submit a task for the first time</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);

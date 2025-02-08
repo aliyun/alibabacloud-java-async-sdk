@@ -205,6 +205,9 @@ public class QuerySensNodeInfoRequest extends Request {
 
         /**
          * <p>The name of the sensitive field. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Data Security Guard page to obtain the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID card</p>
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);

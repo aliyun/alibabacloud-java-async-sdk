@@ -104,9 +104,6 @@ public class GetQualityFollowerRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -115,6 +112,7 @@ public class GetQualityFollowerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the partition filter expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +125,10 @@ public class GetQualityFollowerRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -136,6 +137,7 @@ public class GetQualityFollowerRequest extends Request {
         }
 
         /**
+         * <p>The name of the engine or data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -103,7 +103,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The data entries returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;

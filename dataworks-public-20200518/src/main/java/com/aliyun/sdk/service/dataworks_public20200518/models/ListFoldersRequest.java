@@ -169,6 +169,9 @@ public class ListFoldersRequest extends Request {
         /**
          * <p>The path of the parent folder.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business_process/my_first_business_process/MaxCompute</p>
          */
         public Builder parentFolderPath(String parentFolderPath) {
             this.putBodyParameter("ParentFolderPath", parentFolderPath);

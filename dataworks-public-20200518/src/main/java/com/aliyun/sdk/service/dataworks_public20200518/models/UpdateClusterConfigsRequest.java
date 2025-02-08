@@ -157,6 +157,7 @@ public class UpdateClusterConfigsRequest extends Request {
         }
 
         /**
+         * <p>The configuration information of the cluster submodule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configValues(java.util.List<ClusterConfig> configValues) {
@@ -167,6 +168,7 @@ public class UpdateClusterConfigsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

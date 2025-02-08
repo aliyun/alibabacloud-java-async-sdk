@@ -550,6 +550,9 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
 
             /**
              * <p>The description of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql synchronizes to hologres heartbeat alert</p>
              */
             public Builder description(String description) {
                 this.description = description;

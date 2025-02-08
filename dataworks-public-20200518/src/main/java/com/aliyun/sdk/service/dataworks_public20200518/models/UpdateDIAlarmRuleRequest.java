@@ -170,6 +170,9 @@ public class UpdateDIAlarmRuleRequest extends Request {
 
         /**
          * <p>The description of the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql synchronizes to hologres heartbeat alert</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);

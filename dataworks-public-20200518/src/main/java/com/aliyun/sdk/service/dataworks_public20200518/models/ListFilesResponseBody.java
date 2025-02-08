@@ -460,7 +460,10 @@ public class ListFilesResponseBody extends TeaModel {
             private String useType; 
 
             /**
-             * AbsoluteFolderPath.
+             * <p>The path of the folder where the file is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
              */
             public Builder absoluteFolderPath(String absoluteFolderPath) {
                 this.absoluteFolderPath = absoluteFolderPath;

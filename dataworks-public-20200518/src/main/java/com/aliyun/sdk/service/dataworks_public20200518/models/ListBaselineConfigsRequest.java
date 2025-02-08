@@ -259,6 +259,9 @@ public class ListBaselineConfigsRequest extends Request {
 
         /**
          * <p>The keyword in the baseline name, which is used to search for the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name search keywords</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
