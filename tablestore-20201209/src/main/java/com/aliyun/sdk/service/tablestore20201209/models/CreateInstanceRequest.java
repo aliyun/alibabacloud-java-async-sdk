@@ -189,10 +189,6 @@ public class CreateInstanceRequest extends Request {
 
         /**
          * <p>The type of the instance.</p>
-         * <ul>
-         * <li>SSD: high-performance instance</li>
-         * <li>HYBRID: capacity instance</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -79,7 +79,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * <p>The instances.</p>
+         * <p>The details about the instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -374,6 +374,11 @@ public class ListInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The instance status.</p>
+             * <ul>
+             * <li>normal: The instance works as expected.</li>
+             * <li>forbidden: The instance is disabled.</li>
+             * <li>deleting: The instance is being deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -384,7 +389,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsMultiAZ.
+             * <p>Indicates whether zone-redundant storage (ZRS) is enabled for the instance.</p>
+             * <ul>
+             * <li>true: ZRS is enabled for the instance.</li>
+             * <li>false: Locally redundant storage (LRS) is enabled for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isMultiAZ(Boolean isMultiAZ) {
                 this.isMultiAZ = isMultiAZ;
@@ -429,7 +441,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ots_standard_public_cn-g4t3igqjj002</p>

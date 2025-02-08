@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-tablestore20201209</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>alibabacloud-tablestore20201209</name>
   <description>Alibaba Cloud Tablestore (20201209) Async SDK for Java

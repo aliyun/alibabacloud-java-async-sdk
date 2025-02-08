@@ -101,11 +101,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to remove all tags from the resources. Default value: false. Valid values:</p>
-         * <ul>
-         * <li>true: removes all tags from the resources.</li>
-         * <li>false: removes the tags that are specified by the TagKeys parameter from the resources.</li>
-         * </ul>
+         * <p>Specifies whether to remove all tags from the resources. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

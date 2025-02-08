@@ -23,6 +23,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("ElasticVCUUpperLimit")
+    private Float elasticVCUUpperLimit;
+
     @com.aliyun.core.annotation.NameInMap("InstanceDescription")
     private String instanceDescription;
 
@@ -86,6 +89,7 @@ public class GetInstanceResponseBody extends TeaModel {
     private GetInstanceResponseBody(Builder builder) {
         this.aliasName = builder.aliasName;
         this.createTime = builder.createTime;
+        this.elasticVCUUpperLimit = builder.elasticVCUUpperLimit;
         this.instanceDescription = builder.instanceDescription;
         this.instanceName = builder.instanceName;
         this.instanceSpecification = builder.instanceSpecification;
@@ -128,6 +132,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return elasticVCUUpperLimit
+     */
+    public Float getElasticVCUUpperLimit() {
+        return this.elasticVCUUpperLimit;
     }
 
     /**
@@ -273,6 +284,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String aliasName; 
         private String createTime; 
+        private Float elasticVCUUpperLimit; 
         private String instanceDescription; 
         private String instanceName; 
         private String instanceSpecification; 
@@ -295,7 +307,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Integer VCUQuota; 
 
         /**
-         * <p>The alias of the instance.</p>
+         * <p>The instance alias.</p>
          * 
          * <strong>example:</strong>
          * <p>instance-test</p>
@@ -313,6 +325,17 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * <p>The upper limit for the VCUs of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
+        public Builder elasticVCUUpperLimit(Float elasticVCUUpperLimit) {
+            this.elasticVCUUpperLimit = elasticVCUUpperLimit;
             return this;
         }
 
@@ -370,7 +393,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsMultiAZ.
+         * <p>Indicates whether zone-redundant storage (ZRS) is enabled for the instance.</p>
+         * <ul>
+         * <li>true: ZRS is enabled for the instance.</li>
+         * <li>false: Locally redundant storage (LRS) is enabled for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isMultiAZ(Boolean isMultiAZ) {
             this.isMultiAZ = isMultiAZ;
