@@ -295,7 +295,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private Long zonePrivateIpAddressCount; 
 
         /**
-         * AddressIpVersion.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.addressIpVersion = addressIpVersion;
