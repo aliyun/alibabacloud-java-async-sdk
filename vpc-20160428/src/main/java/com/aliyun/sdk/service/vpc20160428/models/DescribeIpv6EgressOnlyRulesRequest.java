@@ -228,8 +228,11 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance to which you want to apply the egress-only rule. Set the value to</p>
-         * <p><strong>Ipv6Address</strong>, which specifies that the egress-only rule applies to an IPv6 address.</p>
+         * <p>The type of the instance to which you want to apply the egress-only rule. Valid values:</p>
+         * <ul>
+         * <li>IPv6Address (default)</li>
+         * <li>IPv6Prefix</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Ipv6Address</p>
@@ -296,7 +299,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -308,7 +311,7 @@ public class DescribeIpv6EgressOnlyRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -538,6 +538,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SegmentInstanceId")
         private String segmentInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceID")
+        private Long serviceID;
+
         @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Integer serviceManaged;
 
@@ -590,6 +593,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.secondLimited = builder.secondLimited;
             this.securityProtectionTypes = builder.securityProtectionTypes;
             this.segmentInstanceId = builder.segmentInstanceId;
+            this.serviceID = builder.serviceID;
             this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -858,6 +862,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceID
+         */
+        public Long getServiceID() {
+            return this.serviceID;
+        }
+
+        /**
          * @return serviceManaged
          */
         public Integer getServiceManaged() {
@@ -929,6 +940,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private Boolean secondLimited; 
             private SecurityProtectionTypes securityProtectionTypes; 
             private String segmentInstanceId; 
+            private Long serviceID; 
             private Integer serviceManaged; 
             private String status; 
             private Tags tags; 
@@ -1396,6 +1408,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder segmentInstanceId(String segmentInstanceId) {
                 this.segmentInstanceId = segmentInstanceId;
+                return this;
+            }
+
+            /**
+             * ServiceID.
+             */
+            public Builder serviceID(Long serviceID) {
+                this.serviceID = serviceID;
                 return this;
             }
 

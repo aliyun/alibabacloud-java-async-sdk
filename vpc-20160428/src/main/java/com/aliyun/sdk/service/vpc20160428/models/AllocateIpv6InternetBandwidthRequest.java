@@ -203,7 +203,11 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
         } 
 
         /**
-         * <p>The Internet bandwidth of the IPv6 gateway. Unit: Mbit/s. Valid values: <strong>1 to 5000</strong>.</p>
+         * <p>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</p>
+         * <ul>
+         * <li>If you set <strong>InternetChargeType</strong> to <strong>PayByTraffic</strong>, valid values are <strong>1</strong> to <strong>1000</strong>.</li>
+         * <li>If you set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>, valid values are <strong>1</strong> to <strong>2000</strong>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

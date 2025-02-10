@@ -147,7 +147,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of routes.</p>
+         * <p>The list of route entries.</p>
          */
         public Builder vcoRouteEntries(java.util.List<VcoRouteEntries> vcoRouteEntries) {
             this.vcoRouteEntries = vcoRouteEntries;
@@ -155,7 +155,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * VpnRouteCounts.
+         * <p>The information on route entries of the dual-tunnel IPsec connection.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for IPsec connections in dual-tunnel mode.</p>
+         * </blockquote>
          */
         public Builder vpnRouteCounts(java.util.List<VpnRouteCounts> vpnRouteCounts) {
             this.vpnRouteCounts = vpnRouteCounts;
@@ -366,7 +369,13 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopTunnelIdList.
+             * <p>The list of next hops.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is returned only by dual-tunnel IPsec connections.</li>
+             * <li>This parameter is returned only when the tunnel status is <strong>Phase 2 Negotiation Successful</strong>.</li>
+             * </ul>
+             * </blockquote>
              */
             public Builder nextHopTunnelIdList(java.util.List<String> nextHopTunnelIdList) {
                 this.nextHopTunnelIdList = nextHopTunnelIdList;
@@ -441,11 +450,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the destination-based route. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: a low priority</li>
-             * <li><strong>100</strong>: a high priority</li>
-             * </ul>
+             * <p>The weight of the destination-based route.</p>
+             * <blockquote>
+             * <p> The current parameter has no effect.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -519,7 +527,10 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * RouteCount.
+             * <p>The number of route entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder routeCount(Integer routeCount) {
                 this.routeCount = routeCount;
@@ -529,12 +540,12 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             /**
              * <p>The route type. Valid values:</p>
              * <ul>
-             * <li><strong>custom</strong>: a destination-based route</li>
-             * <li><strong>bgp</strong>: a BGP route</li>
+             * <li><strong>custom</strong>: destination-based route.</li>
+             * <li><strong>bgp</strong>: BGP route.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>custom</p>
+             * <p>bgp</p>
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -544,12 +555,12 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
             /**
              * <p>The source of the BGP route. Valid values:</p>
              * <ul>
-             * <li><strong>CLOUD</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.</li>
-             * <li><strong>VPN_BGP</strong>: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.</li>
+             * <li><strong>CLOUD</strong>: The current BGP route is learned by the IPsec connection from the transit router.</li>
+             * <li><strong>VPN_BGP</strong>: The current BGP route is learned by the IPsec connection from the data center.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>CLOUD</p>
+             * <p>VPN_BGP</p>
              */
             public Builder source(String source) {
                 this.source = source;

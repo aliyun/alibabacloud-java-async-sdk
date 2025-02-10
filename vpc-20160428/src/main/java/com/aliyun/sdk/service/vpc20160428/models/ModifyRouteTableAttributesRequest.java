@@ -236,7 +236,16 @@ public class ModifyRouteTableAttributesRequest extends Request {
         }
 
         /**
-         * RoutePropagationEnable.
+         * <p>Indicates whether to enable route propagation to receive dynamic routes. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong> (default): enables route propagation.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables route propagation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder routePropagationEnable(Boolean routePropagationEnable) {
             this.putQueryParameter("RoutePropagationEnable", routePropagationEnable);

@@ -99,7 +99,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -121,7 +121,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DB04E39A-6F0C-36AC-BCA0-B6D371B90062</p>
@@ -263,8 +263,8 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The resource type of the authorization.</p>
-             * <p>The value is set to <strong>CEN</strong>, which indicates that the IPsec-VPN connection can be associated with a transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</p>
+             * <p>The type of resource that can be associated with the IPsec-VPN connection.</p>
+             * <p>Only <strong>CEN</strong> can be returned, which indicates that the IPsec-VPN connection is authorized to be associated with the transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>CEN</p>
@@ -275,7 +275,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account whose resource the IPsec-VPN connection can be associated with.</p>
+             * <p>The ID of the Alibaba Cloud account whose resources the IPsec-VPN connection is authorized to be associated with.</p>
              * 
              * <strong>example:</strong>
              * <p>1210123456123456</p>
@@ -286,7 +286,7 @@ public class DescribeVpnCrossAccountAuthorizationsResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The timestamp when the authorization for the IPsec-VPN connection was created.</p>
+             * <p>The time when the authorization for the IPsec-VPN connection was created.</p>
              * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>

@@ -124,7 +124,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information about the SSL-VPN server.</p>
+         * <p>The detailed information about the SSL-VPN servers.</p>
          */
         public Builder sslVpnServers(SslVpnServers sslVpnServers) {
             this.sslVpnServers = sslVpnServers;
@@ -483,7 +483,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaSApplicationId.
+             * <p>The ID of the IDaaS application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_my6g4qmvnwxzj2f****</p>
              */
             public Builder iDaaSApplicationId(String iDaaSApplicationId) {
                 this.iDaaSApplicationId = iDaaSApplicationId;
@@ -491,7 +494,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IDaaS instance.</p>
+             * <p>The ID of the IDaaS EIAM instance.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas-cn-hangzhou-****</p>
@@ -502,7 +505,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * IDaaSInstanceVersion.
+             * <p>The version of the IDaaS EIAM instance.</p>
+             * <ul>
+             * <li>This parameter is returned only if the SSL server is associated with an IDaaS EIAM 2.0 instance. Only <strong>EIAM 2.0</strong> is returned.</li>
+             * <li>If the SSL server is associated with an IDaaS EIAM 1.0 instance, no value is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EIAM 2.0</p>
              */
             public Builder iDaaSInstanceVersion(String iDaaSInstanceVersion) {
                 this.iDaaSInstanceVersion = iDaaSInstanceVersion;
@@ -510,7 +520,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the IDaaS instance.</p>
+             * <p>The region ID of the IDaaS EIAM instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -554,7 +564,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SSL-VPN server.</p>
+             * <p>The name of the SSL server.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -576,7 +586,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol that is used by the SSL-VPN server.</p>
+             * <p>The protocol that is used by the SSL server.</p>
              * 
              * <strong>example:</strong>
              * <p>UDP</p>
@@ -587,7 +597,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the SSL-VPN server.</p>
+             * <p>The region ID of the SSL server.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -598,7 +608,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID of the SSL-VPN server.</p>
+             * <p>The resource group ID of the SSL server.</p>
              * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
              * 
              * <strong>example:</strong>
@@ -610,7 +620,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SSL-VPN server.</p>
+             * <p>The ID of the SSL server.</p>
              * 
              * <strong>example:</strong>
              * <p>vss-bp15j3du13gq1dgey****</p>

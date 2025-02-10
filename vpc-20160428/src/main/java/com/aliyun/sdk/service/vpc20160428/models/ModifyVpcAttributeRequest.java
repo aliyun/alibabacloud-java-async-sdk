@@ -257,7 +257,14 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * EnableDnsHostname.
+         * <p>Indicates whether the DNS hostname feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): disabled.</li>
+         * <li><strong>true</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDnsHostname(Boolean enableDnsHostname) {
             this.putQueryParameter("EnableDnsHostname", enableDnsHostname);

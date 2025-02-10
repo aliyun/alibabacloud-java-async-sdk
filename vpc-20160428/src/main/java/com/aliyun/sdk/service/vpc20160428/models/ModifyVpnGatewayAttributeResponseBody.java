@@ -381,7 +381,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the VPN gateway.</p>
-         * <p>This parameter is returned only when the VPN gateway is a private VPN gateway and supports only the single-tunnel mode.</p>
+         * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in single-tunnel mode.</p>
          * 
          * <strong>example:</strong>
          * <p>172.27.30.24</p>
@@ -414,11 +414,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VPN网关实例所属的资源组ID。</p>
-         * <p>您可以调用<a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>接口查询资源组信息。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmzs372yg****</p>
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

@@ -190,7 +190,7 @@ public class ModifyHaVipAttributeRequest extends Request {
 
         /**
          * <p>The description of the HAVIP.</p>
-         * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 1 to 255 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>This is my HaVip.</p>

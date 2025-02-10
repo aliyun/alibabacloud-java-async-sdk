@@ -388,7 +388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>AllocateIpv6InternetBandwidth</strong> operation within a specific time period.</p>
+     * <p>  Before you call this operation, make sure that an ECS instance that supports IPv6 is created in a VPC that has an IPv6 CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/100540.html">Create a VPC with an IPv6 CIDR block</a>.</p>
+     * <ul>
+     * <li>You cannot repeatedly call <strong>AllocateIpv6InternetBandwidth</strong> within the specified period of time.</li>
+     * </ul>
      * 
      * @param request the request parameters of AllocateIpv6InternetBandwidth  AllocateIpv6InternetBandwidthRequest
      * @return AllocateIpv6InternetBandwidthResponse
@@ -2352,9 +2355,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>By default, an IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation.</p>
+     * <p>  By default, the IPsec-VPN connection created by calling the <code>CreateVpnAttachment</code> operation is not bound to any resources. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router.</p>
+     * <ul>
+     * <li>If you want to associate an IPsec-VPN connection with a transit router, you can create a dual-tunnel connection in some regions. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections</a>.<ul>
+     * <li>When you create a IPsec-VPN connection in dual tunnel mode, you can configure the following request parameters in addition to the required parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>NetworkType</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>Tags</strong> array, <strong>ResourceGroupId</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</li>
+     * <li>When you create a IPsec-VPN connection in single tunnel mode, you can configure the following request parameters in addition to the required parameters: <strong>ClientToken</strong>, <strong>CustomerGatewayId</strong>, <strong>NetworkType</strong>, <strong>Name</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, <strong>Tags</strong> array, and <strong>ResourceGroupId</strong>.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+     * <p>Before you create an IPsec-VPN connection, you must create a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
      * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.</p>
      * 
      * @param request the request parameters of CreateVpnAttachment  CreateVpnAttachmentRequest
@@ -2938,10 +2948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>  <strong>DeleteIpsecServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.
-     *     *   If a VPN gateway is in the <strong>updating</strong> state, the IPsec server is being deleted.
-     *     *   If a VPN gateway is in the <strong>active</strong> state, the IPsec server is deleted.</p>
+     *     *   If the VPN gateway is in the <strong>updating</strong> state, the IPsec server is being deleted.
+     *     *   If the VPN gateway is in the <strong>active</strong> state, the IPsec server is deleted.</p>
      * <ul>
-     * <li>You cannot repeatedly call <strong>DeleteIpsecServer</strong> to delete an IPsec server from a VPN gateway within the specified period of time.</li>
+     * <li>You cannot call <strong>DeleteIpsecServer</strong> within the specified period of time.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteIpsecServer  DeleteIpsecServerRequest
@@ -4788,8 +4798,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If your VPN gateway was created before December 10, 2022, you must upgrade your VPN gateway to the latest version before you can view connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
-     * If your VPN gateway was created after December 10, 2022, you can view connection information about SSL clients by default.</p>
+     * <p>If your VPN gateway was created before December 10, 2022, you need to upgrade the VPN gateway to the latest version to view the connection information about SSL clients. For more information, see <a href="https://help.aliyun.com/document_detail/2671058.html">Upgrade a VPN gateway</a>.
+     * If your VPN gateway was created after December 10, 2022, you can view the connection information about SSL clients by default.</p>
      * 
      * @param request the request parameters of DescribeSslVpnClients  DescribeSslVpnClientsRequest
      * @return DescribeSslVpnClientsResponse
@@ -5322,7 +5332,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only VPN gateways in specific regions support the quick diagnostics feature. For more information about the supported regions, see <a href="https://help.aliyun.com/document_detail/430697.html">Supported regions</a>.</p>
+     * <p>VPN网关发起诊断</p>
      * 
      * @param request the request parameters of DiagnoseVpnGateway  DiagnoseVpnGatewayRequest
      * @return DiagnoseVpnGatewayResponse
@@ -6674,7 +6684,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HAVIP within the specified period of time.</p>
+     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HAVIP within the specified periods of time.</p>
      * 
      * @param request the request parameters of ModifyHaVipAttribute  ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
@@ -7136,14 +7146,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If you modify only the <strong>name</strong> of the SSL server, the operation is synchronous. If you also modify other configurations besides the <strong>name</strong>, the operation is asynchronous.</p>
+     * <p>  To enable two-factor authentication for an SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</p>
      * <ul>
-     * <li>When <strong>ModifySslVpnServer</strong> is an asynchronous operation, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of the task.<ul>
-     * <li>If a VPN gateway is in the <strong>updating</strong> state, the configurations of the SSL server are being modified.</li>
-     * <li>If a VPN gateway is in the <strong>active</strong> state, the configurations of the SSL server are modified.</li>
+     * <li>If you modify only <strong>Name</strong>, this operation is synchronous. If you modify other parameters besides <strong>Name</strong>, this operation is asynchronous.</li>
+     * <li><strong>ModifySslVpnServer</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL server is being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL server is modified.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call <strong>ModifySslVpnServer</strong> to modify the configurations of an SSL server within the specified period of time.</li>
+     * <li>You cannot repeatedly call <strong>ModifySslVpnServer</strong> within the specified period of time.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifySslVpnServer  ModifySslVpnServerRequest
@@ -7356,16 +7367,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>ModifyVpnAttachmentAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task to modify the configuration of an IPsec-VPN connection in the background. You can call the <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> operation to query the status of the task.
-     *     *   If the IPsec-VPN connection is in the <strong>updating</strong> state, the configuration of the IPsec-VPN connection is being modified.
-     *     *   If the IPsec-VPN connection is in the <strong>attached</strong> state, the configuration of the IPsec-VPN connection is modified.</p>
+     * <p>  When you modify a IPsec-VPN connection in dual-tunnel mode, you can configure the following parameters in addition to the required request parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>AutoConfigRoute</strong>, <strong>TunnelOptionsSpecification</strong> array, and <strong>EnableTunnelsBgp</strong>.</p>
      * <ul>
-     * <li>You cannot call the <strong>ModifyVpnAttachmentAttribute</strong> operation again on the same IPsec-VPN connection before the previous operation is complete.</li>
-     * <li>When you call the <strong>ModifyVpnAttachmentAttribute</strong> operation, take note of the following items:<ul>
-     * <li>If the IPsec-VPN connection is associated with a transit router, you cannot change the type of the gateway connected to the IPsec-VPN connection.</li>
-     * <li>If the IPsec-VPN connection is not associated with a resource, you cannot change the type of the gateway connected to the IPsec-VPN connection or the customer gateway connected to the IPsec-VPN connection.</li>
+     * <li>When you modify a IPsec-VPN connection in single tunnel mode, you can configure the following parameters in addition to the required request parameters: <strong>ClientToken</strong>, <strong>Name</strong>, <strong>LocalSubnet</strong>, <strong>RemoteSubnet</strong>, <strong>EffectImmediately</strong>, <strong>IkeConfig</strong>, <strong>IpsecConfig</strong>, <strong>HealthCheckConfig</strong>, <strong>AutoConfigRoute</strong>, <strong>EnableDpd</strong>, <strong>EnableNatTraversal</strong>, <strong>BgpConfig</strong>, and <strong>CustomerGatewayId</strong>.</li>
+     * <li><strong>ModifyVpnAttachmentAttribute</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/53046.html">DescribeVpnConnection</a> operation to query the status of the task:<ul>
+     * <li>If the IPsec-VPN connection is in the <strong>updating</strong> state, the IPsec-VPN connection is being modified.</li>
+     * <li>If the IPsec-VPN connection is in the <strong>attached</strong> state, the IPsec-VPN connection is modified.</li>
      * </ul>
      * </li>
+     * <li>You cannot concurrently call <strong>ModifyVpnAttachmentAttribute</strong> within the specified period of time.</li>
+     * <li>You cannot call <strong>ModifyVpnAttachmentAttribute</strong> to modify the gateway type of an IPsec-VPN connection.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyVpnAttachmentAttribute  ModifyVpnAttachmentAttributeRequest
@@ -8490,14 +8501,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  If you modify only the <strong>IpsecServerName</strong> parameter, this operation is synchronous. If you modify parameters other than <strong>IpsecServerName</strong>, this operation is asynchronous.</p>
+     * <p>  If you modify only <strong>IpsecServerName</strong> of the IPsec server, this operation is synchronous. If you modify other parameters besides <strong>IpsecServerName</strong>, this operation is asynchronous.</p>
      * <ul>
-     * <li>When the <strong>UpdateIpsecServer</strong> operation is asynchronous, the system returns a request ID after you send a request to call this operation and the IPsec server is being modified in the backend. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the status of a VPN gateway.<ul>
-     * <li>If the VPN gateway is in the <strong>updating</strong> state, the configuration of the IPsec server is being modified.</li>
-     * <li>If the VPN gateway is in the <strong>active</strong> state, the configuration of the IPsec server is modified.</li>
+     * <li>If <strong>UpdateIpsecServer</strong> is an asynchronous operation, after a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the IPsec server is being modified.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the IPsec server is modified.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>UpdateIpsecServer</strong> operation for the same VPN gateway within the specified period of time.</li>
+     * <li>You cannot repeatedly call <strong>UpdateIpsecServer</strong> within the specified period of time.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateIpsecServer  UpdateIpsecServerRequest

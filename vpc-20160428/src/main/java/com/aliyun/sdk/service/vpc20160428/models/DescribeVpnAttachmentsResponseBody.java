@@ -193,7 +193,10 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -201,7 +204,10 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the IPsec-VPN connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -403,7 +409,16 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The system tags of the IPsec-VPN connection.</p>
+             * <p>You can check whether an IPsec-VPN connection supports BGP based on the system tags.</p>
+             * <p><strong>BGPSupport</strong>: indicates whether the IPsec-VPN connection supports BGP.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;description&quot;:&quot;forwarding 1.7.22&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;BGPSupport&quot;:&quot;true&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -411,7 +426,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags to be added to the IPsec-VPN connection.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

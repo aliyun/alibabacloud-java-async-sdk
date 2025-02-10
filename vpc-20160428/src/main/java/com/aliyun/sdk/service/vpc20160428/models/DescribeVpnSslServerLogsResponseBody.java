@@ -114,8 +114,7 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of strings.</p>
-         * <p>Each item in the array is a log entry.</p>
+         * <p>Log information list.</p>
          */
         public Builder data(Data data) {
             this.data = data;

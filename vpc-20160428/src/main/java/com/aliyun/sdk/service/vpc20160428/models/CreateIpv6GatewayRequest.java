@@ -218,7 +218,7 @@ public class CreateIpv6GatewayRequest extends Request {
 
         /**
          * <p>The description of the IPv6 gateway.</p>
-         * <p>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6gatewayforVPC1</p>
@@ -231,7 +231,7 @@ public class CreateIpv6GatewayRequest extends Request {
 
         /**
          * <p>The name of the IPv6 gateway.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6GW</p>

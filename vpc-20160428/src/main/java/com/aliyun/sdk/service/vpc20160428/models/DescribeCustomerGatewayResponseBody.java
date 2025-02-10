@@ -207,7 +207,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The public IP address of the gateway device in the data center.</p>
+         * <p>The IP address of the gateway device in the data center.</p>
          * 
          * <strong>example:</strong>
          * <p>139.32.XX.XX</p>
@@ -310,7 +310,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey</p>
@@ -321,7 +321,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue</p>

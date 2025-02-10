@@ -17,10 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateVpcCidrBlockResponseBody</p>
  */
 public class AssociateVpcCidrBlockResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
+    private String cidrBlock;
+
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssociateVpcCidrBlockResponseBody(Builder builder) {
+        this.cidrBlock = builder.cidrBlock;
+        this.ipVersion = builder.ipVersion;
         this.requestId = builder.requestId;
     }
 
@@ -33,6 +41,20 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
     }
 
     /**
+     * @return cidrBlock
+     */
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -40,7 +62,25 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String cidrBlock; 
+        private String ipVersion; 
         private String requestId; 
+
+        /**
+         * CidrBlock.
+         */
+        public Builder cidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
+            return this;
+        }
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>
