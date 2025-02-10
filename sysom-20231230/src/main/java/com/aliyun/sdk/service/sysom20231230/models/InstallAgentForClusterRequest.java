@@ -29,11 +29,16 @@ public class InstallAgentForClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("grayscale_config")
+    private String grayscaleConfig;
+
     private InstallAgentForClusterRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
         this.agentVersion = builder.agentVersion;
         this.clusterId = builder.clusterId;
+        this.grayscaleConfig = builder.grayscaleConfig;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class InstallAgentForClusterRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return grayscaleConfig
+     */
+    public String getGrayscaleConfig() {
+        return this.grayscaleConfig;
+    }
+
     public static final class Builder extends Request.Builder<InstallAgentForClusterRequest, Builder> {
         private String agentId; 
         private String agentVersion; 
         private String clusterId; 
+        private String grayscaleConfig; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class InstallAgentForClusterRequest extends Request {
             this.agentId = request.agentId;
             this.agentVersion = request.agentVersion;
             this.clusterId = request.clusterId;
+            this.grayscaleConfig = request.grayscaleConfig;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class InstallAgentForClusterRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * grayscale_config.
+         */
+        public Builder grayscaleConfig(String grayscaleConfig) {
+            this.putBodyParameter("grayscale_config", grayscaleConfig);
+            this.grayscaleConfig = grayscaleConfig;
             return this;
         }
 
