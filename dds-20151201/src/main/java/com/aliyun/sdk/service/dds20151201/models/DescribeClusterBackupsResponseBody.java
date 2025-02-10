@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterBackupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterBackups")
-    private java.util.List < ClusterBackups> clusterBackups;
+    private java.util.List<ClusterBackups> clusterBackups;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
     /**
      * @return clusterBackups
      */
-    public java.util.List < ClusterBackups> getClusterBackups() {
+    public java.util.List<ClusterBackups> getClusterBackups() {
         return this.clusterBackups;
     }
 
@@ -79,7 +84,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterBackups> clusterBackups; 
+        private java.util.List<ClusterBackups> clusterBackups; 
         private Integer maxResults; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -88,7 +93,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         /**
          * <p>The cluster backup sets. A cluster backup file contains the backup sets of each node.</p>
          */
-        public Builder clusterBackups(java.util.List < ClusterBackups> clusterBackups) {
+        public Builder clusterBackups(java.util.List<ClusterBackups> clusterBackups) {
             this.clusterBackups = clusterBackups;
             return this;
         }
@@ -608,7 +613,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         private String attachLogStatus;
 
         @com.aliyun.core.annotation.NameInMap("Backups")
-        private java.util.List < Backups> backups;
+        private java.util.List<Backups> backups;
 
         @com.aliyun.core.annotation.NameInMap("ClusterBackupEndTime")
         private String clusterBackupEndTime;
@@ -673,7 +678,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         /**
          * @return backups
          */
-        public java.util.List < Backups> getBackups() {
+        public java.util.List<Backups> getBackups() {
             return this.backups;
         }
 
@@ -749,7 +754,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String attachLogStatus; 
-            private java.util.List < Backups> backups; 
+            private java.util.List<Backups> backups; 
             private String clusterBackupEndTime; 
             private String clusterBackupId; 
             private String clusterBackupMode; 
@@ -785,7 +790,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             /**
              * <p>The collection of the backup sets of each child node in a cluster backup set.</p>
              */
-            public Builder backups(java.util.List < Backups> backups) {
+            public Builder backups(java.util.List<Backups> backups) {
                 this.backups = backups;
                 return this;
             }
@@ -857,7 +862,18 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>Version of the backuped instance.</p>
+             * <ul>
+             * <li><strong>6.0</strong></li>
+             * <li><strong>5.0</strong></li>
+             * <li><strong>4.4</strong></li>
+             * <li><strong>4.2</strong></li>
+             * <li><strong>4.0</strong></li>
+             * <li><strong>3.4</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4.2</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;

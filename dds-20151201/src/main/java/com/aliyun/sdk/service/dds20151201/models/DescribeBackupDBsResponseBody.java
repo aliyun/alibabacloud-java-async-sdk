@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
      */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
-        private java.util.List < Database> database;
+        private java.util.List<Database> database;
 
         private Databases(Builder builder) {
             this.database = builder.database;
@@ -218,17 +223,17 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
         /**
          * @return database
          */
-        public java.util.List < Database> getDatabase() {
+        public java.util.List<Database> getDatabase() {
             return this.database;
         }
 
         public static final class Builder {
-            private java.util.List < Database> database; 
+            private java.util.List<Database> database; 
 
             /**
              * Database.
              */
-            public Builder database(java.util.List < Database> database) {
+            public Builder database(java.util.List<Database> database) {
                 this.database = database;
                 return this;
             }

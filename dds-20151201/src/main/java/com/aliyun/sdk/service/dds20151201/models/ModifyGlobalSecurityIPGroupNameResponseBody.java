@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroup")
-    private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup;
+    private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
     /**
      * @return globalSecurityIPGroup
      */
-    public java.util.List < GlobalSecurityIPGroup> getGlobalSecurityIPGroup() {
+    public java.util.List<GlobalSecurityIPGroup> getGlobalSecurityIPGroup() {
         return this.globalSecurityIPGroup;
     }
 
@@ -46,13 +51,13 @@ public class ModifyGlobalSecurityIPGroupNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup; 
+        private java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup; 
         private String requestId; 
 
         /**
          * <p>The global IP whitelist templates.</p>
          */
-        public Builder globalSecurityIPGroup(java.util.List < GlobalSecurityIPGroup> globalSecurityIPGroup) {
+        public Builder globalSecurityIPGroup(java.util.List<GlobalSecurityIPGroup> globalSecurityIPGroup) {
             this.globalSecurityIPGroup = globalSecurityIPGroup;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
      */
     public static class SecurityIpGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityIpGroup")
-        private java.util.List < SecurityIpGroup> securityIpGroup;
+        private java.util.List<SecurityIpGroup> securityIpGroup;
 
         private SecurityIpGroups(Builder builder) {
             this.securityIpGroup = builder.securityIpGroup;
@@ -218,17 +223,17 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         /**
          * @return securityIpGroup
          */
-        public java.util.List < SecurityIpGroup> getSecurityIpGroup() {
+        public java.util.List<SecurityIpGroup> getSecurityIpGroup() {
             return this.securityIpGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SecurityIpGroup> securityIpGroup; 
+            private java.util.List<SecurityIpGroup> securityIpGroup; 
 
             /**
              * SecurityIpGroup.
              */
-            public Builder securityIpGroup(java.util.List < SecurityIpGroup> securityIpGroup) {
+            public Builder securityIpGroup(java.util.List<SecurityIpGroup> securityIpGroup) {
                 this.securityIpGroup = securityIpGroup;
                 return this;
             }

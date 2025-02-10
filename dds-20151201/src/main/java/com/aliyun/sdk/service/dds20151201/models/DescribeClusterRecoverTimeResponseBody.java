@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RestoreRanges")
-    private java.util.List < RestoreRanges> restoreRanges;
+    private java.util.List<RestoreRanges> restoreRanges;
 
     private DescribeClusterRecoverTimeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     /**
      * @return restoreRanges
      */
-    public java.util.List < RestoreRanges> getRestoreRanges() {
+    public java.util.List<RestoreRanges> getRestoreRanges() {
         return this.restoreRanges;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RestoreRanges> restoreRanges; 
+        private java.util.List<RestoreRanges> restoreRanges; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         /**
          * <p>The cluster backup sets of the instance. A cluster backup file contains the backup sets of each node.</p>
          */
-        public Builder restoreRanges(java.util.List < RestoreRanges> restoreRanges) {
+        public Builder restoreRanges(java.util.List<RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
             return this;
         }

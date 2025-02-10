@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
      */
     public static class ReleaseNotes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReleaseNote")
-        private java.util.List < ReleaseNote> releaseNote;
+        private java.util.List<ReleaseNote> releaseNote;
 
         private ReleaseNotes(Builder builder) {
             this.releaseNote = builder.releaseNote;
@@ -172,12 +177,12 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
         /**
          * @return releaseNote
          */
-        public java.util.List < ReleaseNote> getReleaseNote() {
+        public java.util.List<ReleaseNote> getReleaseNote() {
             return this.releaseNote;
         }
 
         public static final class Builder {
-            private java.util.List < ReleaseNote> releaseNote; 
+            private java.util.List<ReleaseNote> releaseNote; 
 
             /**
              * <p>The release notes.</p>
@@ -185,7 +190,7 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>test release note.</p>
              */
-            public Builder releaseNote(java.util.List < ReleaseNote> releaseNote) {
+            public Builder releaseNote(java.util.List<ReleaseNote> releaseNote) {
                 this.releaseNote = releaseNote;
                 return this;
             }

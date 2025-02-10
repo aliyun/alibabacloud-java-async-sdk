@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -321,7 +326,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class ConfigParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameter")
-        private java.util.List < Parameter> parameter;
+        private java.util.List<Parameter> parameter;
 
         private ConfigParameters(Builder builder) {
             this.parameter = builder.parameter;
@@ -338,17 +343,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.List < Parameter> getParameter() {
+        public java.util.List<Parameter> getParameter() {
             return this.parameter;
         }
 
         public static final class Builder {
-            private java.util.List < Parameter> parameter; 
+            private java.util.List<Parameter> parameter; 
 
             /**
              * Parameter.
              */
-            public Builder parameter(java.util.List < Parameter> parameter) {
+            public Builder parameter(java.util.List<Parameter> parameter) {
                 this.parameter = parameter;
                 return this;
             }
@@ -569,7 +574,7 @@ public class DescribeParametersResponseBody extends TeaModel {
      */
     public static class RunningParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameter")
-        private java.util.List < RunningParametersParameter> parameter;
+        private java.util.List<RunningParametersParameter> parameter;
 
         private RunningParameters(Builder builder) {
             this.parameter = builder.parameter;
@@ -586,17 +591,17 @@ public class DescribeParametersResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.List < RunningParametersParameter> getParameter() {
+        public java.util.List<RunningParametersParameter> getParameter() {
             return this.parameter;
         }
 
         public static final class Builder {
-            private java.util.List < RunningParametersParameter> parameter; 
+            private java.util.List<RunningParametersParameter> parameter; 
 
             /**
              * Parameter.
              */
-            public Builder parameter(java.util.List < RunningParametersParameter> parameter) {
+            public Builder parameter(java.util.List<RunningParametersParameter> parameter) {
                 this.parameter = parameter;
                 return this;
             }

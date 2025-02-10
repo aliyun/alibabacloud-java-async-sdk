@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackupTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BackupJobs")
-    private java.util.List < BackupJobs> backupJobs;
+    private java.util.List<BackupJobs> backupJobs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     /**
      * @return backupJobs
      */
-    public java.util.List < BackupJobs> getBackupJobs() {
+    public java.util.List<BackupJobs> getBackupJobs() {
         return this.backupJobs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BackupJobs> backupJobs; 
+        private java.util.List<BackupJobs> backupJobs; 
         private String requestId; 
 
         /**
          * <p>The details of the backup task.</p>
          */
-        public Builder backupJobs(java.util.List < BackupJobs> backupJobs) {
+        public Builder backupJobs(java.util.List<BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
             return this;
         }

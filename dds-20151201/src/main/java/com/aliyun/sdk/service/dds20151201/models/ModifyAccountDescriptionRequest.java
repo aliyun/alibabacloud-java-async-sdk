@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,6 +30,10 @@ public class ModifyAccountDescriptionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AccountName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CharacterType")
+    private String characterType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
@@ -52,6 +61,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         this.regionId = builder.regionId;
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
+        this.characterType = builder.characterType;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -94,6 +104,13 @@ public class ModifyAccountDescriptionRequest extends Request {
     }
 
     /**
+     * @return characterType
+     */
+    public String getCharacterType() {
+        return this.characterType;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -132,6 +149,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         private String regionId; 
         private String accountDescription; 
         private String accountName; 
+        private String characterType; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -147,6 +165,7 @@ public class ModifyAccountDescriptionRequest extends Request {
             this.regionId = request.regionId;
             this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
+            this.characterType = request.characterType;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -190,6 +209,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
             this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * CharacterType.
+         */
+        public Builder characterType(String characterType) {
+            this.putQueryParameter("CharacterType", characterType);
+            this.characterType = characterType;
             return this;
         }
 

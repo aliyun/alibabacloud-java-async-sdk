@@ -59,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckRecoveryConditionResponse> checkRecoveryCondition(CheckRecoveryConditionRequest request);
 
     /**
+     * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
+     * @return CheckServiceLinkedRoleResponse
+     */
+    CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
      * <ul>
@@ -178,10 +184,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeActiveOperationMaintenanceConfig  DescribeActiveOperationMaintenanceConfigRequest
+     * @return DescribeActiveOperationMaintenanceConfigResponse
+     */
+    CompletableFuture<DescribeActiveOperationMaintenanceConfigResponse> describeActiveOperationMaintenanceConfig(DescribeActiveOperationMaintenanceConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTask  DescribeActiveOperationTaskRequest
+     * @return DescribeActiveOperationTaskResponse
+     */
+    CompletableFuture<DescribeActiveOperationTaskResponse> describeActiveOperationTask(DescribeActiveOperationTaskRequest request);
+
+    /**
      * @param request the request parameters of DescribeActiveOperationTaskCount  DescribeActiveOperationTaskCountRequest
      * @return DescribeActiveOperationTaskCountResponse
      */
     CompletableFuture<DescribeActiveOperationTaskCountResponse> describeActiveOperationTaskCount(DescribeActiveOperationTaskCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTaskRegion  DescribeActiveOperationTaskRegionRequest
+     * @return DescribeActiveOperationTaskRegionResponse
+     */
+    CompletableFuture<DescribeActiveOperationTaskRegionResponse> describeActiveOperationTaskRegion(DescribeActiveOperationTaskRegionRequest request);
 
     /**
      * <b>description</b> :
@@ -724,12 +748,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Cross-regional backup only supports  MongoDB sharded cluster instance and MongoDB replica set.</p>
+     * <p>The cross-region backup feature is suitable only for replica set or sharded cluster instances that use cloud disks.</p>
      * 
      * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
      */
     CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBInstanceConfig  ModifyDBInstanceConfigRequest
+     * @return ModifyDBInstanceConfigResponse
+     */
+    CompletableFuture<ModifyDBInstanceConfigResponse> modifyDBInstanceConfig(ModifyDBInstanceConfigRequest request);
 
     /**
      * <b>description</b> :

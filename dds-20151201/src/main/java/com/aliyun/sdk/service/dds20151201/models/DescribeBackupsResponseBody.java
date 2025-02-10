@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -455,7 +460,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the backup set (invalid now).</p>
+             * <p>The name of the backup set. The parameter is invalid.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678.tar.gz</p>
@@ -466,7 +471,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scale of the backup set (invalid now).</p>
+             * <p>The backup granularity. The parameter is invalid.</p>
              * 
              * <strong>example:</strong>
              * <p>DBInstance</p>
@@ -529,7 +534,18 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>Version of the backuped instance.</p>
+             * <ul>
+             * <li><strong>6.0</strong></li>
+             * <li><strong>5.0</strong></li>
+             * <li><strong>4.4</strong></li>
+             * <li><strong>4.2</strong></li>
+             * <li><strong>4.0</strong></li>
+             * <li><strong>3.4</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4.2</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -566,7 +582,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
      */
     public static class Backups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Backup")
-        private java.util.List < Backup> backup;
+        private java.util.List<Backup> backup;
 
         private Backups(Builder builder) {
             this.backup = builder.backup;
@@ -583,17 +599,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backup
          */
-        public java.util.List < Backup> getBackup() {
+        public java.util.List<Backup> getBackup() {
             return this.backup;
         }
 
         public static final class Builder {
-            private java.util.List < Backup> backup; 
+            private java.util.List<Backup> backup; 
 
             /**
              * Backup.
              */
-            public Builder backup(java.util.List < Backup> backup) {
+            public Builder backup(java.util.List<Backup> backup) {
                 this.backup = backup;
                 return this;
             }

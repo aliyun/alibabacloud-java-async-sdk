@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class MongosList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MongosAttribute")
-        private java.util.List < MongosAttribute> mongosAttribute;
+        private java.util.List<MongosAttribute> mongosAttribute;
 
         private MongosList(Builder builder) {
             this.mongosAttribute = builder.mongosAttribute;
@@ -264,17 +269,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return mongosAttribute
          */
-        public java.util.List < MongosAttribute> getMongosAttribute() {
+        public java.util.List<MongosAttribute> getMongosAttribute() {
             return this.mongosAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < MongosAttribute> mongosAttribute; 
+            private java.util.List<MongosAttribute> mongosAttribute; 
 
             /**
              * MongosAttribute.
              */
-            public Builder mongosAttribute(java.util.List < MongosAttribute> mongosAttribute) {
+            public Builder mongosAttribute(java.util.List<MongosAttribute> mongosAttribute) {
                 this.mongosAttribute = mongosAttribute;
                 return this;
             }
@@ -436,7 +441,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class ShardList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShardAttribute")
-        private java.util.List < ShardAttribute> shardAttribute;
+        private java.util.List<ShardAttribute> shardAttribute;
 
         private ShardList(Builder builder) {
             this.shardAttribute = builder.shardAttribute;
@@ -453,17 +458,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return shardAttribute
          */
-        public java.util.List < ShardAttribute> getShardAttribute() {
+        public java.util.List<ShardAttribute> getShardAttribute() {
             return this.shardAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < ShardAttribute> shardAttribute; 
+            private java.util.List<ShardAttribute> shardAttribute; 
 
             /**
              * ShardAttribute.
              */
-            public Builder shardAttribute(java.util.List < ShardAttribute> shardAttribute) {
+            public Builder shardAttribute(java.util.List<ShardAttribute> shardAttribute) {
                 this.shardAttribute = shardAttribute;
                 return this;
             }
@@ -556,7 +561,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -573,17 +578,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1429,7 +1434,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class DBInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstance")
-        private java.util.List < DBInstance> DBInstance;
+        private java.util.List<DBInstance> DBInstance;
 
         private DBInstances(Builder builder) {
             this.DBInstance = builder.DBInstance;
@@ -1446,17 +1451,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return DBInstance
          */
-        public java.util.List < DBInstance> getDBInstance() {
+        public java.util.List<DBInstance> getDBInstance() {
             return this.DBInstance;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstance> DBInstance; 
+            private java.util.List<DBInstance> DBInstance; 
 
             /**
              * DBInstance.
              */
-            public Builder DBInstance(java.util.List < DBInstance> DBInstance) {
+            public Builder DBInstance(java.util.List<DBInstance> DBInstance) {
                 this.DBInstance = DBInstance;
                 return this;
             }

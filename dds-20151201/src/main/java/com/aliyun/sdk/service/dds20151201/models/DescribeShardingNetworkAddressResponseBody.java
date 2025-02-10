@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -301,7 +306,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
      */
     public static class CompatibleConnections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompatibleConnection")
-        private java.util.List < CompatibleConnection> compatibleConnection;
+        private java.util.List<CompatibleConnection> compatibleConnection;
 
         private CompatibleConnections(Builder builder) {
             this.compatibleConnection = builder.compatibleConnection;
@@ -318,17 +323,17 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         /**
          * @return compatibleConnection
          */
-        public java.util.List < CompatibleConnection> getCompatibleConnection() {
+        public java.util.List<CompatibleConnection> getCompatibleConnection() {
             return this.compatibleConnection;
         }
 
         public static final class Builder {
-            private java.util.List < CompatibleConnection> compatibleConnection; 
+            private java.util.List<CompatibleConnection> compatibleConnection; 
 
             /**
              * CompatibleConnection.
              */
-            public Builder compatibleConnection(java.util.List < CompatibleConnection> compatibleConnection) {
+            public Builder compatibleConnection(java.util.List<CompatibleConnection> compatibleConnection) {
                 this.compatibleConnection = compatibleConnection;
                 return this;
             }
@@ -675,7 +680,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
      */
     public static class NetworkAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkAddress")
-        private java.util.List < NetworkAddress> networkAddress;
+        private java.util.List<NetworkAddress> networkAddress;
 
         private NetworkAddresses(Builder builder) {
             this.networkAddress = builder.networkAddress;
@@ -692,12 +697,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
         /**
          * @return networkAddress
          */
-        public java.util.List < NetworkAddress> getNetworkAddress() {
+        public java.util.List<NetworkAddress> getNetworkAddress() {
             return this.networkAddress;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkAddress> networkAddress; 
+            private java.util.List<NetworkAddress> networkAddress; 
 
             /**
              * <p>The connection string of the instance.</p>
@@ -705,7 +710,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
              */
-            public Builder networkAddress(java.util.List < NetworkAddress> networkAddress) {
+            public Builder networkAddress(java.util.List<NetworkAddress> networkAddress) {
                 this.networkAddress = networkAddress;
                 return this;
             }

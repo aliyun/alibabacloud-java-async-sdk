@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
      */
     public static class HistoricalParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HistoricalParameter")
-        private java.util.List < HistoricalParameter> historicalParameter;
+        private java.util.List<HistoricalParameter> historicalParameter;
 
         private HistoricalParameters(Builder builder) {
             this.historicalParameter = builder.historicalParameter;
@@ -218,17 +223,17 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
         /**
          * @return historicalParameter
          */
-        public java.util.List < HistoricalParameter> getHistoricalParameter() {
+        public java.util.List<HistoricalParameter> getHistoricalParameter() {
             return this.historicalParameter;
         }
 
         public static final class Builder {
-            private java.util.List < HistoricalParameter> historicalParameter; 
+            private java.util.List<HistoricalParameter> historicalParameter; 
 
             /**
              * HistoricalParameter.
              */
-            public Builder historicalParameter(java.util.List < HistoricalParameter> historicalParameter) {
+            public Builder historicalParameter(java.util.List<HistoricalParameter> historicalParameter) {
                 this.historicalParameter = historicalParameter;
                 return this;
             }

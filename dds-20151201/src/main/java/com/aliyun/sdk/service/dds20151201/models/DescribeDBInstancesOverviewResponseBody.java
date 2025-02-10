@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBInstances")
-    private java.util.List < DBInstances> DBInstances;
+    private java.util.List<DBInstances> DBInstances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     /**
      * @return DBInstances
      */
-    public java.util.List < DBInstances> getDBInstances() {
+    public java.util.List<DBInstances> getDBInstances() {
         return this.DBInstances;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBInstances> DBInstances; 
+        private java.util.List<DBInstances> DBInstances; 
         private String requestId; 
         private String totalCount; 
 
         /**
          * <p>The information of instances.</p>
          */
-        public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
+        public Builder DBInstances(java.util.List<DBInstances> DBInstances) {
             this.DBInstances = DBInstances;
             return this;
         }
@@ -474,7 +479,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         private String lockMode;
 
         @com.aliyun.core.annotation.NameInMap("MongosList")
-        private java.util.List < MongosList> mongosList;
+        private java.util.List<MongosList> mongosList;
 
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
@@ -489,10 +494,10 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ShardList")
-        private java.util.List < ShardList> shardList;
+        private java.util.List<ShardList> shardList;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcAuthMode")
         private String vpcAuthMode;
@@ -651,7 +656,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         /**
          * @return mongosList
          */
-        public java.util.List < MongosList> getMongosList() {
+        public java.util.List<MongosList> getMongosList() {
             return this.mongosList;
         }
 
@@ -686,14 +691,14 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
         /**
          * @return shardList
          */
-        public java.util.List < ShardList> getShardList() {
+        public java.util.List<ShardList> getShardList() {
             return this.shardList;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -728,13 +733,13 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             private String kindCode; 
             private String lastDowngradeTime; 
             private String lockMode; 
-            private java.util.List < MongosList> mongosList; 
+            private java.util.List<MongosList> mongosList; 
             private String networkType; 
             private String regionId; 
             private String replicationFactor; 
             private String resourceGroupId; 
-            private java.util.List < ShardList> shardList; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<ShardList> shardList; 
+            private java.util.List<Tags> tags; 
             private String vpcAuthMode; 
             private String zoneId; 
 
@@ -955,7 +960,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
              * <p> This parameter is returned when the instance is a sharded cluster instance.</p>
              * </blockquote>
              */
-            public Builder mongosList(java.util.List < MongosList> mongosList) {
+            public Builder mongosList(java.util.List<MongosList> mongosList) {
                 this.mongosList = mongosList;
                 return this;
             }
@@ -1017,7 +1022,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
              * <p> This parameter is returned when the instance is a sharded cluster instance.</p>
              * </blockquote>
              */
-            public Builder shardList(java.util.List < ShardList> shardList) {
+            public Builder shardList(java.util.List<ShardList> shardList) {
                 this.shardList = shardList;
                 return this;
             }
@@ -1025,7 +1030,7 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
             /**
              * <p>The tags to add to the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

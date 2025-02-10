@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -66,6 +71,10 @@ public class DescribeDBInstancesOverviewRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowTags")
+    private Boolean showTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -92,6 +101,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.showTags = builder.showTags;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -202,6 +212,13 @@ public class DescribeDBInstancesOverviewRequest extends Request {
     }
 
     /**
+     * @return showTags
+     */
+    public Boolean getShowTags() {
+        return this.showTags;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -236,6 +253,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean showTags; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -259,6 +277,7 @@ public class DescribeDBInstancesOverviewRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.showTags = request.showTags;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -439,6 +458,15 @@ public class DescribeDBInstancesOverviewRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ShowTags.
+         */
+        public Builder showTags(Boolean showTags) {
+            this.putQueryParameter("ShowTags", showTags);
+            this.showTags = showTags;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
      */
     public static class EngineVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
-        private java.util.List < String > engineVersion;
+        private java.util.List<String> engineVersion;
 
         private EngineVersions(Builder builder) {
             this.engineVersion = builder.engineVersion;
@@ -102,17 +107,17 @@ public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
         /**
          * @return engineVersion
          */
-        public java.util.List < String > getEngineVersion() {
+        public java.util.List<String> getEngineVersion() {
             return this.engineVersion;
         }
 
         public static final class Builder {
-            private java.util.List < String > engineVersion; 
+            private java.util.List<String> engineVersion; 
 
             /**
              * EngineVersion.
              */
-            public Builder engineVersion(java.util.List < String > engineVersion) {
+            public Builder engineVersion(java.util.List<String> engineVersion) {
                 this.engineVersion = engineVersion;
                 return this;
             }

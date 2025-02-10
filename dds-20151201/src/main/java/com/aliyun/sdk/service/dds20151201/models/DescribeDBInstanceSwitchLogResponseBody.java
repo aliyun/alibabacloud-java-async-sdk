@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("LogItems")
-    private java.util.List < LogItems> logItems;
+    private java.util.List<LogItems> logItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -57,7 +62,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     /**
      * @return logItems
      */
-    public java.util.List < LogItems> getLogItems() {
+    public java.util.List<LogItems> getLogItems() {
         return this.logItems;
     }
 
@@ -91,7 +96,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceId; 
-        private java.util.List < LogItems> logItems; 
+        private java.util.List<LogItems> logItems; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         /**
          * <p>The primary/secondary switchover logs.</p>
          */
-        public Builder logItems(java.util.List < LogItems> logItems) {
+        public Builder logItems(java.util.List<LogItems> logItems) {
             this.logItems = logItems;
             return this;
         }

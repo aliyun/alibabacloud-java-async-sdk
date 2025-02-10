@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeKmsKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("KmsKeys")
-    private java.util.List < KmsKeys> kmsKeys;
+    private java.util.List<KmsKeys> kmsKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     /**
      * @return kmsKeys
      */
-    public java.util.List < KmsKeys> getKmsKeys() {
+    public java.util.List<KmsKeys> getKmsKeys() {
         return this.kmsKeys;
     }
 
@@ -46,13 +51,13 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < KmsKeys> kmsKeys; 
+        private java.util.List<KmsKeys> kmsKeys; 
         private String requestId; 
 
         /**
          * <p>The KMS keys.</p>
          */
-        public Builder kmsKeys(java.util.List < KmsKeys> kmsKeys) {
+        public Builder kmsKeys(java.util.List<KmsKeys> kmsKeys) {
             this.kmsKeys = kmsKeys;
             return this;
         }

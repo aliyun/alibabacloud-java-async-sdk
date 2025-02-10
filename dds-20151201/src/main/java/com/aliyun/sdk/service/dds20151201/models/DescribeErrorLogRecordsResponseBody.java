@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -327,7 +332,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogRecords")
-        private java.util.List < LogRecords> logRecords;
+        private java.util.List<LogRecords> logRecords;
 
         private Items(Builder builder) {
             this.logRecords = builder.logRecords;
@@ -344,17 +349,17 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         /**
          * @return logRecords
          */
-        public java.util.List < LogRecords> getLogRecords() {
+        public java.util.List<LogRecords> getLogRecords() {
             return this.logRecords;
         }
 
         public static final class Builder {
-            private java.util.List < LogRecords> logRecords; 
+            private java.util.List<LogRecords> logRecords; 
 
             /**
              * LogRecords.
              */
-            public Builder logRecords(java.util.List < LogRecords> logRecords) {
+            public Builder logRecords(java.util.List<LogRecords> logRecords) {
                 this.logRecords = logRecords;
                 return this;
             }

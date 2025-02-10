@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -302,7 +307,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
      */
     public static class ReplicaSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReplicaSet")
-        private java.util.List < ReplicaSet> replicaSet;
+        private java.util.List<ReplicaSet> replicaSet;
 
         private ReplicaSets(Builder builder) {
             this.replicaSet = builder.replicaSet;
@@ -319,17 +324,17 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
         /**
          * @return replicaSet
          */
-        public java.util.List < ReplicaSet> getReplicaSet() {
+        public java.util.List<ReplicaSet> getReplicaSet() {
             return this.replicaSet;
         }
 
         public static final class Builder {
-            private java.util.List < ReplicaSet> replicaSet; 
+            private java.util.List<ReplicaSet> replicaSet; 
 
             /**
              * ReplicaSet.
              */
-            public Builder replicaSet(java.util.List < ReplicaSet> replicaSet) {
+            public Builder replicaSet(java.util.List<ReplicaSet> replicaSet) {
                 this.replicaSet = replicaSet;
                 return this;
             }

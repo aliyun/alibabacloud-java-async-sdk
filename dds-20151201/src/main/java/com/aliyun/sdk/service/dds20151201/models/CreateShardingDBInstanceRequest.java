@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigServer")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ConfigServer> configServer;
+    private java.util.List<ConfigServer> configServer;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
@@ -74,7 +79,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Mongos")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Mongos> mongos;
+    private java.util.List<Mongos> mongos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkType")
@@ -108,7 +113,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReplicaSet")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ReplicaSet> replicaSet;
+    private java.util.List<ReplicaSet> replicaSet;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -156,7 +161,7 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -263,7 +268,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return configServer
      */
-    public java.util.List < ConfigServer> getConfigServer() {
+    public java.util.List<ConfigServer> getConfigServer() {
         return this.configServer;
     }
 
@@ -326,7 +331,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return mongos
      */
-    public java.util.List < Mongos> getMongos() {
+    public java.util.List<Mongos> getMongos() {
         return this.mongos;
     }
 
@@ -382,7 +387,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return replicaSet
      */
-    public java.util.List < ReplicaSet> getReplicaSet() {
+    public java.util.List<ReplicaSet> getReplicaSet() {
         return this.replicaSet;
     }
 
@@ -466,7 +471,7 @@ public class CreateShardingDBInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -497,7 +502,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String backupId; 
         private String chargeType; 
         private String clientToken; 
-        private java.util.List < ConfigServer> configServer; 
+        private java.util.List<ConfigServer> configServer; 
         private String DBInstanceDescription; 
         private String destRegion; 
         private Boolean encrypted; 
@@ -506,7 +511,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String engineVersion; 
         private String globalSecurityGroupIds; 
         private String hiddenZoneId; 
-        private java.util.List < Mongos> mongos; 
+        private java.util.List<Mongos> mongos; 
         private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -514,7 +519,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String protocolType; 
         private Long provisionedIops; 
         private String regionId; 
-        private java.util.List < ReplicaSet> replicaSet; 
+        private java.util.List<ReplicaSet> replicaSet; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -526,7 +531,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String srcRegion; 
         private String storageEngine; 
         private String storageType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -663,7 +668,7 @@ public class CreateShardingDBInstanceRequest extends Request {
          * <p>The ConfigServer nodes of the instance.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder configServer(java.util.List < ConfigServer> configServer) {
+        public Builder configServer(java.util.List<ConfigServer> configServer) {
             this.putQueryParameter("ConfigServer", configServer);
             this.configServer = configServer;
             return this;
@@ -820,7 +825,7 @@ public class CreateShardingDBInstanceRequest extends Request {
          * <p>The mongos nodes of the instance.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder mongos(java.util.List < Mongos> mongos) {
+        public Builder mongos(java.util.List<Mongos> mongos) {
             this.putQueryParameter("Mongos", mongos);
             this.mongos = mongos;
             return this;
@@ -918,7 +923,7 @@ public class CreateShardingDBInstanceRequest extends Request {
          * <p>The information of the shard node.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder replicaSet(java.util.List < ReplicaSet> replicaSet) {
+        public Builder replicaSet(java.util.List<ReplicaSet> replicaSet) {
             this.putQueryParameter("ReplicaSet", replicaSet);
             this.replicaSet = replicaSet;
             return this;
@@ -1123,7 +1128,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         /**
          * <p>The custom tags that you want to add to the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

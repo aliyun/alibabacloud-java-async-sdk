@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdsEcsSecurityGroupRel")
-        private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
+        private java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
 
         private Items(Builder builder) {
             this.rdsEcsSecurityGroupRel = builder.rdsEcsSecurityGroupRel;
@@ -199,17 +204,17 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         /**
          * @return rdsEcsSecurityGroupRel
          */
-        public java.util.List < RdsEcsSecurityGroupRel> getRdsEcsSecurityGroupRel() {
+        public java.util.List<RdsEcsSecurityGroupRel> getRdsEcsSecurityGroupRel() {
             return this.rdsEcsSecurityGroupRel;
         }
 
         public static final class Builder {
-            private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel; 
+            private java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel; 
 
             /**
              * RdsEcsSecurityGroupRel.
              */
-            public Builder rdsEcsSecurityGroupRel(java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
+            public Builder rdsEcsSecurityGroupRel(java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
                 this.rdsEcsSecurityGroupRel = rdsEcsSecurityGroupRel;
                 return this;
             }
