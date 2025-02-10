@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcpeer20220101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcPeerConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcPeerConnectionsResponseBody</p>
  */
 public class ListVpcPeerConnectionsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpcPeerConnects")
-    private java.util.List < VpcPeerConnects> vpcPeerConnects;
+    @com.aliyun.core.annotation.NameInMap("VpcPeerConnects")
+    private java.util.List<VpcPeerConnects> vpcPeerConnects;
 
     private ListVpcPeerConnectionsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
     /**
      * @return vpcPeerConnects
      */
-    public java.util.List < VpcPeerConnects> getVpcPeerConnects() {
+    public java.util.List<VpcPeerConnects> getVpcPeerConnects() {
         return this.vpcPeerConnects;
     }
 
@@ -83,10 +88,13 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VpcPeerConnects> vpcPeerConnects; 
+        private java.util.List<VpcPeerConnects> vpcPeerConnects; 
 
         /**
-         * The number of entries per page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,11 +102,14 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+         * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -106,7 +117,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED39DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +128,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -122,9 +139,9 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the VPC peering connections.
+         * <p>The details of the VPC peering connections.</p>
          */
-        public Builder vpcPeerConnects(java.util.List < VpcPeerConnects> vpcPeerConnects) {
+        public Builder vpcPeerConnects(java.util.List<VpcPeerConnects> vpcPeerConnects) {
             this.vpcPeerConnects = vpcPeerConnects;
             return this;
         }
@@ -135,14 +152,20 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcPeerConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcPeerConnectionsResponseBody</p>
+     */
     public static class AcceptingVpc extends TeaModel {
-        @NameInMap("Ipv4Cidrs")
-        private java.util.List < String > ipv4Cidrs;
+        @com.aliyun.core.annotation.NameInMap("Ipv4Cidrs")
+        private java.util.List<String> ipv4Cidrs;
 
-        @NameInMap("Ipv6Cidrs")
-        private java.util.List < String > ipv6Cidrs;
+        @com.aliyun.core.annotation.NameInMap("Ipv6Cidrs")
+        private java.util.List<String> ipv6Cidrs;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private AcceptingVpc(Builder builder) {
@@ -162,14 +185,14 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         /**
          * @return ipv4Cidrs
          */
-        public java.util.List < String > getIpv4Cidrs() {
+        public java.util.List<String> getIpv4Cidrs() {
             return this.ipv4Cidrs;
         }
 
         /**
          * @return ipv6Cidrs
          */
-        public java.util.List < String > getIpv6Cidrs() {
+        public java.util.List<String> getIpv6Cidrs() {
             return this.ipv6Cidrs;
         }
 
@@ -181,28 +204,31 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv4Cidrs; 
-            private java.util.List < String > ipv6Cidrs; 
+            private java.util.List<String> ipv4Cidrs; 
+            private java.util.List<String> ipv6Cidrs; 
             private String vpcId; 
 
             /**
-             * The CIDR block of the accepter VPC.
+             * <p>The CIDR block of the accepter VPC.</p>
              */
-            public Builder ipv4Cidrs(java.util.List < String > ipv4Cidrs) {
+            public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
                 return this;
             }
 
             /**
-             * The IPv6 CIDR block of the accepter VPC.
+             * <p>The IPv6 CIDR block of the accepter VPC.</p>
              */
-            public Builder ipv6Cidrs(java.util.List < String > ipv6Cidrs) {
+            public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
                 this.ipv6Cidrs = ipv6Cidrs;
                 return this;
             }
 
             /**
-             * The ID of the accepter VPC.
+             * <p>The ID of the accepter VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1vzjkp2q1xgnind****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -216,11 +242,17 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcPeerConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcPeerConnectionsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -255,7 +287,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -263,7 +298,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -277,14 +315,20 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcPeerConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcPeerConnectionsResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
-        @NameInMap("Ipv4Cidrs")
-        private java.util.List < String > ipv4Cidrs;
+        @com.aliyun.core.annotation.NameInMap("Ipv4Cidrs")
+        private java.util.List<String> ipv4Cidrs;
 
-        @NameInMap("Ipv6Cidrs")
-        private java.util.List < String > ipv6Cidrs;
+        @com.aliyun.core.annotation.NameInMap("Ipv6Cidrs")
+        private java.util.List<String> ipv6Cidrs;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Vpc(Builder builder) {
@@ -304,14 +348,14 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         /**
          * @return ipv4Cidrs
          */
-        public java.util.List < String > getIpv4Cidrs() {
+        public java.util.List<String> getIpv4Cidrs() {
             return this.ipv4Cidrs;
         }
 
         /**
          * @return ipv6Cidrs
          */
-        public java.util.List < String > getIpv6Cidrs() {
+        public java.util.List<String> getIpv6Cidrs() {
             return this.ipv6Cidrs;
         }
 
@@ -323,28 +367,31 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv4Cidrs; 
-            private java.util.List < String > ipv6Cidrs; 
+            private java.util.List<String> ipv4Cidrs; 
+            private java.util.List<String> ipv6Cidrs; 
             private String vpcId; 
 
             /**
-             * The CIDR block of the requester VPC.
+             * <p>The CIDR block of the requester VPC.</p>
              */
-            public Builder ipv4Cidrs(java.util.List < String > ipv4Cidrs) {
+            public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
                 return this;
             }
 
             /**
-             * The IPv6 CIDR block of the requester VPC.
+             * <p>The IPv6 CIDR block of the requester VPC.</p>
              */
-            public Builder ipv6Cidrs(java.util.List < String > ipv6Cidrs) {
+            public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
                 this.ipv6Cidrs = ipv6Cidrs;
                 return this;
             }
 
             /**
-             * The ID of the requester VPC.
+             * <p>The ID of the requester VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1gsk7h12ew7oegk****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -358,56 +405,65 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcPeerConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcPeerConnectionsResponseBody</p>
+     */
     public static class VpcPeerConnects extends TeaModel {
-        @NameInMap("AcceptingOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("AcceptingOwnerUid")
         private Long acceptingOwnerUid;
 
-        @NameInMap("AcceptingRegionId")
+        @com.aliyun.core.annotation.NameInMap("AcceptingRegionId")
         private String acceptingRegionId;
 
-        @NameInMap("AcceptingVpc")
+        @com.aliyun.core.annotation.NameInMap("AcceptingVpc")
         private AcceptingVpc acceptingVpc;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BizStatus")
+        @com.aliyun.core.annotation.NameInMap("BizStatus")
         private String bizStatus;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtExpired")
+        @com.aliyun.core.annotation.NameInMap("GmtExpired")
         private String gmtExpired;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("LinkType")
+        private String linkType;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Vpc")
+        @com.aliyun.core.annotation.NameInMap("Vpc")
         private Vpc vpc;
 
         private VpcPeerConnects(Builder builder) {
@@ -421,6 +477,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             this.gmtExpired = builder.gmtExpired;
             this.gmtModified = builder.gmtModified;
             this.instanceId = builder.instanceId;
+            this.linkType = builder.linkType;
             this.name = builder.name;
             this.ownerId = builder.ownerId;
             this.regionId = builder.regionId;
@@ -509,6 +566,13 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return linkType
+         */
+        public String getLinkType() {
+            return this.linkType;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -546,7 +610,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -568,16 +632,20 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             private String gmtExpired; 
             private String gmtModified; 
             private String instanceId; 
+            private String linkType; 
             private String name; 
             private Long ownerId; 
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Vpc vpc; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the accepter VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the accepter VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder acceptingOwnerUid(Long acceptingOwnerUid) {
                 this.acceptingOwnerUid = acceptingOwnerUid;
@@ -585,7 +653,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the accepter VPC.
+             * <p>The region ID of the accepter VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder acceptingRegionId(String acceptingRegionId) {
                 this.acceptingRegionId = acceptingRegionId;
@@ -593,7 +664,7 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the accepter VPC.
+             * <p>The details of the accepter VPC.</p>
              */
             public Builder acceptingVpc(AcceptingVpc acceptingVpc) {
                 this.acceptingVpc = acceptingVpc;
@@ -601,15 +672,18 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth of the VPC peering connection. Unit: Mbit/s. The value is an integer greater than 0.
-             * <p>
+             * <p>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value is an integer greater than 0.</p>
+             * <blockquote>
+             * <p> If the value is set to -1, it indicates that no limit is imposed on the bandwidth.</p>
+             * </blockquote>
+             * <p>Default value:</p>
+             * <ul>
+             * <li>The default bandwidth of an inter-region VPC peering connection is <strong>1024</strong> Mbit/s.</li>
+             * <li>The default bandwidth of an intra-region VPC peering connection is <strong>-1</strong> Mbit/s.</li>
+             * </ul>
              * 
-             * >  If the value is set to -1, it indicates that no limit is imposed on the bandwidth.
-             * 
-             * Default value:
-             * 
-             * *   The default bandwidth of an inter-region VPC peering connection is **1024** Mbit/s.
-             * *   The default bandwidth of an intra-region VPC peering connection is **-1** Mbit/s.
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -617,11 +691,14 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The business status of the VPC peering connection. Valid values:
-             * <p>
+             * <p>The business status of the VPC peering connection. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong></li>
+             * <li><strong>FinancialLocked</strong></li>
+             * </ul>
              * 
-             * *   **Normal**
-             * *   **FinancialLocked**
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder bizStatus(String bizStatus) {
                 this.bizStatus = bizStatus;
@@ -629,7 +706,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the VPC peering connection.
+             * <p>The description of the VPC peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -637,7 +717,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPC peering connection was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+             * <p>The time when the VPC peering connection was created. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-24T09:02:36Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -645,10 +728,11 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the VPC peering connection. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
-             * <p>
+             * <p>The expiration time of the VPC peering connection. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+             * <p>The expiration time is returned only when the <strong>Status</strong> of the VPC peering connection is <strong>Accepting</strong> or <strong>Expired</strong>. Otherwise, <strong>null</strong> is returned.</p>
              * 
-             * The expiration time is returned only when the **Status** of the VPC peering connection is **Accepting** or **Expired**. Otherwise, **null** is returned.
+             * <strong>example:</strong>
+             * <p>2022-05-01T09:02:36Z</p>
              */
             public Builder gmtExpired(String gmtExpired) {
                 this.gmtExpired = gmtExpired;
@@ -656,7 +740,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPC peering connection was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.
+             * <p>The time when the VPC peering connection was modified. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-24T19:20:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -664,7 +751,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC peering connection.
+             * <p>The ID of the VPC peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcc-lnk0m24khwvtkm****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -672,7 +762,21 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC peering connection.
+             * <p>The link type of the VPC peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gold</p>
+             */
+            public Builder linkType(String linkType) {
+                this.linkType = linkType;
+                return this;
+            }
+
+            /**
+             * <p>The name of the VPC peering connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpcpeer</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -680,7 +784,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the requester VPC belongs.
+             * <p>The ID of the Alibaba Cloud account to which the requester VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253460731706911258</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -688,7 +795,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the requester VPC.
+             * <p>The region ID of the requester VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -696,7 +806,10 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2gvbs746gt4q</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -704,19 +817,21 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC peering connection. Valid values:
-             * <p>
+             * <p>The status of the VPC peering connection. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Accepting</strong></li>
+             * <li><strong>Updating</strong></li>
+             * <li><strong>Rejected</strong></li>
+             * <li><strong>Expired</strong></li>
+             * <li><strong>Activated</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * <p>For more information about the status of VPC peering connections, see <a href="https://help.aliyun.com/document_detail/418507.html">Overview of VPC peering connections</a>.</p>
              * 
-             * *   **Creating**
-             * *   **Accepting**
-             * *   **Updating**
-             * *   **Rejected**
-             * *   **Expired**
-             * *   **Activated**
-             * *   **Deleting**
-             * *   **Deleted**
-             * 
-             * For more information about the status of VPC peering connections, see [Overview of VPC peering connections](~~418507~~).
+             * <strong>example:</strong>
+             * <p>Activated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -724,15 +839,15 @@ public class ListVpcPeerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag list.
+             * <p>The tag list.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The details of the requester VPC.
+             * <p>The details of the requester VPC.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
