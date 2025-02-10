@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
      */
     public static class AlertGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertGroup")
-        private java.util.List < AlertGroup> alertGroup;
+        private java.util.List<AlertGroup> alertGroup;
 
         private AlertGroups(Builder builder) {
             this.alertGroup = builder.alertGroup;
@@ -149,17 +154,17 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
         /**
          * @return alertGroup
          */
-        public java.util.List < AlertGroup> getAlertGroup() {
+        public java.util.List<AlertGroup> getAlertGroup() {
             return this.alertGroup;
         }
 
         public static final class Builder {
-            private java.util.List < AlertGroup> alertGroup; 
+            private java.util.List<AlertGroup> alertGroup; 
 
             /**
              * AlertGroup.
              */
-            public Builder alertGroup(java.util.List < AlertGroup> alertGroup) {
+            public Builder alertGroup(java.util.List<AlertGroup> alertGroup) {
                 this.alertGroup = alertGroup;
                 return this;
             }

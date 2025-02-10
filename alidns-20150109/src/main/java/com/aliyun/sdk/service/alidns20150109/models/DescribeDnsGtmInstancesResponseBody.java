@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GtmInstances")
-    private java.util.List < GtmInstances> gtmInstances;
+    private java.util.List<GtmInstances> gtmInstances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     /**
      * @return gtmInstances
      */
-    public java.util.List < GtmInstances> getGtmInstances() {
+    public java.util.List<GtmInstances> getGtmInstances() {
         return this.gtmInstances;
     }
 
@@ -90,7 +95,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GtmInstances> gtmInstances; 
+        private java.util.List<GtmInstances> gtmInstances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         /**
          * <p>The Global Traffic Manager (GTM) instances.</p>
          */
-        public Builder gtmInstances(java.util.List < GtmInstances> gtmInstances) {
+        public Builder gtmInstances(java.util.List<GtmInstances> gtmInstances) {
             this.gtmInstances = gtmInstances;
             return this;
         }
@@ -312,7 +317,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
      */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
-        private java.util.List < AlertConfig> alertConfig;
+        private java.util.List<AlertConfig> alertConfig;
 
         @com.aliyun.core.annotation.NameInMap("AlertGroup")
         private String alertGroup;
@@ -365,7 +370,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         /**
          * @return alertConfig
          */
-        public java.util.List < AlertConfig> getAlertConfig() {
+        public java.util.List<AlertConfig> getAlertConfig() {
             return this.alertConfig;
         }
 
@@ -433,7 +438,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertConfig> alertConfig; 
+            private java.util.List<AlertConfig> alertConfig; 
             private String alertGroup; 
             private String cnameType; 
             private String instanceName; 
@@ -447,7 +452,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
             /**
              * <p>The alert notification method.</p>
              */
-            public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+            public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
                 return this;
             }

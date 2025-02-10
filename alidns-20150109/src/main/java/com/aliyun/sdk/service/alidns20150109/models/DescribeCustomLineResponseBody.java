@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     private Long id;
 
     @com.aliyun.core.annotation.NameInMap("IpSegmentList")
-    private java.util.List < IpSegmentList> ipSegmentList;
+    private java.util.List<IpSegmentList> ipSegmentList;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -71,7 +76,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     /**
      * @return ipSegmentList
      */
-    public java.util.List < IpSegmentList> getIpSegmentList() {
+    public java.util.List<IpSegmentList> getIpSegmentList() {
         return this.ipSegmentList;
     }
 
@@ -93,7 +98,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         private String code; 
         private String domainName; 
         private Long id; 
-        private java.util.List < IpSegmentList> ipSegmentList; 
+        private java.util.List<IpSegmentList> ipSegmentList; 
         private String name; 
         private String requestId; 
 
@@ -133,7 +138,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         /**
          * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
          */
-        public Builder ipSegmentList(java.util.List < IpSegmentList> ipSegmentList) {
+        public Builder ipSegmentList(java.util.List<IpSegmentList> ipSegmentList) {
             this.ipSegmentList = ipSegmentList;
             return this;
         }

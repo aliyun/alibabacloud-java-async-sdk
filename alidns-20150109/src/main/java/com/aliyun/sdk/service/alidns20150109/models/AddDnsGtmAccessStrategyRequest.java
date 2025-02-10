@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultAddrPool")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DefaultAddrPool> defaultAddrPool;
+    private java.util.List<DefaultAddrPool> defaultAddrPool;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolType")
@@ -42,7 +47,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FailoverAddrPool")
-    private java.util.List < FailoverAddrPool> failoverAddrPool;
+    private java.util.List<FailoverAddrPool> failoverAddrPool;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolType")
@@ -126,7 +131,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
     /**
      * @return defaultAddrPool
      */
-    public java.util.List < DefaultAddrPool> getDefaultAddrPool() {
+    public java.util.List<DefaultAddrPool> getDefaultAddrPool() {
         return this.defaultAddrPool;
     }
 
@@ -168,7 +173,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
     /**
      * @return failoverAddrPool
      */
-    public java.util.List < FailoverAddrPool> getFailoverAddrPool() {
+    public java.util.List<FailoverAddrPool> getFailoverAddrPool() {
         return this.failoverAddrPool;
     }
 
@@ -243,13 +248,13 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddDnsGtmAccessStrategyRequest, Builder> {
-        private java.util.List < DefaultAddrPool> defaultAddrPool; 
+        private java.util.List<DefaultAddrPool> defaultAddrPool; 
         private String defaultAddrPoolType; 
         private String defaultLatencyOptimization; 
         private String defaultLbaStrategy; 
         private Integer defaultMaxReturnAddrNum; 
         private Integer defaultMinAvailableAddrNum; 
-        private java.util.List < FailoverAddrPool> failoverAddrPool; 
+        private java.util.List<FailoverAddrPool> failoverAddrPool; 
         private String failoverAddrPoolType; 
         private String failoverLatencyOptimization; 
         private String failoverLbaStrategy; 
@@ -290,7 +295,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
          * <p>The address pools in the primary address pool set.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder defaultAddrPool(java.util.List < DefaultAddrPool> defaultAddrPool) {
+        public Builder defaultAddrPool(java.util.List<DefaultAddrPool> defaultAddrPool) {
             this.putQueryParameter("DefaultAddrPool", defaultAddrPool);
             this.defaultAddrPool = defaultAddrPool;
             return this;
@@ -374,7 +379,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         /**
          * <p>The address pools in the secondary address pool set. If no address pool exists in the secondary address pool set, set this parameter to EMPTY.</p>
          */
-        public Builder failoverAddrPool(java.util.List < FailoverAddrPool> failoverAddrPool) {
+        public Builder failoverAddrPool(java.util.List<FailoverAddrPool> failoverAddrPool) {
             this.putQueryParameter("FailoverAddrPool", failoverAddrPool);
             this.failoverAddrPool = failoverAddrPool;
             return this;

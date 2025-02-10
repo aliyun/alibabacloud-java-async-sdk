@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,22 +84,25 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * Data.
+         * <p>The statistics on the DNS requests.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: <strong>1 to 100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -176,7 +193,12 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             private String threatType; 
 
             /**
-             * ThreatLevel.
+             * <p>The current version does not support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -184,7 +206,12 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatType.
+             * <p>The current version does not support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder threatType(String threatType) {
                 this.threatType = threatType;
@@ -230,7 +257,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         private Long threatCount;
 
         @com.aliyun.core.annotation.NameInMap("ThreatInfo")
-        private java.util.List < ThreatInfo> threatInfo;
+        private java.util.List<ThreatInfo> threatInfo;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -343,7 +370,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         /**
          * @return threatInfo
          */
-        public java.util.List < ThreatInfo> getThreatInfo() {
+        public java.util.List<ThreatInfo> getThreatInfo() {
             return this.threatInfo;
         }
 
@@ -412,7 +439,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             private String maxThreatLevel; 
             private String subDomain; 
             private Long threatCount; 
-            private java.util.List < ThreatInfo> threatInfo; 
+            private java.util.List<ThreatInfo> threatInfo; 
             private Long totalCount; 
             private Long udpTotalCount; 
             private Long v4Count; 
@@ -423,7 +450,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             private Long v6HttpsCount; 
 
             /**
-             * DohTotalCount.
+             * <p>The total number of DoH requests, including the HTTP and HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dohTotalCount(Long dohTotalCount) {
                 this.dohTotalCount = dohTotalCount;
@@ -431,7 +461,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -439,7 +472,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpCount.
+             * <p>The number of HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder httpCount(Long httpCount) {
                 this.httpCount = httpCount;
@@ -447,7 +483,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsCount.
+             * <p>The number of HTTPS requests. On the Traffic Analysis tab of the public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder httpsCount(Long httpsCount) {
                 this.httpsCount = httpsCount;
@@ -455,7 +494,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IpCount.
+             * <p>The number of source IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ipCount(Long ipCount) {
                 this.ipCount = ipCount;
@@ -463,7 +505,12 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxThreatLevel.
+             * <p>The current version does not support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder maxThreatLevel(String maxThreatLevel) {
                 this.maxThreatLevel = maxThreatLevel;
@@ -471,7 +518,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SubDomain.
+             * <p>The subdomain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -479,7 +529,12 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatCount.
+             * <p>The current version does not support this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder threatCount(Long threatCount) {
                 this.threatCount = threatCount;
@@ -487,15 +542,18 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreatInfo.
+             * <p>The current version does not support this parameter.</p>
              */
-            public Builder threatInfo(java.util.List < ThreatInfo> threatInfo) {
+            public Builder threatInfo(java.util.List<ThreatInfo> threatInfo) {
                 this.threatInfo = threatInfo;
                 return this;
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -503,7 +561,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UdpTotalCount.
+             * <p>The total number of UDP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder udpTotalCount(Long udpTotalCount) {
                 this.udpTotalCount = udpTotalCount;
@@ -511,7 +572,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V4Count.
+             * <p>The number of IPv4-based requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v4Count(Long v4Count) {
                 this.v4Count = v4Count;
@@ -519,7 +583,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V4HttpCount.
+             * <p>The number of IPv4-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v4HttpCount(Long v4HttpCount) {
                 this.v4HttpCount = v4HttpCount;
@@ -527,7 +594,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V4HttpsCount.
+             * <p>The number of IPv4-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v4HttpsCount(Long v4HttpsCount) {
                 this.v4HttpsCount = v4HttpsCount;
@@ -535,7 +605,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V6Count.
+             * <p>The number of IPv6-based requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v6Count(Long v6Count) {
                 this.v6Count = v6Count;
@@ -543,7 +616,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V6HttpCount.
+             * <p>The number of IPv6-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v6HttpCount(Long v6HttpCount) {
                 this.v6HttpCount = v6HttpCount;
@@ -551,7 +627,10 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * V6HttpsCount.
+             * <p>The number of IPv6-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v6HttpsCount(Long v6HttpsCount) {
                 this.v6HttpsCount = v6HttpsCount;

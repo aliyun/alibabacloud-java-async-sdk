@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1005,7 +1010,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
      */
     public static class DnsProducts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsProduct")
-        private java.util.List < DnsProduct> dnsProduct;
+        private java.util.List<DnsProduct> dnsProduct;
 
         private DnsProducts(Builder builder) {
             this.dnsProduct = builder.dnsProduct;
@@ -1022,17 +1027,17 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
         /**
          * @return dnsProduct
          */
-        public java.util.List < DnsProduct> getDnsProduct() {
+        public java.util.List<DnsProduct> getDnsProduct() {
             return this.dnsProduct;
         }
 
         public static final class Builder {
-            private java.util.List < DnsProduct> dnsProduct; 
+            private java.util.List<DnsProduct> dnsProduct; 
 
             /**
              * DnsProduct.
              */
-            public Builder dnsProduct(java.util.List < DnsProduct> dnsProduct) {
+            public Builder dnsProduct(java.util.List<DnsProduct> dnsProduct) {
                 this.dnsProduct = dnsProduct;
                 return this;
             }

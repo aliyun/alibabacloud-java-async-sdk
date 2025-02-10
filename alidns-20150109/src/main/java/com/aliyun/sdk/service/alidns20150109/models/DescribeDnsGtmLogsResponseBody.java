@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -379,7 +384,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
      */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Log")
-        private java.util.List < Log> log;
+        private java.util.List<Log> log;
 
         private Logs(Builder builder) {
             this.log = builder.log;
@@ -396,17 +401,17 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         /**
          * @return log
          */
-        public java.util.List < Log> getLog() {
+        public java.util.List<Log> getLog() {
             return this.log;
         }
 
         public static final class Builder {
-            private java.util.List < Log> log; 
+            private java.util.List<Log> log; 
 
             /**
              * Log.
              */
-            public Builder log(java.util.List < Log> log) {
+            public Builder log(java.util.List<Log> log) {
                 this.log = log;
                 return this;
             }

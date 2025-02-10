@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateCustomLineRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpSegment")
-    private java.util.List < IpSegment> ipSegment;
+    private java.util.List<IpSegment> ipSegment;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -53,7 +58,7 @@ public class UpdateCustomLineRequest extends Request {
     /**
      * @return ipSegment
      */
-    public java.util.List < IpSegment> getIpSegment() {
+    public java.util.List<IpSegment> getIpSegment() {
         return this.ipSegment;
     }
 
@@ -79,7 +84,7 @@ public class UpdateCustomLineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCustomLineRequest, Builder> {
-        private java.util.List < IpSegment> ipSegment; 
+        private java.util.List<IpSegment> ipSegment; 
         private String lang; 
         private Long lineId; 
         private String lineName; 
@@ -99,7 +104,7 @@ public class UpdateCustomLineRequest extends Request {
         /**
          * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
          */
-        public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
+        public Builder ipSegment(java.util.List<IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
             this.ipSegment = ipSegment;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -535,7 +540,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
      */
     public static class HealthTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthTask")
-        private java.util.List < HealthTask> healthTask;
+        private java.util.List<HealthTask> healthTask;
 
         private HealthTasks(Builder builder) {
             this.healthTask = builder.healthTask;
@@ -552,17 +557,17 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
         /**
          * @return healthTask
          */
-        public java.util.List < HealthTask> getHealthTask() {
+        public java.util.List<HealthTask> getHealthTask() {
             return this.healthTask;
         }
 
         public static final class Builder {
-            private java.util.List < HealthTask> healthTask; 
+            private java.util.List<HealthTask> healthTask; 
 
             /**
              * HealthTask.
              */
-            public Builder healthTask(java.util.List < HealthTask> healthTask) {
+            public Builder healthTask(java.util.List<HealthTask> healthTask) {
                 this.healthTask = healthTask;
                 return this;
             }
@@ -582,7 +587,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
      */
     public static class RequestSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestSource")
-        private java.util.List < String > requestSource;
+        private java.util.List<String> requestSource;
 
         private RequestSource(Builder builder) {
             this.requestSource = builder.requestSource;
@@ -599,17 +604,17 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
         /**
          * @return requestSource
          */
-        public java.util.List < String > getRequestSource() {
+        public java.util.List<String> getRequestSource() {
             return this.requestSource;
         }
 
         public static final class Builder {
-            private java.util.List < String > requestSource; 
+            private java.util.List<String> requestSource; 
 
             /**
              * RequestSource.
              */
-            public Builder requestSource(java.util.List < String > requestSource) {
+            public Builder requestSource(java.util.List<String> requestSource) {
                 this.requestSource = requestSource;
                 return this;
             }
@@ -1167,7 +1172,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
      */
     public static class Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
-        private java.util.List < Address> address;
+        private java.util.List<Address> address;
 
         private Addresses(Builder builder) {
             this.address = builder.address;
@@ -1184,12 +1189,12 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
         /**
          * @return address
          */
-        public java.util.List < Address> getAddress() {
+        public java.util.List<Address> getAddress() {
             return this.address;
         }
 
         public static final class Builder {
-            private java.util.List < Address> address; 
+            private java.util.List<Address> address; 
 
             /**
              * <p>IP address or domain name.</p>
@@ -1197,7 +1202,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>223.5.XX.XX</p>
              */
-            public Builder address(java.util.List < Address> address) {
+            public Builder address(java.util.List<Address> address) {
                 this.address = address;
                 return this;
             }

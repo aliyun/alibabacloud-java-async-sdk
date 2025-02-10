@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCustomLinesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomLines")
-    private java.util.List < CustomLines> customLines;
+    private java.util.List<CustomLines> customLines;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     /**
      * @return customLines
      */
-    public java.util.List < CustomLines> getCustomLines() {
+    public java.util.List<CustomLines> getCustomLines() {
         return this.customLines;
     }
 
@@ -90,7 +95,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CustomLines> customLines; 
+        private java.util.List<CustomLines> customLines; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         /**
          * <p>The custom lines.</p>
          */
-        public Builder customLines(java.util.List < CustomLines> customLines) {
+        public Builder customLines(java.util.List<CustomLines> customLines) {
             this.customLines = customLines;
             return this;
         }

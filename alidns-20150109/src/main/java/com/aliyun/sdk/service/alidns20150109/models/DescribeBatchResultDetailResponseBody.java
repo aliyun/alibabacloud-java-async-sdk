@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -546,7 +551,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
      */
     public static class BatchResultDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchResultDetail")
-        private java.util.List < BatchResultDetail> batchResultDetail;
+        private java.util.List<BatchResultDetail> batchResultDetail;
 
         private BatchResultDetails(Builder builder) {
             this.batchResultDetail = builder.batchResultDetail;
@@ -563,17 +568,17 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         /**
          * @return batchResultDetail
          */
-        public java.util.List < BatchResultDetail> getBatchResultDetail() {
+        public java.util.List<BatchResultDetail> getBatchResultDetail() {
             return this.batchResultDetail;
         }
 
         public static final class Builder {
-            private java.util.List < BatchResultDetail> batchResultDetail; 
+            private java.util.List<BatchResultDetail> batchResultDetail; 
 
             /**
              * BatchResultDetail.
              */
-            public Builder batchResultDetail(java.util.List < BatchResultDetail> batchResultDetail) {
+            public Builder batchResultDetail(java.util.List<BatchResultDetail> batchResultDetail) {
                 this.batchResultDetail = batchResultDetail;
                 return this;
             }

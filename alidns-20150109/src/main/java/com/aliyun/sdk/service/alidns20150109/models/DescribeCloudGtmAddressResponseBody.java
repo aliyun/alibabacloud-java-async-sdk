@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -606,7 +611,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
      */
     public static class HealthTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthTask")
-        private java.util.List < HealthTask> healthTask;
+        private java.util.List<HealthTask> healthTask;
 
         private HealthTasks(Builder builder) {
             this.healthTask = builder.healthTask;
@@ -623,17 +628,17 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         /**
          * @return healthTask
          */
-        public java.util.List < HealthTask> getHealthTask() {
+        public java.util.List<HealthTask> getHealthTask() {
             return this.healthTask;
         }
 
         public static final class Builder {
-            private java.util.List < HealthTask> healthTask; 
+            private java.util.List<HealthTask> healthTask; 
 
             /**
              * HealthTask.
              */
-            public Builder healthTask(java.util.List < HealthTask> healthTask) {
+            public Builder healthTask(java.util.List<HealthTask> healthTask) {
                 this.healthTask = healthTask;
                 return this;
             }

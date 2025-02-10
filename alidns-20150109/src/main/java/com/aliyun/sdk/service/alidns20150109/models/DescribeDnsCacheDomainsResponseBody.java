@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         /**
          * <p>The domain names.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -254,7 +259,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         private String remark;
 
         @com.aliyun.core.annotation.NameInMap("SourceDnsServers")
-        private java.util.List < SourceDnsServers> sourceDnsServers;
+        private java.util.List<SourceDnsServers> sourceDnsServers;
 
         @com.aliyun.core.annotation.NameInMap("SourceEdns")
         private String sourceEdns;
@@ -371,7 +376,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         /**
          * @return sourceDnsServers
          */
-        public java.util.List < SourceDnsServers> getSourceDnsServers() {
+        public java.util.List<SourceDnsServers> getSourceDnsServers() {
             return this.sourceDnsServers;
         }
 
@@ -421,7 +426,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             private Long expireTimestamp; 
             private String instanceId; 
             private String remark; 
-            private java.util.List < SourceDnsServers> sourceDnsServers; 
+            private java.util.List<SourceDnsServers> sourceDnsServers; 
             private String sourceEdns; 
             private String sourceProtocol; 
             private String updateTime; 
@@ -541,7 +546,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             /**
              * <p>The origin DNS servers.</p>
              */
-            public Builder sourceDnsServers(java.util.List < SourceDnsServers> sourceDnsServers) {
+            public Builder sourceDnsServers(java.util.List<SourceDnsServers> sourceDnsServers) {
                 this.sourceDnsServers = sourceDnsServers;
                 return this;
             }

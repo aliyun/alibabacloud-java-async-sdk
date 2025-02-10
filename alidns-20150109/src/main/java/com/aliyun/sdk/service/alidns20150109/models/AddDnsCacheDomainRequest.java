@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class AddDnsCacheDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDnsServer")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SourceDnsServer> sourceDnsServer;
+    private java.util.List<SourceDnsServer> sourceDnsServer;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceEdns")
@@ -126,7 +131,7 @@ public class AddDnsCacheDomainRequest extends Request {
     /**
      * @return sourceDnsServer
      */
-    public java.util.List < SourceDnsServer> getSourceDnsServer() {
+    public java.util.List<SourceDnsServer> getSourceDnsServer() {
         return this.sourceDnsServer;
     }
 
@@ -151,7 +156,7 @@ public class AddDnsCacheDomainRequest extends Request {
         private String instanceId; 
         private String lang; 
         private String remark; 
-        private java.util.List < SourceDnsServer> sourceDnsServer; 
+        private java.util.List<SourceDnsServer> sourceDnsServer; 
         private String sourceEdns; 
         private String sourceProtocol; 
 
@@ -252,7 +257,7 @@ public class AddDnsCacheDomainRequest extends Request {
          * <p>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sourceDnsServer(java.util.List < SourceDnsServer> sourceDnsServer) {
+        public Builder sourceDnsServer(java.util.List<SourceDnsServer> sourceDnsServer) {
             this.putQueryParameter("SourceDnsServer", sourceDnsServer);
             this.sourceDnsServer = sourceDnsServer;
             return this;

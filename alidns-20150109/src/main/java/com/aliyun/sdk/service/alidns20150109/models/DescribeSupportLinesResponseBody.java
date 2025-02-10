@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -140,7 +145,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
+             * <p>The code of the parent line. Currently, no data is returned.</p>
              * 
              * <strong>example:</strong>
              * <p>unicom</p>
@@ -151,7 +156,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the line.</p>
+             * <p>The code of the child line.</p>
              * 
              * <strong>example:</strong>
              * <p>cn_unicom_shanxi</p>
@@ -162,7 +167,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the parent line.</p>
+             * <p>The display name of the line.</p>
              * 
              * <strong>example:</strong>
              * <p>China Unicom</p>
@@ -173,7 +178,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the line.</p>
+             * <p>The name of the child line.</p>
              * 
              * <strong>example:</strong>
              * <p>China Unicom_Shanxi</p>
@@ -198,7 +203,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
      */
     public static class RecordLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordLine")
-        private java.util.List < RecordLine> recordLine;
+        private java.util.List<RecordLine> recordLine;
 
         private RecordLines(Builder builder) {
             this.recordLine = builder.recordLine;
@@ -215,17 +220,17 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         /**
          * @return recordLine
          */
-        public java.util.List < RecordLine> getRecordLine() {
+        public java.util.List<RecordLine> getRecordLine() {
             return this.recordLine;
         }
 
         public static final class Builder {
-            private java.util.List < RecordLine> recordLine; 
+            private java.util.List<RecordLine> recordLine; 
 
             /**
              * RecordLine.
              */
-            public Builder recordLine(java.util.List < RecordLine> recordLine) {
+            public Builder recordLine(java.util.List<RecordLine> recordLine) {
                 this.recordLine = recordLine;
                 return this;
             }

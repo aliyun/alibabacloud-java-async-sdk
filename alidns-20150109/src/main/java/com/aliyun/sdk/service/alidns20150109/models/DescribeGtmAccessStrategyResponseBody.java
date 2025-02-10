@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -518,7 +523,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
      */
     public static class Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < Line> line;
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -535,17 +540,17 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }

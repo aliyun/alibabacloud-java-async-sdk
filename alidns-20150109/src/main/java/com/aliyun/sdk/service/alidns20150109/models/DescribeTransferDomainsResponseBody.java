@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
      */
     public static class DomainTransfers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainTransfer")
-        private java.util.List < DomainTransfer> domainTransfer;
+        private java.util.List<DomainTransfer> domainTransfer;
 
         private DomainTransfers(Builder builder) {
             this.domainTransfer = builder.domainTransfer;
@@ -333,17 +338,17 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         /**
          * @return domainTransfer
          */
-        public java.util.List < DomainTransfer> getDomainTransfer() {
+        public java.util.List<DomainTransfer> getDomainTransfer() {
             return this.domainTransfer;
         }
 
         public static final class Builder {
-            private java.util.List < DomainTransfer> domainTransfer; 
+            private java.util.List<DomainTransfer> domainTransfer; 
 
             /**
              * DomainTransfer.
              */
-            public Builder domainTransfer(java.util.List < DomainTransfer> domainTransfer) {
+            public Builder domainTransfer(java.util.List<DomainTransfer> domainTransfer) {
                 this.domainTransfer = domainTransfer;
                 return this;
             }

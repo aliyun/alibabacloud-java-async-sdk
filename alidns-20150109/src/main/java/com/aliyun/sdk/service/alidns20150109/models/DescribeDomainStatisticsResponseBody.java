@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
      */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Statistic")
-        private java.util.List < Statistic> statistic;
+        private java.util.List<Statistic> statistic;
 
         private Statistics(Builder builder) {
             this.statistic = builder.statistic;
@@ -195,17 +200,17 @@ public class DescribeDomainStatisticsResponseBody extends TeaModel {
         /**
          * @return statistic
          */
-        public java.util.List < Statistic> getStatistic() {
+        public java.util.List<Statistic> getStatistic() {
             return this.statistic;
         }
 
         public static final class Builder {
-            private java.util.List < Statistic> statistic; 
+            private java.util.List<Statistic> statistic; 
 
             /**
              * Statistic.
              */
-            public Builder statistic(java.util.List < Statistic> statistic) {
+            public Builder statistic(java.util.List<Statistic> statistic) {
                 this.statistic = statistic;
                 return this;
             }

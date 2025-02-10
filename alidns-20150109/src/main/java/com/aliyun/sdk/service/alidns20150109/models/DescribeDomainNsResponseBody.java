@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -171,7 +176,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
      */
     public static class DnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServer")
-        private java.util.List < String > dnsServer;
+        private java.util.List<String> dnsServer;
 
         private DnsServers(Builder builder) {
             this.dnsServer = builder.dnsServer;
@@ -188,17 +193,17 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         /**
          * @return dnsServer
          */
-        public java.util.List < String > getDnsServer() {
+        public java.util.List<String> getDnsServer() {
             return this.dnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsServer; 
+            private java.util.List<String> dnsServer; 
 
             /**
              * DnsServer.
              */
-            public Builder dnsServer(java.util.List < String > dnsServer) {
+            public Builder dnsServer(java.util.List<String> dnsServer) {
                 this.dnsServer = dnsServer;
                 return this;
             }
@@ -218,7 +223,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
      */
     public static class ExpectDnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpectDnsServer")
-        private java.util.List < String > expectDnsServer;
+        private java.util.List<String> expectDnsServer;
 
         private ExpectDnsServers(Builder builder) {
             this.expectDnsServer = builder.expectDnsServer;
@@ -235,17 +240,17 @@ public class DescribeDomainNsResponseBody extends TeaModel {
         /**
          * @return expectDnsServer
          */
-        public java.util.List < String > getExpectDnsServer() {
+        public java.util.List<String> getExpectDnsServer() {
             return this.expectDnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > expectDnsServer; 
+            private java.util.List<String> expectDnsServer; 
 
             /**
              * ExpectDnsServer.
              */
-            public Builder expectDnsServer(java.util.List < String > expectDnsServer) {
+            public Builder expectDnsServer(java.util.List<String> expectDnsServer) {
                 this.expectDnsServer = expectDnsServer;
                 return this;
             }

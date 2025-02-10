@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class CreateCloudGtmAddressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthTasks")
-    private java.util.List < HealthTasks> healthTasks;
+    private java.util.List<HealthTasks> healthTasks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ManualAvailableStatus")
@@ -147,7 +152,7 @@ public class CreateCloudGtmAddressRequest extends Request {
     /**
      * @return healthTasks
      */
-    public java.util.List < HealthTasks> getHealthTasks() {
+    public java.util.List<HealthTasks> getHealthTasks() {
         return this.healthTasks;
     }
 
@@ -187,7 +192,7 @@ public class CreateCloudGtmAddressRequest extends Request {
         private String clientToken; 
         private String enableStatus; 
         private String healthJudgement; 
-        private java.util.List < HealthTasks> healthTasks; 
+        private java.util.List<HealthTasks> healthTasks; 
         private String manualAvailableStatus; 
         private String name; 
         private String remark; 
@@ -323,7 +328,7 @@ public class CreateCloudGtmAddressRequest extends Request {
         /**
          * <p>The health check tasks associated with the address.</p>
          */
-        public Builder healthTasks(java.util.List < HealthTasks> healthTasks) {
+        public Builder healthTasks(java.util.List<HealthTasks> healthTasks) {
             String healthTasksShrink = shrink(healthTasks, "HealthTasks", "json");
             this.putQueryParameter("HealthTasks", healthTasksShrink);
             this.healthTasks = healthTasks;

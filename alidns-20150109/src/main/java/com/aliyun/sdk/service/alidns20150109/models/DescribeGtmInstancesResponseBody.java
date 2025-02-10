@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -577,7 +582,7 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
      */
     public static class GtmInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GtmInstance")
-        private java.util.List < GtmInstance> gtmInstance;
+        private java.util.List<GtmInstance> gtmInstance;
 
         private GtmInstances(Builder builder) {
             this.gtmInstance = builder.gtmInstance;
@@ -594,17 +599,17 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         /**
          * @return gtmInstance
          */
-        public java.util.List < GtmInstance> getGtmInstance() {
+        public java.util.List<GtmInstance> getGtmInstance() {
             return this.gtmInstance;
         }
 
         public static final class Builder {
-            private java.util.List < GtmInstance> gtmInstance; 
+            private java.util.List<GtmInstance> gtmInstance; 
 
             /**
              * GtmInstance.
              */
-            public Builder gtmInstance(java.util.List < GtmInstance> gtmInstance) {
+            public Builder gtmInstance(java.util.List<GtmInstance> gtmInstance) {
                 this.gtmInstance = gtmInstance;
                 return this;
             }

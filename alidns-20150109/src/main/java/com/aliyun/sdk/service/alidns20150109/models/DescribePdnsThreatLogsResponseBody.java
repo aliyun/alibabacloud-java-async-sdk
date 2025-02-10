@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePdnsThreatLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Logs")
-    private java.util.List < Logs> logs;
+    private java.util.List<Logs> logs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < Logs> getLogs() {
+    public java.util.List<Logs> getLogs() {
         return this.logs;
     }
 
@@ -79,7 +84,7 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Logs> logs; 
+        private java.util.List<Logs> logs; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
         /**
          * Logs.
          */
-        public Builder logs(java.util.List < Logs> logs) {
+        public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
             return this;
         }

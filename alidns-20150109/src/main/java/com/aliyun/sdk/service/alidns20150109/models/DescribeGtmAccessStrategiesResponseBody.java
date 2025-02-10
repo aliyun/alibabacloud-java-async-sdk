@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -287,7 +292,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
      */
     public static class Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < Line> line;
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -304,17 +309,17 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }
@@ -755,7 +760,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
      */
     public static class Strategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Strategy")
-        private java.util.List < Strategy> strategy;
+        private java.util.List<Strategy> strategy;
 
         private Strategies(Builder builder) {
             this.strategy = builder.strategy;
@@ -772,17 +777,17 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
         /**
          * @return strategy
          */
-        public java.util.List < Strategy> getStrategy() {
+        public java.util.List<Strategy> getStrategy() {
             return this.strategy;
         }
 
         public static final class Builder {
-            private java.util.List < Strategy> strategy; 
+            private java.util.List<Strategy> strategy; 
 
             /**
              * Strategy.
              */
-            public Builder strategy(java.util.List < Strategy> strategy) {
+            public Builder strategy(java.util.List<Strategy> strategy) {
                 this.strategy = strategy;
                 return this;
             }

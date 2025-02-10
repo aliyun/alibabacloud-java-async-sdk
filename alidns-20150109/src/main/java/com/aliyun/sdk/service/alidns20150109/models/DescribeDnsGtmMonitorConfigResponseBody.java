@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -541,7 +546,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
      */
     public static class IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IspCityNode")
-        private java.util.List < IspCityNode> ispCityNode;
+        private java.util.List<IspCityNode> ispCityNode;
 
         private IspCityNodes(Builder builder) {
             this.ispCityNode = builder.ispCityNode;
@@ -558,17 +563,17 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
         /**
          * @return ispCityNode
          */
-        public java.util.List < IspCityNode> getIspCityNode() {
+        public java.util.List<IspCityNode> getIspCityNode() {
             return this.ispCityNode;
         }
 
         public static final class Builder {
-            private java.util.List < IspCityNode> ispCityNode; 
+            private java.util.List<IspCityNode> ispCityNode; 
 
             /**
              * IspCityNode.
              */
-            public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
+            public Builder ispCityNode(java.util.List<IspCityNode> ispCityNode) {
                 this.ispCityNode = ispCityNode;
                 return this;
             }

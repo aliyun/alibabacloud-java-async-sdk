@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IspCityNodes")
-    private java.util.List < IspCityNodes> ispCityNodes;
+    private java.util.List<IspCityNodes> ispCityNodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -125,7 +130,7 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
     /**
      * @return ispCityNodes
      */
-    public java.util.List < IspCityNodes> getIspCityNodes() {
+    public java.util.List<IspCityNodes> getIspCityNodes() {
         return this.ispCityNodes;
     }
 
@@ -157,7 +162,7 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
         private String extendInfo; 
         private Integer failureRate; 
         private Integer interval; 
-        private java.util.List < IspCityNodes> ispCityNodes; 
+        private java.util.List<IspCityNodes> ispCityNodes; 
         private String name; 
         private String templateId; 
         private Integer timeout; 
@@ -295,7 +300,7 @@ public class UpdateCloudGtmMonitorTemplateRequest extends Request {
         /**
          * <p>The health check nodes. You can call the <a href="~~ListCloudGtmMonitorNodes~~">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
          */
-        public Builder ispCityNodes(java.util.List < IspCityNodes> ispCityNodes) {
+        public Builder ispCityNodes(java.util.List<IspCityNodes> ispCityNodes) {
             String ispCityNodesShrink = shrink(ispCityNodes, "IspCityNodes", "json");
             this.putQueryParameter("IspCityNodes", ispCityNodesShrink);
             this.ispCityNodes = ispCityNodes;

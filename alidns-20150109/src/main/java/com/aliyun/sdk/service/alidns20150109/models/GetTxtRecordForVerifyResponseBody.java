@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -100,7 +105,10 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * ParentDomainName.
+         * <p>The top-level domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com</p>
          */
         public Builder parentDomainName(String parentDomainName) {
             this.parentDomainName = parentDomainName;

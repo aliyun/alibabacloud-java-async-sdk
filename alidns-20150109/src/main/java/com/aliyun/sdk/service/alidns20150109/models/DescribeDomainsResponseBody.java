@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
      */
     public static class DnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServer")
-        private java.util.List < String > dnsServer;
+        private java.util.List<String> dnsServer;
 
         private DnsServers(Builder builder) {
             this.dnsServer = builder.dnsServer;
@@ -168,17 +173,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return dnsServer
          */
-        public java.util.List < String > getDnsServer() {
+        public java.util.List<String> getDnsServer() {
             return this.dnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsServer; 
+            private java.util.List<String> dnsServer; 
 
             /**
              * DnsServer.
              */
-            public Builder dnsServer(java.util.List < String > dnsServer) {
+            public Builder dnsServer(java.util.List<String> dnsServer) {
                 this.dnsServer = dnsServer;
                 return this;
             }
@@ -265,7 +270,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -282,17 +287,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -817,7 +822,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
      */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < Domain> domain;
+        private java.util.List<Domain> domain;
 
         private Domains(Builder builder) {
             this.domain = builder.domain;
@@ -834,17 +839,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         /**
          * @return domain
          */
-        public java.util.List < Domain> getDomain() {
+        public java.util.List<Domain> getDomain() {
             return this.domain;
         }
 
         public static final class Builder {
-            private java.util.List < Domain> domain; 
+            private java.util.List<Domain> domain; 
 
             /**
              * Domain.
              */
-            public Builder domain(java.util.List < Domain> domain) {
+            public Builder domain(java.util.List<Domain> domain) {
                 this.domain = domain;
                 return this;
             }

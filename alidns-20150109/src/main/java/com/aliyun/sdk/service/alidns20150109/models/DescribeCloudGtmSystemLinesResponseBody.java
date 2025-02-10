@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
      */
     public static class SystemLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemLine")
-        private java.util.List < SystemLine> systemLine;
+        private java.util.List<SystemLine> systemLine;
 
         private SystemLines(Builder builder) {
             this.systemLine = builder.systemLine;
@@ -268,17 +273,17 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         /**
          * @return systemLine
          */
-        public java.util.List < SystemLine> getSystemLine() {
+        public java.util.List<SystemLine> getSystemLine() {
             return this.systemLine;
         }
 
         public static final class Builder {
-            private java.util.List < SystemLine> systemLine; 
+            private java.util.List<SystemLine> systemLine; 
 
             /**
              * SystemLine.
              */
-            public Builder systemLine(java.util.List < SystemLine> systemLine) {
+            public Builder systemLine(java.util.List<SystemLine> systemLine) {
                 this.systemLine = systemLine;
                 return this;
             }

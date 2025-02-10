@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,19 +51,22 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The statistics on the DNS requests.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +256,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             private Long v6HttpsCount; 
 
             /**
-             * DohTotalCount.
+             * <p>The total number of DoH requests, including HTTP and HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dohTotalCount(Long dohTotalCount) {
                 this.dohTotalCount = dohTotalCount;
@@ -256,7 +267,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HttpCount.
+             * <p>The number of HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder httpCount(Long httpCount) {
                 this.httpCount = httpCount;
@@ -264,7 +278,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsCount.
+             * <p>The number of HTTPS requests. On the Traffic Analysis tab of the Public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder httpsCount(Long httpsCount) {
                 this.httpsCount = httpsCount;
@@ -272,7 +289,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * IpCount.
+             * <p>The number of source IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ipCount(Long ipCount) {
                 this.ipCount = ipCount;
@@ -280,7 +300,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706716800000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -288,7 +311,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -296,7 +322,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * UdpTotalCount.
+             * <p>The total number of UDP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder udpTotalCount(Long udpTotalCount) {
                 this.udpTotalCount = udpTotalCount;
@@ -304,7 +333,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * V4Count.
+             * <p>The number of IPv4-based requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v4Count(Long v4Count) {
                 this.v4Count = v4Count;
@@ -312,7 +344,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * V4HttpCount.
+             * <p>The number of IPv4-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v4HttpCount(Long v4HttpCount) {
                 this.v4HttpCount = v4HttpCount;
@@ -320,7 +355,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * V4HttpsCount.
+             * <p>The number of IPv4-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v4HttpsCount(Long v4HttpsCount) {
                 this.v4HttpsCount = v4HttpsCount;
@@ -328,7 +366,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * V6Count.
+             * <p>The number of IPv6-based requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v6Count(Long v6Count) {
                 this.v6Count = v6Count;
@@ -336,7 +377,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * V6HttpCount.
+             * <p>The number of IPv6-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v6HttpCount(Long v6HttpCount) {
                 this.v6HttpCount = v6HttpCount;
@@ -344,7 +388,10 @@ public class DescribePdnsRequestStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * V6HttpsCount.
+             * <p>The number of IPv6-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder v6HttpsCount(Long v6HttpsCount) {
                 this.v6HttpsCount = v6HttpsCount;

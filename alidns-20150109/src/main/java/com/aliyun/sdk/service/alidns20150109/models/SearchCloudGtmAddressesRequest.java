@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Names")
-    private java.util.List < String > names;
+    private java.util.List<String> names;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -64,7 +69,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remarks")
-    private java.util.List < String > remarks;
+    private java.util.List<String> remarks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -160,7 +165,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
     /**
      * @return names
      */
-    public java.util.List < String > getNames() {
+    public java.util.List<String> getNames() {
         return this.names;
     }
 
@@ -188,7 +193,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
     /**
      * @return remarks
      */
-    public java.util.List < String > getRemarks() {
+    public java.util.List<String> getRemarks() {
         return this.remarks;
     }
 
@@ -208,11 +213,11 @@ public class SearchCloudGtmAddressesRequest extends Request {
         private String healthStatus; 
         private String monitorTemplateName; 
         private String nameSearchCondition; 
-        private java.util.List < String > names; 
+        private java.util.List<String> names; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String remarkSearchCondition; 
-        private java.util.List < String > remarks; 
+        private java.util.List<String> remarks; 
         private String type; 
 
         private Builder() {
@@ -358,7 +363,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
         /**
          * <p>Address name, usually for users to distinguish between different addresses.</p>
          */
-        public Builder names(java.util.List < String > names) {
+        public Builder names(java.util.List<String> names) {
             this.putQueryParameter("Names", names);
             this.names = names;
             return this;
@@ -407,7 +412,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
         /**
          * <p>Remarks for the address.</p>
          */
-        public Builder remarks(java.util.List < String > remarks) {
+        public Builder remarks(java.util.List<String> remarks) {
             this.putQueryParameter("Remarks", remarks);
             this.remarks = remarks;
             return this;

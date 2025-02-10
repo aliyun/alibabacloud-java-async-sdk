@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -198,7 +203,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
      */
     public static class AddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrPool")
-        private java.util.List < AddrPool> addrPool;
+        private java.util.List<AddrPool> addrPool;
 
         private AddrPools(Builder builder) {
             this.addrPool = builder.addrPool;
@@ -215,17 +220,17 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         /**
          * @return addrPool
          */
-        public java.util.List < AddrPool> getAddrPool() {
+        public java.util.List<AddrPool> getAddrPool() {
             return this.addrPool;
         }
 
         public static final class Builder {
-            private java.util.List < AddrPool> addrPool; 
+            private java.util.List<AddrPool> addrPool; 
 
             /**
              * AddrPool.
              */
-            public Builder addrPool(java.util.List < AddrPool> addrPool) {
+            public Builder addrPool(java.util.List<AddrPool> addrPool) {
                 this.addrPool = addrPool;
                 return this;
             }
@@ -414,7 +419,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
      */
     public static class Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < Line> line;
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -431,17 +436,17 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }

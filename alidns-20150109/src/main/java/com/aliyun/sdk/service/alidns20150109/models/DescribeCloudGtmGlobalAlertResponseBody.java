@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -240,7 +245,7 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
      */
     public static class AlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
-        private java.util.List < AlertConfigAlertConfig> alertConfig;
+        private java.util.List<AlertConfigAlertConfig> alertConfig;
 
         private AlertConfig(Builder builder) {
             this.alertConfig = builder.alertConfig;
@@ -257,17 +262,17 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         /**
          * @return alertConfig
          */
-        public java.util.List < AlertConfigAlertConfig> getAlertConfig() {
+        public java.util.List<AlertConfigAlertConfig> getAlertConfig() {
             return this.alertConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AlertConfigAlertConfig> alertConfig; 
+            private java.util.List<AlertConfigAlertConfig> alertConfig; 
 
             /**
              * <p>The alert configurations.</p>
              */
-            public Builder alertConfig(java.util.List < AlertConfigAlertConfig> alertConfig) {
+            public Builder alertConfig(java.util.List<AlertConfigAlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
                 return this;
             }
@@ -287,7 +292,7 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
      */
     public static class AlertGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertGroup")
-        private java.util.List < String > alertGroup;
+        private java.util.List<String> alertGroup;
 
         private AlertGroup(Builder builder) {
             this.alertGroup = builder.alertGroup;
@@ -304,17 +309,17 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
         /**
          * @return alertGroup
          */
-        public java.util.List < String > getAlertGroup() {
+        public java.util.List<String> getAlertGroup() {
             return this.alertGroup;
         }
 
         public static final class Builder {
-            private java.util.List < String > alertGroup; 
+            private java.util.List<String> alertGroup; 
 
             /**
              * <p>The alert contact groups.</p>
              */
-            public Builder alertGroup(java.util.List < String > alertGroup) {
+            public Builder alertGroup(java.util.List<String> alertGroup) {
                 this.alertGroup = alertGroup;
                 return this;
             }

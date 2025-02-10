@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Statistics")
-    private java.util.List < Statistics> statistics;
+    private java.util.List<Statistics> statistics;
 
     @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
@@ -71,7 +76,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
     /**
      * @return statistics
      */
-    public java.util.List < Statistics> getStatistics() {
+    public java.util.List<Statistics> getStatistics() {
         return this.statistics;
     }
 
@@ -93,7 +98,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Statistics> statistics; 
+        private java.util.List<Statistics> statistics; 
         private Integer totalItems; 
         private Integer totalPages; 
 
@@ -133,7 +138,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         /**
          * <p>The statistics.</p>
          */
-        public Builder statistics(java.util.List < Statistics> statistics) {
+        public Builder statistics(java.util.List<Statistics> statistics) {
             this.statistics = statistics;
             return this;
         }

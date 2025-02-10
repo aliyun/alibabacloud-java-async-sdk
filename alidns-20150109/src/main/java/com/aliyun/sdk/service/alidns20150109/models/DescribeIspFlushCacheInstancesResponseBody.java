@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IspFlushCacheInstances")
-    private java.util.List < IspFlushCacheInstances> ispFlushCacheInstances;
+    private java.util.List<IspFlushCacheInstances> ispFlushCacheInstances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
     /**
      * @return ispFlushCacheInstances
      */
-    public java.util.List < IspFlushCacheInstances> getIspFlushCacheInstances() {
+    public java.util.List<IspFlushCacheInstances> getIspFlushCacheInstances() {
         return this.ispFlushCacheInstances;
     }
 
@@ -90,7 +95,7 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IspFlushCacheInstances> ispFlushCacheInstances; 
+        private java.util.List<IspFlushCacheInstances> ispFlushCacheInstances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
         /**
          * IspFlushCacheInstances.
          */
-        public Builder ispFlushCacheInstances(java.util.List < IspFlushCacheInstances> ispFlushCacheInstances) {
+        public Builder ispFlushCacheInstances(java.util.List<IspFlushCacheInstances> ispFlushCacheInstances) {
             this.ispFlushCacheInstances = ispFlushCacheInstances;
             return this;
         }

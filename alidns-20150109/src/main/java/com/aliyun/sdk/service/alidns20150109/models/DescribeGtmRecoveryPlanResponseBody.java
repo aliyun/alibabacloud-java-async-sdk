@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -477,7 +482,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
      */
     public static class Addrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
-        private java.util.List < Addr> addr;
+        private java.util.List<Addr> addr;
 
         private Addrs(Builder builder) {
             this.addr = builder.addr;
@@ -494,17 +499,17 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         /**
          * @return addr
          */
-        public java.util.List < Addr> getAddr() {
+        public java.util.List<Addr> getAddr() {
             return this.addr;
         }
 
         public static final class Builder {
-            private java.util.List < Addr> addr; 
+            private java.util.List<Addr> addr; 
 
             /**
              * Addr.
              */
-            public Builder addr(java.util.List < Addr> addr) {
+            public Builder addr(java.util.List<Addr> addr) {
                 this.addr = addr;
                 return this;
             }
@@ -637,7 +642,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
      */
     public static class FaultAddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaultAddrPool")
-        private java.util.List < FaultAddrPool> faultAddrPool;
+        private java.util.List<FaultAddrPool> faultAddrPool;
 
         private FaultAddrPools(Builder builder) {
             this.faultAddrPool = builder.faultAddrPool;
@@ -654,17 +659,17 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         /**
          * @return faultAddrPool
          */
-        public java.util.List < FaultAddrPool> getFaultAddrPool() {
+        public java.util.List<FaultAddrPool> getFaultAddrPool() {
             return this.faultAddrPool;
         }
 
         public static final class Builder {
-            private java.util.List < FaultAddrPool> faultAddrPool; 
+            private java.util.List<FaultAddrPool> faultAddrPool; 
 
             /**
              * FaultAddrPool.
              */
-            public Builder faultAddrPool(java.util.List < FaultAddrPool> faultAddrPool) {
+            public Builder faultAddrPool(java.util.List<FaultAddrPool> faultAddrPool) {
                 this.faultAddrPool = faultAddrPool;
                 return this;
             }

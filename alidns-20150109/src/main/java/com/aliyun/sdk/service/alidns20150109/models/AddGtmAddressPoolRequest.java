@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddGtmAddressPoolRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Addr")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Addr> addr;
+    private java.util.List<Addr> addr;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EvaluationCount")
@@ -32,7 +37,7 @@ public class AddGtmAddressPoolRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IspCityNode")
-    private java.util.List < IspCityNode> ispCityNode;
+    private java.util.List<IspCityNode> ispCityNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -102,7 +107,7 @@ public class AddGtmAddressPoolRequest extends Request {
     /**
      * @return addr
      */
-    public java.util.List < Addr> getAddr() {
+    public java.util.List<Addr> getAddr() {
         return this.addr;
     }
 
@@ -130,7 +135,7 @@ public class AddGtmAddressPoolRequest extends Request {
     /**
      * @return ispCityNode
      */
-    public java.util.List < IspCityNode> getIspCityNode() {
+    public java.util.List<IspCityNode> getIspCityNode() {
         return this.ispCityNode;
     }
 
@@ -191,11 +196,11 @@ public class AddGtmAddressPoolRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddGtmAddressPoolRequest, Builder> {
-        private java.util.List < Addr> addr; 
+        private java.util.List<Addr> addr; 
         private Integer evaluationCount; 
         private String instanceId; 
         private Integer interval; 
-        private java.util.List < IspCityNode> ispCityNode; 
+        private java.util.List<IspCityNode> ispCityNode; 
         private String lang; 
         private Integer minAvailableAddrNum; 
         private String monitorExtendInfo; 
@@ -230,7 +235,7 @@ public class AddGtmAddressPoolRequest extends Request {
          * <p>The address pools.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder addr(java.util.List < Addr> addr) {
+        public Builder addr(java.util.List<Addr> addr) {
             this.putQueryParameter("Addr", addr);
             this.addr = addr;
             return this;
@@ -276,7 +281,7 @@ public class AddGtmAddressPoolRequest extends Request {
         /**
          * <p>The monitored nodes.</p>
          */
-        public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
+        public Builder ispCityNode(java.util.List<IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
             this.ispCityNode = ispCityNode;
             return this;

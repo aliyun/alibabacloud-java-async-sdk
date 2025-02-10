@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IpSegments")
-    private java.util.List < IpSegments> ipSegments;
+    private java.util.List<IpSegments> ipSegments;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -50,7 +55,7 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
     /**
      * @return ipSegments
      */
-    public java.util.List < IpSegments> getIpSegments() {
+    public java.util.List<IpSegments> getIpSegments() {
         return this.ipSegments;
     }
 
@@ -90,7 +95,7 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpSegments> ipSegments; 
+        private java.util.List<IpSegments> ipSegments; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         /**
          * IpSegments.
          */
-        public Builder ipSegments(java.util.List < IpSegments> ipSegments) {
+        public Builder ipSegments(java.util.List<IpSegments> ipSegments) {
             this.ipSegments = ipSegments;
             return this;
         }

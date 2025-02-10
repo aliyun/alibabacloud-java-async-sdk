@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthTasks")
-    private java.util.List < HealthTasks> healthTasks;
+    private java.util.List<HealthTasks> healthTasks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -115,7 +120,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
     /**
      * @return healthTasks
      */
-    public java.util.List < HealthTasks> getHealthTasks() {
+    public java.util.List<HealthTasks> getHealthTasks() {
         return this.healthTasks;
     }
 
@@ -133,7 +138,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
         private String attributeInfo; 
         private String clientToken; 
         private String healthJudgement; 
-        private java.util.List < HealthTasks> healthTasks; 
+        private java.util.List<HealthTasks> healthTasks; 
         private String name; 
 
         private Builder() {
@@ -169,7 +174,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
         }
 
         /**
-         * <p>Modified IP address or domain name.</p>
+         * <p>The IP address or domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>223.5.XX.XX</p>
@@ -218,7 +223,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
         }
 
         /**
-         * <p>The condition for determining the health status of the address. This parameter is required when HealthTasks is specified. Valid values:</p>
+         * <p>The new condition for determining the health state of the address. Valid values:</p>
          * <ul>
          * <li>any_ok: The health check results of at least one health check template are normal.</li>
          * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
@@ -239,7 +244,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
         /**
          * <p>The health check tasks.</p>
          */
-        public Builder healthTasks(java.util.List < HealthTasks> healthTasks) {
+        public Builder healthTasks(java.util.List<HealthTasks> healthTasks) {
             String healthTasksShrink = shrink(healthTasks, "HealthTasks", "json");
             this.putQueryParameter("HealthTasks", healthTasksShrink);
             this.healthTasks = healthTasks;
@@ -247,7 +252,7 @@ public class UpdateCloudGtmAddressRequest extends Request {
         }
 
         /**
-         * <p>Modified address name.</p>
+         * <p>The name of the address.</p>
          * 
          * <strong>example:</strong>
          * <p>Address-1</p>
@@ -310,10 +315,10 @@ public class UpdateCloudGtmAddressRequest extends Request {
             private String templateId; 
 
             /**
-             * <p>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</p>
+             * <p>The service port of the address on which health check tasks are performed. If the ping protocol is used for health checks, the configuration of the service port is not supported.</p>
              * <ul>
-             * <li>If the input parameter is empty: Delete the currently configured port number;</li>
-             * <li>If the input parameter is not empty: Update the port number based on the input parameter;</li>
+             * <li>If you leave this parameter empty, the existing service port is deleted.</li>
+             * <li>If you specify this parameter, the existing service port is updated based on the value of this parameter.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -325,10 +330,10 @@ public class UpdateCloudGtmAddressRequest extends Request {
             }
 
             /**
-             * <p>ID of the health check template associated with the address. This parameter is required if a health check port is configured.</p>
+             * <p>The ID of the health check template that is associated with the address. This parameter is required if you specify a service port of the address for health check tasks.</p>
              * <ul>
-             * <li>If the input parameter is empty: Delete the currently configured detection template;</li>
-             * <li>If the input parameter is not empty: Update the detection template based on the input parameter;</li>
+             * <li>If you leave this parameter empty, the associated health check template is disassociated from the address.</li>
+             * <li>If you specify this parameter, the associated health check template is updated based on the value of this parameter.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceDomains")
-    private java.util.List < InstanceDomains> instanceDomains;
+    private java.util.List<InstanceDomains> instanceDomains;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
     /**
      * @return instanceDomains
      */
-    public java.util.List < InstanceDomains> getInstanceDomains() {
+    public java.util.List<InstanceDomains> getInstanceDomains() {
         return this.instanceDomains;
     }
 
@@ -90,7 +95,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceDomains> instanceDomains; 
+        private java.util.List<InstanceDomains> instanceDomains; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class DescribeInstanceDomainsResponseBody extends TeaModel {
         /**
          * <p>The domain names that are bound to the Alibaba Cloud DNS instance.</p>
          */
-        public Builder instanceDomains(java.util.List < InstanceDomains> instanceDomains) {
+        public Builder instanceDomains(java.util.List<InstanceDomains> instanceDomains) {
             this.instanceDomains = instanceDomains;
             return this;
         }

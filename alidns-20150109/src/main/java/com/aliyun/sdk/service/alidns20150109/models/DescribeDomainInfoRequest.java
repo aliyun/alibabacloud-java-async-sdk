@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -108,7 +113,7 @@ public class DescribeDomainInfoRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether detailed attributes are required. The default value is <strong>false</strong>, which indicates that detailed attributes are not required.</p>
+         * <p>Specifies whether detailed attributes are required. Default value: <strong>false</strong>, which indicates that detailed attributes are not returned.</p>
          * <p>If you set this parameter to <strong>true</strong>, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</p>
          * 
          * <strong>example:</strong>

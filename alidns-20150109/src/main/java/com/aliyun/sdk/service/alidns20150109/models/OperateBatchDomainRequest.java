@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class OperateBatchDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainRecordInfo")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DomainRecordInfo> domainRecordInfo;
+    private java.util.List<DomainRecordInfo> domainRecordInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -49,7 +54,7 @@ public class OperateBatchDomainRequest extends Request {
     /**
      * @return domainRecordInfo
      */
-    public java.util.List < DomainRecordInfo> getDomainRecordInfo() {
+    public java.util.List<DomainRecordInfo> getDomainRecordInfo() {
         return this.domainRecordInfo;
     }
 
@@ -68,7 +73,7 @@ public class OperateBatchDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OperateBatchDomainRequest, Builder> {
-        private java.util.List < DomainRecordInfo> domainRecordInfo; 
+        private java.util.List<DomainRecordInfo> domainRecordInfo; 
         private String lang; 
         private String type; 
 
@@ -87,7 +92,7 @@ public class OperateBatchDomainRequest extends Request {
          * <p>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder domainRecordInfo(java.util.List < DomainRecordInfo> domainRecordInfo) {
+        public Builder domainRecordInfo(java.util.List<DomainRecordInfo> domainRecordInfo) {
             this.putQueryParameter("DomainRecordInfo", domainRecordInfo);
             this.domainRecordInfo = domainRecordInfo;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -228,7 +233,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
      */
     public static class LineAlgorithms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LineAlgorithm")
-        private java.util.List < LineAlgorithm> lineAlgorithm;
+        private java.util.List<LineAlgorithm> lineAlgorithm;
 
         private LineAlgorithms(Builder builder) {
             this.lineAlgorithm = builder.lineAlgorithm;
@@ -245,17 +250,17 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         /**
          * @return lineAlgorithm
          */
-        public java.util.List < LineAlgorithm> getLineAlgorithm() {
+        public java.util.List<LineAlgorithm> getLineAlgorithm() {
             return this.lineAlgorithm;
         }
 
         public static final class Builder {
-            private java.util.List < LineAlgorithm> lineAlgorithm; 
+            private java.util.List<LineAlgorithm> lineAlgorithm; 
 
             /**
              * LineAlgorithm.
              */
-            public Builder lineAlgorithm(java.util.List < LineAlgorithm> lineAlgorithm) {
+            public Builder lineAlgorithm(java.util.List<LineAlgorithm> lineAlgorithm) {
                 this.lineAlgorithm = lineAlgorithm;
                 return this;
             }
@@ -414,7 +419,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
      */
     public static class SlbSubDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlbSubDomain")
-        private java.util.List < SlbSubDomain> slbSubDomain;
+        private java.util.List<SlbSubDomain> slbSubDomain;
 
         private SlbSubDomains(Builder builder) {
             this.slbSubDomain = builder.slbSubDomain;
@@ -431,17 +436,17 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         /**
          * @return slbSubDomain
          */
-        public java.util.List < SlbSubDomain> getSlbSubDomain() {
+        public java.util.List<SlbSubDomain> getSlbSubDomain() {
             return this.slbSubDomain;
         }
 
         public static final class Builder {
-            private java.util.List < SlbSubDomain> slbSubDomain; 
+            private java.util.List<SlbSubDomain> slbSubDomain; 
 
             /**
              * SlbSubDomain.
              */
-            public Builder slbSubDomain(java.util.List < SlbSubDomain> slbSubDomain) {
+            public Builder slbSubDomain(java.util.List<SlbSubDomain> slbSubDomain) {
                 this.slbSubDomain = slbSubDomain;
                 return this;
             }

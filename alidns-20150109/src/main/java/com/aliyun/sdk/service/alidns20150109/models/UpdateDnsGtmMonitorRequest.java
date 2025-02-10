@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IspCityNode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < IspCityNode> ispCityNode;
+    private java.util.List<IspCityNode> ispCityNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -93,7 +98,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
     /**
      * @return ispCityNode
      */
-    public java.util.List < IspCityNode> getIspCityNode() {
+    public java.util.List<IspCityNode> getIspCityNode() {
         return this.ispCityNode;
     }
 
@@ -135,7 +140,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDnsGtmMonitorRequest, Builder> {
         private Integer evaluationCount; 
         private Integer interval; 
-        private java.util.List < IspCityNode> ispCityNode; 
+        private java.util.List<IspCityNode> ispCityNode; 
         private String lang; 
         private String monitorConfigId; 
         private String monitorExtendInfo; 
@@ -186,7 +191,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
          * <p>The monitored nodes.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
+        public Builder ispCityNode(java.util.List<IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
             this.ispCityNode = ispCityNode;
             return this;

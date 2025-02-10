@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -78,6 +83,9 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
      * <p>DescribePdnsUserInfoResponseBody</p>
      */
     public static class UserInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableAccessSecurityType")
+        private String availableAccessSecurityType;
+
         @com.aliyun.core.annotation.NameInMap("AvailableService")
         private String availableService;
 
@@ -100,6 +108,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         private String stoppedService;
 
         private UserInfo(Builder builder) {
+            this.availableAccessSecurityType = builder.availableAccessSecurityType;
             this.availableService = builder.availableService;
             this.pdnsId = builder.pdnsId;
             this.secretKey = builder.secretKey;
@@ -115,6 +124,13 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
 
         public static UserInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableAccessSecurityType
+         */
+        public String getAvailableAccessSecurityType() {
+            return this.availableAccessSecurityType;
         }
 
         /**
@@ -167,6 +183,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String availableAccessSecurityType; 
             private String availableService; 
             private Long pdnsId; 
             private String secretKey; 
@@ -174,6 +191,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             private String state; 
             private String statisticSwitchStatus; 
             private String stoppedService; 
+
+            /**
+             * AvailableAccessSecurityType.
+             */
+            public Builder availableAccessSecurityType(String availableAccessSecurityType) {
+                this.availableAccessSecurityType = availableAccessSecurityType;
+                return this;
+            }
 
             /**
              * AvailableService.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -294,7 +299,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
      */
     public static class Addr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
-        private java.util.List < AddrAddr> addr;
+        private java.util.List<AddrAddr> addr;
 
         private Addr(Builder builder) {
             this.addr = builder.addr;
@@ -311,12 +316,12 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
         /**
          * @return addr
          */
-        public java.util.List < AddrAddr> getAddr() {
+        public java.util.List<AddrAddr> getAddr() {
             return this.addr;
         }
 
         public static final class Builder {
-            private java.util.List < AddrAddr> addr; 
+            private java.util.List<AddrAddr> addr; 
 
             /**
              * <p>The address in the address pool.</p>
@@ -324,7 +329,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>1.1.1.1</p>
              */
-            public Builder addr(java.util.List < AddrAddr> addr) {
+            public Builder addr(java.util.List<AddrAddr> addr) {
                 this.addr = addr;
                 return this;
             }

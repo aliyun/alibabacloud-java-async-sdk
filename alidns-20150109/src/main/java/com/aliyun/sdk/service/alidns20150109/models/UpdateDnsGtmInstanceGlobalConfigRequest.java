@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertConfig")
-    private java.util.List < AlertConfig> alertConfig;
+    private java.util.List<AlertConfig> alertConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertGroup")
@@ -94,7 +99,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
     /**
      * @return alertConfig
      */
-    public java.util.List < AlertConfig> getAlertConfig() {
+    public java.util.List<AlertConfig> getAlertConfig() {
         return this.alertConfig;
     }
 
@@ -176,7 +181,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateDnsGtmInstanceGlobalConfigRequest, Builder> {
-        private java.util.List < AlertConfig> alertConfig; 
+        private java.util.List<AlertConfig> alertConfig; 
         private String alertGroup; 
         private String cnameType; 
         private Boolean forceUpdate; 
@@ -212,7 +217,7 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
         /**
          * AlertConfig.
          */
-        public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+        public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
             this.putQueryParameter("AlertConfig", alertConfig);
             this.alertConfig = alertConfig;
             return this;

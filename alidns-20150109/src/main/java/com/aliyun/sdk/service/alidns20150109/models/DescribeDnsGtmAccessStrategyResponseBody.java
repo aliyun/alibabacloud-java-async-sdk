@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -794,7 +799,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
      */
     public static class DefaultAddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultAddrPool")
-        private java.util.List < DefaultAddrPool> defaultAddrPool;
+        private java.util.List<DefaultAddrPool> defaultAddrPool;
 
         private DefaultAddrPools(Builder builder) {
             this.defaultAddrPool = builder.defaultAddrPool;
@@ -811,17 +816,17 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return defaultAddrPool
          */
-        public java.util.List < DefaultAddrPool> getDefaultAddrPool() {
+        public java.util.List<DefaultAddrPool> getDefaultAddrPool() {
             return this.defaultAddrPool;
         }
 
         public static final class Builder {
-            private java.util.List < DefaultAddrPool> defaultAddrPool; 
+            private java.util.List<DefaultAddrPool> defaultAddrPool; 
 
             /**
              * DefaultAddrPool.
              */
-            public Builder defaultAddrPool(java.util.List < DefaultAddrPool> defaultAddrPool) {
+            public Builder defaultAddrPool(java.util.List<DefaultAddrPool> defaultAddrPool) {
                 this.defaultAddrPool = defaultAddrPool;
                 return this;
             }
@@ -960,7 +965,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
      */
     public static class FailoverAddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailoverAddrPool")
-        private java.util.List < FailoverAddrPool> failoverAddrPool;
+        private java.util.List<FailoverAddrPool> failoverAddrPool;
 
         private FailoverAddrPools(Builder builder) {
             this.failoverAddrPool = builder.failoverAddrPool;
@@ -977,17 +982,17 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return failoverAddrPool
          */
-        public java.util.List < FailoverAddrPool> getFailoverAddrPool() {
+        public java.util.List<FailoverAddrPool> getFailoverAddrPool() {
             return this.failoverAddrPool;
         }
 
         public static final class Builder {
-            private java.util.List < FailoverAddrPool> failoverAddrPool; 
+            private java.util.List<FailoverAddrPool> failoverAddrPool; 
 
             /**
              * FailoverAddrPool.
              */
-            public Builder failoverAddrPool(java.util.List < FailoverAddrPool> failoverAddrPool) {
+            public Builder failoverAddrPool(java.util.List<FailoverAddrPool> failoverAddrPool) {
                 this.failoverAddrPool = failoverAddrPool;
                 return this;
             }
@@ -1126,7 +1131,7 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
      */
     public static class Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
-        private java.util.List < Line> line;
+        private java.util.List<Line> line;
 
         private Lines(Builder builder) {
             this.line = builder.line;
@@ -1143,17 +1148,17 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
         /**
          * @return line
          */
-        public java.util.List < Line> getLine() {
+        public java.util.List<Line> getLine() {
             return this.line;
         }
 
         public static final class Builder {
-            private java.util.List < Line> line; 
+            private java.util.List<Line> line; 
 
             /**
              * Line.
              */
-            public Builder line(java.util.List < Line> line) {
+            public Builder line(java.util.List<Line> line) {
                 this.line = line;
                 return this;
             }

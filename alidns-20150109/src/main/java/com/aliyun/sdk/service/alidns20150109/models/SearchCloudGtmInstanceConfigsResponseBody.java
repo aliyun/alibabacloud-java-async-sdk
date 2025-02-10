@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -174,7 +179,7 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
      */
     public static class RequestSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestSource")
-        private java.util.List < String > requestSource;
+        private java.util.List<String> requestSource;
 
         private RequestSource(Builder builder) {
             this.requestSource = builder.requestSource;
@@ -191,17 +196,17 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         /**
          * @return requestSource
          */
-        public java.util.List < String > getRequestSource() {
+        public java.util.List<String> getRequestSource() {
             return this.requestSource;
         }
 
         public static final class Builder {
-            private java.util.List < String > requestSource; 
+            private java.util.List<String> requestSource; 
 
             /**
              * RequestSource.
              */
-            public Builder requestSource(java.util.List < String > requestSource) {
+            public Builder requestSource(java.util.List<String> requestSource) {
                 this.requestSource = requestSource;
                 return this;
             }
@@ -675,7 +680,7 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
      */
     public static class AddressPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressPool")
-        private java.util.List < AddressPool> addressPool;
+        private java.util.List<AddressPool> addressPool;
 
         private AddressPools(Builder builder) {
             this.addressPool = builder.addressPool;
@@ -692,17 +697,17 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         /**
          * @return addressPool
          */
-        public java.util.List < AddressPool> getAddressPool() {
+        public java.util.List<AddressPool> getAddressPool() {
             return this.addressPool;
         }
 
         public static final class Builder {
-            private java.util.List < AddressPool> addressPool; 
+            private java.util.List<AddressPool> addressPool; 
 
             /**
              * AddressPool.
              */
-            public Builder addressPool(java.util.List < AddressPool> addressPool) {
+            public Builder addressPool(java.util.List<AddressPool> addressPool) {
                 this.addressPool = addressPool;
                 return this;
             }
@@ -1269,7 +1274,7 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
      */
     public static class InstanceConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceConfig")
-        private java.util.List < InstanceConfig> instanceConfig;
+        private java.util.List<InstanceConfig> instanceConfig;
 
         private InstanceConfigs(Builder builder) {
             this.instanceConfig = builder.instanceConfig;
@@ -1286,17 +1291,17 @@ public class SearchCloudGtmInstanceConfigsResponseBody extends TeaModel {
         /**
          * @return instanceConfig
          */
-        public java.util.List < InstanceConfig> getInstanceConfig() {
+        public java.util.List<InstanceConfig> getInstanceConfig() {
             return this.instanceConfig;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceConfig> instanceConfig; 
+            private java.util.List<InstanceConfig> instanceConfig; 
 
             /**
              * InstanceConfig.
              */
-            public Builder instanceConfig(java.util.List < InstanceConfig> instanceConfig) {
+            public Builder instanceConfig(java.util.List<InstanceConfig> instanceConfig) {
                 this.instanceConfig = instanceConfig;
                 return this;
             }

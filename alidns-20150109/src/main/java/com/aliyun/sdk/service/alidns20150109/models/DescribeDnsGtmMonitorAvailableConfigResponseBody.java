@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,7 +147,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class Ips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         private Ips(Builder builder) {
             this.ip = builder.ip;
@@ -159,17 +164,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
 
             /**
              * Ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
@@ -402,7 +407,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class DomainIpv4IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainIpv4IspCityNode")
-        private java.util.List < DomainIpv4IspCityNode> domainIpv4IspCityNode;
+        private java.util.List<DomainIpv4IspCityNode> domainIpv4IspCityNode;
 
         private DomainIpv4IspCityNodes(Builder builder) {
             this.domainIpv4IspCityNode = builder.domainIpv4IspCityNode;
@@ -419,17 +424,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return domainIpv4IspCityNode
          */
-        public java.util.List < DomainIpv4IspCityNode> getDomainIpv4IspCityNode() {
+        public java.util.List<DomainIpv4IspCityNode> getDomainIpv4IspCityNode() {
             return this.domainIpv4IspCityNode;
         }
 
         public static final class Builder {
-            private java.util.List < DomainIpv4IspCityNode> domainIpv4IspCityNode; 
+            private java.util.List<DomainIpv4IspCityNode> domainIpv4IspCityNode; 
 
             /**
              * DomainIpv4IspCityNode.
              */
-            public Builder domainIpv4IspCityNode(java.util.List < DomainIpv4IspCityNode> domainIpv4IspCityNode) {
+            public Builder domainIpv4IspCityNode(java.util.List<DomainIpv4IspCityNode> domainIpv4IspCityNode) {
                 this.domainIpv4IspCityNode = domainIpv4IspCityNode;
                 return this;
             }
@@ -449,7 +454,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class DomainIpv6IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         private DomainIpv6IspCityNodeIps(Builder builder) {
             this.ip = builder.ip;
@@ -466,17 +471,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
 
             /**
              * ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
@@ -709,7 +714,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class DomainIpv6IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainIpv6IspCityNode")
-        private java.util.List < DomainIpv6IspCityNode> domainIpv6IspCityNode;
+        private java.util.List<DomainIpv6IspCityNode> domainIpv6IspCityNode;
 
         private DomainIpv6IspCityNodes(Builder builder) {
             this.domainIpv6IspCityNode = builder.domainIpv6IspCityNode;
@@ -726,17 +731,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return domainIpv6IspCityNode
          */
-        public java.util.List < DomainIpv6IspCityNode> getDomainIpv6IspCityNode() {
+        public java.util.List<DomainIpv6IspCityNode> getDomainIpv6IspCityNode() {
             return this.domainIpv6IspCityNode;
         }
 
         public static final class Builder {
-            private java.util.List < DomainIpv6IspCityNode> domainIpv6IspCityNode; 
+            private java.util.List<DomainIpv6IspCityNode> domainIpv6IspCityNode; 
 
             /**
              * DomainIpv6IspCityNode.
              */
-            public Builder domainIpv6IspCityNode(java.util.List < DomainIpv6IspCityNode> domainIpv6IspCityNode) {
+            public Builder domainIpv6IspCityNode(java.util.List<DomainIpv6IspCityNode> domainIpv6IspCityNode) {
                 this.domainIpv6IspCityNode = domainIpv6IspCityNode;
                 return this;
             }
@@ -756,7 +761,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class Ipv4IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         private Ipv4IspCityNodeIps(Builder builder) {
             this.ip = builder.ip;
@@ -773,17 +778,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
 
             /**
              * Ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
@@ -1016,7 +1021,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class Ipv4IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4IspCityNode")
-        private java.util.List < Ipv4IspCityNode> ipv4IspCityNode;
+        private java.util.List<Ipv4IspCityNode> ipv4IspCityNode;
 
         private Ipv4IspCityNodes(Builder builder) {
             this.ipv4IspCityNode = builder.ipv4IspCityNode;
@@ -1033,17 +1038,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return ipv4IspCityNode
          */
-        public java.util.List < Ipv4IspCityNode> getIpv4IspCityNode() {
+        public java.util.List<Ipv4IspCityNode> getIpv4IspCityNode() {
             return this.ipv4IspCityNode;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv4IspCityNode> ipv4IspCityNode; 
+            private java.util.List<Ipv4IspCityNode> ipv4IspCityNode; 
 
             /**
              * Ipv4IspCityNode.
              */
-            public Builder ipv4IspCityNode(java.util.List < Ipv4IspCityNode> ipv4IspCityNode) {
+            public Builder ipv4IspCityNode(java.util.List<Ipv4IspCityNode> ipv4IspCityNode) {
                 this.ipv4IspCityNode = ipv4IspCityNode;
                 return this;
             }
@@ -1063,7 +1068,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class Ipv6IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
-        private java.util.List < String > ip;
+        private java.util.List<String> ip;
 
         private Ipv6IspCityNodeIps(Builder builder) {
             this.ip = builder.ip;
@@ -1080,17 +1085,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return ip
          */
-        public java.util.List < String > getIp() {
+        public java.util.List<String> getIp() {
             return this.ip;
         }
 
         public static final class Builder {
-            private java.util.List < String > ip; 
+            private java.util.List<String> ip; 
 
             /**
              * Ip.
              */
-            public Builder ip(java.util.List < String > ip) {
+            public Builder ip(java.util.List<String> ip) {
                 this.ip = ip;
                 return this;
             }
@@ -1323,7 +1328,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
      */
     public static class Ipv6IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6IspCityNode")
-        private java.util.List < Ipv6IspCityNode> ipv6IspCityNode;
+        private java.util.List<Ipv6IspCityNode> ipv6IspCityNode;
 
         private Ipv6IspCityNodes(Builder builder) {
             this.ipv6IspCityNode = builder.ipv6IspCityNode;
@@ -1340,17 +1345,17 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         /**
          * @return ipv6IspCityNode
          */
-        public java.util.List < Ipv6IspCityNode> getIpv6IspCityNode() {
+        public java.util.List<Ipv6IspCityNode> getIpv6IspCityNode() {
             return this.ipv6IspCityNode;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6IspCityNode> ipv6IspCityNode; 
+            private java.util.List<Ipv6IspCityNode> ipv6IspCityNode; 
 
             /**
              * Ipv6IspCityNode.
              */
-            public Builder ipv6IspCityNode(java.util.List < Ipv6IspCityNode> ipv6IspCityNode) {
+            public Builder ipv6IspCityNode(java.util.List<Ipv6IspCityNode> ipv6IspCityNode) {
                 this.ipv6IspCityNode = ipv6IspCityNode;
                 return this;
             }

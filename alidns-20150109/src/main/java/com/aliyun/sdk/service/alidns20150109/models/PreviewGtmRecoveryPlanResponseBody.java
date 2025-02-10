@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -244,7 +249,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
      */
     public static class SwitchInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SwitchInfo")
-        private java.util.List < SwitchInfo> switchInfo;
+        private java.util.List<SwitchInfo> switchInfo;
 
         private SwitchInfos(Builder builder) {
             this.switchInfo = builder.switchInfo;
@@ -261,17 +266,17 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         /**
          * @return switchInfo
          */
-        public java.util.List < SwitchInfo> getSwitchInfo() {
+        public java.util.List<SwitchInfo> getSwitchInfo() {
             return this.switchInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SwitchInfo> switchInfo; 
+            private java.util.List<SwitchInfo> switchInfo; 
 
             /**
              * SwitchInfo.
              */
-            public Builder switchInfo(java.util.List < SwitchInfo> switchInfo) {
+            public Builder switchInfo(java.util.List<SwitchInfo> switchInfo) {
                 this.switchInfo = switchInfo;
                 return this;
             }
@@ -407,7 +412,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
      */
     public static class Previews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Preview")
-        private java.util.List < Preview> preview;
+        private java.util.List<Preview> preview;
 
         private Previews(Builder builder) {
             this.preview = builder.preview;
@@ -424,17 +429,17 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         /**
          * @return preview
          */
-        public java.util.List < Preview> getPreview() {
+        public java.util.List<Preview> getPreview() {
             return this.preview;
         }
 
         public static final class Builder {
-            private java.util.List < Preview> preview; 
+            private java.util.List<Preview> preview; 
 
             /**
              * Preview.
              */
-            public Builder preview(java.util.List < Preview> preview) {
+            public Builder preview(java.util.List<Preview> preview) {
                 this.preview = preview;
                 return this;
             }

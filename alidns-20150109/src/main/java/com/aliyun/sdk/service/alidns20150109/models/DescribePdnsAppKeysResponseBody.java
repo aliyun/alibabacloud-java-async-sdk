@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePdnsAppKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppKeys")
-    private java.util.List < AppKeys> appKeys;
+    private java.util.List<AppKeys> appKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
     /**
      * @return appKeys
      */
-    public java.util.List < AppKeys> getAppKeys() {
+    public java.util.List<AppKeys> getAppKeys() {
         return this.appKeys;
     }
 
@@ -46,13 +51,13 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppKeys> appKeys; 
+        private java.util.List<AppKeys> appKeys; 
         private String requestId; 
 
         /**
          * AppKeys.
          */
-        public Builder appKeys(java.util.List < AppKeys> appKeys) {
+        public Builder appKeys(java.util.List<AppKeys> appKeys) {
             this.appKeys = appKeys;
             return this;
         }

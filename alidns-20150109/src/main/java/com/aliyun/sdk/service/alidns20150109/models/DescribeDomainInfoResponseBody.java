@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -603,7 +608,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      */
     public static class AvailableTtls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableTtl")
-        private java.util.List < String > availableTtl;
+        private java.util.List<String> availableTtl;
 
         private AvailableTtls(Builder builder) {
             this.availableTtl = builder.availableTtl;
@@ -620,17 +625,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         /**
          * @return availableTtl
          */
-        public java.util.List < String > getAvailableTtl() {
+        public java.util.List<String> getAvailableTtl() {
             return this.availableTtl;
         }
 
         public static final class Builder {
-            private java.util.List < String > availableTtl; 
+            private java.util.List<String> availableTtl; 
 
             /**
              * AvailableTtl.
              */
-            public Builder availableTtl(java.util.List < String > availableTtl) {
+            public Builder availableTtl(java.util.List<String> availableTtl) {
                 this.availableTtl = availableTtl;
                 return this;
             }
@@ -650,7 +655,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      */
     public static class DnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServer")
-        private java.util.List < String > dnsServer;
+        private java.util.List<String> dnsServer;
 
         private DnsServers(Builder builder) {
             this.dnsServer = builder.dnsServer;
@@ -667,17 +672,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         /**
          * @return dnsServer
          */
-        public java.util.List < String > getDnsServer() {
+        public java.util.List<String> getDnsServer() {
             return this.dnsServer;
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsServer; 
+            private java.util.List<String> dnsServer; 
 
             /**
              * DnsServer.
              */
-            public Builder dnsServer(java.util.List < String > dnsServer) {
+            public Builder dnsServer(java.util.List<String> dnsServer) {
                 this.dnsServer = dnsServer;
                 return this;
             }
@@ -810,7 +815,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      */
     public static class RecordLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordLine")
-        private java.util.List < RecordLine> recordLine;
+        private java.util.List<RecordLine> recordLine;
 
         private RecordLines(Builder builder) {
             this.recordLine = builder.recordLine;
@@ -827,17 +832,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
         /**
          * @return recordLine
          */
-        public java.util.List < RecordLine> getRecordLine() {
+        public java.util.List<RecordLine> getRecordLine() {
             return this.recordLine;
         }
 
         public static final class Builder {
-            private java.util.List < RecordLine> recordLine; 
+            private java.util.List<RecordLine> recordLine; 
 
             /**
              * RecordLine.
              */
-            public Builder recordLine(java.util.List < RecordLine> recordLine) {
+            public Builder recordLine(java.util.List<RecordLine> recordLine) {
                 this.recordLine = recordLine;
                 return this;
             }

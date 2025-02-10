@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddressPools")
-    private java.util.List < AddressPools> addressPools;
+    private java.util.List<AddressPools> addressPools;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -64,7 +69,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
     /**
      * @return addressPools
      */
-    public java.util.List < AddressPools> getAddressPools() {
+    public java.util.List<AddressPools> getAddressPools() {
         return this.addressPools;
     }
 
@@ -91,7 +96,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
 
     public static final class Builder extends Request.Builder<ReplaceCloudGtmInstanceConfigAddressPoolRequest, Builder> {
         private String acceptLanguage; 
-        private java.util.List < AddressPools> addressPools; 
+        private java.util.List<AddressPools> addressPools; 
         private String clientToken; 
         private String configId; 
         private String instanceId; 
@@ -128,7 +133,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
         /**
          * <p>The address pools.</p>
          */
-        public Builder addressPools(java.util.List < AddressPools> addressPools) {
+        public Builder addressPools(java.util.List<AddressPools> addressPools) {
             String addressPoolsShrink = shrink(addressPools, "AddressPools", "json");
             this.putQueryParameter("AddressPools", addressPoolsShrink);
             this.addressPools = addressPools;
@@ -190,7 +195,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
         private String addressPoolId;
 
         @com.aliyun.core.annotation.NameInMap("RequestSource")
-        private java.util.List < String > requestSource;
+        private java.util.List<String> requestSource;
 
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private Integer serialNumber;
@@ -223,7 +228,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
         /**
          * @return requestSource
          */
-        public java.util.List < String > getRequestSource() {
+        public java.util.List<String> getRequestSource() {
             return this.requestSource;
         }
 
@@ -243,7 +248,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
 
         public static final class Builder {
             private String addressPoolId; 
-            private java.util.List < String > requestSource; 
+            private java.util.List<String> requestSource; 
             private Integer serialNumber; 
             private Integer weightValue; 
 
@@ -265,7 +270,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends Request {
             /**
              * <p>The DNS request sources.</p>
              */
-            public Builder requestSource(java.util.List < String > requestSource) {
+            public Builder requestSource(java.util.List<String> requestSource) {
                 this.requestSource = requestSource;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class AddCustomLineRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpSegment")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < IpSegment> ipSegment;
+    private java.util.List<IpSegment> ipSegment;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -62,7 +67,7 @@ public class AddCustomLineRequest extends Request {
     /**
      * @return ipSegment
      */
-    public java.util.List < IpSegment> getIpSegment() {
+    public java.util.List<IpSegment> getIpSegment() {
         return this.ipSegment;
     }
 
@@ -82,7 +87,7 @@ public class AddCustomLineRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddCustomLineRequest, Builder> {
         private String domainName; 
-        private java.util.List < IpSegment> ipSegment; 
+        private java.util.List<IpSegment> ipSegment; 
         private String lang; 
         private String lineName; 
 
@@ -115,7 +120,7 @@ public class AddCustomLineRequest extends Request {
          * <p>The CIDR blocks.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
+        public Builder ipSegment(java.util.List<IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
             this.ipSegment = ipSegment;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Isp")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > isp;
+    private java.util.List<String> isp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -69,7 +74,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
     /**
      * @return isp
      */
-    public java.util.List < String > getIsp() {
+    public java.util.List<String> getIsp() {
         return this.isp;
     }
 
@@ -83,7 +88,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitIspFlushCacheTaskRequest, Builder> {
         private String clientToken; 
         private String domainName; 
-        private java.util.List < String > isp; 
+        private java.util.List<String> isp; 
         private String lang; 
 
         private Builder() {
@@ -119,7 +124,7 @@ public class SubmitIspFlushCacheTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder isp(java.util.List < String > isp) {
+        public Builder isp(java.util.List<String> isp) {
             this.putQueryParameter("Isp", isp);
             this.isp = isp;
             return this;

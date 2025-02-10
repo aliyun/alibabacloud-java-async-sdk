@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -467,7 +472,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
      */
     public static class ConfigAlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
-        private java.util.List < AlertConfig> alertConfig;
+        private java.util.List<AlertConfig> alertConfig;
 
         private ConfigAlertConfig(Builder builder) {
             this.alertConfig = builder.alertConfig;
@@ -484,17 +489,17 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         /**
          * @return alertConfig
          */
-        public java.util.List < AlertConfig> getAlertConfig() {
+        public java.util.List<AlertConfig> getAlertConfig() {
             return this.alertConfig;
         }
 
         public static final class Builder {
-            private java.util.List < AlertConfig> alertConfig; 
+            private java.util.List<AlertConfig> alertConfig; 
 
             /**
              * AlertConfig.
              */
-            public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+            public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
                 return this;
             }

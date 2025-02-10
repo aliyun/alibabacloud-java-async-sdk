@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Addresses> addresses;
+    private java.util.List<Addresses> addresses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -66,7 +71,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
     /**
      * @return addresses
      */
-    public java.util.List < Addresses> getAddresses() {
+    public java.util.List<Addresses> getAddresses() {
         return this.addresses;
     }
 
@@ -80,7 +85,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
     public static final class Builder extends Request.Builder<ReplaceCloudGtmAddressPoolAddressRequest, Builder> {
         private String acceptLanguage; 
         private String addressPoolId; 
-        private java.util.List < Addresses> addresses; 
+        private java.util.List<Addresses> addresses; 
         private String clientToken; 
 
         private Builder() {
@@ -126,7 +131,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         /**
          * <p>The addresses.</p>
          */
-        public Builder addresses(java.util.List < Addresses> addresses) {
+        public Builder addresses(java.util.List<Addresses> addresses) {
             String addressesShrink = shrink(addresses, "Addresses", "json");
             this.putQueryParameter("Addresses", addressesShrink);
             this.addresses = addresses;
@@ -163,7 +168,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         private String addressId;
 
         @com.aliyun.core.annotation.NameInMap("RequestSource")
-        private java.util.List < String > requestSource;
+        private java.util.List<String> requestSource;
 
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private Integer serialNumber;
@@ -196,7 +201,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         /**
          * @return requestSource
          */
-        public java.util.List < String > getRequestSource() {
+        public java.util.List<String> getRequestSource() {
             return this.requestSource;
         }
 
@@ -216,7 +221,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
 
         public static final class Builder {
             private String addressId; 
-            private java.util.List < String > requestSource; 
+            private java.util.List<String> requestSource; 
             private Integer serialNumber; 
             private Integer weightValue; 
 
@@ -238,7 +243,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
             /**
              * <p>The DNS request sources.</p>
              */
-            public Builder requestSource(java.util.List < String > requestSource) {
+            public Builder requestSource(java.util.List<String> requestSource) {
                 this.requestSource = requestSource;
                 return this;
             }

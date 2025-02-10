@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
      */
     public static class DomainGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainGroup")
-        private java.util.List < DomainGroup> domainGroup;
+        private java.util.List<DomainGroup> domainGroup;
 
         private DomainGroups(Builder builder) {
             this.domainGroup = builder.domainGroup;
@@ -268,17 +273,17 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         /**
          * @return domainGroup
          */
-        public java.util.List < DomainGroup> getDomainGroup() {
+        public java.util.List<DomainGroup> getDomainGroup() {
             return this.domainGroup;
         }
 
         public static final class Builder {
-            private java.util.List < DomainGroup> domainGroup; 
+            private java.util.List<DomainGroup> domainGroup; 
 
             /**
              * DomainGroup.
              */
-            public Builder domainGroup(java.util.List < DomainGroup> domainGroup) {
+            public Builder domainGroup(java.util.List<DomainGroup> domainGroup) {
                 this.domainGroup = domainGroup;
                 return this;
             }

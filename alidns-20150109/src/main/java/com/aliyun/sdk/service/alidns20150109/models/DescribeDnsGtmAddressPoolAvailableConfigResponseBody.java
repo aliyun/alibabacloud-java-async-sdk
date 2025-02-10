@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
      */
     public static class AttributeInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeInfo")
-        private java.util.List < AttributeInfo> attributeInfo;
+        private java.util.List<AttributeInfo> attributeInfo;
 
         private AttributeInfos(Builder builder) {
             this.attributeInfo = builder.attributeInfo;
@@ -241,17 +246,17 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         /**
          * @return attributeInfo
          */
-        public java.util.List < AttributeInfo> getAttributeInfo() {
+        public java.util.List<AttributeInfo> getAttributeInfo() {
             return this.attributeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AttributeInfo> attributeInfo; 
+            private java.util.List<AttributeInfo> attributeInfo; 
 
             /**
              * AttributeInfo.
              */
-            public Builder attributeInfo(java.util.List < AttributeInfo> attributeInfo) {
+            public Builder attributeInfo(java.util.List<AttributeInfo> attributeInfo) {
                 this.attributeInfo = attributeInfo;
                 return this;
             }

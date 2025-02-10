@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertConfig")
-    private java.util.List < AlertConfig> alertConfig;
+    private java.util.List<AlertConfig> alertConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertGroup")
-    private java.util.List < String > alertGroup;
+    private java.util.List<String> alertGroup;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -59,14 +64,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
     /**
      * @return alertConfig
      */
-    public java.util.List < AlertConfig> getAlertConfig() {
+    public java.util.List<AlertConfig> getAlertConfig() {
         return this.alertConfig;
     }
 
     /**
      * @return alertGroup
      */
-    public java.util.List < String > getAlertGroup() {
+    public java.util.List<String> getAlertGroup() {
         return this.alertGroup;
     }
 
@@ -79,8 +84,8 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateCloudGtmGlobalAlertRequest, Builder> {
         private String acceptLanguage; 
-        private java.util.List < AlertConfig> alertConfig; 
-        private java.util.List < String > alertGroup; 
+        private java.util.List<AlertConfig> alertConfig; 
+        private java.util.List<String> alertGroup; 
         private String clientToken; 
 
         private Builder() {
@@ -114,7 +119,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         /**
          * <p>The alert configurations.</p>
          */
-        public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
+        public Builder alertConfig(java.util.List<AlertConfig> alertConfig) {
             String alertConfigShrink = shrink(alertConfig, "AlertConfig", "json");
             this.putQueryParameter("AlertConfig", alertConfigShrink);
             this.alertConfig = alertConfig;
@@ -124,7 +129,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         /**
          * <p>The alert contact groups.</p>
          */
-        public Builder alertGroup(java.util.List < String > alertGroup) {
+        public Builder alertGroup(java.util.List<String> alertGroup) {
             String alertGroupShrink = shrink(alertGroup, "AlertGroup", "json");
             this.putQueryParameter("AlertGroup", alertGroupShrink);
             this.alertGroup = alertGroup;

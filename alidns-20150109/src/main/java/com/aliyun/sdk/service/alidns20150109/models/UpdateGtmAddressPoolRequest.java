@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Addr")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Addr> addr;
+    private java.util.List<Addr> addr;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddrPoolId")
@@ -65,7 +70,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
     /**
      * @return addr
      */
-    public java.util.List < Addr> getAddr() {
+    public java.util.List<Addr> getAddr() {
         return this.addr;
     }
 
@@ -105,7 +110,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateGtmAddressPoolRequest, Builder> {
-        private java.util.List < Addr> addr; 
+        private java.util.List<Addr> addr; 
         private String addrPoolId; 
         private String lang; 
         private Integer minAvailableAddrNum; 
@@ -129,7 +134,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder addr(java.util.List < Addr> addr) {
+        public Builder addr(java.util.List<Addr> addr) {
             this.putQueryParameter("Addr", addr);
             this.addr = addr;
             return this;
