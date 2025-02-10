@@ -204,7 +204,77 @@ public class PurgeCachesRequest extends Request {
      *
      * <p>PurgeCachesRequest</p>
      */
+    public static class CacheKeys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Headers")
+        private java.util.Map<String, String> headers;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private CacheKeys(Builder builder) {
+            this.headers = builder.headers;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CacheKeys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return headers
+         */
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, String> headers; 
+            private String url; 
+
+            /**
+             * Headers.
+             */
+            public Builder headers(java.util.Map<String, String> headers) {
+                this.headers = headers;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public CacheKeys build() {
+                return new CacheKeys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PurgeCachesRequest} extends {@link TeaModel}
+     *
+     * <p>PurgeCachesRequest</p>
+     */
     public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CacheKeys")
+        private java.util.List<CacheKeys> cacheKeys;
+
         @com.aliyun.core.annotation.NameInMap("CacheTags")
         private java.util.List<String> cacheTags;
 
@@ -224,6 +294,7 @@ public class PurgeCachesRequest extends Request {
         private Boolean purgeAll;
 
         private Content(Builder builder) {
+            this.cacheKeys = builder.cacheKeys;
             this.cacheTags = builder.cacheTags;
             this.directories = builder.directories;
             this.files = builder.files;
@@ -238,6 +309,13 @@ public class PurgeCachesRequest extends Request {
 
         public static Content create() {
             return builder().build();
+        }
+
+        /**
+         * @return cacheKeys
+         */
+        public java.util.List<CacheKeys> getCacheKeys() {
+            return this.cacheKeys;
         }
 
         /**
@@ -283,12 +361,21 @@ public class PurgeCachesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<CacheKeys> cacheKeys; 
             private java.util.List<String> cacheTags; 
             private java.util.List<String> directories; 
             private java.util.List<?> files; 
             private java.util.List<String> hostnames; 
             private java.util.List<String> ignoreParams; 
             private Boolean purgeAll; 
+
+            /**
+             * CacheKeys.
+             */
+            public Builder cacheKeys(java.util.List<CacheKeys> cacheKeys) {
+                this.cacheKeys = cacheKeys;
+                return this;
+            }
 
             /**
              * <p>The cache tags that are used to purge the cache. This parameter is required if Type is set to cachetag.</p>

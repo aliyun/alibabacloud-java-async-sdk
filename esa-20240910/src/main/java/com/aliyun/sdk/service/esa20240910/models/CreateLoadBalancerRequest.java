@@ -23,6 +23,7 @@ public class CreateLoadBalancerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultPools")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Long> defaultPools;
 
     @com.aliyun.core.annotation.Query
@@ -31,10 +32,12 @@ public class CreateLoadBalancerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallbackPool")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long fallbackPool;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Monitor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Monitor monitor;
 
     @com.aliyun.core.annotation.Query
@@ -69,6 +72,7 @@ public class CreateLoadBalancerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SteeringPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String steeringPolicy;
 
     @com.aliyun.core.annotation.Query
@@ -267,7 +271,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * DefaultPools.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
          */
         public Builder defaultPools(java.util.List<Long> defaultPools) {
             String defaultPoolsShrink = shrink(defaultPools, "DefaultPools", "json");
@@ -286,7 +293,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * FallbackPool.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder fallbackPool(Long fallbackPool) {
             this.putQueryParameter("FallbackPool", fallbackPool);
@@ -295,7 +305,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * Monitor.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         public Builder monitor(Monitor monitor) {
             String monitorShrink = shrink(monitor, "Monitor", "json");
@@ -374,7 +387,10 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * SteeringPolicy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder steeringPolicy(String steeringPolicy) {
             this.putQueryParameter("SteeringPolicy", steeringPolicy);
