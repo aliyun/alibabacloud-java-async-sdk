@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -233,7 +238,7 @@ public class UntagResourcesResponseBody extends TeaModel {
      */
     public static class FailedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedResource")
-        private java.util.List < FailedResource> failedResource;
+        private java.util.List<FailedResource> failedResource;
 
         private FailedResources(Builder builder) {
             this.failedResource = builder.failedResource;
@@ -250,17 +255,17 @@ public class UntagResourcesResponseBody extends TeaModel {
         /**
          * @return failedResource
          */
-        public java.util.List < FailedResource> getFailedResource() {
+        public java.util.List<FailedResource> getFailedResource() {
             return this.failedResource;
         }
 
         public static final class Builder {
-            private java.util.List < FailedResource> failedResource; 
+            private java.util.List<FailedResource> failedResource; 
 
             /**
              * FailedResource.
              */
-            public Builder failedResource(java.util.List < FailedResource> failedResource) {
+            public Builder failedResource(java.util.List<FailedResource> failedResource) {
                 this.failedResource = failedResource;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -202,7 +207,7 @@ public class ModifyPolicyRequest extends Request {
 
         /**
          * <p>The document of the tag policy.</p>
-         * <p>For more information about the syntax of a tag policy, see <a href="~~417436~~">Syntax of a tag policy</a>.</p>
+         * <p>For more information about the syntax of a tag policy, see <a href="https://help.aliyun.com/document_detail/417436.html">Syntax of a tag policy</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
@@ -228,6 +233,7 @@ public class ModifyPolicyRequest extends Request {
 
         /**
          * <p>The ID of the tag policy.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>p-5732750813924f90****</p>

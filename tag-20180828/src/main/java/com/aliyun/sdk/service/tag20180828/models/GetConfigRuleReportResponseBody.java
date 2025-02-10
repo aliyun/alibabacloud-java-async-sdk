@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -217,7 +222,7 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
             /**
              * <p>The ID of the object.</p>
              * <blockquote>
-             * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="~~433313~~">GenerateConfigRuleReport</a> operation to generate the report.</p>
+             * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="https://help.aliyun.com/document_detail/433313.html">GenerateConfigRuleReport</a> operation to generate the report.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -237,7 +242,7 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
              * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="~~433313~~">GenerateConfigRuleReport</a> operation to generate the report.</p>
+             * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="https://help.aliyun.com/document_detail/433313.html">GenerateConfigRuleReport</a> operation to generate the report.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

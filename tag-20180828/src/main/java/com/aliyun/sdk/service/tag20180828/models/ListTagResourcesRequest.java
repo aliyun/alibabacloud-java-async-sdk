@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceARN")
-    private java.util.List < String > resourceARN;
+    private java.util.List<String> resourceARN;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -120,7 +125,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return resourceARN
      */
-    public java.util.List < String > getResourceARN() {
+    public java.util.List<String> getResourceARN() {
         return this.resourceARN;
     }
 
@@ -145,7 +150,7 @@ public class ListTagResourcesRequest extends Request {
         private Long ownerId; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < String > resourceARN; 
+        private java.util.List<String> resourceARN; 
         private String resourceOwnerAccount; 
         private String tags; 
 
@@ -230,9 +235,10 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <ul>
-         * <li>If the resources belong to a service that is centrally deployed, set the value to the region ID of the resources by referring to <a href="~~2579691~~">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</li>
+         * <li>If the resources belong to a service that is centrally deployed, set the value to the region ID of the resources by referring to <a href="https://help.aliyun.com/document_detail/2579691.html">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</li>
          * <li>If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -249,7 +255,7 @@ public class ListTagResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-bp15hr53jws84akg****</p>
          */
-        public Builder resourceARN(java.util.List < String > resourceARN) {
+        public Builder resourceARN(java.util.List<String> resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
             this.resourceARN = resourceARN;
             return this;

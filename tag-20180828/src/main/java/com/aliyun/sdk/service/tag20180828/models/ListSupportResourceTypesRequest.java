@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -237,7 +242,7 @@ public class ListSupportResourceTypesRequest extends Request {
 
         /**
          * <p>The region ID.</p>
-         * <p>For more information about region IDs, see <a href="~~2330902~~">Endpoints</a>.</p>
+         * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

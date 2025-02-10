@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -267,7 +272,8 @@ public class ListResourcesByTagRequest extends Request {
 
         /**
          * <p>The region ID.</p>
-         * <p>For more information about region IDs, see <a href="~~2330902~~">Endpoints</a>.</p>
+         * <p>For more information about region IDs, see <a href="https://help.aliyun.com/document_detail/2330902.html">Endpoints</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -290,9 +296,10 @@ public class ListResourcesByTagRequest extends Request {
         /**
          * <p>The resource type. This parameter specifies a filter condition for the query.</p>
          * <ul>
-         * <li>If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the <a href="~~2330915~~">ListSupportResourceTypes</a> operation.</li>
+         * <li>If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
          * <li>If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in <strong>Types of resources that support queries based on the NOT operator</strong>.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::VPC::VPC</p>
@@ -358,6 +365,7 @@ public class ListResourcesByTagRequest extends Request {
             /**
              * <p>The tag key. This parameter specifies a filter condition for the query.</p>
              * <p>The tag key can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -369,7 +377,7 @@ public class ListResourcesByTagRequest extends Request {
 
             /**
              * <p>The tag value. This parameter specifies a filter condition for the query.</p>
-             * <p>The tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

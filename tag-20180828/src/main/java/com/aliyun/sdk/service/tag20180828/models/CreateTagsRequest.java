@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateTagsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagKeyValueParamList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TagKeyValueParamList> tagKeyValueParamList;
+    private java.util.List<TagKeyValueParamList> tagKeyValueParamList;
 
     private CreateTagsRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class CreateTagsRequest extends Request {
     /**
      * @return tagKeyValueParamList
      */
-    public java.util.List < TagKeyValueParamList> getTagKeyValueParamList() {
+    public java.util.List<TagKeyValueParamList> getTagKeyValueParamList() {
         return this.tagKeyValueParamList;
     }
 
@@ -96,7 +101,7 @@ public class CreateTagsRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private java.util.List < TagKeyValueParamList> tagKeyValueParamList; 
+        private java.util.List<TagKeyValueParamList> tagKeyValueParamList; 
 
         private Builder() {
             super();
@@ -134,6 +139,7 @@ public class CreateTagsRequest extends Request {
          * <blockquote>
          * <p>Only <code>cn-hangzhou</code> is supported.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -155,8 +161,9 @@ public class CreateTagsRequest extends Request {
 
         /**
          * <p>The information about the tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tagKeyValueParamList(java.util.List < TagKeyValueParamList> tagKeyValueParamList) {
+        public Builder tagKeyValueParamList(java.util.List<TagKeyValueParamList> tagKeyValueParamList) {
             this.putQueryParameter("TagKeyValueParamList", tagKeyValueParamList);
             this.tagKeyValueParamList = tagKeyValueParamList;
             return this;
@@ -227,7 +234,7 @@ public class CreateTagsRequest extends Request {
 
             /**
              * <p>The value of tag N.</p>
-             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. </p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>Valid values of N: 1 to 10.</p>
              * 
              * <strong>example:</strong>
@@ -260,7 +267,7 @@ public class CreateTagsRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("TagValueParamList")
-        private java.util.List < TagValueParamList> tagValueParamList;
+        private java.util.List<TagValueParamList> tagValueParamList;
 
         private TagKeyValueParamList(Builder builder) {
             this.description = builder.description;
@@ -293,14 +300,14 @@ public class CreateTagsRequest extends Request {
         /**
          * @return tagValueParamList
          */
-        public java.util.List < TagValueParamList> getTagValueParamList() {
+        public java.util.List<TagValueParamList> getTagValueParamList() {
             return this.tagValueParamList;
         }
 
         public static final class Builder {
             private String description; 
             private String key; 
-            private java.util.List < TagValueParamList> tagValueParamList; 
+            private java.util.List<TagValueParamList> tagValueParamList; 
 
             /**
              * <p>The description of the key for tag N.</p>
@@ -315,9 +322,10 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * <p>The key of tag N.</p>
-             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * <p>The value of tag N.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
              * <p>Valid values of N: 1 to 10.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>Environment</p>
@@ -328,9 +336,9 @@ public class CreateTagsRequest extends Request {
             }
 
             /**
-             * <p>The information about the tag value.</p>
+             * <p>The information about the tag values.</p>
              */
-            public Builder tagValueParamList(java.util.List < TagValueParamList> tagValueParamList) {
+            public Builder tagValueParamList(java.util.List<TagValueParamList> tagValueParamList) {
                 this.tagValueParamList = tagValueParamList;
                 return this;
             }

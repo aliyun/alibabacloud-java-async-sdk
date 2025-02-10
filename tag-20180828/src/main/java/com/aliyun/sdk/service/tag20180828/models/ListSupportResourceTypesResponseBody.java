@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SupportResourceTypes")
-    private java.util.List < SupportResourceTypes> supportResourceTypes;
+    private java.util.List<SupportResourceTypes> supportResourceTypes;
 
     private ListSupportResourceTypesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
     /**
      * @return supportResourceTypes
      */
-    public java.util.List < SupportResourceTypes> getSupportResourceTypes() {
+    public java.util.List<SupportResourceTypes> getSupportResourceTypes() {
         return this.supportResourceTypes;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SupportResourceTypes> supportResourceTypes; 
+        private java.util.List<SupportResourceTypes> supportResourceTypes; 
 
         /**
          * <p>Indicates whether the next query is required.</p>
@@ -90,7 +95,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         /**
          * <p>The supported resource types.</p>
          */
-        public Builder supportResourceTypes(java.util.List < SupportResourceTypes> supportResourceTypes) {
+        public Builder supportResourceTypes(java.util.List<SupportResourceTypes> supportResourceTypes) {
             this.supportResourceTypes = supportResourceTypes;
             return this;
         }
@@ -115,7 +120,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         private String supportCode;
 
         @com.aliyun.core.annotation.NameInMap("SupportDetails")
-        private java.util.List < java.util.Map<String, String>> supportDetails;
+        private java.util.List<java.util.Map<String, String>> supportDetails;
 
         private SupportItems(Builder builder) {
             this.support = builder.support;
@@ -148,14 +153,14 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         /**
          * @return supportDetails
          */
-        public java.util.List < java.util.Map<String, String>> getSupportDetails() {
+        public java.util.List<java.util.Map<String, String>> getSupportDetails() {
             return this.supportDetails;
         }
 
         public static final class Builder {
             private Boolean support; 
             private String supportCode; 
-            private java.util.List < java.util.Map<String, String>> supportDetails; 
+            private java.util.List<java.util.Map<String, String>> supportDetails; 
 
             /**
              * <p>Indicates whether the tag-related capability item is supported. Valid values:</p>
@@ -186,7 +191,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             /**
              * <p>The details of the support for the tag-related capability item.</p>
              */
-            public Builder supportDetails(java.util.List < java.util.Map<String, String>> supportDetails) {
+            public Builder supportDetails(java.util.List<java.util.Map<String, String>> supportDetails) {
                 this.supportDetails = supportDetails;
                 return this;
             }
@@ -215,7 +220,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("SupportItems")
-        private java.util.List < SupportItems> supportItems;
+        private java.util.List<SupportItems> supportItems;
 
         private SupportResourceTypes(Builder builder) {
             this.arnTemplate = builder.arnTemplate;
@@ -256,7 +261,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         /**
          * @return supportItems
          */
-        public java.util.List < SupportItems> getSupportItems() {
+        public java.util.List<SupportItems> getSupportItems() {
             return this.supportItems;
         }
 
@@ -264,10 +269,13 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             private String arnTemplate; 
             private String productCode; 
             private String resourceType; 
-            private java.util.List < SupportItems> supportItems; 
+            private java.util.List<SupportItems> supportItems; 
 
             /**
-             * ArnTemplate.
+             * <p>The resource ARN template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ecs:<em>:</em>:instance/${ResourceId}</p>
              */
             public Builder arnTemplate(String arnTemplate) {
                 this.arnTemplate = arnTemplate;
@@ -302,7 +310,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
              * <p> This parameter is returned only if the <code>ShowItems</code> parameter is set to <code>true</code>.</p>
              * </blockquote>
              */
-            public Builder supportItems(java.util.List < SupportItems> supportItems) {
+            public Builder supportItems(java.util.List<SupportItems> supportItems) {
                 this.supportItems = supportItems;
                 return this;
             }

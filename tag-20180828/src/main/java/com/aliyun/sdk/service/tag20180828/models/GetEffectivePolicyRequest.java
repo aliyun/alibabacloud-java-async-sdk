@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,6 +34,10 @@ public class GetEffectivePolicyRequest extends Request {
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
+    private java.util.List<String> tagKeys;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
@@ -42,6 +51,7 @@ public class GetEffectivePolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.tagKeys = builder.tagKeys;
         this.targetId = builder.targetId;
         this.targetType = builder.targetType;
     }
@@ -88,6 +98,13 @@ public class GetEffectivePolicyRequest extends Request {
     }
 
     /**
+     * @return tagKeys
+     */
+    public java.util.List<String> getTagKeys() {
+        return this.tagKeys;
+    }
+
+    /**
      * @return targetId
      */
     public String getTargetId() {
@@ -106,6 +123,7 @@ public class GetEffectivePolicyRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
+        private java.util.List<String> tagKeys; 
         private String targetId; 
         private String targetType; 
 
@@ -119,6 +137,7 @@ public class GetEffectivePolicyRequest extends Request {
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tagKeys = request.tagKeys;
             this.targetId = request.targetId;
             this.targetType = request.targetType;
         } 
@@ -159,6 +178,15 @@ public class GetEffectivePolicyRequest extends Request {
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
             this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * TagKeys.
+         */
+        public Builder tagKeys(java.util.List<String> tagKeys) {
+            this.putQueryParameter("TagKeys", tagKeys);
+            this.tagKeys = tagKeys;
             return this;
         }
 

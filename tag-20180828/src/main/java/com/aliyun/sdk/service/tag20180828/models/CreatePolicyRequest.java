@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -203,7 +208,8 @@ public class CreatePolicyRequest extends Request {
 
         /**
          * <p>The document of the tag policy.</p>
-         * <p>For more information about the syntax of a tag policy, see <a href="~~417436~~">Syntax of a tag policy</a>.</p>
+         * <p>For more information about the syntax of a tag policy, see <a href="https://help.aliyun.com/document_detail/417436.html">Syntax of a tag policy</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
@@ -230,6 +236,7 @@ public class CreatePolicyRequest extends Request {
         /**
          * <p>The name of the tag policy.</p>
          * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_).</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -267,7 +274,7 @@ public class CreatePolicyRequest extends Request {
          * <li>USER: single-account mode. Set the value to USER if you use an Alibaba Cloud account or a member of a resource directory to call this API operation to create a tag policy for the Alibaba Cloud account or member.</li>
          * <li>RD: multi-account mode. Set the value to RD if you use the management account of a resource directory to call this API operation to create a tag policy for the resource directory.</li>
          * </ul>
-         * <p>For more information about the modes of the Tag Policy feature, see <a href="~~417434~~">Modes of the Tag Policy feature</a>.</p>
+         * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>RD</p>

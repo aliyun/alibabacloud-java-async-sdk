@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Targets")
-    private java.util.List < Targets> targets;
+    private java.util.List<Targets> targets;
 
     private ListTargetsForPolicyResponseBody(Builder builder) {
         this.isRd = builder.isRd;
@@ -74,7 +79,7 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
     /**
      * @return targets
      */
-    public java.util.List < Targets> getTargets() {
+    public java.util.List<Targets> getTargets() {
         return this.targets;
     }
 
@@ -83,7 +88,7 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         private String nextToken; 
         private String rdId; 
         private String requestId; 
-        private java.util.List < Targets> targets; 
+        private java.util.List<Targets> targets; 
 
         /**
          * <p>Indicates whether the object belongs to the resource directory. Valid values:</p>
@@ -143,7 +148,7 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         /**
          * <p>The objects to which the tag policy is attached.</p>
          */
-        public Builder targets(java.util.List < Targets> targets) {
+        public Builder targets(java.util.List<Targets> targets) {
             this.targets = targets;
             return this;
         }

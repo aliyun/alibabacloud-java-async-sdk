@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("PolicyList")
-    private java.util.List < PolicyList> policyList;
+    private java.util.List<PolicyList> policyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     /**
      * @return policyList
      */
-    public java.util.List < PolicyList> getPolicyList() {
+    public java.util.List<PolicyList> getPolicyList() {
         return this.policyList;
     }
 
@@ -58,7 +63,7 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < PolicyList> policyList; 
+        private java.util.List<PolicyList> policyList; 
         private String requestId; 
 
         /**
@@ -79,7 +84,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         /**
          * <p>The tag policies.</p>
          */
-        public Builder policyList(java.util.List < PolicyList> policyList) {
+        public Builder policyList(java.util.List<PolicyList> policyList) {
             this.policyList = policyList;
             return this;
         }
@@ -231,7 +236,7 @@ public class ListPoliciesResponseBody extends TeaModel {
              * <li>USER: single-account mode</li>
              * <li>RD: multi-account mode</li>
              * </ul>
-             * <p>For more information about the modes of the Tag Policy feature, see <a href="~~417434~~">Modes of the Tag Policy feature</a>.</p>
+             * <p>For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>USER</p>
