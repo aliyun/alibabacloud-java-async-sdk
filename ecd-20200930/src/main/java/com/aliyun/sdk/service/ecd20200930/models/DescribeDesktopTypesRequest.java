@@ -78,6 +78,14 @@ public class DescribeDesktopTypesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SortType")
     private String sortType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportMinSessionCount")
+    private Integer supportMinSessionCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
     private DescribeDesktopTypesRequest(Builder builder) {
         super(builder);
         this.appliedScope = builder.appliedScope;
@@ -95,6 +103,8 @@ public class DescribeDesktopTypesRequest extends Request {
         this.regionId = builder.regionId;
         this.scope = builder.scope;
         this.sortType = builder.sortType;
+        this.supportMinSessionCount = builder.supportMinSessionCount;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -215,6 +225,20 @@ public class DescribeDesktopTypesRequest extends Request {
         return this.sortType;
     }
 
+    /**
+     * @return supportMinSessionCount
+     */
+    public Integer getSupportMinSessionCount() {
+        return this.supportMinSessionCount;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDesktopTypesRequest, Builder> {
         private String appliedScope; 
         private Integer cpuCount; 
@@ -231,6 +255,8 @@ public class DescribeDesktopTypesRequest extends Request {
         private String regionId; 
         private String scope; 
         private String sortType; 
+        private Integer supportMinSessionCount; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -253,6 +279,8 @@ public class DescribeDesktopTypesRequest extends Request {
             this.regionId = request.regionId;
             this.scope = request.scope;
             this.sortType = request.sortType;
+            this.supportMinSessionCount = request.supportMinSessionCount;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -617,6 +645,24 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);
             this.sortType = sortType;
+            return this;
+        }
+
+        /**
+         * SupportMinSessionCount.
+         */
+        public Builder supportMinSessionCount(Integer supportMinSessionCount) {
+            this.putQueryParameter("SupportMinSessionCount", supportMinSessionCount);
+            this.supportMinSessionCount = supportMinSessionCount;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

@@ -51,6 +51,14 @@ public class DescribeRecordingsRequest extends Request {
     private Integer signedUrlExpireMinutes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandardEndTime")
+    private String standardEndTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandardStartTime")
+    private String standardStartTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -64,6 +72,8 @@ public class DescribeRecordingsRequest extends Request {
         this.policyGroupId = builder.policyGroupId;
         this.regionId = builder.regionId;
         this.signedUrlExpireMinutes = builder.signedUrlExpireMinutes;
+        this.standardEndTime = builder.standardEndTime;
+        this.standardStartTime = builder.standardStartTime;
         this.startTime = builder.startTime;
     }
 
@@ -137,6 +147,20 @@ public class DescribeRecordingsRequest extends Request {
     }
 
     /**
+     * @return standardEndTime
+     */
+    public String getStandardEndTime() {
+        return this.standardEndTime;
+    }
+
+    /**
+     * @return standardStartTime
+     */
+    public String getStandardStartTime() {
+        return this.standardStartTime;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -152,6 +176,8 @@ public class DescribeRecordingsRequest extends Request {
         private String policyGroupId; 
         private String regionId; 
         private Integer signedUrlExpireMinutes; 
+        private String standardEndTime; 
+        private String standardStartTime; 
         private String startTime; 
 
         private Builder() {
@@ -168,6 +194,8 @@ public class DescribeRecordingsRequest extends Request {
             this.policyGroupId = request.policyGroupId;
             this.regionId = request.regionId;
             this.signedUrlExpireMinutes = request.signedUrlExpireMinutes;
+            this.standardEndTime = request.standardEndTime;
+            this.standardStartTime = request.standardStartTime;
             this.startTime = request.startTime;
         } 
 
@@ -243,6 +271,24 @@ public class DescribeRecordingsRequest extends Request {
         public Builder signedUrlExpireMinutes(Integer signedUrlExpireMinutes) {
             this.putQueryParameter("SignedUrlExpireMinutes", signedUrlExpireMinutes);
             this.signedUrlExpireMinutes = signedUrlExpireMinutes;
+            return this;
+        }
+
+        /**
+         * StandardEndTime.
+         */
+        public Builder standardEndTime(String standardEndTime) {
+            this.putQueryParameter("StandardEndTime", standardEndTime);
+            this.standardEndTime = standardEndTime;
+            return this;
+        }
+
+        /**
+         * StandardStartTime.
+         */
+        public Builder standardStartTime(String standardStartTime) {
+            this.putQueryParameter("StandardStartTime", standardStartTime);
+            this.standardStartTime = standardStartTime;
             return this;
         }
 

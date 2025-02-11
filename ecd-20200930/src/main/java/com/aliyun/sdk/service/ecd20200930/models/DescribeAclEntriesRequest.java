@@ -27,6 +27,10 @@ public class DescribeAclEntriesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -43,6 +47,7 @@ public class DescribeAclEntriesRequest extends Request {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
@@ -76,6 +81,13 @@ public class DescribeAclEntriesRequest extends Request {
     }
 
     /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -99,6 +111,7 @@ public class DescribeAclEntriesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAclEntriesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
+        private String officeSiteId; 
         private String regionId; 
         private String sourceId; 
         private String sourceType; 
@@ -111,6 +124,7 @@ public class DescribeAclEntriesRequest extends Request {
             super(request);
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
@@ -138,6 +152,15 @@ public class DescribeAclEntriesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
             return this;
         }
 

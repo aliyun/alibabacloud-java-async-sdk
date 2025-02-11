@@ -1168,6 +1168,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserGroupCoordinate")
         private String endUserGroupCoordinate;
 
+        @com.aliyun.core.annotation.NameInMap("FileTransfer")
+        private String fileTransfer;
+
         @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
         private String gpuAcceleration;
 
@@ -1246,6 +1249,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordContentExpires")
         private Long recordContentExpires;
 
+        @com.aliyun.core.annotation.NameInMap("RecordEventDuration")
+        private Integer recordEventDuration;
+
+        @com.aliyun.core.annotation.NameInMap("RecordEventFilePaths")
+        private java.util.List<String> recordEventFilePaths;
+
+        @com.aliyun.core.annotation.NameInMap("RecordEventRegisters")
+        private java.util.List<String> recordEventRegisters;
+
         @com.aliyun.core.annotation.NameInMap("Recording")
         private String recording;
 
@@ -1275,6 +1287,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
+
+        @com.aliyun.core.annotation.NameInMap("ResetDesktop")
+        private String resetDesktop;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupCount")
         private Integer resourceGroupCount;
@@ -1395,6 +1410,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.edsCount = builder.edsCount;
             this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
             this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
+            this.fileTransfer = builder.fileTransfer;
             this.gpuAcceleration = builder.gpuAcceleration;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
@@ -1421,6 +1437,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.qualityEnhancement = builder.qualityEnhancement;
             this.recordContent = builder.recordContent;
             this.recordContentExpires = builder.recordContentExpires;
+            this.recordEventDuration = builder.recordEventDuration;
+            this.recordEventFilePaths = builder.recordEventFilePaths;
+            this.recordEventRegisters = builder.recordEventRegisters;
             this.recording = builder.recording;
             this.recordingAudio = builder.recordingAudio;
             this.recordingDuration = builder.recordingDuration;
@@ -1431,6 +1450,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordingUserNotify = builder.recordingUserNotify;
             this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
             this.remoteCoordinate = builder.remoteCoordinate;
+            this.resetDesktop = builder.resetDesktop;
             this.resourceGroupCount = builder.resourceGroupCount;
             this.resourceRegionId = builder.resourceRegionId;
             this.scope = builder.scope;
@@ -1648,6 +1668,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileTransfer
+         */
+        public String getFileTransfer() {
+            return this.fileTransfer;
+        }
+
+        /**
          * @return gpuAcceleration
          */
         public String getGpuAcceleration() {
@@ -1830,6 +1857,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordEventDuration
+         */
+        public Integer getRecordEventDuration() {
+            return this.recordEventDuration;
+        }
+
+        /**
+         * @return recordEventFilePaths
+         */
+        public java.util.List<String> getRecordEventFilePaths() {
+            return this.recordEventFilePaths;
+        }
+
+        /**
+         * @return recordEventRegisters
+         */
+        public java.util.List<String> getRecordEventRegisters() {
+            return this.recordEventRegisters;
+        }
+
+        /**
          * @return recording
          */
         public String getRecording() {
@@ -1897,6 +1945,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getRemoteCoordinate() {
             return this.remoteCoordinate;
+        }
+
+        /**
+         * @return resetDesktop
+         */
+        public String getResetDesktop() {
+            return this.resetDesktop;
         }
 
         /**
@@ -2142,6 +2197,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer edsCount; 
             private String endUserApplyAdminCoordinate; 
             private String endUserGroupCoordinate; 
+            private String fileTransfer; 
             private String gpuAcceleration; 
             private String html5Access; 
             private String html5FileTransfer; 
@@ -2168,6 +2224,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String qualityEnhancement; 
             private String recordContent; 
             private Long recordContentExpires; 
+            private Integer recordEventDuration; 
+            private java.util.List<String> recordEventFilePaths; 
+            private java.util.List<String> recordEventRegisters; 
             private String recording; 
             private String recordingAudio; 
             private Integer recordingDuration; 
@@ -2178,6 +2237,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String recordingUserNotify; 
             private String recordingUserNotifyMessage; 
             private String remoteCoordinate; 
+            private String resetDesktop; 
             private Integer resourceGroupCount; 
             private String resourceRegionId; 
             private String scope; 
@@ -2477,6 +2537,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder endUserGroupCoordinate(String endUserGroupCoordinate) {
                 this.endUserGroupCoordinate = endUserGroupCoordinate;
+                return this;
+            }
+
+            /**
+             * FileTransfer.
+             */
+            public Builder fileTransfer(String fileTransfer) {
+                this.fileTransfer = fileTransfer;
                 return this;
             }
 
@@ -2805,6 +2873,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * RecordEventDuration.
+             */
+            public Builder recordEventDuration(Integer recordEventDuration) {
+                this.recordEventDuration = recordEventDuration;
+                return this;
+            }
+
+            /**
+             * RecordEventFilePaths.
+             */
+            public Builder recordEventFilePaths(java.util.List<String> recordEventFilePaths) {
+                this.recordEventFilePaths = recordEventFilePaths;
+                return this;
+            }
+
+            /**
+             * RecordEventRegisters.
+             */
+            public Builder recordEventRegisters(java.util.List<String> recordEventRegisters) {
+                this.recordEventRegisters = recordEventRegisters;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the screen recording feature is enabled.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -2932,6 +3024,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder remoteCoordinate(String remoteCoordinate) {
                 this.remoteCoordinate = remoteCoordinate;
+                return this;
+            }
+
+            /**
+             * ResetDesktop.
+             */
+            public Builder resetDesktop(String resetDesktop) {
+                this.resetDesktop = resetDesktop;
                 return this;
             }
 

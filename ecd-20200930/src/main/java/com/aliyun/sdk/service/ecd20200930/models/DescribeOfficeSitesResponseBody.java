@@ -505,6 +505,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ADConnectors")
         private java.util.List<ADConnectors> ADConnectors;
 
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+        private String acceleratorId;
+
         @com.aliyun.core.annotation.NameInMap("AdHostname")
         private String adHostname;
 
@@ -669,6 +672,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         private OfficeSites(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
+            this.acceleratorId = builder.acceleratorId;
             this.adHostname = builder.adHostname;
             this.backupDCHostname = builder.backupDCHostname;
             this.backupDns = builder.backupDns;
@@ -738,6 +742,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public java.util.List<ADConnectors> getADConnectors() {
             return this.ADConnectors;
+        }
+
+        /**
+         * @return acceleratorId
+         */
+        public String getAcceleratorId() {
+            return this.acceleratorId;
         }
 
         /**
@@ -1120,6 +1131,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ADConnectors> ADConnectors; 
+            private String acceleratorId; 
             private String adHostname; 
             private String backupDCHostname; 
             private String backupDns; 
@@ -1180,6 +1192,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder ADConnectors(java.util.List<ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
+                return this;
+            }
+
+            /**
+             * AcceleratorId.
+             */
+            public Builder acceleratorId(String acceleratorId) {
+                this.acceleratorId = acceleratorId;
                 return this;
             }
 

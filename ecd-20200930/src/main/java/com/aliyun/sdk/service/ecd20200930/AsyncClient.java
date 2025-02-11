@@ -124,6 +124,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachEndUserResponse> attachEndUser(AttachEndUserRequest request);
 
     /**
+     * @param request the request parameters of BindConfigGroup  BindConfigGroupRequest
+     * @return BindConfigGroupResponse
+     */
+    CompletableFuture<BindConfigGroupResponse> bindConfigGroup(BindConfigGroupRequest request);
+
+    /**
      * @param request the request parameters of CancelAutoSnapshotPolicy  CancelAutoSnapshotPolicyRequest
      * @return CancelAutoSnapshotPolicyResponse
      */
@@ -261,6 +267,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCloudDriveUsersResponse
      */
     CompletableFuture<CreateCloudDriveUsersResponse> createCloudDriveUsers(CreateCloudDriveUsersRequest request);
+
+    /**
+     * @param request the request parameters of CreateConfigGroup  CreateConfigGroupRequest
+     * @return CreateConfigGroupResponse
+     */
+    CompletableFuture<CreateConfigGroupResponse> createConfigGroup(CreateConfigGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -404,6 +416,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudDriveUsersResponse
      */
     CompletableFuture<DeleteCloudDriveUsersResponse> deleteCloudDriveUsers(DeleteCloudDriveUsersRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConfigGroup  DeleteConfigGroupRequest
+     * @return DeleteConfigGroupResponse
+     */
+    CompletableFuture<DeleteConfigGroupResponse> deleteConfigGroup(DeleteConfigGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -577,6 +595,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCloudDriveUsersResponse
      */
     CompletableFuture<DescribeCloudDriveUsersResponse> describeCloudDriveUsers(DescribeCloudDriveUsersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeConfigGroup  DescribeConfigGroupRequest
+     * @return DescribeConfigGroupResponse
+     */
+    CompletableFuture<DescribeConfigGroupResponse> describeConfigGroup(DescribeConfigGroupRequest request);
 
     /**
      * @param request the request parameters of DescribeCustomizedListHeaders  DescribeCustomizedListHeadersRequest
@@ -843,6 +867,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSnapshotsResponse
      */
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTimerGroup  DescribeTimerGroupRequest
+     * @return DescribeTimerGroupResponse
+     */
+    CompletableFuture<DescribeTimerGroupResponse> describeTimerGroup(DescribeTimerGroupRequest request);
 
     /**
      * @param request the request parameters of DescribeUserConnectTime  DescribeUserConnectTimeRequest
@@ -1153,6 +1183,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCloudDriveUsersResponse> modifyCloudDriveUsers(ModifyCloudDriveUsersRequest request);
 
     /**
+     * @param request the request parameters of ModifyConfigGroup  ModifyConfigGroupRequest
+     * @return ModifyConfigGroupResponse
+     */
+    CompletableFuture<ModifyConfigGroupResponse> modifyConfigGroup(ModifyConfigGroupRequest request);
+
+    /**
      * @param request the request parameters of ModifyCustomizedListHeaders  ModifyCustomizedListHeadersRequest
      * @return ModifyCustomizedListHeadersResponse
      */
@@ -1366,6 +1402,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyGroupResponse
      */
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyTimerGroup  ModifyTimerGroupRequest
+     * @return ModifyTimerGroupResponse
+     */
+    CompletableFuture<ModifyTimerGroupResponse> modifyTimerGroup(ModifyTimerGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -1604,6 +1646,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnbindConfigGroup  UnbindConfigGroupRequest
+     * @return UnbindConfigGroupResponse
+     */
+    CompletableFuture<UnbindConfigGroupResponse> unbindConfigGroup(UnbindConfigGroupRequest request);
 
     /**
      * @param request the request parameters of UnbindUserDesktop  UnbindUserDesktopRequest

@@ -26,6 +26,10 @@ public class DescribeDesktopGroupsRequest extends Request {
     private String desktopGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
+    private java.util.List<String> desktopGroupIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
     private String desktopGroupName;
 
@@ -44,6 +48,10 @@ public class DescribeDesktopGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiResource")
+    private Boolean multiResource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -90,11 +98,13 @@ public class DescribeDesktopGroupsRequest extends Request {
         super(builder);
         this.bundleId = builder.bundleId;
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopGroupIds = builder.desktopGroupIds;
         this.desktopGroupName = builder.desktopGroupName;
         this.endUserIds = builder.endUserIds;
         this.excludedEndUserIds = builder.excludedEndUserIds;
         this.imageId = builder.imageId;
         this.maxResults = builder.maxResults;
+        this.multiResource = builder.multiResource;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
         this.ownType = builder.ownType;
@@ -135,6 +145,13 @@ public class DescribeDesktopGroupsRequest extends Request {
     }
 
     /**
+     * @return desktopGroupIds
+     */
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    /**
      * @return desktopGroupName
      */
     public String getDesktopGroupName() {
@@ -167,6 +184,13 @@ public class DescribeDesktopGroupsRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return multiResource
+     */
+    public Boolean getMultiResource() {
+        return this.multiResource;
     }
 
     /**
@@ -242,11 +266,13 @@ public class DescribeDesktopGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDesktopGroupsRequest, Builder> {
         private java.util.List<String> bundleId; 
         private String desktopGroupId; 
+        private java.util.List<String> desktopGroupIds; 
         private String desktopGroupName; 
         private java.util.List<String> endUserIds; 
         private java.util.List<String> excludedEndUserIds; 
         private java.util.List<String> imageId; 
         private Integer maxResults; 
+        private Boolean multiResource; 
         private String nextToken; 
         private String officeSiteId; 
         private Long ownType; 
@@ -266,11 +292,13 @@ public class DescribeDesktopGroupsRequest extends Request {
             super(request);
             this.bundleId = request.bundleId;
             this.desktopGroupId = request.desktopGroupId;
+            this.desktopGroupIds = request.desktopGroupIds;
             this.desktopGroupName = request.desktopGroupName;
             this.endUserIds = request.endUserIds;
             this.excludedEndUserIds = request.excludedEndUserIds;
             this.imageId = request.imageId;
             this.maxResults = request.maxResults;
+            this.multiResource = request.multiResource;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
             this.ownType = request.ownType;
@@ -301,6 +329,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         public Builder desktopGroupId(String desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
             this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+
+        /**
+         * DesktopGroupIds.
+         */
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
+            this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
+            this.desktopGroupIds = desktopGroupIds;
             return this;
         }
 
@@ -352,6 +389,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * MultiResource.
+         */
+        public Builder multiResource(Boolean multiResource) {
+            this.putQueryParameter("MultiResource", multiResource);
+            this.multiResource = multiResource;
             return this;
         }
 

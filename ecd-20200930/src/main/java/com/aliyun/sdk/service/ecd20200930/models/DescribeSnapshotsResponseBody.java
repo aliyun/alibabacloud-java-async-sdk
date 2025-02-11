@@ -139,6 +139,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
+        @com.aliyun.core.annotation.NameInMap("RestorePointId")
+        private String restorePointId;
+
+        @com.aliyun.core.annotation.NameInMap("RestorePointName")
+        private String restorePointName;
+
         @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
@@ -174,6 +180,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
             this.remainTime = builder.remainTime;
+            this.restorePointId = builder.restorePointId;
+            this.restorePointName = builder.restorePointName;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
             this.snapshotType = builder.snapshotType;
@@ -263,6 +271,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return restorePointId
+         */
+        public String getRestorePointId() {
+            return this.restorePointId;
+        }
+
+        /**
+         * @return restorePointName
+         */
+        public String getRestorePointName() {
+            return this.restorePointName;
+        }
+
+        /**
          * @return snapshotId
          */
         public String getSnapshotId() {
@@ -329,6 +351,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String progress; 
             private String protocolType; 
             private Integer remainTime; 
+            private String restorePointId; 
+            private String restorePointName; 
             private String snapshotId; 
             private String snapshotName; 
             private String snapshotType; 
@@ -475,6 +499,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
+                return this;
+            }
+
+            /**
+             * RestorePointId.
+             */
+            public Builder restorePointId(String restorePointId) {
+                this.restorePointId = restorePointId;
+                return this;
+            }
+
+            /**
+             * RestorePointName.
+             */
+            public Builder restorePointName(String restorePointName) {
+                this.restorePointName = restorePointName;
                 return this;
             }
 

@@ -45,7 +45,6 @@ public class CreateDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BundleId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String bundleId;
 
     @com.aliyun.core.annotation.Query
@@ -74,13 +73,33 @@ public class CreateDesktopGroupRequest extends Request {
     private Long connectDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
+    private String dataDiskCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskPerLevel")
+    private String dataDiskPerLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
+    private Integer dataDiskSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultInitDesktopCount")
     @com.aliyun.core.annotation.Validation(maximum = 1000)
     private Integer defaultInitDesktopCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultLanguage")
+    private String defaultLanguage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
     private String desktopGroupName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopType")
+    private String desktopType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DirectoryId")
@@ -91,16 +110,32 @@ public class CreateDesktopGroupRequest extends Request {
     private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusiveType")
+    private String exclusiveType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupAmount")
+    private Integer groupAmount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupVersion")
     private Integer groupVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hostname")
+    private String hostname;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdleDisconnectDuration")
     private Long idleDisconnectDuration;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeepDuration")
@@ -119,6 +154,10 @@ public class CreateDesktopGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MinDesktopsCount")
     @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer minDesktopsCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiResource")
+    private Boolean multiResource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
@@ -168,12 +207,36 @@ public class CreateDesktopGroupRequest extends Request {
     private String scaleStrategyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionType")
+    private String sessionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
+    private String snapshotPolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StopDuration")
     private Long stopDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
+    private String systemDiskCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskPerLevel")
+    private String systemDiskPerLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    private Integer systemDiskSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimerGroupId")
+    private String timerGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
@@ -202,17 +265,27 @@ public class CreateDesktopGroupRequest extends Request {
         this.clientToken = builder.clientToken;
         this.comments = builder.comments;
         this.connectDuration = builder.connectDuration;
+        this.dataDiskCategory = builder.dataDiskCategory;
+        this.dataDiskPerLevel = builder.dataDiskPerLevel;
+        this.dataDiskSize = builder.dataDiskSize;
         this.defaultInitDesktopCount = builder.defaultInitDesktopCount;
+        this.defaultLanguage = builder.defaultLanguage;
         this.desktopGroupName = builder.desktopGroupName;
+        this.desktopType = builder.desktopType;
         this.directoryId = builder.directoryId;
         this.endUserIds = builder.endUserIds;
+        this.exclusiveType = builder.exclusiveType;
         this.fileSystemId = builder.fileSystemId;
+        this.groupAmount = builder.groupAmount;
         this.groupVersion = builder.groupVersion;
+        this.hostname = builder.hostname;
         this.idleDisconnectDuration = builder.idleDisconnectDuration;
+        this.imageId = builder.imageId;
         this.keepDuration = builder.keepDuration;
         this.loadPolicy = builder.loadPolicy;
         this.maxDesktopsCount = builder.maxDesktopsCount;
         this.minDesktopsCount = builder.minDesktopsCount;
+        this.multiResource = builder.multiResource;
         this.officeSiteId = builder.officeSiteId;
         this.ownType = builder.ownType;
         this.period = builder.period;
@@ -224,8 +297,14 @@ public class CreateDesktopGroupRequest extends Request {
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
+        this.sessionType = builder.sessionType;
+        this.snapshotPolicyId = builder.snapshotPolicyId;
         this.stopDuration = builder.stopDuration;
+        this.systemDiskCategory = builder.systemDiskCategory;
+        this.systemDiskPerLevel = builder.systemDiskPerLevel;
+        this.systemDiskSize = builder.systemDiskSize;
         this.tag = builder.tag;
+        this.timerGroupId = builder.timerGroupId;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
         this.volumeEncryptionKey = builder.volumeEncryptionKey;
         this.vpcId = builder.vpcId;
@@ -336,6 +415,27 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return dataDiskCategory
+     */
+    public String getDataDiskCategory() {
+        return this.dataDiskCategory;
+    }
+
+    /**
+     * @return dataDiskPerLevel
+     */
+    public String getDataDiskPerLevel() {
+        return this.dataDiskPerLevel;
+    }
+
+    /**
+     * @return dataDiskSize
+     */
+    public Integer getDataDiskSize() {
+        return this.dataDiskSize;
+    }
+
+    /**
      * @return defaultInitDesktopCount
      */
     public Integer getDefaultInitDesktopCount() {
@@ -343,10 +443,24 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return defaultLanguage
+     */
+    public String getDefaultLanguage() {
+        return this.defaultLanguage;
+    }
+
+    /**
      * @return desktopGroupName
      */
     public String getDesktopGroupName() {
         return this.desktopGroupName;
+    }
+
+    /**
+     * @return desktopType
+     */
+    public String getDesktopType() {
+        return this.desktopType;
     }
 
     /**
@@ -364,10 +478,24 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return exclusiveType
+     */
+    public String getExclusiveType() {
+        return this.exclusiveType;
+    }
+
+    /**
      * @return fileSystemId
      */
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    /**
+     * @return groupAmount
+     */
+    public Integer getGroupAmount() {
+        return this.groupAmount;
     }
 
     /**
@@ -378,10 +506,24 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return hostname
+     */
+    public String getHostname() {
+        return this.hostname;
+    }
+
+    /**
      * @return idleDisconnectDuration
      */
     public Long getIdleDisconnectDuration() {
         return this.idleDisconnectDuration;
+    }
+
+    /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
     }
 
     /**
@@ -410,6 +552,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public Integer getMinDesktopsCount() {
         return this.minDesktopsCount;
+    }
+
+    /**
+     * @return multiResource
+     */
+    public Boolean getMultiResource() {
+        return this.multiResource;
     }
 
     /**
@@ -490,6 +639,20 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return sessionType
+     */
+    public String getSessionType() {
+        return this.sessionType;
+    }
+
+    /**
+     * @return snapshotPolicyId
+     */
+    public String getSnapshotPolicyId() {
+        return this.snapshotPolicyId;
+    }
+
+    /**
      * @return stopDuration
      */
     public Long getStopDuration() {
@@ -497,10 +660,38 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return systemDiskCategory
+     */
+    public String getSystemDiskCategory() {
+        return this.systemDiskCategory;
+    }
+
+    /**
+     * @return systemDiskPerLevel
+     */
+    public String getSystemDiskPerLevel() {
+        return this.systemDiskPerLevel;
+    }
+
+    /**
+     * @return systemDiskSize
+     */
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
         return this.tag;
+    }
+
+    /**
+     * @return timerGroupId
+     */
+    public String getTimerGroupId() {
+        return this.timerGroupId;
     }
 
     /**
@@ -538,17 +729,27 @@ public class CreateDesktopGroupRequest extends Request {
         private String clientToken; 
         private String comments; 
         private Long connectDuration; 
+        private String dataDiskCategory; 
+        private String dataDiskPerLevel; 
+        private Integer dataDiskSize; 
         private Integer defaultInitDesktopCount; 
+        private String defaultLanguage; 
         private String desktopGroupName; 
+        private String desktopType; 
         private String directoryId; 
         private java.util.List<String> endUserIds; 
+        private String exclusiveType; 
         private String fileSystemId; 
+        private Integer groupAmount; 
         private Integer groupVersion; 
+        private String hostname; 
         private Long idleDisconnectDuration; 
+        private String imageId; 
         private Long keepDuration; 
         private Long loadPolicy; 
         private Integer maxDesktopsCount; 
         private Integer minDesktopsCount; 
+        private Boolean multiResource; 
         private String officeSiteId; 
         private Integer ownType; 
         private Integer period; 
@@ -560,8 +761,14 @@ public class CreateDesktopGroupRequest extends Request {
         private String regionId; 
         private Long resetType; 
         private String scaleStrategyId; 
+        private String sessionType; 
+        private String snapshotPolicyId; 
         private Long stopDuration; 
+        private String systemDiskCategory; 
+        private String systemDiskPerLevel; 
+        private Integer systemDiskSize; 
         private java.util.List<Tag> tag; 
+        private String timerGroupId; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
         private String vpcId; 
@@ -585,17 +792,27 @@ public class CreateDesktopGroupRequest extends Request {
             this.clientToken = request.clientToken;
             this.comments = request.comments;
             this.connectDuration = request.connectDuration;
+            this.dataDiskCategory = request.dataDiskCategory;
+            this.dataDiskPerLevel = request.dataDiskPerLevel;
+            this.dataDiskSize = request.dataDiskSize;
             this.defaultInitDesktopCount = request.defaultInitDesktopCount;
+            this.defaultLanguage = request.defaultLanguage;
             this.desktopGroupName = request.desktopGroupName;
+            this.desktopType = request.desktopType;
             this.directoryId = request.directoryId;
             this.endUserIds = request.endUserIds;
+            this.exclusiveType = request.exclusiveType;
             this.fileSystemId = request.fileSystemId;
+            this.groupAmount = request.groupAmount;
             this.groupVersion = request.groupVersion;
+            this.hostname = request.hostname;
             this.idleDisconnectDuration = request.idleDisconnectDuration;
+            this.imageId = request.imageId;
             this.keepDuration = request.keepDuration;
             this.loadPolicy = request.loadPolicy;
             this.maxDesktopsCount = request.maxDesktopsCount;
             this.minDesktopsCount = request.minDesktopsCount;
+            this.multiResource = request.multiResource;
             this.officeSiteId = request.officeSiteId;
             this.ownType = request.ownType;
             this.period = request.period;
@@ -607,8 +824,14 @@ public class CreateDesktopGroupRequest extends Request {
             this.regionId = request.regionId;
             this.resetType = request.resetType;
             this.scaleStrategyId = request.scaleStrategyId;
+            this.sessionType = request.sessionType;
+            this.snapshotPolicyId = request.snapshotPolicyId;
             this.stopDuration = request.stopDuration;
+            this.systemDiskCategory = request.systemDiskCategory;
+            this.systemDiskPerLevel = request.systemDiskPerLevel;
+            this.systemDiskSize = request.systemDiskSize;
             this.tag = request.tag;
+            this.timerGroupId = request.timerGroupId;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
             this.volumeEncryptionKey = request.volumeEncryptionKey;
             this.vpcId = request.vpcId;
@@ -704,7 +927,6 @@ public class CreateDesktopGroupRequest extends Request {
 
         /**
          * <p>The ID of the desktop template.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>b-je9hani001wfn****</p>
@@ -789,6 +1011,33 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * DataDiskCategory.
+         */
+        public Builder dataDiskCategory(String dataDiskCategory) {
+            this.putQueryParameter("DataDiskCategory", dataDiskCategory);
+            this.dataDiskCategory = dataDiskCategory;
+            return this;
+        }
+
+        /**
+         * DataDiskPerLevel.
+         */
+        public Builder dataDiskPerLevel(String dataDiskPerLevel) {
+            this.putQueryParameter("DataDiskPerLevel", dataDiskPerLevel);
+            this.dataDiskPerLevel = dataDiskPerLevel;
+            return this;
+        }
+
+        /**
+         * DataDiskSize.
+         */
+        public Builder dataDiskSize(Integer dataDiskSize) {
+            this.putQueryParameter("DataDiskSize", dataDiskSize);
+            this.dataDiskSize = dataDiskSize;
+            return this;
+        }
+
+        /**
          * <p>The default number of cloud desktops to create when you create the desktop group. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -801,6 +1050,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * DefaultLanguage.
+         */
+        public Builder defaultLanguage(String defaultLanguage) {
+            this.putQueryParameter("DefaultLanguage", defaultLanguage);
+            this.defaultLanguage = defaultLanguage;
+            return this;
+        }
+
+        /**
          * <p>The name of the desktop group.</p>
          * 
          * <strong>example:</strong>
@@ -809,6 +1067,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
             this.desktopGroupName = desktopGroupName;
+            return this;
+        }
+
+        /**
+         * DesktopType.
+         */
+        public Builder desktopType(String desktopType) {
+            this.putQueryParameter("DesktopType", desktopType);
+            this.desktopType = desktopType;
             return this;
         }
 
@@ -834,6 +1101,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * ExclusiveType.
+         */
+        public Builder exclusiveType(String exclusiveType) {
+            this.putQueryParameter("ExclusiveType", exclusiveType);
+            this.exclusiveType = exclusiveType;
+            return this;
+        }
+
+        /**
          * <p>The File Storage NAS (NAS) file system that is used after data roaming is enabled.</p>
          * 
          * <strong>example:</strong>
@@ -842,6 +1118,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
             this.fileSystemId = fileSystemId;
+            return this;
+        }
+
+        /**
+         * GroupAmount.
+         */
+        public Builder groupAmount(Integer groupAmount) {
+            this.putQueryParameter("GroupAmount", groupAmount);
+            this.groupAmount = groupAmount;
             return this;
         }
 
@@ -858,6 +1143,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * Hostname.
+         */
+        public Builder hostname(String hostname) {
+            this.putQueryParameter("Hostname", hostname);
+            this.hostname = hostname;
+            return this;
+        }
+
+        /**
          * <p>The maximum period of time for which a session remains idle. If an end user performs no operations on a cloud desktop by using keyboards or mouses during a session, the session becomes idle. When the specified maximum period of time is reached, the session automatically disconnects. Unit: milliseconds. This parameter is required only for cloud desktops in the same desktop group.</p>
          * 
          * <strong>example:</strong>
@@ -866,6 +1160,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder idleDisconnectDuration(Long idleDisconnectDuration) {
             this.putQueryParameter("IdleDisconnectDuration", idleDisconnectDuration);
             this.idleDisconnectDuration = idleDisconnectDuration;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 
@@ -914,6 +1217,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder minDesktopsCount(Integer minDesktopsCount) {
             this.putQueryParameter("MinDesktopsCount", minDesktopsCount);
             this.minDesktopsCount = minDesktopsCount;
+            return this;
+        }
+
+        /**
+         * MultiResource.
+         */
+        public Builder multiResource(Boolean multiResource) {
+            this.putQueryParameter("MultiResource", multiResource);
+            this.multiResource = multiResource;
             return this;
         }
 
@@ -1072,6 +1384,24 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * SessionType.
+         */
+        public Builder sessionType(String sessionType) {
+            this.putQueryParameter("SessionType", sessionType);
+            this.sessionType = sessionType;
+            return this;
+        }
+
+        /**
+         * SnapshotPolicyId.
+         */
+        public Builder snapshotPolicyId(String snapshotPolicyId) {
+            this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
+            this.snapshotPolicyId = snapshotPolicyId;
+            return this;
+        }
+
+        /**
          * <p>The period of time before the idle cloud desktop is stopped. When the specified period of time is reached, the idle cloud desktop automatically stops. If an end user connects to a stopped cloud desktop, the cloud desktop automatically starts. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -1084,11 +1414,47 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * SystemDiskCategory.
+         */
+        public Builder systemDiskCategory(String systemDiskCategory) {
+            this.putQueryParameter("SystemDiskCategory", systemDiskCategory);
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+
+        /**
+         * SystemDiskPerLevel.
+         */
+        public Builder systemDiskPerLevel(String systemDiskPerLevel) {
+            this.putQueryParameter("SystemDiskPerLevel", systemDiskPerLevel);
+            this.systemDiskPerLevel = systemDiskPerLevel;
+            return this;
+        }
+
+        /**
+         * SystemDiskSize.
+         */
+        public Builder systemDiskSize(Integer systemDiskSize) {
+            this.putQueryParameter("SystemDiskSize", systemDiskSize);
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+
+        /**
          * <p>The tags that you want to attach to the cloud computer pool. You can specify 1 to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * TimerGroupId.
+         */
+        public Builder timerGroupId(String timerGroupId) {
+            this.putQueryParameter("TimerGroupId", timerGroupId);
+            this.timerGroupId = timerGroupId;
             return this;
         }
 

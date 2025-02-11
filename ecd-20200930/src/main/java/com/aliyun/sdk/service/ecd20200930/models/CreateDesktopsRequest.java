@@ -113,6 +113,10 @@ public class CreateDesktopsRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SavingPlanId")
+    private String savingPlanId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
     private String snapshotPolicyId;
 
@@ -173,6 +177,7 @@ public class CreateDesktopsRequest extends Request {
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.savingPlanId = builder.savingPlanId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
         this.tag = builder.tag;
         this.timerGroupId = builder.timerGroupId;
@@ -359,6 +364,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return savingPlanId
+     */
+    public String getSavingPlanId() {
+        return this.savingPlanId;
+    }
+
+    /**
      * @return snapshotPolicyId
      */
     public String getSnapshotPolicyId() {
@@ -445,6 +457,7 @@ public class CreateDesktopsRequest extends Request {
         private String promotionId; 
         private String regionId; 
         private String resourceGroupId; 
+        private String savingPlanId; 
         private String snapshotPolicyId; 
         private java.util.List<Tag> tag; 
         private String timerGroupId; 
@@ -484,6 +497,7 @@ public class CreateDesktopsRequest extends Request {
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.savingPlanId = request.savingPlanId;
             this.snapshotPolicyId = request.snapshotPolicyId;
             this.tag = request.tag;
             this.timerGroupId = request.timerGroupId;
@@ -827,6 +841,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SavingPlanId.
+         */
+        public Builder savingPlanId(String savingPlanId) {
+            this.putQueryParameter("SavingPlanId", savingPlanId);
+            this.savingPlanId = savingPlanId;
             return this;
         }
 

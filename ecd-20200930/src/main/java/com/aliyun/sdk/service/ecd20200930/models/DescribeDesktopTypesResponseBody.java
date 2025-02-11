@@ -110,6 +110,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
+        @com.aliyun.core.annotation.NameInMap("MaxSessionCount")
+        private Integer maxSessionCount;
+
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
@@ -131,6 +134,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             this.gpuMemory = builder.gpuMemory;
             this.gpuSpec = builder.gpuSpec;
             this.instanceTypeFamily = builder.instanceTypeFamily;
+            this.maxSessionCount = builder.maxSessionCount;
             this.memorySize = builder.memorySize;
             this.scopes = builder.scopes;
             this.stockState = builder.stockState;
@@ -202,6 +206,13 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxSessionCount
+         */
+        public Integer getMaxSessionCount() {
+            return this.maxSessionCount;
+        }
+
+        /**
          * @return memorySize
          */
         public String getMemorySize() {
@@ -238,6 +249,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private Integer gpuMemory; 
             private String gpuSpec; 
             private String instanceTypeFamily; 
+            private Integer maxSessionCount; 
             private String memorySize; 
             private java.util.List<String> scopes; 
             private String stockState; 
@@ -325,6 +337,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * MaxSessionCount.
+             */
+            public Builder maxSessionCount(Integer maxSessionCount) {
+                this.maxSessionCount = maxSessionCount;
                 return this;
             }
 

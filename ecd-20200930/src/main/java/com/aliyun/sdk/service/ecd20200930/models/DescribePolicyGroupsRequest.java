@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePolicyGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPolicyGroupIds")
+    private java.util.List<String> externalPolicyGroupIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer maxResults;
@@ -41,6 +45,7 @@ public class DescribePolicyGroupsRequest extends Request {
 
     private DescribePolicyGroupsRequest(Builder builder) {
         super(builder);
+        this.externalPolicyGroupIds = builder.externalPolicyGroupIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.policyGroupId = builder.policyGroupId;
@@ -59,6 +64,13 @@ public class DescribePolicyGroupsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return externalPolicyGroupIds
+     */
+    public java.util.List<String> getExternalPolicyGroupIds() {
+        return this.externalPolicyGroupIds;
     }
 
     /**
@@ -97,6 +109,7 @@ public class DescribePolicyGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePolicyGroupsRequest, Builder> {
+        private java.util.List<String> externalPolicyGroupIds; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> policyGroupId; 
@@ -109,12 +122,22 @@ public class DescribePolicyGroupsRequest extends Request {
 
         private Builder(DescribePolicyGroupsRequest request) {
             super(request);
+            this.externalPolicyGroupIds = request.externalPolicyGroupIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.policyGroupId = request.policyGroupId;
             this.regionId = request.regionId;
             this.scope = request.scope;
         } 
+
+        /**
+         * ExternalPolicyGroupIds.
+         */
+        public Builder externalPolicyGroupIds(java.util.List<String> externalPolicyGroupIds) {
+            this.putQueryParameter("ExternalPolicyGroupIds", externalPolicyGroupIds);
+            this.externalPolicyGroupIds = externalPolicyGroupIds;
+            return this;
+        }
 
         /**
          * <p>The number of entries per page.</p>

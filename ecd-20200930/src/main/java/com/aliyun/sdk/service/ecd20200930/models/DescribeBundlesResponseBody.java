@@ -382,6 +382,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
+        private String dataDiskCategory;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -424,6 +427,9 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StockState")
         private String stockState;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
+        private String systemDiskCategory;
+
         @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
 
@@ -435,6 +441,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             this.bundleName = builder.bundleName;
             this.bundleType = builder.bundleType;
             this.creationTime = builder.creationTime;
+            this.dataDiskCategory = builder.dataDiskCategory;
             this.description = builder.description;
             this.desktopType = builder.desktopType;
             this.desktopTypeAttribute = builder.desktopTypeAttribute;
@@ -449,6 +456,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             this.protocolType = builder.protocolType;
             this.sessionType = builder.sessionType;
             this.stockState = builder.stockState;
+            this.systemDiskCategory = builder.systemDiskCategory;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -487,6 +495,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return dataDiskCategory
+         */
+        public String getDataDiskCategory() {
+            return this.dataDiskCategory;
         }
 
         /**
@@ -588,6 +603,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDiskCategory
+         */
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        /**
          * @return volumeEncryptionEnabled
          */
         public Boolean getVolumeEncryptionEnabled() {
@@ -606,6 +628,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String bundleName; 
             private String bundleType; 
             private String creationTime; 
+            private String dataDiskCategory; 
             private String description; 
             private String desktopType; 
             private DesktopTypeAttribute desktopTypeAttribute; 
@@ -620,6 +643,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String protocolType; 
             private String sessionType; 
             private String stockState; 
+            private String systemDiskCategory; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
 
@@ -680,6 +704,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DataDiskCategory.
+             */
+            public Builder dataDiskCategory(String dataDiskCategory) {
+                this.dataDiskCategory = dataDiskCategory;
                 return this;
             }
 
@@ -904,6 +936,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
              */
             public Builder stockState(String stockState) {
                 this.stockState = stockState;
+                return this;
+            }
+
+            /**
+             * SystemDiskCategory.
+             */
+            public Builder systemDiskCategory(String systemDiskCategory) {
+                this.systemDiskCategory = systemDiskCategory;
                 return this;
             }
 

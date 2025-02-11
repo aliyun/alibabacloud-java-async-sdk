@@ -91,6 +91,10 @@ public class DescribeDesktopsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiResource")
+    private Boolean multiResource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -179,6 +183,7 @@ public class DescribeDesktopsRequest extends Request {
         this.imageId = builder.imageId;
         this.managementFlag = builder.managementFlag;
         this.maxResults = builder.maxResults;
+        this.multiResource = builder.multiResource;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteName = builder.officeSiteName;
@@ -338,6 +343,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return multiResource
+     */
+    public Boolean getMultiResource() {
+        return this.multiResource;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -475,6 +487,7 @@ public class DescribeDesktopsRequest extends Request {
         private java.util.List<String> imageId; 
         private String managementFlag; 
         private Integer maxResults; 
+        private Boolean multiResource; 
         private String nextToken; 
         private String officeSiteId; 
         private String officeSiteName; 
@@ -517,6 +530,7 @@ public class DescribeDesktopsRequest extends Request {
             this.imageId = request.imageId;
             this.managementFlag = request.managementFlag;
             this.maxResults = request.maxResults;
+            this.multiResource = request.multiResource;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
             this.officeSiteName = request.officeSiteName;
@@ -747,6 +761,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * MultiResource.
+         */
+        public Builder multiResource(Boolean multiResource) {
+            this.putQueryParameter("MultiResource", multiResource);
+            this.multiResource = multiResource;
             return this;
         }
 

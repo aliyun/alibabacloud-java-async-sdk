@@ -20,6 +20,9 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     private String desktopGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
+    private java.util.List<String> desktopGroupIds;
+
     @com.aliyun.core.annotation.NameInMap("OrderIds")
     private java.util.List<String> orderIds;
 
@@ -28,6 +31,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
 
     private CreateDesktopGroupResponseBody(Builder builder) {
         this.desktopGroupId = builder.desktopGroupId;
+        this.desktopGroupIds = builder.desktopGroupIds;
         this.orderIds = builder.orderIds;
         this.requestId = builder.requestId;
     }
@@ -48,6 +52,13 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return desktopGroupIds
+     */
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    /**
      * @return orderIds
      */
     public java.util.List<String> getOrderIds() {
@@ -63,6 +74,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String desktopGroupId; 
+        private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> orderIds; 
         private String requestId; 
 
@@ -74,6 +86,14 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
          */
         public Builder desktopGroupId(String desktopGroupId) {
             this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+
+        /**
+         * DesktopGroupIds.
+         */
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
+            this.desktopGroupIds = desktopGroupIds;
             return this;
         }
 
